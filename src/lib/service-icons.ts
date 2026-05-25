@@ -1,0 +1,210 @@
+/** Klíče ikon (SVG ve stylu Lucide, MIT) mapované na služby a sekce. */
+export type ServiceIconKey =
+  | "emise"
+  | "pracovni-prostredi"
+  | "hluk"
+  | "vibrace"
+  | "osvetleni"
+  | "mikroklima"
+  | "rozptyl"
+  | "hlukova-studie"
+  | "akustika"
+  | "model"
+  | "imis-hluk"
+  | "posudek"
+  | "provozni-rad"
+  | "povoleni"
+  | "ippc"
+  | "eia"
+  | "zjistovaci-eia"
+  | "investor"
+  | "ispop"
+  | "ghg"
+  | "chemie"
+  | "skoleni"
+  | "bezpecnostni-listy"
+  | "pillar-mereni"
+  | "pillar-studie"
+  | "pillar-dokumentace"
+  | "audience-prumysl"
+  | "audience-energetika"
+  | "audience-investor"
+  | "audience-odpady"
+  | "audience-verejny"
+  | "audience-budovy"
+  | "process-posouzeni"
+  | "process-rozsah"
+  | "process-zpracovani"
+  | "process-vystup"
+  | "default";
+
+const hrefToIcon: Record<string, ServiceIconKey> = {
+  "/mereni-emisi": "emise",
+  "/pracovni-prostredi": "pracovni-prostredi",
+  "/mereni-hluku-hlukove-studie": "hluk",
+  "/mereni-vibraci": "vibrace",
+  "/mereni-osvetleni": "osvetleni",
+  "/mereni-mikroklimatu": "mikroklima",
+  "/rozptylove-studie": "rozptyl",
+  "/hlukove-studie": "hlukova-studie",
+  "/akusticke-posudky": "akustika",
+  "/modelove-vypocty": "model",
+  "/imisni-a-hlukove-dopady-zameru": "imis-hluk",
+  "/odborne-posudky": "posudek",
+  "/provozni-rady": "provozni-rad",
+  "/povoleni-provozu-zdroje": "povoleni",
+  "/ippc-integrovana-povoleni": "ippc",
+  "/eia-oznameni-zameru": "eia",
+  "/zjistovaci-rizeni-eia": "zjistovaci-eia",
+  "/technicke-prilohy-pro-investory": "investor",
+  "/ispop-souhrnna-provozni-evidence": "ispop",
+  "/ghg-overovani-emisi-sklenikovych-plynu": "ghg",
+  "/chemicke-latky-v-provozu": "chemie",
+  "/skoleni-chemicke-legislativy": "skoleni",
+  "/bezpecnostni-listy": "bezpecnostni-listy",
+  "/eia-posudky-poradenstvi": "pillar-dokumentace",
+  "/provozy-a-technologie/kotelny": "emise",
+  "/provozy-a-technologie/bioplyn-biometan": "audience-energetika",
+  "/provozy-a-technologie/zemedelske-provozy": "audience-prumysl",
+  "/provozy-a-technologie/lakovny": "emise",
+  "/provozy-a-technologie/drevozpracujici": "audience-prumysl",
+  "/provozy-a-technologie/odpady-recyklace": "audience-odpady",
+  "/provozy-a-technologie/automotive": "audience-prumysl",
+  "/provozy-a-technologie/svarovny": "pracovni-prostredi",
+  "/provozy-a-technologie/sklarstvi": "emise",
+  "/provozy-a-technologie/tepelna-cerpadla-vzt": "hluk",
+  "/typicke-zakazky": "process-posouzeni",
+  "/reference": "audience-prumysl",
+  "/poradna": "posudek",
+  "/faq": "process-posouzeni",
+  "/akreditace-autorizace-dokumenty": "pillar-mereni",
+  "/pristrojove-vybaveni": "pillar-mereni"
+};
+
+export function getServiceIconKey(href: string): ServiceIconKey {
+  const path = href.split("#")[0].replace(/\/$/, "") || "/";
+  return hrefToIcon[path] ?? "default";
+}
+
+const referenceSegmentToIcon: Record<string, ServiceIconKey> = {
+  "Průmysl a automotive": "audience-prumysl",
+  "Energetika, kotelny a kogenerace": "audience-energetika",
+  "Energetika a spalovací zdroje": "audience-energetika",
+  "Lakovny a povrchové úpravy": "emise",
+  "Zemědělství a bioplyn": "audience-energetika",
+  "Odpady, recyklace a skládky": "audience-odpady",
+  "Stavebnictví a infrastruktura": "audience-budovy",
+  "Veřejný sektor a zdravotnictví": "audience-verejny",
+  "Veřejný sektor a instituce": "audience-verejny",
+  "Projektanti, investoři a EIA": "audience-investor",
+  "Projektanti, investoři a poradenské společnosti": "audience-investor"
+};
+
+export function getReferenceSegmentIconKey(title: string): ServiceIconKey {
+  return referenceSegmentToIcon[title] ?? "default";
+}
+
+const poradnaTopicToIcon: Record<string, ServiceIconKey> = {
+  Emise: "emise",
+  "Rozptylové studie": "rozptyl",
+  Hluk: "hluk",
+  "Pracovní prostředí": "pracovni-prostredi",
+  "EIA a povolování": "pillar-dokumentace",
+  Legislativa: "posudek",
+  "Chemická legislativa": "skoleni"
+};
+
+export function getPoradnaTopicIconKey(topic: string): ServiceIconKey {
+  return poradnaTopicToIcon[topic] ?? "default";
+}
+
+const accreditationScopeToIcon: Record<string, ServiceIconKey> = {
+  "Emise ze stacionárních zdrojů": "emise",
+  "Pracovní a vnitřní ovzduší": "pracovni-prostredi",
+  Mikroklima: "mikroklima",
+  Osvětlení: "osvetleni",
+  Vibrace: "vibrace",
+  Hluk: "hluk"
+};
+
+export function getAccreditationScopeIconKey(title: string): ServiceIconKey {
+  return accreditationScopeToIcon[title] ?? "default";
+}
+
+const authorizationToIcon: Record<string, ServiceIconKey> = {
+  EIA: "eia",
+  "Rozptylové studie": "rozptyl",
+  "Odborné posudky": "posudek",
+  "Skleníkové plyny": "ghg"
+};
+
+export function getAuthorizationIconKey(title: string): ServiceIconKey {
+  return authorizationToIcon[title] ?? "default";
+}
+
+const equipmentGroupToIcon: Record<string, ServiceIconKey> = {
+  "Měření emisí a odběry ze stacionárních zdrojů": "emise",
+  "Pracovní prostředí, odběry a mikroklima": "pracovni-prostredi",
+  "Hluk, vibrace a akustika": "hluk",
+  "Osvětlení a fyzikální faktory": "osvetleni",
+  "Laboratorní a podpůrné zázemí": "process-zpracovani"
+};
+
+export function getEquipmentGroupIconKey(title: string): ServiceIconKey {
+  return equipmentGroupToIcon[title] ?? "default";
+}
+
+const faqCategoryToIcon: Record<string, ServiceIconKey> = {
+  obecne: "process-posouzeni",
+  emise: "emise",
+  "pracovni-prostredi": "pracovni-prostredi",
+  hluk: "hluk",
+  studie: "pillar-studie",
+  eia: "eia",
+  ispop: "ispop",
+  poptavka: "process-vystup"
+};
+
+export function getFaqCategoryIconKey(categoryId: string): ServiceIconKey {
+  return faqCategoryToIcon[categoryId] ?? "default";
+}
+
+const contactAttachmentToIcon: Record<string, ServiceIconKey> = {
+  "požadavek, výzvu nebo rozhodnutí úřadu": "pillar-dokumentace",
+  "projektovou dokumentaci": "process-posouzeni",
+  "popis technologie": "audience-prumysl",
+  "provozní řád nebo povolení provozu": "provozni-rad",
+  "fotografie provozu, výduchu, zdroje hluku nebo pracoviště": "process-zpracovani",
+  "požadovaný termín": "process-vystup",
+  "lokalitu provozu nebo záměru": "audience-budovy"
+};
+
+export function getContactAttachmentIconKey(item: string): ServiceIconKey {
+  return contactAttachmentToIcon[item] ?? "default";
+}
+
+const aboutWorkStepIcons: ServiceIconKey[] = [
+  "process-posouzeni",
+  "process-rozsah",
+  "process-zpracovani",
+  "process-vystup"
+];
+
+export function getAboutWorkStepIconKey(index: number): ServiceIconKey {
+  return aboutWorkStepIcons[index] ?? "default";
+}
+
+/** Ikony u rychlých poptávkových cest na /kontakt (podle hodnoty service ve formuláři). */
+const contactServiceToIcon: Record<string, ServiceIconKey> = {
+  "Měření emisí": "emise",
+  "Měření pracovního prostředí": "pracovni-prostredi",
+  "Měření hluku a akustika": "hluk",
+  "Rozptylové studie": "rozptyl",
+  "EIA a oznámení záměru": "pillar-dokumentace",
+  "Školení chemického zákona / chemické legislativy": "skoleni",
+  "Nejsem si jistý": "process-posouzeni"
+};
+
+export function getContactServiceIconKey(service: string): ServiceIconKey {
+  return contactServiceToIcon[service] ?? "default";
+}

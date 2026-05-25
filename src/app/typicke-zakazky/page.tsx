@@ -1,0 +1,57 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { CaseStudiesView } from "@/components/CaseStudiesView";
+import { TypicalScenarios } from "@/components/TypicalScenarios";
+import { caseStudyCategories } from "@/lib/case-studies";
+import { siteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Typické zakázky – měření, studie, ISPOP a školení",
+  description:
+    "Konkrétní scénáře zakázek NATURCHEM: měření emisí, pracovní prostředí, hlukové a rozptylové studie, EIA, ISPOP a školení chemické legislativy.",
+  alternates: { canonical: `${siteUrl}/typicke-zakazky/` }
+};
+
+export default function TypickeZakazkyPage() {
+  return (
+    <main className="container section">
+      <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: "Typické zakázky" }]} />
+      <h1>Typické zakázky</h1>
+      <p>
+        Přehled nejčastějších scénářů z praxe — měření emisí, pracovního prostředí, hluku,
+        rozptylové a hlukové studie, EIA podklady, ISPOP a školení chemické legislativy. U každé
+        zakázky upřesňujeme rozsah podle podkladů a účelu výstupu.
+      </p>
+      <p>
+        <Link href="/reference">Vybrané reference a oblasti realizací</Link>
+      </p>
+
+      <section className="section">
+        <h2>Scénáře z praxe</h2>
+        <TypicalScenarios />
+      </section>
+
+      <section className="section">
+        <h2>Další příklady podle oblasti</h2>
+        <CaseStudiesView categories={caseStudyCategories} />
+      </section>
+
+      <section className="section content-block card">
+        <h2>Kam dál na webu</h2>
+        <p className="muted">
+          Kompletní přehled služeb včetně legislativních souvislostí najdete v sekci{" "}
+          <Link href="/sluzby">Služby</Link>. Typy provozů a technologie řešíme v části{" "}
+          <Link href="/provozy-a-technologie">Provozy a technologie</Link>. Odpovědi na opakující se
+          dotazy najdete v <Link href="/faq">FAQ</Link> a v <Link href="/poradna">odborné poradně</Link>.
+        </p>
+      </section>
+
+      <p style={{ marginTop: "1.25rem" }}>
+        <Link href="/kontakt" className="button">
+          Poptat službu
+        </Link>
+      </p>
+    </main>
+  );
+}

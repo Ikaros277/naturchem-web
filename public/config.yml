@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: Ikaros277/naturchem-web
+  branch: main
+  base_url: https://naturchem-web.vercel.app
+  auth_endpoint: api/decap/auth
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "poradna"
+    label: "Poradna"
+    folder: "content/articles"
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Nadpis", name: "title", widget: "string" }
+      - {
+          label: "Slug (URL, bez diakritiky)",
+          name: "slug",
+          widget: "string",
+          hint: "Musí odpovídat názvu souboru, např. novela-zakona-o-ochrane-ovzdusi-2025",
+          pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Malá písmena, číslice a pomlčky."]
+        }
+      - { label: "Perex", name: "excerpt", widget: "text" }
+      - { label: "Autor", name: "author", widget: "string", default: "NATURCHEM" }
+      - {
+          label: "Datum publikace",
+          name: "publishedAt",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false
+        }
+      - {
+          label: "Datum aktualizace",
+          name: "updatedAt",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+          required: false
+        }
+      - { label: "Obsah", name: "body", widget: "markdown" }

@@ -1,0 +1,108 @@
+import fs from "node:fs/promises";
+import path from "node:path";
+import matter from "gray-matter";
+import { normalizeArticleDate } from "@/lib/format-date";
+
+const articlesDirectory = path.join(process.cwd(), "content", "articles");
+
+export type Article = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  publishedAt: string;
+  updatedAt?: string;
+  author?: string;
+  body: string;
+};
+
+type ArticleFrontmatter = {
+  slug?: string;
+  title?: string;
+  excerpt?: string;
+  publishedAt?: unknown;
+  updatedAt?: unknown;
+  author?: string;
+};
+
+function resolveSlug(fileSlug: string, data: ArticleFrontmatter): string {
+  const fromFrontmatter =
+    typeof data.slug === "string" && data.slug.trim() ? data.slug.trim() : null;
+  return fromFrontmatter ?? fileSlug;
+}
+
+/** Opraví escapovaný markdown z některých editorů (např. \*\*, \| nebo \##). */
+function normalizeMarkdownBody(body: string): string {
+  return body
+    .replace(/^\\(#{1,6}\s)/gm, "$1")
+    .replace(/^\\-/gm, "-")
+    .replace(/\\([\\`*_{}\[\]()#+\-.!|>])/g, "$1");
+}
+
+function toArticle(fileSlug: string, fileContents: string): Article {
+  const parsed = matter(fileContents);
+  const data = parsed.data as ArticleFrontmatter;
+  const slug = resolveSlug(fileSlug, data);
+
+  return {
+    slug,
+    title: data.title || slug,
+    excerpt: data.excerpt || "",
+    publishedAt: normalizeArticleDate(data.publishedAt) || new Date().toISOString(),
+    updatedAt: normalizeArticleDate(data.updatedAt),
+    author: data.author || "NATURCHEM",
+    body: normalizeMarkdownBody(parsed.content)
+  };
+}
+
+async function readArticleFiles(): Promise<string[]> {
+  const files = await fs.readdir(articlesDirectory);
+  return files.filter((file) => file.endsWith(".md"));
+}
+
+export async function getArticles(): Promise<Article[]> {
+  try {
+    const mdFiles = await readArticleFiles();
+
+    const articles = await Promise.all(
+      mdFiles.map(async (file) => {
+        const fileSlug = file.replace(/\.md$/, "");
+        const fullPath = path.join(articlesDirectory, file);
+        const fileContents = await fs.readFile(fullPath, "utf8");
+        return toArticle(fileSlug, fileContents);
+      })
+    );
+
+    return articles.sort(
+      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    );
+  } catch {
+    return [];
+  }
+}
+
+export async function getArticleBySlug(slug: string): Promise<Article | null> {
+  try {
+    const decoded = decodeURIComponent(slug);
+    const mdFiles = await readArticleFiles();
+
+    for (const file of mdFiles) {
+      const fileSlug = file.replace(/\.md$/, "");
+      const fullPath = path.join(articlesDirectory, file);
+      const fileContents = await fs.readFile(fullPath, "utf8");
+      const article = toArticle(fileSlug, fileContents);
+
+      if (
+        article.slug === slug ||
+        article.slug === decoded ||
+        fileSlug === slug ||
+        fileSlug === decoded
+      ) {
+        return article;
+      }
+    }
+
+    return null;
+  } catch {
+    return null;
+  }
+}

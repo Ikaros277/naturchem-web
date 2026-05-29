@@ -1,4 +1,4 @@
-export type DedicatedServicePage = {
+﻿export type DedicatedServicePage = {
   slug: string;
   title: string;
   description: string;
@@ -22,7 +22,7 @@ export type DedicatedServicePage = {
 
 export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
   "hlukove-studie": {
-    slug: "hlukove-studie",
+    slug: "sluzby/hlukove-studie",
     title: "Hlukové studie",
     description:
       "Hlukové studie pro technologie, areály, dopravu, VZT, tepelná čerpadla a stavební záměry. Podklady pro KHS, stavební řízení a EIA.",
@@ -77,18 +77,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Měření hluku a akustika",
-        href: "/mereni-hluku-hlukove-studie",
+        href: "/sluzby/mereni-hluku",
         description: "Terénní měření a ověření skutečného hluku v provozu."
       },
       {
         title: "EIA a oznámení záměru",
-        href: "/eia-oznameni-zameru",
+        href: "/sluzby/eia-oznameni-zameru",
         description: "Hluková studie bývá častou přílohou záměrů s vlivem na okolí."
       }
     ]
   },
   "odborne-posudky": {
-    slug: "odborne-posudky",
+    slug: "sluzby/odborne-posudky",
     title: "Odborné posudky",
     description:
       "Odborné posudky podle zákona o ochraně ovzduší pro zdroje, technologie, změny provozu a povolovací řízení.",
@@ -143,18 +143,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Rozptylové studie",
-        href: "/rozptylove-studie",
+        href: "/sluzby/rozptylove-studie",
         description: "Imisní posouzení často navazuje na odborný posudek."
       },
       {
         title: "Provozní řády",
-        href: "/provozni-rady",
+        href: "/sluzby/provozni-rady",
         description: "Provozní dokumentace zdroje po povolení nebo změně provozu."
       }
     ]
   },
   "provozni-rady": {
-    slug: "provozni-rady",
+    slug: "sluzby/provozni-rady",
     title: "Provozní řády zdrojů znečišťování ovzduší",
     description:
       "Příprava a aktualizace provozních řádů stacionárních zdrojů znečišťování ovzduší pro provozovatele a krajské úřady.",
@@ -209,18 +209,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Měření emisí",
-        href: "/mereni-emisi",
+        href: "/sluzby/mereni-emisi",
         description: "Měřicí výstupy často tvoří podklad pro provozní řád."
       },
       {
         title: "ISPOP a souhrnná provozní evidence",
-        href: "/ispop-souhrnna-provozni-evidence",
+        href: "/sluzby/ispop",
         description: "Provozní řád navazuje na evidenci a hlášení provozu."
       }
     ]
   },
   "ippc-integrovana-povoleni": {
-    slug: "ippc-integrovana-povoleni",
+    slug: "sluzby/ippc-integrovana-povoleni",
     title: "IPPC a integrovaná povolení",
     description:
       "Podklady pro integrovaná povolení, změny IPPC a odbornou koordinaci měření, studií a provozní dokumentace.",
@@ -275,18 +275,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Odborné posudky",
-        href: "/odborne-posudky",
+        href: "/sluzby/odborne-posudky",
         description: "Technické posouzení změn zdrojů a zařízení."
       },
       {
         title: "EIA a oznámení záměru",
-        href: "/eia-oznameni-zameru",
+        href: "/sluzby/eia-oznameni-zameru",
         description: "U větších změn může IPPC navazovat na proces EIA."
       }
     ]
   },
   "eia-oznameni-zameru": {
-    slug: "eia-oznameni-zameru",
+    slug: "sluzby/eia-oznameni-zameru",
     title: "EIA a oznámení záměru",
     description:
       "Oznámení záměru EIA, odborné přílohy a koordinace podkladů pro zjišťovací řízení a navazující povolování.",
@@ -341,18 +341,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Rozptylové studie",
-        href: "/rozptylove-studie",
+        href: "/sluzby/rozptylove-studie",
         description: "Imisní příspěvky záměru jako častá příloha EIA."
       },
       {
         title: "Hlukové studie",
-        href: "/hlukove-studie",
+        href: "/sluzby/hlukove-studie",
         description: "Vyhodnocení hluku z technologie, dopravy a areálu."
       }
     ]
   },
-  "ispop-souhrnna-provozni-evidence": {
-    slug: "ispop-souhrnna-provozni-evidence",
+  "ispop": {
+    slug: "sluzby/ispop",
     title: "ISPOP a souhrnná provozní evidence",
     description:
       "ISPOP, souhrnná provozní evidence a roční hlášení pro provozovatele zdrojů v návaznosti na měření emisí a povolení provozu.",
@@ -406,18 +406,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Měření emisí",
-        href: "/mereni-emisi",
+        href: "/sluzby/mereni-emisi",
         description: "Výsledky měření jsou častým vstupem pro evidenci a hlášení."
       },
       {
         title: "Provozní řády",
-        href: "/provozni-rady",
+        href: "/sluzby/provozni-rady",
         description: "Provozní dokumentace musí odpovídat skutečnému režimu zdroje."
       }
     ]
   },
-  "ghg-overovani-emisi-sklenikovych-plynu": {
-    slug: "ghg-overovani-emisi-sklenikovych-plynu",
+  "ghg-overovani": {
+    slug: "sluzby/ghg-overovani",
     title: "GHG a ověřování emisí skleníkových plynů",
     description:
       "GHG, ověřování emisí skleníkových plynů, kontrola emisních údajů a podklady pro reporting provozovatelů.",
@@ -471,18 +471,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "ISPOP a souhrnná provozní evidence",
-        href: "/ispop-souhrnna-provozni-evidence",
+        href: "/sluzby/ispop",
         description: "Reportingové agendy často sdílejí provozní data a bilance."
       },
       {
         title: "Měření emisí",
-        href: "/mereni-emisi",
+        href: "/sluzby/mereni-emisi",
         description: "Měřicí výstupy podporují kontrolu emisních údajů."
       }
     ]
   },
   "bezpecnostni-listy": {
-    slug: "bezpecnostni-listy",
+    slug: "sluzby/bezpecnostni-listy",
     title: "Bezpečnostní listy a označování chemických látek",
     description:
       "Kontrola bezpečnostních listů, označování chemických látek a směsí, štítků, interních nádob a návaznosti na BOZP.",
@@ -536,18 +536,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Školení chemické legislativy",
-        href: "/skoleni-chemicke-legislativy",
+        href: "/sluzby/skoleni-chemicke-legislativy",
         description: "Praktické školení navazuje na bezpečnostní listy a značení."
       },
       {
         title: "Chemické látky v provozu",
-        href: "/chemicke-latky-v-provozu",
+        href: "/sluzby/chemicke-latky",
         description: "Nastavení pravidel pro používání, skladování a provozní odpovědnosti."
       }
     ]
   },
-  "chemicke-latky-v-provozu": {
-    slug: "chemicke-latky-v-provozu",
+  "chemicke-latky": {
+    slug: "sluzby/chemicke-latky",
     title: "Chemické látky v provozu",
     description:
       "Praktická podpora pro nakládání s chemickými látkami v provozu, skladování, značení, pravidla pro zaměstnance a návaznost na BOZP.",
@@ -601,18 +601,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Bezpečnostní listy",
-        href: "/bezpecnostni-listy",
+        href: "/sluzby/bezpecnostni-listy",
         description: "Bezpečnostní listy jsou výchozí podklad pro provozní pravidla."
       },
       {
         title: "Školení chemické legislativy",
-        href: "/skoleni-chemicke-legislativy",
+        href: "/sluzby/skoleni-chemicke-legislativy",
         description: "Školení převádí pravidla do praxe pro zaměstnance."
       }
     ]
   },
   "mereni-vibraci": {
-    slug: "mereni-vibraci",
+    slug: "sluzby/mereni-vibraci",
     title: "Měření vibrací",
     description:
       "Akreditované měření vibrací na pracovištích pro kategorizaci prací, BOZP a požadavky KHS. Ruční nářadí, stroje, dopravní technika.",
@@ -663,7 +663,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Měření pracovního prostředí",
-        href: "/pracovni-prostredi",
+        href: "/sluzby/pracovni-prostredi",
         description: "Komplexní hygienická měření včetně hluku, prachu a chemických látek."
       },
       {
@@ -674,7 +674,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     ]
   },
   "mereni-osvetleni": {
-    slug: "mereni-osvetleni",
+    slug: "sluzby/mereni-osvetleni",
     title: "Měření osvětlení",
     description:
       "Měření osvětlení na pracovištích pro KHS, kategorizaci prací a BOZP. Umělé i denní osvětlení, kanceláře i výrobní haly.",
@@ -725,18 +725,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Měření pracovního prostředí",
-        href: "/pracovni-prostredi",
+        href: "/sluzby/pracovni-prostredi",
         description: "Další faktory pracovního prostředí v jedné zakázce."
       },
       {
         title: "Měření mikroklimatu",
-        href: "/mereni-mikroklimatu",
+        href: "/sluzby/mereni-mikroklimatu",
         description: "Teplota, vlhkost a proudění vzduchu na pracovištích."
       }
     ]
   },
   "mereni-mikroklimatu": {
-    slug: "mereni-mikroklimatu",
+    slug: "sluzby/mereni-mikroklimatu",
     title: "Měření mikroklimatu",
     description:
       "Měření mikroklimatických podmínek na pracovištích: teplota, vlhkost, proudění vzduchu. Podklady pro KHS a kategorizaci prací.",
@@ -787,7 +787,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Měření pracovního prostředí",
-        href: "/pracovni-prostredi",
+        href: "/sluzby/pracovni-prostredi",
         description: "Komplexní měření rizikových faktorů na pracovištích."
       },
       {
@@ -798,7 +798,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     ]
   },
   "akusticke-posudky": {
-    slug: "akusticke-posudky",
+    slug: "sluzby/akusticke-posudky",
     title: "Akustické posudky",
     description:
       "Akustické posudky a odborná vyjádření k hluku technologií, strojoven a stavebních úprav s technologickým provozem. Podklady pro stavební řízení a KHS.",
@@ -853,18 +853,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Hlukové studie",
-        href: "/hlukove-studie",
+        href: "/sluzby/hlukove-studie",
         description: "Výpočtové posouzení hluku záměrů a areálů v okolí."
       },
       {
         title: "Měření hluku a akustika",
-        href: "/mereni-hluku-hlukove-studie",
+        href: "/sluzby/mereni-hluku",
         description: "Terénní měření pro ověření skutečného stavu."
       }
     ]
   },
   "modelove-vypocty": {
-    slug: "modelove-vypocty",
+    slug: "sluzby/modelove-vypocty",
     title: "Modelové výpočty",
     description:
       "Modelové výpočty imisí a hluku pro záměry, změny provozu a varianty technologií. Podklady pro rozptylové a hlukové studie.",
@@ -919,18 +919,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Rozptylové studie",
-        href: "/rozptylove-studie",
+        href: "/sluzby/rozptylove-studie",
         description: "Kompletní rozptylová studie včetně modelových výpočtů."
       },
       {
         title: "Hlukové studie",
-        href: "/hlukove-studie",
+        href: "/sluzby/hlukove-studie",
         description: "Hlukové modelování pro záměry a areály."
       }
     ]
   },
-  "imisni-a-hlukove-dopady-zameru": {
-    slug: "imisni-a-hlukove-dopady-zameru",
+  "imisni-dopady": {
+    slug: "sluzby/imisni-dopady",
     title: "Imisní a hlukové dopady záměrů",
     description:
       "Propojené posouzení imisí a hluku pro investiční záměry, změny provozu a EIA. Rozptyl, hluk a varianty v jednom postupu.",
@@ -985,18 +985,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Rozptylové studie",
-        href: "/rozptylove-studie",
+        href: "/sluzby/rozptylove-studie",
         description: "Imisní modelování a rozptylové studie."
       },
       {
         title: "Hlukové studie",
-        href: "/hlukove-studie",
+        href: "/sluzby/hlukove-studie",
         description: "Hlukové posouzení záměrů a areálů."
       }
     ]
   },
-  "povoleni-provozu-zdroje": {
-    slug: "povoleni-provozu-zdroje",
+  "povoleni-provozu": {
+    slug: "sluzby/povoleni-provozu",
     title: "Povolení provozu zdroje",
     description:
       "Podklady pro vydání nebo změnu povolení provozu stacionárního zdroje. Měření, posudky, provozní řády a komunikace s úřadem.",
@@ -1047,18 +1047,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "Odborné posudky",
-        href: "/odborne-posudky",
+        href: "/sluzby/odborne-posudky",
         description: "Odborné posudky podle zákona o ochraně ovzduší."
       },
       {
         title: "Provozní řády",
-        href: "/provozni-rady",
+        href: "/sluzby/provozni-rady",
         description: "Provozní řády jako součást povolovacích podkladů."
       }
     ]
   },
   "zjistovaci-rizeni-eia": {
-    slug: "zjistovaci-rizeni-eia",
+    slug: "sluzby/zjistovaci-rizeni-eia",
     title: "Zjišťovací řízení EIA",
     description:
       "Odborné podklady pro zjišťovací řízení EIA. Technické vstupy, koordinace měření a studií pro investora a zpracovatele.",
@@ -1109,18 +1109,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "EIA a oznámení záměru",
-        href: "/eia-oznameni-zameru",
+        href: "/sluzby/eia-oznameni-zameru",
         description: "Oznámení záměru a příprava dokumentace EIA."
       },
       {
         title: "Technické přílohy pro investory",
-        href: "/technicke-prilohy-pro-investory",
+        href: "/sluzby/technicke-prilohy",
         description: "Podklady pro investiční a projektovou přípravu."
       }
     ]
   },
-  "technicke-prilohy-pro-investory": {
-    slug: "technicke-prilohy-pro-investory",
+  "technicke-prilohy": {
+    slug: "sluzby/technicke-prilohy",
     title: "Technické přílohy pro investory",
     description:
       "Technické přílohy pro investory a projektanty: rozptyl, hluk, emise, doprava a návaznost na povolování a EIA.",
@@ -1175,12 +1175,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     relatedLinks: [
       {
         title: "EIA a oznámení záměru",
-        href: "/eia-oznameni-zameru",
+        href: "/sluzby/eia-oznameni-zameru",
         description: "Proces EIA a oznámení záměru."
       },
       {
         title: "Imisní a hlukové dopady záměrů",
-        href: "/imisni-a-hlukove-dopady-zameru",
+        href: "/sluzby/imisni-dopady",
         description: "Propojené posouzení dopadů záměru."
       }
     ]

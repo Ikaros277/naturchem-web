@@ -1,4 +1,4 @@
-export type CaseStudy = {
+﻿export type CaseStudy = {
   title: string;
   narrative: string;
   output: string;
@@ -17,7 +17,7 @@ export const caseStudyCategories: CaseStudyCategory[] = [
     slug: "mereni-emisi",
     title: "Měření emisí",
     short: "Stacionární zdroje, kotelny, technologie.",
-    serviceHref: "/mereni-emisi",
+    serviceHref: "/sluzby/mereni-emisi",
     cases: [
       {
         title: "Měření emisí ve sklářském provozu",
@@ -43,7 +43,7 @@ export const caseStudyCategories: CaseStudyCategory[] = [
     slug: "hygienicka-mereni",
     title: "Hygienická měření",
     short: "Pracovní prostředí, kategorizace prací.",
-    serviceHref: "/pracovni-prostredi",
+    serviceHref: "/sluzby/pracovni-prostredi",
     cases: [
       {
         title: "Pracovní prostředí ve svařovně",
@@ -69,7 +69,7 @@ export const caseStudyCategories: CaseStudyCategory[] = [
     slug: "rozptylove-studie",
     title: "Rozptylové studie",
     short: "Imise, varianty provozu.",
-    serviceHref: "/rozptylove-studie",
+    serviceHref: "/sluzby/rozptylove-studie",
     cases: [
       {
         title: "Rozptylová studie pro odpadové hospodářství",
@@ -95,7 +95,7 @@ export const caseStudyCategories: CaseStudyCategory[] = [
     slug: "hlukove-studie",
     title: "Hlukové studie",
     short: "Terén, hlukové studie, doprava.",
-    serviceHref: "/hlukove-studie",
+    serviceHref: "/sluzby/hlukove-studie",
     cases: [
       {
         title: "Hluková studie recyklačního areálu",
@@ -121,7 +121,7 @@ export const caseStudyCategories: CaseStudyCategory[] = [
     slug: "odborne-posudky",
     title: "Odborné posudky",
     short: "Vyjádření pro úřady.",
-    serviceHref: "/odborne-posudky",
+    serviceHref: "/sluzby/odborne-posudky",
     cases: [
       {
         title: "Posudek ke změně technologie",
@@ -147,7 +147,7 @@ export const caseStudyCategories: CaseStudyCategory[] = [
     slug: "eia",
     title: "EIA",
     short: "Zjišťovací řízení, koordinace studií.",
-    serviceHref: "/eia-oznameni-zameru",
+    serviceHref: "/sluzby/eia-oznameni-zameru",
     cases: [
       {
         title: "EIA u nového průmyslového záměru",
@@ -173,7 +173,7 @@ export const caseStudyCategories: CaseStudyCategory[] = [
     slug: "skoleni-chemicke-legislativy",
     title: "Školení chemické legislativy",
     short: "Chemické látky, bezpečnostní listy, provozní pravidla.",
-    serviceHref: "/skoleni-chemicke-legislativy",
+    serviceHref: "/sluzby/skoleni-chemicke-legislativy",
     cases: [
       {
         title: "Školení zaměstnanců ve výrobním provozu",
@@ -199,7 +199,7 @@ export const caseStudyCategories: CaseStudyCategory[] = [
     slug: "dalsi",
     title: "Další zakázky",
     short: "IPPC, provozní řády, ISPOP.",
-    serviceHref: "/ippc-integrovana-povoleni",
+    serviceHref: "/sluzby/ippc-integrovana-povoleni",
     cases: [
       {
         title: "Aktualizace provozního řádu",

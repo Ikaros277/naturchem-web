@@ -1,4 +1,4 @@
-import { contactUrl } from "@/lib/contact-url";
+﻿import { contactUrl } from "@/lib/contact-url";
 
 export type TypicalScenario = {
   title: string;
@@ -16,7 +16,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji změřit emise z lakovny",
     narrative:
       "Měříme VOC/TOC, TZL a související parametry z výduchů a filtrace, ověřujeme reprezentativní provozní režim a předáváme protokol pro provoz i orgány ochrany ovzduší.",
-    learnMoreHref: "/mereni-emisi",
+    learnMoreHref: "/sluzby/mereni-emisi",
     ctaLabel: "Poptat měření",
     ctaHref: contactUrl("Měření emisí")
   },
@@ -24,7 +24,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji měření kotelny nebo spalovacího zdroje",
     narrative:
       "Periodická i provozní měření kotelen, hořáků, kogenerací a dalších zdrojů s protokolem pro povolení provozu, úřad nebo ISPOP.",
-    learnMoreHref: "/mereni-emisi",
+    learnMoreHref: "/sluzby/mereni-emisi",
     ctaLabel: "Poptat měření",
     ctaHref: contactUrl("Měření emisí")
   },
@@ -32,7 +32,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji rozptylovou studii pro nový nebo měněný zdroj",
     narrative:
       "Modelování imisních příspěvků pro povolování, změnu kapacity, EIA nebo jednání s krajským úřadem.",
-    learnMoreHref: "/rozptylove-studie",
+    learnMoreHref: "/sluzby/rozptylove-studie",
     ctaLabel: "Poptat studii / posudek",
     ctaHref: contactUrl("Rozptylové studie")
   },
@@ -40,7 +40,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji hlukovou studii pro provoz, stavbu nebo technologii",
     narrative:
       "Výpočet a vyhodnocení hluku pro areály, VZT, tepelná čerpadla, průmyslové zdroje nebo stavební řízení.",
-    learnMoreHref: "/hlukove-studie",
+    learnMoreHref: "/sluzby/hlukove-studie",
     ctaLabel: "Poptat studii / posudek",
     ctaHref: contactUrl("Hlukové studie")
   },
@@ -48,7 +48,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji podklady pro KHS",
     narrative:
       "Měření pracovního prostředí — prašnost, chemické látky, hluk, mikroklima — pro kategorizaci prací, dokumentaci BOZP nebo výzvu hygieny.",
-    learnMoreHref: "/pracovni-prostredi",
+    learnMoreHref: "/sluzby/pracovni-prostredi",
     ctaLabel: "Poptat měření",
     ctaHref: contactUrl("Měření pracovního prostředí")
   },
@@ -56,7 +56,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji podklady pro krajský úřad nebo ČIŽP",
     narrative:
       "Protokoly z měření emisí, studie, odborné posudky a provozní dokumentace sladíme s výzvou nebo integrovaným povolením.",
-    learnMoreHref: "/mereni-emisi",
+    learnMoreHref: "/sluzby/mereni-emisi",
     ctaLabel: "Poslat podklady k posouzení",
     ctaHref: contactUrl("Nejsem si jistý")
   },
@@ -64,7 +64,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji oznámení EIA",
     narrative:
       "Oznámení záměru, odborné přílohy a vstupy pro zjišťovací řízení držíme pohromadě s měřením, studiemi a projektovou dokumentací.",
-    learnMoreHref: "/eia-oznameni-zameru",
+    learnMoreHref: "/sluzby/eia-oznameni-zameru",
     ctaLabel: "Poptat studii / posudek",
     ctaHref: contactUrl("EIA a oznámení záměru")
   },
@@ -72,7 +72,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji provozní řád nebo odborný posudek",
     narrative:
       "Zpracování podle zákona o ochraně ovzduší, návaznost na měření a provoz, výstupy pro správní řízení a změny technologie.",
-    learnMoreHref: "/provozni-rady",
+    learnMoreHref: "/sluzby/provozni-rady",
     ctaLabel: "Poptat studii / posudek",
     ctaHref: contactUrl("Provozní řády")
   },
@@ -80,7 +80,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji vyřešit ISPOP",
     narrative:
       "Souhrnná provozní evidence, kontrola údajů vůči měření a povolení, příprava podkladů pro hlášení.",
-    learnMoreHref: "/ispop-souhrnna-provozni-evidence",
+    learnMoreHref: "/sluzby/ispop",
     ctaLabel: "Poptat službu",
     ctaHref: contactUrl("ISPOP")
   },
@@ -88,7 +88,7 @@ export const typicalScenarios: TypicalScenario[] = [
     title: "Potřebuji proškolit zaměstnance k chemickým látkám",
     narrative:
       "Praktické školení chemické legislativy pro provoz, sklad, výrobu nebo laboratoř se zaměřením na bezpečnostní listy, označování, skladování a provozní pravidla.",
-    learnMoreHref: "/skoleni-chemicke-legislativy",
+    learnMoreHref: "/sluzby/skoleni-chemicke-legislativy",
     ctaLabel: "Poptat školení",
     ctaHref: contactUrl("Školení chemického zákona / chemické legislativy")
   },

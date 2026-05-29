@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SectorPage } from "@/components/SectorPage";
 import { siteUrl } from "@/lib/site";
 
@@ -48,9 +48,9 @@ export default function Page() {
         "podcenění technického stavu odsávání a filtrace"
       ]}
       relatedServices={[
-        { title: "Měření emisí", href: "/mereni-emisi" },
-        { title: "Měření pracovního prostředí", href: "/pracovni-prostredi" },
-        { title: "Rozptylové studie", href: "/rozptylove-studie" }
+        { title: "Měření emisí", href: "/sluzby/mereni-emisi" },
+        { title: "Měření pracovního prostředí", href: "/sluzby/pracovni-prostredi" },
+        { title: "Rozptylové studie", href: "/sluzby/rozptylove-studie" }
       ]}
       faq={[
         {

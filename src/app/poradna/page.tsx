@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { IndexCard } from "@/components/IndexCard";
@@ -125,7 +125,7 @@ export default async function Page() {
               <li key={topic}>{topic}</li>
             ))}
           </ul>
-          <Link href="/skoleni-chemicke-legislativy" className="button secondary">
+          <Link href="/sluzby/skoleni-chemicke-legislativy" className="button secondary">
             Školení chemické legislativy
           </Link>
         </article>

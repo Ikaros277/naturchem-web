@@ -7,14 +7,11 @@ import { JsonLd } from "@/components/Schema";
 import { contactSubmitCta } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
-import { defaultServiceProcess } from "@/lib/service-defaults";
 import {
   serviceCtaLead,
   serviceDocsIntro,
-  serviceForWhomHeading,
   serviceMistakesHeading,
-  serviceScopeHeading,
-  serviceSectorHeading
+  serviceScopeHeading
 } from "@/lib/service-copy";
 import { company, services, siteUrl } from "@/lib/site";
 
@@ -40,13 +37,13 @@ type Props = {
 };
 
 export function ServicePage(props: Props) {
+  const bareSlug = props.slug.split("/").pop() ?? props.slug;
   const serviceMeta = services.find((s) => s.href === `/${props.slug}`);
   const relatedServices = services.filter((s) => s.href !== `/${props.slug}`).slice(0, 3);
   const contactServiceValue = props.contactService || serviceMeta?.contactService || props.title;
   const contactCta = serviceMeta?.contactCta ?? contactSubmitCta;
   const quickContactHref = contactUrl(contactServiceValue);
-  const process = props.process ?? defaultServiceProcess;
-  const sectorCrossLinks = relatedSectorsForService(props.slug);
+  const sectorCrossLinks = relatedSectorsForService(bareSlug);
   const relatedLinks = props.relatedLinks ?? [];
   const quickNeeds = props.whenNeeded.slice(0, 3);
   const keyScope = props.scope.slice(0, 4);
@@ -54,18 +51,17 @@ export function ServicePage(props: Props) {
   const keyDocs = props.docs.slice(0, 3);
   const practicalExamples = props.practicalSituations?.slice(0, 3) ?? [];
   const detailGroups = [
-    props.forWhom && props.forWhom.length > 0
-      ? { title: serviceForWhomHeading, items: props.forWhom }
-      : null,
-    props.authorities && props.authorities.length > 0
-      ? { title: "Typické úřady a řízení", items: props.authorities }
-      : null,
     practicalExamples.length > 0 ? { title: "Příklady zakázek z praxe", items: practicalExamples } : null,
-    { title: "Jak probíhá zakázka", items: process },
     props.commonMistakes && props.commonMistakes.length > 0
       ? { title: serviceMistakesHeading, items: props.commonMistakes }
       : null
   ].filter((group): group is { title: string; items: string[] } => group !== null);
+
+  const mergedRelated = [
+    ...relatedLinks.map((l) => ({ href: l.href, title: l.title, description: l.description, cta: "Zobrazit téma" })),
+    ...sectorCrossLinks.map((s) => ({ href: s.href, title: s.title, description: undefined as string | undefined, cta: "Zobrazit provoz" })),
+    ...relatedServices.map((s) => ({ href: s.href, title: s.title, description: s.short, cta: "Zobrazit službu" }))
+  ].slice(0, 3);
 
   const serviceData = {
     "@context": "https://schema.org",
@@ -202,62 +198,25 @@ export function ServicePage(props: Props) {
           <ServiceFaqTeaser categoryId={props.faqCategoryId} />
         ) : null}
 
-        {relatedLinks.length > 0 ? (
+        {mergedRelated.length > 0 ? (
           <section className="content-block">
-            <h2>Navazující témata a dokumentace</h2>
+            <h2>Mohlo by Vás zajímat</h2>
             <div className="grid grid-3 index-card-grid">
-              {relatedLinks.map((link) => (
+              {mergedRelated.map((item) => (
                 <IndexCard
-                  key={link.href}
-                  href={link.href}
-                  title={link.title}
-                  cta="Zobrazit téma"
+                  key={item.href}
+                  href={item.href}
+                  title={item.title}
+                  cta={item.cta}
                   className="service-related-card"
                 >
-                  <ServiceIcon href={link.href} />
-                  <p className="muted">{link.description}</p>
+                  <ServiceIcon href={item.href} />
+                  {item.description ? <p className="muted">{item.description}</p> : null}
                 </IndexCard>
               ))}
             </div>
           </section>
         ) : null}
-
-        {sectorCrossLinks.length > 0 ? (
-          <section className="content-block">
-            <h2>{serviceSectorHeading}</h2>
-            <div className="grid grid-2 index-card-grid">
-              {sectorCrossLinks.map((s) => (
-                <IndexCard
-                  key={s.href}
-                  href={s.href}
-                  title={s.title}
-                  cta="Zobrazit provoz"
-                  className="service-related-card"
-                >
-                  <ServiceIcon href={s.href} />
-                </IndexCard>
-              ))}
-            </div>
-          </section>
-        ) : null}
-
-        <section className="content-block">
-          <h2>Související služby</h2>
-          <div className="grid grid-3 index-card-grid">
-            {relatedServices.map((service) => (
-              <IndexCard
-                key={service.href}
-                href={service.href}
-                title={service.title}
-                cta="Zobrazit službu"
-                className="service-related-card"
-              >
-                <ServiceIcon href={service.href} />
-                <p className="muted">{service.short}</p>
-              </IndexCard>
-            ))}
-          </div>
-        </section>
 
         <section className="cta-strip card content-block">
           <h2>Poptávka</h2>

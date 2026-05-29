@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 import { siteUrl } from "@/lib/site";
 
@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "Měření hluku a akustika",
   description:
     "Měření hluku v terénu, hlukové studie, hluk z dopravy a technologií. Kolaudace, EIA, stavební řízení.",
-  alternates: { canonical: `${siteUrl}/mereni-hluku-hlukove-studie/` }
+  alternates: { canonical: `${siteUrl}/sluzby/mereni-hluku/` }
 };
 
 export default function Page() {
   return (
     <ServicePage
-      slug="mereni-hluku-hlukove-studie"
+      slug="sluzby/mereni-hluku"
       faqCategoryId="hluk"
       title="Měření hluku a akustika"
       intro="Měření hluku a hlukové studie slouží k posouzení hlukové zátěže provozů, technologií, dopravy a stavebních záměrů. Výstupy se používají při kolaudaci, stavebním řízení, EIA, požadavku KHS nebo při řešení stížností na hluk. Rozsah měření nebo výpočtu stanovujeme podle zdrojů hluku, provozního režimu a chráněných prostor v okolí."
@@ -68,12 +68,12 @@ export default function Page() {
         },
         {
           title: "Rozptylové studie",
-          href: "/rozptylove-studie",
+          href: "/sluzby/rozptylove-studie",
           description: "Navazující posouzení ovzduší u průmyslových a dopravních záměrů."
         },
         {
           title: "EIA a oznámení záměru",
-          href: "/eia-oznameni-zameru",
+          href: "/sluzby/eia-oznameni-zameru",
           description: "Koordinace hlukové studie s dalšími podklady pro povolovací proces."
         }
       ]}

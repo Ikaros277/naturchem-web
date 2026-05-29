@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 import { siteUrl } from "@/lib/site";
 
@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "Měření emisí ze stacionárních zdrojů",
   description:
     "Měření emisí z kotelen, lakovny, spaloven a technologických zdrojů. Protokoly pro provozovatele, KHS a krajské úřady.",
-  alternates: { canonical: `${siteUrl}/mereni-emisi/` }
+  alternates: { canonical: `${siteUrl}/sluzby/mereni-emisi/` }
 };
 
 export default function Page() {
   return (
     <ServicePage
-      slug="mereni-emisi"
+      slug="sluzby/mereni-emisi"
       faqCategoryId="emise"
       title="Měření emisí ze stacionárních zdrojů"
       intro="Akreditované měření emisí z komínů, výduchů a technologií. Ověřujeme vhodnost měřicího místa, reprezentativnost provozního režimu a návaznost protokolu na povolení provozu, požadavky ČIŽP, krajského úřadu a evidenci v ISPOP."
@@ -67,17 +67,17 @@ export default function Page() {
       relatedLinks={[
         {
           title: "ISPOP a provozní evidence",
-          href: "/ispop-souhrnna-provozni-evidence",
+          href: "/sluzby/ispop",
           description: "Souhrnná provozní evidence, emisní data a návaznost na roční hlášení."
         },
         {
           title: "Odborné posudky a provozní řády",
-          href: "/odborne-posudky",
+          href: "/sluzby/odborne-posudky",
           description: "Technické vyhodnocení zdroje, povolení provozu a aktualizace dokumentace."
         },
         {
           title: "Rozptylové studie",
-          href: "/rozptylove-studie",
+          href: "/sluzby/rozptylove-studie",
           description: "Navazující posouzení imisního příspěvku zdroje v okolí záměru."
         }
       ]}

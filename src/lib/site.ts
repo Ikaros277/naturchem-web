@@ -1,4 +1,4 @@
-export const siteUrl = "https://www.naturchem.cz";
+﻿export const siteUrl = "https://www.naturchem.cz";
 
 export const company = {
   name: "NATURCHEM, s.r.o.",
@@ -41,7 +41,7 @@ export const company = {
 
 export const services = [
   {
-    href: "/mereni-emisi",
+    href: "/sluzby/mereni-emisi",
     title: "Měření emisí",
     short: "Kotelny, lakovny, technologie, výduchy, VOC/TOC, TZL, NOx, CO.",
     cta: "Zjistit více o měření emisí",
@@ -49,7 +49,7 @@ export const services = [
     contactService: "Měření emisí"
   },
   {
-    href: "/pracovni-prostredi",
+    href: "/sluzby/pracovni-prostredi",
     title: "Měření pracovního prostředí",
     short: "Prašnost, chemické látky, hluk, vibrace, mikroklima, kategorizace prací.",
     cta: "Zjistit více o měření pracovního prostředí",
@@ -57,7 +57,7 @@ export const services = [
     contactService: "Měření pracovního prostředí"
   },
   {
-    href: "/mereni-hluku-hlukove-studie",
+    href: "/sluzby/mereni-hluku",
     title: "Měření hluku a akustika",
     short: "Terénní měření hluku, hluk z dopravy a technologií, hlukové studie.",
     cta: "Zjistit více o hluku a akustice",
@@ -65,7 +65,7 @@ export const services = [
     contactService: "Měření hluku a akustika"
   },
   {
-    href: "/rozptylove-studie",
+    href: "/sluzby/rozptylove-studie",
     title: "Rozptylové studie",
     short: "Modelování imisí, varianty provozu, dopady zdrojů na okolí záměru.",
     cta: "Zjistit více o rozptylových studiích",
@@ -73,7 +73,7 @@ export const services = [
     contactService: "Rozptylové studie"
   },
   {
-    href: "/hlukove-studie",
+    href: "/sluzby/hlukove-studie",
     title: "Hlukové studie",
     short: "Výpočtové posouzení hluku technologií, areálů, dopravy a stavebních záměrů.",
     cta: "Zjistit více o hlukových studiích",
@@ -81,7 +81,7 @@ export const services = [
     contactService: "Hlukové studie"
   },
   {
-    href: "/odborne-posudky",
+    href: "/sluzby/odborne-posudky",
     title: "Odborné posudky",
     short: "Posudky podle zákona o ochraně ovzduší, změny technologií a povolení provozu.",
     cta: "Zjistit více o odborných posudcích",
@@ -89,7 +89,7 @@ export const services = [
     contactService: "Odborné posudky"
   },
   {
-    href: "/provozni-rady",
+    href: "/sluzby/provozni-rady",
     title: "Provozní řády",
     short: "Příprava a aktualizace provozních řádů zdrojů znečišťování ovzduší.",
     cta: "Zjistit více o provozních řádech",
@@ -97,7 +97,7 @@ export const services = [
     contactService: "Provozní řády"
   },
   {
-    href: "/ippc-integrovana-povoleni",
+    href: "/sluzby/ippc-integrovana-povoleni",
     title: "IPPC",
     short: "Podklady pro integrovaná povolení, změny IPPC a návaznou dokumentaci.",
     cta: "Zjistit více o IPPC",
@@ -105,7 +105,7 @@ export const services = [
     contactService: "IPPC a integrovaná povolení"
   },
   {
-    href: "/eia-oznameni-zameru",
+    href: "/sluzby/eia-oznameni-zameru",
     title: "EIA a oznámení záměru",
     short: "Oznámení záměru, odborné přílohy a koordinace podkladů pro EIA.",
     cta: "Zjistit více o EIA",
@@ -113,7 +113,7 @@ export const services = [
     contactService: "EIA a oznámení záměru"
   },
   {
-    href: "/ispop-souhrnna-provozni-evidence",
+    href: "/sluzby/ispop",
     title: "ISPOP",
     short: "Souhrnná provozní evidence, roční hlášení a návaznost na měření emisí.",
     cta: "Zjistit více o ISPOP",
@@ -121,7 +121,7 @@ export const services = [
     contactService: "ISPOP"
   },
   {
-    href: "/ghg-overovani-emisi-sklenikovych-plynu",
+    href: "/sluzby/ghg-overovani",
     title: "GHG",
     short: "Ověřování emisí skleníkových plynů, emisní údaje a reporting.",
     cta: "Zjistit více o GHG",
@@ -129,7 +129,7 @@ export const services = [
     contactService: "GHG"
   },
   {
-    href: "/skoleni-chemicke-legislativy",
+    href: "/sluzby/skoleni-chemicke-legislativy",
     title: "Školení chemické legislativy",
     short: "Chemický zákon, bezpečnostní listy, označování, skladování a provozní pravidla.",
     cta: "Zjistit více o školení chemické legislativy",
@@ -137,7 +137,7 @@ export const services = [
     contactService: "Školení chemického zákona / chemické legislativy"
   },
   {
-    href: "/bezpecnostni-listy",
+    href: "/sluzby/bezpecnostni-listy",
     title: "Bezpečnostní listy",
     short: "Kontrola bezpečnostních listů, označování, štítky a návaznost na BOZP.",
     cta: "Zjistit více o bezpečnostních listech",
@@ -145,7 +145,7 @@ export const services = [
     contactService: "Bezpečnostní listy"
   },
   {
-    href: "/chemicke-latky-v-provozu",
+    href: "/sluzby/chemicke-latky",
     title: "Chemické látky v provozu",
     short: "Pravidla pro používání, skladování a značení chemických látek v provozu.",
     cta: "Zjistit více o chemických látkách v provozu",

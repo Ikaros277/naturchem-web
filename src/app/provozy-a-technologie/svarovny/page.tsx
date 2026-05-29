@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SectorPage } from "@/components/SectorPage";
 import { siteUrl } from "@/lib/site";
 
@@ -48,9 +48,9 @@ export default function Page() {
         "podcenění účinnosti lokálního odsávání"
       ]}
       relatedServices={[
-        { title: "Měření pracovního prostředí", href: "/pracovni-prostredi" },
-        { title: "Měření emisí", href: "/mereni-emisi" },
-        { title: "Měření hluku a akustika", href: "/mereni-hluku-hlukove-studie" }
+        { title: "Měření pracovního prostředí", href: "/sluzby/pracovni-prostredi" },
+        { title: "Měření emisí", href: "/sluzby/mereni-emisi" },
+        { title: "Měření hluku a akustika", href: "/sluzby/mereni-hluku" }
       ]}
       faq={[
         {

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 import { siteUrl } from "@/lib/site";
 
@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "Rozptylové studie",
   description:
     "Rozptylové studie a modelování imisního příspěvku zdrojů. Nové technologie, změny provozu, EIA, krajské úřady.",
-  alternates: { canonical: `${siteUrl}/rozptylove-studie/` }
+  alternates: { canonical: `${siteUrl}/sluzby/rozptylove-studie/` }
 };
 
 export default function Page() {
   return (
     <ServicePage
-      slug="rozptylove-studie"
+      slug="sluzby/rozptylove-studie"
       faqCategoryId="studie"
       title="Rozptylové studie"
       intro="Modelujeme imisní příspěvky zdrojů, výduchů a dopravy pro záměry, změny provozu a EIA. Studie stavíme na konkrétních emisních parametrech, variantách provozu a požadavcích povolovacího řízení. Součástí zpracování může být také návrh potřebných vstupních podkladů, koordinace návazných studií a příprava technické argumentace pro správní orgány."
@@ -64,12 +64,12 @@ export default function Page() {
       relatedLinks={[
         {
           title: "Měření emisí",
-          href: "/mereni-emisi",
+          href: "/sluzby/mereni-emisi",
           description: "Reálná emisní data pro zdroj, výduch nebo technologii."
         },
         {
           title: "EIA a oznámení záměru",
-          href: "/eia-oznameni-zameru",
+          href: "/sluzby/eia-oznameni-zameru",
           description: "Návaznost rozptylové studie na zjišťovací řízení a povolování."
         },
         {

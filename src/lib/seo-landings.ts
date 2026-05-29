@@ -1,4 +1,4 @@
-export type SeoLanding = {
+﻿export type SeoLanding = {
   slug: string;
   title: string;
   metaDescription: string;
@@ -27,7 +27,7 @@ export const seoLandings: SeoLanding[] = [
         ]
       }
     ],
-    serviceHref: "/mereni-emisi",
+    serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     oboryHref: "/provozy-a-technologie/kotelny"
   },
@@ -47,7 +47,7 @@ export const seoLandings: SeoLanding[] = [
         ]
       }
     ],
-    serviceHref: "/mereni-emisi",
+    serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     oboryHref: "/provozy-a-technologie/lakovny"
   },
@@ -67,7 +67,7 @@ export const seoLandings: SeoLanding[] = [
         ]
       }
     ],
-    serviceHref: "/mereni-emisi",
+    serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     oboryHref: "/provozy-a-technologie/bioplyn-biometan"
   },
@@ -87,7 +87,7 @@ export const seoLandings: SeoLanding[] = [
         ]
       }
     ],
-    serviceHref: "/mereni-emisi",
+    serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     oboryHref: "/provozy-a-technologie/drevozpracujici"
   },
@@ -107,7 +107,7 @@ export const seoLandings: SeoLanding[] = [
         ]
       }
     ],
-    serviceHref: "/mereni-emisi",
+    serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     oboryHref: "/provozy-a-technologie/zemedelske-provozy"
   },
@@ -127,7 +127,7 @@ export const seoLandings: SeoLanding[] = [
         ]
       }
     ],
-    serviceHref: "/mereni-hluku-hlukove-studie",
+    serviceHref: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
     oboryHref: "/provozy-a-technologie/tepelna-cerpadla-vzt"
   },
@@ -147,7 +147,7 @@ export const seoLandings: SeoLanding[] = [
         ]
       }
     ],
-    serviceHref: "/pracovni-prostredi",
+    serviceHref: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí"
   },
   

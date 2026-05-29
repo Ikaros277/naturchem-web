@@ -1,4 +1,4 @@
-import { contactUrl } from "@/lib/contact-url";
+﻿import { contactUrl } from "@/lib/contact-url";
 
 export type FaqLink = {
   label: string;
@@ -72,9 +72,9 @@ export const faqCategories: FaqCategory[] = [
           "Pošlete rozhodnutí úřadu, výzvu, provozní řád, projektovou dokumentaci, popis technologie nebo stručný popis problému. Z podkladů určíme, zda jde o měření, rozptylovou nebo hlukovou studii, odborný posudek, provozní řád, EIA podklad, ISPOP nebo jiný typ dokumentace."
         ],
         links: [
-          { label: "Měření emisí", href: "/mereni-emisi" },
-          { label: "Rozptylové studie", href: "/rozptylove-studie" },
-          { label: "EIA a oznámení záměru", href: "/eia-oznameni-zameru" },
+          { label: "Měření emisí", href: "/sluzby/mereni-emisi" },
+          { label: "Rozptylové studie", href: "/sluzby/rozptylove-studie" },
+          { label: "EIA a oznámení záměru", href: "/sluzby/eia-oznameni-zameru" },
           { label: "Kontakt", href: "/kontakt" }
         ]
       },
@@ -118,7 +118,7 @@ export const faqCategories: FaqCategory[] = [
             "Vyhláška č. 415/2012 Sb. stanovuje intervaly jednorázového měření emisí, včetně měření po prvním uvedení zdroje do provozu, po změně paliva, suroviny nebo po zásahu do konstrukce či vybavení zdroje, který by mohl vést ke změně emisí.",
           refs: [{ label: "Vyhláška č. 415/2012 Sb.", href: L.v415 }]
         },
-        links: [{ label: "Měření emisí ze stacionárních zdrojů", href: "/mereni-emisi" }]
+        links: [{ label: "Měření emisí ze stacionárních zdrojů", href: "/sluzby/mereni-emisi" }]
       },
       {
         q: "Kdo může provádět jednorázové měření emisí?",
@@ -196,7 +196,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Měření pracovního prostředí se obvykle řeší při kategorizaci prací, změně technologie, zavedení nového pracoviště, požadavku KHS nebo při ověření expozice zaměstnanců rizikovým faktorům."
         ],
-        links: [{ label: "Měření pracovního prostředí", href: "/pracovni-prostredi" }]
+        links: [{ label: "Měření pracovního prostředí", href: "/sluzby/pracovni-prostredi" }]
       },
       {
         q: "Jaké faktory pracovního prostředí měříte?",
@@ -257,7 +257,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Měření hluku je vhodné při kolaudaci, stížnostech, změně technologie, provozu nového zařízení, kontrole hluku na pracovišti, ověření účinnosti opatření nebo na základě požadavku KHS či stavebního úřadu."
         ],
-        links: [{ label: "Měření hluku a akustika", href: "/mereni-hluku-hlukove-studie" }]
+        links: [{ label: "Měření hluku a akustika", href: "/sluzby/mereni-hluku" }]
       },
       {
         q: "Jaký je rozdíl mezi měřením hluku a hlukovou studií?",
@@ -265,8 +265,8 @@ export const faqCategories: FaqCategory[] = [
           "Měření hluku ověřuje skutečný stav v konkrétním místě a čase. Hluková studie hodnotí očekávaný nebo modelovaný stav — například novou technologii, průmyslový areál, dopravu, VZT, tepelné čerpadlo nebo změnu provozu."
         ],
         links: [
-          { label: "Hlukové studie", href: "/hlukove-studie" },
-          { label: "Měření hluku a akustika", href: "/mereni-hluku-hlukove-studie" }
+          { label: "Hlukové studie", href: "/sluzby/hlukove-studie" },
+          { label: "Měření hluku a akustika", href: "/sluzby/mereni-hluku" }
         ]
       },
       {
@@ -296,8 +296,8 @@ export const faqCategories: FaqCategory[] = [
           "Ano. Právě před instalací technologie je vhodné zpracovat hlukovou studii nebo akustické posouzení, aby bylo možné včas upravit umístění zdroje, výkon, provozní režim nebo navrhnout protihluková opatření."
         ],
         links: [
-          { label: "Hlukové studie", href: "/hlukove-studie" },
-          { label: "Měření hluku a akustika", href: "/mereni-hluku-hlukove-studie" }
+          { label: "Hlukové studie", href: "/sluzby/hlukove-studie" },
+          { label: "Měření hluku a akustika", href: "/sluzby/mereni-hluku" }
         ]
       },
       {
@@ -323,7 +323,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Rozptylová studie se zpracovává zejména pro nový nebo měněný zdroj emisí, změnu technologie, navýšení kapacity, EIA, povolovací řízení nebo požadavek krajského úřadu."
         ],
-        links: [{ label: "Rozptylové studie", href: "/rozptylove-studie" }]
+        links: [{ label: "Rozptylové studie", href: "/sluzby/rozptylove-studie" }]
       },
       {
         q: "Kdo může zpracovat rozptylovou studii?",
@@ -353,7 +353,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Hluková studie je vhodná před realizací nového zdroje hluku, při změně technologie, u průmyslových areálů, VZT, tepelných čerpadel, dopravy, skladových a výrobních provozů nebo jako podklad pro stavební řízení, KHS či EIA."
         ],
-        links: [{ label: "Hlukové studie", href: "/hlukove-studie" }]
+        links: [{ label: "Hlukové studie", href: "/sluzby/hlukove-studie" }]
       },
       {
         q: "Jaké podklady jsou potřeba pro hlukovou studii?",
@@ -389,7 +389,7 @@ export const faqCategories: FaqCategory[] = [
             "Zákon č. 100/2001 Sb. uvádí, že účelem posuzování vlivů na životní prostředí je získat objektivní odborný podklad pro vydání rozhodnutí nebo opatření podle zvláštních právních předpisů.",
           refs: [{ label: "Zákon č. 100/2001 Sb.", href: L.z100 }]
         },
-        links: [{ label: "EIA a oznámení záměru", href: "/eia-oznameni-zameru" }]
+        links: [{ label: "EIA a oznámení záměru", href: "/sluzby/eia-oznameni-zameru" }]
       },
       {
         q: "Jaké vlivy se v EIA posuzují?",
@@ -411,7 +411,7 @@ export const faqCategories: FaqCategory[] = [
           summary: "Zpracování odborného posudku je podle § 32 zákona č. 201/2012 Sb. autorizovanou činností.",
           refs: [{ label: "§ 32 zákona č. 201/2012 Sb.", href: L.p32 }]
         },
-        links: [{ label: "Odborné posudky", href: "/odborne-posudky" }]
+        links: [{ label: "Odborné posudky", href: "/sluzby/odborne-posudky" }]
       },
       {
         q: "Co musí obsahovat provozní řád zdroje?",
@@ -435,7 +435,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Ano. Podle rozsahu zakázky připravujeme nebo doplňujeme podklady pro integrovaná povolení a jejich změny, zejména v návaznosti na ovzduší, hluk, odpady, provozní režim a technické parametry zdrojů."
         ],
-        links: [{ label: "IPPC a integrovaná povolení", href: "/ippc-integrovana-povoleni" }]
+        links: [{ label: "IPPC a integrovaná povolení", href: "/sluzby/ippc-integrovana-povoleni" }]
       }
     ]
   },
@@ -453,7 +453,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Ano. Pomáháme s přípravou podkladů, kontrolou návaznosti na měření emisí, povolení provozu, spotřeby paliv nebo surovin, provozní hodiny a další údaje potřebné pro hlášení."
         ],
-        links: [{ label: "ISPOP a provozní evidence", href: "/ispop-souhrnna-provozni-evidence" }]
+        links: [{ label: "ISPOP a provozní evidence", href: "/sluzby/ispop" }]
       },
       {
         q: "Kdo podává souhrnnou provozní evidenci?",
@@ -490,7 +490,7 @@ export const faqCategories: FaqCategory[] = [
             "§ 32 zákona č. 201/2012 Sb. zahrnuje mezi autorizované činnosti také ověřování zprávy o emisích.",
           refs: [{ label: "§ 32 zákona č. 201/2012 Sb.", href: L.p32 }]
         },
-        links: [{ label: "Ověřování emisí skleníkových plynů", href: "/ghg-overovani-emisi-sklenikovych-plynu" }]
+        links: [{ label: "Ověřování emisí skleníkových plynů", href: "/sluzby/ghg-overovani" }]
       }
     ]
   },

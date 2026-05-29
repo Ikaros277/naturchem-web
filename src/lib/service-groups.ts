@@ -1,4 +1,4 @@
-export type ServiceGroupItem = {
+﻿export type ServiceGroupItem = {
   title: string;
   href: string;
   text: string;
@@ -21,32 +21,32 @@ export const serviceGroups: ServiceGroup[] = [
     items: [
       {
         title: "Měření emisí ze stacionárních zdrojů",
-        href: "/mereni-emisi",
+        href: "/sluzby/mereni-emisi",
         text: "Kotelny, lakovny, kogenerační jednotky, technologické výduchy. NOx, CO, TOC/VOC, TZL."
       },
       {
         title: "Měření pracovního prostředí",
-        href: "/pracovni-prostredi",
+        href: "/sluzby/pracovni-prostredi",
         text: "Prašnost, chemické látky, hluk, mikroklima, osvětlení, vibrace. Kategorizace prací, KHS."
       },
       {
         title: "Měření hluku a akustika",
-        href: "/mereni-hluku-hlukove-studie",
+        href: "/sluzby/mereni-hluku",
         text: "Terénní měření hluku, hodnocení zátěže okolí, provozoven a technologií."
       },
       {
         title: "Měření vibrací",
-        href: "/mereni-vibraci",
+        href: "/sluzby/mereni-vibraci",
         text: "Vibrace přenášené na ruce i celé tělo. Kategorizace prací a BOZP."
       },
       {
         title: "Měření osvětlení",
-        href: "/mereni-osvetleni",
+        href: "/sluzby/mereni-osvetleni",
         text: "Osvětlení pracovišť pro KHS, kategorizaci prací a kolaudace."
       },
       {
         title: "Měření mikroklimatu",
-        href: "/mereni-mikroklimatu",
+        href: "/sluzby/mereni-mikroklimatu",
         text: "Teplota, vlhkost a proudění vzduchu na pracovištích."
       }
     ]
@@ -59,27 +59,27 @@ export const serviceGroups: ServiceGroup[] = [
     items: [
       {
         title: "Rozptylové studie",
-        href: "/rozptylove-studie",
+        href: "/sluzby/rozptylove-studie",
         text: "Imisní příspěvky zdrojů, varianty provozu, změny kapacity, podklady pro úřady."
       },
       {
         title: "Hlukové studie",
-        href: "/hlukove-studie",
+        href: "/sluzby/hlukove-studie",
         text: "Výpočtové posouzení hluku technologií, areálů, dopravy a stavebních záměrů."
       },
       {
         title: "Akustické posudky",
-        href: "/akusticke-posudky",
+        href: "/sluzby/akusticke-posudky",
         text: "Vyjádření k hluku technologií, strojoven a provozních zdrojů v objektech."
       },
       {
         title: "Modelové výpočty",
-        href: "/modelove-vypocty",
+        href: "/sluzby/modelove-vypocty",
         text: "Imisní a hlukové modelování pro záměry a varianty provozu."
       },
       {
         title: "Imisní a hlukové dopady záměrů",
-        href: "/imisni-a-hlukove-dopady-zameru",
+        href: "/sluzby/imisni-dopady",
         text: "Propojení studií ovzduší a hluku pro záměr nebo změnu provozu."
       }
     ]
@@ -92,22 +92,22 @@ export const serviceGroups: ServiceGroup[] = [
     items: [
       {
         title: "Odborné posudky",
-        href: "/odborne-posudky",
+        href: "/sluzby/odborne-posudky",
         text: "Vyjádření podle zákona o ochraně ovzduší, změny technologie, komunikace s úřady."
       },
       {
         title: "Provozní řády",
-        href: "/provozni-rady",
+        href: "/sluzby/provozni-rady",
         text: "Aktualizace a příprava provozních řádů zdrojů znečišťování ovzduší."
       },
       {
         title: "Povolení provozu zdroje",
-        href: "/povoleni-provozu-zdroje",
+        href: "/sluzby/povoleni-provozu",
         text: "Podklady pro vydání nebo změnu povolení provozu stacionárního zdroje."
       },
       {
         title: "IPPC a změny povolení",
-        href: "/ippc-integrovana-povoleni",
+        href: "/sluzby/ippc-integrovana-povoleni",
         text: "Integrovaná prevence a omezování znečišťování, souhrnné podklady pro provoz."
       }
     ]
@@ -120,17 +120,17 @@ export const serviceGroups: ServiceGroup[] = [
     items: [
       {
         title: "EIA a oznámení záměru",
-        href: "/eia-oznameni-zameru",
+        href: "/sluzby/eia-oznameni-zameru",
         text: "Příprava oznámení a technických příloh pro záměry s vlivy na životní prostředí."
       },
       {
         title: "Zjišťovací řízení EIA",
-        href: "/zjistovaci-rizeni-eia",
+        href: "/sluzby/zjistovaci-rizeni-eia",
         text: "Odborné podklady a koordinace vstupů pro fázi zjišťovacího řízení."
       },
       {
         title: "Technické přílohy pro investory",
-        href: "/technicke-prilohy-pro-investory",
+        href: "/sluzby/technicke-prilohy",
         text: "Rozptyl, hluk, doprava, emise a návaznost na skutečný provoz záměru."
       }
     ]
@@ -143,17 +143,17 @@ export const serviceGroups: ServiceGroup[] = [
     items: [
       {
         title: "ISPOP a souhrnná provozní evidence",
-        href: "/ispop-souhrnna-provozni-evidence",
+        href: "/sluzby/ispop",
         text: "Roční hlášení, souhrnná provozní evidence, návaznost na měření emisí."
       },
       {
         title: "GHG a skleníkové plyny",
-        href: "/ghg-overovani-emisi-sklenikovych-plynu",
+        href: "/sluzby/ghg-overovani",
         text: "Ověřování emisních údajů, podklady pro reporting skleníkových plynů."
       },
       {
         title: "Legislativní péče o provozovatele",
-        href: "/chemicke-latky-v-provozu",
+        href: "/sluzby/chemicke-latky",
         text: "Kontrola vypočtených a měřených hodnot, autorizované ověřování dle požadavků."
       }
     ]
@@ -166,17 +166,17 @@ export const serviceGroups: ServiceGroup[] = [
     items: [
       {
         title: "Školení chemického zákona a chemické legislativy",
-        href: "/skoleni-chemicke-legislativy",
+        href: "/sluzby/skoleni-chemicke-legislativy",
         text: "Praktické školení pro firmy nakládající s chemickými látkami a směsmi."
       },
       {
         title: "Školení práce s chemickými látkami a směsmi",
-        href: "/chemicke-latky-v-provozu",
+        href: "/sluzby/chemicke-latky",
         text: "Bezpečné používání, skladování, značení a provozní pravidla pro zaměstnance."
       },
       {
         title: "Bezpečnostní listy a označování",
-        href: "/bezpecnostni-listy",
+        href: "/sluzby/bezpecnostni-listy",
         text: "Orientace v bezpečnostních listech, interní nádoby, štítky a návaznost na BOZP."
       }
     ]

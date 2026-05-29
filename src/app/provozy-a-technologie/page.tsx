@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectorGroupsIndex } from "@/components/SectorGroupsIndex";
@@ -53,7 +53,7 @@ const sectorGroups = [
   {
     title: "Budovy, VZT a technologie",
     description: "VZT, chlazení, tepelná čerpadla, čisté prostory a technologie v objektech.",
-    hrefs: ["/provozy-a-technologie/tepelna-cerpadla-vzt", "/pracovni-prostredi"]
+    hrefs: ["/provozy-a-technologie/tepelna-cerpadla-vzt", "/sluzby/pracovni-prostredi"]
   },
   {
     title: "Stavební a investiční záměry",

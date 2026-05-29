@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SectorPage } from "@/components/SectorPage";
 import { siteUrl } from "@/lib/site";
 
@@ -48,9 +48,9 @@ export default function Page() {
         "podcenění přípravy měřicího místa"
       ]}
       relatedServices={[
-        { title: "Měření emisí", href: "/mereni-emisi" },
-        { title: "Odborné posudky", href: "/odborne-posudky" },
-        { title: "Rozptylové studie", href: "/rozptylove-studie" }
+        { title: "Měření emisí", href: "/sluzby/mereni-emisi" },
+        { title: "Odborné posudky", href: "/sluzby/odborne-posudky" },
+        { title: "Rozptylové studie", href: "/sluzby/rozptylove-studie" }
       ]}
       faq={[
         {

@@ -3,7 +3,7 @@ import { ServicePage } from "@/components/ServicePage";
 import { dedicatedServicePages } from "@/lib/dedicated-service-pages";
 import { siteUrl } from "@/lib/site";
 
-const service = dedicatedServicePages["ispop-souhrnna-provozni-evidence"];
+const service = dedicatedServicePages["ispop"];
 
 export const metadata: Metadata = {
   title: service.title,

@@ -3,7 +3,7 @@ import { ServicePage } from "@/components/ServicePage";
 import { dedicatedServicePages } from "@/lib/dedicated-service-pages";
 import { siteUrl } from "@/lib/site";
 
-const service = dedicatedServicePages["chemicke-latky-v-provozu"];
+const service = dedicatedServicePages["chemicke-latky"];
 
 export const metadata: Metadata = {
   title: service.title,

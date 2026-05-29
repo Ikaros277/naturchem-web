@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { ReactNode } from "react";
 import { accreditationDocuments } from "@/lib/accreditation-documents";
 import { globalCta, referenceNav } from "@/lib/navigation";
@@ -13,12 +13,12 @@ const footerDocumentLabels: Record<string, string> = {
 };
 
 const footerServices = [
-  { href: "/mereni-emisi", title: "Měření emisí" },
-  { href: "/pracovni-prostredi", title: "Měření pracovního prostředí" },
-  { href: "/mereni-hluku-hlukove-studie", title: "Měření hluku a akustika" },
-  { href: "/rozptylove-studie", title: "Rozptylové studie" },
-  { href: "/eia-posudky-poradenstvi", title: "EIA, posudky a IPPC" },
-  { href: "/skoleni-chemicke-legislativy", title: "Školení chemické legislativy" }
+  { href: "/sluzby/mereni-emisi", title: "Měření emisí" },
+  { href: "/sluzby/pracovni-prostredi", title: "Měření pracovního prostředí" },
+  { href: "/sluzby/mereni-hluku", title: "Měření hluku a akustika" },
+  { href: "/sluzby/rozptylove-studie", title: "Rozptylové studie" },
+  { href: "/sluzby/eia-posudky-poradenstvi", title: "EIA, posudky a IPPC" },
+  { href: "/sluzby/skoleni-chemicke-legislativy", title: "Školení chemické legislativy" }
 ] as const;
 
 const footerOdbornost = [

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SectorPage } from "@/components/SectorPage";
 import { siteUrl } from "@/lib/site";
 
@@ -48,8 +48,8 @@ export default function Page() {
         "technické řešení bez ověření účinnosti"
       ]}
       relatedServices={[
-        { title: "Měření hluku a hlukové studie", href: "/mereni-hluku-hlukove-studie" },
-        { title: "Hlukové studie", href: "/hlukove-studie" },
+        { title: "Měření hluku a hlukové studie", href: "/sluzby/mereni-hluku" },
+        { title: "Hlukové studie", href: "/sluzby/hlukove-studie" },
         { title: "Kontakt", href: "/kontakt" }
       ]}
       faq={[

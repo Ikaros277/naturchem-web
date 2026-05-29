@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SectorPage } from "@/components/SectorPage";
 import { siteUrl } from "@/lib/site";
 
@@ -48,9 +48,9 @@ export default function Page() {
         "neaktuální podklady při změně kapacity projektu"
       ]}
       relatedServices={[
-        { title: "Rozptylové studie", href: "/rozptylove-studie" },
-        { title: "Hlukové studie", href: "/hlukove-studie" },
-        { title: "EIA a oznámení záměru", href: "/eia-oznameni-zameru" }
+        { title: "Rozptylové studie", href: "/sluzby/rozptylove-studie" },
+        { title: "Hlukové studie", href: "/sluzby/hlukove-studie" },
+        { title: "EIA a oznámení záměru", href: "/sluzby/eia-oznameni-zameru" }
       ]}
       faq={[
         {

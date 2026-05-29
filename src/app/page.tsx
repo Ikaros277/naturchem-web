@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -20,29 +20,6 @@ export const metadata: Metadata = {
   alternates: { canonical: `${siteUrl}/` }
 };
 
-const processSteps = [
-  {
-    icon: "process-posouzeni" as const,
-    title: "Posouzení podkladů",
-    text: "Vyhodnotíme rozhodnutí, výzvu úřadu, projekt nebo popis provozu."
-  },
-  {
-    icon: "process-rozsah" as const,
-    title: "Návrh rozsahu",
-    text: "Určíme měření, studii nebo dokumentaci podle účelu výstupu."
-  },
-  {
-    icon: "process-zpracovani" as const,
-    title: "Zpracování",
-    text: "Provedeme měření, výpočet, posudek nebo povolovací podklady."
-  },
-  {
-    icon: "process-vystup" as const,
-    title: "Výstup pro úřad",
-    text: "Předáme protokol, studii nebo dokumentaci s doporučením dalšího kroku."
-  }
-];
-
 const offerPillars = [
   {
     icon: "pillar-mereni" as const,
@@ -51,9 +28,9 @@ const offerPillars = [
     cta: "Zobrazit měření",
     href: "/sluzby#mericke-sluzby",
     links: [
-      { label: "Měření emisí", href: "/mereni-emisi" },
-      { label: "Pracovní prostředí", href: "/pracovni-prostredi" },
-      { label: "Vibrace", href: "/mereni-vibraci" }
+      { label: "Měření emisí", href: "/sluzby/mereni-emisi" },
+      { label: "Pracovní prostředí", href: "/sluzby/pracovni-prostredi" },
+      { label: "Vibrace", href: "/sluzby/mereni-vibraci" }
     ]
   },
   {
@@ -63,9 +40,9 @@ const offerPillars = [
     cta: "Zobrazit studie",
     href: "/sluzby#studie-vypocty",
     links: [
-      { label: "Rozptylové studie", href: "/rozptylove-studie" },
-      { label: "Hlukové studie", href: "/hlukove-studie" },
-      { label: "Modelové výpočty", href: "/modelove-vypocty" }
+      { label: "Rozptylové studie", href: "/sluzby/rozptylove-studie" },
+      { label: "Hlukové studie", href: "/sluzby/hlukove-studie" },
+      { label: "Modelové výpočty", href: "/sluzby/modelove-vypocty" }
     ]
   },
   {
@@ -75,8 +52,8 @@ const offerPillars = [
     cta: "Zobrazit dokumentaci",
     href: "/sluzby#povolovaci-podklady",
     links: [
-      { label: "EIA a posudky", href: "/eia-posudky-poradenstvi" },
-      { label: "IPPC / ISPOP / GHG", href: "/ippc-integrovana-povoleni" },
+      { label: "EIA a posudky", href: "/sluzby/eia-posudky-poradenstvi" },
+      { label: "IPPC / ISPOP / GHG", href: "/sluzby/ippc-integrovana-povoleni" },
       { label: "Kontakt", href: "/kontakt" }
     ]
   }
@@ -95,39 +72,6 @@ const referenceExamples = [
   "rozptylová a hluková studie",
   "měření pracovního prostředí"
 ];
-
-const audienceFocus = [
-  {
-    icon: "audience-prumysl" as const,
-    title: "Průmysl a výroba",
-    text: "Měření, studie a provozní dokumentace pro výrobní technologie a areály."
-  },
-  {
-    icon: "audience-energetika" as const,
-    title: "Energetika a zdroje emisí",
-    text: "Kotelny, spalovací zdroje, kogenerace, ISPOP a povolení provozu."
-  },
-  {
-    icon: "audience-investor" as const,
-    title: "Investoři a projektanti",
-    text: "Podklady pro EIA, stavební řízení, povolení a projektovou dokumentaci."
-  },
-  {
-    icon: "audience-odpady" as const,
-    title: "Odpady, skládky a recyklace",
-    text: "Rozptyl, hluk, EIA a kapacitní změny zařízení k nakládání s odpady."
-  },
-  {
-    icon: "audience-verejny" as const,
-    title: "Veřejný sektor a obce",
-    text: "Odborné podklady pro rozhodování, investice a komunikaci se správními orgány."
-  },
-  {
-    icon: "audience-budovy" as const,
-    title: "Budovy, VZT a technologie",
-    text: "Hluk, mikroklima, pracovní prostředí, tepelná čerpadla a technická zařízení budov."
-  }
-] as const;
 
 export default async function Home() {
   const latestArticles = await getLatestPoradnaArticles(3);
@@ -233,45 +177,6 @@ export default async function Home() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="home-section container">
-        <header className="section-header">
-          <h2>Pro koho pracujeme</h2>
-          <p className="muted section-intro">
-            Rozsah zakázky navrhujeme podle role zákazníka, typu provozu a účelu výstupu.
-          </p>
-        </header>
-        <div className="audience-grid">
-          {audienceFocus.map((a) => (
-            <article key={a.title} className="card audience-card">
-              <ServiceIcon icon={a.icon} />
-              <h3>{a.title}</h3>
-              <p className="muted">{a.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="home-section container">
-        <header className="section-header">
-          <h2>Jak probíhá zakázka</h2>
-          <p className="muted section-intro">
-            Zakázku nenavrhujeme podle šablony, ale podle účelu výstupu a požadavků úřadu nebo investora.
-          </p>
-        </header>
-        <div className="process-timeline">
-          {processSteps.map((step, i) => (
-            <article key={step.title} className="timeline-step">
-              <span className="step-num" aria-hidden="true">
-                <ServiceIcon icon={step.icon} size={20} className="step-num-icon" />
-              </span>
-              <span className="sr-only">Krok {i + 1}:</span>
-              <h3>{step.title}</h3>
-              <p className="muted">{step.text}</p>
-            </article>
-          ))}
         </div>
       </section>
 

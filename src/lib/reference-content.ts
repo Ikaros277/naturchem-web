@@ -1,4 +1,4 @@
-/** Obsah stránky Reference — oblasti, segmenty a anonymizované příklady zakázek. */
+﻿/** Obsah stránky Reference — oblasti, segmenty a anonymizované příklady zakázek. */
 
 export type ReferenceArea = {
   title: string;
@@ -84,7 +84,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "protokol z měření emisí a podklad pro povolení provozu / kontrolu plnění podmínek",
     text: "Pro výrobní provoz v automotive jsme zajišťovali měření emisí z lakovací technologie, včetně VOC/TOC a tuhých znečišťujících látek. Součástí zakázky bylo posouzení měřicích míst, měření na výduších a zpracování výstupu použitelného pro provozovatele i navazující úřední agendu.",
     tags: ["Emise", "VOC", "KÚ"],
-    href: "/mereni-emisi",
+    href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Poptat podobnou zakázku"
   },
@@ -95,7 +95,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "protokol a podklady pro provozní evidenci",
     text: "U bioplynové stanice jsme řešili měření emisí kogenerační jednotky a návaznost výsledků na provozní evidenci a ohlašovací povinnosti. Zakázka zahrnovala koordinaci termínu měření, provozní režim zdroje a zpracování výstupu pro provozovatele.",
     tags: ["Emise", "ISPOP", "KÚ"],
-    href: "/mereni-emisi",
+    href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Poptat měření / studii"
   },
@@ -106,7 +106,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "sada protokolů a jednotná evidence výsledků",
     text: "Pro provozovatele s více bioplynovými stanicemi jsme zajišťovali měření emisí na několika lokalitách a více kogeneračních jednotkách. Důraz byl kladen na jednotný postup, plánování termínů a přehledné výstupy pro navazující provozní evidenci.",
     tags: ["Emise", "ISPOP"],
-    href: "/mereni-emisi",
+    href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Poptat podobnou zakázku"
   },
@@ -117,7 +117,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "protokol z měření emisí",
     text: "Pro provozovatele plynové kotelny jsme provedli měření emisí na dvou kotlích v reprezentativním provozním režimu. Výstup sloužil jako odborný podklad pro plnění povinností provozovatele zdroje znečišťování ovzduší.",
     tags: ["Emise", "KÚ", "ČIŽP"],
-    href: "/mereni-emisi",
+    href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Poptat měření / studii"
   },
@@ -128,7 +128,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "podklad pro KHS a kategorizaci prací",
     text: "Ve výrobní hale jsme měřili faktory pracovního prostředí pro více pracovních pozic. Zakázka zahrnovala hluk, prašnost a chemické látky v pracovním ovzduší. Výsledky sloužily jako podklad pro zaměstnavatele a kategorizaci prací.",
     tags: ["KHS", "Hluk", "Prašnost"],
-    href: "/pracovni-prostredi",
+    href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
     cta: "Poptat podobnou zakázku"
   },
@@ -139,7 +139,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "protokoly pro hodnocení expozice zaměstnanců",
     text: "Ve svařovacím a kovovýrobním provozu jsme zajišťovali měření prašnosti, chemických faktorů, hluku a vibrací. Výsledky byly určeny pro hodnocení pracovních podmínek, BOZP a případnou komunikaci s hygienickou stanicí.",
     tags: ["KHS", "Prašnost", "Hluk"],
-    href: "/pracovni-prostredi",
+    href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
     cta: "Poptat podobnou zakázku"
   },
@@ -150,7 +150,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "měření / akustické posouzení a doporučení dalšího postupu",
     text: "U provozu tepelného čerpadla jsme řešili hluk v nejbližším chráněném prostoru. Výstup sloužil pro posouzení stavu, komunikaci se zúčastněnými stranami a návrh dalšího technického nebo provozního řešení.",
     tags: ["Hluk", "KHS"],
-    href: "/mereni-hluku-hlukove-studie",
+    href: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
     cta: "Poptat měření / studii"
   },
@@ -161,7 +161,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "podklad pro kolaudaci, KHS nebo stavební úřad",
     text: "Pro technologické zařízení a vzduchotechniku jsme připravili hlukové posouzení zaměřené na nejbližší chráněné prostory. Výstup byl určen pro projektanta, provozovatele a navazující povolovací nebo kolaudační řízení.",
     tags: ["Hluk", "KHS", "VZT"],
-    href: "/hlukove-studie",
+    href: "/sluzby/hlukove-studie",
     contactService: "Měření hluku a akustika",
     cta: "Poptat měření / studii"
   },
@@ -172,7 +172,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "rozptylová studie pro povolovací proces",
     text: "Pro instalaci nové plynové kotelny jsme zpracovali rozptylovou studii hodnotící imisní příspěvky zdroje. Studie pracovala s technickými parametry kotlů, provozní dobou, výduchy a umístěním záměru v lokalitě.",
     tags: ["Rozptyl", "KÚ", "EIA"],
-    href: "/rozptylove-studie",
+    href: "/sluzby/rozptylove-studie",
     contactService: "Rozptylové studie",
     cta: "Poptat měření / studii"
   },
@@ -183,7 +183,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "sada podkladů pro povolovací řízení",
     text: "Pro zařízení k nakládání s odpady jsme zajišťovali kombinaci odborného posudku, rozptylové studie a hlukové studie. Cílem bylo vyhodnotit provozní, emisní a hlukové souvislosti záměru a připravit podklady pro navazující řízení.",
     tags: ["Rozptyl", "Hluk", "EIA", "KÚ"],
-    href: "/odborne-posudky",
+    href: "/sluzby/odborne-posudky",
     contactService: "Odborné posudky",
     cta: "Poptat měření / studii"
   },
@@ -194,7 +194,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "oznámení záměru a přílohy pro povolovací proces",
     text: "Pro záměr lakovny svitkových plechů jsme řešili EIA agendu a odborné podklady k technologii. Zakázka vyžadovala propojení emisních vstupů, provozního režimu, návazných studií a argumentace pro příslušné řízení.",
     tags: ["EIA", "Emise", "KÚ"],
-    href: "/eia-oznameni-zameru",
+    href: "/sluzby/eia-oznameni-zameru",
     contactService: "EIA a oznámení záměru",
     cta: "Poptat měření / studii"
   },
@@ -205,7 +205,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "komplexní sada povolovacích podkladů",
     text: "U modernizace slévárenského provozu jsme připravovali kombinaci odborných podkladů zahrnující EIA, odborný posudek, rozptylovou a hlukovou studii. Zakázka řešila navýšení nebo změnu technologie a její dopady na okolí.",
     tags: ["EIA", "Rozptyl", "Hluk", "KÚ"],
-    href: "/eia-posudky-poradenstvi",
+    href: "/sluzby/eia-posudky-poradenstvi",
     contactService: "EIA a oznámení záměru",
     cta: "Poptat měření / studii"
   },
@@ -216,7 +216,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "provozní dokumentace pro povolení",
     text: "Pro provoz s nakládáním s odpady jsme zpracovávali provozní řád v návaznosti na kapacitní změnu a zpracování stavební suti. Dokumentace sloužila jako podklad pro úřední projednání a povolení provozu.",
     tags: ["KÚ", "ČIŽP", "Ovzduší"],
-    href: "/provozni-rady",
+    href: "/sluzby/provozni-rady",
     contactService: "Provozní řády",
     cta: "Poptat podobnou zakázku"
   },
@@ -227,7 +227,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "roční hlášení a provozní evidence",
     text: "Každoročně zajišťujeme provozovatelům zpracování souhrnné provozní evidence a hlášení v systému ISPOP. U opakujících se zakázek kontrolujeme návaznost na měření emisí, provozní údaje, povolení provozu a další podklady.",
     tags: ["ISPOP", "KÚ"],
-    href: "/ispop-souhrnna-provozni-evidence",
+    href: "/sluzby/ispop",
     contactService: "ISPOP",
     cta: "Poptat podobnou zakázku"
   },
@@ -238,7 +238,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "ověřovací výstupy pro provozovatele",
     text: "Pro provozovatele s povinnostmi v oblasti emisí skleníkových plynů jsme zajišťovali ověřování ročních emisních údajů a podkladů ke změnám kapacity. Zakázky vyžadovaly kontrolu provozních dat, návaznost na vykazování a odborné zpracování výstupů.",
     tags: ["GHG", "ISPOP"],
-    href: "/ghg-overovani-emisi-sklenikovych-plynu",
+    href: "/sluzby/ghg-overovani",
     contactService: "GHG",
     cta: "Poptat podobnou zakázku"
   },
@@ -249,7 +249,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     output: "oznámení záměru",
     text: "Pro zemědělský areál jsme připravovali podklady pro zjišťovací řízení v rámci modernizace chovu. Hodnoceny byly provozní parametry, kapacita, návaznost na okolí a související environmentální vlivy.",
     tags: ["EIA", "KÚ"],
-    href: "/zjistovaci-rizeni-eia",
+    href: "/sluzby/zjistovaci-rizeni-eia",
     contactService: "EIA a oznámení záměru",
     cta: "Poptat měření / studii"
   }

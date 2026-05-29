@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SectorPage } from "@/components/SectorPage";
 import { siteUrl } from "@/lib/site";
 
@@ -48,9 +48,9 @@ export default function Page() {
         "neúplná dokumentace pro návazné řízení"
       ]}
       relatedServices={[
-        { title: "Měření emisí", href: "/mereni-emisi" },
-        { title: "Rozptylové studie", href: "/rozptylove-studie" },
-        { title: "EIA a oznámení záměru", href: "/eia-oznameni-zameru" }
+        { title: "Měření emisí", href: "/sluzby/mereni-emisi" },
+        { title: "Rozptylové studie", href: "/sluzby/rozptylove-studie" },
+        { title: "EIA a oznámení záměru", href: "/sluzby/eia-oznameni-zameru" }
       ]}
       faq={[
         {

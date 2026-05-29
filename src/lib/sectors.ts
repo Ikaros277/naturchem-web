@@ -1,4 +1,4 @@
-export type Sector = {
+﻿export type Sector = {
   title: string;
   href: string;
   description: string;
@@ -110,7 +110,7 @@ export const sectors: Sector[] = [
   },
   {
     title: "Zdravotnictví, laboratoře a čisté prostory",
-    href: "/pracovni-prostredi",
+    href: "/sluzby/pracovni-prostredi",
     description:
       "Měření pracovního prostředí, mikroklimatu, osvětlení, chemických látek a prašnosti v laboratořích, zdravotnických a čistých provozech.",
     typical: "čisté prostory, mikroklima, osvětlení, chemické látky, dokumentaci pro KHS",

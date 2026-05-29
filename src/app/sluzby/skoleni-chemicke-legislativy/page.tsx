@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/Schema";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   description:
     "Praktické školení chemického zákona, bezpečnostních listů, označování, skladování a nakládání s chemickými látkami pro provozy, sklady, výrobu a laboratoře.",
-  alternates: { canonical: `${siteUrl}/skoleni-chemicke-legislativy/` }
+  alternates: { canonical: `${siteUrl}/sluzby/skoleni-chemicke-legislativy/` }
 };
 
 const audience = [
@@ -50,7 +50,7 @@ export default function Page() {
     serviceType: "Školení chemického zákona a chemické legislativy",
     provider: { "@type": "Organization", name: "NATURCHEM, s.r.o.", url: siteUrl },
     areaServed: "CZ",
-    url: `${siteUrl}/skoleni-chemicke-legislativy/`,
+    url: `${siteUrl}/sluzby/skoleni-chemicke-legislativy/`,
     description: metadata.description
   };
 
@@ -64,7 +64,7 @@ export default function Page() {
         "@type": "ListItem",
         position: 3,
         name: "Školení chemické legislativy",
-        item: `${siteUrl}/skoleni-chemicke-legislativy/`
+        item: `${siteUrl}/sluzby/skoleni-chemicke-legislativy/`
       }
     ]
   };

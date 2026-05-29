@@ -1,6 +1,6 @@
 ﻿import { DedicatedServiceRoute, dedicatedServiceMetadata } from "@/lib/render-dedicated-service-page";
 
-const slug = "technicke-prilohy-pro-investory";
+const slug = "imisni-dopady";
 
 export const metadata = dedicatedServiceMetadata(slug);
 

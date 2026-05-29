@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 import { siteUrl } from "@/lib/site";
 
@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "EIA, posudky, provozní řády a IPPC",
   description:
     "EIA, IPPC, provozní řády, ISPOP, GHG, odborné posudky a vyřízení stanovisek a povolení.",
-  alternates: { canonical: `${siteUrl}/eia-posudky-poradenstvi/` }
+  alternates: { canonical: `${siteUrl}/sluzby/eia-posudky-poradenstvi/` }
 };
 
 export default function Page() {
   return (
     <ServicePage
-      slug="eia-posudky-poradenstvi"
+      slug="sluzby/eia-posudky-poradenstvi"
       faqCategoryId="eia"
       title="EIA, posudky, provozní řády a IPPC"
       intro="Povolovací agenda kolem zdroje zahrnuje EIA, posudek, měření, provozní řád a ISPOP. Zajišťujeme koordinaci kroků a podkladů tak, aby data pro krajský úřad byla technicky konzistentní."
@@ -67,17 +67,17 @@ export default function Page() {
       relatedLinks={[
         {
           title: "Rozptylové studie",
-          href: "/rozptylove-studie",
+          href: "/sluzby/rozptylove-studie",
           description: "Imisní příspěvek zdrojů a dopravy jako častá příloha EIA a povolování."
         },
         {
           title: "Měření hluku a hlukové studie",
-          href: "/hlukove-studie",
+          href: "/sluzby/hlukove-studie",
           description: "Hluk z technologie, dopravy, VZT a průmyslových areálů."
         },
         {
           title: "Odborné posudky",
-          href: "/odborne-posudky",
+          href: "/sluzby/odborne-posudky",
           description: "Samostatný detail odborných posudků pro zdroje a povolování."
         }
       ]}

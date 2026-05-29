@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SectorPage } from "@/components/SectorPage";
 import { siteUrl } from "@/lib/site";
 
@@ -48,9 +48,9 @@ export default function Page() {
         "oddělené řešení emisí a prašnosti bez společného kontextu"
       ]}
       relatedServices={[
-        { title: "Měření emisí", href: "/mereni-emisi" },
-        { title: "Měření pracovního prostředí", href: "/pracovni-prostredi" },
-        { title: "Měření emisí dřevozpracujících provozů", href: "/mereni-emisi-drevozpracujicich-provoze" }
+        { title: "Měření emisí", href: "/sluzby/mereni-emisi" },
+        { title: "Měření pracovního prostředí", href: "/sluzby/pracovni-prostredi" },
+        { title: "Měření emisí dřevozpracujících provozů", href: "/sluzby/mereni-emisi-drevozpracujicich-provoze" }
       ]}
       faq={[
         {

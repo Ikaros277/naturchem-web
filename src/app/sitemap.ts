@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 import { caseStudyCategories } from "@/lib/case-studies";
 import { getArticles } from "@/lib/articles";
 import { dedicatedServiceSlugs } from "@/lib/render-dedicated-service-page";
@@ -8,21 +8,21 @@ import { siteUrl } from "@/lib/site";
 const routes = [
   "",
   "/sluzby",
-  "/mereni-emisi",
-  "/pracovni-prostredi",
-  "/mereni-hluku-hlukove-studie",
-  "/rozptylove-studie",
-  "/hlukove-studie",
-  "/odborne-posudky",
-  "/provozni-rady",
-  "/ippc-integrovana-povoleni",
-  "/eia-oznameni-zameru",
-  "/ispop-souhrnna-provozni-evidence",
-  "/ghg-overovani-emisi-sklenikovych-plynu",
-  "/eia-posudky-poradenstvi",
-  "/skoleni-chemicke-legislativy",
-  "/bezpecnostni-listy",
-  "/chemicke-latky-v-provozu",
+  "/sluzby/mereni-emisi",
+  "/sluzby/pracovni-prostredi",
+  "/sluzby/mereni-hluku",
+  "/sluzby/rozptylove-studie",
+  "/sluzby/hlukove-studie",
+  "/sluzby/odborne-posudky",
+  "/sluzby/provozni-rady",
+  "/sluzby/ippc-integrovana-povoleni",
+  "/sluzby/eia-oznameni-zameru",
+  "/sluzby/ispop",
+  "/sluzby/ghg-overovani",
+  "/sluzby/eia-posudky-poradenstvi",
+  "/sluzby/skoleni-chemicke-legislativy",
+  "/sluzby/bezpecnostni-listy",
+  "/sluzby/chemicke-latky",
   "/akreditace-autorizace-dokumenty",
   "/pristrojove-vybaveni",
   "/faq",

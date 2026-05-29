@@ -1,4 +1,4 @@
-import { globalCta } from "@/lib/cta";
+﻿import { globalCta } from "@/lib/cta";
 import { homeSectors as sectorsForHome, provozyNavLabel, sectors } from "@/lib/sectors";
 
 /**
@@ -31,25 +31,25 @@ export const pristrojoveVybaveniNav = {
 } as const;
 
 export const serviceNav = [
-  { href: "/mereni-emisi", label: "Měření emisí" },
-  { href: "/pracovni-prostredi", label: "Měření pracovního prostředí" },
-  { href: "/mereni-vibraci", label: "Měření vibrací" },
-  { href: "/mereni-osvetleni", label: "Měření osvětlení" },
-  { href: "/mereni-mikroklimatu", label: "Měření mikroklimatu" },
-  { href: "/mereni-hluku-hlukove-studie", label: "Měření hluku a akustika" },
-  { href: "/akusticke-posudky", label: "Akustické posudky" },
-  { href: "/rozptylove-studie", label: "Rozptylové studie" },
-  { href: "/hlukove-studie", label: "Hlukové studie" },
-  { href: "/modelove-vypocty", label: "Modelové výpočty" },
-  { href: "/odborne-posudky", label: "Odborné posudky" },
-  { href: "/provozni-rady", label: "Provozní řády" },
-  { href: "/ippc-integrovana-povoleni", label: "IPPC" },
-  { href: "/eia-oznameni-zameru", label: "EIA" },
-  { href: "/ispop-souhrnna-provozni-evidence", label: "ISPOP" },
-  { href: "/ghg-overovani-emisi-sklenikovych-plynu", label: "GHG" },
-  { href: "/skoleni-chemicke-legislativy", label: "Školení chemické legislativy" },
-  { href: "/bezpecnostni-listy", label: "Bezpečnostní listy" },
-  { href: "/chemicke-latky-v-provozu", label: "Chemické látky v provozu" }
+  { href: "/sluzby/mereni-emisi", label: "Měření emisí" },
+  { href: "/sluzby/pracovni-prostredi", label: "Měření pracovního prostředí" },
+  { href: "/sluzby/mereni-vibraci", label: "Měření vibrací" },
+  { href: "/sluzby/mereni-osvetleni", label: "Měření osvětlení" },
+  { href: "/sluzby/mereni-mikroklimatu", label: "Měření mikroklimatu" },
+  { href: "/sluzby/mereni-hluku", label: "Měření hluku a akustika" },
+  { href: "/sluzby/akusticke-posudky", label: "Akustické posudky" },
+  { href: "/sluzby/rozptylove-studie", label: "Rozptylové studie" },
+  { href: "/sluzby/hlukove-studie", label: "Hlukové studie" },
+  { href: "/sluzby/modelove-vypocty", label: "Modelové výpočty" },
+  { href: "/sluzby/odborne-posudky", label: "Odborné posudky" },
+  { href: "/sluzby/provozni-rady", label: "Provozní řády" },
+  { href: "/sluzby/ippc-integrovana-povoleni", label: "IPPC" },
+  { href: "/sluzby/eia-oznameni-zameru", label: "EIA" },
+  { href: "/sluzby/ispop", label: "ISPOP" },
+  { href: "/sluzby/ghg-overovani", label: "GHG" },
+  { href: "/sluzby/skoleni-chemicke-legislativy", label: "Školení chemické legislativy" },
+  { href: "/sluzby/bezpecnostni-listy", label: "Bezpečnostní listy" },
+  { href: "/sluzby/chemicke-latky", label: "Chemické látky v provozu" }
 ] as const;
 
 export const mainNavObory = { href: "/provozy-a-technologie", label: provozyNavLabel } as const;

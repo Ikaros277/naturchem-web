@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Interní prolinkování: hlavní služba → typické provozy (/provozy-a-technologie/…).
  * Používá ServicePage i pro SEO navigaci uživatele.
  */
@@ -20,7 +20,7 @@ const P = {
   vzt: { title: "VZT, chlazení a tepelná čerpadla", href: "/provozy-a-technologie/tepelna-cerpadla-vzt" },
   ciste: {
     title: "Čisté prostory a laboratoře",
-    href: "/pracovni-prostredi"
+    href: "/sluzby/pracovni-prostredi"
   }
 } satisfies Record<string, SectorLink>;
 

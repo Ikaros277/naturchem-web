@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 import { siteUrl } from "@/lib/site";
 
@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "Měření pracovního prostředí",
   description:
     "Hygienická měření: hluk, prach, chemické látky, vibrace, mikroklima a osvětlení. Podklady pro KHS a kategorizaci prací.",
-  alternates: { canonical: `${siteUrl}/pracovni-prostredi/` }
+  alternates: { canonical: `${siteUrl}/sluzby/pracovni-prostredi/` }
 };
 
 export default function Page() {
   return (
     <ServicePage
-      slug="pracovni-prostredi"
+      slug="sluzby/pracovni-prostredi"
       faqCategoryId="pracovni-prostredi"
       title="Měření pracovního prostředí"
       intro="Měříme hluk, prach, chemické látky, mikroklima, osvětlení a vibrace přímo v pracovních operacích. Výstupy slouží pro KHS, kategorizaci prací, BOZP a ověření účinnosti technických opatření."
@@ -64,22 +64,22 @@ export default function Page() {
       relatedLinks={[
         {
           title: "Měření vibrací",
-          href: "/mereni-vibraci",
+          href: "/sluzby/mereni-vibraci",
           description: "Vibrace přenášené na ruce i celé tělo."
         },
         {
           title: "Měření osvětlení",
-          href: "/mereni-osvetleni",
+          href: "/sluzby/mereni-osvetleni",
           description: "Osvětlení pracovišť pro KHS a kategorizaci prací."
         },
         {
           title: "Měření mikroklimatu",
-          href: "/mereni-mikroklimatu",
+          href: "/sluzby/mereni-mikroklimatu",
           description: "Teplota, vlhkost a proudění vzduchu."
         },
         {
           title: "Měření hluku a akustika",
-          href: "/mereni-hluku-hlukove-studie",
+          href: "/sluzby/mereni-hluku",
           description: "Hluk na pracovišti, kolaudace, VZT a technologické zdroje."
         },
         {

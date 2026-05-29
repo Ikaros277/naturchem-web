@@ -90,9 +90,8 @@ export default async function Home() {
             <p className="eyebrow">Akreditovaná měření · odborné studie · dokumentace pro úřady</p>
             <h1>Měření, studie a dokumentace pro provozy, investory a úřady</h1>
             <p className="hero-lead">
-              NATURCHEM propojuje terénní měření, výpočty, odborné posudky, EIA a povolovací
-              dokumentaci do jednoho obhajitelného postupu pro průmysl, investory, projektanty a
-              veřejnou správu.
+              Propojujeme terénní měření, studie a dokumentaci do jednoho obhajitelného výstupu
+              pro průmysl, investory a projektanty.
             </p>
             <div className="hero-actions">
               <Link href={contactUrl("Měření emisí")} className="button">

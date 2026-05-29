@@ -1,7 +1,7 @@
 ﻿import type { MetadataRoute } from "next";
 import { caseStudyCategories } from "@/lib/case-studies";
 import { getArticles } from "@/lib/articles";
-import { dedicatedServiceSlugs } from "@/lib/render-dedicated-service-page";
+import { dedicatedServicePages } from "@/lib/dedicated-service-pages";
 import { seoLandings } from "@/lib/seo-landings";
 import { siteUrl } from "@/lib/site";
 
@@ -50,7 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const caseRoutes = caseStudyCategories.map((c) => `/typicke-zakazky/${c.slug}`);
   const articleRoutes = articles.map((a) => `/poradna/${a.slug}`);
   const landingRoutes = seoLandings.map((l) => `/${l.slug}`);
-  const dedicatedRoutes = dedicatedServiceSlugs.map((slug) => `/${slug}`);
+  const dedicatedRoutes = Object.values(dedicatedServicePages).map((p) => `/${p.slug}`);
   const allRoutes = [
     ...routes,
     ...dedicatedRoutes,

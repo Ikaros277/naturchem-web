@@ -20,8 +20,7 @@ export default function Page() {
         "EIA — oznámení, zjišťovací řízení, technické přílohy",
         "odborné posudky a povolení provozu zdroje",
         "provozní řády a změny IPPC",
-        "ISPOP, souhrnná evidence a GHG",
-        "sladění rozptylu, hluku a měření emisí"
+        "ISPOP, souhrnná evidence a GHG"
       ]}
       forWhom={[
         "investoři, developeři a veřejný sektor v povolovacích řízeních",

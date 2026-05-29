@@ -15,7 +15,7 @@ export default function Page() {
       slug="sluzby/mereni-hluku"
       faqCategoryId="hluk"
       title="Měření hluku a akustika"
-      intro="Měření hluku a hlukové studie slouží k posouzení hlukové zátěže provozů, technologií, dopravy a stavebních záměrů. Výstupy se používají při kolaudaci, stavebním řízení, EIA, požadavku KHS nebo při řešení stížností na hluk. Rozsah měření nebo výpočtu stanovujeme podle zdrojů hluku, provozního režimu a chráněných prostor v okolí."
+      intro="Terénní měření hluku a akustické výpočty pro kolaudaci, EIA, požadavky KHS a řešení stížností. Rozsah stanovujeme podle zdrojů, provozního režimu a chráněných prostor v okolí."
       scope={[
         "terénní měření LAeq a LAFmax u běžícího provozu",
         "hluk z dopravy a technologií v areálu",

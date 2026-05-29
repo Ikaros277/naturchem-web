@@ -93,7 +93,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Odborné posudky podle zákona o ochraně ovzduší pro zdroje, technologie, změny provozu a povolovací řízení.",
     intro:
-      "Odborný posudek podle zákona o ochraně ovzduší slouží jako technický podklad pro správní orgány. Zpracováváme popis zdroje, výduchu, filtrace a změny kapacity v návaznosti na povolení provozu, měření emisí a skutečný provozní stav.",
+      "Odborné posudky podle zákona o ochraně ovzduší jako technický podklad pro správní orgány — v návaznosti na povolení provozu, měření emisí a skutečný provozní stav.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
@@ -291,7 +291,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Oznámení záměru EIA, odborné přílohy a koordinace podkladů pro zjišťovací řízení a navazující povolování.",
     intro:
-      "Oznámení záměru v procesu EIA je odborný podklad, který musí být věcně konzistentní, technicky srozumitelný a navázaný na skutečné parametry záměru. Zpracujeme oznámení a sladíme vstupy pro ovzduší, hluk, dopravu, kapacity a provozní režim tak, aby dokumentace tvořila jeden ucelený a obhajitelný celek.",
+      "Zpracujeme oznámení záměru a sladíme vstupy pro ovzduší, hluk, dopravu a provozní parametry do jednoho ucelného dokumentu.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
@@ -359,6 +359,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     intro:
       "Souhrnná provozní evidence v ISPOP musí odpovídat skutečnému provozu a výsledkům měření. Kontrolujeme údaje o palivu, výkonu a emisích, porovnáváme je s povolením provozu a doplníme podklady pro kontrolu úřadu.",
     contactService: "ISPOP",
+    faqCategoryId: "ispop",
     scope: [
       "souhrnná provozní evidence zdroje",
       "roční hlášení ISPOP — kontrola a doplnění údajů",
@@ -424,6 +425,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     intro:
       "Ověřování emisí skleníkových plynů posuzuje správnost metodiky, vstupních dat a dokumentace. Ověřujeme návaznost výpočtu na spotřeby, měření a provozní bilanci před reportingem, auditem nebo požadavkem investora.",
     contactService: "GHG",
+    faqCategoryId: "ispop",
     scope: [
       "ověření emisí skleníkových plynů a výpočtových listů",
       "kontrola emisních faktorů, spotřeb a provozních dat",
@@ -489,6 +491,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     intro:
       "Bezpečnostní listy musí být dostupné zaměstnancům u konkrétní látky a odpovídat skladování i manipulaci. Kontrolujeme úplnost dokumentace, označení a skladových míst a navrhujeme úpravy v provozu.",
     contactService: "Bezpečnostní listy",
+    faqCategoryId: "pracovni-prostredi",
     scope: [
       "revize bezpečnostních listů a jejich dostupnosti u pracoviště",
       "štítky na interních nádobách, skladech a pracovních místech",
@@ -554,6 +557,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     intro:
       "Chemické látky v provozu posuzujeme v místě skladování, přelévání a použití. Zpracováváme pravidla pro vedoucí směn a BOZP na základě skutečné manipulace se látkami, nejen evidenčních tabulek.",
     contactService: "Chemické látky v provozu",
+    faqCategoryId: "pracovni-prostredi",
     scope: [
       "mapování látek a směsí od dodávky po pracoviště",
       "pravidla manipulace, přelévání a skladování",
@@ -679,7 +683,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Měření osvětlení na pracovištích pro KHS, kategorizaci prací a BOZP. Umělé i denní osvětlení, kanceláře i výrobní haly.",
     intro:
-      "Měření osvětlení ověřuje skutečné světelné podmínky na konkrétních pracovních místech. Posuzujeme umělé i denní osvětlení podle charakteru práce, zrakové náročnosti, dispozice pracoviště a provozního režimu. Výstup slouží jako podklad pro KHS, kategorizaci prací, BOZP, kolaudaci nebo úpravy osvětlení po změně technologie či dispozice.",
+      "Měříme umělé i denní osvětlení na pracovních místech podle charakteru práce a zrakové náročnosti. Výstup slouží pro KHS, kategorizaci prací, BOZP a kolaudaci.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [

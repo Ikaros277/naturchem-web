@@ -37,7 +37,7 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
         >
           <summary className="equipment-accordion-summary">
             <ServiceIcon icon={getEquipmentGroupIconKey(group.title)} className="equipment-group-icon" />
-            <h2>{group.title}</h2>
+            <h2>{group.title} <span className="muted accordion-count">({group.items.length})</span></h2>
           </summary>
           <p className="muted">{group.text}</p>
           <ul className="check-list">

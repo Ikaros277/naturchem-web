@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExperienceStats } from "@/components/ExperienceStats";
-import { ServiceIcon } from "@/components/ServiceIcon";
-import { getAboutWorkStepIconKey } from "@/lib/service-icons";
 import { JsonLd } from "@/components/Schema";
 import { TeamMemberCards } from "@/components/TeamSection";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy";
@@ -18,25 +16,6 @@ export const metadata: Metadata = {
     "NATURCHEM propojuje akreditovaná měření, výpočtové studie, EIA, odborné posudky, provozní řády, ISPOP a technické podklady pro úřady.",
   alternates: { canonical: `${siteUrl}/o-spolecnosti-naturchem/` }
 };
-
-const workSteps = [
-  {
-    title: "Vyhodnocení účelu",
-    text: "Určíme, k čemu má výstup sloužit pro provoz, investora nebo úřad."
-  },
-  {
-    title: "Návrh rozsahu",
-    text: "Upřesníme měření, studii nebo dokumentaci podle dostupných podkladů."
-  },
-  {
-    title: "Odborné zpracování",
-    text: "Realizujeme terénní část, výpočet nebo odborné vyhodnocení."
-  },
-  {
-    title: "Předání výstupu",
-    text: "Předáme protokol, studii nebo podklady s doporučením dalšího kroku."
-  }
-] as const;
 
 export default function ONaturchemPage() {
   const aboutPageData = {
@@ -137,33 +116,6 @@ export default function ONaturchemPage() {
       </section>
 
       <section className="section content-block container">
-        <h2>Měření, studie a povolovací podklady v jednom procesu</h2>
-        <p>
-          U zakázky posuzujeme, k čemu má výstup sloužit — pro provozovatele, KHS, ČIŽP, krajský
-          úřad, stavební řízení, EIA nebo investora. Podle toho volíme měření emisí,
-          pracovního prostředí nebo hluku, rozptylovou či hlukovou studii, odborný posudek,
-          provozní řád, EIA přílohy, IPPC, ISPOP nebo GHG podklady.
-        </p>
-        <p>
-          Koordinujeme návazné studie, technickou argumentaci pro úřady a strategii podkladů —
-          nejen samotný dokument.
-        </p>
-      </section>
-
-      <section className="section content-block container">
-        <article className="card guarantee-panel">
-          <h2>Technické a přístrojové zázemí</h2>
-          <p>
-            Součástí odborné práce NATURCHEM je vlastní přístrojové vybavení pro měření emisí,
-            pracovního prostředí, hluku, vibrací, osvětlení, mikroklimatu a odběry vzorků.
-          </p>
-          <p>
-            <Link href="/pristrojove-vybaveni">Přehled měřicího a odběrového vybavení</Link>
-          </p>
-        </article>
-      </section>
-
-      <section className="section content-block container">
         <article className="card guarantee-panel">
         <h2>Odborná garance</h2>
         <p>{guaranteeIntroParagraph}</p>
@@ -191,22 +143,6 @@ export default function ONaturchemPage() {
         <p style={{ marginTop: "1rem" }}>
           <Link href="/reference">Reference a vybrané zkušenosti</Link>
         </p>
-      </section>
-
-      <section className="section content-block container">
-        <h2>Jak pracujeme</h2>
-        <div className="process-timeline">
-          {workSteps.map((step, index) => (
-            <article key={step.title} className="timeline-step">
-              <span className="step-num" aria-hidden="true">
-                <ServiceIcon icon={getAboutWorkStepIconKey(index)} size={20} className="step-num-icon" />
-              </span>
-              <span className="sr-only">Krok {index + 1}:</span>
-              <h3>{step.title}</h3>
-              <p className="muted">{step.text}</p>
-            </article>
-          ))}
-        </div>
       </section>
 
       <section className="cta-strip container">

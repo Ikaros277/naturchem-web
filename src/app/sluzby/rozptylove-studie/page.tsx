@@ -15,7 +15,7 @@ export default function Page() {
       slug="sluzby/rozptylove-studie"
       faqCategoryId="studie"
       title="Rozptylové studie"
-      intro="Modelujeme imisní příspěvky zdrojů, výduchů a dopravy pro záměry, změny provozu a EIA. Studie stavíme na konkrétních emisních parametrech, variantách provozu a požadavcích povolovacího řízení. Součástí zpracování může být také návrh potřebných vstupních podkladů, koordinace návazných studií a příprava technické argumentace pro správní orgány."
+      intro="Modelujeme imisní příspěvky zdrojů, výduchů a dopravy pro záměry, změny provozu a EIA. Studie stavíme na konkrétních emisních parametrech a požadavcích povolovacího řízení."
       scope={[
         "modelování imisního příspěvku stacionárních zdrojů znečišťování ovzduší a dopravy",
         "varianty provozu a technická opatření",

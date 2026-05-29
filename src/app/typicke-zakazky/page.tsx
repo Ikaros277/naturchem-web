@@ -37,16 +37,6 @@ export default function TypickeZakazkyPage() {
         <CaseStudiesView categories={caseStudyCategories} />
       </section>
 
-      <section className="section content-block card">
-        <h2>Kam dál na webu</h2>
-        <p className="muted">
-          Kompletní přehled služeb včetně legislativních souvislostí najdete v sekci{" "}
-          <Link href="/sluzby">Služby</Link>. Typy provozů a technologie řešíme v části{" "}
-          <Link href="/provozy-a-technologie">Provozy a technologie</Link>. Odpovědi na opakující se
-          dotazy najdete v <Link href="/faq">FAQ</Link> a v <Link href="/poradna">odborné poradně</Link>.
-        </p>
-      </section>
-
       <p style={{ marginTop: "1.25rem" }}>
         <Link href="/kontakt" className="button">
           Poptat službu

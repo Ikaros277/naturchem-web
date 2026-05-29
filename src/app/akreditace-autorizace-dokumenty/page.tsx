@@ -183,11 +183,13 @@ export default function AkreditaceAutorizaceDokumentyPage() {
         <p className="muted" style={{ marginTop: "1rem" }}>
           Dokumenty k akreditaci a autorizacím jsou dostupné ke stažení níže.
         </p>
-        <p>
-          <Link className="button" href="/kontakt">
-            Kontaktovat nás
-          </Link>
-        </p>
+      </section>
+      <section className="cta-strip">
+        <p>Potřebujete ověřit, zda vaše měření nebo studie spadají do akreditovaného rozsahu?</p>
+        <div className="btn-row">
+          <Link href="/kontakt" className="button">Kontaktovat NATURCHEM</Link>
+          <Link href="/sluzby" className="button secondary">Přehled služeb</Link>
+        </div>
       </section>
     </main>
   );

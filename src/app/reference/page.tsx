@@ -9,7 +9,6 @@ import { JsonLd } from "@/components/Schema";
 import { contactUrl } from "@/lib/contact-url";
 import {
   referenceAreas,
-  referenceCustomerSegmentsText,
   referenceExamples,
   referenceIntro
 } from "@/lib/reference-content";
@@ -67,11 +66,6 @@ export default function ReferencePage() {
             </SemanticCard>
           ))}
         </div>
-      </section>
-
-      <section className="section content-block container" id="segmenty">
-        <h2>Vybrané zkušenosti a zákaznické segmenty</h2>
-        <p className="muted reference-segments-note">{referenceCustomerSegmentsText}</p>
       </section>
 
       <section className="section content-block container" id="priklady">

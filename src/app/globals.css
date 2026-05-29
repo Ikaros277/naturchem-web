@@ -4355,6 +4355,13 @@ footer .muted,
   color: #163962;
   font-size: 0.88rem;
   font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.topic-pill[aria-pressed="true"] {
+  background: #163962;
+  color: #fff;
+  border-color: #163962;
 }
 
 .topbar-contact {

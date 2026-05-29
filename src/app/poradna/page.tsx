@@ -1,11 +1,9 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { IndexCard } from "@/components/IndexCard";
-import { topicForArticle } from "@/lib/poradna-topic";
+import { PoradnaFilterableList } from "@/components/PoradnaFilterableList";
 import { JsonLd } from "@/components/Schema";
 import { siteUrl } from "@/lib/site";
-import { formatArticleDate } from "@/lib/format-date";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
 
 export const metadata: Metadata = {
@@ -14,16 +12,6 @@ export const metadata: Metadata = {
     "Praktické články a odpovědi pro měření emisí, pracovní prostředí, hluk, rozptylové studie, EIA, povolovací procesy a chemickou legislativu.",
   alternates: { canonical: `${siteUrl}/poradna/` }
 };
-
-const topicFilters = [
-  "Emise",
-  "Rozptylové studie",
-  "Hluk",
-  "Pracovní prostředí",
-  "EIA a povolování",
-  "Legislativa",
-  "Chemická legislativa"
-] as const;
 
 export default async function Page() {
   const mergedArticles = await getPoradnaArticles();
@@ -70,41 +58,7 @@ export default async function Page() {
           projektanty a pracovníky v oblasti životního prostředí.
         </p>
       </header>
-      <nav className="topic-filter-pills" role="list" aria-label="Témata odborné poradny">
-        {topicFilters.map((topic) => (
-          <span key={topic} className="topic-pill">
-            {topic}
-          </span>
-        ))}
-      </nav>
-      <div className="article-list-grid">
-        {mergedArticles.map((article) => {
-          const publishedLabel = formatArticleDate(article.publishedAt);
-          const topic = topicForArticle(article.title);
-
-          return (
-            <IndexCard
-              key={article.href}
-              href={article.href}
-              title={article.title}
-              className="article-list-card article-card"
-              cta="Číst článek"
-              meta={
-                <div className="article-card-meta">
-                  {publishedLabel ? (
-                    <time className="article-card-date muted" dateTime={article.publishedAt}>
-                      {publishedLabel}
-                    </time>
-                  ) : null}
-                  <span className="tag">{topic}</span>
-                </div>
-              }
-            >
-              {article.excerpt ? <p className="muted article-card-excerpt">{article.excerpt}</p> : null}
-            </IndexCard>
-          );
-        })}
-      </div>
+      <PoradnaFilterableList articles={mergedArticles} />
       <section className="card final-cta poradna-cta">
         <h2>Máte konkrétní dotaz z provozu?</h2>
         <p className="muted">

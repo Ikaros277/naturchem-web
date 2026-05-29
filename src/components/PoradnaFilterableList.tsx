@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { IndexCard } from '@/components/IndexCard';
 import { topicForArticle } from '@/lib/poradna-topic';
-import { formatArticleDate } from '@/lib/format-date';
 import type { PoradnaArticleListing } from '@/lib/poradna-articles';
 
 const topicFilters = [
@@ -16,8 +15,10 @@ const topicFilters = [
   "Chemická legislativa"
 ] as const;
 
+export type PoradnaArticleDisplay = PoradnaArticleListing & { displayDate: string | null };
+
 type Props = {
-  articles: PoradnaArticleListing[];
+  articles: PoradnaArticleDisplay[];
 };
 
 export function PoradnaFilterableList({ articles }: Props) {
@@ -60,7 +61,6 @@ export function PoradnaFilterableList({ articles }: Props) {
           <p className="muted">K tomuto tématu zatím nemáme články. Zkuste jiné téma.</p>
         ) : (
           filtered.map(article => {
-            const publishedLabel = formatArticleDate(article.publishedAt);
             const topic = topicForArticle(article.title);
             return (
               <IndexCard
@@ -71,9 +71,9 @@ export function PoradnaFilterableList({ articles }: Props) {
                 cta="Číst článek"
                 meta={
                   <div className="article-card-meta">
-                    {publishedLabel ? (
+                    {article.displayDate ? (
                       <time className="article-card-date muted" dateTime={article.publishedAt}>
-                        {publishedLabel}
+                        {article.displayDate}
                       </time>
                     ) : null}
                     <span className="tag">{topic}</span>

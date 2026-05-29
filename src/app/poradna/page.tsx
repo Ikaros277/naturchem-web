@@ -5,6 +5,7 @@ import { PoradnaFilterableList } from "@/components/PoradnaFilterableList";
 import { JsonLd } from "@/components/Schema";
 import { siteUrl } from "@/lib/site";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
+import { formatArticleDate } from "@/lib/format-date";
 
 export const metadata: Metadata = {
   title: "Odborná poradna",
@@ -14,7 +15,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const mergedArticles = await getPoradnaArticles();
+  const rawArticles = await getPoradnaArticles();
+  const mergedArticles = rawArticles.map(a => ({
+    ...a,
+    displayDate: formatArticleDate(a.publishedAt)
+  }));
 
   const collectionPageData = {
     "@context": "https://schema.org",

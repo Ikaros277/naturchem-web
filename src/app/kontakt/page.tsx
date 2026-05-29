@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SemanticCard } from "@/components/SemanticCard";
 import { ContactFormSection } from "@/components/ContactFormSection";
-import { contactUrl } from "@/lib/contact-url";
 import {
   isValidContactService,
   resolveContactServices,
@@ -15,7 +13,7 @@ import { company, siteUrl } from "@/lib/site";
 import { JsonLd } from "@/components/Schema";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { TeamSectionContact } from "@/components/TeamSection";
-import { getContactAttachmentIconKey, getContactServiceIconKey } from "@/lib/service-icons";
+import { getContactAttachmentIconKey } from "@/lib/service-icons";
 
 export const metadata: Metadata = {
   title: {
@@ -43,51 +41,6 @@ function queryParam(value: string | string[] | undefined): string {
     return raw;
   }
 }
-
-const quickPaths = [
-  {
-    title: "Měření emisí",
-    text: "Výduchy, provozní řád, režim zdroje, požadavek KÚ/ČIŽP.",
-    service: "Měření emisí",
-    cta: "Poptat měření"
-  },
-  {
-    title: "Měření pracovního prostředí",
-    text: "Kategorizace prací, chemické látky, prašnost, hluk, směnnost.",
-    service: "Měření pracovního prostředí",
-    cta: "Poptat měření"
-  },
-  {
-    title: "Hluk, akustika a hlukové studie",
-    text: "Kolaudace, stížnosti, VZT, tepelná čerpadla, noční režimy.",
-    service: "Měření hluku a akustika",
-    cta: "Poptat měření"
-  },
-  {
-    title: "Rozptylové studie",
-    text: "Nový záměr, kapacitní změna, EIA, podklady pro KÚ.",
-    service: "Rozptylové studie",
-    cta: "Poptat studii / posudek"
-  },
-  {
-    title: "EIA, odborné posudky a provozní řády",
-    text: "Povolovací proces, připomínky úřadů, EIA a provozní dokumentace.",
-    service: "EIA a oznámení záměru",
-    cta: "Poptat studii / posudek"
-  },
-  {
-    title: "Školení chemické legislativy",
-    text: "Chemický zákon, bezpečnostní listy, označování, skladování a pravidla v provozu.",
-    service: "Školení chemického zákona / chemické legislativy",
-    cta: "Poptat školení"
-  },
-  {
-    title: "Nejsem si jistý rozsahem",
-    text: "Pošlete výzvu úřadu, projekt nebo fotky provozu. Určíme, co je pro další krok potřeba.",
-    service: "Nejsem si jistý",
-    cta: "Poslat podklady k posouzení"
-  }
-] as const;
 
 const attachmentItems = [
   "požadavek, výzvu nebo rozhodnutí úřadu",
@@ -137,9 +90,7 @@ export default async function Page({ searchParams }: PageProps) {
               měření, studie, odborný posudek, EIA nebo jiná dokumentace.
             </p>
             <div className="btn-row">
-              <a href={`tel:${company.phones[0].replaceAll(" ", "")}`} className="button">Zavolat</a>
-              <a href={`mailto:${company.email}`} className="button secondary">Poslat e-mail</a>
-              <a href="#poptavkovy-formular" className="button secondary">Vyplnit poptávku</a>
+              <a href="#poptavkovy-formular" className="button">Vyplnit poptávku</a>
             </div>
           </div>
         </header>
@@ -200,24 +151,6 @@ export default async function Page({ searchParams }: PageProps) {
             ))}
           </ul>
         </article>
-      </section>
-
-      <section className="section container contact-quick-paths">
-        <h2>Rychlé poptávkové cesty</h2>
-        <div className="service-card-grid">
-          {quickPaths.map((path) => (
-            <SemanticCard
-              key={path.title}
-              href={contactUrl(path.service)}
-              className={`service-index-card${path.service === "Nejsem si jistý" ? " service-index-card-featured" : ""}`}
-              cta={path.cta}
-            >
-              <ServiceIcon icon={getContactServiceIconKey(path.service)} />
-              <h3>{path.title}</h3>
-              <p className="muted">{path.text}</p>
-            </SemanticCard>
-          ))}
-        </div>
       </section>
 
       <div className="container contact-team-section">

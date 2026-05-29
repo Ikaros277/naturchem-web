@@ -25,14 +25,6 @@ const topicFilters = [
   "Chemická legislativa"
 ] as const;
 
-const plannedChemicalTopics = [
-  "Kdy musí firma řešit školení chemických látek?",
-  "Co má obsahovat školení chemického zákona?",
-  "Jak se orientovat v bezpečnostním listu?",
-  "Nejčastější chyby při skladování chemických látek",
-  "Chemické látky v provozu: co musí vědět zaměstnanci"
-] as const;
-
 export default async function Page() {
   const mergedArticles = await getPoradnaArticles();
 
@@ -113,23 +105,6 @@ export default async function Page() {
           );
         })}
       </div>
-      <section className="section content-block">
-        <article className="card">
-          <h2>Chystaná témata k chemické legislativě</h2>
-          <p className="muted">
-            Na službu školení chemické legislativy navazují praktická témata pro provozy, sklady,
-            výrobu, laboratoře a osoby odpovědné za chemické látky.
-          </p>
-          <ul className="check-list">
-            {plannedChemicalTopics.map((topic) => (
-              <li key={topic}>{topic}</li>
-            ))}
-          </ul>
-          <Link href="/sluzby/skoleni-chemicke-legislativy" className="button secondary">
-            Školení chemické legislativy
-          </Link>
-        </article>
-      </section>
       <section className="card final-cta poradna-cta">
         <h2>Máte konkrétní dotaz z provozu?</h2>
         <p className="muted">

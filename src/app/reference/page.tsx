@@ -98,12 +98,6 @@ export default function ReferencePage() {
           <Link href={contactUrl("Nejsem si jistý")} className="button">
             Poptat podobnou zakázku
           </Link>
-          <Link href={contactUrl("Odborné posudky")} className="button secondary">
-            Poptat měření / studii
-          </Link>
-          <Link href={contactUrl("Nejsem si jistý")} className="section-link-inline">
-            Poslat podklady k posouzení
-          </Link>
         </div>
       </section>
     </main>

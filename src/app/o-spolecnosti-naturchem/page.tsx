@@ -208,6 +208,14 @@ export default function ONaturchemPage() {
           ))}
         </div>
       </section>
+
+      <section className="cta-strip container">
+        <p>Máte zájem o spolupráci nebo potřebujete poradit s rozsahem zakázky?</p>
+        <div className="btn-row">
+          <Link href="/kontakt" className="button">Kontaktovat NATURCHEM</Link>
+          <Link href="/sluzby" className="button secondary">Přehled služeb</Link>
+        </div>
+      </section>
     </main>
   );
 }

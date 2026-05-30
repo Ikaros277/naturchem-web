@@ -39,3 +39,6 @@ Link-CommandsDir (Join-Path $root ".claude\commands") "Claude Code"
 
 Write-Host ""
 Write-Host "Hotovo. Upravuj prikazy jen v .agents/commands/"
+Write-Host ""
+Write-Host "Poznamka: Cursor hooky pro logovani casu jsou v .cursor/hooks.json"
+Write-Host "         (nepotrebuji junction — nacitaji se automaticky po restartu Cursoru)."

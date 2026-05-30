@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .cursor/hooks/log-session-activity.ps1 -EventType user_prompt",
+        "matcher": "UserPromptSubmit"
+      }
+    ],
+    "stop": [
+      {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .cursor/hooks/log-session-activity.ps1 -EventType agent_stop"
+      }
+    ]
+  }
+}

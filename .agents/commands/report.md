@@ -32,10 +32,18 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 
 6. **Pokud není co reportovat** (žádné nové commity od posledního sezení a žádná implementace v konverzaci): neupravuj report, informuj uživatele, že vše je aktuální.
 
-7. Odhadni časovou náročnost tohoto sezení:
-   - Použij **jen commity v rozsahu sezení**. Seřaď časy vzestupně. Spočítej součet mezer **jen mezi po sobě jdoucími commity kratšími než 2 hodiny** (větší mezery = pauza, nezapočítávat).
-   - Pokud v rozsahu sezení není commit nebo je jen jeden: odhad z počtu výměn (1 výměna ≈ 2–5 minut).
-   - Vypiš každý pracovní blok zvlášť s datem (např. „29. 5. večer ~1,5 hod + 30. 5. odpoledne ~1,5 hod").
+7. **Odhadni časovou náročnost** spuštěním skriptu (primární zdroj — deterministický výpočet):
+   ```
+   powershell -NoProfile -ExecutionPolicy Bypass -File scripts/estimate-session-time.ps1 -Since "YYYY-MM-DD"
+   ```
+   - `-Since`: datum posledního zaznamenaného sezení z reportu (formát `YYYY-MM-DD`, např. `2026-05-29` pro sezení před dnešním).
+   - Skript vrátí JSON s poli: `totalLabel`, `blocksLabel`, `method`, `totalMinutes`, `hasGit`, `hasActivityLog`.
+   - **Metoda odhadu** z `method`:
+     - `git + konverzace` — commity + log z Cursor hooku (mezera nad 30 min = pauza)
+     - `git` — jen commity (typicky Claude Code / bez hooku)
+     - `konverzace` — jen log konverzace
+   - **Fallback pořadí:** skript → odhad z počtu výměn (`počet × 3 min` z config `fallbackExchangeMinutes`).
+   - Do reportu zapiš hodnoty ze skriptu — neodhaduješ čas „od oka".
 
 8. Aktualizuj tabulku „Přehled projektu":
    - Počet sezení: předchozí + 1 (nebo beze změny, pokud jen doplňuješ stejné dne)
@@ -49,7 +57,7 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 11. Ulož zpět do `reports/report.md`.
 
 12. **Automatický commit a push** (pouze pokud byl report skutečně změněn v kroku 11):
-    - `git add reports/report.md`
+    - `git add reports/report.md .agents/session-activity.jsonl`
     - Commit se zprávou: `Report: aktualizace sezení [DD. M. YYYY]` — přidej stručný doplněk z přehledu sezení, pokud je výstižný (max. ~60 znaků v prvním řádku).
     - `git push` na aktuální větev (typicky `main`).
     - Pokud push selže kvůli zaostávající větvi: `git pull --rebase`, pak znovu `git push`.
@@ -88,10 +96,11 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 [Opakuj pro každou oblast změn.]
 
 ### Časová náročnost
-**Odhadovaná doba práce:** [např. přibližně 2–3 hodiny]  
-**Rozložení:** [pracovní bloky s datem, např. "29. 5. večer ~1,5 hod + 30. 5. odpoledne ~1,5 hod"]  
+**Odhadovaná doba práce:** [např. ~1 hod 20 min — ze skriptu `totalLabel`]  
+**Rozložení:** [ze skriptu `blocksLabel`, např. "30. 5. 09:58–11:17 (~1 hod 15 min) + 30. 5. 13:00–13:25 (~25 min)"]  
+**Metoda odhadu:** [git + konverzace | git | konverzace | výměny]  
 **Počet výměn s AI:** [počet kol konverzace]  
-*Poznámka: čas odhadován součtem mezer mezi git commity kratšími než 2 hodiny; delší mezery se jako přestávky nezapočítávají. Commity jsou nástrojově neutrální — fungují z Cursoru i VS Code + Claude Code.*
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. V Claude Code bez hooku se použijí jen commity.*
 
 ### Technická poznámka
 [Volitelně: stručná zmínka o ovlivněných souborech nebo komponentách. Vynech, pokud není přínosná.]

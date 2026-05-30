@@ -1,0 +1,5 @@
+{
+  "pauseThresholdMinutes": 30,
+  "minBlockMinutes": 5,
+  "fallbackExchangeMinutes": 3
+}

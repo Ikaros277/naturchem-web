@@ -6,7 +6,7 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 4 |
-| Celkový odhadovaný čas | ~9 hodin |
+| Celkový odhadovaný čas | ~7,5 hodiny |
 | Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
 
 ---
@@ -14,9 +14,9 @@
 ## Sezení: 30. 5. 2026 (večer)
 
 ### Přehled
-Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky.
+Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky. Změny commitnuty a pushnuty na GitHub (`f260dca`).
 
-**Zdroj popisu:** AI konverzace
+**Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
 
@@ -28,13 +28,19 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Co bylo uděláno:** Na stránce `/akreditace-autorizace-dokumenty` sloučena sekce přístrojového vybavení do bloku akreditovaného rozsahu (odstavec + odkaz na vybavení). Autorizace a dokumenty ke stažení jsou v jedné sekci „Autorizace, oprávnění a dokumenty“.  
 **Proč:** Stránka měla příliš mnoho samostatných sekcí se stejným účelem (důvěryhodnost) — kratší struktura zrychluje orientaci a posiluje závěrečné CTA.
 
+#### Odeslání do repozitáře
+**Co bylo uděláno:** Všechny změny zabaleny do commitu `f260dca` a odeslány na větev `main` (GitHub). Vercel nasadí aktualizaci automaticky.  
+**Proč:** Sdílení hotového stavu pro klienta a produkční preview.
+
 ### Časová náročnost
-**Odhadovaná doba práce:** přibližně 1 hodina  
-**Počet výměn s AI:** ~15 kol konverzace  
-*Poznámka: čas odhadován z rozsahu změn v repozitáři; commit může následovat po ukončení sezení.*
+**Odhadovaná doba práce:** ~33 min  
+**Rozložení:** 30. 5. 13:20–13:53 (~33 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~18 kol konverzace  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Odpolední blok zahrnuje i dokončení workflow reportu před implementací P1.*
 
 ### Technická poznámka
-`ServicePage.tsx`, `dedicated-service-pages.ts`, 5× `sluzby/*/page.tsx`, `akreditace-autorizace-dokumenty/page.tsx`, `globals.css`, `service-copy.ts`; smazáno `home-audience.ts`, `service-defaults.ts`. Build `npm run build` prošel bez chyb.
+`ServicePage.tsx`, `dedicated-service-pages.ts`, 5× `sluzby/*/page.tsx`, `akreditace-autorizace-dokumenty/page.tsx`, `globals.css`, `service-copy.ts`; smazáno `home-audience.ts`, `service-defaults.ts`. Build `npm run build` prošel bez chyb. Commit `f260dca` na `origin/main`.
 
 ---
 
@@ -72,14 +78,15 @@ Sezení navázalo na předchozí den a dokončilo čtvrtý UX sprint — opravy 
 **Proč:** Reálné zákaznické reference s logy firem (Škoda Auto, ČEZ, České dráhy, E.ON, Strabag a další) jsou silný důkaz odborné praxe. Zobrazení na homepage i na stránce Reference posiluje důvěryhodnost hned při prvním kontaktu s webem.
 
 #### Nastavení projektového workflow a AI příkazů
-**Co bylo uděláno:** Vylepšen příkaz `/report` pro práci napříč nástroji (Cursor i VS Code + Claude Code) — odhad času z git commitů funguje bez ohledu na nástroj, popis změn se doplní i z commitů, pokud v daném nástroji neproběhla konverzace. Příkazy `/report` a `/status` sjednoceny do jedné složky `.agents/commands/` s automatickým propojením do Cursoru a Claude Code (junction skript). Klientský report prací zaveden v repozitáři (`reports/report.md`) a commitnut na GitHub.  
+**Co bylo uděláno:** Vylepšen příkaz `/report` pro práci napříč nástroji (Cursor i VS Code + Claude Code) — odhad času z git commitů funguje bez ohledu na nástroj, popis změn se doplní i z commitů, pokud v daném nástroji neproběhla konverzace. Příkazy `/report` a `/status` sjednoceny do jedné složky `.agents/commands/` s automatickým propojením do Cursoru a Claude Code (junction skript). Klientský report prací zaveden v repozitáři (`reports/report.md`) a commitnut na GitHub. Doplněn skript `estimate-session-time.ps1` (git + log konverzace, pauza 30 min) a automatický commit a push po každé aktualizaci reportu.  
 **Proč:** Klient pracuje střídavě z různých AI nástrojů — duplicitní údržba příkazů v `.cursor/` a `.claude/` by vedla k rozpory. Sjednocený zdroj zajišťuje konzistentní `/report` a `/status` odkudkoliv, report prací slouží jako průběžná evidence pro klienta.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** přibližně 2,5 hodiny  
-**Rozložení:** 30. 5. dopoledne ~1,5 hod (UX sprint 4, commity 09:58–11:35) + 30. 5. odpoledne ~1 hod (homepage loga, AI workflow, commit)  
+**Odhadovaná doba práce:** ~1 hod 37 min  
+**Rozložení:** 30. 5. 09:58–11:35 (~1 hod 37 min)  
+**Metoda odhadu:** git + konverzace  
 **Počet výměn s AI:** ~30 kol konverzace  
-*Poznámka: čas odhadován součtem mezer mezi git commity kratšími než 2 hodiny; delší mezery se jako přestávky nezapočítávají. Commity jsou nástrojově neutrální — fungují z Cursoru i VS Code + Claude Code.*
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — dopolední blok dne 30. 5. (UX sprint 4 a reference). Odpolední práce je v sezení „30. 5. 2026 (večer)".*
 
 ### Technická poznámka
 UX: upraveno 8+ komponent a stránek (`ServicePage`, `FaqPageContent`, `EquipmentAccordion`, `ReferenceExampleCard`, `reference/page.tsx`, `page.tsx`, `globals.css`, `navigation.ts`, `faq.ts`), datová vrstva `src/lib/client-logos.ts`, 19 log v `public/loga-referenci/`. Workflow: `.agents/commands/`, `scripts/setup-ai-commands.ps1`, `reports/report.md`. Nasazeno na `web-naturchem.vercel.app`.

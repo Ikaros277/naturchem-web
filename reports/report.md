@@ -6,54 +6,51 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 5 |
-| Celkový odhadovaný čas | ~10,2 hodiny |
-| Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
+| Celkový odhadovaný čas | ~10 hod 40 min |
+| Aktuální fáze | Sprint 12 hotovo — SEO audit, hero layout, responzivní menu; další copy sprint a launch |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem a +5 min po konci (`report-config.json`).*
 
 ---
 
-## Sezení: 30. 5. 2026, 17:22–18:13
+## Sezení: 30. 5. 2026, 17:17–18:35
 
 ### Přehled
-Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero na informační stránky a zjednodušení homepage (P5-11, P5-12).
+Večerní implementační sprint navázal na vizuální úpravy hero sekcí (Sprint 9–10). Dokončeny Sprinty 11 a 12: SEO meta audit, prolinkování poradny se službami, sjednocení hero pásu, oprava layoutu hero textu a responzivní hlavní menu s dropdownem „Další“. Po zpětné vazbě klienta doplněna oprava zarovnání textu v hero vůči containeru stránky.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
-#### Sprint 12: hero layout fix a responzivn├ş menu (P6-3/4, P1-7).
-**Co bylo uděláno:** Sprint 12: hero layout fix a responzivn├ş menu (P6-3/4, P1-7). (commit `2714920`). Dotčené oblasti: app, components, report, ROADMAPA.md, ux-audit-roadmapa.md, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
 
-#### Sjednotit v├Ż┼íku hero p├ísu nap┼Ö├ş─Ź str├ínkami (P6-2).
-**Co bylo uděláno:** Sjednotit v├Ż┼íku hero p├ísu nap┼Ö├ş─Ź str├ínkami (P6-2). (commit `3288441`). Dotčené oblasti: app, components, report, ROADMAPA.md, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+#### Sprint 11 — SEO a prolinkování poradna ↔ služby
+**Co bylo uděláno:** Proveden audit meta title/description na klíčových stránkách (dokument `05-seo/meta-audit-sprint11.md`). Přidáno obousměrné prolinkování: u každého článku poradny blok souvisejících služeb, u stránek služeb teaser souvisejících článků. Dokončena technická hygiena P4 — migrace stránky školení na šablonu ServicePage, FAQ teaser u ISPOP/GHG/chemických služeb, přesun checklistu „Nejste si jistí?" výše na indexu provozů.  
+**Proč:** Lepší SEO a navigace mezi odborným obsahem a konverzními stránkami služeb; konzistentní struktura service pages.
 
-#### Sprint 11: meta audit, prolinkov├ín├ş poradnaÔćöslu┼żby a P4 hygiena.
-**Co bylo uděláno:** Sprint 11: meta audit, prolinkov├ín├ş poradnaÔćöslu┼żby a P4 hygiena. (commit `401f312`). Dotčené oblasti: components, lib, meta-audit-sprint11.md, page.tsx, poradna, provozy-a-technologie, ROADMAPA.md.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+#### Sprint 10 — homepage a dokumentace (doplnění večera)
+**Co bylo uděláno:** Trust lišta hned pod hero, kompaktní statistiky bez duplicitního nadpisu, redukce vertikálních mezer (−50 %). Projektová dokumentace (`naturchem-projekt/`) zahrnuta do repozitáře.  
+**Proč:** Posílení důvěry hned pod hero a sjednocení spacingu dle UX roadmapy.
 
-#### Homepage d┼»v─Ťra a spacing: trust li┼íta pod hero, kompaktn├ş stats,...
-**Co bylo uděláno:** Homepage d┼»v─Ťra a spacing: trust li┼íta pod hero, kompaktn├ş stats, Ôłĺ50 % mezer (Sprint 10). (commit `6719a30`). Dotčené oblasti: app, components, report, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+#### Sprint 12 — hero layout a responzivní menu
+**Co bylo uděláno:** Opravena regrese zarovnání — `.container` znovu centruje obsah. Hero pás na podstránkách začíná bez bílé mezery pod fixed hlavičkou. Sjednocena min-height hero (`standard` / `service` varianty). Hlavní menu: od 1280 px plné menu, na 1024–1279 px zkrácená verze s dropdownem „Další" (Typické zakázky, O NATURCHEM, FAQ, Poradna, Akreditace, Přístrojové vybavení) — řeší překryv tlačítka „Poptat službu" s položkou Kontakt.  
+**Proč:** Klient hlásil nestabilní výšku hero, text u levého okraje monitoru a přeplněné menu na středně širokých displejích.
 
-#### P┼Öidat projektovou dokumentaci do repozit├í┼Öe.
-**Co bylo uděláno:** P┼Öidat projektovou dokumentaci do repozit├í┼Öe. (commit `786252a`). Dotčené oblasti: .gitignore, brand-manual.md, cmo-role.md, competitive-analysis.md, copy-audit.md, copy-role.md, graficky-audit.md, mvp-audit.md, personas.md, PROJEKT-STATUS.md, ROADMAPA.md, seo-audit.md, seo-role.md, sitemap.md, tone-of-voice.md, ux-audit-roadmapa.md, ux-role.md.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+#### UX konzultace — hero fotky a výška
+**Co bylo uděláno:** Odsouhlaseno: homepage může mít vyšší hero (landing), podstránky mají být mezi sebou konzistentní. Tématické stock fotky podle kategorií služeb (emise / hluk / dokumentace) ponechány — ne jedna fotka všude, ne 24 unikátních variant.  
+**Proč:** Kompromis mezi orientací návštěvníka na správné službě a udržitelností údržby webu.
 
-#### Rozšířit photo hero na všechny stránky a zjednodušit homepage (P5-11, P5-12)
-**Co bylo uděláno:** Rozšířit photo hero na všechny stránky a zjednodušit homepage (P5-11, P5-12). (commit `cefcbd0`). Dotčené oblasti: akreditace-autorizace-dokumenty, app, components, faq, kontakt, lib, o-spolecnosti-naturchem, page.tsx, poradna, pristrojove-vybaveni, provozy-a-technologie, reference, sluzby, typicke-zakazky, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+#### Oprava zarovnání hero textu (doplnění po kontrole)
+**Co bylo uděláno:** Odstraněno `width: 100%` z vnitřního wrapperu hero pásu, které přepisovalo šířku containeru a tlačilo text k levému okraji obrazovky (např. stránka Reference). Text hero nyní začíná ve stejné linii jako obsah pod ním a jako na homepage.  
+**Proč:** Po první opravě containeru zůstala vizuální regrese — klient ji ověřil na screenshotu stránky Reference.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~51 min
-**Rozložení:** 30. 5. 2026 17:22–18:13 (~51 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~1 hod 18 min  
+**Rozložení:** 30. 5. 2026 17:17–18:35 (~1 hod 18 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~14 kol konverzace  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-Commit: `cefcbd0ea2036d6ce173444b3bc070edb0227424`
+`PageHeroBand.tsx`, `Header.tsx`, `globals.css`, `poradna-service-links.ts`, `ServicePage.tsx`, `dedicated-service-pages.ts`, `ROADMAPA.md`. Commity `401f312` (S11), `2714920` (S12), `650f64a` (zarovnání hero). Build prošel bez chyb.
 
 ---
 

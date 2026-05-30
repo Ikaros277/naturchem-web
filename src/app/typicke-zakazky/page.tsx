@@ -4,10 +4,12 @@ import { CaseStudiesView } from "@/components/CaseStudiesView";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { TypicalScenarios } from "@/components/TypicalScenarios";
+import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
 import { pageCtaPresets } from "@/lib/cta";
 import { caseStudyCategories } from "@/lib/case-studies";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
+import { workProcessHeading, workProcessIntro } from "@/lib/work-process";
 
 export const metadata: Metadata = {
   title: "Typické zakázky – měření, studie, ISPOP a školení",
@@ -38,6 +40,12 @@ export default function TypickeZakazkyPage() {
       </PageHeroBand>
 
       <div className="container">
+        <section className="section content-block">
+          <h2>{workProcessHeading}</h2>
+          <p className="muted section-intro">{workProcessIntro}</p>
+          <WorkProcessTimeline />
+        </section>
+
         <section className="section">
           <h2>Scénáře z praxe</h2>
           <TypicalScenarios />

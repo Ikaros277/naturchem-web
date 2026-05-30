@@ -3676,14 +3676,8 @@ footer .muted,
   line-height: 1.8;
 }
 
-.about-hero {
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
-  max-width: none;
-  align-items: stretch;
-}
-
-.about-proof-panel {
-  background: var(--primary);
+.about-page > .section {
+  padding: clamp(1rem, 2vw, 1.75rem) 0;
 }
 
 .about-two-column {
@@ -4103,7 +4097,6 @@ footer .muted,
 }
 
 @media (max-width: 960px) {
-  .about-hero,
   .about-two-column {
     grid-template-columns: 1fr;
   }

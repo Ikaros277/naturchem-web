@@ -1,4 +1,4 @@
-/** Kroky spolupráce — zobrazení na /o-spolecnosti-naturchem (P5-7). */
+/** Kroky spolupráce — zobrazení na /typicke-zakazky. */
 
 export const workProcessSteps = [
   {

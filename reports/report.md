@@ -11,7 +11,7 @@
 
 ---
 
-## Sezení: 30. 5. 2026 (večer)
+## Sezení: 30. 5. 2026, 13:20–13:53
 
 ### Přehled
 Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky. Změny commitnuty a pushnuty na GitHub (`f260dca`).
@@ -44,7 +44,7 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 
 ---
 
-## Sezení: 30. 5. 2026
+## Sezení: 30. 5. 2026, 09:58–11:35
 
 ### Přehled
 Sezení navázalo na předchozí den a dokončilo čtvrtý UX sprint — opravy designového systému, přepracování stránky Reference, doplnění log zákazníků a jejich zobrazení i na homepage. Odpoledne proběhlo nastavení projektového workflow — sjednocení AI příkazů pro Cursor i Claude Code a zavedení klientského reportu prací.
@@ -86,7 +86,7 @@ Sezení navázalo na předchozí den a dokončilo čtvrtý UX sprint — opravy 
 **Rozložení:** 30. 5. 09:58–11:35 (~1 hod 37 min)  
 **Metoda odhadu:** git + konverzace  
 **Počet výměn s AI:** ~30 kol konverzace  
-*Poznámka: čas počítá skript `estimate-session-time.ps1` — dopolední blok dne 30. 5. (UX sprint 4 a reference). Odpolední práce je v sezení „30. 5. 2026 (večer)".*
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — dopolední blok dne 30. 5. (UX sprint 4 a reference). Odpolední práce (P1, akreditace) je v sezení „30. 5. 2026, 13:20–13:53".*
 
 ### Technická poznámka
 UX: upraveno 8+ komponent a stránek (`ServicePage`, `FaqPageContent`, `EquipmentAccordion`, `ReferenceExampleCard`, `reference/page.tsx`, `page.tsx`, `globals.css`, `navigation.ts`, `faq.ts`), datová vrstva `src/lib/client-logos.ts`, 19 log v `public/loga-referenci/`. Workflow: `.agents/commands/`, `scripts/setup-ai-commands.ps1`, `reports/report.md`. Nasazeno na `web-naturchem.vercel.app`.

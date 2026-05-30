@@ -50,7 +50,13 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
    - Celkový čas: předchozí součet + čas tohoto sezení
    - Aktuální fáze: odvoď z obsahu sezení; volitelně ověř v `naturchem-projekt/ROADMAPA.md`
 
-9. Přidej nový blok sezení **hned pod tabulku „Přehled projektu"** (před ostatní sezení — nejnovější nahoře). Pokud sezení stejného dne již existuje a obsahuje stejnou práci, **doplň ho** místo duplicity. Pokud tentýž den pokračuje práce z jiného nástroje, **slouč** do jednoho sezení daného dne.
+9. Přidej nový blok sezení **hned pod tabulku „Přehled projektu"** (před ostatní sezení — nejnovější nahoře). Pokud sezení stejného dne již existuje a obsahuje stejnou práci, **doplň ho** místo duplicity. Pokud tentýž den pokračuje práce z jiného nástroje s **pauzou nad 30 min** (jiný blok ze skriptu), vytvoř **samostatné sezení** se stejným datem, ale jiným časovým rozsahem.
+
+   **Pojmenování sezení (povinné):**
+   - Nadpis ve tvaru `## Sezení: DD. M. YYYY, HH:MM–HH:MM` — časy **vždy z git commitů** nebo z pole `blocks[].label` / `blocksLabel` skriptu `estimate-session-time.ps1`.
+   - **Nikdy** nepoužívej „ráno“, „dopoledne“, „odpoledne“, „večer“ v nadpisu — neodpovídají skutečnému času práce a matou klienta (např. práce ve 13:50 není večer).
+   - Pokud je v daný den jen jeden souvislý blok, stačí `## Sezení: DD. M. YYYY, HH:MM–HH:MM` z prvního a posledního commitu bloku.
+   - Starší sezení bez časů v nadpisu při úpravě reportu **oprav** podle `git log`, pokud commity existují.
 
 10. Pokud složka `reports/` neexistuje, vytvoř ji.
 
@@ -80,7 +86,7 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 
 ---
 
-## Sezení: DD. M. YYYY
+## Sezení: DD. M. YYYY, HH:MM–HH:MM
 
 ### Přehled
 [2–3 věty shrnující záměr a výsledek tohoto sezení.]
@@ -111,6 +117,7 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 ```
 
 **Pravidla pro obsah:**
+- Nadpis sezení = datum + **skutečný časový rozsah práce** (z git / skriptu), ne část dne slovy.
 - Zpráva musí být celá v češtině.
 - Cílová skupina: polotechnický klient — rozumí webu a technologiím obecně, ale nepotřebuje znát konkrétní kód.
 - Zahrň pouze to, co bylo skutečně provedeno v rozsahu sezení (konverzace nebo nezreportované commity).

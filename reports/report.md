@@ -6,17 +6,17 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 5 |
-| Celkový odhadovaný čas | ~10 hod 40 min |
-| Aktuální fáze | Sprint 12 hotovo — SEO audit, hero layout, responzivní menu; další copy sprint a launch |
+| Celkový odhadovaný čas | ~11 hod 24 min |
+| Aktuální fáze | Copy sprint C1–C2 hotovo; další C3 (akreditace) a launch checklist |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem a +5 min po konci (`report-config.json`).*
 
 ---
 
-## Sezení: 30. 5. 2026, 17:17–18:35
+## Sezení: 30. 5. 2026, 17:17–19:19
 
 ### Přehled
-Večerní implementační sprint navázal na vizuální úpravy hero sekcí (Sprint 9–10). Dokončeny Sprinty 11 a 12: SEO meta audit, prolinkování poradny se službami, sjednocení hero pásu, oprava layoutu hero textu a responzivní hlavní menu s dropdownem „Další“. Po zpětné vazbě klienta doplněna oprava zarovnání textu v hero vůči containeru stránky.
+Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní menu) a pokračoval copy sprintem podle tone of voice. Naplánován rozsah C1–C9, zaveden příkaz `/copy`, doplněn sprint log v copy-audit. Implementovány dávky C1 (homepage) a C2 (O společnosti, odborná garance) včetně úprav layoutu homepage po schválení klienta.
 
 **Zdroj popisu:** AI konverzace + git commity
 
@@ -42,15 +42,27 @@ Večerní implementační sprint navázal na vizuální úpravy hero sekcí (Spr
 **Co bylo uděláno:** Odstraněno `width: 100%` z vnitřního wrapperu hero pásu, které přepisovalo šířku containeru a tlačilo text k levému okraji obrazovky (např. stránka Reference). Text hero nyní začíná ve stejné linii jako obsah pod ním a jako na homepage.  
 **Proč:** Po první opravě containeru zůstala vizuální regrese — klient ji ověřil na screenshotu stránky Reference.
 
+#### Plánování copy sprintu a příkaz `/copy`
+**Co bylo uděláno:** Po status briefingu sestaven plán copy sprintu C1–C9 (poradna články odloženy do P-COPY). Vytvořen Cursor příkaz `.agents/commands/copy.md` s pravidly faktické přesnosti (TOV §0). Do `01-copy-audit/copy-audit.md` doplněn sprint log a mapování na starší CC položky.  
+**Proč:** Systematický TOV pass napříč webem s jasným workflow návrh → schválení → implementace.
+
+#### Copy sprint C1 — homepage
+**Co bylo uděláno:** Přepsány hero texty (H1 s důrazem na komplexní pokrytí potřeb provozu), intro sekce „Co zajišťujeme" a texty tří pilířů nabídky. Odstraněn reference teaser, hero CTA tlačítka, odkaz „Nevím co potřebuji" a spodní uncertain CTA pás — konverze zůstává v hlavičce. Loga zákazníků ponechána.  
+**Proč:** Homepage má být přehlednější, copy zákaznicky orientované dle TOV; méně duplicitních CTA.
+
+#### Copy sprint C2 — O společnosti a odborná garance
+**Co bylo uděláno:** Přepsány hero, sekce „Kdo jsme", garance a stránka `/odborna-garance` (profil Ing. Heziny, konzistentní autorizace). Aktualizovány sdílené texty: stats intro („řešíme déle než 36 let"), garance, proces zakázky, tým (popisy u obchodního kontaktu), působnost a CTA spolupráce.  
+**Proč:** Klíčové důvěryhodnostní stránky musí mluvit jazykem zákazníka, ne firemním katalogem.
+
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 18 min  
-**Rozložení:** 30. 5. 2026 17:17–18:35 (~1 hod 18 min)  
+**Odhadovaná doba práce:** ~2 hod 2 min  
+**Rozložení:** 30. 5. 2026 17:17–19:19 (~2 hod 2 min)  
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** ~14 kol konverzace  
+**Počet výměn s AI:** ~25 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-`PageHeroBand.tsx`, `Header.tsx`, `globals.css`, `poradna-service-links.ts`, `ServicePage.tsx`, `dedicated-service-pages.ts`, `ROADMAPA.md`. Commity `401f312` (S11), `2714920` (S12), `650f64a` (zarovnání hero). Build prošel bez chyb.
+UX: `PageHeroBand.tsx`, `Header.tsx`, `globals.css`, `poradna-service-links.ts` — commity S11–S12 (`401f312`, `2714920`, `650f64a`). Copy: `page.tsx`, `o-spolecnosti-naturchem/page.tsx`, `odborna-garance/page.tsx`, `.agents/commands/copy.md`, `01-copy-audit/copy-audit.md`, lib (`company-stats`, `team`, `guarantee-copy`, `work-process`, `nationalMessaging`, `cta`) — commit `ebbae75`. Build prošel bez chyb.
 
 ---
 

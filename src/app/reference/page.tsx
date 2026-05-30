@@ -45,15 +45,12 @@ export default function ReferencePage() {
       <section className="section content-block container" id="zakaznici">
         <h2>Vybraní zákazníci</h2>
         <div className="client-logos-grid">
-          {referenceClients.filter(c => c.logo).map(client => (
+          {referenceClients.map(client => (
             <div key={client.name} className="client-logo-item">
               <img src={client.logo} alt={client.name} title={client.name} />
             </div>
           ))}
         </div>
-        <p className="client-names-text muted">
-          {referenceClients.filter(c => !c.logo).map(c => c.name).join(" · ")}
-        </p>
       </section>
 
       <section className="section content-block container" id="priklady">

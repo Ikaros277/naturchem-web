@@ -3269,25 +3269,52 @@ footer .muted,
 }
 
 .client-logos-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
   align-items: center;
-  gap: 1.75rem 2.5rem;
+  justify-items: center;
+  gap: 1.1rem 1.25rem;
   margin-top: 1.5rem;
+}
+
+.client-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
 }
 
 .client-logo-item img {
   display: block;
-  max-height: 48px;
-  max-width: 130px;
-  min-height: 24px;
-  min-width: 48px;
+  max-height: 40px;
+  max-width: 108px;
+  min-height: 22px;
+  min-width: 40px;
   width: auto;
   height: auto;
   object-fit: contain;
   filter: grayscale(100%);
-  opacity: 0.75;
+  opacity: 0.8;
   transition: filter 0.2s, opacity 0.2s;
+}
+
+@media (max-width: 900px) {
+  .client-logos-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .client-logos-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .client-logo-item img {
+    max-height: 34px;
+    max-width: 88px;
+  }
 }
 
 .client-logo-item img:hover {

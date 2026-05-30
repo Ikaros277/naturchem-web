@@ -10,9 +10,11 @@ $configPath = Join-Path $root ".agents\report-config.json"
 $activityPath = Join-Path $root ".agents\session-activity.jsonl"
 
 $config = @{
-    pauseThresholdMinutes    = 30
-    minBlockMinutes          = 5
-    fallbackExchangeMinutes  = 3
+    pauseThresholdMinutes       = 30
+    minBlockMinutes             = 5
+    sessionPaddingMinutesBefore = 5
+    sessionPaddingMinutesAfter  = 5
+    fallbackExchangeMinutes     = 3
 }
 
 if (Test-Path $configPath) {
@@ -20,6 +22,12 @@ if (Test-Path $configPath) {
     $config.pauseThresholdMinutes = $loaded.pauseThresholdMinutes
     $config.minBlockMinutes = $loaded.minBlockMinutes
     $config.fallbackExchangeMinutes = $loaded.fallbackExchangeMinutes
+    if ($null -ne $loaded.sessionPaddingMinutesBefore) {
+        $config.sessionPaddingMinutesBefore = [int]$loaded.sessionPaddingMinutesBefore
+    }
+    if ($null -ne $loaded.sessionPaddingMinutesAfter) {
+        $config.sessionPaddingMinutesAfter = [int]$loaded.sessionPaddingMinutesAfter
+    }
 }
 
 function Get-SinceDateTime {
@@ -162,22 +170,21 @@ $blockResults = @()
 $totalMinutes = 0
 
 foreach ($block in $blocks) {
-    $start = $block[0].Local
-    $end = $block[-1].Local
-    $span = $end - $start
-
-    if ($block.Count -eq 1 -or $span.TotalMinutes -lt $config.minBlockMinutes) {
-        $minutes = [math]::Max($config.minBlockMinutes, [math]::Round($span.TotalMinutes))
-    } else {
-        $minutes = [math]::Round($span.TotalMinutes)
-    }
+    $rawStart = $block[0].Local
+    $rawEnd = $block[-1].Local
+    $displayStart = $rawStart.AddMinutes(-$config.sessionPaddingMinutesBefore)
+    $displayEnd = $rawEnd.AddMinutes($config.sessionPaddingMinutesAfter)
+    $minutes = [math]::Max(
+        $config.minBlockMinutes,
+        [math]::Round(($displayEnd - $displayStart).TotalMinutes)
+    )
 
     $totalMinutes += $minutes
     $blockResults += [ordered]@{
-        startLocal = $start.ToString("yyyy-MM-ddTHH:mm:ss")
-        endLocal   = $end.ToString("yyyy-MM-ddTHH:mm:ss")
+        startLocal = $displayStart.ToString("yyyy-MM-ddTHH:mm:ss")
+        endLocal   = $displayEnd.ToString("yyyy-MM-ddTHH:mm:ss")
         minutes    = $minutes
-        label      = (Format-CzechBlockLabel -Start $start -End $end -Minutes $minutes)
+        label      = (Format-CzechBlockLabel -Start $displayStart -End $displayEnd -Minutes $minutes)
         eventCount = $block.Count
     }
 }
@@ -203,7 +210,9 @@ $output = [ordered]@{
     hasGit            = $hasGit
     hasActivityLog    = $hasActivityLog
     eventCount        = $events.Count
-    pauseThresholdMin = $config.pauseThresholdMinutes
+    pauseThresholdMin          = $config.pauseThresholdMinutes
+    sessionPaddingMinutesBefore = $config.sessionPaddingMinutesBefore
+    sessionPaddingMinutesAfter  = $config.sessionPaddingMinutesAfter
 }
 
 Write-Output ($output | ConvertTo-Json -Depth 5 -Compress)

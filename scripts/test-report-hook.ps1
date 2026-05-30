@@ -15,6 +15,8 @@ $log = Get-Content .agents/report-hook.log -Tail 5 -ErrorAction SilentlyContinue
 Assert-True ([bool]($log | Select-String "skip: already processed")) "idempotence skip"
 
 $config = Get-Content .agents/report-config.json -Raw | ConvertFrom-Json
+Assert-True ($null -ne $config.sessionPaddingMinutesBefore) "sessionPaddingMinutesBefore in config"
+Assert-True ($null -ne $config.sessionPaddingMinutesAfter) "sessionPaddingMinutesAfter in config"
 $skipReport = $false
 foreach ($p in @($config.skipCommitMessagePrefixes)) {
     if ("Report: auto-sync test".StartsWith($p)) { $skipReport = $true }

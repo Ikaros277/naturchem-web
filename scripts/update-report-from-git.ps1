@@ -14,20 +14,46 @@ $changeTemplatePath = Join-Path $root ".agents\templates\auto-change-block.md"
 $newSessionTemplatePath = Join-Path $root ".agents\templates\auto-new-session.md"
 
 $config = @{
-    pauseThresholdMinutes   = 30
-    minBlockMinutes         = 5
-    autoSyncOnCommit        = $true
-    autoPush                = $true
-    skipCommitMessagePrefixes = @("Report:")
+    pauseThresholdMinutes        = 30
+    minBlockMinutes              = 5
+    sessionPaddingMinutesBefore  = 5
+    sessionPaddingMinutesAfter   = 5
+    autoSyncOnCommit             = $true
+    autoPush                     = $true
+    skipCommitMessagePrefixes    = @("Report:")
 }
 
 if (Test-Path $configPath) {
     $loaded = Get-Content $configPath -Raw | ConvertFrom-Json
     $config.pauseThresholdMinutes = $loaded.pauseThresholdMinutes
     $config.minBlockMinutes = $loaded.minBlockMinutes
+    if ($null -ne $loaded.sessionPaddingMinutesBefore) {
+        $config.sessionPaddingMinutesBefore = [int]$loaded.sessionPaddingMinutesBefore
+    }
+    if ($null -ne $loaded.sessionPaddingMinutesAfter) {
+        $config.sessionPaddingMinutesAfter = [int]$loaded.sessionPaddingMinutesAfter
+    }
     if ($null -ne $loaded.autoSyncOnCommit) { $config.autoSyncOnCommit = [bool]$loaded.autoSyncOnCommit }
     if ($null -ne $loaded.autoPush) { $config.autoPush = [bool]$loaded.autoPush }
     if ($loaded.skipCommitMessagePrefixes) { $config.skipCommitMessagePrefixes = @($loaded.skipCommitMessagePrefixes) }
+}
+
+function Get-PaddedSessionSpan {
+    param(
+        [DateTime]$RawStart,
+        [DateTime]$RawEnd
+    )
+    $displayStart = $RawStart.AddMinutes(-$config.sessionPaddingMinutesBefore)
+    $displayEnd = $RawEnd.AddMinutes($config.sessionPaddingMinutesAfter)
+    $minutes = [math]::Max(
+        $config.minBlockMinutes,
+        [math]::Round(($displayEnd - $displayStart).TotalMinutes)
+    )
+    return @{
+        DisplayStart = $displayStart
+        DisplayEnd     = $displayEnd
+        Minutes        = $minutes
+    }
 }
 
 function Write-HookLog {
@@ -190,19 +216,20 @@ try {
     }
 
     if (-not (Test-Path $reportPath)) {
-        $durationLabel = Format-DurationLabel -Minutes $config.minBlockMinutes
+        $padded = Get-PaddedSessionSpan -RawStart $commitLocal -RawEnd $commitLocal
+        $durationLabel = Format-DurationLabel -Minutes $padded.Minutes
         $newSessionTemplate = Read-Utf8File $newSessionTemplatePath
         $reportBody = "# Report prac" + [char]0xED + " - naturchem.cz`n`n" + (Expand-Template $newSessionTemplate @{
             DATE        = $dateLabel
-            TIME_START  = $timeLabel
-            TIME_END    = $timeLabel
+            TIME_START  = $padded.DisplayStart.ToString("HH:mm")
+            TIME_END    = $padded.DisplayEnd.ToString("HH:mm")
             HASH        = $shortHash
             FULL_HASH   = $headHash
             CHANGE_BLOCK = $changeBlock.Trim()
             DURATION    = $durationLabel
         })
         $state.sessionCount = 1
-        $state.totalMinutesTracked = $config.minBlockMinutes
+        $state.totalMinutesTracked = $padded.Minutes
     } else {
         $reportBody = Read-Utf8File $reportPath
 
@@ -231,7 +258,8 @@ try {
                         $sessionStart = $sessionDate
                         $sessionEnd = $sessionDate.AddHours(12)
                     }
-                    $gap = $commitLocal - $sessionEnd
+                    $sessionEndRaw = $sessionEnd.AddMinutes(-$config.sessionPaddingMinutesAfter)
+                    $gap = $commitLocal - $sessionEndRaw
                     if ($gap.TotalMinutes -le $config.pauseThresholdMinutes -and $gap.TotalMinutes -ge -5) {
                         $mergeIntoExisting = $true
                     }
@@ -240,12 +268,20 @@ try {
         }
 
         if ($mergeIntoExisting) {
-            $newEnd = $commitLocal
-            if ($newEnd -lt $sessionStart) { $newEnd = $sessionStart.AddMinutes($config.minBlockMinutes) }
-            $newStartStr = $sessionStart.ToString("HH:mm")
-            $newEndStr = $newEnd.ToString("HH:mm")
+            $rawEnd = $commitLocal
+            if ($rawEnd -lt $sessionStart) {
+                $rawEnd = $sessionStart.AddMinutes($config.minBlockMinutes)
+            }
+            # sessionStart v hlavicce je uz display start (s paddingem), neodecitame znovu
+            $displayStart = $sessionStart
+            $displayEnd = $rawEnd.AddMinutes($config.sessionPaddingMinutesAfter)
+            $newStartStr = $displayStart.ToString("HH:mm")
+            $newEndStr = $displayEnd.ToString("HH:mm")
             $timeDash = [char]0x2013
-            $spanMinutes = [math]::Max($config.minBlockMinutes, [math]::Round(($newEnd - $sessionStart).TotalMinutes))
+            $spanMinutes = [math]::Max(
+                $config.minBlockMinutes,
+                [math]::Round(($displayEnd - $displayStart).TotalMinutes)
+            )
 
             $parts = Split-ReportFirstSession -Body $reportBody
             $sessionBlock = $parts.Session
@@ -287,15 +323,20 @@ try {
 
             $reportBody = $parts.Preamble + $sessionBlock + $parts.Rest
 
-            $delta = $spanMinutes - [math]::Max($config.minBlockMinutes, [math]::Round(($sessionEnd - $sessionStart).TotalMinutes))
+            $oldSpanMinutes = [math]::Max(
+                $config.minBlockMinutes,
+                [math]::Round(($sessionEnd - $sessionStart).TotalMinutes)
+            )
+            $delta = $spanMinutes - $oldSpanMinutes
             if ($delta -gt 0) { $state.totalMinutesTracked += $delta }
         } else {
-            $durationLabel = Format-DurationLabel -Minutes $config.minBlockMinutes
+            $padded = Get-PaddedSessionSpan -RawStart $commitLocal -RawEnd $commitLocal
+            $durationLabel = Format-DurationLabel -Minutes $padded.Minutes
             $newSessionTemplate = Read-Utf8File $newSessionTemplatePath
             $newSession = Expand-Template $newSessionTemplate @{
                 DATE         = $dateLabel
-                TIME_START   = $timeLabel
-                TIME_END     = $timeLabel
+                TIME_START   = $padded.DisplayStart.ToString("HH:mm")
+                TIME_END     = $padded.DisplayEnd.ToString("HH:mm")
                 HASH         = $shortHash
                 FULL_HASH    = $headHash
                 CHANGE_BLOCK = $changeBlock.Trim()
@@ -312,7 +353,7 @@ try {
             }
 
             $state.sessionCount += 1
-            $state.totalMinutesTracked += $config.minBlockMinutes
+            $state.totalMinutesTracked += $padded.Minutes
         }
 
         $totalLabel = Format-TotalHoursLabel -Minutes $state.totalMinutesTracked

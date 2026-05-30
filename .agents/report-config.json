@@ -1,6 +1,8 @@
 {
   "pauseThresholdMinutes": 30,
   "minBlockMinutes": 5,
+  "sessionPaddingMinutesBefore": 5,
+  "sessionPaddingMinutesAfter": 5,
   "fallbackExchangeMinutes": 3,
   "autoSyncOnCommit": true,
   "autoPush": true,

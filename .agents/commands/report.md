@@ -44,6 +44,8 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
      - `konverzace` — jen log konverzace
    - **Fallback pořadí:** skript → odhad z počtu výměn (`počet × 3 min` z config `fallbackExchangeMinutes`).
    - Do reportu zapiš hodnoty ze skriptu — neodhaduješ čas „od oka".
+   - **Padding sezení:** ke každému bloku se přičte `sessionPaddingMinutesBefore` (výchozí 5) před začátkem a `sessionPaddingMinutesAfter` (výchozí 5) po konci — práce před prvním commitem a kontrola po posledním. Nastavení v `.agents/report-config.json`. Časy v `blocksLabel` / nadpisu sezení už padding zahrnují.
+   - **Zpětně na starší záznamy:** jednorázově `powershell -File scripts/reapply-report-session-padding.ps1` (předpokládá surové časy v nadpisech; u sezení bez času doplní git nebo ruční odhad + padding).
 
 8. Aktualizuj tabulku „Přehled projektu":
    - Počet sezení: předchozí + 1 (nebo beze změny, pokud jen doplňuješ stejné dne)
@@ -106,7 +108,7 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 **Rozložení:** [ze skriptu `blocksLabel`, např. "30. 5. 09:58–11:17 (~1 hod 15 min) + 30. 5. 13:00–13:25 (~25 min)"]  
 **Metoda odhadu:** [git + konverzace | git | konverzace | výměny]  
 **Počet výměn s AI:** [počet kol konverzace]  
-*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. V Claude Code bez hooku se použijí jen commity.*
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`). V Claude Code bez hooku se použijí jen commity.*
 
 ### Technická poznámka
 [Volitelně: stručná zmínka o ovlivněných souborech nebo komponentách. Vynech, pokud není přínosná.]
@@ -121,6 +123,7 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 Po instalaci (`pwsh scripts/install-git-hooks.ps1`, součást `setup-ai-commands.ps1`) běží po každém **produktovém** commitu skript `scripts/update-report-from-git.ps1`:
 
 - Doplní `reports/report.md` a `.agents/report-state.json` (čas, commit message, dotčené soubory).
+- Používá **stejný padding** času jako `/report` (+5 min před / +5 min po sezení z `report-config.json`).
 - Commit `Report: auto-sync [datum, čas] — …` a push na `origin` (vypnutí: `autoSyncOnCommit` / `autoPush` v `.agents/report-config.json`).
 - **Přeskočí:** commity s prefixem `Report:`, pouze změny reportu/activity logu, už zpracovaný commit (`lastProcessedCommit`), běh uvnitř `REPORT_HOOK_RUNNING`.
 

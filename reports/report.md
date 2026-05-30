@@ -6,37 +6,37 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 5 |
-| Celkový odhadovaný čas | ~12,2 hodiny |
-| Aktuální fáze | Copy sprint C1–C2 hotovo; další C3 (akreditace) a launch checklist |
+| Celkový odhadovaný čas | ~12 hod 14 min |
+| Aktuální fáze | Copy sprint C1–C2 hotovo; UX revize O společnosti dokončena; další C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 30. 5. 2026, 17:17–20:06
+## Sezení: 30. 5. 2026, 17:17–20:08
 
 ### Přehled
-Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní menu) a pokračoval copy sprintem podle tone of voice. Naplánován rozsah C1–C9, zaveden příkaz `/copy`, doplněn sprint log v copy-audit. Implementovány dávky C1 (homepage) a C2 (O společnosti, odborná garance) včetně úprav layoutu homepage po schválení klienta.
+Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní menu) a pokračoval copy sprintem podle tone of voice. Zaveden příkaz `/copy`, dokončeny dávky C1–C2. Následovala UX revize a copy follow-up stránky O NATURCHEM — zjednodušení struktury, lidskější texty, úprava menu a sjednocení šířky sekcí.
 
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
-#### UX: sjednotit ┼í├ş┼Öku sekc├ş na O spole─Źnosti.
-**Co bylo uděláno:** UX: sjednotit ┼í├ş┼Öku sekc├ş na O spole─Źnosti. - Kdo jsme, garance a t├Żm sd├şlej├ş container bez omezen├ş na 980 px.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `cebecfe`). Dotcene oblasti: app, o-spolecnosti-naturchem.  
-**Proč:** Kdo jsme, garance a t├Żm sd├şlej├ş container bez omezen├ş na 980 px.  Co-authored-by: Cursor <cursoragent@cursor.com>.
 
-#### Zredukovat hlavn├ş menu a zjednodu┼íit sekci Kdo jsme.
-**Co bylo uděláno:** Zredukovat hlavn├ş menu a zjednodu┼íit sekci Kdo jsme. - Slou─Źen├ş Odbornost do dropdownu O n├ís, odstran─Ťn├ş tablet re┼żimu Dal┼í├ş a ├║prava CSS pro notebook 1366 px; sekce Kdo jsme na O spole─Źnosti bez dvousloupcov├ęho layoutu.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `4d0e23e`). Dotcene oblasti: app, components, lib, o-spolecnosti-naturchem.  
-**Proč:** Slou─Źen├ş Odbornost do dropdownu O n├ís, odstran─Ťn├ş tablet re┼żimu Dal┼í├ş a ├║prava CSS pro notebook 1366 px; sekce Kdo jsme na O spole─Źnosti bez dvousloupcov├ęho layoutu.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+#### UX revize stránky O NATURCHEM (follow-up)
+**Co bylo uděláno:** Stránka O společnosti zjednodušena — pod hero trust lišta a kompaktní statistiky (jako na homepage) místo panelu „Odborná autorita". Odstraněny sekce Typičtí zákazníci a Jak probíhá zakázka; proces přesunut na stránku Typické zakázky. Zmenšeny vertikální mezery mezi bloky.  
+**Proč:** Příliš mnoho důvěryhodnostních vrstev posouvalo klíčovou sekci „Kdo jsme" níže ve scrollu; popis průběhu zakázky patří spíš k nákupní cestě u typických scénářů.
 
-#### Copy: lidsk─Ťj┼í├ş hero a Kdo jsme na O spole─Źnosti.
-**Co bylo uděláno:** Copy: lidsk─Ťj┼í├ş hero a Kdo jsme na O spole─Źnosti. - Hero p┼Öedstavuje t├Żm a garanci Heziny; sekce Kdo jsme za─Ź├şn├í identitou firmy m├şsto v├Żstupy.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `be3f7ef`). Dotcene oblasti: o-spolecnosti-naturchem, report, workflow.  
-**Proč:** Hero p┼Öedstavuje t├Żm a garanci Heziny; sekce Kdo jsme za─Ź├şn├í identitou firmy m├şsto v├Żstupy.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+#### Copy follow-up — hero a Kdo jsme
+**Co bylo uděláno:** Přepsán hero lead — představení týmu a odborné garance Ing. Františka Heziny místo čistě výstupového textu. Sekce „Kdo jsme" začíná identitou firmy (NATURCHEM, s.r.o., působnost). Eyebrow „Akreditovaná měřicí a poradenská firma", aktualizováno SEO description.  
+**Proč:** Klient potřeboval, aby stránka O nás nejdřív představila firmu a lidi, ne jen seznam služeb.
 
-#### Zjednodu┼íit O spole─Źnosti a p┼Öesunout proces na Typick├ę zak├ízky.
-**Co bylo uděláno:** Zjednodu┼íit O spole─Źnosti a p┼Öesunout proces na Typick├ę zak├ízky. - Trust li┼íta a compact statistiky nahrazuj├ş p┼Öepln─Ťn├Ż hero; sekce Kdo jsme je v├Ż┼í na str├ínce.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `9abb16a`). Dotcene oblasti: app, lib, o-spolecnosti-naturchem, typicke-zakazky.  
-**Proč:** Trust li┼íta a compact statistiky nahrazuj├ş p┼Öepln─Ťn├Ż hero; sekce Kdo jsme je v├Ż┼í na str├ínce.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+#### Menu a jednosloupcové Kdo jsme
+**Co bylo uděláno:** Redukce hlavního menu — položka Odbornost sloučena do dropdownu O nás, odstraněn tablet režim „Další", CSS úpravy pro notebook 1366 px. Sekce Kdo jsme převedena z dvousloupcového layoutu na jeden sloupec; navigační odkazy přesunuty pod text s vizuálním oddělením.  
+**Proč:** Dva sloupce s nevyrovnanou délkou textu matou pořadí čtení; menu se na středně širokých displejích přeplňovalo.
 
+#### Sjednocení šířky sekcí O společnosti
+**Co bylo uděláno:** Sekce Kdo jsme, Odborná garance a Tým sdílejí stejnou šířku containeru jako statistiky nad nimi — odstraněno omezení 980 px u textu a karty garance.  
+**Proč:** Užší bloky působily vizuálně rozhozeně a levé hrany sekcí neseděly.
 
 #### Sprint 11 — SEO a prolinkování poradna ↔ služby
 **Co bylo uděláno:** Proveden audit meta title/description na klíčových stránkách (dokument `05-seo/meta-audit-sprint11.md`). Přidáno obousměrné prolinkování: u každého článku poradny blok souvisejících služeb, u stránek služeb teaser souvisejících článků. Dokončena technická hygiena P4 — migrace stránky školení na šablonu ServicePage, FAQ teaser u ISPOP/GHG/chemických služeb, přesun checklistu „Nejste si jistí?" výše na indexu provozů.  
@@ -71,14 +71,14 @@ Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní men
 **Proč:** Klíčové důvěryhodnostní stránky musí mluvit jazykem zákazníka, ne firemním katalogem.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~2 hod 49 min
-**Rozložení:** 30. 5. 2026 17:17–20:06 (~2 hod 49 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** ~25 kol konverzace  
+**Odhadovaná doba práce:** ~2 hod 51 min  
+**Rozložení:** 30. 5. 2026 17:17–20:08 (~2 hod 51 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~30 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-UX: `PageHeroBand.tsx`, `Header.tsx`, `globals.css`, `poradna-service-links.ts` — commity S11–S12 (`401f312`, `2714920`, `650f64a`). Copy: `page.tsx`, `o-spolecnosti-naturchem/page.tsx`, `odborna-garance/page.tsx`, `.agents/commands/copy.md`, `01-copy-audit/copy-audit.md`, lib (`company-stats`, `team`, `guarantee-copy`, `work-process`, `nationalMessaging`, `cta`) — commit `ebbae75`. Build prošel bez chyb.
+UX O společnosti: `o-spolecnosti-naturchem/page.tsx`, `typicke-zakazky/page.tsx`, `globals.css` — commity `9abb16a`, `4d0e23e`, `cebecfe`. Copy follow-up: `be3f7ef`. Menu: `Header.tsx`, `navigation.ts` — commit `4d0e23e`. Dříve večer: S11–S12, copy C1–C2 (`ebbae75`), `.agents/commands/copy.md`. Build prošel bez chyb.
 
 ---
 

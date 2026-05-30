@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 5 |
-| Celkový odhadovaný čas | ~11,6 hodiny |
+| Celkový odhadovaný čas | ~12,2 hodiny |
 | Aktuální fáze | Copy sprint C1–C2 hotovo; další C3 (akreditace) a launch checklist |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 30. 5. 2026, 17:17–19:31
+## Sezení: 30. 5. 2026, 17:17–20:06
 
 ### Přehled
 Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní menu) a pokračoval copy sprintem podle tone of voice. Naplánován rozsah C1–C9, zaveden příkaz `/copy`, doplněn sprint log v copy-audit. Implementovány dávky C1 (homepage) a C2 (O společnosti, odborná garance) včetně úprav layoutu homepage po schválení klienta.
@@ -21,6 +21,18 @@ Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní men
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
+#### UX: sjednotit ┼í├ş┼Öku sekc├ş na O spole─Źnosti.
+**Co bylo uděláno:** UX: sjednotit ┼í├ş┼Öku sekc├ş na O spole─Źnosti. - Kdo jsme, garance a t├Żm sd├şlej├ş container bez omezen├ş na 980 px.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `cebecfe`). Dotcene oblasti: app, o-spolecnosti-naturchem.  
+**Proč:** Kdo jsme, garance a t├Żm sd├şlej├ş container bez omezen├ş na 980 px.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### Zredukovat hlavn├ş menu a zjednodu┼íit sekci Kdo jsme.
+**Co bylo uděláno:** Zredukovat hlavn├ş menu a zjednodu┼íit sekci Kdo jsme. - Slou─Źen├ş Odbornost do dropdownu O n├ís, odstran─Ťn├ş tablet re┼żimu Dal┼í├ş a ├║prava CSS pro notebook 1366 px; sekce Kdo jsme na O spole─Źnosti bez dvousloupcov├ęho layoutu.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `4d0e23e`). Dotcene oblasti: app, components, lib, o-spolecnosti-naturchem.  
+**Proč:** Slou─Źen├ş Odbornost do dropdownu O n├ís, odstran─Ťn├ş tablet re┼żimu Dal┼í├ş a ├║prava CSS pro notebook 1366 px; sekce Kdo jsme na O spole─Źnosti bez dvousloupcov├ęho layoutu.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### Copy: lidsk─Ťj┼í├ş hero a Kdo jsme na O spole─Źnosti.
+**Co bylo uděláno:** Copy: lidsk─Ťj┼í├ş hero a Kdo jsme na O spole─Źnosti. - Hero p┼Öedstavuje t├Żm a garanci Heziny; sekce Kdo jsme za─Ź├şn├í identitou firmy m├şsto v├Żstupy.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `be3f7ef`). Dotcene oblasti: o-spolecnosti-naturchem, report, workflow.  
+**Proč:** Hero p┼Öedstavuje t├Żm a garanci Heziny; sekce Kdo jsme za─Ź├şn├í identitou firmy m├şsto v├Żstupy.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
 #### Zjednodu┼íit O spole─Źnosti a p┼Öesunout proces na Typick├ę zak├ízky.
 **Co bylo uděláno:** Zjednodu┼íit O spole─Źnosti a p┼Öesunout proces na Typick├ę zak├ízky. - Trust li┼íta a compact statistiky nahrazuj├ş p┼Öepln─Ťn├Ż hero; sekce Kdo jsme je v├Ż┼í na str├ínce.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `9abb16a`). Dotcene oblasti: app, lib, o-spolecnosti-naturchem, typicke-zakazky.  
 **Proč:** Trust li┼íta a compact statistiky nahrazuj├ş p┼Öepln─Ťn├Ż hero; sekce Kdo jsme je v├Ż┼í na str├ínce.  Co-authored-by: Cursor <cursoragent@cursor.com>.
@@ -59,8 +71,8 @@ Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní men
 **Proč:** Klíčové důvěryhodnostní stránky musí mluvit jazykem zákazníka, ne firemním katalogem.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~2 hod 15 min
-**Rozložení:** 30. 5. 2026 17:17–19:31 (~2 hod 15 min)
+**Odhadovaná doba práce:** ~2 hod 49 min
+**Rozložení:** 30. 5. 2026 17:17–20:06 (~2 hod 49 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** ~25 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*

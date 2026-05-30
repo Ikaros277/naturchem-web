@@ -83,3 +83,12 @@ await composeWordmark(tsIcon, "Teplárna Strakonice, a.s.", join(dir, "teplarnas
 });
 
 await prepSwietelskyWordmark(join(dir, "swietelsky-temp.png"), join(dir, "swietelsky.png"));
+
+/** Teplárna ČB: official PNG has black text — never run fixDarkBgLogo (removes all black pixels). */
+async function prepTeplarnaCb(input, output) {
+  await sharp(input).trim().png().toFile(output);
+  const meta = await sharp(output).metadata();
+  console.log(`teplarna CB ${meta.width}x${meta.height}`);
+}
+
+await prepTeplarnaCb(join(dir, "tcb-official-2x.png"), join(dir, "teplarnatucb.png"));

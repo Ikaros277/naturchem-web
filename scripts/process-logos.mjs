@@ -54,7 +54,7 @@ async function fixDarkBgLogo(input, output) {
   console.log(`fixed dark-bg logo ${output}`);
 }
 
-const darkBgLogos = ["teplarnatucb.png", "teplarnapisek.png", "teplarnastrakonice.png"];
+const darkBgLogos = ["teplarnapisek.png", "teplarnastrakonice.png"];
 for (const name of darkBgLogos) {
   await fixDarkBgLogo(join(dir, name), join(dir, name));
 }

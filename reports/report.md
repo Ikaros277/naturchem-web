@@ -6,12 +6,12 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 4 |
-| Celkový odhadovaný čas | ~8,5 hodiny |
+| Celkový odhadovaný čas | ~8,6 hodiny |
 | Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
 
 ---
 
-## Sezení: 30. 5. 2026, 13:20–15:02
+## Sezení: 30. 5. 2026, 13:20–15:08
 
 ### Přehled
 Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky. Změny commitnuty a pushnuty na GitHub (`f260dca`).
@@ -19,6 +19,10 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
+#### Opravit build a doplnit horizont├íln├ş wordmarky u log z├íkazn├şk┼».
+**Co bylo uděláno:** Opravit build a doplnit horizont├íln├ş wordmarky u log z├íkazn├şk┼». (commit `9d6aa32`). Dotčené oblasti: build-wordmark-logos.mjs, components, lib, report, workflow.  
+**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+
 #### Tepl├írna ─îB: ┼íir┼í├ş slot v gridu kv┼»li horizont├íln├şmu wordmarku.
 **Co bylo uděláno:** Tepl├írna ─îB: ┼íir┼í├ş slot v gridu kv┼»li horizont├íln├şmu wordmarku. (commit `0acf53b`). Dotčené oblasti: app, lib, reference, report, workflow.  
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
@@ -64,8 +68,8 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Proč:** Sdílení hotového stavu pro klienta a produkční preview.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 43 min
-**Rozložení:** 30. 5. 2026 13:20–15:02 (~1 hod 43 min)
+**Odhadovaná doba práce:** ~1 hod 48 min
+**Rozložení:** 30. 5. 2026 13:20–15:08 (~1 hod 48 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** ~18 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Odpolední blok zahrnuje i dokončení workflow reportu před implementací P1.*

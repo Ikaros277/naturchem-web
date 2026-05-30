@@ -25,11 +25,34 @@ async function removeSolidBackground(input, output, { r, g, b, threshold = 40 })
 
 const jobs = [
   { in: "swietelsky-temp.png", out: "swietelsky.png", bg: { r: 0, g: 0, b: 0 } },
-  { in: "teplarnatucb.png", out: "teplarnatucb.png", bg: { r: 0, g: 0, b: 0 } },
-  { in: "teplarnapisek.png", out: "teplarnapisek.png", bg: { r: 0, g: 0, b: 0 } },
-  { in: "teplarnastrakonice.png", out: "teplarnastrakonice.png", bg: { r: 0, g: 0, b: 0 } },
   { in: "letiste-cb-temp.png", out: "letiste-cb.png", bg: { r: 255, g: 255, b: 255 }, threshold: 30 }
 ];
+
+/** Logos exported on black (white text): remove black, recolor white text to dark gray. */
+async function fixDarkBgLogo(input, output) {
+  const { data, info } = await sharp(input).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  for (let i = 0; i < data.length; i += 4) {
+    const r = data[i], g = data[i + 1], b = data[i + 2];
+    if (r < 35 && g < 35 && b < 35) {
+      data[i + 3] = 0;
+      continue;
+    }
+    if (r > 210 && g > 210 && b > 210) {
+      data[i] = 45;
+      data[i + 1] = 45;
+      data[i + 2] = 45;
+    }
+  }
+  await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })
+    .png()
+    .toFile(output);
+  console.log(`fixed dark-bg logo ${output}`);
+}
+
+const darkBgLogos = ["teplarnatucb.png", "teplarnapisek.png", "teplarnastrakonice.png"];
+for (const name of darkBgLogos) {
+  await fixDarkBgLogo(join(dir, name), join(dir, name));
+}
 
 for (const job of jobs) {
   await removeSolidBackground(join(dir, job.in), join(dir, job.out), {

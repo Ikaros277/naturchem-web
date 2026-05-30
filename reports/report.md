@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 5 |
-| Celkový odhadovaný čas | ~9,6 hodiny |
+| Celkový odhadovaný čas | ~9,8 hodiny |
 | Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem a +5 min po konci (`report-config.json`).*
 
 ---
 
-## Sezení: 30. 5. 2026, 17:22–17:32
+## Sezení: 30. 5. 2026, 17:22–17:45
 
 ### Přehled
 Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero na informační stránky a zjednodušení homepage (P5-11, P5-12).
@@ -21,14 +21,18 @@ Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### P┼Öidat projektovou dokumentaci do repozit├í┼Öe.
+**Co bylo uděláno:** P┼Öidat projektovou dokumentaci do repozit├í┼Öe. (commit `786252a`). Dotčené oblasti: .gitignore, brand-manual.md, cmo-role.md, competitive-analysis.md, copy-audit.md, copy-role.md, graficky-audit.md, mvp-audit.md, personas.md, PROJEKT-STATUS.md, ROADMAPA.md, seo-audit.md, seo-role.md, sitemap.md, tone-of-voice.md, ux-audit-roadmapa.md, ux-role.md.  
+**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+
 #### Rozšířit photo hero na všechny stránky a zjednodušit homepage (P5-11, P5-12)
 **Co bylo uděláno:** Rozšířit photo hero na všechny stránky a zjednodušit homepage (P5-11, P5-12). (commit `cefcbd0`). Dotčené oblasti: akreditace-autorizace-dokumenty, app, components, faq, kontakt, lib, o-spolecnosti-naturchem, page.tsx, poradna, pristrojove-vybaveni, provozy-a-technologie, reference, sluzby, typicke-zakazky, workflow.  
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 30. 5. 2026, 17:22–17:32 (~10 min)  
-**Metoda odhadu:** git  
+**Odhadovaná doba práce:** ~23 min
+**Rozložení:** 30. 5. 2026 17:22–17:45 (~23 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*
 

@@ -2,16 +2,12 @@
 import type { Metadata } from "next";
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { ExperienceStats } from "@/components/ExperienceStats";
-import { IndexCard } from "@/components/IndexCard";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
 import { heroCtaMeasurement, heroCtaStudy, pageCtaPresets } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
-import { formatArticleDate } from "@/lib/format-date";
-import { poradnaTopicIconKey, topicForArticle } from "@/lib/poradna-topic";
 import { homeTrustBandItems } from "@/lib/home-hero-metrics";
-import { getLatestPoradnaArticles } from "@/lib/poradna-articles";
 import { siteUrl } from "@/lib/site";
 import { clientLogoItemClass, referenceClients } from "@/lib/client-logos";
 
@@ -77,8 +73,7 @@ const referenceExamples = [
   "měření pracovního prostředí"
 ];
 
-export default async function Home() {
-  const latestArticles = await getLatestPoradnaArticles(3);
+export default function Home() {
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -115,13 +110,6 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="home-usp-section section-surface" aria-labelledby="home-usp-heading">
-        <div className="container stats-section">
-          <h2 id="home-usp-heading">Odborná garance</h2>
-          <ExperienceStats showNote={false} />
-        </div>
-      </section>
-
       <section className="trust-band" aria-labelledby="duveryhodnost-heading">
         <div className="container trust-band-inner">
           <h2 id="duveryhodnost-heading" className="sr-only">
@@ -130,6 +118,12 @@ export default async function Home() {
           {homeTrustBandItems.map((item) => (
             <span key={item}>{item}</span>
           ))}
+        </div>
+      </section>
+
+      <section className="home-stats-compact" aria-label="Zkušenosti v číslech">
+        <div className="container">
+          <ExperienceStats variant="compact" showNote={false} />
         </div>
       </section>
 
@@ -202,46 +196,6 @@ export default async function Home() {
             ))}
           </ul>
         </article>
-      </section>
-
-      <section className="home-section home-section-surface">
-        <div className="container">
-        <header className="section-header">
-          <h2>Odborná poradna</h2>
-          <p className="muted section-intro">Krátké odborné články k měření, studiím a povolování.</p>
-        </header>
-        <div className="grid grid-3 article-card-grid">
-          {latestArticles.map((article) => {
-            const publishedLabel = formatArticleDate(article.publishedAt);
-            return (
-              <IndexCard
-                key={article.href}
-                href={article.href}
-                title={article.title}
-                className="article-card article-list-card"
-                cta="Číst článek"
-                meta={
-                  <>
-                    {publishedLabel ? (
-                      <time className="article-card-date muted" dateTime={article.publishedAt}>
-                        {publishedLabel}
-                      </time>
-                    ) : null}
-                    <span className="tag">{topicForArticle(article.title)}</span>
-                  </>
-                }
-              >
-                {article.excerpt ? <p className="article-card-excerpt muted">{article.excerpt}</p> : null}
-              </IndexCard>
-            );
-          })}
-        </div>
-        <p className="home-poradna-cta">
-          <Link href="/poradna" className="button secondary">
-            Zobrazit Odbornou poradnu
-          </Link>
-        </p>
-        </div>
       </section>
 
       <section className="home-section container">

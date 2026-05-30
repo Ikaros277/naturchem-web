@@ -9,6 +9,7 @@
   --border: #d6e4fb;
   --ring: rgba(40, 51, 119, 0.28);
   --site-header-offset: 6.25rem;
+  --section-padding-y: clamp(2rem, 3.5vw, 3.25rem);
 }
 
 * {
@@ -98,11 +99,11 @@ textarea:focus {
 
 .section,
 .home-section {
-  padding: 3rem 0;
+  padding: var(--section-padding-y) 0;
 }
 
 .home-section:first-of-type {
-  padding-top: 2rem;
+  padding-top: var(--section-padding-y);
 }
 
 .page {
@@ -110,8 +111,8 @@ textarea:focus {
 }
 
 .page-inner {
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: var(--section-padding-y);
 }
 
 .page-header {
@@ -236,7 +237,7 @@ textarea:focus {
 }
 
 .content-block {
-  margin-bottom: 2rem;
+  margin-bottom: var(--section-padding-y);
 }
 
 .content-block h2 {
@@ -2036,7 +2037,7 @@ fieldset.card legend {
   }
 
   .section {
-    padding: 3rem 0;
+    padding: var(--section-padding-y) 0;
   }
 }
 
@@ -2079,11 +2080,11 @@ body {
 
 .section,
 .home-section {
-  padding: clamp(4rem, 7vw, 6.5rem) 0;
+  padding: var(--section-padding-y) 0;
 }
 
 .section-header {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1rem;
   max-width: 760px;
 }
 
@@ -2377,13 +2378,18 @@ a:hover {
   max-width: 720px;
 }
 
-.home-usp-section {
-  padding: clamp(2rem, 4vw, 3rem) 0;
+.home-stats-compact {
+  padding: clamp(1.25rem, 2.5vw, 1.75rem) 0;
+  background: var(--surface-muted);
+  border-bottom: 1px solid var(--border);
 }
 
-.home-usp-section h2 {
-  margin: 0 0 0.25rem;
-  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+.experience-stats-compact .stat-card-with-icon {
+  padding: 1rem 1.1rem;
+}
+
+.experience-stats-compact .stat-card-prominent .stat-value {
+  font-size: clamp(1.65rem, 2.8vw, 2.15rem);
 }
 
 .service-hero--photo {
@@ -3286,7 +3292,7 @@ footer .muted,
 @media (max-width: 720px) {
   .section,
   .home-section {
-    padding: 3.5rem 0;
+    padding: clamp(1.75rem, 3vw, 2.5rem) 0;
   }
 
   .hero {
@@ -3321,7 +3327,7 @@ footer .muted,
 }
 
 .premium-page {
-  padding-top: 2rem;
+  padding-top: var(--section-padding-y);
 }
 
 .premium-page-hero {
@@ -4835,7 +4841,7 @@ footer .muted,
 }
 
 .home-section {
-  padding: clamp(4.5rem, 7vw, 6rem) 0;
+  padding: var(--section-padding-y) 0;
 }
 
 .home-offer-grid-three {
@@ -5392,11 +5398,11 @@ footer .muted,
   }
 
   .home-section {
-    padding: 2.35rem 0;
+    padding: clamp(1.5rem, 2.5vw, 2rem) 0;
   }
 
   .section {
-    padding: 2.35rem 0;
+    padding: clamp(1.5rem, 2.5vw, 2rem) 0;
   }
 
   .container {

@@ -7,12 +7,15 @@ import {
 
 type Props = {
   showNote?: boolean;
+  variant?: "default" | "compact";
 };
 
-export function ExperienceStats({ showNote = true }: Props) {
+export function ExperienceStats({ showNote = true, variant = "default" }: Props) {
+  const compact = variant === "compact";
+
   return (
-    <div className="experience-stats">
-      <p className="experience-stats-intro">{companyStatsIntro}</p>
+    <div className={compact ? "experience-stats experience-stats-compact" : "experience-stats"}>
+      {!compact ? <p className="experience-stats-intro">{companyStatsIntro}</p> : null}
       <div className="stats-grid stats-highlight-metrics" aria-label="Přehled zkušeností">
         {companyStats.map((stat) => (
           <article key={stat.label} className="stat-card stat-card-prominent stat-card-with-icon">
@@ -24,7 +27,7 @@ export function ExperienceStats({ showNote = true }: Props) {
           </article>
         ))}
       </div>
-      {showNote ? <p className="muted stats-note">{companyStatsNote}</p> : null}
+      {showNote && !compact ? <p className="muted stats-note">{companyStatsNote}</p> : null}
     </div>
   );
 }

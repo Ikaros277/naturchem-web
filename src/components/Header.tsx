@@ -5,39 +5,23 @@ import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
-import {
-  globalCta,
-  headerMainNav,
-  headerTabletMoreLinks,
-  kontaktNav,
-  odbornostNav,
-  referenceNav
-} from "@/lib/navigation";
+import { globalCta, headerMainNav, kontaktNav, oNasNav } from "@/lib/navigation";
 import { serviceMegaGroups } from "@/lib/service-megamenu";
 import { BrandLogo } from "@/components/BrandLogo";
 import { company } from "@/lib/site";
 
-function useNavBreakpoints() {
-  const [breakpoints, setBreakpoints] = useState({ isDesktop: false, isDesktopWide: false });
+function useIsDesktopNav() {
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const mqDesktop = window.matchMedia("(min-width: 1024px)");
-    const mqWide = window.matchMedia("(min-width: 1280px)");
-    const update = () =>
-      setBreakpoints({
-        isDesktop: mqDesktop.matches,
-        isDesktopWide: mqWide.matches
-      });
+    const update = () => setIsDesktop(mqDesktop.matches);
     update();
     mqDesktop.addEventListener("change", update);
-    mqWide.addEventListener("change", update);
-    return () => {
-      mqDesktop.removeEventListener("change", update);
-      mqWide.removeEventListener("change", update);
-    };
+    return () => mqDesktop.removeEventListener("change", update);
   }, []);
 
-  return breakpoints;
+  return isDesktop;
 }
 
 function ServiceMegaMenu() {
@@ -66,22 +50,10 @@ function ServiceMegaMenu() {
   );
 }
 
-function OdbornostDropdown() {
+function ONasDropdown() {
   return (
-    <div id="nav-dropdown-odbornost" className="nav-dropdown" aria-label={odbornostNav.label}>
-      {odbornostNav.links.map((item) => (
-        <Link key={item.href} href={item.href} className="nav-dropdown-link">
-          {item.label}
-        </Link>
-      ))}
-    </div>
-  );
-}
-
-function MoreDropdown() {
-  return (
-    <div id="nav-dropdown-dalsi" className="nav-dropdown" aria-label="Další">
-      {headerTabletMoreLinks.map((item) => (
+    <div id="nav-dropdown-o-nas" className="nav-dropdown" aria-label={oNasNav.label}>
+      {oNasNav.links.map((item) => (
         <Link key={item.href} href={item.href} className="nav-dropdown-link">
           {item.label}
         </Link>
@@ -151,12 +123,10 @@ function MobileServiceGroups({ onNavigate }: { onNavigate?: () => void }) {
 
 export function Header() {
   const pathname = usePathname();
-  const { isDesktop, isDesktopWide } = useNavBreakpoints();
-  const isTabletDesktop = isDesktop && !isDesktopWide;
+  const isDesktop = useIsDesktopNav();
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [odbornostOpen, setOdbornostOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
+  const [oNasOpen, setONasOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const mobileSheetRef = useRef<HTMLDivElement>(null);
   const mobileToggleRef = useRef<HTMLButtonElement>(null);
@@ -168,8 +138,7 @@ export function Header() {
   useEffect(() => {
     setMenuOpen(false);
     setServicesOpen(false);
-    setOdbornostOpen(false);
-    setMoreOpen(false);
+    setONasOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -270,9 +239,9 @@ export function Header() {
                   </Link>
                 ))}
                 <details className="nav-mobile-details">
-                  <summary>{odbornostNav.label}</summary>
+                  <summary>{oNasNav.label}</summary>
                   <div className="nav-mobile-sub">
-                    {odbornostNav.links.map((item) => (
+                    {oNasNav.links.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
@@ -324,8 +293,8 @@ export function Header() {
           </span>
         </Link>
 
-        {isDesktopWide ? (
-          <nav className="nav-links nav-desktop-full" aria-label="Hlavní navigace">
+        {isDesktop ? (
+          <nav className="nav-links nav-desktop" aria-label="Hlavní navigace">
             <div
               className="nav-item nav-item-mega"
               onMouseEnter={() => setServicesOpen(true)}
@@ -348,40 +317,13 @@ export function Header() {
               </Link>
             ))}
             <NavDropdownItem
-              id="nav-dropdown-odbornost"
-              label={odbornostNav.label}
-              open={odbornostOpen}
-              onOpen={() => setOdbornostOpen(true)}
-              onClose={() => setOdbornostOpen(false)}
+              id="nav-dropdown-o-nas"
+              label={oNasNav.label}
+              open={oNasOpen}
+              onOpen={() => setONasOpen(true)}
+              onClose={() => setONasOpen(false)}
             >
-              <OdbornostDropdown />
-            </NavDropdownItem>
-            <Link href={kontaktNav.href}>{kontaktNav.label}</Link>
-          </nav>
-        ) : null}
-
-        {isTabletDesktop ? (
-          <nav className="nav-links nav-desktop-tablet" aria-label="Hlavní navigace">
-            <Link href="/sluzby">Služby</Link>
-            <Link href="/provozy-a-technologie">Provozy</Link>
-            <Link href={referenceNav.href}>{referenceNav.label}</Link>
-            <NavDropdownItem
-              id="nav-dropdown-odbornost"
-              label={odbornostNav.label}
-              open={odbornostOpen}
-              onOpen={() => setOdbornostOpen(true)}
-              onClose={() => setOdbornostOpen(false)}
-            >
-              <OdbornostDropdown />
-            </NavDropdownItem>
-            <NavDropdownItem
-              id="nav-dropdown-dalsi"
-              label="Další"
-              open={moreOpen}
-              onOpen={() => setMoreOpen(true)}
-              onClose={() => setMoreOpen(false)}
-            >
-              <MoreDropdown />
+              <ONasDropdown />
             </NavDropdownItem>
             <Link href={kontaktNav.href}>{kontaktNav.label}</Link>
           </nav>

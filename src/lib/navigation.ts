@@ -2,7 +2,7 @@
 import { homeSectors as sectorsForHome, provozyNavLabel, sectors } from "@/lib/sectors";
 
 /**
- * Hlavní menu: Služby | Provozy a technologie | Typické zakázky | Akreditace | Reference | …
+ * Hlavní menu: Služby | Provozy | Typické zakázky | Reference | O nás ▾ | Kontakt | Poptat
  */
 
 export { globalCta };
@@ -13,10 +13,13 @@ export const articlesNav = { href: "/poradna", label: "Odborná poradna" } as co
 
 export const faqNav = { href: "/faq", label: "Časté dotazy" } as const;
 
-export const oNaturchemNav = {
+export const oSpolecnostiNav = {
   href: "/o-spolecnosti-naturchem",
-  label: "O NATURCHEM"
+  label: "O společnosti"
 } as const;
+
+/** @deprecated Použijte oSpolecnostiNav */
+export const oNaturchemNav = oSpolecnostiNav;
 
 export const kontaktNav = { href: "/kontakt", label: "Kontakt" } as const;
 
@@ -52,7 +55,7 @@ export const serviceNav = [
   { href: "/sluzby/chemicke-latky", label: "Chemické látky v provozu" }
 ] as const;
 
-export const mainNavObory = { href: "/provozy-a-technologie", label: provozyNavLabel } as const;
+export const mainNavObory = { href: "/provozy-a-technologie", label: "Provozy" } as const;
 
 export { provozyNavLabel };
 
@@ -69,10 +72,11 @@ export const accreditationNav = {
   authItems: ["EIA", "Rozptylové studie", "Odborné posudky", "Emise skleníkových plynů (GHG)"]
 } as const;
 
-/** Dropdown Odbornost v hlavní navigaci */
-export const odbornostNav = {
-  label: "Odbornost",
+/** Dropdown O nás v hlavní navigaci */
+export const oNasNav = {
+  label: "O nás",
   links: [
+    oSpolecnostiNav,
     accreditationNav,
     pristrojoveVybaveniNav,
     articlesNav,
@@ -80,39 +84,21 @@ export const odbornostNav = {
   ]
 } as const;
 
-/** Hlavní položky desktop menu (bez Služeb a Kontaktu — řeší Header) */
-export const headerMainNav = [
-  mainNavObory,
-  typickeZakazkyNav,
-  referenceNav,
-  oNaturchemNav
-] as const;
+/** @deprecated Použijte oNasNav */
+export const odbornostNav = {
+  label: "Odbornost",
+  links: [accreditationNav, pristrojoveVybaveniNav, articlesNav, faqNav]
+} as const;
 
-/** Zkrácené menu pro tablet (1024–1179 px) */
-export const headerTabletNav = [
-  { href: "/sluzby", label: "Služby" },
-  { href: "/provozy-a-technologie", label: "Provozy" },
-  referenceNav,
-  odbornostNav,
-  kontaktNav
-] as const;
+/** Hlavní položky desktop menu (bez Služeb, O nás a Kontaktu — řeší Header) */
+export const headerMainNav = [mainNavObory, typickeZakazkyNav, referenceNav] as const;
 
-/** Položky v tablet dropdown „Další“ */
-export const headerTabletMoreLinks = [
-  typickeZakazkyNav,
-  oNaturchemNav,
-  articlesNav,
-  faqNav,
-  accreditationNav,
-  pristrojoveVybaveniNav
-] as const;
-
-/** @deprecated Použijte headerMainNav + odbornostNav */
+/** @deprecated Použijte headerMainNav + oNasNav */
 export const headerTailNav = [
   referenceNav,
   articlesNav,
   faqNav,
-  oNaturchemNav,
+  oSpolecnostiNav,
   kontaktNav
 ] as const;
 

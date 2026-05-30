@@ -1,8 +1,9 @@
 ﻿import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PoradnaFilterableList } from "@/components/PoradnaFilterableList";
 import { JsonLd } from "@/components/Schema";
+import { pageCtaPresets } from "@/lib/cta";
 import { siteUrl } from "@/lib/site";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
 import { formatArticleDate } from "@/lib/format-date";
@@ -64,14 +65,7 @@ export default async function Page() {
         </p>
       </header>
       <PoradnaFilterableList articles={mergedArticles} />
-      <section className="card final-cta poradna-cta">
-        <h2>Máte konkrétní dotaz z provozu?</h2>
-        <p className="muted">
-          Pošlete rozhodnutí, výzvu nebo stručný popis situace. Na základě podkladů navrhneme další
-          postup.
-        </p>
-        <Link href="/kontakt" className="button">Kontaktovat NATURCHEM</Link>
-      </section>
+      <PageCtaStrip {...pageCtaPresets.poradna} />
     </main>
   );
 }

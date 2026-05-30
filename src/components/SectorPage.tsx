@@ -1,8 +1,9 @@
-import Link from "next/link";
 import { IndexCard } from "@/components/IndexCard";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/Schema";
+import { pageCtaPresets } from "@/lib/cta";
 import { sectorContactUrl } from "@/lib/contact-url";
 import { provozyNavLabel } from "@/lib/sectors";
 import { siteUrl } from "@/lib/site";
@@ -80,17 +81,6 @@ export function SectorPage(props: Props) {
           </div>
         </header>
 
-        <section className="cta-strip card">
-          <div className="btn-row">
-            <Link className="button" href={contactHref}>
-              Poslat podklady k posouzení
-            </Link>
-            <Link className="button secondary" href="/provozy-a-technologie">
-              Přehled provozů
-            </Link>
-          </div>
-        </section>
-
         <section className="content-block grid grid-2">
           <article className="card">
             <h2>Typické problémy</h2>
@@ -166,6 +156,11 @@ export function SectorPage(props: Props) {
             ))}
           </div>
         </section>
+
+        <PageCtaStrip
+          {...pageCtaPresets.sectorDetail}
+          primaryHref={contactHref}
+        />
       </div>
     </main>
   );

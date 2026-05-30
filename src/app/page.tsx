@@ -1,9 +1,10 @@
 ﻿import Link from "next/link";
 import type { Metadata } from "next";
 import { IndexCard } from "@/components/IndexCard";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
-import { heroCtaMeasurement, heroCtaStudy } from "@/lib/cta";
+import { heroCtaMeasurement, heroCtaStudy, pageCtaPresets } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
 import { formatArticleDate } from "@/lib/format-date";
 import { poradnaTopicIconKey, topicForArticle } from "@/lib/poradna-topic";
@@ -247,16 +248,7 @@ export default async function Home() {
       </section>
 
       <section className="home-section container">
-        <article className="card cta-banner final-cta">
-          <h2>Nejste si jistí, jaký výstup po vás úřad požaduje?</h2>
-          <p className="muted">
-            Pošlete nám rozhodnutí, výzvu nebo popis záměru. Navrhneme vhodný rozsah měření, studie
-            nebo dokumentace.
-          </p>
-          <Link href={contactUrl("Nejsem si jistý")} className="button">
-            Poslat podklady k posouzení
-          </Link>
-        </article>
+        <PageCtaStrip {...pageCtaPresets.uncertain} />
       </section>
 
       <section className="home-section container home-clients-section">

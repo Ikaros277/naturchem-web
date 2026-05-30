@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/Schema";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceGroupsIndex } from "@/components/ServiceGroupsIndex";
-import { globalCta } from "@/lib/navigation";
+import { pageCtaPresets } from "@/lib/cta";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -42,16 +42,7 @@ export default function Page() {
       <ServiceGroupsIndex />
 
       <section className="section container">
-        <article className="card cta-banner">
-          <h2>Nevíte, kterou službu zvolit?</h2>
-          <p className="muted">
-            Pošlete rozhodnutí úřadu, provozní řád nebo popis technologie. Doporučíme správný rozsah
-            měření nebo studie.
-          </p>
-          <Link href="/kontakt" className="button">
-            {globalCta}
-          </Link>
-        </article>
+        <PageCtaStrip {...pageCtaPresets.servicesIndex} />
       </section>
     </main>
   );

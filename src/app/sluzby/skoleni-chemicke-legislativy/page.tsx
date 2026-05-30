@@ -1,8 +1,10 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
 import { contactUrl } from "@/lib/contact-url";
+import { pageCtaPresets } from "@/lib/cta";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -85,9 +87,9 @@ export default function Page() {
           <p className="eyebrow">Školení a odborná podpora</p>
           <h1>Školení chemického zákona a chemické legislativy</h1>
           <p className="page-lead">
-            Praktické školení pro firmy, které nakládají s chemickými látkami a směsmi. Zaměstnanci
-            i odpovědné osoby získají přehled o základních povinnostech, bezpečnostních listech,
-            označování, skladování a provozních pravidlech.
+            Praktické školení pro firmy nakládající s chemickými látkami a směsmi. Zaměstnanci i
+            odpovědné osoby získají přehled o povinnostech, bezpečnostních listech a provozních
+            pravidlech.
           </p>
           <div className="btn-row">
             <Link href={contactUrl("Školení chemického zákona / chemické legislativy")} className="button">
@@ -137,18 +139,7 @@ export default function Page() {
           </article>
         </section>
 
-        <section className="section content-block">
-          <article className="card cta-banner">
-            <h2>Domluvit školení pro provoz</h2>
-            <p className="muted">
-              Obsah školení přizpůsobíme typu provozu, rozsahu používaných chemických látek
-              a skupině zaměstnanců.
-            </p>
-            <Link href={contactUrl("Školení chemického zákona / chemické legislativy")} className="button">
-              Poptat školení chemické legislativy
-            </Link>
-          </article>
-        </section>
+        <PageCtaStrip {...pageCtaPresets.training} />
       </div>
     </main>
   );

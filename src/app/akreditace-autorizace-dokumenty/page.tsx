@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { accreditationDocuments } from "@/lib/accreditation-documents";
+import { pageCtaPresets } from "@/lib/cta";
 import {
   getAccreditationScopeIconKey,
   getAuthorizationIconKey
@@ -172,13 +174,7 @@ export default function AkreditaceAutorizaceDokumentyPage() {
           ))}
         </div>
       </section>
-      <section className="cta-strip">
-        <p>Potřebujete ověřit, zda vaše měření nebo studie spadají do akreditovaného rozsahu?</p>
-        <div className="btn-row">
-          <Link href="/kontakt" className="button">Kontaktovat NATURCHEM</Link>
-          <Link href="/sluzby" className="button secondary">Přehled služeb</Link>
-        </div>
-      </section>
+      <PageCtaStrip {...pageCtaPresets.accreditation} />
     </main>
   );
 }

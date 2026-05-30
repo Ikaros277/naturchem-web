@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CaseStudiesView } from "@/components/CaseStudiesView";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { TypicalScenarios } from "@/components/TypicalScenarios";
+import { pageCtaPresets } from "@/lib/cta";
 import { caseStudyCategories } from "@/lib/case-studies";
 import { siteUrl } from "@/lib/site";
 
@@ -37,11 +39,7 @@ export default function TypickeZakazkyPage() {
         <CaseStudiesView categories={caseStudyCategories} />
       </section>
 
-      <p style={{ marginTop: "1.25rem" }}>
-        <Link href="/kontakt" className="button">
-          Poptat službu
-        </Link>
-      </p>
+      <PageCtaStrip {...pageCtaPresets.typicalOrders} />
     </main>
   );
 }

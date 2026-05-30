@@ -1,9 +1,10 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { SectorGroupsIndex } from "@/components/SectorGroupsIndex";
 import { JsonLd } from "@/components/Schema";
-import { contactUrl } from "@/lib/contact-url";
+import { pageCtaPresets } from "@/lib/cta";
 import { provozyNavLabel, sectors } from "@/lib/sectors";
 import { siteUrl } from "@/lib/site";
 
@@ -118,7 +119,7 @@ export default function Page() {
 
       <SectorGroupsIndex groups={sectorGroups} sectors={sectors} />
 
-      <section className="section content-block container sector-page-cta" aria-labelledby="sector-cta-heading">
+      <section className="section content-block container" aria-labelledby="sector-cta-heading">
         <h2 id="sector-cta-heading">Nejste si jistí, kam váš provoz zařadit?</h2>
         <p>
           Pošlete nám stručný popis provozu, technologii, požadavek úřadu nebo projektovou
@@ -131,12 +132,9 @@ export default function Page() {
             <li key={item}>{item}</li>
           ))}
         </ul>
-        <p className="sector-page-cta-action">
-          <Link href={contactUrl("Nejsem si jistý")} className="button">
-            Poslat podklady k posouzení
-          </Link>
-        </p>
       </section>
+
+      <PageCtaStrip {...pageCtaPresets.sectorIndex} className="container" />
     </main>
   );
 }

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
 import { contactUrl } from "@/lib/contact-url";
+import { globalCta } from "@/lib/cta";
 import type { SeoLanding } from "@/lib/seo-landings";
 import { siteUrl } from "@/lib/site";
 
@@ -43,26 +45,19 @@ export function SeoLandingPage({ landing }: Props) {
         </section>
       ))}
 
-      <section className="cta-strip card content-block">
-        <h2>Poptávka</h2>
-        <p className="muted">
-          Pošlete stručný popis provozu nebo požadavek úřadu. Na základě podkladů navrhneme
-          rozsah prací a možný termín realizace.
+      <PageCtaStrip
+        text="Pošlete stručný popis provozu nebo požadavek úřadu. Na základě podkladů navrhneme rozsah prací a možný termín realizace."
+        primaryLabel={globalCta}
+        primaryHref={contactHref}
+        secondaryLabel="Obecná stránka služby"
+        secondaryHref={landing.serviceHref}
+        className="content-block"
+      />
+      {landing.oboryHref ? (
+        <p className="content-block">
+          <Link href={landing.oboryHref}>Související provoz</Link>
         </p>
-        <div className="btn-row">
-          <Link className="button" href={contactHref}>
-            Poptat službu
-          </Link>
-          <Link className="button secondary" href={landing.serviceHref}>
-            Obecná stránka služby
-          </Link>
-          {landing.oboryHref ? (
-            <Link className="button secondary" href={landing.oboryHref}>
-              Související provoz
-            </Link>
-          ) : null}
-        </div>
-      </section>
+      ) : null}
     </main>
   );
 }

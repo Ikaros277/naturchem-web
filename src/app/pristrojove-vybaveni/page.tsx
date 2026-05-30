@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EquipmentAccordion } from "@/components/EquipmentAccordion";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
-import { contactUrl } from "@/lib/contact-url";
+import { pageCtaPresets } from "@/lib/cta";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -130,21 +130,7 @@ export default function Page() {
       </section>
 
       <section className="section content-block container">
-        <article className="card cta-banner">
-          <h2>Potřebujete měření nebo technické posouzení provozu?</h2>
-          <p className="muted">
-            Pošlete popis technologie, požadavek úřadu nebo dostupné podklady. Určíme potřebné
-            měření, odběry nebo navazující studii podle účelu výstupu.
-          </p>
-          <div className="btn-row">
-            <Link href={contactUrl("Měření emisí")} className="button">
-              Poptat měření
-            </Link>
-            <Link href="/akreditace-autorizace-dokumenty" className="button secondary">
-              Akreditace a oprávnění
-            </Link>
-          </div>
-        </article>
+        <PageCtaStrip {...pageCtaPresets.measurement} />
       </section>
     </main>
   );

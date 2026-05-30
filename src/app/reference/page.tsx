@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ReferenceExampleCard } from "@/components/ReferenceExampleCard";
 import { JsonLd } from "@/components/Schema";
-import { contactUrl } from "@/lib/contact-url";
+import { pageCtaPresets } from "@/lib/cta";
 import {
   referenceExamples,
   referenceIntro
@@ -74,19 +74,7 @@ export default function ReferencePage() {
         </div>
       </section>
 
-      <section className="section content-block container reference-cta-block">
-        <h2>Další krok</h2>
-        <p className="muted">
-          Potřebujete měření, studii, EIA, provozní řád nebo podklad k úřadu? Pošlete výzvu,
-          povolení nebo stručný popis provozu. Na základě podkladů navrhneme rozsah prací a možný
-          termín realizace.
-        </p>
-        <div className="btn-row">
-          <Link href={contactUrl("Nejsem si jistý")} className="button">
-            Poptat podobnou zakázku
-          </Link>
-        </div>
-      </section>
+      <PageCtaStrip {...pageCtaPresets.reference} className="container" />
     </main>
   );
 }

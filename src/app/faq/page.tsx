@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqPageContent } from "@/components/FaqPageContent";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
+import { pageCtaPresets } from "@/lib/cta";
 import { faqFlatItems } from "@/lib/faq";
 import { siteUrl } from "@/lib/site";
 
@@ -44,12 +45,7 @@ export default function FaqPage() {
       <JsonLd data={breadcrumbData} />
       <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: "FAQ" }]} />
       <FaqPageContent />
-      <section className="cta-strip">
-        <p>Nenašli jste odpověď? Pošlete dotaz nebo podklady přímo.</p>
-        <div className="btn-row">
-          <Link href="/kontakt" className="button">Kontaktovat NATURCHEM</Link>
-        </div>
-      </section>
+      <PageCtaStrip {...pageCtaPresets.contact} />
     </main>
   );
 }

@@ -6,12 +6,12 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 4 |
-| Celkový odhadovaný čas | ~8,3 hodiny |
+| Celkový odhadovaný čas | ~8,4 hodiny |
 | Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
 
 ---
 
-## Sezení: 30. 5. 2026, 13:20–14:55
+## Sezení: 30. 5. 2026, 13:20–14:59
 
 ### Přehled
 Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky. Změny commitnuty a pushnuty na GitHub (`f260dca`).
@@ -19,6 +19,10 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
+#### Uspo┼Ö├ídat loga z├íkazn├şk┼» do dvou ┼Ö├ídk┼» a opravit Tepl├írnu ─îB.
+**Co bylo uděláno:** Uspo┼Ö├ídat loga z├íkazn├şk┼» do dvou ┼Ö├ídk┼» a opravit Tepl├írnu ─îB. (commit `29d3d50`). Dotčené oblasti: app.  
+**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+
 #### P3-1 a P3-2: popisny styl intro textu na service pages a homepage.
 **Co bylo uděláno:** P3-1 a P3-2: popisny styl intro textu na service pages a homepage. (commit `78876a3`). Dotčené oblasti: app, lib, page.tsx, sluzby.  
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
@@ -56,8 +60,8 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Proč:** Sdílení hotového stavu pro klienta a produkční preview.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 35 min
-**Rozložení:** 30. 5. 2026 13:20–14:55 (~1 hod 35 min)
+**Odhadovaná doba práce:** ~1 hod 40 min
+**Rozložení:** 30. 5. 2026 13:20–14:59 (~1 hod 40 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** ~18 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Odpolední blok zahrnuje i dokončení workflow reportu před implementací P1.*

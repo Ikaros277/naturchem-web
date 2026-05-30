@@ -2,7 +2,13 @@ export type ClientLogo = {
   name: string;
   logo: string;
   website: string;
+  /** Wide horizontal wordmark — spans two grid columns. */
+  wide?: boolean;
 };
+
+export function clientLogoItemClass(client: ClientLogo): string {
+  return client.wide ? "client-logo-item client-logo-item--wide" : "client-logo-item";
+}
 
 export const referenceClients: ClientLogo[] = [
   { name: "Škoda Auto, a.s.", logo: "/loga-referenci/skoda.svg", website: "https://www.skoda-auto.cz" },
@@ -12,7 +18,12 @@ export const referenceClients: ClientLogo[] = [
   { name: "Strabag", logo: "/loga-referenci/strabag.svg", website: "https://www.strabag.cz" },
   { name: "Swietelsky stavební", logo: "/loga-referenci/swietelsky.svg", website: "https://www.swietelsky.cz" },
   { name: "Letiště České Budějovice", logo: "/loga-referenci/letiste-cb.png", website: "https://www.airport-cb.cz" },
-  { name: "Teplárna České Budějovice", logo: "/loga-referenci/teplarnatucb.png", website: "https://www.teplarna-cb.cz" },
+  {
+    name: "Teplárna České Budějovice",
+    logo: "/loga-referenci/teplarnatucb.png",
+    website: "https://www.teplarna-cb.cz",
+    wide: true
+  },
   { name: "Teplárna Písek", logo: "/loga-referenci/teplarnapisek.png", website: "https://www.tpi.cz" },
   { name: "Teplárna Strakonice", logo: "/loga-referenci/teplarnastrakonice.png", website: "https://www.teplarnastrakonice.cz" },
   { name: "ČSAD Jihotrans", logo: "/loga-referenci/jihotrans.svg", website: "https://www.gwjihotrans.cz" },

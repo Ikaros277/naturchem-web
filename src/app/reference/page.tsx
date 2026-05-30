@@ -8,7 +8,7 @@ import {
   referenceExamples,
   referenceIntro
 } from "@/lib/reference-content";
-import { referenceClients } from "@/lib/client-logos";
+import { clientLogoItemClass, referenceClients } from "@/lib/client-logos";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ export default function ReferencePage() {
             <a
               key={client.name}
               href={client.website}
-              className="client-logo-item"
+              className={clientLogoItemClass(client)}
               target="_blank"
               rel="noopener noreferrer"
               title={client.name}

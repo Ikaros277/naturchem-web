@@ -11,7 +11,7 @@ import { poradnaTopicIconKey, topicForArticle } from "@/lib/poradna-topic";
 import { homeHeroMetrics, homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { getLatestPoradnaArticles } from "@/lib/poradna-articles";
 import { siteUrl } from "@/lib/site";
-import { referenceClients } from "@/lib/client-logos";
+import { clientLogoItemClass, referenceClients } from "@/lib/client-logos";
 
 export const metadata: Metadata = {
   title: {
@@ -157,7 +157,7 @@ export default async function Home() {
                   className="card-cover-link"
                   aria-label={`${pillar.title} — ${pillar.cta}`}
                 />
-                <ServiceIcon icon={pillar.icon} />
+                <ServiceIcon icon={pillar.icon} variant="card" />
                 <h3>{pillar.title}</h3>
                 <p className="muted">{pillar.text}</p>
                 <ul className="home-offer-links">
@@ -209,7 +209,8 @@ export default async function Home() {
         </article>
       </section>
 
-      <section className="home-section container">
+      <section className="home-section home-section-surface">
+        <div className="container">
         <header className="section-header">
           <h2>Odborná poradna</h2>
           <p className="muted section-intro">Krátké odborné články k měření, studiím a povolování.</p>
@@ -245,6 +246,7 @@ export default async function Home() {
             Zobrazit Odbornou poradnu
           </Link>
         </p>
+        </div>
       </section>
 
       <section className="home-section container">
@@ -258,7 +260,7 @@ export default async function Home() {
             <a
               key={client.name}
               href={client.website}
-              className="client-logo-item"
+              className={clientLogoItemClass(client)}
               target="_blank"
               rel="noopener noreferrer"
               title={client.name}

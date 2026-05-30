@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 5 |
-| Celkový odhadovaný čas | ~10 hodiny |
+| Celkový odhadovaný čas | ~10,2 hodiny |
 | Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem a +5 min po konci (`report-config.json`).*
 
 ---
 
-## Sezení: 30. 5. 2026, 17:22–18:03
+## Sezení: 30. 5. 2026, 17:22–18:13
 
 ### Přehled
 Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero na informační stránky a zjednodušení homepage (P5-11, P5-12).
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Sprint 12: hero layout fix a responzivn├ş menu (P6-3/4, P1-7).
+**Co bylo uděláno:** Sprint 12: hero layout fix a responzivn├ş menu (P6-3/4, P1-7). (commit `2714920`). Dotčené oblasti: app, components, report, ROADMAPA.md, ux-audit-roadmapa.md, workflow.  
+**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+
 #### Sjednotit v├Ż┼íku hero p├ísu nap┼Ö├ş─Ź str├ínkami (P6-2).
 **Co bylo uděláno:** Sjednotit v├Ż┼íku hero p├ísu nap┼Ö├ş─Ź str├ínkami (P6-2). (commit `3288441`). Dotčené oblasti: app, components, report, ROADMAPA.md, workflow.  
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
@@ -42,8 +46,8 @@ Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~41 min
-**Rozložení:** 30. 5. 2026 17:22–18:03 (~41 min)
+**Odhadovaná doba práce:** ~51 min
+**Rozložení:** 30. 5. 2026 17:22–18:13 (~51 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

@@ -2072,16 +2072,16 @@ a:hover {
 }
 
 .button.secondary {
-  background: #fff;
-  border-color: rgba(11, 31, 53, 0.22);
+  background: #eef1f8;
+  border-color: rgba(40, 51, 119, 0.30);
   color: var(--primary);
   box-shadow: none;
 }
 
 .button.secondary:hover {
-  border-color: var(--secondary);
-  color: var(--secondary);
-  background: #f8faf9;
+  background: #e4e8f4;
+  border-color: rgba(40, 51, 119, 0.50);
+  color: var(--primary);
 }
 
 .button.ghost {
@@ -3260,6 +3260,79 @@ footer .muted,
   gap: 0.65rem 1.25rem;
   margin: auto 0 0;
   padding-top: 0.35rem;
+}
+
+.reference-examples-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.reference-example-details {
+  width: 100%;
+}
+
+.reference-example-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.25rem 0;
+}
+
+.reference-example-summary::-webkit-details-marker {
+  display: none;
+}
+
+.reference-example-summary::after {
+  content: "+";
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  color: var(--muted);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.reference-example-details[open] .reference-example-summary::after {
+  content: "−";
+}
+
+.reference-example-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.reference-example-summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.reference-example-type {
+  font-size: 0.82rem;
+}
+
+.reference-example-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reference-example-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--border);
 }
 
 .download-card.card-link {

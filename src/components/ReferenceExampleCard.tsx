@@ -9,42 +9,38 @@ type Props = {
 };
 
 export function ReferenceExampleCard({ example }: Props) {
-  const primaryHref = contactUrl(example.contactService);
-
   return (
-    <article className="card reference-example-card card-interactive">
-      <Link
-        href={primaryHref}
-        className="card-cover-link"
-        aria-label={`${example.title} — ${example.cta}`}
-      />
-      <ServiceIcon icon={getServiceIconKey(example.href)} />
-      <h3 className="reference-example-title">{example.title}</h3>
-      <dl className="reference-example-meta">
-        <div>
-          <dt>Typ provozu</dt>
-          <dd>{example.operationType}</dd>
+    <article className="card reference-example-card">
+      <details className="reference-example-details">
+        <summary className="reference-example-summary">
+          <ServiceIcon icon={getServiceIconKey(example.href)} className="reference-example-icon" />
+          <div className="reference-example-summary-content">
+            <h3 className="reference-example-title">{example.title}</h3>
+            <span className="reference-example-type muted">{example.operationType}</span>
+          </div>
+          <ul className="tag-row reference-example-tags" aria-label="Oblasti">
+            {example.tags.map((tag) => (
+              <li key={tag}><span className="tag">{tag}</span></li>
+            ))}
+          </ul>
+        </summary>
+        <div className="reference-example-detail">
+          <dl className="reference-example-meta">
+            <div>
+              <dt>Rozsah prací</dt>
+              <dd>{example.scope}</dd>
+            </div>
+            <div>
+              <dt>Výstup</dt>
+              <dd>{example.output}</dd>
+            </div>
+          </dl>
+          {example.text ? <p className="muted">{example.text}</p> : null}
+          <Link href={contactUrl(example.contactService)} className="button secondary">
+            Poptat podobnou zakázku
+          </Link>
         </div>
-        <div>
-          <dt>Rozsah prací</dt>
-          <dd>{example.scope}</dd>
-        </div>
-        <div>
-          <dt>Výstup</dt>
-          <dd>{example.output}</dd>
-        </div>
-      </dl>
-      <p className="muted">{example.text}</p>
-      <ul className="tag-row" aria-label="Oblasti">
-        {example.tags.map((tag) => (
-          <li key={tag}>
-            <span className="tag">{tag}</span>
-          </li>
-        ))}
-      </ul>
-      <p className="reference-example-actions">
-        <span className="card-inline-link">{example.cta}</span>
-      </p>
+      </details>
     </article>
   );
 }

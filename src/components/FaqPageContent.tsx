@@ -136,15 +136,6 @@ export function FaqPageContent() {
               <FaqAccordionItem key={item.q} item={item} />
             ))}
           </div>
-          {!normalizedQuery ? (
-            <div className="faq-section-ctas btn-row">
-              {category.ctas.slice(0, 2).map((cta) => (
-                <Link key={cta.href + cta.label} href={cta.href} className="button secondary">
-                  {cta.label}
-                </Link>
-              ))}
-            </div>
-          ) : null}
         </section>
       ))}
     </>

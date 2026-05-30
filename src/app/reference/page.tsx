@@ -2,13 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ReferenceExampleCard } from "@/components/ReferenceExampleCard";
-import { SemanticCard } from "@/components/SemanticCard";
-import { ServiceIcon } from "@/components/ServiceIcon";
-import { getReferenceSegmentIconKey } from "@/lib/service-icons";
 import { JsonLd } from "@/components/Schema";
 import { contactUrl } from "@/lib/contact-url";
 import {
-  referenceAreas,
   referenceExamples,
   referenceIntro
 } from "@/lib/reference-content";
@@ -45,36 +41,13 @@ export default function ReferencePage() {
         </header>
       </div>
 
-      <section className="section content-block container" id="oblasti">
-        <h2>Reference podle oblastí</h2>
-        <p className="muted section-intro-small">
-          Typické služby a situace, které v jednotlivých oborech opakovaně řešíme — měření,
-          studie, EIA, provozní dokumentace a podklady pro úřady.
-        </p>
-        <div className="reference-segments index-card-grid">
-          {referenceAreas.map((area) => (
-            <SemanticCard
-              key={area.title}
-              href={contactUrl(area.contactService)}
-              className="reference-segment-card"
-              cta="Poptat podobnou zakázku"
-              aria-label={area.title}
-            >
-              <ServiceIcon icon={getReferenceSegmentIconKey(area.title)} />
-              <h3 className="reference-segment-title">{area.title}</h3>
-              <p className="muted">{area.description}</p>
-            </SemanticCard>
-          ))}
-        </div>
-      </section>
-
       <section className="section content-block container" id="priklady">
-        <h2>Anonymizované příklady řešených zakázek</h2>
+        <h2>Příklady z praxe</h2>
         <p className="muted section-intro-small">
-          Konkrétní typy situací z praxe — bez názvů zákazníků a bez osobních údajů. U každého
-          příkladu uvádíme typ provozu, rozsah prací a výstup.
+          Konkrétní typy situací z praxe — bez názvů zákazníků. U každého příkladu uvádíme typ
+          provozu, rozsah prací a výstup.
         </p>
-        <div className="reference-examples-grid">
+        <div className="reference-examples-list">
           {referenceExamples.map((example) => (
             <ReferenceExampleCard key={example.title} example={example} />
           ))}

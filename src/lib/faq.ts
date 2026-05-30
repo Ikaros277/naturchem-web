@@ -51,8 +51,6 @@ export const faqPageIntro =
   "Nevíte, zda potřebujete měření, studii, odborný posudek, provozní řád nebo jiný podklad pro úřad? Pošlete rozhodnutí, výzvu, projektovou dokumentaci nebo stručný popis technologie. Posoudíme účel zakázky, typ provozu a požadavky příslušného orgánu.";
 
 export const faqIntroCtas: FaqLink[] = [
-  { label: "Poptat měření", href: contactUrl("Měření emisí") },
-  { label: "Poptat studii / posudek", href: contactUrl("Odborné posudky") },
   { label: "Poslat podklady k posouzení", href: contactUrl("Nejsem si jistý") }
 ];
 

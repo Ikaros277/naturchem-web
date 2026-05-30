@@ -11,7 +11,7 @@ export const referenceNav = { href: "/reference", label: "Reference" } as const;
 
 export const articlesNav = { href: "/poradna", label: "Odborná poradna" } as const;
 
-export const faqNav = { href: "/faq", label: "FAQ" } as const;
+export const faqNav = { href: "/faq", label: "Časté dotazy" } as const;
 
 export const oNaturchemNav = {
   href: "/o-spolecnosti-naturchem",

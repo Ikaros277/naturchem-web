@@ -218,18 +218,6 @@ export function ServicePage(props: Props) {
           </section>
         ) : null}
 
-        <section className="cta-strip card content-block">
-          <h2>Poptávka</h2>
-          <p className="muted">{serviceCtaLead}</p>
-          <div className="btn-row">
-            <Link className="button" href={quickContactHref}>
-              {contactCta}
-            </Link>
-            <Link className="button secondary" href="/kontakt#podklady">
-              Jaké podklady poslat
-            </Link>
-          </div>
-        </section>
       </div>
     </main>
   );

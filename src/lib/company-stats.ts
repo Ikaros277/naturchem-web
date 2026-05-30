@@ -1,22 +1,31 @@
 /** Zaokrouhlená čísla z interní evidence zakázek a protokolových výstupů. */
 
+import type { ServiceIconKey } from "@/lib/service-icons";
+
 export const companyStatsIntro =
   "NATURCHEM dlouhodobě zajišťuje měření, studie a odborné podklady pro průmyslové provozy, projektanty, investory i veřejnou správu.";
 
-export const companyStats = [
+export const companyStats: ReadonlyArray<{
+  value: string;
+  label: string;
+  icon: ServiceIconKey;
+}> = [
   {
     value: "14 000+",
-    label: "realizovaných zakázek"
+    label: "realizovaných zakázek",
+    icon: "process-vystup"
   },
   {
     value: "6 000+",
-    label: "měření v terénu"
+    label: "měření v terénu",
+    icon: "emise"
   },
   {
     value: "36 let",
-    label: "odborné činnosti"
+    label: "odborné činnosti",
+    icon: "process-posouzeni"
   }
-] as const;
+];
 
 export const companyStatsNote =
   "Uvedená čísla jsou zaokrouhlené údaje z interní evidence zakázek a protokolových výstupů.";

@@ -154,6 +154,15 @@ export function getEquipmentGroupIconKey(title: string): ServiceIconKey {
   return equipmentGroupToIcon[title] ?? "default";
 }
 
+const detailGroupToIcon: Record<string, ServiceIconKey> = {
+  "Příklady zakázek z praxe": "process-zpracovani",
+  "Typické chyby a rizika": "process-posouzeni"
+};
+
+export function getDetailGroupIconKey(title: string): ServiceIconKey {
+  return detailGroupToIcon[title] ?? "default";
+}
+
 const faqCategoryToIcon: Record<string, ServiceIconKey> = {
   obecne: "process-posouzeni",
   emise: "emise",

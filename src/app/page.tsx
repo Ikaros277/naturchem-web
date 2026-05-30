@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import type { Metadata } from "next";
+import { HeroPhoto } from "@/components/HeroPhoto";
 import { IndexCard } from "@/components/IndexCard";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -86,7 +87,8 @@ export default async function Home() {
   return (
     <main className="home-page">
       <JsonLd data={breadcrumbData} />
-      <section className="hero">
+      <section className="hero hero--photo">
+        <HeroPhoto theme="home" priority />
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Akreditovaná měření · odborné studie · dokumentace pro úřady</p>

@@ -115,7 +115,7 @@ export function FaqPageContent() {
       <nav className="faq-tiles" aria-label="Kategorie častých dotazů">
         {faqCategories.map((cat) => (
           <a key={cat.id} href={`#${cat.id}`} className="card faq-tile">
-            <ServiceIcon icon={getFaqCategoryIconKey(cat.id)} className="faq-tile-icon" />
+            <ServiceIcon icon={getFaqCategoryIconKey(cat.id)} variant="inline" className="faq-tile-icon" />
             <span className="faq-tile-label">{cat.tileLabel}</span>
           </a>
         ))}

@@ -8,12 +8,13 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default function SluzbyOpenGraphImage() {
   return new ImageResponse(
     (
       <OgImageLayout
-        title="Měření, studie a dokumentace pro provozy a úřady"
-        subtitle="Emise · pracovní prostředí · hluk · rozptylové studie · EIA"
+        title="Akreditovaná měření a odborné služby"
+        subtitle="Měření emisí, pracovního prostředí, hluku, studie a povolovací dokumentace"
+        footer="naturchem.cz/sluzby · Akreditovaná laboratoř č. 1599"
       />
     ),
     {

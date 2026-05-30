@@ -5,10 +5,12 @@ import { ExperienceStats } from "@/components/ExperienceStats";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
 import { TeamMemberCards } from "@/components/TeamSection";
+import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
 import { pageCtaPresets } from "@/lib/cta";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy";
 import { nationalPresenceShort } from "@/lib/nationalMessaging";
 import { siteUrl } from "@/lib/site";
+import { workProcessHeading, workProcessIntro } from "@/lib/work-process";
 
 export const metadata: Metadata = {
   title: {
@@ -86,9 +88,11 @@ export default function ONaturchemPage() {
         </header>
       </div>
 
-      <section className="section container stats-section">
+      <section className="section section-surface">
+        <div className="container stats-section">
         <h2>Zkušenosti v číslech</h2>
         <ExperienceStats showNote />
+        </div>
       </section>
 
       <section className="section content-block container">
@@ -118,6 +122,13 @@ export default function ONaturchemPage() {
       </section>
 
       <section className="section content-block container">
+        <h2>{workProcessHeading}</h2>
+        <p className="muted section-intro">{workProcessIntro}</p>
+        <WorkProcessTimeline />
+      </section>
+
+      <section className="section section-surface content-block">
+        <div className="container">
         <article className="card guarantee-panel">
         <h2>Odborná garance</h2>
         <p>{guaranteeIntroParagraph}</p>
@@ -128,6 +139,7 @@ export default function ONaturchemPage() {
           emisí skleníkových plynů a oznámení EIA.
         </p>
         </article>
+        </div>
       </section>
 
       <section className="section content-block container">
@@ -135,7 +147,8 @@ export default function ONaturchemPage() {
         <TeamMemberCards />
       </section>
 
-      <section className="section content-block container">
+      <section className="section section-surface content-block">
+        <div className="container">
         <h2>Typičtí zákazníci</h2>
         <ul className="check-list">
           <li>výrobní a energetické provozy, kotelny, lakovny, svařovny, sklárny</li>
@@ -145,6 +158,7 @@ export default function ONaturchemPage() {
         <p style={{ marginTop: "1rem" }}>
           <Link href="/reference">Reference a vybrané zkušenosti</Link>
         </p>
+        </div>
       </section>
 
       <PageCtaStrip {...pageCtaPresets.cooperation} className="container" />

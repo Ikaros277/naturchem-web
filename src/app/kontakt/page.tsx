@@ -145,7 +145,7 @@ export default async function Page({ searchParams }: PageProps) {
           <ul className="check-list contact-attachment-checklist">
             {attachmentItems.map((item) => (
               <li key={item} className="contact-attachment-item">
-                <ServiceIcon icon={getContactAttachmentIconKey(item)} size={18} className="contact-attachment-icon" />
+                <ServiceIcon icon={getContactAttachmentIconKey(item)} variant="inline" className="contact-attachment-icon" />
                 <span>{item}</span>
               </li>
             ))}

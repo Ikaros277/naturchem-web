@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroPhoto } from "@/components/HeroPhoto";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -7,6 +8,8 @@ import { JsonLd } from "@/components/Schema";
 import { contactSubmitCta } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
+import { getDetailGroupIconKey } from "@/lib/service-icons";
+import { getServiceHeroTheme } from "@/lib/hero-images";
 import {
   serviceDocsIntro,
   serviceMistakesHeading,
@@ -95,6 +98,8 @@ export function ServicePage(props: Props) {
     }))
   };
 
+  const heroTheme = getServiceHeroTheme(props.slug);
+
   return (
     <main className="page">
       <JsonLd data={serviceData} />
@@ -102,38 +107,42 @@ export function ServicePage(props: Props) {
       {(relatedLinks.length > 0 || sectorCrossLinks.length > 0) ? (
         <JsonLd data={relatedItemListData} />
       ) : null}
-      <div className="container page-inner">
-        <Breadcrumbs
-          items={[
-            { name: "Úvod", href: "/" },
-            { name: "Služby", href: "/sluzby" },
-            { name: props.title }
-          ]}
-        />
-        <header className="page-header service-hero">
-          <div>
-            <ServiceIcon href={`/${props.slug}`} size={26} className="service-hero-icon" />
-            <h1>{props.title}</h1>
-            <p className="page-lead">{props.intro}</p>
-            <div className="btn-row">
-              <Link className="button" href={quickContactHref}>
-                {contactCta}
-              </Link>
-              <Link className="button secondary" href="/kontakt#podklady">
-                Jaké podklady poslat
-              </Link>
+      <div className="service-hero-band">
+        <HeroPhoto theme={heroTheme} compact />
+        <div className="container service-hero-band-inner">
+          <Breadcrumbs
+            items={[
+              { name: "Úvod", href: "/" },
+              { name: "Služby", href: "/sluzby" },
+              { name: props.title }
+            ]}
+          />
+          <header className="page-header service-hero service-hero--photo">
+            <div>
+              <ServiceIcon href={`/${props.slug}`} variant="card" className="service-hero-icon" />
+              <h1>{props.title}</h1>
+              <p className="page-lead">{props.intro}</p>
+              <div className="btn-row">
+                <Link className="button" href={quickContactHref}>
+                  {contactCta}
+                </Link>
+                <Link className="button secondary" href="/kontakt#podklady">
+                  Jaké podklady poslat
+                </Link>
+              </div>
             </div>
-          </div>
-          <aside className="service-hero-panel" aria-label="Typické důvody poptávky">
-            <h2>{props.heroPanelTitle ?? "Typické důvody poptávky"}</h2>
-            <ul className="compact-list">
-              {quickNeeds.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </aside>
-        </header>
-
+            <aside className="service-hero-panel" aria-label="Typické důvody poptávky">
+              <h2>{props.heroPanelTitle ?? "Typické důvody poptávky"}</h2>
+              <ul className="compact-list">
+                {quickNeeds.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </aside>
+          </header>
+        </div>
+      </div>
+      <div className="container page-inner">
         <section className="service-decision-panel content-block" aria-label="Stručný přehled služby">
           <div className="service-decision-card service-decision-card-primary">
             <h2>{props.scopeHeading ?? serviceScopeHeading}</h2>
@@ -176,7 +185,10 @@ export function ServicePage(props: Props) {
               <div className="service-extra-grid">
                 {detailGroups.map((group) => (
                   <article key={group.title} className="service-extra-card">
-                    <h3>{group.title}</h3>
+                    <div className="service-extra-card-head">
+                      <ServiceIcon icon={getDetailGroupIconKey(group.title)} variant="inline" />
+                      <h3>{group.title}</h3>
+                    </div>
                     <ul className="compact-list">
                       {group.items.map((item) => (
                         <li key={item}>{item}</li>

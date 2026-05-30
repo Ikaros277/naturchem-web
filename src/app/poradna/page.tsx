@@ -10,9 +10,9 @@ import { getPoradnaArticles } from "@/lib/poradna-articles";
 import { formatArticleDate } from "@/lib/format-date";
 
 export const metadata: Metadata = {
-  title: "Odborná poradna",
+  title: "Odborná poradna – články o měřeních, studiích a povolování",
   description:
-    "Praktické články a odpovědi pro měření emisí, pracovní prostředí, hluk, rozptylové studie, EIA, povolovací procesy a chemickou legislativu.",
+    "Praktické články a odpovědi pro měření emisí, pracovní prostředí, hluk, rozptylové studie, EIA, povolovací procesy a chemickou legislativu. Související služby NATURCHEM.",
   alternates: { canonical: `${siteUrl}/poradna/` }
 };
 

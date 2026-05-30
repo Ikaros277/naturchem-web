@@ -1026,5 +1026,68 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
         description: "Propojené posouzení dopadů záměru."
       }
     ]
+  },
+  "skoleni-chemicke-legislativy": {
+    slug: "sluzby/skoleni-chemicke-legislativy",
+    title: "Školení chemického zákona a chemické legislativy",
+    description:
+      "Praktické školení chemického zákona, bezpečnostních listů, označování, skladování a nakládání s chemickými látkami pro provozy, sklady, výrobu a laboratoře.",
+    intro:
+      "Praktické školení chemického zákona pro provozy nakládající s látkami a směsmi. Projdeme povinnosti, bezpečnostní listy a pravidla pro skladování i manipulaci.",
+    contactService: "Školení chemického zákona / chemické legislativy",
+    heroPanelTitle: "Typické důvody poptávky",
+    scope: [
+      "základní povinnosti při nakládání s chemickými látkami a směsmi",
+      "orientace v bezpečnostních listech a jejich praktické použití",
+      "označování, skladování a bezpečné používání chemických látek",
+      "návaznost na BOZP, ochranu zdraví a životní prostředí",
+      "provozní evidence, interní pravidla a časté chyby v provozech"
+    ],
+    whenNeeded: [
+      "nové chemické látky nebo směsi v provozu",
+      "příprava na kontrolu nebo interní audit BOZP",
+      "potřeba praktického podkladu pro zaměstnance",
+      "rozšíření provozu, skladu nebo pracovních činností s chemií"
+    ],
+    practicalSituations: [
+      "školení pro výrobní podnik, sklad nebo laboratoř",
+      "školení pro lakovnu, galvanovnu nebo automotive provoz",
+      "školení provozních ekologů, BOZP pracovníků a vedoucích směn",
+      "školení osob odpovědných za chemické látky a směsi v provozu"
+    ],
+    docs: [
+      "seznam používaných chemických látek a směsí",
+      "bezpečnostní listy a interní postupy",
+      "popis provozu, skladu nebo pracovních činností",
+      "požadovaný okruh zaměstnanců a rozsah školení"
+    ],
+    outputs: [
+      "prezenční listina",
+      "osnova školení",
+      "potvrzení o absolvování školení",
+      "doporučení k doplnění interní dokumentace podle potřeby"
+    ],
+    commonMistakes: [
+      "školení jen formálně bez vazby na skutečné látky v provozu",
+      "bezpečnostní listy nejsou dostupné na pracovištích",
+      "zaměstnanci nemají jasná pravidla pro přelévání a označování nádob"
+    ],
+    relatedLinks: [
+      {
+        title: "Bezpečnostní listy a označování",
+        href: "/sluzby/bezpecnostni-listy",
+        description: "Revize listů a štítků jako podklad pro školení."
+      },
+      {
+        title: "Chemické látky v provozu",
+        href: "/sluzby/chemicke-latky",
+        description: "Pravidla pro skladování, manipulaci a odpovědnosti."
+      },
+      {
+        title: "Odborná poradna",
+        href: "/poradna",
+        description: "Praktické články k chemické legislativě a provozu."
+      }
+    ]
   }
 };

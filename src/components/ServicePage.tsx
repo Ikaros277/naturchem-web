@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
+import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
 import { contactSubmitCta } from "@/lib/cta";
@@ -200,6 +201,8 @@ export function ServicePage(props: Props) {
         {props.faqCategoryId ? (
           <ServiceFaqTeaser categoryId={props.faqCategoryId} />
         ) : null}
+
+        <ServicePoradnaTeaser serviceSlug={props.slug} />
 
         {mergedRelated.length > 0 ? (
           <section className="content-block">

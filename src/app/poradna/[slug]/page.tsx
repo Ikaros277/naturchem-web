@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
 import type { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { ArticleRelatedServices } from "@/components/ArticleRelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/Schema";
 import { getArticleBySlug, getArticles } from "@/lib/articles";
@@ -89,8 +90,13 @@ export default async function CmsArticlePage({ params }: Props) {
           {article.body}
         </Markdown>
       </div>
-      <p>
+
+      <ArticleRelatedServices title={article.title} slug={article.slug} />
+
+      <p className="article-footer-cta">
         <Link href="/kontakt">Požádat o konzultaci</Link>
+        {" · "}
+        <Link href="/poradna">Další články poradny</Link>
       </p>
     </main>
   );

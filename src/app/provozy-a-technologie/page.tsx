@@ -120,8 +120,6 @@ export default function Page() {
         </header>
       </PageHeroBand>
 
-      <SectorGroupsIndex groups={sectorGroups} sectors={sectors} />
-
       <section className="section content-block container" aria-labelledby="sector-cta-heading">
         <h2 id="sector-cta-heading">Nejste si jistí, kam váš provoz zařadit?</h2>
         <p>
@@ -136,6 +134,8 @@ export default function Page() {
           ))}
         </ul>
       </section>
+
+      <SectorGroupsIndex groups={sectorGroups} sectors={sectors} />
 
       <PageCtaStrip {...pageCtaPresets.sectorIndex} className="container" />
     </main>

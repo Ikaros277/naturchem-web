@@ -4,7 +4,7 @@
 > **Jak číst:** ✅ Hotovo · 🔄 Probíhá · 🔲 Čeká · ❓ Čeká na klienta
 
 **Poslední aktualizace:** 2026-05-30  
-**Aktuální fáze:** Sprint 10 hotovo → zbývá P5-B (fotky od Heziny), copy klíčové stránky
+**Aktuální fáze:** Sprint 11 hotovo → copy sprint, P5-B fotky, launch checklist
 
 ---
 
@@ -15,7 +15,7 @@
 | UX opravy | 🔄 ~99 % | P5 + homepage trust order + spacing tight; P5-B fotky čekají |
 | Copy a obsah | 🔄 ~25 % | Intro texty 24 service pages + homepage hotovo; klíčové stránky čekají |
 | Grafický audit | 🔄 Audit hotov | Diagnóza v `06-graficky-audit/`; implementace sloučena do P5 |
-| SEO a analytika | 🔲 Nezahájeno | Sitemap opravena, GA4/Search Console nenastaveno |
+| SEO a analytika | 🔄 Zahájeno | Meta audit S11 hotov; GA4/GSC čeká na produkci |
 | Launch checklist | 🔲 Nezahájeno | Resend netestován na produkci, GDPR neřešeno |
 
 ---
@@ -62,10 +62,10 @@
 
 | ID | Úkol | Stav | Obtížnost |
 |----|------|------|-----------|
-| P4-1 | /skoleni: migrace na ServicePage komponent | 🔲 | Vysoká |
+| P4-1 | /skoleni: migrace na ServicePage komponent | ✅ | — |
 | P4-2 | Sitemap: ověřit vyloučení redirect stránek | ✅ | — |
-| P4-3 | Přidat faqCategoryId: ispop, ghg, bezpecnostni-listy, chemicke-latky | 🔲 | Nízká |
-| P4-4 | /provozy-a-technologie: přesunout „Nejste si jistí?" checklist výše | 🔲 | Nízká |
+| P4-3 | Přidat faqCategoryId: ispop, ghg, bezpecnostni-listy, chemicke-latky | ✅ | V `dedicated-service-pages.ts` |
+| P4-4 | /provozy-a-technologie: přesunout „Nejste si jistí?" checklist výše | ✅ | — |
 | P4-5 | /eia-posudky: opravit neviditelnou 5. položku scope | ✅ | — |
 | P4-6 | Univerzální PageCtaStrip — sjednocení konverzních pásů napříč webem | ✅ | — |
 
@@ -145,8 +145,8 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | Robots.txt: ověřit nastavení | 🔲 | |
 | Technické SEO: Core Web Vitals, PageSpeed (Lighthouse audit) | 🔲 | |
 | Strukturovaná data (JSON-LD): ověřit pomocí Google Rich Results Test | 🔲 | Data jsou implementována |
-| Klíčová slova: ověřit meta title/description na klíčových stránkách | 🔲 | |
-| Interní prolinkování: audit (zejm. poradna ↔ service pages) | 🔲 | |
+| Klíčová slova: ověřit meta title/description na klíčových stránkách | ✅ | `05-seo/meta-audit-sprint11.md` |
+| Interní prolinkování: audit (zejm. poradna ↔ service pages) | ✅ | S11 — `poradna-service-links.ts` |
 
 ---
 
@@ -195,6 +195,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 30. 5. | Sprint 8 | P5-7 timeline, P5-8 OG šablony, P5-9 tým avatary |
 | 30. 5. | Sprint 9 | P5-11 PageHeroBand na všech stránkách, P5-12 homepage USP refactor |
 | 30. 5. | Sprint 10 | P5-13 trust order + kompaktní stats, P3-8 homepage trim, P6-1 spacing, docs v gitu |
+| 30. 5. | Sprint 11 | Meta audit, poradna↔služby prolinkování, P4-1/P4-3/P4-4 |
 
 ---
 

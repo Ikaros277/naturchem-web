@@ -1193,6 +1193,7 @@ header.site-header {
 
 .nav-brand {
   flex-shrink: 0;
+  min-width: min-content;
   text-align: center;
 }
 
@@ -1537,7 +1538,9 @@ header.site-header {
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
-  min-width: 0;
+  flex-shrink: 0;
+  width: max-content;
+  min-width: max-content;
   text-align: center;
 }
 
@@ -1555,7 +1558,9 @@ header.site-header {
 
 .brand-tagline {
   display: block;
-  width: 100%;
+  width: max-content;
+  max-width: none;
+  white-space: nowrap;
   color: var(--muted);
   font-size: 0.68rem;
   font-weight: 700;
@@ -3686,10 +3691,6 @@ footer .muted,
   padding: clamp(1rem, 2vw, 1.75rem) 0;
 }
 
-.about-prose {
-  max-width: 980px;
-}
-
 .about-prose p:last-child {
   margin-bottom: 0;
 }
@@ -3702,7 +3703,7 @@ footer .muted,
 }
 
 .guarantee-panel {
-  max-width: 980px;
+  width: 100%;
   border-color: rgba(47, 111, 94, 0.25);
   background:
     linear-gradient(135deg, rgba(47, 111, 94, 0.08), transparent 45%),
@@ -4783,7 +4784,7 @@ footer .muted,
 
 .nav {
   display: grid;
-  grid-template-columns: minmax(0, 240px) 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   min-height: 80px;
   padding: 0;
@@ -4791,11 +4792,11 @@ footer .muted,
 }
 
 .nav-brand {
-  max-width: 240px;
+  max-width: none;
 }
 
 .brand-mark {
-  max-width: 240px;
+  max-width: none;
 }
 
 .nav-desktop {
@@ -5262,14 +5263,6 @@ footer .muted,
   .nav-item-link {
     font-size: 0.86rem;
   }
-
-  .brand-mark {
-    max-width: 210px;
-  }
-
-  .brand-tagline {
-    font-size: 0.72rem;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -5285,14 +5278,6 @@ footer .muted,
   .nav-links a,
   .nav-item-link {
     font-size: 0.9rem;
-  }
-
-  .brand-mark {
-    max-width: 240px;
-  }
-
-  .brand-tagline {
-    font-size: inherit;
   }
 }
 

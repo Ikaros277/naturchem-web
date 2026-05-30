@@ -101,28 +101,30 @@ export default function ONaturchemPage() {
         </div>
       </section>
 
-      <section className="section content-block container">
-        <h2>Kdo jsme</h2>
-        <div className="about-prose">
-          <p>
-            NATURCHEM, s.r.o. je akreditovaná měřicí a poradenská firma. Měříme a zpracováváme studie
-            z Havlíčkova Brodu, Českých Budějovic a Prahy; zakázky v terénu řešíme po celé ČR.
-          </p>
-          <p>
-            Za odbornou stránku zakázek stojí tým pod garancí Ing. Františka Heziny — od návrhu
-            rozsahu po výstup pro úřad. Pracujeme pro průmyslové provozy, investory, projektanty i
-            veřejnou správu.
-          </p>
-          <p>
-            Nejsme jen laboratoř s jedním typem výstupu. Měření, výpočty, studie i dokumentaci pro
-            úřady vyřešíte u nás najednou — bez koordinace více dodavatelů.
-          </p>
-          <p className="about-related-links muted">
-            Chcete vědět, co konkrétně umíme? Přehled služeb, typů provozů a referencí najdete v
-            sekcích <Link href="/sluzby">Služby</Link>,{" "}
-            <Link href="/provozy-a-technologie">Provozy a technologie</Link>,{" "}
-            <Link href="/reference">Reference z praxe</Link> a <Link href="/faq">FAQ</Link>.
-          </p>
+      <section className="section content-block">
+        <div className="container">
+          <h2>Kdo jsme</h2>
+          <div className="about-prose">
+            <p>
+              NATURCHEM, s.r.o. je akreditovaná měřicí a poradenská firma. Měříme a zpracováváme studie
+              z Havlíčkova Brodu, Českých Budějovic a Prahy; zakázky v terénu řešíme po celé ČR.
+            </p>
+            <p>
+              Za odbornou stránku zakázek stojí tým pod garancí Ing. Františka Heziny — od návrhu
+              rozsahu po výstup pro úřad. Pracujeme pro průmyslové provozy, investory, projektanty i
+              veřejnou správu.
+            </p>
+            <p>
+              Nejsme jen laboratoř s jedním typem výstupu. Měření, výpočty, studie i dokumentaci pro
+              úřady vyřešíte u nás najednou — bez koordinace více dodavatelů.
+            </p>
+            <p className="about-related-links muted">
+              Chcete vědět, co konkrétně umíme? Přehled služeb, typů provozů a referencí najdete v
+              sekcích <Link href="/sluzby">Služby</Link>,{" "}
+              <Link href="/provozy-a-technologie">Provozy a technologie</Link>,{" "}
+              <Link href="/reference">Reference z praxe</Link> a <Link href="/faq">FAQ</Link>.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -142,9 +144,11 @@ export default function ONaturchemPage() {
         </div>
       </section>
 
-      <section className="section content-block container">
-        <h2>Tým</h2>
-        <TeamMemberCards />
+      <section className="section content-block">
+        <div className="container">
+          <h2>Tým</h2>
+          <TeamMemberCards />
+        </div>
       </section>
 
       <PageCtaStrip {...pageCtaPresets.cooperation} className="container" />

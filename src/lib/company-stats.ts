@@ -3,7 +3,7 @@
 import type { ServiceIconKey } from "@/lib/service-icons";
 
 export const companyStatsIntro =
-  "NATURCHEM dlouhodobě zajišťuje měření, studie a odborné podklady pro průmyslové provozy, projektanty, investory i veřejnou správu.";
+  "Měření, studie a odborné podklady pro průmyslové provozy, projektanty, investory i veřejnou správu — řešíme to déle než 36 let.";
 
 export const companyStats: ReadonlyArray<{
   value: string;

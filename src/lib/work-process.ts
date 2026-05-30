@@ -22,4 +22,4 @@ export const workProcessSteps = [
 export const workProcessHeading = "Jak probíhá zakázka";
 
 export const workProcessIntro =
-  "Typický postup od první poptávky po odborný výstup — bez zbytečných kol a s jasným rozhodováním o rozsahu.";
+  "Od první poptávky po hotový protokol nebo studii — postup je jasný a rozsah služeb určíme podle Vašeho cíle, ne naopak.";

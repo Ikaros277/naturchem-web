@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     absolute: "O NATURCHEM – měření, studie a povolovací podklady"
   },
   description:
-    "NATURCHEM propojuje akreditovaná měření, výpočtové studie, EIA, odborné posudky, provozní řády, ISPOP a technické podklady pro úřady.",
+    "Akreditovaná měření, studie a povolovací podklady pro průmyslové provozy, investory a veřejnou správu — déle než 36 let praxe.",
   alternates: { canonical: `${siteUrl}/o-spolecnosti-naturchem/` }
 };
 
@@ -77,16 +77,16 @@ export default function ONaturchemPage() {
       >
         <header className="premium-page-hero about-hero page-hero--photo">
           <div>
-            <p className="eyebrow">Firemní profil</p>
+            <p className="eyebrow">Měřicí a poradenská firma</p>
             <h1>O NATURCHEM</h1>
             <p className="page-lead">
-              Akreditovaná měřicí a poradenská společnost, která propojuje terénní měření, odborné
-              studie a povolovací podklady pro průmysl, investory a veřejnou správu.
+              Postaráme se o měření, studie i povolovací podklady, které Váš provoz potřebuje — pro
+              průmysl, investory, projektanty i veřejnou správu.
             </p>
           </div>
           <aside className="hero-proof-panel about-proof-panel">
             <p className="proof-panel-label">Odborná autorita</p>
-            <strong>Akreditace, autorizace a dlouhodobá praxe v jednom procesu</strong>
+            <strong>Akreditovaná laboratoř · autorizace EIA · 36 let praxe</strong>
           </aside>
         </header>
       </PageHeroBand>
@@ -103,13 +103,13 @@ export default function ONaturchemPage() {
         <div className="about-two-column">
           <div>
         <p>
-          NATURCHEM, s.r.o. je akreditovaná měřicí a poradenská společnost pro průmyslové provozy,
-          investory a projektanty. Zaměřujeme se na odborně obhajitelné výstupy — od protokolu z
-          terénu přes studii až po dokumentaci pro správní řízení.
+          Zajistíme akreditovaná měření, odborné studie a povolovací podklady — od protokolu z terénu
+          přes výpočet až po dokumentaci pro správní řízení. Pracujeme pro průmyslové provozy,
+          investory i projektanty.
         </p>
         <p>
-          Nejsme pouze laboratoř s jedním typem výstupu. Dlouhodobě propojujeme měření, výpočty,
-          studie a povolovací podklady tak, aby šly řešit v jednom odborném procesu.
+          Nejsme jen laboratoř s jedním typem výstupu. Měření, výpočty, studie i dokumentaci pro
+          úřady vyřešíte u nás najednou — bez koordinace více dodavatelů.
         </p>
           </div>
           <div>
@@ -136,10 +136,11 @@ export default function ONaturchemPage() {
         <h2>Odborná garance</h2>
         <p>{guaranteeIntroParagraph}</p>
         <p>
-          Jmenovitě za odbornou stránku zakázek odpovídá{" "}
-          <strong>Ing. František Hezina</strong> — jednatel společnosti, odborná garance zakázek, soudní
-          znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování
-          emisí skleníkových plynů a oznámení EIA.
+          Za odbornou stránku zakázek odpovídá{" "}
+          <strong>Ing. František Hezina</strong> — jednatel, odborná garance, soudní znalec,
+          autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování emisí
+          skleníkových plynů a oznámení EIA.{" "}
+          <Link href="/odborna-garance">Více o odborné garanci</Link>
         </p>
         </article>
         </div>
@@ -159,7 +160,7 @@ export default function ONaturchemPage() {
           <li>investoři, projektanti, automotive a veřejní zadavatelé</li>
         </ul>
         <p style={{ marginTop: "1rem" }}>
-          <Link href="/reference">Reference a vybrané zkušenosti</Link>
+          <Link href="/reference">Reference z praxe</Link>
         </p>
         </div>
       </section>

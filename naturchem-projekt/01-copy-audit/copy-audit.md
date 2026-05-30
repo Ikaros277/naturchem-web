@@ -224,5 +224,40 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 
 ---
 
+## Copy sprint C1–C9 (implementační plán)
+
+> **Metodika:** `/copy sprint Cx` → návrhy → schválení → `implement` → aktualizace stavu zde.  
+> **Mimo scope:** `content/articles/*.md` (33 článků) = **P-COPY** (samostatný úkol).  
+> **Pravidlo:** TOV §0 — faktická přesnost před stylem; copy = přeformulování, ne doplňování faktů.
+
+| Sprint | Rozsah | Stav | Poznámka |
+|--------|--------|------|----------|
+| **C1** | Homepage: `page.tsx` — copy hero/pillars, odstraněn reference teaser + hero CTA + uncertain strip; loga zůstala | ✅ | 30. 5. 2026 |
+| **C2** | O společnosti, odborná garance, `guarantee-copy`, `work-process`, `team`, `nationalMessaging`, `companyStatsIntro` | ✅ | 30. 5. 2026 |
+| **C3** | Akreditace, `accreditation-scope`, `accreditation-documents`, přístrojové vybavení (úvody) | 🔲 | |
+| **C4** | Služby měření (7 slugů) — body copy, intro jen kontrola (P3-2 ✅) | 🔲 | |
+| **C5** | Služby studie (6 slugů) | 🔲 | |
+| **C6** | Služby povolování/EIA (11 slugů) | 🔲 | |
+| **C7** | `service-groups`, provozy 13×, reference, typické zakázky, `seo-landings` | 🔲 | |
+| **C8** | `faq.ts` (styl only), `/poradna` hero | 🔲 | |
+| **C9** | Kontakt, formulář, Footer, UI labely + grep QA | 🔲 | |
+| **P-COPY** | 33× `content/articles/*.md` | 🔲 odloženo | Po dokončení C1–C9 |
+
+### Mapování na CC položky (starší audit)
+
+| CC | Stav | Poznámka |
+|----|------|----------|
+| CC1 | 🔲 | Service intro zkrácení — C4–C6 |
+| CC2 | ✅ | Homepage lead P3-1 hotovo; C1 = TOV pass zbytku homepage |
+| CC3 | 🔲 | C9 grep QA |
+| CC4 | ❓ | Metriky ponechány; okolí v C1 |
+| CC5 | 🔲 | C2 (Hezina) |
+| CC6 | 🔲 | C1 reference teaser — bez jmen firem |
+| CC7 | 🔲 | C4–C6 |
+| CC8 | — | P-COPY (poradna články) |
+| CC9 | 🔲 | C9 |
+
+---
+
 *Soubor: 01-copy-audit/copy-audit.md*  
 *Navazuje na: 00-strategie/tone-of-voice.md, personas.md, 03-ux-audit/ux-audit-roadmapa.md*

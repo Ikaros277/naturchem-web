@@ -43,7 +43,7 @@ export const pageCtaPresets = {
     secondaryHref: "/sluzby"
   },
   cooperation: {
-    text: "Máte zájem o spolupráci nebo potřebujete poradit s rozsahem zakázky?",
+    text: "Potřebujete poradit s rozsahem měření, studie nebo dokumentace? Napište nám — navrhneme další postup.",
     primaryLabel: "Kontaktovat NATURCHEM",
     primaryHref: "/kontakt",
     secondaryLabel: "Přehled služeb",

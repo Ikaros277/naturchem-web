@@ -9,7 +9,7 @@ const url = `${siteUrl}/odborna-garance/`;
 export const metadata: Metadata = {
   title: "Odborná garance Ing. Františka Heziny",
   description:
-    "Odborná garance NATURCHEM: osobní odpovědnost, dlouhodobá praxe, autorizace EIA a důraz na použitelnost výstupů pro úřady.",
+    "Za každou zakázku NATURCHEM odpovídá Ing. František Hezina — soudní znalec a autorizovaná osoba pro měření emisí, posudky, studie, GHG a EIA.",
   alternates: { canonical: url }
 };
 
@@ -21,7 +21,7 @@ export default function Page() {
     jobTitle: "Odborný garant měření a studií",
     worksFor: { "@type": "Organization", name: company.name },
     description:
-      "Dlouhodobá odborná praxe v oblasti měření, studií, povolovacích procesů a jednání s orgány veřejné správy."
+      "Odborná praxe v měření, studiích, povolovacích procesech a jednání s orgány veřejné správy."
   };
 
   return (
@@ -35,35 +35,40 @@ export default function Page() {
       />
       <h1>Odbornou garanci zajišťuje Ing. František Hezina</h1>
       <p>
-        Zakázky NATURCHEM nejsou anonymním výstupem velké organizace. Za odborným
-        posouzením, návrhem měření a výslednou dokumentací stojí konkrétní zkušenost
-        z provozní praxe, povolovacích procesů a jednání s úřady.
+        Výstup z naší laboratoře není anonymní protokol velké firmy. Za posouzením zakázky, návrhem
+        měření i finální dokumentací stojí konkrétní odborník s praxí v provozech, povolovacích
+        procesech a jednání s úřady.
       </p>
       <section className="grid grid-2">
         <article className="card">
           <h2>Odborný profil</h2>
           <ul>
-            <li>dlouhodobá činnost v oblasti měření a environmentálních podkladů</li>
-            <li>autorizace odborné osoby pro EIA</li>
+            <li>jednatel NATURCHEM, odborná garance zakázek</li>
+            <li>soudní znalec v oblasti měření a environmentálních podkladů</li>
+            <li>
+              autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování
+              emisí skleníkových plynů a oznámení EIA
+            </li>
             <li>praxe s průmyslovými provozy, projektanty a investory</li>
-            <li>důraz na přesnost, přezkoumatelnost a použitelnost výsledků</li>
           </ul>
         </article>
         <article className="card">
           <h2>Jak přemýšlíme nad zakázkou</h2>
           <p>
-            Posuzujeme zakázku v návaznosti na účel měření nebo studie, adresáta výstupu
-            a technická rizika v provozu i v řízení. Díky tomu lze předejít zbytečným
-            doplňováním, nejasnostem a opakovaným požadavkům úřadů.
+            Posoudíme, k čemu měření nebo studie slouží, kdo výstup obdrží a jaká technická rizika
+            hrozí v provozu i v řízení. Díky tomu předejdete zbytečným doplňováním a opakovaným
+            požadavkům úřadů.
           </p>
           <p>
-            Cílem je dodat výstup, který je použitelný v provozu i při jednání s
-            úřadem.
+            Cíl je jasný: výstup, který použijete v provozu i při jednání s úřadem — bez překvapení
+            na poslední chvíli.
           </p>
         </article>
       </section>
       <p style={{ marginTop: "1rem" }}>
         <Link href="/kontakt">Konzultovat konkrétní zakázku</Link>
+        {" · "}
+        <Link href="/o-spolecnosti-naturchem">O NATURCHEM</Link>
       </p>
     </main>
   );

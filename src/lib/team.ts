@@ -17,13 +17,17 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Mgr. Markéta Žilková",
     role: "Prodej / obchodní kontakt",
-    details: [],
+    details: [
+      "První kontakt pro poptávky měření, studií a dokumentace. Pomůže zaslat podklady a domluvit další postup."
+    ],
     phone: "+420 736 778 391"
   },
   {
     name: "Ing. Petra Svátová, DiS.",
     role: "Poradce pro životní prostředí",
-    details: [],
+    details: [
+      "Poradí s environmentálními požadavky u zakázky a koordinuje spolupráci s odborným týmem."
+    ],
     phone: "+420 774 100 572"
   }
 ];

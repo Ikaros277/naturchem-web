@@ -2,11 +2,8 @@
 import type { Metadata } from "next";
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { ExperienceStats } from "@/components/ExperienceStats";
-import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
-import { heroCtaMeasurement, heroCtaStudy, pageCtaPresets } from "@/lib/cta";
-import { contactUrl } from "@/lib/contact-url";
 import { homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { siteUrl } from "@/lib/site";
 import { clientLogoItemClass, referenceClients } from "@/lib/client-logos";
@@ -16,7 +13,7 @@ export const metadata: Metadata = {
     absolute: "NATURCHEM – měření, studie a dokumentace"
   },
   description:
-    "Akreditovaná měření, rozptylové a hlukové studie, EIA, posudky, provozní řády, IPPC, ISPOP a GHG pro průmysl, investory a veřejný sektor.",
+    "Akreditovaná měření emisí a pracovního prostředí, hlukové a rozptylové studie, EIA, posudky, provozní řády, IPPC, ISPOP a GHG — pro provozovatele, investory a veřejný sektor.",
   alternates: { canonical: `${siteUrl}/` }
 };
 
@@ -24,7 +21,7 @@ const offerPillars = [
   {
     icon: "pillar-mereni" as const,
     title: "Akreditovaná měření",
-    text: "Emise, pracovní prostředí, hluk, vibrace, osvětlení, mikroklima a čisté prostory.",
+    text: "Změříme emise, pracovní prostředí, hluk, vibrace, osvětlení, mikroklima i čisté prostory — akreditovaně, s výstupem pro úřady.",
     cta: "Zobrazit měření",
     href: "/sluzby#mericke-sluzby",
     links: [
@@ -36,7 +33,7 @@ const offerPillars = [
   {
     icon: "pillar-studie" as const,
     title: "Studie a odborné výpočty",
-    text: "Rozptylové studie, hlukové studie, akustické posudky a modelové výpočty.",
+    text: "Připravíme rozptylové a hlukové studie, akustické posudky a modelové výpočty pro KHS, stavební řízení nebo EIA.",
     cta: "Zobrazit studie",
     href: "/sluzby#studie-vypocty",
     links: [
@@ -48,7 +45,7 @@ const offerPillars = [
   {
     icon: "pillar-dokumentace" as const,
     title: "Povolovací dokumentace a EIA",
-    text: "EIA, odborné posudky, provozní řády, IPPC, ISPOP, GHG a podklady pro správní orgány.",
+    text: "Zpracujeme EIA, odborné posudky, provozní řády, IPPC, ISPOP, GHG i další dokumentaci pro správní orgány.",
     cta: "Zobrazit dokumentaci",
     href: "/sluzby#povolovaci-podklady",
     links: [
@@ -57,20 +54,6 @@ const offerPillars = [
       { label: "Kontakt", href: "/kontakt" }
     ]
   }
-];
-
-const referenceSegments = [
-  "Průmysl a automotive",
-  "Energetika",
-  "Stavebnictví",
-  "Odpady a recyklace",
-  "Veřejný sektor"
-];
-
-const referenceExamples = [
-  "měření emisí pro lakovnu",
-  "rozptylová a hluková studie",
-  "měření pracovního prostředí"
 ];
 
 export default function Home() {
@@ -87,24 +70,13 @@ export default function Home() {
         <HeroPhoto theme="home" priority />
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Akreditovaná měření · odborné studie · dokumentace pro úřady</p>
-            <h1>Měření, studie a dokumentace pro provozy, investory a úřady</h1>
-            <p className="hero-lead">
-              Měření emisí, hlukové studie a podklady pro EIA v jednom procesu — pro průmyslové
-              provozy, investory a projektanty.
+            <p className="eyebrow">
+              Akreditovaná měření · studie a posudky · podklady pro KHS, ČIŽP a stavební úřady
             </p>
-            <div className="hero-actions">
-              <Link href={contactUrl("Měření emisí")} className="button">
-                {heroCtaMeasurement}
-              </Link>
-              <Link href={contactUrl("Odborné posudky")} className="button secondary">
-                {heroCtaStudy}
-              </Link>
-            </div>
-            <p className="hero-unsure">
-              <Link href={contactUrl("Nejsem si jistý")}>
-                Nevím, co potřebuji – poslat podklady k posouzení
-              </Link>
+            <h1>Měření, studie i povolovací podklady — postaráme se o vše, co Váš provoz potřebuje</h1>
+            <p className="hero-lead">
+              Potřebujete měření emisí, hlukovou studii nebo podklady pro EIA? Zajistíme je v jednom
+              procesu — pro provozovatele, investory i projektanty.
             </p>
           </div>
         </div>
@@ -132,7 +104,8 @@ export default function Home() {
           <header className="section-header">
             <h2>Co zajišťujeme</h2>
             <p className="muted section-intro">
-              Tři hlavní oblasti, které v praxi často navazují: měření, studie a dokumentace pro úřady.
+              Měření, studie a povolovací podklady u nás na sebe navazují — nemusíte koordinovat více
+              dodavatelů.
             </p>
           </header>
           <div className="home-offer-grid home-offer-grid-three">
@@ -168,38 +141,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="home-section container">
-        <article className="card proof-section home-reference-teaser">
-          <div>
-            <p className="eyebrow">Vybrané zkušenosti</p>
-            <h2>Zkušenosti z průmyslu, energetiky, stavebnictví a veřejného sektoru</h2>
-            <p className="muted">
-              Zakázky často kombinují akreditovaná měření, odborné studie, technické podklady a
-              komunikaci s úřady.
-            </p>
-            <div className="reference-tags">
-              {referenceSegments.map((item) => (
-                <span key={item} className="reference-tag">
-                  {item}
-                </span>
-              ))}
-            </div>
-            <Link href="/reference" className="button secondary">
-              Zobrazit reference
-            </Link>
-          </div>
-          <ul className="proof-list">
-            {referenceExamples.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </article>
-      </section>
-
-      <section className="home-section container">
-        <PageCtaStrip {...pageCtaPresets.uncertain} />
       </section>
 
       <section className="home-section container home-clients-section">

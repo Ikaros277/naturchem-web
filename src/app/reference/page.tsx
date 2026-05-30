@@ -46,9 +46,17 @@ export default function ReferencePage() {
         <h2>Vybraní zákazníci</h2>
         <div className="client-logos-grid">
           {referenceClients.map(client => (
-            <div key={client.name} className="client-logo-item">
-              <img src={client.logo} alt={client.name} title={client.name} />
-            </div>
+            <a
+              key={client.name}
+              href={client.website}
+              className="client-logo-item"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={client.name}
+              aria-label={client.name}
+            >
+              <img src={client.logo} alt={client.name} />
+            </a>
           ))}
         </div>
       </section>

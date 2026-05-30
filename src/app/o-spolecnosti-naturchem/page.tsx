@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExperienceStats } from "@/components/ExperienceStats";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
 import { TeamMemberCards } from "@/components/TeamSection";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
 import { pageCtaPresets } from "@/lib/cta";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import { nationalPresenceShort } from "@/lib/nationalMessaging";
 import { siteUrl } from "@/lib/site";
 import { workProcessHeading, workProcessIntro } from "@/lib/work-process";
@@ -70,9 +71,11 @@ export default function ONaturchemPage() {
       <JsonLd data={orgData} />
       <JsonLd data={personData} />
       <JsonLd data={breadcrumbData} />
-      <div className="container">
-        <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: "O NATURCHEM" }]} />
-        <header className="premium-page-hero about-hero">
+      <PageHeroBand
+        theme={getPageHeroTheme("/o-spolecnosti-naturchem")}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "O NATURCHEM" }]}
+      >
+        <header className="premium-page-hero about-hero page-hero--photo">
           <div>
             <p className="eyebrow">Firemní profil</p>
             <h1>O NATURCHEM</h1>
@@ -86,7 +89,7 @@ export default function ONaturchemPage() {
             <strong>Akreditace, autorizace a dlouhodobá praxe v jednom procesu</strong>
           </aside>
         </header>
-      </div>
+      </PageHeroBand>
 
       <section className="section section-surface">
         <div className="container stats-section">

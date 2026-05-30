@@ -1,6 +1,7 @@
 ﻿import Link from "next/link";
 import type { Metadata } from "next";
 import { HeroPhoto } from "@/components/HeroPhoto";
+import { ExperienceStats } from "@/components/ExperienceStats";
 import { IndexCard } from "@/components/IndexCard";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -9,7 +10,7 @@ import { heroCtaMeasurement, heroCtaStudy, pageCtaPresets } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
 import { formatArticleDate } from "@/lib/format-date";
 import { poradnaTopicIconKey, topicForArticle } from "@/lib/poradna-topic";
-import { homeHeroMetrics, homeTrustBandItems } from "@/lib/home-hero-metrics";
+import { homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { getLatestPoradnaArticles } from "@/lib/poradna-articles";
 import { siteUrl } from "@/lib/site";
 import { clientLogoItemClass, referenceClients } from "@/lib/client-logos";
@@ -87,7 +88,7 @@ export default async function Home() {
   return (
     <main className="home-page">
       <JsonLd data={breadcrumbData} />
-      <section className="hero hero--photo">
+      <section className="hero hero--photo hero--copy-only">
         <HeroPhoto theme="home" priority />
         <div className="container hero-grid">
           <div className="hero-copy">
@@ -111,21 +112,13 @@ export default async function Home() {
               </Link>
             </p>
           </div>
-          <aside className="hero-proof-panel" aria-label="Odborné důkazy NATURCHEM">
-            <p className="proof-panel-label">Odborná garance</p>
-            <strong>Laboratoř, autorizace a povolovací podklady v návaznosti</strong>
-            <div className="proof-metrics">
-              {homeHeroMetrics.map((metric) => (
-                <article key={metric.label} className="proof-metric-card">
-                  <span className="proof-metric-value">{metric.value}</span>
-                  <span className="proof-metric-label">{metric.label}</span>
-                </article>
-              ))}
-            </div>
-            <p className="proof-panel-note">
-              Výstupy pro KHS, ČIŽP, krajské úřady, stavební úřady a procesy EIA.
-            </p>
-          </aside>
+        </div>
+      </section>
+
+      <section className="home-usp-section section-surface" aria-labelledby="home-usp-heading">
+        <div className="container stats-section">
+          <h2 id="home-usp-heading">Odborná garance</h2>
+          <ExperienceStats showNote={false} />
         </div>
       </section>
 

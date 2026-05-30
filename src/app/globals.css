@@ -2282,6 +2282,7 @@ a:hover {
   z-index: 1;
 }
 
+.page-hero-band,
 .service-hero-band {
   position: relative;
   isolation: isolate;
@@ -2291,19 +2292,98 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
+.page-hero-band-inner,
 .service-hero-band-inner {
   position: relative;
   z-index: 1;
   padding-top: 0.5rem;
 }
 
+.page-hero-band .breadcrumbs,
+.page-hero-band .breadcrumbs a,
 .service-hero-band .breadcrumbs,
 .service-hero-band .breadcrumbs a {
   color: #dce7f2;
 }
 
+.page-hero-band .breadcrumbs a:hover,
 .service-hero-band .breadcrumbs a:hover {
   color: #fff;
+}
+
+.page-hero--photo {
+  margin-bottom: 0;
+}
+
+.page-hero--photo h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.25rem, 3vw, 2.625rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.page-hero--photo .page-lead,
+.page-hero--photo p,
+.page-hero--photo .faq-page-subtitle {
+  color: #dce7f2;
+}
+
+.page-hero--photo a:not(.button) {
+  color: #c8e6dc;
+}
+
+.page-hero--photo a:not(.button):hover {
+  color: #fff;
+}
+
+.page-hero--photo .eyebrow {
+  color: #b8d4c8;
+}
+
+.page-hero--photo .button.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.page-hero--photo .hero-proof-panel,
+.page-hero--photo .service-hero-panel {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.page-hero--photo .hero-proof-panel strong,
+.page-hero--photo .service-hero-panel h2 {
+  color: #fff;
+}
+
+.page-hero--photo .proof-panel-label {
+  color: #b8d4c8;
+}
+
+.page-hero--photo .service-hero-icon {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.1);
+  color: #d8eee6;
+}
+
+.hero--photo.hero--copy-only .hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero--photo.hero--copy-only .hero-copy {
+  max-width: 720px;
+}
+
+.home-usp-section {
+  padding: clamp(2rem, 4vw, 3rem) 0;
+}
+
+.home-usp-section h2 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
 }
 
 .service-hero--photo {

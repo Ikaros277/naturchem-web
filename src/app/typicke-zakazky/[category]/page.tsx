@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CaseStudiesView } from "@/components/CaseStudiesView";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { caseStudyCategories, getCaseStudyCategory } from "@/lib/case-studies";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 
 type Props = { params: Promise<{ category: string }> };
@@ -30,22 +31,28 @@ export default async function CaseStudyCategoryPage({ params }: Props) {
   if (!category) notFound();
 
   return (
-    <main className="container section">
-      <Breadcrumbs
-        items={[
+    <main className="section premium-page">
+      <PageHeroBand
+        theme={getPageHeroTheme(`/typicke-zakazky/${slug}`)}
+        breadcrumbs={[
           { name: "Úvod", href: "/" },
           { name: "Typické zakázky", href: "/typicke-zakazky" },
           { name: category.title }
         ]}
-      />
-      <h1>{category.title}</h1>
-      <p className="muted">{category.short}</p>
-      <CaseStudiesView category={category} categories={caseStudyCategories} />
-      <p style={{ marginTop: "1.25rem" }}>
-        <Link href="/typicke-zakazky" className="button secondary">
-          Všechny typy zakázek
-        </Link>
-      </p>
+      >
+        <header className="premium-page-hero page-hero--photo">
+          <h1>{category.title}</h1>
+          <p className="page-lead">{category.short}</p>
+        </header>
+      </PageHeroBand>
+      <div className="container">
+        <CaseStudiesView category={category} categories={caseStudyCategories} />
+        <p style={{ marginTop: "1.25rem" }}>
+          <Link href="/typicke-zakazky" className="button secondary">
+            Všechny typy zakázek
+          </Link>
+        </p>
+      </div>
     </main>
   );
 }

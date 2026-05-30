@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { accreditationDocuments } from "@/lib/accreditation-documents";
 import { pageCtaPresets } from "@/lib/cta";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import {
   getAccreditationScopeIconKey,
   getAuthorizationIconKey
@@ -80,20 +81,24 @@ export default function AkreditaceAutorizaceDokumentyPage() {
   };
 
   return (
-    <main className="container section accreditation-page premium-page">
+    <main className="section accreditation-page premium-page">
       <JsonLd data={webPageData} />
       <JsonLd data={orgData} />
-      <Breadcrumbs
-        items={[{ name: "Úvod", href: "/" }, { name: "Akreditace a oprávnění" }]}
-      />
-      <header className="premium-page-hero">
-        <p className="eyebrow">Důkaz odborné způsobilosti</p>
-        <h1>Akreditace, autorizace a odborná oprávnění</h1>
-        <p className="page-lead">
-          Přehled akreditovaného rozsahu laboratoře a samostatných autorizací. U každé zakázky
-          ověřujeme soulad s platným osvědčením a jeho přílohou.
-        </p>
-      </header>
+      <PageHeroBand
+        theme={getPageHeroTheme("/akreditace-autorizace-dokumenty")}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Akreditace a oprávnění" }]}
+      >
+        <header className="premium-page-hero page-hero--photo">
+          <p className="eyebrow">Důkaz odborné způsobilosti</p>
+          <h1>Akreditace, autorizace a odborná oprávnění</h1>
+          <p className="page-lead">
+            Přehled akreditovaného rozsahu laboratoře a samostatných autorizací. U každé zakázky
+            ověřujeme soulad s platným osvědčením a jeho přílohou.
+          </p>
+        </header>
+      </PageHeroBand>
+
+      <div className="container">
 
       <section className="grid grid-2 accreditation-overview">
         <article className="card accreditation-facts-card">
@@ -175,6 +180,7 @@ export default function AkreditaceAutorizaceDokumentyPage() {
         </div>
       </section>
       <PageCtaStrip {...pageCtaPresets.accreditation} />
+      </div>
     </main>
   );
 }

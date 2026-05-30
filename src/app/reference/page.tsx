@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ReferenceExampleCard } from "@/components/ReferenceExampleCard";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import {
   referenceExamples,
   referenceIntro
@@ -33,14 +34,16 @@ export default function ReferencePage() {
   return (
     <main className="section reference-page premium-page">
       <JsonLd data={breadcrumbData} />
-      <div className="container">
-        <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: "Reference" }]} />
-        <header className="premium-page-hero">
+      <PageHeroBand
+        theme={getPageHeroTheme("/reference")}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Reference" }]}
+      >
+        <header className="premium-page-hero page-hero--photo">
           <p className="eyebrow">Důkaz odborné praxe</p>
           <h1>Reference a příklady řešených zakázek NATURCHEM</h1>
           <p className="page-lead">{referenceIntro}</p>
         </header>
-      </div>
+      </PageHeroBand>
 
       <section className="section content-block container" id="zakaznici">
         <h2>Naši zákazníci</h2>

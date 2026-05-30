@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EquipmentAccordion } from "@/components/EquipmentAccordion";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -111,9 +112,11 @@ export default function Page() {
     <main className="section premium-page equipment-page">
       <JsonLd data={breadcrumbData} />
       <JsonLd data={webPageData} />
-      <div className="container">
-        <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: "Přístrojové vybavení" }]} />
-        <header className="premium-page-hero">
+      <PageHeroBand
+        theme={getPageHeroTheme("/pristrojove-vybaveni")}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Přístrojové vybavení" }]}
+      >
+        <header className="premium-page-hero page-hero--photo">
           <p className="eyebrow">Technické zázemí laboratoře</p>
           <h1>Přístrojové vybavení NATURCHEM</h1>
           <p className="page-lead">
@@ -123,7 +126,7 @@ export default function Page() {
             vzorků.
           </p>
         </header>
-      </div>
+      </PageHeroBand>
 
       <section className="section container">
         <EquipmentAccordion groups={equipmentGroups} />

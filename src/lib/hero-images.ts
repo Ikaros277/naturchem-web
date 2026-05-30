@@ -29,9 +29,38 @@ const hlukSlugs = new Set([
   "rozptylove-studie"
 ]);
 
+const pageThemeMap: Record<string, HeroTheme> = {
+  "/": "home",
+  "/provozy-a-technologie": "emise",
+  "/typicke-zakazky": "emise",
+  "/reference": "dokumentace",
+  "/o-spolecnosti-naturchem": "dokumentace",
+  "/kontakt": "hluk",
+  "/akreditace-autorizace-dokumenty": "dokumentace",
+  "/pristrojove-vybaveni": "hluk",
+  "/poradna": "dokumentace",
+  "/faq": "hluk",
+  "/sluzby": "dokumentace"
+};
+
+function normalizePath(path: string): string {
+  const bare = path.replace(/^\/|\/$/g, "");
+  return bare ? `/${bare}` : "/";
+}
+
 export function getServiceHeroTheme(slug: string): HeroTheme {
   const bare = slug.replace(/^\/|\/$/g, "").split("/").pop() ?? slug;
   if (emiseSlugs.has(bare)) return "emise";
   if (hlukSlugs.has(bare)) return "hluk";
+  return "dokumentace";
+}
+
+export function getPageHeroTheme(path: string): HeroTheme {
+  const normalized = normalizePath(path);
+  const mapped = pageThemeMap[normalized];
+  if (mapped) return mapped;
+  if (normalized.startsWith("/provozy-a-technologie/")) return "emise";
+  if (normalized.startsWith("/typicke-zakazky/")) return "emise";
+  if (normalized.startsWith("/sluzby/")) return getServiceHeroTheme(normalized);
   return "dokumentace";
 }

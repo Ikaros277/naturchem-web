@@ -6,12 +6,12 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 4 |
-| Celkový odhadovaný čas | ~8,6 hodiny |
+| Celkový odhadovaný čas | ~8,7 hodiny |
 | Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
 
 ---
 
-## Sezení: 30. 5. 2026, 13:20–15:12
+## Sezení: 30. 5. 2026, 13:20–15:16
 
 ### Přehled
 Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky. Změny commitnuty a pushnuty na GitHub (`f260dca`).
@@ -19,6 +19,10 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
+#### P┼Öidat vizu├íln├ş scanovatelnost (P5): hero fotky, ikony, timeline a...
+**Co bylo uděláno:** P┼Öidat vizu├íln├ş scanovatelnost (P5): hero fotky, ikony, timeline a OG ┼íablony. (commit `af84c90`). Dotčené oblasti: app, components, kontakt, lib, o-spolecnosti-naturchem, report, sluzby, workflow.  
+**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+
 #### Opravit logo Tepl├írny ─îB ÔÇö obnovit chyb─Ťj├şc├ş n├ípis firmy.
 **Co bylo uděláno:** Opravit logo Tepl├írny ─îB ÔÇö obnovit chyb─Ťj├şc├ş n├ípis firmy. (commit `5a26e52`). Dotčené oblasti: build-wordmark-logos.mjs, process-logos.mjs, report, workflow.  
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
@@ -72,8 +76,8 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Proč:** Sdílení hotového stavu pro klienta a produkční preview.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 52 min
-**Rozložení:** 30. 5. 2026 13:20–15:12 (~1 hod 52 min)
+**Odhadovaná doba práce:** ~1 hod 56 min
+**Rozložení:** 30. 5. 2026 13:20–15:16 (~1 hod 56 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** ~18 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Odpolední blok zahrnuje i dokončení workflow reportu před implementací P1.*

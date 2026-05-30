@@ -6,10 +6,6 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { getFaqCategoryIconKey } from "@/lib/service-icons";
 import {
   faqCategories,
-  faqIntroCtas,
-  faqPageIntro,
-  faqPageSubtitle,
-  faqPageTitle,
   type FaqItem
 } from "@/lib/faq";
 
@@ -86,22 +82,7 @@ export function FaqPageContent() {
 
   return (
     <>
-      <header className="faq-page-header">
-        <h1>{faqPageTitle}</h1>
-        <p className="faq-page-subtitle">{faqPageSubtitle}</p>
-        <p className="faq-page-intro">{faqPageIntro}</p>
-        <div className="btn-row faq-intro-ctas">
-          {faqIntroCtas.map((cta, i) => (
-            <Link
-              key={cta.href}
-              href={cta.href}
-              className={i === 0 ? "button" : "button secondary"}
-            >
-              {cta.label}
-            </Link>
-          ))}
-        </div>
-        <label className="faq-search">
+      <label className="faq-search">
           <span>Vyhledat v dotazech</span>
           <input
             type="search"
@@ -110,7 +91,6 @@ export function FaqPageContent() {
             placeholder="Např. emise, hluk, KHS, ISPOP"
           />
         </label>
-      </header>
 
       <nav className="faq-tiles" aria-label="Kategorie častých dotazů">
         {faqCategories.map((cat) => (

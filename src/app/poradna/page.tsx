@@ -1,9 +1,10 @@
 ﻿import type { Metadata } from "next";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { PoradnaFilterableList } from "@/components/PoradnaFilterableList";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
 import { formatArticleDate } from "@/lib/format-date";
@@ -51,21 +52,27 @@ export default async function Page() {
   };
 
   return (
-    <main className="container section poradna-page premium-page">
+    <main className="section poradna-page premium-page">
       <JsonLd data={collectionPageData} />
       <JsonLd data={itemListData} />
       <JsonLd data={breadcrumbData} />
-      <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: "Odborná poradna" }]} />
-      <header className="premium-page-hero">
-        <p className="eyebrow">Znalostní centrum</p>
-        <h1>Odborná poradna</h1>
-        <p className="page-lead">
-          Praktické informace k měřením, studiím a povolování pro provozovatele,
-          projektanty a pracovníky v oblasti životního prostředí.
-        </p>
-      </header>
-      <PoradnaFilterableList articles={mergedArticles} />
-      <PageCtaStrip {...pageCtaPresets.poradna} />
+      <PageHeroBand
+        theme={getPageHeroTheme("/poradna")}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Odborná poradna" }]}
+      >
+        <header className="premium-page-hero page-hero--photo">
+          <p className="eyebrow">Znalostní centrum</p>
+          <h1>Odborná poradna</h1>
+          <p className="page-lead">
+            Praktické informace k měřením, studiím a povolování pro provozovatele,
+            projektanty a pracovníky v oblasti životního prostředí.
+          </p>
+        </header>
+      </PageHeroBand>
+      <div className="container">
+        <PoradnaFilterableList articles={mergedArticles} />
+        <PageCtaStrip {...pageCtaPresets.poradna} />
+      </div>
     </main>
   );
 }

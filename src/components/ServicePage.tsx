@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { HeroPhoto } from "@/components/HeroPhoto";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
 import { contactSubmitCta } from "@/lib/cta";
@@ -107,17 +106,15 @@ export function ServicePage(props: Props) {
       {(relatedLinks.length > 0 || sectorCrossLinks.length > 0) ? (
         <JsonLd data={relatedItemListData} />
       ) : null}
-      <div className="service-hero-band">
-        <HeroPhoto theme={heroTheme} compact />
-        <div className="container service-hero-band-inner">
-          <Breadcrumbs
-            items={[
-              { name: "Úvod", href: "/" },
-              { name: "Služby", href: "/sluzby" },
-              { name: props.title }
-            ]}
-          />
-          <header className="page-header service-hero service-hero--photo">
+      <PageHeroBand
+        theme={heroTheme}
+        breadcrumbs={[
+          { name: "Úvod", href: "/" },
+          { name: "Služby", href: "/sluzby" },
+          { name: props.title }
+        ]}
+      >
+        <header className="page-header service-hero service-hero--photo">
             <div>
               <ServiceIcon href={`/${props.slug}`} variant="card" className="service-hero-icon" />
               <h1>{props.title}</h1>
@@ -140,8 +137,7 @@ export function ServicePage(props: Props) {
               </ul>
             </aside>
           </header>
-        </div>
-      </div>
+      </PageHeroBand>
       <div className="container page-inner">
         <section className="service-decision-panel content-block" aria-label="Stručný přehled služby">
           <div className="service-decision-card service-decision-card-primary">

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContactFormSection } from "@/components/ContactFormSection";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import {
   isValidContactService,
   resolveContactServices,
@@ -14,6 +13,7 @@ import { JsonLd } from "@/components/Schema";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { TeamSectionContact } from "@/components/TeamSection";
 import { getContactAttachmentIconKey } from "@/lib/service-icons";
+import { getPageHeroTheme } from "@/lib/hero-images";
 
 export const metadata: Metadata = {
   title: {
@@ -79,9 +79,11 @@ export default async function Page({ searchParams }: PageProps) {
   return (
     <main className="section contact-page premium-page">
       <JsonLd data={breadcrumbData} />
-      <div className="container">
-        <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: "Kontakt" }]} />
-        <header className="premium-page-hero contact-hero">
+      <PageHeroBand
+        theme={getPageHeroTheme("/kontakt")}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Kontakt" }]}
+      >
+        <header className="premium-page-hero contact-hero page-hero--photo">
           <div>
             <p className="eyebrow">Kontakt a poptávka</p>
             <h1>Pošlete nám požadavek nebo podklady k posouzení</h1>
@@ -94,7 +96,7 @@ export default async function Page({ searchParams }: PageProps) {
             </div>
           </div>
         </header>
-      </div>
+      </PageHeroBand>
 
       <section className="container contact-main-layout" aria-labelledby="poptavka-heading">
         <aside className="card contact-side-panel">

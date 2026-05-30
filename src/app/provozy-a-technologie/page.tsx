@@ -1,10 +1,11 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { SectorGroupsIndex } from "@/components/SectorGroupsIndex";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import { provozyNavLabel, sectors } from "@/lib/sectors";
 import { siteUrl } from "@/lib/site";
 
@@ -101,9 +102,11 @@ export default function Page() {
       <JsonLd data={collectionPageData} />
       <JsonLd data={itemListData} />
       <JsonLd data={breadcrumbData} />
-      <div className="container">
-        <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: provozyNavLabel }]} />
-        <header className="premium-page-hero">
+      <PageHeroBand
+        theme={getPageHeroTheme("/provozy-a-technologie")}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: provozyNavLabel }]}
+      >
+        <header className="premium-page-hero page-hero--photo">
           <p className="eyebrow">Rozcestník podle provozu</p>
           <h1>Provozy a technologie, pro které zajišťujeme měření, studie a povolovací podklady</h1>
           <p className="page-lead">
@@ -115,7 +118,7 @@ export default function Page() {
             <Link href="/reference">referencích a vybraných zkušenostech</Link>.
           </p>
         </header>
-      </div>
+      </PageHeroBand>
 
       <SectorGroupsIndex groups={sectorGroups} sectors={sectors} />
 

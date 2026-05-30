@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/Schema";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { ServiceGroupsIndex } from "@/components/ServiceGroupsIndex";
 import { pageCtaPresets } from "@/lib/cta";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -24,11 +25,13 @@ export default function Page() {
   };
 
   return (
-    <main className="section services-index-page">
+    <main className="section services-index-page premium-page">
       <JsonLd data={breadcrumbData} />
-      <div className="container">
-        <Breadcrumbs items={[{ name: "Úvod", href: "/" }, { name: "Služby" }]} />
-        <header className="page-header services-index-header">
+      <PageHeroBand
+        theme={getPageHeroTheme("/sluzby")}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Služby" }]}
+      >
+        <header className="page-header services-index-header page-hero--photo">
           <p className="eyebrow">Odborný rozcestník služeb</p>
           <h1>Služby pro měření, studie a povolovací dokumentaci</h1>
           <p className="page-lead">
@@ -37,7 +40,7 @@ export default function Page() {
             legislativě.
           </p>
         </header>
-      </div>
+      </PageHeroBand>
 
       <ServiceGroupsIndex />
 

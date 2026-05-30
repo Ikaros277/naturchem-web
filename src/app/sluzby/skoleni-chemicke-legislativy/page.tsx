@@ -1,10 +1,11 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
 import { contactUrl } from "@/lib/contact-url";
 import { pageCtaPresets } from "@/lib/cta";
+import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -75,15 +76,15 @@ export default function Page() {
     <main className="section premium-page training-page">
       <JsonLd data={serviceData} />
       <JsonLd data={breadcrumbData} />
-      <div className="container">
-        <Breadcrumbs
-          items={[
-            { name: "Úvod", href: "/" },
-            { name: "Služby", href: "/sluzby" },
-            { name: "Školení chemické legislativy" }
-          ]}
-        />
-        <header className="premium-page-hero">
+      <PageHeroBand
+        theme={getPageHeroTheme("/sluzby/skoleni-chemicke-legislativy")}
+        breadcrumbs={[
+          { name: "Úvod", href: "/" },
+          { name: "Služby", href: "/sluzby" },
+          { name: "Školení chemické legislativy" }
+        ]}
+      >
+        <header className="premium-page-hero page-hero--photo">
           <p className="eyebrow">Školení a odborná podpora</p>
           <h1>Školení chemického zákona a chemické legislativy</h1>
           <p className="page-lead">
@@ -99,7 +100,8 @@ export default function Page() {
             </Link>
           </div>
         </header>
-
+      </PageHeroBand>
+      <div className="container">
         <section className="grid grid-2 training-card-grid">
           <article className="card service-content-card">
             <h2>Pro koho je školení</h2>

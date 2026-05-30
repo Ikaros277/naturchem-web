@@ -130,23 +130,17 @@ export default function AkreditaceAutorizaceDokumentyPage() {
           </a>
           .
         </p>
-      </section>
-
-      <section className="section content-block">
-        <article className="card cta-banner">
-          <h2>Přístrojové vybavení a metrologické řízení</h2>
-          <p className="muted">
-            Laboratoř využívá analyzátory, odběrové aparatury, akustickou a vibrační techniku,
-            luxmetry, čerpadla a laboratorní zázemí pro přípravu a vyhodnocení vzorků.
-          </p>
-          <Link href="/pristrojove-vybaveni" className="button secondary">
-            Vybrané přístrojové vybavení
-          </Link>
-        </article>
+        <p className="muted" style={{ marginTop: "1rem" }}>
+          Laboratoř využívá analyzátory, odběrové aparatury, akustickou a vibrační techniku,
+          luxmetry, čerpadla a laboratorní zázemí pro přípravu a vyhodnocení vzorků.
+        </p>
+        <Link href="/pristrojove-vybaveni" className="button secondary" style={{ marginTop: "0.75rem" }}>
+          Vybrané přístrojové vybavení
+        </Link>
       </section>
 
       <section className="section">
-        <h2>Autorizace a odborná oprávnění</h2>
+        <h2>Autorizace, oprávnění a dokumenty</h2>
         <p className="muted">
           Rozptylové a hlukové studie, EIA a odborné posudky jsou samostatná odborná činnost mimo
           akreditovaný rozsah laboratoře ISO/IEC 17025. Jsou kryty těmito autorizacemi:
@@ -160,10 +154,7 @@ export default function AkreditaceAutorizaceDokumentyPage() {
             </article>
           ))}
         </div>
-      </section>
-
-      <section className="section">
-        <h2>Dokumenty ke stažení</h2>
+        <h3 className="accreditation-docs-subheading">Dokumenty ke stažení</h3>
         <div className="download-card-grid">
           {accreditationDocuments.map((doc) => (
             <a
@@ -180,9 +171,6 @@ export default function AkreditaceAutorizaceDokumentyPage() {
             </a>
           ))}
         </div>
-        <p className="muted" style={{ marginTop: "1rem" }}>
-          Dokumenty k akreditaci a autorizacím jsou dostupné ke stažení níže.
-        </p>
       </section>
       <section className="cta-strip">
         <p>Potřebujete ověřit, zda vaše měření nebo studie spadají do akreditovaného rozsahu?</p>

@@ -50,7 +50,6 @@ h6,
 .index-card-heading,
 .service-index-card h3,
 .card h3,
-.timeline-step h3,
 .team-card-name,
 .faq-accordion-summary,
 .topbar-link {
@@ -2420,52 +2419,6 @@ a:hover {
   margin-bottom: 0;
 }
 
-.process-timeline {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sharp);
-  overflow: hidden;
-  background: #fff;
-  box-shadow: var(--shadow-card);
-}
-
-.timeline-step {
-  position: relative;
-  padding: 1.5rem;
-  border-right: 1px solid var(--border);
-}
-
-.timeline-step:last-child {
-  border-right: 0;
-}
-
-.timeline-step h3 {
-  margin: 0.85rem 0 0.4rem;
-  font-size: 1.05rem;
-}
-
-.timeline-step p {
-  margin: 0;
-}
-
-.timeline-step .step-num {
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border-radius: var(--radius-sharp);
-  background: transparent;
-}
-
-.timeline-step .step-num-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--primary);
-  border-color: rgba(255, 255, 255, 0.22);
-  color: #fff;
-}
-
 .audience-card .card-symbol,
 .home-offer-card .card-symbol {
   margin-bottom: 0.15rem;
@@ -2633,6 +2586,11 @@ a:hover {
 
 .authorization-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.accreditation-docs-subheading {
+  margin: 2rem 0 0;
+  font-size: 1.2rem;
 }
 
 .final-cta {
@@ -3036,17 +2994,8 @@ footer .muted,
   .trust-band-inner,
   .audience-grid,
   .home-offer-grid,
-  .process-timeline,
   .service-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .timeline-step:nth-child(2) {
-    border-right: 0;
-  }
-
-  .timeline-step:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--border);
   }
 }
 
@@ -3090,7 +3039,6 @@ footer .muted,
   .trust-band-inner,
   .audience-grid,
   .home-offer-grid,
-  .process-timeline,
   .service-card-grid {
     grid-template-columns: 1fr;
   }
@@ -3099,16 +3047,6 @@ footer .muted,
     min-height: auto;
     justify-content: flex-start;
     border-right: 1px solid var(--border);
-  }
-
-  .timeline-step,
-  .timeline-step:nth-child(2) {
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .timeline-step:last-child {
-    border-bottom: 0;
   }
 
   .topbar-inner {
@@ -5150,22 +5088,6 @@ footer .muted,
   .home-reference-teaser .button {
     width: 100%;
     justify-content: center;
-  }
-
-  .process-timeline {
-    grid-template-columns: 1fr !important;
-    border-radius: 16px;
-  }
-
-  .timeline-step,
-  .timeline-step:nth-child(2) {
-    border-right: 0 !important;
-    border-bottom: 1px solid var(--border);
-    padding: 1.15rem;
-  }
-
-  .timeline-step:last-child {
-    border-bottom: 0;
   }
 
   .home-section {

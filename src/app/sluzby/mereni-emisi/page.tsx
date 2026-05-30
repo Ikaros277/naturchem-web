@@ -22,22 +22,11 @@ export default function Page() {
         "průběžná komunikace s provozem při přípravě a realizaci měření",
         "vyhodnocení výsledků v kontextu limitů, povolení a případných výzev úřadu"
       ]}
-      forWhom={[
-        "provozovatelé kotelen, spaloven, lakoven, výrobních linek a dalších stacionárních zdrojů",
-        "investoři a projektanti při změnách technologie, rozšíření výroby nebo nových výduších",
-        "subjekty řešící výzvu krajského úřadu, ČIŽP nebo integrované povolení"
-      ]}
       whenNeeded={[
         "periodické nebo jednorázové měření dle vyhlášky č. 415/2012 Sb. a povolení provozu",
         "požadavek krajského úřadu, ČIŽP nebo kontrolního orgánu",
         "změna paliva, suroviny, technologie nebo kapacity zdroje",
         "podklad pro rozptylovou studii, EIA, odborný posudek nebo aktualizaci provozní dokumentace"
-      ]}
-      authorities={[
-        "krajský úřad a povolení provozu stacionárního zdroje znečišťování ovzduší",
-        "ČIŽP při kontrole plnění emisních limitů a provozních podmínek",
-        "IPPC a integrované povolení u významnějších zařízení",
-        "ISPOP a souhrnná provozní evidence navazující na reálná provozní data"
       ]}
       practicalSituations={[
         "měření emisí lakovny po změně technologie nebo filtrace",

@@ -22,22 +22,11 @@ export default function Page() {
         "provozní řády a změny IPPC",
         "ISPOP, souhrnná evidence a GHG"
       ]}
-      forWhom={[
-        "investoři, developeři a veřejný sektor v povolovacích řízeních",
-        "provozovatelé významných zdrojů a zařízení s integrovaným povolením",
-        "organizace řešící GHG, ISPOP a změny provozní dokumentace"
-      ]}
       whenNeeded={[
         "nový záměr nebo změna kapacity",
         "zjišťovací řízení EIA nebo doplnění po připomínkách úřadu",
         "změna technologie, povolení provozu, provozního řádu nebo integrovaného povolení",
         "roční ISPOP / souhrnná provozní evidence nebo GHG agenda"
-      ]}
-      authorities={[
-        "krajský úřad u povolení provozu, odborných posudků a provozních řádů",
-        "MŽP a příslušný úřad v procesu EIA a zjišťovacího řízení",
-        "IPPC a integrované povolení u zařízení s významnými environmentálními dopady",
-        "ČIŽP při kontrolách plnění podmínek provozu a dokumentace"
       ]}
       practicalSituations={[
         "EIA oznámení záměru pro kapacitní změnu provozu",

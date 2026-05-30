@@ -10,9 +10,7 @@
   contactService: string;
   faqCategoryId?: string;
   scope: string[];
-  forWhom: string[];
   whenNeeded: string[];
-  authorities: string[];
   practicalSituations: string[];
   docs: string[];
   outputs: string[];
@@ -36,21 +34,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "vyhodnocení vůči limitům a chráněnému venkovnímu prostoru",
       "návrh odhlučnění nebo úpravy provozu, pokud limit hrozí překročit"
     ],
-    forWhom: [
-      "investoři a projektanti připravující nový záměr nebo změnu stavby",
-      "provozovatelé řešící hluk z technologie, dopravy nebo areálu",
-      "stavební řízení, kolaudace, EIA a požadavky hygienické stanice"
-    ],
     whenNeeded: [
       "nový zdroj hluku nebo změna technologie",
       "požadavek KHS, stavebního úřadu nebo EIA",
       "kolaudace, změna užívání nebo stížnost okolí",
       "prověření účinnosti protihlukového opatření před realizací"
-    ],
-    authorities: [
-      "KHS při posouzení hlukové zátěže",
-      "stavební úřad při povolování nebo kolaudaci",
-      "příslušný úřad v procesu EIA"
     ],
     practicalSituations: [
       "hluková studie pro venkovní jednotky tepelných čerpadel a VZT",
@@ -102,21 +90,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "vyjádření k výzvě krajského úřadu nebo ČIŽP",
       "shrnutí pro investora před podáním žádosti o povolení provozu"
     ],
-    forWhom: [
-      "provozovatelé stacionárních zdrojů",
-      "investoři a projektanti při povolování technologie",
-      "firmy reagující na požadavek krajského úřadu nebo ČIŽP"
-    ],
     whenNeeded: [
       "nový zdroj nebo změna technologie",
       "změna kapacity, paliva, filtrace nebo provozního režimu",
       "požadavek úřadu v řízení o povolení provozu",
       "potřeba technicky podloženého stanoviska"
-    ],
-    authorities: [
-      "krajský úřad v ochraně ovzduší",
-      "ČIŽP při kontrolách nebo návazných požadavcích",
-      "stavební úřad nebo příslušný orgán v povolovacím procesu"
     ],
     practicalSituations: [
       "odborný posudek pro novou lakovací technologii",
@@ -168,21 +146,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "sladění s povolením provozu a posledním měřením emisí",
       "úpravy na výzvu krajského úřadu nebo ČIŽP"
     ],
-    forWhom: [
-      "provozovatelé zdrojů znečišťování ovzduší",
-      "provozy po modernizaci technologie nebo změně povolení",
-      "firmy řešící kontrolu, výzvu úřadu nebo interní audit dokumentace"
-    ],
     whenNeeded: [
       "nový zdroj nebo změna povolení provozu",
       "změna technologie, paliva, výduchu nebo odlučovacího zařízení",
       "neaktuální provozní řád vůči skutečnému provozu",
       "požadavek krajského úřadu nebo ČIŽP"
-    ],
-    authorities: [
-      "krajský úřad při povolení provozu",
-      "ČIŽP při kontrole plnění provozních podmínek",
-      "orgány ochrany ovzduší v navazujících řízeních"
     ],
     practicalSituations: [
       "aktualizace provozního řádu po výměně filtrace",
@@ -234,21 +202,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "technický popis změny vůči stávajícímu povolení a BAT",
       "doplnění dokumentace po připomínkách krajského úřadu"
     ],
-    forWhom: [
-      "provozovatelé zařízení v režimu IPPC",
-      "investoři připravující významnou změnu zařízení",
-      "provozy řešící změnu technologie, kapacity nebo povolených podmínek"
-    ],
     whenNeeded: [
       "nové integrované povolení",
       "podstatná nebo nepodstatná změna IPPC",
       "změna kapacity, technologie nebo emisních parametrů",
       "doplnění podkladů na výzvu úřadu"
-    ],
-    authorities: [
-      "krajský úřad v řízení IPPC",
-      "ČIŽP a dotčené orgány podle rozsahu změny",
-      "MŽP nebo další odborné orgány u specifických zařízení"
     ],
     practicalSituations: [
       "změna technologie v zařízení s integrovaným povolením",
@@ -300,21 +258,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "technické přílohy pro investora a zpracovatele EIA",
       "úpravy po připomínkách úřadu nebo veřejnosti"
     ],
-    forWhom: [
-      "investoři a projektanti nových záměrů",
-      "provozovatelé připravující změnu kapacity nebo technologie",
-      "obce, veřejný sektor a technické týmy v povolovacích procesech"
-    ],
     whenNeeded: [
       "nový záměr s možnými vlivy na životní prostředí",
       "změna kapacity, technologie nebo areálu",
       "požadavek na zjišťovací řízení",
       "doplnění odborných příloh k povolovacímu procesu"
-    ],
-    authorities: [
-      "příslušný úřad v procesu EIA",
-      "krajský úřad nebo MŽP podle typu záměru",
-      "dotčené orgány v oblasti ovzduší, hluku, vod, odpadů a veřejného zdraví"
     ],
     practicalSituations: [
       "oznámení EIA pro rozšíření výrobního areálu",
@@ -366,21 +314,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "soulad s měřením emisí, povolením provozu a provozním řádem",
       "zapracování změny paliva, kapacity nebo provozních hodin"
     ],
-    forWhom: [
-      "provozovatelé stacionárních zdrojů",
-      "firmy s pravidelnými povinnostmi v ochraně ovzduší",
-      "provozy po změně technologie, kapacity nebo paliva"
-    ],
     whenNeeded: [
       "roční reporting a souhrnná provozní evidence",
       "změna zdroje nebo provozních údajů",
       "kontrola návaznosti na měření emisí",
       "požadavek úřadu nebo interní kontrola povinností"
-    ],
-    authorities: [
-      "ISPOP a ohlašovací povinnosti",
-      "krajský úřad v ochraně ovzduší",
-      "ČIŽP při kontrole provozní evidence"
     ],
     practicalSituations: [
       "příprava ročního hlášení po pravidelném měření emisí",
@@ -432,21 +370,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "návaznost na měření emisí a provozní evidenci",
       "přehled nesouladů před odevzdáním reportingu"
     ],
-    forWhom: [
-      "provozovatelé s povinnostmi v oblasti GHG",
-      "firmy připravující emisní reporting nebo ověření údajů",
-      "technické a environmentální týmy provozů"
-    ],
     whenNeeded: [
       "reporting emisí skleníkových plynů",
       "ověření výpočtů nebo emisních údajů",
       "změna technologie, paliva nebo provozních dat",
       "požadavek investora, auditu nebo správního orgánu"
-    ],
-    authorities: [
-      "MŽP a příslušné systémy reportingu podle typu povinnosti",
-      "auditoři, investoři a interní environmentální řízení",
-      "orgány navazující na povolení a kontrolu emisních údajů"
     ],
     practicalSituations: [
       "kontrola výpočtu emisí skleníkových plynů",
@@ -498,21 +426,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "soulad skladování a OOPP s údaji v listu",
       "podklad pro školení a interní provozní pokyn"
     ],
-    forWhom: [
-      "výrobní podniky, sklady, laboratoře a údržba",
-      "provozní ekologové, BOZP pracovníci a vedoucí provozů",
-      "firmy používající chemické látky nebo směsi v běžném provozu"
-    ],
     whenNeeded: [
       "nové chemické látky nebo směsi v provozu",
       "nejasné bezpečnostní listy, štítky nebo skladování",
       "příprava na kontrolu nebo interní audit",
       "potřeba praktického podkladu pro školení zaměstnanců"
-    ],
-    authorities: [
-      "KHS a kontrolní orgány v oblasti ochrany zdraví",
-      "BOZP a interní bezpečnostní pravidla provozu",
-      "environmentální a provozní řízení podle typu činnosti"
     ],
     practicalSituations: [
       "kontrola štítků na interních nádobách",
@@ -564,21 +482,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "propojení s bezpečnostními listy a BOZP",
       "návrh odpovědností a podklad pro školení obsluhy"
     ],
-    forWhom: [
-      "výrobní provozy, sklady, laboratoře, údržba a technické týmy",
-      "provozní ekologové, BOZP pracovníci a vedoucí směn",
-      "firmy s lakovnami, čištěním, úpravou povrchů nebo chemickými sklady"
-    ],
     whenNeeded: [
       "rozšíření používaných chemických látek nebo směsí",
       "příprava skladu, provozu nebo pracovních míst",
       "nejasnosti v označování, manipulaci nebo odpovědnostech",
       "příprava školení nebo reakce na kontrolní zjištění"
-    ],
-    authorities: [
-      "KHS a kontrolní orgány v oblasti ochrany zdraví",
-      "BOZP, požární ochrana a interní provozní pravidla",
-      "environmentální agenda podle typu látek a provozu"
     ],
     practicalSituations: [
       "nastavení pravidel pro sklad chemických látek",
@@ -630,18 +538,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "expozice podle skutečných operací a směnnosti",
       "návrh střídání práce nebo technického opatření při překročení"
     ],
-    forWhom: [
-      "výrobní provozy, údržba, stavebnictví a doprava",
-      "zaměstnavatelé při kategorizaci prací nebo auditu BOZP",
-      "provozy s ručním nářadím, bruskami, kompresory a strojní technikou"
-    ],
     whenNeeded: [
       "kategorizace prací nebo její aktualizace",
       "požadavek KHS nebo interní audit BOZP",
       "nová technologie nebo změna pracovních operací",
       "stížnosti zaměstnanců nebo ověření účinnosti opatření"
     ],
-    authorities: ["KHS při kategorizaci prací a kontrolách pracovního prostředí", "BOZP dokumentace zaměstnavatele"],
     practicalSituations: [
       "měření vibrací u brusek a pneumatického nářadí ve výrobě",
       "měření vibrací u obsluhy strojů a manipulační techniky",
@@ -692,18 +594,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "výrobní haly, laboratoře, sklady i administrativa",
       "konkrétní návrh úpravy svítidel nebo dispozice při nedostatku"
     ],
-    forWhom: [
-      "zaměstnavatelé výroby, logistiky, administrativy a laboratoří",
-      "investoři při změně dispozice nebo kolaudaci pracoviště",
-      "organizace reagující na požadavek KHS nebo interní audit"
-    ],
     whenNeeded: [
       "kategorizace prací nebo nové pracoviště",
       "požadavek KHS nebo kolaudace",
       "změna dispozice, technologie nebo typu osvětlení",
       "stížnosti na nedostatečné osvětlení"
     ],
-    authorities: ["KHS při kategorizaci prací a kontrolách", "BOZP a stavební řízení při změně užívání"],
     practicalSituations: [
       "měření osvětlení ve výrobní hale po změně technologie",
       "posouzení osvětlení kanceláří a zasedacích místností",
@@ -754,18 +650,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "haly, sušárny, sklady s tepelnou zátěží",
       "návrh větrání, klimatizace nebo organizace směn"
     ],
-    forWhom: [
-      "výrobní a technologické provozy s tepelnou zátěží",
-      "zaměstnavatelé při kategorizaci prací nebo požadavku KHS",
-      "provozy se sušárnami, pecní technologií nebo horkými operacemi"
-    ],
     whenNeeded: [
       "kategorizace prací nebo její aktualizace",
       "požadavek KHS nebo stížnosti na tepelnou zátěž",
       "nová technologie nebo změna větrání",
       "kolaudace nebo změna provozního režimu"
     ],
-    authorities: ["KHS při kategorizaci prací a kontrolách pracovního prostředí", "BOZP dokumentace zaměstnavatele"],
     practicalSituations: [
       "měření mikroklimatu ve skladu nebo výrobní hale",
       "posouzení podmínek u pecí, sušáren a horkých operací",
@@ -816,21 +706,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "vyjádření pro stavební řízení a kolaudaci",
       "návaznost na měření v provozu nebo výpočet"
     ],
-    forWhom: [
-      "investoři a projektanti staveb a technologií",
-      "provozovatelé řešící hluk z VZT, strojoven nebo výroby",
-      "stavební řízení, kolaudace a požadavky hygienické stanice"
-    ],
     whenNeeded: [
       "stavební úpravy s dopadem na hluk v budově nebo okolí",
       "kolaudace nebo změna užívání budovy",
       "požadavek stavebního úřadu nebo KHS",
       "návrh odhlučnění před realizací"
-    ],
-    authorities: [
-      "stavební úřad při povolování a kolaudaci",
-      "KHS při posouzení hluku v budovách a na pracovištích",
-      "investor nebo projektant při přípravě záměru"
     ],
     practicalSituations: [
       "akustický posudek pro strojovnu VZT nebo kotelnu v budově",
@@ -882,21 +762,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "srovnání variant provozu nebo umístění",
       "výstupní podklady pro studii, EIA nebo jednání s úřadem"
     ],
-    forWhom: [
-      "investoři a projektanti připravující záměr nebo změnu provozu",
-      "provozovatelé řešící dopady na okolí nebo úřadní požadavky",
-      "zpracovatelé EIA a technické dokumentace"
-    ],
     whenNeeded: [
       "nový záměr nebo změna kapacity zdroje",
       "potřeba variantního posouzení provozu",
       "požadavek úřadu na imisní nebo hlukové hodnocení",
       "příprava rozptylové nebo hlukové studie"
-    ],
-    authorities: [
-      "krajský úřad a ČIŽP při posuzování zdrojů",
-      "KHS a stavební úřad v návaznosti na hluk",
-      "orgány EIA při posuzování záměrů"
     ],
     practicalSituations: [
       "modelový výpočet imisí pro novou technologii v areálu",
@@ -948,21 +818,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "podklad pro EIA, krajský úřad a KHS",
       "jeden kontaktní výstup pro investora a projektanta"
     ],
-    forWhom: [
-      "investoři a projektanti připravující větší záměr",
-      "provozovatelé měnící technologii nebo kapacitu areálu",
-      "zpracovatelé EIA a technické dokumentace"
-    ],
     whenNeeded: [
       "záměr se souběžným vlivem na ovzduší a hluk",
       "požadavek úřadu na imisní i hlukové hodnocení",
       "příprava EIA nebo oznámení záměru",
       "potřeba variantního srovnání umístění technologií"
-    ],
-    authorities: [
-      "krajský úřad a orgány EIA",
-      "KHS při posouzení hluku",
-      "stavební úřad a investor při přípravě záměru"
     ],
     practicalSituations: [
       "imisní a hlukové dopady průmyslového areálu",
@@ -1014,18 +874,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "návaznost na IPPC a ISPOP u větších zdrojů",
       "technická podpora při doplňování žádosti"
     ],
-    forWhom: [
-      "provozovatelé stacionárních zdrojů",
-      "investoři uvádějící novou technologii do provozu",
-      "firmy reagující na výzvu krajského úřadu"
-    ],
     whenNeeded: [
       "nový zdroj nebo změna kapacity",
       "vydání povolení provozu po technologické změně",
       "požadavek úřadu na doplnění podkladů",
       "změna paliva, filtrace nebo provozního režimu"
     ],
-    authorities: ["krajský úřad v ochraně ovzduší", "ČIŽP při kontrolách a návazných požadavcích"],
     practicalSituations: [
       "povolení provozu nové lakovací linky",
       "změna povolení u kotle nebo kogenerační jednotky",
@@ -1076,18 +930,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "sladění dat od provozu a z projektu",
       "doplnění po připomínkách úřadu ve fázi zjišťování"
     ],
-    forWhom: [
-      "investoři a zpracovatelé EIA",
-      "provozovatelé připravující záměr s vlivem na životní prostředí",
-      "projektanti potřebující odborné vstupy pro dokumentaci"
-    ],
     whenNeeded: [
       "záměr spadající do zjišťovacího řízení",
       "požadavek na technické přílohy včasně v procesu",
       "potřeba sladit měření, studie a projekt",
       "příprava podkladů pro veřejnost a úřady"
     ],
-    authorities: ["příslušný orgán EIA", "krajský úřad a dotčené správní orgány", "investor a zpracovatel EIA"],
     practicalSituations: [
       "podklady pro zjišťovací řízení průmyslového záměru",
       "technické vstupy pro skládku, bioplynovku nebo výrobu",
@@ -1138,21 +986,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "koordinace měření a studií pro projektanta",
       "návaznost na EIA, stavební řízení a povolení provozu"
     ],
-    forWhom: [
-      "investoři v přípravě průmyslového nebo infrastrukturního záměru",
-      "projektanti a techničtí zpracovatelé dokumentace",
-      "developéři potřebující vstupy pro rozhodnutí o variantě"
-    ],
     whenNeeded: [
       "příprava investice před podáním na úřady",
       "potřeba sladit projekt s požadavky na životní prostředí",
       "variantní posouzení umístění technologií",
       "včasná příprava podkladů pro EIA nebo povolení"
-    ],
-    authorities: [
-      "investor a projektant při rozhodování o záměru",
-      "orgány EIA a povolovací řízení v další fázi",
-      "krajský úřad, KHS a stavební úřad podle typu záměru"
     ],
     practicalSituations: [
       "technické přílohy pro nový výrobní areál",

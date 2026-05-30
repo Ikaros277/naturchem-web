@@ -22,21 +22,11 @@ export default function Page() {
         "ověření účinnosti protihlukového opatření po realizaci",
         "měření u VZT, tepelných čerpadel a strojoven"
       ]}
-      forWhom={[
-        "investoři a stavební projektanti (kolaudace, změny užívání)",
-        "provozovatelé areálů řešících stížnosti okolí nebo limity HLUK",
-        "záměry s podkladem pro KHS, stavební úřad nebo EIA"
-      ]}
       whenNeeded={[
         "stavební řízení nebo kolaudace",
         "stížnost na hluk z provozu",
         "hluková studie pro EIA nebo změnu záměru",
         "hluková studie pro tepelné čerpadlo, VZT, chlazení nebo průmyslový areál"
-      ]}
-      authorities={[
-        "KHS při posouzení hlukové zátěže a požadavcích na kolaudaci",
-        "stavební úřad u novostaveb, změn užívání a technologických instalací",
-        "EIA a zjišťovací řízení, kde je hluk jedním z klíčových vlivů záměru"
       ]}
       practicalSituations={[
         "měření hluku pro kolaudaci nebo změnu užívání",

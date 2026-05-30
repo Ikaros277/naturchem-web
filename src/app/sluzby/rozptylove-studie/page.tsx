@@ -22,21 +22,11 @@ export default function Page() {
         "posouzení dopadů na okolní zástavbu",
         "rozptylové studie pro kotelny, skládky, recyklační areály, bioplyn, sklářství a lakovny"
       ]}
-      forWhom={[
-        "investoři a projektanti nových záměrů nebo rozšíření provozu",
-        "provozovatelé měnící emise, výšku komína nebo kapacitu zdroje",
-        "žadatelé o povolení nebo účastníci EIA a zjišťovacího řízení"
-      ]}
       whenNeeded={[
         "nový záměr nebo rozšíření provozu",
         "požadavek krajského úřadu nebo EIA",
         "porovnání variant technického řešení",
         "změna zdroje znečišťování ovzduší, kapacity, paliva, dopravy nebo emisních parametrů"
-      ]}
-      authorities={[
-        "krajský úřad při povolení provozu nebo změně zdroje znečišťování ovzduší",
-        "EIA a zjišťovací řízení při nových nebo kapacitně měněných záměrech",
-        "ČIŽP nebo obec v situacích, kde se řeší imisní dopad na okolí"
       ]}
       practicalSituations={[
         "rozptylová studie pro nový nebo měněný zdroj znečišťování ovzduší",

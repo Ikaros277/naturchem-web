@@ -8,7 +8,6 @@ import { contactSubmitCta } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
 import {
-  serviceCtaLead,
   serviceDocsIntro,
   serviceMistakesHeading,
   serviceScopeHeading
@@ -22,12 +21,8 @@ type Props = {
   heroPanelTitle?: string;
   contactService?: string;
   scope: string[];
-  /** Pro koho typicky služba je – investoři, provozy, úřady. */
-  forWhom?: string[];
-  authorities?: string[];
   whenNeeded: string[];
   docs: string[];
-  process?: string[];
   outputs: string[];
   commonMistakes?: string[];
   practicalSituations?: string[];

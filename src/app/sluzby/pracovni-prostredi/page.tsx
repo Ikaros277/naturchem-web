@@ -22,21 +22,11 @@ export default function Page() {
         "měření pracovního prostředí ve svařovnách, lakovnách, výrobních halách i čistých prostorech",
         "podklady pro kategorizaci prací, BOZP a komunikaci s KHS"
       ]}
-      forWhom={[
-        "zaměstnavatelé výrobních provozů, služeb a skladů",
-        "pracoviště s chemickými látkami, prachem, hlukem nebo vibracemi (svařovny, lakovny, zemědělství)",
-        "organizace připravující dokumentaci pro KHS nebo interní audit BOZP"
-      ]}
       whenNeeded={[
         "kategorizace prací nebo její aktualizace",
         "požadavek KHS",
         "změna technologie nebo dispozice pracoviště",
         "kolaudace, interní audit BOZP nebo ověření účinnosti odsávání a technických opatření"
-      ]}
-      authorities={[
-        "KHS při kategorizaci prací, kontrolách pracovního prostředí a kolaudacích",
-        "BOZP dokumentace zaměstnavatele a interní řízení rizik",
-        "stavební řízení nebo změna užívání tam, kde se dokládají hygienické parametry pracoviště"
       ]}
       practicalSituations={[
         "měření pracovního prostředí ve svařovně při aktualizaci kategorizace prací",

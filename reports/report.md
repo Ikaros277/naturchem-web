@@ -5,9 +5,36 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 3 |
-| Celkový odhadovaný čas | ~8 hodin |
-| Aktuální fáze | UX sprint 4 dokončen, nastavení projektového workflow |
+| Počet sezení celkem | 4 |
+| Celkový odhadovaný čas | ~9 hodin |
+| Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
+
+---
+
+## Sezení: 30. 5. 2026 (večer)
+
+### Přehled
+Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### P1 — ověření a úklid ServicePage + homepage
+**Co bylo uděláno:** Potvrzeno, že šablona služeb už má jednu sekci „Mohlo by Vás zajímat“ (max 3 karty) a accordion jen s Příklady a Chybami. Odstraněna mrtvá data `forWhom` / `authorities` z 18 definic služeb a 5 ručně psaných stránek, smazán soubor `home-audience.ts`, odstraněny nepoužívané CSS pro timeline procesu na homepage.  
+**Proč:** Úkoly P1 byly hotové od sprintu 1, ale data a roadmapa neodpovídaly skutečnému stavu — úklid zjednodušuje údržbu a předchází zmatku při dalších úpravách.
+
+#### Akreditace — redukce struktury (P2-5)
+**Co bylo uděláno:** Na stránce `/akreditace-autorizace-dokumenty` sloučena sekce přístrojového vybavení do bloku akreditovaného rozsahu (odstavec + odkaz na vybavení). Autorizace a dokumenty ke stažení jsou v jedné sekci „Autorizace, oprávnění a dokumenty“.  
+**Proč:** Stránka měla příliš mnoho samostatných sekcí se stejným účelem (důvěryhodnost) — kratší struktura zrychluje orientaci a posiluje závěrečné CTA.
+
+### Časová náročnost
+**Odhadovaná doba práce:** přibližně 1 hodina  
+**Počet výměn s AI:** ~15 kol konverzace  
+*Poznámka: čas odhadován z rozsahu změn v repozitáři; commit může následovat po ukončení sezení.*
+
+### Technická poznámka
+`ServicePage.tsx`, `dedicated-service-pages.ts`, 5× `sluzby/*/page.tsx`, `akreditace-autorizace-dokumenty/page.tsx`, `globals.css`, `service-copy.ts`; smazáno `home-audience.ts`, `service-defaults.ts`. Build `npm run build` prošel bez chyb.
 
 ---
 

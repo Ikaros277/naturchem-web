@@ -752,9 +752,9 @@ main ol {
 
 .faq-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
-  gap: 0.75rem;
-  margin: 2rem 0 2.5rem;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.5rem;
+  margin: 1.5rem 0 2.5rem;
 }
 
 .faq-tile {
@@ -762,9 +762,8 @@ main ol {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
-  min-height: 4.5rem;
-  padding: 1rem;
+  gap: 0.4rem;
+  padding: 0.65rem 0.4rem;
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -772,8 +771,8 @@ main ol {
 }
 
 .faq-tile-icon {
-  width: 38px;
-  height: 38px;
+  width: 28px;
+  height: 28px;
 }
 
 .faq-tile:hover {
@@ -783,9 +782,21 @@ main ol {
 
 .faq-tile-label {
   font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.35;
+  font-size: 0.78rem;
+  line-height: 1.3;
   color: var(--primary);
+}
+
+@media (max-width: 860px) {
+  .faq-tiles {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .faq-tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .faq-category {

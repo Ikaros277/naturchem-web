@@ -6,12 +6,12 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 4 |
-| Celkový odhadovaný čas | ~7,6 hodiny |
+| Celkový odhadovaný čas | ~7,9 hodiny |
 | Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
 
 ---
 
-## Sezení: 30. 5. 2026, 13:20–14:13
+## Sezení: 30. 5. 2026, 13:20–14:28
 
 ### Přehled
 Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky. Změny commitnuty a pushnuty na GitHub (`f260dca`).
@@ -19,6 +19,10 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
+#### Automatická synchronizace reportu po produktovém commitu
+**Co bylo uděláno:** Automatická synchronizace reportu po produktovém commitu — post-commit hook, skripty a šablony. (commit `0665436`). Dotčené oblasti: .gitignore, install-git-hooks.ps1, report, setup-ai-commands.ps1, test-report-hook.ps1, update-report-from-git.ps1, workflow.  
+**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+
 #### Univerzální PageCtaStrip a oprava fixed hlavičky při scrollu
 **Co bylo uděláno:** Univerzální PageCtaStrip a oprava fixed hlavičky při scrollu. (commit `ec19e3d`). Dotčené oblasti: akreditace-autorizace-dokumenty, app, components, faq, lib, o-spolecnosti-naturchem, page.tsx, poradna, pristrojove-vybaveni, provozy-a-technologie, reference, sluzby, typicke-zakazky.  
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
@@ -36,8 +40,8 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Proč:** Sdílení hotového stavu pro klienta a produkční preview.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~53 min
-**Rozložení:** 30. 5. 2026, 13:20–14:13 (~53 min)
+**Odhadovaná doba práce:** ~1 hod 8 min
+**Rozložení:** 30. 5. 2026, 13:20–14:28 (~1 hod 8 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** ~18 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Odpolední blok zahrnuje i dokončení workflow reportu před implementací P1.*

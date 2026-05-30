@@ -13,10 +13,10 @@
 
 ---
 
-## Sezení: 30. 5. 2026, 17:17–20:08
+## Sezení: 30. 5. 2026, 17:17–20:09
 
 ### Přehled
-Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní menu) a pokračoval copy sprintem podle tone of voice. Zaveden příkaz `/copy`, dokončeny dávky C1–C2. Následovala UX revize a copy follow-up stránky O NATURCHEM — zjednodušení struktury, lidskější texty, úprava menu a sjednocení šířky sekcí.
+Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní menu) a pokračoval copy sprintem podle tone of voice. Zaveden příkaz `/copy`, dokončeny dávky C1–C2. Následovala UX revize a copy follow-up stránky O NATURCHEM — zjednodušení struktury, lidskější texty, redesign hlavního menu, oprava loga v hlavičce a sjednocení šířky sekcí.
 
 **Zdroj popisu:** AI konverzace + git commity
 
@@ -31,8 +31,12 @@ Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní men
 **Proč:** Klient potřeboval, aby stránka O nás nejdřív představila firmu a lidi, ne jen seznam služeb.
 
 #### Menu a jednosloupcové Kdo jsme
-**Co bylo uděláno:** Redukce hlavního menu — položka Odbornost sloučena do dropdownu O nás, odstraněn tablet režim „Další", CSS úpravy pro notebook 1366 px. Sekce Kdo jsme převedena z dvousloupcového layoutu na jeden sloupec; navigační odkazy přesunuty pod text s vizuálním oddělením.  
-**Proč:** Dva sloupce s nevyrovnanou délkou textu matou pořadí čtení; menu se na středně širokých displejích přeplňovalo.
+**Co bylo uděláno:** UX konzultace a redesign hlavního menu — položka Odbornost sloučena do dropdownu O nás (O společnosti, Akreditace, Přístroje, Poradna, FAQ), zachovány top-level položky Služby, Provozy, Typické zakázky, Reference, Kontakt a tlačítko Poptat. Odstraněn tablet režim „Další", sjednoceno menu od 1024 px. Sekce Kdo jsme převedena z dvousloupcového layoutu na jeden sloupec; navigační odkazy přesunuty pod text s vizuálním oddělením.  
+**Proč:** Menu se na běžných noteboocích (1366 px) nepřeplňovalo a skrývalo položky; dva sloupce v Kdo jsme matou pořadí čtení.
+
+#### Oprava loga a tagline v hlavičce
+**Co bylo uděláno:** Opraveno občasné zalamování tagline „Měření · studie · dokumentace" na dva řádky při zoomu nebo změně šířky okna — tagline má `white-space: nowrap`, logo blok se už nestahuje pod 210 px a grid hlavičky nechává logo sloupci přirozenou šířku.  
+**Proč:** Po úpravách menu pro úzké displeje se logo vizuálně rozbíjelo; tagline musí být vždy na jednom řádku pod logem NATURCHEM.
 
 #### Sjednocení šířky sekcí O společnosti
 **Co bylo uděláno:** Sekce Kdo jsme, Odborná garance a Tým sdílejí stejnou šířku containeru jako statistiky nad nimi — odstraněno omezení 980 px u textu a karty garance.  
@@ -46,9 +50,9 @@ Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní men
 **Co bylo uděláno:** Trust lišta hned pod hero, kompaktní statistiky bez duplicitního nadpisu, redukce vertikálních mezer (−50 %). Projektová dokumentace (`naturchem-projekt/`) zahrnuta do repozitáře.  
 **Proč:** Posílení důvěry hned pod hero a sjednocení spacingu dle UX roadmapy.
 
-#### Sprint 12 — hero layout a responzivní menu
-**Co bylo uděláno:** Opravena regrese zarovnání — `.container` znovu centruje obsah. Hero pás na podstránkách začíná bez bílé mezery pod fixed hlavičkou. Sjednocena min-height hero (`standard` / `service` varianty). Hlavní menu: od 1280 px plné menu, na 1024–1279 px zkrácená verze s dropdownem „Další" (Typické zakázky, O NATURCHEM, FAQ, Poradna, Akreditace, Přístrojové vybavení) — řeší překryv tlačítka „Poptat službu" s položkou Kontakt.  
-**Proč:** Klient hlásil nestabilní výšku hero, text u levého okraje monitoru a přeplněné menu na středně širokých displejích.
+#### Sprint 12 — hero layout a responzivní menu (doplnění večera)
+**Co bylo uděláno:** Opravena regrese zarovnání — `.container` znovu centruje obsah. Hero pás na podstránkách začíná bez bílé mezery pod fixed hlavičkou. Sjednocena min-height hero (`standard` / `service` varianty). Původní tablet režim menu s dropdownem „Další" (P1-7) byl večer nahrazen finálním redesignem menu (viz výše).  
+**Proč:** Klient hlásil nestabilní výšku hero a text u levého okraje monitoru; první iterace menu řešila překryv CTA, finální verze zredukovala počet položek v liště.
 
 #### UX konzultace — hero fotky a výška
 **Co bylo uděláno:** Odsouhlaseno: homepage může mít vyšší hero (landing), podstránky mají být mezi sebou konzistentní. Tématické stock fotky podle kategorií služeb (emise / hluk / dokumentace) ponechány — ne jedna fotka všude, ne 24 unikátních variant.  
@@ -71,14 +75,14 @@ Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní men
 **Proč:** Klíčové důvěryhodnostní stránky musí mluvit jazykem zákazníka, ne firemním katalogem.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~2 hod 51 min  
-**Rozložení:** 30. 5. 2026 17:17–20:08 (~2 hod 51 min)  
+**Odhadovaná doba práce:** ~2 hod 52 min  
+**Rozložení:** 30. 5. 2026 17:17–20:09 (~2 hod 52 min)  
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** ~30 kol konverzace  
+**Počet výměn s AI:** ~35 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-UX O společnosti: `o-spolecnosti-naturchem/page.tsx`, `typicke-zakazky/page.tsx`, `globals.css` — commity `9abb16a`, `4d0e23e`, `cebecfe`. Copy follow-up: `be3f7ef`. Menu: `Header.tsx`, `navigation.ts` — commit `4d0e23e`. Dříve večer: S11–S12, copy C1–C2 (`ebbae75`), `.agents/commands/copy.md`. Build prošel bez chyb.
+UX O společnosti: `o-spolecnosti-naturchem/page.tsx`, `typicke-zakazky/page.tsx`, `globals.css` — commity `9abb16a`, `4d0e23e`, `cebecfe`. Copy follow-up: `be3f7ef`. Menu a logo v hlavičce: `Header.tsx`, `navigation.ts`, `globals.css` — commity `4d0e23e`, `cebecfe`. Dříve večer: S11–S12, copy C1–C2 (`ebbae75`), `.agents/commands/copy.md`. Build prošel bez chyb.
 
 ---
 

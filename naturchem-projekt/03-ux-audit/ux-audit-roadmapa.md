@@ -542,6 +542,19 @@ _Tyto úpravy nejvíce ovlivní, zda visitor poptá nebo odejde._
 
 ---
 
+### P6 — Layout, spacing a hero (Sprint 10–12)
+
+| ID | Úprava | Stav |
+|----|--------|------|
+| P6-1 | Token `--section-padding-y`, sjednocení vertikálních mezer | ✅ |
+| P6-2 | `PageHeroBand` min-height varianty standard / service | ✅ |
+| P6-3 | Regrese `.container` — obnovit `margin-inline: auto` | ✅ |
+| P6-4 | Hero flush pod fixed header — `padding-top: 0` u stránek s `PageHeroBand` | ✅ |
+
+**P1-7 (navigace):** ≥1280 px plné menu · 1024–1279 px zkrácené menu + dropdown „Další" · &lt;1024 px hamburger. Implementace: `Header.tsx`, `navigation.ts` (`headerTabletMoreLinks`).
+
+---
+
 ### P5 — Vizuální scanovatelnost
 
 _Navazuje na G6. Sloučeno z grafického auditu (`06-graficky-audit/graficky-audit.md`). Fáze A = bez fotek od klienta._

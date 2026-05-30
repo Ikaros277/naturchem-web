@@ -13,7 +13,7 @@
 
 ---
 
-## Sezení: 30. 5. 2026, 17:22–18:00
+## Sezení: 30. 5. 2026, 17:22–18:03
 
 ### Přehled
 Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero na informační stránky a zjednodušení homepage (P5-11, P5-12).
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Sjednotit v├Ż┼íku hero p├ísu nap┼Ö├ş─Ź str├ínkami (P6-2).
+**Co bylo uděláno:** Sjednotit v├Ż┼íku hero p├ísu nap┼Ö├ş─Ź str├ínkami (P6-2). (commit `3288441`). Dotčené oblasti: app, components, report, ROADMAPA.md, workflow.  
+**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
+
 #### Sprint 11: meta audit, prolinkov├ín├ş poradnaÔćöslu┼żby a P4 hygiena.
 **Co bylo uděláno:** Sprint 11: meta audit, prolinkov├ín├ş poradnaÔćöslu┼żby a P4 hygiena. (commit `401f312`). Dotčené oblasti: components, lib, meta-audit-sprint11.md, page.tsx, poradna, provozy-a-technologie, ROADMAPA.md.  
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
@@ -38,8 +42,8 @@ Automaticky založené sezení po commitu `cefcbd0` — rozšíření photo hero
 **Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~38 min
-**Rozložení:** 30. 5. 2026 17:22–18:00 (~38 min)
+**Odhadovaná doba práce:** ~41 min
+**Rozložení:** 30. 5. 2026 17:22–18:03 (~41 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

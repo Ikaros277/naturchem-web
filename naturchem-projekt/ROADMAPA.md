@@ -4,7 +4,7 @@
 > **Jak číst:** ✅ Hotovo · 🔄 Probíhá · 🔲 Čeká · ❓ Čeká na klienta
 
 **Poslední aktualizace:** 2026-05-30  
-**Aktuální fáze:** Sprint 11 hotovo → copy sprint, P5-B fotky, launch checklist
+**Aktuální fáze:** Sprint 12 hotovo → copy sprint, P5-B fotky, launch checklist
 
 ---
 
@@ -32,6 +32,7 @@
 | P1-4 | Homepage: smazat sekci „Jak probíhá zakázka" nebo přesunout za reference teaser | ✅ | — |
 | P1-5 | /o-spolecnosti-naturchem: přidat primární CTA tlačítko na konec stránky | ✅ | — |
 | P1-6 | /kontakt: odstranit redundantní telefon/email, smazat „Rychlé poptávkové cesty" | ✅ | — |
+| P1-7 | Hlavní menu: breakpoint 1280 px + dropdown „Další" (1024–1279 px) | ✅ | Nízká |
 
 ### P2 — Vysoká priorita (UX a důvěryhodnost)
 
@@ -96,6 +97,8 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 |----|------|------|-----------|
 | P6-1 | Globální vertikální padding sekcí (−50 %, token `--section-padding-y`) | ✅ | Nízká |
 | P6-2 | Sjednocená min-height hero pásu (`PageHeroBand` standard / service) | ✅ | Nízká |
+| P6-3 | Oprava `.container` — centrování obsahu (regrese margin) | ✅ | Nízká |
+| P6-4 | Hero flush pod hlavičkou — bez padding-top u stránek s `PageHeroBand` | ✅ | Nízká |
 
 **Doporučené pořadí:** Sprint 6 → P5-4, P5-5, P5-6 · Sprint 7 → P5-1, P5-2, P5-3 · Sprint 8 → P5-7–P5-10
 
@@ -198,6 +201,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 30. 5. | Sprint 10 | P5-13 trust order + kompaktní stats, P3-8 homepage trim, P6-1 spacing, docs v gitu |
 | 30. 5. | Sprint 11 | Meta audit, poradna↔služby prolinkování, P4-1/P4-3/P4-4 |
 | 30. 5. | P6-2 | Sjednocená výška hero pásu (standard / service variant) |
+| 30. 5. | Sprint 12 | P6-3/P6-4 hero layout fix, P1-7 responzivní menu (Další) |
 
 ---
 

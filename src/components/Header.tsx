@@ -1,31 +1,43 @@
 "use client";
 
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 import {
   globalCta,
   headerMainNav,
+  headerTabletMoreLinks,
   kontaktNav,
-  odbornostNav
+  odbornostNav,
+  referenceNav
 } from "@/lib/navigation";
 import { serviceMegaGroups } from "@/lib/service-megamenu";
 import { BrandLogo } from "@/components/BrandLogo";
 import { company } from "@/lib/site";
 
-function useDesktopNav() {
-  const [isDesktop, setIsDesktop] = useState(false);
+function useNavBreakpoints() {
+  const [breakpoints, setBreakpoints] = useState({ isDesktop: false, isDesktopWide: false });
 
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1024px)");
-    const update = () => setIsDesktop(mq.matches);
+    const mqDesktop = window.matchMedia("(min-width: 1024px)");
+    const mqWide = window.matchMedia("(min-width: 1280px)");
+    const update = () =>
+      setBreakpoints({
+        isDesktop: mqDesktop.matches,
+        isDesktopWide: mqWide.matches
+      });
     update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
+    mqDesktop.addEventListener("change", update);
+    mqWide.addEventListener("change", update);
+    return () => {
+      mqDesktop.removeEventListener("change", update);
+      mqWide.removeEventListener("change", update);
+    };
   }, []);
 
-  return isDesktop;
+  return breakpoints;
 }
 
 function ServiceMegaMenu() {
@@ -66,6 +78,53 @@ function OdbornostDropdown() {
   );
 }
 
+function MoreDropdown() {
+  return (
+    <div id="nav-dropdown-dalsi" className="nav-dropdown" aria-label="Další">
+      {headerTabletMoreLinks.map((item) => (
+        <Link key={item.href} href={item.href} className="nav-dropdown-link">
+          {item.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+function NavDropdownItem({
+  id,
+  label,
+  open,
+  onOpen,
+  onClose,
+  children
+}: {
+  id: string;
+  label: string;
+  open: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+  children: ReactNode;
+}) {
+  return (
+    <div
+      className="nav-item"
+      onMouseEnter={onOpen}
+      onMouseLeave={onClose}
+      onFocusCapture={onOpen}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          onClose();
+        }
+      }}
+    >
+      <span className="nav-item-link nav-item-trigger" aria-expanded={open} aria-controls={id}>
+        {label}
+      </span>
+      {open ? children : null}
+    </div>
+  );
+}
+
 function MobileServiceGroups({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <>
@@ -92,10 +151,12 @@ function MobileServiceGroups({ onNavigate }: { onNavigate?: () => void }) {
 
 export function Header() {
   const pathname = usePathname();
-  const isDesktop = useDesktopNav();
+  const { isDesktop, isDesktopWide } = useNavBreakpoints();
+  const isTabletDesktop = isDesktop && !isDesktopWide;
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [odbornostOpen, setOdbornostOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const mobileSheetRef = useRef<HTMLDivElement>(null);
   const mobileToggleRef = useRef<HTMLButtonElement>(null);
@@ -108,6 +169,7 @@ export function Header() {
     setMenuOpen(false);
     setServicesOpen(false);
     setOdbornostOpen(false);
+    setMoreOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -262,7 +324,7 @@ export function Header() {
           </span>
         </Link>
 
-        {isDesktop ? (
+        {isDesktopWide ? (
           <nav className="nav-links nav-desktop-full" aria-label="Hlavní navigace">
             <div
               className="nav-item nav-item-mega"
@@ -285,22 +347,42 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <div
-              className="nav-item"
-              onMouseEnter={() => setOdbornostOpen(true)}
-              onMouseLeave={() => setOdbornostOpen(false)}
-              onFocusCapture={() => setOdbornostOpen(true)}
-              onBlurCapture={(event) => {
-                if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
-                  setOdbornostOpen(false);
-                }
-              }}
+            <NavDropdownItem
+              id="nav-dropdown-odbornost"
+              label={odbornostNav.label}
+              open={odbornostOpen}
+              onOpen={() => setOdbornostOpen(true)}
+              onClose={() => setOdbornostOpen(false)}
             >
-              <span className="nav-item-link nav-item-trigger" aria-expanded={odbornostOpen} aria-controls="nav-dropdown-odbornost">
-                {odbornostNav.label}
-              </span>
-              {odbornostOpen ? <OdbornostDropdown /> : null}
-            </div>
+              <OdbornostDropdown />
+            </NavDropdownItem>
+            <Link href={kontaktNav.href}>{kontaktNav.label}</Link>
+          </nav>
+        ) : null}
+
+        {isTabletDesktop ? (
+          <nav className="nav-links nav-desktop-tablet" aria-label="Hlavní navigace">
+            <Link href="/sluzby">Služby</Link>
+            <Link href="/provozy-a-technologie">Provozy</Link>
+            <Link href={referenceNav.href}>{referenceNav.label}</Link>
+            <NavDropdownItem
+              id="nav-dropdown-odbornost"
+              label={odbornostNav.label}
+              open={odbornostOpen}
+              onOpen={() => setOdbornostOpen(true)}
+              onClose={() => setOdbornostOpen(false)}
+            >
+              <OdbornostDropdown />
+            </NavDropdownItem>
+            <NavDropdownItem
+              id="nav-dropdown-dalsi"
+              label="Další"
+              open={moreOpen}
+              onOpen={() => setMoreOpen(true)}
+              onClose={() => setMoreOpen(false)}
+            >
+              <MoreDropdown />
+            </NavDropdownItem>
             <Link href={kontaktNav.href}>{kontaktNav.label}</Link>
           </nav>
         ) : null}

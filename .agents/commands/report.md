@@ -48,6 +48,14 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 
 11. Ulož zpět do `reports/report.md`.
 
+12. **Automatický commit a push** (pouze pokud byl report skutečně změněn v kroku 11):
+    - `git add reports/report.md`
+    - Commit se zprávou: `Report: aktualizace sezení [DD. M. YYYY]` — přidej stručný doplněk z přehledu sezení, pokud je výstižný (max. ~60 znaků v prvním řádku).
+    - `git push` na aktuální větev (typicky `main`).
+    - Pokud push selže kvůli zaostávající větvi: `git pull --rebase`, pak znovu `git push`.
+    - Po úspěchu uveď hash commitu a potvrzení pushnutí.
+    - Pokud nebyl report změněn (krok 6), commit ani push neprováděj.
+
 **Formát výstupního souboru:**
 
 ```markdown
@@ -102,4 +110,4 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 - V režimu git: primární zdroj = commit messages + diff; „Proč" odvoď rozumně z kontextu změn.
 - Pokud $ARGUMENTS obsahuje text, použij ho jako volitelný podtitulek nebo poznámku v reportu.
 
-Po uložení řekni uživateli, že soubor byl aktualizován, a uveď aktuální celkový čas projektu.
+Po uložení, commitu a pushu řekni uživateli, že report byl aktualizován a odeslán do repozitáře, a uveď aktuální celkový čas projektu. Pokud nebylo co reportovat, jen informuj, že vše je aktuální.

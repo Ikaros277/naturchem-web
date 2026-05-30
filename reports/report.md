@@ -6,15 +6,17 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 3 |
-| Celkový odhadovaný čas | ~7 hodin |
-| Aktuální fáze | UX revize a obsahový sprint |
+| Celkový odhadovaný čas | ~8 hodin |
+| Aktuální fáze | UX sprint 4 dokončen, nastavení projektového workflow |
 
 ---
 
 ## Sezení: 30. 5. 2026
 
 ### Přehled
-Sezení navázalo na předchozí den a dokončilo čtvrtý UX sprint — opravy designového systému, přepracování stránky Reference a doplnění sekce s logy zákazníků. Všechny změny byly nasazeny na produkci.
+Sezení navázalo na předchozí den a dokončilo čtvrtý UX sprint — opravy designového systému, přepracování stránky Reference, doplnění log zákazníků a jejich zobrazení i na homepage. Odpoledne proběhlo nastavení projektového workflow — sjednocení AI příkazů pro Cursor i Claude Code a zavedení klientského reportu prací.
+
+**Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
 
@@ -38,17 +40,22 @@ Sezení navázalo na předchozí den a dokončilo čtvrtý UX sprint — opravy 
 **Co bylo uděláno:** Odstraněna sekce „Reference podle oblastí" (obsahovala karty vedoucí na poptávkový formulář, nikoliv skutečné reference). Sekce „Anonymizované příklady řešených zakázek" přejmenována na „Příklady z praxe" a přepracována — každý příklad je na samostatném řádku, ve výchozím stavu sbalený, po rozbalení zobrazí rozsah prací, výstup a popis, plus tlačítko „Poptat podobnou zakázku".  
 **Proč:** Stránka Reference má za cíl budovat důvěru — původní sekce zbytečně duplikovala stránku /typicke-zakazky a vedla na formuláře místo na reálný důkaz praxe.
 
-#### Sekce Vybraní zákazníci s logy a prokliky
-**Co bylo uděláno:** Na stránce Reference přidána nová sekce s logy 19 zákazníků NATURCHEM. Logo každé společnosti bylo dohledáno a staženo z jejich oficiálních webů. Každé logo je prokliknutelné (otevírá homepage firmy v novém okně) a zobrazuje se v šedé — při najetí myší přechází na barevnou verzi.  
-**Proč:** Reálné zákaznické reference s logy firem (Škoda Auto, ČEZ, České dráhy, E.ON, Strabag a další) jsou silný důkaz odborné praxe a zvyšují důvěryhodnost webu.
+#### Sekce Naši zákazníci s logy a prokliky
+**Co bylo uděláno:** Na stránce Reference přidána sekce s logy 19 zákazníků NATURCHEM (přejmenováno z „Vybraní zákazníci" na „Naši zákazníci"). Logo každé společnosti bylo dohledáno a staženo z oficiálních webů. Každé logo je prokliknutelné (otevírá homepage firmy v novém okně) a zobrazuje se v šedé — při najetí myší přechází na barevnou verzi. Stejný pruh s logy byl přidán i na homepage nad patičku.  
+**Proč:** Reálné zákaznické reference s logy firem (Škoda Auto, ČEZ, České dráhy, E.ON, Strabag a další) jsou silný důkaz odborné praxe. Zobrazení na homepage i na stránce Reference posiluje důvěryhodnost hned při prvním kontaktu s webem.
+
+#### Nastavení projektového workflow a AI příkazů
+**Co bylo uděláno:** Vylepšen příkaz `/report` pro práci napříč nástroji (Cursor i VS Code + Claude Code) — odhad času z git commitů funguje bez ohledu na nástroj, popis změn se doplní i z commitů, pokud v daném nástroji neproběhla konverzace. Příkazy `/report` a `/status` sjednoceny do jedné složky `.agents/commands/` s automatickým propojením do Cursoru a Claude Code (junction skript). Klientský report prací zaveden v repozitáři (`reports/report.md`) a commitnut na GitHub.  
+**Proč:** Klient pracuje střídavě z různých AI nástrojů — duplicitní údržba příkazů v `.cursor/` a `.claude/` by vedla k rozpory. Sjednocený zdroj zajišťuje konzistentní `/report` a `/status` odkudkoliv, report prací slouží jako průběžná evidence pro klienta.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** přibližně 1,5 hodiny  
-**Počet výměn s AI:** ~20 kol konverzace  
-*Poznámka: čas odhadován ze součtu mezer mezi git commity (09:58–11:17, 5 commitů). Skutečná doba může být vyšší.*
+**Odhadovaná doba práce:** přibližně 2,5 hodiny  
+**Rozložení:** 30. 5. dopoledne ~1,5 hod (UX sprint 4, commity 09:58–11:35) + 30. 5. odpoledne ~1 hod (homepage loga, AI workflow, commit)  
+**Počet výměn s AI:** ~30 kol konverzace  
+*Poznámka: čas odhadován součtem mezer mezi git commity kratšími než 2 hodiny; delší mezery se jako přestávky nezapočítávají. Commity jsou nástrojově neutrální — fungují z Cursoru i VS Code + Claude Code.*
 
 ### Technická poznámka
-Upraveno 8 komponent a stránek (`ServicePage`, `FaqPageContent`, `EquipmentAccordion`, `ReferenceExampleCard`, `reference/page.tsx`, `globals.css`, `navigation.ts`, `faq.ts`) a přidána nová datová vrstva pro zákaznická loga (`src/lib/client-logos.ts`) s 19 soubory log v `public/loga-referenci/`. Nasazeno na `web-naturchem.vercel.app`.
+UX: upraveno 8+ komponent a stránek (`ServicePage`, `FaqPageContent`, `EquipmentAccordion`, `ReferenceExampleCard`, `reference/page.tsx`, `page.tsx`, `globals.css`, `navigation.ts`, `faq.ts`), datová vrstva `src/lib/client-logos.ts`, 19 log v `public/loga-referenci/`. Workflow: `.agents/commands/`, `scripts/setup-ai-commands.ps1`, `reports/report.md`. Nasazeno na `web-naturchem.vercel.app`.
 
 ---
 

@@ -15,7 +15,7 @@ export default function Page() {
       slug="sluzby/eia-posudky-poradenstvi"
       faqCategoryId="eia"
       title="EIA, posudky, provozní řády a IPPC"
-      intro="Povolovací agenda kolem zdroje zahrnuje EIA, posudek, měření, provozní řád a ISPOP. Zajišťujeme koordinaci kroků a podkladů tak, aby data pro krajský úřad byla technicky konzistentní."
+      intro="Povolovací agenda kolem zdroje zahrnuje EIA, posudek, měření, provozní řád a ISPOP. Zkoordinujeme kroky a podklady tak, aby data pro krajský úřad byla konzistentní."
       scope={[
         "EIA — oznámení, zjišťovací řízení, technické přílohy",
         "odborné posudky a povolení provozu zdroje",

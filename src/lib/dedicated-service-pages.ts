@@ -25,7 +25,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Hlukové studie pro technologie, areály, dopravu, VZT, tepelná čerpadla a stavební záměry. Podklady pro KHS, stavební řízení a EIA.",
     intro:
-      "Hluková studie slouží k posouzení hlukové zátěže záměrů, technologií, dopravy a areálů ještě před realizací. Výpočet zpracováváme pro KHS, stavební řízení, EIA a variantní posouzení umístění zdrojů. Rozsah stanovujeme podle provozního režimu, typu zdroje a chráněných prostor v okolí.",
+      "Hluková studie posuzuje zátěž záměru, technologií a dopravy pro KHS, stavební řízení a EIA. Zpracujeme výpočet včetně variantního posouzení umístění zdrojů.",
     contactService: "Hlukové studie",
     faqCategoryId: "hluk",
     scope: [
@@ -81,7 +81,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Odborné posudky podle zákona o ochraně ovzduší pro zdroje, technologie, změny provozu a povolovací řízení.",
     intro:
-      "Odborné posudky podle zákona o ochraně ovzduší jako technický podklad pro správní orgány — v návaznosti na povolení provozu, měření emisí a skutečný provozní stav.",
+      "Odborné posudky podle zákona o ochraně ovzduší jako technický podklad pro správní orgány. V návaznosti na povolení provozu, měření emisí a skutečný provozní stav.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
@@ -137,7 +137,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Příprava a aktualizace provozních řádů stacionárních zdrojů znečišťování ovzduší pro provozovatele a krajské úřady.",
     intro:
-      "Provozní řád musí odpovídat skutečnému provoznímu režimu zdroje. Zpracováváme nový provozní řád nebo revizi stávajícího po změně filtrace, paliva, výkonu nebo po zjištění nesouladu při kontrole úřadu.",
+      "Provozní řád musí odpovídat skutečnému režimu zdroje po změně filtrace, paliva nebo výkonu. Zpracujeme nový řád nebo revizi po zjištění nesouladu při kontrole.",
     contactService: "Provozní řády",
     faqCategoryId: "eia",
     scope: [
@@ -193,7 +193,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Podklady pro integrovaná povolení, změny IPPC a odbornou koordinaci měření, studií a provozní dokumentace.",
     intro:
-      "U zařízení v režimu IPPC nestačí poslat úřadu jen jeden protokol z měření. Sjednotíme měření, studie, provozní data a popis změny tak, aby v řízení o integrovaném povolení — nebo jeho změně — bylo jasné, co se mění a co zůstává.",
+      "U zařízení v režimu IPPC nestačí samostatný protokol z měření. Sjednotíme měření, studie a provozní data pro řízení o integrovaném povolení nebo jeho změně.",
     contactService: "IPPC a integrovaná povolení",
     faqCategoryId: "eia",
     scope: [
@@ -305,7 +305,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "ISPOP, souhrnná provozní evidence a roční hlášení pro provozovatele zdrojů v návaznosti na měření emisí a povolení provozu.",
     intro:
-      "Souhrnná provozní evidence v ISPOP musí odpovídat skutečnému provozu a výsledkům měření. Kontrolujeme údaje o palivu, výkonu a emisích, porovnáváme je s povolením provozu a doplníme podklady pro kontrolu úřadu.",
+      "Souhrnná evidence v ISPOP musí odpovídat skutečnému provozu a výsledkům měření. Zkontrolujeme údaje o palivu, výkonu a emisích a doplníme podklady pro kontrolu úřadu.",
     contactService: "ISPOP",
     faqCategoryId: "ispop",
     scope: [
@@ -361,7 +361,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "GHG, ověřování emisí skleníkových plynů, kontrola emisních údajů a podklady pro reporting provozovatelů.",
     intro:
-      "Ověřování emisí skleníkových plynů posuzuje správnost metodiky, vstupních dat a dokumentace. Ověřujeme návaznost výpočtu na spotřeby, měření a provozní bilanci před reportingem, auditem nebo požadavkem investora.",
+      "Ověřování emisí skleníkových plynů posuzuje správnost metodiky, vstupních dat a dokumentace. Ověřujeme návaznost výpočtu na spotřeby, měření a provozní bilanci.",
     contactService: "GHG",
     faqCategoryId: "ispop",
     scope: [
@@ -417,7 +417,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Kontrola bezpečnostních listů, označování chemických látek a směsí, štítků, interních nádob a návaznosti na BOZP.",
     intro:
-      "Bezpečnostní listy musí být dostupné zaměstnancům u konkrétní látky a odpovídat skladování i manipulaci. Kontrolujeme úplnost dokumentace, označení a skladových míst a navrhujeme úpravy v provozu.",
+      "Bezpečnostní listy musí odpovídat skladování a manipulaci s látkami v provozu. Zkontrolujeme dokumentaci, označení a navrhneme úpravy tam, kde chybí.",
     contactService: "Bezpečnostní listy",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -473,7 +473,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Praktická podpora pro nakládání s chemickými látkami v provozu, skladování, značení, pravidla pro zaměstnance a návaznost na BOZP.",
     intro:
-      "Chemické látky v provozu posuzujeme v místě skladování, přelévání a použití. Zpracováváme pravidla pro vedoucí směn a BOZP na základě skutečné manipulace se látkami, nejen evidenčních tabulek.",
+      "Chemické látky posuzujeme v místě skladování, přelévání a použití. Zpracujeme pravidla pro vedoucí směn na základě skutečné manipulace, ne jen evidenčních tabulek.",
     contactService: "Chemické látky v provozu",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -529,7 +529,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Akreditované měření vibrací na pracovištích pro kategorizaci prací, BOZP a požadavky KHS. Ruční nářadí, stroje, dopravní technika.",
     intro:
-      "Měření vibrací posuzuje expozici podle používaného nářadí, operací a délky práce na stanovišti. Měříme ruční vibrace i vibrace přenášené na celé tělo; výstup slouží pro kategorizaci prací a KHS.",
+      "Měření vibrací posuzuje expozici podle nářadí, operací a délky práce na stanovišti. Výstup slouží pro KHS a kategorizaci prací.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -585,7 +585,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Měření osvětlení na pracovištích pro KHS, kategorizaci prací a BOZP. Umělé i denní osvětlení, kanceláře i výrobní haly.",
     intro:
-      "Měříme umělé i denní osvětlení na pracovních místech podle charakteru práce a zrakové náročnosti. Výstup slouží pro KHS, kategorizaci prací, BOZP a kolaudaci.",
+      "Měříme umělé i denní osvětlení na pracovištích podle zrakové náročnosti práce. Výstup slouží pro KHS, kategorizaci prací, BOZP a kolaudaci.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -641,7 +641,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Měření mikroklimatických podmínek na pracovištích: teplota, vlhkost, proudění vzduchu. Podklady pro KHS a kategorizaci prací.",
     intro:
-      "Měření mikroklimatu posuzuje teplotu, vlhkost a proudění vzduchu v návaznosti na fyzickou zátěž práce. Měříme v reálném provozu u pecí, sušáren a horkých operací; výstup slouží pro KHS, kategorizaci prací nebo návrh větrání.",
+      "Měření mikroklimatu posuzuje teplotu, vlhkost a proudění vzduchu u horkých operací. Měříme v reálném provozu; výstup slouží pro KHS a kategorizaci prací.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -697,7 +697,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Akustické posudky a odborná vyjádření k hluku technologií, strojoven a stavebních úprav s technologickým provozem. Podklady pro stavební řízení a KHS.",
     intro:
-      "Akustický posudek posuzuje hluk technologií v budově — strojovny VZT, kotelny a výrobní provozy. Výstup se liší od hlukové studie záměru vůči okolí a obvykle slouží pro stavební řízení nebo KHS při kolaudaci.",
+      "Akustický posudek posuzuje hluk technologií uvnitř budovy — strojovny, kotelny a výrobní provozy. Slouží pro stavební řízení nebo KHS, na rozdíl od hlukové studie záměru vůči okolí.",
     contactService: "Měření hluku a akustika",
     faqCategoryId: "hluk",
     scope: [
@@ -753,7 +753,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Modelové výpočty imisí a hluku pro záměry, změny provozu a varianty technologií. Podklady pro rozptylové a hlukové studie.",
     intro:
-      "Modelové výpočty imisí nebo hluku slouží k rychlému posouzení variant umístění komína, strojovny nebo dopravy. Výsledek lze zapracovat do rozptylové či hlukové studie nebo dokumentace EIA.",
+      "Modelové výpočty slouží k rychlému posouzení variant umístění komína, strojovny nebo dopravy. Výsledek lze zapracovat do rozptylové studie nebo dokumentace EIA.",
     contactService: "Rozptylové studie",
     faqCategoryId: "rozptyl",
     scope: [
@@ -809,7 +809,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Propojené posouzení imisí a hluku pro investiční záměry, změny provozu a EIA. Rozptyl, hluk a varianty v jednom postupu.",
     intro:
-      "Imisní a hlukové dopady záměru zpracováváme ve stejných vstupních datech, aby provozní režim a technické parametry byly v dokumentaci konzistentní. Snižuje to riziko připomínek správního orgánu v procesu EIA.",
+      "Imisní a hlukové dopady záměru zpracováváme ve stejných vstupních datech. Provozní režim a technické parametry tak zůstanou v dokumentaci EIA konzistentní.",
     contactService: "Rozptylové studie",
     faqCategoryId: "rozptyl",
     scope: [
@@ -865,7 +865,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Podklady pro vydání nebo změnu povolení provozu stacionárního zdroje. Měření, posudky, provozní řády a komunikace s úřadem.",
     intro:
-      "Povolení provozu zdroje často vyžaduje měření, odborný posudek nebo provozní řád v konkrétním rozsahu. Navrhneme požadované podklady podle typu technologie a požadavků krajského úřadu.",
+      "Povolení provozu zdroje často vyžaduje měření, odborný posudek nebo provozní řád v konkrétním rozsahu. Navrhneme podklady podle typu technologie a požadavků krajského úřadu.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
@@ -921,7 +921,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Odborné podklady pro zjišťovací řízení EIA. Technické vstupy, koordinace měření a studií pro investora a zpracovatele.",
     intro:
-      "Ve zjišťovacím řízení EIA je nutné dodat technické vstupy včas. Zajišťujeme měření, rozptyl a hluk ve formě použitelné pro zpracovatele EIA včetně sladění se stávajícím provozem areálu.",
+      "Ve zjišťovacím řízení EIA je nutné dodat technické vstupy včas. Zajistíme měření, rozptyl a hluk ve formě použitelné pro zpracovatele EIA.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
@@ -977,7 +977,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Technické přílohy pro investory a projektanty: rozptyl, hluk, emise, doprava a návaznost na povolování a EIA.",
     intro:
-      "Technické přílohy pro investory posuzují varianty záměru z hlediska imisí, hluku, emisí a dopravy ještě před finálním projektem. Výstupy slouží k rozhodnutí o umístění komína, strojovny nebo vstupní rampy.",
+      "Technické přílohy posuzují varianty záměru z hlediska imisí, hluku a dopravy ještě před finálním projektem. Výstupy slouží k rozhodnutí o umístění komína nebo strojovny.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [

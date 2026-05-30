@@ -15,7 +15,7 @@ export default function Page() {
       slug="sluzby/mereni-hluku"
       faqCategoryId="hluk"
       title="Měření hluku a akustika"
-      intro="Terénní měření hluku a akustické výpočty pro kolaudaci, EIA, požadavky KHS a řešení stížností. Rozsah stanovujeme podle zdrojů, provozního režimu a chráněných prostor v okolí."
+      intro="Terénní měření hluku a akustické výpočty pro kolaudaci, EIA, požadavky KHS a řešení stížností. Rozsah stanovujeme podle zdrojů a chráněných prostor v okolí."
       scope={[
         "terénní měření LAeq a LAFmax u běžícího provozu",
         "hluk z dopravy a technologií v areálu",

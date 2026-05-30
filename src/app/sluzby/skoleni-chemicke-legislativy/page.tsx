@@ -87,9 +87,8 @@ export default function Page() {
           <p className="eyebrow">Školení a odborná podpora</p>
           <h1>Školení chemického zákona a chemické legislativy</h1>
           <p className="page-lead">
-            Praktické školení pro firmy nakládající s chemickými látkami a směsmi. Zaměstnanci i
-            odpovědné osoby získají přehled o povinnostech, bezpečnostních listech a provozních
-            pravidlech.
+            Praktické školení chemického zákona pro provozy nakládající s látkami a směsmi. Projdeme
+            povinnosti, bezpečnostní listy a pravidla pro skladování i manipulaci.
           </p>
           <div className="btn-row">
             <Link href={contactUrl("Školení chemického zákona / chemické legislativy")} className="button">

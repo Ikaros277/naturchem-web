@@ -15,7 +15,7 @@ export default function Page() {
       slug="sluzby/mereni-emisi"
       faqCategoryId="emise"
       title="Měření emisí ze stacionárních zdrojů"
-      intro="Akreditované měření emisí z komínů, výduchů a technologií. Ověřujeme vhodnost měřicího místa, reprezentativnost provozního režimu a návaznost protokolu na povolení provozu, požadavky ČIŽP, krajského úřadu a evidenci v ISPOP."
+      intro="Akreditované měření emisí z komínů, výduchů a technologií. Protokol navazujeme na povolení provozu, požadavky ČIŽP, krajského úřadu a evidenci ISPOP."
       scope={[
         "měření NOx, CO, SO₂, O₂, TOC/VOC, TZL, HCl, kovů a dalších složek dle povolení provozu a zadání",
         "posouzení měřicího místa, výduchu a souladu s provozním řádem",

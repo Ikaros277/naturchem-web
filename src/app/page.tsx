@@ -92,8 +92,8 @@ export default async function Home() {
             <p className="eyebrow">Akreditovaná měření · odborné studie · dokumentace pro úřady</p>
             <h1>Měření, studie a dokumentace pro provozy, investory a úřady</h1>
             <p className="hero-lead">
-              Propojujeme terénní měření, studie a dokumentaci do jednoho obhajitelného výstupu
-              pro průmysl, investory a projektanty.
+              Měření emisí, hlukové studie a podklady pro EIA v jednom procesu — pro průmyslové
+              provozy, investory a projektanty.
             </p>
             <div className="hero-actions">
               <Link href={contactUrl("Měření emisí")} className="button">

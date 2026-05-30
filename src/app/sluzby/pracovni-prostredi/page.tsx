@@ -15,7 +15,7 @@ export default function Page() {
       slug="sluzby/pracovni-prostredi"
       faqCategoryId="pracovni-prostredi"
       title="Měření pracovního prostředí"
-      intro="Měříme hluk, prach, chemické látky, mikroklima, osvětlení a vibrace přímo v pracovních operacích. Výstupy slouží pro KHS, kategorizaci prací, BOZP a ověření účinnosti technických opatření."
+      intro="Posouzení pracovního prostředí zahrnuje hluk, prach, mikroklima, osvětlení a vibrace přímo v provozu. Výstupy slouží pro KHS, kategorizaci prací a BOZP."
       scope={[
         "hluk, prašnost, chemické látky v pracovním ovzduší, vibrace, mikroklima a osvětlení",
         "měření expozice podle operací, směnnosti a skutečné pracovní zátěže",

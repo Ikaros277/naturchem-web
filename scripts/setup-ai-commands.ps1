@@ -42,3 +42,8 @@ Write-Host "Hotovo. Upravuj prikazy jen v .agents/commands/"
 Write-Host ""
 Write-Host "Poznamka: Cursor hooky pro logovani casu jsou v .cursor/hooks.json"
 Write-Host "         (nepotrebuji junction — nacitaji se automaticky po restartu Cursoru)."
+Write-Host ""
+$installHooks = Join-Path $root "scripts\install-git-hooks.ps1"
+if (Test-Path $installHooks) {
+    & $installHooks
+}

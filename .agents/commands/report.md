@@ -30,7 +30,7 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
    - Proč se to dělalo (záměr, kontext, zadání)
    - Kolik kol výměny (user → asistent) proběhlo v **této** konverzaci (v režimu git může být 1–2)
 
-6. **Pokud není co reportovat** (žádné nové commity od posledního sezení a žádná implementace v konverzaci): neupravuj report, informuj uživatele, že vše je aktuální.
+6. **Pokud není co reportovat** (žádné nové commity od posledního sezení — ověř i `lastProcessedCommit` v `.agents/report-state.json` — a žádná implementace v konverzaci): neupravuj report, informuj uživatele, že vše je aktuální.
 
 7. **Odhadni časovou náročnost** spuštěním skriptu (primární zdroj — deterministický výpočet):
    ```
@@ -62,8 +62,8 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 
 11. Ulož zpět do `reports/report.md`.
 
-12. **Automatický commit a push** (pouze pokud byl report skutečně změněn v kroku 11):
-    - `git add reports/report.md .agents/session-activity.jsonl`
+12. **Automatický commit a push** (pouze pokud byl report skutečně změněn v kroku 11 a **neproběhla** automatická synchronizace z post-commit hooku — viz níže):
+    - `git add reports/report.md .agents/report-state.json .agents/session-activity.jsonl`
     - Commit se zprávou: `Report: aktualizace sezení [DD. M. YYYY]` — přidej stručný doplněk z přehledu sezení, pokud je výstižný (max. ~60 znaků v prvním řádku).
     - `git push` na aktuální větev (typicky `main`).
     - Pokud push selže kvůli zaostávající větvi: `git pull --rebase`, pak znovu `git push`.
@@ -115,6 +115,16 @@ Vytvoř nebo aktualizuj klientský report prací v souboru `reports/report.md`.
 
 [Starší sezení zůstávají níže beze změny]
 ```
+
+**Automatický režim (post-commit hook):**
+
+Po instalaci (`pwsh scripts/install-git-hooks.ps1`, součást `setup-ai-commands.ps1`) běží po každém **produktovém** commitu skript `scripts/update-report-from-git.ps1`:
+
+- Doplní `reports/report.md` a `.agents/report-state.json` (čas, commit message, dotčené soubory).
+- Commit `Report: auto-sync [datum, čas] — …` a push na `origin` (vypnutí: `autoSyncOnCommit` / `autoPush` v `.agents/report-config.json`).
+- **Přeskočí:** commity s prefixem `Report:`, pouze změny reportu/activity logu, už zpracovaný commit (`lastProcessedCommit`), běh uvnitř `REPORT_HOOK_RUNNING`.
+
+**Kdy volat `/report` navíc:** větší sezení s kvalitním „Proč“ pro klienta, sloučení více commitů do jednoho přehledu, oprava auto-záznamu. Před zápisem zkontroluj `lastProcessedCommit` v `report-state.json` — neopakuj stejný commit. Auto-blok lze **přepsat** bohatším textem v nejnovějším sezení.
 
 **Pravidla pro obsah:**
 - Nadpis sezení = datum + **skutečný časový rozsah práce** (z git / skriptu), ne část dne slovy.

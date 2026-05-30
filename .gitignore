@@ -25,3 +25,4 @@ pnpm-debug.log*
 .cursor/commands
 naturchem-projekt/
 Podklady/
+.agents/report-hook.log

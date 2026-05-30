@@ -1,4 +1,4 @@
-# Report prací — naturchem.cz
+﻿# Report prací — naturchem.cz
 
 ## Přehled projektu
 | Položka | Hodnota |
@@ -6,12 +6,12 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 4 |
-| Celkový odhadovaný čas | ~7,5 hodiny |
+| Celkový odhadovaný čas | ~7,6 hodiny |
 | Aktuální fáze | P1 ServicePage + homepage dokončeno, akreditace zredukována |
 
 ---
 
-## Sezení: 30. 5. 2026, 13:20–13:53
+## Sezení: 30. 5. 2026, 13:20–14:13
 
 ### Přehled
 Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky. Změny commitnuty a pushnuty na GitHub (`f260dca`).
@@ -19,6 +19,9 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
+#### Univerzální PageCtaStrip a oprava fixed hlavičky při scrollu
+**Co bylo uděláno:** Univerzální PageCtaStrip a oprava fixed hlavičky při scrollu. (commit `ec19e3d`). Dotčené oblasti: akreditace-autorizace-dokumenty, app, components, faq, lib, o-spolecnosti-naturchem, page.tsx, poradna, pristrojove-vybaveni, provozy-a-technologie, reference, sluzby, typicke-zakazky.  
+**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
 
 #### P1 — ověření a úklid ServicePage + homepage
 **Co bylo uděláno:** Potvrzeno, že šablona služeb už má jednu sekci „Mohlo by Vás zajímat“ (max 3 karty) a accordion jen s Příklady a Chybami. Odstraněna mrtvá data `forWhom` / `authorities` z 18 definic služeb a 5 ručně psaných stránek, smazán soubor `home-audience.ts`, odstraněny nepoužívané CSS pro timeline procesu na homepage.  
@@ -33,9 +36,9 @@ Navázání na status briefing — ověření hotových P1 úkolů (ServicePage,
 **Proč:** Sdílení hotového stavu pro klienta a produkční preview.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~33 min  
-**Rozložení:** 30. 5. 13:20–13:53 (~33 min)  
-**Metoda odhadu:** git + konverzace  
+**Odhadovaná doba práce:** ~53 min
+**Rozložení:** 30. 5. 2026, 13:20–14:13 (~53 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** ~18 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Odpolední blok zahrnuje i dokončení workflow reportu před implementací P1.*
 

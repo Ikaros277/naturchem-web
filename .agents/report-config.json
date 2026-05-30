@@ -1,5 +1,8 @@
 {
   "pauseThresholdMinutes": 30,
   "minBlockMinutes": 5,
-  "fallbackExchangeMinutes": 3
+  "fallbackExchangeMinutes": 3,
+  "autoSyncOnCommit": true,
+  "autoPush": true,
+  "skipCommitMessagePrefixes": ["Report:"]
 }

@@ -38,6 +38,12 @@ $scriptBody = Get-Content scripts/update-report-from-git.ps1 -Raw
 Assert-True ($scriptBody -match "REPORT_HOOK_TEST_PUSH_FAIL") "push fail test hook"
 Assert-True ($scriptBody -match "push failed after rebase") "push fail logging"
 Assert-True ($scriptBody -match "REPORT_HOOK_RUNNING") "loop guard env"
+Assert-True ($scriptBody -match "report-auto-why.ps1") "auto-why integration"
+
+. (Join-Path $root "scripts\report-auto-why.ps1")
+$why = Get-AutoCommitWhy -Subject "Opravit zarovnani hero textu" -Body "" -Areas "app"
+Assert-True ($why -notmatch '/report') "why not placeholder"
+Assert-True ($why -match 'hero|zarovn') "why hero heuristic"
 
 Pop-Location
 if ($fail -gt 0) { exit 1 }

@@ -124,6 +124,7 @@ Po instalaci (`pwsh scripts/install-git-hooks.ps1`, součást `setup-ai-commands
 
 - Doplní `reports/report.md` a `.agents/report-state.json` (čas, commit message, dotčené soubory).
 - Používá **stejný padding** času jako `/report` (+5 min před / +5 min po sezení z `report-config.json`).
+- **Proč** a **Co bylo uděláno** doplní automaticky ze zprávy commitu, těla commitu a typu změny (`scripts/report-auto-why.ps1`) — ne generický text o `/report`. U starších zápisů: `powershell -File scripts/repair-report-auto-why.ps1`.
 - Commit `Report: auto-sync [datum, čas] — …` a push na `origin` (vypnutí: `autoSyncOnCommit` / `autoPush` v `.agents/report-config.json`).
 - **Přeskočí:** commity s prefixem `Report:`, pouze změny reportu/activity logu, už zpracovaný commit (`lastProcessedCommit`), běh uvnitř `REPORT_HOOK_RUNNING`.
 

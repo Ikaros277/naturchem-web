@@ -57,76 +57,49 @@ Večerní implementační sprint navázal na vizuální úpravy hero sekcí (Spr
 ## Sezení: 30. 5. 2026, 13:15–15:21
 
 ### Přehled
-Navázání na status briefing — ověření hotových P1 úkolů (ServicePage, homepage), technický úklid nepoužívaných dat a CSS, redukce stránky akreditace ze 7 na 4 obsahové bloky. Změny commitnuty a pushnuty na GitHub (`f260dca`).
+Odpolední implementační sprint navázal na status briefing a dokončil zbývající úkoly z oblastí P1–P3. Proveden technický úklid šablony služeb, zkrácena stránka akreditace, sjednoceny konverzní pásy a opravena hlavička při scrollu. Následovala rozsáhlá oprava log zákazníků na homepage a stránce Reference a dokončení Sprintů 6–8 (vizuální scanovatelnost P5). Zavedena automatická synchronizace klientského reportu po produktových commitech.
 
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
-#### P┼Öidat vizu├íln├ş scanovatelnost (P5): hero fotky, ikony, timeline a...
-**Co bylo uděláno:** P┼Öidat vizu├íln├ş scanovatelnost (P5): hero fotky, ikony, timeline a OG ┼íablony. (commit `af84c90`). Dotčené oblasti: app, components, kontakt, lib, o-spolecnosti-naturchem, report, sluzby, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Opravit logo Tepl├írny ─îB ÔÇö obnovit chyb─Ťj├şc├ş n├ípis firmy.
-**Co bylo uděláno:** Opravit logo Tepl├írny ─îB ÔÇö obnovit chyb─Ťj├şc├ş n├ípis firmy. (commit `5a26e52`). Dotčené oblasti: build-wordmark-logos.mjs, process-logos.mjs, report, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Opravit build a doplnit horizont├íln├ş wordmarky u log z├íkazn├şk┼».
-**Co bylo uděláno:** Opravit build a doplnit horizont├íln├ş wordmarky u log z├íkazn├şk┼». (commit `9d6aa32`). Dotčené oblasti: build-wordmark-logos.mjs, components, lib, report, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Tepl├írna ─îB: ┼íir┼í├ş slot v gridu kv┼»li horizont├íln├şmu wordmarku.
-**Co bylo uděláno:** Tepl├írna ─îB: ┼íir┼í├ş slot v gridu kv┼»li horizont├íln├şmu wordmarku. (commit `0acf53b`). Dotčené oblasti: app, lib, reference, report, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Uspo┼Ö├ídat loga z├íkazn├şk┼» do dvou ┼Ö├ídk┼» a opravit Tepl├írnu ─îB.
-**Co bylo uděláno:** Uspo┼Ö├ídat loga z├íkazn├şk┼» do dvou ┼Ö├ídk┼» a opravit Tepl├írnu ─îB. (commit `29d3d50`). Dotčené oblasti: app.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### P3-1 a P3-2: popisny styl intro textu na service pages a homepage.
-**Co bylo uděláno:** P3-1 a P3-2: popisny styl intro textu na service pages a homepage. (commit `78876a3`). Dotčené oblasti: app, lib, page.tsx, sluzby.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Opravit neviditeln├í loga: inline SVG fill a tepl├írny pro sv─Ťtl├ę p...
-**Co bylo uděláno:** Opravit neviditeln├í loga: inline SVG fill a tepl├írny pro sv─Ťtl├ę pozad├ş. (commit `da2293d`). Dotčené oblasti: app, cez.svg, process-logos.mjs, swietelsky.svg.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Opravit viditelnost log ─îEZ a tepl├íren v gridu z├íkazn├şk┼».
-**Co bylo uděláno:** Opravit viditelnost log ─îEZ a tepl├íren v gridu z├íkazn├şk┼». (commit `52c2c66`). Dotčené oblasti: cez.svg, process-logos.mjs, swietelsky.svg.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Nahradit loga referenc├ş SVG a PNG s pr┼»hledn├Żm pozad├şm.
-**Co bylo uděláno:** Nahradit loga referenc├ş SVG a PNG s pr┼»hledn├Żm pozad├şm. (commit `3d8e14e`). Dotčené oblasti: cd.svg, cez.svg, dura.svg, eon.svg, lib, process-logos.mjs, skoda.svg, strabag.svg, swietelsky.svg.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Automatická synchronizace reportu po produktovém commitu
-**Co bylo uděláno:** Automatická synchronizace reportu po produktovém commitu — post-commit hook, skripty a šablony. (commit `0665436`). Dotčené oblasti: .gitignore, install-git-hooks.ps1, report, setup-ai-commands.ps1, test-report-hook.ps1, update-report-from-git.ps1, workflow.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
-
-#### Univerzální PageCtaStrip a oprava fixed hlavičky při scrollu
-**Co bylo uděláno:** Univerzální PageCtaStrip a oprava fixed hlavičky při scrollu. (commit `ec19e3d`). Dotčené oblasti: akreditace-autorizace-dokumenty, app, components, faq, lib, o-spolecnosti-naturchem, page.tsx, poradna, pristrojove-vybaveni, provozy-a-technologie, reference, sluzby, typicke-zakazky.  
-**Proč:** Záznam doplněn automaticky po commitu; podrobný kontext lze doplnit příkazem /report.
 
 #### P1 — ověření a úklid ServicePage + homepage
 **Co bylo uděláno:** Potvrzeno, že šablona služeb už má jednu sekci „Mohlo by Vás zajímat“ (max 3 karty) a accordion jen s Příklady a Chybami. Odstraněna mrtvá data `forWhom` / `authorities` z 18 definic služeb a 5 ručně psaných stránek, smazán soubor `home-audience.ts`, odstraněny nepoužívané CSS pro timeline procesu na homepage.  
-**Proč:** Úkoly P1 byly hotové od sprintu 1, ale data a roadmapa neodpovídaly skutečnému stavu — úklid zjednodušuje údržbu a předchází zmatku při dalších úpravách.
+**Proč:** Úkoly P1 byly hotové od dřívějších sprintů, ale data a roadmapa neodpovídaly skutečnému stavu — úklid zjednodušuje údržbu a předchází zmatku při dalších úpravách.
 
 #### Akreditace — redukce struktury (P2-5)
 **Co bylo uděláno:** Na stránce `/akreditace-autorizace-dokumenty` sloučena sekce přístrojového vybavení do bloku akreditovaného rozsahu (odstavec + odkaz na vybavení). Autorizace a dokumenty ke stažení jsou v jedné sekci „Autorizace, oprávnění a dokumenty“.  
 **Proč:** Stránka měla příliš mnoho samostatných sekcí se stejným účelem (důvěryhodnost) — kratší struktura zrychluje orientaci a posiluje závěrečné CTA.
 
-#### Odeslání do repozitáře
-**Co bylo uděláno:** Všechny změny zabaleny do commitu `f260dca` a odeslány na větev `main` (GitHub). Vercel nasadí aktualizaci automaticky.  
-**Proč:** Sdílení hotového stavu pro klienta a produkční preview.
+#### Univerzální PageCtaStrip a fixed hlavička (P3-6, P4-6)
+**Co bylo uděláno:** Nová komponenta `PageCtaStrip` sjednotila konverzní pásy na informačních stránkách (O společnosti, FAQ, poradna, reference, akreditace, typické zakázky a další). Hlavička přešla z nefunkčního `sticky` na `position: fixed` — původní chování rozbíjelo `overflow-x` na `body`.  
+**Proč:** Chyběla konzistentní výzva k akci na stránkách bez poptávkového panelu; hlavička přestávala držet nahoře při scrollu.
+
+#### Copy intro texty (P3-1, P3-2)
+**Co bylo uděláno:** Úvodní texty na homepage a stránkách služeb přepsány do popisného stylu — konkrétnější formulace místo obecných frází, sjednocený tón napříč 24 službami.  
+**Proč:** Splnění copy úkolů z roadmapy; návštěvník rychleji pochopí, co firma dělá a pro koho.
+
+#### Loga referencí — konzistentní grid zákazníků
+**Co bylo uděláno:** Rasterová loga s bílým nebo černým pozadím nahrazena SVG/PNG s průhledností. Opravena neviditelná loga (ČEZ, Swietelsky, teplárny) — CSS třídy a text v inline SVG se v `<img>` tagu nevykreslují, proto přepsány na `path` s `fill` atributy nebo oficiální wordmarky. Grid na homepage a `/reference` uspořádán do dvou řádků (10 sloupců na desktopu). Horizontálním logům (Teplárna ČB, Swietelsky, Teplárny Písek a Strakonice) přidán širší slot ve gridu a varianty s názvem firmy.  
+**Proč:** Loga na světlém pozadí webu mizela nebo byla nečitelná; různé poměry stran rozbíjely vizuální řád gridu.
+
+#### Sprint 6–8 — vizuální scanovatelnost (P5)
+**Co bylo uděláno:** Stock hero fotky podle kategorií služeb, stats band s firemními čísly, globální vizuální rytmus sekcí (střídání bílého a muted pozadí), ikony u accordion karet a sjednocené velikosti ikon, timeline pracovního procesu, OG image šablony pro sdílení a iniciály místo fotek v týmové sekci.  
+**Proč:** Web působil jako „wall of text“ bez vizuálních přestávek — P5 z auditu grafiky a UX roadmapy; řešení bez reálných fotografií od klienta (placeholder stock + ikony + layout).
+
+#### Workflow — automatická synchronizace reportu
+**Co bylo uděláno:** Post-commit hook po každém produktovém commitu doplní report ze gitu, uloží stav do `report-state.json` a volitelně pushne commit `Report: auto-sync`. Součást instalace přes `setup-ai-commands.ps1`.  
+**Proč:** Klientský report nemusí být ručně doplňován po každé práci z Cursoru nebo Claude Code.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~2 hod 6 min
-**Rozložení:** 30. 5. 2026 13:15–15:21 (~2 hod 6 min)
-**Metoda odhadu:** git
+**Odhadovaná doba práce:** ~2 hod 6 min  
+**Rozložení:** 30. 5. 2026 13:15–15:21 (~2 hod 6 min)  
+**Metoda odhadu:** git  
 **Počet výměn s AI:** ~18 kol konverzace  
-*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Odpolední blok zahrnuje i dokončení workflow reportu před implementací P1.*
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-`ServicePage.tsx`, `dedicated-service-pages.ts`, 5× `sluzby/*/page.tsx`, `akreditace-autorizace-dokumenty/page.tsx`, `globals.css`, `service-copy.ts`; smazáno `home-audience.ts`, `service-defaults.ts`. Build `npm run build` prošel bez chyb. Commit `f260dca` na `origin/main`.
+`ServicePage.tsx`, `PageCtaStrip.tsx`, `client-logos.ts`, `HeroPhoto.tsx`, `WorkProcessTimeline.tsx`, `globals.css`, `akreditace-autorizace-dokumenty/page.tsx`; skripty `process-logos.mjs`, `update-report-from-git.ps1`. Commity `f260dca` (P1 + akreditace), `ec19e3d` (CTA + hlavička), `78876a3` (intro texty), `af84c90` (P5 Sprint 6–8). Build prošel bez chyb.
 
 ---
 

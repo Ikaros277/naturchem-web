@@ -138,6 +138,8 @@ if ($env:REPORT_HOOK_RUNNING -eq "1") {
     Exit-Quiet "REPORT_HOOK_RUNNING"
 }
 
+. (Join-Path $root "scripts\report-auto-why.ps1")
+
 Push-Location $root
 try {
     $headHash = (git rev-parse HEAD 2>$null).Trim()
@@ -145,6 +147,7 @@ try {
 
     $subject = (git -c i18n.logOutputEncoding=utf-8 log -1 --encoding=UTF-8 --format="%s" $headHash 2>$null).Trim()
     if (-not $subject) { $subject = (git log -1 --format="%s" $headHash).Trim() }
+    $commitBody = (git -c i18n.logOutputEncoding=utf-8 log -1 --encoding=UTF-8 --format="%b" $headHash 2>$null).Trim()
     foreach ($prefix in $config.skipCommitMessagePrefixes) {
         if ($subject.StartsWith($prefix)) {
             Exit-Quiet "commit prefix $prefix"
@@ -208,11 +211,12 @@ try {
     $shortHash = $headHash.Substring(0, 7)
     $changeTitle = if ($subject.Length -gt 72) { $subject.Substring(0, 69) + "..." } else { $subject }
     $changeTemplate = Read-Utf8File $changeTemplatePath
+    $whyText = Get-AutoCommitWhy -Subject $subject -Body $commitBody -Areas $areasText
+    $doneText = Get-AutoCommitDone -Subject $subject -Body $commitBody -ShortHash $shortHash -Areas $areasText
     $changeBlock = Expand-Template $changeTemplate @{
-        TITLE   = $changeTitle
-        SUBJECT = $subject
-        HASH    = $shortHash
-        AREAS   = $areasText
+        TITLE = $changeTitle
+        DONE  = $doneText
+        WHY   = $whyText
     }
 
     if (-not (Test-Path $reportPath)) {

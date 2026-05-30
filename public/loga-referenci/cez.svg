@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 36" role="img" aria-label="ČEZ">
+  <rect x="0" y="2" width="32" height="32" fill="#F15A22"/>
+  <path fill="#FFFFFF" d="M9.7 30.4h20.3v-6.4H15V16h14.7v-6.4H9.7V30.4zm12.7-8.1h8.7v6.3h-8.7v-6.3z"/>
+  <text x="40" y="26" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">ČEZ</text>
+</svg>

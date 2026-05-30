@@ -5,12 +5,12 @@ export type ClientLogo = {
 };
 
 export const referenceClients: ClientLogo[] = [
-  { name: "Škoda Auto, a.s.", logo: "/loga-referenci/skoda.jpeg", website: "https://www.skoda-auto.cz" },
-  { name: "ČEZ, a.s.", logo: "/loga-referenci/cez.png", website: "https://www.cez.cz" },
-  { name: "České dráhy, a.s.", logo: "/loga-referenci/cd.png", website: "https://www.cd.cz" },
-  { name: "E.ON, a.s.", logo: "/loga-referenci/eon.jpeg", website: "https://www.eon.cz" },
-  { name: "Strabag", logo: "/loga-referenci/strabag.png", website: "https://www.strabag.cz" },
-  { name: "Swietelsky stavební", logo: "/loga-referenci/swietelsky.png", website: "https://www.swietelsky.cz" },
+  { name: "Škoda Auto, a.s.", logo: "/loga-referenci/skoda.svg", website: "https://www.skoda-auto.cz" },
+  { name: "ČEZ, a.s.", logo: "/loga-referenci/cez.svg", website: "https://www.cez.cz" },
+  { name: "České dráhy, a.s.", logo: "/loga-referenci/cd.svg", website: "https://www.cd.cz" },
+  { name: "E.ON, a.s.", logo: "/loga-referenci/eon.svg", website: "https://www.eon.cz" },
+  { name: "Strabag", logo: "/loga-referenci/strabag.svg", website: "https://www.strabag.cz" },
+  { name: "Swietelsky stavební", logo: "/loga-referenci/swietelsky.svg", website: "https://www.swietelsky.cz" },
   { name: "Letiště České Budějovice", logo: "/loga-referenci/letiste-cb.png", website: "https://www.airport-cb.cz" },
   { name: "Teplárna České Budějovice", logo: "/loga-referenci/teplarnatucb.png", website: "https://www.teplarna-cb.cz" },
   { name: "Teplárna Písek", logo: "/loga-referenci/teplarnapisek.png", website: "https://www.tpi.cz" },
@@ -23,5 +23,5 @@ export const referenceClients: ClientLogo[] = [
   { name: "HELUZ cihlářský průmysl", logo: "/loga-referenci/heluz.svg", website: "https://www.heluz.cz" },
   { name: "Ředitelství silnic a dálnic ČR", logo: "/loga-referenci/rsd.svg", website: "https://www.rsd.cz" },
   { name: "METAL TRADE COMAX", logo: "/loga-referenci/mtcomax.svg", website: "https://www.mtcomax.cz" },
-  { name: "DURA Automotive Systems CZ", logo: "/loga-referenci/dura.png", website: "https://durashiloh.com" }
+  { name: "DURA Automotive Systems CZ", logo: "/loga-referenci/dura.svg", website: "https://durashiloh.com" }
 ];

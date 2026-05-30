@@ -3360,6 +3360,36 @@ footer .muted,
   cursor: pointer;
 }
 
+.client-logos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.75rem 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.client-logo-item img {
+  max-height: 48px;
+  max-width: 130px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.65;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.client-logo-item img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.client-names-text {
+  margin-top: 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
 .reference-cta-block {
   border-top: 1px solid var(--border);
 }

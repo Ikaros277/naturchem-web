@@ -8,6 +8,7 @@ import {
   referenceExamples,
   referenceIntro
 } from "@/lib/reference-content";
+import { referenceClients } from "@/lib/client-logos";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -40,6 +41,20 @@ export default function ReferencePage() {
           <p className="page-lead">{referenceIntro}</p>
         </header>
       </div>
+
+      <section className="section content-block container" id="zakaznici">
+        <h2>Vybraní zákazníci</h2>
+        <div className="client-logos-grid">
+          {referenceClients.filter(c => c.logo).map(client => (
+            <div key={client.name} className="client-logo-item">
+              <img src={client.logo} alt={client.name} title={client.name} />
+            </div>
+          ))}
+        </div>
+        <p className="client-names-text muted">
+          {referenceClients.filter(c => !c.logo).map(c => c.name).join(" · ")}
+        </p>
+      </section>
 
       <section className="section content-block container" id="priklady">
         <h2>Příklady z praxe</h2>

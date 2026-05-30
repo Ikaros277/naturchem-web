@@ -43,7 +43,7 @@ export default function ReferencePage() {
       </div>
 
       <section className="section content-block container" id="zakaznici">
-        <h2>Vybraní zákazníci</h2>
+        <h2>Naši zákazníci</h2>
         <div className="client-logos-grid">
           {referenceClients.map(client => (
             <a

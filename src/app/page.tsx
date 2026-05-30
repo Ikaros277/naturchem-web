@@ -10,6 +10,7 @@ import { poradnaTopicIconKey, topicForArticle } from "@/lib/poradna-topic";
 import { homeHeroMetrics, homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { getLatestPoradnaArticles } from "@/lib/poradna-articles";
 import { siteUrl } from "@/lib/site";
+import { referenceClients } from "@/lib/client-logos";
 
 export const metadata: Metadata = {
   title: {
@@ -256,6 +257,25 @@ export default async function Home() {
             Poslat podklady k posouzení
           </Link>
         </article>
+      </section>
+
+      <section className="home-section container home-clients-section">
+        <p className="eyebrow">Naši zákazníci</p>
+        <div className="client-logos-grid">
+          {referenceClients.map(client => (
+            <a
+              key={client.name}
+              href={client.website}
+              className="client-logo-item"
+              target="_blank"
+              rel="noopener noreferrer"
+              title={client.name}
+              aria-label={client.name}
+            >
+              <img src={client.logo} alt={client.name} />
+            </a>
+          ))}
+        </div>
       </section>
     </main>
   );

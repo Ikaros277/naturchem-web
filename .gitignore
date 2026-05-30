@@ -23,6 +23,5 @@ pnpm-debug.log*
 # local project docs & AI tooling
 .claude/
 .cursor/commands
-naturchem-projekt/
 Podklady/
 .agents/report-hook.log

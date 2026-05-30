@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 5 |
-| Celkový odhadovaný čas | ~11 hod 24 min |
+| Celkový odhadovaný čas | ~11,6 hodiny |
 | Aktuální fáze | Copy sprint C1–C2 hotovo; další C3 (akreditace) a launch checklist |
 
-*Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem a +5 min po konci (`report-config.json`).*
+*Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 30. 5. 2026, 17:17–19:19
+## Sezení: 30. 5. 2026, 17:17–19:31
 
 ### Přehled
 Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní menu) a pokračoval copy sprintem podle tone of voice. Naplánován rozsah C1–C9, zaveden příkaz `/copy`, doplněn sprint log v copy-audit. Implementovány dávky C1 (homepage) a C2 (O společnosti, odborná garance) včetně úprav layoutu homepage po schválení klienta.
@@ -21,6 +21,10 @@ Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní men
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
+#### Zjednodu┼íit O spole─Źnosti a p┼Öesunout proces na Typick├ę zak├ízky.
+**Co bylo uděláno:** Zjednodu┼íit O spole─Źnosti a p┼Öesunout proces na Typick├ę zak├ízky. - Trust li┼íta a compact statistiky nahrazuj├ş p┼Öepln─Ťn├Ż hero; sekce Kdo jsme je v├Ż┼í na str├ínce.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `9abb16a`). Dotcene oblasti: app, lib, o-spolecnosti-naturchem, typicke-zakazky.  
+**Proč:** Trust li┼íta a compact statistiky nahrazuj├ş p┼Öepln─Ťn├Ż hero; sekce Kdo jsme je v├Ż┼í na str├ínce.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
 
 #### Sprint 11 — SEO a prolinkování poradna ↔ služby
 **Co bylo uděláno:** Proveden audit meta title/description na klíčových stránkách (dokument `05-seo/meta-audit-sprint11.md`). Přidáno obousměrné prolinkování: u každého článku poradny blok souvisejících služeb, u stránek služeb teaser souvisejících článků. Dokončena technická hygiena P4 — migrace stránky školení na šablonu ServicePage, FAQ teaser u ISPOP/GHG/chemických služeb, přesun checklistu „Nejste si jistí?" výše na indexu provozů.  
@@ -55,9 +59,9 @@ Večerní sprint navázal na Sprinty 11–12 (SEO, hero layout, responzivní men
 **Proč:** Klíčové důvěryhodnostní stránky musí mluvit jazykem zákazníka, ne firemním katalogem.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~2 hod 2 min  
-**Rozložení:** 30. 5. 2026 17:17–19:19 (~2 hod 2 min)  
-**Metoda odhadu:** git + konverzace  
+**Odhadovaná doba práce:** ~2 hod 15 min
+**Rozložení:** 30. 5. 2026 17:17–19:31 (~2 hod 15 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** ~25 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 

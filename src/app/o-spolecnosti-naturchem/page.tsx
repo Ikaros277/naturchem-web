@@ -9,7 +9,6 @@ import { pageCtaPresets } from "@/lib/cta";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy";
 import { homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { getPageHeroTheme } from "@/lib/hero-images";
-import { nationalPresenceShort } from "@/lib/nationalMessaging";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     absolute: "O NATURCHEM – měření, studie a povolovací podklady"
   },
   description:
-    "Akreditovaná měření, studie a povolovací podklady pro průmyslové provozy, investory a veřejnou správu — déle než 36 let praxe.",
+    "Akreditovaná měřicí a poradenská firma — tým pod garancí Ing. Františka Heziny. Měření, studie a povolovací podklady pro průmysl, investory a veřejnou správu — déle než 36 let praxe.",
   alternates: { canonical: `${siteUrl}/o-spolecnosti-naturchem/` }
 };
 
@@ -75,11 +74,12 @@ export default function ONaturchemPage() {
         breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "O NATURCHEM" }]}
       >
         <header className="premium-page-hero page-hero--photo">
-          <p className="eyebrow">Měřicí a poradenská firma</p>
+          <p className="eyebrow">Akreditovaná měřicí a poradenská firma</p>
           <h1>O NATURCHEM</h1>
           <p className="page-lead">
-            Postaráme se o měření, studie i povolovací podklady, které Váš provoz potřebuje — pro
-            průmysl, investory, projektanty i veřejnou správu.
+            Jsme tým měřicích a environmentálních specialistů pod odbornou garancí Ing. Františka
+            Heziny. Zajistíme měření, studie i povolovací podklady — pro průmysl, investory,
+            projektanty i veřejnou správu.
           </p>
         </header>
       </PageHeroBand>
@@ -106,9 +106,14 @@ export default function ONaturchemPage() {
         <div className="about-two-column">
           <div>
             <p>
-              Zajistíme akreditovaná měření, odborné studie a povolovací podklady — od protokolu z
-              terénu přes výpočet až po dokumentaci pro správní řízení. Pracujeme pro průmyslové
-              provozy, investory i projektanty.
+              NATURCHEM, s.r.o. je akreditovaná měřicí a poradenská firma. Měříme a zpracováváme
+              studie z Havlíčkova Brodu, Českých Budějovic a Prahy; zakázky v terénu řešíme po celé
+              ČR.
+            </p>
+            <p>
+              Za odbornou stránku zakázek stojí tým pod garancí Ing. Františka Heziny — od návrhu
+              rozsahu po výstup pro úřad. Pracujeme pro průmyslové provozy, investory, projektanty i
+              veřejnou správu.
             </p>
             <p>
               Nejsme jen laboratoř s jedním typem výstupu. Měření, výpočty, studie i dokumentaci pro
@@ -116,13 +121,12 @@ export default function ONaturchemPage() {
             </p>
           </div>
           <div>
-            <p>{nationalPresenceShort}</p>
             <p>
-              Přehled služeb a oborů najdete v sekcích{" "}
-              <Link href="/sluzby">Služby</Link>,{" "}
-              <Link href="/provozy-a-technologie">Provozy a technologie</Link>, v{" "}
-              <Link href="/reference">referencích z praxe</Link> a v{" "}
-              <Link href="/faq">častých dotazech</Link>.
+              Chcete vědět, co konkrétně umíme? Přehled služeb, typů provozů a referencí najdete v
+              sekcích <Link href="/sluzby">Služby</Link>,{" "}
+              <Link href="/provozy-a-technologie">Provozy a technologie</Link>,{" "}
+              <Link href="/reference">Reference z praxe</Link> a{" "}
+              <Link href="/faq">FAQ</Link>.
             </p>
           </div>
         </div>

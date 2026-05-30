@@ -5,8 +5,15 @@ type Props = {
   href?: string;
   icon?: ServiceIconKey;
   size?: number;
+  variant?: "card" | "inline" | "nav";
   className?: string;
 };
+
+const variantSvgSize = {
+  card: 22,
+  inline: 24,
+  nav: 20
+} as const;
 
 function SvgIcon({ size, children }: { size: number; children: ReactNode }) {
   return (
@@ -303,9 +310,10 @@ function resolveKey(props: Props): ServiceIconKey {
   return "default";
 }
 
-export function ServiceIcon({ href, icon, size = 22, className }: Props) {
+export function ServiceIcon({ href, icon, size, variant = "inline", className }: Props) {
   const key = resolveKey({ href, icon });
+  const resolvedSize = size ?? variantSvgSize[variant];
   const classes = ["card-symbol", className].filter(Boolean).join(" ");
 
-  return <span className={classes}>{iconGlyphs[key](size)}</span>;
+  return <span className={classes}>{iconGlyphs[key](resolvedSize)}</span>;
 }

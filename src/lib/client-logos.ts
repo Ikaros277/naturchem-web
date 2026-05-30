@@ -16,7 +16,12 @@ export const referenceClients: ClientLogo[] = [
   { name: "České dráhy, a.s.", logo: "/loga-referenci/cd.svg", website: "https://www.cd.cz" },
   { name: "E.ON, a.s.", logo: "/loga-referenci/eon.svg", website: "https://www.eon.cz" },
   { name: "Strabag", logo: "/loga-referenci/strabag.svg", website: "https://www.strabag.cz" },
-  { name: "Swietelsky stavební", logo: "/loga-referenci/swietelsky.svg", website: "https://www.swietelsky.cz" },
+  {
+    name: "Swietelsky stavební",
+    logo: "/loga-referenci/swietelsky.png",
+    website: "https://www.swietelsky.cz",
+    wide: true
+  },
   { name: "Letiště České Budějovice", logo: "/loga-referenci/letiste-cb.png", website: "https://www.airport-cb.cz" },
   {
     name: "Teplárna České Budějovice",
@@ -24,8 +29,18 @@ export const referenceClients: ClientLogo[] = [
     website: "https://www.teplarna-cb.cz",
     wide: true
   },
-  { name: "Teplárna Písek", logo: "/loga-referenci/teplarnapisek.png", website: "https://www.tpi.cz" },
-  { name: "Teplárna Strakonice", logo: "/loga-referenci/teplarnastrakonice.png", website: "https://www.teplarnastrakonice.cz" },
+  {
+    name: "Teplárna Písek",
+    logo: "/loga-referenci/teplarnapisek.png",
+    website: "https://www.tpi.cz",
+    wide: true
+  },
+  {
+    name: "Teplárna Strakonice",
+    logo: "/loga-referenci/teplarnastrakonice.png",
+    website: "https://www.teplarnastrakonice.cz",
+    wide: true
+  },
   { name: "ČSAD Jihotrans", logo: "/loga-referenci/jihotrans.svg", website: "https://www.gwjihotrans.cz" },
   { name: "Madeta", logo: "/loga-referenci/madeta.svg", website: "https://www.madeta.cz" },
   { name: "AISIN Europe Manufacturing Czech", logo: "/loga-referenci/aisin.svg", website: "https://www.aisin.co.cz" },

@@ -109,6 +109,7 @@ export function ServicePage(props: Props) {
       ) : null}
       <PageHeroBand
         theme={heroTheme}
+        variant="service"
         breadcrumbs={[
           { name: "Úvod", href: "/" },
           { name: "Služby", href: "/sluzby" },

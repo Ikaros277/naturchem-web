@@ -95,6 +95,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | ID | Úkol | Stav | Obtížnost |
 |----|------|------|-----------|
 | P6-1 | Globální vertikální padding sekcí (−50 %, token `--section-padding-y`) | ✅ | Nízká |
+| P6-2 | Sjednocená min-height hero pásu (`PageHeroBand` standard / service) | ✅ | Nízká |
 
 **Doporučené pořadí:** Sprint 6 → P5-4, P5-5, P5-6 · Sprint 7 → P5-1, P5-2, P5-3 · Sprint 8 → P5-7–P5-10
 
@@ -196,6 +197,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 30. 5. | Sprint 9 | P5-11 PageHeroBand na všech stránkách, P5-12 homepage USP refactor |
 | 30. 5. | Sprint 10 | P5-13 trust order + kompaktní stats, P3-8 homepage trim, P6-1 spacing, docs v gitu |
 | 30. 5. | Sprint 11 | Meta audit, poradna↔služby prolinkování, P4-1/P4-3/P4-4 |
+| 30. 5. | P6-2 | Sjednocená výška hero pásu (standard / service variant) |
 
 ---
 

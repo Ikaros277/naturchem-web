@@ -28,7 +28,7 @@ const jobs = [
   { in: "letiste-cb-temp.png", out: "letiste-cb.png", bg: { r: 255, g: 255, b: 255 }, threshold: 30 }
 ];
 
-/** Logos exported on black (white text): remove black, recolor white text to dark gray. */
+/** Logos exported on black (white text): remove black, recolor light pixels to dark gray. */
 async function fixDarkBgLogo(input, output) {
   const { data, info } = await sharp(input).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   for (let i = 0; i < data.length; i += 4) {
@@ -37,10 +37,15 @@ async function fixDarkBgLogo(input, output) {
       data[i + 3] = 0;
       continue;
     }
-    if (r > 210 && g > 210 && b > 210) {
+    const lum = 0.299 * r + 0.587 * g + 0.114 * b;
+    if (lum > 185) {
       data[i] = 45;
       data[i + 1] = 45;
       data[i + 2] = 45;
+    } else if (lum > 120 && r > 80 && b > 80 && g < r) {
+      data[i] = 30;
+      data[i + 1] = 30;
+      data[i + 2] = 30;
     }
   }
   await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })

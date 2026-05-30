@@ -3277,13 +3277,16 @@ footer .muted,
 }
 
 .client-logo-item img {
+  display: block;
   max-height: 48px;
   max-width: 130px;
+  min-height: 24px;
+  min-width: 48px;
   width: auto;
   height: auto;
   object-fit: contain;
   filter: grayscale(100%);
-  opacity: 0.65;
+  opacity: 0.75;
   transition: filter 0.2s, opacity 0.2s;
 }
 

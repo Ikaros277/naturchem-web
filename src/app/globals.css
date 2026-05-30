@@ -2078,6 +2078,7 @@ body {
 
 .container {
   width: min(1220px, 92%);
+  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -2295,6 +2296,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: clamp(1rem, 2vw, 1.25rem) 0 clamp(1.25rem, 2.5vw, 2rem);
   margin-bottom: 0.5rem;
 }
@@ -2314,8 +2316,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
-  width: 100%;
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
 }

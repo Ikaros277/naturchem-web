@@ -13,7 +13,7 @@ type Props = {
   children: ReactNode;
   className?: string;
   priority?: boolean;
-  /** standard = index stránky; service = ServicePage s bočním panelem */
+  /** standard = index stránky; service = ServicePage */
   variant?: PageHeroBandVariant;
 };
 

@@ -336,7 +336,7 @@ export function Header() {
         ) : (
           <>
             <Link className="button nav-cta-mobile" href="/kontakt#poptavkovy-formular">
-              Poptat
+              {globalCta}
             </Link>
             <button
               ref={mobileToggleRef}

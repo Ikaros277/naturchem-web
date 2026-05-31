@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageHeroBand } from "@/components/PageHeroBand";
+import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
 import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
@@ -7,6 +8,7 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
 import { contactSubmitCta } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
+import { serviceTrustBandItems } from "@/lib/home-hero-metrics";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
 import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
@@ -43,7 +45,6 @@ export function ServicePage(props: Props) {
   const quickContactHref = contactUrl(contactServiceValue);
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
   const relatedLinks = props.relatedLinks ?? [];
-  const quickNeeds = props.whenNeeded.slice(0, 3);
   const keyScope = props.scope.slice(0, 4);
   const keyOutputs = props.outputs.slice(0, 3);
   const keyDocs = props.docs.slice(0, 3);
@@ -116,44 +117,52 @@ export function ServicePage(props: Props) {
           { name: props.title }
         ]}
       >
-        <header className="page-header service-hero service-hero--photo">
-            <div>
-              <ServiceIcon href={`/${props.slug}`} variant="card" className="service-hero-icon" />
-              <h1>{props.title}</h1>
-              <p className="page-lead">{props.intro}</p>
-              <div className="btn-row">
-                <Link className="button" href={quickContactHref}>
-                  {contactCta}
-                </Link>
-                <Link className="button secondary" href="/kontakt#podklady">
-                  Jaké podklady poslat
-                </Link>
+        <header className="page-header service-hero service-hero--photo service-hero--single">
+          <ServiceIcon href={`/${props.slug}`} variant="card" className="service-hero-icon" />
+          <h1>{props.title}</h1>
+          <p className="page-lead">{props.intro}</p>
+          <div className="btn-row">
+            <Link className="button" href={quickContactHref}>
+              {contactCta}
+            </Link>
+            <Link className="button secondary" href="/kontakt#podklady">
+              Jaké podklady poslat
+            </Link>
+          </div>
+        </header>
+      </PageHeroBand>
+
+      <section className="trust-band trust-band--compact" aria-labelledby="service-trust-heading">
+        <div className="container trust-band-inner">
+          <h2 id="service-trust-heading" className="sr-only">
+            Důvěryhodnost a oprávnění
+          </h2>
+          {serviceTrustBandItems.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="service-overview-section section-surface" aria-label="Stručný přehled služby">
+        <div className="container">
+          <div className="service-decision-panel">
+            <article className="service-decision-card">
+              <div className="service-decision-card-head">
+                <ServiceIcon icon="process-rozsah" variant="inline" />
+                <h2>{props.scopeHeading ?? serviceScopeHeading}</h2>
               </div>
-            </div>
-            <aside className="service-hero-panel" aria-label="Typické důvody poptávky">
-              <h2>{props.heroPanelTitle ?? "Typické důvody poptávky"}</h2>
-              <ul className="compact-list">
-                {quickNeeds.map((item) => (
+              <ul className="check-list">
+                {keyScope.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            </aside>
-          </header>
-      </PageHeroBand>
-      <div className="container page-inner">
-        <section className="service-decision-panel content-block" aria-label="Stručný přehled služby">
-          <div className="service-decision-card service-decision-card-primary">
-            <h2>{props.scopeHeading ?? serviceScopeHeading}</h2>
-            <ul className="check-list">
-              {keyScope.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
+            </article>
 
-          <div className="service-decision-side">
             <article className="service-decision-card">
-              <h2>Co dostanete</h2>
+              <div className="service-decision-card-head">
+                <ServiceIcon icon="process-vystup" variant="inline" />
+                <h2>Co dostanete</h2>
+              </div>
               <ul className="check-list">
                 {keyOutputs.map((item) => (
                   <li key={item}>{item}</li>
@@ -162,7 +171,10 @@ export function ServicePage(props: Props) {
             </article>
 
             <article className="service-decision-card service-start-card">
-              <h2>Jak začít</h2>
+              <div className="service-decision-card-head">
+                <ServiceIcon icon="process-posouzeni" variant="inline" />
+                <h2>Jak začít</h2>
+              </div>
               <p className="muted">{serviceDocsIntro}</p>
               <ul className="check-list">
                 {keyDocs.map((item) => (
@@ -174,8 +186,11 @@ export function ServicePage(props: Props) {
               </Link>
             </article>
           </div>
-        </section>
+          <ServiceContextPhoto theme={heroTheme} />
+        </div>
+      </section>
 
+      <div className="container page-inner">
         {detailGroups.length > 0 ? (
           <section className="content-block service-extra-section">
             <details className="service-extra-details">
@@ -224,7 +239,6 @@ export function ServicePage(props: Props) {
             </div>
           </section>
         ) : null}
-
       </div>
     </main>
   );

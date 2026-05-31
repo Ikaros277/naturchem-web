@@ -1,8 +1,12 @@
 ﻿import Link from "next/link";
 import type { ReactNode } from "react";
 import { accreditationDocuments } from "@/lib/accreditation-documents";
-import { globalCta, referenceNav } from "@/lib/navigation";
+import { globalCta } from "@/lib/cta";
+import { contactUrl } from "@/lib/contact-url";
+import { referenceNav } from "@/lib/navigation";
 import { company } from "@/lib/site";
+
+const contactFormHref = contactUrl("Nejsem si jistý");
 
 const footerDocumentLabels: Record<string, string> = {
   "osvedceni-akreditace": "Osvědčení o akreditaci",
@@ -28,8 +32,6 @@ const footerOdbornost = [
   { href: "/faq", title: "FAQ" },
   { href: "/pristrojove-vybaveni", title: "Přístrojové vybavení" }
 ] as const;
-
-const contactFormHref = "/kontakt#poptavkovy-formular";
 
 function telHref(phone: string) {
   return `tel:${phone.replace(/\s/g, "")}`;
@@ -186,11 +188,6 @@ export function Footer() {
           <p>© NATURCHEM, s.r.o. {currentYear}</p>
         </div>
       </div>
-
-      <nav className="mobile-sticky-contact" aria-label="Rychlý kontakt">
-        <a href={telHref(company.phones[0])}>Zavolat</a>
-        <Link href={contactFormHref}>{globalCta}</Link>
-      </nav>
     </footer>
   );
 }

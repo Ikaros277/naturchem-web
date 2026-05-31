@@ -2,7 +2,7 @@
 
 import { contactUrl } from "@/lib/contact-url";
 
-export const globalCta = "Poptat službu";
+export const globalCta = "Nezávazně poptat";
 
 export const heroCtaMeasurement = "Poptat měření";
 

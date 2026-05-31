@@ -5,11 +5,39 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 9 |
-| Celkový odhadovaný čas | ~14,2 hodiny |
+| Počet sezení celkem | 10 |
+| Celkový odhadovaný čas | ~14,6 hodiny |
 | Aktuální fáze | Sprint 14 + P5-18 hotovo (mobilní UX, kompaktní loga, skrytý trust band); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 31. 5. 2026, 13:26–13:45
+
+### Přehled
+Automaticky založené sezení po commitu `186bc6b`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### UX: cap log zakazniku na 2 radky i na desktopu.
+**Co bylo uděláno:** UX: cap log zakazniku na 2 radky i na desktopu. - ClientLogosGrid s limitem dle viewportu, 19 log + a mnoho dalsich na desktopu; na referencich rozbaleni vsech log po kliknuti.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `279512b`). Dotcene oblasti: app, components, lib.  
+**Proč:** ClientLogosGrid s limitem dle viewportu, 19 log + a mnoho dalsich na desktopu; na referencich rozbaleni vsech log po kliknuti.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### Homepage hero: vrstvene copy, sitewide skryti eyebrow na mobilu.
+**Co bylo uděláno:** Homepage hero: vrstvene copy, sitewide skryti eyebrow na mobilu. - Zkraceny H1 a lead bez zdvojeni sluzeb, jednotny text pro mobil i desktop. Pravidla hero zapsana do ux-role a copy-role (P5-21, P5-22).  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `186bc6b`). Dotcene oblasti: app, copy-audit.md, copy-role.md, ROADMAPA.md, ux-audit-roadmapa.md, ux-role.md, workflow.  
+**Proč:** Zkraceny H1 a lead bez zdvojeni sluzeb, jednotny text pro mobil i desktop. Pravidla hero zapsana do ux-role a copy-role (P5-21, P5-22).  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~20 min
+**Rozložení:** 31. 5. 2026 13:26–13:45 (~20 min)
+**Metoda odhadu:** git
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `186bc6b25ed862f37d5e2366181256b410f1d7e8`
 
 ---
 

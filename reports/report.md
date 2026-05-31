@@ -5,11 +5,52 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 5 |
-| Celkový odhadovaný čas | ~12 hod 14 min |
-| Aktuální fáze | Copy sprint C1–C2 hotovo; UX revize O společnosti dokončena; další C3 (akreditace) |
+| Počet sezení celkem | 6 |
+| Celkový odhadovaný čas | ~12 hod 52 min |
+| Aktuální fáze | Sprint S7 hotovo (service pages); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 31. 5. 2026, 09:42–10:20
+
+### Přehled
+Dopolední sezení začalo status briefingem a UX konzultací struktury stránek služeb. Po schválení plánu S7 proběhla implementace přestavby šablony ServicePage na všech ~24 službách, drobná úprava umístění kontextové fotografie a oprava pádu patičky na mobilu. Změny commitnuty a pushnuty na GitHub.
+
+**Zdroj popisu:** AI konverzace + git commity
+
+### Provedené změny
+
+#### Status briefing a UX plán S7 — service pages
+**Co bylo uděláno:** Příkaz `/status` shrnul stav projektu; následovala UX konzultace šablony služeb — diagnóza „dvojí mřížky karet“ (hero panel + decision panel) a chybějícího vizuálního rytmu. Sestaven a schválen plán S7: odstranit hero panel, decision sekce vertikálně, trust pruh, ikony u nadpisů, kategorie-specifická fotografie.  
+**Proč:** Klient hlásil špatnou scanovatelnost stránek služeb — příliš textu v hero a matoucí dvousloupcový layout pod ním.
+
+#### Sprint S7 — přestavba šablony služeb
+**Co bylo uděláno:** Z hero odstraněn pravý panel „Typické důvody poptávky“ — zůstal H1, perex a 2 CTA v jednom sloupci. Pod hero přidán kompaktní trust pruh (akreditace, ISO, výstupy pro úřady). Sekce Co zajišťujeme / Co dostanete / Jak začít přeuspořádány vertikálně pod sebe v muted bloku, u každého nadpisu ikona. Nová komponenta `ServiceContextPhoto` pro tematickou fotografii dle kategorie služby. Globální CTA text sjednocen na „Nezávazně poptat“.  
+**Proč:** Vertikální flow zrychluje orientaci; ikony a střídání pozadí rozbíjí „wall of text“ bez mazání konverzního obsahu.
+
+#### Umístění kontextové fotografie
+**Co bylo uděláno:** Po kontrole klienta přesunuta horizontální fotografie z pozice hned pod hero na konec decision bloku — pod tři karty, před accordion a FAQ. Mírně snížena výška stripu.  
+**Proč:** Dvě fotografie za sebou (hero + strip) působily redundantně; fotka lépe slouží jako přestávka před doplňujícím obsahem.
+
+#### Oprava patičky (runtime error)
+**Co bylo uděláno:** Opraven pád lokálního dev serveru — v `Footer.tsx` doplněny chybějící importy `globalCta` a `contactFormHref` pro mobilní CTA v patičce.  
+**Proč:** Po úpravách mobilní patičky nebyly proměnné definované — stránka se nenačetla (`ReferenceError`).
+
+#### Commit a nasazení
+**Co bylo uděláno:** Produktové změny commitnuty (`fc828fd`) a pushnuty na `origin/main`.  
+**Proč:** Uzavření sprintu S7 a nasazení na Vercel preview/produkci.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~38 min  
+**Rozložení:** 31. 5. 2026 09:42–10:20 (~38 min)  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** ~12 kol konverzace  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
+
+### Technická poznámka
+`ServicePage.tsx`, `ServiceContextPhoto.tsx`, `globals.css`, `home-hero-metrics.ts`, `Footer.tsx`, `Header.tsx`, `cta.ts` — commit `fc828fd`. Build prošel bez chyb.
 
 ---
 

@@ -5,9 +5,9 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 13 |
-| Celkový odhadovaný čas | ~15,5 hodiny |
-| Aktuální fáze | UX loga zákazníků — spacing pod mřížkou hotovo; P5-17 hotovo |
+| Počet sezení celkem | 14 |
+| Celkový odhadovaný čas | ~15,7 hodiny |
+| Aktuální fáze | UX homepage fold (P5-17) hotovo; copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
@@ -68,6 +68,39 @@ Dokončení P5-17 — těsnější mobilní fold po zkrácení hero copy (P5-21)
 **Rozložení:** 31. 5. 2026 14:18–14:19 (~12 min)  
 **Metoda odhadu:** konverzace  
 **Počet výměn s AI:** 2  
+
+---
+
+## Sezení: 31. 5. 2026, 14:12–14:17
+
+### Přehled
+Uzavření otevřených položek z ROADMAPA — ověřené metriky a odstranění duplicitní stránky Odborná garance. Úprava mřížky log zákazníků: Dura zpět na desktopu, chování buňky „a mnoho dalších..“ bez falešného rozbalení.
+
+**Zdroj popisu:** AI konverzace + git commity
+
+### Provedené změny
+
+#### Odstranění /odborna-garance (P2-6)
+**Co bylo uděláno:** Smazána samostatná stránka `/odborna-garance`, odstraněn redirect a odkaz „Více o odborné garanci“ ze stránky O společnosti — obsah garance tam už je. ROADMAPA aktualizována.  
+**Proč:** Obsah byl duplicitní; klient potvrdil, že samostatná stránka není potřeba.
+
+#### Ověření metrik s Hezinou
+**Co bylo uděláno:** V ROADMAPA označeno jako hotové: „36 let odborné činnosti“, počty zakázek, měření a certifikátů.  
+**Proč:** Před publikací webu musí být čísla na homepage a ve stats ověřená — klient je potvrdil.
+
+#### Loga zákazníků — Dura a chování overflow
+**Co bylo uděláno:** Na desktopu zobrazeno všech 19 log včetně Dury; buňka „a mnoho dalších..“ je statická, pokud nejsou skrytá loga. Na stránce Reference rozbalení zbývajících log jen při reálném overflow (`expandable`).  
+**Proč:** Po capu na 2 řádky chyběla Dura na desktopu; na mobilu působilo kliknutí na „více“ matoucí, když nebylo co rozbalit.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~13 min  
+**Rozložení:** 31. 5. 2026 14:12–14:17 (~13 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** ~4  
+*Poznámka: commity `0ec29c4`, `a2ab851`.*
+
+### Technická poznámka
+`src/lib/redirects.ts`, `src/app/o-spolecnosti-naturchem/page.tsx`, `ClientLogosGrid.tsx`, `client-logos.ts` — commity `0ec29c4`, `a2ab851`.
 
 ---
 

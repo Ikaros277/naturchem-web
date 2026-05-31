@@ -5,11 +5,44 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 8 |
-| Celkový odhadovaný čas | ~14 hodiny |
-| Aktuální fáze | Sprint 14 + P5-18 hotovo (mobilní homepage, kompaktní loga zákazníků); copy sprint C3 (akreditace) |
+| Počet sezení celkem | 9 |
+| Celkový odhadovaný čas | ~14,2 hodiny |
+| Aktuální fáze | Sprint 14 + P5-18 hotovo (mobilní UX, kompaktní loga, skrytý trust band); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 31. 5. 2026, 12:48–13:02
+
+### Přehled
+Doplňková UX úprava mobilního zobrazení — trust band s akreditačními údaji (laboratoř 1599, ISO, KHS/ČIŽP, EIA) se skryje na všech stránkách do šířky 1023 px, nejen na homepage. Na desktopu zůstává beze změny. Commitnuto a pushnuto na GitHub.
+
+**Zdroj popisu:** AI konverzace + git commity
+
+### Provedené změny
+
+#### Trust band skrytý na mobilu napříč webem
+**Co bylo uděláno:** CSS pravidlo pro skrytí `.trust-band` rozšířeno z homepage na celý web — stránky služeb, O společnosti i homepage. Blok se pod hero na telefonu a tabletu vůbec nezobrazuje. Odstraněny nepotřebné mobilní styly pro vertikální skládání trust bandu.  
+**Proč:** Na stránkách služeb blok čtyř akreditačních řádků zbytečně odsouval hlavní obsah dolů; na homepage už byl skrytý, chování teď sjednoceno.
+
+#### Akreditace na mobilu zachována v topbaru
+**Co bylo uděláno:** Informace o akreditaci zůstávají dostupné v horní liště webu — trust band pod hero se na mobilu neopakuje.  
+**Proč:** Důvěryhodnostní signál zůstává viditelný, ale bez duplicity a bez ztráty místa v hlavním obsahu.
+
+#### Commit a nasazení
+**Co bylo uděláno:** Produktová změna commitnutá (`10ea068`) a pushnutá na `origin/main`.  
+**Proč:** Nasazení sjednoceného mobilního chování na Vercel.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~14 min  
+**Rozložení:** 31. 5. 2026 12:48–13:02 (~14 min)  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** ~3  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
+
+### Technická poznámka
+`src/app/globals.css` — commit `10ea068`.
 
 ---
 

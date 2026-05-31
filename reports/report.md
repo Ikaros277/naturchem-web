@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 6 |
-| Celkový odhadovaný čas | ~13,1 hodiny |
+| Počet sezení celkem | 7 |
+| Celkový odhadovaný čas | ~13,3 hodiny |
 | Aktuální fáze | Sprint S7 hotovo (service pages + mobilní hlavička); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 31. 5. 2026, 10:59-11:09
+
+### Přehled
+Automaticky založené sezení po commitu `a930750`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### UX: optimalizace mobilni homepage fold (P5-14-16).
+**Co bylo uděláno:** UX: optimalizace mobilni homepage fold (P5-14-16). - Zkraceny hero copy a skryty trust band na mobilu, kompaktni stats ve trech sloupcich se zkracenou textaci a symetrickymi mezerami; aktualizace ROADMAPY.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `a930750`). Dotcene oblasti: app, lib, report, ROADMAPA.md, ux-audit-roadmapa.md, workflow.  
+**Proč:** Zkraceny hero copy a skryty trust band na mobilu, kompaktni stats ve trech sloupcich se zkracenou textaci a symetrickymi mezerami; aktualizace ROADMAPY.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 31. 5. 2026 10:59-11:09 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `a93075056fec1f34779942f50a9f73784d2a2f61`
 
 ---
 
@@ -265,10 +289,63 @@ Hlavní implementační sezení — provedeny tři UX sprinty zahrnující přec
 
 ---
 
+## Sezení: 18. 5. 2026, ~19:00–21:00
+
+### Přehled
+Úvodní klientská schůzka před zahájením implementace — společné navnímání představ klienta o webu, projednání cílových skupin, struktury obsahu a způsobu spolupráce. Schůzka proběhla formou videohovoru / osobního setkání, bez práce v kódu; sloužila jako podklad pro následné strategické dokumenty a UX audit.
+
+**Zdroj popisu:** poznámky ze schůzky s klientem
+
+### Projednaná témata
+
+#### Představení a rámec spolupráce
+**Co bylo projednáno:** Stručné představení obou stran, očekávání od spolupráce a způsob komunikace (schůzky, zpětná vazba, schvalování změn). Dohodnuto, že web má primárně podporovat získávání poptávek od provozů a firem s environmentálními povinnostmi, ne sloužit jako katalog bez konverze.  
+**Proč:** Sjednocení očekávání před vstupem do technické fáze — klient potřeboval vědět, jak bude probíhat iterace, a dodavatel získat mandát pro zjednodušení obsahu tam, kde původní web přebíral.
+
+#### Firma, služby a diferenciace
+**Co bylo projednáno:** Představení NATURCHEM jako akreditované měřicí a poradenské firmy — měření emisí, hluku, EIA, ISPOP, chemické služby, dokumentace pro úřady. Klient zdůraznil dlouholetou praxi (36+ let), akreditace, autorizaci Ing. Františka Heziny a komplexní pokrytí potřeb provozu „od měření po studii“.  
+**Proč:** Bez sdíleného obrazu firmy nelze správně navrhnout hierarchii služeb ani důvěryhodnostní prvky — akreditace a odborná garance mají být viditelné, ne schované v patičce.
+
+#### Současný web a důvody změny
+**Co bylo projednáno:** Klient popsal stávající web jako obsahově bohatý, ale pro návštěvníka matoucí — příliš textu, nejasná navigace mezi službami, chybějící jasná cesta k poptávce. Cílem není „větší web“, ale přehlednější a důvěryhodnější prezentace s rychlejší orientací.  
+**Proč:** Definice problému určila směr dalších sprintů — redukce redundance, sjednocení šablon služeb a posílení CTA místo dalšího rozšiřování obsahu.
+
+#### Cílové skupiny a typické scénáře
+**Co bylo projednáno:** Společně vytipovány hlavní persony: provozní manažer / technik provozu (řeší termíny a povinnosti), environmentální specialista ve firmě, projektant nebo investor u EIA, menší firma, která „neví, co přesně potřebuje“. Projednány typické vstupy na web — konkrétní služba, oblast (emise / hluk / chemie), nebo obecný dotaz přes kontakt.  
+**Proč:** Persony a scénáře později promítnuty do struktury menu, stránky Typické zakázky a tone of voice — web má vést i nejistého návštěvníka, ne předpokládat odbornou znalost oboru.
+
+#### Struktura webu a obsahové priority
+**Co bylo projednáno:** Náčrt požadované struktury: homepage s přehledem nabídky, katalog služeb (s logickým členěním), O společnosti včetně týmu a odborné garance, akreditace a vybavení, reference, poradna, FAQ, kontakt. Klient preferoval méně top-level položek v menu a seskupení odborného obsahu pod „O nás“. Priorita obsahu: služby a důvěra (reference, akreditace) před rozšiřováním poradny.  
+**Proč:** První verze sitemap a navigační logiky vzešla z této schůzky — pozdější sloučení položek menu a redesign dropdownů navazovaly na dohodnutý princip „nejdřív orientace, pak detail“.
+
+#### Vizuální směr a tón komunikace
+**Co bylo projednáno:** Klient chce působit odborně, ale srozumitelně — ne suchý úřední jazyk, ale ani marketingové superlativy. Barvy a logo vycházejí ze stávající identity NATURCHEM; fotografie zatím spíše obecné (provoz, měření, dokumentace), reálné fotky týmu a zakázek dodá klient postupně. Důraz na čitelnost, zejména na mobilech.  
+**Proč:** Zadání pro tone of voice a brand manuál — copy sprinty C1–C2 později explicitně přepisovaly texty z „katalogového“ stylu do zákaznicky orientovaného jazyka.
+
+#### Materiály, termíny a další kroky
+**Co bylo projednáno:** Klient poskytne seznam referencí a log zákazníků, podklady k akreditacím a autorizacím, texty k týmu a případně upřesnění u vybraných služeb. Dohodnuto, že nejdřív proběhne technický průzkum stávajícího webu a UX audit, teprve potom implementační sprinty. Orientační horizont: iterativní vylepšování po blocích, ne jednorázový redesign „na slepo“.  
+**Proč:** Realistický plán — bez auditu by se opakovaly chyby starého webu; klient věděl, jaké podklady má připravit, než se spustí copy a reference.
+
+### Výstupy schůzky
+- Sdílená představa o účelu webu (poptávky + důvěra, ne jen brožura)
+- První návrh obsahové struktury a priorit sekcí
+- Vytipované cílové skupiny a typické nákupní cesty
+- Zadání pro tone of voice a vizuální směr
+- Seznam podkladů, které klient dodá do další fáze
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~2 hodiny  
+**Rozložení:** 18. 5. 2026, cca 14:00–16:00 (~2 hod)  
+**Metoda odhadu:** manuální odhad (klientská schůzka)  
+**Počet výměn s AI:** —  
+*Poznámka: schůzka proběhla mimo vývojové prostředí; zápis slouží jako kontext pro následné sezení 25.–26. 5.*
+
+---
+
 ## Sezení: 25.–26. 5. 2026
 
 ### Přehled
-Zahajovací sezení zaměřené na přípravu projektu — stažení a zprovoznění klientovy pracovní verze webu, průzkum existujícího kódu a obsahu a provedení UX auditu jako základ pro další sprinty.
+Zahajovací implementační sezení zaměřené na přípravu projektu — stažení a zprovoznění klientovy pracovní verze webu, průzkum existujícího kódu a obsahu a provedení UX auditu jako základ pro další sprinty. Navazuje na úvodní klientskou schůzku z 18. 5.
 
 ### Provedené změny
 

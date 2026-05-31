@@ -5,15 +5,44 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 12 |
-| Celkový odhadovaný čas | ~15,3 hodiny |
-| Aktuální fáze | UX revize homepage fold (P5-17); patička P5-23 hotovo |
+| Počet sezení celkem | 13 |
+| Celkový odhadovaný čas | ~15,5 hodiny |
+| Aktuální fáze | UX loga zákazníků — spacing pod mřížkou hotovo; P5-17 hotovo |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 31. 5. 2026, 14:18–14:23
+## Sezení: 31. 5. 2026, 14:19–14:27
+
+### Přehled
+Srovnání vertikální mezery pod mřížkou log zákazníků — na homepage i na stránce Reference byla mezera k další sekci („Příklady z praxe“ / patička) výrazně větší než mezera nad nadpisem „Naši zákazníci“. Úprava v CSS, commitnuto a pushnuto na GitHub.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Mezera pod logy zákazníků
+**Co bylo uděláno:** U sousedících sekcí `.section.content-block` se přestalo sčítat spodní padding a margin — mezera k následující sekci odpovídá jen hornímu paddingu (stejně jako nad prvním nadpisem). Na homepage má patička `margin-top` podle `--section-padding-y` místo pevných 3 rem, takže mezera pod logy odpovídá mezeře nad eyebrow „Naši zákazníci“.  
+**Proč:** Klient vizuálně ověřil na mobilu i desktopu, že bílý prostor pod logy působil nadměrně a narušoval rytmus stránky.
+
+#### Commit a nasazení
+**Co bylo uděláno:** Produktová změna commitnutá (`73744a8`) a pushnutá na `origin/main`.  
+**Proč:** Nasazení opravy spacingu na Vercel.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~13 min  
+**Rozložení:** 31. 5. 2026 14:19–14:27 (~13 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 3  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
+
+### Technická poznámka
+Soubor `src/app/globals.css` — pravidla pro sousedící `.content-block` a `main.home-page + .site-footer`.
+
+---
+
+## Sezení: 31. 5. 2026, 14:18–14:19
 
 ### Přehled
 Dokončení P5-17 — těsnější mobilní fold po zkrácení hero copy (P5-21). Přidána varianta `BrandLogo` pro tmavé pozadí (SVG wordmark). Aktualizace audit docs, ROADMAPA a reportu.
@@ -36,8 +65,9 @@ Dokončení P5-17 — těsnější mobilní fold po zkrácení hero copy (P5-21)
 
 ### Časová náročnost
 **Odhadovaná doba práce:** ~12 min  
-**Rozložení:** 31. 5. 2026 14:18–14:25 (~12 min)  
+**Rozložení:** 31. 5. 2026 14:18–14:19 (~12 min)  
 **Metoda odhadu:** konverzace  
+**Počet výměn s AI:** 2  
 
 ---
 

@@ -210,6 +210,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 31. 5. | P5-18 | Offer karty homepage — nadpis vedle ikony (card-head) |
 | 31. 5. | P2-6 + metriky | /odborna-garance odstraněna (obsah v O společnosti), metriky ověřeny s Hezinou |
 | 31. 5. | P5-23 | Redesign patičky — 4 zóny, footer-nav.ts, desktop navigace + kontakt |
+| 31. 5. | P5-17 | Mobilní fold follow-up — padding hero/stats/offer po P5-21 |
 
 ---
 

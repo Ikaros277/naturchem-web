@@ -3529,17 +3529,10 @@ footer .muted,
     font-size: clamp(2.25rem, 12vw, 3.35rem);
   }
 
-  .trust-band-inner,
   .audience-grid,
   .home-offer-grid,
   .service-card-grid {
     grid-template-columns: 1fr;
-  }
-
-  .trust-band span {
-    min-height: auto;
-    justify-content: flex-start;
-    border-right: 1px solid var(--border);
   }
 
   .topbar-inner {
@@ -5756,31 +5749,12 @@ footer .muted,
     font-size: 1.35rem;
   }
 
-  .trust-band-inner {
-    grid-template-columns: 1fr !important;
-  }
-
-  .trust-band span {
-    min-height: auto;
-    justify-content: flex-start;
-    text-align: left;
-    padding: 0.85rem 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .trust-band span:last-child {
-    border-bottom: 0;
-  }
-
-  /* P5-14–16: Homepage mobile fold — trust band skryt, kompaktní stats, kratší hero */
-  .home-page .trust-band {
+  /* P5-14–16: trust band skryt na mobilu/tabletu — akreditace zůstává v topbaru */
+  .trust-band {
     display: none;
   }
 
+  /* P5-14–16: Homepage mobile fold — kompaktní stats, kratší hero */
   .home-page .hero .eyebrow--desktop,
   .home-page .hero .hero-lead--desktop {
     display: none;

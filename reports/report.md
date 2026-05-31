@@ -6,7 +6,7 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 12 |
-| Celkový odhadovaný čas | ~15 hodiny |
+| Celkový odhadovaný čas | ~15,3 hodiny |
 | Aktuální fáze | UX revize homepage fold (P5-17); patička P5-23 hotovo |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*

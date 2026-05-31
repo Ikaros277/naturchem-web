@@ -6,17 +6,17 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 6 |
-| Celkový odhadovaný čas | ~12 hod 52 min |
-| Aktuální fáze | Sprint S7 hotovo (service pages); copy sprint C3 (akreditace) |
+| Celkový odhadovaný čas | ~12 hod 53 min |
+| Aktuální fáze | Sprint S7 hotovo (service pages + mobilní hlavička); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 31. 5. 2026, 09:42–10:20
+## Sezení: 31. 5. 2026, 09:42–10:21
 
 ### Přehled
-Dopolední sezení začalo status briefingem a UX konzultací struktury stránek služeb. Po schválení plánu S7 proběhla implementace přestavby šablony ServicePage na všech ~24 službách, drobná úprava umístění kontextové fotografie a oprava pádu patičky na mobilu. Změny commitnuty a pushnuty na GitHub.
+Dopolední sezení začalo status briefingem a UX konzultací struktury stránek služeb. Po schválení plánu S7 proběhla přestavba šablony ServicePage, úpravy mobilní hlavičky (CTA, logo, odstranění spodní lišty) a sjednocení výšky ovládacích prvků. Změny commitnuty a pushnuty na GitHub.
 
 **Zdroj popisu:** AI konverzace + git commity
 
@@ -27,30 +27,34 @@ Dopolední sezení začalo status briefingem a UX konzultací struktury stránek
 **Proč:** Klient hlásil špatnou scanovatelnost stránek služeb — příliš textu v hero a matoucí dvousloupcový layout pod ním.
 
 #### Sprint S7 — přestavba šablony služeb
-**Co bylo uděláno:** Z hero odstraněn pravý panel „Typické důvody poptávky“ — zůstal H1, perex a 2 CTA v jednom sloupci. Pod hero přidán kompaktní trust pruh (akreditace, ISO, výstupy pro úřady). Sekce Co zajišťujeme / Co dostanete / Jak začít přeuspořádány vertikálně pod sebe v muted bloku, u každého nadpisu ikona. Nová komponenta `ServiceContextPhoto` pro tematickou fotografii dle kategorie služby. Globální CTA text sjednocen na „Nezávazně poptat“.  
+**Co bylo uděláno:** Z hero odstraněn pravý panel „Typické důvody poptávky“ — zůstal H1, perex a 2 CTA v jednom sloupci. Pod hero přidán kompaktní trust pruh (akreditace, ISO, výstupy pro úřady). Sekce Co zajišťujeme / Co dostanete / Jak začít přeuspořádány vertikálně pod sebe v muted bloku, u každého nadpisu ikona. Nová komponenta `ServiceContextPhoto` pro tematickou fotografii dle kategorie služby.  
 **Proč:** Vertikální flow zrychluje orientaci; ikony a střídání pozadí rozbíjí „wall of text“ bez mazání konverzního obsahu.
 
 #### Umístění kontextové fotografie
 **Co bylo uděláno:** Po kontrole klienta přesunuta horizontální fotografie z pozice hned pod hero na konec decision bloku — pod tři karty, před accordion a FAQ. Mírně snížena výška stripu.  
 **Proč:** Dvě fotografie za sebou (hero + strip) působily redundantně; fotka lépe slouží jako přestávka před doplňujícím obsahem.
 
-#### Oprava patičky (runtime error)
-**Co bylo uděláno:** Opraven pád lokálního dev serveru — v `Footer.tsx` doplněny chybějící importy `globalCta` a `contactFormHref` pro mobilní CTA v patičce.  
-**Proč:** Po úpravách mobilní patičky nebyly proměnné definované — stránka se nenačetla (`ReferenceError`).
+#### Copy a CTA v hlavičce
+**Co bylo uděláno:** Globální text hlavního tlačítka sjednocen na **„Nezávazně poptat“** (copy sprint, schváleno klientem). Stejný text v desktopové hlavičce, mobilním tlačítku i mobilním menu.  
+**Proč:** „Poptat službu“ bylo vágní; „Nezávazně poptat“ snižuje bariéru u B2B zákazníků a lépe sedí k formuláři na /kontakt.
+
+#### Mobilní hlavička — logo a konverze
+**Co bylo uděláno:** Na mobilu zobrazeno plné logo včetně textace „Měření · studie · dokumentace“ — wordmark centrovaný nad tagline. Odstraněna spodní sticky lišta „Zavolat / Poptávka“ (pill tlačítka mimo brand manual). CTA a hamburger zmenšeny, aby nepřebíjely logo; sjednocena výška obou prvků na 36 px (na úzkých displejích 34 px).  
+**Proč:** Spodní lišta duplikovala hlavičkové CTA a vizuálně neseděla k designu (zaoblené pill, jiná barva). Příliš velké ovládací prvky v hlavičce potlačovaly identitu značky.
 
 #### Commit a nasazení
-**Co bylo uděláno:** Produktové změny commitnuty (`fc828fd`) a pushnuty na `origin/main`.  
+**Co bylo uděláno:** Produktové změny commitnuty (`fc828fd`, `9ef9d3e`) a pushnuty na `origin/main`.  
 **Proč:** Uzavření sprintu S7 a nasazení na Vercel preview/produkci.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~38 min  
-**Rozložení:** 31. 5. 2026 09:42–10:20 (~38 min)  
-**Metoda odhadu:** konverzace  
-**Počet výměn s AI:** ~12 kol konverzace  
-*Poznámka: čas počítá skript `estimate-session-time.ps1` — log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
+**Odhadovaná doba práce:** ~39 min  
+**Rozložení:** 31. 5. 2026 09:42–10:21 (~39 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~18 kol konverzace  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-`ServicePage.tsx`, `ServiceContextPhoto.tsx`, `globals.css`, `home-hero-metrics.ts`, `Footer.tsx`, `Header.tsx`, `cta.ts` — commit `fc828fd`. Build prošel bez chyb.
+`ServicePage.tsx`, `ServiceContextPhoto.tsx`, `globals.css`, `Footer.tsx`, `Header.tsx`, `cta.ts` — commity `fc828fd`, `9ef9d3e`.
 
 ---
 

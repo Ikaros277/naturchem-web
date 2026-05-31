@@ -15,6 +15,8 @@ type Props = {
   clients?: ClientLogo[];
   /** When set, the overflow hint links here instead of expanding the grid inline. */
   moreHref?: string;
+  /** When true, hidden logos are revealed inline after clicking the overflow hint. */
+  expandable?: boolean;
 };
 
 function ClientLogoLink({ client, className }: { client: ClientLogo; className?: string }) {
@@ -57,10 +59,15 @@ function useLogoGridCap(clientCount: number) {
   return cap;
 }
 
-export function ClientLogosGrid({ clients = referenceClients, moreHref }: Props) {
+export function ClientLogosGrid({
+  clients = referenceClients,
+  moreHref,
+  expandable = false
+}: Props) {
   const [expanded, setExpanded] = useState(false);
-  const { previewCount, hasOverflow } = useLogoGridCap(clients.length);
-  const capped = hasOverflow && !expanded;
+  const { previewCount, showMore } = useLogoGridCap(clients.length);
+  const overflowClients = clients.slice(previewCount);
+  const capped = showMore && !expanded;
 
   if (expanded) {
     return (
@@ -73,7 +80,7 @@ export function ClientLogosGrid({ clients = referenceClients, moreHref }: Props)
   }
 
   const previewClients = clients.slice(0, previewCount);
-  const overflowClients = clients.slice(previewCount);
+  const hasHiddenLogos = overflowClients.length > 0;
 
   return (
     <div className={["client-logos-grid", capped ? "client-logos-grid--capped" : ""].filter(Boolean).join(" ")}>
@@ -82,20 +89,26 @@ export function ClientLogosGrid({ clients = referenceClients, moreHref }: Props)
       ))}
 
       {capped &&
-        (moreHref ? (
-          <Link href={moreHref} className="client-logo-item client-logo-more" aria-label={clientLogosMoreAriaLabel}>
-            <ClientLogosMoreContent />
-          </Link>
+        (hasHiddenLogos ? (
+          moreHref ? (
+            <Link href={moreHref} className="client-logo-item client-logo-more" aria-label={clientLogosMoreAriaLabel}>
+              <ClientLogosMoreContent />
+            </Link>
+          ) : (
+            <button
+              type="button"
+              className="client-logo-item client-logo-more"
+              onClick={() => setExpanded(true)}
+              aria-expanded={false}
+              aria-label={clientLogosMoreAriaLabel}
+            >
+              <ClientLogosMoreContent />
+            </button>
+          )
         ) : (
-          <button
-            type="button"
-            className="client-logo-item client-logo-more"
-            onClick={() => setExpanded(true)}
-            aria-expanded={false}
-            aria-label={clientLogosMoreAriaLabel}
-          >
+          <span className="client-logo-item client-logo-more client-logo-more--static">
             <ClientLogosMoreContent />
-          </button>
+          </span>
         ))}
 
       {overflowClients.map(client => (

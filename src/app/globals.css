@@ -3937,6 +3937,17 @@ footer .muted,
   opacity: 1;
 }
 
+.client-logo-more--static {
+  cursor: default;
+  pointer-events: none;
+}
+
+.client-logo-more--static:hover,
+.client-logo-more--static:focus-visible {
+  filter: grayscale(100%);
+  opacity: 0.72;
+}
+
 .client-logo-item img:hover {
   filter: grayscale(0%);
   opacity: 1;

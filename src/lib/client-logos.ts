@@ -34,9 +34,9 @@ export function getLogoPreviewCount(viewportWidth: number): number {
 export function getLogoGridCap(count: number, viewportWidth: number) {
   const previewMax = getLogoPreviewCount(viewportWidth);
   if (count < previewMax) {
-    return { previewCount: count, hasOverflow: false };
+    return { previewCount: count, showMore: false };
   }
-  return { previewCount: previewMax, hasOverflow: true };
+  return { previewCount: previewMax, showMore: true };
 }
 
 /** @deprecated Use getLogoGridCap. */

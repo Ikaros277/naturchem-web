@@ -47,7 +47,7 @@ export default function ReferencePage() {
 
       <section className="section content-block container" id="zakaznici">
         <h2>Naši zákazníci</h2>
-        <ClientLogosGrid />
+        <ClientLogosGrid expandable />
       </section>
 
       <section className="section content-block container" id="priklady">

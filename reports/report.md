@@ -6,47 +6,55 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 7 |
-| Celkový odhadovaný čas | ~13,7 hodiny |
-| Aktuální fáze | Sprint 14 hotovo (homepage „Co zajišťujeme“ + mobilní fold); copy sprint C3 (akreditace) |
+| Celkový odhadovaný čas | ~13,8 hodiny |
+| Aktuální fáze | Sprint 14 + P5-18 hotovo (mobilní homepage, offer karty); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 31. 5. 2026, 10:40–11:11
+## Sezení: 31. 5. 2026, 10:40–11:17
 
 ### Přehled
-Navazující sezení po Sprintu S7 — UX audit homepage sekce „Co zajišťujeme“, implementace vizuálního zvýraznění tří pilířů služeb (Sprint 14) a dokončení mobilního foldu homepage (P5-14–16). Změny commitnuty a pushnuty na GitHub.
+Navazující UX sezení na homepage — nejdřív optimalizace mobilního foldu (hero, trust lišta, stats), poté vizuální zvýraznění sekce „Co zajišťujeme“ (Sprint 14) a úprava layoutu karet (nadpis vedle ikony, P5-18). Průběžně několik kol ladění spacingu a zarovnání na mobilu. Změny commitnuty a pushnuty na GitHub.
 
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
 
-#### UX audit — sekce „Co zajišťujeme“
-**Co bylo uděláno:** Proveden cílený UX audit homepage — diagnóza proč pilíře služeb (měření, studie, dokumentace) působí vizuálně slaběji než stats band a trust lišta. Navrženy varianty A–D (karty, accent, bílá sekce, fotky); schválena kombinace Sprint 14 bez stock fotek.  
-**Proč:** Klient potřeboval, aby hlavní nabídka firmy byla na první pohled nejvýraznější část stránky — ne text „plující“ na šedém pozadí.
+#### UX audit — mobilní homepage (P5-14–16)
+**Co bylo uděláno:** Proveden UX audit mobilní homepage — diagnóza přetíženého foldu (dlouhý hero text, vertikální trust lišta, vysoké stats karty). Na mobilu zkrácen eyebrow a lead (desktop beze změny), trust band skryt, akreditační signál v krátkém eyebrow „Akreditovaná laboratoř · ISO 17025“. Stats zkráceny na „14 000+ zakázek“, „6 000+ měření“, „36 let praxe“ ve třech kompaktních kartách s ikonami.  
+**Proč:** Návštěvník na telefonu scrolloval přes ~1000 px důvěryhodnostního obsahu, než uviděl nabídku služeb.
 
-#### Sprint 14 — vizuální zvýraznění pilířů (P5-18–20)
-**Co bylo uděláno:** Sekce přepnuta na bílé pozadí s eyebrow „Naše služby“. Tři pilíře dostaly bílé karty se stínem a forest accent horním okrajem, větší ikony (52 px), tag pills (KHS, EIA, ČIŽP…), primary CTA místo ghost tlačítek. Celá karta zůstává klikací.  
-**Proč:** Stats karty měly box styling, pilíře ne — hierarchie byla obrácená. Úpravy sjednocují vizuální jazyk s ostatními kartami webu a zrychlují scan pro B2B návštěvníky.
+#### Ladění spacingu a stats na mobilu
+**Co bylo uděláno:** Iterativně doladěny mezery mezi hero, USP stats a sekcí „Co zajišťujeme“ — odstraněn skrytý `margin-top` u stats gridu, sjednoceny symetrické mezery (hero spodní padding + stats padding + padding následující sekce). Stats karty: ikony vycentrovány, číslo a popisek na dva řádky, vertikální zarovnání nadpisu s ikonou.  
+**Proč:** Po první implementaci působily karty „ujeté“ nahoru nebo měly nevyrovnané mezery nad/pod stats pruhem.
 
-#### Mobilní homepage fold (P5-14–16)
-**Co bylo uděláno:** Na mobilu zkrácen hero eyebrow a lead (desktop copy beze změny), skryta trust lišta (akreditace v krátkém eyebrow), stats přeuspořádány do tří kompaktních bílých řádků. Aktualizována ROADMAPA a UX audit dokumentace.  
-**Proč:** Nad foldem na telefonu bylo příliš obsahu před hlavní nabídkou; cílem je rychlejší orientace v terénu.
+#### Sprint 14 — vizuální zvýraznění pilířů služeb
+**Co bylo uděláno:** Sekce „Co zajišťujeme“ přepnuta na bílé pozadí s eyebrow „Naše služby“. Tři pilíře dostaly bílé karty se stínem, forest accent horním okrajem, větší ikony (52 px), tag pills (KHS, EIA, ČIŽP…), primary CTA místo ghost tlačítek. Celá karta zůstává klikací.  
+**Proč:** Stats karty měly box styling, pilíře ne — vizuální hierarchie byla obrácená.
+
+#### P5-18 — nadpis vedle ikony v offer kartách
+**Co bylo uděláno:** UX konzultace a implementace — ikona a nadpis sloučeny do řádku `.home-offer-card-head` (stejný vzor jako decision panel na service pages). Na mobilu menší ikony (40 px), vertikální centrování nadpisu vůči ikoně.  
+**Proč:** Vertikální stack ikona → nadpis zbytečně prodlužoval karty (~50–80 px na kartu); horizontální head zrychluje scan.
+
+#### Kompaktní mřížka log zákazníků
+**Co bylo uděláno:** Nová komponenta `ClientLogosGrid` — na mobilu preview 11 log + odkaz „a další…“ na /reference, na desktopu plná mřížka. Použito na homepage i stránce Reference.  
+**Proč:** 19 log na mobilu zabíralo příliš mnoho místa pod hlavním obsahem.
 
 #### Commit a nasazení
-**Co bylo uděláno:** Produktové změny commitnuty (`a930750`) a pushnuty na `origin/main`.  
-**Proč:** Uzavření Sprintu 14 a nasazení na Vercel preview/produkci.
+**Co bylo uděláno:** Produktové změny commitnuty (`a930750`, `bfcb660`) a pushnuty na `origin/main`. Aktualizována ROADMAPA a UX audit dokumentace (P5-14–18).  
+**Proč:** Uzavření Sprintu 13–14 a nasazení na Vercel.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~31 min  
-**Rozložení:** 31. 5. 2026 10:40–11:11 (~31 min)  
+**Odhadovaná doba práce:** ~38 min  
+**Rozložení:** 31. 5. 2026 10:40–11:17 (~38 min)  
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** 5  
+**Počet výměn s AI:** ~12  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-Dotčené soubory: `src/app/page.tsx`, `src/app/globals.css`, `src/lib/company-stats.ts`, `naturchem-projekt/ROADMAPA.md`. Commity: `a930750`, `6ce9a6c`.
+`src/app/page.tsx`, `src/app/globals.css`, `src/lib/company-stats.ts`, `src/components/ClientLogosGrid.tsx`, `src/lib/client-logos.ts` — commity `a930750`, `bfcb660`.
 
 ---
 
@@ -58,10 +66,9 @@ Dopolední sezení začalo status briefingem a UX konzultací struktury stránek
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
-#### UX: upgrade mobiln├şho hamburger menu (P5-14).
-**Co bylo uděláno:** UX: upgrade mobiln├şho hamburger menu (P5-14). - Logo s tagline m├şsto ÔÇ×MenuÔÇť, ploch├Ż accordion bez box┼», sticky CTA dole a oprava ┼íipek u vno┼Öen├Żch sekc├ş Slu┼żeb.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `e0be408`). Dotcene oblasti: app, components.  
-**Proč:** Logo s tagline m├şsto ÔÇ×MenuÔÇť, ploch├Ż accordion bez box┼», sticky CTA dole a oprava ┼íipek u vno┼Öen├Żch sekc├ş Slu┼żeb.  Co-authored-by: Cursor <cursoragent@cursor.com>.
-
+#### Upgrade mobilního hamburger menu (P5-14)
+**Co bylo uděláno:** Logo s tagline místo textu „Menu“, plochý accordion bez boxů, sticky CTA dole v menu a oprava šipek u vnořených sekcí Služeb (commit `e0be408`).  
+**Proč:** Původní mobilní menu působilo genericky a špatně navigovalo ve vnořené struktuře služeb.
 
 #### Status briefing a UX plán S7 — service pages
 **Co bylo uděláno:** Příkaz `/status` shrnul stav projektu; následovala UX konzultace šablony služeb — diagnóza „dvojí mřížky karet“ (hero panel + decision panel) a chybějícího vizuálního rytmu. Sestaven a schválen plán S7: odstranit hero panel, decision sekce vertikálně, trust pruh, ikony u nadpisů, kategorie-specifická fotografie.  

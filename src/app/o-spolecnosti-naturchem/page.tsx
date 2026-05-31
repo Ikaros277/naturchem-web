@@ -137,8 +137,7 @@ export default function ONaturchemPage() {
               Za odbornou stránku zakázek odpovídá{" "}
               <strong>Ing. František Hezina</strong> — jednatel, odborná garance, soudní znalec,
               autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování emisí
-              skleníkových plynů a oznámení EIA.{" "}
-              <Link href="/odborna-garance">Více o odborné garanci</Link>
+              skleníkových plynů a oznámení EIA.
             </p>
           </article>
         </div>

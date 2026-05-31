@@ -43,7 +43,7 @@
 | P2-3 | /reference: sekce zákazníků s logy + příklady z praxe (přepracováno) | ✅ | — |
 | P2-4 | /reference: 3 CTA → 1 primární | ✅ | — |
 | P2-5 | /akreditace: přidat CTA (přidáno), redukovat z 7 sekcí na 4 | ✅ | — |
-| P2-6 | /odborna-garance: rozhodnutí — smazat stránku (obsah do /o-spolecnosti) NEBO rozšířit | ❓ | Střední |
+| P2-6 | /odborna-garance: obsah integrován do /o-spolecnosti, stránka a redirect odstraněny | ✅ | — |
 | P2-7 | /o-spolecnosti-naturchem: redukovat z 10 sekcí na 6, smazat duplikáty | ✅ | — |
 
 ### P3 — Střední priorita (copy a drobné UX)
@@ -96,6 +96,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | P5-18 | Homepage offer karty: nadpis vedle ikony (card-head) | ✅ | Nízká |
 | P5-21 | Homepage hero: vrstvené copy (H1 max 8 slov, lead bez zdvojení) | ✅ | Nízká |
 | P5-22 | Hero pravidla zapsána do ux-role + copy-role | ✅ | Nízká |
+| P5-23 | Redesign patičky — jeden responsive grid, navigace + kontakt, akreditace jako odkaz | ✅ | Střední |
 | P5-B1–B4 | Reálné fotografie (hero, tým, přístroje, Hezina) | ❓ | Po dodání fotek |
 
 ### P6 — Layout a spacing
@@ -116,11 +117,10 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | Úkol | Stav | Poznámka |
 |------|------|----------|
 | Homepage hero: přepsat lead paragraph (zkrátit + zpřesnit) | ✅ | P3-1 + P5-21 (vrstvené copy 31. 5.) |
-| Klíčové stránky: přepis dle TOV (o-spolecnosti, akreditace, odborna-garance) | 🔲 | Po dokončení UX struktury |
+| Klíčové stránky: přepis dle TOV (o-spolecnosti, akreditace) | 🔲 | Po dokončení UX struktury |
 | Service pages: intro texty (popisný styl, max 25 slov) | ✅ | 24 stránek + školení |
-| Ověřit metriky s Hezinou: „36 let odborné činnosti", „14 000+ zakázek", „6 000+ měření" | ❓ | OVĚŘIT S HEZINOU před publikací |
+| Ověřit metriky s Hezinou: „36 let odborné činnosti", „14 000+ zakázek", „6 000+ měření" | ✅ | Ověřeno s Hezinou 31. 5. 2026 |
 | Homepage: reference teaser — konkrétní příklady (Škoda Auto, ČEZ apod.) | ❓ | Závisí na souhlasu klienta |
-| /odborna-garance: obsah pro expertní profil (životopis, certifikáty, citát) | ❓ | Pokud se stránka zachová |
 | /typicke-zakazky: přidat úvodní text vysvětlující účel stránky | 🔲 | Krátké, 2 věty |
 | Fotografie: tým, laboratoř, terénní práce | ❓ | OVĚŘIT — existují fotky? |
 
@@ -180,13 +180,10 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 
 | Otázka | Oblast | Priorita |
 |--------|--------|----------|
-| „36 let odborné činnosti" — ověřit správnost (IČO registrováno ~2004) | Copy | Vysoká — nesmí být na webu špatné číslo |
-| Konkrétní čísla: počet zakázek, měření, certifikátů | Copy | Vysoká |
 | Fotografie: tým, laboratoř, terénní práce — existují? | Grafika | Střední |
 | Reference: mohou být zákazníci jmenovaní, nebo jen anonymně? | Copy | Střední |
 | Světlá varianta loga (pro tmavé pozadí) | Grafika | Střední |
 | GDPR / cookie lišta — řeší klient nebo my? | Launch | Střední |
-| /odborna-garance: zachovat jako plnohodnotnou stránku NEBO integrovat do /o-spolecnosti? | UX | Nízká |
 
 ---
 
@@ -211,7 +208,8 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 30. 5. | Sprint 12 | P6-3/P6-4 hero layout fix, P1-7 responzivní menu (Další) |
 | 31. 5. | Sprint 13 | P5-14–16 mobilní homepage fold — skrytý trust band, inline stats, kratší hero |
 | 31. 5. | P5-18 | Offer karty homepage — nadpis vedle ikony (card-head) |
-| 31. 5. | P5-21 + P5-22 | Homepage hero vrstvené copy + hero pravidla v ux-role/copy-role |
+| 31. 5. | P2-6 + metriky | /odborna-garance odstraněna (obsah v O společnosti), metriky ověřeny s Hezinou |
+| 31. 5. | P5-23 | Redesign patičky — 4 zóny, footer-nav.ts, desktop navigace + kontakt |
 
 ---
 

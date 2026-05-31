@@ -6,8 +6,6 @@ export const permanentRedirects = [
   { source: "/spolecnost/", destination: "/o-spolecnosti-naturchem", permanent: true },
   { source: "/o-nas", destination: "/o-spolecnosti-naturchem", permanent: true },
   { source: "/o-nas/", destination: "/o-spolecnosti-naturchem", permanent: true },
-  { source: "/odborna-garance", destination: "/o-spolecnosti-naturchem", permanent: true },
-  { source: "/odborna-garance/", destination: "/o-spolecnosti-naturchem", permanent: true },
   { source: "/hlukova-studie", destination: "/sluzby/hlukove-studie", permanent: true },
   { source: "/hlukova-studie/", destination: "/sluzby/hlukove-studie", permanent: true },
   { source: "/sluzby/pracovni-prostredi/vibrace", destination: "/sluzby/mereni-vibraci", permanent: true },

@@ -12,13 +12,36 @@ export function clientLogoItemClass(client: ClientLogo): string {
 
 /** Mobile grid: 3 columns × 4 rows; last slot reserved for overflow hint. */
 export const mobileLogoGridSlots = 12;
-export const mobileLogoPreviewCount = mobileLogoGridSlots - 1;
+export const mobileLogoPreviewCount = 11;
+
+/** Tablet grid: 4 columns × 2 rows. */
+export const tabletLogoGridSlots = 8;
+export const tabletLogoPreviewCount = 7;
+
+/** Desktop grid: 10 columns × 2 rows; last slot reserved for overflow hint. */
+export const desktopLogoGridSlots = 20;
+export const desktopLogoPreviewCount = 19;
 
 export const clientLogosMoreLabel = "a mnoho dalších..";
 export const clientLogosMoreAriaLabel = "Zobrazit další loga zákazníků";
 
+export function getLogoPreviewCount(viewportWidth: number): number {
+  if (viewportWidth <= 520) return mobileLogoPreviewCount;
+  if (viewportWidth <= 900) return tabletLogoPreviewCount;
+  return desktopLogoPreviewCount;
+}
+
+export function getLogoGridCap(count: number, viewportWidth: number) {
+  const previewMax = getLogoPreviewCount(viewportWidth);
+  if (count < previewMax) {
+    return { previewCount: count, hasOverflow: false };
+  }
+  return { previewCount: previewMax, hasOverflow: true };
+}
+
+/** @deprecated Use getLogoGridCap. */
 export function hasMobileLogoOverflow(count: number): boolean {
-  return count > mobileLogoGridSlots;
+  return count > mobileLogoPreviewCount;
 }
 
 export const referenceClients: ClientLogo[] = [

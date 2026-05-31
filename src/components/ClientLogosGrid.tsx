@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   clientLogoItemClass,
   clientLogosMoreAriaLabel,
   clientLogosMoreLabel,
-  hasMobileLogoOverflow,
-  mobileLogoPreviewCount,
+  getLogoGridCap,
   referenceClients,
   type ClientLogo
 } from "@/lib/client-logos";
@@ -41,23 +40,43 @@ function ClientLogosMoreContent() {
   );
 }
 
+function useLogoGridCap(clientCount: number) {
+  const [cap, setCap] = useState(() =>
+    typeof window === "undefined"
+      ? getLogoGridCap(clientCount, 1200)
+      : getLogoGridCap(clientCount, window.innerWidth)
+  );
+
+  useEffect(() => {
+    const update = () => setCap(getLogoGridCap(clientCount, window.innerWidth));
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [clientCount]);
+
+  return cap;
+}
+
 export function ClientLogosGrid({ clients = referenceClients, moreHref }: Props) {
   const [expanded, setExpanded] = useState(false);
-  const overflow = hasMobileLogoOverflow(clients.length);
-  const capped = overflow && !expanded;
-  const previewClients = clients.slice(0, mobileLogoPreviewCount);
-  const overflowClients = clients.slice(mobileLogoPreviewCount);
+  const { previewCount, hasOverflow } = useLogoGridCap(clients.length);
+  const capped = hasOverflow && !expanded;
+
+  if (expanded) {
+    return (
+      <div className="client-logos-grid client-logos-grid--expanded">
+        {clients.map(client => (
+          <ClientLogoLink key={client.name} client={client} />
+        ))}
+      </div>
+    );
+  }
+
+  const previewClients = clients.slice(0, previewCount);
+  const overflowClients = clients.slice(previewCount);
 
   return (
-    <div
-      className={[
-        "client-logos-grid",
-        "client-logos-grid--mobile-cap",
-        expanded ? "client-logos-grid--mobile-expanded" : ""
-      ]
-        .filter(Boolean)
-        .join(" ")}
-    >
+    <div className={["client-logos-grid", capped ? "client-logos-grid--capped" : ""].filter(Boolean).join(" ")}>
       {previewClients.map(client => (
         <ClientLogoLink key={client.name} client={client} />
       ))}
@@ -80,11 +99,7 @@ export function ClientLogosGrid({ clients = referenceClients, moreHref }: Props)
         ))}
 
       {overflowClients.map(client => (
-        <ClientLogoLink
-          key={client.name}
-          client={client}
-          className={capped ? "client-logo-item--mobile-overflow" : undefined}
-        />
+        <ClientLogoLink key={client.name} client={client} className="client-logo-item--overflow" />
       ))}
     </div>
   );

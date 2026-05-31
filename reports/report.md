@@ -5,11 +5,48 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 7 |
-| Celkový odhadovaný čas | ~13,8 hodiny |
-| Aktuální fáze | Sprint 14 + P5-18 hotovo (mobilní homepage, offer karty); copy sprint C3 (akreditace) |
+| Počet sezení celkem | 8 |
+| Celkový odhadovaný čas | ~14 hodiny |
+| Aktuální fáze | Sprint 14 + P5-18 hotovo (mobilní homepage, kompaktní loga zákazníků); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 31. 5. 2026, 11:09–11:21
+
+### Přehled
+Navazující UX úpravy mřížky log zákazníků na mobilu — sjednocení limitu 4 řádků na homepage i stránce Reference, náhrada posledního slotu textovou buňkou naznačující další zákazníky a finální schválení copy „a mnoho dalších..“. Commitnuto a pushnuto na GitHub.
+
+**Zdroj popisu:** AI konverzace + git commity
+
+### Provedené změny
+
+#### Mobilní preview log — stejný limit na obou stránkách
+**Co bylo uděláno:** Komponenta `ClientLogosGrid` s limitem 4×3 buněk na mobilu rozšířena i na `/reference` (dříve jen homepage). Zobrazuje se 11 log; 12. slot nahrazuje textová buňka místo dalšího loga.  
+**Proč:** Na mobilu působila mřížka 19 log rozházeně a zabírala příliš scrollu; na stránce referencí stejný problém.
+
+#### Textová buňka overflow
+**Co bylo uděláno:** Na homepage buňka odkazuje na `/reference#zakaznici`, na stránce Reference po tapnutí rozbalí zbývající loga. Vizuálně sladěno s logy (šedá, stejná výška buňky).  
+**Proč:** Návštěvník má signal, že jde o výběr, ne kompletní seznam — bez nutnosti zobrazit všech 19 log najednou.
+
+#### Finální copy — „a mnoho dalších..“
+**Co bylo uděláno:** Po copy iteraci (dvouřádkový návrh → jeden řádek) schválena a implementována textace **„a mnoho dalších..“** v `client-logos.ts`, doplněn `aria-label` pro přístupnost.  
+**Proč:** Krátký text se vejde do buňky loga a přirozeně naznačuje širší okruh zákazníků bez uvádění konkrétních jmen.
+
+#### Commit a nasazení
+**Co bylo uděláno:** Produktové změny commitnuty (`7a52ea1`) a pushnuty na `origin/main`.  
+**Proč:** Uzavření ladění mobilní mřížky log před nasazením na Vercel.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~11 min  
+**Rozložení:** 31. 5. 2026 11:09–11:21 (~11 min)  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** ~6  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
+
+### Technická poznámka
+`src/components/ClientLogosGrid.tsx`, `src/lib/client-logos.ts`, `src/app/globals.css` — commit `7a52ea1`.
 
 ---
 
@@ -39,8 +76,8 @@ Navazující UX sezení na homepage — nejdřív optimalizace mobilního foldu 
 **Proč:** Vertikální stack ikona → nadpis zbytečně prodlužoval karty (~50–80 px na kartu); horizontální head zrychluje scan.
 
 #### Kompaktní mřížka log zákazníků
-**Co bylo uděláno:** Nová komponenta `ClientLogosGrid` — na mobilu preview 11 log + odkaz „a další…“ na /reference, na desktopu plná mřížka. Použito na homepage i stránce Reference.  
-**Proč:** 19 log na mobilu zabíralo příliš mnoho místa pod hlavním obsahem.
+**Co bylo uděláno:** Nová komponenta `ClientLogosGrid` — sjednocená 3sloupcová mřížka na mobilu s pevnou výškou buněk, reset wide log, těsnější mezery. Na mobilu preview 11 log + 12. slot pro overflow hint; na desktopu plná mřížka 10 sloupců. Použito na homepage i stránce Reference.  
+**Proč:** 19 log na mobilu působilo rozházeně (wide loga rozbíjela řádky) a zabíralo příliš místa.
 
 #### Commit a nasazení
 **Co bylo uděláno:** Produktové změny commitnuty (`a930750`, `bfcb660`) a pushnuty na `origin/main`. Aktualizována ROADMAPA a UX audit dokumentace (P5-14–18).  

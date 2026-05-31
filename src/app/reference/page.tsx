@@ -9,7 +9,7 @@ import {
   referenceExamples,
   referenceIntro
 } from "@/lib/reference-content";
-import { clientLogoItemClass, referenceClients } from "@/lib/client-logos";
+import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -47,21 +47,7 @@ export default function ReferencePage() {
 
       <section className="section content-block container" id="zakaznici">
         <h2>Naši zákazníci</h2>
-        <div className="client-logos-grid">
-          {referenceClients.map(client => (
-            <a
-              key={client.name}
-              href={client.website}
-              className={clientLogoItemClass(client)}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={client.name}
-              aria-label={client.name}
-            >
-              <img src={client.logo} alt={client.name} />
-            </a>
-          ))}
-        </div>
+        <ClientLogosGrid />
       </section>
 
       <section className="section content-block container" id="priklady">

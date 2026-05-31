@@ -4,9 +4,9 @@ import { HeroPhoto } from "@/components/HeroPhoto";
 import { ExperienceStats } from "@/components/ExperienceStats";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
+import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { siteUrl } from "@/lib/site";
-import { clientLogoItemClass, referenceClients } from "@/lib/client-logos";
 
 export const metadata: Metadata = {
   title: {
@@ -128,8 +128,10 @@ export default function Home() {
                   className="card-cover-link"
                   aria-label={`${pillar.title} — ${pillar.cta}`}
                 />
-                <ServiceIcon icon={pillar.icon} variant="card" className="home-offer-icon" />
-                <h3>{pillar.title}</h3>
+                <header className="home-offer-card-head">
+                  <ServiceIcon icon={pillar.icon} variant="card" className="home-offer-icon" />
+                  <h3>{pillar.title}</h3>
+                </header>
                 <ul className="tag-row home-offer-tags" aria-label="Typické oblasti">
                   {pillar.tags.map((tag) => (
                     <li key={tag}>
@@ -161,21 +163,7 @@ export default function Home() {
 
       <section className="home-section container home-clients-section">
         <p className="eyebrow">Naši zákazníci</p>
-        <div className="client-logos-grid">
-          {referenceClients.map(client => (
-            <a
-              key={client.name}
-              href={client.website}
-              className={clientLogoItemClass(client)}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={client.name}
-              aria-label={client.name}
-            >
-              <img src={client.logo} alt={client.name} />
-            </a>
-          ))}
-        </div>
+        <ClientLogosGrid moreHref="/reference#zakaznici" />
       </section>
     </main>
   );

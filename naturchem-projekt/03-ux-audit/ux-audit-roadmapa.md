@@ -577,6 +577,7 @@ _Navazuje na G6. Sloučeno z grafického auditu (`06-graficky-audit/graficky-aud
 | P5-15 | Mobilní homepage: skrýt trust band (desktop 5 sloupců zachován) | `app/page.tsx`, `globals.css` | Nízká | — |
 | P5-16 | Mobilní homepage stats: jednořádkový inline layout bez ikon | `globals.css` | Nízká | — |
 | P5-17 | Mobilní fold follow-up: sloučit stats do hero nebo snížit padding | `globals.css` | Nízká | Po QA P5-14–16 |
+| P5-18 | Homepage offer karty: nadpis vedle ikony (card-head) | `app/page.tsx`, `globals.css` | Nízká | — |
 
 #### P5-B — Fáze B (čeká na fotografie od Heziny)
 

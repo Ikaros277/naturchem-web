@@ -93,6 +93,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | P5-15 | Mobilní homepage: skrýt trust band | ✅ | Nízká |
 | P5-16 | Mobilní homepage stats: kompaktní 3 sloupce s ikonami | ✅ | Nízká |
 | P5-17 | Mobilní fold follow-up (stats do hero / padding) | 🔲 | Nízká |
+| P5-18 | Homepage offer karty: nadpis vedle ikony (card-head) | ✅ | Nízká |
 | P5-B1–B4 | Reálné fotografie (hero, tým, přístroje, Hezina) | ❓ | Po dodání fotek |
 
 ### P6 — Layout a spacing
@@ -207,6 +208,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 30. 5. | P6-2 | Sjednocená výška hero pásu (standard / service variant) |
 | 30. 5. | Sprint 12 | P6-3/P6-4 hero layout fix, P1-7 responzivní menu (Další) |
 | 31. 5. | Sprint 13 | P5-14–16 mobilní homepage fold — skrytý trust band, inline stats, kratší hero |
+| 31. 5. | P5-18 | Offer karty homepage — nadpis vedle ikony (card-head) |
 
 ---
 

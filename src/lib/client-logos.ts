@@ -14,11 +14,13 @@ export function clientLogoItemClass(client: ClientLogo): string {
 export const mobileLogoGridSlots = 12;
 export const mobileLogoPreviewCount = mobileLogoGridSlots - 1;
 
-export const clientLogosMoreLabel = "a další…";
+export const clientLogosMoreLabel = "a mnoho dalších..";
+export const clientLogosMoreAriaLabel = "Zobrazit další loga zákazníků";
 
 export function hasMobileLogoOverflow(count: number): boolean {
   return count > mobileLogoGridSlots;
 }
+
 export const referenceClients: ClientLogo[] = [
   { name: "Škoda Auto, a.s.", logo: "/loga-referenci/skoda.svg", website: "https://www.skoda-auto.cz" },
   { name: "ČEZ, a.s.", logo: "/loga-referenci/cez.svg", website: "https://www.cez.cz" },

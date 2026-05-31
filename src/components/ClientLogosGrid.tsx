@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   clientLogoItemClass,
+  clientLogosMoreAriaLabel,
   clientLogosMoreLabel,
   hasMobileLogoOverflow,
   mobileLogoPreviewCount,
@@ -32,6 +33,14 @@ function ClientLogoLink({ client, className }: { client: ClientLogo; className?:
   );
 }
 
+function ClientLogosMoreContent() {
+  return (
+    <span className="client-logo-more-text" aria-hidden="true">
+      {clientLogosMoreLabel}
+    </span>
+  );
+}
+
 export function ClientLogosGrid({ clients = referenceClients, moreHref }: Props) {
   const [expanded, setExpanded] = useState(false);
   const overflow = hasMobileLogoOverflow(clients.length);
@@ -55,8 +64,8 @@ export function ClientLogosGrid({ clients = referenceClients, moreHref }: Props)
 
       {capped &&
         (moreHref ? (
-          <Link href={moreHref} className="client-logo-item client-logo-more">
-            {clientLogosMoreLabel}
+          <Link href={moreHref} className="client-logo-item client-logo-more" aria-label={clientLogosMoreAriaLabel}>
+            <ClientLogosMoreContent />
           </Link>
         ) : (
           <button
@@ -64,9 +73,9 @@ export function ClientLogosGrid({ clients = referenceClients, moreHref }: Props)
             className="client-logo-item client-logo-more"
             onClick={() => setExpanded(true)}
             aria-expanded={false}
-            aria-label="Zobrazit další loga zákazníků"
+            aria-label={clientLogosMoreAriaLabel}
           >
-            {clientLogosMoreLabel}
+            <ClientLogosMoreContent />
           </button>
         ))}
 

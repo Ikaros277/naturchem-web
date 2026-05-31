@@ -3900,15 +3900,21 @@ footer .muted,
   background: none;
   cursor: pointer;
   padding: 2px 4px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: lowercase;
   text-decoration: none;
   color: var(--secondary);
   opacity: 0.72;
   filter: grayscale(100%);
   transition: filter 0.2s, opacity 0.2s;
+}
+
+.client-logo-more-text {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .client-logo-more:hover,

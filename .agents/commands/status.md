@@ -13,6 +13,8 @@ Z těchto tří zdrojů urči: (a) poslední commit = kde přesně se skončilo,
 ```
 ## Status — naturchem.cz [dnešní datum]
 
+**Roadmapa:** [naturchem-projekt/ROADMAPA.md](naturchem-projekt/ROADMAPA.md)
+
 ### Kde jsme skončili
 [1 věta — konkrétní poslední provedená věc: která stránka, která sekce, co přesně bylo naposledy dokončeno. Vychází z posledního commitu + report.md.]
 
@@ -32,4 +34,4 @@ Z těchto tří zdrojů urči: (a) poslední commit = kde přesně se skončilo,
 [Vše z ROADMAPA.md označené jako ❓ — jen seznam, bez komentáře.]
 ```
 
-Výstup pouze v češtině. Žádný kód ani technické detaily — briefing pro okamžité navázání na práci.
+Výstup pouze v češtině. Žádný kód ani technické detaily — briefing pro okamžité navázání na práci. Odkaz na roadmapu v hlavičce výstupu vždy ponech beze změny (klikací cesta k `naturchem-projekt/ROADMAPA.md`).

@@ -45,7 +45,7 @@ Z `tone-of-voice.md` sekce 5 — ověřit výskyt na webu:
 | „komplexní služby" nebo „komplexní přístup" | Homepage, o-spolecnosti, service pages | 🔲 ověřit |
 | „profesionální přístup" | O-spolecnosti | 🔲 ověřit |
 | „neváhejte nás kontaktovat" | Formulářové sekce, CTA bannery | 🔲 ověřit |
-| „rádi Vám pomůžeme" | Footer, CTA | 🔲 ověřit |
+| „rádi Vám pomůžeme" | Footer, CTA | ✅ odstraněno z patičky (P5-23) |
 | „v nejkratším možném termínu" | Formuláře, service pages | 🔲 ověřit |
 | „kvalita je naší prioritou" | O-spolecnosti | 🔲 ověřit |
 
@@ -245,7 +245,7 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 | **C6** | Služby povolování/EIA (11 slugů) | 🔲 | |
 | **C7** | `service-groups`, provozy 13×, reference, typické zakázky, `seo-landings` | 🔲 | |
 | **C8** | `faq.ts` (styl only), `/poradna` hero | 🔲 | |
-| **C9** | Kontakt, formulář, Footer, UI labely + grep QA | 🔲 | |
+| **C9** | Kontakt, formulář, Footer, UI labely + grep QA | 🔲 | Footer copy ✅ P5-23 (tagline, labely sloupců) |
 | **P-COPY** | 33× `content/articles/*.md` | 🔲 odloženo | Po dokončení C1–C9 |
 
 ### Mapování na CC položky (starší audit)

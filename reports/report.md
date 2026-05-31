@@ -5,11 +5,39 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 11 |
-| Celkový odhadovaný čas | ~15,1 hodiny |
-| Aktuální fáze | UX revize patičky (P5-23); mobilní homepage a hero copy hotovo |
+| Počet sezení celkem | 12 |
+| Celkový odhadovaný čas | ~15 hodiny |
+| Aktuální fáze | UX revize homepage fold (P5-17); patička P5-23 hotovo |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 31. 5. 2026, 14:18–14:23
+
+### Přehled
+Dokončení P5-17 — těsnější mobilní fold po zkrácení hero copy (P5-21). Přidána varianta `BrandLogo` pro tmavé pozadí (SVG wordmark). Aktualizace audit docs, ROADMAPA a reportu.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### P5-17 — mobilní fold padding
+**Co bylo uděláno:** Snížení paddingu hero, stats a první sekce offer na mobilu (`globals.css`). P5-17 označeno jako hotové v ROADMAPA a ux-audit-roadmapa.  
+**Proč:** Po zkrácení hero copy zůstal nadbytečný vertikální prostor — fold byl příliš nízko.
+
+#### BrandLogo `onDark`
+**Co bylo uděláno:** Nová prop `variant="onDark"` — SVG značka + text NATURCHEM bez PNG filtru pro tmavé pozadí.  
+**Proč:** Připraveno pro použití na tmavých plochách (patička byla redesignována bez loga).
+
+#### Dokumentace
+**Co bylo uděláno:** copy-audit (P5-23 footer copy), ux-audit-roadmapa (P5-17, P5-23), status šablona s odkazem na ROADMAPA.  
+**Proč:** Synchronizace stavu projektu s implementací.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~12 min  
+**Rozložení:** 31. 5. 2026 14:18–14:25 (~12 min)  
+**Metoda odhadu:** konverzace  
 
 ---
 

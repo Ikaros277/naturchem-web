@@ -5686,37 +5686,37 @@ footer .muted,
     display: none;
   }
 
-  /* P5-14–16: Homepage mobile fold — kompaktní stats, kratší hero padding */
+  /* P5-14–17: Homepage mobile fold — kompaktní stats, padding po zkrácení hero copy (P5-21) */
   .home-page .hero .hero-lead {
     font-size: 0.98rem;
     line-height: 1.5;
-    margin-top: 0.85rem;
+    margin-top: 0.7rem;
   }
 
   .home-page .hero {
-    padding: 1.45rem 0 1.15rem;
+    padding: 1.15rem 0 0.85rem;
   }
 
   .home-page .home-stats-compact {
-    padding: 0.7rem 0;
+    padding: 0.5rem 0;
   }
 
   .home-page .home-stats-compact .stats-grid,
   .home-page .home-stats-compact .stats-highlight-metrics {
     margin-top: 0;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.45rem;
+    gap: 0.4rem;
   }
 
   .home-page .home-stats-compact + .home-section {
-    padding-top: 1.15rem;
+    padding-top: 0.9rem;
   }
 
   .home-page .home-stats-compact .stat-card-with-icon {
     display: flex;
     align-items: center;
-    gap: 0.45rem;
-    padding: 0.55rem 0.45rem;
+    gap: 0.4rem;
+    padding: 0.45rem 0.4rem;
     background: #fff;
     border: 1px solid var(--border);
     box-shadow: var(--shadow-card);

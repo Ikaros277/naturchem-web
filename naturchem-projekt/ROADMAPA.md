@@ -92,7 +92,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | P5-14 | Mobilní homepage hero: kratší eyebrow + lead | ✅ | Nízká |
 | P5-15 | Mobilní homepage: skrýt trust band | ✅ | Nízká |
 | P5-16 | Mobilní homepage stats: kompaktní 3 sloupce s ikonami | ✅ | Nízká |
-| P5-17 | Mobilní fold follow-up (padding po zkrácení hero copy) | 🔲 | Nízká |
+| P5-17 | Mobilní fold follow-up (padding po zkrácení hero copy) | ✅ | Nízká |
 | P5-18 | Homepage offer karty: nadpis vedle ikony (card-head) | ✅ | Nízká |
 | P5-21 | Homepage hero: vrstvené copy (H1 max 8 slov, lead bez zdvojení) | ✅ | Nízká |
 | P5-22 | Hero pravidla zapsána do ux-role + copy-role | ✅ | Nízká |

@@ -6,34 +6,47 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 7 |
-| Celkový odhadovaný čas | ~13,3 hodiny |
-| Aktuální fáze | Sprint S7 hotovo (service pages + mobilní hlavička); copy sprint C3 (akreditace) |
+| Celkový odhadovaný čas | ~13,7 hodiny |
+| Aktuální fáze | Sprint 14 hotovo (homepage „Co zajišťujeme“ + mobilní fold); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 31. 5. 2026, 10:59-11:09
+## Sezení: 31. 5. 2026, 10:40–11:11
 
 ### Přehled
-Automaticky založené sezení po commitu `a930750`.
+Navazující sezení po Sprintu S7 — UX audit homepage sekce „Co zajišťujeme“, implementace vizuálního zvýraznění tří pilířů služeb (Sprint 14) a dokončení mobilního foldu homepage (P5-14–16). Změny commitnuty a pushnuty na GitHub.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
-#### UX: optimalizace mobilni homepage fold (P5-14-16).
-**Co bylo uděláno:** UX: optimalizace mobilni homepage fold (P5-14-16). - Zkraceny hero copy a skryty trust band na mobilu, kompaktni stats ve trech sloupcich se zkracenou textaci a symetrickymi mezerami; aktualizace ROADMAPY.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `a930750`). Dotcene oblasti: app, lib, report, ROADMAPA.md, ux-audit-roadmapa.md, workflow.  
-**Proč:** Zkraceny hero copy a skryty trust band na mobilu, kompaktni stats ve trech sloupcich se zkracenou textaci a symetrickymi mezerami; aktualizace ROADMAPY.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### UX audit — sekce „Co zajišťujeme“
+**Co bylo uděláno:** Proveden cílený UX audit homepage — diagnóza proč pilíře služeb (měření, studie, dokumentace) působí vizuálně slaběji než stats band a trust lišta. Navrženy varianty A–D (karty, accent, bílá sekce, fotky); schválena kombinace Sprint 14 bez stock fotek.  
+**Proč:** Klient potřeboval, aby hlavní nabídka firmy byla na první pohled nejvýraznější část stránky — ne text „plující“ na šedém pozadí.
+
+#### Sprint 14 — vizuální zvýraznění pilířů (P5-18–20)
+**Co bylo uděláno:** Sekce přepnuta na bílé pozadí s eyebrow „Naše služby“. Tři pilíře dostaly bílé karty se stínem a forest accent horním okrajem, větší ikony (52 px), tag pills (KHS, EIA, ČIŽP…), primary CTA místo ghost tlačítek. Celá karta zůstává klikací.  
+**Proč:** Stats karty měly box styling, pilíře ne — hierarchie byla obrácená. Úpravy sjednocují vizuální jazyk s ostatními kartami webu a zrychlují scan pro B2B návštěvníky.
+
+#### Mobilní homepage fold (P5-14–16)
+**Co bylo uděláno:** Na mobilu zkrácen hero eyebrow a lead (desktop copy beze změny), skryta trust lišta (akreditace v krátkém eyebrow), stats přeuspořádány do tří kompaktních bílých řádků. Aktualizována ROADMAPA a UX audit dokumentace.  
+**Proč:** Nad foldem na telefonu bylo příliš obsahu před hlavní nabídkou; cílem je rychlejší orientace v terénu.
+
+#### Commit a nasazení
+**Co bylo uděláno:** Produktové změny commitnuty (`a930750`) a pushnuty na `origin/main`.  
+**Proč:** Uzavření Sprintu 14 a nasazení na Vercel preview/produkci.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 31. 5. 2026 10:59-11:09 (~10 min)  
-**Metoda odhadu:** git  
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~31 min  
+**Rozložení:** 31. 5. 2026 10:40–11:11 (~31 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 5  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-Commit: `a93075056fec1f34779942f50a9f73784d2a2f61`
+Dotčené soubory: `src/app/page.tsx`, `src/app/globals.css`, `src/lib/company-stats.ts`, `naturchem-projekt/ROADMAPA.md`. Commity: `a930750`, `6ce9a6c`.
 
 ---
 

@@ -242,6 +242,12 @@ textarea:focus {
   margin-bottom: var(--section-padding-y);
 }
 
+/* Sousedící sekce: mezera = jen padding-top následující sekce (ne trojnásobek) */
+.section.content-block:has(+ .section.content-block) {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
 .content-block h2 {
   margin: 0 0 0.75rem;
   font-size: 1.25rem;
@@ -3807,6 +3813,7 @@ footer .muted,
   justify-items: center;
   gap: 1.1rem 1.25rem;
   margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .client-logo-item {
@@ -5194,6 +5201,11 @@ footer .muted,
 
 .home-section {
   padding: var(--section-padding-y) 0;
+}
+
+/* Homepage: mezera pod logy = mezera nad „Naši zákazníci“ (2× section padding) */
+main.home-page + .site-footer {
+  margin-top: var(--section-padding-y);
 }
 
 .home-offer-grid-three {

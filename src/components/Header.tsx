@@ -203,7 +203,12 @@ export function Header() {
             <div className="nav-mobile-backdrop" aria-hidden onClick={closeMenu} />
             <div className="nav-mobile-sheet" ref={mobileSheetRef}>
               <div className="nav-mobile-sheet-head">
-                <span className="muted">Menu</span>
+                <div className="nav-mobile-brand">
+                  <Link href="/" className="nav-mobile-logo" onClick={closeMenu} aria-label="NATURCHEM domů">
+                    <BrandLogo className="nav-mobile-logo-img" />
+                  </Link>
+                  <p className="nav-mobile-tagline brand-tagline">Měření · studie · dokumentace</p>
+                </div>
                 <button
                   type="button"
                   className="nav-mobile-close"
@@ -213,11 +218,6 @@ export function Header() {
                   ×
                 </button>
               </div>
-              <p className="nav-mobile-contact muted">
-                <a href={`tel:${company.phones[0].replace(/\s/g, "")}`}>{company.phones[0]}</a>
-                {" · "}
-                <a href={`mailto:${company.email}`}>{company.email}</a>
-              </p>
               <nav className="nav-mobile-nav" aria-label="Hlavní navigace">
                 <details className="nav-mobile-details">
                   <summary>Služby</summary>
@@ -256,10 +256,12 @@ export function Header() {
                 <Link href={kontaktNav.href} className="nav-mobile-link" onClick={closeMenu}>
                   {kontaktNav.label}
                 </Link>
+              </nav>
+              <div className="nav-mobile-sheet-foot">
                 <Link className="button nav-mobile-cta" href="/kontakt" onClick={closeMenu}>
                   {globalCta}
                 </Link>
-              </nav>
+              </div>
             </div>
           </div>,
           document.body

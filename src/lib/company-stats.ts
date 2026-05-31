@@ -12,17 +12,17 @@ export const companyStats: ReadonlyArray<{
 }> = [
   {
     value: "14 000+",
-    label: "realizovaných zakázek",
+    label: "zakázek",
     icon: "process-vystup"
   },
   {
     value: "6 000+",
-    label: "měření v terénu",
+    label: "měření",
     icon: "emise"
   },
   {
     value: "36 let",
-    label: "odborné činnosti",
+    label: "praxe",
     icon: "process-posouzeni"
   }
 ];
@@ -46,8 +46,8 @@ export const practiceFromRecordsParagraphs = [
 ] as const;
 
 export const experienceBullets = [
-  "14 000+ realizovaných zakázek",
-  "6 000+ měření v terénu",
-  "36 let odborné činnosti",
+  "14 000+ zakázek",
+  "6 000+ měření",
+  "36 let praxe",
   "dlouhodobá práce pro průmyslové, energetické, zemědělské, komunální a veřejné zadavatele"
 ] as const;

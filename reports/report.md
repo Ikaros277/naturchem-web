@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 6 |
-| Celkový odhadovaný čas | ~12 hod 53 min |
+| Celkový odhadovaný čas | ~13,1 hodiny |
 | Aktuální fáze | Sprint S7 hotovo (service pages + mobilní hlavička); copy sprint C3 (akreditace) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 31. 5. 2026, 09:42–10:21
+## Sezení: 31. 5. 2026, 09:42–10:36
 
 ### Přehled
 Dopolední sezení začalo status briefingem a UX konzultací struktury stránek služeb. Po schválení plánu S7 proběhla přestavba šablony ServicePage, úpravy mobilní hlavičky (CTA, logo, odstranění spodní lišty) a sjednocení výšky ovládacích prvků. Změny commitnuty a pushnuty na GitHub.
@@ -21,6 +21,10 @@ Dopolední sezení začalo status briefingem a UX konzultací struktury stránek
 **Zdroj popisu:** AI konverzace + git commity
 
 ### Provedené změny
+#### UX: upgrade mobiln├şho hamburger menu (P5-14).
+**Co bylo uděláno:** UX: upgrade mobiln├şho hamburger menu (P5-14). - Logo s tagline m├şsto ÔÇ×MenuÔÇť, ploch├Ż accordion bez box┼», sticky CTA dole a oprava ┼íipek u vno┼Öen├Żch sekc├ş Slu┼żeb.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `e0be408`). Dotcene oblasti: app, components.  
+**Proč:** Logo s tagline m├şsto ÔÇ×MenuÔÇť, ploch├Ż accordion bez box┼», sticky CTA dole a oprava ┼íipek u vno┼Öen├Żch sekc├ş Slu┼żeb.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
 
 #### Status briefing a UX plán S7 — service pages
 **Co bylo uděláno:** Příkaz `/status` shrnul stav projektu; následovala UX konzultace šablony služeb — diagnóza „dvojí mřížky karet“ (hero panel + decision panel) a chybějícího vizuálního rytmu. Sestaven a schválen plán S7: odstranit hero panel, decision sekce vertikálně, trust pruh, ikony u nadpisů, kategorie-specifická fotografie.  
@@ -47,9 +51,9 @@ Dopolední sezení začalo status briefingem a UX konzultací struktury stránek
 **Proč:** Uzavření sprintu S7 a nasazení na Vercel preview/produkci.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~39 min  
-**Rozložení:** 31. 5. 2026 09:42–10:21 (~39 min)  
-**Metoda odhadu:** git + konverzace  
+**Odhadovaná doba práce:** ~54 min
+**Rozložení:** 31. 5. 2026 09:42–10:36 (~54 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** ~18 kol konverzace  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 

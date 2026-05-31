@@ -24,6 +24,7 @@ const offerPillars = [
     text: "Změříme emise, pracovní prostředí, hluk, vibrace, osvětlení, mikroklima i čisté prostory — akreditovaně, s výstupem pro úřady.",
     cta: "Zobrazit měření",
     href: "/sluzby#mericke-sluzby",
+    tags: ["KHS", "ČIŽP", "ISO 17025"],
     links: [
       { label: "Měření emisí", href: "/sluzby/mereni-emisi" },
       { label: "Pracovní prostředí", href: "/sluzby/pracovni-prostredi" },
@@ -36,6 +37,7 @@ const offerPillars = [
     text: "Připravíme rozptylové a hlukové studie, akustické posudky a modelové výpočty pro KHS, stavební řízení nebo EIA.",
     cta: "Zobrazit studie",
     href: "/sluzby#studie-vypocty",
+    tags: ["EIA", "KHS", "KÚ"],
     links: [
       { label: "Rozptylové studie", href: "/sluzby/rozptylove-studie" },
       { label: "Hlukové studie", href: "/sluzby/hlukove-studie" },
@@ -48,6 +50,7 @@ const offerPillars = [
     text: "Zpracujeme EIA, odborné posudky, provozní řády, IPPC, ISPOP, GHG i další dokumentaci pro správní orgány.",
     cta: "Zobrazit dokumentaci",
     href: "/sluzby#povolovaci-podklady",
+    tags: ["EIA", "IPPC", "ČIŽP"],
     links: [
       { label: "EIA a posudky", href: "/sluzby/eia-posudky-poradenstvi" },
       { label: "IPPC / ISPOP / GHG", href: "/sluzby/ippc-integrovana-povoleni" },
@@ -70,13 +73,18 @@ export default function Home() {
         <HeroPhoto theme="home" priority />
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">
+            <p className="eyebrow eyebrow--desktop">
               Akreditovaná měření · studie a posudky · podklady pro KHS, ČIŽP a stavební úřady
             </p>
+            <p className="eyebrow eyebrow--mobile">Akreditovaná laboratoř · ISO 17025</p>
             <h1>Měření, studie i povolovací podklady — postaráme se o vše, co Váš provoz potřebuje</h1>
-            <p className="hero-lead">
+            <p className="hero-lead hero-lead--desktop">
               Potřebujete měření emisí, hlukovou studii nebo podklady pro EIA? Zajistíme je v jednom
               procesu — pro provozovatele, investory i projektanty.
+            </p>
+            <p className="hero-lead hero-lead--mobile">
+              Měření, studie i povolovací podklady v jednom procesu — pro provozovatele, investory i
+              projektanty.
             </p>
           </div>
         </div>
@@ -99,10 +107,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-section home-section-surface">
+      <section className="home-section home-section-offer" aria-labelledby="home-offer-heading">
         <div className="container">
-          <header className="section-header">
-            <h2>Co zajišťujeme</h2>
+          <header className="section-header home-offer-header">
+            <p className="eyebrow">Naše služby</p>
+            <h2 id="home-offer-heading">Co zajišťujeme</h2>
             <p className="muted section-intro">
               Měření, studie a povolovací podklady u nás na sebe navazují — nemusíte koordinovat více
               dodavatelů.
@@ -112,15 +121,22 @@ export default function Home() {
             {offerPillars.map((pillar) => (
               <article
                 key={pillar.title}
-                className="institutional-card home-offer-card card-interactive"
+                className="card institutional-card home-offer-card card-interactive"
               >
                 <Link
                   href={pillar.href}
                   className="card-cover-link"
                   aria-label={`${pillar.title} — ${pillar.cta}`}
                 />
-                <ServiceIcon icon={pillar.icon} variant="card" />
+                <ServiceIcon icon={pillar.icon} variant="card" className="home-offer-icon" />
                 <h3>{pillar.title}</h3>
+                <ul className="tag-row home-offer-tags" aria-label="Typické oblasti">
+                  {pillar.tags.map((tag) => (
+                    <li key={tag}>
+                      <span className="tag">{tag}</span>
+                    </li>
+                  ))}
+                </ul>
                 <p className="muted">{pillar.text}</p>
                 <ul className="home-offer-links">
                   {pillar.links.map((link) => (
@@ -133,7 +149,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href={pillar.href}
-                  className="button secondary home-offer-cta card-interactive-nested"
+                  className="button home-offer-cta card-interactive-nested"
                 >
                   {pillar.cta}
                 </Link>

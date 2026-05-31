@@ -2066,12 +2066,17 @@ fieldset.card legend {
 .stat-card-with-icon {
   grid-template-columns: auto 1fr;
   align-items: center;
+  align-content: center;
   gap: 1rem 1.15rem;
   padding: 1.35rem 1.25rem;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius-sharp);
   box-shadow: var(--shadow-card);
+}
+
+.stat-card-with-icon .stat-card-icon {
+  align-self: center;
 }
 
 .stat-card-body {
@@ -2530,12 +2535,42 @@ main.page:has(.page-hero-band) {
   border-bottom: 1px solid var(--border);
 }
 
+.home-stats-compact .stats-grid,
+.home-stats-compact .stats-highlight-metrics {
+  margin-top: 0;
+}
+
+.home-page .hero .eyebrow--mobile,
+.home-page .hero .hero-lead--mobile {
+  display: none;
+}
+
 .experience-stats-compact .stat-card-with-icon {
   padding: 1rem 1.1rem;
+  align-items: center;
+  align-content: center;
+}
+
+.experience-stats-compact .stat-card-icon {
+  align-self: center;
+}
+
+.experience-stats-compact .stat-card-body {
+  display: grid;
+  gap: 0.15rem;
+  align-self: center;
 }
 
 .experience-stats-compact .stat-card-prominent .stat-value {
   font-size: clamp(1.65rem, 2.8vw, 2.15rem);
+  margin-bottom: 0;
+  line-height: 1.05;
+}
+
+.experience-stats-compact .stat-card-prominent .stat-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .service-hero--photo {
@@ -2713,6 +2748,15 @@ main.page:has(.page-hero-band) {
   background: var(--surface-muted);
 }
 
+.home-section-offer {
+  background: #fff;
+  border-top: 1px solid var(--border);
+}
+
+.home-offer-header .eyebrow {
+  margin: 0 0 0.35rem;
+}
+
 .home-offer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -2721,11 +2765,6 @@ main.page:has(.page-hero-band) {
 
 .institutional-card {
   min-height: 100%;
-}
-
-.home-offer-card {
-  display: grid;
-  gap: 0.85rem;
 }
 
 .home-offer-card h3 {
@@ -4232,6 +4271,11 @@ footer .muted,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .home-page .home-stats-compact .stats-grid,
+  .home-page .home-stats-compact .stats-highlight-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .contact-side-panel {
     position: static;
   }
@@ -4534,6 +4578,15 @@ footer .muted,
   .stats-highlight-four,
   .stats-highlight-metrics {
     grid-template-columns: 1fr;
+  }
+
+  .home-page .home-stats-compact .stats-grid,
+  .home-page .home-stats-compact .stats-highlight-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-page .home-stats-compact .stat-card-prominent .stat-value {
+    margin-bottom: 0;
   }
 
   .stat-card,
@@ -5047,6 +5100,22 @@ footer .muted,
   gap: 0.85rem;
   padding: clamp(1.4rem, 2.5vw, 2rem);
   min-height: 100%;
+  border-top: 3px solid var(--secondary);
+  box-shadow: var(--shadow-card);
+}
+
+.home-offer-card .home-offer-icon.card-symbol {
+  width: 52px;
+  height: 52px;
+}
+
+.home-offer-card .home-offer-icon.card-symbol svg {
+  width: 26px;
+  height: 26px;
+}
+
+.home-offer-tags {
+  margin: 0;
 }
 
 .home-offer-links {
@@ -5623,6 +5692,109 @@ footer .muted,
 
   .trust-band span:last-child {
     border-bottom: 0;
+  }
+
+  /* P5-14–16: Homepage mobile fold — trust band skryt, kompaktní stats, kratší hero */
+  .home-page .trust-band {
+    display: none;
+  }
+
+  .home-page .hero .eyebrow--desktop,
+  .home-page .hero .hero-lead--desktop {
+    display: none;
+  }
+
+  .home-page .hero .eyebrow--mobile,
+  .home-page .hero .hero-lead--mobile {
+    display: block;
+  }
+
+  .home-page .hero .eyebrow--mobile {
+    margin-bottom: 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  .home-page .hero .hero-lead--mobile {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-top: 0.85rem;
+  }
+
+  .home-page .hero {
+    padding: 1.45rem 0 1.15rem;
+  }
+
+  .home-page .home-stats-compact {
+    padding: 0.7rem 0;
+  }
+
+  .home-page .home-stats-compact .stats-grid,
+  .home-page .home-stats-compact .stats-highlight-metrics {
+    margin-top: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+
+  .home-page .home-stats-compact + .home-section {
+    padding-top: 1.15rem;
+  }
+
+  .home-page .home-stats-compact .stat-card-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.45rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    min-width: 0;
+  }
+
+  .home-page .home-stats-compact .stat-card-icon {
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .home-page .home-stats-compact .stat-card-icon.card-symbol {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .home-page .home-stats-compact .stat-card-icon.card-symbol svg {
+    width: 14px;
+    height: 14px;
+    display: block;
+  }
+
+  .home-page .home-stats-compact .stat-card-body {
+    display: grid;
+    gap: 0.1rem;
+    min-width: 0;
+    flex: 1;
+    align-self: center;
+  }
+
+  .home-page .home-stats-compact .stat-card-prominent .stat-value {
+    font-size: clamp(0.82rem, 2.8vw, 0.98rem);
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .home-page .home-stats-compact .stat-card-prominent .stat-label {
+    font-size: clamp(0.68rem, 2.2vw, 0.78rem);
+    font-weight: 600;
+    color: var(--muted);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
   }
 
   .home-offer-grid-three,

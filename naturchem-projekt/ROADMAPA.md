@@ -3,8 +3,8 @@
 > **Účel:** Jediná pravda o stavu celého projektu. Aktualizovat vždy na konci sezení nebo po dokončení úkolu.  
 > **Jak číst:** ✅ Hotovo · 🔄 Probíhá · 🔲 Čeká · ❓ Čeká na klienta
 
-**Poslední aktualizace:** 2026-05-30  
-**Aktuální fáze:** Sprint 12 hotovo → copy sprint, P5-B fotky, launch checklist
+**Poslední aktualizace:** 2026-05-31  
+**Aktuální fáze:** Sprint 13 hotovo → copy sprint, P5-B fotky, launch checklist
 
 ---
 
@@ -89,6 +89,10 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | P5-11 | Photo hero na všech hlavních stránkách (PageHeroBand) | ✅ | Střední |
 | P5-12 | Homepage hero: metriky dolů do USP sekce (ExperienceStats) | ✅ | Nízká |
 | P5-13 | Homepage: trust lišta hned pod hero + kompaktní stats bez nadpisu | ✅ | Nízká |
+| P5-14 | Mobilní homepage hero: kratší eyebrow + lead | ✅ | Nízká |
+| P5-15 | Mobilní homepage: skrýt trust band | ✅ | Nízká |
+| P5-16 | Mobilní homepage stats: kompaktní 3 sloupce s ikonami | ✅ | Nízká |
+| P5-17 | Mobilní fold follow-up (stats do hero / padding) | 🔲 | Nízká |
 | P5-B1–B4 | Reálné fotografie (hero, tým, přístroje, Hezina) | ❓ | Po dodání fotek |
 
 ### P6 — Layout a spacing
@@ -202,6 +206,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 30. 5. | Sprint 11 | Meta audit, poradna↔služby prolinkování, P4-1/P4-3/P4-4 |
 | 30. 5. | P6-2 | Sjednocená výška hero pásu (standard / service variant) |
 | 30. 5. | Sprint 12 | P6-3/P6-4 hero layout fix, P1-7 responzivní menu (Další) |
+| 31. 5. | Sprint 13 | P5-14–16 mobilní homepage fold — skrytý trust band, inline stats, kratší hero |
 
 ---
 

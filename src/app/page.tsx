@@ -73,18 +73,13 @@ export default function Home() {
         <HeroPhoto theme="home" priority />
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow eyebrow--desktop">
+            <p className="eyebrow">
               Akreditovaná měření · studie a posudky · podklady pro KHS, ČIŽP a stavební úřady
             </p>
-            <p className="eyebrow eyebrow--mobile">Akreditovaná laboratoř · ISO 17025</p>
-            <h1>Měření, studie i povolovací podklady — postaráme se o vše, co Váš provoz potřebuje</h1>
-            <p className="hero-lead hero-lead--desktop">
-              Potřebujete měření emisí, hlukovou studii nebo podklady pro EIA? Zajistíme je v jednom
-              procesu — pro provozovatele, investory i projektanty.
-            </p>
-            <p className="hero-lead hero-lead--mobile">
-              Měření, studie i povolovací podklady v jednom procesu — pro provozovatele, investory i
-              projektanty.
+            <h1>Akreditovaná měření, studie a podklady pro úřady</h1>
+            <p className="hero-lead">
+              Postaráme se o vše, co Váš provoz potřebuje — pro provozovatele, investory i projektanty,
+              bez nutnosti poptávat více dodavatelů.
             </p>
           </div>
         </div>
@@ -113,8 +108,7 @@ export default function Home() {
             <p className="eyebrow">Naše služby</p>
             <h2 id="home-offer-heading">Co zajišťujeme</h2>
             <p className="muted section-intro">
-              Měření, studie a povolovací podklady u nás na sebe navazují — nemusíte koordinovat více
-              dodavatelů.
+              Služby u nás na sebe navazují — nemusíte poptávat více dodavatelů.
             </p>
           </header>
           <div className="home-offer-grid home-offer-grid-three">

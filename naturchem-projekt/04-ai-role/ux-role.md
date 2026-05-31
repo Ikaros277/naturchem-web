@@ -41,11 +41,35 @@ Rozhoduji na základě dat a empatie k uživateli, ne na základě estetických 
 - Sticky navigace na desktopu pro dlouhé stránky
 - Mobilní menu: hamburger → slide-in panel
 
-### Hero sekce (každé stránky)
-- Headline: max. 8 slov, odpovídá na „co tady dostanu"
-- Subheadline: 1–2 věty, upřesňuje a přesvědčuje
-- CTA tlačítko: viditelné, kontrastní (Navy `#0b1f35`, bílý text), jasná akce („Poptat měření")
-- Žádné slidery ani karusely (brzdí výkon, snižují konverze)
+### Hero sekce (všechny stránky)
+
+Hero = první tmavý pás (`hero`, `PageHeroBand`). Každá vrstva má **jinou roli** — texty se nesmí opakovat.
+
+| Vrstva | Úloha | Limit |
+|--------|--------|-------|
+| **Eyebrow** | Důvěra nebo kontext stránky (akreditace, kategorie) | 1 řádek; stejný text na mobilu i desktopu |
+| **H1** | Co návštěvník na stránce dostane | Max. **8 slov** (výjimka: oficiální název služby/stránky) |
+| **Lead** (`hero-lead`, `page-lead`) | Proč / pro koho / situace — **ne opakovat H1** | 1–2 věty, max. **20 slov** (homepage desktop max. 30) |
+| **CTA** | Konverzní akce | Viz typ stránky níže |
+
+**Mobil (375px):**
+- **Stejný obsah jako desktop** — žádné duplicitní `*--mobile` texty v markupu
+- Responzivita jen CSS (typografie, padding, **skrytí** prvků — ne jiný text)
+- **Mobil/tablet (`≤1023px`):** všechny `.eyebrow` skryté sitewide; trust band skrytý (homepage); akreditace v topbaru
+- Testovat fold: H1 + lead (+ stats u homepage mobil)
+
+**CTA podle typu stránky:**
+- **Homepage:** žádné CTA v hero — primární konverze = sticky tlačítko „Nezávazně poptat" v hlavičce (schváleno C1, hero audit 2026-05-31)
+- **Service pages:** 1 primary + 1 secondary v hero (`btn-row`)
+- **Ostatní stránky** (kontakt, FAQ, indexy): dle šablony — typicky 1 CTA nebo jen navigace
+
+**Co odmítám v hero:**
+- Oddělený copy pro mobil a desktop (dva `<p>` se stejnou rolí)
+- Stejná fráze v H1, leadu a první sekci pod hero
+- Lead, který jen přeformuluje H1 (např. znovu výčet měření/studií/podkladů)
+- Slidery, karusely, fullscreen video
+
+**Reference v kódu:** homepage → `src/app/page.tsx`; služby → `ServicePage.tsx` + `PageHeroBand.tsx`
 
 ### Formuláře
 - Poptávkový formulář: max. 6 polí (jméno, firma, e-mail, telefon, typ poptávky, zpráva)

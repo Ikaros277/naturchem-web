@@ -4,7 +4,7 @@ Spusť copy návrhy nebo audit textů pro naturchem.cz. Bez zápisu do kódu, po
 
 **Povinné zdroje (vždy přečíst):**
 - `naturchem-projekt/00-strategie/tone-of-voice.md` — **sekce 0 (faktická přesnost) má absolutní prioritu** nad stylem
-- `naturchem-projekt/04-ai-role/copy-role.md` — pravidla psaní, šablony, checklist
+- `naturchem-projekt/04-ai-role/copy-role.md` — pravidla psaní, šablony, **hero vrstvy + checklist**
 - `naturchem-projekt/00-strategie/personas.md` — cílové persony
 
 **Doplňkové zdroje (podle tématu):**

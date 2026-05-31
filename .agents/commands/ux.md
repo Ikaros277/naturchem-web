@@ -6,6 +6,7 @@ Spusť UX audit nebo doporučení pro naturchem.cz. Bez implementace kódu, poku
 - `naturchem-projekt/03-ux-audit/ux-audit-roadmapa.md` — stávající diagnóza a roadmapa P1–P5
 - `naturchem-projekt/ROADMAPA.md` — aktuální stav úkolů
 - `naturchem-projekt/00-strategie/personas.md` — cílové persony
+- **Hero sekce (všechny stránky):** `ux-role.md` § Hero — vrstvy eyebrow/H1/lead/CTA, mobilní varianty, pravidla foldu
 
 **Doplňkové zdroje (podle tématu):**
 - Vizuální scanovatelnost / P5 → `naturchem-projekt/06-graficky-audit/graficky-audit.md`

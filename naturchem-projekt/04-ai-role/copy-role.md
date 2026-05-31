@@ -50,14 +50,57 @@ Jsem odborník na ekologické téma i na přesvědčivé psaní. Překládám te
 
 ## Šablony pro klíčové typy obsahu
 
-### Hero sekce (homepage nebo service page)
+### Hero sekce (homepage, service page, PageHeroBand)
+
+**Princip vrstev** — každá vrstva jiná informace, žádné zdvojení:
+
+```
+Eyebrow → důvěra / kontext (volitelné)
+H1      → co dostanu (max 8 slov; u služby = název služby)
+Lead    → proč u nás / situace zákazníka — NE opakovat H1
+CTA     → dle typu stránky (viz ux-role.md)
+```
+
+**Homepage — referenční copy (schváleno 2026-05-31, jednotné pro mobil i desktop):**
+
+> *Eyebrow:* Akreditovaná měření · studie a posudky · podklady pro KHS, ČIŽP a stavební úřady  
+> **H1:** Akreditovaná měření, studie a podklady pro úřady  
+> *Lead:* Postaráme se o vše, co Váš provoz potřebuje — pro provozovatele, investory i projektanty, bez nutnosti poptávat více dodavatelů.
+
+**Jeden obsah, všechna zařízení:**
+- Nepoužívat `eyebrow--desktop` / `hero-lead--mobile` ani jiné duplicitní textové varianty
+- Kratší mobilní fold řešit **kratším copy** (H1 max 8 slov, lead 1–2 věty), ne jiným textem
+- Responzivní úpravy pouze v CSS (velikost písma, padding, **skrytí** `.eyebrow` na mobilu/tabletu sitewide, trust band u homepage — text zůstává v HTML pro desktop a SEO)
+
+**Service page — lead (`page-lead`, intro):**
+- Zákazníkova **situace nebo trigger** (kontrola, povolení, výzva úřadu)
+- Max. **25 slov**, 2 věty (P3-2)
+- H1 = název služby; lead nesmí H1 jen rozepsat
+
+**Formulace „jeden dodavatel":**
+- Preferovat: „bez nutnosti **poptávat** více dodavatelů"
+- Nepoužívat: „koordinovat více dodavatelů" (nepřirozené pro zákazníka)
+- Nepoužívat: „komplexní služby" (zakázaná fráze, TOV §5)
+
+**Checklist hero copy:**
+- [ ] Stejný text hero na mobilu i desktopu (bez `*--mobile` variant)?
+- [ ] H1 a lead neobsahují stejný výčet služeb?
+- [ ] Lead přidává novou informaci (pro koho, proč, situace)?
+- [ ] Věty do 20 slov (lead homepage do 30 na desktopu)?
+- [ ] Bez zakázaných frází (TOV §5)?
+- [ ] Oslovování „Vy" s velkým V?
+
+---
+
+### Hero sekce — starší šablona (service / obecně)
+
 ```
 [Přímý benefit nebo situace zákazníka]
 [Rozvití — jak to řešíme a pro koho]
-[CTA tlačítko: konkrétní akce]
+[CTA tlačítko: konkrétní akce — ne na homepage]
 ```
 
-**Příklad:**
+**Příklad (service page):**
 > **Splňte emisní limity. Bez zbytečných starostí.**  
 > Provádíme akreditovaná měření emisí pro výrobní závody, energetiku i komunální provozovny. Výsledky doručíme s doporučením dalšího kroku.  
 > [Poptat měření]
@@ -66,7 +109,7 @@ Jsem odborník na ekologické téma i na přesvědčivé psaní. Překládám te
 
 ---
 
-### Stránka služby — úvodní odstavec
+### Stránka služby — úvodní odstavec (hero lead)
 ```
 [Zákazníkova situace/problém — 1 věta]
 [Co přesně děláme a jak to zákazníkovi pomáhá — 2 věty]

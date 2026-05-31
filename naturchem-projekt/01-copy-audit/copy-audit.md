@@ -78,8 +78,13 @@ Dle TOV principu č. 1 — nikdy nepsat čísla bez ověření s Hezinou.
 
 ## 2. Homepage
 
-### Aktuální stav hero textu
-Hero pravděpodobně obsahuje H1 zaměřené na firmu a lead paragraph 40+ slov.
+### Aktuální stav hero textu (homepage, 2026-05-31)
+
+**H1:** Akreditovaná měření, studie a podklady pro úřady (7 slov)  
+**Lead:** Postaráme se o vše, co Váš provoz potřebuje — pro provozovatele, investory i projektanty, bez nutnosti poptávat více dodavatelů. (mobil = desktop)  
+**Pravidla pro všechny hero:** viz `04-ai-role/copy-role.md` § Hero a `04-ai-role/ux-role.md` § Hero.
+
+Historické problémy H1/H2 (lead 40+ slov, firma místo benefitu) — **vyřešeno P5-21**.
 
 ### Problémy
 
@@ -232,7 +237,7 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 
 | Sprint | Rozsah | Stav | Poznámka |
 |--------|--------|------|----------|
-| **C1** | Homepage: `page.tsx` — copy hero/pillars, odstraněn reference teaser + hero CTA + uncertain strip; loga zůstala | ✅ | 30. 5. 2026 |
+| **C1** | Homepage: `page.tsx` — copy hero/pillars, odstraněn reference teaser + hero CTA + uncertain strip; loga zůstala | ✅ | 30. 5. + follow-up P5-21 (31. 5.) |
 | **C2** | O společnosti, odborná garance, `guarantee-copy`, `work-process`, `team`, `nationalMessaging`, `companyStatsIntro` | ✅ | 30. 5. 2026 |
 | **C3** | Akreditace, `accreditation-scope`, `accreditation-documents`, přístrojové vybavení (úvody) | 🔲 | |
 | **C4** | Služby měření (7 slugů) — body copy, intro jen kontrola (P3-2 ✅) | 🔲 | |

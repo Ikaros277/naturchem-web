@@ -92,8 +92,10 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | P5-14 | Mobilní homepage hero: kratší eyebrow + lead | ✅ | Nízká |
 | P5-15 | Mobilní homepage: skrýt trust band | ✅ | Nízká |
 | P5-16 | Mobilní homepage stats: kompaktní 3 sloupce s ikonami | ✅ | Nízká |
-| P5-17 | Mobilní fold follow-up (stats do hero / padding) | 🔲 | Nízká |
+| P5-17 | Mobilní fold follow-up (padding po zkrácení hero copy) | 🔲 | Nízká |
 | P5-18 | Homepage offer karty: nadpis vedle ikony (card-head) | ✅ | Nízká |
+| P5-21 | Homepage hero: vrstvené copy (H1 max 8 slov, lead bez zdvojení) | ✅ | Nízká |
+| P5-22 | Hero pravidla zapsána do ux-role + copy-role | ✅ | Nízká |
 | P5-B1–B4 | Reálné fotografie (hero, tým, přístroje, Hezina) | ❓ | Po dodání fotek |
 
 ### P6 — Layout a spacing
@@ -113,7 +115,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 
 | Úkol | Stav | Poznámka |
 |------|------|----------|
-| Homepage hero: přepsat lead paragraph (zkrátit + zpřesnit) | ✅ | P3-1 hotovo |
+| Homepage hero: přepsat lead paragraph (zkrátit + zpřesnit) | ✅ | P3-1 + P5-21 (vrstvené copy 31. 5.) |
 | Klíčové stránky: přepis dle TOV (o-spolecnosti, akreditace, odborna-garance) | 🔲 | Po dokončení UX struktury |
 | Service pages: intro texty (popisný styl, max 25 slov) | ✅ | 24 stránek + školení |
 | Ověřit metriky s Hezinou: „36 let odborné činnosti", „14 000+ zakázek", „6 000+ měření" | ❓ | OVĚŘIT S HEZINOU před publikací |
@@ -209,6 +211,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 30. 5. | Sprint 12 | P6-3/P6-4 hero layout fix, P1-7 responzivní menu (Další) |
 | 31. 5. | Sprint 13 | P5-14–16 mobilní homepage fold — skrytý trust band, inline stats, kratší hero |
 | 31. 5. | P5-18 | Offer karty homepage — nadpis vedle ikony (card-head) |
+| 31. 5. | P5-21 + P5-22 | Homepage hero vrstvené copy + hero pravidla v ux-role/copy-role |
 
 ---
 

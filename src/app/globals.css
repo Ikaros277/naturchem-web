@@ -2540,11 +2540,6 @@ main.page:has(.page-hero-band) {
   margin-top: 0;
 }
 
-.home-page .hero .eyebrow--mobile,
-.home-page .hero .hero-lead--mobile {
-  display: none;
-}
-
 .experience-stats-compact .stat-card-with-icon {
   padding: 1rem 1.1rem;
   align-items: center;
@@ -5749,28 +5744,18 @@ footer .muted,
     font-size: 1.35rem;
   }
 
+  /* Mobil/tablet: eyebrow skryt sitewide — H1/H2 stačí; text zůstává v HTML pro desktop */
+  .eyebrow {
+    display: none;
+  }
+
   /* P5-14–16: trust band skryt na mobilu/tabletu — akreditace zůstává v topbaru */
   .trust-band {
     display: none;
   }
 
-  /* P5-14–16: Homepage mobile fold — kompaktní stats, kratší hero */
-  .home-page .hero .eyebrow--desktop,
-  .home-page .hero .hero-lead--desktop {
-    display: none;
-  }
-
-  .home-page .hero .eyebrow--mobile,
-  .home-page .hero .hero-lead--mobile {
-    display: block;
-  }
-
-  .home-page .hero .eyebrow--mobile {
-    margin-bottom: 0.55rem;
-    font-size: 0.72rem;
-  }
-
-  .home-page .hero .hero-lead--mobile {
+  /* P5-14–16: Homepage mobile fold — kompaktní stats, kratší hero padding */
+  .home-page .hero .hero-lead {
     font-size: 0.98rem;
     line-height: 1.5;
     margin-top: 0.85rem;

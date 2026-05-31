@@ -5,39 +5,81 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 10 |
-| Celkový odhadovaný čas | ~14,6 hodiny |
-| Aktuální fáze | Sprint 14 + P5-18 hotovo (mobilní UX, kompaktní loga, skrytý trust band); copy sprint C3 (akreditace) |
+| Počet sezení celkem | 11 |
+| Celkový odhadovaný čas | ~15,1 hodiny |
+| Aktuální fáze | UX revize patičky (P5-23); mobilní homepage a hero copy hotovo |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 31. 5. 2026, 13:48–14:10
+
+### Přehled
+Kompletní redesign patičky webu — z původní nefunkční čtyřsloupcové verze na kompaktní třísloupcovou strukturu (Společnost · Služby · Kontakt). Logo z patičky odstraněno kvůli zbytečné výšce; nadpisy sloupců vizuálně odděleny. Commitnuto a pushnuto na GitHub.
+
+**Zdroj popisu:** AI konverzace + git commit
+
+### Provedené změny
+
+#### Redesign patičky — 3 sloupce
+**Co bylo uděláno:** Patička postavena od nuly: sloupec Společnost (O nás, Reference, Akreditace, Poradna, FAQ), sloupec Služby (přehled + 3 klíčové služby), sloupec Kontakt (města Budějovice · Praha · Brod, oba telefony, e-mail, odkaz na formulář). Odstraněn accordion `<details>`, který na desktopu schovával odkazy ve sloupcích Služby a O webu.  
+**Proč:** Původní patička na desktopu nezobrazovala navigaci; klient požadoval vyváženou, kompaktní strukturu bez duplicitního obsahu.
+
+#### Obsah a vyvážení sloupců
+**Co bylo uděláno:** Ze sloupce Služby odstraněny Provozy, Typické zakázky a Akreditace; akreditace přesunuta do sloupce Společnost. Zkrácen kontaktní sloupec — bez ulic a PSČ, detail na stránce Kontakt.  
+**Proč:** Sloupec Služby má obsahovat jen služby; patička má být přehledná mapa webu, ne duplikát celého menu.
+
+#### Vizuální nadpisy sloupců
+**Co bylo uděláno:** Nadpisy Služby, Společnost a Kontakt — sage barva, uppercase, spodní linka — jednotný styl napříč sloupci.  
+**Proč:** Tučný text splýval s odkazy; klient potřeboval jasné oddělení sekcí.
+
+#### Odstranění loga z patičky
+**Co bylo uděláno:** Logo NATURCHEM odstraněno z prvního sloupce včetně bílého boxu a CSS zarovnání, které nafukovalo výšku celé patičky. Logo zůstává v hlavičce.  
+**Proč:** Logo v patičce zdvojovalo značku a vytvářelo prázdný prostor ve sloupcích Služby a Kontakt; patička má sloužit navigaci a kontaktu.
+
+#### Commit a nasazení
+**Co bylo uděláno:** Produktová změna commitnutá (`434cb01`) a pushnutá na `origin/main`.  
+**Proč:** Nasazení nové patičky na Vercel.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~27 min  
+**Rozložení:** 31. 5. 2026 13:48–14:10 (~27 min)  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** ~8  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — log konverzace (Cursor hook). Každý blok má +5 min před začátkem a +5 min po konci.*
+
+### Technická poznámka
+`src/components/Footer.tsx`, `src/lib/footer-nav.ts`, `src/app/globals.css` — commit `434cb01`.
 
 ---
 
 ## Sezení: 31. 5. 2026, 13:26–13:45
 
 ### Přehled
-Automaticky založené sezení po commitu `186bc6b`.
+Úpravy homepage hero copy (vrstvené texty H1/lead) a cap log zákazníků na 2 řádky i na desktopu.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** Git commity (automatická synchronizace + AI konverzace)
 
 ### Provedené změny
-#### UX: cap log zakazniku na 2 radky i na desktopu.
-**Co bylo uděláno:** UX: cap log zakazniku na 2 radky i na desktopu. - ClientLogosGrid s limitem dle viewportu, 19 log + a mnoho dalsich na desktopu; na referencich rozbaleni vsech log po kliknuti.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `279512b`). Dotcene oblasti: app, components, lib.  
-**Proč:** ClientLogosGrid s limitem dle viewportu, 19 log + a mnoho dalsich na desktopu; na referencich rozbaleni vsech log po kliknuti.  Co-authored-by: Cursor <cursoragent@cursor.com>.
 
-#### Homepage hero: vrstvene copy, sitewide skryti eyebrow na mobilu.
-**Co bylo uděláno:** Homepage hero: vrstvene copy, sitewide skryti eyebrow na mobilu. - Zkraceny H1 a lead bez zdvojeni sluzeb, jednotny text pro mobil i desktop. Pravidla hero zapsana do ux-role a copy-role (P5-21, P5-22).  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `186bc6b`). Dotcene oblasti: app, copy-audit.md, copy-role.md, ROADMAPA.md, ux-audit-roadmapa.md, ux-role.md, workflow.  
-**Proč:** Zkraceny H1 a lead bez zdvojeni sluzeb, jednotny text pro mobil i desktop. Pravidla hero zapsana do ux-role a copy-role (P5-21, P5-22).  Co-authored-by: Cursor <cursoragent@cursor.com>.
+#### UX: cap log zákazníků na 2 řádky i na desktopu
+**Co bylo uděláno:** ClientLogosGrid s limitem dle viewportu, 19 log + text „a mnoho dalších..“ na desktopu; na Referencích rozbalení všech log po kliknutí.  
+**Proč:** Přehlednější homepage a reference bez nekonečné mřížky log.
+
+#### Homepage hero: vrstvené copy, sitewide skrytí eyebrow na mobilu
+**Co bylo uděláno:** Zkrácený H1 a lead bez zdvojení služeb, jednotný text pro mobil i desktop. Pravidla hero zapsána do ux-role a copy-role (P5-21, P5-22).  
+**Proč:** Hero musí okamžitě sdělit hodnotu; duplicitní copy a dlouhý lead oslabovaly první dojem.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~20 min
-**Rozložení:** 31. 5. 2026 13:26–13:45 (~20 min)
-**Metoda odhadu:** git
+**Odhadovaná doba práce:** ~20 min  
+**Rozložení:** 31. 5. 2026 13:26–13:45 (~20 min)  
+**Metoda odhadu:** git  
 **Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+*Poznámka: commity `186bc6b`, `279512b`.*
 
 ### Technická poznámka
-Commit: `186bc6b25ed862f37d5e2366181256b410f1d7e8`
+Commity: `186bc6b`, `279512b`.
 
 ---
 

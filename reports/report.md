@@ -6,10 +6,34 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 19 |
-| Celkový odhadovaný čas | ~19,5 hodiny |
+| Celkový odhadovaný čas | ~18,5 hodiny |
 | Aktuální fáze | Copy sprint C4 (měření) — přehled služeb 2×2, rollout copy na 6 slugů měření |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 4. 6. 2026, 19:32-19:42
+
+### Přehled
+Automaticky založené sezení po commitu `164e914`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Sluzby: prehled 2x2, C4 copy mereni a sjednoceni CTA v panelu.
+**Co bylo uděláno:** Sluzby: prehled 2x2, C4 copy mereni a sjednoceni CTA v panelu. - Jeden prehledovy panel na ServicePage (mrizka, foto vpravo), copy sprint C4 na sesti mericich sluzbach, card-head u souvisejicich karet.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `164e914`). Dotcene oblasti: app, components, lib, report, sluzby, workflow.  
+**Proč:** Jeden prehledovy panel na ServicePage (mrizka, foto vpravo), copy sprint C4 na sesti mericich sluzbach, card-head u souvisejicich karet.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 4. 6. 2026 19:32-19:42 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `164e914baa93ab4f85009c65a1ef4d1c81d1fb81`
 
 ---
 

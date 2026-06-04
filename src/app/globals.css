@@ -3874,6 +3874,11 @@ footer .muted,
   border-bottom: 1px solid var(--border);
 }
 
+.sector-process-section {
+  padding-top: clamp(1.5rem, 3vw, 2.25rem);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 .service-overview-title {
   margin: 0 0 1rem;
   font-size: clamp(1.25rem, 2vw, 1.45rem);

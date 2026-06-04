@@ -1,6 +1,8 @@
-/** Kroky spolupráce — zobrazení na /typicke-zakazky. */
+/** Kroky spolupráce — zobrazení na /typicke-zakazky a detailech provozů. */
 
-export const workProcessSteps = [
+export type WorkProcessStep = { title: string; text: string };
+
+export const workProcessSteps: WorkProcessStep[] = [
   {
     title: "Posouzení podkladů",
     text: "Projdeme podklady, požadavek úřadu a navrhneme nejvhodnější postup."

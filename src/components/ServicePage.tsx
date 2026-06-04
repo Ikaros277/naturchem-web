@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
 import { PageHeroBand } from "@/components/PageHeroBand";
+import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
@@ -13,7 +13,7 @@ import { contactUrl } from "@/lib/contact-url";
 import { serviceTrustBandItems } from "@/lib/home-hero-metrics";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
 import { provozyNavLabel, sectors } from "@/lib/sectors";
-import { getDetailGroupIconKey, type ServiceIconKey } from "@/lib/service-icons";
+import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
 import {
   serviceCtaStripText,
@@ -178,32 +178,32 @@ export function ServicePage(props: Props) {
                   .join(" ")}
               >
                 {keyWhenNeeded.length > 0 ? (
-                  <ServiceOverviewCell icon="process-posouzeni" title={serviceWhenNeededHeading}>
+                  <OverviewGridCell icon="process-posouzeni" title={serviceWhenNeededHeading}>
                     <ul className="check-list">
                       {keyWhenNeeded.map((item) => (
                         <li key={item}>{item}</li>
                       ))}
                     </ul>
-                  </ServiceOverviewCell>
+                  </OverviewGridCell>
                 ) : null}
 
-                <ServiceOverviewCell icon="process-rozsah" title={props.scopeHeading ?? serviceScopeHeading}>
+                <OverviewGridCell icon="process-rozsah" title={props.scopeHeading ?? serviceScopeHeading}>
                   <ul className="check-list">
                     {keyScope.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                </ServiceOverviewCell>
+                </OverviewGridCell>
 
-                <ServiceOverviewCell icon="process-vystup" title="Co dostanete">
+                <OverviewGridCell icon="process-vystup" title="Co dostanete">
                   <ul className="check-list">
                     {keyOutputs.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                </ServiceOverviewCell>
+                </OverviewGridCell>
 
-                <ServiceOverviewCell
+                <OverviewGridCell
                   icon="process-posouzeni"
                   title="Jak začít"
                   className="service-overview-cell--start"
@@ -217,7 +217,7 @@ export function ServicePage(props: Props) {
                   <Link className="button service-overview-cta--in-cell" href={quickContactHref}>
                     {contactCta}
                   </Link>
-                </ServiceOverviewCell>
+                </OverviewGridCell>
               </div>
               <div className="service-overview-actions">
                 <Link className="button service-overview-cta--in-bar" href={quickContactHref}>
@@ -298,27 +298,5 @@ export function ServicePage(props: Props) {
         className="container"
       />
     </main>
-  );
-}
-
-function ServiceOverviewCell({
-  icon,
-  title,
-  children,
-  className = ""
-}: {
-  icon: ServiceIconKey;
-  title: string;
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <article className={["service-overview-cell", className].filter(Boolean).join(" ")}>
-      <div className="service-decision-card-head">
-        <ServiceIcon icon={icon} variant="inline" />
-        <h2>{title}</h2>
-      </div>
-      {children}
-    </article>
   );
 }

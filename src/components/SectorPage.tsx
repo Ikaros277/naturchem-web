@@ -1,12 +1,22 @@
 import Link from "next/link";
 import { IndexCard } from "@/components/IndexCard";
+import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
+import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
 import { sectorContactUrl } from "@/lib/contact-url";
 import { getPageHeroTheme } from "@/lib/hero-images";
+import {
+  sectorOverviewHeading,
+  sectorProcessHeading,
+  sectorProcessIntro,
+  sectorProcessSteps
+} from "@/lib/sector-copy";
+import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { provozyNavLabel } from "@/lib/sectors";
 import { siteUrl } from "@/lib/site";
 
@@ -30,6 +40,7 @@ export function SectorPage(props: Props) {
     props.relatedServices.map((s) => s.title)
   );
   const heroTheme = getPageHeroTheme(`/provozy-a-technologie/${props.slug}`);
+  const processSteps = sectorProcessSteps(props.process);
 
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -64,7 +75,7 @@ export function SectorPage(props: Props) {
   };
 
   return (
-    <main className="page">
+    <main className="page sector-detail-page">
       <JsonLd data={breadcrumbData} />
       <JsonLd data={faqData} />
       <JsonLd data={relatedServiceListData} />
@@ -89,54 +100,64 @@ export function SectorPage(props: Props) {
           </div>
         </header>
       </PageHeroBand>
+
+      <section className="service-overview-section section-surface" aria-label={sectorOverviewHeading}>
+        <div className="container">
+          <h2 className="service-overview-title">{sectorOverviewHeading}</h2>
+          <div className="service-overview-layout">
+            <div className="service-overview-panel">
+              <div className="service-overview-grid">
+                <OverviewGridCell icon="audience-prumysl" title="Typické problémy">
+                  <ul className="check-list">
+                    {props.typicalProblems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </OverviewGridCell>
+
+                <OverviewGridCell icon="pillar-dokumentace" title="Podklady">
+                  <ul className="check-list">
+                    {props.docs.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </OverviewGridCell>
+
+                <OverviewGridCell icon="process-vystup" title="Výstup">
+                  <ul className="check-list">
+                    {props.outputs.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </OverviewGridCell>
+
+                <OverviewGridCell
+                  icon={getDetailGroupIconKey("Typické chyby a rizika")}
+                  title="Typické chyby a rizika"
+                >
+                  <ul className="check-list">
+                    {props.pitfalls.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </OverviewGridCell>
+              </div>
+            </div>
+            <ServiceContextPhoto theme={heroTheme} className="service-overview-photo" />
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="section content-block container sector-process-section typicke-zakazky-process"
+        aria-labelledby="sector-process-heading"
+      >
+        <h2 id="sector-process-heading">{sectorProcessHeading}</h2>
+        <p className="muted section-intro">{sectorProcessIntro}</p>
+        <WorkProcessTimeline steps={processSteps} />
+      </section>
+
       <div className="container page-inner">
-        <section className="content-block grid grid-2">
-          <article className="card">
-            <h2>Typické problémy</h2>
-            <ul className="check-list">
-              {props.typicalProblems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="card">
-            <h2>Podklady</h2>
-            <ul className="check-list">
-              {props.docs.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        </section>
-
-        <section className="content-block">
-          <h2>Průběh zakázky</h2>
-          <ol className="steps">
-            {props.process.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ol>
-        </section>
-
-        <section className="content-block grid grid-2">
-          <article>
-            <h2>Výstup</h2>
-            <ul className="check-list">
-              {props.outputs.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article>
-            <h2>Typické chyby a rizika</h2>
-            <ul className="check-list muted-list">
-              {props.pitfalls.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        </section>
-
         <section className="content-block">
           <h2>Související služby</h2>
           <div className="grid grid-3 index-card-grid">
@@ -165,10 +186,7 @@ export function SectorPage(props: Props) {
           </div>
         </section>
 
-        <PageCtaStrip
-          {...pageCtaPresets.sectorDetail}
-          primaryHref={contactHref}
-        />
+        <PageCtaStrip {...pageCtaPresets.sectorDetail} primaryHref={contactHref} />
       </div>
     </main>
   );

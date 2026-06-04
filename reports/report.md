@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 20 |
-| Celkový odhadovaný čas | ~20 hodiny |
+| Celkový odhadovaný čas | ~20,6 hodiny |
 | Aktuální fáze | Copy C7 — index /sluzby hotov; další krok: provozy a technologie (intro, index) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 20:55–22:01
+## Sezení: 4. 6. 2026, 20:55–22:38
 
 ### Přehled
 Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**, úpravy navigace a cross-linku na provozy. Na závěr **C7 (část A)** — přestavba indexu `/sluzby` na šest skupin s accordionem, novými úvody skupin a srozumitelnými popisky rozbalení.
@@ -21,6 +21,18 @@ Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**,
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### C7: reference copy, skupiny zakazek a karty jako u sluzeb.
+**Co bylo uděláno:** C7: reference copy, skupiny zakazek a karty jako u sluzeb. (commit `7c72278`). Dotcene oblasti: app, components, copy-audit.md, lib, reference.  
+**Proč:** Posileni duveryhodnosti prostrednictvim referenci a znacek zakazniku.
+
+#### UX: FAQ u provozu stejny accordion jako u sluzeb.
+**Co bylo uděláno:** UX: FAQ u provozu stejny accordion jako u sluzeb. (commit `3a2468e`). Dotcene oblasti: components.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
+#### UX: detail provozu 2x2 panel a casova osa prubehu u vsech SectorPage.
+**Co bylo uděláno:** UX: detail provozu 2x2 panel a casova osa prubehu u vsech SectorPage. (commit `da350fe`). Dotcene oblasti: app, components, lib.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
 #### C7 B: index provozu accordion, copy a sbalene skupiny sluzeb.
 **Co bylo uděláno:** C7 B: index provozu accordion, copy a sbalene skupiny sluzeb. (commit `94d7a3f`). Dotcene oblasti: app, components, copy-audit.md, lib, page.tsx, provozy-a-technologie.  
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
@@ -47,8 +59,8 @@ Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**,
 **Proč:** Zkratky bez kontextu nejsou srozumitelné pro netechnické publikum; v oboru se používají, ale menu má vysvětlit obsah.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 7 min
-**Rozložení:** 4. 6. 2026 20:55–22:01 (~1 hod 7 min)
+**Odhadovaná doba práce:** ~1 hod 44 min
+**Rozložení:** 4. 6. 2026 20:55–22:38 (~1 hod 44 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** ~12  
 *Poznámka: čas ze skriptu `estimate-session-time.ps1`; mezera nad 30 min od odpoledního bloku (služby 2×2 / C4).*

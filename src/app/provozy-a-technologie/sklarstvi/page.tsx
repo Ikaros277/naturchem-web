@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Sklářské provozy"
       slug="sklarstvi"
-      intro="Sklářské provozy mají specifický tepelný a technologický režim, který významně ovlivňuje měření emisí i interpretaci výsledků. Důležité je správně nastavit režim měření a technicky posoudit měřicí místa."
+      intro="U pecních zdrojů záleží na režimu měření i na měřicím místě. Emise, rozptyl a provozní dokumentaci připravíme pro sklářský provoz."
       typicalProblems={[
         "nestabilní nebo cyklický provoz pecí během měření",
         "omezená dostupnost měřicích míst",

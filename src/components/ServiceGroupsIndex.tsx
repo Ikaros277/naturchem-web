@@ -72,10 +72,10 @@ export function ServiceGroupsIndex() {
   return (
     <section className="section service-group service-groups-accordion">
       <div className="container service-groups-accordion-inner">
-        {serviceGroups.map((group, index) => {
+        {serviceGroups.map((group) => {
           const expand = groupExpandLabels[group.id];
           return (
-          <details key={group.id} id={group.id} className="card service-group-details" open={index === 0}>
+          <details key={group.id} id={group.id} className="card service-group-details">
             <summary
               className="service-group-summary"
               aria-label={`${group.title}, ${serviceCountLabel(group.items.length)} — zobrazit nebo skrýt ${expand.ariaVerb}`}

@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Lakovny"
       slug="lakovny"
-      intro="Lakovny řeší souběžně emise do ovzduší, pracovní expozici chemickým látkám i návaznost na provozní řád. Správné nastavení měření VOC/TOC a pracovního prostředí je klíčové pro provozní jistotu i komunikaci s úřady."
+      intro="Na lakovací lince jde současně o VOC do ovzduší i expozici na pracovišti. Změříme obojí a propojíme výsledky s provozním řádem a požadavky úřadu."
       typicalProblems={[
         "kolísání emisí podle režimu nanášení a vytvrzování",
         "nedostatečné nebo nerovnoměrné odsávání",

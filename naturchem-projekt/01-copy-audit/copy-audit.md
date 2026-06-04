@@ -245,7 +245,7 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 | **C4** | Služby měření (7 slugů) — body copy, intro jen kontrola (P3-2 ✅) | 🔲 | |
 | **C5** | Služby studie (5 slugů ve skupině studií; `odborne-posudky` → C6) | ✅ | 4. 6. 2026 — rozptyl + 4× `dedicated-service-pages` |
 | **C6** | Služby povolování/EIA (10 slugů + přehled EIA) | ✅ | 4. 6. 2026 |
-| **C7** | `service-groups`, provozy 13×, reference, typické zakázky, `seo-landings` | 🔄 | `/sluzby` skupiny + accordion + intro 4. 6. 2026; zbývá provozy, reference, seo |
+| **C7** | `service-groups`, provozy 13×, reference, typické zakázky, `seo-landings` | 🔄 | `/sluzby` + index provozů (accordion) + intro detailů 4. 6. 2026; zbývá reference, seo |
 | **Nav** | Megamenu / footer služby — IPPC, ISPOP, GHG bez kontextu | ✅ | 4. 6. 2026 — plné názvy v `service-megamenu`, `navigation`, `home-offer` |
 | **Cross** | „Mohlo by Vás zajímat“ — provozy vs služby | 📋 | Popis provozů z `sectors.ts`; mapování v `service-sector-links.ts` |
 | **C8** | `faq.ts` (styl only), `/poradna` hero | 🔲 | |

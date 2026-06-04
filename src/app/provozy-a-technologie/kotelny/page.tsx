@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Kotelny a spalovací zdroje"
       slug="kotelny"
-      intro="U kotelen je rozhodující správně nastavit měření v reprezentativním výkonu a navázat výsledky na povolovací dokumentaci. Vedle emisních složek je důležitá i interpretace provozních podmínek při měření."
+      intro="Úřad nebo provozní řád vyžaduje měření v konkrétním výkonu? Zajistíme protokol emisí navázaný na vaše povolení a reálný provoz kotle."
       typicalProblems={[
         "měření v nereprezentativním výkonovém režimu",
         "nejasný rozsah složek podle rozhodnutí úřadu",

@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Svařovny"
       slug="svarovny"
-      intro="Svařovny obvykle řeší kombinaci faktorů pracovního prostředí: prašnost, kovy, plyny, hluk a účinnost odsávání. Měření slouží jako podklad pro kategorizaci prací i návrh technických a organizačních opatření v provozu."
+      intro="Ve svařovně potřebujete podklad pro kategorizaci prací nebo návrh odsávání? Změříme expozici, hluk a navrhneme praktická opatření."
       typicalProblems={[
         "neúplný přehled používaných materiálů a přídavných látek",
         "kolísání expozice podle typu svařování a směnnosti",

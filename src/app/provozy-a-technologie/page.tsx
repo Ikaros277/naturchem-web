@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { SectorGroupsIndex } from "@/components/SectorGroupsIndex";
@@ -24,49 +23,6 @@ const assessmentItems = [
   "fotografie technologie, výduchů, měřicích míst nebo okolí provozu",
   "případná komunikace s KHS, ČIŽP, krajským úřadem nebo stavebním úřadem"
 ];
-
-const sectorGroups = [
-  {
-    title: "Průmysl a výroba",
-    description: "Výrobní technologie, povrchové úpravy, svařovny, sklářství a dřevozpracující provozy.",
-    hrefs: [
-      "/provozy-a-technologie/lakovny",
-      "/provozy-a-technologie/svarovny",
-      "/provozy-a-technologie/sklarstvi",
-      "/provozy-a-technologie/drevozpracujici",
-      "/provozy-a-technologie/automotive"
-    ]
-  },
-  {
-    title: "Energetika a zdroje emisí",
-    description: "Kotelny, spalovací zdroje, kogenerace, bioplyn a navazující emisní povinnosti.",
-    hrefs: ["/provozy-a-technologie/kotelny", "/provozy-a-technologie/bioplyn-biometan"]
-  },
-  {
-    title: "Odpady a recyklace",
-    description: "Skládky, recyklační areály, kompostárny a zařízení s dopady na hluk, ovzduší a EIA.",
-    hrefs: ["/provozy-a-technologie/odpady-recyklace"]
-  },
-  {
-    title: "Zemědělství a potravinářství",
-    description: "Zemědělské areály, sušárny, provozy s emisemi, hlukem, pracovní expozicí a pachy.",
-    hrefs: ["/provozy-a-technologie/zemedelske-provozy"]
-  },
-  {
-    title: "Budovy, VZT a technologie",
-    description: "VZT, chlazení, tepelná čerpadla, čisté prostory a technologie v objektech.",
-    hrefs: ["/provozy-a-technologie/tepelna-cerpadla-vzt", "/sluzby/pracovni-prostredi"]
-  },
-  {
-    title: "Stavební a investiční záměry",
-    description: "Záměry v přípravě, změny technologií, EIA, hluk, rozptyl a podklady pro řízení.",
-    hrefs: [
-      "/provozy-a-technologie/automotive",
-      "/provozy-a-technologie/odpady-recyklace",
-      "/provozy-a-technologie/tepelna-cerpadla-vzt"
-    ]
-  }
-] as const;
 
 export default function Page() {
   const collectionPageData = {
@@ -107,21 +63,35 @@ export default function Page() {
         breadcrumbs={[{ name: "Úvod", href: "/" }, { name: provozyNavLabel }]}
       >
         <header className="premium-page-hero page-hero--photo">
-          <p className="eyebrow">Rozcestník podle provozu</p>
-          <h1>Provozy a technologie, pro které zajišťujeme měření, studie a povolovací podklady</h1>
+          <p className="eyebrow">Podle typu provozu</p>
+          <h1>Provozy a technologie — měření, studie a podklady pro úřad</h1>
           <p className="page-lead">
-            Najdete služby podle svého provozu — měření, studie a podklady pro ČIŽP, KHS i stavební
-            řízení bez hledání v obecném katalogu služeb.
-          </p>
-          <p>
-            Inspiraci z praxe najdete v{" "}
-            <Link href="/reference">referencích a vybraných zkušenostech</Link>.
+            Podívejte se, pro které provozy u nás řešíme měření, studie a povolovací podklady — od
+            kotelny a lakovny přes bioplyn až po recyklaci, svařovnu nebo venkovní jednotku VZT.
           </p>
         </header>
       </PageHeroBand>
 
-      <section className="section content-block container page-first-section" aria-labelledby="sector-cta-heading">
-        <h2 id="sector-cta-heading">Nejste si jistí, kam váš provoz zařadit?</h2>
+      <section
+        className="section content-block container page-first-section"
+        aria-labelledby="sector-index-intro-heading"
+      >
+        <h2 id="sector-index-intro-heading">Výroba, energetika, zemědělství a další obory</h2>
+        <p>
+          Pracujeme napříč odvětvími — od výroby a energetiky přes odpady a recyklaci až po farmy,
+          potravinářství a technologie v areálech. U každého typu provozu řešíme měření, studie i
+          podklady pro úřad v kontextu konkrétní technologie, ne jen obecný seznam služeb.
+        </p>
+        <p className="muted">
+          Najděte obor, který je vám nejblíž — u provozu uvidíte typické situace, související služby
+          a jak u vás zakázka obvykle proběhne.
+        </p>
+      </section>
+
+      <SectorGroupsIndex sectors={sectors} />
+
+      <section className="section content-block container" aria-labelledby="sector-assessment-heading">
+        <h2 id="sector-assessment-heading">Nejste si jistí, kam váš provoz zařadit?</h2>
         <p>
           Pošlete nám stručný popis provozu, technologii, požadavek úřadu nebo projektovou
           dokumentaci. Podle situace určíme, zda je potřeba měření, studie, odborný posudek,
@@ -134,8 +104,6 @@ export default function Page() {
           ))}
         </ul>
       </section>
-
-      <SectorGroupsIndex groups={sectorGroups} sectors={sectors} />
 
       <PageCtaStrip {...pageCtaPresets.sectorIndex} className="container" />
     </main>

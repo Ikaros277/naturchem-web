@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Dřevozpracující provozy"
       slug="drevozpracujici"
-      intro="Řešíme měření emisí, prašnosti, hluku a provozní podklady pro pily, truhlárny, výrobu nábytku, odsávání pilin, kotelny na biomasu a související technologie. Výstupy připravujeme pro provozovatele, KHS, krajské úřady i povolovací řízení."
+      intro="V pilách a truhlárnách jde o prašnost, TZL i kotel na biomasu. Zajistíme měření a podklady pro KHS, krajský úřad i povolování."
       typicalProblems={[
         "měření emisí ze spalování biomasy a technologických výduchů",
         "prašnost u drticích linek a odsávacích systémů",

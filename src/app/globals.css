@@ -2222,8 +2222,13 @@ fieldset.card legend {
   display: none;
 }
 
-.service-group-details .service-card-grid {
+.service-group-details .service-card-grid,
+.service-group-details.sector-group-details .sector-grid {
   padding: 0 1.25rem 1.25rem;
+}
+
+.sector-groups-accordion {
+  padding-top: 0;
 }
 
 .service-index-card .service-index-card-tags {

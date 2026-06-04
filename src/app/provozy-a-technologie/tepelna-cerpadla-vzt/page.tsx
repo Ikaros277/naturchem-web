@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Tepelná čerpadla a VZT"
       slug="tepelna-cerpadla-vzt"
-      intro="U tepelných čerpadel a VZT je klíčové posoudit hlukové dopady v denním i nočním režimu ještě před instalací nebo kolaudací. Důraz je na měřicí body, provozní scénáře a reálně proveditelná opatření."
+      intro="Instalujete venkovní jednotku nebo VZT a řešíte hluk vůči sousedům? Posoudíme scénáře denního i nočního režimu ještě před kolaudací."
       typicalProblems={[
         "nevhodné umístění venkovní jednotky vůči zástavbě",
         "podcenění nočního režimu provozu",

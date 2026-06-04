@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Automotive a technické textilie"
       slug="automotive"
-      intro="Zajišťujeme měření emisí, pracovního prostředí, hluku a odborné podklady pro výrobu komponentů, technických textilií, potahů, plastových a kovových dílů a související technologické procesy. Výstupy připravujeme pro provozovatele, investory i technický dozor."
+      intro="Ve výrobě komponent řešíte chemické látky, VOC i hluk technologií? Měření a podklady připravíme pro provoz, investora i úřad."
       typicalProblems={[
         "měření emisí z technologií a lakoven v areálu",
         "kategorizace prací a expozice chemickým látkám",

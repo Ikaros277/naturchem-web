@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Bioplyn a biometan"
       slug="bioplyn-biometan"
-      intro="Bioplynové a biometanové projekty vyžadují koordinaci rozptylového a hlukového posouzení, dopravy i návaznosti na EIA. Důležitá je včasná příprava podkladů podle skutečného technologického řešení."
+      intro="Připravujete bioplyn nebo biometan a potřebujete sladit rozptyl, hluk a EIA? Podklady připravíme podle skutečné technologie, ne až po připomínkách úřadu."
       typicalProblems={[
         "opožděné řešení rozptylu a hluku až po připomínkách úřadu",
         "neúplné vstupy o provozních režimech technologie",

@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Odpady a recyklace"
       slug="odpady-recyklace"
-      intro="Zařízení odpadů a recyklace vyžadují integrovaný pohled na hluk, prašnost, dopravu a rozptyl. Kvalitní podklad musí spojit technická data provozu s požadavky správního řízení."
+      intro="Měníte kapacitu areálu nebo řešíte EIA u odpadů a recyklace? Spojíme hluk, prašnost, dopravu a rozptyl do jednoho podkladu pro řízení."
       typicalProblems={[
         "kapacitní změny bez včasné aktualizace odborných podkladů",
         "kombinace technologického hluku a dopravní zátěže",

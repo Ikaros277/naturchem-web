@@ -18,7 +18,7 @@ export default function Page() {
     <SectorPage
       title="Zemědělské provozy a sušárny"
       slug="zemedelske-provozy"
-      intro="Zajišťujeme měření emisí, hluku, pracovního prostředí a odborné podklady pro zemědělské areály, stáje, sušárny, bioplynové stanice a související technologie. Výstupy připravujeme pro provozovatele, krajské úřady, ČIŽP, KHS i povolovací řízení."
+      intro="Řešíte emise, hluk nebo pracoviště na farmě či v sušárně? Měření a posudky připravíme pro provozovatele i krajský úřad a KHS."
       typicalProblems={[
         "nejasný rozsah měření při změně technologie nebo kapacity",
         "souběh požadavků na emise, pracovní prostředí a pachové látky",

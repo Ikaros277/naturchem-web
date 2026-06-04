@@ -198,9 +198,45 @@ Vzor pro sekci „Co to znamená pro zákazníka" nebo feature benefity.
 
 ---
 
+### Spacing po PageHeroBand (první sekce na stránce)
+
+Každá stránka s `PageHeroBand` potřebuje správný spacing první sekce pod ním. Bez explicitního nastavení je první sekce buď příliš daleko, nebo příliš blízko hero.
+
+**Základní pravidlo:**
+```css
+/* První sekce / kontejner pod hero */
+.page-first-section,
+.accreditation-overview,
+.about-first-section {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+```
+
+**Kdy použít menší spacing:** Stránky kde pod hero navazují trust band nebo kompaktní stats (jako /o-spolecnosti) — tam je menší gap (1–1.5rem) záměrný.
+
+**Kdy použít větší spacing:** Stránky kde pod hero jdou rovnou textové sekce nebo gridy karet — clamp(2rem, 4vw, 3rem).
+
+---
+
+### Padding karet v overview sekcích
+
+Výchozí `.card { padding: clamp(1.25rem, 2vw, 1.75rem) }` je správný pro standalone karty. V 2–3 sloupcových grid sekcích hned po hero působí příliš mnoho místa nad nadpisem v kartě.
+
+**Override pro overview sekcí:**
+```css
+.overview-sekce .card {
+  padding-top: 1rem; /* místo výchozích 1.25–1.75rem */
+}
+```
+
+**Kdy použít:** 2-sloupcové přehledové sekce s kartami hned pod hero (akreditace overview, případně O společnosti benefit sekce).  
+**Kdy NEpoužívat:** Samostatné karty ve spodní části stránky, karty v muted/surface pozadí, service page decision cards.
+
+---
+
 ### Overview sekce hned po hero (2-sl. přehledové karty)
 
-Pokud stránka začíná 2-sloupcovou sekcí s kartami těsně pod hero (`PageHeroBand`):
+Kombinace spacing + padding pro přehledové 2-sloupcové sekce těsně pod `PageHeroBand`:
 
 ```css
 .accreditation-overview,

@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 15 |
-| Celkový odhadovaný čas | ~17,1 hodiny |
+| Počet sezení celkem | 16 |
+| Celkový odhadovaný čas | ~17,3 hodiny |
 | Aktuální fáze | Copy sprint C3 hotovo — /akreditace plně přepsána; příprava na launch checklist |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 4. 6. 2026, 18:01-18:11
+
+### Přehled
+Automaticky založené sezení po commitu `92eedd5`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### UX role: zavedene vzory komponent z implementace akreditace (card-hea...
+**Co bylo uděláno:** UX role: zavedene vzory komponent z implementace akreditace (card-head, ikony, download karty). (commit `92eedd5`). Dotcene oblasti: ux-role.md.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 4. 6. 2026 18:01-18:11 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `92eedd5b57ef074e8bb4a5871d8dd0ae90606b70`
 
 ---
 

@@ -3022,6 +3022,14 @@ main.page:has(.page-hero-band) {
   margin-top: 1.5rem;
 }
 
+.accreditation-overview {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.accreditation-overview .card {
+  padding-top: 1rem;
+}
+
 .accreditation-page > section:not(.accreditation-overview) {
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -3047,8 +3055,28 @@ main.page:has(.page-hero-band) {
   background: #f8faf9;
   padding: 0.9rem;
   color: var(--primary);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.35;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.mini-card svg {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  color: var(--forest);
+}
+
+.mini-card .card-symbol,
+.authorization-card-head .card-symbol {
+  background: none;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  color: var(--forest);
 }
 
 .scope-card-grid,
@@ -3059,11 +3087,42 @@ main.page:has(.page-hero-band) {
   margin-top: 1.25rem;
 }
 
-.scope-card,
-.download-card {
+.scope-card {
   display: grid;
   gap: 0.75rem;
   align-content: start;
+}
+
+.scope-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.scope-card-head h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.scope-card-head .card-symbol {
+  background: none;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  color: var(--forest);
+}
+
+.download-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.download-card .button {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .scope-card h3,
@@ -3079,6 +3138,26 @@ main.page:has(.page-hero-band) {
 
 .authorization-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.authorization-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.authorization-card-head h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+.authorization-card-head .card-symbol {
+  width: var(--icon-size-card);
+  height: var(--icon-size-card);
+  margin-bottom: 0;
+  flex-shrink: 0;
 }
 
 .accreditation-docs-subheading {
@@ -3792,12 +3871,7 @@ footer .muted,
   border-top: 1px solid var(--border);
 }
 
-.download-card.card-link {
-  gap: 0.65rem;
-}
-
-.download-card.card-link h3 {
-  margin: 0;
+.download-card h3 {
   font-size: 1.05rem;
   line-height: 1.3;
 }

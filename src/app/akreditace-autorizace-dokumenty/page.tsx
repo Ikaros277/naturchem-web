@@ -9,7 +9,8 @@ import { pageCtaPresets } from "@/lib/cta";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import {
   getAccreditationScopeIconKey,
-  getAuthorizationIconKey
+  getAuthorizationIconKey,
+  type ServiceIconKey
 } from "@/lib/service-icons";
 import { accreditedLabScope, authorizations } from "@/lib/accreditation-scope";
 import { company, siteUrl } from "@/lib/site";
@@ -30,12 +31,12 @@ const accreditationFacts = [
   "Platnost akreditace do 26. 10. 2028"
 ] as const;
 
-const customerBenefits = [
-  "řízený a dohledatelný postup měření",
-  "protokoly použitelné při jednání se správními orgány",
-  "odborný komentář pro provozní rozhodování",
-  "návaznost na požadované podklady"
-] as const;
+const customerBenefits: Array<{ icon: ServiceIconKey; text: string }> = [
+  { icon: "ippc", text: "Výsledky dohledatelné a obhajitelné při kontrole" },
+  { icon: "bezpecnostni-listy", text: "Protokoly přímo pro ČIŽP, KHS nebo stavební úřad" },
+  { icon: "skoleni", text: "Odborný výklad výsledků — nejen čísla" },
+  { icon: "povoleni", text: "Vždy v souladu s platným osvědčením a jeho přílohou" },
+];
 
 const scopeGroups = [
   {
@@ -92,8 +93,8 @@ export default function AkreditaceAutorizaceDokumentyPage() {
           <p className="eyebrow">Důkaz odborné způsobilosti</p>
           <h1>Akreditace, autorizace a odborná oprávnění</h1>
           <p className="page-lead">
-            Přehled akreditovaného rozsahu laboratoře a samostatných autorizací. U každé zakázky
-            ověřujeme soulad s platným osvědčením a jeho přílohou.
+            Výsledky z NATURCHEM obstojí při kontrole ČIŽP, KHS i v stavebním řízení — tady jsou
+            osvědčení, která za nimi stojí.
           </p>
         </header>
       </PageHeroBand>
@@ -112,8 +113,11 @@ export default function AkreditaceAutorizaceDokumentyPage() {
         <article className="card">
           <h2>Co akreditace znamená pro zákazníka</h2>
           <div className="mini-card-grid">
-            {customerBenefits.map((benefit) => (
-              <div key={benefit} className="mini-card">{benefit}</div>
+            {customerBenefits.map(({ icon, text }) => (
+              <div key={text} className="mini-card">
+                <ServiceIcon icon={icon} size={32} />
+                <span>{text}</span>
+              </div>
             ))}
           </div>
         </article>
@@ -125,7 +129,10 @@ export default function AkreditaceAutorizaceDokumentyPage() {
         <div className="scope-card-grid">
           {scopeGroups.map((group) => (
             <article key={group.title} className="card scope-card">
-              <h3>{group.title}</h3>
+              <div className="scope-card-head">
+                <ServiceIcon icon={getAccreditationScopeIconKey(group.title)} size={20} />
+                <h3>{group.title}</h3>
+              </div>
               <p className="muted">{group.text}</p>
             </article>
           ))}
@@ -149,14 +156,16 @@ export default function AkreditaceAutorizaceDokumentyPage() {
       <section className="section">
         <h2>Autorizace, oprávnění a dokumenty</h2>
         <p className="muted">
-          Rozptylové a hlukové studie, EIA a odborné posudky jsou samostatná odborná činnost mimo
-          akreditovaný rozsah laboratoře ISO/IEC 17025. Jsou kryty těmito autorizacemi:
+          EIA, rozptylové a hlukové studie nebo odborné posudky nespadají pod akreditaci
+          laboratoře — jsou kryty samostatnými autorizacemi Ing. Heziny:
         </p>
         <div className="grid grid-4 authorization-grid">
           {authorizations.map((item) => (
             <article key={item.title} className="card">
-              <ServiceIcon icon={getAuthorizationIconKey(item.title)} />
-              <h3>{item.title}</h3>
+              <div className="authorization-card-head">
+                <ServiceIcon icon={getAuthorizationIconKey(item.title)} />
+                <h3>{item.title}</h3>
+              </div>
               <p className="muted">{item.text}</p>
             </article>
           ))}
@@ -164,18 +173,19 @@ export default function AkreditaceAutorizaceDokumentyPage() {
         <h3 className="accreditation-docs-subheading">Dokumenty ke stažení</h3>
         <div className="download-card-grid">
           {accreditationDocuments.map((doc) => (
-            <a
-              key={doc.id}
-              href={doc.href}
-              className="card card-link download-card"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${doc.title} — stáhnout PDF`}
-            >
+            <div key={doc.id} className="card download-card">
               <h3>{doc.title}</h3>
               <p className="muted">{doc.description}</p>
-              <span className="card-inline-link">Stáhnout PDF</span>
-            </a>
+              <a
+                href={doc.href}
+                className="button secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${doc.title} — stáhnout PDF`}
+              >
+                Stáhnout PDF
+              </a>
+            </div>
           ))}
         </div>
       </section>

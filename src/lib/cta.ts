@@ -36,7 +36,7 @@ export const pageCtaPresets = {
     primaryHref: "/kontakt"
   },
   accreditation: {
-    text: "Potřebujete ověřit, zda vaše měření nebo studie spadají do akreditovaného rozsahu?",
+    text: "Nejste si jistí, zda Váš případ akreditace pokrývá? Pošlete popis zdroje nebo záměru — odpovíme.",
     primaryLabel: "Kontaktovat NATURCHEM",
     primaryHref: "/kontakt",
     secondaryLabel: "Přehled služeb",

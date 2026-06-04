@@ -43,7 +43,7 @@ export const accreditedLabScope = {
 export const authorizations = [
   {
     title: "EIA",
-    text: "vypracování podkladů v procesech posuzování vlivů na životní prostředí"
+    text: "podklady a oznámení záměru pro EIA řízení"
   },
   {
     title: "Rozptylové studie",

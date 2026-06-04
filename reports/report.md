@@ -6,37 +6,21 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 20 |
-| Celkový odhadovaný čas | ~20,6 hodiny |
-| Aktuální fáze | Copy C7 — index /sluzby hotov; další krok: provozy a technologie (intro, index) |
+| Celkový odhadovaný čas | ~20,7 hodiny |
+| Aktuální fáze | C7 uzavřeno (služby, provozy, reference); další krok: /kontakt (C9) — UX a copy |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 20:55–22:38
+## Sezení: 4. 6. 2026, 20:55–22:44
 
 ### Přehled
-Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**, úpravy navigace a cross-linku na provozy. Na závěr **C7 (část A)** — přestavba indexu `/sluzby` na šest skupin s accordionem, novými úvody skupin a srozumitelnými popisky rozbalení.
+Večerní blok dokončil **copy C5–C6**, úpravy navigace a celý **C7**: index služeb i provozů, sjednocený UX detailů provozů a FAQ, přestavbu **Reference** na skupiny zakázek s kartami jako u služeb, plus zápis v projektu — **C7 uzavřen**, SEO landingy odloženy až po odevzdání webu.
 
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### C7: reference copy, skupiny zakazek a karty jako u sluzeb.
-**Co bylo uděláno:** C7: reference copy, skupiny zakazek a karty jako u sluzeb. (commit `7c72278`). Dotcene oblasti: app, components, copy-audit.md, lib, reference.  
-**Proč:** Posileni duveryhodnosti prostrednictvim referenci a znacek zakazniku.
-
-#### UX: FAQ u provozu stejny accordion jako u sluzeb.
-**Co bylo uděláno:** UX: FAQ u provozu stejny accordion jako u sluzeb. (commit `3a2468e`). Dotcene oblasti: components.  
-**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
-
-#### UX: detail provozu 2x2 panel a casova osa prubehu u vsech SectorPage.
-**Co bylo uděláno:** UX: detail provozu 2x2 panel a casova osa prubehu u vsech SectorPage. (commit `da350fe`). Dotcene oblasti: app, components, lib.  
-**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
-
-#### C7 B: index provozu accordion, copy a sbalene skupiny sluzeb.
-**Co bylo uděláno:** C7 B: index provozu accordion, copy a sbalene skupiny sluzeb. (commit `94d7a3f`). Dotcene oblasti: app, components, copy-audit.md, lib, page.tsx, provozy-a-technologie.  
-**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
-
 
 #### C7 — index služeb (/sluzby)
 **Co bylo uděláno:** Šest tematických skupin včetně „Školení a odborná podpora“ s úvodním textem zákazníkovi. Accordion na desktopu i mobilu (první skupina otevřená), ikony u nadpisů skupin i u karet služeb, správné skloňování počtu služeb. Místo obecných „Rozbalit / Sbalit“ kontextové štítky (např. „Zobrazit měření“ / „Skrýt měření“). Sjednocené bílé pozadí sekcí a zarovnání štítků KHS/ČIŽP u karet.  
@@ -58,15 +42,35 @@ Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**,
 **Co bylo uděláno:** V megamenu, patičkovém seznamu služeb a `site.ts` nahrazeny samotné zkratky plnými názvy (např. „ISPOP a provozní evidence“, „Emise skleníkových plynů (GHG)“).  
 **Proč:** Zkratky bez kontextu nejsou srozumitelné pro netechnické publikum; v oboru se používají, ale menu má vysvětlit obsah.
 
+#### C7 — index provozů (/provozy-a-technologie)
+**Co bylo uděláno:** Deset oborů ve skupinách s accordionem (všechny skupiny výchozí sbalené), nový lead a úvody skupin, kontextové štítky rozbalení. U všech deseti detailů provozu přepsané úvodní texty podle schváleného tónu.  
+**Proč:** Stejná logika přehledu jako u služeb — zákazník nejdřív vidí tematické bloky, ne dlouhý seznam odkazů.
+
+#### UX — detail provozu (SectorPage)
+**Co bylo uděláno:** U všech stránek provozů stejný vzor jako u služeb: panel „Stručně o provozu“ 2×2 s kontextovou fotografií a horizontální časová osa průběhu spolupráce.  
+**Proč:** Provozy a služby mají na webu jednotný konverzní layout; uživatel nemusí přecházet mezi odlišnými šablonami.
+
+#### UX — FAQ u provozů
+**Co bylo uděláno:** Sekce častých dotazů na detailu provozu používá stejný accordion jako u služeb (sdílená komponenta).  
+**Proč:** Konzistentní chování a vzhled napříč webem; menší údržba dvou vzorů.
+
+#### C7 — reference (/reference)
+**Co bylo uděláno:** Hero a lead („36 let na trhu…“), úprava úvodu zákazníků, šest skupin příkladů zakázek s accordionem a mřížkou karet (jako u služeb), štítky „Zobrazit zakázky“ / „Sbalit zakázky“, přepsání 16 příkladů; odstraněn vnořený accordion u jednotlivých zakázek.  
+**Proč:** Reference mají být přehledné a důvěryhodné bez zbytečného klikání; skupiny odpovídají oborům práce firmy.
+
+#### Projektová dokumentace — uzavření C7 a SEO
+**Co bylo uděláno:** V `copy-audit.md` a `ROADMAPA.md` označeno C7 jako hotové; SEO landingy (C7-seo) odloženy na samostatný projekt po odevzdání webu.  
+**Proč:** Dodávka webu se soustředí na hlavní strukturu a copy; sedm SEO stránek zůstane v repu, ale není součástí aktuálního předání.
+
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 44 min
-**Rozložení:** 4. 6. 2026 20:55–22:38 (~1 hod 44 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** ~12  
+**Odhadovaná doba práce:** ~1 hod 49 min  
+**Rozložení:** 4. 6. 2026 20:55–22:44 (~1 hod 49 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~14  
 *Poznámka: čas ze skriptu `estimate-session-time.ps1`; mezera nad 30 min od odpoledního bloku (služby 2×2 / C4).*
 
 ### Technická poznámka
-Commity: `17a751a` … `850c3c1`. Soubory: `service-groups.ts`, `ServiceGroupsIndex.tsx`, `globals.css`, `dedicated-service-pages.ts`, `ServicePage.tsx`, `service-megamenu.ts`, `navigation.ts`, `site.ts`, `service-sector-links.ts`, `copy-audit.md`.
+Commity: `17a751a` … `e45c5a3`. Soubory: `service-groups.ts`, `ServiceGroupsIndex.tsx`, `sector-groups.ts`, `SectorGroupsIndex.tsx`, `SectorPage.tsx`, `ReferenceExamplesIndex.tsx`, `reference-content.ts`, `reference-example-groups.ts`, `copy-audit.md`, `ROADMAPA.md`.
 
 ---
 

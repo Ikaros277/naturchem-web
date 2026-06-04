@@ -12,6 +12,7 @@ import { contactSubmitCta, globalCta } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
 import { serviceTrustBandItems } from "@/lib/home-hero-metrics";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
+import { sectors } from "@/lib/sectors";
 import { getDetailGroupIconKey, type ServiceIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
 import {
@@ -48,6 +49,7 @@ export function ServicePage(props: Props) {
   const contactServiceValue = props.contactService || serviceMeta?.contactService || props.title;
   const contactCta = serviceMeta?.contactCta ?? contactSubmitCta;
   const quickContactHref = contactUrl(contactServiceValue);
+  const sectorMetaByHref = new Map(sectors.map((s) => [s.href, s]));
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
   const relatedLinks = props.relatedLinks ?? [];
   const keyScope = props.scope.slice(0, 4);
@@ -64,7 +66,15 @@ export function ServicePage(props: Props) {
 
   const mergedRelated = [
     ...relatedLinks.map((l) => ({ href: l.href, title: l.title, description: l.description, cta: "Zobrazit téma" })),
-    ...sectorCrossLinks.map((s) => ({ href: s.href, title: s.title, description: undefined as string | undefined, cta: "Zobrazit provoz" })),
+    ...sectorCrossLinks.map((s) => {
+      const sector = sectorMetaByHref.get(s.href);
+      return {
+        href: s.href,
+        title: s.title,
+        description: sector?.description,
+        cta: sector?.linkHint ?? "Zobrazit provoz"
+      };
+    }),
     ...relatedServices.map((s) => ({ href: s.href, title: s.title, description: s.short, cta: "Zobrazit službu" }))
   ].slice(0, 3);
 

@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 19 |
-| Celkový odhadovaný čas | ~19,5 hodiny |
+| Počet sezení celkem | 20 |
+| Celkový odhadovaný čas | ~18,7 hodiny |
 | Aktuální fáze | Copy sprint C4 (měření) — přehled služeb 2×2, rollout copy na 6 slugů měření |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 4. 6. 2026, 21:05-21:15
+
+### Přehled
+Automaticky založené sezení po commitu `17a751a`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Copy sprint C5: studie - aktivni leady a prehledove body.
+**Co bylo uděláno:** Copy sprint C5: studie - aktivni leady a prehledove body. (commit `17a751a`). Dotcene oblasti: copy-audit.md, lib, sluzby.  
+**Proč:** Upravy na strankach sluzeb - jasnejsi prezentace nabidky NATURCHEM.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 4. 6. 2026 21:05-21:15 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `17a751a684c703181eea35617c2756235dc22ab7`
 
 ---
 

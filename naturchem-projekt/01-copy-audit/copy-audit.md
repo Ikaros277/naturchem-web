@@ -244,7 +244,7 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 | **C3** | Akreditace, `accreditation-scope`, `accreditation-documents`, přístrojové vybavení (úvody) | ✅ akreditace | 4. 6. 2026 — stránka akreditace; úvody přístrojů částečně sitewide Vzor F |
 | **C4** | Služby měření (7 slugů) — body copy, intro jen kontrola (P3-2 ✅) | 🔲 | |
 | **C5** | Služby studie (5 slugů ve skupině studií; `odborne-posudky` → C6) | ✅ | 4. 6. 2026 — rozptyl + 4× `dedicated-service-pages` |
-| **C6** | Služby povolování/EIA (11 slugů) | 🔲 | |
+| **C6** | Služby povolování/EIA (10 slugů + přehled EIA) | ✅ | 4. 6. 2026 |
 | **C7** | `service-groups`, provozy 13×, reference, typické zakázky, `seo-landings` | 🔄 typické zakázky ✅ | Index + úvody sekcí 4. 6. 2026; zbývá reference/provozy/seo |
 | **C8** | `faq.ts` (styl only), `/poradna` hero | 🔲 | |
 | **C9** | Kontakt, formulář, Footer, UI labely + grep QA | 🔲 | Footer copy ✅ P5-23 (tagline, labely sloupců) |

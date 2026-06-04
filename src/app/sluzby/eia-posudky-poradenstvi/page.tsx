@@ -15,18 +15,18 @@ export default function Page() {
       slug="sluzby/eia-posudky-poradenstvi"
       faqCategoryId="eia"
       title="EIA, posudky, provozní řády a IPPC"
-      intro="Povolovací agenda kolem zdroje zahrnuje EIA, posudek, měření, provozní řád a ISPOP. Zkoordinujeme kroky a podklady tak, aby data pro krajský úřad byla konzistentní."
+      intro="EIA, posudek, měření i provozní řád u jednoho zdroje? Zkoordinujeme povolovací kroky tak, aby údaje pro krajský úřad byly konzistentní."
       scope={[
-        "EIA — oznámení, zjišťovací řízení, technické přílohy",
-        "odborné posudky a povolení provozu zdroje",
-        "provozní řády a změny IPPC",
-        "ISPOP, souhrnná evidence a GHG"
+        "Zkoordinujeme EIA — oznámení, zjišťovací řízení, technické přílohy",
+        "Zajistíme odborné posudky a povolení provozu zdroje",
+        "Připravíme provozní řády a změny IPPC",
+        "Zkontrolujeme ISPOP, souhrnnou evidenci a GHG"
       ]}
       whenNeeded={[
-        "nový záměr nebo změna kapacity",
-        "zjišťovací řízení EIA nebo doplnění po připomínkách úřadu",
-        "změna technologie, povolení provozu, provozního řádu nebo integrovaného povolení",
-        "roční ISPOP / souhrnná provozní evidence nebo GHG agenda"
+        "Plánujete nový záměr nebo změnu kapacity",
+        "Probíhá zjišťovací řízení EIA nebo doplňujete po připomínkách úřadu",
+        "Měníte technologii, povolení provozu, provozní řád nebo integrované povolení",
+        "Řešíte roční ISPOP, souhrnnou evidenci nebo GHG reporting"
       ]}
       practicalSituations={[
         "EIA oznámení záměru pro kapacitní změnu provozu",
@@ -48,9 +48,9 @@ export default function Page() {
         "strukturovaná odpověď na připomínky úřadů"
       ]}
       commonMistakes={[
-        "nekoordinované studie hluku a rozptylu v EIA",
-        "zastaralý provozní řád po změně technologie",
-        "neúplná odpověď na připomínky úřadu"
+        "Nekoordinované studie hluku a rozptylu v EIA",
+        "Zastaralý provozní řád po změně technologie",
+        "Neúplná odpověď na připomínky úřadu"
       ]}
       relatedLinks={[
         {

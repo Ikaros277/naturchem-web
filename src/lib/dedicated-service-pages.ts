@@ -81,20 +81,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Odborné posudky podle zákona o ochraně ovzduší pro zdroje, technologie, změny provozu a povolovací řízení.",
     intro:
-      "Odborné posudky podle zákona o ochraně ovzduší jako technický podklad pro správní orgány. V návaznosti na povolení provozu, měření emisí a skutečný provozní stav.",
+      "Krajský úřad požaduje odborný posudek ke zdroji nebo změně technologie? Zpracujeme posudek podle zákona o ochraně ovzduší — v návaznosti na měření emisí a povolení provozu.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
-      "posudek ke stacionárnímu zdroji, změně technologie nebo kapacity",
-      "vazba na měření emisí, rozptylovou studii a provozní řád",
-      "vyjádření k výzvě krajského úřadu nebo ČIŽP",
-      "shrnutí pro investora před podáním žádosti o povolení provozu"
+      "Zpracujeme posudek ke zdroji, změně technologie nebo kapacity",
+      "Propojíme měření emisí, rozptylovou studii a provozní řád",
+      "Připravíme vyjádření k výzvě krajského úřadu nebo ČIŽP",
+      "Shrnutí pro investora před podáním žádosti o povolení provozu"
     ],
     whenNeeded: [
-      "nový zdroj nebo změna technologie",
-      "změna kapacity, paliva, filtrace nebo provozního režimu",
-      "požadavek úřadu v řízení o povolení provozu",
-      "potřeba technicky podloženého stanoviska"
+      "Plánujete nový zdroj nebo změnu technologie",
+      "Měníte kapacitu, palivo, filtraci nebo provozní režim",
+      "Úřad požaduje posudek v řízení o povolení provozu",
+      "Potřebujete technicky podložené stanovisko"
     ],
     practicalSituations: [
       "odborný posudek pro novou lakovací technologii",
@@ -114,9 +114,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doporučení návazných kroků, měření nebo dokumentace"
     ],
     commonMistakes: [
-      "posuzování technologie bez aktuálních provozních údajů",
-      "chybějící návaznost na povolení provozu a limity",
-      "neúplné podklady k výduchům, filtraci nebo režimu zdroje"
+      "Posuzování technologie bez aktuálních provozních údajů",
+      "Chybějící návaznost na povolení provozu a limity",
+      "Neúplné podklady k výduchům, filtraci nebo režimu zdroje"
     ],
     relatedLinks: [
       {
@@ -137,20 +137,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Příprava a aktualizace provozních řádů stacionárních zdrojů znečišťování ovzduší pro provozovatele a krajské úřady.",
     intro:
-      "Provozní řád musí odpovídat skutečnému režimu zdroje po změně filtrace, paliva nebo výkonu. Zpracujeme nový řád nebo revizi po zjištění nesouladu při kontrole.",
+      "Provozní řád neodpovídá skutečnému provozu po změně filtrace, paliva nebo výkonu? Připravíme nový řád nebo revizi — sladěnou s povolením a měřením emisí.",
     contactService: "Provozní řády",
     faqCategoryId: "eia",
     scope: [
-      "nový provozní řád zdroje znečišťování ovzduší",
-      "aktualizace po změně technologie, výduchu nebo havarijních postupů",
-      "sladění s povolením provozu a posledním měřením emisí",
-      "úpravy na výzvu krajského úřadu nebo ČIŽP"
+      "Připravíme nový provozní řád zdroje znečišťování ovzduší",
+      "Aktualizujeme po změně technologie, výduchu nebo havarijních postupů",
+      "Sladíme s povolením provozu a posledním měřením emisí",
+      "Upravíme na výzvu krajského úřadu nebo ČIŽP"
     ],
     whenNeeded: [
-      "nový zdroj nebo změna povolení provozu",
-      "změna technologie, paliva, výduchu nebo odlučovacího zařízení",
-      "neaktuální provozní řád vůči skutečnému provozu",
-      "požadavek krajského úřadu nebo ČIŽP"
+      "Plánujete nový zdroj nebo změnu povolení provozu",
+      "Měníte technologii, palivo, výduch nebo odlučovací zařízení",
+      "Provozní řád neodpovídá skutečnému provozu",
+      "Krajský úřad nebo ČIŽP požaduje úpravu dokumentace"
     ],
     practicalSituations: [
       "aktualizace provozního řádu po výměně filtrace",
@@ -170,9 +170,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doporučení pro návaznou evidenci a měření"
     ],
     commonMistakes: [
-      "provozní řád neodpovídá skutečné technologii",
-      "chybí vazba na měřené znečišťující látky a limity",
-      "dokumentace neřeší nestandardní nebo havarijní stavy"
+      "Provozní řád neodpovídá skutečné technologii",
+      "Chybí vazba na měřené znečišťující látky a limity",
+      "Dokumentace neřeší nestandardní nebo havarijní stavy"
     ],
     relatedLinks: [
       {
@@ -193,20 +193,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Podklady pro integrovaná povolení, změny IPPC a odbornou koordinaci měření, studií a provozní dokumentace.",
     intro:
-      "U zařízení v režimu IPPC nestačí samostatný protokol z měření. Sjednotíme měření, studie a provozní data pro řízení o integrovaném povolení nebo jeho změně.",
+      "Měníte zařízení s integrovaným povolením? Sjednotíme měření, studie a provozní podklady pro řízení o IPPC nebo jeho změně.",
     contactService: "IPPC a integrovaná povolení",
     faqCategoryId: "eia",
     scope: [
-      "podklady pro nové integrované povolení nebo změnu IPPC",
-      "přehled měření, studií a provozních vstupů v jednom celku",
-      "technický popis změny vůči stávajícímu povolení a BAT",
-      "doplnění dokumentace po připomínkách krajského úřadu"
+      "Připravíme podklady pro nové integrované povolení nebo změnu IPPC",
+      "Sjednotíme měření, studie a provozní vstupy v jednom celku",
+      "Popíšeme změnu vůči stávajícímu povolení a BAT",
+      "Doplníme dokumentaci po připomínkách krajského úřadu"
     ],
     whenNeeded: [
-      "nové integrované povolení",
-      "podstatná nebo nepodstatná změna IPPC",
-      "změna kapacity, technologie nebo emisních parametrů",
-      "doplnění podkladů na výzvu úřadu"
+      "Plánujete nové integrované povolení",
+      "Řešíte podstatnou nebo nepodstatnou změnu IPPC",
+      "Měníte kapacitu, technologii nebo emisní parametry",
+      "Úřad požaduje doplnění podkladů"
     ],
     practicalSituations: [
       "změna technologie v zařízení s integrovaným povolením",
@@ -226,9 +226,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doplnění dokumentace pro správní řízení"
     ],
     commonMistakes: [
-      "oddělené řešení měření a povolovací dokumentace bez společného závěru",
-      "neaktuální údaje o kapacitě, režimu nebo výduších",
-      "podklady bez jasného rozlišení stávajícího a navrhovaného stavu"
+      "Oddělené řešení měření a povolovací dokumentace bez společného závěru",
+      "Neaktuální údaje o kapacitě, režimu nebo výduších",
+      "Podklady bez jasného rozlišení stávajícího a navrhovaného stavu"
     ],
     relatedLinks: [
       {
@@ -249,20 +249,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Oznámení záměru EIA, odborné přílohy a koordinace podkladů pro zjišťovací řízení a navazující povolování.",
     intro:
-      "Zpracujeme oznámení záměru a sladíme vstupy pro ovzduší, hluk, dopravu a provozní parametry do jednoho ucelného dokumentu.",
+      "Připravujete záměr s vlivy na životní prostředí? Zpracujeme oznámení EIA a sladíme podklady pro ovzduší, hluk a dopravu v jednom dokumentu.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "oznámení záměru podle zákona o EIA",
-      "sjednocení rozptylových, hlukových a dopravních podkladů",
-      "technické přílohy pro investora a zpracovatele EIA",
-      "úpravy po připomínkách úřadu nebo veřejnosti"
+      "Zpracujeme oznámení záměru podle zákona o EIA",
+      "Sjednotíme rozptylové, hlukové a dopravní přílohy",
+      "Připravíme technické přílohy pro investora a zpracovatele EIA",
+      "Upravíme po připomínkách úřadu nebo veřejnosti"
     ],
     whenNeeded: [
-      "nový záměr s možnými vlivy na životní prostředí",
-      "změna kapacity, technologie nebo areálu",
-      "požadavek na zjišťovací řízení",
-      "doplnění odborných příloh k povolovacímu procesu"
+      "Plánujete nový záměr s vlivy na životní prostředí",
+      "Měníte kapacitu, technologii nebo areál",
+      "Úřad požaduje zjišťovací řízení",
+      "Potřebujete doplnit odborné přílohy k povolování"
     ],
     practicalSituations: [
       "oznámení EIA pro rozšíření výrobního areálu",
@@ -282,9 +282,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "podklady pro zjišťovací řízení a navazující povolování"
     ],
     commonMistakes: [
-      "nekoordinované technické přílohy s rozdílnými vstupními údaji",
-      "podcenění nočního provozu, dopravy nebo kumulace vlivů",
-      "neúplný popis variant a provozního režimu"
+      "Nekoordinované technické přílohy s rozdílnými vstupními údaji",
+      "Podcenění nočního provozu, dopravy nebo kumulace vlivů",
+      "Neúplný popis variant a provozního režimu"
     ],
     relatedLinks: [
       {
@@ -305,20 +305,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "ISPOP, souhrnná provozní evidence a roční hlášení pro provozovatele zdrojů v návaznosti na měření emisí a povolení provozu.",
     intro:
-      "Souhrnná evidence v ISPOP musí odpovídat skutečnému provozu a výsledkům měření. Zkontrolujeme údaje o palivu, výkonu a emisích a doplníme podklady pro kontrolu úřadu.",
+      "Blíží se roční hlášení ISPOP nebo kontrola úřadu? Zkontrolujeme souhrnnou evidenci vůči měření emisí, povolení a skutečnému provozu.",
     contactService: "ISPOP",
     faqCategoryId: "ispop",
     scope: [
-      "souhrnná provozní evidence zdroje",
-      "roční hlášení ISPOP — kontrola a doplnění údajů",
-      "soulad s měřením emisí, povolením provozu a provozním řádem",
-      "zapracování změny paliva, kapacity nebo provozních hodin"
+      "Zpracujeme souhrnnou provozní evidenci zdroje",
+      "Zkontrolujeme a doplníme roční hlášení ISPOP",
+      "Sladíme s měřením emisí, povolením a provozním řádem",
+      "Zapracujeme změnu paliva, kapacity nebo provozních hodin"
     ],
     whenNeeded: [
-      "roční reporting a souhrnná provozní evidence",
-      "změna zdroje nebo provozních údajů",
-      "kontrola návaznosti na měření emisí",
-      "požadavek úřadu nebo interní kontrola povinností"
+      "Plánujete roční reporting a souhrnnou provozní evidenci",
+      "Měníte zdroj nebo provozní údaje",
+      "Kontrolujete návaznost na měření emisí",
+      "Úřad požaduje doplnění nebo provádíte interní kontrolu"
     ],
     practicalSituations: [
       "příprava ročního hlášení po pravidelném měření emisí",
@@ -338,9 +338,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "přehled chybějících nebo rizikových údajů"
     ],
     commonMistakes: [
-      "přepis starých údajů bez kontroly změn provozu",
-      "nesoulad mezi měřením emisí, povolením a evidencí",
-      "opomenutí změny paliva, výkonu nebo provozních hodin"
+      "Přepis starých údajů bez kontroly změn provozu",
+      "Nesoulad mezi měřením emisí, povolením a evidencí",
+      "Opomenutí změny paliva, výkonu nebo provozních hodin"
     ],
     relatedLinks: [
       {
@@ -361,20 +361,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "GHG, ověřování emisí skleníkových plynů, kontrola emisních údajů a podklady pro reporting provozovatelů.",
     intro:
-      "Ověřování emisí skleníkových plynů posuzuje správnost metodiky, vstupních dat a dokumentace. Ověřujeme návaznost výpočtu na spotřeby, měření a provozní bilanci.",
+      "Ověřujete emise skleníkových plynů před reportingem? Posoudíme metodiku, vstupy a návaznost na spotřeby, měření a provozní bilanci.",
     contactService: "GHG",
     faqCategoryId: "ispop",
     scope: [
-      "ověření emisí skleníkových plynů a výpočtových listů",
-      "kontrola emisních faktorů, spotřeb a provozních dat",
-      "návaznost na měření emisí a provozní evidenci",
-      "přehled nesouladů před odevzdáním reportingu"
+      "Ověříme emise skleníkových plynů a výpočtové listy",
+      "Zkontrolujeme emisní faktory, spotřeby a provozní data",
+      "Navážeme na měření emisí a provozní evidenci",
+      "Připravíme přehled nesouladů před odevzdáním reportingu"
     ],
     whenNeeded: [
-      "reporting emisí skleníkových plynů",
-      "ověření výpočtů nebo emisních údajů",
-      "změna technologie, paliva nebo provozních dat",
-      "požadavek investora, auditu nebo správního orgánu"
+      "Plánujete reporting emisí skleníkových plynů",
+      "Potřebujete ověřit výpočty nebo emisní údaje",
+      "Měníte technologii, palivo nebo provozní data",
+      "Investor, audit nebo úřad požaduje kontrolu"
     ],
     practicalSituations: [
       "kontrola výpočtu emisí skleníkových plynů",
@@ -394,9 +394,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "podklad pro reporting GHG"
     ],
     commonMistakes: [
-      "neaktuální emisní faktory nebo metodika výpočtu",
-      "nesoulad mezi spotřebami a provozní evidencí",
-      "chybějící doložení zdrojových dat"
+      "Neaktuální emisní faktory nebo metodika výpočtu",
+      "Nesoulad mezi spotřebami a provozní evidencí",
+      "Chybějící doložení zdrojových dat"
     ],
     relatedLinks: [
       {
@@ -865,20 +865,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Podklady pro vydání nebo změnu povolení provozu stacionárního zdroje. Měření, posudky, provozní řády a komunikace s úřadem.",
     intro:
-      "Povolení provozu zdroje často vyžaduje měření, odborný posudek nebo provozní řád v konkrétním rozsahu. Navrhneme podklady podle typu technologie a požadavků krajského úřadu.",
+      "Řešíte vydání nebo změnu povolení provozu zdroje? Navrhneme rozsah měření, posudku a provozního řádu podle typu technologie a požadavků krajského úřadu.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
-      "návrh rozsahu podkladů před podáním na krajský úřad",
-      "měření emisí, odborný posudek a provozní řád jako celek",
-      "návaznost na IPPC a ISPOP u větších zdrojů",
-      "technická podpora při doplňování žádosti"
+      "Navrhneme rozsah podkladů před podáním na krajský úřad",
+      "Zkoordinujeme měření emisí, posudek a provozní řád",
+      "Zohledníme návaznost na IPPC a ISPOP u větších zdrojů",
+      "Poskytneme technickou podporu při doplňování žádosti"
     ],
     whenNeeded: [
-      "nový zdroj nebo změna kapacity",
-      "vydání povolení provozu po technologické změně",
-      "požadavek úřadu na doplnění podkladů",
-      "změna paliva, filtrace nebo provozního režimu"
+      "Plánujete nový zdroj nebo změnu kapacity",
+      "Potřebujete povolení provozu po technologické změně",
+      "Úřad požaduje doplnění podkladů",
+      "Měníte palivo, filtraci nebo provozní režim"
     ],
     practicalSituations: [
       "povolení provozu nové lakovací linky",
@@ -898,9 +898,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "technická podpora při jednání s úřadem"
     ],
     commonMistakes: [
-      "podání žádosti bez měření nebo posudku v požadovaném rozsahu",
-      "nezohlednění změny technologie oproti původnímu povolení",
-      "nekoordinované podklady od více dodavatelů"
+      "Podání žádosti bez měření nebo posudku v požadovaném rozsahu",
+      "Nezohlednění změny technologie oproti původnímu povolení",
+      "Nekoordinované podklady od více dodavatelů"
     ],
     relatedLinks: [
       {
@@ -921,20 +921,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Odborné podklady pro zjišťovací řízení EIA. Technické vstupy, koordinace měření a studií pro investora a zpracovatele.",
     intro:
-      "Ve zjišťovacím řízení EIA je nutné dodat technické vstupy včas. Zajistíme měření, rozptyl a hluk ve formě použitelné pro zpracovatele EIA.",
+      "Záměr vstupuje do zjišťovacího řízení EIA? Zajistíme technické vstupy z měření a studií včas — ve formě použitelné pro zpracovatele EIA.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "technické přílohy pro zjišťovací řízení",
-      "měření emisí, rozptyl a hluk podle zadání EIA",
-      "sladění dat od provozu a z projektu",
-      "doplnění po připomínkách úřadu ve fázi zjišťování"
+      "Připravíme technické přílohy pro zjišťovací řízení",
+      "Zajistíme měření emisí, rozptyl a hluk podle zadání EIA",
+      "Sladíme data od provozu a z projektu",
+      "Doplníme po připomínkách úřadu ve fázi zjišťování"
     ],
     whenNeeded: [
-      "záměr spadající do zjišťovacího řízení",
-      "požadavek na technické přílohy včasně v procesu",
-      "potřeba sladit měření, studie a projekt",
-      "příprava podkladů pro veřejnost a úřady"
+      "Záměr spadá do zjišťovacího řízení",
+      "Potřebujete technické přílohy včas v procesu",
+      "Chcete sladit měření, studie a projekt",
+      "Připravujete podklady pro veřejnost a úřady"
     ],
     practicalSituations: [
       "podklady pro zjišťovací řízení průmyslového záměru",
@@ -954,9 +954,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doporučení dalšího postupu v procesu EIA"
     ],
     commonMistakes: [
-      "pozdní dodání technických podkladů do EIA",
-      "nesoulad mezi projektem a skutečným provozem",
-      "oddělené studie bez společného zadání"
+      "Pozdní dodání technických podkladů do EIA",
+      "Nesoulad mezi projektem a skutečným provozem",
+      "Oddělené studie bez společného zadání"
     ],
     relatedLinks: [
       {
@@ -977,20 +977,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Technické přílohy pro investory a projektanty: rozptyl, hluk, emise, doprava a návaznost na povolování a EIA.",
     intro:
-      "Technické přílohy posuzují varianty záměru z hlediska imisí, hluku a dopravy ještě před finálním projektem. Výstupy slouží k rozhodnutí o umístění komína nebo strojovny.",
+      "Rozhodujete o variantě umístění technologie před podáním na úřady? Připravíme technické přílohy k imisím, hluku a dopravě pro investora i projektanta.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "přílohy pro studii proveditelnosti a projektovou přípravu",
-      "rozptyl, hluk, emise a doprava u variant záměru",
-      "koordinace měření a studií pro projektanta",
-      "návaznost na EIA, stavební řízení a povolení provozu"
+      "Připravíme přílohy pro studii proveditelnosti a projektovou přípravu",
+      "Posoudíme rozptyl, hluk, emise a dopravu u variant záměru",
+      "Zkoordinujeme měření a studie pro projektanta",
+      "Navážeme na EIA, stavební řízení a povolení provozu"
     ],
     whenNeeded: [
-      "příprava investice před podáním na úřady",
-      "potřeba sladit projekt s požadavky na životní prostředí",
-      "variantní posouzení umístění technologií",
-      "včasná příprava podkladů pro EIA nebo povolení"
+      "Připravujete investici před podáním na úřady",
+      "Potřebujete sladit projekt s požadavky na životní prostředí",
+      "Porovnáváte varianty umístění technologií",
+      "Chcete včas připravit podklady pro EIA nebo povolení"
     ],
     practicalSituations: [
       "technické přílohy pro nový výrobní areál",
@@ -1010,9 +1010,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doporučení dalšího postupu v povolování"
     ],
     commonMistakes: [
-      "pozdní zapojení odborných podkladů až po projektu",
-      "nesoulad technických příloh s reálným provozem",
-      "opomenutí dopravy nebo vedlejších zdrojů"
+      "Pozdní zapojení odborných podkladů až po projektu",
+      "Nesoulad technických příloh s reálným provozem",
+      "Opomenutí dopravy nebo vedlejších zdrojů"
     ],
     relatedLinks: [
       {

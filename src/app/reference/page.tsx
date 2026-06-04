@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
-import { ReferenceExampleCard } from "@/components/ReferenceExampleCard";
+import { ReferenceExamplesIndex } from "@/components/ReferenceExamplesIndex";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import {
-  referenceExamples,
+  getReferenceExamplesById,
+  referenceCustomersIntro,
+  referenceExamplesHeading,
+  referenceEyebrow,
   referenceIntro
 } from "@/lib/reference-content";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
@@ -14,14 +17,16 @@ import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Reference a příklady řešených zakázek | NATURCHEM"
+    absolute: "Reference a důvěra zákazníků | NATURCHEM"
   },
   description:
-    "Reference NATURCHEM — průmysl, energetika, automotive, zemědělství, odpady, stavebnictví a veřejný sektor. Anonymizované příklady měření, studií, EIA a podkladů pro úřady.",
+    "Reference NATURCHEM — 36 let na trhu, spolupráce s významnými společnostmi. Anonymizované příklady měření, studií a podkladů pro úřady.",
   alternates: { canonical: `${siteUrl}/reference/` }
 };
 
 export default function ReferencePage() {
+  const examplesById = getReferenceExamplesById();
+
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -39,28 +44,21 @@ export default function ReferencePage() {
         breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Reference" }]}
       >
         <header className="premium-page-hero page-hero--photo">
-          <p className="eyebrow">Důkaz odborné praxe</p>
-          <h1>Reference a příklady řešených zakázek NATURCHEM</h1>
+          <p className="eyebrow">{referenceEyebrow}</p>
+          <h1>Reference a důvěra zákazníků</h1>
           <p className="page-lead">{referenceIntro}</p>
         </header>
       </PageHeroBand>
 
       <section className="section content-block container page-first-section" id="zakaznici">
         <h2>Naši zákazníci</h2>
+        <p className="muted section-intro">{referenceCustomersIntro}</p>
         <ClientLogosGrid expandable />
       </section>
 
       <section className="section content-block container" id="priklady">
-        <h2>Příklady z praxe</h2>
-        <p className="muted section-intro-small">
-          Konkrétní typy situací z praxe — bez názvů zákazníků. U každého příkladu uvádíme typ
-          provozu, rozsah prací a výstup.
-        </p>
-        <div className="reference-examples-list">
-          {referenceExamples.map((example) => (
-            <ReferenceExampleCard key={example.title} example={example} />
-          ))}
-        </div>
+        <h2>{referenceExamplesHeading}</h2>
+        <ReferenceExamplesIndex examplesById={examplesById} />
       </section>
 
       <PageCtaStrip {...pageCtaPresets.reference} className="container" />

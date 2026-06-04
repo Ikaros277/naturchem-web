@@ -62,8 +62,8 @@ export const pageCtaPresets = {
     secondaryHref: "/akreditace-autorizace-dokumenty"
   },
   reference: {
-    text: "Potřebujete měření, studii, EIA, provozní řád nebo podklad k úřadu? Pošlete výzvu, povolení nebo stručný popis provozu. Na základě podkladů navrhneme rozsah prací a možný termín realizace.",
-    primaryLabel: "Poptat podobnou zakázku",
+    text: "Máte podobný provoz nebo požadavek úřadu? Pošlete výzvu, povolení nebo stručný popis — navrhneme rozsah a termín.",
+    primaryLabel: "Poslat podklady k posouzení",
     primaryHref: contactUrl("Nejsem si jistý")
   },
   sectorIndex: {

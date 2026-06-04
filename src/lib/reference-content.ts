@@ -7,6 +7,7 @@ export type ReferenceArea = {
 };
 
 export type ReferenceExample = {
+  id: string;
   title: string;
   operationType: string;
   scope: string;
@@ -18,11 +19,19 @@ export type ReferenceExample = {
   cta: "Poptat podobnou zakázku" | "Poslat podklady k posouzení" | "Poptat měření / studii";
 };
 
-export const referenceIntro =
-  "Měření, studie a podklady pro ČIŽP, KHS i stavební řízení — anonymizované příklady z průmyslu, energetiky, zemědělství a veřejného sektoru.";
+export const referenceEyebrow = "36 let na trhu · reference z praxe";
 
-export const referenceCustomerSegmentsText =
-  "V interní evidenci NATURCHEM se dlouhodobě opakují zakázky pro průmyslové podniky, lakovny, kotelny, bioplynové stanice, dřevozpracující provozy, zemědělské areály, odpadová zařízení, zdravotnické provozy, projektanty a investory. Konkrétní názvy zákazníků na web uvádíme jen po ověření, že je lze veřejně prezentovat.";
+export const referenceIntro =
+  "Za 36 let na trhu jsme spolupracovali s mnoha významnými společnostmi v průmyslu i energetice.";
+
+export const referenceCustomersIntro =
+  "Společnosti, které u nás řeší měření, studie a podklady pro úřad — od automotive a energetiky po veřejný sektor.";
+
+export const referenceExamplesHeading = "Příklady zakázek z praxe";
+
+export function getReferenceExamplesById(): Map<string, ReferenceExample> {
+  return new Map(referenceExamples.map((example) => [example.id, example]));
+}
 
 export const referenceAreas: readonly ReferenceArea[] = [
   {
@@ -78,176 +87,192 @@ export const referenceAreas: readonly ReferenceArea[] = [
 /** Výběr 16 anonymizovaných příkladů pro web (z interní evidence). */
 export const referenceExamples: readonly ReferenceExample[] = [
   {
-    title: "Měření emisí v lakovně automotive",
+    id: "lak-automotive-emise",
+    title: "Lakovna automotive — měření VOC/TOC a TZL",
     operationType: "lakovna, automotive",
     scope: "měření VOC/TOC a TZL na technologických výduších",
     output: "protokol z měření emisí a podklad pro povolení provozu / kontrolu plnění podmínek",
-    text: "Pro výrobní provoz v automotive jsme zajišťovali měření emisí z lakovací technologie, včetně VOC/TOC a tuhých znečišťujících látek. Součástí zakázky bylo posouzení měřicích míst, měření na výduších a zpracování výstupu použitelného pro provozovatele i navazující úřední agendu.",
+    text: "Změřili jsme emise z lakovací technologie včetně VOC/TOC a tuhých látek na výduších. Protokol šel do plnění podmínek provozu a komunikace s úřadem.",
     tags: ["Emise", "VOC", "KÚ"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Poptat podobnou zakázku"
   },
   {
-    title: "Měření emisí bioplynové stanice",
+    id: "bps-emise",
+    title: "Bioplynová stanice — emise kogenerace",
     operationType: "BPS / kogenerační jednotka",
     scope: "emise kogenerační jednotky, provozní údaje, návaznost na ISPOP",
     output: "protokol a podklady pro provozní evidenci",
-    text: "U bioplynové stanice jsme řešili měření emisí kogenerační jednotky a návaznost výsledků na provozní evidenci a ohlašovací povinnosti. Zakázka zahrnovala koordinaci termínu měření, provozní režim zdroje a zpracování výstupu pro provozovatele.",
+    text: "Změřili jsme emise kogenerační jednotky v dohodnutém provozním režimu a propojili výsledek s provozní evidencí a ISPOP.",
     tags: ["Emise", "ISPOP", "KÚ"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Poptat měření / studii"
   },
   {
-    title: "Série měření na více bioplynových stanicích",
+    id: "bps-serie-emise",
+    title: "Více bioplynových stanic — série měření emisí",
     operationType: "skupina BPS",
     scope: "více lokalit, více kogeneračních jednotek",
     output: "sada protokolů a jednotná evidence výsledků",
-    text: "Pro provozovatele s více bioplynovými stanicemi jsme zajišťovali měření emisí na několika lokalitách a více kogeneračních jednotkách. Důraz byl kladen na jednotný postup, plánování termínů a přehledné výstupy pro navazující provozní evidenci.",
+    text: "Na několika lokalitách jsme změřili emise kogeneračních jednotek jednotným postupem. Výstupy sloužily pro přehlednou provozní evidenci skupiny stanic.",
     tags: ["Emise", "ISPOP"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Poptat podobnou zakázku"
   },
   {
-    title: "Měření emisí plynové kotelny",
+    id: "plyn-kotelna-emise",
+    title: "Plynová kotelna — měření emisí",
     operationType: "městská / areálová kotelna",
     scope: "dva plynové kotle, spaliny, provozní režim",
     output: "protokol z měření emisí",
-    text: "Pro provozovatele plynové kotelny jsme provedli měření emisí na dvou kotlích v reprezentativním provozním režimu. Výstup sloužil jako odborný podklad pro plnění povinností provozovatele zdroje znečišťování ovzduší.",
+    text: "Změřili jsme emise na dvou kotlích v reprezentativním výkonu. Protokol sloužil jako podklad pro plnění povinností provozovatele zdroje.",
     tags: ["Emise", "KÚ", "ČIŽP"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Poptat měření / studii"
   },
   {
-    title: "Měření pracovního prostředí ve výrobní hale",
+    id: "hala-pp",
+    title: "Výrobní hala — měření pracovního prostředí",
     operationType: "výrobní závod",
     scope: "hluk, prach, chemické látky, pracovní pozice",
     output: "podklad pro KHS a kategorizaci prací",
-    text: "Ve výrobní hale jsme měřili faktory pracovního prostředí pro více pracovních pozic. Zakázka zahrnovala hluk, prašnost a chemické látky v pracovním ovzduší. Výsledky sloužily jako podklad pro zaměstnavatele a kategorizaci prací.",
+    text: "Změřili jsme hluk, prašnost a chemické látky na vybraných pracovištích. Výsledky sloužily pro kategorizaci prací a komunikaci s KHS.",
     tags: ["KHS", "Hluk", "Prašnost"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
     cta: "Poptat podobnou zakázku"
   },
   {
-    title: "Měření pracovního prostředí ve svařovně a kovovýrobě",
+    id: "svarovna-pp",
+    title: "Svařovna — expozice a hluk",
     operationType: "svařovna / zámečnický provoz",
     scope: "prach, kovy, ozon, hluk, vibrace",
     output: "protokoly pro hodnocení expozice zaměstnanců",
-    text: "Ve svařovacím a kovovýrobním provozu jsme zajišťovali měření prašnosti, chemických faktorů, hluku a vibrací. Výsledky byly určeny pro hodnocení pracovních podmínek, BOZP a případnou komunikaci s hygienickou stanicí.",
+    text: "Změřili jsme prašnost, kovy, hluk a vibrace ve svařovně. Protokoly sloužily pro BOZP a návrh opatření na pracovištích.",
     tags: ["KHS", "Prašnost", "Hluk"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
     cta: "Poptat podobnou zakázku"
   },
   {
-    title: "Hluk z provozu tepelného čerpadla",
+    id: "tcp-hluk",
+    title: "Tepelné čerpadlo — hluk v okolí",
     operationType: "technické zařízení budovy",
     scope: "venkovní hluk v chráněném prostoru",
     output: "měření / akustické posouzení a doporučení dalšího postupu",
-    text: "U provozu tepelného čerpadla jsme řešili hluk v nejbližším chráněném prostoru. Výstup sloužil pro posouzení stavu, komunikaci se zúčastněnými stranami a návrh dalšího technického nebo provozního řešení.",
+    text: "Změřili jsme hluk venkovní jednotky v chráněném prostoru. Výstup pomohl při komunikaci se sousedy a návrhu dalšího postupu.",
     tags: ["Hluk", "KHS"],
     href: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
     cta: "Poptat měření / studii"
   },
   {
-    title: "Hluková studie pro technologii VZT",
+    id: "vzt-hluk-studie",
+    title: "VZT — hluková studie",
     operationType: "VZT / technologické zařízení",
     scope: "výpočet nebo měření hluku technologie",
     output: "podklad pro kolaudaci, KHS nebo stavební úřad",
-    text: "Pro technologické zařízení a vzduchotechniku jsme připravili hlukové posouzení zaměřené na nejbližší chráněné prostory. Výstup byl určen pro projektanta, provozovatele a navazující povolovací nebo kolaudační řízení.",
+    text: "Připravili jsme hlukové posouzení technologie vůči nejbližší zástavbě. Podklad šel pro kolaudaci a jednání s úřady.",
     tags: ["Hluk", "KHS", "VZT"],
     href: "/sluzby/hlukove-studie",
     contactService: "Měření hluku a akustika",
     cta: "Poptat měření / studii"
   },
   {
-    title: "Rozptylová studie pro novou plynovou kotelnu",
+    id: "rozptyl-kotelna",
+    title: "Nová plynová kotelna — rozptylová studie",
     operationType: "potravinářský / průmyslový provoz",
     scope: "několik plynových kotlů, výduchy, imisní příspěvky",
     output: "rozptylová studie pro povolovací proces",
-    text: "Pro instalaci nové plynové kotelny jsme zpracovali rozptylovou studii hodnotící imisní příspěvky zdroje. Studie pracovala s technickými parametry kotlů, provozní dobou, výduchy a umístěním záměru v lokalitě.",
+    text: "Zpracovali jsme rozptylovou studii pro novou kotelnu s imisními příspěvky do okolí. Vstupy: výduchy, provozní režim a parametry zdroje.",
     tags: ["Rozptyl", "KÚ", "EIA"],
     href: "/sluzby/rozptylove-studie",
     contactService: "Rozptylové studie",
     cta: "Poptat měření / studii"
   },
   {
-    title: "Odborný posudek, rozptylová a hluková studie pro kompostárnu",
+    id: "kompost-studie",
+    title: "Kompostárna — posudek, rozptyl a hluk",
     operationType: "kompostárna / zařízení k nakládání s odpady",
     scope: "odborný posudek, rozptylová studie, hluková studie",
     output: "sada podkladů pro povolovací řízení",
-    text: "Pro zařízení k nakládání s odpady jsme zajišťovali kombinaci odborného posudku, rozptylové studie a hlukové studie. Cílem bylo vyhodnotit provozní, emisní a hlukové souvislosti záměru a připravit podklady pro navazující řízení.",
+    text: "Spojili jsme odborný posudek, rozptylovou a hlukovou studii pro zařízení odpadů. Výstupy šly do jednoho povolovacího řízení.",
     tags: ["Rozptyl", "Hluk", "EIA", "KÚ"],
     href: "/sluzby/odborne-posudky",
     contactService: "Odborné posudky",
     cta: "Poptat měření / studii"
   },
   {
-    title: "EIA pro lakovnu svitkových plechů",
+    id: "eia-lak",
+    title: "Lakovna plechů — EIA",
     operationType: "lakovna / povrchové úpravy",
     scope: "EIA, technologie, emise, provozní režim",
     output: "oznámení záměru a přílohy pro povolovací proces",
-    text: "Pro záměr lakovny svitkových plechů jsme řešili EIA agendu a odborné podklady k technologii. Zakázka vyžadovala propojení emisních vstupů, provozního režimu, návazných studií a argumentace pro příslušné řízení.",
+    text: "Připravili jsme EIA a technické přílohy k lakovně plechů včetně emisních vstupů a provozního režimu.",
     tags: ["EIA", "Emise", "KÚ"],
     href: "/sluzby/eia-oznameni-zameru",
     contactService: "EIA a oznámení záměru",
     cta: "Poptat měření / studii"
   },
   {
-    title: "Modernizace slévárenského provozu",
+    id: "slevarna-eia",
+    title: "Slévárna — modernizace a EIA",
     operationType: "slévárna / kovovýroba",
     scope: "EIA, odborný posudek, rozptylová studie, hluková studie",
     output: "komplexní sada povolovacích podkladů",
-    text: "U modernizace slévárenského provozu jsme připravovali kombinaci odborných podkladů zahrnující EIA, odborný posudek, rozptylovou a hlukovou studii. Zakázka řešila navýšení nebo změnu technologie a její dopady na okolí.",
+    text: "U modernizace slévárny jsme sladili EIA, posudek, rozptyl a hluk do jedné sady podkladů pro změnu technologie.",
     tags: ["EIA", "Rozptyl", "Hluk", "KÚ"],
     href: "/sluzby/eia-posudky-poradenstvi",
     contactService: "EIA a oznámení záměru",
     cta: "Poptat měření / studii"
   },
   {
-    title: "Provozní řád pro kompostárnu a zpracování stavební suti",
+    id: "provozni-rad-odpady",
+    title: "Odpady — provozní řád při změně kapacity",
     operationType: "odpady / recyklace",
     scope: "provozní řád, navýšení kapacity, jednání s úřadem",
     output: "provozní dokumentace pro povolení",
-    text: "Pro provoz s nakládáním s odpady jsme zpracovávali provozní řád v návaznosti na kapacitní změnu a zpracování stavební suti. Dokumentace sloužila jako podklad pro úřední projednání a povolení provozu.",
+    text: "Zpracovali jsme provozní řád při navýšení kapacity a zpracování stavební suti. Dokumentace šla do úředního projednání.",
     tags: ["KÚ", "ČIŽP", "Ovzduší"],
     href: "/sluzby/provozni-rady",
     contactService: "Provozní řády",
     cta: "Poptat podobnou zakázku"
   },
   {
-    title: "ISPOP a souhrnná provozní evidence pro více provozoven",
+    id: "ispop-vice",
+    title: "Více provozoven — ISPOP a evidence",
     operationType: "více provozoven, různé obory",
     scope: "ovzduší, odpady, návaznost na měření emisí",
     output: "roční hlášení a provozní evidence",
-    text: "Každoročně zajišťujeme provozovatelům zpracování souhrnné provozní evidence a hlášení v systému ISPOP. U opakujících se zakázek kontrolujeme návaznost na měření emisí, provozní údaje, povolení provozu a další podklady.",
+    text: "Každoročně zpracováváme souhrnnou provozní evidenci a hlášení ISPOP s návazností na měření emisí a povolení provozu.",
     tags: ["ISPOP", "KÚ"],
     href: "/sluzby/ispop",
     contactService: "ISPOP",
     cta: "Poptat podobnou zakázku"
   },
   {
-    title: "GHG – ověřování emisních údajů a změn kapacity",
+    id: "ghg-overovani",
+    title: "GHG — ověření emisních údajů",
     operationType: "provoz s povinností v oblasti skleníkových plynů",
     scope: "roční ověření, změny kapacity, provozní data",
     output: "ověřovací výstupy pro provozovatele",
-    text: "Pro provozovatele s povinnostmi v oblasti emisí skleníkových plynů jsme zajišťovali ověřování ročních emisních údajů a podkladů ke změnám kapacity. Zakázky vyžadovaly kontrolu provozních dat, návaznost na vykazování a odborné zpracování výstupů.",
+    text: "Ověřili jsme roční emisní údaje a podklady ke změně kapacity v režimu skleníkových plynů.",
     tags: ["GHG", "ISPOP"],
     href: "/sluzby/ghg-overovani",
     contactService: "GHG",
     cta: "Poptat podobnou zakázku"
   },
   {
-    title: "Zjišťovací řízení pro modernizaci chovu skotu",
+    id: "zjistovaci-zemedelstvi",
+    title: "Zemědělský areál — zjišťovací řízení",
     operationType: "zemědělský areál",
     scope: "EIA / zjišťovací řízení, provozní a územní souvislosti",
     output: "oznámení záměru",
-    text: "Pro zemědělský areál jsme připravovali podklady pro zjišťovací řízení v rámci modernizace chovu. Hodnoceny byly provozní parametry, kapacita, návaznost na okolí a související environmentální vlivy.",
+    text: "Připravili jsme podklady pro zjišťovací řízení při modernizaci chovu skotu včetně kapacity a vlivů na okolí.",
     tags: ["EIA", "KÚ"],
     href: "/sluzby/zjistovaci-rizeni-eia",
     contactService: "EIA a oznámení záměru",

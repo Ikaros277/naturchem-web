@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 20 |
-| Celkový odhadovaný čas | ~19,7 hodiny |
+| Celkový odhadovaný čas | ~20 hodiny |
 | Aktuální fáze | Copy C7 — index /sluzby hotov; další krok: provozy a technologie (intro, index) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 20:55–21:47
+## Sezení: 4. 6. 2026, 20:55–22:01
 
 ### Přehled
 Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**, úpravy navigace a cross-linku na provozy. Na závěr **C7 (část A)** — přestavba indexu `/sluzby` na šest skupin s accordionem, novými úvody skupin a srozumitelnými popisky rozbalení.
@@ -21,6 +21,10 @@ Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**,
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### C7 B: index provozu accordion, copy a sbalene skupiny sluzeb.
+**Co bylo uděláno:** C7 B: index provozu accordion, copy a sbalene skupiny sluzeb. (commit `94d7a3f`). Dotcene oblasti: app, components, copy-audit.md, lib, page.tsx, provozy-a-technologie.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
 
 #### C7 — index služeb (/sluzby)
 **Co bylo uděláno:** Šest tematických skupin včetně „Školení a odborná podpora“ s úvodním textem zákazníkovi. Accordion na desktopu i mobilu (první skupina otevřená), ikony u nadpisů skupin i u karet služeb, správné skloňování počtu služeb. Místo obecných „Rozbalit / Sbalit“ kontextové štítky (např. „Zobrazit měření“ / „Skrýt měření“). Sjednocené bílé pozadí sekcí a zarovnání štítků KHS/ČIŽP u karet.  
@@ -43,9 +47,9 @@ Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**,
 **Proč:** Zkratky bez kontextu nejsou srozumitelné pro netechnické publikum; v oboru se používají, ale menu má vysvětlit obsah.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~53 min  
-**Rozložení:** 4. 6. 2026 20:55–21:47 (~53 min)  
-**Metoda odhadu:** git + konverzace  
+**Odhadovaná doba práce:** ~1 hod 7 min
+**Rozložení:** 4. 6. 2026 20:55–22:01 (~1 hod 7 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** ~12  
 *Poznámka: čas ze skriptu `estimate-session-time.ps1`; mezera nad 30 min od odpoledního bloku (služby 2×2 / C4).*
 

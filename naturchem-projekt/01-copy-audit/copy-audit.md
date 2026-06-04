@@ -242,10 +242,11 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 | **C1** | Homepage: `page.tsx` — copy hero/pillars, odstraněn reference teaser + hero CTA + uncertain strip; loga zůstala | ✅ | 30. 5. + follow-up P5-21 (31. 5.) |
 | **C2** | O společnosti, odborná garance, `guarantee-copy`, `work-process`, `team`, `nationalMessaging`, `companyStatsIntro` | ✅ | 30. 5. 2026 |
 | **C3** | Akreditace, `accreditation-scope`, `accreditation-documents`, přístrojové vybavení (úvody) | ✅ akreditace | 4. 6. 2026 — stránka akreditace; úvody přístrojů částečně sitewide Vzor F |
-| **C4** | Služby měření (7 slugů) — body copy, intro jen kontrola (P3-2 ✅) | 🔲 | |
+| **C4** | Služby měření (7 slugů) — body copy, intro jen kontrola (P3-2 ✅) | ✅ | 4. 6. 2026 |
 | **C5** | Služby studie (5 slugů ve skupině studií; `odborne-posudky` → C6) | ✅ | 4. 6. 2026 — rozptyl + 4× `dedicated-service-pages` |
 | **C6** | Služby povolování/EIA (10 slugů + přehled EIA) | ✅ | 4. 6. 2026 |
-| **C7** | `service-groups`, provozy 13×, reference, typické zakázky, `seo-landings` | 🔄 | reference copy + skupiny příkladů 4. 6. 2026; zbývá seo-landings |
+| **C7** | `service-groups`, provozy 13×, reference, typické zakázky | ✅ | 4. 6. 2026 — indexy `/sluzby`, `/provozy`, reference; typické zakázky dříve |
+| **C7-seo** | `seo-landings` (7 SEO vstupních stránek) | ⏸ po odevzdání | Samostatný projekt — routy existují, copy/UX neřešit v rámci odevzdání webu |
 | **Nav** | Megamenu / footer služby — IPPC, ISPOP, GHG bez kontextu | ✅ | 4. 6. 2026 — plné názvy v `service-megamenu`, `navigation`, `home-offer` |
 | **Cross** | „Mohlo by Vás zajímat“ — provozy vs služby | 📋 | Popis provozů z `sectors.ts`; mapování v `service-sector-links.ts` |
 | **C8** | `faq.ts` (styl only), `/poradna` hero | 🔲 | |

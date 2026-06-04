@@ -215,6 +215,8 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 30. 5. | Copy C1–C2 | Homepage TOV; O společnosti + sdílené texty (garance, tým, stats intro) |
 | 4. 6. | Copy C3 | Akreditace — hero lead, benefity, autorizace, download karty |
 | 4. 6. | Sitewide vzory | UI vzory A–F na informačních stránkách; mezery sekcí = standard Reference |
+| 4. 6. | Copy C7 | `/sluzby`, provozy, reference — hotovo |
+| — | **Po odevzdání webu** | **SEO landing pages** (7× `seo-landings.ts`) — samostatný projekt na přání klienta; technicky nasazeno, copy sprint odložen |
 
 ---
 

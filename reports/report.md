@@ -6,21 +6,25 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 20 |
-| Celkový odhadovaný čas | ~19,1 hodiny |
-| Aktuální fáze | Copy sprint C5–C6 hotovo; navigace a cross-link provozů; příprava C7 (provozy, reference, skupiny služeb) |
+| Celkový odhadovaný čas | ~19,7 hodiny |
+| Aktuální fáze | Copy C7 — index /sluzby hotov; další krok: provozy a technologie (intro, index) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 20:55–21:29
+## Sezení: 4. 6. 2026, 20:55–21:47
 
 ### Přehled
-Po schválení copy návrhů implementován sprint **C5** (studie) a **C6** (povolování / EIA). Doplněny popisy u karet provozů v sekci „Mohlo by Vás zajímat“, sjednoceny názvy IPPC / ISPOP / GHG v menu a na kartách služeb. U cross-linku na provozy přidán štítek sekce, aby přechod z `/sluzby/` do `/provozy-a-technologie/` nebyl překvapivý.
+Večerní blok: po schválení návrhů dokončeny copy sprinty **C5** a **C6**, úpravy navigace a cross-linku na provozy. Na závěr **C7 (část A)** — přestavba indexu `/sluzby` na šest skupin s accordionem, novými úvody skupin a srozumitelnými popisky rozbalení.
 
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+
+#### C7 — index služeb (/sluzby)
+**Co bylo uděláno:** Šest tematických skupin včetně „Školení a odborná podpora“ s úvodním textem zákazníkovi. Accordion na desktopu i mobilu (první skupina otevřená), ikony u nadpisů skupin i u karet služeb, správné skloňování počtu služeb. Místo obecných „Rozbalit / Sbalit“ kontextové štítky (např. „Zobrazit měření“ / „Skrýt měření“). Sjednocené bílé pozadí sekcí a zarovnání štítků KHS/ČIŽP u karet.  
+**Proč:** Katalog 30+ služeb byl na jedné stránce nepřehledný; skupiny mají vysvětlit účel bloku a zkrátit scroll bez ztráty přímých odkazů.
 
 #### Copy — sprint C5 (studie)
 **Co bylo uděláno:** Schválené texty zapsány u rozptylových studií a čtyř služeb ve skupině studií (hlukové studie, akustické posudky, modelové výpočty, imisní dopady): lead se situací zákazníka, aktivní odrážky v přehledu, sjednocené „Kdy službu potřebujete“.  
@@ -39,14 +43,14 @@ Po schválení copy návrhů implementován sprint **C5** (studie) a **C6** (pov
 **Proč:** Zkratky bez kontextu nejsou srozumitelné pro netechnické publikum; v oboru se používají, ale menu má vysvětlit obsah.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~35 min  
-**Rozložení:** 4. 6. 2026 20:55–21:29 (~34 min ze skriptu + dokončení reportu)  
+**Odhadovaná doba práce:** ~53 min  
+**Rozložení:** 4. 6. 2026 20:55–21:47 (~53 min)  
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** ~10  
-*Poznámka: čas ze skriptu `estimate-session-time.ps1`; mezera nad 30 min od předchozího bloku (služby 2×2 / C4).*
+**Počet výměn s AI:** ~12  
+*Poznámka: čas ze skriptu `estimate-session-time.ps1`; mezera nad 30 min od odpoledního bloku (služby 2×2 / C4).*
 
 ### Technická poznámka
-Commity: `17a751a` … `bdf1a76`. Soubory: `dedicated-service-pages.ts`, `rozptylove-studie/page.tsx`, `eia-posudky-poradenstvi/page.tsx`, `ServicePage.tsx`, `service-megamenu.ts`, `navigation.ts`, `site.ts`, `service-sector-links.ts`, `copy-audit.md`.
+Commity: `17a751a` … `850c3c1`. Soubory: `service-groups.ts`, `ServiceGroupsIndex.tsx`, `globals.css`, `dedicated-service-pages.ts`, `ServicePage.tsx`, `service-megamenu.ts`, `navigation.ts`, `site.ts`, `service-sector-links.ts`, `copy-audit.md`.
 
 ---
 

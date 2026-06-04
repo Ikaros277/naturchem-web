@@ -50,7 +50,7 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
             </div>
             <p className="muted case-category-card-short">{cat.short}</p>
             <span className="card-inline-link case-category-card-cta">
-              Zobrazit příklady →
+              Zobrazit příklady
             </span>
           </button>
         ))}

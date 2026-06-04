@@ -1084,7 +1084,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
         description: "Pravidla pro skladování, manipulaci a odpovědnosti."
       },
       {
-        title: "Odborná poradna",
+        title: "Odborné články",
         href: "/poradna",
         description: "Praktické články k chemické legislativě a provozu."
       }

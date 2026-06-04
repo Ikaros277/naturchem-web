@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { articlesNav } from "@/lib/navigation";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
 import { getRelatedArticlesForService } from "@/lib/poradna-service-links";
 
@@ -15,7 +16,7 @@ export async function ServicePoradnaTeaser({ serviceSlug }: Props) {
 
   return (
     <section className="content-block service-poradna-teaser" aria-labelledby="service-poradna-heading">
-      <h2 id="service-poradna-heading">Související články z odborné poradny</h2>
+      <h2 id="service-poradna-heading">Související odborné články</h2>
       <ul className="compact-list">
         {related.map((article) => (
           <li key={article.href}>
@@ -25,8 +26,8 @@ export async function ServicePoradnaTeaser({ serviceSlug }: Props) {
         ))}
       </ul>
       <p>
-        <Link href="/poradna" className="text-link">
-          Všechny články poradny
+        <Link href={articlesNav.href} className="text-link">
+          Všechny {articlesNav.label.toLowerCase()}
         </Link>
       </p>
     </section>

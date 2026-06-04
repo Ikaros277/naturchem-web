@@ -5,7 +5,7 @@ import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
-import { faqFlatItems, faqIntroCtas, faqPageIntro, faqPageSubtitle, faqPageTitle } from "@/lib/faq";
+import { faqFlatItems, faqIntroCtas, faqPageIntro, faqPageTitle } from "@/lib/faq";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 
@@ -51,7 +51,6 @@ export default function FaqPage() {
       >
         <header className="premium-page-hero page-hero--photo">
           <h1>{faqPageTitle}</h1>
-          <p className="faq-page-subtitle">{faqPageSubtitle}</p>
           <p className="page-lead faq-page-intro">{faqPageIntro}</p>
           <div className="btn-row faq-intro-ctas">
             {faqIntroCtas.map((cta, i) => (

@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 20 |
-| Celkový odhadovaný čas | ~20,7 hodiny |
+| Celkový odhadovaný čas | ~20,8 hodiny |
 | Aktuální fáze | C7 uzavřeno (služby, provozy, reference); další krok: /kontakt (C9) — UX a copy |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 20:55–22:44
+## Sezení: 4. 6. 2026, 20:55–22:45
 
 ### Přehled
 Večerní blok dokončil **copy C5–C6**, úpravy navigace a celý **C7**: index služeb i provozů, sjednocený UX detailů provozů a FAQ, přestavbu **Reference** na skupiny zakázek s kartami jako u služeb, plus zápis v projektu — **C7 uzavřen**, SEO landingy odloženy až po odevzdání webu.
@@ -21,6 +21,10 @@ Večerní blok dokončil **copy C5–C6**, úpravy navigace a celý **C7**: inde
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### Pridat prikazy /cmo a /seo a zdrojova loga referenci (TPI, TCB, tepla...
+**Co bylo uděláno:** Pridat prikazy /cmo a /seo a zdrojova loga referenci (TPI, TCB, teplarny). (commit `dcf2184`). Dotcene oblasti: tcb-home.html, teplarnastrakonice-test.svg, tpi-home.html, ts-home.html, workflow.  
+**Proč:** Rozsireni nebo sjednoceni funkcionality podle roadmapy - konzistentnejsi zazitek pro uzivatele.
+
 
 #### C7 — index služeb (/sluzby)
 **Co bylo uděláno:** Šest tematických skupin včetně „Školení a odborná podpora“ s úvodním textem zákazníkovi. Accordion na desktopu i mobilu (první skupina otevřená), ikony u nadpisů skupin i u karet služeb, správné skloňování počtu služeb. Místo obecných „Rozbalit / Sbalit“ kontextové štítky (např. „Zobrazit měření“ / „Skrýt měření“). Sjednocené bílé pozadí sekcí a zarovnání štítků KHS/ČIŽP u karet.  
@@ -63,9 +67,9 @@ Večerní blok dokončil **copy C5–C6**, úpravy navigace a celý **C7**: inde
 **Proč:** Dodávka webu se soustředí na hlavní strukturu a copy; sedm SEO stránek zůstane v repu, ale není součástí aktuálního předání.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 49 min  
-**Rozložení:** 4. 6. 2026 20:55–22:44 (~1 hod 49 min)  
-**Metoda odhadu:** git + konverzace  
+**Odhadovaná doba práce:** ~1 hod 50 min
+**Rozložení:** 4. 6. 2026 20:55–22:45 (~1 hod 50 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** ~14  
 *Poznámka: čas ze skriptu `estimate-session-time.ps1`; mezera nad 30 min od odpoledního bloku (služby 2×2 / C4).*
 

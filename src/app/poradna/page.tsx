@@ -5,14 +5,15 @@ import { PoradnaFilterableList } from "@/components/PoradnaFilterableList";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
 import { getPageHeroTheme } from "@/lib/hero-images";
+import { articlesNav } from "@/lib/navigation";
 import { siteUrl } from "@/lib/site";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
 import { formatArticleDate } from "@/lib/format-date";
 
 export const metadata: Metadata = {
-  title: "Odborná poradna – články o měřeních, studiích a povolování",
+  title: `${articlesNav.label} – měření, studie a povolování`,
   description:
-    "Praktické články a odpovědi pro měření emisí, pracovní prostředí, hluk, rozptylové studie, EIA, povolovací procesy a chemickou legislativu. Související služby NATURCHEM.",
+    "Články z praxe i z oboru — měření, studie, EIA a legislativa. Orientace v oboru dřív, než poptáte službu.",
   alternates: { canonical: `${siteUrl}/poradna/` }
 };
 
@@ -26,7 +27,7 @@ export default async function Page() {
   const collectionPageData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Odborná poradna",
+    name: articlesNav.label,
     url: `${siteUrl}/poradna/`,
     description: metadata.description
   };
@@ -47,7 +48,7 @@ export default async function Page() {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Úvod", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "Odborná poradna", item: `${siteUrl}/poradna/` }
+      { "@type": "ListItem", position: 2, name: articlesNav.label, item: `${siteUrl}/poradna/` }
     ]
   };
 
@@ -58,14 +59,14 @@ export default async function Page() {
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         theme={getPageHeroTheme("/poradna")}
-        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Odborná poradna" }]}
+        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: articlesNav.label }]}
       >
         <header className="premium-page-hero page-hero--photo">
-          <p className="eyebrow">Znalostní centrum</p>
-          <h1>Odborná poradna</h1>
+          <p className="eyebrow">Články z praxe · legislativa · měření</p>
+          <h1>{articlesNav.label}</h1>
           <p className="page-lead">
-            Praktické odpovědi k měřením, studiím a povolování — abyste věděli, co připravit pro
-            ČIŽP, KHS nebo stavební úřad ještě před poptávkou.
+            Desítky článků z měření, studií a povolování — pro orientaci v oboru, novinkách v
+            legislativě i v situacích, které řeší provozy jako ten Váš.
           </p>
         </header>
       </PageHeroBand>

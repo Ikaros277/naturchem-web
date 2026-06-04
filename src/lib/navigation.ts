@@ -9,7 +9,7 @@ export { globalCta };
 
 export const referenceNav = { href: "/reference", label: "Reference" } as const;
 
-export const articlesNav = { href: "/poradna", label: "Odborná poradna" } as const;
+export const articlesNav = { href: "/poradna", label: "Odborné články" } as const;
 
 export const faqNav = { href: "/faq", label: "Časté dotazy" } as const;
 

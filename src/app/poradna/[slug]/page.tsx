@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/Schema";
 import { getArticleBySlug, getArticles } from "@/lib/articles";
 import { formatArticleDate, normalizeArticleDate } from "@/lib/format-date";
+import { articlesNav } from "@/lib/navigation";
 import { siteUrl } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: article.title,
-    description: article.excerpt || "Odborný článek poradny NATURCHEM.",
+    description: article.excerpt || "Odborný článek NATURCHEM.",
     alternates: { canonical: `${siteUrl}/poradna/${article.slug}/` }
   };
 }
@@ -73,7 +74,7 @@ export default async function CmsArticlePage({ params }: Props) {
       <Breadcrumbs
         items={[
           { name: "Úvod", href: "/" },
-          { name: "Odborná poradna", href: "/poradna" },
+          { name: articlesNav.label, href: articlesNav.href },
           { name: article.title }
         ]}
       />
@@ -96,7 +97,7 @@ export default async function CmsArticlePage({ params }: Props) {
       <p className="article-footer-cta">
         <Link href="/kontakt">Požádat o konzultaci</Link>
         {" · "}
-        <Link href="/poradna">Další články poradny</Link>
+        <Link href={articlesNav.href}>Další odborné články</Link>
       </p>
     </main>
   );

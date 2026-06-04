@@ -42,13 +42,10 @@ const L = {
   p17: "https://www.zakonyprolidi.cz/cs/2012-201"
 } as const;
 
-export const faqPageTitle = "Časté dotazy k měření, studiím a povolovacím podkladům";
-
-export const faqPageSubtitle =
-  "Praktické odpovědi k měření emisí, pracovnímu prostředí, hluku, rozptylovým a hlukovým studiím, EIA, odborným posudkům, provozním řádům, ISPOP, GHG a podkladům pro úřady.";
+export const faqPageTitle = "Časté dotazy";
 
 export const faqPageIntro =
-  "Rychle zjistíte, zda potřebujete měření, studii nebo provozní řád — a co má smysl poslat ČIŽP, KHS nebo stavebnímu úřadu jako první podklad.";
+  "Zjistíte, zda jde o měření, studii nebo provozní řád — a co poslat ČIŽP, KHS nebo stavebnímu úřadu jako první podklad.";
 
 export const faqIntroCtas: FaqLink[] = [
   { label: "Poslat podklady k posouzení", href: contactUrl("Nejsem si jistý") }
@@ -67,7 +64,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Jak zjistíme, jakou službu potřebujeme?",
         paragraphs: [
-          "Pošlete rozhodnutí úřadu, výzvu, provozní řád, projektovou dokumentaci, popis technologie nebo stručný popis problému. Z podkladů určíme, zda jde o měření, rozptylovou nebo hlukovou studii, odborný posudek, provozní řád, EIA podklad, ISPOP nebo jiný typ dokumentace."
+          "Pošlete rozhodnutí nebo výzvu úřadu, provozní řád, projektovou dokumentaci, popis technologie nebo stručný popis situace. Z podkladů určíme, zda jde o měření, studii, posudek, provozní řád, EIA podklad, ISPOP nebo jiný výstup."
         ],
         links: [
           { label: "Měření emisí", href: "/sluzby/mereni-emisi" },
@@ -81,7 +78,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Měření ověřuje skutečný stav v provozu nebo v chráněném prostředí. Studie obvykle hodnotí předpokládaný nebo modelovaný stav, například imisní příspěvky nebo hlukovou situaci. Odborný posudek hodnotí technické, emisní a provozní souvislosti zdroje nebo záměru a slouží jako odborný podklad pro povolování."
         ],
-        tip: "Pokud si nejste jistí, pošlete nám výzvu úřadu, popis provozu a dostupné přílohy. Rozlišíme měření, studii a posudek podle toho, k čemu má výstup sloužit."
+        tip: "Nejste si jistí? Pošlete výzvu úřadu, popis provozu a přílohy. Rozlišíme měření, studii a posudek podle účelu výstupu."
       },
       {
         q: "Jsou výstupy použitelné pro úřady?",
@@ -109,7 +106,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Kdy je potřeba jednorázové měření emisí?",
         paragraphs: [
-          "Jednorázové měření emisí se řeší zejména při pravidelném ověřování povinností provozovatele, po uvedení zdroje do provozu, po změně technologie, paliva nebo suroviny, při požadavku úřadu nebo jako podklad pro vyhodnocení plnění emisních limitů."
+          "Jednorázové měření emisí potřebujete při pravidelném ověření povinností, po uvedení zdroje do provozu, po změně technologie, paliva nebo suroviny, na pokyn úřadu nebo jako podklad pro plnění emisních limitů."
         ],
         legal: {
           summary:
@@ -121,7 +118,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Kdo může provádět jednorázové měření emisí?",
         paragraphs: [
-          "Jednorázové měření emisí může provádět pouze autorizovaná osoba v příslušném rozsahu. Při výběru dodavatele je proto vhodné ověřit nejen termín, ale také rozsah autorizace a akreditovaných metod."
+          "Jednorázové měření emisí může provádět pouze autorizovaná osoba v příslušném rozsahu. Při výběru dodavatele ověřte nejen termín, ale také rozsah autorizace a akreditovaných metod."
         ],
         legal: {
           summary:
@@ -141,7 +138,7 @@ export const faqCategories: FaqCategory[] = [
           summary: "Termín a protokol jednorázového měření emisí se ohlašují prostřednictvím ISPOP.",
           refs: [{ label: "ISPOP – měření emisí", href: L.ispop }]
         },
-        tip: "Při plánování termínu je vhodné počítat s oznamovací lhůtou a s tím, kdo konkrétně hlášení podává."
+        tip: "Při plánování termínu počítejte s oznamovací lhůtou a určete, kdo hlášení podá."
       },
       {
         q: "Jak často se měření emisí provádí?",
@@ -157,14 +154,14 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Co když nemáme vhodné měřicí místo?",
         paragraphs: [
-          "Měřicí místo je vhodné posoudit ještě před měřením. Pokud výduch nebo komín není ideální, lze navrhnout technicky dosažitelné řešení, upravit přístup, doplnit příruby nebo v protokolu odborně popsat omezení a reprezentativnost měření."
+          "Měřicí místo posoudíme ještě před měřením. Pokud výduch nebo komín není ideální, navrhneme technicky dosažitelné řešení, upravíme přístup, doplníme příruby nebo v protokolu odborně popíšeme omezení a reprezentativnost měření."
         ],
         tip: "K poptávce přiložte fotografie výduchu, komínu, přístupu, přírub a dostupnou projektovou dokumentaci."
       },
       {
         q: "Jaké látky se při měření emisí obvykle sledují?",
         paragraphs: [
-          "Podle typu zdroje, povolení provozu a charakteru technologie se může jednat například o TZL, VOC/TOC, NOx, CO, SO₂, O₂, HCl, HF, kovy nebo další látky."
+          "Podle typu zdroje, povolení provozu a charakteru technologie sledujeme například TZL, VOC/TOC, NOx, CO, SO₂, O₂, HCl, HF, kovy nebo další látky."
         ]
       },
       {
@@ -192,7 +189,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Kdy je potřeba měření pracovního prostředí?",
         paragraphs: [
-          "Měření pracovního prostředí se obvykle řeší při kategorizaci prací, změně technologie, zavedení nového pracoviště, požadavku KHS nebo při ověření expozice zaměstnanců rizikovým faktorům."
+          "Měření pracovního prostředí řešíte při kategorizaci prací, změně technologie, novém pracovišti, pokynu KHS nebo při ověření expozice zaměstnanců."
         ],
         links: [{ label: "Měření pracovního prostředí", href: "/sluzby/pracovni-prostredi" }]
       },
@@ -253,7 +250,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Kdy potřebujeme měření hluku?",
         paragraphs: [
-          "Měření hluku je vhodné při kolaudaci, stížnostech, změně technologie, provozu nového zařízení, kontrole hluku na pracovišti, ověření účinnosti opatření nebo na základě požadavku KHS či stavebního úřadu."
+          "Měření hluku objednáte při kolaudaci, stížnostech, změně technologie, novém zařízení, kontrole na pracovišti, ověření opatření nebo na pokyn KHS či stavebního úřadu."
         ],
         links: [{ label: "Měření hluku a akustika", href: "/sluzby/mereni-hluku" }]
       },
@@ -291,7 +288,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Lze hluk řešit ještě před instalací technologie?",
         paragraphs: [
-          "Ano. Právě před instalací technologie je vhodné zpracovat hlukovou studii nebo akustické posouzení, aby bylo možné včas upravit umístění zdroje, výkon, provozní režim nebo navrhnout protihluková opatření."
+          "Ano. Před instalací technologie zpracujte hlukovou studii nebo akustické posouzení — včas upravíte umístění zdroje, výkon, režim nebo protihluková opatření."
         ],
         links: [
           { label: "Hlukové studie", href: "/sluzby/hlukove-studie" },
@@ -319,7 +316,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Kdy je potřeba rozptylová studie?",
         paragraphs: [
-          "Rozptylová studie se zpracovává zejména pro nový nebo měněný zdroj emisí, změnu technologie, navýšení kapacity, EIA, povolovací řízení nebo požadavek krajského úřadu."
+          "Rozptylovou studii zpracujete pro nový nebo měněný zdroj emisí, změnu technologie, navýšení kapacity, EIA, povolovací řízení nebo na pokyn krajského úřadu."
         ],
         links: [{ label: "Rozptylové studie", href: "/sluzby/rozptylove-studie" }]
       },
@@ -378,9 +375,9 @@ export const faqCategories: FaqCategory[] = [
     ],
     items: [
       {
-        q: "Kdy je vhodné řešit EIA?",
+        q: "Kdy řešit EIA?",
         paragraphs: [
-          "EIA je vhodné řešit už při přípravě záměru, zejména pokud se jedná o novou technologii, změnu kapacity, odpady, významnější zdroj emisí, hluk, dopravu nebo zásah do území. Včasné posouzení může zabránit přepracování projektové dokumentace."
+          "EIA řešte už při přípravě záměru — u nové technologie, změny kapacity, odpadů, významnějšího zdroje emisí, hluku, dopravy nebo zásahu do území. Včasné posouzení omezí přepracování dokumentace."
         ],
         legal: {
           summary:
@@ -470,7 +467,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Jak dlouho je potřeba uchovávat provozní evidenci?",
         paragraphs: [
-          "U vyjmenovaných stacionárních zdrojů je třeba počítat s uchováváním provozní evidence po zákonem stanovenou dobu tak, aby byla dostupná při kontrole."
+          "U vyjmenovaných stacionárních zdrojů uchovávejte provozní evidenci po zákonem stanovenou dobu tak, aby byla dostupná při kontrole."
         ],
         legal: {
           summary:
@@ -523,7 +520,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Lze udělat nejdřív orientační posouzení?",
         paragraphs: [
-          "Ano. U složitějších záměrů je vhodné nejprve provést orientační posouzení technologie, měřicích míst, hlukových zdrojů, emisních parametrů nebo požadavků úřadu a až následně stanovit přesný rozsah zakázky."
+          "Ano. U složitějších záměrů nejdřív uděláme orientační posouzení technologie, měřicích míst, hluku, emisí nebo požadavku úřadu — a pak stanovíme přesný rozsah zakázky."
         ]
       }
     ]

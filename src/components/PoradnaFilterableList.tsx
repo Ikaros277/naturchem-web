@@ -43,7 +43,7 @@ export function PoradnaFilterableList({ articles }: Props) {
 
   return (
     <>
-      <nav className="topic-filter-pills" role="list" aria-label="Témata odborné poradny">
+      <nav className="topic-filter-pills" role="list" aria-label="Témata odborných článků">
         {topicFilters.map(topic => (
           <button
             key={topic}
@@ -58,7 +58,9 @@ export function PoradnaFilterableList({ articles }: Props) {
       </nav>
       <div className="article-list-grid">
         {filtered.length === 0 ? (
-          <p className="muted">K tomuto tématu zatím nemáme články. Zkuste jiné téma.</p>
+          <p className="muted">
+            K tomuto tématu zatím nemáme článek. Zkuste jiný filtr nebo projděte všechny články.
+          </p>
         ) : (
           filtered.map(article => {
             const topic = topicForArticle(article.title);

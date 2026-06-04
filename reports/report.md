@@ -5,15 +5,52 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 17 |
-| Celkový odhadovaný čas | ~17,6 hodiny |
-| Aktuální fáze | Sitewide mezery sekcí sjednoceny na standard Reference |
+| Počet sezení celkem | 18 |
+| Celkový odhadovaný čas | ~18,3 hodiny |
+| Aktuální fáze | Typické zakázky — copy a UX (modál příkladů, postup zakázky); copy pravidla rozšířena |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 18:24-18:34
+## Sezení: 4. 6. 2026, 18:25–19:08
+
+### Přehled
+Stránka Typické zakázky — copy podle účelu stránky (inspirace v hero, scénáře bez „Potřebuji…“), modál místo podstránek u příkladů zakázek a přepracovaný horizontální postup spolupráce na plnou šířku. Doplněna pravidla copy (účel stránky před textem). Commit `0a2a664`.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Copy — hero a struktura textů
+**Co bylo uděláno:** Sloučený hero lead (jedna věta o tom, co pro provozy měříme a zpracováváme), nový eyebrow, odstraněn odkaz na Reference. Sekce scénářů přejmenována na „Co řešíme“, titulky karet přeformulovány (např. „Měření emisí z lakovny“ místo „Potřebuji…“). Úprava ROADMAPA a copy-audit (C7 částečně hotovo).  
+**Proč:** Stránka má návštěvníka inspirovat rozsahem měření a studií, ne vést katalogovým jazykem ani opakovat „Potřebuji“ v každé kartě.
+
+#### Copy — pravidla pro další práce
+**Co bylo uděláno:** Do copy-role a příkazu `/copy` doplněn princip „účel stránky před psaním“ — text se navrhuje podle toho, co má stránka dělat, ne jen přeformulováním starého copy.  
+**Proč:** Aby copy sprinty nevedly na špatný kontext (orientační stránka vs. reference).
+
+#### UX — příklady zakázek v modálu
+**Co bylo uděláno:** Kategorie příkladů otevírají modál na stejné stránce se třemi příběhy zakázek; fixní hlavička modálu, zaoblené rohy, zavření Esc / backdrop. Kompaktnější karty kategorií a správná velikost nadpisů.  
+**Proč:** Odchod na samostatnou URL byl matoucí — zákazník ztratil kontext stránky.
+
+#### UX — Jak probíhá zakázka
+**Co bylo uděláno:** Postup přes celou šířku: kolej s čísly 1–4 a spojnicemi (včetně dojezdu u kroku 4), pod ní čtyři sloupce s ikonou bez rámečku a popisem těsně pod nadpisem.  
+**Proč:** Původní úzké boxy splývaly a kroky nepůsobily jako navazující cesta.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~43 min  
+**Rozložení:** 4. 6. 2026 18:25–19:08 (~43 min)  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** ~12  
+*Poznámka: čas ze skriptu `estimate-session-time.ps1` od posledního zpracovaného commitu; auto-záznam hooku nahrazen klientským přehledem.*
+
+### Technická poznámka
+`typicke-zakazky/page.tsx`, `typicke-zakazky-content.ts`, `CaseStudiesCategoryGrid.tsx`, `WorkProcessTimeline.tsx`, `globals.css` — commit `0a2a664`.
+
+---
+
+## Sezení: 4. 6. 2026, 18:24–18:35
 
 ### Přehled
 Automaticky založené sezení po commitu `fbba8c6`.
@@ -21,14 +58,18 @@ Automaticky založené sezení po commitu `fbba8c6`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Dokon─Źen├ş roadmapy vzor┼»: hero p┼Ö├şstrojov├ę vybaven├ş, markup ka...
+**Co bylo uděláno:** Dokon─Źen├ş roadmapy vzor┼»: hero p┼Ö├şstrojov├ę vybaven├ş, markup kategori├ş zak├ízek. - Posledn├ş polo┼żky F a E u podstr├ínek typick├Żch zak├ízek; roadmapa p┼Öepnuta na procesn├ş kontrolu nov├Żch str├ínek.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `4b51611`). Dotcene oblasti: pristrojove-vybaveni, report, typicke-zakazky, vzory-aplikace-roadmapa.md, workflow.  
+**Proč:** Posledn├ş polo┼żky F a E u podstr├ínek typick├Żch zak├ízek; roadmapa p┼Öepnuta na procesn├ş kontrolu nov├Żch str├ínek.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
 #### Sitewide UI vzory: spacing po hero, hero leads, card-head a rytmus se...
 **Co bylo uděláno:** Sitewide UI vzory: spacing po hero, hero leads, card-head a rytmus sekc├ş. - Aplikace vzor┼» z akreditace na informa─Źn├ş str├ínky, sjednocen├ş mezer mezi sekcemi na standard Reference a dokumentace v ux-role a roadmap─Ť.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `fbba8c6`). Dotcene oblasti: app, components, faq, kontakt, lib, poradna, pristrojove-vybaveni, provozy-a-technologie, reference, report, typicke-zakazky, ux-role.md, vzory-aplikace-roadmapa.md, workflow.  
 **Proč:** Aplikace vzor┼» z akreditace na informa─Źn├ş str├ínky, sjednocen├ş mezer mezi sekcemi na standard Reference a dokumentace v ux-role a roadmap─Ť.  Co-authored-by: Cursor <cursoragent@cursor.com>.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 4. 6. 2026 18:24-18:34 (~10 min)  
-**Metoda odhadu:** git  
+**Odhadovaná doba práce:** ~11 min
+**Rozložení:** 4. 6. 2026 18:24–18:35 (~11 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*
 

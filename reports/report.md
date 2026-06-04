@@ -5,11 +5,52 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 14 |
-| Celkový odhadovaný čas | ~15,7 hodiny |
-| Aktuální fáze | UX homepage fold (P5-17) hotovo; copy sprint C3 (akreditace) |
+| Počet sezení celkem | 15 |
+| Celkový odhadovaný čas | ~17,1 hodiny |
+| Aktuální fáze | Copy sprint C3 hotovo — /akreditace plně přepsána; příprava na launch checklist |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 4. 6. 2026, 17:30–17:40
+
+### Přehled
+Copy sprint C3 — kompletní přepis stránky /akreditace-autorizace-dokumenty dle TOV, navazující UX opravy ikony a layout. Hero lead přepsán ze tří iterací na finální variantu zaměřenou na zákazníkův výsledek (obstojí při kontrole ČIŽP, KHS, stavební řízení). Commitnuto a nasazeno na Vercel.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Copy — hero lead
+**Co bylo uděláno:** Původní technický popis „Přehled akreditovaného rozsahu…" nahrazen zákaznicky orientovanou větou: „Výsledky z NATURCHEM obstojí při kontrole ČIŽP, KHS i v stavebním řízení — tady jsou osvědčení, která za nimi stojí." Po třech iteracích variant (technická, benefit-first, přímá, důkaz) schválena varianta zaměřená na výsledek pro zákazníka. Hero lead sloučen do jedné věty s em-dash — výsledek se nezalomí na samostatné slovo.  
+**Proč:** Původní text byl katalogový a suchý; zákazník (Tomáš, EHS manažer) potřebuje vědět, že výstup obstojí při reálné kontrole, ne že stránka přehledově vysvětluje rozsah osvědčení.
+
+#### Copy — customerBenefits (Co akreditace znamená pro zákazníka)
+**Co bylo uděláno:** Čtyři benefity přepsány z vágních frází na konkrétní: „Výsledky dohledatelné a obhajitelné při kontrole", „Protokoly přímo pro ČIŽP, KHS nebo stavební úřad", „Odborný výklad výsledků — nejen čísla", „Vždy v souladu s platným osvědčením a jeho přílohou". Přidány ikony ze stávajícího systému ServiceIcon (štít, dokument s checkmarkem, školení, ověřovací odznak).  
+**Proč:** Původní text jmenoval správní orgány vágně jako „správní orgány"; pojmenování ČIŽP, KHS a stavebního úřadu přímo odpovídá situacím, ve kterých zákazník akreditaci potřebuje.
+
+#### Copy — autorizace a CTA
+**Co bylo uděláno:** Intro odstavec sekce autorizací přepsán — „jsou kryty samostatnými autorizacemi Ing. Heziny" místo pasivní formulace. EIA autorizace zkrácena na „podklady a oznámení záměru pro EIA řízení". CTA strip aktualizován na zákaznickou otázku: „Nejste si jistí, zda Váš případ akreditace pokrývá? Pošlete popis zdroje nebo záměru — odpovíme."  
+**Proč:** Kratší, aktivní formulace odpovídá TOV; jméno Heziny v autorizacích propojuje s profilem O společnosti.
+
+#### UX — ikony a karty
+**Co bylo uděláno:** Autorizační karty přepracovány: ikona + nadpis ve stejném řádku (`.authorization-card-head`), ikony bez rámečku. Scope karty (Emise, Hluk, Osvětlení…) dostaly odpovídající ikony vedle nadpisu ze stávajícího mapování `getAccreditationScopeIconKey`. Download karty přestavěny z celé karty jako odkazu na kartu s tlačítkem „Stáhnout PDF" — tlačítko vždy na stejné výšce dole ve všech kartách díky flex `margin-top: auto`.  
+**Proč:** Vizuální konzistence se zbytkem webu; zákazník potřebuje jasný prvek ke stažení dokumentu, ne celou kartu jako link.
+
+#### UX — spacing a zarovnání
+**Co bylo uděláno:** Snížen `padding-top` karet v sekci overview. Odstraněny rámečky (border/background) z ikon v mini-kartách i autorizačních kartách — ikony čistší bez dekorativního boxu. Zmenšen h3 font-size v autorizačních kartách (0.9 rem) aby tituly nepřetékaly přes ikony. `align-items: flex-start` pro konzistentní zarovnání ikony s horním okrajem textu.  
+**Proč:** Zákazník upozornil na zbytečné rámečky, velké mezery a nezarovnané řádky — vizuální detaily, které snižují dojem odbornosti stránky.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~1 hod 15 min  
+**Rozložení:** 4. 6. 2026 17:30–17:40 (git: 1 commit) — celé sezení proběhlo v Claude Code bez Cursor activity logu  
+**Metoda odhadu:** výměny (~25 kol × 3 min = fallback; skript naměřil jen 10 min z 1 commitu)  
+**Počet výměn s AI:** ~25  
+*Poznámka: Claude Code neprodukuje activity log pro skript — čas odvozen z počtu výměn. Skript `estimate-session-time.ps1` naměřil 10 min (1 git event bez padding bloku konverzace).*
+
+### Technická poznámka
+`src/app/akreditace-autorizace-dokumenty/page.tsx`, `src/app/globals.css`, `src/lib/accreditation-scope.ts`, `src/lib/cta.ts` — commit `496cfaf`.
 
 ---
 

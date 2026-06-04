@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaqAccordionList } from "@/components/FaqAccordionList";
 import { getFaqCategory, getFaqTeaserItems } from "@/lib/faq";
 
 type Props = {
@@ -14,18 +15,7 @@ export function ServiceFaqTeaser({ categoryId, limit = 5 }: Props) {
   return (
     <section className="content-block service-faq-teaser">
       <h2>Časté dotazy k této službě</h2>
-      <div className="faq-accordion-list">
-        {items.map((item) => (
-          <details key={item.q} className="faq-accordion">
-            <summary className="faq-accordion-summary">{item.q}</summary>
-            <div className="faq-accordion-body">
-              {item.paragraphs.map((p) => (
-                <p key={p.slice(0, 40)}>{p}</p>
-              ))}
-            </div>
-          </details>
-        ))}
-      </div>
+      <FaqAccordionList items={items} />
       <p>
         <Link href={`/faq#${categoryId}`}>Zobrazit všechny časté dotazy — {category.title}</Link>
       </p>

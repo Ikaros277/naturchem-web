@@ -5,6 +5,7 @@ import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { SectorFaqTeaser } from "@/components/SectorFaqTeaser";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
 import { JsonLd } from "@/components/Schema";
 import { pageCtaPresets } from "@/lib/cta";
@@ -174,17 +175,7 @@ export function SectorPage(props: Props) {
           </div>
         </section>
 
-        <section className="content-block">
-          <h2>Časté dotazy</h2>
-          <div className="faq-list">
-            {props.faq.map((item) => (
-              <details key={item.q} className="card faq-item">
-                <summary>{item.q}</summary>
-                <p>{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
+        <SectorFaqTeaser items={props.faq} />
 
         <PageCtaStrip {...pageCtaPresets.sectorDetail} primaryHref={contactHref} />
       </div>

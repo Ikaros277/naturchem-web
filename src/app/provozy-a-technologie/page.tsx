@@ -110,8 +110,8 @@ export default function Page() {
           <p className="eyebrow">Rozcestník podle provozu</p>
           <h1>Provozy a technologie, pro které zajišťujeme měření, studie a povolovací podklady</h1>
           <p className="page-lead">
-            Každý provoz má jiné emisní, hlukové, hygienické a povolovací souvislosti. Proto služby
-            NATURCHEM řadíme také podle typů technologií, které zákazníci skutečně řeší v praxi.
+            Najdete služby podle svého provozu — měření, studie a podklady pro ČIŽP, KHS i stavební
+            řízení bez hledání v obecném katalogu služeb.
           </p>
           <p>
             Inspiraci z praxe najdete v{" "}
@@ -120,7 +120,7 @@ export default function Page() {
         </header>
       </PageHeroBand>
 
-      <section className="section content-block container" aria-labelledby="sector-cta-heading">
+      <section className="section content-block container page-first-section" aria-labelledby="sector-cta-heading">
         <h2 id="sector-cta-heading">Nejste si jistí, kam váš provoz zařadit?</h2>
         <p>
           Pošlete nám stručný popis provozu, technologii, požadavek úřadu nebo projektovou

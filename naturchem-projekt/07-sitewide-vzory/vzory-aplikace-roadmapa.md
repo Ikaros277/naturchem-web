@@ -14,10 +14,10 @@ Ikona a h3 ve flex řádku místo vertikálního stacku. Třída `*.card-head` s
 |---|---|---|
 | `/akreditace` — autorizační karty | ✅ | `.authorization-card-head` hotovo 4. 6. |
 | `/akreditace` — scope karty (Emise, Hluk…) | ✅ | `.scope-card-head` hotovo 4. 6. |
-| Service pages — decision karty | ✅ | `.service-decision-card-head` hotovo dříve |
+| Service pages — decision karty | ✅ | `.service-decision-card-head` — flex-start + menší h2 (6. 2026) |
 | Homepage — offer karty | ✅ | `.home-offer-card-head` hotovo P5-18 |
-| `/pristrojove-vybaveni` — skupiny přístrojů | 🔲 | Accordion nadpisy — ověřit jestli mají ikony, případně přidat |
-| `/o-spolecnosti` — guarantee card | 🔲 | Ověřit vizuální konzistenci s ostatními kartami |
+| `/pristrojove-vybaveni` — skupiny přístrojů | ✅ | `.equipment-card-head` — ikona + nadpis (6. 2026) |
+| `/o-spolecnosti` — guarantee card | ✅ | Textová karta bez ikony — konzistentní `.card` padding, card-head neplatí |
 
 ---
 
@@ -31,7 +31,8 @@ Override `.card-symbol` bez border/background v kontextu card-head a mini-karet.
 | `/akreditace` — autorizační ikony | ✅ | Hotovo 4. 6. |
 | `/akreditace` — scope ikony | ✅ | Hotovo 4. 6. |
 | `/kontakt` — inline ikony v checklistu | ✅ | Používá `variant="inline"` — bez rámečku OK |
-| Service pages — decision/extra card ikony | 🔲 | Ověřit jestli mají rámeček nebo ne — `.service-decision-card-head .card-symbol` už override má |
+| Service pages — decision/extra card ikony | ✅ | Override v `.service-decision-card-head` a `.service-extra-card-head` (6. 2026) |
+| `/pristrojove-vybaveni` — accordion ikony | ✅ | `.equipment-card-head .card-symbol` (6. 2026) |
 | Každá nová stránka s kartami | 🔲 | Vždy zkontrolovat kontext — viz pravidlo v ux-role.md |
 
 ---
@@ -43,7 +44,7 @@ Override `.card-symbol` bez border/background v kontextu card-head a mini-karet.
 | Stránka / komponenta | Stav | Poznámka |
 |---|---|---|
 | `/akreditace` — dokumenty ke stažení | ✅ | Hotovo 4. 6. — `<div>` + `<a class="button secondary">` |
-| `/typicke-zakazky` — case study karty | 🔲 | Mají CTA „Poptat podobnou zakázku" — ověřit výšku tlačítka |
+| `/typicke-zakazky` — scénáře a kategorie | ✅ | `SemanticCard` + `.card-inline-link { margin-top: auto }` — bez samostatného tlačítka v case kartách |
 | `/reference` — příklady z praxe (accordion) | ➖ | Expandovatelné detaily, ne karty — neplatí |
 | Případné future stránky s PDF nebo dokumenty | 🔲 | Aplikovat vzor při vzniku |
 
@@ -56,7 +57,7 @@ Override `.card-symbol` bez border/background v kontextu card-head a mini-karet.
 | Stránka / komponenta | Stav | Poznámka |
 |---|---|---|
 | `/akreditace` — „Co akreditace znamená pro zákazníka" | ✅ | Hotovo 4. 6. — ikony, velká písmena, konkrétní úřady |
-| `/o-spolecnosti` — případná sekce benefitů | 🔲 | Ověřit jestli existuje podobný blok; pokud ano, sjednotit |
+| `/o-spolecnosti` — případná sekce benefitů | ➖ | Sekce neexistuje — vzor neplatí |
 | Ostatní stránky | ➖ | Vzor se zatím jinde nevyskytuje |
 
 ---
@@ -69,13 +70,17 @@ Override `.card-symbol` bez border/background v kontextu card-head a mini-karet.
 |---|---|---|
 | `/akreditace` — overview sekce | ✅ | `margin-top` + `padding-top: 1rem` hotovo 4. 6. |
 | `/o-spolecnosti` — trust band + stats pod hero | ✅ | Záměrně těsnější spacing (stejný vzor jako homepage) |
-| `/reference` — první sekce pod hero | 🔲 | Ověřit spacing od hero k první sekci |
-| `/typicke-zakazky` — první sekce pod hero | 🔲 | Ověřit spacing |
-| `/faq` — první sekce pod hero | 🔲 | Ověřit spacing |
-| `/provozy-a-technologie` — první sekce pod hero | 🔲 | Ověřit spacing |
-| `/kontakt` — layout pod hero | 🔲 | Agent hlásil sekci bez explicitního padding-top |
-| `/poradna` — první sekce pod hero | 🔲 | Ověřit spacing |
-| `/pristrojove-vybaveni` — první sekce pod hero | 🔲 | Ověřit spacing |
+| `/reference` — první sekce pod hero | ✅ | `.page-first-section` (6. 2026) |
+| `/typicke-zakazky` — první sekce pod hero | ✅ | `.page-first-section` na container (6. 2026) |
+| `/faq` — první sekce pod hero | ✅ | `.page-first-section` (6. 2026) |
+| `/provozy-a-technologie` — první sekce pod hero | ✅ | `.page-first-section` (6. 2026) |
+| `/kontakt` — layout pod hero | ✅ | `.page-first-section` + sitewide clamp (6. 2026) |
+| `/poradna` — první sekce pod hero | ✅ | `.page-first-section` (6. 2026) |
+| `/pristrojove-vybaveni` — první sekce pod hero | ✅ | `.page-first-section` (6. 2026) |
+
+**Sitewide CSS:** `.page-hero-band + .page-first-section`, `.overview-section-po-hero .card` v `globals.css`.
+
+**Mezery mezi sekcemi (6. 2026):** Sitewide rytmus jako `/reference` — sousedící `.section` bez dvojitého paddingu; viz `ux-role.md` sekce „Mezery mezi sekcemi".
 
 ---
 
@@ -87,26 +92,24 @@ Override `.card-symbol` bez border/background v kontextu card-head a mini-karet.
 |---|---|---|
 | `/akreditace` | ✅ | „Výsledky obstojí při kontrole ČIŽP, KHS…" — hotovo 4. 6. |
 | `/o-spolecnosti` | ✅ | Copy sprint C2 — zákaznicky orientovaný lead |
-| `/reference` | 🔲 | Ověřit stávající lead — je zákaznicky orientovaný? |
-| `/typicke-zakazky` | 🔲 | Ověřit |
-| `/faq` | 🔲 | C8 sprint — na seznamu |
-| `/poradna` | 🔲 | C8 sprint — na seznamu |
-| `/provozy-a-technologie` | 🔲 | Ověřit |
+| `/reference` | ✅ | `referenceIntro` — zákaznický lead s ČIŽP, KHS (6. 2026) |
+| `/typicke-zakazky` | ✅ | Jedna věta s em-dash (6. 2026) |
+| `/faq` | ✅ | `faqPageIntro` — zákaznický výsledek (6. 2026) |
+| `/poradna` | ✅ | Lead s úřady před poptávkou (6. 2026) |
+| `/provozy-a-technologie` | ✅ | Lead podle provozu, ne katalog služeb (6. 2026) |
 
 ---
 
 ## Prioritní pořadí pro další sezení
 
-Doporučené pořadí — kombinace dopadu a rozsahu:
+Většina sitewide vzorů je hotová. Zbývá:
 
-1. **Spacing po hero (Vzor E)** — `/reference`, `/kontakt`, `/typicke-zakazky` — vizuálně nejviditelnější, CSS změny
-2. **Hero leads (Vzor F)** — `/reference`, `/typicke-zakazky` — přímý dopad na konverzi
-3. **Typicke zakázky CTA výška (Vzor C)** — tlačítka na stejné výšce v kartách
-4. **Pristrojové vybavení ikony (Vzor A)** — pokud accordion nadpisy nemají ikony
-5. **O společnosti — benefit blok (Vzor D)** — pokud existuje
+1. **Kontrola nových stránek** — při každé nové stránce s kartami zkontrolovat Vzor A/B (řádek „Každá nová stránka").
+2. **Future download karty** — Vzor C při vzniku stránek s PDF/dokumenty.
+3. **Volitelně:** `/pristrojove-vybaveni` hero lead — stále popisný (není v původní F tabulce); sjednotit až při copy sprintu.
 
 ---
 
 *Soubor: naturchem-projekt/07-sitewide-vzory/vzory-aplikace-roadmapa.md*  
-*Poslední aktualizace: 4. 6. 2026*  
+*Poslední aktualizace: 4. 6. 2026 (sitewide implementace)*  
 *Navazuje na: `04-ai-role/ux-role.md` (vzory), `ROADMAPA.md` (celkový stav)*

@@ -66,7 +66,7 @@ export default function FaqPage() {
           </div>
         </header>
       </PageHeroBand>
-      <div className="container">
+      <div className="container page-first-section">
         <FaqPageContent />
         <PageCtaStrip {...pageCtaPresets.contact} />
       </div>

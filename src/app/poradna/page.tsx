@@ -64,12 +64,12 @@ export default async function Page() {
           <p className="eyebrow">Znalostní centrum</p>
           <h1>Odborná poradna</h1>
           <p className="page-lead">
-            Praktické informace k měřením, studiím a povolování pro provozovatele,
-            projektanty a pracovníky v oblasti životního prostředí.
+            Praktické odpovědi k měřením, studiím a povolování — abyste věděli, co připravit pro
+            ČIŽP, KHS nebo stavební úřad ještě před poptávkou.
           </p>
         </header>
       </PageHeroBand>
-      <div className="container">
+      <div className="container page-first-section">
         <PoradnaFilterableList articles={mergedArticles} />
         <PageCtaStrip {...pageCtaPresets.poradna} />
       </div>

@@ -48,7 +48,7 @@ export const faqPageSubtitle =
   "Praktické odpovědi k měření emisí, pracovnímu prostředí, hluku, rozptylovým a hlukovým studiím, EIA, odborným posudkům, provozním řádům, ISPOP, GHG a podkladům pro úřady.";
 
 export const faqPageIntro =
-  "Nevíte, zda potřebujete měření, studii, odborný posudek, provozní řád nebo jiný podklad pro úřad? Pošlete rozhodnutí, výzvu, projektovou dokumentaci nebo stručný popis technologie. Posoudíme účel zakázky, typ provozu a požadavky příslušného orgánu.";
+  "Rychle zjistíte, zda potřebujete měření, studii nebo provozní řád — a co má smysl poslat ČIŽP, KHS nebo stavebnímu úřadu jako první podklad.";
 
 export const faqIntroCtas: FaqLink[] = [
   { label: "Poslat podklady k posouzení", href: contactUrl("Nejsem si jistý") }

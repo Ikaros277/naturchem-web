@@ -218,6 +218,18 @@ Každá stránka s `PageHeroBand` potřebuje správný spacing první sekce pod 
 
 ---
 
+### Mezery mezi sekcemi (sitewide rytmus)
+
+Standard = stránka `/reference`: mezera mezi bloky je **jednou** `--section-padding-y`, ne součet `padding-bottom` + `padding-top` + `margin-bottom` u `.content-block`.
+
+**V kódu (globals.css):** sousedící `.section` / `.content-block` mají `padding-bottom: 0` a `margin-bottom: 0`; mezera vzniká jen `padding-top` následujícího bloku. Vnořené `.section` v `.container` a `.section + .container` (např. provozy) řídí stejný token.
+
+**Markup:** Preferovat flat `section.section.content-block.container` pod `<main>` (jako Reference), ne jeden wrapper `div.container` kolem více `.section` — jinak se sitewide pravidla hůř chytají.
+
+**Výjimky:** homepage (`home-section`), trust band pod hero na O společnosti, `.accreditation-page > section`.
+
+---
+
 ### Padding karet v overview sekcích
 
 Výchozí `.card { padding: clamp(1.25rem, 2vw, 1.75rem) }` je správný pro standalone karty. V 2–3 sloupcových grid sekcích hned po hero působí příliš mnoho místa nad nadpisem v kartě.

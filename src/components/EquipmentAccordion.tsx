@@ -12,9 +12,12 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
     <div className="equipment-accordion-grid">
       {groups.map((group) => (
         <article key={group.title} className="card scope-card equipment-accordion-card">
-          <div className="equipment-accordion-summary">
-            <ServiceIcon icon={getEquipmentGroupIconKey(group.title)} variant="card" className="equipment-group-icon" />
-            <h2>{group.title} <span className="muted accordion-count">({group.items.length})</span></h2>
+          <div className="equipment-card-head">
+            <ServiceIcon icon={getEquipmentGroupIconKey(group.title)} size={20} />
+            <h2>
+              {group.title}{" "}
+              <span className="muted accordion-count">({group.items.length})</span>
+            </h2>
           </div>
           <p className="muted">{group.text}</p>
           <ul className="check-list">

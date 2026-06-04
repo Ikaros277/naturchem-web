@@ -98,7 +98,7 @@ export default async function Page({ searchParams }: PageProps) {
         </header>
       </PageHeroBand>
 
-      <section className="container contact-main-layout" aria-labelledby="poptavka-heading">
+      <section className="container contact-main-layout page-first-section" aria-labelledby="poptavka-heading">
         <aside className="card contact-side-panel">
           <p className="eyebrow">Rychlý kontakt</p>
           <h2>Rychlý kontakt</h2>

@@ -19,7 +19,7 @@ export type ReferenceExample = {
 };
 
 export const referenceIntro =
-  "NATURCHEM dlouhodobě zajišťuje měření, studie a odborné podklady pro průmyslové provozy, energetiku, zemědělství, odpadové hospodářství, stavebnictví, veřejný sektor i investiční záměry. V zakázkách se často propojuje akreditované měření, rozptylové a hlukové studie, EIA, odborné posudky, provozní řády, ISPOP a technická argumentace pro úřady.";
+  "Měření, studie a podklady pro ČIŽP, KHS i stavební řízení — anonymizované příklady z průmyslu, energetiky, zemědělství a veřejného sektoru.";
 
 export const referenceCustomerSegmentsText =
   "V interní evidenci NATURCHEM se dlouhodobě opakují zakázky pro průmyslové podniky, lakovny, kotelny, bioplynové stanice, dřevozpracující provozy, zemědělské areály, odpadová zařízení, zdravotnické provozy, projektanty a investory. Konkrétní názvy zákazníků na web uvádíme jen po ověření, že je lze veřejně prezentovat.";

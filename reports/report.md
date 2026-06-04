@@ -5,15 +5,84 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 16 |
-| Celkový odhadovaný čas | ~17,3 hodiny |
-| Aktuální fáze | Copy sprint C3 hotovo — /akreditace plně přepsána; příprava na launch checklist |
+| Počet sezení celkem | 18 |
+| Celkový odhadovaný čas | ~19 hodiny |
+| Aktuální fáze | Sitewide mezery sekcí sjednoceny na standard Reference |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 18:01-18:11
+## Sezení: 4. 6. 2026 — sitewide mezery mezi sekcemi
+
+### Přehled
+Oprava nadměrných vertikálních mezer mezi sekcemi napříč webem — standard jako stránka Reference (jedna mezera `--section-padding-y`).
+
+**Zdroj popisu:** AI konverzace + screenshot Typické zakázky
+
+### Provedené změny
+
+#### Sitewide CSS — rytmus sekcí
+**Co bylo uděláno:** V `globals.css` pravidla pro sousedící `.section` / `.content-block` (padding-bottom 0, mezera jen padding-top následníka), první vnořená sekce v `.page-first-section`, `.section + .container`, zmenšen gap `.sector-group-stack`.  
+**Proč:** Dvojitý padding u vnořených sekcí (např. Typické zakázky) dělal obří mezery.
+
+#### Typické zakázky — markup
+**Co bylo uděláno:** Flat `section.content-block.container` pod `<main>` jako Reference, bez wrapperu `div.container`.  
+**Proč:** Stejná struktura jako etalon + spolehlivé chování globálních pravidel.
+
+#### Dokumentace
+**Co bylo uděláno:** `ux-role.md`, `vzory-aplikace-roadmapa.md`.  
+**Proč:** Sitewide standard pro další stránky.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~45 min  
+**Metoda odhadu:** konverzace
+
+### Technická poznámka
+`src/app/globals.css`, `src/app/typicke-zakazky/page.tsx`, `naturchem-projekt/04-ai-role/ux-role.md`, `naturchem-projekt/07-sitewide-vzory/vzory-aplikace-roadmapa.md`
+
+---
+
+## Sezení: 4. 6. 2026 — sitewide aplikace UI vzorů
+
+### Přehled
+Aplikace vzorů z `/akreditace` napříč informačními stránkami: spacing po hero (Vzor E), hero leads (Vzor F), card-head a ikony na přístrojovém vybavení a service pages (A, B), ověření CTA karet na typických zakázkách (C).
+
+**Zdroj popisu:** AI konverzace + plán sitewide UI vzorů
+
+### Provedené změny
+
+#### Vzor E — spacing po PageHeroBand
+**Co bylo uděláno:** Sitewide třída `.page-first-section` v `globals.css` (`clamp(2rem, 4vw, 3rem)` pod hero). Přidána na 7 stránek: reference, kontakt, typické zakázky, FAQ, poradna, provozy, přístrojové vybavení. Sjednocen margin u kontaktního layoutu.  
+**Proč:** Konzistentní dýchací prostor mezi hero a prvním obsahem jako na akreditaci.
+
+#### Vzor F — hero leads
+**Co bylo uděláno:** Přepsány `.page-lead` / intro copy na reference, typické zakázky, FAQ, poradna, provozy — jedna věta, zákaznický benefit, konkrétní úřady (ČIŽP, KHS, stavební úřad).  
+**Proč:** Vzor konverzního copy z akreditace a O společnosti.
+
+#### Vzory A a B — card-head a ikony bez rámečku
+**Co bylo uděláno:** Přístrojové vybavení — `.equipment-card-head` v accordionu. Service pages — override rámečku u decision/extra card-head, `flex-start` u nadpisů.  
+**Proč:** Vizuální sjednocení s akreditací a homepage offer kartami.
+
+#### Vzor C — typické zakázky
+**Co bylo uděláno:** Ověřeno — scénáře a kategorie používají `SemanticCard` s `margin-top: auto` na CTA; úprava kódu nebyla potřeba.  
+**Proč:** Roadmapa — zarovnání CTA ve spodní hraně karet.
+
+#### Dokumentace
+**Co bylo uděláno:** Aktualizována `vzory-aplikace-roadmapa.md` — většina položek ✅ nebo ➖.  
+**Proč:** Evidence pro další práce na webu.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~1 hodina  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** —
+
+### Technická poznámka
+`src/app/globals.css`, `src/app/reference/page.tsx`, `src/app/kontakt/page.tsx`, `src/app/typicke-zakazky/page.tsx`, `src/app/faq/page.tsx`, `src/app/poradna/page.tsx`, `src/app/provozy-a-technologie/page.tsx`, `src/app/pristrojove-vybaveni/page.tsx`, `src/lib/reference-content.ts`, `src/lib/faq.ts`, `src/components/EquipmentAccordion.tsx`, `naturchem-projekt/07-sitewide-vzory/vzory-aplikace-roadmapa.md`
+
+---
+
+## Sezení: 4. 6. 2026, 18:01–18:17
 
 ### Přehled
 Automaticky založené sezení po commitu `92eedd5`.
@@ -21,14 +90,18 @@ Automaticky založené sezení po commitu `92eedd5`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### UX role + roadmapa: padding vzory a sitewide aplikace vzoru komponent.
+**Co bylo uděláno:** UX role + roadmapa: padding vzory a sitewide aplikace vzoru komponent. (commit `4c172b8`). Dotcene oblasti: report, ux-role.md, vzory-aplikace-roadmapa.md, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### UX role: zavedene vzory komponent z implementace akreditace (card-hea...
 **Co bylo uděláno:** UX role: zavedene vzory komponent z implementace akreditace (card-head, ikony, download karty). (commit `92eedd5`). Dotcene oblasti: ux-role.md.  
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 4. 6. 2026 18:01-18:11 (~10 min)  
-**Metoda odhadu:** git  
+**Odhadovaná doba práce:** ~17 min
+**Rozložení:** 4. 6. 2026 18:01–18:17 (~17 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*
 

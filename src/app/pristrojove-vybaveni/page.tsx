@@ -128,7 +128,7 @@ export default function Page() {
         </header>
       </PageHeroBand>
 
-      <section className="section container">
+      <section className="section container page-first-section">
         <EquipmentAccordion groups={equipmentGroups} />
       </section>
 

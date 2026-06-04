@@ -45,7 +45,7 @@ export default function ReferencePage() {
         </header>
       </PageHeroBand>
 
-      <section className="section content-block container" id="zakaznici">
+      <section className="section content-block container page-first-section" id="zakaznici">
         <h2>Naši zákazníci</h2>
         <ClientLogosGrid expandable />
       </section>

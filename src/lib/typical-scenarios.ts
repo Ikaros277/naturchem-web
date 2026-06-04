@@ -13,7 +13,7 @@ export type TypicalScenario = {
  */
 export const typicalScenarios: TypicalScenario[] = [
   {
-    title: "Potřebuji změřit emise z lakovny",
+    title: "Měření emisí z lakovny",
     narrative:
       "Měříme VOC/TOC, TZL a související parametry z výduchů a filtrace, ověřujeme reprezentativní provozní režim a předáváme protokol pro provoz i orgány ochrany ovzduší.",
     learnMoreHref: "/sluzby/mereni-emisi",
@@ -21,7 +21,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("Měření emisí")
   },
   {
-    title: "Potřebuji měření kotelny nebo spalovacího zdroje",
+    title: "Měření kotelny nebo spalovacího zdroje",
     narrative:
       "Periodická i provozní měření kotelen, hořáků, kogenerací a dalších zdrojů s protokolem pro povolení provozu, úřad nebo ISPOP.",
     learnMoreHref: "/sluzby/mereni-emisi",
@@ -29,7 +29,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("Měření emisí")
   },
   {
-    title: "Potřebuji rozptylovou studii pro nový nebo měněný zdroj",
+    title: "Rozptylová studie pro nový nebo měněný zdroj",
     narrative:
       "Modelování imisních příspěvků pro povolování, změnu kapacity, EIA nebo jednání s krajským úřadem.",
     learnMoreHref: "/sluzby/rozptylove-studie",
@@ -37,7 +37,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("Rozptylové studie")
   },
   {
-    title: "Potřebuji hlukovou studii pro provoz, stavbu nebo technologii",
+    title: "Hluková studie pro provoz, stavbu nebo technologii",
     narrative:
       "Výpočet a vyhodnocení hluku pro areály, VZT, tepelná čerpadla, průmyslové zdroje nebo stavební řízení.",
     learnMoreHref: "/sluzby/hlukove-studie",
@@ -45,7 +45,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("Hlukové studie")
   },
   {
-    title: "Potřebuji podklady pro KHS",
+    title: "Měření pracovního prostředí pro KHS",
     narrative:
       "Měření pracovního prostředí — prašnost, chemické látky, hluk, mikroklima — pro kategorizaci prací, dokumentaci BOZP nebo výzvu hygieny.",
     learnMoreHref: "/sluzby/pracovni-prostredi",
@@ -53,7 +53,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("Měření pracovního prostředí")
   },
   {
-    title: "Potřebuji podklady pro krajský úřad nebo ČIŽP",
+    title: "Podklady pro krajský úřad nebo ČIŽP",
     narrative:
       "Protokoly z měření emisí, studie, odborné posudky a provozní dokumentace sladíme s výzvou nebo integrovaným povolením.",
     learnMoreHref: "/sluzby/mereni-emisi",
@@ -61,7 +61,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("Nejsem si jistý")
   },
   {
-    title: "Potřebuji oznámení EIA",
+    title: "Oznámení EIA a podklady pro řízení",
     narrative:
       "Oznámení záměru, odborné přílohy a vstupy pro zjišťovací řízení držíme pohromadě s měřením, studiemi a projektovou dokumentací.",
     learnMoreHref: "/sluzby/eia-oznameni-zameru",
@@ -69,7 +69,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("EIA a oznámení záměru")
   },
   {
-    title: "Potřebuji provozní řád nebo odborný posudek",
+    title: "Provozní řád nebo odborný posudek",
     narrative:
       "Zpracování podle zákona o ochraně ovzduší, návaznost na měření a provoz, výstupy pro správní řízení a změny technologie.",
     learnMoreHref: "/sluzby/provozni-rady",
@@ -77,7 +77,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("Provozní řády")
   },
   {
-    title: "Potřebuji vyřešit ISPOP",
+    title: "ISPOP a provozní evidence",
     narrative:
       "Souhrnná provozní evidence, kontrola údajů vůči měření a povolení, příprava podkladů pro hlášení.",
     learnMoreHref: "/sluzby/ispop",
@@ -85,7 +85,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("ISPOP")
   },
   {
-    title: "Potřebuji proškolit zaměstnance k chemickým látkám",
+    title: "Školení chemické legislativy ve výrobě",
     narrative:
       "Praktické školení chemické legislativy pro provoz, sklad, výrobu nebo laboratoř se zaměřením na bezpečnostní listy, označování, skladování a provozní pravidla.",
     learnMoreHref: "/sluzby/skoleni-chemicke-legislativy",
@@ -93,7 +93,7 @@ export const typicalScenarios: TypicalScenario[] = [
     ctaHref: contactUrl("Školení chemického zákona / chemické legislativy")
   },
   {
-    title: "Potřebuji posoudit, co po nás vlastně úřad chce",
+    title: "Posouzení výzvy nebo rozhodnutí úřadu",
     narrative:
       "Pošlete výzvu nebo rozhodnutí. Rozlišíme, co je nutné doložit hned, co lze doplnit později a jaké termíny je potřeba hlídat.",
     learnMoreHref: "/faq",

@@ -30,8 +30,13 @@ Z těchto tří zdrojů urči: (a) poslední commit = kde přesně se skončilo,
 ### Doporučeno: pokračovat zde
 [Konkrétní 1 úkol pro toto sezení — logické pokračování od místa kde se skončilo, s nejvyšším dopadem. Uveď: která stránka, která komponenta, co konkrétně udělat. Max 3 věty.]
 
+**Nepředkládat jako další úkol** stránky už označené ✅ v ROADMAPA Oblast 2 (např. O společnosti = C2, Akreditace = C3). Navazuj na první 🔲 z copy sprintu C4–C9 nebo launch/SEO.
+
 ### Otevřené otázky (čeká na Hezinu)
 [Vše z ROADMAPA.md označené jako ❓ — jen seznam, bez komentáře.]
 ```
 
 Výstup pouze v češtině. Žádný kód ani technické detaily — briefing pro okamžité navázání na práci. Odkaz na roadmapu v hlavičce výstupu vždy ponech beze změny (klikací cesta k `naturchem-projekt/ROADMAPA.md`).
+k `naturchem-projekt/ROADMAPA.md`).
+
+k `naturchem-projekt/ROADMAPA.md`).

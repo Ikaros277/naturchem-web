@@ -19,12 +19,13 @@ Spusť copy návrhy nebo audit textů pro naturchem.cz. Bez zápisu do kódu, po
 
 ## Princip faktické přesnosti (TOV §0) — anti-halucinace
 
-Copy sprint = **přeformulování**, ne **doplňování faktů**. Styl je až druhý.
+**Fakta** neměníš. **Text** navrhuješ podle **účelu stránky** — viz `copy-role.md` sekce „Účel stránky — před psaním textu". Nemusíš držet 1:1 stávající copy, pokud neslouží účelu (katalog, zdvojení, špatná vrstva).
 
 | Režim | Kdy | Co smíš |
 |-------|-----|---------|
 | **Styl only** | FAQ, legislativní pasáže, seznamy podkladů, instrumenty | Zkrátit větu, aktivní sloveso, odstranit kličé — **význam a fakta beze změny** |
-| **Parafráze** | Služby, corporate, reference | Přeformulovat existující tvrzení — **nesmíš přidat nový fakt, číslo, termín ani závazek** |
+| **Parafráze** | Služby, corporate — text už sedí k účelu | Přeformulovat existující tvrzení — **bez nových faktů** |
+| **Redesign copy** | Stránka má jiný účel než starý text; duplicitní hero + úvod | Nová formulace pro účel stránky — **bez nových faktů** |
 | **Zakázáno** | Vše bez podkladu | Vymýšlení metodik, termínů dodání, rozsahů akreditace, jmen zákazníků, citátů Heziny |
 
 **Nikdy:**
@@ -67,9 +68,10 @@ Copy sprint = **přeformulování**, ne **doplňování faktů**. Styl je až dr
 
 **Postup návrhů:**
 1. Zjisti rozsah z dotazu (sprint / stránka).
-2. Načti stávající texty z kódu — **nejdřív čti, pak navrhuj**.
-3. U každého bloku urči typ úpravy (styl only / parafráze / [OVĚŘIT S HEZINOU]).
-4. Formuluj návrhy ve formátu níže — **nepiš do kódu** bez `implement`.
+2. **Urči účel stránky** (co má zákazník udělat / kam jít dál) — 2–3 věty pro sebe před návrhy.
+3. Načti stávající texty z kódu — ber je jako podklad, ne jako povinnou šablonu.
+4. U každého bloku urči typ úpravy (styl only / parafráze / redesign copy / [OVĚŘIT S HEZINOU]).
+5. Formuluj návrhy ve formátu níže — **nepiš do kódu** bez `implement`.
 
 **Formát každého návrhu:**
 

@@ -110,6 +110,8 @@ Historické problémy H1/H2 (lead 40+ slov, firma místo benefitu) — **vyřeš
 
 ## 3. /o-spolecnosti-naturchem
 
+**Stav:** ✅ Copy sprint **C2** (30. 5. 2026) — hero, Kdo jsme, garance, tým, stats intro a sdílené texty přepsány dle TOV. Níže původní auditní poznámky (archiv).
+
 ### Problémy
 
 | ID | Problém |
@@ -239,11 +241,11 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 |--------|--------|------|----------|
 | **C1** | Homepage: `page.tsx` — copy hero/pillars, odstraněn reference teaser + hero CTA + uncertain strip; loga zůstala | ✅ | 30. 5. + follow-up P5-21 (31. 5.) |
 | **C2** | O společnosti, odborná garance, `guarantee-copy`, `work-process`, `team`, `nationalMessaging`, `companyStatsIntro` | ✅ | 30. 5. 2026 |
-| **C3** | Akreditace, `accreditation-scope`, `accreditation-documents`, přístrojové vybavení (úvody) | 🔲 | |
+| **C3** | Akreditace, `accreditation-scope`, `accreditation-documents`, přístrojové vybavení (úvody) | ✅ akreditace | 4. 6. 2026 — stránka akreditace; úvody přístrojů částečně sitewide Vzor F |
 | **C4** | Služby měření (7 slugů) — body copy, intro jen kontrola (P3-2 ✅) | 🔲 | |
 | **C5** | Služby studie (6 slugů) | 🔲 | |
 | **C6** | Služby povolování/EIA (11 slugů) | 🔲 | |
-| **C7** | `service-groups`, provozy 13×, reference, typické zakázky, `seo-landings` | 🔲 | |
+| **C7** | `service-groups`, provozy 13×, reference, typické zakázky, `seo-landings` | 🔄 typické zakázky ✅ | Index + úvody sekcí 4. 6. 2026; zbývá reference/provozy/seo |
 | **C8** | `faq.ts` (styl only), `/poradna` hero | 🔲 | |
 | **C9** | Kontakt, formulář, Footer, UI labely + grep QA | 🔲 | Footer copy ✅ P5-23 (tagline, labely sloupců) |
 | **P-COPY** | 33× `content/articles/*.md` | 🔲 odloženo | Po dokončení C1–C9 |
@@ -256,7 +258,7 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 | CC2 | ✅ | Homepage lead P3-1 hotovo; C1 = TOV pass zbytku homepage |
 | CC3 | 🔲 | C9 grep QA |
 | CC4 | ❓ | Metriky ponechány; okolí v C1 |
-| CC5 | 🔲 | C2 (Hezina) |
+| CC5 | 🔲 | Citát Heziny v první osobě — mimo C2 (volitelné doplnění) |
 | CC6 | 🔲 | C1 reference teaser — bez jmen firem |
 | CC7 | 🔲 | C4–C6 |
 | CC8 | — | P-COPY (poradna články) |

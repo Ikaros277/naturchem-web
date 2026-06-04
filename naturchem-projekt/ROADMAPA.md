@@ -3,8 +3,8 @@
 > **Účel:** Jediná pravda o stavu celého projektu. Aktualizovat vždy na konci sezení nebo po dokončení úkolu.  
 > **Jak číst:** ✅ Hotovo · 🔄 Probíhá · 🔲 Čeká · ❓ Čeká na klienta
 
-**Poslední aktualizace:** 2026-05-31  
-**Aktuální fáze:** Sprint 13 hotovo → copy sprint, P5-B fotky, launch checklist
+**Poslední aktualizace:** 2026-06-04  
+**Aktuální fáze:** Sitewide UI vzory hotové → copy sprint C4+, P5-B fotky, launch checklist
 
 ---
 
@@ -13,7 +13,7 @@
 | Oblast | Stav | Poznámka |
 |--------|------|----------|
 | UX opravy | 🔄 ~99 % | P5 + homepage trust order + spacing tight; P5-B fotky čekají |
-| Copy a obsah | 🔄 ~25 % | Intro texty 24 service pages + homepage hotovo; klíčové stránky čekají |
+| Copy a obsah | 🔄 ~40 % | C1–C3 hotovo (homepage, O společnosti, akreditace); zbývá C4–C9 + P-COPY |
 | Grafický audit | 🔄 Audit hotov | Diagnóza v `06-graficky-audit/`; implementace sloučena do P5 |
 | SEO a analytika | 🔄 Zahájeno | Meta audit S11 hotov; GA4/GSC čeká na produkci |
 | Launch checklist | 🔲 Nezahájeno | Resend netestován na produkci, GDPR neřešeno |
@@ -117,11 +117,12 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | Úkol | Stav | Poznámka |
 |------|------|----------|
 | Homepage hero: přepsat lead paragraph (zkrátit + zpřesnit) | ✅ | P3-1 + P5-21 (vrstvené copy 31. 5.) |
-| Klíčové stránky: přepis dle TOV (o-spolecnosti, akreditace) | 🔲 | Po dokončení UX struktury |
+| `/o-spolecnosti-naturchem`: přepis dle TOV | ✅ | Copy sprint C2, 30. 5. 2026 |
+| `/akreditace-autorizace-dokumenty`: přepis dle TOV | ✅ | Copy sprint C3, 4. 6. 2026 |
 | Service pages: intro texty (popisný styl, max 25 slov) | ✅ | 24 stránek + školení |
 | Ověřit metriky s Hezinou: „36 let odborné činnosti", „14 000+ zakázek", „6 000+ měření" | ✅ | Ověřeno s Hezinou 31. 5. 2026 |
 | Homepage: reference teaser — konkrétní příklady (Škoda Auto, ČEZ apod.) | ❓ | Závisí na souhlasu klienta |
-| /typicke-zakazky: přidat úvodní text vysvětlující účel stránky | 🔲 | Krátké, 2 věty |
+| `/typicke-zakazky`: úvodní text a sekční copy | ✅ | `typicke-zakazky-content.ts`, 4. 6. 2026 |
 | Fotografie: tým, laboratoř, terénní práce | ❓ | OVĚŘIT — existují fotky? |
 
 ---
@@ -211,6 +212,9 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 31. 5. | P2-6 + metriky | /odborna-garance odstraněna (obsah v O společnosti), metriky ověřeny s Hezinou |
 | 31. 5. | P5-23 | Redesign patičky — 4 zóny, footer-nav.ts, desktop navigace + kontakt |
 | 31. 5. | P5-17 | Mobilní fold follow-up — padding hero/stats/offer po P5-21 |
+| 30. 5. | Copy C1–C2 | Homepage TOV; O společnosti + sdílené texty (garance, tým, stats intro) |
+| 4. 6. | Copy C3 | Akreditace — hero lead, benefity, autorizace, download karty |
+| 4. 6. | Sitewide vzory | UI vzory A–F na informačních stránkách; mezery sekcí = standard Reference |
 
 ---
 

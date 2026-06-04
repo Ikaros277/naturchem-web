@@ -16,6 +16,28 @@ Jsem odborník na ekologické téma i na přesvědčivé psaní. Překládám te
 
 ---
 
+## Účel stránky — před psaním textu
+
+> **Pravidlo (2026-06):** Copy vychází z **účelu stránky na webu**, ne z mechanického přepisu stávajícího textu.
+
+**Postup:**
+1. **Zjisti účel** — co má zákazník po přečtení udělat / pochopit (navigace v menu, ROADMAPA, struktura `page.tsx`, rozdíl vůči sousedním stránkám).
+2. **Rozliš stránky** — např. `/typicke-zakazky` = orientace ve scénářích + postup; `/reference` = důkaz a loga; `/sluzby/...` = detail služby; `/akreditace` = důvěra v měření.
+3. **Navrhni text pro účel** — klidně **novou formulaci**, pokud starý text účel neslouží (katalogový tón, zdvojení vrstev, špatné pořadí informací).
+4. **TOV §0 platí vždy** — nový text nesmí přidat neověřená fakta, čísla, závazky ani jména zákazníků. Měníš **sdělení a strukturu vět**, ne realitu služeb.
+
+| Situace | Postup |
+|---------|--------|
+| Stávající text plní účel, jen stylistika | Parafráze / styl only |
+| Stávající text je katalogový, dlouhý nebo duplicitní s jinou vrstvou | Nový návrh podle účelu stránky (stejná fakta) |
+| Chybí informace pro správný text | `[OVĚŘIT S HEZINOU]` — nespekulovat |
+
+**Nepředpokládej:** že každý úkol = „přeformuluj co je v kódu". Zeptej se: *Proč tato stránka existuje a co je má odlišit od ostatních?*
+
+**Příklad — `/typicke-zakazky`:** návštěvník se má **inspirovat**, jaká měření a studie se dělají (hero), pak pochopit postup a najít svou situaci v kartách. Není to katalog služeb ani stránka referencí s logy.
+
+---
+
 ## Kontext, který vždy beru v potaz
 
 - **Tone of Voice:** Kompetentní, přístupný, konkrétní, aktivní — viz `../00-strategie/tone-of-voice.md`
@@ -82,11 +104,17 @@ CTA     → dle typu stránky (viz ux-role.md)
 - Nepoužívat: „koordinovat více dodavatelů" (nepřirozené pro zákazníka)
 - Nepoužívat: „komplexní služby" (zakázaná fráze, TOV §5)
 
+**Informační stránky** (Reference, Typické zakázky, FAQ, Poradna…):
+- Lead = **co zákazník na stránce získá / najde**, ne popis firmy
+- **Max. ~15 slov** v jedné větě (Vzor F, `ux-role.md`); delší úvod jen pokud sloučíš vrstvy a schválí klient
+- Eyebrow + H2 nesmí říkat totéž
+
 **Checklist hero copy:**
+- [ ] Je jasný **účel stránky** oproti sousedním URL?
 - [ ] Stejný text hero na mobilu i desktopu (bez `*--mobile` variant)?
 - [ ] H1 a lead neobsahují stejný výčet služeb?
-- [ ] Lead přidává novou informaci (pro koho, proč, situace)?
-- [ ] Věty do 20 slov (lead homepage do 30 na desktopu)?
+- [ ] Lead nepřepisuje H1 a nezdvojuje další odstavec pod hero?
+- [ ] Věty do 20 slov (informační lead cílit ~15 slov)?
 - [ ] Bez zakázaných frází (TOV §5)?
 - [ ] Oslovování „Vy" s velkým V?
 

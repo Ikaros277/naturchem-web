@@ -13,8 +13,10 @@ export function TypicalScenarios() {
           cta="Zobrazit řešení"
           aria-label={`Více o službě: ${scenario.title}`}
         >
-          <ServiceIcon href={scenario.learnMoreHref} />
-          <h3>{scenario.title}</h3>
+          <div className="typical-scenario-card-head">
+            <ServiceIcon href={scenario.learnMoreHref} />
+            <h3>{scenario.title}</h3>
+          </div>
           <p className="muted">{scenario.narrative}</p>
         </SemanticCard>
       ))}

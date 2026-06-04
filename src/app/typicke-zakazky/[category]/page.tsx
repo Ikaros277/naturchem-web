@@ -46,12 +46,12 @@ export default async function CaseStudyCategoryPage({ params }: Props) {
         </header>
       </PageHeroBand>
       <section className="section content-block container page-first-section">
-        <CaseStudiesView category={category} categories={caseStudyCategories} />
-        <p className="btn-row">
+        <p className="btn-row" style={{ marginBottom: "1.25rem" }}>
           <Link href="/typicke-zakazky" className="button secondary">
-            Všechny typy zakázek
+            ← Zpět na typické zakázky
           </Link>
         </p>
+        <CaseStudiesView category={category} categories={caseStudyCategories} />
       </section>
     </main>
   );

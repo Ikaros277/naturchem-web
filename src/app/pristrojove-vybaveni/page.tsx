@@ -120,10 +120,8 @@ export default function Page() {
           <p className="eyebrow">Technické zázemí laboratoře</p>
           <h1>Přístrojové vybavení NATURCHEM</h1>
           <p className="page-lead">
-            NATURCHEM používá přístrojové vybavení a technické zázemí pro měření emisí, pracovního
-            prostředí, hluku, vibrací, osvětlení, mikroklimatu a související odběry vzorků. Přehled
-            uvádí hlavní technické zázemí používané při měřeních, odběrech a laboratorní přípravě
-            vzorků.
+            Měření a odběry podložené přístrojovým zázemím laboratoře — emise, pracovní prostředí,
+            hluk i příprava vzorků pro protokol nebo studii u ČIŽP a KHS.
           </p>
         </header>
       </PageHeroBand>

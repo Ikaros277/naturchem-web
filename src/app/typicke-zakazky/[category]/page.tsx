@@ -45,14 +45,14 @@ export default async function CaseStudyCategoryPage({ params }: Props) {
           <p className="page-lead">{category.short}</p>
         </header>
       </PageHeroBand>
-      <div className="container">
+      <section className="section content-block container page-first-section">
         <CaseStudiesView category={category} categories={caseStudyCategories} />
-        <p style={{ marginTop: "1.25rem" }}>
+        <p className="btn-row">
           <Link href="/typicke-zakazky" className="button secondary">
             Všechny typy zakázek
           </Link>
         </p>
-      </div>
+      </section>
     </main>
   );
 }

@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 18 |
-| Celkový odhadovaný čas | ~19 hodiny |
+| Počet sezení celkem | 17 |
+| Celkový odhadovaný čas | ~17,6 hodiny |
 | Aktuální fáze | Sitewide mezery sekcí sjednoceny na standard Reference |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 4. 6. 2026, 18:24-18:34
+
+### Přehled
+Automaticky založené sezení po commitu `fbba8c6`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Sitewide UI vzory: spacing po hero, hero leads, card-head a rytmus se...
+**Co bylo uděláno:** Sitewide UI vzory: spacing po hero, hero leads, card-head a rytmus sekc├ş. - Aplikace vzor┼» z akreditace na informa─Źn├ş str├ínky, sjednocen├ş mezer mezi sekcemi na standard Reference a dokumentace v ux-role a roadmap─Ť.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `fbba8c6`). Dotcene oblasti: app, components, faq, kontakt, lib, poradna, pristrojove-vybaveni, provozy-a-technologie, reference, report, typicke-zakazky, ux-role.md, vzory-aplikace-roadmapa.md, workflow.  
+**Proč:** Aplikace vzor┼» z akreditace na informa─Źn├ş str├ínky, sjednocen├ş mezer mezi sekcemi na standard Reference a dokumentace v ux-role a roadmap─Ť.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 4. 6. 2026 18:24-18:34 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `fbba8c6660e915ba119a67201827b21a86765811`
 
 ---
 

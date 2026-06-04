@@ -71,7 +71,8 @@ Override `.card-symbol` bez border/background v kontextu card-head a mini-karet.
 | `/akreditace` — overview sekce | ✅ | `margin-top` + `padding-top: 1rem` hotovo 4. 6. |
 | `/o-spolecnosti` — trust band + stats pod hero | ✅ | Záměrně těsnější spacing (stejný vzor jako homepage) |
 | `/reference` — první sekce pod hero | ✅ | `.page-first-section` (6. 2026) |
-| `/typicke-zakazky` — první sekce pod hero | ✅ | `.page-first-section` na container (6. 2026) |
+| `/typicke-zakazky` — první sekce pod hero | ✅ | Flat `section.content-block.container` + `.page-first-section` (6. 2026) |
+| `/typicke-zakazky/[kategorie]` — první sekce pod hero | ✅ | Stejný markup jako index (6. 2026) |
 | `/faq` — první sekce pod hero | ✅ | `.page-first-section` (6. 2026) |
 | `/provozy-a-technologie` — první sekce pod hero | ✅ | `.page-first-section` (6. 2026) |
 | `/kontakt` — layout pod hero | ✅ | `.page-first-section` + sitewide clamp (6. 2026) |
@@ -97,16 +98,16 @@ Override `.card-symbol` bez border/background v kontextu card-head a mini-karet.
 | `/faq` | ✅ | `faqPageIntro` — zákaznický výsledek (6. 2026) |
 | `/poradna` | ✅ | Lead s úřady před poptávkou (6. 2026) |
 | `/provozy-a-technologie` | ✅ | Lead podle provozu, ne katalog služeb (6. 2026) |
+| `/pristrojove-vybaveni` | ✅ | Zákaznický lead — protokol/studie, ČIŽP, KHS (6. 2026) |
 
 ---
 
 ## Prioritní pořadí pro další sezení
 
-Většina sitewide vzorů je hotová. Zbývá:
+Sitewide vzory A–F jsou **implementované**. Procesní kontrola (ne kódové úkoly):
 
-1. **Kontrola nových stránek** — při každé nové stránce s kartami zkontrolovat Vzor A/B (řádek „Každá nová stránka").
-2. **Future download karty** — Vzor C při vzniku stránek s PDF/dokumenty.
-3. **Volitelně:** `/pristrojove-vybaveni` hero lead — stále popisný (není v původní F tabulce); sjednotit až při copy sprintu.
+1. **Nové stránky s kartami** — při každé nové stránce zkontrolovat Vzor A/B (řádek „Každá nová stránka" v tabulce B).
+2. **Future download karty** — Vzor C aplikovat při vzniku stránek s PDF/dokumenty (stejný vzor jako akreditace).
 
 ---
 

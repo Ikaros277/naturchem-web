@@ -26,9 +26,9 @@ export const serviceMegaGroups = [
       { href: "/sluzby/eia-oznameni-zameru", label: "EIA a oznámení záměru" },
       { href: "/sluzby/odborne-posudky", label: "Odborné posudky" },
       { href: "/sluzby/provozni-rady", label: "Provozní řády" },
-      { href: "/sluzby/ippc-integrovana-povoleni", label: "IPPC" },
-      { href: "/sluzby/ispop", label: "ISPOP" },
-      { href: "/sluzby/ghg-overovani", label: "GHG" }
+      { href: "/sluzby/ippc-integrovana-povoleni", label: "IPPC a integrovaná povolení" },
+      { href: "/sluzby/ispop", label: "ISPOP a provozní evidence" },
+      { href: "/sluzby/ghg-overovani", label: "Emise skleníkových plynů (GHG)" }
     ]
   },
   {

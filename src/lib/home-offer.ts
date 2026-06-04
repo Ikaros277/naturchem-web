@@ -24,9 +24,9 @@ export const homeStudiesPillar = {
     { label: "EIA oznámení záměru", href: "/sluzby/eia-oznameni-zameru" },
     { label: "Odborné posudky", href: "/sluzby/odborne-posudky" },
     { label: "Provozní řády", href: "/sluzby/provozni-rady" },
-    { label: "IPPC", href: "/sluzby/ippc-integrovana-povoleni" },
-    { label: "ISPOP", href: "/sluzby/ispop" },
-    { label: "GHG", href: "/sluzby/ghg-overovani" },
+    { label: "IPPC a integrovaná povolení", href: "/sluzby/ippc-integrovana-povoleni" },
+    { label: "ISPOP a provozní evidence", href: "/sluzby/ispop" },
+    { label: "Emise skleníkových plynů (GHG)", href: "/sluzby/ghg-overovani" },
     { label: "Technické podklady pro úřady", href: "/sluzby/odborne-posudky" }
   ] satisfies HomeOfferItem[]
 };

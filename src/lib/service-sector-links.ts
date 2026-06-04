@@ -1,6 +1,14 @@
 ﻿/**
- * Interní prolinkování: hlavní služba → typické provozy (/provozy-a-technologie/…).
- * Používá ServicePage i pro SEO navigaci uživatele.
+ * Interní prolinkování: stránka služby → typické provozy (/provozy-a-technologie/…).
+ *
+ * Proč ne vždy /sluzby/…?
+ * - Služba = CO děláme (měření, studie, EIA…).
+ * - Provoz = PRO KOHO / v jaké situaci (skládka, bioplyn, kotelna…).
+ * Sekce „Mohlo by Vás zajímat“ na ServicePage míchá až 3 typy odkazů (viz ServicePage):
+ *   1) relatedLinks z page/dedicated-service-pages — vždy /sluzby/, s vlastním popisem
+ *   2) sectorCrossLinks odtud — /provozy-a-technologie/, popis z sectors.ts (pokud existuje)
+ *   3) fallback z site.ts — jiné služby
+ * Popis u provozu není generovaný copy — bere se z `sectors.ts` (stejný text jako na indexu provozů).
  */
 export type SectorLink = { title: string; href: string };
 

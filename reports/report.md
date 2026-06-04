@@ -6,46 +6,47 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 20 |
-| Celkový odhadovaný čas | ~18,9 hodiny |
-| Aktuální fáze | Copy sprint C4 (měření) — přehled služeb 2×2, rollout copy na 6 slugů měření |
+| Celkový odhadovaný čas | ~19,1 hodiny |
+| Aktuální fáze | Copy sprint C5–C6 hotovo; navigace a cross-link provozů; příprava C7 (provozy, reference, skupiny služeb) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 21:05–21:25
+## Sezení: 4. 6. 2026, 20:55–21:29
 
 ### Přehled
-Automaticky založené sezení po commitu `17a751a`.
+Po schválení copy návrhů implementován sprint **C5** (studie) a **C6** (povolování / EIA). Doplněny popisy u karet provozů v sekci „Mohlo by Vás zajímat“, sjednoceny názvy IPPC / ISPOP / GHG v menu a na kartách služeb. U cross-linku na provozy přidán štítek sekce, aby přechod z `/sluzby/` do `/provozy-a-technologie/` nebyl překvapivý.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### site.ts: plne titulky sluzeb IPPC ISPOP GHG pro karty a fallback.
-**Co bylo uděláno:** site.ts: plne titulky sluzeb IPPC ISPOP GHG pro karty a fallback. (commit `6dd898f`). Dotcene oblasti: lib, report, workflow.  
-**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
 
-#### Nav: plne nazvy IPPC ISPOP GHG, dokumentace cross-linku provozu.
-**Co bylo uděláno:** Nav: plne nazvy IPPC ISPOP GHG, dokumentace cross-linku provozu. (commit `ca9f1ad`). Dotcene oblasti: copy-audit.md, lib, report, workflow.  
-**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+#### Copy — sprint C5 (studie)
+**Co bylo uděláno:** Schválené texty zapsány u rozptylových studií a čtyř služeb ve skupině studií (hlukové studie, akustické posudky, modelové výpočty, imisní dopady): lead se situací zákazníka, aktivní odrážky v přehledu, sjednocené „Kdy službu potřebujete“.  
+**Proč:** Stejný konverzní vzor jako u měření (C4); nejdřív návrhy k review, pak implementace.
 
-#### C6 copy, popisy provozu v Mohlo by Vas zajimat, audit C6.
-**Co bylo uděláno:** C6 copy, popisy provozu v Mohlo by Vas zajimat, audit C6. (commit `621b9c2`). Dotcene oblasti: components, copy-audit.md, lib, report, sluzby, workflow.  
-**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+#### Copy — sprint C6 (dokumentace a povolování)
+**Co bylo uděláno:** Přeformulovány intro, scope, whenNeeded a commonMistakes u odborných posudků, provozních řádů, IPPC, EIA oznámení, zjišťovacího řízení, technických příloh, povolení provozu, ISPOP, GHG a přehledové stránky EIA / posudky / IPPC.  
+**Proč:** Katalogový tón nahrazen jazykem zákazníka (úřad, změna provozu, reporting) bez nových faktů.
 
-#### Copy sprint C5: studie - aktivni leady a prehledove body.
-**Co bylo uděláno:** Copy sprint C5: studie - aktivni leady a prehledove body. (commit `17a751a`). Dotcene oblasti: copy-audit.md, lib, sluzby.  
-**Proč:** Upravy na strankach sluzeb - jasnejsi prezentace nabidky NATURCHEM.
+#### UX — „Mohlo by Vás zajímat“ a provozy
+**Co bylo uděláno:** U karet odkazujících na `/provozy-a-technologie/…` se popis bere z `sectors.ts` (ne generovaný text). U karty odpadů / recyklace na stránce EIA oznámení doplněn chybějící popis. Na provozní kartě štítek **Provozy a technologie**; CTA služeb sjednoceno na „Zobrazit službu“.  
+**Proč:** Třetí karta u EIA záměrně vede na oborový přehled (logika záměru), ale uživatel musí vidět, že mění sekci webu.
+
+#### Navigace — IPPC, ISPOP, GHG
+**Co bylo uděláno:** V megamenu, patičkovém seznamu služeb a `site.ts` nahrazeny samotné zkratky plnými názvy (např. „ISPOP a provozní evidence“, „Emise skleníkových plynů (GHG)“).  
+**Proč:** Zkratky bez kontextu nejsou srozumitelné pro netechnické publikum; v oboru se používají, ale menu má vysvětlit obsah.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~21 min
-**Rozložení:** 4. 6. 2026 21:05–21:25 (~21 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~35 min  
+**Rozložení:** 4. 6. 2026 20:55–21:29 (~34 min ze skriptu + dokončení reportu)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~10  
+*Poznámka: čas ze skriptu `estimate-session-time.ps1`; mezera nad 30 min od předchozího bloku (služby 2×2 / C4).*
 
 ### Technická poznámka
-Commit: `17a751a684c703181eea35617c2756235dc22ab7`
+Commity: `17a751a` … `bdf1a76`. Soubory: `dedicated-service-pages.ts`, `rozptylove-studie/page.tsx`, `eia-posudky-poradenstvi/page.tsx`, `ServicePage.tsx`, `service-megamenu.ts`, `navigation.ts`, `site.ts`, `service-sector-links.ts`, `copy-audit.md`.
 
 ---
 

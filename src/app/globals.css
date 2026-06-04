@@ -5982,6 +5982,15 @@ main.home-page + .site-footer {
   line-height: 1.25;
 }
 
+.related-card-section-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .index-card-heading {
   margin: 0;
   font-size: 1.05rem;

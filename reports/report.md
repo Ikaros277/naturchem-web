@@ -6,7 +6,7 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 20 |
-| Celkový odhadovaný čas | ~18,8 hodiny |
+| Celkový odhadovaný čas | ~18,9 hodiny |
 | Aktuální fáze | Copy sprint C4 (měření) — přehled služeb 2×2, rollout copy na 6 slugů měření |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `17a751a`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### site.ts: plne titulky sluzeb IPPC ISPOP GHG pro karty a fallback.
+**Co bylo uděláno:** site.ts: plne titulky sluzeb IPPC ISPOP GHG pro karty a fallback. (commit `6dd898f`). Dotcene oblasti: lib, report, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### Nav: plne nazvy IPPC ISPOP GHG, dokumentace cross-linku provozu.
 **Co bylo uděláno:** Nav: plne nazvy IPPC ISPOP GHG, dokumentace cross-linku provozu. (commit `ca9f1ad`). Dotcene oblasti: copy-audit.md, lib, report, workflow.  
 **Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
@@ -34,8 +38,8 @@ Automaticky založené sezení po commitu `17a751a`.
 **Proč:** Upravy na strankach sluzeb - jasnejsi prezentace nabidky NATURCHEM.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~20 min
-**Rozložení:** 4. 6. 2026 21:05–21:25 (~20 min)
+**Odhadovaná doba práce:** ~21 min
+**Rozložení:** 4. 6. 2026 21:05–21:25 (~21 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

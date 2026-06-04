@@ -12,7 +12,7 @@ import { contactSubmitCta, globalCta } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
 import { serviceTrustBandItems } from "@/lib/home-hero-metrics";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
-import { sectors } from "@/lib/sectors";
+import { provozyNavLabel, sectors } from "@/lib/sectors";
 import { getDetailGroupIconKey, type ServiceIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
 import {
@@ -65,17 +65,30 @@ export function ServicePage(props: Props) {
   ].filter((group): group is { title: string; items: string[] } => group !== null);
 
   const mergedRelated = [
-    ...relatedLinks.map((l) => ({ href: l.href, title: l.title, description: l.description, cta: "Zobrazit téma" })),
+    ...relatedLinks.map((l) => ({
+      href: l.href,
+      title: l.title,
+      description: l.description,
+      cta: "Zobrazit službu",
+      sectionLabel: undefined as string | undefined
+    })),
     ...sectorCrossLinks.map((s) => {
       const sector = sectorMetaByHref.get(s.href);
       return {
         href: s.href,
         title: s.title,
         description: sector?.description,
-        cta: sector?.linkHint ?? "Zobrazit provoz"
+        cta: sector?.linkHint ?? "Zobrazit provoz",
+        sectionLabel: provozyNavLabel
       };
     }),
-    ...relatedServices.map((s) => ({ href: s.href, title: s.title, description: s.short, cta: "Zobrazit službu" }))
+    ...relatedServices.map((s) => ({
+      href: s.href,
+      title: s.title,
+      description: s.short,
+      cta: "Zobrazit službu",
+      sectionLabel: undefined as string | undefined
+    }))
   ].slice(0, 3);
 
   const serviceData = {
@@ -262,6 +275,11 @@ export function ServicePage(props: Props) {
                   cta={item.cta}
                   className="service-related-card"
                   icon={<ServiceIcon href={item.href} variant="inline" size={20} />}
+                  meta={
+                    item.sectionLabel ? (
+                      <p className="related-card-section-label">{item.sectionLabel}</p>
+                    ) : null
+                  }
                 >
                   {item.description ? <p className="muted">{item.description}</p> : null}
                 </IndexCard>

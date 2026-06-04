@@ -25,20 +25,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Hlukové studie pro technologie, areály, dopravu, VZT, tepelná čerpadla a stavební záměry. Podklady pro KHS, stavební řízení a EIA.",
     intro:
-      "Hluková studie posuzuje zátěž záměru, technologií a dopravy pro KHS, stavební řízení a EIA. Zpracujeme výpočet včetně variantního posouzení umístění zdrojů.",
+      "Úřad požaduje hlukovou studii nebo řešíte stížnost okolí? Zpracujeme výpočet technologií, areálu a dopravy — podklad pro KHS, stavební řízení i EIA.",
     contactService: "Hlukové studie",
     faqCategoryId: "hluk",
     scope: [
-      "výpočet hluku technologií, areálů, VZT, tepelných čerpadel a dopravy v areálu",
-      "denní i noční režim a srovnání variant umístění zdroje",
-      "vyhodnocení vůči limitům a chráněnému venkovnímu prostoru",
-      "návrh odhlučnění nebo úpravy provozu, pokud limit hrozí překročit"
+      "Zpracujeme výpočet hluku technologií, areálů, VZT, tepelných čerpadel a dopravy",
+      "Posoudíme denní i noční režim a varianty umístění zdroje",
+      "Vyhodnotíme výsledky vůči limitům a chráněnému venkovnímu prostoru",
+      "Navrhneme odhlučnění nebo úpravu provozu při hrozbě překročení limitu"
     ],
     whenNeeded: [
-      "nový zdroj hluku nebo změna technologie",
-      "požadavek KHS, stavebního úřadu nebo EIA",
-      "kolaudace, změna užívání nebo stížnost okolí",
-      "prověření účinnosti protihlukového opatření před realizací"
+      "Vzniká nový zdroj hluku nebo měníte technologii",
+      "KHS, stavební úřad nebo EIA požaduje hlukovou studii",
+      "Probíhá kolaudace, změna užívání nebo stížnost okolí",
+      "Ověřujete účinnost protihlukového opatření před realizací"
     ],
     practicalSituations: [
       "hluková studie pro venkovní jednotky tepelných čerpadel a VZT",
@@ -58,9 +58,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "podklad pro KHS, stavební řízení, kolaudaci nebo EIA"
     ],
     commonMistakes: [
-      "zaměnění hlukové studie za měření hluku u dosud nerealizovaného záměru",
-      "neúplné údaje o nočním režimu provozu",
-      "opomenutí souběhu více zdrojů hluku v areálu"
+      "Záměna hlukové studie za měření hluku u dosud nerealizovaného záměru",
+      "Neúplné údaje o nočním režimu provozu",
+      "Opomenutí souběhu více zdrojů hluku v areálu"
     ],
     relatedLinks: [
       {
@@ -697,20 +697,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Akustické posudky a odborná vyjádření k hluku technologií, strojoven a stavebních úprav s technologickým provozem. Podklady pro stavební řízení a KHS.",
     intro:
-      "Akustický posudek posuzuje hluk technologií uvnitř budovy — strojovny, kotelny a výrobní provozy. Slouží pro stavební řízení nebo KHS, na rozdíl od hlukové studie záměru vůči okolí.",
+      "Potřebujete akustický posudek ke strojovně nebo technologii v budově? Posoudíme hluk pro stavební řízení a KHS — jiný rozsah než hluková studie záměru v okolí.",
     contactService: "Měření hluku a akustika",
     faqCategoryId: "hluk",
     scope: [
-      "posudek ke stavební úpravě nebo změně užívání budovy",
-      "odhlučnění strojoven, VZT a technologií v objektu",
-      "vyjádření pro stavební řízení a kolaudaci",
-      "návaznost na měření v provozu nebo výpočet"
+      "Zpracujeme posudek ke stavební úpravě nebo změně užívání budovy",
+      "Navrhneme odhlučnění strojoven, VZT a technologií v objektu",
+      "Připravíme vyjádření pro stavební řízení a kolaudaci",
+      "Navážeme na měření v provozu nebo akustický výpočet"
     ],
     whenNeeded: [
-      "stavební úpravy s dopadem na hluk v budově nebo okolí",
-      "kolaudace nebo změna užívání budovy",
-      "požadavek stavebního úřadu nebo KHS",
-      "návrh odhlučnění před realizací"
+      "Plánujete stavební úpravy s dopadem na hluk v budově",
+      "Probíhá kolaudace nebo změna užívání budovy",
+      "Stavební úřad nebo KHS požaduje akustické vyjádření",
+      "Potřebujete návrh odhlučnění před realizací"
     ],
     practicalSituations: [
       "akustický posudek pro strojovnu VZT nebo kotelnu v budově",
@@ -730,9 +730,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "podklad pro stavební řízení nebo KHS"
     ],
     commonMistakes: [
-      "zaměnění akustického posudku za hlukovou studii záměru v okolí",
-      "posudek bez vazby na skutečný provozní režim",
-      "neúplná projektová dokumentace zdrojů hluku"
+      "Záměna akustického posudku za hlukovou studii záměru v okolí",
+      "Posudek bez vazby na skutečný provozní režim",
+      "Neúplná projektová dokumentace zdrojů hluku"
     ],
     relatedLinks: [
       {
@@ -753,20 +753,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Modelové výpočty imisí a hluku pro záměry, změny provozu a varianty technologií. Podklady pro rozptylové a hlukové studie.",
     intro:
-      "Modelové výpočty slouží k rychlému posouzení variant umístění komína, strojovny nebo dopravy. Výsledek lze zapracovat do rozptylové studie nebo dokumentace EIA.",
+      "Potřebujete rychle porovnat varianty komína, strojovny nebo dopravy? Provedeme imisní a hlukové modelové výpočty — podklad pro studii, EIA nebo jednání s úřadem.",
     contactService: "Rozptylové studie",
     faqCategoryId: "rozptyl",
     scope: [
-      "imisní model zdrojů ovzduší a dopravy v areálu",
-      "výpočet hluku technologií, areálu a komunikací",
-      "srovnání variant provozu nebo umístění",
-      "výstupní podklady pro studii, EIA nebo jednání s úřadem"
+      "Zmodelujeme imisní příspěvky zdrojů ovzduší a dopravy v areálu",
+      "Zpracujeme výpočet hluku technologií, areálu a komunikací",
+      "Porovnáme varianty provozu nebo umístění zdrojů",
+      "Připravíme výstupy pro studii, EIA nebo jednání s úřadem"
     ],
     whenNeeded: [
-      "nový záměr nebo změna kapacity zdroje",
-      "potřeba variantního posouzení provozu",
-      "požadavek úřadu na imisní nebo hlukové hodnocení",
-      "příprava rozptylové nebo hlukové studie"
+      "Plánujete nový záměr nebo změnu kapacity zdroje",
+      "Potřebujete variantní posouzení provozu",
+      "Úřad požaduje imisní nebo hlukové hodnocení",
+      "Připravujete rozptylovou nebo hlukovou studii"
     ],
     practicalSituations: [
       "modelový výpočet imisí pro novou technologii v areálu",
@@ -786,9 +786,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "variantní srovnání a doporučení dalšího postupu"
     ],
     commonMistakes: [
-      "výpočet bez ověřených vstupních emisních údajů",
-      "nezohlednění všech relevantních zdrojů v areálu",
-      "zaměnění výpočtu za terénní měření u existujícího provozu"
+      "Výpočet bez ověřených vstupních emisních údajů",
+      "Nezohlednění všech relevantních zdrojů v areálu",
+      "Záměna výpočtu za terénní měření u existujícího provozu"
     ],
     relatedLinks: [
       {
@@ -809,20 +809,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Propojené posouzení imisí a hluku pro investiční záměry, změny provozu a EIA. Rozptyl, hluk a varianty v jednom postupu.",
     intro:
-      "Imisní a hlukové dopady záměru zpracováváme ve stejných vstupních datech. Provozní režim a technické parametry tak zůstanou v dokumentaci EIA konzistentní.",
+      "Záměr ovlivňuje ovzduší i hluk najednou? Zpracujeme propojené posouzení ve stejných datech — konzistentní podklad pro EIA, krajský úřad a KHS.",
     contactService: "Rozptylové studie",
     faqCategoryId: "rozptyl",
     scope: [
-      "společné zadání imisí a hluku pro jeden záměr",
-      "modelové výpočty a varianty umístění technologií",
-      "podklad pro EIA, krajský úřad a KHS",
-      "jeden kontaktní výstup pro investora a projektanta"
+      "Sjednotíme zadání imisí a hluku pro jeden záměr",
+      "Zmodelujeme varianty umístění technologií",
+      "Připravíme podklad pro EIA, krajský úřad a KHS",
+      "Dodáme jeden souhrnný výstup pro investora a projektanta"
     ],
     whenNeeded: [
-      "záměr se souběžným vlivem na ovzduší a hluk",
-      "požadavek úřadu na imisní i hlukové hodnocení",
-      "příprava EIA nebo oznámení záměru",
-      "potřeba variantního srovnání umístění technologií"
+      "Záměr má souběžný vliv na ovzduší i hluk",
+      "Úřad požaduje imisní i hlukové hodnocení",
+      "Připravujete EIA nebo oznámení záměru",
+      "Potřebujete variantní srovnání umístění technologií"
     ],
     practicalSituations: [
       "imisní a hlukové dopady průmyslového areálu",
@@ -842,9 +842,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "podklad pro EIA, úřady a investora"
     ],
     commonMistakes: [
-      "řešení hluku a imisí odděleně bez návaznosti na stejný záměr",
-      "neúplné vstupní údaje pro modelování",
-      "opomenutí dopravy nebo vedlejších zdrojů v areálu"
+      "Řešení hluku a imisí odděleně bez návaznosti na stejný záměr",
+      "Neúplné vstupní údaje pro modelování",
+      "Opomenutí dopravy nebo vedlejších zdrojů v areálu"
     ],
     relatedLinks: [
       {

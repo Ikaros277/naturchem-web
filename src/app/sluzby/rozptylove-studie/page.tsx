@@ -15,18 +15,18 @@ export default function Page() {
       slug="sluzby/rozptylove-studie"
       faqCategoryId="studie"
       title="Rozptylové studie"
-      intro="Modelujeme imisní příspěvky zdrojů, výduchů a dopravy pro záměry, změny provozu a EIA. Studie stavíme na konkrétních emisních parametrech a požadavcích řízení."
+      intro="Krajský úřad nebo EIA požaduje rozptylovou studii? Zmodelujeme imisní příspěvky zdrojů a dopravy — podklad pro investora, projektanta i úřad."
       scope={[
-        "modelování imisního příspěvku stacionárních zdrojů znečišťování ovzduší a dopravy",
-        "varianty provozu a technická opatření",
-        "posouzení dopadů na okolní zástavbu",
-        "rozptylové studie pro kotelny, skládky, recyklační areály, bioplyn, sklářství a lakovny"
+        "Zmodelujeme imisní příspěvek stacionárních zdrojů a dopravy v areálu",
+        "Posoudíme varianty provozu a technická opatření",
+        "Vyhodnotíme dopady na okolní zástavbu",
+        "Zpracujeme studie pro kotelny, skládky, recyklaci, bioplyn, sklářství a lakovny"
       ]}
       whenNeeded={[
-        "nový záměr nebo rozšíření provozu",
-        "požadavek krajského úřadu nebo EIA",
-        "porovnání variant technického řešení",
-        "změna zdroje znečišťování ovzduší, kapacity, paliva, dopravy nebo emisních parametrů"
+        "Plánujete nový záměr nebo rozšíření provozu",
+        "Krajský úřad nebo EIA požaduje rozptylovou studii",
+        "Potřebujete porovnat varianty technického řešení",
+        "Měníte zdroj, kapacitu, palivo, dopravu nebo emisní parametry"
       ]}
       practicalSituations={[
         "rozptylová studie pro nový nebo měněný zdroj znečišťování ovzduší",
@@ -47,9 +47,9 @@ export default function Page() {
         "podklad pro investora, projektanta i úřad"
       ]}
       commonMistakes={[
-        "neaktuální emisní údaje nebo provozní režimy",
-        "studie bez variantního posouzení u kapacitní změny",
-        "nedostatečné mapové a dopravní podklady"
+        "Neaktuální emisní údaje nebo provozní režimy",
+        "Studie bez variantního posouzení u kapacitní změny",
+        "Nedostatečné mapové a dopravní podklady"
       ]}
       relatedLinks={[
         {

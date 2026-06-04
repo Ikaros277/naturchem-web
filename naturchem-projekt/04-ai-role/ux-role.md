@@ -103,6 +103,130 @@ Hero = první tmavý pás (`hero`, `PageHeroBand`). Každá vrstva má **jinou r
 
 ---
 
+## Zavedené vzory komponent (z implementace — platí sitewide)
+
+Vzory níže jsou odladěné a ověřené v praxi. Aplikovat na každou novou nebo upravenou stránku — neřešit od nuly.
+
+---
+
+### Card-head: ikona + nadpis v jednom řádku
+
+**Kdy použít:** Kdykoli je karta s ikonou a nadpisem — místo vertikálního stacku (ikona nad nadpisem).
+
+```css
+.xxx-card-head {
+  display: flex;
+  align-items: flex-start; /* ne center — aby ikona seděla s prvním řádkem textu */
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+.xxx-card-head h3 {
+  margin: 0;
+  font-size: 0.9–0.95rem; /* zabránit zalomení v úzkých grid kolonách */
+  line-height: 1.25;
+}
+.xxx-card-head .card-symbol {
+  /* viz vzor Ikona bez rámečku níže */
+}
+```
+
+**Zavedené třídy:** `.authorization-card-head`, `.scope-card-head`, `.service-decision-card-head`, `.home-offer-card-head`
+
+**Ikona:** `size={20}` pro card-head, `size={24–28}` pro větší feature karty.
+
+---
+
+### Ikona bez rámečku (inline kontext)
+
+Defaultní `.card-symbol` má dekorativní rámeček (border + background). V card-head řádcích a mini-kartách je rámeček zbytečný — ikona stojí vedle textu, ne samostatně.
+
+**Override vždy v kontextu:**
+```css
+.xxx-card-head .card-symbol,
+.mini-card .card-symbol {
+  background: none;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  color: var(--forest);
+}
+```
+
+**Kdy ponechat rámeček:** Standalone ikony ve vertikálním stacku (timeline, samostatné feature bloky bez přiléhajícího textu).
+
+---
+
+### Download / action karty — tlačítko vždy dole
+
+Pokud karta obsahuje akční tlačítko (stáhnout, poptat…) a karty mají různou výšku obsahu, tlačítko musí být na stejné výšce dole u všech karet.
+
+```css
+.download-card, .action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.download-card .button,
+.action-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+```
+
+**Důležité:** Celá karta nesmí být `<a>` tag pokud obsahuje tlačítko — nested interactive elements jsou invalid HTML. Karta = `<div>`, tlačítko = `<a class="button">` nebo `<button>`.
+
+---
+
+### Mini-karty s benefity (2×2 grid)
+
+Vzor pro sekci „Co to znamená pro zákazníka" nebo feature benefity.
+
+```css
+.mini-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  /* + border, border-radius, background, padding, font-weight */
+}
+.mini-card .card-symbol { /* viz Ikona bez rámečku */ }
+```
+
+**Ikona:** `size={32}`, bez rámečku, barva `--forest`.  
+**Text:** Vždy velké první písmeno. Konkrétní — pojmenovávat úřady (ČIŽP, KHS, stavební úřad), ne „správní orgány".
+
+---
+
+### Overview sekce hned po hero (2-sl. přehledové karty)
+
+Pokud stránka začíná 2-sloupcovou sekcí s kartami těsně pod hero (`PageHeroBand`):
+
+```css
+.accreditation-overview,
+.overview-section-po-hero {
+  margin-top: clamp(2rem, 4vw, 3rem); /* dýchací prostor od hero */
+}
+.overview-section-po-hero .card {
+  padding-top: 1rem; /* méně místa nad nadpisem v kartě */
+}
+```
+
+---
+
+### Hero lead na informačních stránkách (není service page)
+
+Na stránkách jako Akreditace, O společnosti, Reference:
+
+- **Zákazníkův výsledek** — ne popis stránky: „Výsledky obstojí při kontrole ČIŽP" > „Přehled akreditovaného rozsahu"
+- **1 věta s em-dash** (`—`) místo dvou vět — zabraňuje osiřelému slovu na posledním řádku
+- **Pojmenovat konkrétní úřady** (ČIŽP, KHS, stavební úřad, MŽP) — zákazník je zná a okamžitě se identifikuje
+- Délka: max. 20 slov
+
+**Co odmítnout:** „Přehled…", „Přinášíme…", „Zabýváme se…" — popis firmy místo hodnoty pro zákazníka.
+
+---
+
 ## Co odmítám
 
 - Fullscreen video v hero sekcích (výkon)

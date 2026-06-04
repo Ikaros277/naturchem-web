@@ -13,7 +13,7 @@
 
 ---
 
-## Sezení: 4. 6. 2026, 21:05–21:19
+## Sezení: 4. 6. 2026, 21:05–21:25
 
 ### Přehled
 Automaticky založené sezení po commitu `17a751a`.
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `17a751a`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Nav: plne nazvy IPPC ISPOP GHG, dokumentace cross-linku provozu.
+**Co bylo uděláno:** Nav: plne nazvy IPPC ISPOP GHG, dokumentace cross-linku provozu. (commit `ca9f1ad`). Dotcene oblasti: copy-audit.md, lib, report, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### C6 copy, popisy provozu v Mohlo by Vas zajimat, audit C6.
 **Co bylo uděláno:** C6 copy, popisy provozu v Mohlo by Vas zajimat, audit C6. (commit `621b9c2`). Dotcene oblasti: components, copy-audit.md, lib, report, sluzby, workflow.  
 **Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
@@ -30,8 +34,8 @@ Automaticky založené sezení po commitu `17a751a`.
 **Proč:** Upravy na strankach sluzeb - jasnejsi prezentace nabidky NATURCHEM.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~14 min
-**Rozložení:** 4. 6. 2026 21:05–21:19 (~14 min)
+**Odhadovaná doba práce:** ~20 min
+**Rozložení:** 4. 6. 2026 21:05–21:25 (~20 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

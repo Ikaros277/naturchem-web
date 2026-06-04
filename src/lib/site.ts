@@ -98,7 +98,7 @@ export const services = [
   },
   {
     href: "/sluzby/ippc-integrovana-povoleni",
-    title: "IPPC",
+    title: "IPPC a integrovaná povolení",
     short: "Podklady pro integrovaná povolení, změny IPPC a návaznou dokumentaci.",
     cta: "Zjistit více o IPPC",
     contactCta: "Poptat podklady pro IPPC",
@@ -114,7 +114,7 @@ export const services = [
   },
   {
     href: "/sluzby/ispop",
-    title: "ISPOP",
+    title: "ISPOP a provozní evidence",
     short: "Souhrnná provozní evidence, roční hlášení a návaznost na měření emisí.",
     cta: "Zjistit více o ISPOP",
     contactCta: "Poptat ISPOP a evidenci",
@@ -122,7 +122,7 @@ export const services = [
   },
   {
     href: "/sluzby/ghg-overovani",
-    title: "GHG",
+    title: "Emise skleníkových plynů (GHG)",
     short: "Ověřování emisí skleníkových plynů, emisní údaje a reporting.",
     cta: "Zjistit více o GHG",
     contactCta: "Poptat GHG",

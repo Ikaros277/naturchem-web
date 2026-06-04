@@ -5,15 +5,52 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 20 |
-| Celkový odhadovaný čas | ~20,8 hodiny |
-| Aktuální fáze | C7 uzavřeno (služby, provozy, reference); další krok: /kontakt (C9) — UX a copy |
+| Počet sezení celkem | 21 |
+| Celkový odhadovaný čas | ~21,0 hodiny |
+| Aktuální fáze | Copy C8 hotovo (FAQ + Odborné články); další krok: C9 (kontakt, formulář) a launch checklist |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 20:55–22:45
+## Sezení: 4. 6. 2026, 22:33–22:56
+
+### Přehled
+Uzavřen **copy sprint C8**: přepsané hero a texty **FAQ**, sekce **Odborné články** (dříve „Odborná poradna“) v menu i na webu, aktivnější formulace vybraných odpovědí ve FAQ. Změny commitnuty a pushnuty na `main`. Doplňkově přidané příkazy `/cmo` a `/seo` a podkladová loga referencí.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Copy sprint C8 — FAQ
+**Co bylo uděláno:** Zkrácen nadpis stránky na „Časté dotazy“, odstraněna duplicitní podtitulková vrstva, jeden lead pod hero. Ve `faq.ts` stylistické úpravy (aktivnější slovesa u vybraných otázek, beze změny legislativních bloků).  
+**Proč:** Hero měl tři vrstvy se stejným významem; tělo FAQ mělo sjednotit tón s ostatními copy sprinty bez zásahu do právních citací.
+
+#### Copy sprint C8 — Odborné články (/poradna)
+**Co bylo uděláno:** Nový hero lead zaměřený na orientaci v oboru a články z praxe (ne na podklady pro úřad). Sekce přejmenována na **Odborné články** v `articlesNav` — menu, patička, drobečky, JSON-LD, detaily článků a teaser na službách. Upraveny meta popisy a prázdný stav filtru témat.  
+**Proč:** „Poradna“ slibovala osobní konzultaci; stránka je katalog článků. Lead po zpětné vazbě bez věty o filtrování.
+
+#### Workflow — příkazy a reference
+**Co bylo uděláno:** Přidány Cursor příkazy `/cmo` a `/seo` a zdrojové podklady log referencí (TPI, TCB, teplárny) do `public/loga-referenci/`.  
+**Proč:** Příprava marketingového a SEO workflow vedle vývoje webu.
+
+#### Nasazení
+**Co bylo uděláno:** Commit `60276d0` a push na `origin/main`.  
+**Proč:** Uzavření C8 v repozitáři pro nasazení na Vercel.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~23 min  
+**Rozložení:** 4. 6. 2026 22:33–22:56 (~23 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~12  
+*Poznámka: čas ze skriptu `estimate-session-time.ps1`; navazuje na večerní blok C7 po pauze pod 30 min.*
+
+### Technická poznámka
+`faq.ts`, `faq/page.tsx`, `poradna/page.tsx`, `poradna/[slug]/page.tsx`, `navigation.ts`, `ServicePoradnaTeaser.tsx`, `PoradnaFilterableList.tsx`, `dedicated-service-pages.ts`. Commit: `60276d0`, `dcf2184`.
+
+---
+
+## Sezení: 4. 6. 2026, 20:55–22:39
 
 ### Přehled
 Večerní blok dokončil **copy C5–C6**, úpravy navigace a celý **C7**: index služeb i provozů, sjednocený UX detailů provozů a FAQ, přestavbu **Reference** na skupiny zakázek s kartami jako u služeb, plus zápis v projektu — **C7 uzavřen**, SEO landingy odloženy až po odevzdání webu.
@@ -21,10 +58,6 @@ Večerní blok dokončil **copy C5–C6**, úpravy navigace a celý **C7**: inde
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### Pridat prikazy /cmo a /seo a zdrojova loga referenci (TPI, TCB, tepla...
-**Co bylo uděláno:** Pridat prikazy /cmo a /seo a zdrojova loga referenci (TPI, TCB, teplarny). (commit `dcf2184`). Dotcene oblasti: tcb-home.html, teplarnastrakonice-test.svg, tpi-home.html, ts-home.html, workflow.  
-**Proč:** Rozsireni nebo sjednoceni funkcionality podle roadmapy - konzistentnejsi zazitek pro uzivatele.
-
 
 #### C7 — index služeb (/sluzby)
 **Co bylo uděláno:** Šest tematických skupin včetně „Školení a odborná podpora“ s úvodním textem zákazníkovi. Accordion na desktopu i mobilu (první skupina otevřená), ikony u nadpisů skupin i u karet služeb, správné skloňování počtu služeb. Místo obecných „Rozbalit / Sbalit“ kontextové štítky (např. „Zobrazit měření“ / „Skrýt měření“). Sjednocené bílé pozadí sekcí a zarovnání štítků KHS/ČIŽP u karet.  
@@ -67,9 +100,9 @@ Večerní blok dokončil **copy C5–C6**, úpravy navigace a celý **C7**: inde
 **Proč:** Dodávka webu se soustředí na hlavní strukturu a copy; sedm SEO stránek zůstane v repu, ale není součástí aktuálního předání.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 50 min
-**Rozložení:** 4. 6. 2026 20:55–22:45 (~1 hod 50 min)
-**Metoda odhadu:** git
+**Odhadovaná doba práce:** ~1 hod 44 min  
+**Rozložení:** 4. 6. 2026 20:55–22:39 (~1 hod 44 min)  
+**Metoda odhadu:** git + konverzace  
 **Počet výměn s AI:** ~14  
 *Poznámka: čas ze skriptu `estimate-session-time.ps1`; mezera nad 30 min od odpoledního bloku (služby 2×2 / C4).*
 

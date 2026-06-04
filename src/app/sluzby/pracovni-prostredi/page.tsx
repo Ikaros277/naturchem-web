@@ -15,18 +15,18 @@ export default function Page() {
       slug="sluzby/pracovni-prostredi"
       faqCategoryId="pracovni-prostredi"
       title="Měření pracovního prostředí"
-      intro="Posouzení pracovního prostředí zahrnuje hluk, prach, mikroklima, osvětlení a vibrace přímo v provozu. Výstupy slouží pro KHS, kategorizaci prací a BOZP."
+      intro="Potřebujete aktualizovat kategorizaci nebo máte výzvu KHS? Změříme hluk, prach, chemické látky, mikroklima, osvětlení a vibrace v provozu — výstupy pro KHS, kategorizaci prací a BOZP."
       scope={[
-        "hluk, prašnost, chemické látky v pracovním ovzduší, vibrace, mikroklima a osvětlení",
-        "měření expozice podle operací, směnnosti a skutečné pracovní zátěže",
-        "měření pracovního prostředí ve svařovnách, lakovnách, výrobních halách i čistých prostorech",
-        "podklady pro kategorizaci prací, BOZP a komunikaci s KHS"
+        "Změříme hluk, prašnost, chemické látky, vibrace, mikroklima a osvětlení podle operací a směnnosti",
+        "Posoudíme expozici ve svařovnách, lakovnách, halách i čistých prostorech",
+        "Vyhodnotíme výsledky v kontextu limitů a skutečné pracovní zátěže",
+        "Připravíme podklady pro kategorizaci prací, BOZP a jednání s KHS"
       ]}
       whenNeeded={[
-        "kategorizace prací nebo její aktualizace",
-        "požadavek KHS",
-        "změna technologie nebo dispozice pracoviště",
-        "kolaudace, interní audit BOZP nebo ověření účinnosti odsávání a technických opatření"
+        "Potřebujete kategorizaci prací nebo její aktualizaci",
+        "KHS požaduje měření pracovního prostředí",
+        "Měníte technologii nebo dispozici pracoviště",
+        "Probíhá kolaudace, interní audit BOZP nebo ověření odsávání a technických opatření"
       ]}
       practicalSituations={[
         "měření pracovního prostředí ve svařovně při aktualizaci kategorizace prací",
@@ -47,9 +47,9 @@ export default function Page() {
         "doporučení organizačních a technických opatření"
       ]}
       commonMistakes={[
-        "měření bez zohlednění směnnosti a skutečných operací",
-        "zastaralá kategorizace po změně technologie",
-        "neúplné bezpečnostní listy nebo popis pracoviště"
+        "Měření bez zohlednění směnnosti a skutečných operací",
+        "Zastaralá kategorizace po změně technologie",
+        "Neúplné bezpečnostní listy nebo popis pracoviště"
       ]}
       relatedLinks={[
         {

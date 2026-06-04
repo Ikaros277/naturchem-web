@@ -1,21 +1,26 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
 import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
+import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
-import { contactSubmitCta } from "@/lib/cta";
+import { contactSubmitCta, globalCta } from "@/lib/cta";
 import { contactUrl } from "@/lib/contact-url";
 import { serviceTrustBandItems } from "@/lib/home-hero-metrics";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
-import { getDetailGroupIconKey } from "@/lib/service-icons";
+import { getDetailGroupIconKey, type ServiceIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
 import {
+  serviceCtaStripText,
   serviceDocsIntro,
   serviceMistakesHeading,
-  serviceScopeHeading
+  serviceOverviewHeading,
+  serviceScopeHeading,
+  serviceWhenNeededHeading
 } from "@/lib/service-copy";
 import { company, services, siteUrl } from "@/lib/site";
 
@@ -46,6 +51,7 @@ export function ServicePage(props: Props) {
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
   const relatedLinks = props.relatedLinks ?? [];
   const keyScope = props.scope.slice(0, 4);
+  const keyWhenNeeded = props.whenNeeded.slice(0, 4);
   const keyOutputs = props.outputs.slice(0, 3);
   const keyDocs = props.docs.slice(0, 3);
   const practicalExamples = props.practicalSituations?.slice(0, 3) ?? [];
@@ -121,14 +127,6 @@ export function ServicePage(props: Props) {
           <ServiceIcon href={`/${props.slug}`} variant="card" className="service-hero-icon" />
           <h1>{props.title}</h1>
           <p className="page-lead">{props.intro}</p>
-          <div className="btn-row">
-            <Link className="button" href={quickContactHref}>
-              {contactCta}
-            </Link>
-            <Link className="button secondary" href="/kontakt#podklady">
-              Jaké podklady poslat
-            </Link>
-          </div>
         </header>
       </PageHeroBand>
 
@@ -145,48 +143,70 @@ export function ServicePage(props: Props) {
 
       <section className="service-overview-section section-surface" aria-label="Stručný přehled služby">
         <div className="container">
-          <div className="service-decision-panel">
-            <article className="service-decision-card">
-              <div className="service-decision-card-head">
-                <ServiceIcon icon="process-rozsah" variant="inline" />
-                <h2>{props.scopeHeading ?? serviceScopeHeading}</h2>
-              </div>
-              <ul className="check-list">
-                {keyScope.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+          <h2 className="service-overview-title">{serviceOverviewHeading}</h2>
+          <div className="service-overview-layout">
+            <div className="service-overview-panel">
+              <div
+                className={[
+                  "service-overview-grid",
+                  keyWhenNeeded.length === 0 ? "service-overview-grid--three" : ""
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
+                {keyWhenNeeded.length > 0 ? (
+                  <ServiceOverviewCell icon="process-posouzeni" title={serviceWhenNeededHeading}>
+                    <ul className="check-list">
+                      {keyWhenNeeded.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </ServiceOverviewCell>
+                ) : null}
 
-            <article className="service-decision-card">
-              <div className="service-decision-card-head">
-                <ServiceIcon icon="process-vystup" variant="inline" />
-                <h2>Co dostanete</h2>
-              </div>
-              <ul className="check-list">
-                {keyOutputs.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+                <ServiceOverviewCell icon="process-rozsah" title={props.scopeHeading ?? serviceScopeHeading}>
+                  <ul className="check-list">
+                    {keyScope.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </ServiceOverviewCell>
 
-            <article className="service-decision-card service-start-card">
-              <div className="service-decision-card-head">
-                <ServiceIcon icon="process-posouzeni" variant="inline" />
-                <h2>Jak začít</h2>
+                <ServiceOverviewCell icon="process-vystup" title="Co dostanete">
+                  <ul className="check-list">
+                    {keyOutputs.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </ServiceOverviewCell>
+
+                <ServiceOverviewCell
+                  icon="process-posouzeni"
+                  title="Jak začít"
+                  className="service-overview-cell--start"
+                >
+                  <p className="muted">{serviceDocsIntro}</p>
+                  <ul className="check-list">
+                    {keyDocs.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                  <Link className="button service-overview-cta--in-cell" href={quickContactHref}>
+                    {contactCta}
+                  </Link>
+                </ServiceOverviewCell>
               </div>
-              <p className="muted">{serviceDocsIntro}</p>
-              <ul className="check-list">
-                {keyDocs.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <Link className="button" href={quickContactHref}>
-                {contactCta}
-              </Link>
-            </article>
+              <div className="service-overview-actions">
+                <Link className="button service-overview-cta--in-bar" href={quickContactHref}>
+                  {contactCta}
+                </Link>
+                <Link className="button secondary" href="/kontakt#podklady">
+                  Jaké podklady poslat
+                </Link>
+              </div>
+            </div>
+            <ServiceContextPhoto theme={heroTheme} className="service-overview-photo" />
           </div>
-          <ServiceContextPhoto theme={heroTheme} />
         </div>
       </section>
 
@@ -231,8 +251,8 @@ export function ServicePage(props: Props) {
                   title={item.title}
                   cta={item.cta}
                   className="service-related-card"
+                  icon={<ServiceIcon href={item.href} variant="inline" size={20} />}
                 >
-                  <ServiceIcon href={item.href} />
                   {item.description ? <p className="muted">{item.description}</p> : null}
                 </IndexCard>
               ))}
@@ -240,6 +260,37 @@ export function ServicePage(props: Props) {
           </section>
         ) : null}
       </div>
+
+      <PageCtaStrip
+        text={serviceCtaStripText}
+        primaryLabel={globalCta}
+        primaryHref={quickContactHref}
+        secondaryLabel="Akreditace a oprávnění"
+        secondaryHref="/akreditace-autorizace-dokumenty"
+        className="container"
+      />
     </main>
+  );
+}
+
+function ServiceOverviewCell({
+  icon,
+  title,
+  children,
+  className = ""
+}: {
+  icon: ServiceIconKey;
+  title: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <article className={["service-overview-cell", className].filter(Boolean).join(" ")}>
+      <div className="service-decision-card-head">
+        <ServiceIcon icon={icon} variant="inline" />
+        <h2>{title}</h2>
+      </div>
+      {children}
+    </article>
   );
 }

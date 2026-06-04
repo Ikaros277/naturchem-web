@@ -3,12 +3,13 @@ import { heroThemeImages, type HeroTheme } from "@/lib/hero-images";
 
 type Props = {
   theme: HeroTheme;
+  className?: string;
 };
 
-/** Kategorie-specifický vizuál nad decision panelem (S7-4). */
-export function ServiceContextPhoto({ theme }: Props) {
+/** Kategorie-specifický vizuál u přehledu služby (S7-4). */
+export function ServiceContextPhoto({ theme, className }: Props) {
   return (
-    <div className="service-context-photo" aria-hidden="true">
+    <div className={["service-context-photo", className].filter(Boolean).join(" ")} aria-hidden="true">
       <Image
         src={heroThemeImages[theme]}
         alt=""

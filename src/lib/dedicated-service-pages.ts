@@ -529,20 +529,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Akreditované měření vibrací na pracovištích pro kategorizaci prací, BOZP a požadavky KHS. Ruční nářadí, stroje, dopravní technika.",
     intro:
-      "Měření vibrací posuzuje expozici podle nářadí, operací a délky práce na stanovišti. Výstup slouží pro KHS a kategorizaci prací.",
+      "Kategorizace prací nebo výzva KHS kvůli vibracím? Změříme expozici u nářadí a strojů podle skutečných operací — protokol pro KHS a BOZP.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
-      "HAV — vibrace na ruce u ručního nářadí a strojů",
-      "vibrace celého těla u strojů, manipulační techniky a vozidel",
-      "expozice podle skutečných operací a směnnosti",
-      "návrh střídání práce nebo technického opatření při překročení"
+      "Změříme HAV — vibrace na ruce u ručního nářadí a strojů",
+      "Posoudíme vibrace celého těla u strojů, manipulační techniky a vozidel",
+      "Vyhodnotíme expozici podle skutečných operací a směnnosti",
+      "Navrhneme střídání práce nebo technické opatření při překročení"
     ],
     whenNeeded: [
-      "kategorizace prací nebo její aktualizace",
-      "požadavek KHS nebo interní audit BOZP",
-      "nová technologie nebo změna pracovních operací",
-      "stížnosti zaměstnanců nebo ověření účinnosti opatření"
+      "Potřebujete kategorizaci prací nebo její aktualizaci",
+      "KHS nebo interní audit BOZP požaduje měření vibrací",
+      "Zavádíte novou technologii nebo měníte pracovní operace",
+      "Ověřujete stížnosti zaměstnanců nebo účinnost opatření"
     ],
     practicalSituations: [
       "měření vibrací u brusek a pneumatického nářadí ve výrobě",
@@ -562,9 +562,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doporučení technických a organizačních opatření"
     ],
     commonMistakes: [
-      "měření bez zohlednění skutečné doby expozice a směnnosti",
-      "zaměnění vibrací s hlukem nebo jiným faktorem pracovního prostředí",
-      "neúplný popis používaného nářadí a operací"
+      "Měření bez zohlednění skutečné doby expozice a směnnosti",
+      "Záměna vibrací s hlukem nebo jiným faktorem pracovního prostředí",
+      "Neúplný popis používaného nářadí a operací"
     ],
     relatedLinks: [
       {
@@ -585,20 +585,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Měření osvětlení na pracovištích pro KHS, kategorizaci prací a BOZP. Umělé i denní osvětlení, kanceláře i výrobní haly.",
     intro:
-      "Měříme umělé i denní osvětlení na pracovištích podle zrakové náročnosti práce. Výstup slouží pro KHS, kategorizaci prací, BOZP a kolaudaci.",
+      "Kolaudace, výzva KHS nebo nové pracoviště? Změříme umělé i denní osvětlení podle zrakové náročnosti — výstup pro KHS, kategorizaci prací a BOZP.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
-      "měření umělého a denního osvětlení na pracovišti",
-      "hodnocení podle typu činnosti a zrakové námahy",
-      "výrobní haly, laboratoře, sklady i administrativa",
-      "konkrétní návrh úpravy svítidel nebo dispozice při nedostatku"
+      "Změříme umělé i denní osvětlení na pracovišti",
+      "Vyhodnotíme podmínky podle typu činnosti a zrakové námahy",
+      "Posoudíme haly, laboratoře, sklady i administrativu",
+      "Navrhneme úpravu svítidel nebo dispozice při nedostatku"
     ],
     whenNeeded: [
-      "kategorizace prací nebo nové pracoviště",
-      "požadavek KHS nebo kolaudace",
-      "změna dispozice, technologie nebo typu osvětlení",
-      "stížnosti na nedostatečné osvětlení"
+      "Potřebujete kategorizaci prací nebo nové pracoviště",
+      "KHS nebo kolaudace vyžaduje měření osvětlení",
+      "Měníte dispozici, technologii nebo typ osvětlení",
+      "Řešíte stížnosti na nedostatečné osvětlení"
     ],
     practicalSituations: [
       "měření osvětlení ve výrobní hale po změně technologie",
@@ -618,9 +618,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doporučení úprav osvětlení nebo dispozice"
     ],
     commonMistakes: [
-      "měření bez zohlednění skutečné zrakové námahy a operací",
-      "posouzení jen podle projektu bez měření v provozu",
-      "neúplný popis typu činnosti na pracovišti"
+      "Měření bez zohlednění skutečné zrakové námahy a operací",
+      "Posouzení jen podle projektu bez měření v provozu",
+      "Neúplný popis typu činnosti na pracovišti"
     ],
     relatedLinks: [
       {
@@ -641,20 +641,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Měření mikroklimatických podmínek na pracovištích: teplota, vlhkost, proudění vzduchu. Podklady pro KHS a kategorizaci prací.",
     intro:
-      "Měření mikroklimatu posuzuje teplotu, vlhkost a proudění vzduchu u horkých operací. Měříme v reálném provozu; výstup slouží pro KHS a kategorizaci prací.",
+      "Tepelná zátěž, výzva KHS nebo změna větrání? Změříme teplotu, vlhkost a proudění vzduchu v reálném provozu — protokol pro KHS a kategorizaci prací.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
-      "teplota, vlhkost a rychlost proudění vzduchu na stanovišti",
-      "posouzení podle fyzické zátěže práce (lehká / střední / těžká)",
-      "haly, sušárny, sklady s tepelnou zátěží",
-      "návrh větrání, klimatizace nebo organizace směn"
+      "Změříme teplotu, vlhkost a rychlost proudění vzduchu na stanovišti",
+      "Posoudíme podmínky podle fyzické zátěže práce (lehká / střední / těžká)",
+      "Změříme v halách, sušárnách a skladech s tepelnou zátěží",
+      "Navrhneme úpravu větrání, klimatizace nebo organizace směn"
     ],
     whenNeeded: [
-      "kategorizace prací nebo její aktualizace",
-      "požadavek KHS nebo stížnosti na tepelnou zátěž",
-      "nová technologie nebo změna větrání",
-      "kolaudace nebo změna provozního režimu"
+      "Potřebujete kategorizaci prací nebo její aktualizaci",
+      "KHS reaguje na stížnosti na tepelnou zátěž",
+      "Zavádíte novou technologii nebo měníte větrání",
+      "Probíhá kolaudace nebo změna provozního režimu"
     ],
     practicalSituations: [
       "měření mikroklimatu ve skladu nebo výrobní hale",
@@ -674,9 +674,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doporučení technických a organizačních opatření"
     ],
     commonMistakes: [
-      "měření bez zohlednění skutečné fyzické zátěže práce",
-      "posouzení jen v jednom čase bez reprezentativního režimu",
-      "neúplný popis větrání a technologie"
+      "Měření bez zohlednění skutečné fyzické zátěže práce",
+      "Posouzení jen v jednom čase bez reprezentativního režimu",
+      "Neúplný popis větrání a technologie"
     ],
     relatedLinks: [
       {

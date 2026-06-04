@@ -6,6 +6,8 @@ type Props = {
   title: string;
   cta?: string;
   className?: string;
+  /** Ikona v jednom řádku s nadpisem (card-head), bez rámečku. */
+  icon?: ReactNode;
   meta?: ReactNode;
   children?: ReactNode;
 };
@@ -16,13 +18,21 @@ export function IndexCard({
   title,
   cta = "Zobrazit",
   className = "",
+  icon,
   meta,
   children
 }: Props) {
   return (
     <SemanticCard href={href} className={className} cta={cta} aria-label={title}>
       {meta}
-      <h3 className="index-card-heading">{title}</h3>
+      {icon ? (
+        <div className="index-card-head">
+          {icon}
+          <h3 className="index-card-heading">{title}</h3>
+        </div>
+      ) : (
+        <h3 className="index-card-heading">{title}</h3>
+      )}
       {children}
     </SemanticCard>
   );

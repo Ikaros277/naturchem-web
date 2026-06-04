@@ -15,18 +15,18 @@ export default function Page() {
       slug="sluzby/mereni-emisi"
       faqCategoryId="emise"
       title="Měření emisí ze stacionárních zdrojů"
-      intro="Akreditované měření emisí z komínů, výduchů a technologií. Protokol navazujeme na povolení provozu, požadavky ČIŽP, krajského úřadu a evidenci ISPOP."
+      intro="Výzva úřadu nebo termín kontrolního měření? Změříme emise z komínu nebo výduchu a předáme akreditovaný protokol pro povolení provozu, ČIŽP, krajský úřad nebo ISPOP."
       scope={[
-        "měření NOx, CO, SO₂, O₂, TOC/VOC, TZL, HCl, kovů a dalších složek dle povolení provozu a zadání",
-        "posouzení měřicího místa, výduchu a souladu s provozním řádem",
-        "průběžná komunikace s provozem při přípravě a realizaci měření",
-        "vyhodnocení výsledků v kontextu limitů, povolení a případných výzev úřadu"
+        "Změříme NOx, CO, SO₂, O₂, TOC/VOC, TZL, HCl, kovy a další složky dle povolení provozu a zadání",
+        "Posoudíme měřicí místo, výduch a soulad s provozním řádem",
+        "Dohodneme s provozem přípravu a průběh měření",
+        "Vyhodnotíme výsledky vůči limitům, povolení a případné výzvě úřadu"
       ]}
       whenNeeded={[
-        "periodické nebo jednorázové měření dle vyhlášky č. 415/2012 Sb. a povolení provozu",
-        "požadavek krajského úřadu, ČIŽP nebo kontrolního orgánu",
-        "změna paliva, suroviny, technologie nebo kapacity zdroje",
-        "podklad pro rozptylovou studii, EIA, odborný posudek nebo aktualizaci provozní dokumentace"
+        "Potřebujete periodické nebo jednorázové měření dle vyhlášky č. 415/2012 Sb. a povolení provozu",
+        "Krajský úřad, ČIŽP nebo kontrolní orgán požaduje měření",
+        "Měníte palivo, surovinu, technologii nebo kapacitu zdroje",
+        "Potřebujete podklad pro rozptylovou studii, EIA, odborný posudek nebo provozní dokumentaci"
       ]}
       practicalSituations={[
         "měření emisí lakovny po změně technologie nebo filtrace",
@@ -48,10 +48,10 @@ export default function Page() {
         "doporučení pro další krok (opakování měření, úprava technologie, návazné studie)"
       ]}
       commonMistakes={[
-        "měření mimo reprezentativní provoz (nízká zátěž, atypický režim, údržbový stav)",
-        "nejasné měřicí místo nebo nekonzistence s výkresovou dokumentací",
-        "chybějící provozní údaje k palivům, materiálu nebo času reálného provozu",
-        "ignorování oznamovacích lhůt nebo podmínek dohody s provozovatelem areálu"
+        "Měření v nereprezentativním provozu (nízká zátěž, atypický režim, údržbový stav)",
+        "Nejasné měřicí místo nebo nesoulad s výkresy",
+        "Chybí provozní údaje k palivům, materiálu nebo reálnému režimu",
+        "Přehlédnuté lhůty oznámení nebo podmínky v areálu"
       ]}
       relatedLinks={[
         {

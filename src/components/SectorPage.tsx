@@ -147,9 +147,8 @@ export function SectorPage(props: Props) {
                 title={service.title}
                 cta="Zobrazit službu"
                 className="service-related-card"
-              >
-                <ServiceIcon href={service.href} />
-              </IndexCard>
+                icon={<ServiceIcon href={service.href} variant="inline" size={20} />}
+              />
             ))}
           </div>
         </section>

@@ -3739,10 +3739,65 @@ footer .muted,
   border-bottom: 1px solid var(--border);
 }
 
+.service-overview-title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.25rem, 2vw, 1.45rem);
+  letter-spacing: -0.02em;
+}
+
+.service-overview-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.service-overview-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sharp);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.service-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.service-overview-cell {
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.service-overview-cell:last-child {
+  border-bottom: none;
+}
+
+.service-overview-cell--start > .muted {
+  margin: 0 0 0.85rem;
+}
+
+.service-overview-cell--start > .check-list {
+  margin: 0;
+}
+
+.service-overview-actions {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: clamp(1rem, 2vw, 1.25rem) clamp(1.1rem, 2vw, 1.5rem);
+  border-top: 1px solid var(--border);
+  background: #fafbfc;
+}
+
+.service-overview-cta--in-cell {
+  margin-top: 0.85rem;
+}
+
 .service-context-photo {
   position: relative;
   height: clamp(120px, 14vw, 168px);
-  margin-top: 1.25rem;
+  margin-top: 0;
   border-radius: var(--radius-sharp);
   overflow: hidden;
   border: 1px solid var(--border);
@@ -3765,7 +3820,6 @@ footer .muted,
 
 .service-sidebar-card,
 .service-content-card,
-.service-decision-card,
 .service-extra-details {
   border: 1px solid var(--border);
   border-radius: var(--radius-sharp);
@@ -3775,20 +3829,10 @@ footer .muted,
 
 .service-sidebar-card h2,
 .service-content-card h2,
-.service-decision-card h2 {
+.service-overview-cell h2 {
   margin-top: 0;
   font-size: 1.1rem;
   letter-spacing: -0.015em;
-}
-
-.service-decision-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.service-decision-card {
-  padding: clamp(1.2rem, 2.2vw, 1.75rem);
 }
 
 .service-decision-card-head {
@@ -3815,7 +3859,7 @@ footer .muted,
   line-height: 1.25;
 }
 
-.service-decision-card .check-list {
+.service-overview-cell .check-list {
   max-width: none;
 }
 
@@ -3831,15 +3875,55 @@ footer .muted,
   margin-bottom: 0.45rem;
 }
 
-.service-start-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+@media (min-width: 768px) {
+  .service-overview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-overview-cell {
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+
+  .service-overview-cell:nth-child(2n) {
+    border-right: none;
+  }
+
+  .service-overview-grid:not(.service-overview-grid--three) .service-overview-cell:nth-child(n + 3) {
+    border-bottom: none;
+  }
+
+  .service-overview-grid--three .service-overview-cell:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .service-overview-grid--three .service-overview-cell:last-child {
+    grid-column: 1 / -1;
+    border-right: none;
+    border-bottom: none;
+  }
 }
 
-.service-start-card .button {
-  align-self: flex-start;
-  margin-top: auto;
+@media (min-width: 1024px) {
+  .service-overview-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) min(340px, 36%);
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .service-overview-photo.service-context-photo {
+    height: 100%;
+    min-height: 280px;
+  }
+
+  .service-overview-cta--in-cell {
+    display: none;
+  }
+
+  .service-overview-actions {
+    display: flex;
+  }
 }
 
 .service-extra-section {
@@ -5875,6 +5959,29 @@ main.home-page + .site-footer {
   height: 100%;
 }
 
+.index-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.35rem;
+}
+
+.index-card-head .card-symbol {
+  background: none;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  margin: 0;
+  color: var(--forest);
+}
+
+.index-card-head .index-card-heading {
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
 .index-card-heading {
   margin: 0;
   font-size: 1.05rem;
@@ -6307,14 +6414,9 @@ main.home-page + .site-footer {
     grid-template-columns: 1fr !important;
   }
 
-  .service-decision-panel {
-    gap: 0.85rem;
-  }
-
-  .service-start-card .button {
+  .service-overview-cta--in-cell {
     width: 100%;
     justify-content: center;
-    align-self: stretch;
   }
 
 

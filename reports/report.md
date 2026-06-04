@@ -5,15 +5,52 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 18 |
-| Celkový odhadovaný čas | ~18,3 hodiny |
-| Aktuální fáze | Typické zakázky — copy a UX (modál příkladů, postup zakázky); copy pravidla rozšířena |
+| Počet sezení celkem | 19 |
+| Celkový odhadovaný čas | ~19,5 hodiny |
+| Aktuální fáze | Copy sprint C4 (měření) — přehled služeb 2×2, rollout copy na 6 slugů měření |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 4. 6. 2026, 18:25–19:08
+## Sezení: 4. 6. 2026, 19:15–20:35
+
+### Přehled
+Službové stránky — nový přehled „Stručně o službě“ (panel 2×2, foto vpravo na desktopu), sekce Kdy službu potřebujete, CTA pás pod mřížkou na desktopu / v buňce Jak začít na mobilu, copy sprint C4 na všech šesti měřicích službách podle vzoru měření emisí. Opravy card-head u souvisejících karet a mezer v sekci Jak začít.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### UX — přehled služby (ServicePage)
+**Co bylo uděláno:** Čtyři informační bloky sloučeny do jednoho panelu s mřížkou 2×2 (tablet/desktop) a jedním sloupcem na mobilu; kontextová fotka vpravo od panelu na šířkách ≥1024 px, pod panelem na menších displejích. Nadpis sekce „Stručně o službě“. Pořadí: Kdy → Co zajišťujeme → Co dostanete → Jak začít.  
+**Proč:** Původní čtyři samostatné karty na plné šířce působily prázdně a monotonně; mřížka lépe využívá horizont a zkracuje scroll.
+
+#### UX — CTA v přehledu
+**Co bylo uděláno:** Na desktopu primární tlačítko a odkaz „Jaké podklady poslat“ v pásu pod celou mřížkou (ne uprostřed panelu). Na mobilu tlačítko zůstává na konci buňky Jak začít. Hero služeb bez tlačítek (konverze jinde). Spodní PageCtaStrip beze změny.  
+**Proč:** Tlačítko v pravém dolním kvadrantu na desktopu působilo nepřirozeně uprostřed layoutu.
+
+#### Copy — sprint C4 (všechny měřicí služby)
+**Co bylo uděláno:** Stejný styl jako u měření emisí — lead se situací zákazníka, aktivní slovesa v odrážkách, přeformulované „Kdy službu potřebujete“, sjednocené chyby. Upraveno: měření emisí, pracovní prostředí, měření hluku, vibrace, osvětlení, mikroklima. Globální text podkladů v `service-copy.ts`.  
+**Proč:** Jednotný konverzní a obsahový vzor pro celou skupinu měření (C4); ostatní služby (studie, povolování) dostávají stejnou šablonu přehledu, copy C5–C6 navazuje.
+
+#### UX — související karty a drobné opravy
+**Co bylo uděláno:** IndexCard s prop `icon` — ikona a nadpis v jednom řádku bez rámečku u „Mohlo by Vás zajímat“ a u provozů. Oprava mezer u úvodní věty v Jak začít (margin u odstavce).  
+**Proč:** Konzistence se sitewide vzorem card-head; odstranění dvojité mezery pod nadpisem.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~1 hod 20 min  
+**Rozložení:** 4. 6. 2026 19:15–20:35 (~1 hod 20 min)  
+**Metoda odhadu:** konverzace (implementace bez mezilehlých commitů; log od posledního commitu ~37 min + dokončení v tomto sezení)  
+**Počet výměn s AI:** ~14  
+*Poznámka: čas zahrnuje návrh UX (P4-S5), implementaci, iterace layoutu a CTA a rollout C4.*
+
+### Technická poznámka
+`ServicePage.tsx`, `globals.css`, `service-copy.ts`, `IndexCard.tsx`, `mereni-emisi/page.tsx`, `pracovni-prostredi/page.tsx`, `mereni-hluku/page.tsx`, `dedicated-service-pages.ts` (vibrace, osvětlení, mikroklima).
+
+---
+
+## Sezení: 4. 6. 2026, 18:25–19:10
 
 ### Přehled
 Stránka Typické zakázky — copy podle účelu stránky (inspirace v hero, scénáře bez „Potřebuji…“), modál místo podstránek u příkladů zakázek a přepracovaný horizontální postup spolupráce na plnou šířku. Doplněna pravidla copy (účel stránky před textem). Commit `0a2a664`.
@@ -21,6 +58,10 @@ Stránka Typické zakázky — copy podle účelu stránky (inspirace v hero, sc
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### UX: jedna ┼íipka u odkazu Zobrazit p┼Ö├şklady na typick├Żch zak├ízk├ích.
+**Co bylo uděláno:** UX: jedna ┼íipka u odkazu Zobrazit p┼Ö├şklady na typick├Żch zak├ízk├ích. (commit `cc570c6`). Dotcene oblasti: components.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
 
 #### Copy — hero a struktura textů
 **Co bylo uděláno:** Sloučený hero lead (jedna věta o tom, co pro provozy měříme a zpracováváme), nový eyebrow, odstraněn odkaz na Reference. Sekce scénářů přejmenována na „Co řešíme“, titulky karet přeformulovány (např. „Měření emisí z lakovny“ místo „Potřebuji…“). Úprava ROADMAPA a copy-audit (C7 částečně hotovo).  
@@ -39,9 +80,9 @@ Stránka Typické zakázky — copy podle účelu stránky (inspirace v hero, sc
 **Proč:** Původní úzké boxy splývaly a kroky nepůsobily jako navazující cesta.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~43 min  
-**Rozložení:** 4. 6. 2026 18:25–19:08 (~43 min)  
-**Metoda odhadu:** konverzace  
+**Odhadovaná doba práce:** ~46 min
+**Rozložení:** 4. 6. 2026 18:25–19:10 (~46 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** ~12  
 *Poznámka: čas ze skriptu `estimate-session-time.ps1` od posledního zpracovaného commitu; auto-záznam hooku nahrazen klientským přehledem.*
 

@@ -15,18 +15,18 @@ export default function Page() {
       slug="sluzby/mereni-hluku"
       faqCategoryId="hluk"
       title="Měření hluku a akustika"
-      intro="Terénní měření hluku a akustické výpočty pro kolaudaci, EIA, požadavky KHS a řešení stížností. Rozsah stanovujeme podle zdrojů a chráněných prostor v okolí."
+      intro="Stížnost na hluk, kolaudace nebo požadavek úřadu? Provedeme terénní měření i akustické výpočty podle zdrojů hluku a chráněných prostor v okolí."
       scope={[
-        "terénní měření LAeq a LAFmax u běžícího provozu",
-        "hluk z dopravy a technologií v areálu",
-        "ověření účinnosti protihlukového opatření po realizaci",
-        "měření u VZT, tepelných čerpadel a strojoven"
+        "Změříme LAeq a LAFmax u běžícího provozu v terénu",
+        "Posoudíme hluk z dopravy a technologií v areálu",
+        "Ověříme účinnost protihlukového opatření po realizaci",
+        "Změříme hluk u VZT, tepelných čerpadel a strojoven"
       ]}
       whenNeeded={[
-        "stavební řízení nebo kolaudace",
-        "stížnost na hluk z provozu",
-        "hluková studie pro EIA nebo změnu záměru",
-        "hluková studie pro tepelné čerpadlo, VZT, chlazení nebo průmyslový areál"
+        "Probíhá stavební řízení nebo kolaudace",
+        "Řešíte stížnost na hluk z provozu",
+        "Potřebujete hlukovou studii pro EIA nebo změnu záměru",
+        "Posuzujete hluk tepelného čerpadla, VZT, chlazení nebo průmyslového areálu"
       ]}
       practicalSituations={[
         "měření hluku pro kolaudaci nebo změnu užívání",
@@ -46,9 +46,9 @@ export default function Page() {
         "hluková studie s doporučením opatření"
       ]}
       commonMistakes={[
-        "měření v nevhodném čase nebo bez zohlednění provozního režimu",
-        "záměna měření a výpočtové studie u nového záměru",
-        "neúplný popis zdrojů hluku a provozního režimu"
+        "Měření v nevhodném čase nebo bez zohlednění provozního režimu",
+        "Záměna měření a výpočtové studie u nového záměru",
+        "Neúplný popis zdrojů hluku a provozního režimu"
       ]}
       relatedLinks={[
         {

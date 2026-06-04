@@ -17,7 +17,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "mericke-sluzby",
     title: "Akreditovaná a autorizovaná měření",
     intro:
-      "Terénní měření pro provozy, pracoviště a zdroje emisí. Výstupem je protokol použitelný pro KHS, ČIŽP, krajský úřad nebo provozní rozhodnutí.",
+      "Potřebujete protokol pro úřad nebo provoz? Zajistíme terénní měření emisí, hluku, pracovního prostředí i dalších veličin — s výstupem pro KHS, ČIŽP nebo krajský úřad.",
     items: [
       {
         title: "Měření emisí ze stacionárních zdrojů",
@@ -55,7 +55,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "studie-vypocty",
     title: "Studie, výpočty a modelování",
     intro:
-      "Výpočtové podklady pro nové záměry, změny kapacit, hluk a imisní dopady. Pracujeme s variantami provozu, technologií a požadavky řízení.",
+      "Plánujete změnu provozu nebo nový záměr? Připravíme rozptyl, hluk, modelové výpočty a propojené dopady včetně variant pro úřad i investora.",
     items: [
       {
         title: "Rozptylové studie",
@@ -88,7 +88,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "povolovaci-podklady",
     title: "Povolovací a úřední dokumentace",
     intro:
-      "Podklady pro zdroje, změny technologií a provozní režimy. Patří sem posudky, provozní řády, IPPC a dokumentace pro KÚ, ČIŽP, KHS nebo stavební řízení.",
+      "Měníte technologii nebo povolení zdroje? Zpracujeme odborné posudky, provozní řády a podklady pro integrovaná povolení — pro krajský úřad i ČIŽP.",
     items: [
       {
         title: "Odborné posudky",
@@ -116,7 +116,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "eia-investice",
     title: "EIA a investiční příprava",
     intro:
-      "Procesní a odborné podklady pro investory a projektanty. Řešíme oznámení záměru, technické přílohy EIA a návaznost na povolovací řízení.",
+      "Připravujete investici s EIA? Zkoordinujeme oznámení záměru, zjišťovací řízení a technické přílohy v návaznosti na povolování.",
     items: [
       {
         title: "EIA a oznámení záměru",
@@ -139,7 +139,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "evidence-reporting",
     title: "Provozní evidence, reporting a legislativní podpora",
     intro:
-      "Evidence, hlášení a ověřování údajů pro provozovatele zdrojů. ISPOP, GHG a termíny navazujeme na měření, povolení a skutečný provoz.",
+      "Blíží se hlášení ISPOP nebo kontrola údajů? Zkontrolujeme souhrnnou evidenci a emise skleníkových plynů v návaznosti na měření a povolení.",
     items: [
       {
         title: "ISPOP a souhrnná provozní evidence",
@@ -162,7 +162,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "skoleni-podpora",
     title: "Školení a odborná podpora",
     intro:
-      "Praktická podpora pro provozy, sklady, výrobu, laboratoře a údržbu. Zaměření na chemickou legislativu, bezpečnostní listy, značení a skladování.",
+      "Potřebujete školení nebo srozumitelné pravidla pro chemii v provozu? Projdeme legislativu, bezpečnostní listy, označování a skladování pro sklady, výrobu i laboratoře.",
     items: [
       {
         title: "Školení chemického zákona a chemické legislativy",

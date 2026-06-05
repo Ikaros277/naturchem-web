@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Markdown from "react-markdown";
-import type { Components } from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { ArticleMarkdown } from "@/components/ArticleMarkdown";
 import { ArticleRelatedServices } from "@/components/ArticleRelatedServices";
 import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
@@ -13,16 +11,6 @@ import { heroThemeForArticle } from "@/lib/poradna-topic";
 import { siteUrl } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
-
-const markdownComponents: Components = {
-  table({ node: _node, ...props }) {
-    return (
-      <div className="article-table-scroll">
-        <table {...props} />
-      </div>
-    );
-  }
-};
 
 export async function generateStaticParams() {
   const articles = await getArticles();
@@ -112,9 +100,7 @@ export default async function CmsArticlePage({ params }: Props) {
 
         <div className="article-content">
           <div className="article-body">
-            <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-              {article.body}
-            </Markdown>
+            <ArticleMarkdown>{article.body}</ArticleMarkdown>
           </div>
         </div>
 

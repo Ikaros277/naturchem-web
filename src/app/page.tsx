@@ -126,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-section container home-clients-section">
+      <section className="home-section container home-clients-section section--forest-tint">
         <p className="eyebrow">Naši zákazníci</p>
         <ClientLogosGrid moreHref="/reference#zakaznici" />
       </section>

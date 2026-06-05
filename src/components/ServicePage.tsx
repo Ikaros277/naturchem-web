@@ -164,7 +164,7 @@ export function ServicePage(props: Props) {
         </div>
       </section>
 
-      <section className="service-overview-section section-surface" aria-label="Stručný přehled služby">
+      <section className="service-overview-section section--forest-tint" aria-label="Stručný přehled služby">
         <div className="container">
           <h2 className="service-overview-title">{serviceOverviewHeading}</h2>
           <div className="service-overview-layout">

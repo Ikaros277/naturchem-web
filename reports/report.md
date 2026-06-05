@@ -7,20 +7,32 @@
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 26 |
 | Celkový odhadovaný čas | ~24,9 hodiny |
-| Aktuální fáze | Přístrojové vybavení a accordion indexy sjednoceny (copy C3 + vizuální vrstva); další krok: launch checklist (GA4, Resend, DNS) |
+| Aktuální fáze | Sjednocený vizuální jazyk (rohy, ikony, accordion indexy); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 5. 6. 2026, 19:02–19:19
+## Sezení: 5. 6. 2026, 19:02–19:21
 
 ### Přehled
-Dokončena vizuální vrstva accordion indexů (P5-26–P5-28) a copy sprint stránky Přístrojové vybavení — včetně zarovnání nadpisů v summary řádcích vedle ikon. Stejný surface pás a forest akcent platí i pro `/sluzby`, `/provozy-a-technologie` a `/reference`.
+Audit a sjednocení vizuálního jazyka napříč webem — zaoblené rohy přes CSS tokeny, ikony bez rámečků (větší a čitelnější) a elegantní oddělovače ve zeleném stats pruhu na homepage. Souběžně dokončena vizuální vrstva accordion indexů (P5-26–P5-28) a copy sprint stránky Přístrojové vybavení.
 
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+
+#### Zaoblené rohy sitewide (design tokeny)
+**Co bylo uděláno:** V `globals.css` zavedeny tokeny `--radius-sharp` (12px), `--radius-ui` (10px) a `--radius-pill` (999px). Karty, tlačítka, formuláře, tagy a další prvky napříč webem je používají místo mixu ostrých rohů a různých hardcoded hodnot.  
+**Proč:** Audit ukázal nekonzistenci — někde zakulacené rohy (FAQ, dlaždice), jinde ostré (tlačítka). Klient preferuje modernější zakulacený vzhled; centralizace přes tokeny umožňuje úpravu celého webu z jednoho místa bez procházení stránek.
+
+#### Ikony bez rámečků sitewide
+**Co bylo uděláno:** Třída `.card-symbol` už nepoužívá border ani pozadí — stejný vzhled jako „čisté“ ikony u nadpisů FAQ. Komponenta `ServiceIcon` sjednocena na větší výchozí velikosti (28–32px v kartách a accordionech). Accordion indexy služeb, sektorů a referencí používají stejnou variantu.  
+**Proč:** Na webu se střídaly ikony v rámečcích a větší ikony bez boxu; požadavek bylo sjednotit na variantu bez rámečků pro čitelnější a modernější dojem.
+
+#### Stats pruh homepage — oddělovače
+**Co bylo uděláno:** Po zavedení zaoblených rohů vypadaly svislé oddělovače mezi třemi metrikami zakulaceně. Statistiky v zeleném pruhu mají `border-radius: 0` a místo `border-left` na celé výšce karty jsou tenké centrované svislé čáry (`::before`, cca polovina výšky pruhu).  
+**Proč:** Původní jednoduché oddělovače byly vizuálně narušeny zaoblením karet; nové dělení působí čistěji a lépe sedí k layoutu tří sloupců.
 
 #### Přístrojové vybavení — copy a obsah
 **Co bylo uděláno:** Nový H1 „Čím měříme v terénu i v laboratoři“, aktualizovaná meta description, zkrácené titulky skupin přístrojů, odkazy na služby ve tvaru „Měření emisí →“ místo „Související služba: …“. Z collapsed řádků accordionu odstraněny redundantní podtitulky (P5-30).  
@@ -31,22 +43,18 @@ Dokončena vizuální vrstva accordion indexů (P5-26–P5-28) a copy sprint str
 **Proč:** Bílé karty na bílém pozadí působily monotónně na čtyřech index stránkách; surface a akcent dávají vizuální rytmus bez změny struktury obsahu.
 
 #### Accordion summary — zarovnání ikony a textu
-**Co bylo uděláno:** Nadpis a počet položek v summary řádku opticky vycentrovány vůči ikoně (pevná výška ikony 2,75 rem, úprava line-height a zarovnání title row).  
-**Proč:** Po první úpravě text seděl nahoře nebo pod ikonou — řádek působil nevyváženě a zbytečně zabíral výšku.
-
-#### Ikony a design tokeny
-**Co bylo uděláno:** ServiceIcon inline/card varianty mírně zvětšeny; mapování ikon skupin přístrojů přes `id` místo titulku. CSS radius tokeny (`--radius-sharp`, `--radius-ui`, `--radius-pill`) pro konzistentní zaoblení.  
-**Proč:** Ikony v accordionu měly být čitelnější a změny titulků skupin už nemají rozbíjet přiřazení ikon.
+**Co bylo uděláno:** Nadpis a počet položek v summary řádku opticky vycentrovány vůči ikoně (úprava line-height a zarovnání title row). Mapování ikon skupin přístrojů přes `id` místo titulku.  
+**Proč:** Text v summary řádku působil nevyváženě vůči ikoně; změny titulků skupin už nemají rozbíjet přiřazení ikon.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~17 min  
-**Rozložení:** 5. 6. 2026 19:02–19:19 (~17 min)  
-**Metoda odhadu:** konverzace  
-**Počet výměn s AI:** ~6  
-*Poznámka: čas počítá skript `estimate-session-time.ps1` — log konverzace od commitu `f8af277` včetně paddingu (+5 min před/po bloku).*
+**Odhadovaná doba práce:** ~18 min  
+**Rozložení:** 5. 6. 2026 19:02–19:21 (~18 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~8  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — commity a log konverzace od `f8af277` včetně paddingu (+5 min před/po bloku).*
 
 ### Technická poznámka
-`src/app/pristrojove-vybaveni/page.tsx`, `src/lib/equipment-content.ts`, `src/components/EquipmentAccordion.tsx`, `src/app/globals.css`, sdílené accordion komponenty. Commit: `3585f95`.
+`src/app/globals.css`, `src/components/ServiceIcon.tsx`, accordion indexy, `src/app/pristrojove-vybaveni/page.tsx`, `src/lib/equipment-content.ts`. Commit: `3585f95`.
 
 ---
 

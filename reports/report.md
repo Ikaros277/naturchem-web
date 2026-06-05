@@ -6,39 +6,51 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 24 |
-| Celkový odhadovaný čas | ~23,1 hodiny |
-| Aktuální fáze | Mobilní homepage hotová; hero provozů sjednoceno; UX/kontakt uzavřeno; další krok: copy sprint C9, zelené akcenty sitewide, launch checklist |
+| Celkový odhadovaný čas | ~23,2 hodiny |
+| Aktuální fáze | Mobilní homepage a forest akcenty hotové; hero provozů sjednoceno; UX/kontakt uzavřeno; další krok: copy sprint C9, launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 5. 6. 2026, 16:57–17:08
+## Sezení: 5. 6. 2026, 16:47–17:13
 
 ### Přehled
-**UX audit a úprava hero** na detailech provozů (`/provozy-a-technologie/*`): tlačítko v hero bylo výjimkou oproti zbytku webu a duplikovalo konverzi. Po schválení auditu odstraněno — konverzní cesta zůstává v patičkovém pásu a sticky hlavičce.
+**Odpolední UX blok:** sjednocení hero na detailech provozů a sitewide zavedení forest zelené jako primární konverzní barvy (navy pro sekundární akce a institucionální prvky). Stats pruh na homepage dostal zelené pozadí, větší ikony bez rámečku a centrované zarovnání sladěné s kartami služeb pod ním.
 
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### Docs: GA4 do launch checklistu v ROADMAPA.
+**Co bylo uděláno:** Docs: GA4 do launch checklistu v ROADMAPA. - Dopln─Ťn ├║kol nasazen├ş a ov─Ť┼Öen├ş GA4 na produkci p┼Öed spu┼ít─Ťn├şm na naturchem.cz.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `584b9ed`). Dotcene oblasti: ROADMAPA.md.  
+**Proč:** Dopln─Ťn ├║kol nasazen├ş a ov─Ť┼Öen├ş GA4 na produkci p┼Öed spu┼ít─Ťn├şm na naturchem.cz.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
 
 #### UX audit — hero na detailech provozů
 **Co bylo uděláno:** Proveden UX audit hero sekce na stránkách jednotlivých provozů. Porovnání s indexem provozů, reference, službami a dalšími informačními stránkami ukázalo, že tlačítko „Poptat posouzení provozu“ v hero je sitewide nekonzistentní a na mobilu zbytečně zabírá fold. Doporučení P5-24: hero bez CTA, konverze dole.  
 **Proč:** Návštěvník na detailu provozu nejdřív potřebuje potvrdit relevanci (H1 + lead), ne okamžitě konvertovat; duplicitní výzva k akci matla a lišila se copy od spodního pásu.
 
 #### UX — odstranění hero CTA z detailů provozů
-**Co bylo uděláno:** Ze sdílené šablony `SectorPage` odstraněno tlačítko z hero — platí pro všech 10 detailů provozů. Hero obsahuje jen ikonu, nadpis a úvodní text. Změna commitnuta a pushnuta na `main`.  
+**Co bylo uděláno:** Ze sdílené šablony `SectorPage` odstraněno tlačítko z hero — platí pro všech 10 detailů provozů. Hero obsahuje jen ikonu, nadpis a úvodní text.  
 **Proč:** Sjednocení vzoru s ostatními stránkami; konverze zůstává dostupná přes sticky „Nezávazně poptat“ a `PageCtaStrip` na konci stránky.
 
+#### UX a grafika — forest zelená sitewide (P5)
+**Co bylo uděláno:** Zavedeny design tokeny (`--forest`, `--navy`, `--cta`). Primární tlačítka jsou forest zelená, sekundární plná navy (na tmavém hero zůstávají bílé ghost). Topbar a patička navy; eyebrow, odkazy a card akcenty forest. Stats pruh sitewide na zeleném pozadí — ikony větší, bez rámečku, vedle čísel, centrované v sloupcích sladěných s kartami „Co zajišťujeme“. Jemný forest tint u sekce zákazníků a service overview; horní linka u CTA pásu a karet.  
+**Proč:** Zelená působí výrazněji než navy a lépe vede ke konverzi; navy drží institucionální tón. Stats pruh měl původně rušivé bílé boxy ikon a špatné zarovnání oproti kartám pod ním.
+
+#### Docs — launch checklist
+**Co bylo uděláno:** Do `ROADMAPA.md` (Oblast 5) doplněn úkol nasazení Google Analytics 4 na produkci s odkazem na Oblast 4.  
+**Proč:** GA4 patří do launch checklistu před ostrým spuštěním na naturchem.cz.
+
 ### Časová náročnost
-**Odhadovaná doba práce:** ~24 min  
-**Rozložení:** 5. 6. 2026 16:57–17:08 (~24 min)  
-**Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** 4  
-*Poznámka: čas ze skriptu `estimate-session-time.ps1` (úzký blok kolem commitu `a1264c5` včetně paddingu).*
+**Odhadovaná doba práce:** ~26 min
+**Rozložení:** 5. 6. 2026 16:47–17:13 (~26 min)
+**Metoda odhadu:** git
+**Počet výměn s AI:** ~12  
+*Poznámka: čas ze skriptu `estimate-session-time.ps1` (blok od commitu `fb14769` včetně paddingu).*
 
 ### Technická poznámka
-`src/components/SectorPage.tsx`. Commit: `a1264c5`.
+`src/components/SectorPage.tsx`, `src/app/globals.css`, `src/app/page.tsx`, `src/components/ServicePage.tsx`, `naturchem-projekt/ROADMAPA.md`. Commity: `a1264c5`, `2eb1df7`.
 
 ---
 

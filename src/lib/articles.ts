@@ -5,10 +5,14 @@ import { normalizeArticleDate } from "@/lib/format-date";
 
 const articlesDirectory = path.join(process.cwd(), "content", "articles");
 
+import type { PoradnaTopic } from "@/lib/poradna-topic";
+import { resolveArticleTopic } from "@/lib/poradna-topic";
+
 export type Article = {
   slug: string;
   title: string;
   excerpt: string;
+  topic: PoradnaTopic;
   publishedAt: string;
   updatedAt?: string;
   author?: string;
@@ -19,6 +23,7 @@ type ArticleFrontmatter = {
   slug?: string;
   title?: string;
   excerpt?: string;
+  topic?: string;
   publishedAt?: unknown;
   updatedAt?: unknown;
   author?: string;
@@ -43,10 +48,13 @@ function toArticle(fileSlug: string, fileContents: string): Article {
   const data = parsed.data as ArticleFrontmatter;
   const slug = resolveSlug(fileSlug, data);
 
+  const title = data.title || slug;
+
   return {
     slug,
-    title: data.title || slug,
+    title,
     excerpt: data.excerpt || "",
+    topic: resolveArticleTopic({ title, topic: data.topic }),
     publishedAt: normalizeArticleDate(data.publishedAt) || new Date().toISOString(),
     updatedAt: normalizeArticleDate(data.updatedAt),
     author: data.author || "NATURCHEM",

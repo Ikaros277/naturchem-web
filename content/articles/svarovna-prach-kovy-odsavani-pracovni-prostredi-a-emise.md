@@ -1,15 +1,11 @@
 ---
-title: "Svařovna: prach, kovy, odsávání, pracovní prostředí a emise"
+title: 'Svařovna: prach, kovy, odsávání, pracovní prostředí a emise'
 slug: svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise
-excerpt: >
-  Svařovna může být významným pracovištěm z hlediska ochrany zdraví zaměstnanců
-  i ochrany ovzduší. Při svařování vznikají svářečské dýmy, jemné částice, oxidy
-  kovů a další látky, jejichž složení závisí na svařovaném materiálu, přídavném
-  materiálu, metodě svařování a účinnosti odsávání. V praxi je proto důležité
-  řešit pracovní ovzduší, lokální odsávání, měření prachu a kovů na pracovišti i
-  to, zda svařovna může být současně stacionárním zdrojem emisí do ovzduší.
+excerpt: |
+  Svařovna může být významným pracovištěm z hlediska ochrany zdraví zaměstnanců i ochrany ovzduší. Při svařování vznikají svářečské dýmy, jemné částice, oxidy kovů a další látky, jejichž složení závisí na svařovaném materiálu, přídavném materiálu, metodě svařování a účinnosti odsávání. V praxi je proto důležité řešit pracovní ovzduší, lokální odsávání, měření prachu a kovů na pracovišti i to, zda svařovna může být současně stacionárním zdrojem emisí do ovzduší.
 author: Ing. František Hezina
-publishedAt: 2026-03-27
+publishedAt: 2026-03-27T00:00:00.000Z
+topic: Pracovní prostředí
 ---
 ## Proč svařovnu nestačí hodnotit jen podle viditelného kouře
 

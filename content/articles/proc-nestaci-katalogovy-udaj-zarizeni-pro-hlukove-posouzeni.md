@@ -1,14 +1,10 @@
 ---
 title: Proč nestačí katalogový údaj zařízení pro hlukové posouzení?
 slug: proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni
-excerpt: Katalogový údaj o hlučnosti zařízení je užitečný orientační vstup, ale
-  sám o sobě obvykle nestačí pro odborné hlukové posouzení. Rozhoduje, zda
-  výrobce uvádí hladinu akustického výkonu nebo akustického tlaku, v jaké
-  vzdálenosti byla hodnota stanovena, při jakém provozním režimu, s jakou
-  směrovostí a s jakou nejistotou. U průmyslových provozů je to zásadní zejména
-  tehdy, když zařízení běží v noci nebo je umístěno blízko obytné zástavby.
+excerpt: 'Katalogový údaj o hlučnosti zařízení je užitečný orientační vstup, ale sám o sobě obvykle nestačí pro odborné hlukové posouzení. Rozhoduje, zda výrobce uvádí hladinu akustického výkonu nebo akustického tlaku, v jaké vzdálenosti byla hodnota stanovena, při jakém provozním režimu, s jakou směrovostí a s jakou nejistotou. U průmyslových provozů je to zásadní zejména tehdy, když zařízení běží v noci nebo je umístěno blízko obytné zástavby.'
 author: Ing. František Hezina
-publishedAt: 2026-04-30
+publishedAt: 2026-04-30T00:00:00.000Z
+topic: Hluk
 ---
 ## Proč je katalogový údaj jen začátek
 

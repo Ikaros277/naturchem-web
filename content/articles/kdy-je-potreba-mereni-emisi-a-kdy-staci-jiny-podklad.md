@@ -1,13 +1,10 @@
 ---
 title: Kdy je potřeba měření emisí a kdy stačí jiný podklad?
 slug: kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad
-excerpt: Provozovatelé kotelen, lakoven, technologických linek a dalších
-  stacionárních zdrojů často řeší, zda musí objednat autorizované měření emisí,
-  nebo zda pro danou situaci stačí jiný odborný podklad. Rozhodující je zejména
-  druh zdroje, podmínky povolení provozu, změna technologie a účel, pro který se
-  výstup dokládá.
+excerpt: 'Provozovatelé kotelen, lakoven, technologických linek a dalších stacionárních zdrojů často řeší, zda musí objednat autorizované měření emisí, nebo zda pro danou situaci stačí jiný odborný podklad. Rozhodující je zejména druh zdroje, podmínky povolení provozu, změna technologie a účel, pro který se výstup dokládá.'
 author: NATURCHEM
-publishedAt: 2025-03-14
+publishedAt: 2025-03-14T00:00:00.000Z
+topic: Emise
 ---
 ## Kdy se měření emisí obvykle řeší
 

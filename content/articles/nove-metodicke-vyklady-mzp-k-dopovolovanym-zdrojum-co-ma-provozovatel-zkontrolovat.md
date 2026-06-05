@@ -1,16 +1,10 @@
 ---
-title: "Nové metodické výklady MŽP k dopovolovaným zdrojům: co má provozovatel
-  zkontrolovat?"
+title: 'Nové metodické výklady MŽP k dopovolovaným zdrojům: co má provozovatel zkontrolovat?'
 slug: nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat
-excerpt: "Novela zákona o ochraně ovzduší a navazující metodické výklady MŽP
-  přinesly novou praktickou otázku: které zdroje je nutné dodatečně povolit nebo
-  uvést do souladu s novými požadavky? Téma se týká zejména zdrojů, které byly
-  dříve v povolení jen zmíněny, byly vedeny jako související činnost, nebo nově
-  spadají pod přílohu č. 2 zákona o ochraně ovzduší. Provozovatel by měl
-  zkontrolovat hlavně výrokovou část povolení, zařazení zdroje, kapacitu, lhůty,
-  potřebu odborného posudku, rozptylové studie a provozní podmínky."
+excerpt: 'Novela zákona o ochraně ovzduší a navazující metodické výklady MŽP přinesly novou praktickou otázku: které zdroje je nutné dodatečně povolit nebo uvést do souladu s novými požadavky? Téma se týká zejména zdrojů, které byly dříve v povolení jen zmíněny, byly vedeny jako související činnost, nebo nově spadají pod přílohu č. 2 zákona o ochraně ovzduší. Provozovatel by měl zkontrolovat hlavně výrokovou část povolení, zařazení zdroje, kapacitu, lhůty, potřebu odborného posudku, rozptylové studie a provozní podmínky.'
 author: Ing. František Hezina
-publishedAt: 2026-05-14
+publishedAt: 2026-05-14T00:00:00.000Z
+topic: Emise
 ---
 ## Proč se téma dopovolovaných zdrojů řeší
 

@@ -1,14 +1,10 @@
 ---
 title: Kdy je potřeba hluková studie a kdy měření hluku?
 slug: kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku
-excerpt: Hluková studie a měření hluku nejsou totéž. Hluková studie obvykle
-  předem výpočtem posuzuje, jaký hluk bude mít záměr, technologie, provozovna,
-  doprava, tepelné čerpadlo nebo VZT jednotka po realizaci. Měření hluku naopak
-  ověřuje skutečný stav v konkrétním místě a čase. Správná volba závisí na tom,
-  zda se záměr teprve připravuje, kolauduje, provozuje, nebo zda se řeší
-  stížnost či požadavek KHS.
+excerpt: 'Hluková studie a měření hluku nejsou totéž. Hluková studie obvykle předem výpočtem posuzuje, jaký hluk bude mít záměr, technologie, provozovna, doprava, tepelné čerpadlo nebo VZT jednotka po realizaci. Měření hluku naopak ověřuje skutečný stav v konkrétním místě a čase. Správná volba závisí na tom, zda se záměr teprve připravuje, kolauduje, provozuje, nebo zda se řeší stížnost či požadavek KHS.'
 author: Ing. František Hezina
-publishedAt: 2025-08-30
+publishedAt: 2025-08-30T00:00:00.000Z
+topic: Hluk
 ---
 ## Hluková studie a měření hluku nejsou totéž
 

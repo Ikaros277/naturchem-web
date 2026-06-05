@@ -1,14 +1,10 @@
 ---
-title: "Dřevozpracující provoz: prach, piliny, odsávání, hluk a povolení zdroje"
+title: 'Dřevozpracující provoz: prach, piliny, odsávání, hluk a povolení zdroje'
 slug: drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje
-excerpt: Dřevozpracující provozy patří mezi typické zdroje prachu, pilin, hluku
-  a emisí tuhých znečišťujících látek. Při řezání, hoblování, broušení,
-  frézování nebo výrobě štěpek a pelet vzniká dřevní prach, který je důležitý
-  jak z hlediska pracovního prostředí, tak z hlediska ochrany ovzduší. U větších
-  provozů je potřeba řešit odsávání, filtrační zařízení, výduchy, měření emisí,
-  hlukovou zátěž a případné povolení provozu zdroje.
+excerpt: 'Dřevozpracující provozy patří mezi typické zdroje prachu, pilin, hluku a emisí tuhých znečišťujících látek. Při řezání, hoblování, broušení, frézování nebo výrobě štěpek a pelet vzniká dřevní prach, který je důležitý jak z hlediska pracovního prostředí, tak z hlediska ochrany ovzduší. U větších provozů je potřeba řešit odsávání, filtrační zařízení, výduchy, měření emisí, hlukovou zátěž a případné povolení provozu zdroje.'
 author: Ing. František Hezina
-publishedAt: 2026-04-14
+publishedAt: 2026-04-14T00:00:00.000Z
+topic: Hluk
 ---
 ## Proč je dřevozpracující provoz citlivý z hlediska prachu a hluku
 

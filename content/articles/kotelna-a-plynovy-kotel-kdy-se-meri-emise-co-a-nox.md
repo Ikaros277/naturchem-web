@@ -1,14 +1,11 @@
 ---
-title: "Kotelna a plynový kotel: kdy se měří emise CO a NOx?"
+title: 'Kotelna a plynový kotel: kdy se měří emise CO a NOx?'
 slug: kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox
-excerpt: >
-  U kotelen a plynových kotlů se v praxi často řeší, zda je nutné měřit emise
-  oxidu uhelnatého a oxidů dusíku. Rozhodující není jen to, že jde o plynový
-  kotel, ale zejména celkový jmenovitý tepelný příkon, druh paliva, zařazení
-  zdroje a podmínky povolení provozu. Menší zdroj může mít jiné povinnosti než
-  vyjmenovaný stacionární zdroj podle zákona o ochraně ovzduší.
+excerpt: |
+  U kotelen a plynových kotlů se v praxi často řeší, zda je nutné měřit emise oxidu uhelnatého a oxidů dusíku. Rozhodující není jen to, že jde o plynový kotel, ale zejména celkový jmenovitý tepelný příkon, druh paliva, zařazení zdroje a podmínky povolení provozu. Menší zdroj může mít jiné povinnosti než vyjmenovaný stacionární zdroj podle zákona o ochraně ovzduší.
 author: Ing. František Hezina
-publishedAt: 2026-03-29
+publishedAt: 2026-03-29T00:00:00.000Z
+topic: Emise
 ---
 ## Proč se u kotelny řeší CO a NOx
 

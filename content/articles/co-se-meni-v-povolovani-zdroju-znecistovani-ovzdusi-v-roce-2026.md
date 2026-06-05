@@ -1,16 +1,10 @@
 ---
 title: Co se mění v povolování zdrojů znečišťování ovzduší v roce 2026?
 slug: co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026
-excerpt: Rok 2026 je v ochraně ovzduší důležitý zejména kvůli praktickému dopadu
-  novely zákona o ochraně ovzduší č. 42/2025 Sb. a navazujících změn vyhlášky č.
-  415/2012 Sb. Provozovatelé vyjmenovaných stacionárních zdrojů musí věnovat
-  pozornost změnám v povoleních provozu, provozním parametrům, ohlašování
-  jednorázového měření emisí, záložním zdrojům, poplatkům, sčítání kapacit a
-  novému kódu 12.1 pro manipulaci se sypkými materiály. Změny nejsou jen
-  formální – mohou ovlivnit odborné posudky, rozptylové studie, provozní řády,
-  evidenci i komunikaci s krajským úřadem nebo ČIŽP.
+excerpt: 'Rok 2026 je v ochraně ovzduší důležitý zejména kvůli praktickému dopadu novely zákona o ochraně ovzduší č. 42/2025 Sb. a navazujících změn vyhlášky č. 415/2012 Sb. Provozovatelé vyjmenovaných stacionárních zdrojů musí věnovat pozornost změnám v povoleních provozu, provozním parametrům, ohlašování jednorázového měření emisí, záložním zdrojům, poplatkům, sčítání kapacit a novému kódu 12.1 pro manipulaci se sypkými materiály. Změny nejsou jen formální – mohou ovlivnit odborné posudky, rozptylové studie, provozní řády, evidenci i komunikaci s krajským úřadem nebo ČIŽP.'
 author: Ing. František Hezina
-publishedAt: 2026-05-10
+publishedAt: 2026-05-10T00:00:00.000Z
+topic: Emise
 ---
 ## Rok 2026 jako praktický dopad novely ovzduší
 

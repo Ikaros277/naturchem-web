@@ -1,17 +1,11 @@
 ---
 title: Kdy může úřad požadovat odborný posudek i u změny stávajícího zdroje?
 slug: kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje
-excerpt: Odborný posudek podle zákona o ochraně ovzduší se neřeší jen u nových
-  zdrojů. V některých případech jej může být nutné předložit i při změně
-  stávajícího vyjmenovaného stacionárního zdroje, zejména pokud se zvyšuje
-  projektovaný výkon, kapacita nebo emise, případně pokud se stanovuje technická
-  podmínka provozu nahrazující specifický emisní limit. Provozovatel by měl
-  proto před každou změnou technologie, kapacity, paliva, výduchu nebo filtrace
-  ověřit, zda nejde o změnu, která vyžaduje odborné posouzení autorizovanou
-  osobou.
+excerpt: 'Odborný posudek podle zákona o ochraně ovzduší se neřeší jen u nových zdrojů. V některých případech jej může být nutné předložit i při změně stávajícího vyjmenovaného stacionárního zdroje, zejména pokud se zvyšuje projektovaný výkon, kapacita nebo emise, případně pokud se stanovuje technická podmínka provozu nahrazující specifický emisní limit. Provozovatel by měl proto před každou změnou technologie, kapacity, paliva, výduchu nebo filtrace ověřit, zda nejde o změnu, která vyžaduje odborné posouzení autorizovanou osobou.'
 author: Ing. František Hezina
-publishedAt: 2026-05-20
-updatedAt: 2026-05-21
+publishedAt: 2026-05-20T00:00:00.000Z
+updatedAt: 2026-05-21T00:00:00.000Z
+topic: EIA a povolování
 ---
 ## Proč se odborný posudek řeší i u změn zdroje
 

@@ -1,13 +1,10 @@
 ---
-title: "Kategorizace prací: jaké měření je potřeba jako podklad?"
+title: 'Kategorizace prací: jaké měření je potřeba jako podklad?'
 slug: kategorizace-praci-jake-mereni-je-potreba-jako-podklad
-excerpt: Kategorizace prací je základní nástroj, kterým se hodnotí zdravotní
-  rizika na pracovišti. V praxi se často řeší otázka, kdy stačí odborné
-  posouzení a kdy je nutné doložit měření pracovního prostředí. Typicky jde o
-  chemické látky, prach, hluk, vibrace, mikroklima nebo další faktory, které
-  mohou ovlivnit zdraví zaměstnanců.
+excerpt: 'Kategorizace prací je základní nástroj, kterým se hodnotí zdravotní rizika na pracovišti. V praxi se často řeší otázka, kdy stačí odborné posouzení a kdy je nutné doložit měření pracovního prostředí. Typicky jde o chemické látky, prach, hluk, vibrace, mikroklima nebo další faktory, které mohou ovlivnit zdraví zaměstnanců.'
 author: Ing. František Hezina
-publishedAt: 2026-02-04
+publishedAt: 2026-02-04T00:00:00.000Z
+topic: Pracovní prostředí
 ---
 ## Co je kategorizace prací
 

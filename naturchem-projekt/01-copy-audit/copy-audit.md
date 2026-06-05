@@ -249,8 +249,8 @@ Blog má 30+ článků. Jejich copy je pravděpodobně na dobré technické úro
 | **C7-seo** | `seo-landings` (7 SEO vstupních stránek) | ⏸ po odevzdání | Samostatný projekt — routy existují, copy/UX neřešit v rámci odevzdání webu |
 | **Nav** | Megamenu / footer služby — IPPC, ISPOP, GHG bez kontextu | ✅ | 4. 6. 2026 — plné názvy v `service-megamenu`, `navigation`, `home-offer` |
 | **Cross** | „Mohlo by Vás zajímat“ — provozy vs služby | 📋 | Popis provozů z `sectors.ts`; mapování v `service-sector-links.ts` |
-| **C8** | `faq.ts` (styl only), `/poradna` hero | 🔲 | |
-| **C9** | Kontakt, formulář, Footer, UI labely + grep QA | 🔲 | Footer copy ✅ P5-23 (tagline, labely sloupců) |
+| **C8** | `faq.ts` (styl only), `/poradna` hero | ✅ | 4. 6. 2026 — Odborné články, hero lead |
+| **C9** | Kontakt, formulář, Footer, UI labely + grep QA | ✅ | 5. 6. 2026 — grep QA zbývá volitelně |
 | **P-COPY** | 33× `content/articles/*.md` | 🔲 odloženo | Po dokončení C1–C9 |
 
 ### Mapování na CC položky (starší audit)

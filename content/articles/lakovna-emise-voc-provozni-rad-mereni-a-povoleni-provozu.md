@@ -1,14 +1,10 @@
 ---
-title: "Lakovna: emise, VOC, provozní řád, měření a povolení provozu"
+title: 'Lakovna: emise, VOC, provozní řád, měření a povolení provozu'
 slug: lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu
-excerpt: Lakovna je z hlediska ochrany ovzduší často významným zdrojem emisí
-  VOC, tedy těkavých organických látek. Provozovatel musí řešit nejen samotné
-  lakování, ale také spotřebu organických rozpouštědel, filtraci, výduchy,
-  bilanci VOC, provozní evidenci, měření emisí a případné povolení provozu.
-  Správně nastavená dokumentace a evidence pomáhá předejít problémům při
-  kontrole ČIŽP nebo krajského úřadu.
+excerpt: 'Lakovna je z hlediska ochrany ovzduší často významným zdrojem emisí VOC, tedy těkavých organických látek. Provozovatel musí řešit nejen samotné lakování, ale také spotřebu organických rozpouštědel, filtraci, výduchy, bilanci VOC, provozní evidenci, měření emisí a případné povolení provozu. Správně nastavená dokumentace a evidence pomáhá předejít problémům při kontrole ČIŽP nebo krajského úřadu.'
 author: NATURCHEM
-publishedAt: 2026-03-20
+publishedAt: 2026-03-20T00:00:00.000Z
+topic: EIA a povolování
 ---
 ## Lakovna: emise, VOC, provozní řád, měření a povolení provozu
 

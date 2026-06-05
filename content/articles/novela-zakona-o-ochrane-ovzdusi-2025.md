@@ -1,14 +1,11 @@
 ---
-title: "Novela zákona o ochraně ovzduší 2025: co se mění pro provozovatele
-  zdrojů emisí"
+title: 'Novela zákona o ochraně ovzduší 2025: co se mění pro provozovatele zdrojů emisí'
 slug: novela-zakona-o-ochrane-ovzdusi-2025
-excerpt: Zákon č. 42/2025 Sb. mění pravidla pro provozovatele stacionárních
-  zdrojů znečišťování ovzduší. Dotýká se zejména zařazování zdrojů, povolení
-  provozu, měření emisí, sledování provozních parametrů, poplatků a opatření
-  proti prašnosti.
+excerpt: 'Zákon č. 42/2025 Sb. mění pravidla pro provozovatele stacionárních zdrojů znečišťování ovzduší. Dotýká se zejména zařazování zdrojů, povolení provozu, měření emisí, sledování provozních parametrů, poplatků a opatření proti prašnosti.'
 author: Naturchem s.r.o.
-publishedAt: 2025-04-29
-updatedAt: ""
+publishedAt: 2025-04-29T00:00:00.000Z
+updatedAt: ''
+topic: Legislativa
 ---
 
 ## Novela zákona o ochraně ovzduší 2025: přehled hlavních změn

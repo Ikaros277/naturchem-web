@@ -1,15 +1,10 @@
 ---
 title: Co poslat pro rychlé posouzení záměru?
 slug: co-poslat-pro-rychle-posouzeni-zameru
-excerpt: Rychlé posouzení záměru je možné udělat jen tehdy, když jsou k
-  dispozici základní informace o stavbě, technologii, kapacitě, výduších,
-  provozní době, dopravě a požadavku úřadu. Nemusí jít hned o kompletní
-  projektovou dokumentaci, ale podklady musí umožnit určit, zda bude potřeba
-  měření, hluková studie, rozptylová studie, odborný posudek, EIA, JES, provozní
-  řád nebo jiné environmentální podklady. Čím přesnější vstupy pošlete na
-  začátku, tím rychleji lze navrhnout správný postup.
+excerpt: 'Rychlé posouzení záměru je možné udělat jen tehdy, když jsou k dispozici základní informace o stavbě, technologii, kapacitě, výduších, provozní době, dopravě a požadavku úřadu. Nemusí jít hned o kompletní projektovou dokumentaci, ale podklady musí umožnit určit, zda bude potřeba měření, hluková studie, rozptylová studie, odborný posudek, EIA, JES, provozní řád nebo jiné environmentální podklady. Čím přesnější vstupy pošlete na začátku, tím rychleji lze navrhnout správný postup.'
 author: Ing. František Hezina
-publishedAt: 2026-04-30
+publishedAt: 2026-04-30T00:00:00.000Z
+topic: Emise
 ---
 ## Proč má smysl poslat podklady hned na začátku
 

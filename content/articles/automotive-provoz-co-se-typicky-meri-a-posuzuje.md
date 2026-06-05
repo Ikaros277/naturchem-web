@@ -1,15 +1,10 @@
 ---
-title: "Automotive provoz: co se typicky měří a posuzuje?"
+title: 'Automotive provoz: co se typicky měří a posuzuje?'
 slug: automotive-provoz-co-se-typicky-meri-a-posuzuje
-excerpt: Automotive provozy kombinují řadu technologií, které mohou mít vliv na
-  pracovní prostředí, emise do ovzduší i hluk v okolí. Typicky se řeší lakování,
-  lepení, potahování dílů, PUR pěny, kašírování, svařování, chemické látky v
-  pracovním ovzduší, VOC, prach, kovy a technologický hluk. Správný rozsah
-  měření se vždy odvíjí od konkrétní technologie, používaných materiálů,
-  bezpečnostních listů, výduchů, odsávání, provozní doby a požadavků KHS,
-  krajského úřadu nebo ČIŽP.
+excerpt: 'Automotive provozy kombinují řadu technologií, které mohou mít vliv na pracovní prostředí, emise do ovzduší i hluk v okolí. Typicky se řeší lakování, lepení, potahování dílů, PUR pěny, kašírování, svařování, chemické látky v pracovním ovzduší, VOC, prach, kovy a technologický hluk. Správný rozsah měření se vždy odvíjí od konkrétní technologie, používaných materiálů, bezpečnostních listů, výduchů, odsávání, provozní doby a požadavků KHS, krajského úřadu nebo ČIŽP.'
 author: Ing. František Hezina
-publishedAt: 2026-04-22
+publishedAt: 2026-04-22T00:00:00.000Z
+topic: Emise
 ---
 ## Automotive není jedna technologie
 

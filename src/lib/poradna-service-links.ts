@@ -1,4 +1,4 @@
-import { topicForArticle } from "@/lib/poradna-topic";
+import { resolveArticleTopic, type PoradnaTopic } from "@/lib/poradna-topic";
 import type { PoradnaArticleListing } from "@/lib/poradna-articles";
 
 export type ServiceLink = {
@@ -58,10 +58,14 @@ function dedupeLinks(links: ServiceLink[]): ServiceLink[] {
   });
 }
 
-export function getRelatedServicesForArticle(title: string, slug: string): ServiceLink[] {
+export function getRelatedServicesForArticle(
+  title: string,
+  slug: string,
+  topic?: PoradnaTopic
+): ServiceLink[] {
   const haystack = `${title} ${slug}`.toLocaleLowerCase("cs-CZ");
-  const topic = topicForArticle(title);
-  const base = topicServices[topic] ?? [S.emise];
+  const resolvedTopic = topic ?? resolveArticleTopic({ title });
+  const base = topicServices[resolvedTopic] ?? [S.emise];
 
   const fromKeywords = keywordRules
     .filter((rule) => rule.pattern.test(haystack))

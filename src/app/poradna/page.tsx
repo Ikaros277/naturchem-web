@@ -65,8 +65,8 @@ export default async function Page() {
           <p className="eyebrow">Články z praxe · legislativa · měření</p>
           <h1>{articlesNav.label}</h1>
           <p className="page-lead">
-            Desítky článků z měření, studií a povolování — pro orientaci v oboru, novinkách v
-            legislativě i v situacích, které řeší provozy jako ten Váš.
+            Články z praxe — měření, studie a legislativa pro provozy, které řeší podobné situace
+            jako ten Váš.
           </p>
         </header>
       </PageHeroBand>

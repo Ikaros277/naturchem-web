@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
 import type { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ArticleRelatedServices } from "@/components/ArticleRelatedServices";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/Schema";
+import { PageHeroBand } from "@/components/PageHeroBand";
 import { getArticleBySlug, getArticles } from "@/lib/articles";
 import { formatArticleDate, normalizeArticleDate } from "@/lib/format-date";
-import { contactFormHref } from "@/lib/contact-url";
 import { articlesNav } from "@/lib/navigation";
+import { heroThemeForArticle } from "@/lib/poradna-topic";
 import { siteUrl } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -53,7 +52,9 @@ export default async function CmsArticlePage({ params }: Props) {
     notFound();
   }
 
+  const displayDate = formatArticleDate(article.updatedAt || article.publishedAt);
   const articleUrl = `${siteUrl}/poradna/${article.slug}/`;
+
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -69,37 +70,60 @@ export default async function CmsArticlePage({ params }: Props) {
     mainEntityOfPage: articleUrl
   };
 
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Úvod", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: articlesNav.label, item: `${siteUrl}/poradna/` },
+      { "@type": "ListItem", position: 3, name: article.title, item: articleUrl }
+    ]
+  };
+
   return (
-    <main className="container section">
+    <main className="section article-page premium-page">
       <JsonLd data={articleData} />
-      <Breadcrumbs
-        items={[
+      <JsonLd data={breadcrumbData} />
+      <PageHeroBand
+        theme={heroThemeForArticle(article)}
+        breadcrumbs={[
           { name: "Úvod", href: "/" },
           { name: articlesNav.label, href: articlesNav.href },
           { name: article.title }
         ]}
-      />
-      <h1>{article.title}</h1>
-      <p className="muted">
-        {article.author || "NATURCHEM"}
-        {formatArticleDate(article.updatedAt || article.publishedAt)
-          ? ` · ${formatArticleDate(article.updatedAt || article.publishedAt)}`
-          : null}
-      </p>
-      {article.excerpt ? <p className="article-perex">{article.excerpt}</p> : null}
-      <div className="article-body">
-        <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-          {article.body}
-        </Markdown>
+      >
+        <header className="premium-page-hero page-hero--photo">
+          <p className="eyebrow">{article.topic}</p>
+          <h1>{article.title}</h1>
+          <p className="article-hero-meta muted">
+            {article.author || "NATURCHEM"}
+            {displayDate ? ` · ${displayDate}` : null}
+          </p>
+        </header>
+      </PageHeroBand>
+
+      <div className="container article-page-body page-first-section">
+        {article.excerpt ? (
+          <aside className="article-tldr" aria-label="Shrnutí článku">
+            <p className="article-tldr-label">Stručně</p>
+            <p className="article-tldr-text">{article.excerpt}</p>
+          </aside>
+        ) : null}
+
+        <div className="article-content">
+          <div className="article-body">
+            <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+              {article.body}
+            </Markdown>
+          </div>
+        </div>
+
+        <ArticleRelatedServices
+          title={article.title}
+          slug={article.slug}
+          topic={article.topic}
+        />
       </div>
-
-      <ArticleRelatedServices title={article.title} slug={article.slug} />
-
-      <p className="article-footer-cta">
-        <Link href={contactFormHref}>Požádat o konzultaci</Link>
-        {" · "}
-        <Link href={articlesNav.href}>Další odborné články</Link>
-      </p>
     </main>
   );
 }

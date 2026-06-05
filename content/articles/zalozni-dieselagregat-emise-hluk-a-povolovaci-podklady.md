@@ -1,15 +1,10 @@
 ---
-title: "Záložní dieselagregát: emise, hluk a povolovací podklady"
+title: 'Záložní dieselagregát: emise, hluk a povolovací podklady'
 slug: zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady
-excerpt: Záložní dieselagregát se v praxi objevuje u průmyslových areálů,
-  vodáren, nemocnic, datových center, administrativních objektů, logistických
-  center nebo technologických provozů, kde je potřeba zajistit napájení při
-  výpadku elektrické energie. Na první pohled může jít o zařízení, které běží
-  jen výjimečně. Z hlediska povolování ale nestačí uvést, že jde o „záložní
-  zdroj“. Rozhodující je výkon, tepelný příkon, palivo, počet provozních hodin,
-  umístění výduchu, hluk a místní podmínky.
+excerpt: 'Záložní dieselagregát se v praxi objevuje u průmyslových areálů, vodáren, nemocnic, datových center, administrativních objektů, logistických center nebo technologických provozů, kde je potřeba zajistit napájení při výpadku elektrické energie. Na první pohled může jít o zařízení, které běží jen výjimečně. Z hlediska povolování ale nestačí uvést, že jde o „záložní zdroj“. Rozhodující je výkon, tepelný příkon, palivo, počet provozních hodin, umístění výduchu, hluk a místní podmínky.'
 author: Ing. František Hezina
-publishedAt: 2026-03-30
+publishedAt: 2026-03-30T00:00:00.000Z
+topic: Hluk
 ---
 Dieselagregát může být řešen současně z několika hledisek: jako spalovací stacionární zdroj podle zákona o ochraně ovzduší, jako zdroj hluku podle hygienických předpisů a jako technické zařízení, které musí být správně umístěno v projektové dokumentaci. U větších zdrojů nebo citlivých lokalit může být nutná také rozptylová studie nebo hluková studie.
 

@@ -3,8 +3,8 @@
 > **Účel:** Jediná pravda o stavu celého projektu. Aktualizovat vždy na konci sezení nebo po dokončení úkolu.  
 > **Jak číst:** ✅ Hotovo · 🔄 Probíhá · 🔲 Čeká · ❓ Čeká na klienta
 
-**Poslední aktualizace:** 2026-06-04  
-**Aktuální fáze:** Sitewide UI vzory hotové → copy sprint C4+, P5-B fotky, launch checklist
+**Poslední aktualizace:** 2026-06-05  
+**Aktuální fáze:** Copy sprint C1–C9 hotový → P-COPY (články), launch checklist, P5-B fotky
 
 ---
 
@@ -13,7 +13,7 @@
 | Oblast | Stav | Poznámka |
 |--------|------|----------|
 | UX opravy | 🔄 ~99 % | P5 + homepage trust order + spacing tight; P5-B fotky čekají |
-| Copy a obsah | 🔄 ~40 % | C1–C3 hotovo (homepage, O společnosti, akreditace); zbývá C4–C9 + P-COPY |
+| Copy a obsah | 🔄 ~90 % | C1–C9 hotovo; zbývá P-COPY (33× články v poradně) + grep QA |
 | Grafický audit | 🔄 Audit hotov | Diagnóza v `06-graficky-audit/`; implementace sloučena do P5 |
 | SEO a analytika | 🔄 Zahájeno | Meta audit S11 hotov; GA4/GSC čeká na produkci |
 | Launch checklist | 🔲 Nezahájeno | Resend netestován na produkci, GDPR neřešeno |
@@ -98,6 +98,24 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | P5-22 | Hero pravidla zapsána do ux-role + copy-role | ✅ | Nízká |
 | P5-23 | Redesign patičky — jeden responsive grid, navigace + kontakt, akreditace jako odkaz | ✅ | Střední |
 | P5-B1–B4 | Reálné fotografie (hero, tým, přístroje, Hezina) | ❓ | Po dodání fotek |
+| P5-24 | Hero bez CTA na detailech provozů (SectorPage) | ✅ | 5. 6. 2026 |
+| P5-25 | Forest zelená sitewide — primární CTA, stats pruh, topbar/patička navy | ✅ | 5. 6. 2026 |
+
+### P-PORADNA — Šablona článků a index (5. 6. 2026)
+
+| ID | Úkol | Stav | Obtížnost |
+|----|------|------|-----------|
+| P-PORADNA-1 | Detail článku: PageHeroBand + CTA pásy (early + end) | ✅ | Střední |
+| P-PORADNA-2 | Šířka textu článku max. 44 rem, line-height 1.7 | ✅ | Nízká |
+| P-PORADNA-3 | TL;DR box z perexu nahoře | ✅ | Nízká |
+| P-PORADNA-4 | Filtry: pill „Vše" + počet výsledků | ✅ | Nízká |
+| P-PORADNA-5 | Forest barvy u topic pills | ✅ | Nízká |
+| P-PORADNA-6 | Náhledové fotky + ikony témat na kartách indexu | ✅ | Střední |
+| P-PORADNA-7 | Související služby jako karty (max 3) | ✅ | Střední |
+| P-PORADNA-8 | Hero lead indexu zkrácen (≤20 slov) | ✅ | Nízká |
+| P-PORADNA-9 | Pole `topic` ve frontmatter všech 33 článků | ✅ | Střední |
+| P-PORADNA-10 | Fulltextové vyhledávání na indexu /poradna | ✅ | Střední |
+| P-PORADNA-11 | Detail článku bez CTA pásů (konverze přes související služby + hlavičku) | ✅ | Nízká |
 
 ### P6 — Layout a spacing
 
@@ -217,6 +235,10 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | 4. 6. | Copy C3 | Akreditace — hero lead, benefity, autorizace, download karty |
 | 4. 6. | Sitewide vzory | UI vzory A–F na informačních stránkách; mezery sekcí = standard Reference |
 | 4. 6. | Copy C7 | `/sluzby`, provozy, reference — hotovo |
+| 4. 6. | Copy C8 | FAQ + `/poradna` hero, přejmenování na Odborné články |
+| 5. 6. | Copy C9 | Kontakt, formulář, e-maily v lidském tónu |
+| 5. 6. | P5-24/25 | Hero provozů bez CTA; forest sitewide; mobilní homepage |
+| 5. 6. | P-PORADNA | Šablona detailu článku, náhledy na indexu, CTA pásy |
 | — | **Po odevzdání webu** | **SEO landing pages** (7× `seo-landings.ts`) — samostatný projekt na přání klienta; technicky nasazeno, copy sprint odložen |
 
 ---

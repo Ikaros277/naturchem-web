@@ -1,11 +1,14 @@
-import { getArticles } from "@/lib/articles";
+import { getArticles, type Article } from "@/lib/articles";
 import { shortenListingExcerpt } from "@/lib/excerpt";
 import { normalizeArticleDate } from "@/lib/format-date";
+import type { PoradnaTopic } from "@/lib/poradna-topic";
 
 export type PoradnaArticleListing = {
   title: string;
   href: string;
   excerpt: string;
+  topic: PoradnaTopic;
+  searchText: string;
   publishedAt: string;
   author?: string;
 };
@@ -16,12 +19,30 @@ function sortByPublishedAt(articles: PoradnaArticleListing[]): PoradnaArticleLis
   );
 }
 
+function stripMarkdownForSearch(body: string): string {
+  return body
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/#{1,6}\s+/g, "")
+    .replace(/\|[^\n]+\|/g, " ")
+    .replace(/[*_~`>#-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function buildSearchText(article: Article): string {
+  return [article.title, article.excerpt, stripMarkdownForSearch(article.body)]
+    .join(" ")
+    .toLocaleLowerCase("cs-CZ");
+}
+
 export async function getPoradnaArticles(): Promise<PoradnaArticleListing[]> {
   const mdArticles = await getArticles();
   const fromMarkdown: PoradnaArticleListing[] = mdArticles.map((article) => ({
     title: article.title,
     href: `/poradna/${article.slug}`,
     excerpt: shortenListingExcerpt(article.excerpt?.trim() || ""),
+    topic: article.topic,
+    searchText: buildSearchText(article),
     publishedAt: normalizeArticleDate(article.publishedAt) || new Date().toISOString(),
     author: article.author
   }));

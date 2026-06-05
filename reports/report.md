@@ -5,11 +5,52 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 21 |
-| Celkový odhadovaný čas | ~21,0 hodiny |
-| Aktuální fáze | Copy C8 hotovo (FAQ + Odborné články); další krok: C9 (kontakt, formulář) a launch checklist |
+| Počet sezení celkem | 22 |
+| Celkový odhadovaný čas | ~21,9 hodiny |
+| Aktuální fáze | UX revize /kontakt hotova; další krok: copy sprint C9 (texty kontaktu a formuláře) a launch checklist |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 5. 6. 2026, 15:15–16:10
+
+### Přehled
+Kompletní **UX revize stránky /kontakt** podle schváleného auditu: zjednodušený formulář, nový box kontaktních údajů, sjednocená šířka s hlavičkou a oddělené chování menu „Kontakt“ vs. poptávkových tlačítek. Doplňkově mobilní accordion u provozů a služeb ze stejného commitu. Připraveno copy sprint C9.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### UX — přestavba stránky /kontakt
+**Co bylo uděláno:** Hero bez CTA; pořadí hero → formulář → kontaktní údaje. Formulář zkrácen (dropdown kategorií místo pěti radio karet, odstraněná rozšířená pole a šedý box tipů). Dvousloupcový layout formuláře uvnitř jedné karty. Odstraněny sekce rychlých cest, sidebar a odborné garance. Kontaktní údaje s ikonami a `getCompanyOffices()` (HB, ČB, Praha). Header CTA vede na formulář.  
+**Proč:** Stránka byla dlouhá a redundantní; zákazník má rychle poslat podklady, kontakty dohledat pod formulářem.
+
+#### UX — šířka obsahu a box kontaktních údajů
+**Co bylo uděláno:** Opraveno přepisování `.container` pravidlem `width: 100 %` — boxy formuláře i kontaktů zarovnány s logem a tlačítkem v hlavičce. Kontaktní box rozdělen na tři sloupce **Společnost / Kontakt / Provozovny** se sjednocenými nadpisy (ikona + dělící čára); provozovny bez ikon u jednotlivých položek; na tabletu provozovny v řádku pod dvěma sloupci.  
+**Proč:** Levý sloupec působil přeplněně, pravý prázdně; čtyři mapové špendlíky pod sebou působily rušivě; šířka neseděla se zbytkem webu.
+
+#### UX — navigace a scroll na formulář
+**Co bylo uděláno:** Položka menu **Kontakt** (`/kontakt`) zobrazuje hero nahoře. Všechna poptávková CTA napříč webem vedou na `contactFormHref` (`/kontakt#poptavkovy-formular`) — hlavička, `PageCtaStrip`, FAQ, typické zakázky, články poradny atd. Opraven automatický scroll při načtení (výchozí kategorie „nevím“ už nespouští posun). Posluchač `hashchange` pro scroll při opakovaném kliknutí na CTA na stejné stránce.  
+**Proč:** Konverzní tlačítka mají vést rovnou na formulář; informační odkaz „Kontakt“ má ukázat celou stránku včetně hero.
+
+#### UX — mobilní accordion (provozy a služby)
+**Co bylo uděláno:** V rámci stejného UX kola doladěn mobilní accordion u skupin provozů a služeb (`globals.css`).  
+**Proč:** Konzistentní chování rozbalovacích sekcí na malých obrazovkách.
+
+#### Nasazení
+**Co bylo uděláno:** Commity `98c3865` a `6b77bc3` na `main`.  
+**Proč:** Uzavření UX fáze kontaktu před copy sprintem C9.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~54 min  
+**Rozložení:** 5. 6. 2026 15:15–16:10 (~54 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~11  
+*Poznámka: čas ze skriptu `estimate-session-time.ps1`.*
+
+### Technická poznámka
+`kontakt/page.tsx`, `ContactForm.tsx`, `ContactFormSection.tsx`, `globals.css`, `contact-url.ts`, `cta.ts`, `Header.tsx`, `site.ts`, `ServiceIcon.tsx`. Commity: `98c3865`, `6b77bc3`.
 
 ---
 

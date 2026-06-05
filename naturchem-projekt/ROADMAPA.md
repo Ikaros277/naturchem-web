@@ -192,7 +192,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 | GDPR / cookie lišta: řeší klient nebo my? | ❓ | ROZHODNOUT |
 | 404 stránka: existuje a vypadá dobře? | 🔲 | |
 | Finální QA: projít celý web na desktopu i mobilu před spuštěním | 🔲 | |
-| Předání klientovi: web + všechna dokumentace + přístupy (Vercel, GitHub, Decap CMS) | 🔲 | Závěrečný krok |
+| Předání klientovi: web + všechna dokumentace + přístupy (Vercel, GitHub, Decap CMS) | 🔲 | Detailní checklist: `PREDANI-KLIENTOVI.md` |
 
 ---
 

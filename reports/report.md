@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 24 |
-| Celkový odhadovaný čas | ~23,2 hodiny |
+| Celkový odhadovaný čas | ~23,9 hodiny |
 | Aktuální fáze | Mobilní homepage a forest akcenty hotové; hero provozů sjednoceno; UX/kontakt uzavřeno; další krok: copy sprint C9, launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 5. 6. 2026, 16:47–17:13
+## Sezení: 5. 6. 2026, 16:47–17:54
 
 ### Přehled
 **Odpolední UX blok:** sjednocení hero na detailech provozů a sitewide zavedení forest zelené jako primární konverzní barvy (navy pro sekundární akce a institucionální prvky). Stats pruh na homepage dostal zelené pozadí, větší ikony bez rámečku a centrované zarovnání sladěné s kartami služeb pod ním.
@@ -21,6 +21,22 @@
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### Fix Decap CMS OAuth login and robots.txt for staging deploy.
+**Co bylo uděláno:** Fix Decap CMS OAuth login and robots.txt for staging deploy. - Align CMS base_url with web-naturchem.vercel.app, repair the GitHub OAuth callback handshake, and block /admin and /api from crawlers.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `a91ee67`). Dotcene oblasti: .env.example, api, app, config.yml, README.md.  
+**Proč:** Align CMS base_url with web-naturchem.vercel.app, repair the GitHub OAuth callback handshake, and block /admin and /api from crawlers.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### UX: odstran─Ťn├ş redundantn├şch eyebrow label┼» na homepage.
+**Co bylo uděláno:** UX: odstran─Ťn├ş redundantn├şch eyebrow label┼» na homepage. - Na┼íe slu┼żby a Na┼íi z├íkazn├şci duplikovaly nadpisy sekc├ş a zbyte─Źn─Ť posouvaly karty a loga n├ş┼ż; u z├íkazn├şk┼» z┼»st├ív├í skryt├Ż H2 pro p┼Ö├şstupnost.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `1411dd8`). Dotcene oblasti: app.  
+**Proč:** Na┼íe slu┼żby a Na┼íi z├íkazn├şci duplikovaly nadpisy sekc├ş a zbyte─Źn─Ť posouvaly karty a loga n├ş┼ż; u z├íkazn├şk┼» z┼»st├ív├í skryt├Ż H2 pro p┼Ö├şstupnost.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### UX: odstran─Ťn├ş redundantn├şch eyebrow label┼» na homepage.
+**Co bylo uděláno:** UX: odstran─Ťn├ş redundantn├şch eyebrow label┼» na homepage. - Na┼íe slu┼żby a Na┼íi z├íkazn├şci duplikovaly nadpisy sekc├ş a zbyte─Źn─Ť posouvaly karty a loga n├ş┼ż; u z├íkazn├şk┼» z┼»st├ív├í skryt├Ż H2 pro p┼Ö├şstupnost.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `6022a6b`). Dotcene oblasti: app, report, workflow.  
+**Proč:** Na┼íe slu┼żby a Na┼íi z├íkazn├şci duplikovaly nadpisy sekc├ş a zbyte─Źn─Ť posouvaly karty a loga n├ş┼ż; u z├íkazn├şk┼» z┼»st├ív├í skryt├Ż H2 pro p┼Ö├şstupnost.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### UX: p┼Öestavba /poradna ÔÇö ┼íablona ─Źl├ínk┼», fulltext a topic fron...
+**Co bylo uděláno:** UX: p┼Öestavba /poradna ÔÇö ┼íablona ─Źl├ínk┼», fulltext a topic frontmatter. - Nov├í ┼íablona detailu s hero a TL;DR, n├íhledov├ę fotky na indexu, vyhled├ív├ín├ş v textu ─Źl├ínk┼» a explicitn├ş topic u v┼íech 33 ─Źl├ínk┼»; CTA p├ísy z detailu odstran─Ťny.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `0e95434`). Dotcene oblasti: ...a-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox.md, ...acovniho-prostredi-kdy-ho-muze-pozadovat-khs.md, ...ach-kovy-odsavani-pracovni-prostredi-a-emise.md, ...ake-environmentalni-podklady-se-obvykle-resi.md, ...anym-zdrojum-co-ma-provozovatel-zkontrolovat.md, ...covnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni.md, ...dii-laeq-lafmax-chraneny-prostor-a-nejistota.md, ...e-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat.md, ...eselagregat-emise-hluk-a-povolovaci-podklady.md, ...e-voc-provozni-rad-mereni-a-povoleni-provozu.md, ...i-proc-mohou-zmenit-povinnosti-provozovatele.md, ...i-protokolu-prakticky-dopad-na-provozovatele.md, ...je-potreba-hlukova-studie-a-kdy-mereni-hluku.md, ...-kdy-je-povinna-a-jake-podklady-jsou-potreba.md, ...-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia.md, ...ne-environmentalni-stanovisko-spolecne-s-eia.md, ...odborny-posudek-i-u-zmeny-stavajiciho-zdroje.md, ...omotive-provoz-co-se-typicky-meri-a-posuzuje.md, ...o-stavebnich-odpadu-hluk-prach-doprava-a-eia.md, ...otreba-mereni-emisi-a-kdy-staci-jiny-podklad.md, ...oveho-provozu-z-hlediska-zivotniho-prostredi.md, ...padel-a-vzt-jednotek-co-resit-pred-kolaudaci.md, ...-praci-jake-mereni-je-potreba-jako-podklad-1.md, ...prach-piliny-odsavani-hluk-a-povoleni-zdroje.md, ...-provozovny-co-delat-kdyz-si-sousede-stezuji.md, ...stitut-minimalni-vzdalenosti-ochrana-ovzdusi.md, ...talogovy-udaj-zarizeni-pro-hlukove-posouzeni.md, ...vani-zdroju-znecistovani-ovzdusi-v-roce-2026.md, ...vyduchu-proc-je-dulezite-uz-ve-fazi-projektu.md, ...y-prach-respirabilni-frakce-a-oxid-kremicity.md, app, components, co-poslat-pro-rychle-posouzeni-zameru.md, copy-audit.md, emise-vs-imise-proc-provozovatel-resi-oboji.md, lib, novela-zakona-o-ochrane-ovzdusi-2025.md, poradna, ROADMAPA.md.  
+**Proč:** Nov├í ┼íablona detailu s hero a TL;DR, n├íhledov├ę fotky na indexu, vyhled├ív├ín├ş v textu ─Źl├ínk┼» a explicitn├ş topic u v┼íech 33 ─Źl├ínk┼»; CTA p├ísy z detailu odstran─Ťny.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
 #### Docs: GA4 do launch checklistu v ROADMAPA.
 **Co bylo uděláno:** Docs: GA4 do launch checklistu v ROADMAPA. - Dopln─Ťn ├║kol nasazen├ş a ov─Ť┼Öen├ş GA4 na produkci p┼Öed spu┼ít─Ťn├şm na naturchem.cz.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `584b9ed`). Dotcene oblasti: ROADMAPA.md.  
 **Proč:** Dopln─Ťn ├║kol nasazen├ş a ov─Ť┼Öen├ş GA4 na produkci p┼Öed spu┼ít─Ťn├şm na naturchem.cz.  Co-authored-by: Cursor <cursoragent@cursor.com>.
@@ -43,8 +59,8 @@
 **Proč:** GA4 patří do launch checklistu před ostrým spuštěním na naturchem.cz.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~26 min
-**Rozložení:** 5. 6. 2026 16:47–17:13 (~26 min)
+**Odhadovaná doba práce:** ~1 hod 8 min
+**Rozložení:** 5. 6. 2026 16:47–17:54 (~1 hod 8 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** ~12  
 *Poznámka: čas ze skriptu `estimate-session-time.ps1` (blok od commitu `fb14769` včetně paddingu).*

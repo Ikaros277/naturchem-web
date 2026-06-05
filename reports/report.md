@@ -5,11 +5,40 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 23 |
-| Celkový odhadovaný čas | ~22,7 hodiny |
-| Aktuální fáze | Mobilní homepage hotová; UX/kontakt uzavřeno; další krok: copy sprint C9, zelené akcenty sitewide, launch checklist |
+| Počet sezení celkem | 24 |
+| Celkový odhadovaný čas | ~23,1 hodiny |
+| Aktuální fáze | Mobilní homepage hotová; hero provozů sjednoceno; UX/kontakt uzavřeno; další krok: copy sprint C9, zelené akcenty sitewide, launch checklist |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 5. 6. 2026, 16:57–17:08
+
+### Přehled
+**UX audit a úprava hero** na detailech provozů (`/provozy-a-technologie/*`): tlačítko v hero bylo výjimkou oproti zbytku webu a duplikovalo konverzi. Po schválení auditu odstraněno — konverzní cesta zůstává v patičkovém pásu a sticky hlavičce.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### UX audit — hero na detailech provozů
+**Co bylo uděláno:** Proveden UX audit hero sekce na stránkách jednotlivých provozů. Porovnání s indexem provozů, reference, službami a dalšími informačními stránkami ukázalo, že tlačítko „Poptat posouzení provozu“ v hero je sitewide nekonzistentní a na mobilu zbytečně zabírá fold. Doporučení P5-24: hero bez CTA, konverze dole.  
+**Proč:** Návštěvník na detailu provozu nejdřív potřebuje potvrdit relevanci (H1 + lead), ne okamžitě konvertovat; duplicitní výzva k akci matla a lišila se copy od spodního pásu.
+
+#### UX — odstranění hero CTA z detailů provozů
+**Co bylo uděláno:** Ze sdílené šablony `SectorPage` odstraněno tlačítko z hero — platí pro všech 10 detailů provozů. Hero obsahuje jen ikonu, nadpis a úvodní text. Změna commitnuta a pushnuta na `main`.  
+**Proč:** Sjednocení vzoru s ostatními stránkami; konverze zůstává dostupná přes sticky „Nezávazně poptat“ a `PageCtaStrip` na konci stránky.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~24 min  
+**Rozložení:** 5. 6. 2026 16:57–17:08 (~24 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 4  
+*Poznámka: čas ze skriptu `estimate-session-time.ps1` (úzký blok kolem commitu `a1264c5` včetně paddingu).*
+
+### Technická poznámka
+`src/components/SectorPage.tsx`. Commit: `a1264c5`.
 
 ---
 

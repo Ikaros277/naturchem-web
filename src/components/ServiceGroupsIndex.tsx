@@ -5,6 +5,7 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { accordionExpandClosed, accordionExpandOpen } from "@/lib/accordion-expand-labels";
 import type { ServiceIconKey } from "@/lib/service-icons";
 import { serviceGroups } from "@/lib/service-groups";
+import { useAccordionHashOpen } from "@/lib/use-accordion-hash-open";
 
 const groupIcons: Record<string, ServiceIconKey> = {
   "mericke-sluzby": "pillar-mereni",
@@ -65,7 +66,11 @@ function ServiceCards({ groupId, items }: { groupId: string; items: (typeof serv
   );
 }
 
+const serviceGroupIds = serviceGroups.map((group) => group.id);
+
 export function ServiceGroupsIndex() {
+  const { isOpen, onToggle } = useAccordionHashOpen(serviceGroupIds);
+
   return (
     <section className="section section-surface accordion-index-surface service-groups-accordion">
       <div className="container service-groups-accordion-inner">
@@ -73,7 +78,13 @@ export function ServiceGroupsIndex() {
           const ariaVerb = groupAriaVerbs[group.id] ?? group.title;
 
           return (
-          <details key={group.id} id={group.id} className="card service-group-details">
+          <details
+            key={group.id}
+            id={group.id}
+            className="card service-group-details"
+            open={isOpen(group.id)}
+            onToggle={(event) => onToggle(group.id, event.currentTarget.open)}
+          >
             <summary
               className="service-group-summary"
               aria-label={`${group.title}, ${serviceCountLabel(group.items.length)} — zobrazit nebo skrýt ${ariaVerb}`}

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
 import type { ServiceIconKey } from "@/lib/service-icons";
 
 type OfferLink = {
@@ -18,7 +21,19 @@ export type HomeOfferPillar = {
   links: OfferLink[];
 };
 
+function hasHashHref(href: string) {
+  return href.includes("#");
+}
+
+function onHashLinkClick() {
+  window.setTimeout(notifyAccordionHashSync, 0);
+  window.setTimeout(notifyAccordionHashSync, 100);
+  window.setTimeout(notifyAccordionHashSync, 300);
+}
+
 function OfferPanel({ pillar }: { pillar: HomeOfferPillar }) {
+  const scroll = hasHashHref(pillar.href) ? false : undefined;
+
   return (
     <>
       <ul className="tag-row home-offer-tags" aria-label="Typické oblasti">
@@ -38,7 +53,12 @@ function OfferPanel({ pillar }: { pillar: HomeOfferPillar }) {
           </li>
         ))}
       </ul>
-      <Link href={pillar.href} className="button home-offer-cta card-interactive-nested">
+      <Link
+        href={pillar.href}
+        scroll={scroll}
+        onClick={hasHashHref(pillar.href) ? onHashLinkClick : undefined}
+        className="button home-offer-cta card-interactive-nested"
+      >
         {pillar.cta}
       </Link>
     </>
@@ -46,10 +66,14 @@ function OfferPanel({ pillar }: { pillar: HomeOfferPillar }) {
 }
 
 export function HomeOfferCard({ pillar }: { pillar: HomeOfferPillar }) {
+  const scroll = hasHashHref(pillar.href) ? false : undefined;
+
   return (
     <article className="card institutional-card home-offer-card card-interactive">
       <Link
         href={pillar.href}
+        scroll={scroll}
+        onClick={scroll === false ? onHashLinkClick : undefined}
         className="card-cover-link"
         aria-label={`${pillar.title} — ${pillar.cta}`}
       />

@@ -50,7 +50,7 @@ const offerPillars = [
   },
   {
     icon: "pillar-dokumentace" as const,
-    title: "Povolovací dokumentace a EIA",
+    title: "Dokumentace a EIA",
     teaser: "EIA, posudky, provozní řády, IPPC a ISPOP — podklady pro úřady a povolení…",
     text: "Zpracujeme EIA, odborné posudky, provozní řády, IPPC, ISPOP, GHG i další dokumentaci pro správní orgány.",
     cta: "Zobrazit dokumentaci",

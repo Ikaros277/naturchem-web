@@ -5,6 +5,7 @@ import { useState } from "react";
 import { CONTACT_ATTACHMENT_TOOLTIP } from "@/lib/contact-attachment-hints";
 import { INQUIRY_CATEGORIES, type InquiryCategoryId } from "@/lib/contact-inquiry";
 import { sendGtagEvent } from "@/lib/gtag";
+import { company } from "@/lib/site";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -14,7 +15,9 @@ type Props = {
 };
 
 const SUCCESS_MESSAGE =
-  "Děkujeme, podklady jsme obdrželi. Posoudíme je a ozveme se vám s návrhem dalšího postupu. Pokud bude potřeba něco upřesnit, kontaktujeme vás e-mailem nebo telefonicky.";
+  "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.";
+
+const SEND_FAILURE_MESSAGE = `Zprávu se nepodařilo odeslat. Napište na ${company.email} nebo zavolejte ${company.phones[0]}.`;
 
 export function ContactForm({
   initialCategory = "nevim",
@@ -34,12 +37,12 @@ export function ContactForm({
 
     if (!email && !phone) {
       setStatus("error");
-      setFeedback("Vyplňte prosím e-mail nebo telefon.");
+      setFeedback("Abychom se Vám ozvali, vyplňte prosím e-mail nebo telefon.");
       return;
     }
 
     setStatus("loading");
-    setFeedback("Odesíláme podklady k posouzení...");
+    setFeedback("Moment, odesílám zprávu…");
 
     try {
       const response = await fetch("/api/contact", {
@@ -50,10 +53,7 @@ export function ContactForm({
 
       if (!response.ok || !result.ok) {
         setStatus("error");
-        setFeedback(
-          result.message ||
-            "Odeslání se nezdařilo, kontaktujte nás prosím e-mailem nebo telefonicky."
-        );
+        setFeedback(result.message || SEND_FAILURE_MESSAGE);
         return;
       }
 
@@ -68,7 +68,7 @@ export function ContactForm({
       });
     } catch {
       setStatus("error");
-      setFeedback("Odeslání se nezdařilo, kontaktujte nás prosím e-mailem nebo telefonicky.");
+      setFeedback(SEND_FAILURE_MESSAGE);
     }
   }
 
@@ -76,7 +76,7 @@ export function ContactForm({
     return (
       <div id="poptavkovy-formular" className="contact-form-success" role="status">
         <h2 id="poptavka-heading" className="contact-form-title">
-          Rychlá poptávka
+          Díky, zprávu jsme dostali
         </h2>
         <p className="contact-form-success-message">{feedback}</p>
       </div>
@@ -87,16 +87,19 @@ export function ContactForm({
     <form id="poptavkovy-formular" className="contact-quick-form" onSubmit={handleSubmit}>
       <header className="contact-form-header">
         <h2 id="poptavka-heading" className="contact-form-title">
-          Rychlá poptávka
+          Napište nám
         </h2>
-        <p className="contact-form-lead">Stručný popis nebo příloha stačí — typ služby doladíme podle podkladů.</p>
+        <p className="contact-form-lead">
+          Nemusíte mít všechno připravené. Krátká zpráva nebo příloha stačí — ozveme se a domluvíme,
+          co dává smysl.
+        </p>
       </header>
 
       <div className="contact-form-grid">
         <div className="contact-form-col contact-form-col--identity">
           <p>
             <label>
-              Jméno / firma
+              Jméno nebo firma
               <br />
               <input name="name" required autoComplete="name" />
             </label>
@@ -117,11 +120,10 @@ export function ContactForm({
               <input name="phone" type="tel" autoComplete="tel" />
             </label>
           </p>
-          <p className="form-help contact-form-contact-note">E-mail nebo telefon — alespoň jedno.</p>
 
           <p>
             <label>
-              Čeho se poptávka týká?
+              Čeho se Váš dotaz týká?
               <br />
               <select
                 name="inquiryCategory"
@@ -143,21 +145,21 @@ export function ContactForm({
         <div className="contact-form-col contact-form-col--message">
           <p className="contact-form-message-field">
             <label>
-              Stručně popište, co řešíte
+              S čím Vám pomůžeme?
               <br />
               <textarea
                 name="message"
                 rows={9}
                 required
                 defaultValue={initialMessage}
-                placeholder="Např. výzva z úřadu, měření emisí, hluk technologie, EIA, školení…"
+                placeholder="Třeba výzva z úřadu, popis provozu, termín, co už máte po ruce…"
               />
             </label>
           </p>
 
           <p>
             <span className="contact-form-label-row">
-              <label htmlFor="contact-attachments-input">Příloha</label>
+              <label htmlFor="contact-attachments-input">Příloha (nepovinné)</label>
               <span className="form-info-tip">
                 <button
                   type="button"
@@ -186,12 +188,12 @@ export function ContactForm({
       <p>
         <label className="contact-service-option">
           <input type="checkbox" name="consent" required />
-          <span>Souhlasím se zpracováním osobních údajů pro účel vyřízení poptávky.</span>
+          <span>Souhlasím se zpracováním údajů kvůli vyřízení dotazu.</span>
         </label>
       </p>
 
       <button type="submit" className="button contact-form-submit" disabled={status === "loading"}>
-        {status === "loading" ? "Odesílám..." : "Odeslat podklady k posouzení"}
+        {status === "loading" ? "Odesílám…" : "Odeslat zprávu"}
       </button>
 
       {feedback ? (

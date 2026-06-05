@@ -15,10 +15,10 @@ import { getPageHeroTheme } from "@/lib/hero-images";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Kontakt NATURCHEM – poptávka měření, studií a podkladů"
+    absolute: "Kontakt a dotaz | NATURCHEM"
   },
   description:
-    "Kontakt na NATURCHEM a poptávkový formulář pro měření, studie, EIA, posudky, provozní řády, IPPC, ISPOP, GHG a školení chemické legislativy.",
+    "Napište nám popis situace nebo přiložte podklady od úřadu. Ozveme se s návrhem dalšího postupu — formulář nebo přímý kontakt.",
   alternates: { canonical: `${siteUrl}/kontakt/` }
 };
 
@@ -76,11 +76,11 @@ export default async function Page({ searchParams }: PageProps) {
       >
         <header className="premium-page-hero contact-hero page-hero--photo">
           <div>
-            <p className="eyebrow">Kontakt a poptávka</p>
-            <h1>Pošlete nám požadavek nebo podklady k posouzení</h1>
+            <p className="eyebrow">Kontakt</p>
+            <h1>Ozvěte se nám — rádi pomůžeme</h1>
             <p className="page-lead">
-              Podle typu provozu, požadavku úřadu a dostupných podkladů určíme, zda je vhodné
-              měření, studie, odborný posudek, EIA nebo jiná dokumentace.
+              Stačí poslat stručný popis nebo přílohu od úřadu. Posoudíme situaci a ozveme se s dalším
+              postupem.
             </p>
           </div>
         </header>

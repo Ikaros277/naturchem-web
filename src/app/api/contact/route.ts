@@ -165,7 +165,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           ok: false,
-          message: "Odeslání se nezdařilo, kontaktujte nás prosím e-mailem nebo telefonicky."
+          message: `Zprávu se nepodařilo odeslat. Napište na ${company.email} nebo zavolejte ${company.phones[0]}.`
         },
         { status: 502 }
       );
@@ -176,11 +176,11 @@ export async function POST(request: Request) {
     const confirmationBody = [
       `Dobrý den,`,
       ``,
-      `děkujeme za poptávku zaslanou přes web NATURCHEM.`,
-      `Evidujeme ji s tímto zaměřením: ${confirmationFocus}.`,
+      `děkujeme za zprávu z webu NATURCHEM.`,
+      `Týká se oblasti: ${confirmationFocus}.`,
       ``,
-      `Podklady posoudíme a ozveme se vám s návrhem dalšího postupu.`,
-      `Pokud bude potřeba něco upřesnit, kontaktujeme vás e-mailem nebo telefonicky.`,
+      `Ozveme se Vám s dalším postupem.`,
+      `Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.`,
       ``,
       `NATURCHEM, s.r.o.`
     ].join("\n");
@@ -189,7 +189,7 @@ export async function POST(request: Request) {
       const { error: confirmationError } = await resend.emails.send({
         from: fromEmail,
         to: email,
-        subject: "Potvrzení přijetí poptávky NATURCHEM",
+        subject: "Potvrzení Vaší zprávy — NATURCHEM",
         text: confirmationBody,
         html: `<pre style="font-family:system-ui,sans-serif;white-space:pre-wrap;">${escapeHtml(
           confirmationBody
@@ -204,12 +204,15 @@ export async function POST(request: Request) {
     return NextResponse.json({
       ok: true,
       message:
-        "Děkujeme, podklady jsme obdrželi. Posoudíme je a ozveme se vám s návrhem dalšího postupu. Pokud bude potřeba něco upřesnit, kontaktujeme vás e-mailem nebo telefonicky."
+        "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky."
     });
   } catch (error) {
     console.error("[CONTACT_FORM_ERROR]", error);
     return NextResponse.json(
-      { ok: false, message: "Odeslání se nezdařilo, kontaktujte nás prosím e-mailem nebo telefonicky." },
+      {
+        ok: false,
+        message: `Zprávu se nepodařilo odeslat. Napište na ${company.email} nebo zavolejte ${company.phones[0]}.`
+      },
       { status: 500 }
     );
   }

@@ -3,9 +3,9 @@ import type { ContactServiceOption } from "@/lib/contact-services";
 export const INQUIRY_CATEGORIES = [
   { id: "mereni", label: "Měření" },
   { id: "studie", label: "Studie / posudek" },
-  { id: "eia", label: "EIA / povolení / úřad" },
+  { id: "eia", label: "Úřad, povolení nebo EIA" },
   { id: "skoleni", label: "Školení" },
-  { id: "nevim", label: "Nevím, potřebuji poradit" }
+  { id: "nevim", label: "Ještě nevím — chci poradit" }
 ] as const;
 
 export type InquiryCategoryId = (typeof INQUIRY_CATEGORIES)[number]["id"];
@@ -13,9 +13,9 @@ export type InquiryCategoryId = (typeof INQUIRY_CATEGORIES)[number]["id"];
 export const INQUIRY_CATEGORY_LABELS: Record<InquiryCategoryId, string> = {
   mereni: "Měření",
   studie: "Studie / posudek",
-  eia: "EIA / povolení / úřad",
+  eia: "Úřad, povolení nebo EIA",
   skoleni: "Školení",
-  nevim: "Nevím, potřebuji poradit"
+  nevim: "Ještě nevím — chci poradit"
 };
 
 const MEASUREMENT_SERVICES = new Set<ContactServiceOption>([

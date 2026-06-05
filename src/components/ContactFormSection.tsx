@@ -18,9 +18,9 @@ export function ContactFormFallback() {
   return (
     <div className="contact-form-fallback card" id={CONTACT_FORM_ID}>
       <p>
-        Formulář se nepodařilo načíst. Pošlete poptávku na{" "}
-        <a href={`mailto:${company.email}`}>{company.email}</a> nebo volejte{" "}
-        <a href={phoneHref}>{company.phones[0]}</a>.
+        Formulář teď nejde zobrazit. Napište nám na{" "}
+        <a href={`mailto:${company.email}`}>{company.email}</a> nebo zavolejte{" "}
+        <a href={phoneHref}>{company.phones[0]}</a> — kontakty najdete níže.
       </p>
       <div className="btn-row">
         <a className="button" href={`mailto:${company.email}`}>

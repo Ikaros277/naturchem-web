@@ -5,11 +5,36 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 26 |
-| Celkový odhadovaný čas | ~24,9 hodiny |
-| Aktuální fáze | Sjednocený vizuální jazyk (rohy, ikony, accordion indexy); další krok: launch checklist (GA4, Resend, DNS) |
+| Počet sezení celkem | 27 |
+| Celkový odhadovaný čas | ~25,2 hodiny |
+| Aktuální fáze | Sjednocený vizuální jazyk (accordion indexy, hover stavy); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 5. 6. 2026, 19:16–19:29
+
+### Přehled
+Doplnění vizuálního akcentu na horizontálních accordion kartách ve výpisech (provozy, služby, přístrojové vybavení) — stejný zelený pruh nahoře jako u karet na homepage, včetně jemné změny barvy při najetí myší. Opraven hover, který dříve zvýrazňoval jen střed řádku a působil nevyváženě.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Accordion indexy — horní barevný pruh a hover
+**Co bylo uděláno:** U horizontálních accordion karet na stránkách `/provozy-a-technologie`, `/sluzby` a `/pristrojove-vybaveni` nahrazen levý zelený okraj tenkým pruhem nahoře (stejný princip jako u karet „Co zajišťujeme“ na homepage). Při najetí myší se pruh mírně zesvětlí, celá karta dostane jemný stín a u zavřených položek velmi subtilní gradient — bez přehnaných barev. Hover už neobarvuje jen vnitřní oblast summary řádku.  
+**Proč:** Klient chtěl sjednotit vizuální jazyk s homepage a odstranit „divný“ efekt, kdy se při hoveru zvýraznilo jen středové pole karty místo celého boxu.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~18 min  
+**Rozložení:** 5. 6. 2026 19:16–19:29 (~18 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 2  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — log konverzace a commit `f0bc4f5` včetně paddingu (+5 min před/po bloku).*
+
+### Technická poznámka
+`src/app/globals.css` — třída `.service-group-details`. Commit: `f0bc4f5`.
 
 ---
 

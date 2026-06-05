@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
+import { contactFormHref } from "@/lib/contact-url";
 import { globalCta, headerMainNav, kontaktNav, oNasNav } from "@/lib/navigation";
 import { serviceMegaGroups } from "@/lib/service-megamenu";
 import { BrandLogo } from "@/components/BrandLogo";
@@ -258,7 +259,7 @@ export function Header() {
                 </Link>
               </nav>
               <div className="nav-mobile-sheet-foot">
-                <Link className="button nav-mobile-cta" href="/kontakt#poptavkovy-formular" onClick={closeMenu}>
+                <Link className="button nav-mobile-cta" href={contactFormHref} onClick={closeMenu}>
                   {globalCta}
                 </Link>
               </div>
@@ -332,12 +333,12 @@ export function Header() {
         ) : null}
 
         {isDesktop ? (
-          <Link className="button nav-cta-desktop" href="/kontakt#poptavkovy-formular">
+          <Link className="button nav-cta-desktop" href={contactFormHref}>
             {globalCta}
           </Link>
         ) : (
           <>
-            <Link className="button nav-cta-mobile" href="/kontakt#poptavkovy-formular">
+            <Link className="button nav-cta-mobile" href={contactFormHref}>
               {globalCta}
             </Link>
             <button

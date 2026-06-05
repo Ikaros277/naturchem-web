@@ -1,4 +1,4 @@
-﻿import { contactUrl } from "@/lib/contact-url";
+﻿import { contactFormHref, contactPageHref, contactUrl } from "@/lib/contact-url";
 
 export type FaqLink = {
   label: string;
@@ -57,7 +57,7 @@ export const faqCategories: FaqCategory[] = [
     title: "Obecné dotazy",
     tileLabel: "Obecné dotazy",
     ctas: [
-      { label: "Poptat službu", href: "/kontakt" },
+      { label: "Poptat službu", href: contactFormHref },
       { label: "Poslat podklady k posouzení", href: contactUrl("Nejsem si jistý") }
     ],
     items: [
@@ -70,7 +70,7 @@ export const faqCategories: FaqCategory[] = [
           { label: "Měření emisí", href: "/sluzby/mereni-emisi" },
           { label: "Rozptylové studie", href: "/sluzby/rozptylove-studie" },
           { label: "EIA a oznámení záměru", href: "/sluzby/eia-oznameni-zameru" },
-          { label: "Kontakt", href: "/kontakt" }
+          { label: "Kontakt", href: contactPageHref }
         ]
       },
       {
@@ -494,7 +494,7 @@ export const faqCategories: FaqCategory[] = [
     title: "Poptávka, termíny a podklady",
     tileLabel: "Poptávka a podklady",
     ctas: [
-      { label: "Poptat službu", href: "/kontakt" },
+      { label: "Poptat službu", href: contactFormHref },
       { label: "Poslat podklady k posouzení", href: contactUrl("Nejsem si jistý") }
     ],
     items: [
@@ -503,7 +503,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Nejlepší je poslat rozhodnutí nebo výzvu úřadu, projektovou dokumentaci, popis technologie, lokalitu, provozní režim, dostupné protokoly, provozní řád, bezpečnostní listy a fotografie měřicích míst, výduchů nebo zdrojů hluku."
         ],
-        links: [{ label: "Kontakt a poptávka", href: "/kontakt" }]
+        links: [{ label: "Kontakt a poptávka", href: contactFormHref }]
       },
       {
         q: "Lze začít i s neúplnými podklady?",

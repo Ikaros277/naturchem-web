@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { contactFormHref } from "@/lib/contact-url";
 import { SemanticCard } from "@/components/SemanticCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { CaseStudy, CaseStudyCategory } from "@/lib/case-studies";
@@ -25,7 +26,7 @@ export function CaseStudiesView({ category, categories }: Props) {
           <Link href={category.serviceHref} className="button secondary">
             Související služba
           </Link>{" "}
-          <Link href="/kontakt" className="button">
+          <Link href={contactFormHref} className="button">
             Poptat službu
           </Link>
         </p>

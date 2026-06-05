@@ -1,6 +1,6 @@
 /** Globální a kontextové texty výzev k akci na webu NATURCHEM. */
 
-import { contactUrl } from "@/lib/contact-url";
+import { contactFormHref, contactUrl } from "@/lib/contact-url";
 
 export const globalCta = "Nezávazně poptat";
 
@@ -23,7 +23,7 @@ export const pageCtaPresets = {
   contact: {
     text: "Nenašli jste odpověď? Pošlete dotaz nebo podklady přímo.",
     primaryLabel: "Kontaktovat NATURCHEM",
-    primaryHref: "/kontakt"
+    primaryHref: contactFormHref
   },
   uncertain: {
     text: "Pošlete nám rozhodnutí, výzvu nebo popis záměru. Navrhneme vhodný rozsah měření, studie nebo dokumentace.",
@@ -33,19 +33,19 @@ export const pageCtaPresets = {
   servicesIndex: {
     text: "Pošlete rozhodnutí úřadu, provozní řád nebo popis technologie. Doporučíme správný rozsah měření nebo studie.",
     primaryLabel: globalCta,
-    primaryHref: "/kontakt"
+    primaryHref: contactFormHref
   },
   accreditation: {
     text: "Nejste si jistí, zda Váš případ akreditace pokrývá? Pošlete popis zdroje nebo záměru — odpovíme.",
     primaryLabel: "Kontaktovat NATURCHEM",
-    primaryHref: "/kontakt",
+    primaryHref: contactFormHref,
     secondaryLabel: "Přehled služeb",
     secondaryHref: "/sluzby"
   },
   cooperation: {
     text: "Potřebujete poradit s rozsahem měření, studie nebo dokumentace? Napište nám — navrhneme další postup.",
     primaryLabel: "Kontaktovat NATURCHEM",
-    primaryHref: "/kontakt",
+    primaryHref: contactFormHref,
     secondaryLabel: "Přehled služeb",
     secondaryHref: "/sluzby"
   },
@@ -81,11 +81,11 @@ export const pageCtaPresets = {
   typicalOrders: {
     text: "Potřebujete měření, studii nebo školení? Pošlete stručný popis provozu nebo výzvu úřadu.",
     primaryLabel: globalCta,
-    primaryHref: "/kontakt"
+    primaryHref: contactFormHref
   },
   poradna: {
     text: "Pošlete rozhodnutí, výzvu nebo stručný popis situace. Na základě podkladů navrhneme další postup.",
     primaryLabel: "Kontaktovat NATURCHEM",
-    primaryHref: "/kontakt"
+    primaryHref: contactFormHref
   }
 } as const satisfies Record<string, PageCtaStripProps>;

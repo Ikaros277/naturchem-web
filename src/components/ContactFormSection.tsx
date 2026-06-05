@@ -1,6 +1,7 @@
 "use client";
 
 import { Component, useEffect, type ReactNode } from "react";
+import { CONTACT_FORM_ID } from "@/lib/contact-url";
 import { company } from "@/lib/site";
 import { ContactForm } from "@/components/ContactForm";
 import type { InquiryCategoryId } from "@/lib/contact-inquiry";
@@ -15,7 +16,7 @@ export function ContactFormFallback() {
   const phoneHref = `tel:${company.phones[0].replace(/\s/g, "")}`;
 
   return (
-    <div className="contact-form-fallback card" id="poptavkovy-formular">
+    <div className="contact-form-fallback card" id={CONTACT_FORM_ID}>
       <p>
         Formulář se nepodařilo načíst. Pošlete poptávku na{" "}
         <a href={`mailto:${company.email}`}>{company.email}</a> nebo volejte{" "}
@@ -57,12 +58,21 @@ export function ContactFormSection({
   initialMessage = ""
 }: Props) {
   useEffect(() => {
-    const hasQueryPrefill = initialServices.length > 0 || Boolean(initialMessage);
-    const hasFormHash = window.location.hash === "#poptavkovy-formular";
-    if (!hasQueryPrefill && !hasFormHash) return;
+    function shouldScrollToForm() {
+      const hasQueryPrefill = initialServices.length > 0 || Boolean(initialMessage);
+      const hasFormHash = window.location.hash === `#${CONTACT_FORM_ID}`;
+      return hasQueryPrefill || hasFormHash;
+    }
 
-    const el = document.getElementById("poptavkovy-formular");
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    function scrollToForm() {
+      if (!shouldScrollToForm()) return;
+      const el = document.getElementById(CONTACT_FORM_ID);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    scrollToForm();
+    window.addEventListener("hashchange", scrollToForm);
+    return () => window.removeEventListener("hashchange", scrollToForm);
   }, [initialServices, initialMessage]);
 
   const formKey = [

@@ -1,4 +1,5 @@
 ﻿import { globalCta } from "@/lib/cta";
+import { contactPageHref } from "@/lib/contact-url";
 import { homeSectors as sectorsForHome, provozyNavLabel, sectors } from "@/lib/sectors";
 
 /**
@@ -21,7 +22,7 @@ export const oSpolecnostiNav = {
 /** @deprecated Použijte oSpolecnostiNav */
 export const oNaturchemNav = oSpolecnostiNav;
 
-export const kontaktNav = { href: "/kontakt", label: "Kontakt" } as const;
+export const kontaktNav = { href: contactPageHref, label: "Kontakt" } as const;
 
 export const typickeZakazkyNav = {
   href: "/typicke-zakazky",

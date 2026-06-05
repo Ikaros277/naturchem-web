@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { contactFormHref } from "@/lib/contact-url";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { CaseStudy, CaseStudyCategory } from "@/lib/case-studies";
 
@@ -97,7 +98,7 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
                 <Link href={openCategory.serviceHref} className="button secondary" onClick={close}>
                   Související služba
                 </Link>
-                <Link href="/kontakt" className="button" onClick={close}>
+                <Link href={contactFormHref} className="button" onClick={close}>
                   Poptat službu
                 </Link>
               </p>

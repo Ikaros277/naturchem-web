@@ -5,6 +5,7 @@ import {
   oSpolecnostiNav,
   referenceNav
 } from "@/lib/navigation";
+import { contactPageHref } from "@/lib/contact-url";
 import { company } from "@/lib/site";
 
 export type FooterLink = {
@@ -30,7 +31,7 @@ export const footerServiceLinks: readonly FooterLink[] = [
 ];
 
 export const footerContactPageLink: FooterLink = {
-  href: "/kontakt",
+  href: contactPageHref,
   label: "Kontakt a formulář"
 };
 

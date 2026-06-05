@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/Schema";
 import { getArticleBySlug, getArticles } from "@/lib/articles";
 import { formatArticleDate, normalizeArticleDate } from "@/lib/format-date";
+import { contactFormHref } from "@/lib/contact-url";
 import { articlesNav } from "@/lib/navigation";
 import { siteUrl } from "@/lib/site";
 
@@ -95,7 +96,7 @@ export default async function CmsArticlePage({ params }: Props) {
       <ArticleRelatedServices title={article.title} slug={article.slug} />
 
       <p className="article-footer-cta">
-        <Link href="/kontakt">Požádat o konzultaci</Link>
+        <Link href={contactFormHref}>Požádat o konzultaci</Link>
         {" · "}
         <Link href={articlesNav.href}>Další odborné články</Link>
       </p>

@@ -4,9 +4,17 @@ import {
   type ContactServiceOption
 } from "@/lib/contact-services";
 
+export const CONTACT_FORM_ID = "poptavkovy-formular";
+
+/** Stránka kontaktu — menu „Kontakt“, patička, breadcrumbs. */
+export const contactPageHref = "/kontakt";
+
+/** Poptávkové CTA napříč webem — rovnou na formulář, ne na hero. */
+export const contactFormHref = `${contactPageHref}#${CONTACT_FORM_ID}`;
+
 export function contactUrl(service: ContactServiceOption | string): string {
   const value = relatedServiceToContact(service) ?? (isValidContactService(service) ? service : "Nejsem si jistý");
-  return `/kontakt?service=${encodeURIComponent(value)}#poptavkovy-formular`;
+  return `${contactPageHref}?service=${encodeURIComponent(value)}#${CONTACT_FORM_ID}`;
 }
 
 /** Odkaz z oborové stránky — platné služby + název oboru do formuláře. */
@@ -28,5 +36,5 @@ export function sectorContactUrl(
     params.set("services", unique.slice(1).join(","));
   }
 
-  return `/kontakt?${params.toString()}#poptavkovy-formular`;
+  return `${contactPageHref}?${params.toString()}#${CONTACT_FORM_ID}`;
 }

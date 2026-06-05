@@ -5,47 +5,48 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 25 |
-| Celkový odhadovaný čas | ~24,6 hodiny |
-| Aktuální fáze | Mobilní homepage a forest akcenty hotové; hero provozů sjednoceno; UX/kontakt uzavřeno; další krok: copy sprint C9, launch checklist (GA4, Resend, DNS) |
+| Počet sezení celkem | 26 |
+| Celkový odhadovaný čas | ~24,9 hodiny |
+| Aktuální fáze | Přístrojové vybavení a accordion indexy sjednoceny (copy C3 + vizuální vrstva); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 5. 6. 2026, 18:43–18:55
+## Sezení: 5. 6. 2026, 19:02–19:19
 
 ### Přehled
-Automaticky založené sezení po commitu `12ccc2a`.
+Dokončena vizuální vrstva accordion indexů (P5-26–P5-28) a copy sprint stránky Přístrojové vybavení — včetně zarovnání nadpisů v summary řádcích vedle ikon. Stejný surface pás a forest akcent platí i pro `/sluzby`, `/provozy-a-technologie` a `/reference`.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### UX: stats pruh homepage ÔÇö svisl├ę odd─Ťlova─Źe a centrovan├ę ├║daje.
-**Co bylo uděláno:** UX: stats pruh homepage ÔÇö svisl├ę odd─Ťlova─Źe a centrovan├ę ├║daje. - Zelen├Ż pruh metrik m├í jen tenk├ę d─Ťl├şc├ş ─Ź├íry mezi sloupci; ikona a ─Ź├şsla jsou vycentrovan├ę na mobilu i desktopu.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `9ded192`). Dotcene oblasti: app.  
-**Proč:** Zelen├Ż pruh metrik m├í jen tenk├ę d─Ťl├şc├ş ─Ź├íry mezi sloupci; ikona a ─Ź├şsla jsou vycentrovan├ę na mobilu i desktopu.  Co-authored-by: Cursor <cursoragent@cursor.com>.
 
-#### UX: prestavba stranky Pristrojove vybaveni ÔÇö accordion ve stylu pro...
-**Co bylo uděláno:** UX: prestavba stranky Pristrojove vybaveni ÔÇö accordion ve stylu provozu. - Jednosloupcovy rozbalovaci seznam misto gridu, vlastni CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `14243a3`). Dotcene oblasti: app, components, lib, pristrojove-vybaveni.  
-**Proč:** Jednosloupcovy rozbalovaci seznam misto gridu, vlastni CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+#### Přístrojové vybavení — copy a obsah
+**Co bylo uděláno:** Nový H1 „Čím měříme v terénu i v laboratoři“, aktualizovaná meta description, zkrácené titulky skupin přístrojů, odkazy na služby ve tvaru „Měření emisí →“ místo „Související služba: …“. Z collapsed řádků accordionu odstraněny redundantní podtitulky (P5-30).  
+**Proč:** Stránka měla působit katalogově a summary řádky byly zbytečně vysoké — text měl lépe odpovídat účelu stránky (orientace před zakázkou / ve výběrovém řízení) a být scanovatelný na první pohled.
 
-#### UX: prestavba stranky Pristrojove vybaveni ÔÇö accordion ve stylu pro...
-**Co bylo uděláno:** UX: prestavba stranky Pristrojove vybaveni ÔÇö accordion ve stylu provozu. - Jednosloupcovy rozbalovaci seznam misto gridu, vlastni CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `40360d4`). Dotcene oblasti: app, components, lib, pristrojove-vybaveni, report, workflow.  
-**Proč:** Jednosloupcovy rozbalovaci seznam misto gridu, vlastni CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+#### Accordion indexy — vizuální sjednocení (P5-26–P5-28)
+**Co bylo uděláno:** Accordion sekce obaleny do šedého surface pásu (`.section-surface`), karty mají 3px forest border-left, silnější hover stín a jemné zelené podbarvení při hoveru/rozbalení. Sitewide sjednoceno „Zobrazit více“ / „Zobrazit méně“ včetně typických zakázek.  
+**Proč:** Bílé karty na bílém pozadí působily monotónně na čtyřech index stránkách; surface a akcent dávají vizuální rytmus bez změny struktury obsahu.
 
-#### UX: p?estavba str?nky P??strojov? vybaven? ? accordion ve stylu provoz?.
-**Co bylo uděláno:** UX: p?estavba str?nky P??strojov? vybaven? ? accordion ve stylu provoz?. - Jednosloupcov? rozbalovac? seznam m?sto gridu, vlastn? CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `12ccc2a`). Dotcene oblasti: app, components, lib, pristrojove-vybaveni.  
-**Proč:** Jednosloupcov? rozbalovac? seznam m?sto gridu, vlastn? CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+#### Accordion summary — zarovnání ikony a textu
+**Co bylo uděláno:** Nadpis a počet položek v summary řádku opticky vycentrovány vůči ikoně (pevná výška ikony 2,75 rem, úprava line-height a zarovnání title row).  
+**Proč:** Po první úpravě text seděl nahoře nebo pod ikonou — řádek působil nevyváženě a zbytečně zabíral výšku.
+
+#### Ikony a design tokeny
+**Co bylo uděláno:** ServiceIcon inline/card varianty mírně zvětšeny; mapování ikon skupin přístrojů přes `id` místo titulku. CSS radius tokeny (`--radius-sharp`, `--radius-ui`, `--radius-pill`) pro konzistentní zaoblení.  
+**Proč:** Ikony v accordionu měly být čitelnější a změny titulků skupin už nemají rozbíjet přiřazení ikon.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~12 min
-**Rozložení:** 5. 6. 2026 18:43–18:55 (~12 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~17 min  
+**Rozložení:** 5. 6. 2026 19:02–19:19 (~17 min)  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** ~6  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — log konverzace od commitu `f8af277` včetně paddingu (+5 min před/po bloku).*
 
 ### Technická poznámka
-Commit: `12ccc2aab7e9814f1f0067ad9ed38c7e6f885ad0`
+`src/app/pristrojove-vybaveni/page.tsx`, `src/lib/equipment-content.ts`, `src/components/EquipmentAccordion.tsx`, `src/app/globals.css`, sdílené accordion komponenty. Commit: `3585f95`.
 
 ---
 

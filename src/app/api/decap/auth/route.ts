@@ -31,7 +31,7 @@ export async function GET(request: Request) {
   const response = NextResponse.redirect(githubUrl);
   response.cookies.set("decap_oauth_state", state, {
     httpOnly: true,
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     path: "/",
     maxAge: 60 * 10

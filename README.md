@@ -54,10 +54,10 @@ Detail clanku je na `/poradna/[slug]`.
 
 1. Vytvor GitHub OAuth App (`Settings -> Developer settings -> OAuth Apps`)
 2. Nastav:
-   - `Homepage URL`: `https://naturchem-web.vercel.app`
-   - `Authorization callback URL`: `https://naturchem-web.vercel.app/api/decap/callback`
+   - `Homepage URL`: `https://web-naturchem.vercel.app`
+   - `Authorization callback URL`: `https://web-naturchem.vercel.app/api/decap/callback`
 3. Ve Vercel Environment Variables nastav:
-   - `NEXT_PUBLIC_SITE_URL=https://naturchem-web.vercel.app`
+   - `NEXT_PUBLIC_SITE_URL=https://web-naturchem.vercel.app`
    - `GITHUB_OAUTH_CLIENT_ID=...`
    - `GITHUB_OAUTH_CLIENT_SECRET=...`
 4. Redeploy projekt na Vercelu

@@ -18,12 +18,21 @@ function jsonResponseScript(payload: Record<string, unknown>, success: boolean):
   const status = success ? "success" : "error";
   const message = `authorization:github:${status}:${JSON.stringify(payload)}`;
   return `
-const message = ${JSON.stringify(message)};
-if (window.opener) {
-  window.opener.postMessage("authorizing:github", window.location.origin);
-  window.opener.postMessage(message, window.location.origin);
+const msg = ${JSON.stringify(message)};
+function sendResult(origin) {
+  if (window.opener) {
+    window.opener.postMessage(msg, origin || "*");
+  }
+  window.close();
 }
-window.close();
+window.addEventListener("message", function (e) {
+  if (e.data === "authorizing:github") {
+    sendResult(e.origin);
+  }
+}, false);
+if (window.opener) {
+  window.opener.postMessage("authorizing:github", "*");
+}
 `;
 }
 

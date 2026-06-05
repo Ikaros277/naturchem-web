@@ -258,7 +258,7 @@ export function Header() {
                 </Link>
               </nav>
               <div className="nav-mobile-sheet-foot">
-                <Link className="button nav-mobile-cta" href="/kontakt" onClick={closeMenu}>
+                <Link className="button nav-mobile-cta" href="/kontakt#poptavkovy-formular" onClick={closeMenu}>
                   {globalCta}
                 </Link>
               </div>
@@ -332,7 +332,7 @@ export function Header() {
         ) : null}
 
         {isDesktop ? (
-          <Link className="button nav-cta-desktop" href="/kontakt">
+          <Link className="button nav-cta-desktop" href="/kontakt#poptavkovy-formular">
             {globalCta}
           </Link>
         ) : (

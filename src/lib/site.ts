@@ -39,6 +39,31 @@ export const company = {
   }
 };
 
+export type CompanyOffice = {
+  label: string;
+  street: string;
+  city: string;
+  postalCode: string;
+};
+
+/** Sídlo + provozovny — jednotný seznam pro kontakt a patičku. */
+export function getCompanyOffices(): CompanyOffice[] {
+  return [
+    {
+      label: company.address.city,
+      street: company.address.street,
+      city: company.address.city,
+      postalCode: company.address.postalCode
+    },
+    ...company.branchAddresses.map((branch) => ({
+      label: branch.label,
+      street: branch.street,
+      city: branch.city,
+      postalCode: branch.postalCode
+    }))
+  ];
+}
+
 export const services = [
   {
     href: "/sluzby/mereni-emisi",

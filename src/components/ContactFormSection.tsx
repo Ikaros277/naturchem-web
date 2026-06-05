@@ -57,10 +57,13 @@ export function ContactFormSection({
   initialMessage = ""
 }: Props) {
   useEffect(() => {
-    if (!initialCategory && initialServices.length === 0 && !initialMessage) return;
+    const hasQueryPrefill = initialServices.length > 0 || Boolean(initialMessage);
+    const hasFormHash = window.location.hash === "#poptavkovy-formular";
+    if (!hasQueryPrefill && !hasFormHash) return;
+
     const el = document.getElementById("poptavkovy-formular");
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [initialCategory, initialServices, initialMessage]);
+  }, [initialServices, initialMessage]);
 
   const formKey = [
     initialCategory ?? "nevim",
@@ -73,7 +76,6 @@ export function ContactFormSection({
       <ContactForm
         key={formKey}
         initialCategory={initialCategory}
-        initialServices={initialServices}
         initialMessage={initialMessage}
       />
     </ContactFormErrorBoundary>

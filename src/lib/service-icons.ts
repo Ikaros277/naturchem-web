@@ -36,6 +36,11 @@ export type ServiceIconKey =
   | "process-rozsah"
   | "process-zpracovani"
   | "process-vystup"
+  | "contact-building"
+  | "contact-user"
+  | "contact-phone"
+  | "contact-mail"
+  | "contact-map-pin"
   | "default";
 
 const hrefToIcon: Record<string, ServiceIconKey> = {
@@ -180,12 +185,9 @@ export function getFaqCategoryIconKey(categoryId: string): ServiceIconKey {
 
 const contactAttachmentToIcon: Record<string, ServiceIconKey> = {
   "požadavek, výzvu nebo rozhodnutí úřadu": "pillar-dokumentace",
-  "projektovou dokumentaci": "process-posouzeni",
-  "popis technologie": "audience-prumysl",
-  "provozní řád nebo povolení provozu": "provozni-rad",
-  "fotografie provozu, výduchu, zdroje hluku nebo pracoviště": "process-zpracovani",
-  "požadovaný termín": "process-vystup",
-  "lokalitu provozu nebo záměru": "audience-budovy"
+  "projektovou dokumentaci nebo popis technologie": "process-posouzeni",
+  "fotografie provozu, výduchu nebo pracoviště": "process-zpracovani",
+  "provozní řád, povolení nebo lokalitu záměru": "provozni-rad"
 };
 
 export function getContactAttachmentIconKey(item: string): ServiceIconKey {

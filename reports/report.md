@@ -5,11 +5,40 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 27 |
-| Celkový odhadovaný čas | ~25,2 hodiny |
-| Aktuální fáze | Sjednocený vizuální jazyk (accordion indexy, hover stavy); další krok: launch checklist (GA4, Resend, DNS) |
+| Počet sezení celkem | 28 |
+| Celkový odhadovaný čas | ~25,8 hodiny |
+| Aktuální fáze | UX homepage a hluboké odkazy na služby; další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 5. 6. 2026, 19:18–19:39
+
+### Přehled
+Úpravy sekce „Co zajišťujeme“ na homepage: zkrácený nadpis třetího pilíře a funkční hluboké odkazy na přehled služeb. Po kliknutí na „Zobrazit měření / studie / dokumentaci“ se na `/sluzby` automaticky rozbalí odpovídající accordion skupina a stránka k ní scrolluje.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Homepage — nadpis pilíře dokumentace
+**Co bylo uděláno:** Nadpis třetí karty zkrácen z „Povolovací dokumentace a EIA“ na „Dokumentace a EIA“, aby se vešel na jeden řádek.  
+**Proč:** Dlouhý nadpis se lámal na dva řádky a vizuálně narušoval rovnoměrnost tří karet v řadě.
+
+#### Homepage → /sluzby — auto-rozbalení accordionu podle kotvy
+**Co bylo uděláno:** Tlačítka a karty pilířů vedou na `/sluzby#mericke-sluzby`, `#studie-vypocty` a `#povolovaci-podklady`. Na stránce služeb se příslušná skupina (měření, studie, povolovací dokumentace) při příchodu přes kotvu automaticky rozbalí a stránka k ní plynule scrolluje. Řešení zahrnuje řízený stav accordionu, sledování hashe v URL (včetně navigace Next.js bez události `hashchange`) a vypnutí výchozího scrollu na začátek stránky u odkazů s kotvou.  
+**Proč:** Uživatel z homepage očekává, že po kliknutí na „Zobrazit studie“ nebo „Zobrazit dokumentaci“ uvidí rovnou obsah dané skupiny služeb — ne jen zavřený accordion u správné kotvy.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~21 min  
+**Rozložení:** 5. 6. 2026 19:18–19:39 (~21 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 4  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — log konverzace a commit `05f417e` včetně paddingu (+5 min před/po bloku).*
+
+### Technická poznámka
+`src/app/page.tsx`, `src/components/HomeOfferCard.tsx`, `src/components/ServiceGroupsIndex.tsx`, `src/lib/use-accordion-hash-open.ts`. Commit: `05f417e`.
 
 ---
 

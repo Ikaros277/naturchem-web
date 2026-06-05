@@ -2,9 +2,11 @@
 import type { Metadata } from "next";
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { ExperienceStats } from "@/components/ExperienceStats";
-import { ServiceIcon } from "@/components/ServiceIcon";
+import { HomeOfferCard } from "@/components/HomeOfferCard";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
+import { globalCta } from "@/lib/cta";
+import { contactFormHref } from "@/lib/contact-url";
 import { homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { siteUrl } from "@/lib/site";
 
@@ -21,6 +23,7 @@ const offerPillars = [
   {
     icon: "pillar-mereni" as const,
     title: "Akreditovaná měření",
+    teaser: "Emise, hluk, pracovní prostředí i vibrace — akreditovaně, s výstupem pro KHS a ČIŽP…",
     text: "Změříme emise, pracovní prostředí, hluk, vibrace, osvětlení, mikroklima i čisté prostory — akreditovaně, s výstupem pro úřady.",
     cta: "Zobrazit měření",
     href: "/sluzby#mericke-sluzby",
@@ -34,6 +37,7 @@ const offerPillars = [
   {
     icon: "pillar-studie" as const,
     title: "Studie a odborné výpočty",
+    teaser: "Rozptylové a hlukové studie, posudky a výpočty pro řízení, KHS nebo EIA…",
     text: "Připravíme rozptylové a hlukové studie, akustické posudky a modelové výpočty pro KHS, stavební řízení nebo EIA.",
     cta: "Zobrazit studie",
     href: "/sluzby#studie-vypocty",
@@ -47,6 +51,7 @@ const offerPillars = [
   {
     icon: "pillar-dokumentace" as const,
     title: "Povolovací dokumentace a EIA",
+    teaser: "EIA, posudky, provozní řády, IPPC a ISPOP — podklady pro úřady a povolení…",
     text: "Zpracujeme EIA, odborné posudky, provozní řády, IPPC, ISPOP, GHG i další dokumentaci pro správní orgány.",
     cta: "Zobrazit dokumentaci",
     href: "/sluzby#povolovaci-podklady",
@@ -81,6 +86,11 @@ export default function Home() {
               Postaráme se o vše, co Váš provoz potřebuje — pro provozovatele, investory i projektanty,
               bez nutnosti poptávat více dodavatelů.
             </p>
+            <div className="hero-actions hero-actions--home-mobile">
+              <Link className="button" href={contactFormHref}>
+                {globalCta}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -107,49 +117,10 @@ export default function Home() {
           <header className="section-header home-offer-header">
             <p className="eyebrow">Naše služby</p>
             <h2 id="home-offer-heading">Co zajišťujeme</h2>
-            <p className="muted section-intro">
-              Služby u nás na sebe navazují — nemusíte poptávat více dodavatelů.
-            </p>
           </header>
           <div className="home-offer-grid home-offer-grid-three">
             {offerPillars.map((pillar) => (
-              <article
-                key={pillar.title}
-                className="card institutional-card home-offer-card card-interactive"
-              >
-                <Link
-                  href={pillar.href}
-                  className="card-cover-link"
-                  aria-label={`${pillar.title} — ${pillar.cta}`}
-                />
-                <header className="home-offer-card-head">
-                  <ServiceIcon icon={pillar.icon} variant="card" className="home-offer-icon" />
-                  <h3>{pillar.title}</h3>
-                </header>
-                <ul className="tag-row home-offer-tags" aria-label="Typické oblasti">
-                  {pillar.tags.map((tag) => (
-                    <li key={tag}>
-                      <span className="tag">{tag}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="muted">{pillar.text}</p>
-                <ul className="home-offer-links">
-                  {pillar.links.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className="card-interactive-nested">
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={pillar.href}
-                  className="button home-offer-cta card-interactive-nested"
-                >
-                  {pillar.cta}
-                </Link>
-              </article>
+              <HomeOfferCard key={pillar.title} pillar={pillar} />
             ))}
           </div>
         </div>

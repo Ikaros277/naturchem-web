@@ -166,6 +166,7 @@ _Detail: `03-ux-audit/ux-audit-roadmapa.md` (G6, P5) + reference `06-graficky-au
 
 | Úkol | Stav | Poznámka |
 |------|------|----------|
+| Google Analytics 4: nasazení na produkci + ověření sběru dat | 🔲 | Viz také Oblast 4; měřicí ID v env, test po DNS na naturchem.cz |
 | Resend API: otestovat odesílání formuláře na produkci | 🔲 | `RESEND_API_KEY` v env |
 | Formulář: ověřit doručování emailů na naturchem@naturchem.cz | 🔲 | |
 | Vercel: nastavení produkčního prostředí a env proměnných | 🔲 | |

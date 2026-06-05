@@ -42,7 +42,6 @@ export function ReferenceExamplesIndex({ examplesById }: Props) {
               <ServiceIcon
                 icon={groupIcons[group.id]}
                 variant="inline"
-                size={24}
                 className="service-group-summary-icon"
               />
               <div className="service-group-summary-text">

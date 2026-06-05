@@ -4,7 +4,7 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { accordionExpandClosed, accordionExpandOpen } from "@/lib/accordion-expand-labels";
 import type { EquipmentGroup } from "@/lib/equipment-content";
 import { equipmentGroupAriaVerbs, equipmentItemCountLabel } from "@/lib/equipment-content";
-import { getEquipmentGroupIconKey } from "@/lib/service-icons";
+import { getEquipmentGroupIconKeyById } from "@/lib/service-icons";
 
 function ExpandChevron() {
   return (
@@ -26,7 +26,10 @@ function ExpandChevron() {
 
 export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup[] }) {
   return (
-    <section className="section equipment-groups-accordion" aria-label="Skupiny přístrojového vybavení">
+    <section
+      className="section section-surface accordion-index-surface equipment-groups-accordion"
+      aria-label="Skupiny přístrojového vybavení"
+    >
       <div className="container service-groups-accordion-inner">
         {groups.map((group) => {
           const ariaVerb = equipmentGroupAriaVerbs[group.id] ?? group.title;
@@ -42,7 +45,7 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
                 aria-label={`${group.title}, ${equipmentItemCountLabel(group.items.length)} — zobrazit nebo skrýt ${ariaVerb}`}
               >
                 <ServiceIcon
-                  icon={getEquipmentGroupIconKey(group.title)}
+                  icon={getEquipmentGroupIconKeyById(group.id)}
                   variant="inline"
                   size={24}
                   className="service-group-summary-icon"
@@ -54,7 +57,6 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
                       {equipmentItemCountLabel(group.items.length)}
                     </span>
                   </div>
-                  <p className="muted service-group-intro">{group.text}</p>
                 </div>
                 <span className="service-group-expand" aria-hidden="true">
                   <span className="service-group-expand-text">
@@ -74,7 +76,7 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
                 </ul>
                 {group.serviceHref && group.serviceLabel ? (
                   <p className="equipment-service-link">
-                    <Link href={group.serviceHref}>Související služba: {group.serviceLabel} →</Link>
+                    <Link href={group.serviceHref}>{group.serviceLabel} →</Link>
                   </p>
                 ) : null}
               </div>

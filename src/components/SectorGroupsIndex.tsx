@@ -49,7 +49,7 @@ function SectorCards({ hrefs, sectors }: { hrefs: readonly string[]; sectors: re
 
 export function SectorGroupsIndex({ sectors }: Props) {
   return (
-    <section className="section sector-groups-accordion" aria-labelledby="sector-groups-heading">
+    <section className="section section-surface accordion-index-surface sector-groups-accordion" aria-labelledby="sector-groups-heading">
       <div className="container service-groups-accordion-inner">
         {sectorGroups.map((group) => {
           const ariaVerb = groupAriaVerbs[group.id] ?? group.title;
@@ -68,7 +68,6 @@ export function SectorGroupsIndex({ sectors }: Props) {
                 <ServiceIcon
                   icon={groupIcons[group.id]}
                   variant="inline"
-                  size={24}
                   className="service-group-summary-icon"
                 />
                 <div className="service-group-summary-text">

@@ -67,7 +67,7 @@ function ServiceCards({ groupId, items }: { groupId: string; items: (typeof serv
 
 export function ServiceGroupsIndex() {
   return (
-    <section className="section service-group service-groups-accordion">
+    <section className="section section-surface accordion-index-surface service-groups-accordion">
       <div className="container service-groups-accordion-inner">
         {serviceGroups.map((group) => {
           const ariaVerb = groupAriaVerbs[group.id] ?? group.title;
@@ -78,7 +78,7 @@ export function ServiceGroupsIndex() {
               className="service-group-summary"
               aria-label={`${group.title}, ${serviceCountLabel(group.items.length)} — zobrazit nebo skrýt ${ariaVerb}`}
             >
-              <ServiceIcon icon={groupIcons[group.id]} variant="inline" size={24} className="service-group-summary-icon" />
+              <ServiceIcon icon={groupIcons[group.id]} variant="inline" className="service-group-summary-icon" />
               <div className="service-group-summary-text">
                 <div className="service-group-summary-title-row">
                   <h2>{group.title}</h2>

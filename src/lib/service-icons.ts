@@ -147,13 +147,28 @@ export function getAuthorizationIconKey(title: string): ServiceIconKey {
   return authorizationToIcon[title] ?? "default";
 }
 
+const equipmentIdToIcon: Record<string, ServiceIconKey> = {
+  emise: "emise",
+  "pracovni-prostredi": "pracovni-prostredi",
+  hluk: "hluk",
+  osvetleni: "osvetleni",
+  laborator: "process-zpracovani"
+};
+
+/** @deprecated Prefer getEquipmentGroupIconKeyById */
 const equipmentGroupToIcon: Record<string, ServiceIconKey> = {
   "Měření emisí a odběry ze stacionárních zdrojů": "emise",
+  "Emise a odběry ze stacionárních zdrojů": "emise",
   "Pracovní prostředí, odběry a mikroklima": "pracovni-prostredi",
+  "Pracovní prostředí a mikroklima": "pracovni-prostredi",
   "Hluk, vibrace a akustika": "hluk",
   "Osvětlení a fyzikální faktory": "osvetleni",
   "Laboratorní a podpůrné zázemí": "process-zpracovani"
 };
+
+export function getEquipmentGroupIconKeyById(groupId: string): ServiceIconKey {
+  return equipmentIdToIcon[groupId] ?? "default";
+}
 
 export function getEquipmentGroupIconKey(title: string): ServiceIconKey {
   return equipmentGroupToIcon[title] ?? "default";

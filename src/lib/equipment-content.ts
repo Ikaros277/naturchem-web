@@ -1,7 +1,6 @@
 export type EquipmentGroup = {
   id: string;
   title: string;
-  text: string;
   items: readonly string[];
   serviceHref?: string;
   serviceLabel?: string;
@@ -29,8 +28,7 @@ export const equipmentSectionIntro =
 export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "emise",
-    title: "Měření emisí a odběry ze stacionárních zdrojů",
-    text: "Terénní měření a odběry u stacionárních zdrojů.",
+    title: "Emise a odběry ze stacionárních zdrojů",
     serviceHref: "/sluzby/mereni-emisi",
     serviceLabel: "Měření emisí",
     items: [
@@ -51,8 +49,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   },
   {
     id: "pracovni-prostredi",
-    title: "Pracovní prostředí, odběry a mikroklima",
-    text: "Měření a odběry v pracovním ovzduší.",
+    title: "Pracovní prostředí a mikroklima",
     serviceHref: "/sluzby/pracovni-prostredi",
     serviceLabel: "Měření pracovního prostředí",
     items: [
@@ -69,7 +66,6 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "hluk",
     title: "Hluk, vibrace a akustika",
-    text: "Hluk a vibrace v provozu i okolí.",
     serviceHref: "/sluzby/mereni-hluku-hlukove-studie",
     serviceLabel: "Měření hluku a akustika",
     items: [
@@ -84,7 +80,6 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "osvetleni",
     title: "Osvětlení a fyzikální faktory",
-    text: "Osvětlení a související veličiny ve vnitřním prostředí.",
     serviceHref: "/sluzby/mereni-osvetleni",
     serviceLabel: "Měření osvětlení",
     items: [
@@ -99,7 +94,6 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "laborator",
     title: "Laboratorní a podpůrné zázemí",
-    text: "Příprava a zpracování vzorků z terénu.",
     serviceHref: "/sluzby",
     serviceLabel: "Přehled služeb",
     items: [

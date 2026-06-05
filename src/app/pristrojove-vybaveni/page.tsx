@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     absolute: "Přístrojové vybavení NATURCHEM"
   },
   description:
-    "Přehled vybraného přístrojového vybavení NATURCHEM pro měření emisí, pracovního prostředí, hluku, vibrací, osvětlení, mikroklimatu a odběry vzorků.",
+    "Jaké analyzátory a odběrové sestavy NATURCHEM používá pro emise, pracovní prostředí, hluk a laboratorní zpracování vzorků — pro orientaci před zakázkou nebo ve výběrovém řízení.",
   alternates: { canonical: `${siteUrl}/pristrojove-vybaveni/` }
 };
 
@@ -35,7 +35,7 @@ export default function Page() {
   const webPageData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Přístrojové vybavení NATURCHEM",
+    name: "Čím měříme v terénu i v laboratoři | NATURCHEM",
     url: `${siteUrl}/pristrojove-vybaveni/`,
     description: metadata.description
   };
@@ -50,7 +50,7 @@ export default function Page() {
       >
         <header className="premium-page-hero page-hero--photo">
           <p className="eyebrow">Technické zázemí laboratoře</p>
-          <h1>Přístrojové vybavení NATURCHEM</h1>
+          <h1>Čím měříme v terénu i v laboratoři</h1>
           <p className="page-lead">
             Měřicí a odběrová technika podle oblasti — pro orientaci před zakázkou nebo ve
             výběrovém řízení.

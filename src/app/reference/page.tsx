@@ -56,7 +56,7 @@ export default function ReferencePage() {
         <ClientLogosGrid expandable />
       </section>
 
-      <section className="section content-block container" id="priklady">
+      <section className="section section-surface accordion-index-surface content-block container" id="priklady">
         <h2>{referenceExamplesHeading}</h2>
         <ReferenceExamplesIndex examplesById={examplesById} />
       </section>

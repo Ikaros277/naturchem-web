@@ -10,8 +10,8 @@ type Props = {
 };
 
 const variantSvgSize = {
-  card: 22,
-  inline: 24,
+  card: 32,
+  inline: 28,
   nav: 20,
   plain: 28
 } as const;
@@ -348,10 +348,7 @@ function resolveKey(props: Props): ServiceIconKey {
 export function ServiceIcon({ href, icon, size, variant = "inline", className }: Props) {
   const key = resolveKey({ href, icon });
   const resolvedSize = size ?? variantSvgSize[variant];
-  const classes =
-    variant === "plain"
-      ? ["service-icon-plain", className].filter(Boolean).join(" ")
-      : ["card-symbol", className].filter(Boolean).join(" ");
+  const classes = ["service-icon-plain", "card-symbol", className].filter(Boolean).join(" ");
 
   return <span className={classes}>{iconGlyphs[key](resolvedSize)}</span>;
 }

@@ -115,7 +115,6 @@ export default function Home() {
       <section className="home-section home-section-offer" aria-labelledby="home-offer-heading">
         <div className="container">
           <header className="section-header home-offer-header">
-            <p className="eyebrow">Naše služby</p>
             <h2 id="home-offer-heading">Co zajišťujeme</h2>
           </header>
           <div className="home-offer-grid home-offer-grid-three">
@@ -126,8 +125,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-section container home-clients-section section--forest-tint">
-        <p className="eyebrow">Naši zákazníci</p>
+      <section
+        className="home-section container home-clients-section section--forest-tint"
+        aria-labelledby="home-clients-heading"
+      >
+        <h2 id="home-clients-heading" className="sr-only">
+          Naši zákazníci
+        </h2>
         <ClientLogosGrid moreHref="/reference#zakaznici" />
       </section>
     </main>

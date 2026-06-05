@@ -3393,10 +3393,6 @@ main.page:has(.page-hero-band) {
   border-top: 1px solid var(--border);
 }
 
-.home-offer-header .eyebrow {
-  margin: 0 0 0.35rem;
-}
-
 .home-offer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -6306,7 +6302,7 @@ main.contact-page + .site-footer {
   padding: var(--section-padding-y) 0;
 }
 
-/* Homepage: mezera pod logy = mezera nad „Naši zákazníci“ (2× section padding) */
+/* Homepage: mezera pod logy = dvojnásobek section padding nad patičkou */
 main.home-page + .site-footer {
   margin-top: var(--section-padding-y);
 }

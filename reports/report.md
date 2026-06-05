@@ -5,15 +5,51 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 24 |
-| Celkový odhadovaný čas | ~23,9 hodiny |
+| Počet sezení celkem | 25 |
+| Celkový odhadovaný čas | ~24,6 hodiny |
 | Aktuální fáze | Mobilní homepage a forest akcenty hotové; hero provozů sjednoceno; UX/kontakt uzavřeno; další krok: copy sprint C9, launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 5. 6. 2026, 16:47–17:54
+## Sezení: 5. 6. 2026, 18:43–18:55
+
+### Přehled
+Automaticky založené sezení po commitu `12ccc2a`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### UX: stats pruh homepage ÔÇö svisl├ę odd─Ťlova─Źe a centrovan├ę ├║daje.
+**Co bylo uděláno:** UX: stats pruh homepage ÔÇö svisl├ę odd─Ťlova─Źe a centrovan├ę ├║daje. - Zelen├Ż pruh metrik m├í jen tenk├ę d─Ťl├şc├ş ─Ź├íry mezi sloupci; ikona a ─Ź├şsla jsou vycentrovan├ę na mobilu i desktopu.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `9ded192`). Dotcene oblasti: app.  
+**Proč:** Zelen├Ż pruh metrik m├í jen tenk├ę d─Ťl├şc├ş ─Ź├íry mezi sloupci; ikona a ─Ź├şsla jsou vycentrovan├ę na mobilu i desktopu.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### UX: prestavba stranky Pristrojove vybaveni ÔÇö accordion ve stylu pro...
+**Co bylo uděláno:** UX: prestavba stranky Pristrojove vybaveni ÔÇö accordion ve stylu provozu. - Jednosloupcovy rozbalovaci seznam misto gridu, vlastni CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `14243a3`). Dotcene oblasti: app, components, lib, pristrojove-vybaveni.  
+**Proč:** Jednosloupcovy rozbalovaci seznam misto gridu, vlastni CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### UX: prestavba stranky Pristrojove vybaveni ÔÇö accordion ve stylu pro...
+**Co bylo uděláno:** UX: prestavba stranky Pristrojove vybaveni ÔÇö accordion ve stylu provozu. - Jednosloupcovy rozbalovaci seznam misto gridu, vlastni CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `40360d4`). Dotcene oblasti: app, components, lib, pristrojove-vybaveni, report, workflow.  
+**Proč:** Jednosloupcovy rozbalovaci seznam misto gridu, vlastni CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### UX: p?estavba str?nky P??strojov? vybaven? ? accordion ve stylu provoz?.
+**Co bylo uděláno:** UX: p?estavba str?nky P??strojov? vybaven? ? accordion ve stylu provoz?. - Jednosloupcov? rozbalovac? seznam m?sto gridu, vlastn? CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `12ccc2a`). Dotcene oblasti: app, components, lib, pristrojove-vybaveni.  
+**Proč:** Jednosloupcov? rozbalovac? seznam m?sto gridu, vlastn? CTA preset, data v equipment-content.ts a hero theme dokumentace.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~12 min
+**Rozložení:** 5. 6. 2026 18:43–18:55 (~12 min)
+**Metoda odhadu:** git
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `12ccc2aab7e9814f1f0067ad9ed38c7e6f885ad0`
+
+---
+
+## Sezení: 5. 6. 2026, 16:47–18:23
 
 ### Přehled
 **Odpolední UX blok:** sjednocení hero na detailech provozů a sitewide zavedení forest zelené jako primární konverzní barvy (navy pro sekundární akce a institucionální prvky). Stats pruh na homepage dostal zelené pozadí, větší ikony bez rámečku a centrované zarovnání sladěné s kartami služeb pod ním.
@@ -21,6 +57,14 @@
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### Fix mobiln├ş layout detailu ─Źl├ínk┼» v poradn─Ť.
+**Co bylo uděláno:** Fix mobiln├ş layout detailu ─Źl├ínk┼» v poradn─Ť. - Opravuje p┼Öet├ęk├ín├ş obsahu mimo viewport a zp┼Öehled┼łuje tabulky na mobilu men┼í├şm p├şsmem a lep┼í├şm zalamov├ín├şm textu.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `cd5e81f`). Dotcene oblasti: app, components, poradna.  
+**Proč:** Opravuje p┼Öet├ęk├ín├ş obsahu mimo viewport a zp┼Öehled┼łuje tabulky na mobilu men┼í├şm p├şsmem a lep┼í├şm zalamov├ín├şm textu.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### Docs: checklist p┼Öed├ín├ş klientovi a hosting alternativy.
+**Co bylo uděláno:** Docs: checklist p┼Öed├ín├ş klientovi a hosting alternativy. - P┼Öid├ín kompletn├ş postup p┼Öevodu Vercel, GitHub, OAuth, Vedosu a Resend; srovn├ín├ş free hostingu s komer─Źn├şm provozem.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `1001a2c`). Dotcene oblasti: HOSTING-ALTERNATIVY.md, PREDANI-KLIENTOVI.md, report, ROADMAPA.md, workflow.  
+**Proč:** P┼Öid├ín kompletn├ş postup p┼Öevodu Vercel, GitHub, OAuth, Vedosu a Resend; srovn├ín├ş free hostingu s komer─Źn├şm provozem.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
 #### Fix Decap CMS OAuth login and robots.txt for staging deploy.
 **Co bylo uděláno:** Fix Decap CMS OAuth login and robots.txt for staging deploy. - Align CMS base_url with web-naturchem.vercel.app, repair the GitHub OAuth callback handshake, and block /admin and /api from crawlers.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `a91ee67`). Dotcene oblasti: .env.example, api, app, config.yml, README.md.  
 **Proč:** Align CMS base_url with web-naturchem.vercel.app, repair the GitHub OAuth callback handshake, and block /admin and /api from crawlers.  Co-authored-by: Cursor <cursoragent@cursor.com>.
@@ -59,8 +103,8 @@
 **Proč:** GA4 patří do launch checklistu před ostrým spuštěním na naturchem.cz.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 8 min
-**Rozložení:** 5. 6. 2026 16:47–17:54 (~1 hod 8 min)
+**Odhadovaná doba práce:** ~1 hod 36 min
+**Rozložení:** 5. 6. 2026 16:47–18:23 (~1 hod 36 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** ~12  
 *Poznámka: čas ze skriptu `estimate-session-time.ps1` (blok od commitu `fb14769` včetně paddingu).*

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { IndexCard } from "@/components/IndexCard";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
@@ -93,11 +92,6 @@ export function SectorPage(props: Props) {
             <ServiceIcon href={`/provozy-a-technologie/${props.slug}`} variant="card" className="service-hero-icon" />
             <h1>{props.title}</h1>
             <p className="page-lead">{props.intro}</p>
-            <div className="btn-row">
-              <Link className="button" href={contactHref}>
-                Poptat posouzení provozu
-              </Link>
-            </div>
           </div>
         </header>
       </PageHeroBand>

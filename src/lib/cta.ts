@@ -87,5 +87,12 @@ export const pageCtaPresets = {
     text: "Pošlete rozhodnutí, výzvu nebo stručný popis situace. Na základě podkladů navrhneme další postup.",
     primaryLabel: "Kontaktovat NATURCHEM",
     primaryHref: contactFormHref
+  },
+  equipment: {
+    text: "Potřebujete ověřit, zda máme vybavení pro Vaši veličinu nebo zdroj? Napište typ měření nebo přiložte výzvu úřadu.",
+    primaryLabel: "Ověřit dostupnost vybavení",
+    primaryHref: contactUrl("Nejsem si jistý"),
+    secondaryLabel: "Akreditace a rozsah laboratoře",
+    secondaryHref: "/akreditace-autorizace-dokumenty"
   }
 } as const satisfies Record<string, PageCtaStripProps>;

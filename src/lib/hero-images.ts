@@ -37,7 +37,7 @@ const pageThemeMap: Record<string, HeroTheme> = {
   "/o-spolecnosti-naturchem": "dokumentace",
   "/kontakt": "hluk",
   "/akreditace-autorizace-dokumenty": "dokumentace",
-  "/pristrojove-vybaveni": "hluk",
+  "/pristrojove-vybaveni": "dokumentace",
   "/poradna": "dokumentace",
   "/faq": "hluk",
   "/sluzby": "dokumentace"

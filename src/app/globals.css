@@ -2246,6 +2246,24 @@ fieldset.card legend {
   padding-top: 0;
 }
 
+.equipment-groups-accordion {
+  padding-top: 0;
+}
+
+.service-group-details.equipment-group-details .equipment-group-body {
+  padding: 1.15rem 1.25rem 1.25rem;
+}
+
+.equipment-service-link {
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.equipment-service-link a {
+  color: var(--primary);
+}
+
 .service-index-card .service-index-card-tags {
   list-style: none;
   padding-left: 0;
@@ -3087,14 +3105,14 @@ main.page:has(.page-hero-band) {
   border: none;
   box-shadow: none;
   min-width: 0;
-  width: max-content;
-  max-width: 100%;
-  justify-self: center;
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
   text-align: left;
 }
 
 .home-stats-compact .stat-card-with-icon + .stat-card-with-icon {
-  border-left: 1px solid rgba(255, 255, 255, 0.22);
+  border-left: 1px solid rgba(255, 255, 255, 0.32);
 }
 
 .home-stats-compact .stat-card-body {
@@ -3157,19 +3175,10 @@ main.page:has(.page-hero-band) {
   align-items: center;
   gap: 0.85rem 1rem;
   padding: 0.85rem clamp(0.75rem, 2vw, 1.25rem);
-  width: max-content;
-  max-width: 100%;
-  justify-self: center;
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
   text-align: left;
-}
-
-.home-page .home-stats-compact .stats-grid,
-.home-page .home-stats-compact .stats-highlight-metrics {
-  gap: 1.15rem;
-}
-
-.home-page .home-stats-compact .stat-card-with-icon + .stat-card-with-icon {
-  border-left: none;
 }
 
 .home-stats-compact .experience-stats-compact .stat-card-icon {
@@ -5644,7 +5653,6 @@ main.contact-page + .site-footer {
   .reference-examples-grid,
   .reference-type-grid,
   .scope-card-grid,
-  .equipment-accordion-grid,
   .training-card-grid {
     grid-template-columns: 1fr;
   }
@@ -5784,50 +5792,6 @@ main.contact-page + .site-footer {
     padding: 0.22rem 0.55rem;
     background: rgba(47, 111, 94, 0.06);
     font-size: 0.86rem;
-  }
-
-  .equipment-accordion-card {
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .equipment-accordion-card summary {
-    min-height: 56px;
-    padding: 1rem;
-    cursor: pointer;
-    list-style: none;
-  }
-
-  .equipment-accordion-card summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .equipment-accordion-card summary h2 {
-    margin: 0;
-    font-size: 1.15rem;
-  }
-
-  .equipment-accordion-card summary::after {
-    content: "Rozbalit";
-    display: block;
-    margin-top: 0.35rem;
-    color: var(--muted);
-    font-size: 0.82rem;
-    font-weight: 600;
-  }
-
-  .equipment-accordion-card[open] summary::after {
-    content: "Sbalit";
-  }
-
-  .equipment-accordion-card > p,
-  .equipment-accordion-card > ul {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .equipment-accordion-card > ul {
-    padding-bottom: 1rem;
   }
 
   .contact-form-grid {
@@ -6767,31 +6731,6 @@ main.home-page + .site-footer {
   }
 }
 
-@media (min-width: 721px) {
-  .equipment-accordion-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .equipment-accordion-card {
-    padding: 1.25rem;
-  }
-
-  .equipment-accordion-card summary {
-    cursor: default;
-  }
-
-  .equipment-accordion-card summary::after {
-    content: none !important;
-  }
-
-  .equipment-accordion-card > p,
-  .equipment-accordion-card > ul {
-    display: block !important;
-  }
-}
-
 /* —— Mobilní opravy: přehledný layout, bez překryvů —— */
 
 .site-footer .muted,
@@ -6928,7 +6867,7 @@ main.home-page + .site-footer {
   }
 
   .home-stats-compact {
-    padding: 0.65rem 0;
+    padding: 0.75rem 0;
   }
 
   .home-stats-compact .stat-card-icon {
@@ -6939,7 +6878,7 @@ main.home-page + .site-footer {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
-    padding: 0.35rem 0.3rem;
+    padding: 0.55rem 0.35rem;
   }
 
   .home-stats-compact .stat-card-body {

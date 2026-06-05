@@ -7,31 +7,12 @@ export type EquipmentGroup = {
   serviceLabel?: string;
 };
 
-export const equipmentGroupExpandLabels: Record<
-  string,
-  { closed: string; open: string; ariaVerb: string }
-> = {
-  emise: { closed: "Zobrazit emise", open: "Skrýt emise", ariaVerb: "emise a odběry" },
-  "pracovni-prostredi": {
-    closed: "Zobrazit pracovní prostředí",
-    open: "Skrýt pracovní prostředí",
-    ariaVerb: "pracovní prostředí a mikroklima"
-  },
-  hluk: {
-    closed: "Zobrazit hluk a vibrace",
-    open: "Skrýt hluk a vibrace",
-    ariaVerb: "hluk, vibrace a akustiku"
-  },
-  osvetleni: {
-    closed: "Zobrazit osvětlení",
-    open: "Skrýt osvětlení",
-    ariaVerb: "osvětlení a fyzikální faktory"
-  },
-  laborator: {
-    closed: "Zobrazit laboratorní zázemí",
-    open: "Skrýt laboratorní zázemí",
-    ariaVerb: "laboratorní zázemí"
-  }
+export const equipmentGroupAriaVerbs: Record<string, string> = {
+  emise: "emise a odběry",
+  "pracovni-prostredi": "pracovní prostředí a mikroklima",
+  hluk: "hluk, vibrace a akustiku",
+  osvetleni: "osvětlení a fyzikální faktory",
+  laborator: "laboratorní zázemí"
 };
 
 export function equipmentItemCountLabel(count: number): string {
@@ -40,16 +21,16 @@ export function equipmentItemCountLabel(count: number): string {
   return `${count} přístrojů`;
 }
 
-export const equipmentSectionHeading = "Měřicí technika podle oblasti";
+export const equipmentSectionHeading = "Jakou techniku používáme?";
 
 export const equipmentSectionIntro =
-  "Vybrané přístroje, které laboratoř běžně nasazuje v terénu i při zpracování vzorků. Rozbalte oblast, která Vás zajímá — úplný akreditovaný rozsah metod je v osvědčení laboratoře.";
+  "Uvádíme techniku, kterou laboratoř obvykle nasazuje v terénu i v laboratoři.";
 
 export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "emise",
     title: "Měření emisí a odběry ze stacionárních zdrojů",
-    text: "Analyzátory, izokinetické odběrové sestavy, sondy a úprava vzorku pro terénní měření emisí.",
+    text: "Terénní měření a odběry u stacionárních zdrojů.",
     serviceHref: "/sluzby/mereni-emisi",
     serviceLabel: "Měření emisí",
     items: [
@@ -71,7 +52,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "pracovni-prostredi",
     title: "Pracovní prostředí, odběry a mikroklima",
-    text: "Systémy pro měření fyzikálních faktorů, odběry chemických látek, prachu a provozních expozic.",
+    text: "Měření a odběry v pracovním ovzduší.",
     serviceHref: "/sluzby/pracovni-prostredi",
     serviceLabel: "Měření pracovního prostředí",
     items: [
@@ -88,7 +69,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "hluk",
     title: "Hluk, vibrace a akustika",
-    text: "Akustická a vibrační technika pro pracovní prostředí a mimopracovní prostředí.",
+    text: "Hluk a vibrace v provozu i okolí.",
     serviceHref: "/sluzby/mereni-hluku-hlukove-studie",
     serviceLabel: "Měření hluku a akustika",
     items: [
@@ -103,7 +84,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "osvetleni",
     title: "Osvětlení a fyzikální faktory",
-    text: "Vybavení pro osvětlení, orientační kontrolu prostředí a doplňkovou diagnostiku provozních podmínek.",
+    text: "Osvětlení a související veličiny ve vnitřním prostředí.",
     serviceHref: "/sluzby/mereni-osvetleni",
     serviceLabel: "Měření osvětlení",
     items: [
@@ -118,7 +99,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "laborator",
     title: "Laboratorní a podpůrné zázemí",
-    text: "Zázemí pro přípravu, transport, sušení, ochranu a vyhodnocení vzorků navazující na terénní práci.",
+    text: "Příprava a zpracování vzorků z terénu.",
     serviceHref: "/sluzby",
     serviceLabel: "Přehled služeb",
     items: [

@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { accordionExpandClosed, accordionExpandOpen } from "@/lib/accordion-expand-labels";
 import type { EquipmentGroup } from "@/lib/equipment-content";
-import { equipmentGroupExpandLabels, equipmentItemCountLabel } from "@/lib/equipment-content";
+import { equipmentGroupAriaVerbs, equipmentItemCountLabel } from "@/lib/equipment-content";
 import { getEquipmentGroupIconKey } from "@/lib/service-icons";
 
 function ExpandChevron() {
@@ -28,7 +29,7 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
     <section className="section equipment-groups-accordion" aria-label="Skupiny přístrojového vybavení">
       <div className="container service-groups-accordion-inner">
         {groups.map((group) => {
-          const expand = equipmentGroupExpandLabels[group.id];
+          const ariaVerb = equipmentGroupAriaVerbs[group.id] ?? group.title;
 
           return (
             <details
@@ -38,7 +39,7 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
             >
               <summary
                 className="service-group-summary"
-                aria-label={`${group.title}, ${equipmentItemCountLabel(group.items.length)} — zobrazit nebo skrýt ${expand.ariaVerb}`}
+                aria-label={`${group.title}, ${equipmentItemCountLabel(group.items.length)} — zobrazit nebo skrýt ${ariaVerb}`}
               >
                 <ServiceIcon
                   icon={getEquipmentGroupIconKey(group.title)}
@@ -57,8 +58,8 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
                 </div>
                 <span className="service-group-expand" aria-hidden="true">
                   <span className="service-group-expand-text">
-                    <span className="service-group-expand-when-closed">{expand.closed}</span>
-                    <span className="service-group-expand-when-open">{expand.open}</span>
+                    <span className="service-group-expand-when-closed">{accordionExpandClosed}</span>
+                    <span className="service-group-expand-when-open">{accordionExpandOpen}</span>
                   </span>
                   <span className="service-group-expand-icon">
                     <ExpandChevron />

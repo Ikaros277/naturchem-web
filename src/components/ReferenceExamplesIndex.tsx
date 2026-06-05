@@ -1,5 +1,6 @@
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { accordionExpandClosed, accordionExpandOpen } from "@/lib/accordion-expand-labels";
 import type { ReferenceExample } from "@/lib/reference-content";
 import { referenceExampleGroups } from "@/lib/reference-example-groups";
 import type { ServiceIconKey } from "@/lib/service-icons";
@@ -13,8 +14,6 @@ const groupIcons: Record<string, ServiceIconKey> = {
   "evidence-dokumentace": "ispop"
 };
 
-const expandClosed = "Zobrazit zakázky";
-const expandOpen = "Sbalit zakázky";
 
 function exampleCountLabel(count: number): string {
   if (count === 1) return "1 zakázka";
@@ -55,8 +54,8 @@ export function ReferenceExamplesIndex({ examplesById }: Props) {
               </div>
               <span className="service-group-expand" aria-hidden="true">
                 <span className="service-group-expand-text">
-                  <span className="service-group-expand-when-closed">{expandClosed}</span>
-                  <span className="service-group-expand-when-open">{expandOpen}</span>
+                  <span className="service-group-expand-when-closed">{accordionExpandClosed}</span>
+                  <span className="service-group-expand-when-open">{accordionExpandOpen}</span>
                 </span>
                 <span className="service-group-expand-icon">
                   <svg

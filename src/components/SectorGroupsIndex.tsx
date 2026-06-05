@@ -2,6 +2,7 @@
 
 import { SectorCard } from "@/components/SectorCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { accordionExpandClosed, accordionExpandOpen } from "@/lib/accordion-expand-labels";
 import type { ServiceIconKey } from "@/lib/service-icons";
 import { sectorGroups } from "@/lib/sector-groups";
 import type { Sector } from "@/lib/sectors";
@@ -15,21 +16,13 @@ const groupIcons: Record<string, ServiceIconKey> = {
   "investicni-zamery": "audience-investor"
 };
 
-const groupExpandLabels: Record<string, { closed: string; open: string; ariaVerb: string }> = {
-  "prumysl-vyroba": { closed: "Zobrazit průmysl", open: "Skrýt průmysl", ariaVerb: "průmysl a výrobu" },
-  "energetika-emise": {
-    closed: "Zobrazit energetiku",
-    open: "Skrýt energetiku",
-    ariaVerb: "energetiku a emise"
-  },
-  "odpady-recyklace": { closed: "Zobrazit odpady", open: "Skrýt odpady", ariaVerb: "odpady a recyklaci" },
-  zemedelstvi: { closed: "Zobrazit zemědělství", open: "Skrýt zemědělství", ariaVerb: "zemědělství" },
-  "budovy-vzt": { closed: "Zobrazit budovy a VZT", open: "Skrýt budovy a VZT", ariaVerb: "budovy a VZT" },
-  "investicni-zamery": {
-    closed: "Zobrazit investiční záměry",
-    open: "Skrýt investiční záměry",
-    ariaVerb: "investiční záměry"
-  }
+const groupAriaVerbs: Record<string, string> = {
+  "prumysl-vyroba": "průmysl a výrobu",
+  "energetika-emise": "energetiku a emise",
+  "odpady-recyklace": "odpady a recyklaci",
+  zemedelstvi: "zemědělství",
+  "budovy-vzt": "budovy a VZT",
+  "investicni-zamery": "investiční záměry"
 };
 
 function sectorCountLabel(count: number): string {
@@ -59,7 +52,7 @@ export function SectorGroupsIndex({ sectors }: Props) {
     <section className="section sector-groups-accordion" aria-labelledby="sector-groups-heading">
       <div className="container service-groups-accordion-inner">
         {sectorGroups.map((group) => {
-          const expand = groupExpandLabels[group.id];
+          const ariaVerb = groupAriaVerbs[group.id] ?? group.title;
           const count = group.hrefs.length;
 
           return (
@@ -70,7 +63,7 @@ export function SectorGroupsIndex({ sectors }: Props) {
             >
               <summary
                 className="service-group-summary"
-                aria-label={`${group.title}, ${sectorCountLabel(count)} — zobrazit nebo skrýt ${expand.ariaVerb}`}
+                aria-label={`${group.title}, ${sectorCountLabel(count)} — zobrazit nebo skrýt ${ariaVerb}`}
               >
                 <ServiceIcon
                   icon={groupIcons[group.id]}
@@ -87,8 +80,8 @@ export function SectorGroupsIndex({ sectors }: Props) {
                 </div>
                 <span className="service-group-expand" aria-hidden="true">
                   <span className="service-group-expand-text">
-                    <span className="service-group-expand-when-closed">{expand.closed}</span>
-                    <span className="service-group-expand-when-open">{expand.open}</span>
+                    <span className="service-group-expand-when-closed">{accordionExpandClosed}</span>
+                    <span className="service-group-expand-when-open">{accordionExpandOpen}</span>
                   </span>
                   <span className="service-group-expand-icon">
                     <svg

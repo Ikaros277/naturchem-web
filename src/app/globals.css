@@ -774,50 +774,70 @@ main ol {
 
 .faq-tiles {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(8, minmax(0, 7.5rem));
+  justify-content: start;
   gap: 0.5rem;
   margin: 1.5rem 0 2.5rem;
 }
 
-.faq-tile {
+.faq-tile.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.4rem;
-  padding: 0.65rem 0.4rem;
+  padding: 0.7rem 0.4rem 0.65rem;
   text-align: center;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(13, 54, 130, 0.06);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
 }
 
-.faq-tile-icon {
-  width: var(--icon-size-inline);
-  height: var(--icon-size-inline);
+.faq-tile-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2.75rem;
+  flex-shrink: 0;
+}
+
+.faq-tile-icon.service-icon-plain {
+  color: var(--secondary);
+  transition: color 0.15s ease;
 }
 
 .faq-tile:hover {
   border-color: var(--primary);
   box-shadow: 0 8px 24px rgba(13, 54, 130, 0.1);
+  transform: translateY(-1px);
+}
+
+.faq-tile:hover .faq-tile-icon {
+  color: var(--primary);
 }
 
 .faq-tile-label {
   font-weight: 600;
-  font-size: 0.78rem;
-  line-height: 1.3;
+  font-size: 0.8125rem;
+  line-height: 1.25;
   color: var(--primary);
 }
 
 @media (max-width: 860px) {
   .faq-tiles {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 7.5rem));
   }
 }
 
 @media (max-width: 500px) {
   .faq-tiles {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -825,15 +845,22 @@ main ol {
   scroll-margin-top: 6rem;
 }
 
-.faq-category h2 {
+.faq-category-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin-top: 0;
   padding-top: 0.5rem;
   border-top: 1px solid rgba(13, 54, 130, 0.1);
 }
 
-.faq-category:first-of-type h2 {
+.faq-category:first-of-type .faq-category-heading {
   border-top: 0;
   padding-top: 0;
+}
+
+.faq-category-heading .faq-category-icon.service-icon-plain {
+  color: var(--secondary);
 }
 
 .faq-accordion-list {
@@ -2136,9 +2163,9 @@ fieldset.card legend {
 
 .service-group-details summary.service-group-summary {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.15rem 1.25rem;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.9rem 1.1rem;
   list-style: none;
   cursor: pointer;
   transition: background 0.15s ease;
@@ -2188,9 +2215,9 @@ fieldset.card legend {
 }
 
 .service-group-details summary .service-group-intro {
-  margin: 0.45rem 0 0;
-  font-size: 0.95rem;
-  line-height: 1.55;
+  margin: 0.3rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .service-group-expand {
@@ -2248,6 +2275,19 @@ fieldset.card legend {
 
 .equipment-groups-accordion {
   padding-top: 0;
+}
+
+.section.service-groups-accordion,
+.section.sector-groups-accordion,
+.section.equipment-groups-accordion {
+  padding-top: 0;
+}
+
+section.content-block.page-first-section + .section.service-groups-accordion,
+section.content-block.page-first-section + .section.sector-groups-accordion,
+section.content-block.page-first-section + .section.equipment-groups-accordion,
+.container.page-first-section.content-block + .section.equipment-groups-accordion {
+  margin-top: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
 .service-group-details.equipment-group-details .equipment-group-body {
@@ -3445,6 +3485,19 @@ main.page:has(.page-hero-band) {
   border-radius: var(--radius-sharp);
   background: #f3f7f5;
   color: var(--secondary);
+}
+
+.service-icon-plain {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--secondary);
+  line-height: 0;
+}
+
+.service-icon-plain svg {
+  display: block;
 }
 
 .card-symbol svg {

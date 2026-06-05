@@ -95,7 +95,9 @@ export function FaqPageContent() {
       <nav className="faq-tiles" aria-label="Kategorie častých dotazů">
         {faqCategories.map((cat) => (
           <a key={cat.id} href={`#${cat.id}`} className="card faq-tile">
-            <ServiceIcon icon={getFaqCategoryIconKey(cat.id)} variant="inline" className="faq-tile-icon" />
+            <span className="faq-tile-icon-wrap" aria-hidden="true">
+              <ServiceIcon icon={getFaqCategoryIconKey(cat.id)} variant="plain" size={28} className="faq-tile-icon" />
+            </span>
             <span className="faq-tile-label">{cat.tileLabel}</span>
           </a>
         ))}
@@ -110,7 +112,15 @@ export function FaqPageContent() {
 
       {filteredCategories.map((category) => (
         <section key={category.id} id={category.id} className="section faq-category">
-          <h2>{category.title}</h2>
+          <h2 className="faq-category-heading">
+            <ServiceIcon
+              icon={getFaqCategoryIconKey(category.id)}
+              variant="plain"
+              size={32}
+              className="faq-category-icon"
+            />
+            {category.title}
+          </h2>
           <div className="faq-accordion-list">
             {category.items.map((item) => (
               <FaqAccordionItem key={item.q} item={item} />

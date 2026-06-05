@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { EquipmentAccordion } from "@/components/EquipmentAccordion";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
@@ -53,8 +52,8 @@ export default function Page() {
           <p className="eyebrow">Technické zázemí laboratoře</p>
           <h1>Přístrojové vybavení NATURCHEM</h1>
           <p className="page-lead">
-            Měření a odběry podložené přístrojovým zázemím laboratoře — emise, pracovní prostředí,
-            hluk i příprava vzorků pro protokol nebo studii u ČIŽP a KHS.
+            Měřicí a odběrová technika podle oblasti — pro orientaci před zakázkou nebo ve
+            výběrovém řízení.
           </p>
         </header>
       </PageHeroBand>
@@ -65,10 +64,6 @@ export default function Page() {
       >
         <h2 id="equipment-index-intro-heading">{equipmentSectionHeading}</h2>
         <p>{equipmentSectionIntro}</p>
-        <p className="muted">
-          Úplný akreditovaný rozsah metod najdete na stránce{" "}
-          <Link href="/akreditace-autorizace-dokumenty">Akreditace a oprávnění</Link>.
-        </p>
       </section>
 
       <EquipmentAccordion groups={equipmentGroups} />

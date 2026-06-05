@@ -2,6 +2,7 @@
 
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { accordionExpandClosed, accordionExpandOpen } from "@/lib/accordion-expand-labels";
 import type { ServiceIconKey } from "@/lib/service-icons";
 import { serviceGroups } from "@/lib/service-groups";
 
@@ -14,17 +15,13 @@ const groupIcons: Record<string, ServiceIconKey> = {
   "skoleni-podpora": "skoleni"
 };
 
-const groupExpandLabels: Record<string, { closed: string; open: string; ariaVerb: string }> = {
-  "mericke-sluzby": { closed: "Zobrazit měření", open: "Skrýt měření", ariaVerb: "měření" },
-  "studie-vypocty": { closed: "Zobrazit studie", open: "Skrýt studie", ariaVerb: "studie" },
-  "povolovaci-podklady": {
-    closed: "Zobrazit povolování",
-    open: "Skrýt povolování",
-    ariaVerb: "povolovací služby"
-  },
-  "eia-investice": { closed: "Zobrazit EIA", open: "Skrýt EIA", ariaVerb: "EIA" },
-  "evidence-reporting": { closed: "Zobrazit evidenci", open: "Skrýt evidenci", ariaVerb: "evidenci" },
-  "skoleni-podpora": { closed: "Zobrazit školení", open: "Skrýt školení", ariaVerb: "školení" }
+const groupAriaVerbs: Record<string, string> = {
+  "mericke-sluzby": "měření",
+  "studie-vypocty": "studie",
+  "povolovaci-podklady": "povolovací služby",
+  "eia-investice": "EIA",
+  "evidence-reporting": "evidenci",
+  "skoleni-podpora": "školení"
 };
 
 function serviceCountLabel(count: number): string {
@@ -73,12 +70,13 @@ export function ServiceGroupsIndex() {
     <section className="section service-group service-groups-accordion">
       <div className="container service-groups-accordion-inner">
         {serviceGroups.map((group) => {
-          const expand = groupExpandLabels[group.id];
+          const ariaVerb = groupAriaVerbs[group.id] ?? group.title;
+
           return (
           <details key={group.id} id={group.id} className="card service-group-details">
             <summary
               className="service-group-summary"
-              aria-label={`${group.title}, ${serviceCountLabel(group.items.length)} — zobrazit nebo skrýt ${expand.ariaVerb}`}
+              aria-label={`${group.title}, ${serviceCountLabel(group.items.length)} — zobrazit nebo skrýt ${ariaVerb}`}
             >
               <ServiceIcon icon={groupIcons[group.id]} variant="inline" size={24} className="service-group-summary-icon" />
               <div className="service-group-summary-text">
@@ -90,8 +88,8 @@ export function ServiceGroupsIndex() {
               </div>
               <span className="service-group-expand" aria-hidden="true">
                 <span className="service-group-expand-text">
-                  <span className="service-group-expand-when-closed">{expand.closed}</span>
-                  <span className="service-group-expand-when-open">{expand.open}</span>
+                  <span className="service-group-expand-when-closed">{accordionExpandClosed}</span>
+                  <span className="service-group-expand-when-open">{accordionExpandOpen}</span>
                 </span>
                 <span className="service-group-expand-icon">
                   <svg

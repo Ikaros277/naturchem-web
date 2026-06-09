@@ -15,7 +15,9 @@ const fontDisplay = IBM_Plex_Sans({
   weight: ["500", "600", "700"],
   display: "swap"
 });
-import { Analytics } from "@/components/Analytics";
+import { ConsentAwareTracking } from "@/components/ConsentAwareTracking";
+import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
+import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { OutboundLinkTelemetry } from "@/components/OutboundLinkTelemetry";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -102,13 +104,15 @@ export default function RootLayout({
   return (
     <html lang="cs" className={`${fontBody.variable} ${fontDisplay.variable}`}>
       <body className={fontBody.className}>
+        <GoogleConsentModeInit />
         <JsonLd data={websiteData} />
         <JsonLd data={orgData} />
         <JsonLd data={localBusinessData} />
         <Header />
         {children}
         <Footer />
-        <Analytics />
+        <CookieConsentBanner />
+        <ConsentAwareTracking />
         <OutboundLinkTelemetry />
       </body>
     </html>

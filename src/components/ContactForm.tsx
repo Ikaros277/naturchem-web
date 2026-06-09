@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 import { CONTACT_ATTACHMENT_TOOLTIP } from "@/lib/contact-attachment-hints";
+import { legalPaths } from "@/lib/legal";
 import { INQUIRY_CATEGORIES, type InquiryCategoryId } from "@/lib/contact-inquiry";
 import { sendGtagEvent } from "@/lib/gtag";
 import { company } from "@/lib/site";
@@ -188,7 +190,10 @@ export function ContactForm({
       <p>
         <label className="contact-service-option">
           <input type="checkbox" name="consent" required />
-          <span>Souhlasím se zpracováním údajů kvůli vyřízení dotazu.</span>
+          <span>
+            Souhlasím se zpracováním osobních údajů za účelem vyřízení dotazu dle{" "}
+            <Link href={legalPaths.privacy}>zásad ochrany osobních údajů</Link>.
+          </span>
         </label>
       </p>
 

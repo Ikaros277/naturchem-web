@@ -8,6 +8,7 @@ import {
   footerPhones,
   type FooterLink
 } from "@/lib/footer-nav";
+import { FooterLegalBar } from "@/components/FooterLegalBar";
 import { company } from "@/lib/site";
 
 function telHref(phone: string) {
@@ -64,15 +65,6 @@ function FooterContact() {
   );
 }
 
-function FooterLegal({ year }: { year: number }) {
-  return (
-    <div className="footer-bottom">
-      <p>
-        © NATURCHEM, s.r.o. {year} · IČO {company.ico} · DIČ {company.dic}
-      </p>
-    </div>
-  );
-}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -89,7 +81,7 @@ export function Footer() {
           </FooterColumn>
           <FooterContact />
         </div>
-        <FooterLegal year={currentYear} />
+        <FooterLegalBar year={currentYear} ico={company.ico} dic={company.dic} />
       </div>
     </footer>
   );

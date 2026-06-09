@@ -41,7 +41,9 @@ const routes = [
   "/provozy-a-technologie/drevozpracujici",
   "/provozy-a-technologie/automotive",
   "/poradna",
-  "/kontakt"
+  "/kontakt",
+  "/ochrana-osobnich-udaju",
+  "/zasady-cookies"
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

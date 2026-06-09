@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 
+import { useCookieConsentState } from "@/components/CookieConsentBanner";
 import { sendGtagEvent } from "@/lib/gtag";
 
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -14,11 +15,13 @@ function linkText(link: HTMLAnchorElement): string | undefined {
 }
 
 /**
- * Zachytí důležité obchodní interakce bez nutnosti ručně označovat každý odkaz.
+ * Zachytí důležité obchodní interakce — pouze po souhlasu se statistickými cookies.
  */
 export function OutboundLinkTelemetry() {
+  const consent = useCookieConsentState();
+
   useEffect(() => {
-    if (!gaId) return;
+    if (!gaId || !consent.statistics || !consent.updatedAt) return;
 
     function onPointerDown(event: Event) {
       if (!(event.target instanceof Element)) return;
@@ -45,7 +48,7 @@ export function OutboundLinkTelemetry() {
 
     document.addEventListener("pointerdown", onPointerDown, true);
     return () => document.removeEventListener("pointerdown", onPointerDown, true);
-  }, []);
+  }, [consent.statistics, consent.updatedAt]);
 
   return null;
 }

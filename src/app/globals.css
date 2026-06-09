@@ -2969,11 +2969,20 @@ a:hover {
   overflow: hidden;
   padding-top: 0;
   padding-bottom: 0;
+  /* Definovaná výška umožňuje align-content: center na gridu uvnitř */
+  min-height: clamp(360px, 44vh, 440px);
+  display: flex;
+  align-items: stretch;
+}
+
+/* Container se roztáhne přes celou výšku sekce */
+.hero--split > .container {
+  min-height: inherit;
 }
 
 .hero--split .hero-copy {
-  --hero-copy-pad-y: clamp(1.5rem, 2.5vw, 2.25rem);
-  padding-top: calc(var(--hero-copy-pad-y) + 0.9rem);
+  --hero-copy-pad-y: clamp(0.75rem, 1.2vw, 1.25rem);
+  padding-top: var(--hero-copy-pad-y);
   padding-bottom: var(--hero-copy-pad-y);
 }
 
@@ -3066,7 +3075,7 @@ a:hover {
 .hero-diagonal-spacer {
   float: right;
   width: calc(min(1220px, 92vw) * 0.09 + 1.5rem);
-  height: clamp(300px, 40vh, 460px);
+  height: clamp(300px, 44vh, 440px);
   shape-outside: polygon(100% 0%, 100% 100%, 0% 100%);
   pointer-events: none;
 }

@@ -3057,6 +3057,8 @@ a:hover {
 .hero-band-text {
   padding-top: clamp(1.5rem, 3vw, 2.5rem);
   padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: calc(min(1220px, 92vw) * 0.5);
+  padding-right: clamp(1rem, 2vw, 2rem);
 }
 
 .page-hero-band .premium-page-hero {
@@ -3357,7 +3359,8 @@ main.page:has(.page-hero-band) {
 }
 
 .hero-copy {
-  max-width: 760px;
+  max-width: calc(min(1220px, 92vw) * 0.5);
+  padding-right: clamp(1rem, 2vw, 2rem);
 }
 
 

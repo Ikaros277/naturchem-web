@@ -13,7 +13,7 @@
 
 ---
 
-## Sezení: 9. 6. 2026, 17:52–18:14
+## Sezení: 9. 6. 2026, 17:52–18:18
 
 ### Přehled
 Automaticky založené sezení po commitu `efd2ffe`.
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `efd2ffe`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Fix: page-hero-band-inner ÔÇö odstran─Ťno width: 100% kter├ę p┼Öeb├şj...
+**Co bylo uděláno:** Fix: page-hero-band-inner ÔÇö odstran─Ťno width: 100% kter├ę p┼Öeb├şjelo container. - width: 100% na .page-hero-band-inner p┼Öeb├şjelo .container width: min(1220px, 92%), ─Ź├şm┼ż text na interior str├ínk├ích za─Ź├şnal od lev├ęho okraje viewportu m├şsto containeru.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `b2c2ed4`). Dotcene oblasti: app, report, workflow.  
+**Proč:** width: 100% na .page-hero-band-inner p┼Öeb├şjelo .container width: min(1220px, 92%), ─Ź├şm┼ż text na interior str├ínk├ích za─Ź├şnal od lev├ęho okraje viewportu m├şsto containeru.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>.
+
 #### UX: mobil ÔÇö v─Ťt┼í├ş logo v headeru a oprava navy overlay na mobilu.
 **Co bylo uděláno:** UX: mobil ÔÇö v─Ťt┼í├ş logo v headeru a oprava navy overlay na mobilu. - Logo max-height zv├Ż┼íeno z 2.35rem na 2.75rem pro mobiln├ş viewporty. Opravena mobiln├ş hero sekce: navy overlay ::after s content/position/inset pro ─Źitelnost textu nad foto pozad├şm.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `cefa9ab`). Dotcene oblasti: app, report, workflow.  
 **Proč:** Logo max-height zv├Ż┼íeno z 2.35rem na 2.75rem pro mobiln├ş viewporty. Opravena mobiln├ş hero sekce: navy overlay ::after s content/position/inset pro ─Źitelnost textu nad foto pozad├şm.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>.
@@ -34,8 +38,8 @@ Automaticky založené sezení po commitu `efd2ffe`.
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~23 min
-**Rozložení:** 9. 6. 2026 17:52–18:14 (~23 min)
+**Odhadovaná doba práce:** ~27 min
+**Rozložení:** 9. 6. 2026 17:52–18:18 (~27 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

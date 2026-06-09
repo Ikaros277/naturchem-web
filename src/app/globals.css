@@ -2968,7 +2968,7 @@ a:hover {
   position: relative;
   overflow: hidden;
   padding: 0;
-  min-height: 430px;
+  height: 430px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3017,11 +3017,11 @@ a:hover {
 
 /* Mobil: foto jako tmavé pozadí celé sekce */
 @media (max-width: 767px) {
-  /* Na mobilu necháme výšku hero řízenou obsahem — foto pokrývá celé pozadí */
+  /* Na mobilu výška hero řízená obsahem — foto pokrývá celé pozadí */
   .hero--split,
   .page-hero-band,
   .service-hero-band {
-    min-height: 0;
+    height: auto;
   }
 
   .hero-band-grid,
@@ -3062,11 +3062,11 @@ a:hover {
 }
 
 .page-hero-band--standard {
-  min-height: var(--hero-band-min-height-standard);
+  height: 430px;
 }
 
 .page-hero-band--service {
-  min-height: var(--hero-band-min-height-service);
+  height: 430px;
 }
 
 .page-hero-band-inner,

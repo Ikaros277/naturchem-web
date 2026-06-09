@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 30 |
-| Celkový odhadovaný čas | ~27 hodiny |
+| Celkový odhadovaný čas | ~27,2 hodiny |
 | Aktuální fáze | UX hero dokončeno (split layout, výška, centrování, mobil); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 9. 6. 2026, 20:04-20:14
+## Sezení: 9. 6. 2026, 20:04–20:21
 
 ### Přehled
 Automaticky založené sezení po commitu `b5d0f26`.
@@ -21,14 +21,18 @@ Automaticky založené sezení po commitu `b5d0f26`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### UX: hero sekce ÔÇö 430 px sjednocen├í v├Ż┼íka a centrov├ín├ş obsahu n...
+**Co bylo uděláno:** UX: hero sekce ÔÇö 430 px sjednocen├í v├Ż┼íka a centrov├ín├ş obsahu nap┼Ö├ş─Ź webem. (commit `4bbb82f`). Dotcene oblasti: app, report, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### Fix: hero--split ÔÇö spolehliv├ę centrov├ín├ş p┼Öes align-items: center.
 **Co bylo uděláno:** Fix: hero--split ÔÇö spolehliv├ę centrov├ín├ş p┼Öes align-items: center. (commit `b5d0f26`). Dotcene oblasti: app.  
 **Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 9. 6. 2026 20:04-20:14 (~10 min)  
-**Metoda odhadu:** git  
+**Odhadovaná doba práce:** ~18 min
+**Rozložení:** 9. 6. 2026 20:04–20:21 (~18 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*
 

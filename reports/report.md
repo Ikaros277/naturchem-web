@@ -6,38 +6,39 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 30 |
-| Celkový odhadovaný čas | ~27,2 hodiny |
-| Aktuální fáze | UX hero dokončeno (split layout, výška, centrování, mobil); další krok: launch checklist (GA4, Resend, DNS) |
+| Celkový odhadovaný čas | ~27,4 hodiny |
+| Aktuální fáze | UX hero — fixní výška 430 px a centrování napříč webem; další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 9. 6. 2026, 20:04–20:21
+## Sezení: 9. 6. 2026, 20:04–20:36
 
 ### Přehled
-Automaticky založené sezení po commitu `b5d0f26`.
+Iterativní ladění vertikálního centrování hero sekce — obsah se zobrazoval u horního okraje místo uprostřed. Řešení prošlo třemi commity: přepnutí na `align-items: center`, sjednocení výšky na 430 px napříč webem a finální záměna `min-height` za pevné `height: 430px`, která jako jediná zaručila spolehlivé centrování ve flex kontejneru.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### UX: hero sekce ÔÇö 430 px sjednocen├í v├Ż┼íka a centrov├ín├ş obsahu n...
-**Co bylo uděláno:** UX: hero sekce ÔÇö 430 px sjednocen├í v├Ż┼íka a centrov├ín├ş obsahu nap┼Ö├ş─Ź webem. (commit `4bbb82f`). Dotcene oblasti: app, report, workflow.  
-**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
 
-#### Fix: hero--split ÔÇö spolehliv├ę centrov├ín├ş p┼Öes align-items: center.
-**Co bylo uděláno:** Fix: hero--split ÔÇö spolehliv├ę centrov├ín├ş p┼Öes align-items: center. (commit `b5d0f26`). Dotcene oblasti: app.  
-**Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
+#### Hero — spolehlivé vertikální centrování
+**Co bylo uděláno:** Obsah hero sekce (drobečková navigace, eyebrow, H1, lead) se zobrazoval u horního okraje namísto uprostřed. Po dvou pokusech s `align-items` a `min-height` bylo zjištěno, že prohlížeč při `min-height` vypočítá výšku kontejneru rovnou výšce obsahu — flexu tak nezbývá prostor pro centrování. Opraveno záměnou `min-height: 430px` za pevné `height: 430px` na `.hero--split`. Na mobilu se výška resetuje na `height: auto`.  
+**Proč:** `min-height` je pro flexové centrování nespolehlivé — kontejner dostane vypočítanou výšku obsahu, ne minimum. Fixní `height` dá flexu jasně ohraničený prostor a `justify-content: center` funguje bezpečně.
+
+#### Hero — sjednocená výška 430 px napříč webem
+**Co bylo uděláno:** Pevná výška 430 px nastavena na všechny tři varianty hero sekce: homepage (`.hero--split`), interní stránky (`.page-hero-band--standard`) i service stránky (`.page-hero-band--service`). Aktualizovány i CSS proměnné `--hero-band-min-height-*`.  
+**Proč:** Každá sekce webu měla jinou výšku hero pruhu, výsledek vypadal nejednotně. Sjednocená výška dává webu konzistentní první dojem na všech stránkách.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~18 min
-**Rozložení:** 9. 6. 2026 20:04–20:21 (~18 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~32 min  
+**Rozložení:** 9. 6. 20:04–20:36 (~32 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** ~5  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`). V Claude Code bez hooku se použijí jen commity.*
 
 ### Technická poznámka
-Commit: `b5d0f26139f3082651646d90edba6ef0146b0fcb`
+Dotčené soubory: `src/app/globals.css` (`.hero--split`, `.page-hero-band--standard`, `.page-hero-band--service` — přechod z `min-height` na `height`), `src/app/page.tsx`, `src/components/PageHeroBand.tsx` (diagonal spacer).
 
 ---
 

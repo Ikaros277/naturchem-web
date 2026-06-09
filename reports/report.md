@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 29 |
-| Celkový odhadovaný čas | ~27 hodin |
+| Počet sezení celkem | 30 |
+| Celkový odhadovaný čas | ~27 hodiny |
 | Aktuální fáze | UX hero dokončeno (split layout, výška, centrování, mobil); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 9. 6. 2026, 20:04-20:14
+
+### Přehled
+Automaticky založené sezení po commitu `b5d0f26`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Fix: hero--split ÔÇö spolehliv├ę centrov├ín├ş p┼Öes align-items: center.
+**Co bylo uděláno:** Fix: hero--split ÔÇö spolehliv├ę centrov├ín├ş p┼Öes align-items: center. (commit `b5d0f26`). Dotcene oblasti: app.  
+**Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 9. 6. 2026 20:04-20:14 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `b5d0f26139f3082651646d90edba6ef0146b0fcb`
 
 ---
 

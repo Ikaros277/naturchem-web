@@ -13,8 +13,8 @@
   --radius-pill: 999px;
   --site-header-offset: 6.25rem;
   --section-padding-y: clamp(2rem, 3.5vw, 3.25rem);
-  --hero-band-min-height-standard: clamp(280px, 34vh, 380px);
-  --hero-band-min-height-service: clamp(300px, 36vh, 400px);
+  --hero-band-min-height-standard: 430px;
+  --hero-band-min-height-service: 430px;
 }
 
 * {
@@ -2967,17 +2967,17 @@ a:hover {
 .hero--split {
   position: relative;
   overflow: hidden;
-  padding-top: 0;
-  padding-bottom: 0;
-  min-height: clamp(340px, 42vh, 400px);
+  padding: 0;
+  min-height: 430px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .hero--split .hero-copy {
-  --hero-copy-pad-y: clamp(0.75rem, 1.2vw, 1.25rem);
-  padding-top: var(--hero-copy-pad-y);
-  padding-bottom: var(--hero-copy-pad-y);
+  padding-top: clamp(0.75rem, 1.5vw, 1.25rem);
+  padding-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
 /* Grid uvnitř containeru: text zabírá 60 % šířky, zbytek je vzduch pro foto */
@@ -3017,6 +3017,13 @@ a:hover {
 
 /* Mobil: foto jako tmavé pozadí celé sekce */
 @media (max-width: 767px) {
+  /* Na mobilu necháme výšku hero řízenou obsahem — foto pokrývá celé pozadí */
+  .hero--split,
+  .page-hero-band,
+  .service-hero-band {
+    min-height: 0;
+  }
+
   .hero-band-grid,
   .page-hero-band-inner {
     grid-template-columns: 1fr;
@@ -6984,13 +6991,8 @@ main.home-page + .site-footer {
     margin-top: 0.7rem;
   }
 
-  .home-page .hero--split {
-    min-height: 0;
-    padding: 0;
-  }
-
   .home-page .hero--split .hero-copy {
-    --hero-copy-pad-y: clamp(1rem, 2.5vw, 1.2rem);
+    --hero-copy-pad-y: clamp(0.75rem, 2vw, 1rem);
     padding-top: var(--hero-copy-pad-y);
     padding-bottom: var(--hero-copy-pad-y);
   }

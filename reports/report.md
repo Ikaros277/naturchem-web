@@ -5,11 +5,48 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 30 |
-| Celkový odhadovaný čas | ~27,6 hodiny |
-| Aktuální fáze | UX hero dokončeno (430 px, centrování, bez ikon v pruhu); další krok: launch checklist (GA4, Resend, DNS) |
+| Počet sezení celkem | 31 |
+| Celkový odhadovaný čas | ~28,5 hodiny |
+| Aktuální fáze | GDPR a cookie souhlas připraveny (Consent Mode v2); další krok: doplnit GA4 ID ve Vercelu, ověřit GSC a Resend |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 9. 6. 2026, 20:35–21:25
+
+### Přehled
+Příprava webu na launch z hlediska GDPR a měření: cookie lišta s volbou kategorií, dvě právní stránky (ochrana údajů a zásady cookies), Google Consent Mode v2 a načítání analytických/marketingových tagů až po souhlasu. Kontaktní formulář doplněn o odkaz na zásady ochrany údajů; patička o právní navigaci.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Cookie lišta a správa souhlasu
+**Co bylo uděláno:** Přidána cookie lišta s tlačítky Přijmout vše, Odmítnout volitelné a Nastavení. Návštěvník může zvlášť povolit statistické (GA4) a marketingové (Google Ads, Meta, LinkedIn) cookies. Volba se ukládá do local storage; z patičky jde kdykoli otevřít „Spravovat cookies“.  
+**Proč:** Web musí před spuštěním měření splnit požadavky EU na informovaný souhlas — bez lišty by GA4 a reklamní pixely nemohly legálně běžet.
+
+#### Právní stránky — GDPR a cookies
+**Co bylo uděláno:** Nové stránky `/ochrana-osobnich-udaju` a `/zasady-cookies` s údaji správce, účely zpracování, tabulkou cookies, právy subjektů údajů a odkazem na Google Consent Mode. Sdílená šablona `LegalPageLayout`, centrální konstanty v `legal.ts`. Stránky zařazeny do sitemap.  
+**Proč:** Cookie lišta i kontaktní formulář musí vést na konkrétní právní texty; bez nich by souhlas nebyl informovaný a audit by web označil jako nekompletní.
+
+#### Consent Mode v2 a měření po souhlasu
+**Co bylo uděláno:** Nahrazena stará komponenta `Analytics` za `ConsentAwareTracking` a `GoogleConsentModeInit`. Výchozí stav všech úložišť je „denied“; po volbě v liště se aktualizuje přes `gtag('consent', 'update', …)`. GA4 a Google Ads se načtou přes gtag.js (s anonymizací IP); Meta Pixel a LinkedIn Insight Tag až po marketingovém souhlasu. Eventy `generate_lead` a outbound telemetrie zůstávají, ale GA běží jen se statistikami.  
+**Proč:** Příprava na nasazení `NEXT_PUBLIC_GA_MEASUREMENT_ID` ve Vercelu — měření musí respektovat souhlas ještě před prvním pageview, jak vyžaduje Google Consent Mode v2.
+
+#### Patička a kontaktní formulář
+**Co bylo uděláno:** V patičce nový právní řádek s odkazy na ochranu údajů, zásady cookies a tlačítkem správy souhlasu. U kontaktního formuláře povinný checkbox se souhlasem a odkazem na zásady ochrany osobních údajů.  
+**Proč:** Právní odkazy musí být dostupné z každé stránky; formulář zpracovává osobní údaje a potřebuje výslovný souhlas se zpracováním.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~51 min  
+**Rozložení:** 9. 6. 20:35–21:25 (~51 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 2  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`). V Claude Code bez hooku se použijí jen commity.*
+
+### Technická poznámka
+Soubory: `CookieConsentBanner`, `ConsentAwareTracking`, `GoogleConsentModeInit`, `legal.ts`, `ochrana-osobnich-udaju/page.tsx`, `zasady-cookies/page.tsx`, `FooterLegalBar`, `globals.css`, `layout.tsx`. Commit: `bd70d7c`.
 
 ---
 

@@ -1,12 +1,9 @@
-﻿import Link from "next/link";
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { ExperienceStats } from "@/components/ExperienceStats";
 import { HomeOfferCard } from "@/components/HomeOfferCard";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
-import { globalCta } from "@/lib/cta";
-import { contactFormHref } from "@/lib/contact-url";
 import { homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { siteUrl } from "@/lib/site";
 
@@ -86,11 +83,6 @@ export default function Home() {
               Postaráme se o vše, co Váš provoz potřebuje — pro provozovatele, investory i projektanty,
               bez nutnosti poptávat více dodavatelů.
             </p>
-            <div className="hero-actions hero-actions--home-mobile">
-              <Link className="button" href={contactFormHref}>
-                {globalCta}
-              </Link>
-            </div>
           </div>
         </div>
         <div className="hero-photo-frame" aria-hidden="true">

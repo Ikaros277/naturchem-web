@@ -3019,23 +3019,7 @@ a:hover {
   }
 
   .hero-photo-frame {
-    left: 0;
-    clip-path: none;
-  }
-
-  /* Navy overlay přes foto — zachová barvu design systému, foto svítí zpoza */
-  .hero-photo-frame::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(7, 24, 39, 0.82) 0%,
-      rgba(7, 24, 39, 0.70) 55%,
-      rgba(7, 24, 39, 0.60) 100%
-    );
-    pointer-events: none;
-    z-index: 1;
+    display: none;
   }
 }
 
@@ -7187,11 +7171,11 @@ main.home-page + .site-footer {
   }
 
   .brand-logo {
-    max-width: min(200px, 44vw);
+    max-width: min(220px, 48vw);
   }
 
   .brand-logo-img {
-    max-height: 2.35rem;
+    max-height: 2.75rem;
   }
 
   .button.nav-cta-mobile,

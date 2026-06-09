@@ -2968,25 +2968,31 @@ a:hover {
   position: relative;
   overflow: hidden;
   padding: 0;
-  height: 430px;
+  height: var(--hero-band-min-height-standard);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
-.hero--split .hero-copy {
-  padding-top: clamp(0.75rem, 1.5vw, 1.25rem);
-  padding-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+.hero--split > .container,
+.page-hero-band > .container,
+.service-hero-band > .container {
+  flex: 1;
+  height: 100%;
+  min-height: 0;
 }
 
 /* Grid uvnitř containeru: text zabírá 60 % šířky, zbytek je vzduch pro foto */
 .hero-band-grid,
-.page-hero-band-inner {
+.page-hero-band-inner,
+.service-hero-band-inner {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(220px, 2fr);
+  grid-template-rows: 1fr;
   gap: 0;
-  align-content: center;
+  align-items: stretch;
+  height: 100%;
+  min-height: 0;
 }
 
 /* Foto rámeček: absolutní, sahá od top/bottom sekce k pravému okraji viewportu.
@@ -3008,11 +3014,16 @@ a:hover {
   object-fit: cover;
 }
 
-/* Text musí být nad foto vrstvou */
+/* Text musí být nad foto vrstvou a vertikálně vycentrovaný v modrém pruhu */
 .hero-copy,
 .hero-band-text {
   position: relative;
   z-index: 1;
+  display: grid;
+  align-content: center;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* Mobil: foto jako tmavé pozadí celé sekce */
@@ -3052,8 +3063,7 @@ a:hover {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
   padding: 0;
   margin-bottom: 0.5rem;
   background:
@@ -3062,11 +3072,11 @@ a:hover {
 }
 
 .page-hero-band--standard {
-  height: 430px;
+  height: var(--hero-band-min-height-standard);
 }
 
 .page-hero-band--service {
-  height: 430px;
+  height: var(--hero-band-min-height-service);
 }
 
 .page-hero-band-inner,
@@ -3075,28 +3085,26 @@ a:hover {
   z-index: 1;
 }
 
-.hero-band-text {
-  --hero-copy-pad-y: clamp(1rem, 2vw, 1.5rem);
-  padding-top: var(--hero-copy-pad-y);
-  padding-bottom: var(--hero-copy-pad-y);
-}
-
-/* Diagonální spacer — shape-outside trojúhelník floatovaný vpravo,
-   sklon odpovídá clip-path fotky (12 % šíře rámečku přes celou výšku). */
+/* Diagonální spacer — vizuální rezerva u šikmého řezu fotky; mimo layout (flex ignoruje float). */
 .hero-diagonal-spacer {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: calc(min(1220px, 92vw) * 0.09 + 1.5rem);
-  height: clamp(280px, 42vh, 400px);
-  shape-outside: polygon(100% 0%, 100% 100%, 0% 100%);
+  height: 100%;
   pointer-events: none;
 }
 
-.page-hero-band .premium-page-hero {
-  margin-bottom: 0;
+.hero--split .hero-copy,
+.page-hero-band .hero-band-text,
+.service-hero-band .hero-band-text {
+  padding-right: calc(min(1220px, 92vw) * 0.06 + 0.75rem);
 }
 
-.page-hero-band .service-hero {
-  margin: 0.35rem 0 0.5rem;
+.page-hero-band .premium-page-hero,
+.page-hero-band .service-hero,
+.page-hero-band .page-header {
+  margin: 0;
 }
 
 main:has(> .page-hero-band),
@@ -3389,7 +3397,7 @@ main.page:has(.page-hero-band) {
 }
 
 .hero-copy {
-  /* max-width a padding-right řeší .hero-diagonal-spacer (shape-outside) */
+  /* padding-right řeší .hero-diagonal-spacer + pravidla u .page-hero-band .hero-band-text */
 }
 
 
@@ -6900,7 +6908,7 @@ main.home-page + .site-footer {
     grid-template-columns: 1fr;
   }
 
-  .hero {
+  .hero:not(.hero--split) {
     padding: 1.45rem 0 calc(2rem + env(safe-area-inset-bottom, 0px));
   }
 
@@ -6989,12 +6997,6 @@ main.home-page + .site-footer {
     font-size: 0.98rem;
     line-height: 1.5;
     margin-top: 0.7rem;
-  }
-
-  .home-page .hero--split .hero-copy {
-    --hero-copy-pad-y: clamp(0.75rem, 2vw, 1rem);
-    padding-top: var(--hero-copy-pad-y);
-    padding-bottom: var(--hero-copy-pad-y);
   }
 
   .home-page .hero-photo-overlay {

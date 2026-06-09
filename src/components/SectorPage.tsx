@@ -88,11 +88,8 @@ export function SectorPage(props: Props) {
         ]}
       >
         <header className="page-header service-hero service-hero--photo">
-          <div>
-            <ServiceIcon href={`/provozy-a-technologie/${props.slug}`} variant="card" className="service-hero-icon" />
-            <h1>{props.title}</h1>
-            <p className="page-lead">{props.intro}</p>
-          </div>
+          <h1>{props.title}</h1>
+          <p className="page-lead">{props.intro}</p>
         </header>
       </PageHeroBand>
 

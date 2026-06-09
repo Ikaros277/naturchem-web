@@ -147,7 +147,6 @@ export function ServicePage(props: Props) {
         ]}
       >
         <header className="page-header service-hero service-hero--photo service-hero--single">
-          <ServiceIcon href={`/${props.slug}`} variant="card" className="service-hero-icon" />
           <h1>{props.title}</h1>
           <p className="page-lead">{props.intro}</p>
         </header>

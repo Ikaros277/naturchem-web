@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 29 |
-| Celkový odhadovaný čas | ~26,7 hodiny |
+| Celkový odhadovaný čas | ~26,8 hodiny |
 | Aktuální fáze | UX hero dokončeno (split layout, fotky, diagonální text); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 9. 6. 2026, 17:52–18:47
+## Sezení: 9. 6. 2026, 17:52–18:53
 
 ### Přehled
 Velká úprava hero sekce na celém webu: nový split layout s diagonální fotkou, diagonální zalamování textu pomocí CSS `shape-outside`, UX doladění paddingu (P6-5) a mobilní opravy loga a textu v hero. Cílem bylo sjednotit první dojem na desktopu i mobilu — kratší modrý pruh, čitelný text a logo ve stejné podobě jako na velké obrazovce.
@@ -21,6 +21,10 @@ Velká úprava hero sekce na celém webu: nový split layout s diagonální fotk
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### UX: hero--split ÔÇö krat┼í├ş v├Ż┼íka a vertik├íln├ş centrov├ín├ş obsahu.
+**Co bylo uděláno:** UX: hero--split ÔÇö krat┼í├ş v├Ż┼íka a vertik├íln├ş centrov├ín├ş obsahu. (commit `34ab030`). Dotcene oblasti: app.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
 
 #### Hero — diagonální zalamování textu
 **Co bylo uděláno:** Text v hero sloupci nyní zalamuje podél diagonály fotky — řádky nahoře jsou delší, směrem dolů se zkracují podle stejného sklonu jako diagonální řez fotky. Implementováno přes CSS `shape-outside` na floatovaném prázdném elementu uvnitř textového sloupce. Na mobilu je efekt vypnutý.  
@@ -43,9 +47,9 @@ Velká úprava hero sekce na celém webu: nový split layout s diagonální fotk
 **Proč:** Na mobilu logo působilo jinak než na desktopu a hero text zůstal jen v levé části obrazovky; návštěvník neviděl sdělení přes celou šířku jako v cílovém mobilním návrhu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~55 min
-**Rozložení:** 9. 6. 2026 17:52–18:47 (~55 min)
-**Metoda odhadu:** git + konverzace  
+**Odhadovaná doba práce:** ~1 hod 2 min
+**Rozložení:** 9. 6. 2026 17:52–18:53 (~1 hod 2 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** ~11  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 

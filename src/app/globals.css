@@ -13,8 +13,8 @@
   --radius-pill: 999px;
   --site-header-offset: 6.25rem;
   --section-padding-y: clamp(2rem, 3.5vw, 3.25rem);
-  --hero-band-min-height-standard: clamp(280px, 32vh, 360px);
-  --hero-band-min-height-service: clamp(320px, 38vh, 420px);
+  --hero-band-min-height-standard: clamp(280px, 34vh, 380px);
+  --hero-band-min-height-service: clamp(300px, 36vh, 400px);
 }
 
 * {
@@ -2969,15 +2969,10 @@ a:hover {
   overflow: hidden;
   padding-top: 0;
   padding-bottom: 0;
-  /* Definovaná výška umožňuje align-content: center na gridu uvnitř */
-  min-height: clamp(360px, 44vh, 440px);
+  min-height: clamp(340px, 42vh, 400px);
   display: flex;
-  align-items: stretch;
-}
-
-/* Container se roztáhne přes celou výšku sekce */
-.hero--split > .container {
-  min-height: inherit;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero--split .hero-copy {
@@ -3029,7 +3024,17 @@ a:hover {
   }
 
   .hero-photo-frame {
-    display: none;
+    left: 0;
+    clip-path: none;
+  }
+
+  .hero-photo-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7,24,39,0.82) 0%, rgba(7,24,39,0.70) 55%, rgba(7,24,39,0.60) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
 }
 
@@ -3065,8 +3070,8 @@ a:hover {
 }
 
 .hero-band-text {
-  --hero-copy-pad-y: clamp(1.5rem, 3vw, 2.5rem);
-  padding-top: calc(var(--hero-copy-pad-y) + 0.9rem);
+  --hero-copy-pad-y: clamp(1rem, 2vw, 1.5rem);
+  padding-top: var(--hero-copy-pad-y);
   padding-bottom: var(--hero-copy-pad-y);
 }
 
@@ -3075,7 +3080,7 @@ a:hover {
 .hero-diagonal-spacer {
   float: right;
   width: calc(min(1220px, 92vw) * 0.09 + 1.5rem);
-  height: clamp(300px, 44vh, 440px);
+  height: clamp(280px, 42vh, 400px);
   shape-outside: polygon(100% 0%, 100% 100%, 0% 100%);
   pointer-events: none;
 }

@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 28 |
-| Celkový odhadovaný čas | ~25,8 hodiny |
+| Počet sezení celkem | 29 |
+| Celkový odhadovaný čas | ~25,9 hodiny |
 | Aktuální fáze | UX homepage a hluboké odkazy na služby; další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 9. 6. 2026, 17:52-18:02
+
+### Přehled
+Automaticky založené sezení po commitu `efd2ffe`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### UX: hero sekce ÔÇö split layout s foto p┼Öes celou v├Ż┼íku a viewport...
+**Co bylo uděláno:** UX: hero sekce ÔÇö split layout s foto p┼Öes celou v├Ż┼íku a viewport vpravo. - Nov├Ż syst├ęm hero fotek: gradient pruh p┼Öes celou ┼í├ş┼Öku, foto absolutn─Ť pozicovan├ę vpravo (sah├í k okraji viewportu), diagon├íln├ş ┼Öez vlevo. Na mobilu foto jako tmav├ę pozad├ş sekce. HeroTheme roz┼í├ş┼Öen na string s per-slug p┼Öi┼Öazen├şm fotek (heroSlugImages). Forge-worker foto pro home.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `efd2ffe`). Dotcene oblasti: app, components, lib.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 9. 6. 2026 17:52-18:02 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `efd2ffe30f7749c1e7f6fbccb9c3ab1bca9e14ea`
 
 ---
 

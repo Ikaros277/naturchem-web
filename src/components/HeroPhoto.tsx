@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getHeroImageSrc, type HeroTheme } from "@/lib/hero-images";
+import { getHeroImageConfig, type HeroTheme } from "@/lib/hero-images";
 
 type Props = {
   theme: HeroTheme;
@@ -7,13 +7,15 @@ type Props = {
 };
 
 export function HeroPhoto({ theme, priority = false }: Props) {
+  const { src, position = "center center" } = getHeroImageConfig(theme);
   return (
     <Image
-      src={getHeroImageSrc(theme)}
+      src={src}
       alt=""
       fill
       sizes="(max-width: 767px) 100vw, 48vw"
       className="hero-photo-img"
+      style={{ objectPosition: position }}
       priority={priority}
     />
   );

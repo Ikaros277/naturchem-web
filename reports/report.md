@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 29 |
-| Celkový odhadovaný čas | ~26 hodiny |
+| Celkový odhadovaný čas | ~26,2 hodiny |
 | Aktuální fáze | UX homepage a hluboké odkazy na služby; další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 9. 6. 2026, 17:52–18:06
+## Sezení: 9. 6. 2026, 17:52–18:14
 
 ### Přehled
 Automaticky založené sezení po commitu `efd2ffe`.
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `efd2ffe`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### UX: mobil ÔÇö v─Ťt┼í├ş logo v headeru a oprava navy overlay na mobilu.
+**Co bylo uděláno:** UX: mobil ÔÇö v─Ťt┼í├ş logo v headeru a oprava navy overlay na mobilu. - Logo max-height zv├Ż┼íeno z 2.35rem na 2.75rem pro mobiln├ş viewporty. Opravena mobiln├ş hero sekce: navy overlay ::after s content/position/inset pro ─Źitelnost textu nad foto pozad├şm.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `cefa9ab`). Dotcene oblasti: app, report, workflow.  
+**Proč:** Logo max-height zv├Ż┼íeno z 2.35rem na 2.75rem pro mobiln├ş viewporty. Opravena mobiln├ş hero sekce: navy overlay ::after s content/position/inset pro ─Źitelnost textu nad foto pozad├şm.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>.
+
 #### UX: hero foto ÔÇö per-fotka focal point + oprava navy overlay na mobilu.
 **Co bylo uděláno:** UX: hero foto ÔÇö per-fotka focal point + oprava navy overlay na mobilu. - Syst├ęm focal pointu: HeroImageConfig s voliteln├Żm `position` per slug/kategorie. HeroPhoto ─Źte config a p┼Öed├ív├í objectPosition inline. Odstran─Ťn glob├íln├ş object-position z CSS. Opravena mobiln├ş ::after vrstva ÔÇö navy gradient overlay (0.82Ôćĺ0.60 opacity) zachov├ív├í barvu design syst├ęmu, foto sv├şt├ş zpoza.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `a625767`). Dotcene oblasti: app, components, lib, report, workflow.  
 **Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
@@ -30,8 +34,8 @@ Automaticky založené sezení po commitu `efd2ffe`.
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~15 min
-**Rozložení:** 9. 6. 2026 17:52–18:06 (~15 min)
+**Odhadovaná doba práce:** ~23 min
+**Rozložení:** 9. 6. 2026 17:52–18:14 (~23 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

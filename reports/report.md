@@ -7,20 +7,24 @@
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 29 |
 | Celkový odhadovaný čas | ~26,7 hodiny |
-| Aktuální fáze | UX hero (split layout, mobilní logo a text); další krok: launch checklist (GA4, Resend, DNS) |
+| Aktuální fáze | UX hero dokončeno (split layout, fotky, diagonální text); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 9. 6. 2026, 17:52–18:45
+## Sezení: 9. 6. 2026, 17:52–18:47
 
 ### Přehled
-Velká úprava hero sekce na celém webu: nový split layout s diagonální fotkou, následné UX doladění paddingu (P6-5) a mobilní opravy loga a textu v hero. Cílem bylo sjednotit první dojem na desktopu i mobilu — kratší modrý pruh, čitelný text a logo ve stejné podobě jako na velké obrazovce.
+Velká úprava hero sekce na celém webu: nový split layout s diagonální fotkou, diagonální zalamování textu pomocí CSS `shape-outside`, UX doladění paddingu (P6-5) a mobilní opravy loga a textu v hero. Cílem bylo sjednotit první dojem na desktopu i mobilu — kratší modrý pruh, čitelný text a logo ve stejné podobě jako na velké obrazovce.
 
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+
+#### Hero — diagonální zalamování textu
+**Co bylo uděláno:** Text v hero sloupci nyní zalamuje podél diagonály fotky — řádky nahoře jsou delší, směrem dolů se zkracují podle stejného sklonu jako diagonální řez fotky. Implementováno přes CSS `shape-outside` na floatovaném prázdném elementu uvnitř textového sloupce. Na mobilu je efekt vypnutý.  
+**Proč:** Samotný `max-width` svíral text na pevnou šíři bez vizuální vazby na fotografii. Diagonální zalamování opticky propojuje textový sloupec s fotkou a dává layoutu živější, dynamičtější charakter.
 
 #### Hero — split layout a systém fotek
 **Co bylo uděláno:** Přestavba hero na všechny stránky: tmavý gradient přes celou šířku, fotka absolutně vpravo s diagonálním řezem, na mobilu tmavé pozadí. Přidáno přiřazení fotek podle stránky (slug), focal point pro každou fotku a nová homepage fotka (forge-worker).  
@@ -39,14 +43,14 @@ Velká úprava hero sekce na celém webu: nový split layout s diagonální fotk
 **Proč:** Na mobilu logo působilo jinak než na desktopu a hero text zůstal jen v levé části obrazovky; návštěvník neviděl sdělení přes celou šířku jako v cílovém mobilním návrhu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~53 min  
-**Rozložení:** 9. 6. 2026 17:52–18:45 (~53 min)  
+**Odhadovaná doba práce:** ~55 min
+**Rozložení:** 9. 6. 2026 17:52–18:47 (~55 min)
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** 8  
+**Počet výměn s AI:** ~11  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-Soubory: `globals.css`, `HeroPhoto.tsx`, `PageHeroBand.tsx`, `hero-images.ts`, `page.tsx`. Commity: `efd2ffe` … `1a619b5`.
+Soubory: `globals.css`, `HeroPhoto.tsx`, `PageHeroBand.tsx`, `hero-images.ts`, `page.tsx`. Commity: `efd2ffe` … `1acc6c1`.
 
 ---
 

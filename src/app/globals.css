@@ -3369,8 +3369,7 @@ main.page:has(.page-hero-band) {
 }
 
 .hero-copy {
-  max-width: calc(min(1220px, 92vw) * 0.5);
-  padding-right: clamp(1rem, 2vw, 2rem);
+  /* max-width a padding-right řeší .hero-diagonal-spacer (shape-outside) */
 }
 
 
@@ -6870,6 +6869,10 @@ main.home-page + .site-footer {
   .hero-band-text {
     max-width: none;
     padding-right: 0;
+  }
+
+  .hero-diagonal-spacer {
+    display: none;
   }
 
   .hero-band-grid,

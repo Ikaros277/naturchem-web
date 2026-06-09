@@ -29,6 +29,7 @@ export function PageHeroBand({
     <div className={`page-hero-band page-hero-band--${variant} ${className}`.trim()}>
       <div className="container page-hero-band-inner">
         <div className="hero-band-text">
+          <div className="hero-diagonal-spacer" aria-hidden="true" />
           {breadcrumbs ? <Breadcrumbs items={breadcrumbs} /> : null}
           {children}
         </div>

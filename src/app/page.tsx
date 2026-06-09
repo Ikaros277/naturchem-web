@@ -77,6 +77,7 @@ export default function Home() {
       <section className="hero hero--split">
         <div className="container hero-band-grid">
           <div className="hero-copy">
+            <div className="hero-diagonal-spacer" aria-hidden="true" />
             <p className="eyebrow">
               Akreditovaná měření · studie a posudky · podklady pro KHS, ČIŽP a stavební úřady
             </p>

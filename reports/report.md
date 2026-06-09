@@ -6,54 +6,47 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 29 |
-| Celkový odhadovaný čas | ~26,6 hodiny |
-| Aktuální fáze | UX homepage a hluboké odkazy na služby; další krok: launch checklist (GA4, Resend, DNS) |
+| Celkový odhadovaný čas | ~26,7 hodiny |
+| Aktuální fáze | UX hero (split layout, mobilní logo a text); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 9. 6. 2026, 17:52–18:37
+## Sezení: 9. 6. 2026, 17:52–18:45
 
 ### Přehled
-Automaticky založené sezení po commitu `efd2ffe`.
+Velká úprava hero sekce na celém webu: nový split layout s diagonální fotkou, následné UX doladění paddingu (P6-5) a mobilní opravy loga a textu v hero. Cílem bylo sjednotit první dojem na desktopu i mobilu — kratší modrý pruh, čitelný text a logo ve stejné podobě jako na velké obrazovce.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### UX: P6-5 ÔÇö kompaktn─Ťj┼í├ş hero pruh, vyrovnan├ę okraje textu a sta...
-**Co bylo uděláno:** UX: P6-5 ÔÇö kompaktn─Ťj┼í├ş hero pruh, vyrovnan├ę okraje textu a stats li┼íta (commit `24a82a8`). Dotcene oblasti: app.  
-**Proč:** Splneni ukolu P6-5 z roadmapy - posun webu k cilove podobe pro klienta.
 
-#### Fix: hero text ÔÇö max-width zabr├ín├ş p┼Öet├ęk├ín├ş do foto oblasti.
-**Co bylo uděláno:** Fix: hero text ÔÇö max-width zabr├ín├ş p┼Öet├ęk├ín├ş do foto oblasti. - Diagon├íla (spodn├ş bod) za─Ź├şn├í na 52 % containeru. max-width: 50 % containeru + padding-right zajist├ş, ┼że text nikdy nep┼Öes├íhne za hranici fotky bez ohledu na d├ęlku obsahu nebo ┼í├ş┼Öku viewportu. Plat├ş pro .hero-band-text i .hero-copy.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `36c748a`). Dotcene oblasti: app, report, workflow.  
-**Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
+#### Hero — split layout a systém fotek
+**Co bylo uděláno:** Přestavba hero na všechny stránky: tmavý gradient přes celou šířku, fotka absolutně vpravo s diagonálním řezem, na mobilu tmavé pozadí. Přidáno přiřazení fotek podle stránky (slug), focal point pro každou fotku a nová homepage fotka (forge-worker).  
+**Proč:** Hero mělo působit profesionálněji a konzistentně — vizuální kotva pro B2B návštěvníka, ne generický tmavý pás bez fotky.
 
-#### Fix: page-hero-band-inner ÔÇö odstran─Ťno width: 100% kter├ę p┼Öeb├şj...
-**Co bylo uděláno:** Fix: page-hero-band-inner ÔÇö odstran─Ťno width: 100% kter├ę p┼Öeb├şjelo container. - width: 100% na .page-hero-band-inner p┼Öeb├şjelo .container width: min(1220px, 92%), ─Ź├şm┼ż text na interior str├ínk├ích za─Ź├şnal od lev├ęho okraje viewportu m├şsto containeru.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `b2c2ed4`). Dotcene oblasti: app, report, workflow.  
-**Proč:** width: 100% na .page-hero-band-inner p┼Öeb├şjelo .container width: min(1220px, 92%), ─Ź├şm┼ż text na interior str├ínk├ích za─Ź├şnal od lev├ęho okraje viewportu m├şsto containeru.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>.
+#### Hero — zarovnání textu vůči fotce (desktop)
+**Co bylo uděláno:** Opraveno přetékání textu do foto oblasti (max-width 50 % containeru) a regrese, kdy text na vnitřních stránkách začínal od okraje viewportu místo od containeru.  
+**Proč:** Po zavedení split layoutu text „lezl“ pod fotku nebo mimo mřížku stránky — horší čitelnost a neprofesionální dojem.
 
-#### UX: mobil ÔÇö v─Ťt┼í├ş logo v headeru a oprava navy overlay na mobilu.
-**Co bylo uděláno:** UX: mobil ÔÇö v─Ťt┼í├ş logo v headeru a oprava navy overlay na mobilu. - Logo max-height zv├Ż┼íeno z 2.35rem na 2.75rem pro mobiln├ş viewporty. Opravena mobiln├ş hero sekce: navy overlay ::after s content/position/inset pro ─Źitelnost textu nad foto pozad├şm.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `cefa9ab`). Dotcene oblasti: app, report, workflow.  
-**Proč:** Logo max-height zv├Ż┼íeno z 2.35rem na 2.75rem pro mobiln├ş viewporty. Opravena mobiln├ş hero sekce: navy overlay ::after s content/position/inset pro ─Źitelnost textu nad foto pozad├şm.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>.
+#### P6-5 — kompaktnější hero pruh a stats lišta
+**Co bylo uděláno:** Snížen vnitřní padding modrého hero pruhu (sjednocení s ostatními stránkami), mírně zkompaktněn zelený stats pruh pod hero. Vyrovnané horní a spodní okraje textu v modrém pruhu (optická kompenzace line-height u leadu). Trust band beze změny.  
+**Proč:** Pod hero bylo zbytečně moc prázdného místa — obsah „Co zajišťujeme“ byl příliš nízko; úprava posouvá klíčový obsah výš na fold.
 
-#### UX: hero foto ÔÇö per-fotka focal point + oprava navy overlay na mobilu.
-**Co bylo uděláno:** UX: hero foto ÔÇö per-fotka focal point + oprava navy overlay na mobilu. - Syst├ęm focal pointu: HeroImageConfig s voliteln├Żm `position` per slug/kategorie. HeroPhoto ─Źte config a p┼Öed├ív├í objectPosition inline. Odstran─Ťn glob├íln├ş object-position z CSS. Opravena mobiln├ş ::after vrstva ÔÇö navy gradient overlay (0.82Ôćĺ0.60 opacity) zachov├ív├í barvu design syst├ęmu, foto sv├şt├ş zpoza.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `a625767`). Dotcene oblasti: app, components, lib, report, workflow.  
-**Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
-
-#### UX: hero sekce ÔÇö split layout s foto p┼Öes celou v├Ż┼íku a viewport...
-**Co bylo uděláno:** UX: hero sekce ÔÇö split layout s foto p┼Öes celou v├Ż┼íku a viewport vpravo. - Nov├Ż syst├ęm hero fotek: gradient pruh p┼Öes celou ┼í├ş┼Öku, foto absolutn─Ť pozicovan├ę vpravo (sah├í k okraji viewportu), diagon├íln├ş ┼Öez vlevo. Na mobilu foto jako tmav├ę pozad├ş sekce. HeroTheme roz┼í├ş┼Öen na string s per-slug p┼Öi┼Öazen├şm fotek (heroSlugImages). Forge-worker foto pro home.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `efd2ffe`). Dotcene oblasti: app, components, lib.  
-**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+#### Mobil — logo a hero text
+**Co bylo uděláno:** Logo a tagline v hlavičce na mobilu ve stejných rozměrech a centrování jako na desktopu (bez zmenšeného nebo ořezaného wordmarku). Hero nadpis a lead na plnou šířku kontejneru — zrušeno desktopové omezení na polovinu šířky a zalamování podle úzkého sloupce.  
+**Proč:** Na mobilu logo působilo jinak než na desktopu a hero text zůstal jen v levé části obrazovky; návštěvník neviděl sdělení přes celou šířku jako v cílovém mobilním návrhu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~45 min
-**Rozložení:** 9. 6. 2026 17:52–18:37 (~45 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~53 min  
+**Rozložení:** 9. 6. 2026 17:52–18:45 (~53 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 8  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci.*
 
 ### Technická poznámka
-Commit: `efd2ffe30f7749c1e7f6fbccb9c3ab1bca9e14ea`
+Soubory: `globals.css`, `HeroPhoto.tsx`, `PageHeroBand.tsx`, `hero-images.ts`, `page.tsx`. Commity: `efd2ffe` … `1a619b5`.
 
 ---
 

@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next";
-import { HeroPhoto } from "@/components/HeroPhoto";
+import { HomeHeroSection } from "@/components/HomeHeroSection";
 import { ExperienceStats } from "@/components/ExperienceStats";
 import { HomeOfferCard } from "@/components/HomeOfferCard";
 import { JsonLd } from "@/components/Schema";
@@ -71,26 +71,9 @@ export default function Home() {
   return (
     <main className="home-page">
       <JsonLd data={breadcrumbData} />
-      <section className="hero hero--split">
-        <div className="container hero-band-grid">
-          <div className="hero-copy">
-            <div className="hero-diagonal-spacer" aria-hidden="true" />
-            <p className="eyebrow">
-              Akreditovaná měření · studie a posudky · podklady pro KHS, ČIŽP a stavební úřady
-            </p>
-            <h1>Akreditovaná měření, studie a podklady pro úřady</h1>
-            <p className="hero-lead">
-              Postaráme se o vše, co Váš provoz potřebuje — pro provozovatele, investory i projektanty,
-              bez nutnosti poptávat více dodavatelů.
-            </p>
-          </div>
-        </div>
-        <div className="hero-photo-frame" aria-hidden="true">
-          <HeroPhoto theme="home" priority />
-        </div>
-      </section>
+      <HomeHeroSection />
 
-      <section className="trust-band" aria-labelledby="duveryhodnost-heading">
+      <section className="trust-band home-fade-in-section" aria-labelledby="duveryhodnost-heading">
         <div className="container trust-band-inner">
           <h2 id="duveryhodnost-heading" className="sr-only">
             Důvěryhodnost a oprávnění
@@ -101,13 +84,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-stats-compact" aria-label="Zkušenosti v číslech">
+      <section className="home-stats-compact home-fade-in-section home-fade-in-section-delay-1" aria-label="Zkušenosti v číslech">
         <div className="container">
           <ExperienceStats variant="compact" showNote={false} />
         </div>
       </section>
 
-      <section className="home-section home-section-offer" aria-labelledby="home-offer-heading">
+      <section
+        className="home-section home-section-offer home-fade-in-section home-fade-in-section-delay-2"
+        aria-labelledby="home-offer-heading"
+      >
         <div className="container">
           <header className="section-header home-offer-header">
             <h2 id="home-offer-heading">Co zajišťujeme</h2>

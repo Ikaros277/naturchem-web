@@ -3015,6 +3015,145 @@ a:hover {
   object-fit: cover;
 }
 
+.hero-photo-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.hero-photo-layer.is-active {
+  opacity: 1;
+}
+
+.home-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: clamp(0.85rem, 2vw, 1.15rem);
+}
+
+.home-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.85rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.home-hero-pill:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.home-hero-pill[aria-selected="true"] {
+  background: var(--forest, #2f6f5e);
+  border-color: var(--forest, #2f6f5e);
+  color: #fff;
+}
+
+.home-hero-pill:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.home-hero-detail {
+  margin: 0.75rem 0 0;
+  max-width: 44ch;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero-detail {
+    animation: home-hero-detail-in 0.35s ease;
+  }
+}
+
+@keyframes home-hero-detail-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-section-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero-enter {
+    opacity: 0;
+    animation: home-hero-fade-in 0.55s ease forwards;
+  }
+
+  .home-hero-enter-1 {
+    animation-delay: 0.05s;
+  }
+
+  .home-hero-enter-2 {
+    animation-delay: 0.12s;
+  }
+
+  .home-hero-enter-3 {
+    animation-delay: 0.19s;
+  }
+
+  .home-fade-in-section {
+    opacity: 0;
+    animation: home-section-fade-in 0.5s ease forwards;
+    animation-delay: 0.28s;
+  }
+
+  .home-fade-in-section-delay-1 {
+    animation-delay: 0.38s;
+  }
+
+  .home-fade-in-section-delay-2 {
+    animation-delay: 0.48s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo-layer {
+    transition: none;
+  }
+}
+
 /* Text musí být nad foto vrstvou a vertikálně vycentrovaný v modrém pruhu */
 .hero-copy,
 .hero-band-text {
@@ -7029,6 +7168,10 @@ main.home-page + .site-footer {
     font-size: 0.98rem;
     line-height: 1.5;
     margin-top: 0.7rem;
+  }
+
+  .home-hero-pills {
+    margin-top: 0.85rem;
   }
 
   .home-page .hero-photo-overlay {

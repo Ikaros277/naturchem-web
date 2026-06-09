@@ -6,39 +6,43 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 30 |
-| Celkový odhadovaný čas | ~27,4 hodiny |
-| Aktuální fáze | UX hero — fixní výška 430 px a centrování napříč webem; další krok: launch checklist (GA4, Resend, DNS) |
+| Celkový odhadovaný čas | ~27,6 hodiny |
+| Aktuální fáze | UX hero dokončeno (430 px, centrování, bez ikon v pruhu); další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 9. 6. 2026, 20:04–20:36
+## Sezení: 9. 6. 2026, 20:04–20:43
 
 ### Přehled
-Iterativní ladění vertikálního centrování hero sekce — obsah se zobrazoval u horního okraje místo uprostřed. Řešení prošlo třemi commity: přepnutí na `align-items: center`, sjednocení výšky na 430 px napříč webem a finální záměna `min-height` za pevné `height: 430px`, která jako jediná zaručila spolehlivé centrování ve flex kontejneru.
+Dokončení hero sekce napříč webem: sjednocená výška modrého pruhu na 430 px, spolehlivé vertikální centrování textového bloku (drobečkovka, eyebrow, H1, lead) a odstranění ikon nad nadpisy na stránkách služeb a provozů. Po prvních pokusech s centrováním došlo k regresi — text se odtlačil ke spodnímu okraji; finální oprava spočívala v přesunu diagonálního spaceru mimo layout.
 
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
 
-#### Hero — spolehlivé vertikální centrování
-**Co bylo uděláno:** Obsah hero sekce (drobečková navigace, eyebrow, H1, lead) se zobrazoval u horního okraje namísto uprostřed. Po dvou pokusech s `align-items` a `min-height` bylo zjištěno, že prohlížeč při `min-height` vypočítá výšku kontejneru rovnou výšce obsahu — flexu tak nezbývá prostor pro centrování. Opraveno záměnou `min-height: 430px` za pevné `height: 430px` na `.hero--split`. Na mobilu se výška resetuje na `height: auto`.  
-**Proč:** `min-height` je pro flexové centrování nespolehlivé — kontejner dostane vypočítanou výšku obsahu, ne minimum. Fixní `height` dá flexu jasně ohraničený prostor a `justify-content: center` funguje bezpečně.
+#### Hero — sjednocená výška 430 px
+**Co bylo uděláno:** Modrý hero pruh má na desktopu pevnou výšku 430 px na homepage, interních stránkách i detailech služeb. Výška je řízena CSS proměnnými `--hero-band-min-height-standard` a `--hero-band-min-height-service`; na mobilu zůstává `height: auto` podle obsahu.  
+**Proč:** Klient požadoval konzistentní první dojem — hero pruh měl být na všech stránkách stejně vysoký, ne lišit se podle délky textu.
 
-#### Hero — sjednocená výška 430 px napříč webem
-**Co bylo uděláno:** Pevná výška 430 px nastavena na všechny tři varianty hero sekce: homepage (`.hero--split`), interní stránky (`.page-hero-band--standard`) i service stránky (`.page-hero-band--service`). Aktualizovány i CSS proměnné `--hero-band-min-height-*`.  
-**Proč:** Každá sekce webu měla jinou výšku hero pruhu, výsledek vypadal nejednotně. Sjednocená výška dává webu konzistentní první dojem na všech stránkách.
+#### Hero — vertikální centrování textu
+**Co bylo uděláno:** Textový blok v hero je vertikálně vycentrovaný v rámci 430px pruhu. Upraven řetězec výšek (sekce → container → grid → textová kolona) a centrování přes CSS grid (`align-content: center`). Diagonální spacer u šikmého řezu fotky je absolutně pozicovaný, aby nezasahoval do flex/grid layoutu — předchozí verze ho počítala jako flex položku na plnou výšku a odtlačila text dolů mimo viditelnou oblast.  
+**Proč:** Po první opravě centrování text seděl u horního okraje, po druhé u spodního (část H1 byla ořezaná). Kořenem byl spacer, který flexbox bral jako plnohodnotný prvek layoutu.
+
+#### Hero — odstranění ikon u služeb a provozů
+**Co bylo uděláno:** Z hero sekcí na stránkách `/sluzby/*` a `/provozy-a-technologie/*` odstraněny ikony nad nadpisem H1. V hero zůstává drobečková navigace, nadpis a úvodní text (lead).  
+**Proč:** Ikony v hero působily rušivě a duplicitně — stejné služby je mají na kartách a v indexech; v modrém pruhu má dominovat text, ne grafický symbol.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~32 min  
-**Rozložení:** 9. 6. 20:04–20:36 (~32 min)  
+**Odhadovaná doba práce:** ~39 min  
+**Rozložení:** 9. 6. 20:04–20:43 (~39 min)  
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** ~5  
+**Počet výměn s AI:** 6  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`). V Claude Code bez hooku se použijí jen commity.*
 
 ### Technická poznámka
-Dotčené soubory: `src/app/globals.css` (`.hero--split`, `.page-hero-band--standard`, `.page-hero-band--service` — přechod z `min-height` na `height`), `src/app/page.tsx`, `src/components/PageHeroBand.tsx` (diagonal spacer).
+Soubory: `src/app/globals.css`, `src/components/ServicePage.tsx`, `src/components/SectorPage.tsx`. Commity: `b5d0f26` … `ba55c85`.
 
 ---
 

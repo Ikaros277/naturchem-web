@@ -2971,8 +2971,7 @@ a:hover {
   padding-bottom: 0;
   min-height: clamp(340px, 42vh, 400px);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .hero--split .hero-copy {
@@ -6986,24 +6985,14 @@ main.home-page + .site-footer {
   }
 
   .home-page .hero--split {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     min-height: 0;
     padding: 0;
   }
 
   .home-page .hero--split .hero-copy {
     --hero-copy-pad-y: clamp(1rem, 2.5vw, 1.2rem);
-    padding-top: calc(var(--hero-copy-pad-y) + 0.5rem);
+    padding-top: var(--hero-copy-pad-y);
     padding-bottom: var(--hero-copy-pad-y);
-  }
-
-  .home-page .hero--split > .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex: 0 1 auto;
   }
 
   .home-page .hero-photo-overlay {

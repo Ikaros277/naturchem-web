@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 29 |
-| Celkový odhadovaný čas | ~26,2 hodiny |
+| Celkový odhadovaný čas | ~26,6 hodiny |
 | Aktuální fáze | UX homepage a hluboké odkazy na služby; další krok: launch checklist (GA4, Resend, DNS) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 9. 6. 2026, 17:52–18:18
+## Sezení: 9. 6. 2026, 17:52–18:37
 
 ### Přehled
 Automaticky založené sezení po commitu `efd2ffe`.
@@ -21,6 +21,14 @@ Automaticky založené sezení po commitu `efd2ffe`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### UX: P6-5 ÔÇö kompaktn─Ťj┼í├ş hero pruh, vyrovnan├ę okraje textu a sta...
+**Co bylo uděláno:** UX: P6-5 ÔÇö kompaktn─Ťj┼í├ş hero pruh, vyrovnan├ę okraje textu a stats li┼íta (commit `24a82a8`). Dotcene oblasti: app.  
+**Proč:** Splneni ukolu P6-5 z roadmapy - posun webu k cilove podobe pro klienta.
+
+#### Fix: hero text ÔÇö max-width zabr├ín├ş p┼Öet├ęk├ín├ş do foto oblasti.
+**Co bylo uděláno:** Fix: hero text ÔÇö max-width zabr├ín├ş p┼Öet├ęk├ín├ş do foto oblasti. - Diagon├íla (spodn├ş bod) za─Ź├şn├í na 52 % containeru. max-width: 50 % containeru + padding-right zajist├ş, ┼że text nikdy nep┼Öes├íhne za hranici fotky bez ohledu na d├ęlku obsahu nebo ┼í├ş┼Öku viewportu. Plat├ş pro .hero-band-text i .hero-copy.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `36c748a`). Dotcene oblasti: app, report, workflow.  
+**Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
+
 #### Fix: page-hero-band-inner ÔÇö odstran─Ťno width: 100% kter├ę p┼Öeb├şj...
 **Co bylo uděláno:** Fix: page-hero-band-inner ÔÇö odstran─Ťno width: 100% kter├ę p┼Öeb├şjelo container. - width: 100% na .page-hero-band-inner p┼Öeb├şjelo .container width: min(1220px, 92%), ─Ź├şm┼ż text na interior str├ínk├ích za─Ź├şnal od lev├ęho okraje viewportu m├şsto containeru.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `b2c2ed4`). Dotcene oblasti: app, report, workflow.  
 **Proč:** width: 100% na .page-hero-band-inner p┼Öeb├şjelo .container width: min(1220px, 92%), ─Ź├şm┼ż text na interior str├ínk├ích za─Ź├şnal od lev├ęho okraje viewportu m├şsto containeru.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>.
@@ -38,8 +46,8 @@ Automaticky založené sezení po commitu `efd2ffe`.
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~27 min
-**Rozložení:** 9. 6. 2026 17:52–18:18 (~27 min)
+**Odhadovaná doba práce:** ~45 min
+**Rozložení:** 9. 6. 2026 17:52–18:37 (~45 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

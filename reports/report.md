@@ -5,11 +5,44 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 31 |
-| Celkový odhadovaný čas | ~28,5 hodiny |
-| Aktuální fáze | GDPR a cookie souhlas připraveny (Consent Mode v2); další krok: doplnit GA4 ID ve Vercelu, ověřit GSC a Resend |
+| Počet sezení celkem | 33 |
+| Celkový odhadovaný čas | ~29,0 hodiny |
+| Aktuální fáze | Launch checklist — GDPR/cookies hotovo; UX doladění mobilní homepage a hlavičky; další krok: GA4 ve Vercelu, GSC, Resend |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 9. 6. 2026, 22:04–22:27
+
+### Přehled
+UX audit a úpravy mobilní homepage a hlavičky: odstranění duplicitního CTA v hero, vyrovnání mezer v hero pásu a postupné doladění loga a akčních tlačítek ve sticky hlavičce (velikost, zarovnání, touch target 44 px).
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Homepage hero (mobil)
+**Co bylo uděláno:** Z hero sekce na úvodní stránce odstraněno tlačítko „Nezávazně poptat“ — na mobilu i tabletu zůstává jen ve sticky hlavičce. Upraven vertikální padding hero pásu a zarovnání textu od horní hrany (symetrický prostor, obsah už není „zavěšený“ uprostřed s větší mezerou nad H1).  
+**Proč:** Duplicitní CTA zbytečně zabíralo místo ve foldu a opakovalo stejnou akci z hlavičky; asymetrické mezery působily nevyváženě při prvním dojmu.
+
+#### Mobilní hlavička — logo
+**Co bylo uděláno:** Logo se na mobilu zvětšilo (velikost podle výšky místo limitu v `vw`, který ho fyzicky zmenšoval). Tagline „Měření · studie · dokumentace“ je na mobilu/tabletu skrytá (na desktopu zůstává). Logo zarovnané vlevo, vertikálně vycentrované v řádku hlavičky.  
+**Proč:** Po první úpravě logo stále působilo malé a posunuté nahoru; tagline v úzkém prostoru stejně nebyla dobře čitelná a zabírala výšku řádku.
+
+#### Mobilní hlavička — tlačítka
+**Co bylo uděláno:** Tlačítko poptávky i hamburger menu zvětšeny na 44×44 px (standardní touch target), větší text CTA a úprava ikony menu. Upraven `--site-header-offset`, aby obsah nelezl pod vyšší hlavičku.  
+**Proč:** Původní tlačítka (~34–36 px) byla na dotykovém displeji malá a vizuálně slabá vedle loga.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~23 min  
+**Rozložení:** 9. 6. 2026 22:04–22:27 (~23 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 6  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
+
+### Technická poznámka
+Soubory: `src/app/page.tsx`, `src/app/globals.css`, `src/components/BrandLogo.tsx`. Commity: `65d8140`, `9e22626`.
 
 ---
 

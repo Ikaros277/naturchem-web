@@ -5,11 +5,48 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 33 |
-| Celkový odhadovaný čas | ~29,0 hodiny |
-| Aktuální fáze | Launch checklist — GDPR/cookies hotovo; UX doladění mobilní homepage a hlavičky; další krok: GA4 ve Vercelu, GSC, Resend |
+| Počet sezení celkem | 34 |
+| Celkový odhadovaný čas | ~29,5 hodiny |
+| Aktuální fáze | Launch checklist — GDPR/cookies hotovo; homepage hero s interaktivními pilíři; další krok: GA4 ve Vercelu, GSC, Resend |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 9. 6. 2026, 22:28–22:45
+
+### Přehled
+UX a marketingové posouzení návrhu hero karuselu na homepage, následná implementace interaktivního hero s pill chipy (Měření / Studie / EIA): střídání pozadí, kontextový text pod chipy, autoplay každých 5 s a fade-in animace při načtení. Eyebrow v hero odstraněno.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Homepage hero — pill chipy a rotace pozadí
+**Co bylo uděláno:** Statický H1 a lead zůstávají; pod nimi tři pill chipy přepínají fotografii v pozadí (crossfade). Nová komponenta `HomeHeroSection` a data pilířů v `home-hero-pillars.ts`. Fade-in animace hero obsahu a navazujících sekcí při načtení stránky.  
+**Proč:** Homepage působila staticky; chipy oživují fold bez klasického autoplay banneru a mapují tři pilíře nabídky (měření, studie, EIA).
+
+#### Autoplay a interakce
+**Co bylo uděláno:** Pilíře se automaticky střídají každých 5 sekund. Rotace se pozastaví při najetí myší, focusu klávesnicí nebo ručním výběru chipu (následná 10s pauza). U `prefers-reduced-motion` autoplay vypnut.  
+**Proč:** Jemný pohyb bez nutnosti ruční navigace; návštěvník může chipy kdykoli převzít.
+
+#### Kontextový text místo CTA v hero
+**Co bylo uděláno:** Odstraněno ghost tlačítko pod chipy. Místo něj jedna věta pod chipy s aktivním slovesem — „Změříme…“, „Připravíme…“, „Zpracujeme…“ — synchronizovaná s aktivním pilířem.  
+**Proč:** Tlačítko v hero konkursovalo sticky poptávce v hlavičce; kontextový text vysvětluje pilíř bez další konverzní vrstvy.
+
+#### Eyebrow v homepage hero
+**Co bylo uděláno:** Eyebrow („Akreditovaná měření · studie…“) z homepage hero odstraněno z markupu.  
+**Proč:** Na úvodní stránce zbytečně zabíralo místo ve foldu; důvěra zůstává v topbaru a trust liště.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~32 min  
+**Rozložení:** 9. 6. 2026 22:28–22:45 (~32 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 5  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
+
+### Technická poznámka
+Soubory: `src/components/HomeHeroSection.tsx`, `src/lib/home-hero-pillars.ts`, `src/app/page.tsx`, `src/app/globals.css`. Commit: `12abc96`.
 
 ---
 

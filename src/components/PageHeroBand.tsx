@@ -27,10 +27,14 @@ export function PageHeroBand({
 }: Props) {
   return (
     <div className={`page-hero-band page-hero-band--${variant} ${className}`.trim()}>
-      <HeroPhoto theme={theme} compact priority={priority} />
       <div className="container page-hero-band-inner">
-        {breadcrumbs ? <Breadcrumbs items={breadcrumbs} /> : null}
-        {children}
+        <div className="hero-band-text">
+          {breadcrumbs ? <Breadcrumbs items={breadcrumbs} /> : null}
+          {children}
+        </div>
+      </div>
+      <div className="hero-photo-frame" aria-hidden="true">
+        <HeroPhoto theme={theme} priority={priority} />
       </div>
     </div>
   );

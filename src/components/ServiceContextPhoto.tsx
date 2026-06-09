@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { heroThemeImages, type HeroTheme } from "@/lib/hero-images";
+import { getHeroImageSrc, type HeroTheme } from "@/lib/hero-images";
 
 type Props = {
   theme: HeroTheme;
@@ -11,7 +11,7 @@ export function ServiceContextPhoto({ theme, className }: Props) {
   return (
     <div className={["service-context-photo", className].filter(Boolean).join(" ")} aria-hidden="true">
       <Image
-        src={heroThemeImages[theme]}
+        src={getHeroImageSrc(theme)}
         alt=""
         fill
         sizes="(max-width: 768px) 100vw, 1200px"

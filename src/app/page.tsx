@@ -74,9 +74,8 @@ export default function Home() {
   return (
     <main className="home-page">
       <JsonLd data={breadcrumbData} />
-      <section className="hero hero--photo hero--copy-only">
-        <HeroPhoto theme="home" priority />
-        <div className="container hero-grid">
+      <section className="hero hero--split">
+        <div className="container hero-band-grid">
           <div className="hero-copy">
             <p className="eyebrow">
               Akreditovaná měření · studie a posudky · podklady pro KHS, ČIŽP a stavební úřady
@@ -92,6 +91,9 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+        <div className="hero-photo-frame" aria-hidden="true">
+          <HeroPhoto theme="home" priority />
         </div>
       </section>
 

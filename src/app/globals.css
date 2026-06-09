@@ -2962,36 +2962,76 @@ a:hover {
   color: #fff;
 }
 
-.hero--photo {
+/* Hero split layout — gradient pruh přes celou šířku, foto absolutně vpravo */
+
+.hero--split {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.hero-photo {
+.hero--split .hero-copy {
+  padding-top: clamp(4.75rem, 8vw, 7.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+/* Grid uvnitř containeru: text zabírá 60 % šířky, zbytek je vzduch pro foto */
+.hero-band-grid,
+.page-hero-band-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(220px, 2fr);
+  gap: 0;
+  align-content: center;
+}
+
+/* Foto rámeček: absolutní, sahá od top/bottom sekce k pravému okraji viewportu.
+   Levý okraj začíná přibližně tam, kde končí textová kolona (60 % containeru).
+   Diagonála vlevo vytváří přechod, vpravo rovný okraj splývá s koncem viewportu. */
+.hero-photo-frame {
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: calc((100vw - min(1220px, 92vw)) / 2 + min(1220px, 92vw) * 0.52);
+  right: 0;
+  clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
   z-index: 0;
 }
 
-.hero-photo-compact {
-  min-height: 100%;
-}
 
 .hero-photo-img {
   object-fit: cover;
-  object-position: center;
+  object-position: 65% center;
 }
 
-.hero-photo-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(7, 24, 39, 0.72);
-}
-
-.hero--photo > .container {
+/* Text musí být nad foto vrstvou */
+.hero-copy,
+.hero-band-text {
   position: relative;
   z-index: 1;
+}
+
+/* Mobil: foto jako tmavé pozadí celé sekce */
+@media (max-width: 767px) {
+  .hero-band-grid,
+  .page-hero-band-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo-frame {
+    left: 0;
+    clip-path: none;
+  }
+
+  .hero-photo-frame::after {
+    background: linear-gradient(
+      160deg,
+      rgba(7, 24, 39, 0.88) 0%,
+      rgba(7, 24, 39, 0.72) 60%,
+      rgba(7, 24, 39, 0.55) 100%
+    );
+  }
 }
 
 .page-hero-band,
@@ -3004,8 +3044,11 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: clamp(1rem, 2vw, 1.25rem) 0 clamp(1.25rem, 2.5vw, 2rem);
+  padding: 0;
   margin-bottom: 0.5rem;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(47, 111, 94, 0.18), transparent 30rem),
+    linear-gradient(135deg, #071827 0%, #0b1f35 58%, #102c47 100%);
 }
 
 .page-hero-band--standard {
@@ -3020,11 +3063,12 @@ a:hover {
 .service-hero-band-inner {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.25rem;
+  width: 100%;
+}
+
+.hero-band-text {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .page-hero-band .premium-page-hero {
@@ -3141,13 +3185,6 @@ main.page:has(.page-hero-band) {
   color: #d8eee6;
 }
 
-.hero--photo.hero--copy-only .hero-grid {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-.hero--photo.hero--copy-only .hero-copy {
-  max-width: 720px;
-}
 
 .home-stats-compact {
   padding: clamp(0.75rem, 2vw, 1.1rem) 0;
@@ -3334,6 +3371,7 @@ main.page:has(.page-hero-band) {
 .hero-copy {
   max-width: 760px;
 }
+
 
 .hero h1 {
   max-width: 18ch;
@@ -6915,15 +6953,20 @@ main.home-page + .site-footer {
     margin-top: 0.7rem;
   }
 
-  .home-page .hero {
+  .home-page .hero--split {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 0;
-    padding: clamp(1.25rem, 4vw, 1.6rem) 0 clamp(1rem, 2.5vw, 1.2rem);
+    padding: 0;
   }
 
-  .home-page .hero > .container {
+  .home-page .hero--split .hero-copy {
+    padding-top: clamp(1.25rem, 4vw, 1.6rem);
+    padding-bottom: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .home-page .hero--split > .container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

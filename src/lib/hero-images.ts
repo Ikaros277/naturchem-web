@@ -1,13 +1,26 @@
 /** Stock hero fotografie (Unsplash) — Fáze A, nahraditelné reálnými fotkami klienta (P5-B). */
 
-export type HeroTheme = "home" | "emise" | "hluk" | "dokumentace";
+export type HeroTheme = string;
 
-export const heroThemeImages: Record<HeroTheme, string> = {
-  home: "/hero/industrial-plant.jpg",
+/** Záložní kategorie (vždy definované). */
+const heroFallbackImages: Record<string, string> = {
+  home: "/hero/forge-worker.jpg",
   emise: "/hero/emissions-stack.jpg",
   hluk: "/hero/field-measurement.jpg",
   dokumentace: "/hero/planning-documents.jpg"
 };
+
+/**
+ * Per-slug přiřazení fotek — přidat sem, jakmile budou k dispozici reálné fotky
+ * od Heziny nebo stock pro konkrétní službu. Klíč = bare slug (bez lomítek).
+ * Příklad: "mereni-emisi": "/hero/mereni-emisi.jpg"
+ */
+const heroSlugImages: Record<string, string> = {};
+
+/** Vrátí cestu k obrázku pro daný theme (slug nebo kategorie). */
+export function getHeroImageSrc(theme: string): string {
+  return heroSlugImages[theme] ?? heroFallbackImages[theme] ?? heroFallbackImages.dokumentace;
+}
 
 const emiseSlugs = new Set([
   "mereni-emisi",
@@ -29,7 +42,7 @@ const hlukSlugs = new Set([
   "rozptylove-studie"
 ]);
 
-const pageThemeMap: Record<string, HeroTheme> = {
+const pageThemeMap: Record<string, string> = {
   "/": "home",
   "/provozy-a-technologie": "emise",
   "/typicke-zakazky": "emise",
@@ -50,6 +63,7 @@ function normalizePath(path: string): string {
 
 export function getServiceHeroTheme(slug: string): HeroTheme {
   const bare = slug.replace(/^\/|\/$/g, "").split("/").pop() ?? slug;
+  if (heroSlugImages[bare]) return bare;
   if (emiseSlugs.has(bare)) return "emise";
   if (hlukSlugs.has(bare)) return "hluk";
   return "dokumentace";

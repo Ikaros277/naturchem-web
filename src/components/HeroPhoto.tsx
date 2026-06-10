@@ -14,6 +14,7 @@ export function HeroPhoto({ theme, priority = false }: Props) {
       alt=""
       fill
       sizes="(max-width: 767px) 100vw, 48vw"
+      quality={priority ? 70 : 75}
       className="hero-photo-img"
       style={{ objectPosition: position }}
       priority={priority}

@@ -6,32 +6,51 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 35 |
-| Celkový odhadovaný čas | ~30 hodiny |
-| Aktuální fáze | Launch — napojení domény (Forpsi → Vercel), GA4, Search Console; práce na DNS a Google nástrojích probíhá mimo Cursor |
+| Celkový odhadovaný čas | ~31,5 hodiny |
+| Aktuální fáze | Launch na produkci — www.naturchem.cz live, GA4 ověřeno, GSC/sitemap; čeká se na plnou propagaci apex domény |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 10. 6. 2026, 15:21–15:50
+## Sezení: 10. 6. 2026, 15:21–17:18
 
 ### Přehled
-Konzultace k launchi: doporučené pořadí kroků pro napojení domény naturchem.cz (DNS u Forpsi → Vercel), nastavení GA4, Search Console a vysvětlení, proč GTM teď není potřeba. Praktický postup krok za krokem pro každou fázi. **Další práce na DNS, Resend, GA4 a GSC probíhá mimo Cursor** — po dokončení stačí spustit `/report` znovu (nebo se čas doplní z produktových commitů).
+Produkční launch webu na `www.naturchem.cz`: napojení domény (DNS u Forpsi → Vercel), Resend, oprava přihlášení do redakce `/admin`, nastavení GA4 a ověření Search Console. Část konfigurace (DNS záznamy, env ve Vercelu, GA4 stream) proběhla mimo Cursor; v repozitáři byl nasazen fix Decap CMS pro produkční URL.
 
-**Zdroj popisu:** AI konverzace
+**Zdroj popisu:** AI konverzace + git commit
 
 ### Provedené změny
 
-#### Launch checklist — doména a Google nástroje
-**Co bylo uděláno:** Sepsáno doporučené pořadí: (1) DNS Forpsi → Vercel a ověření HTTPS, (2) env proměnné, OAuth pro `/admin`, Resend, (3) smoke test produkce, (4) GA4 přes `NEXT_PUBLIC_GA_MEASUREMENT_ID`, (5) Search Console + sitemap, (6) propojení GA4 ↔ GSC. Upřesněno, že web běží na Vercelu (Forpsi = jen doména/DNS) a že kód používá přímé GA4 s Consent Mode v2, ne GTM kontejner.  
-**Proč:** Před spuštěním na produkční doméně bylo potřeba jasné pořadí kroků a vědět, co lze dělat paralelně a co až po fungující doméně — aby se neztrácel čas špatným pořadím nebo zbytečným GTM.
+#### Launch — doména a DNS (Forpsi → Vercel)
+**Co bylo uděláno:** Průvodce pořadím kroků pro launch. U Forpsi řešeno nahrazení starého A záznamu u `www` novým CNAME na Vercel (`5b4007b8477bd037.vercel-dns-017.com`), úprava apex A záznamu (prázdný hostname, ne `@`) a zachování mailových CNAME. Ověřeno, že `www.naturchem.cz` běží na Vercelu; apex `naturchem.cz` čeká na propagaci DNS.  
+**Proč:** Bez správných DNS záznamů by produkční doména neukazovala nový web na Vercelu a launch by nebyl dokončený.
+
+#### Resend a produkční env (mimo Cursor)
+**Co bylo uděláno:** Fáze 2 dokončena — ověřená doména v Resend, env proměnné ve Vercelu, kontaktní formulář na produkci.  
+**Proč:** Poptávky z webu musí chodit z ověřené domény na firemní e-mail.
+
+#### GitHub OAuth a redakce `/admin`
+**Co bylo uděláno:** Diagnostika nefunkčního přihlášení — produkční `config.yml` měl `base_url` na staging (`web-naturchem.vercel.app`), OAuth tedy běžel na jiné doméně než `www.naturchem.cz`. Commit a deploy: `base_url` změněn na `https://www.naturchem.cz` v `public/admin/config.yml` a `public/config.yml`. Vysvětleno, že OAuth secret se kvůli změně domény nemění a ve Vercelu ho zpětně nevidíte.  
+**Proč:** Bez správné `base_url` Decap CMS nemohl dokončit GitHub OAuth handshake a klient by nemohl editovat články v poradně.
+
+#### Google Analytics 4
+**Co bylo uděláno:** Postup v českém rozhraní GA4 (Administrátor → Datové streamy → Web), použití existující property klienta, doplnění `NEXT_PUBLIC_GA_MEASUREMENT_ID` ve Vercelu, redeploy. Sběr dat ověřen v Realtime po souhlasu se statistickými cookies.  
+**Proč:** Měření návštěvnosti na novém webu s respektováním cookie souhlasu (Consent Mode v2).
+
+#### Google Search Console
+**Co bylo uděláno:** Ověřeno, že existující propojení GA4 ↔ GSC (doména `naturchem.cz`, od 3/2023) zůstává platné — není potřeba přelinkovávat. Doporučeno odeslat sitemap `https://www.naturchem.cz/sitemap.xml` a požádat o indexaci homepage.  
+**Proč:** Po redesignu musí Google indexovat nové URL; staré propojení služeb na stejné doméně stačí.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~29 min  
-**Rozložení:** 10. 6. 2026 15:21–15:50 (~29 min)  
-**Metoda odhadu:** konverzace  
-**Počet výměn s AI:** 2  
-*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`). Práce mimo Cursor (Forpsi, Vercel panel, Google) se do hodin započítá až po dalším `/report` nebo z produktových commitů.*
+**Odhadovaná doba práce:** ~1 hod 57 min  
+**Rozložení:** 10. 6. 2026 15:21–17:18 (~1 hod 57 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 14  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
+
+### Technická poznámka
+Commit: `591ee04` — `public/admin/config.yml`, `public/config.yml`.
 
 ---
 

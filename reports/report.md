@@ -5,15 +5,39 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 36 |
-| Celkový odhadovaný čas | ~31,8 hodiny |
+| Počet sezení celkem | 37 |
+| Celkový odhadovaný čas | ~32,1 hodiny |
 | Aktuální fáze | Launch dokončen — www i apex na Vercel, GA4/GSC; zbývá formální předání klientovi a post-launch monitoring |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 10. 6. 2026, 17:39–20:54
+## Sezení: 10. 6. 2026, 21:53-22:03
+
+### Přehled
+Automaticky založené sezení po commitu `05883a3`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Perf: server-side hero pro rychlej┼í├ş LCP na mobilu
+**Co bylo uděláno:** Perf: server-side hero pro rychlej┼í├ş LCP na mobilu - H1, lead a ├║vodn├ş fotka se renderuj├ş na serveru; interaktivn├ş ─Ź├íst z┼»st├ív├í v client islandu.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `05883a3`). Dotcene oblasti: components.  
+**Proč:** H1, lead a ├║vodn├ş fotka se renderuj├ş na serveru; interaktivn├ş ─Ź├íst z┼»st├ív├í v client islandu.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 10. 6. 2026 21:53-22:03 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `05883a3f65ad8cb101b2e43666de3f64784916ec`
+
+---
+
+## Sezení: 10. 6. 2026, 17:39–21:02
 
 ### Přehled
 Doplnění launch checklistu po nasazení: diagnostika apex domény `naturchem.cz` (konfliktní starý A záznam u Forpsi), ověření produkčního `robots.txt` a `sitemap.xml`, shrnutí zbývajících kroků po spuštění webu.
@@ -21,6 +45,10 @@ Doplnění launch checklistu po nasazení: diagnostika apex domény `naturchem.c
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+#### Perf: mobiln├ş LCP hero + optimalizace log referenc├ş, SEO redirecty ...
+**Co bylo uděláno:** Perf: mobiln├ş LCP hero + optimalizace log referenc├ş, SEO redirecty ze star├ęho webu (commit `fc99e3a`). Dotcene oblasti: app, components, lib, package.json.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
 
 #### Apex doména naturchem.cz — DNS u Forpsi
 **Co bylo uděláno:** Vysvětleno, proč Vercel hlásil Invalid Configuration: u apex zůstal starý A záznam `81.2.194.244` (Forpsi hosting) vedle nového Vercel A (`216.198.79.1`). Postup: smazat starý záznam, nechat jen Vercel IP. Popis ověření (nslookup, Vercel Domains, redirect na www). Po úpravě DNS apex míří na Vercel a přesměrovává na `www`.  
@@ -31,9 +59,9 @@ Doplnění launch checklistu po nasazení: diagnostika apex domény `naturchem.c
 **Proč:** Kontrola, že crawlery a Search Console mají správné instrukce pro indexaci nového webu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~21 min  
-**Rozložení:** 10. 6. 2026 17:39–17:50 (~11 min) + 10. 6. 2026 20:44–20:54 (~10 min)  
-**Metoda odhadu:** konverzace  
+**Odhadovaná doba práce:** ~3 hod 23 min
+**Rozložení:** 10. 6. 2026 17:39–21:02 (~3 hod 23 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** 3  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 

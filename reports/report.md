@@ -5,11 +5,33 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 34 |
-| Celkový odhadovaný čas | ~29,5 hodiny |
-| Aktuální fáze | Launch checklist — GDPR/cookies hotovo; homepage hero s interaktivními pilíři; další krok: GA4 ve Vercelu, GSC, Resend |
+| Počet sezení celkem | 35 |
+| Celkový odhadovaný čas | ~30 hodiny |
+| Aktuální fáze | Launch — napojení domény (Forpsi → Vercel), GA4, Search Console; práce na DNS a Google nástrojích probíhá mimo Cursor |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 10. 6. 2026, 15:21–15:50
+
+### Přehled
+Konzultace k launchi: doporučené pořadí kroků pro napojení domény naturchem.cz (DNS u Forpsi → Vercel), nastavení GA4, Search Console a vysvětlení, proč GTM teď není potřeba. Praktický postup krok za krokem pro každou fázi. **Další práce na DNS, Resend, GA4 a GSC probíhá mimo Cursor** — po dokončení stačí spustit `/report` znovu (nebo se čas doplní z produktových commitů).
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Launch checklist — doména a Google nástroje
+**Co bylo uděláno:** Sepsáno doporučené pořadí: (1) DNS Forpsi → Vercel a ověření HTTPS, (2) env proměnné, OAuth pro `/admin`, Resend, (3) smoke test produkce, (4) GA4 přes `NEXT_PUBLIC_GA_MEASUREMENT_ID`, (5) Search Console + sitemap, (6) propojení GA4 ↔ GSC. Upřesněno, že web běží na Vercelu (Forpsi = jen doména/DNS) a že kód používá přímé GA4 s Consent Mode v2, ne GTM kontejner.  
+**Proč:** Před spuštěním na produkční doméně bylo potřeba jasné pořadí kroků a vědět, co lze dělat paralelně a co až po fungující doméně — aby se neztrácel čas špatným pořadím nebo zbytečným GTM.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~29 min  
+**Rozložení:** 10. 6. 2026 15:21–15:50 (~29 min)  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** 2  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`). Práce mimo Cursor (Forpsi, Vercel panel, Google) se do hodin započítá až po dalším `/report` nebo z produktových commitů.*
 
 ---
 

@@ -5,11 +5,40 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 35 |
-| Celkový odhadovaný čas | ~31,5 hodiny |
-| Aktuální fáze | Launch na produkci — www.naturchem.cz live, GA4 ověřeno, GSC/sitemap; čeká se na plnou propagaci apex domény |
+| Počet sezení celkem | 36 |
+| Celkový odhadovaný čas | ~31,8 hodiny |
+| Aktuální fáze | Launch dokončen — www i apex na Vercel, GA4/GSC; zbývá formální předání klientovi a post-launch monitoring |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 10. 6. 2026, 17:39–20:54
+
+### Přehled
+Doplnění launch checklistu po nasazení: diagnostika apex domény `naturchem.cz` (konfliktní starý A záznam u Forpsi), ověření produkčního `robots.txt` a `sitemap.xml`, shrnutí zbývajících kroků po spuštění webu.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Apex doména naturchem.cz — DNS u Forpsi
+**Co bylo uděláno:** Vysvětleno, proč Vercel hlásil Invalid Configuration: u apex zůstal starý A záznam `81.2.194.244` (Forpsi hosting) vedle nového Vercel A (`216.198.79.1`). Postup: smazat starý záznam, nechat jen Vercel IP. Popis ověření (nslookup, Vercel Domains, redirect na www). Po úpravě DNS apex míří na Vercel a přesměrovává na `www`.  
+**Proč:** Dva A záznamy způsobovaly, že část návštěvníků viděla starý web; Vercel nemohl doménu plně ověřit.
+
+#### Post-launch kontrola (robots.txt, sitemap)
+**Co bylo uděláno:** Ověřeno na produkci — `robots.txt` dostupný, blokuje `/admin/` a `/api/`, obsahuje odkaz na sitemap. `sitemap.xml` vrací HTTP 200.  
+**Proč:** Kontrola, že crawlery a Search Console mají správné instrukce pro indexaci nového webu.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~21 min  
+**Rozložení:** 10. 6. 2026 17:39–17:50 (~11 min) + 10. 6. 2026 20:44–20:54 (~10 min)  
+**Metoda odhadu:** konverzace  
+**Počet výměn s AI:** 3  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
+
+### Technická poznámka
+Produkční `robots.txt` generuje `src/app/robots.ts`. Apex DNS ověřeno: `naturchem.cz` → `216.198.79.1`, redirect 308 na `www`.
 
 ---
 

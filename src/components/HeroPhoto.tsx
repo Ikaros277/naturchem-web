@@ -17,6 +17,8 @@ export function HeroPhoto({ theme, priority = false }: Props) {
       className="hero-photo-img"
       style={{ objectPosition: position }}
       priority={priority}
+      fetchPriority={priority ? "high" : "auto"}
+      loading={priority ? "eager" : "lazy"}
     />
   );
 }

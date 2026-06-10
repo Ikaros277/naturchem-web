@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { HeroPhoto } from "@/components/HeroPhoto";
+import { getHeroImageSrc } from "@/lib/hero-images";
 import { homeHeroPillars, type HomeHeroPillarId } from "@/lib/home-hero-pillars";
 
 const AUTO_ROTATE_MS = 5000;
@@ -51,6 +52,23 @@ export function HomeHeroSection() {
 
     return () => window.clearInterval(timer);
   }, [autoplayPaused]);
+
+  // Po prvním vykreslení (LCP) na pozadí přednačti ostatní hero fotky pro rotaci.
+  useEffect(() => {
+    const prefetch = () => {
+      for (const pillar of homeHeroPillars) {
+        if (pillar.id === "mereni") continue;
+        const img = new window.Image();
+        img.src = getHeroImageSrc(pillar.theme);
+      }
+    };
+    const idle = window.requestIdleCallback?.(prefetch, { timeout: 3000 });
+    if (idle === undefined) {
+      const t = window.setTimeout(prefetch, 1500);
+      return () => window.clearTimeout(t);
+    }
+    return () => window.cancelIdleCallback(idle);
+  }, []);
 
   return (
     <section
@@ -107,15 +125,9 @@ export function HomeHeroSection() {
         role="tabpanel"
         aria-labelledby={`home-hero-tab-${activeId}`}
       >
-        {homeHeroPillars.map((pillar) => (
-          <div
-            key={pillar.id}
-            className={`hero-photo-layer${activeId === pillar.id ? " is-active" : ""}`}
-            aria-hidden={activeId !== pillar.id}
-          >
-            <HeroPhoto theme={pillar.theme} priority={pillar.id === "mereni"} />
-          </div>
-        ))}
+        <div className="hero-photo-layer is-active">
+          <HeroPhoto key={activeId} theme={activePillar.theme} priority={activeId === "mereni"} />
+        </div>
       </div>
     </section>
   );

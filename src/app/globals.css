@@ -4945,7 +4945,8 @@ footer .muted,
   min-height: 44px;
 }
 
-.client-logo-item img {
+.client-logo-item img,
+.client-logo-item .client-logo-img {
   display: block;
   max-height: 40px;
   max-width: 108px;
@@ -4963,7 +4964,8 @@ footer .muted,
   grid-column: auto;
 }
 
-.client-logo-item--wide img {
+.client-logo-item--wide img,
+.client-logo-item--wide .client-logo-img {
   max-width: 100%;
   max-height: 44px;
 }
@@ -4989,7 +4991,8 @@ footer .muted,
     padding: 4px 6px;
   }
 
-  .client-logo-item img {
+  .client-logo-item img,
+.client-logo-item .client-logo-img {
     max-height: 32px;
     max-width: 100%;
     width: 100%;
@@ -5002,7 +5005,8 @@ footer .muted,
     grid-column: auto;
   }
 
-  .client-logo-item--wide img {
+  .client-logo-item--wide img,
+.client-logo-item--wide .client-logo-img {
     max-width: 100%;
     max-height: 32px;
   }
@@ -5019,11 +5023,13 @@ footer .muted,
     padding: 2px 4px;
   }
 
-  .client-logo-item img {
+  .client-logo-item img,
+.client-logo-item .client-logo-img {
     max-height: 24px;
   }
 
-  .client-logo-item--wide img {
+  .client-logo-item--wide img,
+.client-logo-item--wide .client-logo-img {
     max-height: 24px;
   }
 }
@@ -5076,7 +5082,8 @@ footer .muted,
   opacity: 0.72;
 }
 
-.client-logo-item img:hover {
+.client-logo-item img:hover,
+.client-logo-item .client-logo-img:hover {
   filter: grayscale(0%);
   opacity: 1;
 }

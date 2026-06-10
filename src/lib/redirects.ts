@@ -1,5 +1,18 @@
 ﻿/** 301 přesměrování ze starých URL na finální strukturu. */
 export const permanentRedirects = [
+  // --- Starý web Forpsi (2026) → homepage. Doplň podle GSC → Stránky → Nenalezeno (404). ---
+  { source: "/prodej", destination: "/", permanent: true },
+  { source: "/prodej/", destination: "/", permanent: true },
+  { source: "/kariera", destination: "/", permanent: true },
+  { source: "/kariera/", destination: "/", permanent: true },
+  { source: "/index.php", destination: "/", permanent: true },
+  { source: "/index.html", destination: "/", permanent: true },
+  { source: "/index.htm", destination: "/", permanent: true },
+  { source: "/assets", destination: "/", permanent: true },
+  { source: "/assets/:path*", destination: "/", permanent: true },
+  { source: "/redakce", destination: "/poradna", permanent: true },
+  { source: "/redakce/", destination: "/poradna", permanent: true },
+
   { source: "/akreditace-a-autorizace", destination: "/akreditace-autorizace-dokumenty", permanent: true },
   { source: "/akreditace-a-autorizace/", destination: "/akreditace-autorizace-dokumenty", permanent: true },
   { source: "/spolecnost", destination: "/o-spolecnosti-naturchem", permanent: true },

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
@@ -29,7 +30,15 @@ function ClientLogoLink({ client, className }: { client: ClientLogo; className?:
       title={client.name}
       aria-label={client.name}
     >
-      <img src={client.logo} alt={client.name} />
+      <Image
+        src={client.logo}
+        alt={client.name}
+        width={client.wide ? 160 : 120}
+        height={client.wide ? 44 : 40}
+        sizes={client.wide ? "(max-width: 520px) 120px, 160px" : "(max-width: 520px) 68px, 120px"}
+        loading="lazy"
+        className="client-logo-img"
+      />
     </a>
   );
 }

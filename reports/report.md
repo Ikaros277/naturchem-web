@@ -6,34 +6,39 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 37 |
-| Celkový odhadovaný čas | ~32,1 hodiny |
-| Aktuální fáze | Launch dokončen — www i apex na Vercel, GA4/GSC; zbývá formální předání klientovi a post-launch monitoring |
+| Celkový odhadovaný čas | ~32,4 hodiny |
+| Aktuální fáze | Post-launch — optimalizace výkonu (LCP/PageSpeed), produkční deploy na Vercel |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 10. 6. 2026, 21:53-22:03
+## Sezení: 10. 6. 2026, 21:49–22:12
 
 ### Přehled
-Automaticky založené sezení po commitu `05883a3`.
+Po předchozí optimalizaci PageSpeed (skóre ~76, LCP ~5,2 s) byla homepage hero sekce rozdělena na server a client část, aby úvodní fotka a text byly v prvním HTML bez čekání na JavaScript. Změna byla nasazena na produkci; při deployi na Vercel se build zasekl ve frontě, po zrušení byl spuštěn znovu.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### Perf: server-side hero pro rychlej┼í├ş LCP na mobilu
-**Co bylo uděláno:** Perf: server-side hero pro rychlej┼í├ş LCP na mobilu - H1, lead a ├║vodn├ş fotka se renderuj├ş na serveru; interaktivn├ş ─Ź├íst z┼»st├ív├í v client islandu.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `05883a3`). Dotcene oblasti: components.  
-**Proč:** H1, lead a ├║vodn├ş fotka se renderuj├ş na serveru; interaktivn├ş ─Ź├íst z┼»st├ív├í v client islandu.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### Server-side hero pro rychlejší LCP
+**Co bylo uděláno:** Hero na homepage rozděleno na dvě části: `HomeHeroSection` (server) renderuje nadpis H1, úvodní odstavec a prioritní úvodní fotku přímo v HTML; `HomeHeroShell` (client island) obsluhuje pill chipy (Měření / Studie / EIA), autoplay rotaci a výměnu fotek. U priority fotky snížena kvalita JPEG (`quality=70`) pro menší datový objem na mobilu. Commit `05883a3`, push na `main`.  
+**Proč:** PageSpeed Insights ukazoval LCP ~5,2 s — hlavní brzda byla úvodní hero fotka renderovaná až po načtení a hydrataci client komponenty. Server-side render má fotku v prvním HTML s `fetchpriority=high` a preloadem.
+
+#### Vercel deploy — zaseklá fronta
+**Co bylo uděláno:** Po pushi commit `05883a3` zůstal deploy ve stavu Queued bez postupu. Diagnostika: produkce stále běžela na starším commitu (`fc99e3a`), globální stav Vercelu byl v pořádku — typicky zaseklý build slot nebo zrušený deploy ve frontě. Doporučen postup: Cancel u visícího deploye, Redeploy nebo nový trigger. Po zrušení uživatelem byl odeslán commit `1c0a015` pro znovuspuštění webhooku.  
+**Proč:** Bez úspěšného deploye by optimalizace LCP nebyla na produkci viditelná.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 10. 6. 2026 21:53-22:03 (~10 min)  
-**Metoda odhadu:** git  
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~23 min  
+**Rozložení:** 10. 6. 2026 21:49–22:12 (~23 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 5  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 
 ### Technická poznámka
-Commit: `05883a3f65ad8cb101b2e43666de3f64784916ec`
+Commity: `05883a3` (hero refactor), `1c0a015` (retrigger deploy). Nové soubory: `HomeHeroShell.tsx`. Upraveno: `HomeHeroSection.tsx`, `HeroPhoto.tsx`.
 
 ---
 

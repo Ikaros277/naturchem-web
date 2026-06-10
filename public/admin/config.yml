@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Ikaros277/naturchem-web
   branch: main
-  base_url: https://web-naturchem.vercel.app
+  base_url: https://www.naturchem.cz
   auth_endpoint: api/decap/auth
 
 media_folder: "public/uploads"

@@ -6,17 +6,17 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 39 |
-| Celkový odhadovaný čas | ~33,5 hodiny |
-| Aktuální fáze | UX scanovatelnost — forest lišty na rozcestnících, doplnění hero fotek |
+| Celkový odhadovaný čas | ~33,9 hodiny |
+| Aktuální fáze | Homepage sekce odborných článků, sjednocený mobilní layout poradny, forest lišty na rozcestnících |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 12. 6. 2026, 12:06–12:26
+## Sezení: 12. 6. 2026, 12:06–12:51
 
 ### Přehled
-UX audit stránky Služby a napříč rozcestníky — sjednocení vizuálního oddělení karet pomocí zelené forest lišty (stejný vzor jako homepage „Co zajišťujeme“). Jedna úprava stylů pokryla služby, provozy, reference, typické zakázky, akreditaci a tým na stránce O společnosti.
+Odpolední blok spojil tři oblasti: UX audit přehlednosti karet na rozcestnících (forest lišta), návrh a implementaci sekce „Aktuální odborné články“ na homepage a sjednocení mobilního zobrazení článků na `/poradna` se stejným kompaktním layoutem jako na úvodní stránce.
 
 **Zdroj popisu:** AI konverzace
 
@@ -27,18 +27,26 @@ UX audit stránky Služby a napříč rozcestníky — sjednocení vizuálního 
 **Proč:** Návštěvník se v dlouhém seznamu podobných bílých boxů ztrácel; rychlé skenování bez „ztracení místa“ ve scrollu je klíčové na mobilu i u B2B rozcestníků.
 
 #### Forest lišta na navigačních kartách (sitewide CSS)
-**Co bylo uděláno:** V `globals.css` rozšířen blok navigačních karet o 3px forest lištu nahoře: vnitřní karty v accordionu (služby, provozy, reference), karty typických zakázek a kategorií příkladů, scope/autorizace/download karty na akreditaci, karty týmu na O společnosti. Při rozbalení accordionu dostala mřížka jemné `--forest-tint` pozadí a na mobilu větší mezery mezi kartami. Hover provozních karet sjednocen s forest paletou. Commit `8a33464`, push na `main`.  
+**Co bylo uděláno:** V `globals.css` rozšířen blok navigačních karet o 3px forest lištu nahoře: vnitřní karty v accordionu (služby, provozy, reference), karty typických zakázek a kategorií příkladů, scope/autorizace/download karty na akreditaci, karty týmu na O společnosti. Při rozbalení accordionu dostala mřížka jemné `--forest-tint` pozadí a na mobilu větší mezery mezi kartami. Hover provozních karet sjednocen s forest paletou. Commit `8a33464`.  
 **Proč:** Stejný vizuální jazyk jako homepage — bez úprav markupu na jednotlivých stránkách, jedním CSS pravidlem pro všechny rozcestníky.
 
+#### Homepage — sekce Aktuální odborné články
+**Co bylo uděláno:** Po UX konzultaci (/ux) vznikla nová sekce před logy zákazníků se třemi nejnovějšími články z poradny. Desktop: plná šířka kontejneru, tři karty s náhledovými fotkami (stejný vzor jako index poradny). Mobil: kompaktní řádek — náhled vlevo (1/3), text vpravo (2/3), mezera mezi obrázkem a obsahem. Nadpis „Aktuální odborné články“, tlačítko „Všechny odborné články“ pod kartami (desktop vlevo, mobil na střed). CTA na kartách: „Přečíst článek“. Commit `4296969`.  
+**Proč:** Web potřeboval živý obsahový most mezi službami a poradnou — informovat o novinkách bez přetížení homepage plnou sekcí, která byla dříve záměrně odstraněna (P3-8).
+
+#### Poradna — sjednocení mobilních karet
+**Co bylo uděláno:** Stejný kompaktní mobilní layout (`article-card--mobile-row`) nasazen na seznam všech článků na `/poradna` — místo vysokých karet s velkým náhledem nahoře. Textace odkazu sjednocena na „Přečíst článek“. Commit `5b5b50e`.  
+**Proč:** Na mobilu byly karty na poradně nepřehledné (příliš velké fotky, málo textu na první pohled); stejné řešení jako na homepage zrychluje skenování dlouhého seznamu 33+ článků.
+
 ### Časová náročnost
-**Odhadovaná doba práce:** ~21 min  
-**Rozložení:** 12. 6. 2026 12:06–12:26 (~21 min)  
+**Odhadovaná doba práce:** ~45 min  
+**Rozložení:** 12. 6. 2026 12:06–12:51 (~45 min)  
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** 4  
+**Počet výměn s AI:** 11  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 
 ### Technická poznámka
-Commit: `8a33464`. Jediný soubor: `src/app/globals.css` — selektory `.institutional-card`, `.service-group-details .service-index-card`, `.sector-card`, `.typical-scenario-card`, `.case-category-card`, `.scope-card`, `.download-card`, `.team-card`.
+Commity: `8a33464`, `4296969`, `5b5b50e`. Nová komponenta `HomePoradnaStrip.tsx`; úpravy `PoradnaFilterableList.tsx`, `page.tsx`, `globals.css`.
 
 ---
 

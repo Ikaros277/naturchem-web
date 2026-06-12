@@ -2,23 +2,63 @@ export type HeroTheme = string;
 
 export type HeroImageConfig = {
   src: string;
+  /** Jiná fotka pro přehledovou sekci na stránce služby (ServiceContextPhoto). */
+  contextSrc?: string;
   /** CSS object-position — kde má být fokus (např. "70% 30%", "center top"). Výchozí: "center center". */
   position?: string;
+  contextPosition?: string;
 };
 
 /** Záložní kategorie (vždy definované). */
 const heroFallbackImages: Record<string, HeroImageConfig> = {
-  home:         { src: "/hero/forge-worker.jpg",       position: "65% center" },
-  emise:        { src: "/hero/emissions-stack.jpg" },
-  hluk:         { src: "/hero/field-measurement.jpg" },
-  dokumentace:  { src: "/hero/planning-documents.jpg" }
+  home: { src: "/hero/forge-worker.jpg", position: "65% center" },
+  emise: { src: "/hero/emissions-stack.jpg" },
+  hluk: { src: "/hero/field-measurement.jpg" },
+  dokumentace: { src: "/hero/planning-documents.jpg" }
 };
+
+function hero(slug: string, contextSlug?: string, position?: string): HeroImageConfig {
+  const config: HeroImageConfig = { src: `/hero/${slug}.webp` };
+  if (contextSlug) config.contextSrc = `/hero/${contextSlug}.webp`;
+  if (position) config.position = position;
+  return config;
+}
+
+const eiaHero = hero("eia", "eia-context");
 
 /**
  * Per-slug přiřazení fotek. Klíč = bare slug (bez lomítek).
- * Příklad: "mereni-emisi": { src: "/hero/mereni-emisi.jpg", position: "70% 30%" }
  */
-const heroSlugImages: Record<string, HeroImageConfig> = {};
+const heroSlugImages: Record<string, HeroImageConfig> = {
+  "homepage-mereni": hero("homepage-mereni"),
+  "homepage-studie": hero("homepage-studie"),
+  "homepage-eia": hero("homepage-eia"),
+
+  "mereni-emisi": hero("mereni-emisi", "mereni-emisi-context"),
+  "mereni-hluku": hero("mereni-hluku", "mereni-hluku-context"),
+  "mereni-vibraci": hero("mereni-vibraci"),
+  "mereni-osvetleni": hero("mereni-osvetleni"),
+  "mereni-mikroklimatu": hero("mereni-mikroklimatu"),
+  "pracovni-prostredi": hero("pracovni-prostredi", "pracovni-prostredi-context"),
+  "chemicke-latky": hero("chemicke-latky", "chemicke-latky-context"),
+  "bezpecnostni-listy": hero("bezpecnostni-listy"),
+  "skoleni-chemicke-legislativy": hero("skoleni-chemicke-legislativy", "skoleni-chemicke-legislativy-context"),
+
+  "hlukove-studie": hero("hlukove-studie", "hlukove-studie-context"),
+  "rozptylove-studie": hero("rozptylove-studie", "rozptylove-studie-context"),
+  "modelove-vypocty": hero("modelove-vypocty", "modelove-vypocty-context"),
+  "akusticke-posudky": hero("akusticke-posudky"),
+
+  "eia-posudky-poradenstvi": eiaHero,
+  "eia-oznameni-zameru": eiaHero,
+  "zjistovaci-rizeni-eia": eiaHero,
+
+  "odborne-posudky": hero("odborne-posudky", "odborne-posudky-context"),
+  "provozni-rady": hero("provozni-rady", "provozni-rady-context"),
+  "ippc-integrovana-povoleni": hero("ippc-integrovana-povoleni"),
+  "ispop": hero("ispop", "ispop-context"),
+  "ghg-overovani": hero("ghg-overovani", "ghg-overovani-context")
+};
 
 function resolveConfig(theme: string): HeroImageConfig {
   return heroSlugImages[theme] ?? heroFallbackImages[theme] ?? heroFallbackImages.dokumentace;
@@ -30,6 +70,17 @@ export function getHeroImageSrc(theme: string): string {
 
 export function getHeroImageConfig(theme: string): HeroImageConfig {
   return resolveConfig(theme);
+}
+
+export function getHeroContextImageConfig(theme: string): HeroImageConfig {
+  const config = resolveConfig(theme);
+  if (config.contextSrc) {
+    return {
+      src: config.contextSrc,
+      position: config.contextPosition ?? config.position
+    };
+  }
+  return config;
 }
 
 const emiseSlugs = new Set([

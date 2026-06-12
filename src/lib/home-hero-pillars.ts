@@ -14,21 +14,21 @@ export const homeHeroPillars: HomeHeroPillar[] = [
   {
     id: "mereni",
     label: "Měření",
-    theme: "home",
+    theme: "homepage-mereni",
     detail:
       "Změříme emise, pracovní prostředí, hluk i vibrace — akreditovaně, s protokolem pro KHS a ČIŽP."
   },
   {
     id: "studie",
     label: "Studie",
-    theme: "hluk",
+    theme: "homepage-studie",
     detail:
       "Připravíme rozptylové a hlukové studie, posudky a výpočty pro stavební řízení, KHS nebo EIA."
   },
   {
     id: "dokumentace",
     label: "EIA",
-    theme: "dokumentace",
+    theme: "homepage-eia",
     detail:
       "Zpracujeme EIA, odborné posudky, provozní řády, IPPC a ISPOP — podklady pro správní orgány."
   }

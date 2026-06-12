@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 38 |
-| Celkový odhadovaný čas | ~32,5 hodiny |
+| Celkový odhadovaný čas | ~32,8 hodiny |
 | Aktuální fáze | Post-launch — optimalizace výkonu (LCP/PageSpeed), produkční deploy na Vercel |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 12. 6. 2026, 10:59-11:09
+## Sezení: 12. 6. 2026, 10:59–11:24
 
 ### Přehled
 Automaticky založené sezení po commitu `2e6fc90`.
@@ -21,14 +21,18 @@ Automaticky založené sezení po commitu `2e6fc90`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Reuse service hero images on typicke-zakazky category pages.
+**Co bylo uděláno:** Reuse service hero images on typicke-zakazky category pages. - Map category slugs and aliases to existing WEBP assets so case study pages share photos with their linked services.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `a2524fa`). Dotcene oblasti: lib, report, workflow.  
+**Proč:** Map category slugs and aliases to existing WEBP assets so case study pages share photos with their linked services.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
 #### Add thematic hero and overview images for service pages.
 **Co bylo uděláno:** Add thematic hero and overview images for service pages. - Map WEBP assets to per-slug hero photos, alternate context images on service pages, and dedicated homepage pillar visuals.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `2e6fc90`). Dotcene oblasti: components, lib.  
 **Proč:** Map WEBP assets to per-slug hero photos, alternate context images on service pages, and dedicated homepage pillar visuals.  Co-authored-by: Cursor <cursoragent@cursor.com>.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 12. 6. 2026 10:59-11:09 (~10 min)  
-**Metoda odhadu:** git  
+**Odhadovaná doba práce:** ~25 min
+**Rozložení:** 12. 6. 2026 10:59–11:24 (~25 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*
 

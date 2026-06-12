@@ -7,7 +7,7 @@
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 39 |
 | Celkový odhadovaný čas | ~33,5 hodiny |
-| Aktuální fáze | Vizuální sjednocení — institucionální karty na rozcestnících a v obsahu |
+| Aktuální fáze | UX scanovatelnost — forest lišty na rozcestnících, doplnění hero fotek |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
@@ -16,25 +16,29 @@
 ## Sezení: 12. 6. 2026, 12:06–12:26
 
 ### Přehled
-Sjednocení vzhledu karet na rozcestnících a v obsahu — zelený horní pruh (forest bar) u institucionálních karet napříč webem, včetně akordeonů, typických zakázek, akreditací a týmové sekce.
+UX audit stránky Služby a napříč rozcestníky — sjednocení vizuálního oddělení karet pomocí zelené forest lišty (stejný vzor jako homepage „Co zajišťujeme“). Jedna úprava stylů pokryla služby, provozy, reference, typické zakázky, akreditaci a tým na stránce O společnosti.
 
-**Zdroj popisu:** Git commity (práce z jiného nástroje / bez AI konverzace v tomto nástroji)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
 
-#### Institucionální karty — forest top bar
-**Co bylo uděláno:** Rozšířen styl institucionálních karet se zeleným horním pruhem na vnitřní karty v akordeonech, mřížky typických zakázek, akreditací a týmu. Otevřené akordeony mají jemné lesní pozadí (forest-tint); upraveny mezery na mobilu. Změna v `globals.css`, commit `8a33464`, push na `main`.  
-**Proč:** Karty na různých rozcestnících působily vizuálně nesjednoceně; jednotný forest pruh posiluje institucionální identitu a čitelnost přehledových sekcí.
+#### UX audit — přehlednost karet na /sluzby
+**Co bylo uděláno:** Proveden UX audit rozbalených skupin služeb (zejména mobil 375 px): diagnostika, že vnitřní karty po rozbalení accordionu vizuálně splývají, zatímco nadřazená skupina už měla forest lištu. Navržen sitewide vzor přes existující třídu `institutional-card` a mapování sdílených CSS selektorů pro /provozy-a-technologie, /typické zakázky, /reference, /o-spolecnosti-naturchem a /akreditace-autorizace-dokumenty.  
+**Proč:** Návštěvník se v dlouhém seznamu podobných bílých boxů ztrácel; rychlé skenování bez „ztracení místa“ ve scrollu je klíčové na mobilu i u B2B rozcestníků.
+
+#### Forest lišta na navigačních kartách (sitewide CSS)
+**Co bylo uděláno:** V `globals.css` rozšířen blok navigačních karet o 3px forest lištu nahoře: vnitřní karty v accordionu (služby, provozy, reference), karty typických zakázek a kategorií příkladů, scope/autorizace/download karty na akreditaci, karty týmu na O společnosti. Při rozbalení accordionu dostala mřížka jemné `--forest-tint` pozadí a na mobilu větší mezery mezi kartami. Hover provozních karet sjednocen s forest paletou. Commit `8a33464`, push na `main`.  
+**Proč:** Stejný vizuální jazyk jako homepage — bez úprav markupu na jednotlivých stránkách, jedním CSS pravidlem pro všechny rozcestníky.
 
 ### Časová náročnost
 **Odhadovaná doba práce:** ~21 min  
 **Rozložení:** 12. 6. 2026 12:06–12:26 (~21 min)  
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** 1  
+**Počet výměn s AI:** 4  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 
 ### Technická poznámka
-Commit: `8a33464`. Upraveno: `src/app/globals.css`.
+Commit: `8a33464`. Jediný soubor: `src/app/globals.css` — selektory `.institutional-card`, `.service-group-details .service-index-card`, `.sector-card`, `.typical-scenario-card`, `.case-category-card`, `.scope-card`, `.download-card`, `.team-card`.
 
 ---
 

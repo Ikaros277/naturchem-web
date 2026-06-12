@@ -6,21 +6,25 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 39 |
-| Celkový odhadovaný čas | ~33,9 hodiny |
-| Aktuální fáze | Homepage sekce odborných článků, sjednocený mobilní layout poradny, forest lišty na rozcestnících |
+| Celkový odhadovaný čas | ~34,2 hodiny |
+| Aktuální fáze | Poradna s tematickými náhledy článků, homepage sekce odborných článků, forest lišty na rozcestnících |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 12. 6. 2026, 12:06–12:51
+## Sezení: 12. 6. 2026, 12:06–13:04
 
 ### Přehled
-Odpolední blok spojil tři oblasti: UX audit přehlednosti karet na rozcestnících (forest lišta), návrh a implementaci sekce „Aktuální odborné články“ na homepage a sjednocení mobilního zobrazení článků na `/poradna` se stejným kompaktním layoutem jako na úvodní stránce.
+Odpolední blok spojil čtyři oblasti: UX audit přehlednosti karet na rozcestnících (forest lišta), sekci „Aktuální odborné články“ na homepage, sjednocení mobilního layoutu poradny a nahrazení opakujících se generických náhledů u článků tematickými fotografiemi podle obsahu každého textu.
 
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
+
+#### Poradna — jedinečné náhledové fotky u článků
+**Co bylo uděláno:** U všech 33 článků v poradně byly nahrazeny opakující se generické fotky (zejména stejný záběr nákladních aut u tématu Emise) individuálním mapováním podle slugu článku. Doplněno 13 nových tematických fotek (měření ovzduší, kotelna, dieselagregát, automotive, recyklace, HVAC, dokumenty aj.) a využity existující fotky ze stránek služeb tam, kde tematicky sedí. Změna platí na přehledu `/poradna`, na detailu článku i v sekci na homepage. Commit `08950c4`.  
+**Proč:** Přehled článků působil vizuálně monotónně a nereflektoval obsah jednotlivých textů — u odborné poradny to snižovalo důvěryhodnost a přehlednost.
 
 #### UX audit — přehlednost karet na /sluzby
 **Co bylo uděláno:** Proveden UX audit rozbalených skupin služeb (zejména mobil 375 px): diagnostika, že vnitřní karty po rozbalení accordionu vizuálně splývají, zatímco nadřazená skupina už měla forest lištu. Navržen sitewide vzor přes existující třídu `institutional-card` a mapování sdílených CSS selektorů pro /provozy-a-technologie, /typické zakázky, /reference, /o-spolecnosti-naturchem a /akreditace-autorizace-dokumenty.  
@@ -39,14 +43,14 @@ Odpolední blok spojil tři oblasti: UX audit přehlednosti karet na rozcestníc
 **Proč:** Na mobilu byly karty na poradně nepřehledné (příliš velké fotky, málo textu na první pohled); stejné řešení jako na homepage zrychluje skenování dlouhého seznamu 33+ článků.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~45 min  
-**Rozložení:** 12. 6. 2026 12:06–12:51 (~45 min)  
+**Odhadovaná doba práce:** ~59 min  
+**Rozložení:** 12. 6. 2026 12:06–13:04 (~59 min)  
 **Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** 11  
+**Počet výměn s AI:** 14  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 
 ### Technická poznámka
-Commity: `8a33464`, `4296969`, `5b5b50e`. Nová komponenta `HomePoradnaStrip.tsx`; úpravy `PoradnaFilterableList.tsx`, `page.tsx`, `globals.css`.
+Commity: `8a33464`, `4296969`, `5b5b50e`, `08950c4`. Nové soubory: `HomePoradnaStrip.tsx`, `poradna-hero-images.ts`, `public/hero/poradna/*`. Úpravy: `PoradnaFilterableList.tsx`, `hero-images.ts`, `globals.css`.
 
 ---
 

@@ -5,11 +5,36 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 38 |
-| Celkový odhadovaný čas | ~33,2 hodiny |
-| Aktuální fáze | Vizuální obsah — hero fotky služeb, mapování podkladů a checklist pro klienta |
+| Počet sezení celkem | 39 |
+| Celkový odhadovaný čas | ~33,5 hodiny |
+| Aktuální fáze | Vizuální sjednocení — institucionální karty na rozcestnících a v obsahu |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 12. 6. 2026, 12:06–12:26
+
+### Přehled
+Sjednocení vzhledu karet na rozcestnících a v obsahu — zelený horní pruh (forest bar) u institucionálních karet napříč webem, včetně akordeonů, typických zakázek, akreditací a týmové sekce.
+
+**Zdroj popisu:** Git commity (práce z jiného nástroje / bez AI konverzace v tomto nástroji)
+
+### Provedené změny
+
+#### Institucionální karty — forest top bar
+**Co bylo uděláno:** Rozšířen styl institucionálních karet se zeleným horním pruhem na vnitřní karty v akordeonech, mřížky typických zakázek, akreditací a týmu. Otevřené akordeony mají jemné lesní pozadí (forest-tint); upraveny mezery na mobilu. Změna v `globals.css`, commit `8a33464`, push na `main`.  
+**Proč:** Karty na různých rozcestnících působily vizuálně nesjednoceně; jednotný forest pruh posiluje institucionální identitu a čitelnost přehledových sekcí.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~21 min  
+**Rozložení:** 12. 6. 2026 12:06–12:26 (~21 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 1  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
+
+### Technická poznámka
+Commit: `8a33464`. Upraveno: `src/app/globals.css`.
 
 ---
 

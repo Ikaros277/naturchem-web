@@ -4,6 +4,7 @@ import { ExperienceStats } from "@/components/ExperienceStats";
 import { HomeOfferCard } from "@/components/HomeOfferCard";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
+import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
 import { homeTrustBandItems } from "@/lib/home-hero-metrics";
 import { siteUrl } from "@/lib/site";
 
@@ -61,7 +62,7 @@ const offerPillars = [
   }
 ];
 
-export default function Home() {
+export default async function Home() {
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -105,6 +106,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <HomePoradnaStrip />
 
       <section
         className="home-section container home-clients-section section--forest-tint"

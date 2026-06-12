@@ -6,38 +6,43 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 38 |
-| Celkový odhadovaný čas | ~32,8 hodiny |
-| Aktuální fáze | Post-launch — optimalizace výkonu (LCP/PageSpeed), produkční deploy na Vercel |
+| Celkový odhadovaný čas | ~33,2 hodiny |
+| Aktuální fáze | Vizuální obsah — hero fotky služeb, mapování podkladů a checklist pro klienta |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 12. 6. 2026, 10:59–11:24
+## Sezení: 12. 6. 2026, 10:45–11:34
 
 ### Přehled
-Automaticky založené sezení po commitu `2e6fc90`.
+Doplnění tematických fotografií do hero sekcí a přehledových bloků na stránkách služeb z dodaných WEBP podkladů. U kategorií typických zakázek se znovu využily fotky navázaných služeb; pro klienta vznikl přehled chybějících motivů k dodání.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### Reuse service hero images on typicke-zakazky category pages.
-**Co bylo uděláno:** Reuse service hero images on typicke-zakazky category pages. - Map category slugs and aliases to existing WEBP assets so case study pages share photos with their linked services.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `a2524fa`). Dotcene oblasti: lib, report, workflow.  
-**Proč:** Map category slugs and aliases to existing WEBP assets so case study pages share photos with their linked services.  Co-authored-by: Cursor <cursoragent@cursor.com>.
 
-#### Add thematic hero and overview images for service pages.
-**Co bylo uděláno:** Add thematic hero and overview images for service pages. - Map WEBP assets to per-slug hero photos, alternate context images on service pages, and dedicated homepage pillar visuals.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `2e6fc90`). Dotcene oblasti: components, lib.  
-**Proč:** Map WEBP assets to per-slug hero photos, alternate context images on service pages, and dedicated homepage pillar visuals.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+#### Hero fotky služeb a homepage
+**Co bylo uděláno:** Z podkladů ve složce `Podklady/WEBP` bylo 35 fotek zkopírováno do `public/hero/` a namapováno na 22 služeb a 3 pilíře homepage (Měření, Studie, EIA). U služeb s více variantami se v hero a v přehledové sekci na stránce zobrazují různé záběry. Stránky bez vlastního podkladu (3 služby, provozy, obecné stránky) zůstaly u generických placeholderů. Commity `2e6fc90`, push na `main`.  
+**Proč:** Web měl u většiny stránek jen čtyři generické placeholder fotky; klient dodal tematické snímky podle činností a bylo potřeba je zapojit do hero i do vizuálního přehledu u služeb.
+
+#### Typické zakázky — sdílení fotek se službami
+**Co bylo uděláno:** Osm kategorií na `/typicke-zakazky/…` bylo napojeno na existující fotky příslušných služeb (přímý slug nebo alias, např. hygienická měření → pracovní prostředí, EIA → dokumentace EIA). Není třeba dodávat samostatné fotky pro tyto kategorie. Commit `a2524fa`.  
+**Proč:** Kategorie typických zakázek tematicky odpovídají existujícím službám; duplicitní podklady by pro klienta zbytečně zvyšovaly rozsah dodávky.
+
+#### Checklist chybějících fotografií pro klienta
+**Co bylo uděláno:** Vytvořen soubor `Podklady/chybejici-fotografie.md` — tabulkový přehled 23 stránek, kde ještě chybí vlastní fotka, plus 6 služeb s volitelnou druhou fotkou (včetně poznámky, že přehledová fotka může být na výšku). Commit `8879e1e`.  
+**Proč:** Klient potřebuje jednoznačný seznam k doplnění zbývajících podkladů (provozy, obecné stránky, 3 chybějící služby) pro předání a doplnění do Wordu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~25 min
-**Rozložení:** 12. 6. 2026 10:59–11:24 (~25 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~49 min  
+**Rozložení:** 12. 6. 2026 10:45–11:34 (~49 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 7  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 
 ### Technická poznámka
-Commit: `2e6fc90b8b7e86886b9b36b76dd783fd431a23f4`
+Commity: `2e6fc90` (hero WEBP + mapování), `a2524fa` (typické zakázky), `8879e1e` (checklist). Klíčové soubory: `src/lib/hero-images.ts`, `ServiceContextPhoto.tsx`, `home-hero-pillars.ts`, `public/hero/*.webp`.
 
 ---
 

@@ -456,8 +456,9 @@ section.content-block:has(+ .container) {
 
 .sector-card:hover,
 .sector-card:focus-visible {
-  background: linear-gradient(180deg, #f2f7ff 0%, #fff 55%);
-  border-color: #9bbef0;
+  background: linear-gradient(180deg, rgba(47, 111, 94, 0.06) 0%, #fff 55%);
+  border-color: rgba(47, 111, 94, 0.45);
+  border-top-color: var(--forest);
 }
 
 .sector-card:active {
@@ -2292,6 +2293,12 @@ fieldset.card legend {
   padding: 1.15rem 1.25rem 1.25rem;
 }
 
+.service-group-details[open] .service-card-grid,
+.service-group-details[open] .sector-grid {
+  background: var(--forest-tint);
+  gap: 1.15rem;
+}
+
 .sector-groups-accordion {
   padding-top: 0;
 }
@@ -3704,8 +3711,17 @@ main.page:has(.page-hero-band) {
   gap: 1.15rem;
 }
 
+/* Navigační / index karty — forest lišta (homepage, rozcestníky, gridy) */
 .institutional-card,
-.service-overview-cell {
+.service-overview-cell,
+.service-group-details .service-index-card,
+.service-group-details .sector-card,
+.typical-scenario-card,
+.case-category-card,
+.scope-card,
+.authorization-grid > .card,
+.download-card,
+.team-card {
   min-height: 100%;
   border-top: 3px solid var(--forest);
 }
@@ -6047,6 +6063,7 @@ main.contact-page + .site-footer {
   .service-group-details .service-card-grid,
   .sector-group-details .sector-grid {
     padding: 1rem 1rem 1rem;
+    gap: 1.2rem;
   }
 
   .sector-mobile-accordion {
@@ -6611,7 +6628,6 @@ main.home-page + .site-footer {
   gap: 0.85rem;
   padding: clamp(1.4rem, 2.5vw, 2rem);
   min-height: 100%;
-  border-top: 3px solid var(--forest);
   box-shadow: var(--shadow-card);
 }
 

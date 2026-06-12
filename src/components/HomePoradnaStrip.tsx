@@ -25,7 +25,7 @@ export async function HomePoradnaStrip() {
         </header>
         <div className="article-list-grid home-poradna-grid">
           {articles.map((article) => {
-            const articleRef = { title: article.title, topic: article.topic };
+            const articleRef = { slug: article.slug, title: article.title, topic: article.topic };
             const iconKey = poradnaTopicIconKey(articleRef);
             const displayDate = formatArticleDate(article.publishedAt);
 

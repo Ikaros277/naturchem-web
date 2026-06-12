@@ -1,4 +1,5 @@
 import type { HeroTheme } from "@/lib/hero-images";
+import { poradnaHeroThemeForSlug } from "@/lib/poradna-hero-images";
 import { getPoradnaTopicIconKey } from "@/lib/service-icons";
 
 export const PORADNA_TOPICS = [
@@ -45,7 +46,7 @@ export function topicFromTitle(title: string): PoradnaTopic {
   return "Emise";
 }
 
-type ArticleTopicInput = { title: string; topic?: string | null };
+type ArticleTopicInput = { title: string; topic?: string | null; slug?: string | null };
 
 /** Téma článku — frontmatter `topic` má přednost před heuristikou z titulku. */
 export function resolveArticleTopic(article: ArticleTopicInput): PoradnaTopic {
@@ -75,7 +76,9 @@ const topicToHeroTheme: Record<PoradnaTopic, HeroTheme> = {
   "Chemická legislativa": "dokumentace"
 };
 
-/** Stock hero / náhled podle tématu článku (Fáze A — bez vlastních fotek v CMS). */
+/** Hero / náhled — per-article mapování, jinak fallback podle tématu. */
 export function heroThemeForArticle(article: ArticleTopicInput): HeroTheme {
+  const fromSlug = poradnaHeroThemeForSlug(article.slug ?? undefined);
+  if (fromSlug) return fromSlug;
   return topicToHeroTheme[resolveArticleTopic(article)] ?? "dokumentace";
 }

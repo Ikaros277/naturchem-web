@@ -4,6 +4,7 @@ import { normalizeArticleDate } from "@/lib/format-date";
 import type { PoradnaTopic } from "@/lib/poradna-topic";
 
 export type PoradnaArticleListing = {
+  slug: string;
   title: string;
   href: string;
   excerpt: string;
@@ -38,6 +39,7 @@ function buildSearchText(article: Article): string {
 export async function getPoradnaArticles(): Promise<PoradnaArticleListing[]> {
   const mdArticles = await getArticles();
   const fromMarkdown: PoradnaArticleListing[] = mdArticles.map((article) => ({
+    slug: article.slug,
     title: article.title,
     href: `/poradna/${article.slug}`,
     excerpt: shortenListingExcerpt(article.excerpt?.trim() || ""),

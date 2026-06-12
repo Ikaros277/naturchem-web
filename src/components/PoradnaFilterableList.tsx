@@ -119,7 +119,7 @@ export function PoradnaFilterableList({ articles }: Props) {
           </p>
         ) : (
           filtered.map(article => {
-            const articleRef = { title: article.title, topic: article.topic };
+            const articleRef = { slug: article.slug, title: article.title, topic: article.topic };
             const iconKey = poradnaTopicIconKey(articleRef);
             return (
               <IndexCard

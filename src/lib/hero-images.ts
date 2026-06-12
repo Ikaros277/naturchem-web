@@ -12,7 +12,7 @@ export type HeroImageConfig = {
 /** Záložní kategorie (vždy definované). */
 const heroFallbackImages: Record<string, HeroImageConfig> = {
   home: { src: "/hero/forge-worker.jpg", position: "65% center" },
-  emise: { src: "/hero/emissions-stack.jpg" },
+  emise: { src: "/hero/industrial-plant.jpg", position: "center 35%" },
   hluk: { src: "/hero/field-measurement.jpg" },
   dokumentace: { src: "/hero/planning-documents.jpg" }
 };
@@ -57,7 +57,23 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   "provozni-rady": hero("provozni-rady", "provozni-rady-context"),
   "ippc-integrovana-povoleni": hero("ippc-integrovana-povoleni"),
   "ispop": hero("ispop", "ispop-context"),
-  "ghg-overovani": hero("ghg-overovani", "ghg-overovani-context")
+  "ghg-overovani": hero("ghg-overovani", "ghg-overovani-context"),
+
+  "forge-worker": { src: "/hero/forge-worker.jpg", position: "65% center" },
+  "industrial-plant": { src: "/hero/industrial-plant.jpg" },
+
+  "poradna-air-quality": { src: "/hero/poradna/air-quality.jpg", position: "center 40%" },
+  "poradna-laptop-forms": { src: "/hero/poradna/laptop-forms.jpg" },
+  "poradna-hvac-units": { src: "/hero/poradna/hvac-units.jpg" },
+  "poradna-woodworking": { src: "/hero/poradna/woodworking.jpg" },
+  "poradna-recycling": { src: "/hero/poradna/recycling.jpg" },
+  "poradna-diesel-generator": { src: "/hero/poradna/diesel-generator.jpg" },
+  "poradna-automotive": { src: "/hero/poradna/automotive.jpg" },
+  "poradna-waste-landfill": { src: "/hero/poradna/waste-landfill.jpg" },
+  "poradna-boiler-room": { src: "/hero/poradna/boiler-room.jpg" },
+  "poradna-paint-spray": { src: "/hero/poradna/paint-spray.jpg" },
+  "poradna-documents-desk": { src: "/hero/poradna/documents-desk.jpg" },
+  "poradna-factory-aerial": { src: "/hero/poradna/factory-aerial.jpg", position: "center 30%" }
 };
 
 function resolveConfig(theme: string): HeroImageConfig {

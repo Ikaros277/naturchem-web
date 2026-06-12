@@ -6731,8 +6731,8 @@ main.home-page + .site-footer {
     gap: 0.75rem;
   }
 
-  /* Kompaktní řádek: náhled vlevo (1/3), obsah vpravo (2/3) */
-  .home-poradna-grid .home-poradna-card.card-link.semantic-card {
+  /* Kompaktní řádek: náhled vlevo (1/3), obsah vpravo (2/3) — homepage + /poradna */
+  .article-card--mobile-row.card-link.semantic-card {
     display: grid;
     grid-template-columns: minmax(5.25rem, 33%) minmax(0, 1fr);
     grid-template-rows: auto auto auto auto;
@@ -6742,7 +6742,7 @@ main.home-page + .site-footer {
     padding: 0.85rem 0.9rem;
   }
 
-  .home-poradna-grid .home-poradna-card .article-card-thumb {
+  .article-card--mobile-row .article-card-thumb {
     grid-column: 1;
     grid-row: 1 / -1;
     width: 100%;
@@ -6753,7 +6753,7 @@ main.home-page + .site-footer {
     border-radius: var(--radius-sharp);
   }
 
-  .home-poradna-grid .home-poradna-card .article-card-meta {
+  .article-card--mobile-row .article-card-meta {
     grid-column: 2;
     grid-row: 1;
     gap: 0.35rem 0.5rem;
@@ -6761,32 +6761,32 @@ main.home-page + .site-footer {
     margin-bottom: 0.1rem;
   }
 
-  .home-poradna-grid .home-poradna-card .article-card-date {
+  .article-card--mobile-row .article-card-date {
     font-size: 0.78rem;
   }
 
-  .home-poradna-grid .home-poradna-card .tag {
+  .article-card--mobile-row .tag {
     font-size: 0.68rem;
     padding: 0.12rem 0.45rem;
   }
 
-  .home-poradna-grid .home-poradna-card .index-card-head {
+  .article-card--mobile-row .index-card-head {
     grid-column: 2;
     grid-row: 2;
     gap: 0;
     margin: 0;
   }
 
-  .home-poradna-grid .home-poradna-card .index-card-head .card-symbol {
+  .article-card--mobile-row .index-card-head .card-symbol {
     display: none;
   }
 
-  .home-poradna-grid .home-poradna-card .index-card-heading {
+  .article-card--mobile-row .index-card-heading {
     font-size: 0.9rem;
     line-height: 1.3;
   }
 
-  .home-poradna-grid .home-poradna-card .article-card-excerpt {
+  .article-card--mobile-row .article-card-excerpt {
     grid-column: 2;
     grid-row: 3;
     margin: 0;
@@ -6794,13 +6794,17 @@ main.home-page + .site-footer {
     -webkit-line-clamp: 2;
   }
 
-  .home-poradna-grid .home-poradna-card .card-inline-link {
+  .article-card--mobile-row .card-inline-link {
     grid-column: 2;
     grid-row: 4;
     margin-top: 0.15rem;
     padding-top: 0;
     width: fit-content;
     font-size: 0.82rem;
+  }
+
+  .poradna-page .article-list-grid {
+    gap: 0.75rem;
   }
 
   .home-poradna-footer {

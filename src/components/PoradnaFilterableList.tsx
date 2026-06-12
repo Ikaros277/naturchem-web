@@ -126,8 +126,8 @@ export function PoradnaFilterableList({ articles }: Props) {
                 key={article.href}
                 href={article.href}
                 title={article.title}
-                className="article-list-card article-card article-card--with-thumb"
-                cta="Číst článek"
+                className="article-list-card article-card article-card--with-thumb article-card--mobile-row"
+                cta="Přečíst článek"
                 icon={<ServiceIcon icon={iconKey} size={22} variant="inline" />}
                 meta={
                   <>

@@ -34,7 +34,7 @@ export async function HomePoradnaStrip() {
                 key={article.href}
                 href={article.href}
                 title={article.title}
-                className="article-list-card article-card article-card--with-thumb home-poradna-card"
+                className="article-list-card article-card article-card--with-thumb article-card--mobile-row"
                 cta="Přečíst článek"
                 icon={<ServiceIcon icon={iconKey} size={22} variant="inline" />}
                 meta={

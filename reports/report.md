@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 37 |
-| Celkový odhadovaný čas | ~32,4 hodiny |
+| Počet sezení celkem | 38 |
+| Celkový odhadovaný čas | ~32,5 hodiny |
 | Aktuální fáze | Post-launch — optimalizace výkonu (LCP/PageSpeed), produkční deploy na Vercel |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 12. 6. 2026, 10:59-11:09
+
+### Přehled
+Automaticky založené sezení po commitu `2e6fc90`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Add thematic hero and overview images for service pages.
+**Co bylo uděláno:** Add thematic hero and overview images for service pages. - Map WEBP assets to per-slug hero photos, alternate context images on service pages, and dedicated homepage pillar visuals.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `2e6fc90`). Dotcene oblasti: components, lib.  
+**Proč:** Map WEBP assets to per-slug hero photos, alternate context images on service pages, and dedicated homepage pillar visuals.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 12. 6. 2026 10:59-11:09 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `2e6fc90b8b7e86886b9b36b76dd783fd431a23f4`
 
 ---
 

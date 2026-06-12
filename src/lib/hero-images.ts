@@ -135,7 +135,18 @@ export function getPageHeroTheme(path: string): HeroTheme {
   const mapped = pageThemeMap[normalized];
   if (mapped) return mapped;
   if (normalized.startsWith("/provozy-a-technologie/")) return "emise";
-  if (normalized.startsWith("/typicke-zakazky/")) return "emise";
+  if (normalized.startsWith("/typicke-zakazky/")) {
+    const categorySlug = normalized.split("/").pop() ?? "";
+    if (heroSlugImages[categorySlug]) return categorySlug;
+    const categoryAliases: Record<string, string> = {
+      "hygienicka-mereni": "pracovni-prostredi",
+      eia: "eia-posudky-poradenstvi",
+      dalsi: "ippc-integrovana-povoleni"
+    };
+    const alias = categoryAliases[categorySlug];
+    if (alias && heroSlugImages[alias]) return alias;
+    return "emise";
+  }
   if (normalized.startsWith("/sluzby/")) return getServiceHeroTheme(normalized);
   return "dokumentace";
 }

@@ -6,34 +6,51 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 40 |
-| Celkový odhadovaný čas | ~34,3 hodiny |
-| Aktuální fáze | Poradna s tematickými náhledy článků, homepage sekce odborných článků, forest lišty na rozcestnících |
+| Celkový odhadovaný čas | ~34,9 hodiny |
+| Aktuální fáze | Oprava redakce `/admin` (Decap CMS), úvodní obrázky článků v editoru, provozní dokumentace pro klienta |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
 
 ---
 
-## Sezení: 14. 6. 2026, 18:03-18:13
+## Sezení: 14. 6. 2026, 17:54–18:36
 
 ### Přehled
-Automaticky založené sezení po commitu `d5d9487`.
+Vyšetřena a opravena redakce poradny (`/admin`): úpravy článků se po Publish neprojevovaly na webu, protože Decap CMS zapisoval do jiného GitHub repozitáře než ten, ze kterého Vercel web nasazuje. Srovnána konfigurace, doplněn klientský provozní návod, do editoru přidána pole **Téma** a **Úvodní obrázek** a ověřeno, že Publish nyní vytváří commity do správného repa.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### Fix Decap CMS repo so Publish commits to the same GitHub repo Vercel ...
-**Co bylo uděláno:** Fix Decap CMS repo so Publish commits to the same GitHub repo Vercel deploys. - Align admin config with Zluti/naturchem-web and add a short client guide for /admin workflow.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `d5d9487`). Dotcene oblasti: config.yml, PREDANI-KLIENTOVI.md, PROVOZ-ADMIN-CMS.md.  
-**Proč:** Align admin config with Zluti/naturchem-web and add a short client guide for /admin workflow.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+#### Diagnostika — proč se článek na webu lišil od editoru
+**Co bylo uděláno:** Porovnán obsah článku o odborném posudku na produkci, v administraci a v souboru `content/articles/` v GitHubu. Zjištěno, že web zobrazuje poslední verzi z repozitáře `Zluti/naturchem-web`, zatímco CMS bylo nastavené na `Ikaros277/naturchem-web` (původní konfigurace od klienta). Vysvětlen workflow: Publish → commit → automatický deploy Vercelu (~1–3 min); přístup klienta do Vercelu není potřeba, stačí write oprávnění na GitHub.  
+**Proč:** Klient přepisoval články v `/admin`, ale změny se na `www.naturchem.cz` neobjevovaly — působilo to jako chyba webu, ve skutečnosti se ukládalo jinam nebo vůbec necommitovalo.
+
+#### Oprava Decap CMS — správné GitHub repo
+**Co bylo uděláno:** V `public/admin/config.yml` a `public/config.yml` změněno repo na `Zluti/naturchem-web` (stejné jako Vercel deploy). Doplněn provozní návod `naturchem-projekt/PROVOZ-ADMIN-CMS.md` a aktualizován checklist předání klientovi. Commit `d5d9487`, nasazeno na produkci.  
+**Proč:** Bez shody repo ↔ Vercel nemůže Publish automaticky publikovat obsah na live web.
+
+#### Ověření Publish a přístupů
+**Co bylo uděláno:** Po opravě configu ověřeno v Network panelu, že Publish vytváří commit do `Zluti/naturchem-web` (např. úprava článku automotive — commity `883570a`, `751a1ba`). Doporučeno přidat klienta (`Ikaros277`) jako collaboratora na GitHubu; vysvětleno, že pozvánka jde podle GitHub username, ne firemního e-mailu.  
+**Proč:** Po srovnání repa musel klient znovu Publishnout články a mít write přístup — jinak CMS commit selže.
+
+#### Poradna — úvodní obrázek a téma v CMS editoru
+**Co bylo uděláno:** Do Decap CMS přidána pole **Téma** (select) a **Úvodní obrázek** (upload do `public/uploads`). Web načítá `heroImage` z frontmatter a zobrazí ho v hero pruhu detailu článku i v náhledu karty na `/poradna` a homepage; bez vlastního obrázku zůstává stock fotka podle mapování. Pole **Téma** zabrání tomu, aby Publish smazal existující metadata, která dřív v configu chyběla. Commit `6c98a88`.  
+**Proč:** V editoru chyběla možnost nahrát úvodní fotku; Decap ukládá jen pole definovaná v configu — chybějící `topic` mohlo při Publish poškodit frontmatter článků.
+
+#### Provozní vysvětlení — deploy po každém článku
+**Co bylo uděláno:** Vysvětleno, že u současné architektury (Markdown v gitu + statický build Next.js) je po každém Publish nutný automatický deploy Vercelu (~1–3 min) — klient nic nespouští ručně. Alternativy bez deploye by vyžadovaly jiný obsahový backend (DB, headless CMS).  
+**Proč:** Očekávání okamžité změny na webu bez prodlevy; u git-based CMS je krátké čekání na deploy normální.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 14. 6. 2026 18:03-18:13 (~10 min)  
-**Metoda odhadu:** git  
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~42 min  
+**Rozložení:** 14. 6. 2026 17:54–18:36 (~42 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 7  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 
 ### Technická poznámka
-Commit: `d5d9487e7bc6309a9c67187723800a092b262643`
+Commity: `d5d9487`, `883570a`, `751a1ba`, `6c98a88`. Dotčené oblasti: `public/admin/config.yml`, `PROVOZ-ADMIN-CMS.md`, `src/lib/articles.ts`, hero/karty poradny, testovací úprava článku automotive přes CMS.
 
 ---
 

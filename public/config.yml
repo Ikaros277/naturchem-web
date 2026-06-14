@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Ikaros277/naturchem-web
+  repo: Zluti/naturchem-web
   branch: main
   base_url: https://www.naturchem.cz
   auth_endpoint: api/decap/auth

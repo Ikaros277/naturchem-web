@@ -125,6 +125,8 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=    # volitelné, až bude GA4
 3. **Poptávky z webu:** Chodí na e-mail nastavený v `CONTACT_TO_EMAILS`.
 4. **Technické problémy:** [kontakt na správce / vás dle smlouvy].
 
+Podrobný návod pro klienta: `PROVOZ-ADMIN-CMS.md`. Repozitář pro články i CMS musí být **`Zluti/naturchem-web`** (stejný jako Vercel deploy).
+
 ### Seznam přístupů k předání
 
 | Služba | URL | Poznámka |
@@ -132,7 +134,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=    # volitelné, až bude GA4
 | Web | https://www.naturchem.cz | |
 | Redakce | https://www.naturchem.cz/admin | GitHub login klienta |
 | Vercel | https://vercel.com/dashboard | Projekt klienta |
-| GitHub | https://github.com/…/naturchem-web | Repo klienta |
+| GitHub | https://github.com/Zluti/naturchem-web | Repo + články v `content/articles` |
 | Vedos | https://client.wedos.com | Doména + DNS |
 | Resend | https://resend.com/emails | API klíč |
 | Search Console | https://search.google.com/search-console | Po launchi |

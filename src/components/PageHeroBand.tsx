@@ -9,6 +9,7 @@ export type PageHeroBandVariant = "standard" | "service";
 
 type Props = {
   theme: HeroTheme;
+  imageSrc?: string;
   breadcrumbs?: Crumb[];
   children: ReactNode;
   className?: string;
@@ -19,6 +20,7 @@ type Props = {
 
 export function PageHeroBand({
   theme,
+  imageSrc,
   breadcrumbs,
   children,
   className = "",
@@ -35,7 +37,7 @@ export function PageHeroBand({
         </div>
       </div>
       <div className="hero-photo-frame" aria-hidden="true">
-        <HeroPhoto theme={theme} priority={priority} />
+        <HeroPhoto theme={theme} src={imageSrc} priority={priority} />
       </div>
     </div>
   );

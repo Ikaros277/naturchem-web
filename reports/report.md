@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 39 |
-| Celkový odhadovaný čas | ~34,2 hodiny |
+| Počet sezení celkem | 40 |
+| Celkový odhadovaný čas | ~34,3 hodiny |
 | Aktuální fáze | Poradna s tematickými náhledy článků, homepage sekce odborných článků, forest lišty na rozcestnících |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 14. 6. 2026, 18:03-18:13
+
+### Přehled
+Automaticky založené sezení po commitu `d5d9487`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Fix Decap CMS repo so Publish commits to the same GitHub repo Vercel ...
+**Co bylo uděláno:** Fix Decap CMS repo so Publish commits to the same GitHub repo Vercel deploys. - Align admin config with Zluti/naturchem-web and add a short client guide for /admin workflow.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `d5d9487`). Dotcene oblasti: config.yml, PREDANI-KLIENTOVI.md, PROVOZ-ADMIN-CMS.md.  
+**Proč:** Align admin config with Zluti/naturchem-web and add a short client guide for /admin workflow.  Co-authored-by: Cursor <cursoragent@cursor.com>.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 14. 6. 2026 18:03-18:13 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `d5d9487e7bc6309a9c67187723800a092b262643`
 
 ---
 

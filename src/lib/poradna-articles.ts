@@ -12,6 +12,7 @@ export type PoradnaArticleListing = {
   searchText: string;
   publishedAt: string;
   author?: string;
+  heroImage?: string;
 };
 
 function sortByPublishedAt(articles: PoradnaArticleListing[]): PoradnaArticleListing[] {
@@ -46,7 +47,8 @@ export async function getPoradnaArticles(): Promise<PoradnaArticleListing[]> {
     topic: article.topic,
     searchText: buildSearchText(article),
     publishedAt: normalizeArticleDate(article.publishedAt) || new Date().toISOString(),
-    author: article.author
+    author: article.author,
+    heroImage: article.heroImage
   }));
 
   return sortByPublishedAt(fromMarkdown);

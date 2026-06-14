@@ -16,6 +16,7 @@ export type Article = {
   publishedAt: string;
   updatedAt?: string;
   author?: string;
+  heroImage?: string;
   body: string;
 };
 
@@ -27,6 +28,7 @@ type ArticleFrontmatter = {
   publishedAt?: unknown;
   updatedAt?: unknown;
   author?: string;
+  heroImage?: string;
 };
 
 function resolveSlug(fileSlug: string, data: ArticleFrontmatter): string {
@@ -58,6 +60,7 @@ function toArticle(fileSlug: string, fileContents: string): Article {
     publishedAt: normalizeArticleDate(data.publishedAt) || new Date().toISOString(),
     updatedAt: normalizeArticleDate(data.updatedAt),
     author: data.author || "NATURCHEM",
+    heroImage: typeof data.heroImage === "string" ? data.heroImage.trim() || undefined : undefined,
     body: normalizeMarkdownBody(parsed.content)
   };
 }

@@ -41,6 +41,8 @@ Po úspěšném Publish:
 | **Autor** | Jméno pod titulkem |
 | **Datum publikace** | Kdy článek poprvé vyšel |
 | **Datum aktualizace** | Zobrazí se u autora — při větší úpravě změňte |
+| **Téma** | Filtr v přehledu poradny; bez vyplnění se odvodí z nadpisu |
+| **Úvodní obrázek** | Foto v hero pruhu a náhledu karty; bez něj stock fotka podle tématu |
 | **Obsah** | Tělo článku (Markdown) |
 
 ---

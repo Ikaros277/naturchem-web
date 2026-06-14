@@ -131,7 +131,10 @@ export function PoradnaFilterableList({ articles }: Props) {
                 icon={<ServiceIcon icon={iconKey} size={22} variant="inline" />}
                 meta={
                   <>
-                    <ArticleCardThumb theme={heroThemeForArticle(articleRef)} />
+                    <ArticleCardThumb
+                      theme={heroThemeForArticle(articleRef)}
+                      src={article.heroImage}
+                    />
                     <div className="article-card-meta">
                       {article.displayDate ? (
                         <time className="article-card-date muted" dateTime={article.publishedAt}>

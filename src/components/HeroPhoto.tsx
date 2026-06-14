@@ -3,14 +3,16 @@ import { getHeroImageConfig, type HeroTheme } from "@/lib/hero-images";
 
 type Props = {
   theme: HeroTheme;
+  src?: string;
   priority?: boolean;
 };
 
-export function HeroPhoto({ theme, priority = false }: Props) {
-  const { src, position = "center center" } = getHeroImageConfig(theme);
+export function HeroPhoto({ theme, src, priority = false }: Props) {
+  const { src: themeSrc, position = "center center" } = getHeroImageConfig(theme);
+  const imageSrc = src?.trim() || themeSrc;
   return (
     <Image
-      src={src}
+      src={imageSrc}
       alt=""
       fill
       sizes="(max-width: 767px) 100vw, 48vw"

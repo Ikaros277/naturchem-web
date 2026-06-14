@@ -25,7 +25,11 @@ export async function HomePoradnaStrip() {
         </header>
         <div className="article-list-grid home-poradna-grid">
           {articles.map((article) => {
-            const articleRef = { slug: article.slug, title: article.title, topic: article.topic };
+            const articleRef = {
+              slug: article.slug,
+              title: article.title,
+              topic: article.topic
+            };
             const iconKey = poradnaTopicIconKey(articleRef);
             const displayDate = formatArticleDate(article.publishedAt);
 
@@ -39,7 +43,10 @@ export async function HomePoradnaStrip() {
                 icon={<ServiceIcon icon={iconKey} size={22} variant="inline" />}
                 meta={
                   <>
-                    <ArticleCardThumb theme={heroThemeForArticle(articleRef)} />
+                    <ArticleCardThumb
+                      theme={heroThemeForArticle(articleRef)}
+                      src={article.heroImage}
+                    />
                     <div className="article-card-meta">
                       {displayDate ? (
                         <time className="article-card-date muted" dateTime={article.publishedAt}>

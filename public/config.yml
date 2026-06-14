@@ -43,4 +43,28 @@ collections:
           time_format: false,
           required: false
         }
+      - {
+          label: "Téma",
+          name: "topic",
+          widget: "select",
+          options:
+            [
+              "Emise",
+              "Rozptylové studie",
+              "Hluk",
+              "Pracovní prostředí",
+              "EIA a povolování",
+              "Legislativa",
+              "Chemická legislativa"
+            ],
+          required: false,
+          hint: "Filtr v přehledu poradny a výchozí ikona. Pokud prázdné, odvodí se z nadpisu."
+        }
+      - {
+          label: "Úvodní obrázek",
+          name: "heroImage",
+          widget: "image",
+          required: false,
+          hint: "Foto v hero pruhu a náhledu karty. Bez vyplnění se použije stock fotka podle tématu."
+        }
       - { label: "Obsah", name: "body", widget: "markdown" }

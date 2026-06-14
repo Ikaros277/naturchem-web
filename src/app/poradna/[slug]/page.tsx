@@ -74,6 +74,7 @@ export default async function CmsArticlePage({ params }: Props) {
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         theme={heroThemeForArticle(article)}
+        imageSrc={article.heroImage}
         breadcrumbs={[
           { name: "Úvod", href: "/" },
           { name: articlesNav.label, href: articlesNav.href },

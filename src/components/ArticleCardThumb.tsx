@@ -3,14 +3,16 @@ import { getHeroImageSrc, type HeroTheme } from "@/lib/hero-images";
 
 type Props = {
   theme: HeroTheme;
+  src?: string;
 };
 
-/** Náhledová fotka karty článku — téma ze stock hero (Fáze A). */
-export function ArticleCardThumb({ theme }: Props) {
+/** Náhledová fotka karty článku — vlastní obrázek nebo stock hero podle tématu. */
+export function ArticleCardThumb({ theme, src }: Props) {
+  const imageSrc = src?.trim() || getHeroImageSrc(theme);
   return (
     <div className="article-card-thumb" aria-hidden="true">
       <Image
-        src={getHeroImageSrc(theme)}
+        src={imageSrc}
         alt=""
         fill
         sizes="(max-width: 768px) 100vw, 33vw"

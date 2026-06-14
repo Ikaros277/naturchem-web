@@ -2,10 +2,11 @@
 title: "Novela zákona o ochraně ovzduší 2025: co se mění pro provozovatele
   zdrojů emisí"
 slug: novela-zakona-o-ochrane-ovzdusi-2025
-excerpt: Zákon č. 42/2025 Sb. významně mění pravidla pro provozovatele
-  stacionárních zdrojů znečišťování ovzduší. Změny se týkají zařazování zdrojů,
-  sčítacích pravidel, obsahu povolení provozu, měření emisí, provozních
-  parametrů, prašnosti, minimálních vzdáleností i poplatků za znečišťování.
+excerpt: Novela zákona o ochraně ovzduší provedená zákonem č. 42/2025 Sb.
+  přináší důležité změny pro provozovatele stacionárních zdrojů emisí. Týká se
+  zejména zařazení zdrojů, povolení provozu, měření emisí, sledování provozních
+  parametrů, poplatků, prašnosti a nově také některých zdrojů, které mohou
+  vyžadovat doplnění nebo změnu povolení.
 author: Naturchem s.r.o.
 publishedAt: 2025-04-29T00:00:00.000Z
 updatedAt: ""
@@ -13,256 +14,138 @@ topic: Legislativa
 ---
 ## Proč je novela důležitá
 
-Zákon č. 42/2025 Sb. mění zákon č. 201/2012 Sb., o ochraně ovzduší. Pro provozovatele stacionárních zdrojů nejde pouze o formální úpravu právních předpisů. Novela zpřesňuje pravidla, podle kterých se zdroje zařazují, povolují, měří a kontrolují.
+Zákon č. 42/2025 Sb. mění zákon č. 201/2012 Sb., o ochraně ovzduší. Pro provozovatele stacionárních zdrojů nejde jen o formální novelu právního předpisu. Změny mohou mít přímý dopad na to, zda je zdroj správně zařazen, zda má odpovídající povolení provozu, jaké má měřicí povinnosti a jak musí dokládat plnění podmínek provozu.
 
-Dopad může mít zejména na kotelny, lakovny, technologické linky, provozy s organickými rozpouštědly, recyklační provozy, drticí a třídicí linky, deponie sypkých materiálů, kompostárny, zařízení s pachovými látkami, prašné provozy, stavby a další činnosti uvedené v příloze č. 2 zákona o ochraně ovzduší.
+Novela se může týkat zejména kotelen, lakoven, technologických linek, provozů s organickými rozpouštědly, recyklačních linek, drticích a třídicích zařízení, manipulačních ploch, deponií sypkých materiálů, kompostáren, zařízení s pachovými látkami, stavebních a demoličních činností a dalších zdrojů uvedených v příloze č. 2 zákona.
 
-> Prakticky nejde jen o to, zda zdroj „už má povolení“. Důležité je, zda je správně zařazen, zda povolení obsahuje nové zákonné náležitosti a zda provozovatel umí doložit emise, provozní parametry a plnění podmínek provozu.
+> Z praktického hlediska je důležité neptat se jen „máme povolení?“, ale také „odpovídá naše povolení aktuálnímu znění zákona, skutečnému provozu a novému zařazení zdroje?“
 
-## Přehled hlavních změn
+## Co by měli provozovatelé zkontrolovat
 
-| Oblast | Co se mění | Co by měl provozovatel ověřit |
-|---|---|---|
-| zařazení zdroje | podrobnější pravidla pro zařazování podle přílohy č. 2 | správný kód zdroje a projektované parametry |
-| sčítací pravidla | více menších zdrojů se může posuzovat společně | zda se nesčítají příkony nebo kapacity |
-| povolení provozu | přesnější obsah povolení | zda povolení obsahuje kapacitu, výkon, příkon a závazné podmínky |
-| provozní řád | vazba na sloupec C přílohy č. 2 | zda je provozní řád stále aktuální |
-| měření emisí | důraz na měření, výpočty a ohlašování termínů | rozsah měření, výpočty, ISPOP |
-| provozní parametry | u vybraných zdrojů sledování parametru prokazujícího funkci technologie | teplota, tlak, průtok, filtrace, dávkování apod. |
-| prašnost | konkrétnější opatření u staveb a prašných činností | skrápění, zakrytování, čištění komunikací |
-| minimální vzdálenosti | nový institut pro vybrané zdroje | vzdálenost od citlivé zástavby |
-| poplatky | změny v poplatkových povinnostech a evidenci | správnost emisních bilancí a hlášení |
+U stávajících provozů doporučujeme po novele ověřit především tři věci: správné zařazení zdroje, aktuálnost povolení provozu a plnění měřicích a evidenčních povinností.
 
-## Zařazení zdroje podle přílohy č. 2
+Správné zařazení zdroje podle přílohy č. 2 je základ. Od něj se odvíjí, zda zdroj potřebuje povolení provozu, provozní řád, odborný posudek, rozptylovou studii, měření emisí, kompenzační opatření nebo další podklady pro krajský úřad.
 
-Novela zavádí podrobnější pravidla pro zařazování stacionárních zdrojů. V praxi bude důležitější přesně doložit, o jakou technologii jde a jaké má projektované parametry.
+U mnoha provozů bude nutné přesněji doložit technické parametry zdroje. Rozhodující může být například jmenovitý tepelný příkon, projektovaná kapacita, spotřeba organických rozpouštědel, průtok odpadního plynu, plocha deponií, charakter manipulovaného materiálu nebo návaznost více technologických jednotek v jedné provozovně.
 
-U jednotlivých provozů může být rozhodující zejména:
+## Zařazení zdroje a sčítací pravidla
 
-- celkový jmenovitý tepelný příkon,
-- projektovaná kapacita,
-- projektovaný výkon,
-- spotřeba organických rozpouštědel,
-- projektovaný průtok odpadního plynu,
-- plocha deponií nebo manipulačních ploch,
-- druh činnosti a technologické jednotky,
-- vznikající znečišťující látky.
+Novela zpřesňuje pravidla pro zařazování stacionárních zdrojů. V praxi to znamená, že nestačí orientační popis technologie. Pro správné zařazení je potřeba znát skutečné projektované parametry a posoudit, zda se na provoz neuplatní sčítací pravidla.
 
-Zařazení zdroje není pouze administrativní údaj. Ovlivňuje, zda je potřeba povolení provozu, rozptylová studie, odborný posudek, provozní řád, měření emisí, kompenzační opatření nebo další podklady.
+Sčítací pravidla jsou důležitá zejména tam, kde je v jedné provozovně více zařízení obdobného typu. Více menších zdrojů se může pro účely zákona posuzovat společně, pokud spolu technologicky nebo prostorově souvisejí a odvádějí, nebo by mohly odvádět, emise společným výduchem nebo komínem.
 
-### Praktický příklad
+Prakticky to může být významné například u několika kotlů v jedné kotelně, více lakovacích nebo sušicích zařízení, několika technologických linek, souvisejících odsávaných pracovišť nebo postupně rozšiřovaných provozů.
 
-| Provoz | Co může rozhodnout o zařazení |
-|---|---|
-| kotelna | celkový jmenovitý tepelný příkon a druh paliva |
-| lakovna | spotřeba organických rozpouštědel a druh nátěrových hmot |
-| recyklační linka | projektovaná kapacita, drcení, třídění, manipulace |
-| deponie sypkých materiálů | celková projektovaná plocha deponií |
-| svařovna nebo technologická linka | typ procesu, odsávání, výduchy, vznikající emise |
-| kompostárna | kapacita zakládky nebo roční množství zpracovaného odpadu |
+> Provozovatel by neměl posuzovat každé zařízení izolovaně, pokud tvoří součást jednoho technologického nebo prostorově souvisejícího celku.
 
-> Pokud je zdroj špatně zařazen, mohou být špatně nastavené i navazující povinnosti. To se může projevit při změně povolení, kontrole ČIŽP, měření emisí nebo při přípravě nové investice.
+## Povolení provozu po novele
 
-## Sčítací pravidla
+Povolení provozu má nově přesněji vymezovat, co je vlastně povoleno. Důležitý je zejména kód zdroje podle přílohy č. 2, povolená kapacita, povolený výkon nebo jmenovitý tepelný příkon a závazné podmínky provozu.
 
-Novela zpřesňuje také tzv. sčítací pravidla. To znamená, že více menších zdrojů se může pro účely zákona posuzovat jako celek, pokud spolu technologicky a prostorově souvisejí.
+U starších povolení může být problém, že neobsahují všechny údaje v podobě, kterou aktuální právní úprava předpokládá. Někdy je technologie popsána obecně, někdy chybí jasná vazba na projektovanou kapacitu, někdy nejsou jednoznačně stanoveny podmínky pro výduchy, filtraci, provozní režim nebo měření emisí.
 
-Typicky se posuzuje, zda jde o zdroje:
+To může být problém při změně provozu, při kontrole, při měření emisí nebo při řešení nové investice.
 
-- typově spadající pod stejný kód přílohy č. 2,
-- umístěné ve stejné provozovně,
-- odvádějící emise společným výduchem nebo komínem,
-- nebo zdroje, u kterých by k odvádění společným výduchem nebo komínem mohlo docházet s ohledem na jejich uspořádání.
+### Kdy je vhodné povolení zkontrolovat
 
-### Kdy může sčítání změnit povinnosti
+Povolení provozu doporučujeme prověřit zejména tehdy, pokud:
 
-| Situace | Riziko |
-|---|---|
-| několik menších kotlů v jedné kotelně | po sečtení může vzniknout vyšší kategorie zdroje |
-| více technologických jednotek stejného typu | může dojít k překročení kapacitního prahu |
-| několik pracovišť s odsáváním do společného výduchu | zdroj se může posuzovat jako jeden celek |
-| rozšíření provozu o další linku | může změnit zařazení podle přílohy č. 2 |
-| samostatně evidované, ale technologicky související činnosti | úřad může požadovat společné posouzení |
+- byl provoz v minulosti rozšiřován nebo technologicky upravován,
+- se měnily výduchy, filtrace, odlučování nebo palivo,
+- se zvýšila kapacita, provozní doba nebo spotřeba surovin,
+- zdroj může nově spadat pod jiný kód přílohy č. 2,
+- jsou v provozu manipulační plochy, deponie nebo prašné činnosti,
+- povolení je starší a neodpovídá dnešnímu technickému stavu,
+- provozovatel připravuje změnu technologie nebo žádost na úřad.
 
-Sčítací pravidla jsou důležitá zejména při rekonstrukcích, rozšíření provozu nebo při doplňování dalších zařízení do stávající provozovny.
+## Nově zařazené a dopovolované zdroje
 
-## Povolení provozu a provozní řád
+Jednou z prakticky nejdůležitějších oblastí jsou zdroje, které dříve nemusely být jednoznačně povoleny jako samostatné vyjmenované stacionární zdroje, ale po novele nebo metodickém upřesnění mohou do režimu zákona spadat.
 
-Povolení provozu má po novele obsahovat přesnější údaje o zdroji. Důležitý je zejména kód podle přílohy č. 2, povolená celková kapacita, povolený celkový výkon nebo povolený celkový jmenovitý tepelný příkon a závazné podmínky provozu.
+Typickým příkladem mohou být některé manipulační plochy a deponie sypkých materiálů. Rozhodující je nejen to, zda je činnost v areálu fakticky provozována, ale také to, zda byla skutečně povolena ve výrokové části rozhodnutí.
 
-Mezi závazné podmínky mohou patřit například:
+Pokud je určitý zdroj pouze popsán v odůvodnění, v provozním popisu nebo jako související činnost, nemusí to vždy znamenat, že byl řádně povolen jako samostatný stacionární zdroj. V takovém případě může být nutné řešit nové povolení provozu nebo změnu stávajícího povolení.
 
-- specifické emisní limity,
-- způsob, podmínky a četnost měření emisí,
-- podmínky sledování provozního parametru,
-- emisní stropy,
-- provozní řád,
-- technické podmínky provozu,
-- podmínky pro související činnosti ovlivňující emise,
-- opatření při smogové situaci,
-- kompenzační opatření,
-- podmínky pro zkušební provoz.
+> Rozdíl mezi „zdroj je v dokumentaci zmíněn“ a „zdroj je skutečně povolen ve výroku rozhodnutí“ může být pro další postup zásadní.
 
-U řady stávajících provozů proto bude vhodné ověřit, zda povolení provozu odpovídá nové právní úpravě.
+## Měření emisí a provozní parametry
 
-> U provozů, jejichž povolení neobsahuje nové požadované údaje, může být nutné požádat o změnu povolení provozu v přechodné lhůtě.
+Novela posiluje význam správného zjišťování úrovně znečišťování. Emise se podle typu zdroje zjišťují měřením nebo výpočtem, pokud to zákon, prováděcí předpis nebo povolení provozu umožňuje.
 
-## Přechodné lhůty: co nepřehlédnout
+U jednorázového měření emisí je důležité, aby bylo řádně provedeno autorizovanou osobou a aby byly splněny požadavky na oznámení termínu měření, měřicí místo, provozní režim zdroje a vyhodnocení výsledků.
 
-Novela obsahuje přechodná ustanovení. Ta jsou pro provozovatele prakticky velmi důležitá, protože určují, kdy je nutné řešit úpravu povolení nebo nové povolení.
+Vedle samotného měření může být u některých zdrojů podstatné také sledování provozního parametru. Takový parametr má prokazovat, že technologie ke snižování emisí nebo opatření ke snížení emisí skutečně funguje. Může jít například o teplotu, tlak, průtok, tlakovou ztrátu na filtru, dávkování sorbentu, provozní hodiny, funkci odlučovacího zařízení nebo provoz skrápění.
 
-| Situace | Praktický dopad |
-|---|---|
-| stávající zdroj je uvedený v příloze č. 2, ale jeho povolení nesplňuje nové požadavky na obsah | provozovatel musí požádat o změnu povolení provozu v zákonné lhůtě |
-| zdroj byl dříve nevyjmenovaný a nově spadá do přílohy č. 2 | provozovatel musí požádat o povolení provozu |
-| řízení nebo stanovisko bylo zahájeno před účinností novely | mohou se použít přechodná pravidla |
-| minimální vzdálenosti | uplatnění závisí mimo jiné na okamžiku zahájení příslušného řízení nebo postupu |
-| poplatkové povinnosti | některá pravidla se použijí již pro poplatkové období roku 2025 |
+Pokud provozovatel tyto údaje nesleduje nebo je nesleduje prokazatelně, může mít problém doložit plnění podmínek provozu i v situaci, kdy samotná technologie funguje.
 
-### Praktická poznámka
+## Prašnost, stavby a manipulace se sypkými materiály
 
-Pokud byl zdroj nově zařazen mezi vyjmenované stacionární zdroje a provozovatel dosud nepožádal o povolení provozu, je vhodné tuto otázku řešit bez odkladu. Nejde jen o formální doplnění dokumentace, ale o možné provozování zdroje bez odpovídajícího povolení podle aktuální právní úpravy.
+Novela věnuje větší pozornost prašnosti. To je důležité nejen pro průmyslové provozy, ale také pro stavby, demolice, terénní úpravy, recyklační provozy, skládky, deponie a manipulaci se sypkými materiály.
 
-## Měření emisí a výpočty
+V praxi může jít například o skrápění, zakrývání prašných materiálů, omezení spádových výšek, čištění komunikací, čištění vozidel, používání uzavřených shozů, zakrytovaných kontejnerů nebo organizační omezení prací při nevhodných meteorologických podmínkách.
 
-Aktuální znění zákona rozlišuje zjišťování úrovně znečišťování měřením nebo výpočtem. U některých zdrojů se emise zjišťují jednorázovým měřením, u jiných kontinuálním měřením, případně výpočtem, pokud to právní předpis nebo povolení umožňuje.
-
-Provozovatel by měl ověřit zejména:
-
-- které znečišťující látky má sledovat,
-- zda má stanoven specifický emisní limit nebo emisní strop,
-- zda lze použít výpočet namísto měření,
-- zda se měření provádí na všech výduších,
-- zda je měřicí místo technicky vhodné,
-- zda je správně nastaven interval měření,
-- zda jsou termíny měření řádně ohlašovány do ISPOP,
-- zda jsou výsledky měření archivovány a promítnuty do provozní evidence.
-
-> Za jednorázové měření emisí se podle aktuální právní úpravy považuje pouze měření, kterému předchází ohlášení termínu prostřednictvím ISPOP v zákonem stanoveném předstihu.
-
-## Sledování provozních parametrů
-
-U některých zdrojů je důležité nejen samotné měření emisí, ale také průběžné sledování provozního parametru, který prokazuje správnou funkci technologie ke snižování emisí nebo opatření ke snížení emisí.
-
-Může jít například o:
-
-| Provozní parametr | Co může prokazovat |
-|---|---|
-| teplota | správný režim dopalování nebo technologického procesu |
-| tlaková ztráta | funkci filtru nebo odlučovacího zařízení |
-| průtok | správné odsávání a odvod odpadní vzdušiny |
-| dávkování sorbentu | funkci čištění odpadního plynu |
-| provozní hodiny | rozsah využívání zdroje |
-| stav filtračního zařízení | účinnost odlučování prachu |
-| provoz skrápění | opatření proti prašnosti |
-
-Pokud provozní parametr nelze vhodně stanovit, může krajský úřad stanovit technickou podmínku provozu, která zajistí obdobnou kontrolu správné funkce technologie nebo opatření.
-
-## Prašnost a opatření na stavbách
-
-Novela posiluje význam opatření proti prašnosti. Týká se to zejména staveb, demolic, terénních úprav, recyklačních provozů, deponií a manipulace se sypkými materiály.
-
-### Příklady protiprašných opatření
-
-| Opatření | Praktický význam |
-|---|---|
-| zakrývání prašných materiálů | omezení odnosu prachu větrem |
-| skrápění deponií a komunikací | snížení sekundární prašnosti |
-| minimalizace spádových výšek | menší prašnost při nakládce a vykládce |
-| čištění komunikací a vozidel | omezení roznosu materiálu mimo areál |
-| uzavřené shozy a kontejnery | omezení prašnosti u demolic |
-| protiprašné sítě | omezení šíření prachu do okolí |
-| rychlé ozelenění ploch | stabilizace povrchu po dokončení prací |
-
-U prašných provozů je vhodné mít tato opatření popsána nejen obecně, ale konkrétně: kdy se provádějí, kdo je odpovědný, jak se kontrolují a jak se o nich vede evidence.
+Podstatné je, aby opatření nebyla popsána pouze obecně. Úřad nebo kontrolní orgán může řešit, zda jsou opatření konkrétní, proveditelná, kontrolovatelná a zda se o jejich provádění vede odpovídající evidence.
 
 ## Minimální vzdálenosti a zápach
 
-Novela zavádí institut minimálních vzdáleností pro vybrané stacionární zdroje uvedené v příloze č. 2a. Jde zejména o zdroje, které mohou znečišťovat ovzduší tuhými znečišťujícími látkami nebo látkami obtěžujícími zápachem.
+Novela zavádí také institut minimálních vzdáleností pro vybrané zdroje, u kterých může být významná prašnost nebo zápach. Tato oblast může být důležitá například u zařízení pro nakládání s odpady, kompostáren, čistíren odpadních vod, skládek, lomů, recyklačních provozů nebo jiných činností s možným vlivem na okolní obytnou zástavbu.
 
-Tato oblast může být významná například u:
+Minimální vzdálenosti nejsou pouze formální požadavek. Mohou ovlivnit přípravu záměru, stanovisko orgánu ochrany ovzduší, povolení provozu i celkovou průchodnost projektu v území.
 
-- skládek,
-- kompostáren,
-- čistíren odpadních vod,
-- některých zařízení pro nakládání s odpady,
-- kamenolomů, recyklačních linek a provozů se zvýšenou prašností,
-- některých potravinářských, zemědělských nebo technologických provozů.
+U nových záměrů proto doporučujeme řešit otázku vzdáleností už v rané fázi přípravy, nikoli až po zpracování projektové dokumentace.
 
-Minimální vzdálenosti nejsou jen otázkou projektanta. Mohou ovlivnit stanovisko, závazné stanovisko, povolení provozu i celkovou průchodnost záměru v území.
+## Poplatky za znečišťování a evidence
 
-## Poplatky za znečišťování
+Změny se dotýkají také poplatků za znečišťování ovzduší. Provozovatel by měl ověřit, zda správně stanovuje množství emisí, zda používá aktuální vstupní údaje, zda má odpovídající měření nebo výpočty a zda poplatkové přiznání odpovídá skutečnému provozu.
 
-Změny se dotýkají také poplatků za znečišťování ovzduší. Provozovatelé by měli ověřit, zda správně stanovují množství emisí, vedou odpovídající provozní evidenci a plní ohlašovací povinnosti.
+Poplatkové povinnosti úzce souvisejí s provozní evidencí. Pokud evidence neodpovídá povolení provozu, měření emisí nebo skutečné spotřebě paliv, surovin či rozpouštědel, může vzniknout problém při kontrole nebo při zpětném přepočtu emisí.
 
-Poplatková oblast souvisí zejména s těmito otázkami:
-
-| Otázka | Proč je důležitá |
-|---|---|
-| Jsou správně stanoveny roční emise? | ovlivňují výši poplatku |
-| Vychází výpočet z aktuálních měření nebo emisních faktorů? | chybné vstupy mohou vést k nesprávnému přiznání |
-| Jsou správně zahrnuty všechny zpoplatněné látky? | typicky TZL, SO2, NOx, VOC |
-| Je správně vedená evidence provozu? | dokládá výpočet emisí |
-| Navazuje poplatkové přiznání na povolení provozu? | rozdíly mohou být problém při kontrole |
-
-U větších provozů může mít chyba v evidenci, výpočtu nebo hlášení významný finanční i kontrolní dopad.
-
-## Kontrolní seznam pro provozovatele
+## Praktický kontrolní přehled
 
 Před další změnou provozu nebo při revizi povinností po novele doporučujeme ověřit zejména následující body:
 
-- [ ] Je zdroj správně zařazen podle aktuální přílohy č. 2?
-- [ ] Nezměnil se kód zdroje po novele?
-- [ ] Neuplatní se sčítací pravidla?
-- [ ] Obsahuje povolení provozu povolenou kapacitu, výkon nebo příkon?
-- [ ] Odpovídají závazné podmínky provozu skutečnému stavu technologie?
-- [ ] Je provozní řád aktuální?
-- [ ] Je správně nastaven rozsah měření emisí?
-- [ ] Jsou termíny jednorázových měření ohlašovány do ISPOP?
-- [ ] Je nutné sledovat provozní parametr?
-- [ ] Jsou popsána a prováděna opatření proti prašnosti?
-- [ ] Nevztahují se na zdroj minimální vzdálenosti?
-- [ ] Jsou správně nastavené poplatky a emisní bilance?
+- je zdroj správně zařazen podle aktuální přílohy č. 2,
+- neuplatní se na provoz sčítací pravidla,
+- odpovídá povolení provozu skutečnému technickému stavu,
+- obsahuje povolení jasně uvedenou kapacitu, výkon nebo příkon,
+- jsou správně nastaveny emisní limity, technické podmínky a provozní omezení,
+- je provozní řád aktuální,
+- je správně nastaven rozsah měření emisí,
+- jsou termíny měření řádně ohlašovány,
+- je nutné sledovat provozní parametr,
+- jsou konkrétně popsána opatření proti prašnosti,
+- nevztahují se na zdroj minimální vzdálenosti,
+- odpovídá provozní evidence poplatkovým a ohlašovacím povinnostem.
 
-> Včasná revize bývá obvykle jednodušší než následné řešení výzvy krajského úřadu, kontrolního zjištění ČIŽP nebo nesouladu při změně provozu.
+> Včasná revize bývá jednodušší než následné řešení výzvy krajského úřadu, kontrolního zjištění ČIŽP nebo nesouladu při změně technologie.
 
 ## Jak může NATURCHEM pomoci
 
-Společnost NATURCHEM, s.r.o. zajišťuje odborné podklady pro provozovatele zdrojů znečišťování ovzduší, zejména:
+Společnost NATURCHEM, s.r.o. zajišťuje odborné podklady pro provozovatele zdrojů znečišťování ovzduší. Pomůžeme zejména s ověřením zařazení zdroje, kontrolou povolení provozu, návrhem změny povolení, zpracováním provozního řádu, odborného posudku, rozptylové studie, autorizovaným měřením emisí a konzultací k měřicím, evidenčním a poplatkovým povinnostem.
 
-- autorizovaná měření emisí,
-- rozptylové studie,
-- odborné posudky,
-- provozní řády,
-- podklady pro povolení provozu,
-- revize povinností podle zákona o ochraně ovzduší,
-- posouzení zařazení zdroje podle přílohy č. 2,
-- konzultace k měření, evidenci, poplatkům a ISPOP.
-
-Pokud si nejste jistí, zda se novela vztahuje i na váš provoz, pošlete nám stávající povolení provozu, provozní řád, popis technologie, údaje o kapacitě, výduších, palivu, surovinách, měření emisí a provozní evidenci. Ověříme, zda je nutná změna povolení, aktualizace provozního řádu, odborný posudek, rozptylová studie, měření emisí nebo jiný podklad pro krajský úřad.
+Pokud si nejste jistí, zda se novela vztahuje i na váš provoz, pošlete nám stávající povolení provozu, provozní řád, popis technologie, údaje o kapacitě, výduších, palivu, surovinách, měření emisí a provozní evidenci. Posoudíme, zda je potřeba změna povolení, nové povolení provozu, aktualizace provozního řádu, odborný posudek, rozptylová studie nebo jiné podklady pro krajský úřad.
 
 ## Věcná opora článku
 
-Článek vychází zejména z těchto právních a metodických podkladů:
+Článek vychází zejména ze zákona č. 201/2012 Sb., o ochraně ovzduší, ve znění zákona č. 42/2025 Sb. Novela nabyla účinnosti převážně dne 1. 3. 2025 a změnila řadu ustanovení důležitých pro provozovatele stacionárních zdrojů znečišťování ovzduší.
 
-| Podklad | Praktický význam |
+Z hlediska provozovatelů jsou důležitá zejména ustanovení upravující zařazování stacionárních zdrojů, sčítací pravidla, zjišťování a vyhodnocování úrovně znečišťování, obsah povolení provozu, odborné posudky, rozptylové studie, provozní řády, minimální vzdálenosti, poplatky za znečišťování a opatření ke snižování prašnosti.
+
+Prakticky významná jsou zejména tato témata:
+
+| Právní nebo metodická oblast | Praktický význam pro provozovatele |
 |---|---|
-| zákon č. 201/2012 Sb., o ochraně ovzduší | základní právní rámec ochrany ovzduší, povolování zdrojů, měření emisí a povinností provozovatelů |
-| zákon č. 42/2025 Sb. | novela zákona o ochraně ovzduší účinná převážně od 1. 3. 2025 |
-| § 4a zákona č. 201/2012 Sb. | pravidla pro zařazování stacionárních zdrojů |
-| § 4b zákona č. 201/2012 Sb. | sčítací pravidla pro příkony a projektované kapacity |
-| § 6 zákona č. 201/2012 Sb. | zjišťování a vyhodnocování úrovně znečišťování, měření, výpočty, provozní parametry a ohlašování termínů měření |
-| § 11 zákona č. 201/2012 Sb. | závazná stanoviska, povolení provozu, rozptylové studie a odborné posudky |
-| § 12 zákona č. 201/2012 Sb. | obsah povolení provozu a závazné podmínky provozu zdroje |
-| § 12a zákona č. 201/2012 Sb. | minimální vzdálenosti pro vybrané zdroje |
-| § 15 zákona č. 201/2012 Sb. | poplatky za znečišťování ovzduší |
-| příloha č. 2 zákona č. 201/2012 Sb. | vyjmenované stacionární zdroje, vazba na rozptylové studie, kompenzační opatření a provozní řády |
-| příloha č. 2a zákona č. 201/2012 Sb. | zdroje, pro které se řeší minimální vzdálenosti |
-| příloha č. 4 zákona č. 201/2012 Sb. | jednorázové a kontinuální měření emisí u vybraných zdrojů |
-| příloha č. 9 zákona č. 201/2012 Sb. | sazby poplatků za znečišťování a koeficienty úrovně emisí |
-| příloha č. 10 zákona č. 201/2012 Sb. | opatření k předcházení vzniku prašnosti a omezování jejího šíření na staveništi |
-| metodická sdělení a stanoviska MŽP vydaná k novele zákona | praktický výklad vybraných ustanovení, sčítání, poplatků, manipulace se sypkými materiály a dalších oblastí |
+| zařazení zdroje podle přílohy č. 2 | určuje, zda je nutné povolení provozu, provozní řád, měření emisí nebo další podklady |
+| sčítací pravidla | mohou změnit posouzení zdroje, pokud je v provozovně více souvisejících zařízení |
+| obsah povolení provozu | povolení musí odpovídat aktuálnímu právnímu i technickému stavu zdroje |
+| měření emisí a výpočty | provozovatel musí prokazatelně zjišťovat úroveň znečišťování |
+| sledování provozních parametrů | dokládá správnou funkci technologie nebo opatření ke snižování emisí |
+| minimální vzdálenosti | mohou ovlivnit umístění a povolitelnost některých zdrojů |
+| poplatky za znečišťování | vyžadují správnou evidenci, výpočty a ohlašování emisí |
+| opatření proti prašnosti | musí být konkrétní, proveditelná a kontrolovatelná |
 
-Z praktického hlediska je po novele důležité rozlišovat tři roviny. První je správné zařazení zdroje podle přílohy č. 2, včetně ověření projektovaných parametrů a možného sčítání více zařízení. Druhou rovinou je soulad povolení provozu se skutečným stavem technologie a s novými požadavky na obsah povolení. Třetí rovinou je průběžné plnění provozních povinností, zejména měření emisí, sledování provozních parametrů, vedení evidence, ohlašování do ISPOP a plnění poplatkových povinností.
+Při praktickém posouzení nestačí vycházet pouze z názvu technologie nebo z toho, že zdroj byl v minulosti v areálu provozován. Rozhodující je aktuální právní zařazení, projektované parametry, skutečné technické uspořádání, znění výrokové části povolení provozu, stanovené emisní limity, technické podmínky a způsob prokazování jejich plnění.
 
-Provozovatelům doporučujeme nehodnotit novelu pouze podle názvu technologie nebo podle toho, zda zdroj v minulosti povolení měl. Rozhodující je aktuální právní zařazení zdroje, skutečné technické uspořádání provozu, projektovaná kapacita, způsob odvádění emisí, měřicí povinnosti a závazné podmínky uvedené v povolení provozu.
+Zvláštní pozornost je vhodné věnovat zdrojům, které byly v minulosti pouze popsány v dokumentaci, odůvodnění rozhodnutí nebo jako související činnost. Pokud nejsou jednoznačně povoleny ve výrokové části rozhodnutí, může být nutné řešit nové povolení provozu nebo změnu stávajícího povolení. To se může týkat například některých manipulačních ploch, deponií sypkých materiálů nebo dalších činností nově posuzovaných podle aktuální přílohy č. 2 zákona o ochraně ovzduší.
+
+Provozovatelům proto doporučujeme provést po novele cílenou kontrolu povolení provozu, provozního řádu, měřicích povinností, provozní evidence a poplatkových údajů. Cílem není vytvářet zbytečnou administrativu, ale předejít situaci, kdy se nesoulad projeví až při změně provozu, kontrole nebo jednání s krajským úřadem.

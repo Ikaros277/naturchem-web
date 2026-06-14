@@ -5,11 +5,48 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 40 |
-| Celkový odhadovaný čas | ~34,9 hodiny |
-| Aktuální fáze | Oprava redakce `/admin` (Decap CMS), úvodní obrázky článků v editoru, provozní dokumentace pro klienta |
+| Počet sezení celkem | 41 |
+| Celkový odhadovaný čas | ~35,2 hodiny |
+| Aktuální fáze | Kontrola checklistu fotografií — navigace, dostupnost stránek a doporučení pro klienta |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+
+---
+
+## Sezení: 14. 6. 2026, 19:16–19:37
+
+### Přehled
+Kontrola dokumentu `chybejici-fotografie.md` oproti skutečné struktuře webu: ověřeno, které uvedené stránky existují, které nejdou snadno prokliknout z menu a kde klient testuje špatnou URL (např. `/imisni-dopady` místo `/sluzby/imisni-dopady`). Navrženy úpravy dokumentu, megamenu a redirectů.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Revize checklistu chybějících fotografií
+**Co bylo uděláno:** Projity všechny URL v dokumentu pro klienta a porovnány s routami webu, megamenu Služby, rozcestníkem `/sluzby` a přesměrováními ze starých adres. Potvrzeno, že stránky v dokumentu reálně existují — problém není ve falešných URL, ale v navigaci a zkrácených adresách.  
+**Proč:** Klient hlásil, že na některé položky ze seznamu (např. imisní dopady) nejde „prokliknout“ — bylo potřeba oddělit chybějící stránku od špatné cesty nebo skryté položky v menu.
+
+#### Imisní dopady, povolení provozu, technické přílohy — dostupnost
+**Co bylo uděláno:** U tří služeb z checklistu zjištěno: stránka funguje na `/sluzby/…`, je v akordeonu na `/sluzby`, ale chybí v megamenu hlavičky; zkrácená URL `/imisni-dopady` (bez `/sluzby/`) vrací 404 — na rozdíl od jiných služeb nemá redirect. Stejný stav u `/povoleni-provozu` a `/technicke-prilohy` (fungují jen delší aliasy ze starého webu).  
+**Proč:** Bez vysvětlení by klient v dokumentu nebo v prohlížeči testoval neexistující adresu a usoudil, že fotka je pro neexistující stránku.
+
+#### Další stránky se skrytou navigací
+**Co bylo uděláno:** Identifikovány i služby mimo checklist s podobným problémem: `/sluzby/zjistovaci-rizeni-eia` (jen `/sluzby`, ne megamenu) a `/sluzby/eia-posudky-poradenstvi` (ani v indexu služeb — jen odkaz z homepage a referencí). Provozy a obecné stránky z dokumentu jsou proklikatelné z menu.  
+**Proč:** Kompletní přehled pro rozhodnutí, zda upravit dokument, megamenu, nebo redirecty před dalším kolem dodávky fotek.
+
+#### Doporučené další kroky (bez implementace v tomto bloku)
+**Co bylo uděláno:** Navrženy čtyři varianty: upravit dokument pro klienta (plné URL + poznámka k navigaci), doplnit položky do megamenu, přidat redirecty ze zkrácených adres, případně zařadit EIA rozcestník do indexu služeb.  
+**Proč:** Klient potřebuje jednoznačný seznam k dodání fotek; současně musí být jasné, kam se fotka na webu zobrazí a jak se na stránku dostane návštěvník.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~21 min  
+**Rozložení:** 14. 6. 2026 19:16–19:37 (~21 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 2  
+*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
+
+### Technická poznámka
+Bez produktových commitů. Kontrolované soubory: `service-megamenu.ts`, `service-groups.ts`, `redirects.ts`, `Podklady/chybejici-fotografie.md`.
 
 ---
 

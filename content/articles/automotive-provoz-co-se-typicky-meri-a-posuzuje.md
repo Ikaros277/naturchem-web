@@ -12,7 +12,7 @@ author: Ing. František Hezina
 publishedAt: 2026-04-22T00:00:00.000Z
 topic: Emise
 ---
-## AAutomotive není jedna technologie
+## Automotive není jedna technologie
 
 Automotive provoz může znamenat montážní závod, výrobu interiérových dílů, lakovnu, svařovnu, lisovnu, lepení textilií, kašírování, výrobu pěnových dílů, potahování plastů, laminaci nebo finální montáž. Z hlediska environmentálních a hygienických podkladů proto nejde o jeden univerzální typ provozu.
 

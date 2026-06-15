@@ -17,7 +17,8 @@ export const serviceMegaGroups = [
       { href: "/sluzby/rozptylove-studie", label: "Rozptylové studie" },
       { href: "/sluzby/hlukove-studie", label: "Hlukové studie" },
       { href: "/sluzby/akusticke-posudky", label: "Akustické posudky" },
-      { href: "/sluzby/modelove-vypocty", label: "Modelové výpočty" }
+      { href: "/sluzby/modelove-vypocty", label: "Modelové výpočty" },
+      { href: "/sluzby/imisni-dopady", label: "Imisní a hlukové dopady záměrů" }
     ]
   },
   {
@@ -25,6 +26,7 @@ export const serviceMegaGroups = [
     links: [
       { href: "/sluzby/eia-oznameni-zameru", label: "EIA a oznámení záměru" },
       { href: "/sluzby/odborne-posudky", label: "Odborné posudky" },
+      { href: "/sluzby/povoleni-provozu", label: "Povolení provozu zdroje" },
       { href: "/sluzby/provozni-rady", label: "Provozní řády" },
       { href: "/sluzby/ippc-integrovana-povoleni", label: "IPPC a integrovaná povolení" },
       { href: "/sluzby/ispop", label: "ISPOP a provozní evidence" },

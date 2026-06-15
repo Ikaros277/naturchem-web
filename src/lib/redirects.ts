@@ -107,6 +107,8 @@ export const permanentRedirects = [
   { source: "/mereni-hluku-hlukove-studie/", destination: "/sluzby/mereni-hluku", permanent: true },
   { source: "/imisni-a-hlukove-dopady-zameru", destination: "/sluzby/imisni-dopady", permanent: true },
   { source: "/imisni-a-hlukove-dopady-zameru/", destination: "/sluzby/imisni-dopady", permanent: true },
+  { source: "/imisni-dopady", destination: "/sluzby/imisni-dopady", permanent: true },
+  { source: "/imisni-dopady/", destination: "/sluzby/imisni-dopady", permanent: true },
   { source: "/eia-posudky-poradenstvi", destination: "/sluzby/eia-posudky-poradenstvi", permanent: true },
   { source: "/eia-posudky-poradenstvi/", destination: "/sluzby/eia-posudky-poradenstvi", permanent: true },
   { source: "/eia-oznameni-zameru", destination: "/sluzby/eia-oznameni-zameru", permanent: true },
@@ -123,6 +125,8 @@ export const permanentRedirects = [
   { source: "/odborne-posudky/", destination: "/sluzby/odborne-posudky", permanent: true },
   { source: "/povoleni-provozu-zdroje", destination: "/sluzby/povoleni-provozu", permanent: true },
   { source: "/povoleni-provozu-zdroje/", destination: "/sluzby/povoleni-provozu", permanent: true },
+  { source: "/povoleni-provozu", destination: "/sluzby/povoleni-provozu", permanent: true },
+  { source: "/povoleni-provozu/", destination: "/sluzby/povoleni-provozu", permanent: true },
   { source: "/provozni-rady", destination: "/sluzby/provozni-rady", permanent: true },
   { source: "/provozni-rady/", destination: "/sluzby/provozni-rady", permanent: true },
   { source: "/bezpecnostni-listy", destination: "/sluzby/bezpecnostni-listy", permanent: true },
@@ -132,5 +136,7 @@ export const permanentRedirects = [
   { source: "/skoleni-chemicke-legislativy", destination: "/sluzby/skoleni-chemicke-legislativy", permanent: true },
   { source: "/skoleni-chemicke-legislativy/", destination: "/sluzby/skoleni-chemicke-legislativy", permanent: true },
   { source: "/technicke-prilohy-pro-investory", destination: "/sluzby/technicke-prilohy", permanent: true },
-  { source: "/technicke-prilohy-pro-investory/", destination: "/sluzby/technicke-prilohy", permanent: true }
+  { source: "/technicke-prilohy-pro-investory/", destination: "/sluzby/technicke-prilohy", permanent: true },
+  { source: "/technicke-prilohy", destination: "/sluzby/technicke-prilohy", permanent: true },
+  { source: "/technicke-prilohy/", destination: "/sluzby/technicke-prilohy", permanent: true }
 ];

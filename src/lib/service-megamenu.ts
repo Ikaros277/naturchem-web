@@ -18,7 +18,7 @@ export const serviceMegaGroups = [
       { href: "/sluzby/hlukove-studie", label: "Hlukové studie" },
       { href: "/sluzby/akusticke-posudky", label: "Akustické posudky" },
       { href: "/sluzby/modelove-vypocty", label: "Modelové výpočty" },
-      { href: "/sluzby/imisni-dopady", label: "Imisní a hlukové dopady záměrů" }
+      { href: "/sluzby/imisni-dopady", label: "Imisní a hlukové dopady" }
     ]
   },
   {

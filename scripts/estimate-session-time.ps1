@@ -15,6 +15,8 @@ $config = @{
     sessionPaddingMinutesBefore = 5
     sessionPaddingMinutesAfter  = 5
     fallbackExchangeMinutes     = 3
+    includeGitAuthors           = @()
+    skipCommitMessagePrefixes   = @("Report:")
 }
 
 if (Test-Path $configPath) {
@@ -28,6 +30,32 @@ if (Test-Path $configPath) {
     if ($null -ne $loaded.sessionPaddingMinutesAfter) {
         $config.sessionPaddingMinutesAfter = [int]$loaded.sessionPaddingMinutesAfter
     }
+    if ($loaded.includeGitAuthors) {
+        $config.includeGitAuthors = @($loaded.includeGitAuthors)
+    }
+    if ($loaded.skipCommitMessagePrefixes) {
+        $config.skipCommitMessagePrefixes = @($loaded.skipCommitMessagePrefixes)
+    }
+}
+
+function Test-GitCommitIncluded {
+    param(
+        [string]$AuthorName,
+        [string]$AuthorEmail,
+        [string]$Subject
+    )
+
+    foreach ($prefix in $config.skipCommitMessagePrefixes) {
+        if ($Subject.StartsWith($prefix)) { return $false }
+    }
+
+    if ($config.includeGitAuthors.Count -eq 0) { return $true }
+
+    foreach ($author in $config.includeGitAuthors) {
+        if ($AuthorName -eq $author -or $AuthorEmail -eq $author) { return $true }
+    }
+
+    return $false
 }
 
 function Get-SinceDateTime {
@@ -90,7 +118,7 @@ $events = @()
 
 Push-Location $root
 try {
-    $gitArgs = @("log", "--format=%aI|git_commit", "--since=$($sinceUtc.ToString('yyyy-MM-ddTHH:mm:ssZ'))")
+    $gitArgs = @("log", "--format=%aI|%an|%ae|%s", "--since=$($sinceUtc.ToString('yyyy-MM-ddTHH:mm:ssZ'))")
     if ($SinceCommit) {
         $gitArgs += "$SinceCommit..HEAD"
     }
@@ -98,11 +126,14 @@ try {
     $gitLines = & git @gitArgs 2>$null
     foreach ($line in $gitLines) {
         if (-not $line) { continue }
-        $parts = $line -split '\|', 2
-        if ($parts.Count -lt 2) { continue }
+        $parts = $line -split '\|', 4
+        if ($parts.Count -lt 4) { continue }
+        if (-not (Test-GitCommitIncluded -AuthorName $parts[1] -AuthorEmail $parts[2] -Subject $parts[3])) {
+            continue
+        }
         $events += [PSCustomObject]@{
             Time  = [DateTimeOffset]::Parse($parts[0]).UtcDateTime
-            Type  = $parts[1]
+            Type  = "git_commit"
             Local = [DateTimeOffset]::Parse($parts[0]).LocalDateTime
         }
     }

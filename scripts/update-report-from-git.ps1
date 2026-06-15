@@ -20,6 +20,7 @@ $config = @{
     sessionPaddingMinutesAfter   = 5
     autoSyncOnCommit             = $true
     autoPush                     = $true
+    includeGitAuthors            = @()
     skipCommitMessagePrefixes    = @("Report:")
 }
 
@@ -35,7 +36,28 @@ if (Test-Path $configPath) {
     }
     if ($null -ne $loaded.autoSyncOnCommit) { $config.autoSyncOnCommit = [bool]$loaded.autoSyncOnCommit }
     if ($null -ne $loaded.autoPush) { $config.autoPush = [bool]$loaded.autoPush }
+    if ($loaded.includeGitAuthors) { $config.includeGitAuthors = @($loaded.includeGitAuthors) }
     if ($loaded.skipCommitMessagePrefixes) { $config.skipCommitMessagePrefixes = @($loaded.skipCommitMessagePrefixes) }
+}
+
+function Test-GitCommitIncluded {
+    param(
+        [string]$AuthorName,
+        [string]$AuthorEmail,
+        [string]$Subject
+    )
+
+    foreach ($prefix in $config.skipCommitMessagePrefixes) {
+        if ($Subject.StartsWith($prefix)) { return $false }
+    }
+
+    if ($config.includeGitAuthors.Count -eq 0) { return $true }
+
+    foreach ($author in $config.includeGitAuthors) {
+        if ($AuthorName -eq $author -or $AuthorEmail -eq $author) { return $true }
+    }
+
+    return $false
 }
 
 function Get-PaddedSessionSpan {
@@ -147,12 +169,12 @@ try {
 
     $subject = (git -c i18n.logOutputEncoding=utf-8 log -1 --encoding=UTF-8 --format="%s" $headHash 2>$null).Trim()
     if (-not $subject) { $subject = (git log -1 --format="%s" $headHash).Trim() }
-    $commitBody = (git -c i18n.logOutputEncoding=utf-8 log -1 --encoding=UTF-8 --format="%b" $headHash 2>$null).Trim()
-    foreach ($prefix in $config.skipCommitMessagePrefixes) {
-        if ($subject.StartsWith($prefix)) {
-            Exit-Quiet "commit prefix $prefix"
-        }
+    $authorName = (git log -1 --format="%an" $headHash).Trim()
+    $authorEmail = (git log -1 --format="%ae" $headHash).Trim()
+    if (-not (Test-GitCommitIncluded -AuthorName $authorName -AuthorEmail $authorEmail -Subject $subject)) {
+        Exit-Quiet "commit excluded (author or message prefix filter)"
     }
+    $commitBody = (git -c i18n.logOutputEncoding=utf-8 log -1 --encoding=UTF-8 --format="%b" $headHash 2>$null).Trim()
 
     $changedFiles = @(git diff-tree --no-commit-id --name-only -r $headHash 2>$null)
     $reportOnlyFiles = @("reports/report.md", ".agents/session-activity.jsonl", ".agents/report-state.json")

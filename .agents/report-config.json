@@ -6,5 +6,6 @@
   "fallbackExchangeMinutes": 3,
   "autoSyncOnCommit": true,
   "autoPush": true,
+  "includeGitAuthors": ["Zluti", "zluti90@gmail.com"],
   "skipCommitMessagePrefixes": ["Report:"]
 }

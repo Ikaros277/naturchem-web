@@ -5,30 +5,30 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 43 |
-| Celkový odhadovaný čas | ~36,8 hodiny |
-| Aktuální fáze | Vizuální obsah — hero fotky rozcestníků; redakční naplnění poradny přes CMS |
+| Počet sezení celkem | 42 |
+| Celkový odhadovaný čas | ~35,5 hodiny |
+| Aktuální fáze | Vizuální obsah — hero fotky rozcestníků a služeb; navigace (megamenu, redirecty) |
 
-*Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`).*
+*Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
 
 ---
 
 ## Sezení: 15. 6. 2026, 21:08–21:22
 
 ### Přehled
-Nasazeno deset nových hero fotografií pro obecné stránky a rozcestníky webu (služby, reference, kontakt, poradna aj.). Aktualizován klientský checklist — zbývá 13 povinných fotek (3 služby + 10 detailních provozů).
+Nasazeno deset nových hero fotografií pro obecné stránky a rozcestníky webu (služby, reference, kontakt, poradna aj.). Doplněno megamenu o imisní dopady a povolení provozu včetně zkrácených URL redirectů. Aktualizován klientský checklist — zbývá 13 povinných fotek (3 služby + 10 detailních provozů).
 
 **Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### Add imisn├ş dopady and povolen├ş provozu to megamenu with short URL r...
-**Co bylo uděláno:** Add imisn├ş dopady and povolen├ş provozu to megamenu with short URL redirects. - Expose two services in the Slu┼żby megamenu and redirect flat paths to canonical /sluzby/ URLs.  Co-authored-by: Cursor <cursoragent@cursor.com> (commit `35fa463`). Dotcene oblasti: lib.  
-**Proč:** Expose two services in the Slu┼żby megamenu and redirect flat paths to canonical /sluzby/ URLs.  Co-authored-by: Cursor <cursoragent@cursor.com>.
-
 
 #### Hero fotky pro rozcestníky a obecné stránky
 **Co bylo uděláno:** Z podkladů `Podklady/WEBP` (nové soubory ze 15. 6.) zkopírováno 10 WEBP do `public/hero/` a namapováno v `hero-images.ts` na: `/sluzby`, `/reference`, `/o-spolecnosti-naturchem`, `/kontakt`, `/akreditace-autorizace-dokumenty`, `/pristrojove-vybaveni`, `/poradna`, `/faq`, `/typicke-zakazky`, `/provozy-a-technologie`. Místo generických placeholderů se na těchto stránkách zobrazují tematické fotky. Commit `e3ca066`, push na `main`.  
 **Proč:** Klient dodal chybějící podklady pro hero sekce obecných stránek; dosud měly jen 4 sdílené placeholder fotky.
+
+#### Megamenu — imisní dopady a povolení provozu
+**Co bylo uděláno:** Do megamenu služeb přidány položky Imisní dopady a Povolení provozu. V `redirects.ts` nastaveny zkrácené cesty (`/imisni-dopady`, `/povoleni-provozu` aj.) na kanonické URL pod `/sluzby/`. Commit `35fa463`.  
+**Proč:** Stránky existovaly, ale nebyly snadno dohledatelné z navigace; klient testoval URL bez prefixu `/sluzby/`.
 
 #### Aktualizace checklistu pro klienta
 **Co bylo uděláno:** Soubor `Podklady/chybejici-fotografie.md` zkrácen — sekce obecných stránek přesunuta do „hotovo“. Zbývá 3 služby bez fotky, 10 detailních stránek provozů a volitelně 6 druhých fotek u služeb.  
@@ -42,32 +42,7 @@ Nasazeno deset nových hero fotografií pro obecné stránky a rozcestníky webu
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 
 ### Technická poznámka
-Commit: `e3ca066`. Dotčené soubory: `src/lib/hero-images.ts`, `public/hero/*.webp` (10 nových), `Podklady/chybejici-fotografie.md`.
-
----
-
-## Sezení: 15. 6. 2026, 11:10–12:29
-
-### Přehled
-Po opravě CMS z předchozího dne klient publikoval sérii nových odborných článků do poradny — převážně k emisím, ISPOP, provozní evidenci a osvětlení pracovišť.
-
-**Zdroj popisu:** Git commity (práce v CMS / bez AI konverzace v tomto nástroji)
-
-### Provedené změny
-
-#### Redakční obsah poradny — nové a upravené články
-**Co bylo uděláno:** Přes Decap CMS (`/admin`) publikováno 8 nových a několik upravených článků v poradně, mimo jiné: souhrnná provozní evidence 2026, provozní parametr u zdroje emisí, ISPOP u jednorázového měření, měřicí místo na výduchu, emisní faktory a výpočet emisí, poplatky za znečišťování ovzduší, měření osvětlení pracoviště, nedostatečné osvětlení pracoviště. Commity `c7bb5a6` až `05d32d9` (15. 6., 11:15–12:24).  
-**Proč:** Po srovnání GitHub repozitáře s Vercel deployem může klient obsah publikovat sám; první větší redakční vlna po opravě administrace.
-
-### Časová náročnost
-**Odhadovaná doba práce:** ~1 hod 19 min  
-**Rozložení:** 15. 6. 2026 11:10–12:29 (~1 hod 19 min)  
-**Metoda odhadu:** git + konverzace  
-**Počet výměn s AI:** —  
-*Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
-
-### Technická poznámka
-Obsah v `content/articles/*.md`, commity z Decap CMS (Create/Update Poradna …).
+Commity: `e3ca066`, `35fa463`. Dotčené soubory: `src/lib/hero-images.ts`, `src/lib/service-megamenu.ts`, `src/lib/redirects.ts`, `public/hero/*.webp` (10 nových), `Podklady/chybejici-fotografie.md`.
 
 ---
 

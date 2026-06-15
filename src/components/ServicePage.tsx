@@ -222,9 +222,6 @@ export function ServicePage(props: Props) {
                 <Link className="button service-overview-cta--in-bar" href={quickContactHref}>
                   {contactCta}
                 </Link>
-                <Link className="button secondary" href="/kontakt#podklady">
-                  Jaké podklady poslat
-                </Link>
               </div>
             </div>
             <ServiceContextPhoto theme={heroTheme} className="service-overview-photo" />

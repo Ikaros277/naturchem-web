@@ -5,11 +5,36 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 42 |
-| Celkový odhadovaný čas | ~35,7 hodiny |
-| Aktuální fáze | Vizuální obsah — hero fotky rozcestníků a služeb; navigace (megamenu, redirecty) |
+| Počet sezení celkem | 43 |
+| Celkový odhadovaný čas | ~36,0 hodiny |
+| Aktuální fáze | UX úpravy service pages — sjednocení konverzních CTA |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
+
+---
+
+## Sezení: 15. 6. 2026, 21:28–21:44
+
+### Přehled
+UX audit sekundárního tlačítka „Jaké podklady poslat“ na stránkách služeb: label sliboval seznam podkladů, ale vedl na kontaktní formulář stejně jako primární CTA — přitom seznam je už v buňce „Jak začít“. Tlačítko odstraněno ze sdílené šablony, tedy na všech ~24 service pages najednou.
+
+**Zdroj popisu:** AI konverzace
+
+### Provedené změny
+
+#### Odstranění matoucího CTA na service pages
+**Co bylo uděláno:** Ze sekce „Stručně o službě“ odstraněno sekundární tlačítko „Jaké podklady poslat“, které odkazovalo na `/kontakt#podklady` (neexistující kotva, bez předvyplněné služby). Zůstává jedno primární CTA v panelu (desktop) nebo v buňce „Jak začít“ (mobil) a spodní `PageCtaStrip`. Seznam podkladů zůstává v buňce „Jak začít“. Commit `c57bd3e`, push na `main`.  
+**Proč:** Dva formulářové CTA vedle sebe matou návštěvníka; sekundární label evokoval informační obsah, který stránka už zobrazuje — zbytečná duplicita a špatná affordance.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~19 min  
+**Rozložení:** 15. 6. 2026 21:28–21:44 (~19 min)  
+**Metoda odhadu:** výměny  
+**Počet výměn s AI:** 3  
+*Poznámka: samostatný blok konverzace (UX audit + implementace); čas odhadnut jako 3 výměny × 3 min + padding 5 min před/po (`report-config.json`).*
+
+### Technická poznámka
+Commit: `c57bd3e`. Dotčený soubor: `src/components/ServicePage.tsx` (sdílená šablona pro všechny stránky služeb včetně `DedicatedServiceRoute`).
 
 ---
 

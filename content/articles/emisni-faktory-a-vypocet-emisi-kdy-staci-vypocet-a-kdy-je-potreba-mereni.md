@@ -7,7 +7,7 @@ excerpt: Emise lze v některých případech stanovit výpočtem, například po
   zdroj povinnost autorizovaného měření emisí nebo je potřeba prokázat plnění
   emisního limitu, nelze měření jednoduše nahradit orientačním výpočtem.
 author: Ing. František Hezina
-publishedAt: 2026-06-09
+publishedAt: 2026-05-30
 topic: Emise
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_47_15.webp
 ---

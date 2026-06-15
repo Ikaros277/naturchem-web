@@ -6,17 +6,17 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 42 |
-| Celkový odhadovaný čas | ~35,5 hodiny |
+| Celkový odhadovaný čas | ~35,7 hodiny |
 | Aktuální fáze | Vizuální obsah — hero fotky rozcestníků a služeb; navigace (megamenu, redirecty) |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
 
 ---
 
-## Sezení: 15. 6. 2026, 21:08–21:22
+## Sezení: 15. 6. 2026, 21:08–21:37
 
 ### Přehled
-Nasazeno deset nových hero fotografií pro obecné stránky a rozcestníky webu (služby, reference, kontakt, poradna aj.). Doplněno megamenu o imisní dopady a povolení provozu včetně zkrácených URL redirectů. Aktualizován klientský checklist — zbývá 13 povinných fotek (3 služby + 10 detailních provozů).
+Nasazeno deset nových hero fotografií pro obecné stránky a rozcestníky webu (služby, reference, kontakt, poradna aj.). Po analýze skrytých služeb v navigaci doplněno megamenu o imisní dopady a povolení provozu včetně zkrácených URL redirectů; popisek imisních dopadů zkrácen kvůli délce v menu. Aktualizován klientský checklist — zbývá 13 povinných fotek (3 služby + 10 detailních provozů).
 
 **Zdroj popisu:** AI konverzace
 
@@ -26,19 +26,23 @@ Nasazeno deset nových hero fotografií pro obecné stránky a rozcestníky webu
 **Co bylo uděláno:** Z podkladů `Podklady/WEBP` (nové soubory ze 15. 6.) zkopírováno 10 WEBP do `public/hero/` a namapováno v `hero-images.ts` na: `/sluzby`, `/reference`, `/o-spolecnosti-naturchem`, `/kontakt`, `/akreditace-autorizace-dokumenty`, `/pristrojove-vybaveni`, `/poradna`, `/faq`, `/typicke-zakazky`, `/provozy-a-technologie`. Místo generických placeholderů se na těchto stránkách zobrazují tematické fotky. Commit `e3ca066`, push na `main`.  
 **Proč:** Klient dodal chybějící podklady pro hero sekce obecných stránek; dosud měly jen 4 sdílené placeholder fotky.
 
+#### Analýza navigace skrytých služeb
+**Co bylo uděláno:** Porovnány tři služby mimo megamenu — imisní dopady, povolení provozu a technické přílohy — včetně vztahu povolení provozu k EIA. Doporučeno zařadit do menu imisní dopady a povolení provozu; technické přílohy ponechat jen na přehledu služeb a v EIA clusteru.  
+**Proč:** Klient hlásil stránky, na které nejde prokliknout z menu; bylo potřeba rozlišit skrytou navigaci od chybějící stránky a vyhnout se duplicitě s EIA.
+
 #### Megamenu — imisní dopady a povolení provozu
-**Co bylo uděláno:** Do megamenu služeb přidány položky Imisní dopady a Povolení provozu. V `redirects.ts` nastaveny zkrácené cesty (`/imisni-dopady`, `/povoleni-provozu` aj.) na kanonické URL pod `/sluzby/`. Commit `35fa463`.  
-**Proč:** Stránky existovaly, ale nebyly snadno dohledatelné z navigace; klient testoval URL bez prefixu `/sluzby/`.
+**Co bylo uděláno:** Do megamenu služeb přidány položky Imisní a hlukové dopady a Povolení provozu zdroje. V `redirects.ts` nastaveny zkrácené cesty (`/imisni-dopady`, `/povoleni-provozu`, `/technicke-prilohy`) na kanonické URL pod `/sluzby/`. Popisek imisních dopadů v menu zkrácen na „Imisní a hlukové dopady“ (bez slova „záměrů“). Commity `35fa463`, push na `main`.  
+**Proč:** Stránky existovaly, ale nebyly snadno dohledatelné z navigace; klient testoval URL bez prefixu `/sluzby/` a dlouhý popisek v megamenu přetékal layout.
 
 #### Aktualizace checklistu pro klienta
 **Co bylo uděláno:** Soubor `Podklady/chybejici-fotografie.md` zkrácen — sekce obecných stránek přesunuta do „hotovo“. Zbývá 3 služby bez fotky, 10 detailních stránek provozů a volitelně 6 druhých fotek u služeb.  
 **Proč:** Klient potřebuje aktuální seznam k dalšímu kolu dodávky materiálů.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~15 min
-**Rozložení:** 15. 6. 2026 21:08–21:22 (~15 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** 3  
+**Odhadovaná doba práce:** ~28 min  
+**Rozložení:** 15. 6. 2026 21:08–21:37 (~28 min)  
+**Metoda odhadu:** git + konverzace  
+**Počet výměn s AI:** 6  
 *Poznámka: čas počítá skript `estimate-session-time.ps1` — sloučí git commity a log konverzace (Cursor hook). Mezera nad 30 minut = pauza. Každý blok má +5 min před začátkem a +5 min po konci (`sessionPaddingMinutesBefore` / `After` v `report-config.json`).*
 
 ### Technická poznámka

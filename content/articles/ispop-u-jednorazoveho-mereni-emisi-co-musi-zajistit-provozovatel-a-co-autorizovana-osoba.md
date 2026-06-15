@@ -8,9 +8,10 @@ excerpt: Od roku 2026 se u jednorázového měření emisí řeší v ISPOP neje
   Autorizovaná osoba provede měření a ohlásí protokol v ISPOP. Pokud se postup
   podcení, může vzniknout problém s uznatelností měření pro splnění zákonné
   povinnosti.
-author: NATURCHEM
+author: Ing. František Hezina
 publishedAt: 2026-05-26
 topic: Emise
+heroImage: /uploads/chatgpt-image-15.-6.-2026-11_30_49.webp
 ---
 ## Proč je ISPOP u měření emisí důležitý
 

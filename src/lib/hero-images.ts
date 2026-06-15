@@ -59,6 +59,17 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   "ispop": hero("ispop", "ispop-context"),
   "ghg-overovani": hero("ghg-overovani", "ghg-overovani-context"),
 
+  sluzby: hero("sluzby"),
+  reference: hero("reference"),
+  "o-spolecnosti-naturchem": hero("o-spolecnosti-naturchem"),
+  kontakt: hero("kontakt"),
+  "akreditace-autorizace-dokumenty": hero("akreditace-autorizace-dokumenty"),
+  "pristrojove-vybaveni": hero("pristrojove-vybaveni"),
+  poradna: hero("poradna"),
+  faq: hero("faq"),
+  "typicke-zakazky": hero("typicke-zakazky"),
+  "provozy-a-technologie": hero("provozy-a-technologie"),
+
   "forge-worker": { src: "/hero/forge-worker.jpg", position: "65% center" },
   "industrial-plant": { src: "/hero/industrial-plant.jpg" },
 
@@ -121,16 +132,16 @@ const hlukSlugs = new Set([
 
 const pageThemeMap: Record<string, string> = {
   "/": "home",
-  "/provozy-a-technologie": "emise",
-  "/typicke-zakazky": "emise",
-  "/reference": "dokumentace",
-  "/o-spolecnosti-naturchem": "dokumentace",
-  "/kontakt": "hluk",
-  "/akreditace-autorizace-dokumenty": "dokumentace",
-  "/pristrojove-vybaveni": "dokumentace",
-  "/poradna": "dokumentace",
-  "/faq": "hluk",
-  "/sluzby": "dokumentace"
+  "/provozy-a-technologie": "provozy-a-technologie",
+  "/typicke-zakazky": "typicke-zakazky",
+  "/reference": "reference",
+  "/o-spolecnosti-naturchem": "o-spolecnosti-naturchem",
+  "/kontakt": "kontakt",
+  "/akreditace-autorizace-dokumenty": "akreditace-autorizace-dokumenty",
+  "/pristrojove-vybaveni": "pristrojove-vybaveni",
+  "/poradna": "poradna",
+  "/faq": "faq",
+  "/sluzby": "sluzby"
 };
 
 function normalizePath(path: string): string {

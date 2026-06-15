@@ -1,8 +1,8 @@
 # Chybějící fotografie pro web NATURCHEM
 
-Aktualizováno: 12. 6. 2026
+Aktualizováno: 15. 6. 2026
 
-Tento dokument shrnuje, jaké fotografie ještě chybí pro doplnění webu. Homepage, 22 služeb a 8 kategorií typických zakázek už vlastní fotky mají.
+Tento dokument shrnuje, jaké fotografie ještě chybí pro doplnění webu.
 
 ---
 
@@ -28,41 +28,26 @@ Tento dokument shrnuje, jaké fotografie ještě chybí pro doplnění webu. Hom
 
 ---
 
-## 2. Provozy a technologie (11 stránek)
+## 2. Provozy a technologie — detailní stránky (10 stránek)
+
+Rozcestník `/provozy-a-technologie` už má vlastní fotku. Chybí motivy pro jednotlivé provozy:
 
 | # | Stránka | URL | Počet fotek | Doporučený motiv |
 |---|---------|-----|-------------|------------------|
-| 4 | Provozy a technologie (rozcestník) | `/provozy-a-technologie` | 1 | Obecný průmyslový areál |
-| 5 | Kotelny a spalovací zdroje | `/provozy-a-technologie/kotelny` | 1–2 | Kotelna, hořák, měření emisí |
-| 6 | Bioplynové stanice a kogenerace | `/provozy-a-technologie/bioplyn-biometan` | 1–2 | Bioplynová stanice, CHP jednotka |
-| 7 | Zemědělské provozy a sušárny | `/provozy-a-technologie/zemedelske-provozy` | 1–2 | Stáj, sušárna, zemědělský areál |
-| 8 | Lakovny a povrchové úpravy | `/provozy-a-technologie/lakovny` | 1–2 | Lakovací linka, odsávání, VOC |
-| 9 | Dřevozpracující provozy | `/provozy-a-technologie/drevozpracujici` | 1–2 | Pila, drticí linka, prašnost |
-| 10 | Odpady, skládky, recyklace | `/provozy-a-technologie/odpady-recyklace` | 1–2 | Recyklační areál, kompostárna |
-| 11 | Automotive a technické textilie | `/provozy-a-technologie/automotive` | 1–2 | Výroba komponent, automotive provoz |
-| 12 | Svařovny a kovovýroba | `/provozy-a-technologie/svarovny` | 1–2 | Svařovna, kovovýroba, odsávání |
-| 13 | Sklářské a keramické provozy | `/provozy-a-technologie/sklarstvi` | 1–2 | Sklářská pec, výduch, emise |
-| 14 | VZT, chlazení a tepelná čerpadla | `/provozy-a-technologie/tepelna-cerpadla-vzt` | 1–2 | Venkovní jednotka TČ/VZT, měření hluku |
+| 1 | Kotelny a spalovací zdroje | `/provozy-a-technologie/kotelny` | 1–2 | Kotelna, hořák, měření emisí |
+| 2 | Bioplynové stanice a kogenerace | `/provozy-a-technologie/bioplyn-biometan` | 1–2 | Bioplynová stanice, CHP jednotka |
+| 3 | Zemědělské provozy a sušárny | `/provozy-a-technologie/zemedelske-provozy` | 1–2 | Stáj, sušárna, zemědělský areál |
+| 4 | Lakovny a povrchové úpravy | `/provozy-a-technologie/lakovny` | 1–2 | Lakovací linka, odsávání, VOC |
+| 5 | Dřevozpracující provozy | `/provozy-a-technologie/drevozpracujici` | 1–2 | Pila, drticí linka, prašnost |
+| 6 | Odpady, skládky, recyklace | `/provozy-a-technologie/odpady-recyklace` | 1–2 | Recyklační areál, kompostárna |
+| 7 | Automotive a technické textilie | `/provozy-a-technologie/automotive` | 1–2 | Výroba komponent, automotive provoz |
+| 8 | Svařovny a kovovýroba | `/provozy-a-technologie/svarovny` | 1–2 | Svařovna, kovovýroba, odsávání |
+| 9 | Sklářské a keramické provozy | `/provozy-a-technologie/sklarstvi` | 1–2 | Sklářská pec, výduch, emise |
+| 10 | VZT, chlazení a tepelná čerpadla | `/provozy-a-technologie/tepelna-cerpadla-vzt` | 1–2 | Venkovní jednotka TČ/VZT, měření hluku |
 
 ---
 
-## 3. Obecné stránky (9 stránek)
-
-| # | Stránka | URL | Počet fotek | Doporučený motiv |
-|---|---------|-----|-------------|------------------|
-| 15 | Služby (rozcestník) | `/sluzby` | 1 | Přehled činností, terénní měření |
-| 16 | Reference | `/reference` | 1 | Realizované zakázky, areály (bez log, pokud nechcete) |
-| 17 | O společnosti NATURCHEM | `/o-spolecnosti-naturchem` | 1 | Tým, laboratoř, firma |
-| 18 | Kontakt | `/kontakt` | 1 | Kancelář, komunikace, lokalita |
-| 19 | Akreditace a autorizace | `/akreditace-autorizace-dokumenty` | 1 | Certifikáty, akreditace, dokumenty |
-| 20 | Přístrojové vybavení | `/pristrojove-vybaveni` | 1 | Měřicí přístroje, vybavení v terénu |
-| 21 | Poradna (rozcestník) | `/poradna` | 1 | Poradenství, konzultace |
-| 22 | FAQ | `/faq` | 1 | Obecný motiv (poradenství / měření) |
-| 23 | Typické zakázky (rozcestník) | `/typicke-zakazky` | 1 | Příklady zakázek z praxe |
-
----
-
-## 4. Volitelně — druhá fotka u služeb (už mají hero)
+## 3. Volitelně — druhá fotka u služeb (už mají hero)
 
 U těchto služeb je hero fotka hotová. Druhá fotka by zlepšila přehledovou sekci níže na stránce — měla by být **jiný záběr** než v hero.
 
@@ -84,20 +69,20 @@ U těchto služeb je hero fotka hotová. Druhá fotka by zlepšila přehledovou 
 | Kategorie | Počet stránek | Minimální počet fotek |
 |-----------|---------------|------------------------|
 | Služby — chybí | 3 | 3 |
-| Provozy a technologie | 11 | 11 |
-| Obecné stránky | 9 | 9 |
+| Provozy — detailní stránky | 10 | 10 |
 | Volitelně 2. fotka u služeb | 6 | 6 |
-| **Povinné celkem** | **23 stránek** | **23 fotek** |
-| **S volitelnými** | **29 stránek** | **cca 29 fotek** |
+| **Povinné celkem** | **13 stránek** | **13 fotek** |
+| **S volitelnými** | **19 stránek** | **cca 19 fotek** |
 
 ---
 
-## Co už je hotové (bez dalších podkladů)
+## Co už je hotové
 
 - Homepage (3 rotující pilíře: Měření, Studie, EIA)
 - 22 služeb včetně přehledových fotek (kde existují 2 varianty)
-- 8 kategorií typických zakázek (`/typicke-zakazky/mereni-emisi` atd.) — sdílí fotky s příslušnými službami
+- 8 kategorií typických zakázek — sdílí fotky s příslušnými službami
+- **Obecné stránky a rozcestníky:** `/sluzby`, `/reference`, `/o-spolecnosti-naturchem`, `/kontakt`, `/akreditace-autorizace-dokumenty`, `/pristrojove-vybaveni`, `/poradna`, `/faq`, `/typicke-zakazky`, `/provozy-a-technologie`
 
 ## Co nepotřebuje vlastní fotky
 
-- Články v poradně (`/poradna/...`) — používají automaticky tematické placeholder fotky podle oboru článku
+- Články v poradně (`/poradna/...`) — vlastní úvodní obrázek lze nahrát v CMS; jinak stock fotka podle tématu

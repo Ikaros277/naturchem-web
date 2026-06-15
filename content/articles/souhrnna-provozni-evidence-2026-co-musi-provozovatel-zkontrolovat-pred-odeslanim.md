@@ -9,6 +9,7 @@ excerpt: Souhrnná provozní evidence není jen administrativní formulář v IS
   povolení nebo při ověřování ročních emisí.
 author: Ing. František Hezina
 publishedAt: 2026-01-23
+topic: Legislativa
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_12_13.webp
 ---
 \## Proč SPE nepodceňovat

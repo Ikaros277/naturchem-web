@@ -10,6 +10,7 @@ excerpt: Poplatkové přiznání v oblasti ovzduší nevzniká samo od sebe. Vyc
 author: Ing. František Hezina
 publishedAt: 2026-06-15
 topic: Legislativa
+heroImage: /uploads/chatgpt-image-15.-6.-2026-11_57_05.webp
 ---
 ## Proč poplatky řešit společně s evidencí a měřením
 

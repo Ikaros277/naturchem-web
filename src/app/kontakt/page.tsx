@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactFormSection } from "@/components/ContactFormSection";
+import { ContactOfficesMap } from "@/components/ContactOfficesMap";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import {
@@ -73,6 +74,9 @@ export default async function Page({ searchParams }: PageProps) {
       <PageHeroBand
         theme={getPageHeroTheme("/kontakt")}
         breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Kontakt" }]}
+        className="page-hero-band--map"
+        media={<ContactOfficesMap variant="hero" />}
+        mediaLabel="Mapa provozoven NATURCHEM"
       >
         <header className="premium-page-hero contact-hero page-hero--photo">
           <div>
@@ -153,6 +157,7 @@ export default async function Page({ searchParams }: PageProps) {
                   </li>
                 ))}
               </ul>
+              <ContactOfficesMap variant="panel" />
             </div>
           </div>
         </article>

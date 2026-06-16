@@ -16,6 +16,9 @@ type Props = {
   priority?: boolean;
   /** standard = index stránky; service = ServicePage */
   variant?: PageHeroBandVariant;
+  /** Nahradí výchozí hero fotku (např. mapa na kontaktu). */
+  media?: ReactNode;
+  mediaLabel?: string;
 };
 
 export function PageHeroBand({
@@ -25,10 +28,20 @@ export function PageHeroBand({
   children,
   className = "",
   priority = false,
-  variant = "standard"
+  variant = "standard",
+  media,
+  mediaLabel
 }: Props) {
+  const bandClassName = [
+    `page-hero-band page-hero-band--${variant}`,
+    media ? "page-hero-band--media" : "",
+    className
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <div className={`page-hero-band page-hero-band--${variant} ${className}`.trim()}>
+    <div className={bandClassName}>
       <div className="container page-hero-band-inner">
         <div className="hero-band-text">
           <div className="hero-diagonal-spacer" aria-hidden="true" />
@@ -36,8 +49,13 @@ export function PageHeroBand({
           {children}
         </div>
       </div>
-      <div className="hero-photo-frame" aria-hidden="true">
-        <HeroPhoto theme={theme} src={imageSrc} priority={priority} />
+      <div
+        className="hero-photo-frame"
+        aria-hidden={media ? undefined : true}
+        role={media ? "region" : undefined}
+        aria-label={media ? mediaLabel : undefined}
+      >
+        {media ?? <HeroPhoto theme={theme} src={imageSrc} priority={priority} />}
       </div>
     </div>
   );

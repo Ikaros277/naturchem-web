@@ -21,14 +21,18 @@ export const company = {
       street: "Rudolfovská 119/57",
       city: "České Budějovice",
       postalCode: "370 01",
-      country: "CZ"
+      country: "CZ",
+      lat: 48.9585,
+      lng: 14.4678
     },
     {
       label: "Praha 5",
       street: "Lesnická 1214/5",
       city: "Praha 5",
       postalCode: "150 00",
-      country: "CZ"
+      country: "CZ",
+      lat: 50.0553,
+      lng: 14.3921
     }
   ],
   labAddress: {
@@ -44,6 +48,8 @@ export type CompanyOffice = {
   street: string;
   city: string;
   postalCode: string;
+  lat: number;
+  lng: number;
 };
 
 /** Sídlo + provozovny — jednotný seznam pro kontakt a patičku. */
@@ -53,13 +59,17 @@ export function getCompanyOffices(): CompanyOffice[] {
       label: company.address.city,
       street: company.address.street,
       city: company.address.city,
-      postalCode: company.address.postalCode
+      postalCode: company.address.postalCode,
+      lat: 49.5988,
+      lng: 15.5799
     },
     ...company.branchAddresses.map((branch) => ({
       label: branch.label,
       street: branch.street,
       city: branch.city,
-      postalCode: branch.postalCode
+      postalCode: branch.postalCode,
+      lat: branch.lat,
+      lng: branch.lng
     }))
   ];
 }

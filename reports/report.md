@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 44 |
-| Celkový odhadovaný čas | ~36,4 hodiny |
+| Celkový odhadovaný čas | ~36,7 hodiny |
 | Aktuální fáze | UX úpravy service pages — sjednocení konverzních CTA |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
 
 ---
 
-## Sezení: 16. 6. 2026, 09:46–10:10
+## Sezení: 16. 6. 2026, 09:46–10:28
 
 ### Přehled
 Automaticky založené sezení po commitu `3e33cda`.
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `3e33cda`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Team: kontakty (telefony + e-mail) pod ka┼żd├Żm ─Źlenem, nov├í sekce ...
+**Co bylo uděláno:** Team: kontakty (telefony + e-mail) pod ka┼żd├Żm ─Źlenem, nov├í sekce v kart─Ť (commit `85d7c5e`). Dotcene oblasti: app, components, lib, report, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### Team: fotka Sv├ítov├ę + avatar zv─Ťt┼íen na 80px
 **Co bylo uděláno:** Team: fotka Sv├ítov├ę + avatar zv─Ťt┼íen na 80px (commit `c5fd947`). Dotcene oblasti: app, components, lib, report, workflow.  
 **Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
@@ -34,8 +38,8 @@ Automaticky založené sezení po commitu `3e33cda`.
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~25 min
-**Rozložení:** 16. 6. 2026 09:46–10:10 (~25 min)
+**Odhadovaná doba práce:** ~43 min
+**Rozložení:** 16. 6. 2026 09:46–10:28 (~43 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

@@ -26,7 +26,8 @@ export const teamMembers: TeamMember[] = [
       "První kontakt pro poptávky měření, studií a dokumentace. Pomůže zaslat podklady a domluvit další postup."
     ],
     phones: ["+420 736 778 391"],
-    email: "zilkova@naturchem.cz"
+    email: "zilkova@naturchem.cz",
+    photo: "/team/zilkova.jpg"
   },
   {
     name: "Ing. Petra Svátová, DiS.",

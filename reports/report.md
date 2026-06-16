@@ -13,7 +13,7 @@
 
 ---
 
-## Sezení: 16. 6. 2026, 09:46–10:08
+## Sezení: 16. 6. 2026, 09:46–10:10
 
 ### Přehled
 Automaticky založené sezení po commitu `3e33cda`.
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `3e33cda`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Team: fotka Sv├ítov├ę + avatar zv─Ťt┼íen na 80px
+**Co bylo uděláno:** Team: fotka Sv├ítov├ę + avatar zv─Ťt┼íen na 80px (commit `c5fd947`). Dotcene oblasti: app, components, lib, report, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### Fix: odstranit spodn├ş border u sector a team karet
 **Co bylo uděláno:** Fix: odstranit spodn├ş border u sector a team karet - Karty v gridu se natahuj├ş na stejnou v├Ż┼íku (align-items: stretch + height: 100%), ─Ź├şm┼ż jejich spodn├ş border tvo┼Öil vizu├íln├ş horizont├íln├ş linku p┼Öes celou ┼í├ş┼Öku ┼Öady. Border-bottom-width: 0 probl├ęm odstra┼łuje ÔÇö vizu├íln├ş ohrani─Źen├ş spodn├ş ─Ź├ísti karty zaji┼í┼ąuje box-shadow.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `a8edf22`). Dotcene oblasti: app.  
 **Proč:** Technicka nebo vizualni oprava - stabilnejsi a srozumitelnejsi web pro navstevniky.
@@ -30,8 +34,8 @@ Automaticky založené sezení po commitu `3e33cda`.
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~22 min
-**Rozložení:** 16. 6. 2026 09:46–10:08 (~22 min)
+**Odhadovaná doba práce:** ~25 min
+**Rozložení:** 16. 6. 2026 09:46–10:10 (~25 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

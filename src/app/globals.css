@@ -2058,8 +2058,23 @@ footer {
   line-height: 1.5;
 }
 
-.team-card-phone {
-  margin: 0.65rem 0 0;
+.team-card-contacts {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.875rem;
+}
+
+.team-card-contact-line {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.team-card-contact-line:hover {
+  text-decoration: underline;
 }
 
 .footer-docs {

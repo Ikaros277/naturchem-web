@@ -24,10 +24,19 @@ function TeamCard({ member, compact = false }: { member: (typeof teamMembers)[nu
             {line}
           </p>
         ))}
-        {member.phone ? (
-          <p className="team-card-phone">
-            <a href={`tel:${member.phone.replace(/\s/g, "")}`}>Telefon: {member.phone}</a>
-          </p>
+        {(member.phones?.length || member.email) ? (
+          <div className="team-card-contacts">
+            {member.phones?.map((phone) => (
+              <a key={phone} href={`tel:${phone.replace(/\s/g, "")}`} className="team-card-contact-line">
+                {phone}
+              </a>
+            ))}
+            {member.email ? (
+              <a href={`mailto:${member.email}`} className="team-card-contact-line">
+                {member.email}
+              </a>
+            ) : null}
+          </div>
         ) : null}
       </div>
     </article>

@@ -2,7 +2,8 @@ export type TeamMember = {
   name: string;
   role: string;
   details: string[];
-  phone?: string;
+  phones?: string[];
+  email?: string;
   photo?: string;
 };
 
@@ -14,6 +15,8 @@ export const teamMembers: TeamMember[] = [
     details: [
       "Soudní znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování emisí skleníkových plynů a oznámení EIA."
     ],
+    phones: ["+420 603 216 983", "+420 774 100 570"],
+    email: "hezina@naturchem.cz",
     photo: "/team/hezina.jpg"
   },
   {
@@ -22,7 +25,8 @@ export const teamMembers: TeamMember[] = [
     details: [
       "První kontakt pro poptávky měření, studií a dokumentace. Pomůže zaslat podklady a domluvit další postup."
     ],
-    phone: "+420 736 778 391"
+    phones: ["+420 736 778 391"],
+    email: "zilkova@naturchem.cz"
   },
   {
     name: "Ing. Petra Svátová, DiS.",
@@ -30,7 +34,8 @@ export const teamMembers: TeamMember[] = [
     details: [
       "Poradí s environmentálními požadavky u zakázky a koordinuje spolupráci s odborným týmem."
     ],
-    phone: "+420 774 100 572",
+    phones: ["+420 774 100 572"],
+    email: "svatova@naturchem.cz",
     photo: "/team/svatova.jpg"
   }
 ];

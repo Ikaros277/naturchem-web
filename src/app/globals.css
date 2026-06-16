@@ -6592,7 +6592,9 @@ main.contact-page + .site-footer {
 }
 
 .nav-item-mega .nav-dropdown-wide {
-  min-width: min(920px, calc(100vw - 2rem));
+  width: min(1080px, calc(100vw - 1.5rem));
+  min-width: min(960px, calc(100vw - 1.5rem));
+  max-width: calc(100vw - 1.5rem);
   overflow: hidden;
 }
 
@@ -6610,6 +6612,13 @@ main.contact-page + .site-footer {
 
 .mega-menu-grid-four .nav-dropdown-link {
   border-radius: 0.4rem;
+  font-size: 0.94rem;
+  line-height: 1.3;
+  padding: 0.45rem 0.5rem;
+}
+
+.mega-menu-grid-four .nav-dropdown-label {
+  font-size: 0.68rem;
 }
 
 .hero-grid {

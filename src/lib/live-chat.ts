@@ -16,10 +16,13 @@ export function buildWhatsAppUrl(message = defaultWhatsAppMessage): string {
   return `https://wa.me/${getWhatsAppPhoneE164()}?text=${encodeURIComponent(message)}`;
 }
 
-export function getTawkConfig(): { propertyId: string; widgetId: string } | null {
-  const propertyId = process.env.NEXT_PUBLIC_TAWK_PROPERTY_ID?.trim();
-  if (!propertyId) return null;
+const defaultTawkPropertyId = "6a31575716fcef1d436f9b31";
+const defaultTawkWidgetId = "1jr8bqc1t";
 
-  const widgetId = process.env.NEXT_PUBLIC_TAWK_WIDGET_ID?.trim() || "default";
+export function getTawkConfig(): { propertyId: string; widgetId: string } | null {
+  if (process.env.NEXT_PUBLIC_TAWK_ENABLED === "false") return null;
+
+  const propertyId = process.env.NEXT_PUBLIC_TAWK_PROPERTY_ID?.trim() || defaultTawkPropertyId;
+  const widgetId = process.env.NEXT_PUBLIC_TAWK_WIDGET_ID?.trim() || defaultTawkWidgetId;
   return { propertyId, widgetId };
 }

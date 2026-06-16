@@ -6546,6 +6546,7 @@ main.contact-page + .site-footer {
   min-height: 80px;
   padding: 0;
   gap: 0.65rem 1rem;
+  position: relative;
 }
 
 .nav-brand {
@@ -6623,11 +6624,16 @@ main.contact-page + .site-footer {
 }
 
 @media (max-width: 1279px) {
+  .nav-item-mega {
+    position: static;
+  }
+
   .nav-item-mega .nav-dropdown-wide {
     width: min(960px, calc(100vw - 1.25rem));
     max-width: calc(100vw - 1.25rem);
-    left: auto;
+    left: 0;
     right: 0;
+    margin-inline: auto;
   }
 
   .mega-menu-grid-four {

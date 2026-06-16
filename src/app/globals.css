@@ -6593,9 +6593,10 @@ main.contact-page + .site-footer {
 
 .nav-item-mega .nav-dropdown-wide {
   width: min(1080px, calc(100vw - 1.5rem));
-  min-width: min(960px, calc(100vw - 1.5rem));
   max-width: calc(100vw - 1.5rem);
   overflow: hidden;
+  left: 0;
+  right: auto;
 }
 
 .mega-menu-grid-four {
@@ -6619,6 +6620,30 @@ main.contact-page + .site-footer {
 
 .mega-menu-grid-four .nav-dropdown-label {
   font-size: 0.68rem;
+}
+
+@media (max-width: 1279px) {
+  .nav-item-mega .nav-dropdown-wide {
+    width: min(960px, calc(100vw - 1.25rem));
+    max-width: calc(100vw - 1.25rem);
+    left: auto;
+    right: 0;
+  }
+
+  .mega-menu-grid-four {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1120px) {
+  .nav-item-mega .nav-dropdown-wide {
+    width: min(760px, calc(100vw - 1rem));
+    max-width: calc(100vw - 1rem);
+  }
+
+  .mega-menu-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .hero-grid {

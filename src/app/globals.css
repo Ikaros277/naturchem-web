@@ -6597,7 +6597,8 @@ main.contact-page + .site-footer {
   max-width: calc(100vw - 1.5rem);
   overflow: hidden;
   left: 0;
-  right: auto;
+  right: 0;
+  margin-inline: auto;
 }
 
 .mega-menu-grid-four {
@@ -6623,17 +6624,15 @@ main.contact-page + .site-footer {
   font-size: 0.68rem;
 }
 
+.nav-item-mega {
+  position: static;
+}
+
 @media (max-width: 1279px) {
-  .nav-item-mega {
-    position: static;
-  }
 
   .nav-item-mega .nav-dropdown-wide {
     width: min(960px, calc(100vw - 1.25rem));
     max-width: calc(100vw - 1.25rem);
-    left: 0;
-    right: 0;
-    margin-inline: auto;
   }
 
   .mega-menu-grid-four {

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import {
   getCompanyOfficeMapPoints,
   officeAddressLine,
-  officeMapsEmbedUrl,
   officeMapsSearchUrl,
   type CompanyOfficeMapPoint
 } from "@/lib/company-offices-map";
@@ -48,13 +47,42 @@ type GoogleLatLngBounds = {
   extend: (position: { lat: number; lng: number }) => void;
 };
 
+type LeafletMap = {
+  remove: () => void;
+  fitBounds: (bounds: LeafletLatLngBounds, options?: { padding: [number, number] }) => void;
+  flyTo: (latlng: [number, number], zoom: number, options?: { duration?: number }) => void;
+  invalidateSize?: () => void;
+};
+
+type LeafletLatLngBounds = {
+  extend: (latlng: [number, number]) => LeafletLatLngBounds;
+};
+
+type LeafletMarker = {
+  addTo: (map: LeafletMap) => LeafletMarker;
+  bindPopup: (content: string) => LeafletMarker;
+  openPopup: () => void;
+};
+
+type LeafletNamespace = {
+  map: (element: HTMLElement, options?: { scrollWheelZoom?: boolean }) => LeafletMap;
+  tileLayer: (
+    url: string,
+    options: { attribution: string }
+  ) => { addTo: (map: LeafletMap) => void };
+  marker: (latlng: [number, number]) => LeafletMarker;
+  latLngBounds: (latlngs: [number, number][]) => LeafletLatLngBounds;
+};
+
 declare global {
   interface Window {
     google?: GoogleMapsNamespace;
+    L?: LeafletNamespace;
   }
 }
 
 let mapsScriptPromise: Promise<void> | null = null;
+let leafletAssetsPromise: Promise<void> | null = null;
 
 function loadGoogleMapsScript(apiKey: string): Promise<void> {
   if (window.google?.maps) return Promise.resolve();
@@ -83,10 +111,82 @@ function loadGoogleMapsScript(apiKey: string): Promise<void> {
   return mapsScriptPromise;
 }
 
+function loadLeafletAssets(): Promise<void> {
+  if (window.L) return Promise.resolve();
+  if (leafletAssetsPromise) return leafletAssetsPromise;
+
+  leafletAssetsPromise = new Promise((resolve, reject) => {
+    if (!document.querySelector('link[data-leaflet="true"]')) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+      link.dataset.leaflet = "true";
+      document.head.appendChild(link);
+    }
+
+    const existing = document.querySelector<HTMLScriptElement>('script[data-leaflet="true"]');
+    if (existing) {
+      existing.addEventListener("load", () => resolve(), { once: true });
+      existing.addEventListener("error", () => reject(new Error("Leaflet failed to load")), {
+        once: true
+      });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+    script.async = true;
+    script.defer = true;
+    script.dataset.leaflet = "true";
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error("Leaflet failed to load"));
+    document.head.appendChild(script);
+  });
+
+  return leafletAssetsPromise;
+}
+
 function officeInfoContent(office: CompanyOfficeMapPoint): string {
   const address = officeAddressLine(office);
   const mapsUrl = officeMapsSearchUrl(office);
   return `<div class="contact-map-infowindow"><strong>${office.label}</strong><br>${address}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Otevřít v Mapách Google</a></div>`;
+}
+
+function officePopupContent(office: CompanyOfficeMapPoint): string {
+  const mapsUrl = officeMapsSearchUrl(office);
+  return `<strong>${office.label}</strong><br>${officeAddressLine(office)}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Navigovat v Google Maps</a>`;
+}
+
+function OfficePicker({
+  variant,
+  activeIndex,
+  onSelect
+}: {
+  variant: "hero" | "panel";
+  activeIndex: number;
+  onSelect: (index: number) => void;
+}) {
+  return (
+    <div className="contact-offices-map-picker" role="tablist" aria-label="Vyberte provozovnu">
+      {offices.map((office, index) => {
+        const tabId = `contact-map-tab-${variant}-${index}`;
+        const isActive = index === activeIndex;
+        return (
+          <button
+            key={office.label}
+            type="button"
+            role="tab"
+            id={tabId}
+            aria-selected={isActive}
+            className={`contact-offices-map-tab${isActive ? " is-active" : ""}`}
+            onClick={() => onSelect(index)}
+          >
+            {office.label}
+          </button>
+        );
+      })}
+    </div>
+  );
 }
 
 function ContactOfficesMapInteractive({
@@ -148,7 +248,7 @@ function ContactOfficesMapInteractive({
   }, [apiKey]);
 
   if (loadError) {
-    return <ContactOfficesMapEmbed variant={variant} />;
+    return <ContactOfficesMapLeaflet variant={variant} />;
   }
 
   return (
@@ -161,48 +261,80 @@ function ContactOfficesMapInteractive({
   );
 }
 
-/** Embed přepínač poboček — funguje bez API klíče (Maps Embed je zdarma). */
-function ContactOfficesMapEmbed({ variant }: { variant: "hero" | "panel" }) {
+/** Plně posuvná mapa bez API klíče (OpenStreetMap + Leaflet, zdarma). */
+function ContactOfficesMapLeaflet({ variant }: { variant: "hero" | "panel" }) {
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<LeafletMap | null>(null);
+  const markersRef = useRef<LeafletMarker[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const active = offices[activeIndex];
-  const panelId = `contact-map-panel-${variant}`;
+
+  useEffect(() => {
+    const container = mapContainerRef.current;
+    if (!container) return;
+
+    let cancelled = false;
+
+    loadLeafletAssets()
+      .then(() => {
+        if (cancelled || !mapContainerRef.current || !window.L) return;
+
+        const L = window.L;
+        const map = L.map(mapContainerRef.current, { scrollWheelZoom: true });
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        const bounds = L.latLngBounds(
+          offices.map((office) => [office.lat, office.lng] as [number, number])
+        );
+
+        const markers = offices.map((office) => {
+          const marker = L.marker([office.lat, office.lng])
+            .addTo(map)
+            .bindPopup(officePopupContent(office));
+          return marker;
+        });
+
+        map.fitBounds(bounds, { padding: [48, 48] });
+        window.setTimeout(() => {
+          map.invalidateSize?.();
+        }, 120);
+        mapRef.current = map;
+        markersRef.current = markers;
+      })
+      .catch(() => {
+        /* tichý fallback — mapa zůstane prázdná */
+      });
+
+    return () => {
+      cancelled = true;
+      mapRef.current?.remove();
+      mapRef.current = null;
+      markersRef.current = [];
+    };
+  }, []);
+
+  const focusOffice = (index: number) => {
+    setActiveIndex(index);
+    const map = mapRef.current;
+    const marker = markersRef.current[index];
+    const office = offices[index];
+    if (!map) return;
+
+    map.flyTo([office.lat, office.lng], 14, { duration: 0.6 });
+    marker?.openPopup();
+  };
 
   return (
-    <div className={`contact-offices-map-embed contact-offices-map-embed--${variant}`}>
-      <div className="contact-offices-map-picker" role="tablist" aria-label="Vyberte provozovnu">
-        {offices.map((office, index) => {
-          const tabId = `contact-map-tab-${variant}-${index}`;
-          const isActive = index === activeIndex;
-          return (
-            <button
-              key={office.label}
-              type="button"
-              role="tab"
-              id={tabId}
-              aria-selected={isActive}
-              aria-controls={panelId}
-              className={`contact-offices-map-tab${isActive ? " is-active" : ""}`}
-              onClick={() => setActiveIndex(index)}
-            >
-              {office.label}
-            </button>
-          );
-        })}
-      </div>
-      <div
-        id={panelId}
-        role="tabpanel"
-        aria-labelledby={`contact-map-tab-${variant}-${activeIndex}`}
-        className="contact-offices-map-frame-wrap"
-      >
-        <iframe
-          key={active.label}
-          title={`Mapa provozovny ${active.label}`}
-          className="contact-offices-map-iframe"
-          src={officeMapsEmbedUrl(active)}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen
+    <div className={`contact-offices-map-leaflet contact-offices-map-embed--${variant}`}>
+      <OfficePicker variant={variant} activeIndex={activeIndex} onSelect={focusOffice} />
+      <div className="contact-offices-map-frame-wrap">
+        <div
+          ref={mapContainerRef}
+          className="contact-offices-map-canvas contact-offices-map-canvas--leaflet"
+          role="application"
+          aria-label="Interaktivní mapa provozoven NATURCHEM"
         />
       </div>
       <div className="contact-offices-map-embed-foot">
@@ -229,7 +361,7 @@ export function ContactOfficesMap({ variant = "hero" }: Props) {
   const content = mapsApiKey ? (
     <ContactOfficesMapInteractive apiKey={mapsApiKey} variant={variant} />
   ) : (
-    <ContactOfficesMapEmbed variant={variant} />
+    <ContactOfficesMapLeaflet variant={variant} />
   );
 
   return <div className={`contact-offices-map contact-offices-map--${variant}`}>{content}</div>;

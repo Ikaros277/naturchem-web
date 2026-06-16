@@ -157,7 +157,6 @@ export default async function Page({ searchParams }: PageProps) {
                   </li>
                 ))}
               </ul>
-              <ContactOfficesMap variant="panel" />
             </div>
           </div>
         </article>

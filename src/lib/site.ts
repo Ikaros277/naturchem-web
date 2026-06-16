@@ -13,7 +13,9 @@ export const company = {
     street: "Ledečská 3015",
     city: "Havlíčkův Brod",
     postalCode: "580 01",
-    country: "CZ"
+    country: "CZ",
+    lat: 49.606822,
+    lng: 15.567172
   },
   branchAddresses: [
     {
@@ -22,8 +24,8 @@ export const company = {
       city: "České Budějovice",
       postalCode: "370 01",
       country: "CZ",
-      lat: 48.9585,
-      lng: 14.4678
+      lat: 48.97766,
+      lng: 14.488814
     },
     {
       label: "Praha 5",
@@ -31,8 +33,8 @@ export const company = {
       city: "Praha 5",
       postalCode: "150 00",
       country: "CZ",
-      lat: 50.0553,
-      lng: 14.3921
+      lat: 50.073717,
+      lng: 14.40882
     }
   ],
   labAddress: {
@@ -60,8 +62,8 @@ export function getCompanyOffices(): CompanyOffice[] {
       street: company.address.street,
       city: company.address.city,
       postalCode: company.address.postalCode,
-      lat: 49.5988,
-      lng: 15.5799
+      lat: company.address.lat,
+      lng: company.address.lng
     },
     ...company.branchAddresses.map((branch) => ({
       label: branch.label,

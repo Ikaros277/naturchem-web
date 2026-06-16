@@ -27,7 +27,6 @@ export const teamMembers: TeamMember[] = [
     ],
     phones: ["+420 736 778 391"],
     email: "zilkova@naturchem.cz",
-    photo: "/team/zilkova.jpg"
   },
   {
     name: "Ing. Petra Svátová, DiS.",

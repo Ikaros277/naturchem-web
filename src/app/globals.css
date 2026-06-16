@@ -1355,6 +1355,26 @@ header.site-header {
     visibility 0s;
 }
 
+/* Rollout efekt pro megamenu „O nás“ (stejný styl jako obsah po refreshi). */
+.nav-item:hover .nav-dropdown.nav-dropdown-o-nas,
+.nav-item:focus-within .nav-dropdown.nav-dropdown-o-nas {
+  opacity: 0;
+  transform: translateY(10px) scale(1);
+  transition: none;
+  visibility: visible;
+  pointer-events: auto;
+  animation: home-section-fade-in 0.5s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-item:hover .nav-dropdown.nav-dropdown-o-nas,
+  .nav-item:focus-within .nav-dropdown.nav-dropdown-o-nas {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-dropdown {
     transform: none;

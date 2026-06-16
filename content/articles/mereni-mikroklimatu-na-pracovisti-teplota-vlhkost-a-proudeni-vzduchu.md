@@ -9,6 +9,7 @@ excerpt: Mikroklima na pracovišti se řeší tehdy, když je zaměstnancům dlo
   práci.
 author: Ing. František Hezina
 publishedAt: 2026-06-16
+heroImage: /uploads/chatgpt-image-16.-6.-2026-06_56_15.webp
 ---
 ## Proč se mikroklima na pracovišti měří
 

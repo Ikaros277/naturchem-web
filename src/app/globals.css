@@ -3228,6 +3228,27 @@ a:hover {
   background: rgba(7, 24, 39, 0.96);
 }
 
+@media (min-width: 1024px) {
+  .contact-offices-map--hero .contact-offices-map-picker {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+    margin-inline: auto;
+    gap: 0.45rem;
+    padding: 0.55rem 0.65rem;
+    border-radius: var(--radius-pill);
+  }
+
+  .contact-offices-map--hero .contact-offices-map-tab {
+    flex: 0 0 auto;
+    width: auto;
+    padding: 0.38rem 0.85rem;
+    font-size: 0.76rem;
+  }
+}
+
 .contact-offices-map--hero .contact-offices-map-embed-foot {
   grid-row: 3;
 }

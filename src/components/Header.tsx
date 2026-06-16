@@ -26,6 +26,42 @@ function useIsDesktopNav() {
   return isDesktop;
 }
 
+function useDelayedHover(delayMs = 240) {
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [open, setOpen] = useState(false);
+
+  useEffect(
+    () => () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    },
+    []
+  );
+
+  const openMenu = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    setOpen(true);
+  };
+
+  const scheduleClose = () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      setOpen(false);
+      timerRef.current = null;
+    }, delayMs);
+  };
+
+  const closeNow = () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = null;
+    setOpen(false);
+  };
+
+  return { open, openMenu, scheduleClose, closeNow };
+}
+
 function ServiceMegaMenu() {
   return (
     <div id="nav-mega-sluzby" className="nav-dropdown nav-dropdown-wide nav-mega" aria-label="Služby">
@@ -156,7 +192,7 @@ export function Header() {
   const pathname = usePathname();
   const isDesktop = useIsDesktopNav();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const servicesMenu = useDelayedHover();
   const [oNasOpen, setONasOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const mobileSheetRef = useRef<HTMLDivElement>(null);
@@ -168,7 +204,7 @@ export function Header() {
 
   useEffect(() => {
     setMenuOpen(false);
-    setServicesOpen(false);
+    servicesMenu.closeNow();
     setONasOpen(false);
   }, [pathname]);
 
@@ -320,20 +356,33 @@ export function Header() {
         {isDesktop ? (
           <nav className="nav-links nav-desktop" aria-label="Hlavní navigace">
             <div
-              className="nav-item nav-item-mega"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-              onFocusCapture={() => setServicesOpen(true)}
+              className="nav-mega-wrap"
+              onMouseEnter={servicesMenu.openMenu}
+              onMouseLeave={servicesMenu.scheduleClose}
+              onFocusCapture={servicesMenu.openMenu}
               onBlurCapture={(event) => {
                 if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
-                  setServicesOpen(false);
+                  servicesMenu.scheduleClose();
                 }
               }}
             >
-              <Link className="nav-item-link" href="/sluzby" aria-expanded={servicesOpen} aria-controls="nav-mega-sluzby">
+              <Link
+                className="nav-item-link"
+                href="/sluzby"
+                aria-expanded={servicesMenu.open}
+                aria-controls="nav-mega-sluzby"
+              >
                 Služby
               </Link>
-              {servicesOpen ? <ServiceMegaMenu /> : null}
+              {servicesMenu.open ? (
+                <div
+                  className="nav-mega-flyout"
+                  onMouseEnter={servicesMenu.openMenu}
+                  onMouseLeave={servicesMenu.scheduleClose}
+                >
+                  <ServiceMegaMenu />
+                </div>
+              ) : null}
             </div>
             {headerMainNav.map((item) => (
               <Link key={item.href} href={item.href}>

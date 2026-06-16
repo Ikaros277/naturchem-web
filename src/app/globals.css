@@ -6800,13 +6800,50 @@ main.contact-page + .site-footer {
   display: none;
 }
 
-.nav-item-mega .nav-dropdown-wide {
-  width: min(1080px, calc(100vw - 1.5rem));
-  max-width: calc(100vw - 1.5rem);
-  overflow: hidden;
+.nav-mega-wrap {
+  position: static;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.nav-mega-flyout {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  padding-top: 0.55rem;
+}
+
+/* Most mezi odkazem Služby a megamenem */
+.nav-mega-flyout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.55rem;
+}
+
+.nav-mega-flyout .nav-dropdown.nav-mega {
+  position: relative;
+  top: 0;
   left: 0;
   right: 0;
   margin-inline: auto;
+  min-width: 0;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+  transition: none;
+}
+
+.nav-mega-flyout .nav-dropdown-wide {
+  width: min(1080px, calc(100vw - 1.5rem));
+  max-width: calc(100vw - 1.5rem);
+  overflow: hidden;
 }
 
 .mega-menu-grid-four {
@@ -6867,13 +6904,9 @@ main.contact-page + .site-footer {
   padding: 0.4rem 0.65rem;
 }
 
-.nav-item-mega {
-  position: static;
-}
-
 @media (max-width: 1279px) {
 
-  .nav-item-mega .nav-dropdown-wide {
+  .nav-mega-flyout .nav-dropdown-wide {
     width: min(960px, calc(100vw - 1.25rem));
     max-width: calc(100vw - 1.25rem);
   }
@@ -6884,7 +6917,7 @@ main.contact-page + .site-footer {
 }
 
 @media (max-width: 1120px) {
-  .nav-item-mega .nav-dropdown-wide {
+  .nav-mega-flyout .nav-dropdown-wide {
     width: min(760px, calc(100vw - 1rem));
     max-width: calc(100vw - 1rem);
   }

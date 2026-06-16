@@ -5,11 +5,35 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 43 |
-| Celkový odhadovaný čas | ~36,0 hodiny |
+| Počet sezení celkem | 44 |
+| Celkový odhadovaný čas | ~36,2 hodiny |
 | Aktuální fáze | UX úpravy service pages — sjednocení konverzních CTA |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
+
+---
+
+## Sezení: 16. 6. 2026, 09:46-09:56
+
+### Přehled
+Automaticky založené sezení po commitu `3e33cda`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Add Hezina photo to team cards on /o-spolecnosti-naturchem
+**Co bylo uděláno:** Add Hezina photo to team cards on /o-spolecnosti-naturchem - P┼Öid├ína fotografie Ing. Franti┼íka Heziny do karti─Źky t├Żmu. Ostatn├ş ─Źlenov├ę t├Żmu si zachovaj├ş inici├íly jako z├ílohu, dokud nebudou fotky k dispozici.  Co se zm─Ťnilo: - public/team/hezina.jpg ÔÇö fotografie - TeamMember typ roz┼í├ş┼Öen o voliteln├ę pole photo - TeamSection zobrazuje foto m├şsto inici├íl, pokud je k dispozici - CSS pro kruhov├Ż avatar s fotografi├ş  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `3e33cda`). Dotcene oblasti: app, components, lib.  
+**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 16. 6. 2026 09:46-09:56 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `3e33cdaad7b85e0b9f5f1d1f3aaed9f4a7d2008d`
 
 ---
 

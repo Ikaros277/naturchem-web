@@ -19,6 +19,7 @@ import { ConsentAwareTracking } from "@/components/ConsentAwareTracking";
 import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { OutboundLinkTelemetry } from "@/components/OutboundLinkTelemetry";
+import { LiveChatWidgets } from "@/components/LiveChatWidgets";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/Schema";
@@ -112,6 +113,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <CookieConsentBanner />
+        <LiveChatWidgets />
         <ConsentAwareTracking />
         <OutboundLinkTelemetry />
       </body>

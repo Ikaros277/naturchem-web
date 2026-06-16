@@ -6624,11 +6624,11 @@ main.contact-page + .site-footer {
 }
 
 .mega-menu-grid-four .nav-dropdown-label {
-  font-size: 0.74rem;
+  font-size: 0.86rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
-  color: #1f5f53;
-  margin-bottom: 0.15rem;
+  letter-spacing: 0.08em;
+  color: #1c5a4e;
+  margin-bottom: 0.3rem;
 }
 
 .nav-item-mega {

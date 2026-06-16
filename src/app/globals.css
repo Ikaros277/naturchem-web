@@ -6854,17 +6854,26 @@ main.contact-page + .site-footer {
   right: 0;
   margin-inline: auto;
   min-width: 0;
-  opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: none;
+  opacity: 0;
+  transform: translateY(8px);
   transition: none;
+  animation: home-section-fade-in 0.5s ease forwards;
 }
 
 .nav-mega-flyout .nav-dropdown-wide {
   width: min(1080px, calc(100vw - 1.5rem));
   max-width: calc(100vw - 1.5rem);
   overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-mega-flyout .nav-dropdown.nav-mega {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .mega-menu-grid-four {

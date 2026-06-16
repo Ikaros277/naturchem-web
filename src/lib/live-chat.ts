@@ -4,7 +4,7 @@ const defaultWhatsAppMessage = "Dobrý den, mám dotaz ohledně služeb NATURCHE
 
 export function getWhatsAppPhoneE164(): string {
   const override = process.env.NEXT_PUBLIC_WHATSAPP_PHONE?.trim();
-  const raw = override || company.phones[0];
+  const raw = override || company.whatsapp;
   return raw.replace(/\D/g, "");
 }
 

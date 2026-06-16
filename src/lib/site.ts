@@ -7,6 +7,7 @@ export const company = {
   email: "naturchem@naturchem.cz",
   emailSecondary: "hezina@naturchem.cz",
   phones: ["+420 603 216 983", "+420 774 100 570"],
+  whatsapp: "+420 736 778 391",
   web: "www.naturchem.cz",
   person: "Ing. František Hezina",
   address: {

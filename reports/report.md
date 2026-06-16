@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 44 |
-| Celkový odhadovaný čas | ~36,2 hodiny |
+| Celkový odhadovaný čas | ~36,4 hodiny |
 | Aktuální fáze | UX úpravy service pages — sjednocení konverzních CTA |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
 
 ---
 
-## Sezení: 16. 6. 2026, 09:46-09:56
+## Sezení: 16. 6. 2026, 09:46–10:08
 
 ### Přehled
 Automaticky založené sezení po commitu `3e33cda`.
@@ -21,14 +21,18 @@ Automaticky založené sezení po commitu `3e33cda`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Fix: odstranit spodn├ş border u sector a team karet
+**Co bylo uděláno:** Fix: odstranit spodn├ş border u sector a team karet - Karty v gridu se natahuj├ş na stejnou v├Ż┼íku (align-items: stretch + height: 100%), ─Ź├şm┼ż jejich spodn├ş border tvo┼Öil vizu├íln├ş horizont├íln├ş linku p┼Öes celou ┼í├ş┼Öku ┼Öady. Border-bottom-width: 0 probl├ęm odstra┼łuje ÔÇö vizu├íln├ş ohrani─Źen├ş spodn├ş ─Ź├ísti karty zaji┼í┼ąuje box-shadow.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `a8edf22`). Dotcene oblasti: app.  
+**Proč:** Technicka nebo vizualni oprava - stabilnejsi a srozumitelnejsi web pro navstevniky.
+
 #### Add Hezina photo to team cards on /o-spolecnosti-naturchem
 **Co bylo uděláno:** Add Hezina photo to team cards on /o-spolecnosti-naturchem - P┼Öid├ína fotografie Ing. Franti┼íka Heziny do karti─Źky t├Żmu. Ostatn├ş ─Źlenov├ę t├Żmu si zachovaj├ş inici├íly jako z├ílohu, dokud nebudou fotky k dispozici.  Co se zm─Ťnilo: - public/team/hezina.jpg ÔÇö fotografie - TeamMember typ roz┼í├ş┼Öen o voliteln├ę pole photo - TeamSection zobrazuje foto m├şsto inici├íl, pokud je k dispozici - CSS pro kruhov├Ż avatar s fotografi├ş  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `3e33cda`). Dotcene oblasti: app, components, lib.  
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 16. 6. 2026 09:46-09:56 (~10 min)  
-**Metoda odhadu:** git  
+**Odhadovaná doba práce:** ~22 min
+**Rozložení:** 16. 6. 2026 09:46–10:08 (~22 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*
 

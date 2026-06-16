@@ -9,7 +9,7 @@ function TeamCard({ member, compact = false }: { member: (typeof teamMembers)[nu
     <article className="card team-card">
       {member.photo ? (
         <div className="team-card-avatar team-card-avatar--photo" aria-hidden="true">
-          <Image src={member.photo} alt="" width={56} height={56} className="team-card-photo" />
+          <Image src={member.photo} alt="" width={80} height={80} className="team-card-photo" />
         </div>
       ) : (
         <div className="team-card-avatar" aria-hidden="true">

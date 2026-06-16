@@ -30,6 +30,7 @@ export const teamMembers: TeamMember[] = [
     details: [
       "Poradí s environmentálními požadavky u zakázky a koordinuje spolupráci s odborným týmem."
     ],
-    phone: "+420 774 100 572"
+    phone: "+420 774 100 572",
+    photo: "/team/svatova.jpg"
   }
 ];

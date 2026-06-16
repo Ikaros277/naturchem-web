@@ -1,122 +1,101 @@
 ---
 title: "Měření mikroklimatu na pracovišti: teplota, vlhkost a proudění vzduchu"
 slug: mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu
-excerpt: Mikroklima na pracovišti se řeší tehdy, když je zaměstnancům dlouhodobě
-  horko, chladno, vnímají průvan, kolísání teplot, suchý vzduch nebo rozdílné
-  podmínky mezi jednotlivými částmi pracoviště. Měření mikroklimatu pomáhá
-  objektivně posoudit teplotu, vlhkost a proudění vzduchu ve vztahu k vykonávané
-  práci, ročnímu období, provoznímu režimu a požadavkům ochrany zdraví při
-  práci.
+excerpt: Měření mikroklimatu se řeší tam, kde zaměstnanci pociťují horko, chlad,
+  průvan, suchý vzduch nebo výrazné rozdíly mezi jednotlivými částmi pracoviště.
+  Při měření hodnotíme teplotu, vlhkost, proudění vzduchu a související provozní
+  podmínky tak, aby bylo možné objektivně posoudit pracovní prostředí, tepelnou
+  nebo chladovou zátěž a vhodnost technických či organizačních opatření.
 author: Ing. František Hezina
 publishedAt: 2026-06-16
 heroImage: /uploads/chatgpt-image-16.-6.-2026-06_56_15.webp
 ---
-## Proč se mikroklima na pracovišti měří
+## Kdy se mikroklima na pracovišti řeší
 
-Mikroklimatické podmínky patří mezi důležité faktory pracovního prostředí. Nejde jen o subjektivní pocit, že je někomu horko nebo zima. Teplota, vlhkost a proudění vzduchu ovlivňují tepelnou pohodu, únavu, soustředění, výkon i zdravotní riziko při práci.
+Mikroklimatické podmínky patří mezi důležité faktory pracovního prostředí. Ovlivňují tepelnou pohodu, únavu, soustředění, výkon zaměstnanců i zdravotní rizika při práci. Problém se obvykle projeví jako dlouhodobé horko, chlad, průvan, suchý vzduch, kolísání teplot nebo rozdílné podmínky mezi jednotlivými pracovními místy.
 
-V praxi se měření mikroklimatu řeší hlavně ve výrobních halách, skladech, kuchyních, kancelářích, laboratořích, provozech s tepelnou zátěží, chlazených provozech, prostorách s klimatizací nebo na pracovištích, kde se opakují stížnosti zaměstnanců.
+Měření mikroklimatu se uplatňuje ve výrobních halách, skladech, kuchyních, kancelářích, laboratořích, provozech s tepelnou zátěží, chlazených provozech, prostorách s klimatizací a na pracovištích, kde se opakují stížnosti zaměstnanců.
 
-Podnikoví ekologové a osoby odpovědné za BOZP často potřebují zjistit, zda jde o skutečný hygienický problém, špatně nastavené větrání, nevhodný provozní režim, lokální průvan, technologický zdroj tepla nebo pouze nerovnoměrné rozložení teplot v prostoru.
+Při posouzení vždy vycházíme z konkrétní práce, provozního režimu a skutečných podmínek na pracovišti. Jinak se hodnotí kancelář s klimatizací, jinak výrobní hala s technologickými zdroji tepla a jinak sklad s častým otevíráním vrat.
 
-> Měření mikroklimatu má smysl tehdy, když má odpovědět na konkrétní otázku: kde je problém, kdy vzniká, koho se týká a zda souvisí s prací, technologií nebo provozem budovy.
+## Co se při měření mikroklimatu hodnotí
 
-## Co se při měření mikroklimatu sleduje
+Mikroklima není jen teplota vzduchu. Pro odborné posouzení je důležité sledovat více veličin současně a vyhodnotit je ve vztahu k vykonávané práci, směnnosti, ročnímu období a provozu technologie.
 
-Mikroklima není jen teplota vzduchu. Posuzuje se soubor veličin, které společně vytvářejí tepelně-vlhkostní podmínky pracoviště. Základ tvoří teplota, relativní vlhkost a rychlost proudění vzduchu. Podle typu pracoviště a účelu měření se mohou hodnotit také další související veličiny.
-
-| Veličina | Co říká o pracovišti |
+| Veličina | Praktický význam |
 |---|---|
 | Teplota vzduchu | základní údaj o teplotních podmínkách v místě práce |
-| Výsledná nebo operativní teplota | lépe vystihuje tepelnou zátěž při vlivu sálání nebo okolních povrchů |
-| Relativní vlhkost | ovlivňuje pocit sucha, pocení, odpařování a tepelnou pohodu |
-| Rychlost proudění vzduchu | souvisí s větráním, průvanem a ochlazováním zaměstnance |
-| Teplotní rozdíly v prostoru | ukazují nerovnoměrnost podmínek mezi zónami nebo výškami |
-| Provozní režim | vysvětluje, zda hodnoty souvisí s technologií, směnností nebo větráním |
+| Výsledná nebo operativní teplota | lépe vystihuje tepelný účinek okolních povrchů, sálání a proudění |
+| Relativní vlhkost | ovlivňuje pocit sucha, pocení a celkovou tepelnou pohodu |
+| Rychlost proudění vzduchu | souvisí s větráním, průvanem a ochlazováním pracovníka |
+| Rozdíly mezi měřicími místy | ukazují nerovnoměrnost podmínek v prostoru |
+| Provozní režim | vysvětluje souvislost mezi naměřenými hodnotami, technologií a organizací práce |
 
-U kanceláří se často řeší klimatizace, průvan, suchý vzduch, rozdíl mezi místy u oken a v hloubce prostoru nebo rozdíl mezi patry budovy. U výrobních hal bývají důležité zdroje tepla, vrata, lokální větrání, pohyb vzduchu, sálání od technologie a sezónní rozdíly. U kuchyní, prádelen, sléváren, pekáren nebo provozů s pecemi může být klíčová tepelná zátěž. U skladů, chladíren nebo venkovních přechodových pracovišť se naopak řeší chladová zátěž.
+U kanceláří se často řeší klimatizace, průvan, suchý vzduch a rozdíl mezi místy u oken, pod výustkou vzduchotechniky a v hloubce místnosti. U výrobních hal bývají klíčové zdroje tepla, vrata, lokální větrání, sálání od technologie a sezónní rozdíly. U kuchyní, prádelen, pekáren nebo provozů s pecemi se posuzuje zejména tepelná zátěž. U skladů, chladíren a expedičních prostor se řeší chlad, proudění vzduchu a přechody mezi různými teplotními zónami.
 
-## Kdy je vhodné měření objednat
+## Kdy měření objednat
 
-Měření mikroklimatu je vhodné tehdy, pokud běžné organizační nebo technické řešení nestačí a je potřeba objektivní podklad. Typicky se jedná o opakované stížnosti zaměstnanců, podezření na tepelnou nebo chladovou zátěž, jednání s KHS, změnu technologie, nové větrání, úpravu klimatizace, rekonstrukci pracoviště nebo podklady ke kategorizaci prací.
+Měření doporučujeme zejména tehdy, když běžné provozní posouzení nestačí a firma potřebuje objektivní podklad. Typicky jde o opakované stížnosti zaměstnanců, podezření na tepelnou nebo chladovou zátěž, jednání s KHS, změnu technologie, úpravu klimatizace, rekonstrukci pracoviště nebo podklady ke kategorizaci prací.
 
-Zpozornět je vhodné zejména v těchto situacích:
+Měření má význam také před investicí do technických opatření. Bez dat se často řeší pouze domnělý problém. V praxi může být příčinou nepohody špatně nastavená vzduchotechnika, nevhodné umístění pracovního místa, sálání od technologie, lokální průvan, otevřená vrata, nedostatečné stínění nebo kombinace více vlivů.
 
-1. Zaměstnanci opakovaně upozorňují na horko, chlad, průvan, suchý vzduch nebo výrazné rozdíly mezi částmi pracoviště.
-2. Na pracovišti jsou zdroje tepla nebo chladu, například pece, sušárny, varné technologie, chlazené prostory, otevřená vrata, intenzivní větrání nebo klimatizace.
-3. Je potřeba doložit podmínky pro KHS, kategorizaci prací, interní audit, BOZP nebo plánovanou úpravu pracoviště.
+Odborné měření umožní určit, kde problém vzniká, kdy se projevuje a jaké opatření má technický smysl.
 
-Měření je vhodné řešit také před investicí do drahých opatření. Bez objektivních dat se snadno navrhne řešení, které neodstraní skutečnou příčinu problému. Například výměna klimatizace nemusí pomoci, pokud je problém v proudění vzduchu, rozmístění pracovních míst nebo v tepelných ziscích od technologie.
+## Význam ročního období a provozního režimu
 
-## Důležité je roční období a provozní režim
+Mikroklima se výrazně mění podle ročního období. Letní tepelnou zátěž je nutné posuzovat v období, kdy se skutečně projevuje. Chladové podmínky u vrat, expedičních zón, skladů nebo chladicích prostor se naopak hodnotí v odpovídajících zimních nebo provozně zatížených podmínkách.
 
-Mikroklima se během roku mění. Jiné podmínky budou v letním období, jiné v zimě a jiné v přechodových měsících. Proto je před měřením důležité ujasnit, jaký problém se má posoudit.
+Stejně důležitý je provozní režim. Při měření zaznamenáváme, zda běžela technologie, zda byla otevřená vrata, jak byla nastavena vzduchotechnika, zda pracovala klimatizace, jaká byla směna a zda provoz odpovídal běžnému nebo kritickému stavu.
 
-Pokud zaměstnanci řeší horko v hale v červenci, nemá smysl měřit za chladného jarního dne a očekávat, že výsledek zachytí letní tepelnou zátěž. Pokud se naopak řeší chlad u vrat skladu nebo v expediční zóně, měření by mělo proběhnout v podmínkách, kdy se problém skutečně projevuje.
+U proměnlivých provozů navrhujeme měřicí místa a dobu měření tak, aby zachytila rozhodující pracovní situace. U rozsáhlejších hal nebo kancelářských prostor se obvykle měří více míst, protože podmínky se mohou výrazně lišit i v rámci jedné místnosti nebo provozní zóny.
 
-Stejně důležitý je provozní režim. Měření by mělo odpovídat běžné nebo kritické situaci, kterou chcete posoudit. U výroby je nutné vědět, zda běžely zdroje tepla, zda byla otevřená vrata, zda pracovala vzduchotechnika, zda se měřilo na denní nebo noční směně a zda byl provoz typický pro dané pracoviště.
+## Výstupy měření
 
-U proměnlivých provozů může být vhodné měřit více časových úseků nebo více míst. Jednorázová hodnota v jednom bodě nemusí vystihnout pracoviště, kde se podmínky během směny výrazně mění.
+Výstupem je protokol nebo odborný podklad, který obsahuje identifikaci pracovišť, popis pracovních činností, provozní režim během měření, použitou měřicí techniku, měřicí místa, naměřené hodnoty a odborné vyhodnocení.
 
-## Jak měření pomůže podnikovému ekologovi nebo BOZP
+V protokolu zákazník najde zejména:
 
-Měření mikroklimatu poskytne objektivní podklad pro rozhodování. Pomůže odlišit subjektivní stížnost od měřitelného problému a ukáže, zda je potřeba technické opatření, organizační změna, úprava pracovního režimu nebo další posouzení.
+1. popis měřených prostor a pracovních činností,
+2. naměřené hodnoty teploty, vlhkosti a proudění vzduchu,
+3. posouzení výsledků ve vztahu k charakteru práce a provozním podmínkám,
+4. vyhodnocení rozdílů mezi jednotlivými místy nebo režimy,
+5. závěr použitelný pro BOZP, KHS, kategorizaci prací nebo návrh opatření.
 
-Pro podnikového ekologa, bezpečnostního technika nebo personalistu je důležité, že měření může sloužit jako podklad pro komunikaci s vedením firmy i se zaměstnanci. Pokud jsou podmínky v pořádku, lze to doložit. Pokud v pořádku nejsou, je možné přesněji určit, kde problém vzniká a jaký typ opatření dává smysl.
+U pracovišť s významnou tepelnou nebo chladovou zátěží může výstup sloužit jako podklad pro úpravu pracovního režimu, přestávek, pitného režimu, větrání, klimatizace, stínění, izolace zdrojů tepla nebo změnu organizace práce.
 
-Výsledek měření může být důležitý také při kontrole KHS, při aktualizaci kategorizace prací, při řešení stížnosti, při návrhu klimatizace nebo větrání, při úpravě pracovních míst nebo při posouzení práce v tepelné či chladové zátěži.
+## Nejčastější zjištění v praxi
 
-## Nejčastější chyby v praxi
+V kancelářích se často potvrzuje nerovnoměrné proudění vzduchu z klimatizace, rozdíly mezi pracovními místy nebo nízká vlhkost vzduchu. Ve výrobních halách bývá problém v kombinaci technologických zdrojů tepla, nedostatečného větrání, otevřených vrat a sálání od strojů nebo materiálu.
 
-U mikroklimatu se často chybuje tím, že se hodnotí jen běžná teplota na nástěnném teploměru. Ta ale nemusí odpovídat podmínkám v místě, kde zaměstnanec skutečně pracuje. Rozdíl může být mezi pracovištěm u vrat, u okna, u pece, pod výustkou klimatizace nebo v hlubší části haly.
+Ve skladech a expedičních prostorech se často projevuje proudění studeného vzduchu při manipulaci s vraty. U kuchyní a provozů s tepelnou technologií bývá rozhodující skutečný režim vaření, pečení, mytí nebo jiné tepelné činnosti. U klimatizovaných prostor je důležité nejen nastavení teploty, ale také směr proudění, rychlost vzduchu a umístění pracovních míst.
 
-Další častou chybou je měření v nevhodný den nebo v nevhodném provozním režimu. Pokud se měří mimo běžnou výrobu, mimo špičku tepelné zátěže nebo při jinak nastavené vzduchotechnice, výsledek nemusí odpovídat problému, který zaměstnanci popisují.
-
-Problémem bývá také nejasné zadání. Pokud není předem určeno, zda se řeší horko, chlad, průvan, suchý vzduch, klimatizace, pracovní zátěž nebo podklad pro KHS, může být rozsah měření buď nedostatečný, nebo zbytečně široký.
-
-## Jaké podklady si připravit
-
-Před měřením je vhodné připravit základní informace o pracovišti a pracovních činnostech. Pomůže to správně navrhnout počet měřicích míst, dobu měření i vhodný termín.
-
-Pro návrh rozsahu měření obvykle potřebujeme zejména popis pracoviště, typ vykonávané práce, směnnost, počet zaměstnanců, půdorys nebo jednoduchý nákres prostoru, umístění zdrojů tepla nebo chladu, popis větrání a klimatizace, informace o stížnostech a údaj, kdy se problém nejvíce projevuje.
-
-U výrobních pracovišť je vhodné doplnit také popis technologie a provozního režimu. U kanceláří pomůže informace o klimatizaci, otevírání oken, umístění pracovních míst a časových obdobích, kdy zaměstnanci problém vnímají nejvíce. U kuchyní, skladů nebo provozů s chladem je důležité popsat střídání činností, otevírání vrat, pobyt v chlazených zónách a přechody mezi prostředími.
-
-## Co může následovat po měření
-
-Výsledkem měření by neměla být jen tabulka hodnot. Důležitý je praktický závěr, co naměřené hodnoty znamenají pro dané pracoviště a vykonávanou práci.
-
-Podle výsledku může být vhodné upravit větrání, změnit nastavení klimatizace, doplnit stínění, omezit proudění vzduchu na konkrétní pracovní místo, změnit organizaci práce, doplnit přestávky, upravit pitný režim, zlepšit izolaci zdrojů tepla nebo prověřit další technická opatření.
-
-U některých pracovišť může být potřebné měření opakovat v jiném ročním období. To platí hlavně tehdy, když se řeší letní horko, zimní chlad, proměnlivý provoz nebo rozdílné podmínky mezi směnami.
+Odborné posouzení proto vždy spojujeme s místní znalostí provozu. Samotná hodnota teploty bez kontextu často nevysvětlí příčinu problému.
 
 ## Co nám můžete poslat k posouzení
 
-Pokud řešíte horko, chlad, průvan nebo stížnosti zaměstnanců, pošlete nám stručný popis pracoviště, vykonávaných činností, směnnosti, zdrojů tepla nebo chladu, způsobu větrání a klimatizace, půdorys nebo jednoduchý nákres a popis toho, kdy se problém nejvíce projevuje.
+Pro návrh rozsahu měření nám pošlete stručný popis pracoviště, vykonávaných činností, směnnosti, zdrojů tepla nebo chladu, způsobu větrání a klimatizace, půdorys nebo jednoduchý nákres a popis situací, kdy se problém nejvíce projevuje.
 
-Navrhneme rozsah měření mikroklimatu podle pracovišť a pracovních činností. Posoudíme, kde má smysl měřit, v jakém období, za jakého provozního režimu a jaké veličiny je vhodné sledovat. Výsledkem může být podklad pro interní rozhodnutí, BOZP, komunikaci se zaměstnanci, KHS, kategorizaci prací nebo návrh technických opatření.
+Podle těchto podkladů navrhneme rozsah měření mikroklimatu, vhodná měřicí místa, termín měření a provozní režim, při kterém má měření proběhnout. Výsledkem bude odborný podklad použitelný pro interní rozhodnutí, BOZP, KHS, kategorizaci prací nebo návrh technických opatření.
 
 ## Shrnutí
 
-Měření mikroklimatu pomáhá objektivně posoudit teplotu, vlhkost a proudění vzduchu na pracovišti. Je užitečné zejména tam, kde se opakují stížnosti zaměstnanců, kde jsou zdroje tepla nebo chladu, kde pracuje klimatizace nebo větrání, případně kde je potřeba podklad pro KHS, BOZP nebo kategorizaci prací.
+Měření mikroklimatu objektivně posuzuje teplotu, vlhkost a proudění vzduchu na pracovišti. Využívá se při stížnostech zaměstnanců, podezření na tepelnou nebo chladovou zátěž, při úpravách větrání a klimatizace, při rekonstrukcích pracovišť a při přípravě podkladů pro KHS, BOZP nebo kategorizaci prací.
 
-Důležité je měřit správný problém ve správný čas. Letní tepelnou zátěž je vhodné posuzovat v období, kdy se skutečně projevuje, a chladovou zátěž v odpovídajících zimních podmínkách. Stejně důležité je zohlednit druh práce, směnnost, provoz technologie a rozmístění pracovních míst.
+Správně navržené měření zohledňuje druh práce, směnnost, roční období, provozní režim, zdroje tepla nebo chladu a rozmístění pracovních míst. Díky tomu lze určit skutečnou příčinu problému a navrhnout opatření, která odpovídají konkrétnímu pracovišti.
 
 ## Věcná opora článku
 
-Článek vychází zejména z požadavků na ochranu zdraví při práci, z právní úpravy mikroklimatických podmínek na pracovišti a z odborných informací Státního zdravotního ústavu k tepelně-vlhkostním podmínkám vnitřního prostředí pracovišť.
+Článek vychází z požadavků na ochranu zdraví při práci, z právní úpravy mikroklimatických podmínek na pracovišti a z odborných informací Státního zdravotního ústavu k tepelně-vlhkostním podmínkám vnitřního prostředí pracovišť.
 
 | Podklad | Praktický význam |
 |---|---|
 | [nařízení vlády č. 361/2007 Sb.](https://e-sbirka.gov.cz/sb/2007/361) | stanoví podmínky ochrany zdraví při práci včetně požadavků na rizikové faktory pracovních podmínek a mikroklimatické podmínky |
 | [zákon č. 258/2000 Sb., o ochraně veřejného zdraví](https://www.zakonyprolidi.cz/cs/2000-258) | tvoří základní rámec ochrany veřejného zdraví a dozoru nad pracovními podmínkami |
-| [SZÚ – mikroklimatické podmínky vnitřního prostředí pracovišť](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/tep-vlhk-mikroklim/mikrokli-pod-vnitr-pract/) | vysvětluje, že mikroklimatické podmínky jsou určeny teplotou, relativní vlhkostí a rychlostí proudění vzduchu |
-| [MZ ČR – kategorizace prací](https://mzd.gov.cz/kategorizace-praci-podle-zakona-o-ochrane-verejneho-zdravi/) | vysvětluje význam kategorizace prací jako nástroje hodnocení vlivu pracovních podmínek na zdraví zaměstnanců |
+| [SZÚ – mikroklimatické podmínky vnitřního prostředí pracovišť](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/tep-vlhk-mikroklim/mikrokli-pod-vnitr-pract/) | vysvětluje význam teploty, vlhkosti a proudění vzduchu při hodnocení mikroklimatu |
+| [MZ ČR – kategorizace prací](https://mzd.gov.cz/kategorizace-praci-podle-zakona-o-ochrane-verejneho-zdravi/) | popisuje kategorizaci prací jako nástroj hodnocení vlivu pracovních podmínek na zdraví zaměstnanců |
 | [Pracovní prostředí – NATURCHEM](https://www.naturchem.cz/sluzby/pracovni-prostredi) | návazná služba měření faktorů pracovního prostředí včetně mikroklimatu |
 
-Z praktického hlediska z těchto podkladů vyplývá, že mikroklima se nemá hodnotit pouze podle běžného pocitu nebo jednoho orientačního teploměru. Je potřeba posoudit konkrétní pracoviště, druh vykonávané práce, roční období, provozní režim, zdroje tepla nebo chladu, větrání, klimatizaci a reálné rozmístění zaměstnanců.
-
-Mikroklimatické podmínky jsou vzájemně provázané. Změna teploty, vlhkosti nebo proudění vzduchu může změnit celkový pocit tepelné pohody i míru zátěže. Proto je při měření důležité nejen získat hodnoty, ale také správně vyložit, co znamenají pro konkrétní pracovní činnost a pracovní prostředí.
+Z praktického hlediska je při hodnocení mikroklimatu nutné pracovat s konkrétním pracovištěm, druhem práce, ročním obdobím, provozním režimem, zdroji tepla nebo chladu, větráním, klimatizací a rozmístěním zaměstnanců. Teplota, vlhkost a proudění vzduchu se hodnotí společně, protože jejich kombinace rozhoduje o skutečných podmínkách práce.
 
 ## Užitečné odkazy
 

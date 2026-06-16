@@ -5,55 +5,55 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 44 |
-| Celkový odhadovaný čas | ~36,8 hodiny |
-| Aktuální fáze | UX úpravy service pages — sjednocení konverzních CTA |
+| Počet sezení celkem | 45 |
+| Celkový odhadovaný čas | ~37 hodiny |
+| Aktuální fáze | Tým a fotografie — sekce /o-spolecnosti-naturchem |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
 
 ---
 
-## Sezení: 16. 6. 2026, 09:46–10:33
+## Sezení: 16. 6. 2026, 09:46–10:40
 
 ### Přehled
-Automaticky založené sezení po commitu `3e33cda`.
+Sekce Tým na stránce `/o-spolecnosti-naturchem` dostala fotografie všech tří členů, kontaktní údaje a upravenou strukturu kartiček. Souběžně opraveny dva vizuální bugy — spodní border u gridových karet a zelená linka CTA pásu těsně pod týmem.
 
-**Zdroj popisu:** Git commit (automatická synchronizace)
+**Zdroj popisu:** AI konverzace
 
 ### Provedené změny
-#### Team: kontakty hned za rol├ş, popis a┼ż pod nimi; role Heziny zkr├ícena
-**Co bylo uděláno:** Team: kontakty hned za rol├ş, popis a┼ż pod nimi; role Heziny zkr├ícena (commit `6c13cf8`). Dotcene oblasti: app, components, lib, report, workflow.  
-**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
 
-#### Team: fotka ┼Żilkov├ę
-**Co bylo uděláno:** Team: fotka ┼Żilkov├ę (commit `ca19be3`). Dotcene oblasti: lib, report, workflow.  
-**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+#### Fotografie členů týmu
+**Co bylo uděláno:** Do složky `public/team/` přidány tři portréty (Hezina, Žilková, Svátová). Datová struktura `TeamMember` rozšířena o volitelné pole `photo`. Komponenta `TeamCard` zobrazuje fotografii v kruhovém avataru místo iniciál, pokud je fotka k dispozici; jinak zůstávají iniciály jako záloha.  
+**Proč:** Kartičky týmu zobrazovaly jen iniciály — přidání fotek zvyšuje důvěryhodnost a osobní charakter prezentace firmy.
 
-#### Team: kontakty (telefony + e-mail) pod ka┼żd├Żm ─Źlenem, nov├í sekce ...
-**Co bylo uděláno:** Team: kontakty (telefony + e-mail) pod ka┼żd├Żm ─Źlenem, nov├í sekce v kart─Ť (commit `85d7c5e`). Dotcene oblasti: app, components, lib, report, workflow.  
-**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+#### Zvětšení avataru ze 56 na 80px
+**Co bylo uděláno:** CSS třída `.team-card-avatar` upravena z `width/height: 56px` na `80px`, velikost písma iniciál zvýšena z `1rem` na `1.2rem`.  
+**Proč:** Původní velikost 56px byla v kontextu karty těžko viditelná — fotka na 56px nevypadala jako fotografie.
 
-#### Team: fotka Sv├ítov├ę + avatar zv─Ťt┼íen na 80px
-**Co bylo uděláno:** Team: fotka Sv├ítov├ę + avatar zv─Ťt┼íen na 80px (commit `c5fd947`). Dotcene oblasti: app, components, lib, report, workflow.  
-**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+#### Kontaktní údaje v kartičkách týmu
+**Co bylo uděláno:** Do `TeamMember` přidána pole `phones?: string[]` a `email?: string`. Každý člen doplněn o telefony a e-mail. Komponenta `TeamCard` vykresluje kontakty jako klikatelné odkazy (`tel:` / `mailto:`).  
+**Proč:** Návštěvník na stránce O společnosti hledá konkrétní osobu a chce hned vidět, kam zavolat nebo napsat — dosud musel přejít na `/kontakt`.
 
-#### Fix: odstranit spodn├ş border u sector a team karet
-**Co bylo uděláno:** Fix: odstranit spodn├ş border u sector a team karet - Karty v gridu se natahuj├ş na stejnou v├Ż┼íku (align-items: stretch + height: 100%), ─Ź├şm┼ż jejich spodn├ş border tvo┼Öil vizu├íln├ş horizont├íln├ş linku p┼Öes celou ┼í├ş┼Öku ┼Öady. Border-bottom-width: 0 probl├ęm odstra┼łuje ÔÇö vizu├íln├ş ohrani─Źen├ş spodn├ş ─Ź├ísti karty zaji┼í┼ąuje box-shadow.  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `a8edf22`). Dotcene oblasti: app.  
-**Proč:** Technicka nebo vizualni oprava - stabilnejsi a srozumitelnejsi web pro navstevniky.
+#### Přestrukturování kartiček: jméno → role → kontakty → popis
+**Co bylo uděláno:** Pořadí prvků v kartičce změněno tak, aby kontakty byly přímo za rolí, popis osoby až pod nimi. Role Ing. Heziny zkrácena z původní delší varianty na „Jednatel společnosti".  
+**Proč:** Původní rozložení s popisem před kontakty vypadalo nelogicky — primárním cílem návštěvníka je kontakt, ne životopis.
 
-#### Add Hezina photo to team cards on /o-spolecnosti-naturchem
-**Co bylo uděláno:** Add Hezina photo to team cards on /o-spolecnosti-naturchem - P┼Öid├ína fotografie Ing. Franti┼íka Heziny do karti─Źky t├Żmu. Ostatn├ş ─Źlenov├ę t├Żmu si zachovaj├ş inici├íly jako z├ílohu, dokud nebudou fotky k dispozici.  Co se zm─Ťnilo: - public/team/hezina.jpg ÔÇö fotografie - TeamMember typ roz┼í├ş┼Öen o voliteln├ę pole photo - TeamSection zobrazuje foto m├şsto inici├íl, pokud je k dispozici - CSS pro kruhov├Ż avatar s fotografi├ş  Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com> (commit `3e33cda`). Dotcene oblasti: app, components, lib.  
-**Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
+#### Oprava vizuálního bugu — spodní border u gridových karet
+**Co bylo uděláno:** Do CSS přidáno `border-bottom-width: 0` pro `.team-card` i `.sector-card`. Vizuální ohraničení spodní části karty zůstává zachováno přes `box-shadow`.  
+**Proč:** Kartičky v CSS gridu se roztahují na stejnou výšku (`align-items: stretch`), čímž se jejich spodní bordery seřadily do jedné vizuální horizontální linky přes celou šířku řady. Nebylo to záměrné, ale výsledek vypadal jako chyba grafiky.
+
+#### Oprava mezery mezi kartami týmu a CTA pásem
+**Co bylo uděláno:** Na `.team-member-cards` přidán `margin-bottom: var(--section-padding-y)`.  
+**Proč:** CSS pravidlo `section.content-block:has(+ .container)` ruší `padding-bottom` sekci, za níž bezprostředně následuje `.container`. `PageCtaStrip` má `border-top: 3px solid var(--forest)` — po zrušení paddingu se tento zelený border zobrazil těsně pod kartami týmu. `margin-bottom` na vnitřním prvku gridu přežije kolaps vnějšího paddingu a zachová správnou mezeru.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~47 min
-**Rozložení:** 16. 6. 2026 09:46–10:33 (~47 min)
-**Metoda odhadu:** git
-**Počet výměn s AI:** —  
-*Poznámka: automatický záznam z post-commit hooku.*
+**Odhadovaná doba práce:** ~54 min  
+**Rozložení:** 16. 6. 2026 09:46–10:40 (~54 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** ~10  
 
 ### Technická poznámka
-Commit: `3e33cdaad7b85e0b9f5f1d1f3aaed9f4a7d2008d`
+Dotčené soubory: `src/lib/team.ts`, `src/components/TeamSection.tsx`, `src/app/globals.css`, `public/team/` (3 fotografie).
 
 ---
 

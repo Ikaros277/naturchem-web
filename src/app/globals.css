@@ -1805,6 +1805,10 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.team-member-cards {
+  margin-bottom: var(--section-padding-y);
+}
+
 .team-member-cards .team-card h3,
 .team-card-name {
   margin-top: 0;

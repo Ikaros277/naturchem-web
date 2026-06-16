@@ -13,7 +13,7 @@
 
 ---
 
-## Sezení: 16. 6. 2026, 09:46–10:30
+## Sezení: 16. 6. 2026, 09:46–10:33
 
 ### Přehled
 Automaticky založené sezení po commitu `3e33cda`.
@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `3e33cda`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Team: kontakty hned za rol├ş, popis a┼ż pod nimi; role Heziny zkr├ícena
+**Co bylo uděláno:** Team: kontakty hned za rol├ş, popis a┼ż pod nimi; role Heziny zkr├ícena (commit `6c13cf8`). Dotcene oblasti: app, components, lib, report, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### Team: fotka ┼Żilkov├ę
 **Co bylo uděláno:** Team: fotka ┼Żilkov├ę (commit `ca19be3`). Dotcene oblasti: lib, report, workflow.  
 **Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
@@ -42,8 +46,8 @@ Automaticky založené sezení po commitu `3e33cda`.
 **Proč:** Prubezna uprava webu naturchem.cz v ramci dohodnutych UX a obsahovych ukolu.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~45 min
-**Rozložení:** 16. 6. 2026 09:46–10:30 (~45 min)
+**Odhadovaná doba práce:** ~47 min
+**Rozložení:** 16. 6. 2026 09:46–10:33 (~47 min)
 **Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*

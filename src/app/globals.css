@@ -1816,6 +1816,7 @@ footer {
   grid-template-columns: auto 1fr;
   gap: 1rem 1.15rem;
   align-items: start;
+  border-bottom-width: 0;
 }
 
 .team-card-avatar {
@@ -5610,6 +5611,7 @@ main.contact-page + .site-footer {
 
 .sector-card {
   box-shadow: var(--shadow-card);
+  border-bottom-width: 0;
 }
 
 .sector-card-title {

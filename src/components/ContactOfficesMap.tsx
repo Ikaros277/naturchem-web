@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import {
   getCompanyOfficeMapPoints,
+  officeAddressLine,
   officeMapsEmbedUrl,
   officeMapsSearchUrl,
   type CompanyOfficeMapPoint
@@ -83,12 +84,18 @@ function loadGoogleMapsScript(apiKey: string): Promise<void> {
 }
 
 function officeInfoContent(office: CompanyOfficeMapPoint): string {
-  const address = `${office.street}, ${office.postalCode} ${office.city}`;
+  const address = officeAddressLine(office);
   const mapsUrl = officeMapsSearchUrl(office);
   return `<div class="contact-map-infowindow"><strong>${office.label}</strong><br>${address}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Otevřít v Mapách Google</a></div>`;
 }
 
-function ContactOfficesMapInteractive({ apiKey }: { apiKey: string }) {
+function ContactOfficesMapInteractive({
+  apiKey,
+  variant
+}: {
+  apiKey: string;
+  variant: "hero" | "panel";
+}) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const [loadError, setLoadError] = useState(false);
 
@@ -141,34 +148,74 @@ function ContactOfficesMapInteractive({ apiKey }: { apiKey: string }) {
   }, [apiKey]);
 
   if (loadError) {
-    return <ContactOfficesMapEmbedFallback />;
+    return <ContactOfficesMapEmbed variant={variant} />;
   }
 
-  return <div ref={mapContainerRef} className="contact-offices-map-canvas" role="application" aria-label="Mapa provozoven NATURCHEM" />;
+  return (
+    <div
+      ref={mapContainerRef}
+      className="contact-offices-map-canvas"
+      role="application"
+      aria-label="Mapa provozoven NATURCHEM"
+    />
+  );
 }
 
-function ContactOfficesMapEmbedFallback() {
-  const primaryOffice = offices[0];
+/** Embed přepínač poboček — funguje bez API klíče (Maps Embed je zdarma). */
+function ContactOfficesMapEmbed({ variant }: { variant: "hero" | "panel" }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const active = offices[activeIndex];
+  const panelId = `contact-map-panel-${variant}`;
 
   return (
-    <div className="contact-offices-map-fallback">
-      <iframe
-        title={`Mapa provozovny ${primaryOffice.label}`}
-        className="contact-offices-map-iframe"
-        src={officeMapsEmbedUrl(primaryOffice)}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        allowFullScreen
-      />
-      <ul className="contact-offices-map-links" aria-label="Další provozovny">
-        {offices.map((office) => (
-          <li key={office.label}>
-            <a href={officeMapsSearchUrl(office)} target="_blank" rel="noopener noreferrer">
+    <div className={`contact-offices-map-embed contact-offices-map-embed--${variant}`}>
+      <div className="contact-offices-map-picker" role="tablist" aria-label="Vyberte provozovnu">
+        {offices.map((office, index) => {
+          const tabId = `contact-map-tab-${variant}-${index}`;
+          const isActive = index === activeIndex;
+          return (
+            <button
+              key={office.label}
+              type="button"
+              role="tab"
+              id={tabId}
+              aria-selected={isActive}
+              aria-controls={panelId}
+              className={`contact-offices-map-tab${isActive ? " is-active" : ""}`}
+              onClick={() => setActiveIndex(index)}
+            >
               {office.label}
-            </a>
-          </li>
-        ))}
-      </ul>
+            </button>
+          );
+        })}
+      </div>
+      <div
+        id={panelId}
+        role="tabpanel"
+        aria-labelledby={`contact-map-tab-${variant}-${activeIndex}`}
+        className="contact-offices-map-frame-wrap"
+      >
+        <iframe
+          key={active.label}
+          title={`Mapa provozovny ${active.label}`}
+          className="contact-offices-map-iframe"
+          src={officeMapsEmbedUrl(active)}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      </div>
+      <div className="contact-offices-map-embed-foot">
+        <p className="contact-offices-map-address">{officeAddressLine(active)}</p>
+        <a
+          className="contact-offices-map-external"
+          href={officeMapsSearchUrl(active)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Otevřít v Mapách Google
+        </a>
+      </div>
     </div>
   );
 }
@@ -180,9 +227,9 @@ type Props = {
 
 export function ContactOfficesMap({ variant = "hero" }: Props) {
   const content = mapsApiKey ? (
-    <ContactOfficesMapInteractive apiKey={mapsApiKey} />
+    <ContactOfficesMapInteractive apiKey={mapsApiKey} variant={variant} />
   ) : (
-    <ContactOfficesMapEmbedFallback />
+    <ContactOfficesMapEmbed variant={variant} />
   );
 
   return <div className={`contact-offices-map contact-offices-map--${variant}`}>{content}</div>;

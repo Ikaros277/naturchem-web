@@ -11,7 +11,7 @@ export type TeamMember = {
 export const teamMembers: TeamMember[] = [
   {
     name: "Ing. František Hezina",
-    role: "Jednatel společnosti, odborná garance zakázek",
+    role: "Jednatel společnosti",
     details: [
       "Soudní znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování emisí skleníkových plynů a oznámení EIA."
     ],

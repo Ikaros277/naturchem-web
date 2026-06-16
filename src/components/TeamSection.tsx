@@ -19,11 +19,6 @@ function TeamCard({ member, compact = false }: { member: (typeof teamMembers)[nu
       <div className="team-card-content">
         <h3 className="team-card-name">{member.name}</h3>
         <p className="team-card-role muted">{member.role}</p>
-        {detailLines.map((line) => (
-          <p key={line} className="team-card-detail">
-            {line}
-          </p>
-        ))}
         {(member.phones?.length || member.email) ? (
           <div className="team-card-contacts">
             {member.phones?.map((phone) => (
@@ -38,6 +33,11 @@ function TeamCard({ member, compact = false }: { member: (typeof teamMembers)[nu
             ) : null}
           </div>
         ) : null}
+        {detailLines.map((line) => (
+          <p key={line} className="team-card-detail">
+            {line}
+          </p>
+        ))}
       </div>
     </article>
   );

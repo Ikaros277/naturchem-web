@@ -7,6 +7,7 @@ import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 import { contactFormHref } from "@/lib/contact-url";
 import { globalCta, headerMainNav, kontaktNav, oNasNav } from "@/lib/navigation";
+import { oNasMegaGroups } from "@/lib/o-nas-megamenu";
 import { serviceMegaGroups } from "@/lib/service-megamenu";
 import { BrandLogo } from "@/components/BrandLogo";
 import { company } from "@/lib/site";
@@ -53,13 +54,42 @@ function ServiceMegaMenu() {
 
 function ONasDropdown() {
   return (
-    <div id="nav-dropdown-o-nas" className="nav-dropdown" aria-label={oNasNav.label}>
-      {oNasNav.links.map((item) => (
-        <Link key={item.href} href={item.href} className="nav-dropdown-link">
-          {item.label}
-        </Link>
+    <div id="nav-dropdown-o-nas" className="nav-dropdown nav-dropdown-o-nas" aria-label={oNasNav.label}>
+      {oNasMegaGroups.map((group) => (
+        <div key={group.title} className="nav-dropdown-group">
+          <span className="nav-dropdown-label">{group.title}</span>
+          {group.links.map((item) => (
+            <Link key={item.href} href={item.href} className="nav-dropdown-link">
+              {item.label}
+            </Link>
+          ))}
+        </div>
       ))}
     </div>
+  );
+}
+
+function MobileONasGroups({ onNavigate }: { onNavigate?: () => void }) {
+  return (
+    <>
+      {oNasMegaGroups.map((group) => (
+        <details key={group.title} className="nav-mobile-details nav-mobile-nested">
+          <summary>{group.title}</summary>
+          <div className="nav-mobile-sub">
+            {group.links.map((item) => (
+              <Link
+                key={`${group.title}-${item.label}`}
+                href={item.href}
+                className="nav-mobile-sub-link"
+                onClick={onNavigate}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </details>
+      ))}
+    </>
   );
 }
 
@@ -242,16 +272,7 @@ export function Header() {
                 <details className="nav-mobile-details">
                   <summary>{oNasNav.label}</summary>
                   <div className="nav-mobile-sub">
-                    {oNasNav.links.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="nav-mobile-sub-link"
-                        onClick={closeMenu}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                    <MobileONasGroups onNavigate={closeMenu} />
                   </div>
                 </details>
                 <Link href={kontaktNav.href} className="nav-mobile-link" onClick={closeMenu}>

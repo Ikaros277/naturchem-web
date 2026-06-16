@@ -3087,8 +3087,8 @@ a:hover {
 }
 
 .contact-offices-map-picker {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.35rem;
   padding: 0.55rem 0.65rem;
   background: rgba(7, 24, 39, 0.92);
@@ -3100,10 +3100,15 @@ a:hover {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
   font: inherit;
-  font-size: 0.78rem;
+  font-size: clamp(0.68rem, 1.5vw, 0.78rem);
   font-weight: 600;
-  padding: 0.35rem 0.7rem;
+  padding: 0.38rem 0.45rem;
   cursor: pointer;
+  min-width: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition:
     background 0.15s ease,
     border-color 0.15s ease;
@@ -3207,6 +3212,36 @@ a:hover {
   grid-template-rows: auto minmax(0, 1fr) auto;
   min-height: 100%;
   height: 100%;
+}
+
+/* V hero je mapa oříznutá šikmým řezem — přepínač dáme pod mapu, kde je plná šířka. */
+.contact-offices-map--hero .contact-offices-map-leaflet {
+  grid-template-rows: minmax(0, 1fr) auto auto;
+}
+
+.contact-offices-map--hero .contact-offices-map-frame-wrap {
+  grid-row: 1;
+}
+
+.contact-offices-map--hero .contact-offices-map-picker {
+  grid-row: 2;
+  background: rgba(7, 24, 39, 0.96);
+}
+
+.contact-offices-map--hero .contact-offices-map-embed-foot {
+  grid-row: 3;
+}
+
+@media (max-width: 520px) {
+  .contact-offices-map-picker {
+    gap: 0.25rem;
+    padding: 0.45rem 0.5rem;
+  }
+
+  .contact-offices-map-tab {
+    font-size: 0.66rem;
+    padding: 0.34rem 0.3rem;
+  }
 }
 
 .contact-offices-map-canvas--leaflet {

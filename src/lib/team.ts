@@ -3,6 +3,7 @@ export type TeamMember = {
   role: string;
   details: string[];
   phone?: string;
+  photo?: string;
 };
 
 /** Před publikací ověřit telefony a role. */
@@ -12,7 +13,8 @@ export const teamMembers: TeamMember[] = [
     role: "Jednatel společnosti, odborná garance zakázek",
     details: [
       "Soudní znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování emisí skleníkových plynů a oznámení EIA."
-    ]
+    ],
+    photo: "/team/hezina.jpg"
   },
   {
     name: "Mgr. Markéta Žilková",

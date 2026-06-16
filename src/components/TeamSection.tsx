@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTeamInitials } from "@/lib/team-initials";
 import { teamMembers } from "@/lib/team";
 
@@ -6,9 +7,15 @@ function TeamCard({ member, compact = false }: { member: (typeof teamMembers)[nu
 
   return (
     <article className="card team-card">
-      <div className="team-card-avatar" aria-hidden="true">
-        {getTeamInitials(member.name)}
-      </div>
+      {member.photo ? (
+        <div className="team-card-avatar team-card-avatar--photo" aria-hidden="true">
+          <Image src={member.photo} alt="" width={56} height={56} className="team-card-photo" />
+        </div>
+      ) : (
+        <div className="team-card-avatar" aria-hidden="true">
+          {getTeamInitials(member.name)}
+        </div>
+      )}
       <div className="team-card-content">
         <h3 className="team-card-name">{member.name}</h3>
         <p className="team-card-role muted">{member.role}</p>

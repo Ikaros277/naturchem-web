@@ -6593,10 +6593,23 @@ main.contact-page + .site-footer {
 
 .nav-item-mega .nav-dropdown-wide {
   min-width: min(920px, calc(100vw - 2rem));
+  overflow: hidden;
 }
 
 .mega-menu-grid-four {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  column-gap: 0.75rem;
+}
+
+.mega-menu-grid-four .mega-menu-group {
+  min-width: 0;
+  height: 100%;
+  padding: 0.45rem 0.35rem;
+}
+
+.mega-menu-grid-four .nav-dropdown-link {
+  border-radius: 0.4rem;
 }
 
 .hero-grid {

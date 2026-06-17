@@ -25,13 +25,13 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
       "Verfügbare Dokumentation: Projekt, Betriebsanleitung, Betriebserlaubnis, technische Datenblätter",
       "Daten zu Betriebsart, Kapazität, Stapeln, Lärmquellen oder Transport",
       "Fotos von Technik, Schornsteinen, Messstellen oder der Anlagenumgebung",
-      "any communication with KHS, ČIŽP, the regional authority or building authority"
+      "Jegliche Kommunikation mit KHS, ČIŽP, der Regionalbehörde oder dem Bauamt"
     ]
   },
   lakovny: {
     metadataTitle: "Emissions- und Arbeitsplatzumgebungsmessung in Lackierereien",
     metadataDescription:
-      "Sector overview for paint shops: VOC/TOC, extraction, filtration, workplace exposure and documentation for regional authorities, ČIŽP and KHS.",
+      "Branchenübersicht für Lackierereien: VOC/TOC, Absaugung, Filtration, Arbeitsplatzexposition und Dokumentation für Gebietskörperschaften, ČIŽP und KHS.",
     title: "Lackierereien",
     slug: "lakovny",
     intro:
@@ -39,7 +39,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     typicalProblems: [
       "schwankende Emissionen je nach Anwendung und Härtungsmodus",
       "unzureichende oder ungleichmäßige Extraktion",
-      "missing link to the operating manual and regional authority / ČIŽP requirements",
+      "Fehlender Link zur Bedienungsanleitung und zu den Anforderungen der regionalen Behörde / ČIŽP",
       "unvollständige Dokumentation der verwendeten Lösungsmittel und Gemische"
     ],
     docs: [
@@ -98,7 +98,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
       "Betriebserlaubnisbescheid und Betriebshandbuch",
       "Technische Parameter des Kessels, Brennstoff- und Lastmodi",
       "Angaben zur Messstelle und zum Abgasweg",
-      "previous protocols or ČIŽP / regional authority requirement"
+      "frühere Protokolle oder ČIŽP / regionale Behördenanforderungen"
     ],
     process: [
       "Wir klären den Zweck der Messung und den rechtlichen Kontext",

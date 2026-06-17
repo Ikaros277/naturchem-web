@@ -3,7 +3,7 @@ export const aboutPageMetadata = {
     absolute: "Über NATURCHEM – Messungen, Studien und Genehmigungsunterlagen"
   },
   description:
-    "An accredited measurement and consulting company — a team under the professional supervision of Ing. František Hezina. Measurements, studies and permitting documentation for industry, investors and public authorities — more than 36 years of experience."
+    "Ein akkreditiertes Mess- und Beratungsunternehmen – ein Team unter der professionellen Aufsicht von Ing. František Hezina. Messungen, Studien und Genehmigungsunterlagen für Industrie, Investoren und Behörden – mehr als 36 Jahre Erfahrung."
 } as const;
 
 export const aboutPageContent = {
@@ -16,15 +16,15 @@ export const aboutPageContent = {
     eyebrow: "Akkreditiertes Mess- und Beratungsunternehmen",
     title: "Über NATURCHEM",
     lead:
-      "We are a team of measurement and environmental specialists under the professional supervision of Ing. František Hezina. We provide measurements, studies and permitting documentation — for industry, investors, designers and public authorities."
+      "Wir sind ein Team von Mess- und Umweltspezialisten unter der professionellen Aufsicht von Ing. František Hezina. Wir erstellen Messungen, Studien und Genehmigungsunterlagen – für Industrie, Investoren, Planer und Behörden."
   },
   trustBandHeading: "Glaubwürdigkeit und Berechtigungen",
   statsAriaLabel: "Erfahrung in Zahlen",
   whoWeAre: {
     title: "Wer wir sind",
     paragraphs: [
-      "NATURCHEM, s.r.o. is an accredited measurement and consulting company. We carry out measurements and prepare studies from Havlíčkův Brod, České Budějovice and Prague; we handle field projects throughout the Czech Republic.",
-      "The technical side of every project is managed by a team under the supervision of Ing. František Hezina — from scoping through to deliverables for authorities. We work for industrial facilities, investors, designers and public authorities.",
+      "NATURCHEM, s.r.o. ist ein akkreditiertes Mess- und Beratungsunternehmen. Wir führen Messungen durch und erstellen Studien in Havlíčkův Brod, České Budějovice und Prag; Wir wickeln Feldprojekte in der gesamten Tschechischen Republik ab.",
+      "Die technische Seite jedes Projekts wird von einem Team unter der Aufsicht von Ing. František Hezina verwaltet – vom Scoping bis hin zu den Ergebnissen für die Behörden. Wir arbeiten für Industrieanlagen, Investoren, Planer und Behörden.",
       "Wir sind nicht nur ein Labor mit einer einzigen Ausgabeart. Messungen, Berechnungen, Studien und Dokumentationen für Behörden können mit uns abgewickelt werden – ohne die Koordination mehrerer Lieferanten."
     ],
     relatedLinksIntro:
@@ -40,9 +40,9 @@ export const aboutPageContent = {
     title: "Professionelle Betreuung"
   },
   guaranteeCredentials:
-    "Ing. František Hezina is responsible for the technical side of projects — managing director, professional supervision, court-appointed expert, authorised person for emission measurements, expert reports, dispersion studies, greenhouse gas emission verification and EIA notifications.",
+    "Ing. František Hezina ist für die technische Seite der Projekte verantwortlich – Geschäftsführer, Fachaufsicht, gerichtlich bestellter Sachverständiger, bevollmächtigte Person für Emissionsmessungen, Gutachten, Ausbreitungsstudien, Überprüfung der Treibhausgasemissionen und EIA-Meldungen.",
   team: {
-    title: "Team"
+    title: "Unser Team"
   },
   personSchema: {
     jobTitle: "Geschäftsführer, professionelle Betreuung von Projekten"

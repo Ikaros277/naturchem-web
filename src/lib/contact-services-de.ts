@@ -42,7 +42,7 @@ export const CONTACT_SERVICE_LABELS_EN: Record<ContactServiceOption, string> = {
   "Nejsem si jistý": "Ich bin mir nicht sicher",
   "EIA, posudky a poradenství": "UVP und Absichtserklärung",
   "Odborný posudek a provozní řád": "Gutachten",
-  "ISPOP a GHG": "ISPOP",
+  "ISPOP a GHG": "ISPOP und Treibhausgase",
 };
 
 export function sectorContactMessage(sectorTitle: string): string {

@@ -2,7 +2,7 @@
 export const serviceTrustBandItems = [
   "Akkreditiertes Labor Nr. 1599",
   "ČSN EN ISO/IEC 17025",
-  "Outputs for KHS, ČIŽP and regional authorities",
+  "Ausgänge für KHS, ČIŽP und regionale Behörden",
   "UVP-Genehmigung und Gutachten"
 ] as const;
 
@@ -12,5 +12,5 @@ export const homeTrustBandItems = [
   "ČSN EN ISO/IEC 17025",
   "UVP-Genehmigung, Ausbreitungsstudien, Gutachten, Treibhausgasemissionen",
   "Vom Gericht bestellter Sachverständiger",
-  "Outputs for KHS, ČIŽP, regional authorities and building offices"
+  "Ausgänge für KHS, ČIŽP, Gebietskörperschaften und Bauämter"
 ] as const;

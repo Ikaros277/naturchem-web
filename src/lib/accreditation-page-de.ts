@@ -17,7 +17,7 @@ export const accreditationFacts = [
 
 export const customerBenefits: Array<{ icon: ServiceIconKey; text: string }> = [
   { icon: "ippc", text: "Ergebnisse, die bei der Inspektion nachvollziehbar und vertretbar sind" },
-  { icon: "bezpecnostni-listy", text: "Protocols prepared directly for ČIŽP, KHS or the building authority" },
+  { icon: "bezpecnostni-listy", text: "Protokolle direkt für ČIŽP, KHS oder das Bauamt erstellt" },
   { icon: "skoleni", text: "Professionelle Interpretation von Ergebnissen – nicht nur von Zahlen" },
   { icon: "povoleni", text: "Immer im Einklang mit dem gültigen Zertifikat und dessen Anhang" }
 ];
@@ -59,7 +59,7 @@ export const accreditationPageContent = {
     eyebrow: "Nachweis der Fachkompetenz",
     title: "Akkreditierung, Zulassungen und Berufsqualifikationen",
     lead:
-      "Results from NATURCHEM stand up to inspection by ČIŽP, KHS and in building permitting proceedings — here are the certificates behind them."
+      "Ergebnisse von NATURCHEM halten der Prüfung durch ČIŽP, KHS und im Baugenehmigungsverfahren stand – hier sind die Zertifikate dahinter."
   },
   overview: {
     factsTitle: "Wichtige Akkreditierungsdetails",

@@ -20,7 +20,7 @@ export const privacyPageContent = {
       privacyContactLabel: "Kontakt für datenschutzrechtliche Fragen:"
     },
     definitions: {
-      heading: "2. Was sind personenbezogene Daten und was bedeutet Verarbeitung?",
+      heading: "2. Was sind personenbezogene Daten und was Verarbeitung bedeutet?",
       personalDataParagraph:
         "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. Unter Verarbeitung versteht man jeden Vorgang, der mit personenbezogenen Daten durchgeführt wird – Erhebung, Speicherung, Nutzung, Offenlegung, Löschung usw.",
       scopeParagraph:

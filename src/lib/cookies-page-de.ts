@@ -35,7 +35,7 @@ export const cookiesPageContent = {
       statistical: {
         subheading: "3.2 Statistisch",
         paragraph:
-          "These help us understand how the website is used (pages visited, interactions). Wir nutzen insbesondere Google Analytics 4. Wir aktivieren diese erst nach Ihrer Einwilligung."
+          "Diese helfen uns zu verstehen, wie die Website genutzt wird (besuchte Seiten, Interaktionen). Wir nutzen insbesondere Google Analytics 4. Wir nutzen diese erst nach Ihrer Einwilligung."
       },
       marketing: {
         subheading: "3.3 Marketing",

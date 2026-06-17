@@ -18,7 +18,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "emise",
     title: "Emissionsmessung aus stationären Quellen",
     intro:
-      "Authority request or scheduled compliance measurement? We measure emissions from a stack or vent and deliver an accredited report for operating permits, ČIŽP, the regional authority or ISPOP.",
+      "Behördenanfrage oder geplante Compliance-Messung? Wir messen die Emissionen eines Schornsteins oder einer Entlüftung und liefern einen akkreditierten Bericht für Betriebsgenehmigungen, ČIŽP, die regionale Behörde oder ISPOP.",
     scope: [
       "Wir messen NOx, CO, SO₂, O₂, TOC/VOC, Partikel, HCl, Metalle und andere Bestandteile gemäß Betriebserlaubnis und Auftrag",
       "Wir beurteilen den Messpunkt, die Entlüftung und die Übereinstimmung mit der Betriebsanleitung",
@@ -27,7 +27,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     whenNeeded: [
       "Sie benötigen eine regelmäßige oder einmalige Messung gemäß der Verordnung Nr. 415/2012 Slg. und die Betriebserlaubnis",
-      "The regional authority, ČIŽP or inspection body requires measurement",
+      "Die regionale Behörde, ČIŽP oder Inspektionsstelle verlangt eine Messung",
       "Sie ändern Brennstoff, Rohstoff, Technologie oder Quellenkapazität",
       "Sie benötigen Unterlagen für eine Ausbreitungsstudie, UVP, Gutachten oder Betriebsdokumentation"
     ],
@@ -37,7 +37,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       "Messung von Blockheizkraftwerken",
       "Messung der Prozessentlüftung vor Genehmigungsänderung",
       "Messung als Dokumentation für ISPOP, Gutachten oder Ausbreitungsstudie",
-      "measurement following regional authority or ČIŽP request"
+      "Messung auf Anfrage der regionalen Behörde oder ČIŽP"
     ],
     docs: [
       "Betriebserlaubnisbescheid oder Auszug aus integrierter Genehmigung/Bedienungsanleitung",

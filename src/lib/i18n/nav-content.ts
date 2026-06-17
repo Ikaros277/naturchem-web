@@ -115,7 +115,9 @@ export function getFooterNav(locale: Locale) {
       ? [company.branchAddresses[0].label, company.branchAddresses[1].label, company.address.city].join(
           " · "
         )
-      : "České Budějovice · Prague 5 · Havlíčkův Brod";
+      : locale === "de"
+        ? "České Budějovice · Prag 5 · Havlíčkův Brod"
+        : "České Budějovice · Prague 5 · Havlíčkův Brod";
 
   return {
     footerCompanyLinks,

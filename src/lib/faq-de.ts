@@ -20,7 +20,7 @@ const L = {
 export const faqPageTitle = "Häufig gestellte Fragen";
 
 export const faqPageIntro =
-  "Find out whether you need measurement, a study or an operating manual — and what to send ČIŽP, KHS or the building authority as initial documentation.";
+  "Finden Sie heraus, ob Sie ein Aufmaß, eine Studie oder eine Betriebsanleitung benötigen – und was Sie als Erstdokumentation an ČIŽP, KHS oder an das Bauamt senden können.";
 
 export const faqIntroCtas: FaqLink[] = [
   { label: "Senden Sie Materialien zur Bewertung", href: contactUrl("Nejsem si jistý") }
@@ -77,13 +77,13 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Sind die Ergebnisse für die Behörden akzeptabel?",
         paragraphs: [
-          "Yes. For protocols, studies and assessments we align with the specific recipients: the operator, designer, investor, KHS, ČIŽP, regional authority, building authority or EIA proceedings."
+          "Ja. Für Protokolle, Studien und Gutachten richten wir uns nach den konkreten Adressaten: Betreiber, Planer, Investor, KHS, ČIŽP, Landesbehörde, Baubehörde oder EIA Verfahren."
         ]
       },
       {
         q: "Wo sind Sie tätig?",
         paragraphs: [
-          "We are based in Havlíčkův Brod, České Budějovice and Prague. We also handle projects in other regions depending on the service type, site accessibility, representative operating mode and any notification deadlines."
+          "Wir sind in Havlíčkův Brod, České Budějovice und Prag ansässig. Abhängig von der Leistungsart, der Erreichbarkeit des Standorts, der repräsentativen Betriebsweise und etwaigen Anmeldefristen wickeln wir auch Projekte in anderen Regionen ab."
         ]
       }
     ]
@@ -506,7 +506,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Können Sie eine Autoritätsanforderung beurteilen?",
         paragraphs: [
-          "Yes. From a KHS, ČIŽP, regional authority or building authority requirement we determine what type of deliverable is needed and which annexes will be decisive for further proceedings."
+          "Ja. Anhand einer KHS-, ČIŽP-, regionalen oder bauaufsichtlichen Anforderung ermitteln wir, welche Art von Leistung benötigt wird und welche Anlagen für das weitere Verfahren maßgebend sind."
         ]
       },
       {

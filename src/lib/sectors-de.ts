@@ -19,7 +19,7 @@ export const sectorsEn: Sector[] = [
     homeFeatured: true,
     description:
       "Motoremissionen, Lärm, Ausbreitung und UVP für Biogas und Kraft-Wärme-Kopplung – koordinierte Behördenverbindung in einem Sektor.",
-    typical: "emission measurement, dispersion studies, noise studies, EIA, ČIŽP, ISPOP",
+    typical: "Emissionsmessung, Ausbreitungsstudien, Lärmstudien, EIA, ČIŽP, ISPOP",
     ariaLabel: "Leistungen für Biogasanlagen und Blockheizkraftwerke ansehen",
     linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
   },
@@ -38,7 +38,7 @@ export const sectorsEn: Sector[] = [
     href: "/provozy-a-technologie/lakovny",
     homeFeatured: true,
     description:
-      "VOC/TOC, extraction and workplace exposure at paint lines — protocols for regional authorities and ČIŽP.",
+      "VOC/TOC, Absaugung und Arbeitsplatzexposition an Lackierstraßen – Protokolle für regionale Behörden und ČIŽP.",
     typical:
       "VOC/TOC, TSP, Datenblätter der Beschichtungsstoffe, Betriebsanleitung, Dispersionsstudien",
     ariaLabel: "Sehen Sie sich Dienstleistungen für Lackierereien und Oberflächenbehandlung an",

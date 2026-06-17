@@ -36,7 +36,7 @@ export const accreditedLabScope = {
   },
   environment: {
     title: "Außerberufliches Umfeld",
-    items: ["noise (LAeq, LAFmax per applicable ČSN ISO 1996 methods)"]
+    items: ["Lärm (LAeq, LAFmax gemäß den anwendbaren ČSN ISO 1996-Methoden)"]
   }
 } as const;
 

@@ -69,7 +69,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     scope: [
       "Wir erstellen Beurteilungen für eine Quelle, einen Technologiewechsel oder eine Kapazitätsänderung",
       "Wir verknüpfen Emissionsmessungen, Ausbreitungsstudien und Betriebsanleitungen",
-      "We prepare responses to requests from the regional authority or ČIŽP",
+      "Wir bereiten Antworten auf Anfragen der Regionalbehörde oder ČIŽP vor",
       "Zusammenfassung für den Investor vor Einreichung eines Betriebsgenehmigungsantrags"
     ],
     whenNeeded: [
@@ -126,13 +126,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Wir erstellen eine neue Betriebsanleitung für eine Luftverschmutzungsquelle",
       "Wir aktualisieren nach Technologie-, Stack- oder Notfallverfahrensänderungen",
       "Wir richten uns nach der Betriebserlaubnis und den neuesten Emissionsmessungen",
-      "We revise on request from the regional authority or ČIŽP"
+      "Wir überarbeiten auf Anfrage bei der Regionalbehörde oder ČIŽP"
     ],
     whenNeeded: [
       "Sie planen eine neue Quelle oder eine Betriebsgenehmigungsänderung",
       "Sie ändern Technologie, Brennstoff, Schornstein oder Abgasreinigungsausrüstung",
       "Die Betriebsanleitung spiegelt nicht mehr den tatsächlichen Betrieb wider",
-      "The regional authority or ČIŽP requires documentation revision"
+      "Die regionale Behörde oder ČIŽP verlangt eine Überarbeitung der Dokumentation"
     ],
     practicalSituations: [
       "Aktualisierung der Bedienungsanleitung nach Filteraustausch",

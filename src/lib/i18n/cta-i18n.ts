@@ -32,7 +32,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         text: isDe
           ? "Keine Antwort gefunden? Senden Sie Ihre Frage oder Unterlagen direkt."
           : "Didn't find an answer? Send your question or documents directly.",
-        primaryLabel: "Contact NATURCHEM",
+        primaryLabel: isDe ? "NATURCHEM kontaktieren" : "Contact NATURCHEM",
         primaryHref: contactFormHref
       },
       uncertain: {
@@ -53,7 +53,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         text: isDe
           ? "Unsicher, ob Ihr Fall von der Akkreditierung abgedeckt ist? Senden Sie eine Quelle oder Projektbeschreibung — wir antworten."
           : "Not sure whether your case is covered by accreditation? Send a source or project description — we will respond.",
-        primaryLabel: "Contact NATURCHEM",
+        primaryLabel: isDe ? "NATURCHEM kontaktieren" : "Contact NATURCHEM",
         primaryHref: contactFormHref,
         secondaryLabel: isDe ? "Alle Leistungen" : "All services",
         secondaryHref: "/sluzby"
@@ -62,7 +62,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         text: isDe
           ? "Brauchen Sie Beratung zum Umfang von Messungen, Studien oder Dokumentation? Schreiben Sie uns — wir schlagen die nächsten Schritte vor."
           : "Need advice on the scope of measurements, studies or documentation? Write to us — we will propose next steps.",
-        primaryLabel: "Contact NATURCHEM",
+        primaryLabel: isDe ? "NATURCHEM kontaktieren" : "Contact NATURCHEM",
         primaryHref: contactFormHref,
         secondaryLabel: isDe ? "Alle Leistungen" : "All services",
         secondaryHref: "/sluzby"
@@ -117,7 +117,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         text: isDe
           ? "Senden Sie einen Bescheid, eine Aufforderung oder eine kurze Beschreibung. Auf Basis Ihrer Unterlagen schlagen wir die nächsten Schritte vor."
           : "Send a decision, notice or brief description. Based on your documents we will propose next steps.",
-        primaryLabel: "Contact NATURCHEM",
+        primaryLabel: isDe ? "NATURCHEM kontaktieren" : "Contact NATURCHEM",
         primaryHref: contactFormHref
       },
       equipment: {

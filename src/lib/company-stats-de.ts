@@ -10,12 +10,12 @@ export const companyStats: ReadonlyArray<{
 }> = [
   {
     value: "14,000+",
-    label: "projects",
+    label: "Projekte",
     icon: "process-vystup"
   },
   {
     value: "6,000+",
-    label: "measurements",
+    label: "Messungen",
     icon: "emise"
   },
   {
@@ -40,7 +40,7 @@ export const practiceFromRecordsTitle = "Erfahrung durch abgeschlossene Projekte
 export const practiceFromRecordsParagraphs = [
   "Wir bauen auf Langzeitaufzeichnungen von Projekten, Vor-Ort-Messungen und Protokollausgaben. Langfristig arbeiten wir für Kunden aus Industrie, Energie, Landwirtschaft, Kommunen und der öffentlichen Hand.",
   "Am häufigsten befassen wir uns mit Emissionsmessungen, Arbeitsplatzumgebungen, Lärm-, Ausbreitungs- und Lärmstudien, Gutachten, Betriebsvorschriften, UVP-Dokumentation, ISPOP, Betriebsaufzeichnungen und der Überprüfung von Emissionsdaten.",
-  "As a result, we do not treat a project in isolation as a single measurement, but in the context of the purpose of the deliverable — for the operator, designer, investor, KHS, ČIŽP, regional authority, building permitting or EIA."
+  "Deshalb betrachten wir ein Projekt nicht isoliert als einzelne Messung, sondern im Kontext des Zwecks des Ergebnisses — für Betreiber, Planer, Investoren, KHS, ČIŽP, Kreisbehörde, Baugenehmigung oder UVP."
 ] as const;
 
 export const experienceBullets = [

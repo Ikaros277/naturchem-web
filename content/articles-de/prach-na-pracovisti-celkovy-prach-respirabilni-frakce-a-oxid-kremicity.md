@@ -1,13 +1,14 @@
 ---
 
-title: „Arbeitsplatzstaub: Gesamtstaub, alveolengängige Fraktion und Siliziumdioxid“
+title: "Arbeitsplatzstaub: Gesamtstaub, alveolengängige Fraktion und Siliziumdioxid"
 slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity
-excerpt: |
-  Workplace dust is not just visible mess in the air or on the floor. From the perspective of employee health protection, what dust arises, what particle sizes it contains, and whether it contains crystalline silicon dioxide, for example, is important. Total dust, respirable fraction, and dust with a fibrogenic effect that can penetrate deep into the lungs are assessed differently.
+excerpt: "Arbeitsplatzstaub ist nicht nur sichtbare Verschmutzung in der Luft oder auf dem Boden. Für den Gesundheitsschutz der Beschäftigten ist entscheidend, welcher Staub entsteht und welche Partikelgrößen er enthält."
 author: Ing. František Hezina
 publishedAt: 2026-02-24T00:00:00.000Z
 topic: Work environment
----## Warum Staub am Arbeitsplatz professionell beurteilt werden muss
+---
+
+## Warum Staub am Arbeitsplatz professionell beurteilt werden muss
 
 Staub entsteht beim Schneiden, Schleifen, Bohren, Zerkleinern, Mischen, Umfüllen, beim Umgang mit Schüttgütern, bei der Verarbeitung von Holz, Stein, Beton, Keramik oder Baustoffen. Auf den ersten Blick mag es wie ein gewöhnliches betriebliches Problem erscheinen, aus Sicht des Arbeitnehmergesundheitsschutzes ist es jedoch oft ein erheblicher Risikofaktor.
 

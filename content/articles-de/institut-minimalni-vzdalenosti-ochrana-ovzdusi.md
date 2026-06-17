@@ -1,8 +1,8 @@
 ---
 
-title: „Mindestabstandsanforderung: ein neues Instrument zum Schutz der Luftqualität vor Staub und Gerüchen“
+title: "Mindestabstandsanforderung: ein neues Instrument zum Schutz der Luftqualität vor Staub und Gerüchen"
 slug: institut-minimalni-vzdalenosti-ochrana-ovzdusi
-excerpt: „Mit der Novelle des Luftschutzgesetzes wird ein Mindestabstandsgebot für ausgewählte ortsfeste Quellen eingeführt, die die Umgebung durch Staub oder Geruch erheblich beeinträchtigen können. Die neuen Regelungen sind insbesondere bei der Verortung neuer Quellen, bei Änderungen in der Raumordnung sowie bei der Erstellung von Gutachten und Betriebsordnungen von Bedeutung.“
+excerpt: "Mit der Novelle des Luftschutzgesetzes wird ein Mindestabstandsgebot für ausgewählte ortsfeste Quellen eingeführt, die die Umgebung durch Staub oder Geruch erheblich beeinträchtigen können. Die neuen Regelungen sind insbesondere bei der Verortung neuer Quellen, bei Änderungen in der Raumordnung sowie bei der Erstellung von Gutachten und Betriebsordnungen von Bedeutung."
 author: Naturchem s.r.o.
 publishedAt: 2025-11-15T00:00:00.000Z
 topic: Legislation

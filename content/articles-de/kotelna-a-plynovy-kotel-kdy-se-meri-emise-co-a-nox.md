@@ -1,13 +1,14 @@
 ---
 
-title: „Kesselanlage und Gaskessel: Wann werden CO- und NOx-Emissionen gemessen?“
+title: "Kesselanlage und Gaskessel: Wann werden CO- und NOx-Emissionen gemessen?"
 slug: kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox
-excerpt: |
-  For boiler plants and gas boilers, practice often raises the question of whether measurement of carbon monoxide and nitrogen oxide emissions is mandatory. What matters is not only that it is a gas boiler, but especially total rated thermal input, fuel type, source classification, and operating permit conditions. A smaller source may have different obligations from a listed stationary source under the Air Protection Act.
+excerpt: "Bei Kesselanlagen und Gaskesseln stellt sich in der Praxis oft die Frage, ob die Messung von Kohlenmonoxid- und Stickoxid-Emissionen verpflichtend ist."
 author: Ing. František Hezina
 publishedAt: 2026-03-29T00:00:00.000Z
 topic: Emissions
----## Warum CO und NOx für eine Kesselanlage thematisiert werden
+---
+
+## Warum CO und NOx für eine Kesselanlage thematisiert werden
 
 Ein Gaskessel wird vom Betreiber oft als „saubere“ Quelle wahrgenommen. Im Vergleich zu einem Kohle- oder Schwerölkessel trifft das in der Regel zu, bedeutet aber nicht, dass für die Kesselanlage keine Verpflichtungen gelten. Bei der Verbrennung von Erdgas entstehen vor allem Stickoxide, die als **NOx** bezeichnet werden, und bei unvollständiger Verbrennung entsteht auch Kohlenmonoxid, also **CO**.
 

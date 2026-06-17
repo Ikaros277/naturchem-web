@@ -1,8 +1,8 @@
 ---
 
-title: „Neue methodische Leitlinien des Umweltministeriums zu Quellen, für die eine zusätzliche Genehmigung erforderlich ist: Was sollte der Betreiber überprüfen?“
+title: "Neue methodische Leitlinien des Umweltministeriums zu Quellen, für die eine zusätzliche Genehmigung erforderlich ist: Was sollte der Betreiber überprüfen?"
 slug: nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat
-excerpt: „Die Änderung des Luftschutzgesetzes und die damit verbundenen methodischen Leitlinien des Umweltministeriums haben eine neue praktische Frage aufgeworfen: Welche Quellen müssen zusätzlich zugelassen oder an neue Anforderungen angepasst werden?“ Dabei geht es insbesondere um Quellen, die bisher nur in einer Genehmigung genannt wurden, als artverwandte Tätigkeit behandelt wurden oder neu unter die Anlage Nr. 2 zum Luftschutzgesetz fallen. Der Betreiber sollte vor allem den operativen Teil der Genehmigung, die Quellenklassifizierung, die Kapazität, die Fristen, die Notwendigkeit eines Gutachtens, Ausbreitungsstudien und die Betriebsbedingungen prüfen.“
+excerpt: "Die Änderung des Luftschutzgesetzes und die damit verbundenen methodischen Leitlinien des Umweltministeriums haben eine neue praktische Frage aufgeworfen: Welche Quellen müssen zusätzlich zugelassen oder an neue Anforderungen angepasst werden?“ Dabei geht es insbesondere um Quellen, die bisher nur in einer Genehmigung genannt wurden, als artverwandte Tätigkeit behandelt wurden oder neu unter die Anlage Nr. 2 zum Luftschutzgesetz fallen. Der Betreiber sollte vor allem den operativen Teil der Genehmigung, die Quellenklassifizierung, die Kapazität, die Fristen, die Notwendigkeit eines Gutachtens, Ausbreitungsstudien und die Betriebsbedingungen prüfen."
 author: Ing. František Hezina
 publishedAt: 2026-05-14T00:00:00.000Z
 topic: Emissions

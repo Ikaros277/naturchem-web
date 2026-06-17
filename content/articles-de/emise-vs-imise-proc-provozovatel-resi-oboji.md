@@ -1,8 +1,8 @@
 ---
 
-title: „Emissionen vs. Immissionen: Warum muss der Betreiber beides berücksichtigen?“
+title: "Emissionen vs. Immissionen: Warum muss der Betreiber beides berücksichtigen?"
 slug: emise-vs-imise-proc-provozovatel-resi-oboji
-excerpt: „Emissionen und Immissionen sind zwei unterschiedliche Sichtweisen auf die Luftverschmutzung.“ Emissionen beschreiben, was eine Quelle durch einen Schornstein, eine Abgasanlage oder einen Technologiebereich freisetzt. Immissionen beschreiben die Konzentration eines Schadstoffes, der sich anschließend in der Umgebungsluft befindet und dort Auswirkungen auf Mensch und Umwelt hat. Betreiber müssen daher häufig beides berücksichtigen: die Einhaltung der Emissionsgrenzwerte an der Quelle und den Projektbeitrag zur Immissionssituation vor Ort.“
+excerpt: "Emissionen und Immissionen sind zwei unterschiedliche Sichtweisen auf die Luftverschmutzung.“ Emissionen beschreiben, was eine Quelle durch einen Schornstein, eine Abgasanlage oder einen Technologiebereich freisetzt. Immissionen beschreiben die Konzentration eines Schadstoffes, der sich anschließend in der Umgebungsluft befindet und dort Auswirkungen auf Mensch und Umwelt hat. Betreiber müssen daher häufig beides berücksichtigen: die Einhaltung der Emissionsgrenzwerte an der Quelle und den Projektbeitrag zur Immissionssituation vor Ort."
 author: Ing. František Hezina
 publishedAt: 2026-05-03T00:00:00.000Z
 topic: Emissions

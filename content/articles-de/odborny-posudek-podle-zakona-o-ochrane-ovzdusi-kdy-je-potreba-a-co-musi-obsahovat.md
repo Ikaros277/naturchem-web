@@ -1,8 +1,8 @@
 ---
 
-title: „Gutachten nach dem Luftschutzgesetz: Wann wird es benötigt und was muss es enthalten?“
+title: "Gutachten nach dem Luftschutzgesetz: Wann wird es benötigt und was muss es enthalten?"
 slug: odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat
-excerpt: „Ein Gutachten nach dem Luftschutzgesetz ist ein wichtiges Dokument bei der Genehmigung neuer stationärer Quellen, bei Betriebsänderungen und bei der Kommunikation mit der Landesbehörde.“ Typischerweise handelt es sich um Quellen, die in der Anlage Nr. 2 des Luftschutzgesetzes aufgeführt sind, beispielsweise Kesselanlagen, Lackierereien, Verbrennungsanlagen, technologische Linien oder andere industrielle Emissionsquellen.
+excerpt: "Ein Gutachten nach dem Luftschutzgesetz ist ein wichtiges Dokument bei der Genehmigung neuer stationärer Quellen, bei Betriebsänderungen und bei der Kommunikation mit der Landesbehörde.“ Typischerweise handelt es sich um Quellen, die in der Anlage Nr. 2 des Luftschutzgesetzes aufgeführt sind, beispielsweise Kesselanlagen, Lackierereien, Verbrennungsanlagen, technologische Linien oder andere industrielle Emissionsquellen."
 author: NATURCHEM
 publishedAt: 2025-07-11T00:00:00.000Z
 topic: EIA and permitting

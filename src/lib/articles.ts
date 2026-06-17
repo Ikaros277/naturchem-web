@@ -81,14 +81,20 @@ export async function getArticles(locale: Locale = defaultLocale): Promise<Artic
   try {
     const mdFiles = await readArticleFiles(locale);
 
-    const articles = await Promise.all(
-      mdFiles.map(async (file) => {
-        const fileSlug = file.replace(/\.md$/, "");
-        const fullPath = path.join(articlesDirectoryForLocale(locale), file);
-        const fileContents = await fs.readFile(fullPath, "utf8");
-        return toArticle(fileSlug, fileContents);
-      })
-    );
+    const articles = (
+      await Promise.all(
+        mdFiles.map(async (file) => {
+          const fileSlug = file.replace(/\.md$/, "");
+          const fullPath = path.join(articlesDirectoryForLocale(locale), file);
+          try {
+            const fileContents = await fs.readFile(fullPath, "utf8");
+            return toArticle(fileSlug, fileContents);
+          } catch {
+            return null;
+          }
+        })
+      )
+    ).filter((article): article is Article => article !== null);
 
     return articles.sort(
       (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
@@ -107,16 +113,20 @@ export async function getArticleBySlug(slug: string, locale: Locale = defaultLoc
     for (const file of mdFiles) {
       const fileSlug = file.replace(/\.md$/, "");
       const fullPath = path.join(articlesDirectory, file);
-      const fileContents = await fs.readFile(fullPath, "utf8");
-      const article = toArticle(fileSlug, fileContents);
+      try {
+        const fileContents = await fs.readFile(fullPath, "utf8");
+        const article = toArticle(fileSlug, fileContents);
 
-      if (
-        article.slug === slug ||
-        article.slug === decoded ||
-        fileSlug === slug ||
-        fileSlug === decoded
-      ) {
-        return article;
+        if (
+          article.slug === slug ||
+          article.slug === decoded ||
+          fileSlug === slug ||
+          fileSlug === decoded
+        ) {
+          return article;
+        }
+      } catch {
+        continue;
       }
     }
 

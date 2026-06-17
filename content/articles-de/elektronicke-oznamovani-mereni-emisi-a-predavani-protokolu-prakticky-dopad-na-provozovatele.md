@@ -1,8 +1,8 @@
 ---
 
-title: „Elektronische Meldung von Emissionsmessungen und Einreichung von Protokollen: praktische Auswirkungen auf Betreiber“
+title: "Elektronische Meldung von Emissionsmessungen und Einreichung von Protokollen: praktische Auswirkungen auf Betreiber"
 slug: elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele
-excerpt: „Ab 2026 ändert sich die praktische Art der Terminmitteilung und Datenübermittlung aus Protokollen zur einmaligen Emissionsmessung.“ Der Messtermin wird nun über ISPOP bekannt gegeben und die Daten aus dem Messprotokoll werden von der autorisierten Person über das PROTOKOL-Formular gemeldet. „Der Betreiber kümmert sich also nicht mehr nur um die Bestellung der Messung, sondern muss den Termin korrekt planen, Fristen einhalten, mit der autorisierten Person kommunizieren und sicherstellen, dass die Messung und das Protokoll verwaltungstechnisch nachvollziehbar sind.“
+excerpt: "Ab 2026 ändert sich die praktische Art der Terminmitteilung und Datenübermittlung aus Protokollen zur einmaligen Emissionsmessung.“ Der Messtermin wird nun über ISPOP bekannt gegeben und die Daten aus dem Messprotokoll werden von der autorisierten Person über das PROTOKOL-Formular gemeldet. „Der Betreiber kümmert sich also nicht mehr nur um die Bestellung der Messung, sondern muss den Termin korrekt planen, Fristen einhalten, mit der autorisierten Person kommunizieren und sicherstellen, dass die Messung und das Protokoll verwaltungstechnisch nachvollziehbar sind."
 author: Ing. František Hezina
 publishedAt: 2026-05-16T00:00:00.000Z
 topic: Emissions

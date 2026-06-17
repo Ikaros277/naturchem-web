@@ -1,8 +1,8 @@
 ---
 
-title: „Berufskategorisierung: Welche Messung wird als unterstützender Nachweis benötigt?“
+title: "Berufskategorisierung: Welche Messung wird als unterstützender Nachweis benötigt?"
 slug: kategorizace-praci-jake-mereni-je-potreba-jako-podklad
-excerpt: „Die Arbeitsplatzkategorisierung ist das grundlegende Instrument zur Bewertung von Gesundheitsrisiken am Arbeitsplatz.“ In der Praxis stellt sich häufig die Frage, wann eine gutachterliche Beurteilung ausreichend ist und wann eine Messung der Arbeitsumgebung dokumentiert werden muss. Dies betrifft typischerweise chemische Substanzen, Staub, Lärm, Vibrationen, Mikroklima oder andere Faktoren, die sich auf die Gesundheit der Mitarbeiter auswirken können.“
+excerpt: "Die Arbeitsplatzkategorisierung ist das grundlegende Instrument zur Bewertung von Gesundheitsrisiken am Arbeitsplatz.“ In der Praxis stellt sich häufig die Frage, wann eine gutachterliche Beurteilung ausreichend ist und wann eine Messung der Arbeitsumgebung dokumentiert werden muss. Dies betrifft typischerweise chemische Substanzen, Staub, Lärm, Vibrationen, Mikroklima oder andere Faktoren, die sich auf die Gesundheit der Mitarbeiter auswirken können."
 author: Ing. František Hezina
 publishedAt: 2026-02-04T00:00:00.000Z
 topic: Work environment

@@ -1,8 +1,8 @@
 ---
 
-title: „Betriebsparameter an einer Emissionsquelle: Wann muss der Betreiber ihn überwachen und protokollieren?“
+title: "Betriebsparameter an einer Emissionsquelle: Wann muss der Betreiber ihn überwachen und protokollieren?"
 slug: provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat
-excerpt: „Ein Betriebsparameter dient dazu, kontinuierlich nachzuweisen, dass Emissionsminderungstechnologien oder Emissionsminderungsmaßnahmen tatsächlich funktionieren.“ Dabei kann es sich um Temperatur, Druck, Durchflussrate, Filterdruckabfall, Sorptionsmitteldosierung oder Befeuchtungsvorgang handeln. Der Betreiber sollte prüfen, ob diese Verpflichtung für seine Quelle gilt, ob der Parameter in der Betriebsgenehmigung angegeben ist und ob die Aufzeichnungen in einer Form geführt werden, die einer Überprüfung standhält.“
+excerpt: "Ein Betriebsparameter dient dazu, kontinuierlich nachzuweisen, dass Emissionsminderungstechnologien oder Emissionsminderungsmaßnahmen tatsächlich funktionieren.“ Dabei kann es sich um Temperatur, Druck, Durchflussrate, Filterdruckabfall, Sorptionsmitteldosierung oder Befeuchtungsvorgang handeln. Der Betreiber sollte prüfen, ob diese Verpflichtung für seine Quelle gilt, ob der Parameter in der Betriebsgenehmigung angegeben ist und ob die Aufzeichnungen in einer Form geführt werden, die einer Überprüfung standhält."
 author: Ing. František Hezina
 publishedAt: 2026-05-12T00:00:00.000Z
 topic: Emissions

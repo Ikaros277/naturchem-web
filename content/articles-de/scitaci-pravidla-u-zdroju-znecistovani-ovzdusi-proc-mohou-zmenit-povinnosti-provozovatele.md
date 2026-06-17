@@ -1,8 +1,8 @@
 ---
 
-title: „Aggregationsregeln für Luftverschmutzungsquellen: Warum können sie Betreiberpflichten ändern?“
+title: "Aggregationsregeln für Luftverschmutzungsquellen: Warum können sie Betreiberpflichten ändern?"
 slug: scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele
-excerpt: „Aggregationsregeln für Luftverschmutzungsquellen bestimmen, ob mehrere Teiltechnologien einzeln oder gemeinsam auf ihre Kapazität hin bewertet werden.“ Das Ergebnis kann eine Änderung der Quelleneinstufung nach Anlage 2 des Luftschutzgesetzes, der Pflicht zur Betriebserlaubnis, eines Gutachtens, einer Ausbreitungsstudie, einer Emissionsmessung oder einer Betriebsordnung sein. „Betreiber sollten daher nicht nur eine einzelne Maschine, Abgasanlage oder Leitung isoliert beurteilen, sondern das gesamte betriebliche und technische Ganze.“
+excerpt: "Aggregationsregeln für Luftverschmutzungsquellen bestimmen, ob mehrere Teiltechnologien einzeln oder gemeinsam auf ihre Kapazität hin bewertet werden.“ Das Ergebnis kann eine Änderung der Quelleneinstufung nach Anlage 2 des Luftschutzgesetzes, der Pflicht zur Betriebserlaubnis, eines Gutachtens, einer Ausbreitungsstudie, einer Emissionsmessung oder einer Betriebsordnung sein. „Betreiber sollten daher nicht nur eine einzelne Maschine, Abgasanlage oder Leitung isoliert beurteilen, sondern das gesamte betriebliche und technische Ganze."
 author: Ing. František Hezina
 publishedAt: 2026-05-21T00:00:00.000Z
 topic: Emissions

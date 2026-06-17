@@ -1,8 +1,8 @@
 ---
 
-title: „Bauschutt-Recyclingzentrum: Lärm, Staub, Verkehr und UVP“
+title: "Bauschutt-Recyclingzentrum: Lärm, Staub, Verkehr und UVP"
 slug: recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia
-excerpt: „Ein Bauschutt-Recyclingzentrum kann aus genehmigungstechnischer Sicht ein sensibles Projekt sein, auch wenn sein Zweck die stoffliche Verwertung von Abfällen ist.“ Beim Zerkleinern, Sortieren, Verladen und Transport entstehen Lärm, Staub und eine erhöhte Verkehrsbelastung, die bereits bei der Projektvorbereitung abgeschätzt werden muss. In der Praxis werden häufig eine Lärmstudie, eine Ausbreitungsstudie, betriebliche Staubkontrollmaßnahmen und die Überprüfung, ob das Projekt einer UVP oder einem Screening-Verfahren unterliegt, in Betracht gezogen.“
+excerpt: "Ein Bauschutt-Recyclingzentrum kann aus genehmigungstechnischer Sicht ein sensibles Projekt sein, auch wenn sein Zweck die stoffliche Verwertung von Abfällen ist.“ Beim Zerkleinern, Sortieren, Verladen und Transport entstehen Lärm, Staub und eine erhöhte Verkehrsbelastung, die bereits bei der Projektvorbereitung abgeschätzt werden muss. In der Praxis werden häufig eine Lärmstudie, eine Ausbreitungsstudie, betriebliche Staubkontrollmaßnahmen und die Überprüfung, ob das Projekt einer UVP oder einem Screening-Verfahren unterliegt, in Betracht gezogen."
 author: Ing. František Hezina
 publishedAt: 2026-04-03T00:00:00.000Z
 topic: Noise

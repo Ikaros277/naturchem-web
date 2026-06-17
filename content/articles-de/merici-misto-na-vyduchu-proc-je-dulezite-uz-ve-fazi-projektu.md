@@ -1,8 +1,8 @@
 ---
 
-title: „Messort am Abgas: Warum es bereits in der Projektphase wichtig ist“
+title: "Messort am Abgas: Warum es bereits in der Projektphase wichtig ist"
 slug: merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu
-excerpt: „Eine Messstelle am Auspuff ist für das Labor nicht nur ein technisches Detail. Soll künftig eine zugelassene Emissionsmessung durchgeführt werden, muss das Abgas zugänglich, sicher und für eine repräsentative Probenahme geeignet sein. „Schlecht ausgelegte Rohrleitungen, kurze gerade Abschnitte oder ein unzugänglicher Schornstein können zu Problemen bei der Baugenehmigung, der Betriebsgenehmigung oder der anschließenden Inspektion durch die Tschechische Umweltinspektion führen.“
+excerpt: "Eine Messstelle am Auspuff ist für das Labor nicht nur ein technisches Detail. Soll künftig eine zugelassene Emissionsmessung durchgeführt werden, muss das Abgas zugänglich, sicher und für eine repräsentative Probenahme geeignet sein. „Schlecht ausgelegte Rohrleitungen, kurze gerade Abschnitte oder ein unzugänglicher Schornstein können zu Problemen bei der Baugenehmigung, der Betriebsgenehmigung oder der anschließenden Inspektion durch die Tschechische Umweltinspektion führen."
 author: Ing. František Hezina
 publishedAt: 2026-05-05T00:00:00.000Z
 topic: Emissions

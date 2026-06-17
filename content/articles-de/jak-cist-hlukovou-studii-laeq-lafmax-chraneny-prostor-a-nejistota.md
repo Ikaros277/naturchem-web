@@ -1,8 +1,8 @@
 ---
 
-title: „Wie man eine Lärmstudie liest: LAeq, LAFmax, Schutzgebiet und Unsicherheit“
+title: "Wie man eine Lärmstudie liest: LAeq, LAFmax, Schutzgebiet und Unsicherheit"
 slug: jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota
-excerpt: „Eine Lärmstudie oder ein Lärmmessbericht enthält Begriffe, die für den Kunden möglicherweise schwer lesbar sind: LAeq, LAFmax, Tag- und Nachtperioden, geschützter Außenbereich von Gebäuden oder Messunsicherheit.“ Die richtige Interpretation ist wichtig, denn nicht jede hohe Zahl bedeutet automatisch eine Grenzwertüberschreitung.“
+excerpt: "Eine Lärmstudie oder ein Lärmmessbericht enthält Begriffe, die für den Kunden möglicherweise schwer lesbar sind: LAeq, LAFmax, Tag- und Nachtperioden, geschützter Außenbereich von Gebäuden oder Messunsicherheit.“ Die richtige Interpretation ist wichtig, denn nicht jede hohe Zahl bedeutet automatisch eine Grenzwertüberschreitung."
 author: Ing. František Hezina
 publishedAt: 2026-01-09T00:00:00.000Z
 topic: Noise

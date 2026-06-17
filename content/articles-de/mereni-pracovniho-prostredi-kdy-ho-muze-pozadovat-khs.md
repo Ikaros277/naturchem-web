@@ -1,8 +1,8 @@
 ---
 
-title: „Arbeitsplatzmessung: Wann kann KHS sie verlangen?“
+title: "Arbeitsplatzmessung: Wann kann KHS sie verlangen?"
 slug: mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs
-excerpt: „Die regionale Hygienestation kann eine Messung der Arbeitsplatzumgebung erfordern, insbesondere wenn es notwendig ist, die Exposition der Mitarbeiter gegenüber Risikofaktoren am Arbeitsplatz zu überprüfen.“ Am häufigsten werden chemische Substanzen, Staub, Lärm, Vibrationen, Mikroklima, Beleuchtung oder Dokumentation zur Arbeitsplatzkategorisierung angesprochen.“
+excerpt: "Die regionale Hygienestation kann eine Messung der Arbeitsplatzumgebung erfordern, insbesondere wenn es notwendig ist, die Exposition der Mitarbeiter gegenüber Risikofaktoren am Arbeitsplatz zu überprüfen.“ Am häufigsten werden chemische Substanzen, Staub, Lärm, Vibrationen, Mikroklima, Beleuchtung oder Dokumentation zur Arbeitsplatzkategorisierung angesprochen."
 author: Ing. František Hezina
 publishedAt: 2026-01-19T00:00:00.000Z
 topic: Work environment

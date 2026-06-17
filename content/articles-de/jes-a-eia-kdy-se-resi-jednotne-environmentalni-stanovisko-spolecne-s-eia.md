@@ -1,8 +1,8 @@
 ---
 
-title: „JES und EIA: Wann wird die einheitliche Umweltmeinung zusammen mit der EIA behandelt?“
+title: "JES und EIA: Wann wird die einheitliche Umweltmeinung zusammen mit der EIA behandelt?"
 slug: jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia
-excerpt: „Das einheitliche Umweltgutachten, abgekürzt JES, fasst mehrere Umwelterklärungen, verbindliche Gutachten und Entscheidungen in einer einzigen Grundlage für die Genehmigung eines Projekts zusammen.“ Bei Projekten, die einer UVP unterliegen, ist es wichtig, richtig zu entscheiden, ob JES zusammen mit dem UVP-Prozess behandelt werden soll oder erst später, nachdem die UVP-Stellungnahme abgegeben wurde.“
+excerpt: "Das einheitliche Umweltgutachten, abgekürzt JES, fasst mehrere Umwelterklärungen, verbindliche Gutachten und Entscheidungen in einer einzigen Grundlage für die Genehmigung eines Projekts zusammen.“ Bei Projekten, die einer UVP unterliegen, ist es wichtig, richtig zu entscheiden, ob JES zusammen mit dem UVP-Prozess behandelt werden soll oder erst später, nachdem die UVP-Stellungnahme abgegeben wurde."
 author: Ing. František Hezina
 publishedAt: 2025-10-23T00:00:00.000Z
 topic: EIA and permitting

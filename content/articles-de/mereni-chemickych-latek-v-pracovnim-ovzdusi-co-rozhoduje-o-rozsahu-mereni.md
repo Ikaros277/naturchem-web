@@ -1,13 +1,13 @@
 ---
 
-title: „Messung chemischer Stoffe in der Luft am Arbeitsplatz: Was bestimmt den Messumfang?“
+title: "Messung chemischer Stoffe in der Luft am Arbeitsplatz: Was bestimmt den Messumfang?"
 slug: mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni
-excerpt: |
-  The scope of measurement of chemical substances in workplace air cannot be determined from the name of the operation alone or from a general request to "measure chemicals". What matters is the technology used, safety data sheets, work procedure, exposure duration, ventilation method, PEL and NPK-P limit values, and whether sampling should be personal or stationary. Properly designed measurement must answer the question of what the employee is actually exposed to during a representative shift.
+excerpt: "Den Messumfang chemischer Stoffe in der Luft am Arbeitsplatz kann man nicht allein aus dem Namen des Betriebs oder aus einer allgemeinen Anfrage „chemische Stoffe messen“ ableiten."
 author: Ing. František Hezina
 publishedAt: 2026-03-05T00:00:00.000Z
 topic: Work environment
 ---
+
 ## Why a general brief to "measure chemicals" is not enough
 
 Measurement of chemical substances in workplace air is among the common documentation for job categorisation, workplace environment inspection, requests from the regional hygiene station (KHS) or verification of ventilation and extraction effectiveness. In practice it applies to paint shops, bonding, degreasing, welding, plastics processing, chemical surface treatment, laboratories, mixing rooms, pressing operations, operations with material heating or workplaces where cleaning and process agents are used.

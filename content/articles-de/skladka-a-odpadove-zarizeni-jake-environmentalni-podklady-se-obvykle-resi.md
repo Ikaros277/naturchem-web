@@ -1,8 +1,8 @@
 ---
 
-title: „Deponie und Abfallentsorgungsanlage: Welche Umweltdokumentation wird normalerweise behandelt?“
+title: "Deponie und Abfallentsorgungsanlage: Welche Umweltdokumentation wird normalerweise behandelt?"
 slug: skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi
-excerpt: „Deponien und Abfallentsorgungsanlagen gehören zu den Projekten, bei denen in der Regel nicht nur die Abfallwirtschaft selbst angesprochen wird.“ Wichtig sind Kapazitäten, Momentankapazität, Abfallarten, Betriebsregeln, Lärm, Luft, Wasser, Verkehr, UVP und bei größeren Anlagen auch IPPC. Eine qualitativ hochwertige Vorbereitung der Dokumentation trägt dazu bei, Probleme zu vermeiden, die nur in Verfahren vor der Regionalbehörde, der Baubehörde, der regionalen Gesundheitsbehörde (RHA), der tschechischen Umweltinspektion (CEI) oder in öffentlichen Stellungnahmen auftreten.“
+excerpt: "Deponien und Abfallentsorgungsanlagen gehören zu den Projekten, bei denen in der Regel nicht nur die Abfallwirtschaft selbst angesprochen wird.“ Wichtig sind Kapazitäten, Momentankapazität, Abfallarten, Betriebsregeln, Lärm, Luft, Wasser, Verkehr, UVP und bei größeren Anlagen auch IPPC. Eine qualitativ hochwertige Vorbereitung der Dokumentation trägt dazu bei, Probleme zu vermeiden, die nur in Verfahren vor der Regionalbehörde, der Baubehörde, der regionalen Gesundheitsbehörde (RHA), der tschechischen Umweltinspektion (CEI) oder in öffentlichen Stellungnahmen auftreten."
 author: Ing. František Hezina
 publishedAt: 2026-04-09T00:00:00.000Z
 topic: Emissions

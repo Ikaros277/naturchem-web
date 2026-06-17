@@ -32,7 +32,7 @@ export function createSectorDetailPageExports(slug: string) {
     const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
     const data = getSectorPage(slug, locale);
     if (!isSectorDetailPage(data)) notFound();
-    return <SectorPage {...data} />;
+    return <SectorPage locale={locale} {...data} />;
   }
 
   return { generateMetadata, Page };

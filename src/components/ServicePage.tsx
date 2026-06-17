@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { headers } from "next/headers";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
@@ -14,7 +13,7 @@ import { getProvozyNavLabel, getSectors, getSiteServices } from "@/lib/i18n/cont
 import { getServiceTrustBandItems } from "@/lib/i18n/home-content";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import type { Locale } from "@/lib/i18n/locales";
 import { contactUrl } from "@/lib/contact-url";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
 import { getDetailGroupIconKey } from "@/lib/service-icons";
@@ -22,6 +21,7 @@ import { getServiceHeroTheme } from "@/lib/hero-images";
 import { company, siteUrl } from "@/lib/site";
 
 type Props = {
+  locale: Locale;
   title: string;
   intro: string;
   scopeHeading?: string;
@@ -38,14 +38,8 @@ type Props = {
   faqCategoryId?: string;
 };
 
-async function getRequestLocale(): Promise<Locale> {
-  const headerStore = await headers();
-  const locale = headerStore.get("x-locale");
-  return locale && isLocale(locale) ? locale : "cs";
-}
-
-export async function ServicePage(props: Props) {
-  const locale = await getRequestLocale();
+export function ServicePage(props: Props) {
+  const { locale } = props;
   const copy = getServiceCopy(locale);
   const ctaCopy = getCtaCopy(locale);
   const trustItems = getServiceTrustBandItems(locale);
@@ -269,10 +263,10 @@ export async function ServicePage(props: Props) {
         ) : null}
 
         {props.faqCategoryId ? (
-          <ServiceFaqTeaser categoryId={props.faqCategoryId} />
+          <ServiceFaqTeaser locale={locale} categoryId={props.faqCategoryId} />
         ) : null}
 
-        <ServicePoradnaTeaser serviceSlug={props.slug} />
+        <ServicePoradnaTeaser locale={locale} serviceSlug={props.slug} />
 
         {mergedRelated.length > 0 ? (
           <section className="content-block">

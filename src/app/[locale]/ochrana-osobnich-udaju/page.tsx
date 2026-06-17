@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function PrivacyPolicyPage() {
-  return <PrivacyPageBody />;
+export default async function PrivacyPolicyPage({ params }: Props) {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  return <PrivacyPageBody locale={locale} />;
 }

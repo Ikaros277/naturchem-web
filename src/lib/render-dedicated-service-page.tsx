@@ -25,7 +25,7 @@ type RouteProps = {
 
 export function DedicatedServiceRoute({ slug, locale: localeParam }: RouteProps) {
   const locale: Locale = localeParam && isLocale(localeParam) ? localeParam : "cs";
-  return <ServicePage {...getDedicatedService(slug, locale)} />;
+  return <ServicePage locale={locale} {...getDedicatedService(slug, locale)} />;
 }
 
 type PageProps = {

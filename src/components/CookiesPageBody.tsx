@@ -1,24 +1,16 @@
-import { headers } from "next/headers";
 import { LegalPageLayout } from "@/components/LegalPageLayout";
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import { getCookiesPage } from "@/lib/i18n/content";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import type { Locale } from "@/lib/i18n/locales";
 import { fillLegalTemplate } from "@/lib/legal-template";
 import { legalController, legalEffectiveDate, legalPaths } from "@/lib/legal";
-
-async function getRequestLocale(): Promise<Locale> {
-  const headerStore = await headers();
-  const locale = headerStore.get("x-locale");
-  return locale && isLocale(locale) ? locale : "cs";
-}
 
 function splitAroundLabel(text: string, label: string): [string, string] {
   const parts = text.split(label);
   return [parts[0] ?? "", parts.slice(1).join(label)];
 }
 
-export async function CookiesPageBody() {
-  const locale = await getRequestLocale();
+export function CookiesPageBody({ locale }: { locale: Locale }) {
   const { content } = getCookiesPage(locale);
   const s = content.sections;
   const [rightsBefore, rightsAfter] = splitAroundLabel(

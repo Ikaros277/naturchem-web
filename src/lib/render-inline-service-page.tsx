@@ -6,13 +6,13 @@ import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import type { ComponentProps } from "react";
 
-type ServicePageProps = ComponentProps<typeof ServicePage>;
+type ServicePageContent = Omit<ComponentProps<typeof ServicePage>, "locale">;
 
 type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-function inlinePropsForLocale(slug: string, locale: Locale, czech: ServicePageProps) {
+function inlinePropsForLocale(slug: string, locale: Locale, czech: ServicePageContent) {
   if (locale === "de") return inlineServicePagesDe[slug] ?? czech;
   if (locale === "en") return inlineServicePagesEn[slug] ?? czech;
   return czech;
@@ -20,7 +20,7 @@ function inlinePropsForLocale(slug: string, locale: Locale, czech: ServicePagePr
 
 export function createInlineServicePageExports(
   slug: string,
-  czech: ServicePageProps
+  czech: ServicePageContent
 ) {
   async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { locale: localeParam } = await params;
@@ -39,9 +39,9 @@ export function createInlineServicePageExports(
     const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
     const props = inlinePropsForLocale(slug, locale, czech);
     if (!props) {
-      return <ServicePage {...czech} />;
+      return <ServicePage locale={locale} {...czech} />;
     }
-    return <ServicePage {...props} />;
+    return <ServicePage locale={locale} {...props} />;
   }
 
   return { generateMetadata, Page };

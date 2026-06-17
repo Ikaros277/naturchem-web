@@ -1,4 +1,3 @@
-import { headers } from "next/headers";
 import { IndexCard } from "@/components/IndexCard";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
@@ -13,7 +12,7 @@ import { getProvozyNavLabel } from "@/lib/i18n/content";
 import { localizedCanonical } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getSectorCopy } from "@/lib/i18n/sector-copy-i18n";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import type { Locale } from "@/lib/i18n/locales";
 import { sectorProcessSteps } from "@/lib/i18n/work-process-i18n";
 import { sectorContactUrl } from "@/lib/contact-url";
 import { getPageHeroTheme } from "@/lib/hero-images";
@@ -21,6 +20,7 @@ import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { siteUrl } from "@/lib/site";
 
 type Props = {
+  locale: Locale;
   title: string;
   slug: string;
   intro: string;
@@ -33,14 +33,8 @@ type Props = {
   faq: { q: string; a: string }[];
 };
 
-async function getRequestLocale(): Promise<Locale> {
-  const headerStore = await headers();
-  const locale = headerStore.get("x-locale");
-  return locale && isLocale(locale) ? locale : "cs";
-}
-
-export async function SectorPage(props: Props) {
-  const locale = await getRequestLocale();
+export function SectorPage(props: Props) {
+  const { locale } = props;
   const copy = getSectorCopy(locale);
   const provozyNavLabel = getProvozyNavLabel(locale);
   const pageCtaPresets = getPageCtaPresets(locale);

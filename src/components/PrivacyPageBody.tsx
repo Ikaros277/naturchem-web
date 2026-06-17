@@ -1,19 +1,11 @@
-import { headers } from "next/headers";
 import { LegalPageLayout } from "@/components/LegalPageLayout";
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import { getPrivacyPage } from "@/lib/i18n/content";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import type { Locale } from "@/lib/i18n/locales";
 import { fillLegalTemplate } from "@/lib/legal-template";
 import { inquiryRetentionMonths, legalController, legalEffectiveDate, legalPaths } from "@/lib/legal";
 
-async function getRequestLocale(): Promise<Locale> {
-  const headerStore = await headers();
-  const locale = headerStore.get("x-locale");
-  return locale && isLocale(locale) ? locale : "cs";
-}
-
-export async function PrivacyPageBody() {
-  const locale = await getRequestLocale();
+export function PrivacyPageBody({ locale }: { locale: Locale }) {
   const { content } = getPrivacyPage(locale);
   const s = content.sections;
 

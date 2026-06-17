@@ -1,24 +1,17 @@
 import Link from "next/link";
-import { headers } from "next/headers";
 import { getFaqCategoryForLocale, getFaqTeaserItemsForLocale } from "@/lib/i18n/faq-helpers";
 import { getFaqContent } from "@/lib/i18n/content";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { FaqAccordionList } from "@/components/FaqAccordionList";
 
 type Props = {
+  locale: Locale;
   categoryId: string;
   limit?: number;
 };
 
-async function getRequestLocale(): Promise<Locale> {
-  const headerStore = await headers();
-  const locale = headerStore.get("x-locale");
-  return locale && isLocale(locale) ? locale : "cs";
-}
-
-export async function ServiceFaqTeaser({ categoryId, limit = 5 }: Props) {
-  const locale = await getRequestLocale();
+export function ServiceFaqTeaser({ locale, categoryId, limit = 5 }: Props) {
   const { uiLabels } = getFaqContent(locale);
   const category = getFaqCategoryForLocale(categoryId, locale);
   const items = getFaqTeaserItemsForLocale(categoryId, locale, limit);

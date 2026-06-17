@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function CookiePolicyPage() {
-  return <CookiesPageBody />;
+export default async function CookiePolicyPage({ params }: Props) {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  return <CookiesPageBody locale={locale} />;
 }

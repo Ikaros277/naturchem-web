@@ -1,14 +1,14 @@
 "use client";
 
-import { Component, useEffect, type ReactNode } from "react";
+import { Component, useEffect, useState, type ReactNode } from "react";
 import { CONTACT_FORM_ID } from "@/lib/contact-url";
+import { readContactUrlPrefill, type ContactUrlPrefill } from "@/lib/contact-url-prefill";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { company } from "@/lib/site";
 import { ContactForm } from "@/components/ContactForm";
-import type { InquiryCategoryId } from "@/lib/contact-inquiry";
 
 type Props = {
-  initialCategory?: InquiryCategoryId;
+  initialCategory?: ContactUrlPrefill["initialCategory"];
   initialServices?: string[];
   initialMessage?: string;
 };
@@ -54,11 +54,26 @@ class ContactFormErrorBoundary extends Component<
   }
 }
 
-export function ContactFormSection({
-  initialCategory,
-  initialServices = [],
-  initialMessage = ""
-}: Props) {
+const emptyPrefill: ContactUrlPrefill = {
+  initialServices: [],
+  initialMessage: ""
+};
+
+export function ContactFormSection(props: Props = {}) {
+  const [urlPrefill, setUrlPrefill] = useState<ContactUrlPrefill | null>(null);
+
+  useEffect(() => {
+    const fromUrl = readContactUrlPrefill(window.location.search);
+    if (fromUrl.initialServices.length > 0 || fromUrl.initialMessage) {
+      setUrlPrefill(fromUrl);
+    }
+  }, []);
+
+  const prefill = urlPrefill ?? emptyPrefill;
+  const initialCategory = props.initialCategory ?? prefill.initialCategory;
+  const initialServices = props.initialServices ?? prefill.initialServices;
+  const initialMessage = props.initialMessage ?? prefill.initialMessage;
+
   useEffect(() => {
     function shouldScrollToForm() {
       const hasQueryPrefill = initialServices.length > 0 || Boolean(initialMessage);

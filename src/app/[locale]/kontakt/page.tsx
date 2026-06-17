@@ -3,13 +3,6 @@ import { ContactFormSection } from "@/components/ContactFormSection";
 import { ContactPageHeroMedia, ContactPageOfficesMap } from "@/components/ContactPageMedia";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import {
-  isValidContactService,
-  resolveContactServices,
-  sectorContactMessage,
-  type ContactServiceOption
-} from "@/lib/contact-services";
-import { resolveInquiryCategory } from "@/lib/contact-inquiry";
 import { company, getCompanyOffices, siteUrl } from "@/lib/site";
 import { JsonLd } from "@/components/Schema";
 import { getPageHeroTheme } from "@/lib/hero-images";
@@ -20,11 +13,6 @@ import { isLocale, type Locale } from "@/lib/i18n/locales";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{
-    service?: string | string[];
-    sector?: string | string[];
-    services?: string | string[];
-  }>;
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -39,40 +27,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
-function queryParam(value: string | string[] | undefined): string {
-  if (!value) return "";
-  const raw = Array.isArray(value) ? value[0] : value;
-  try {
-    return decodeURIComponent(raw.replace(/\+/g, " "));
-  } catch {
-    return raw;
-  }
-}
-
 const companyOffices = getCompanyOffices();
 const primaryPhoneHref = `tel:${company.phones[0].replaceAll(" ", "")}`;
 
-export default async function Page({ params, searchParams }: PageProps) {
+export default async function Page({ params }: PageProps) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/kontakt")}/`.replace(/([^:]\/)\/+/g, "$1");
-
-  const paramsResolved = await searchParams;
-  const serviceParam = queryParam(paramsResolved.service);
-  const sectorParam = queryParam(paramsResolved.sector);
-  const extraParam = queryParam(paramsResolved.services);
-  const extraServices = extraParam
-    ? extraParam.split(",").map((s) => s.trim()).filter(Boolean)
-    : [];
-  const initialServices = resolveContactServices(serviceParam, sectorParam, extraServices);
-  const initialCategory = resolveInquiryCategory(initialServices as ContactServiceOption[]);
-  const initialMessage = sectorParam
-    ? sectorContactMessage(sectorParam)
-    : !isValidContactService(serviceParam) && serviceParam
-      ? sectorContactMessage(serviceParam)
-      : "";
 
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -111,11 +74,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         aria-labelledby="poptavka-heading"
       >
         <article className="card contact-form-panel contact-page-card">
-          <ContactFormSection
-            initialCategory={initialCategory}
-            initialServices={[...initialServices]}
-            initialMessage={initialMessage}
-          />
+          <ContactFormSection />
         </article>
       </section>
 

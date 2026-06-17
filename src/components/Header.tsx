@@ -335,6 +335,9 @@ export function Header() {
                 </LocaleLink>
               </nav>
               <div className="nav-mobile-sheet-foot">
+                <div className="nav-mobile-lang-row">
+                  <LanguageSwitcher />
+                </div>
                 <LocaleLink className="button nav-mobile-cta" href={contactFormHref} onClick={closeMenu}>
                   {t.cta}
                 </LocaleLink>
@@ -428,6 +431,9 @@ export function Header() {
           </LocaleLink>
         ) : (
           <>
+            <div className="nav-mobile-lang">
+              <LanguageSwitcher />
+            </div>
             <LocaleLink className="button nav-cta-mobile" href={contactFormHref}>
               {t.cta}
             </LocaleLink>

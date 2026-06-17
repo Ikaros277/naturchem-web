@@ -1694,6 +1694,16 @@ header.site-header {
   background: #fff;
 }
 
+.nav-mobile-lang-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.nav-mobile-lang-row .language-switcher {
+  margin-left: 0;
+}
+
 .nav-mobile-cta {
   margin: 0;
   width: 100%;
@@ -6020,10 +6030,26 @@ main.contact-page + .site-footer {
   }
 
   .nav {
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto auto auto;
     align-items: center;
     padding-block: 0.5rem;
     gap: 0.35rem;
+  }
+
+  .nav-mobile-lang {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .nav-mobile-lang .language-switcher {
+    margin-left: 0;
+    gap: 0.3rem;
+  }
+
+  .nav-mobile-lang .language-switcher-option {
+    width: 1.85rem;
+    height: 1.25rem;
   }
 
   .nav-brand {
@@ -8303,6 +8329,16 @@ main.home-page + .site-footer {
 body:has(.live-chat-whatsapp) .tawk-min-container {
   right: 1.1rem !important;
   left: auto !important;
+}
+
+@media (max-width: 1023px) {
+  .tawk-min-container,
+  #tawk-bubble-container,
+  .tawk-button {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
 }
 
 @media (max-width: 767px) {

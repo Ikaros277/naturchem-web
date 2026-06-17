@@ -139,9 +139,9 @@ export default async function LocaleLayout({ children, params }: Props) {
           <JsonLd data={websiteData} />
           <JsonLd data={orgData} />
           <JsonLd data={localBusinessData} />
-          <Header />
+          <Header locale={locale} />
           {children}
-          <Footer />
+          <Footer locale={locale} />
           <CookieConsentBanner />
           <LiveChatWidgets />
           <ConsentAwareTracking />

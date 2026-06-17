@@ -4411,30 +4411,6 @@ header.site-header {
   backdrop-filter: blur(12px);
 }
 
-.topbar {
-  background: var(--primary);
-  padding: 0.34rem 0;
-  font-size: 0.82rem;
-}
-
-.topbar-inner {
-  justify-content: flex-end;
-}
-
-.topbar-label {
-  margin-right: auto;
-  color: #c7d6e3;
-  letter-spacing: 0.02em;
-}
-
-.nav {
-  padding: 0.72rem 0;
-}
-
-.brand-mark {
-  gap: 0.72rem;
-}
-
 .nav-links {
   gap: 0.78rem;
 }

@@ -1,10 +1,10 @@
-﻿"use client";
-
-import type { ReactNode } from "react";
-import { getFooterNav } from "@/lib/i18n/nav-content";
-import { useLocale, useTranslations } from "@/lib/i18n/locale-context";
-import { LocaleLink } from "@/lib/i18n/locale-link";
+﻿import type { ReactNode } from "react";
+import Link from "next/link";
 import { FooterLegalBar } from "@/components/FooterLegalBar";
+import { getFooterNav } from "@/lib/i18n/nav-content";
+import { getMessages } from "@/lib/i18n/get-messages";
+import { localizeHref } from "@/lib/i18n/navigation";
+import type { Locale } from "@/lib/i18n/locales";
 import { company } from "@/lib/site";
 
 function telHref(phone: string) {
@@ -13,12 +13,12 @@ function telHref(phone: string) {
 
 type FooterLink = { href: string; label: string };
 
-function FooterLinkList({ links }: { links: readonly FooterLink[] }) {
+function FooterLinkList({ links, locale }: { links: readonly FooterLink[]; locale: Locale }) {
   return (
     <ul className="footer-links">
       {links.map((item) => (
         <li key={item.href}>
-          <LocaleLink href={item.href}>{item.label}</LocaleLink>
+          <Link href={localizeHref(item.href, locale)}>{item.label}</Link>
         </li>
       ))}
     </ul>
@@ -44,9 +44,13 @@ function FooterColumn({
   );
 }
 
-export function Footer() {
-  const locale = useLocale();
-  const t = useTranslations("footer");
+type Props = {
+  locale: Locale;
+};
+
+export async function Footer({ locale }: Props) {
+  const messages = await getMessages(locale);
+  const t = messages.footer;
   const currentYear = new Date().getFullYear();
   const {
     footerCompanyLinks,
@@ -55,16 +59,17 @@ export function Footer() {
     footerPhones,
     footerLocationLine
   } = getFooterNav(locale);
+  const contactHref = localizeHref(footerContactPageLink.href, locale);
 
   return (
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-grid">
           <FooterColumn title={t.company} ariaLabel={t.companyAria} className="footer-zone--brand">
-            <FooterLinkList links={footerCompanyLinks} />
+            <FooterLinkList links={footerCompanyLinks} locale={locale} />
           </FooterColumn>
           <FooterColumn title={t.services} ariaLabel={t.servicesAria} className="footer-zone--services">
-            <FooterLinkList links={footerServiceLinks} />
+            <FooterLinkList links={footerServiceLinks} locale={locale} />
           </FooterColumn>
           <FooterColumn title={t.contact} ariaLabel={t.contactAria} className="footer-zone--contact">
             <p className="footer-contact-meta">{footerLocationLine}</p>
@@ -77,7 +82,7 @@ export function Footer() {
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </p>
             <p className="footer-contact-more">
-              <LocaleLink href={footerContactPageLink.href}>{footerContactPageLink.label}</LocaleLink>
+              <Link href={contactHref}>{footerContactPageLink.label}</Link>
             </p>
           </FooterColumn>
         </div>
@@ -86,6 +91,9 @@ export function Footer() {
             .replace("{year}", String(currentYear))
             .replace("{ico}", company.ico)
             .replace("{dic}", company.dic)}
+          legalAria={t.legal}
+          privacy={t.privacy}
+          cookies={t.cookies}
         />
       </div>
     </footer>

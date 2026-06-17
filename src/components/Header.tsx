@@ -431,9 +431,6 @@ export function Header() {
           </LocaleLink>
         ) : (
           <>
-            <div className="nav-mobile-lang">
-              <LanguageSwitcher />
-            </div>
             <LocaleLink className="button nav-cta-mobile" href={contactFormHref}>
               {t.cta}
             </LocaleLink>

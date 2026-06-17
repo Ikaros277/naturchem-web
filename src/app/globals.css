@@ -1,16 +1,31 @@
 :root {
-  --bg: #f3f8ff;
+  --navy: #0b1f35;
+  --navy-dark: #071827;
+  --forest: #2f6f5e;
+  --forest-dark: #245a4a;
+  --forest-tint: #eef5f2;
+  --sage: #b8d6ca;
+  --bg: #f4f6f8;
   --surface: #ffffff;
-  --text: #0f1f39;
-  --muted: #49607f;
-  --primary: #283377;
-  --primary-dark: #1f2859;
-  --secondary: #283377;
-  --border: #d6e4fb;
-  --ring: rgba(40, 51, 119, 0.28);
+  --surface-muted: #eef2f5;
+  --text: #101923;
+  --muted: #536273;
+  --primary: var(--navy);
+  --primary-dark: var(--navy-dark);
+  --secondary: var(--forest);
+  --cta: var(--forest);
+  --cta-dark: var(--forest-dark);
+  --accent: #8aa18f;
+  --border: #d8dee6;
+  --ring: rgba(47, 111, 94, 0.24);
+  --shadow-soft: 0 18px 45px rgba(12, 26, 42, 0.08);
+  --shadow-card: 0 14px 34px rgba(12, 26, 42, 0.07);
   --radius-sharp: 12px;
   --radius-ui: 10px;
   --radius-pill: 999px;
+  --icon-size-card: 32px;
+  --icon-size-inline: 28px;
+  --icon-size-nav: 20px;
   --site-header-offset: 6.25rem;
   --section-padding-y: clamp(2rem, 3.5vw, 3.25rem);
   --hero-band-min-height-standard: 430px;
@@ -28,11 +43,9 @@ html {
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-body), "Source Sans 3", "Segoe UI", sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  padding-top: var(--site-header-offset);
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -68,12 +81,12 @@ h6,
 }
 
 a {
-  color: #0f43a7;
+  color: #194f82;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0a2f78;
+  color: var(--secondary);
 }
 
 input,
@@ -97,9 +110,9 @@ textarea:focus {
 }
 
 .container {
-  width: min(1120px, 92%);
-  margin: 0 auto;
+  width: min(1220px, 92%);
   max-width: 100%;
+  margin-inline: auto;
 }
 
 .section,
@@ -1207,24 +1220,21 @@ main ol {
   margin-bottom: 1rem;
 }
 
-header.site-header {
-  background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(6px);
-}
 
 .topbar {
   background: var(--navy);
   color: #dbe9ff;
-  font-size: 0.9rem;
-  padding: 0.45rem 0;
+  min-height: 30px;
+  padding: 0.35rem 0;
+  font-size: 0.8rem;
 }
 
 .topbar-inner {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 0.35rem 0.65rem;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
 }
 
 .topbar-label {
@@ -1278,14 +1288,7 @@ header.site-header {
   }
 }
 
-.nav-links a {
-  font-weight: 500;
-  color: #17365f;
-}
 
-.nav-links a:hover {
-  color: #0f43a7;
-}
 
 .nav-item {
   position: relative;
@@ -1781,11 +1784,6 @@ header.site-header {
   text-align: center;
 }
 
-footer {
-  border-top: 1px solid var(--border);
-  background: #f8fbff;
-  margin-top: 3rem;
-}
 
 .mobile-sticky-contact {
   display: none;
@@ -2770,31 +2768,6 @@ section.content-block.page-first-section + .section.equipment-groups-accordion,
   padding: 0.5rem 0;
 }
 
-@media (max-width: 960px) {
-  .topbar-inner {
-    font-size: 0.82rem;
-  }
-
-  .topbar-link {
-    word-break: break-all;
-  }
-
-  .nav-desktop,
-  .nav-cta-desktop {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: inline-flex;
-  }
-}
-
-@media (min-width: 961px) {
-  .nav-toggle {
-    display: none;
-  }
-}
-
 @media (max-width: 720px) {
   .hero {
     padding-top: 4rem;
@@ -2810,59 +2783,7 @@ section.content-block.page-first-section + .section.equipment-groups-accordion,
   }
 }
 
-/* Prestiznejsi institucionalni vrstva layoutu */
-:root {
-  --navy: #0b1f35;
-  --navy-dark: #071827;
-  --forest: #2f6f5e;
-  --forest-dark: #245a4a;
-  --forest-tint: #eef5f2;
-  --sage: #b8d6ca;
-  --bg: #f4f6f8;
-  --surface: #ffffff;
-  --surface-muted: #eef2f5;
-  --text: #101923;
-  --muted: #536273;
-  --primary: var(--navy);
-  --primary-dark: var(--navy-dark);
-  --secondary: var(--forest);
-  --cta: var(--forest);
-  --cta-dark: var(--forest-dark);
-  --accent: #8aa18f;
-  --border: #d8dee6;
-  --ring: rgba(47, 111, 94, 0.24);
-  --shadow-soft: 0 18px 45px rgba(12, 26, 42, 0.08);
-  --shadow-card: 0 14px 34px rgba(12, 26, 42, 0.07);
-  --radius-sharp: 12px;
-  --radius-ui: 10px;
-  --radius-pill: 999px;
-  --icon-size-card: 32px;
-  --icon-size-inline: 28px;
-  --icon-size-nav: 20px;
-}
-
-html,
-body {
-  background: var(--bg);
-  color: var(--text);
-}
-
-body {
-  font-size: 16px;
-  text-rendering: optimizeLegibility;
-}
-
-.container {
-  width: min(1220px, 92%);
-  max-width: 100%;
-  margin-inline: auto;
-}
-
-.section,
-.home-section {
-  padding: var(--section-padding-y) 0;
-}
-
+/* Institucionalni komponenty a layout */
 .section-header {
   margin-bottom: 1rem;
   max-width: 760px;
@@ -2897,13 +2818,6 @@ p {
   color: var(--muted);
 }
 
-a {
-  color: #194f82;
-}
-
-a:hover {
-  color: var(--secondary);
-}
 
 .card {
   border: 1px solid var(--border);
@@ -4418,12 +4332,6 @@ header.site-header {
   gap: 0.78rem;
 }
 
-.nav-links a {
-  color: #203247;
-  font-size: 0.93rem;
-  font-weight: 700;
-}
-
 .nav-dropdown {
   border-color: var(--border);
   box-shadow: 0 24px 60px rgba(12, 26, 42, 0.16);
@@ -4463,43 +4371,13 @@ header.site-header {
   color: var(--secondary);
 }
 
-footer {
-  margin-top: 2.5rem;
-  border-top: 0;
-  background: var(--primary);
-  color: #e8eef4;
-}
 
-footer h3,
-footer h4 {
-  color: #fff;
-}
-
-footer a {
-  color: #d9e8f5;
-}
-
-footer a:hover {
-  color: #b8d6ca;
-}
-
-footer .muted,
-.footer-claim-muted {
-  color: #b9c6d1;
-}
 
 .footer-claims {
   padding-top: 2rem;
   border-top: 0;
 }
 
-.site-footer .footer-links {
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  line-height: 1.6;
-}
 
 .footer-brand-col p {
   max-width: 22rem;
@@ -4507,14 +4385,6 @@ footer .muted,
 
 .footer-contact-link {
   font-weight: 800;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 1rem 0 1.25rem;
-  color: #c7d6e3;
-  font-size: 0.9rem;
-  text-align: center;
 }
 
 .services-index-page {
@@ -6493,17 +6363,7 @@ main.contact-page + .site-footer {
 
 /* —— Hlavička, homepage a patička (finální UI) —— */
 
-.topbar {
-  min-height: 30px;
-  padding: 0.35rem 0;
-  font-size: 0.8rem;
-}
 
-.topbar-inner {
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 0.75rem 1rem;
-}
 
 .semantic-card,
 .card-link.semantic-card {
@@ -7010,9 +6870,6 @@ main.contact-page + .site-footer {
   line-height: 1.35;
 }
 
-.home-section {
-  padding: var(--section-padding-y) 0;
-}
 
 /* Homepage: mezera pod logy = dvojnásobek section padding nad patičkou */
 main.home-page + .site-footer {
@@ -7236,6 +7093,7 @@ main.home-page + .site-footer {
   background: #0f2437;
   color: #f8fafc;
   padding: 36px 20px calc(24px + env(safe-area-inset-bottom, 0px));
+  margin-top: 2.5rem;
 }
 
 .site-footer .footer-inner {
@@ -7295,9 +7153,11 @@ main.home-page + .site-footer {
 .site-footer .footer-links {
   display: grid;
   gap: 6px;
+  max-width: none;
   margin: 0;
   padding: 0;
   list-style: none;
+  line-height: 1.6;
 }
 
 .site-footer .footer-links a,

@@ -48,6 +48,7 @@ export default async function TypickeZakazkyPage({ params }: Props) {
   return (
     <main className="section premium-page typicke-zakazky-page">
       <PageHeroBand
+        locale={locale}
         theme={getPageHeroTheme("/typicke-zakazky")}
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },

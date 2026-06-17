@@ -64,6 +64,7 @@ export async function SectorIndexPage({ locale }: Props) {
       <JsonLd data={itemListData} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
+        locale={locale}
         theme={getPageHeroTheme("/provozy-a-technologie")}
         breadcrumbs={[
           { name: homeLabel, href: localizeHref("/", locale) },

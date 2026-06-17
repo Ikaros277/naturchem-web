@@ -6,7 +6,9 @@ import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
 import { TeamMemberCards } from "@/components/TeamSection";
 import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
+import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getAboutPage, getGuaranteeIntro, getTeamMembers } from "@/lib/i18n/content";
+import { getMessages } from "@/lib/i18n/get-messages";
 import { getHomeTrustBandItems } from "@/lib/i18n/home-content";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -37,6 +39,8 @@ export default async function ONaturchemPage({ params }: Props) {
   const guaranteeIntro = getGuaranteeIntro(locale);
   const trustItems = getHomeTrustBandItems(locale);
   const teamMembers = getTeamMembers(locale);
+  const messages = await getMessages(locale);
+  const statsContent = getCompanyStatsContent(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/o-spolecnosti-naturchem")}/`.replace(/([^:]\/)\/+/g, "$1");
@@ -90,6 +94,7 @@ export default async function ONaturchemPage({ params }: Props) {
       <JsonLd data={personData} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
+        locale={locale}
         theme={getPageHeroTheme("/o-spolecnosti-naturchem")}
         breadcrumbs={content.breadcrumbs.map((crumb) =>
           "href" in crumb ? { name: crumb.name, href: link(crumb.href) } : { name: crumb.name }
@@ -115,7 +120,12 @@ export default async function ONaturchemPage({ params }: Props) {
 
       <section className="home-stats-compact" aria-label={content.statsAriaLabel}>
         <div className="container">
-          <ExperienceStats variant="compact" showNote={false} />
+          <ExperienceStats
+            variant="compact"
+            showNote={false}
+            statsContent={statsContent}
+            experienceOverviewAria={messages.common.experienceOverview}
+          />
         </div>
       </section>
 

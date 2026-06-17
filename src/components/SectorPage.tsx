@@ -91,6 +91,7 @@ export function SectorPage(props: Props) {
       <JsonLd data={faqData} />
       <JsonLd data={relatedServiceListData} />
       <PageHeroBand
+        locale={locale}
         theme={heroTheme}
         breadcrumbs={[
           { name: copy.breadcrumbHome, href: link("/") },

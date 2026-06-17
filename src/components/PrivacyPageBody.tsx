@@ -10,7 +10,7 @@ export function PrivacyPageBody({ locale }: { locale: Locale }) {
   const s = content.sections;
 
   return (
-    <LegalPageLayout title={content.title} lead={content.lead} breadcrumbLabel={content.breadcrumbLabel}>
+    <LegalPageLayout locale={locale} title={content.title} lead={content.lead} breadcrumbLabel={content.breadcrumbLabel}>
       <p className="legal-meta">
         {content.effectiveDateLabel} {legalEffectiveDate}
       </p>

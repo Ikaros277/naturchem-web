@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { HeroPhoto } from "@/components/HeroPhoto";
+import { getMessages } from "@/lib/i18n/get-messages";
 import type { HeroTheme } from "@/lib/hero-images";
+import type { Locale } from "@/lib/i18n/locales";
 
 type Crumb = { name: string; href?: string };
 
@@ -11,6 +13,7 @@ type Props = {
   theme: HeroTheme;
   imageSrc?: string;
   breadcrumbs?: Crumb[];
+  locale?: Locale;
   children: ReactNode;
   className?: string;
   priority?: boolean;
@@ -21,10 +24,11 @@ type Props = {
   mediaLabel?: string;
 };
 
-export function PageHeroBand({
+export async function PageHeroBand({
   theme,
   imageSrc,
   breadcrumbs,
+  locale,
   children,
   className = "",
   priority = false,
@@ -32,6 +36,9 @@ export function PageHeroBand({
   media,
   mediaLabel
 }: Props) {
+  const breadcrumbsAria =
+    breadcrumbs && locale ? (await getMessages(locale)).common.breadcrumbsAria : undefined;
+
   const bandClassName = [
     `page-hero-band page-hero-band--${variant}`,
     media ? "page-hero-band--media" : "",
@@ -45,7 +52,9 @@ export function PageHeroBand({
       <div className="container page-hero-band-inner">
         <div className="hero-band-text">
           <div className="hero-diagonal-spacer" aria-hidden="true" />
-          {breadcrumbs ? <Breadcrumbs items={breadcrumbs} /> : null}
+          {breadcrumbs && breadcrumbsAria ? (
+            <Breadcrumbs items={breadcrumbs} breadcrumbsAria={breadcrumbsAria} />
+          ) : null}
           {children}
         </div>
       </div>

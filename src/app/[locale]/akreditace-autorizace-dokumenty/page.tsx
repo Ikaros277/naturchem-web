@@ -66,6 +66,7 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
       <JsonLd data={webPageData} />
       <JsonLd data={orgData} />
       <PageHeroBand
+        locale={locale}
         theme={getPageHeroTheme("/akreditace-autorizace-dokumenty")}
         breadcrumbs={content.breadcrumbs.map((crumb) =>
           "href" in crumb ? { name: crumb.name, href: link(crumb.href) } : { name: crumb.name }

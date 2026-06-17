@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { legalPaths } from "@/lib/legal";
 import { type InquiryCategoryId } from "@/lib/contact-inquiry";
-import { getInquiryCategories } from "@/lib/i18n/content";
+import type { getInquiryCategories } from "@/lib/i18n/contact-inquiry-i18n";
 import { sendGtagEvent } from "@/lib/gtag";
 import { useLocale, useTranslations } from "@/lib/i18n/locale-context";
 import { LocaleLink } from "@/lib/i18n/locale-link";
@@ -13,17 +13,18 @@ import { company } from "@/lib/site";
 type Status = "idle" | "loading" | "success" | "error";
 
 type Props = {
+  categories: ReturnType<typeof getInquiryCategories>;
   initialCategory?: InquiryCategoryId;
   initialMessage?: string;
 };
 
 export function ContactForm({
+  categories,
   initialCategory = "nevim",
   initialMessage = ""
 }: Props) {
   const locale = useLocale();
   const t = useTranslations("contactForm");
-  const categories = getInquiryCategories(locale);
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
   const [inquiryCategory, setInquiryCategory] = useState<InquiryCategoryId>(initialCategory);

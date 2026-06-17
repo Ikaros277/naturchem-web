@@ -87,6 +87,7 @@ export default async function CmsArticlePage({ params }: Props) {
       <JsonLd data={articleData} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
+        locale={locale}
         theme={heroThemeForArticle(article)}
         imageSrc={article.heroImage}
         breadcrumbs={[

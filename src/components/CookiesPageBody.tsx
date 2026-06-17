@@ -19,7 +19,7 @@ export function CookiesPageBody({ locale }: { locale: Locale }) {
   );
 
   return (
-    <LegalPageLayout title={content.title} lead={content.lead} breadcrumbLabel={content.breadcrumbLabel}>
+    <LegalPageLayout locale={locale} title={content.title} lead={content.lead} breadcrumbLabel={content.breadcrumbLabel}>
       <p className="legal-meta">
         {content.lastUpdatedLabel} {legalEffectiveDate}
       </p>

@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import { ArticleCardThumb } from '@/components/ArticleCardThumb';
 import { IndexCard } from '@/components/IndexCard';
 import { ServiceIcon } from '@/components/ServiceIcon';
-import { getPoradnaTopicLabel } from '@/lib/i18n/content';
+import type { PoradnaTopic } from '@/lib/poradna-topic';
 import { useLocale, useTranslations } from '@/lib/i18n/locale-context';
 import type { Locale } from '@/lib/i18n/locales';
 import { localeTag } from '@/lib/i18n/locale-pick';
@@ -21,13 +21,14 @@ export type PoradnaArticleDisplay = PoradnaArticleListing & { displayDate: strin
 type Props = {
   articles: PoradnaArticleDisplay[];
   locale?: Locale;
+  topicLabels: Record<PoradnaTopic, string>;
 };
 
 function normalizeSearchQuery(query: string, locale: Locale): string {
   return query.trim().toLocaleLowerCase(localeTag(locale));
 }
 
-export function PoradnaFilterableList({ articles, locale: localeProp }: Props) {
+export function PoradnaFilterableList({ articles, locale: localeProp, topicLabels }: Props) {
   const contextLocale = useLocale();
   const locale = localeProp ?? contextLocale;
   const poradna = useTranslations('poradna');
@@ -109,7 +110,7 @@ export function PoradnaFilterableList({ articles, locale: localeProp }: Props) {
               aria-pressed={activeTopics.has(topic)}
               onClick={() => toggleTopic(topic)}
             >
-              {getPoradnaTopicLabel(topic, locale)}
+              {topicLabels[topic]}
             </button>
           ))}
         </nav>
@@ -130,7 +131,7 @@ export function PoradnaFilterableList({ articles, locale: localeProp }: Props) {
           filtered.map(article => {
             const articleRef = { slug: article.slug, title: article.title, topic: article.topic };
             const iconKey = poradnaTopicIconKey(articleRef);
-            const topicLabel = getPoradnaTopicLabel(article.topic, locale);
+            const topicLabel = topicLabels[article.topic];
             return (
               <IndexCard
                 key={article.href}

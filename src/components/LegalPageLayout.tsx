@@ -1,18 +1,21 @@
 import type { ReactNode } from "react";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { getPageHeroTheme } from "@/lib/hero-images";
+import type { Locale } from "@/lib/i18n/locales";
 
 type Props = {
+  locale: Locale;
   title: string;
   lead?: string;
   breadcrumbLabel: string;
   children: ReactNode;
 };
 
-export function LegalPageLayout({ title, lead, breadcrumbLabel, children }: Props) {
+export function LegalPageLayout({ locale, title, lead, breadcrumbLabel, children }: Props) {
   return (
     <main className="section legal-page premium-page">
       <PageHeroBand
+        locale={locale}
         theme={getPageHeroTheme("/faq")}
         breadcrumbs={[{ name: "Úvod", href: "/" }, { name: breadcrumbLabel }]}
       >

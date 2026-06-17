@@ -65,6 +65,7 @@ export default async function FaqPage({ params }: Props) {
       <JsonLd data={faqData} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
+        locale={locale}
         theme={getPageHeroTheme("/faq")}
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },

@@ -49,6 +49,7 @@ export default async function CaseStudyCategoryPage({ params }: Props) {
   return (
     <main className="section premium-page">
       <PageHeroBand
+        locale={locale}
         theme={getPageHeroTheme(`/typicke-zakazky/${slug}`)}
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },

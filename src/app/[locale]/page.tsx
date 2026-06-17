@@ -5,6 +5,7 @@ import { HomeOfferCard } from "@/components/HomeOfferCard";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
+import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getHomeHeroPillars } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { getHomeOfferPillars, getHomeTrustBandItems } from "@/lib/i18n/home-content";
@@ -36,6 +37,7 @@ export default async function Home({ params }: Props) {
   const offerPillars = getHomeOfferPillars(locale);
   const trustItems = getHomeTrustBandItems(locale);
   const heroPillars = getHomeHeroPillars(locale);
+  const statsContent = getCompanyStatsContent(locale);
   const link = (href: string) => localizeHref(href, locale);
   const homeUrl = `${siteUrl}${link("/")}/`.replace(/([^:]\/)\/+/g, "$1");
 
@@ -74,7 +76,12 @@ export default async function Home({ params }: Props) {
         aria-label={messages.home.statsAria}
       >
         <div className="container">
-          <ExperienceStats variant="compact" showNote={false} />
+          <ExperienceStats
+            variant="compact"
+            showNote={false}
+            statsContent={statsContent}
+            experienceOverviewAria={messages.common.experienceOverview}
+          />
         </div>
       </section>
 

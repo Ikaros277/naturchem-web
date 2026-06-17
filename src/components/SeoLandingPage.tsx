@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
 import { getCtaCopy } from "@/lib/i18n/cta-i18n";
+import { getMessages } from "@/lib/i18n/get-messages";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getSeoLandingCopy } from "@/lib/i18n/seo-landing-i18n";
 import type { Locale } from "@/lib/i18n/locales";
@@ -15,7 +16,8 @@ type Props = {
   locale: Locale;
 };
 
-export function SeoLandingPage({ landing, locale }: Props) {
+export async function SeoLandingPage({ landing, locale }: Props) {
+  const messages = await getMessages(locale);
   const copy = getSeoLandingCopy(locale);
   const ctaCopy = getCtaCopy(locale);
   const link = (href: string) => localizeHref(href, locale);
@@ -36,6 +38,7 @@ export function SeoLandingPage({ landing, locale }: Props) {
     <main className="container section">
       <JsonLd data={serviceData} />
       <Breadcrumbs
+        breadcrumbsAria={messages.common.breadcrumbsAria}
         items={[
           { name: copy.breadcrumbHome, href: link("/") },
           { name: copy.breadcrumbServices, href: link("/sluzby") },

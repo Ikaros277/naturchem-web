@@ -8,6 +8,7 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { getPoradnaTopicLabels } from "@/lib/i18n/poradna-topic-i18n";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
@@ -34,6 +35,7 @@ export default async function Page({ params }: Props) {
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
+  const topicLabels = getPoradnaTopicLabels(locale);
   const link = (href: string) => localizeHref(href, locale);
   const poradnaUrl = `${siteUrl}${link("/poradna")}/`.replace(/([^:]\/)\/+/g, "$1");
 
@@ -77,6 +79,7 @@ export default async function Page({ params }: Props) {
       <JsonLd data={itemListData} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
+        locale={locale}
         theme={getPageHeroTheme("/poradna")}
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },
@@ -90,7 +93,7 @@ export default async function Page({ params }: Props) {
         </header>
       </PageHeroBand>
       <div className="container page-first-section">
-        <PoradnaFilterableList articles={mergedArticles} locale={locale} />
+        <PoradnaFilterableList articles={mergedArticles} locale={locale} topicLabels={topicLabels} />
         <PageCtaStrip {...pageCtaPresets.poradna} />
       </div>
     </main>

@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { IBM_Plex_Sans, Source_Sans_3 } from "next/font/google";
 import "../globals.css";
-import { ConsentAwareTracking } from "@/components/ConsentAwareTracking";
+import { DeferredClientWidgets } from "@/components/DeferredClientWidgets";
 import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { OutboundLinkTelemetry } from "@/components/OutboundLinkTelemetry";
-import { LiveChatWidgets } from "@/components/LiveChatWidgets";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/Schema";
@@ -143,8 +142,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           {children}
           <Footer locale={locale} />
           <CookieConsentBanner />
-          <LiveChatWidgets />
-          <ConsentAwareTracking />
+          <DeferredClientWidgets />
           <OutboundLinkTelemetry />
         </LocaleProvider>
       </body>

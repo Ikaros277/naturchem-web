@@ -86,12 +86,15 @@ function MarketingScripts() {
 
 /**
  * Google tagy běží s Consent Mode v2 (výchozí denied → update po volbě v liště).
+ * gtag.js se načte až po souhlasu se statistikami nebo marketingem (Ads).
  * Meta / LinkedIn se načtou až po marketingovém souhlasu.
  */
 export function ConsentAwareTracking() {
   const consent = useCookieConsentState();
   const hasChoice = Boolean(consent.updatedAt);
   const marketingAllowed = hasChoice && consent.marketing;
+  const googleTagsAllowed =
+    hasChoice && (consent.statistics || (consent.marketing && Boolean(googleAdsId)));
 
   useEffect(() => {
     if (!getPrimaryGoogleTagId()) return;
@@ -101,7 +104,7 @@ export function ConsentAwareTracking() {
 
   return (
     <>
-      {getPrimaryGoogleTagId() ? <GoogleTagScripts /> : null}
+      {googleTagsAllowed && getPrimaryGoogleTagId() ? <GoogleTagScripts /> : null}
       {marketingAllowed ? <MarketingScripts /> : null}
     </>
   );

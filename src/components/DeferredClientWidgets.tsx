@@ -1,0 +1,22 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+const ConsentAwareTracking = dynamic(
+  () => import("@/components/ConsentAwareTracking").then((m) => m.ConsentAwareTracking),
+  { ssr: false }
+);
+
+const LiveChatWidgets = dynamic(
+  () => import("@/components/LiveChatWidgets").then((m) => m.LiveChatWidgets),
+  { ssr: false }
+);
+
+export function DeferredClientWidgets() {
+  return (
+    <>
+      <LiveChatWidgets />
+      <ConsentAwareTracking />
+    </>
+  );
+}

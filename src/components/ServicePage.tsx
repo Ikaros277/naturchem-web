@@ -147,6 +147,7 @@ export function ServicePage(props: Props) {
         <JsonLd data={relatedItemListData} />
       ) : null}
       <PageHeroBand
+        locale={locale}
         theme={heroTheme}
         variant="service"
         breadcrumbs={[

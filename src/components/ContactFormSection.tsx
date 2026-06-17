@@ -1,15 +1,16 @@
 "use client";
 
-import { Component, useEffect, useState, type ReactNode } from "react";
+import { Component, useEffect, type ReactNode } from "react";
 import { CONTACT_FORM_ID } from "@/lib/contact-url";
-import { readContactUrlPrefill, type ContactUrlPrefill } from "@/lib/contact-url-prefill";
+import type { ContactUrlPrefill } from "@/lib/contact-url-prefill";
+import type { getInquiryCategories } from "@/lib/i18n/contact-inquiry-i18n";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { company } from "@/lib/site";
 import { ContactForm } from "@/components/ContactForm";
 
 type Props = {
+  categories: ReturnType<typeof getInquiryCategories>;
   initialCategory?: ContactUrlPrefill["initialCategory"];
-  initialServices?: string[];
   initialMessage?: string;
 };
 
@@ -54,29 +55,14 @@ class ContactFormErrorBoundary extends Component<
   }
 }
 
-const emptyPrefill: ContactUrlPrefill = {
-  initialServices: [],
-  initialMessage: ""
-};
-
-export function ContactFormSection(props: Props = {}) {
-  const [urlPrefill, setUrlPrefill] = useState<ContactUrlPrefill | null>(null);
-
-  useEffect(() => {
-    const fromUrl = readContactUrlPrefill(window.location.search);
-    if (fromUrl.initialServices.length > 0 || fromUrl.initialMessage) {
-      setUrlPrefill(fromUrl);
-    }
-  }, []);
-
-  const prefill = urlPrefill ?? emptyPrefill;
-  const initialCategory = props.initialCategory ?? prefill.initialCategory;
-  const initialServices = props.initialServices ?? prefill.initialServices;
-  const initialMessage = props.initialMessage ?? prefill.initialMessage;
-
+export function ContactFormSection({
+  categories,
+  initialCategory,
+  initialMessage = ""
+}: Props) {
   useEffect(() => {
     function shouldScrollToForm() {
-      const hasQueryPrefill = initialServices.length > 0 || Boolean(initialMessage);
+      const hasQueryPrefill = Boolean(initialMessage) || initialCategory !== undefined;
       const hasFormHash = window.location.hash === `#${CONTACT_FORM_ID}`;
       return hasQueryPrefill || hasFormHash;
     }
@@ -90,18 +76,15 @@ export function ContactFormSection(props: Props = {}) {
     scrollToForm();
     window.addEventListener("hashchange", scrollToForm);
     return () => window.removeEventListener("hashchange", scrollToForm);
-  }, [initialServices, initialMessage]);
+  }, [initialCategory, initialMessage]);
 
-  const formKey = [
-    initialCategory ?? "nevim",
-    ...initialServices,
-    initialMessage
-  ].join("|");
+  const formKey = [initialCategory ?? "nevim", initialMessage].join("|");
 
   return (
     <ContactFormErrorBoundary>
       <ContactForm
         key={formKey}
+        categories={categories}
         initialCategory={initialCategory}
         initialMessage={initialMessage}
       />

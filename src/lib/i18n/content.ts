@@ -130,10 +130,6 @@ import { cookiesPageContent as cookiesPageContentCs, cookiesPageMetadata as cook
 import { cookiesPageContent as cookiesPageContentEn, cookiesPageMetadata as cookiesPageMetadataEn } from "@/lib/cookies-page-en";
 import { cookiesPageContent as cookiesPageContentDe, cookiesPageMetadata as cookiesPageMetadataDe } from "@/lib/cookies-page-de";
 
-import { INQUIRY_CATEGORIES as inquiryCategoriesCs } from "@/lib/contact-inquiry";
-import { INQUIRY_CATEGORIES as inquiryCategoriesEn } from "@/lib/contact-inquiry-en";
-import { INQUIRY_CATEGORIES as inquiryCategoriesDe } from "@/lib/contact-inquiry-de";
-
 import { CONTACT_SERVICE_LABELS_EN } from "@/lib/contact-services-en";
 import { CONTACT_SERVICE_LABELS_EN as CONTACT_SERVICE_LABELS_DE } from "@/lib/contact-services-de";
 import type { ContactServiceOption } from "@/lib/contact-services";
@@ -146,47 +142,9 @@ import { guaranteeIntroParagraph as guaranteeIntroCs } from "@/lib/guarantee-cop
 import { guaranteeIntroParagraph as guaranteeIntroEn } from "@/lib/guarantee-copy-en";
 import { guaranteeIntroParagraph as guaranteeIntroDe } from "@/lib/guarantee-copy-de";
 
-import {
-  companyStats as companyStatsListCs,
-  companyStatsIntro as companyStatsIntroCs,
-  companyStatsNote as companyStatsNoteCs
-} from "@/lib/company-stats";
-import {
-  companyStats as companyStatsListEn,
-  companyStatsIntro as companyStatsIntroEn,
-  companyStatsNote as companyStatsNoteEn
-} from "@/lib/company-stats-en";
-import {
-  companyStats as companyStatsListDe,
-  companyStatsIntro as companyStatsIntroDe,
-  companyStatsNote as companyStatsNoteDe
-} from "@/lib/company-stats-de";
-
-const companyStatsContentCs = {
-  companyStats: companyStatsListCs,
-  companyStatsIntro: companyStatsIntroCs,
-  companyStatsNote: companyStatsNoteCs
-};
-
-const companyStatsContentEn = {
-  companyStats: companyStatsListEn,
-  companyStatsIntro: companyStatsIntroEn,
-  companyStatsNote: companyStatsNoteEn
-};
-
-const companyStatsContentDe = {
-  companyStats: companyStatsListDe,
-  companyStatsIntro: companyStatsIntroDe,
-  companyStatsNote: companyStatsNoteDe
-};
-
 import { homeHeroPillars as homeHeroPillarsCs } from "@/lib/home-hero-pillars";
 import { homeHeroPillars as homeHeroPillarsEn } from "@/lib/home-hero-pillars-en";
 import { homeHeroPillars as homeHeroPillarsDe } from "@/lib/home-hero-pillars-de";
-
-import type { PoradnaTopic } from "@/lib/poradna-topic";
-import { PORADNA_TOPICS_EN } from "@/lib/poradna-topic-en";
-import { PORADNA_TOPICS_EN as PORADNA_TOPICS_DE } from "@/lib/poradna-topic-de";
 
 const faqByLocale: Record<
   Locale,
@@ -378,9 +336,9 @@ export function getCookiesPage(locale: Locale) {
   );
 }
 
-export function getInquiryCategories(locale: Locale) {
-  return localized(locale, inquiryCategoriesCs, inquiryCategoriesEn, inquiryCategoriesDe);
-}
+export { getInquiryCategories } from "@/lib/i18n/contact-inquiry-i18n";
+export { getCompanyStatsContent, type CompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
+export { getPoradnaTopicLabel } from "@/lib/i18n/poradna-topic-i18n";
 
 export function getContactServiceLabel(value: string, locale: Locale): string {
   if (locale === "en") {
@@ -400,20 +358,6 @@ export function getGuaranteeIntro(locale: Locale) {
   return localized(locale, guaranteeIntroCs, guaranteeIntroEn, guaranteeIntroDe);
 }
 
-export function getCompanyStatsContent(locale: Locale) {
-  return localized(locale, companyStatsContentCs, companyStatsContentEn, companyStatsContentDe);
-}
-
 export function getHomeHeroPillars(locale: Locale) {
   return localized(locale, homeHeroPillarsCs, homeHeroPillarsEn, homeHeroPillarsDe);
-}
-
-export function getPoradnaTopicLabel(topic: PoradnaTopic, locale: Locale): string {
-  if (locale === "en") {
-    return PORADNA_TOPICS_EN[topic] ?? topic;
-  }
-  if (locale === "de") {
-    return PORADNA_TOPICS_DE[topic] ?? topic;
-  }
-  return topic;
 }

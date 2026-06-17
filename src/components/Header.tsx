@@ -1,15 +1,17 @@
 "use client";
 
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { usePathname } from "next/navigation";
 import { contactFormHref } from "@/lib/contact-url";
-import { globalCta, headerMainNav, kontaktNav, oNasNav } from "@/lib/navigation";
-import { oNasMegaGroups } from "@/lib/o-nas-megamenu";
-import { serviceMegaGroups } from "@/lib/service-megamenu";
+import { kontaktNav } from "@/lib/navigation";
+import { getONasMegaGroups } from "@/lib/i18n/o-nas-megamenu";
+import { getHeaderMainNav } from "@/lib/i18n/nav-content";
+import { getServiceMegaGroups } from "@/lib/i18n/service-megamenu";
+import { useLocale, useTranslations } from "@/lib/i18n/locale-context";
+import { LocaleLink, useLocalizedPathname } from "@/lib/i18n/locale-link";
 import { BrandLogo } from "@/components/BrandLogo";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { company } from "@/lib/site";
 
 function useIsDesktopNav() {
@@ -63,23 +65,27 @@ function useDelayedHover(delayMs = 240) {
 }
 
 function ServiceMegaMenu() {
+  const locale = useLocale();
+  const t = useTranslations("header");
+  const serviceMegaGroups = getServiceMegaGroups(locale);
+
   return (
-    <div id="nav-mega-sluzby" className="nav-dropdown nav-dropdown-wide nav-mega" aria-label="Služby">
-      <Link href="/sluzby" className="nav-dropdown-link nav-dropdown-overview">
-        Přehled služeb
-      </Link>
+    <div id="nav-mega-sluzby" className="nav-dropdown nav-dropdown-wide nav-mega" aria-label={t.services}>
+      <LocaleLink href="/sluzby" className="nav-dropdown-link nav-dropdown-overview">
+        {t.servicesOverview}
+      </LocaleLink>
       <div className="mega-menu-grid mega-menu-grid-four">
         {serviceMegaGroups.map((group) => (
           <div key={group.title} className="mega-menu-group">
             <span className="nav-dropdown-label">{group.title}</span>
             {group.links.map((item) => (
-              <Link
+              <LocaleLink
                 key={`${group.title}-${item.label}`}
                 href={item.href}
                 className="nav-dropdown-link"
               >
                 {item.label}
-              </Link>
+              </LocaleLink>
             ))}
           </div>
         ))}
@@ -89,15 +95,19 @@ function ServiceMegaMenu() {
 }
 
 function ONasDropdown() {
+  const locale = useLocale();
+  const t = useTranslations("header");
+  const oNasMegaGroups = getONasMegaGroups(locale);
+
   return (
-    <div id="nav-dropdown-o-nas" className="nav-dropdown nav-dropdown-o-nas" aria-label={oNasNav.label}>
+    <div id="nav-dropdown-o-nas" className="nav-dropdown nav-dropdown-o-nas" aria-label={t.about}>
       {oNasMegaGroups.map((group) => (
         <div key={group.title} className="nav-dropdown-group">
           <span className="nav-dropdown-label">{group.title}</span>
           {group.links.map((item) => (
-            <Link key={item.href} href={item.href} className="nav-dropdown-link">
+            <LocaleLink key={item.href} href={item.href} className="nav-dropdown-link">
               {item.label}
-            </Link>
+            </LocaleLink>
           ))}
         </div>
       ))}
@@ -106,6 +116,9 @@ function ONasDropdown() {
 }
 
 function MobileONasGroups({ onNavigate }: { onNavigate?: () => void }) {
+  const locale = useLocale();
+  const oNasMegaGroups = getONasMegaGroups(locale);
+
   return (
     <>
       {oNasMegaGroups.map((group) => (
@@ -113,14 +126,14 @@ function MobileONasGroups({ onNavigate }: { onNavigate?: () => void }) {
           <summary>{group.title}</summary>
           <div className="nav-mobile-sub">
             {group.links.map((item) => (
-              <Link
+              <LocaleLink
                 key={`${group.title}-${item.label}`}
                 href={item.href}
                 className="nav-mobile-sub-link"
                 onClick={onNavigate}
               >
                 {item.label}
-              </Link>
+              </LocaleLink>
             ))}
           </div>
         </details>
@@ -165,6 +178,9 @@ function NavDropdownItem({
 }
 
 function MobileServiceGroups({ onNavigate }: { onNavigate?: () => void }) {
+  const locale = useLocale();
+  const serviceMegaGroups = getServiceMegaGroups(locale);
+
   return (
     <>
       {serviceMegaGroups.map((group) => (
@@ -172,14 +188,14 @@ function MobileServiceGroups({ onNavigate }: { onNavigate?: () => void }) {
           <summary>{group.title}</summary>
           <div className="nav-mobile-sub">
             {group.links.map((item) => (
-              <Link
+              <LocaleLink
                 key={`${group.title}-${item.label}`}
                 href={item.href}
                 className="nav-mobile-sub-link"
                 onClick={onNavigate}
               >
                 {item.label}
-              </Link>
+              </LocaleLink>
             ))}
           </div>
         </details>
@@ -189,7 +205,9 @@ function MobileServiceGroups({ onNavigate }: { onNavigate?: () => void }) {
 }
 
 export function Header() {
-  const pathname = usePathname();
+  const pathname = useLocalizedPathname();
+  const locale = useLocale();
+  const t = useTranslations("header");
   const isDesktop = useIsDesktopNav();
   const [menuOpen, setMenuOpen] = useState(false);
   const servicesMenu = useDelayedHover();
@@ -197,6 +215,7 @@ export function Header() {
   const [mounted, setMounted] = useState(false);
   const mobileSheetRef = useRef<HTMLDivElement>(null);
   const mobileToggleRef = useRef<HTMLButtonElement>(null);
+  const headerMainNav = getHeaderMainNav(locale);
 
   useEffect(() => {
     setMounted(true);
@@ -265,60 +284,60 @@ export function Header() {
             className="nav-mobile-portal"
             role="dialog"
             aria-modal="true"
-            aria-label="Hlavní menu"
+            aria-label={t.mobileMenu}
           >
             <div className="nav-mobile-backdrop" aria-hidden onClick={closeMenu} />
             <div className="nav-mobile-sheet" ref={mobileSheetRef}>
               <div className="nav-mobile-sheet-head">
                 <div className="nav-mobile-brand">
-                  <Link href="/" className="nav-mobile-logo" onClick={closeMenu} aria-label="NATURCHEM domů">
+                  <LocaleLink href="/" className="nav-mobile-logo" onClick={closeMenu} aria-label={t.homeAria}>
                     <BrandLogo className="nav-mobile-logo-img" />
-                  </Link>
-                  <p className="nav-mobile-tagline brand-tagline">Měření · studie · dokumentace</p>
+                  </LocaleLink>
+                  <p className="nav-mobile-tagline brand-tagline">{t.brandTagline}</p>
                 </div>
                 <button
                   type="button"
                   className="nav-mobile-close"
                   onClick={closeMenu}
-                  aria-label="Zavřít menu"
+                  aria-label={t.closeMenu}
                 >
                   ×
                 </button>
               </div>
-              <nav className="nav-mobile-nav" aria-label="Hlavní navigace">
+              <nav className="nav-mobile-nav" aria-label={t.navAria}>
                 <details className="nav-mobile-details">
-                  <summary>Služby</summary>
-                  <Link href="/sluzby" className="nav-mobile-overview" onClick={closeMenu}>
-                    Přehled služeb
-                  </Link>
+                  <summary>{t.services}</summary>
+                  <LocaleLink href="/sluzby" className="nav-mobile-overview" onClick={closeMenu}>
+                    {t.servicesOverview}
+                  </LocaleLink>
                   <div className="nav-mobile-sub">
                     <MobileServiceGroups onNavigate={closeMenu} />
                   </div>
                 </details>
                 {headerMainNav.map((item) => (
-                  <Link
+                  <LocaleLink
                     key={item.href}
                     href={item.href}
                     className="nav-mobile-link"
                     onClick={closeMenu}
                   >
                     {item.label}
-                  </Link>
+                  </LocaleLink>
                 ))}
                 <details className="nav-mobile-details">
-                  <summary>{oNasNav.label}</summary>
+                  <summary>{t.about}</summary>
                   <div className="nav-mobile-sub">
                     <MobileONasGroups onNavigate={closeMenu} />
                   </div>
                 </details>
-                <Link href={kontaktNav.href} className="nav-mobile-link" onClick={closeMenu}>
-                  {kontaktNav.label}
-                </Link>
+                <LocaleLink href={kontaktNav.href} className="nav-mobile-link" onClick={closeMenu}>
+                  {t.contact}
+                </LocaleLink>
               </nav>
               <div className="nav-mobile-sheet-foot">
-                <Link className="button nav-mobile-cta" href={contactFormHref} onClick={closeMenu}>
-                  {globalCta}
-                </Link>
+                <LocaleLink className="button nav-mobile-cta" href={contactFormHref} onClick={closeMenu}>
+                  {t.cta}
+                </LocaleLink>
               </div>
             </div>
           </div>,
@@ -330,7 +349,7 @@ export function Header() {
     <header className="site-header">
       <div className="topbar">
         <div className="container topbar-inner">
-          <span className="topbar-label">Akreditovaná laboratoř č. 1599 · ČSN EN ISO/IEC 17025</span>
+          <span className="topbar-label">{t.topbarLabel}</span>
           <span className="topbar-contact">
             <a className="topbar-link" href={`mailto:${company.email}`}>
               {company.email}
@@ -342,19 +361,20 @@ export function Header() {
             <a className="topbar-link" href={`tel:${company.phones[0].replace(/\s/g, "")}`}>
               {company.phones[0]}
             </a>
+            <LanguageSwitcher />
           </span>
         </div>
       </div>
       <div className="container nav">
-        <Link href="/" aria-label="NATURCHEM domů" className="nav-brand">
+        <LocaleLink href="/" aria-label={t.homeAria} className="nav-brand">
           <span className="brand-mark">
             <BrandLogo priority className="brand-logo-img" />
-            <span className="brand-tagline">Měření · studie · dokumentace</span>
+            <span className="brand-tagline">{t.brandTagline}</span>
           </span>
-        </Link>
+        </LocaleLink>
 
         {isDesktop ? (
-          <nav className="nav-links nav-desktop" aria-label="Hlavní navigace">
+          <nav className="nav-links nav-desktop" aria-label={t.navAria}>
             <div
               className="nav-mega-wrap"
               onMouseEnter={servicesMenu.openMenu}
@@ -366,14 +386,14 @@ export function Header() {
                 }
               }}
             >
-              <Link
+              <LocaleLink
                 className="nav-item-link"
                 href="/sluzby"
                 aria-expanded={servicesMenu.open}
                 aria-controls="nav-mega-sluzby"
               >
-                Služby
-              </Link>
+                {t.services}
+              </LocaleLink>
               {servicesMenu.open ? (
                 <div
                   className="nav-mega-flyout"
@@ -385,32 +405,32 @@ export function Header() {
               ) : null}
             </div>
             {headerMainNav.map((item) => (
-              <Link key={item.href} href={item.href}>
+              <LocaleLink key={item.href} href={item.href}>
                 {item.label}
-              </Link>
+              </LocaleLink>
             ))}
             <NavDropdownItem
               id="nav-dropdown-o-nas"
-              label={oNasNav.label}
+              label={t.about}
               open={oNasOpen}
               onOpen={() => setONasOpen(true)}
               onClose={() => setONasOpen(false)}
             >
               <ONasDropdown />
             </NavDropdownItem>
-            <Link href={kontaktNav.href}>{kontaktNav.label}</Link>
+            <LocaleLink href={kontaktNav.href}>{t.contact}</LocaleLink>
           </nav>
         ) : null}
 
         {isDesktop ? (
-          <Link className="button nav-cta-desktop" href={contactFormHref}>
-            {globalCta}
-          </Link>
+          <LocaleLink className="button nav-cta-desktop" href={contactFormHref}>
+            {t.cta}
+          </LocaleLink>
         ) : (
           <>
-            <Link className="button nav-cta-mobile" href={contactFormHref}>
-              {globalCta}
-            </Link>
+            <LocaleLink className="button nav-cta-mobile" href={contactFormHref}>
+              {t.cta}
+            </LocaleLink>
             <button
               ref={mobileToggleRef}
               type="button"
@@ -419,7 +439,7 @@ export function Header() {
               aria-controls="mobile-menu"
               onClick={() => setMenuOpen((open) => !open)}
             >
-              <span className="sr-only">{menuOpen ? "Zavřít menu" : "Otevřít menu"}</span>
+              <span className="sr-only">{menuOpen ? t.closeMenu : t.openMenu}</span>
               <span className={`nav-toggle-bars${menuOpen ? " is-open" : ""}`} aria-hidden>
                 <span />
                 <span />

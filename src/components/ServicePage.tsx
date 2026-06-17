@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
@@ -8,21 +9,16 @@ import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
-import { contactSubmitCta, globalCta } from "@/lib/cta";
+import { getCtaCopy } from "@/lib/i18n/cta-i18n";
+import { getServiceTrustBandItems } from "@/lib/i18n/home-content";
+import { localizeHref } from "@/lib/i18n/navigation";
+import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { contactUrl } from "@/lib/contact-url";
-import { serviceTrustBandItems } from "@/lib/home-hero-metrics";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
 import { provozyNavLabel, sectors } from "@/lib/sectors";
 import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
-import {
-  serviceCtaStripText,
-  serviceDocsIntro,
-  serviceMistakesHeading,
-  serviceOverviewHeading,
-  serviceScopeHeading,
-  serviceWhenNeededHeading
-} from "@/lib/service-copy";
 import { company, services, siteUrl } from "@/lib/site";
 
 type Props = {
@@ -42,12 +38,24 @@ type Props = {
   faqCategoryId?: string;
 };
 
-export function ServicePage(props: Props) {
+async function getRequestLocale(): Promise<Locale> {
+  const headerStore = await headers();
+  const locale = headerStore.get("x-locale");
+  return locale && isLocale(locale) ? locale : "cs";
+}
+
+export async function ServicePage(props: Props) {
+  const locale = await getRequestLocale();
+  const copy = getServiceCopy(locale);
+  const ctaCopy = getCtaCopy(locale);
+  const trustItems = getServiceTrustBandItems(locale);
+  const link = (href: string) => localizeHref(href, locale);
+
   const bareSlug = props.slug.split("/").pop() ?? props.slug;
   const serviceMeta = services.find((s) => s.href === `/${props.slug}`);
   const relatedServices = services.filter((s) => s.href !== `/${props.slug}`).slice(0, 3);
   const contactServiceValue = props.contactService || serviceMeta?.contactService || props.title;
-  const contactCta = serviceMeta?.contactCta ?? contactSubmitCta;
+  const contactCta = serviceMeta?.contactCta ?? ctaCopy.contactSubmitCta;
   const quickContactHref = contactUrl(contactServiceValue);
   const sectorMetaByHref = new Map(sectors.map((s) => [s.href, s]));
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
@@ -57,19 +65,22 @@ export function ServicePage(props: Props) {
   const keyOutputs = props.outputs.slice(0, 3);
   const keyDocs = props.docs.slice(0, 3);
   const practicalExamples = props.practicalSituations?.slice(0, 3) ?? [];
+  const sectorLabel = locale === "en" ? "Industries" : provozyNavLabel;
   const detailGroups = [
-    practicalExamples.length > 0 ? { title: "Příklady zakázek z praxe", items: practicalExamples } : null,
+    practicalExamples.length > 0
+      ? { title: copy.practicalExamplesHeading, items: practicalExamples }
+      : null,
     props.commonMistakes && props.commonMistakes.length > 0
-      ? { title: serviceMistakesHeading, items: props.commonMistakes }
+      ? { title: copy.mistakesHeading, items: props.commonMistakes }
       : null
-  ].filter((group): group is { title: string; items: string[] } => group !== null);
+  ].filter((group) => group !== null);
 
   const mergedRelated = [
     ...relatedLinks.map((l) => ({
       href: l.href,
       title: l.title,
       description: l.description,
-      cta: "Zobrazit službu",
+      cta: copy.viewService,
       sectionLabel: undefined as string | undefined
     })),
     ...sectorCrossLinks.map((s) => {
@@ -78,18 +89,20 @@ export function ServicePage(props: Props) {
         href: s.href,
         title: s.title,
         description: sector?.description,
-        cta: sector?.linkHint ?? "Zobrazit provoz",
-        sectionLabel: provozyNavLabel
+        cta: sector?.linkHint ?? copy.viewSector,
+        sectionLabel: sectorLabel
       };
     }),
     ...relatedServices.map((s) => ({
       href: s.href,
       title: s.title,
       description: s.short,
-      cta: "Zobrazit službu",
+      cta: copy.viewService,
       sectionLabel: undefined as string | undefined
     }))
   ].slice(0, 3);
+
+  const pageUrl = `${siteUrl}${link(`/${props.slug}`)}/`.replace(/([^:]\/)\/+/g, "$1");
 
   const serviceData = {
     "@context": "https://schema.org",
@@ -97,7 +110,7 @@ export function ServicePage(props: Props) {
     serviceType: props.title,
     provider: { "@type": "Organization", name: company.name, url: siteUrl },
     areaServed: "CZ",
-    url: `${siteUrl}/${props.slug}/`,
+    url: pageUrl,
     description: props.intro
   };
 
@@ -105,13 +118,13 @@ export function ServicePage(props: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Úvod", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "Služby", item: `${siteUrl}/sluzby/` },
+      { "@type": "ListItem", position: 1, name: copy.breadcrumbHome, item: siteUrl },
+      { "@type": "ListItem", position: 2, name: copy.breadcrumbServices, item: `${siteUrl}${link("/sluzby")}/` },
       {
         "@type": "ListItem",
         position: 3,
         name: props.title,
-        item: `${siteUrl}/${props.slug}/`
+        item: pageUrl
       }
     ]
   };
@@ -119,12 +132,12 @@ export function ServicePage(props: Props) {
   const relatedItemListData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `Související odkazy pro ${props.title}`,
+    name: copy.relatedListName(props.title),
     itemListElement: [...relatedLinks, ...sectorCrossLinks].map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: item.title,
-      url: `${siteUrl}${item.href}/`.replace(/([^:]\/)\/+/g, "$1")
+      url: `${siteUrl}${link(item.href)}/`.replace(/([^:]\/)\/+/g, "$1")
     }))
   };
 
@@ -134,15 +147,15 @@ export function ServicePage(props: Props) {
     <main className="page">
       <JsonLd data={serviceData} />
       <JsonLd data={breadcrumbData} />
-      {(relatedLinks.length > 0 || sectorCrossLinks.length > 0) ? (
+      {relatedLinks.length > 0 || sectorCrossLinks.length > 0 ? (
         <JsonLd data={relatedItemListData} />
       ) : null}
       <PageHeroBand
         theme={heroTheme}
         variant="service"
         breadcrumbs={[
-          { name: "Úvod", href: "/" },
-          { name: "Služby", href: "/sluzby" },
+          { name: copy.breadcrumbHome, href: link("/") },
+          { name: copy.breadcrumbServices, href: link("/sluzby") },
           { name: props.title }
         ]}
       >
@@ -155,17 +168,17 @@ export function ServicePage(props: Props) {
       <section className="trust-band trust-band--compact" aria-labelledby="service-trust-heading">
         <div className="container trust-band-inner">
           <h2 id="service-trust-heading" className="sr-only">
-            Důvěryhodnost a oprávnění
+            {copy.trustAria}
           </h2>
-          {serviceTrustBandItems.map((item) => (
+          {trustItems.map((item) => (
             <span key={item}>{item}</span>
           ))}
         </div>
       </section>
 
-      <section className="service-overview-section section--forest-tint" aria-label="Stručný přehled služby">
+      <section className="service-overview-section section--forest-tint" aria-label={copy.overviewAria}>
         <div className="container">
-          <h2 className="service-overview-title">{serviceOverviewHeading}</h2>
+          <h2 className="service-overview-title">{copy.overviewHeading}</h2>
           <div className="service-overview-layout">
             <div className="service-overview-panel">
               <div
@@ -177,7 +190,7 @@ export function ServicePage(props: Props) {
                   .join(" ")}
               >
                 {keyWhenNeeded.length > 0 ? (
-                  <OverviewGridCell icon="process-posouzeni" title={serviceWhenNeededHeading}>
+                  <OverviewGridCell icon="process-posouzeni" title={copy.whenNeededHeading}>
                     <ul className="check-list">
                       {keyWhenNeeded.map((item) => (
                         <li key={item}>{item}</li>
@@ -186,7 +199,7 @@ export function ServicePage(props: Props) {
                   </OverviewGridCell>
                 ) : null}
 
-                <OverviewGridCell icon="process-rozsah" title={props.scopeHeading ?? serviceScopeHeading}>
+                <OverviewGridCell icon="process-rozsah" title={props.scopeHeading ?? copy.scopeHeading}>
                   <ul className="check-list">
                     {keyScope.map((item) => (
                       <li key={item}>{item}</li>
@@ -194,7 +207,7 @@ export function ServicePage(props: Props) {
                   </ul>
                 </OverviewGridCell>
 
-                <OverviewGridCell icon="process-vystup" title="Co dostanete">
+                <OverviewGridCell icon="process-vystup" title={copy.outputsHeading}>
                   <ul className="check-list">
                     {keyOutputs.map((item) => (
                       <li key={item}>{item}</li>
@@ -204,10 +217,10 @@ export function ServicePage(props: Props) {
 
                 <OverviewGridCell
                   icon="process-posouzeni"
-                  title="Jak začít"
+                  title={copy.howToStartHeading}
                   className="service-overview-cell--start"
                 >
-                  <p className="muted">{serviceDocsIntro}</p>
+                  <p className="muted">{copy.docsIntro}</p>
                   <ul className="check-list">
                     {keyDocs.map((item) => (
                       <li key={item}>{item}</li>
@@ -233,7 +246,7 @@ export function ServicePage(props: Props) {
         {detailGroups.length > 0 ? (
           <section className="content-block service-extra-section">
             <details className="service-extra-details">
-              <summary>Doplňující informace pro přípravu zakázky</summary>
+              <summary>{copy.extraInfoSummary}</summary>
               <div className="service-extra-grid">
                 {detailGroups.map((group) => (
                   <article key={group.title} className="service-extra-card">
@@ -261,12 +274,12 @@ export function ServicePage(props: Props) {
 
         {mergedRelated.length > 0 ? (
           <section className="content-block">
-            <h2>Mohlo by Vás zajímat</h2>
+            <h2>{copy.relatedHeading}</h2>
             <div className="grid grid-3 index-card-grid">
               {mergedRelated.map((item) => (
                 <IndexCard
                   key={item.href}
-                  href={item.href}
+                  href={link(item.href)}
                   title={item.title}
                   cta={item.cta}
                   className="service-related-card"
@@ -286,11 +299,11 @@ export function ServicePage(props: Props) {
       </div>
 
       <PageCtaStrip
-        text={serviceCtaStripText}
-        primaryLabel={globalCta}
+        text={copy.ctaStripText}
+        primaryLabel={ctaCopy.globalCta}
         primaryHref={quickContactHref}
-        secondaryLabel="Akreditace a oprávnění"
-        secondaryHref="/akreditace-autorizace-dokumenty"
+        secondaryLabel={copy.accreditationLink}
+        secondaryHref={link("/akreditace-autorizace-dokumenty")}
         className="container"
       />
     </main>

@@ -1,0 +1,103 @@
+{
+  "language": {
+    "ariaLabel": "Language switcher",
+    "switchToCs": "Switch to Czech",
+    "switchToEn": "Switch to English",
+    "currentCs": "Current language: Czech",
+    "currentEn": "Current language: English"
+  },
+  "header": {
+    "topbarLabel": "Accredited laboratory No. 1599 · ČSN EN ISO/IEC 17025",
+    "brandTagline": "Measurements · studies · documentation",
+    "navAria": "Main navigation",
+    "services": "Services",
+    "servicesOverview": "All services",
+    "about": "About us",
+    "contact": "Contact",
+    "cta": "Request a quote",
+    "mobileMenu": "Main menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "homeAria": "NATURCHEM home"
+  },
+  "nav": {
+    "sectors": "Industries",
+    "caseStudies": "Typical projects",
+    "references": "References",
+    "aboutCompany": "About NATURCHEM",
+    "accreditation": "Accreditation & authorisations",
+    "equipment": "Laboratory equipment",
+    "articles": "Knowledge base",
+    "faq": "FAQ"
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "contact": "Contact",
+    "companyAria": "Company links in footer",
+    "servicesAria": "Services links in footer",
+    "contactAria": "Contact in footer",
+    "contactPage": "Contact & inquiry form",
+    "location": "České Budějovice · Prague 5 · Havlíčkův Brod",
+    "legal": "Legal information",
+    "privacy": "Privacy policy",
+    "cookies": "Cookie policy",
+    "manageCookies": "Manage cookies",
+    "copyright": "© NATURCHEM, s.r.o. {year} · Company ID {ico} · VAT {dic}"
+  },
+  "common": {
+    "home": "Home",
+    "readMore": "Read article",
+    "allArticles": "All knowledge articles",
+    "breadcrumbHome": "Home"
+  },
+  "home": {
+    "metaTitle": "NATURCHEM – measurements, studies and documentation",
+    "metaDescription": "Accredited emission and workplace measurements, dispersion and noise studies, EIA, expert reports, operating rules, IPPC, ISPOP and GHG — for operators, investors and the public sector.",
+    "heroTitle": "Accredited measurements, studies and documentation for authorities",
+    "heroLead": "We take care of everything your operation needs — for operators, investors and designers, without having to source multiple suppliers.",
+    "trustAria": "Credibility and authorisations",
+    "statsAria": "Experience in numbers",
+    "offerAria": "What we provide",
+    "offerTitle": "What we provide",
+    "clientsAria": "Our clients",
+    "clientsTitle": "Our clients",
+    "articlesAria": "Latest knowledge articles",
+    "articlesTitle": "Latest knowledge articles"
+  },
+  "contact": {
+    "metaTitle": "Contact & inquiry | NATURCHEM",
+    "metaDescription": "Send us a brief description or attachments from the authority. We will review the situation and propose the next steps — form or direct contact.",
+    "eyebrow": "Contact",
+    "title": "Get in touch — we are happy to help",
+    "lead": "A short description or an attachment from the authority is enough. We will assess the situation and get back to you with next steps.",
+    "detailsTitle": "Contact details",
+    "company": "Company",
+    "contactPerson": "Contact",
+    "contactPersonLabel": "Contact person",
+    "phone": "Phone",
+    "email": "Email",
+    "offices": "Offices",
+    "mapLabel": "NATURCHEM office map"
+  },
+  "cookies": {
+    "bannerTitle": "Cookie consent",
+    "settingsTitle": "Cookie settings",
+    "bannerText": "We use cookies for site operation, visitor statistics and optional online advertising. Optional cookies are enabled only after your consent. More in our",
+    "bannerConjunction": "and",
+    "cookiePolicy": "Cookie policy",
+    "privacyPolicy": "Privacy policy",
+    "acceptAll": "Accept all",
+    "rejectOptional": "Reject optional",
+    "settings": "Settings",
+    "necessary": "Necessary",
+    "necessaryDesc": "Always active — site operation and storing your choice.",
+    "statistics": "Statistics",
+    "statisticsDesc": "Google Analytics — helps us understand how the site is used.",
+    "marketing": "Marketing",
+    "marketingDesc": "Google Ads, Meta, LinkedIn — ad measurement and remarketing.",
+    "savePreferences": "Save preferences",
+    "back": "Back",
+    "manageCookies": "Manage cookies"
+  }
+}

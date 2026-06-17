@@ -1,27 +1,47 @@
 import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
-import { dedicatedServicePages } from "@/lib/dedicated-service-pages";
-import { siteUrl } from "@/lib/site";
+import { getDedicatedService } from "@/lib/i18n/service-pages";
+import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
 
-export function getDedicatedService(slug: string) {
-  const service = dedicatedServicePages[slug];
-  if (!service) {
-    throw new Error(`Neznámá služba: ${slug}`);
-  }
-  return service;
+export function getDedicatedServiceForLocale(slug: string, locale: Locale) {
+  return getDedicatedService(slug, locale);
 }
 
-export function dedicatedServiceMetadata(slug: string): Metadata {
-  const service = getDedicatedService(slug);
-  return {
+export function dedicatedServiceMetadata(slug: string, locale: Locale): Metadata {
+  const service = getDedicatedService(slug, locale);
+  return pageMetadata({
+    locale,
+    path: `/${service.slug}`,
     title: service.title,
-    description: service.description,
-    alternates: { canonical: `${siteUrl}/${service.slug}/` }
-  };
+    description: service.description
+  });
 }
 
-export function DedicatedServiceRoute({ slug }: { slug: string }) {
-  return <ServicePage {...getDedicatedService(slug)} />;
+type RouteProps = {
+  slug: string;
+  locale?: string;
+};
+
+export function DedicatedServiceRoute({ slug, locale: localeParam }: RouteProps) {
+  const locale: Locale = localeParam && isLocale(localeParam) ? localeParam : "cs";
+  return <ServicePage {...getDedicatedService(slug, locale)} />;
 }
 
-export const dedicatedServiceSlugs = Object.keys(dedicatedServicePages);
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export function createDedicatedServicePageExports(slug: string) {
+  async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { locale } = await params;
+    return dedicatedServiceMetadata(slug, isLocale(locale) ? locale : "cs");
+  }
+
+  async function Page({ params }: PageProps) {
+    const { locale } = await params;
+    return <DedicatedServiceRoute slug={slug} locale={locale} />;
+  }
+
+  return { generateMetadata, Page };
+}

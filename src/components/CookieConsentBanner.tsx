@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import {
   COOKIE_CONSENT_EVENT,
   defaultCookieConsent,
@@ -10,6 +9,8 @@ import {
   writeCookieConsent,
   type CookieConsentRecord
 } from "@/lib/cookie-consent";
+import { useTranslations } from "@/lib/i18n/locale-context";
+import { LocaleLink } from "@/lib/i18n/locale-link";
 import { legalPaths } from "@/lib/legal";
 
 type PanelMode = "banner" | "settings";
@@ -47,6 +48,7 @@ function CookieToggle({
 }
 
 export function CookieConsentBanner() {
+  const t = useTranslations("cookies");
   const [visible, setVisible] = useState(false);
   const [mode, setMode] = useState<PanelMode>("banner");
   const [statistics, setStatistics] = useState(false);
@@ -100,27 +102,24 @@ export function CookieConsentBanner() {
   return (
     <div className="cookie-consent-root" role="dialog" aria-modal="true" aria-labelledby="cookie-consent-title">
       <div className="cookie-consent-panel">
-        <h2 id="cookie-consent-title">
-          {mode === "banner" ? "Souhlas s cookies" : "Nastavení cookies"}
-        </h2>
+        <h2 id="cookie-consent-title">{mode === "banner" ? t.bannerTitle : t.settingsTitle}</h2>
 
         {mode === "banner" ? (
           <>
             <p>
-              Používáme cookies pro provoz webu, statistiku návštěvnosti a případně online reklamu.
-              Volitelné cookies spustíme až po Vašem souhlasu. Více v{" "}
-              <Link href={legalPaths.cookies}>Zásadách cookies</Link> a{" "}
-              <Link href={legalPaths.privacy}>Zásadách ochrany osobních údajů</Link>.
+              {t.bannerText}{" "}
+              <LocaleLink href={legalPaths.cookies}>{t.cookiePolicy}</LocaleLink> {t.bannerConjunction}{" "}
+              <LocaleLink href={legalPaths.privacy}>{t.privacyPolicy}</LocaleLink>.
             </p>
             <div className="cookie-consent-actions">
               <button type="button" className="button cookie-consent-btn-accept" onClick={acceptAll}>
-                Přijmout vše
+                {t.acceptAll}
               </button>
               <button type="button" className="button secondary" onClick={rejectOptional}>
-                Odmítnout volitelné
+                {t.rejectOptional}
               </button>
               <button type="button" className="button ghost" onClick={() => setMode("settings")}>
-                Nastavení
+                {t.settings}
               </button>
             </div>
           </>
@@ -128,35 +127,35 @@ export function CookieConsentBanner() {
           <>
             <CookieToggle
               id="cookie-necessary"
-              label="Nezbytné"
-              description="Vždy aktivní — provoz webu a uložení Vašeho rozhodnutí."
+              label={t.necessary}
+              description={t.necessaryDesc}
               checked
               disabled
             />
             <CookieToggle
               id="cookie-statistics"
-              label="Statistické"
-              description="Google Analytics — pomáhá nám pochopit, jak je web používán."
+              label={t.statistics}
+              description={t.statisticsDesc}
               checked={statistics}
               onChange={setStatistics}
             />
             <CookieToggle
               id="cookie-marketing"
-              label="Marketingové"
-              description="Google Ads, Meta, LinkedIn — měření a remarketing reklam."
+              label={t.marketing}
+              description={t.marketingDesc}
               checked={marketing}
               onChange={setMarketing}
             />
             <div className="cookie-consent-actions cookie-consent-actions--settings">
               <button type="button" className="button cookie-consent-btn-accept" onClick={acceptAll}>
-                Přijmout vše
+                {t.acceptAll}
               </button>
               <button type="button" className="button cookie-consent-btn-save" onClick={savePreferences}>
-                Uložit předvolby
+                {t.savePreferences}
               </button>
               {!hasCookieConsentChoice() ? (
                 <button type="button" className="button ghost" onClick={() => setMode("banner")}>
-                  Zpět
+                  {t.back}
                 </button>
               ) : null}
             </div>
@@ -168,13 +167,15 @@ export function CookieConsentBanner() {
 }
 
 export function CookieSettingsButton() {
+  const t = useTranslations("footer");
+
   return (
     <button
       type="button"
       className="footer-legal-button"
       onClick={() => window.dispatchEvent(new Event("naturchem:open-cookie-settings"))}
     >
-      Spravovat cookies
+      {t.manageCookies}
     </button>
   );
 }

@@ -8335,3 +8335,51 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   }
 }
 
+/* --- Language switcher --- */
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.45rem;
+}
+
+.language-switcher-sep {
+  opacity: 0.45;
+  font-size: 0.8rem;
+}
+
+.language-switcher-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.65rem;
+  height: 1.35rem;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  opacity: 0.72;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.language-switcher-option:hover,
+.language-switcher-option.is-active {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.language-switcher-flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .topbar-contact {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .language-switcher {
+    margin-left: 0;
+  }
+}
+

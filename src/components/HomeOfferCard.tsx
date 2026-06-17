@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/lib/i18n/locale-link";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
 import type { ServiceIconKey } from "@/lib/service-icons";
@@ -47,20 +47,20 @@ function OfferPanel({ pillar }: { pillar: HomeOfferPillar }) {
       <ul className="home-offer-links">
         {pillar.links.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className="card-interactive-nested">
+            <LocaleLink href={link.href} className="card-interactive-nested">
               {link.label}
-            </Link>
+            </LocaleLink>
           </li>
         ))}
       </ul>
-      <Link
+      <LocaleLink
         href={pillar.href}
         scroll={scroll}
         onClick={hasHashHref(pillar.href) ? onHashLinkClick : undefined}
         className="button home-offer-cta card-interactive-nested"
       >
         {pillar.cta}
-      </Link>
+      </LocaleLink>
     </>
   );
 }
@@ -70,7 +70,7 @@ export function HomeOfferCard({ pillar }: { pillar: HomeOfferPillar }) {
 
   return (
     <article className="card institutional-card home-offer-card card-interactive">
-      <Link
+      <LocaleLink
         href={pillar.href}
         scroll={scroll}
         onClick={scroll === false ? onHashLinkClick : undefined}

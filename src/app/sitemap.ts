@@ -2,8 +2,9 @@
 import { caseStudyCategories } from "@/lib/case-studies";
 import { getArticles } from "@/lib/articles";
 import { dedicatedServicePages } from "@/lib/dedicated-service-pages";
+import { localizedCanonical } from "@/lib/i18n/metadata-helpers";
+import { locales } from "@/lib/i18n/locales";
 import { seoLandings } from "@/lib/seo-landings";
-import { siteUrl } from "@/lib/site";
 
 const routes = [
   "",
@@ -61,10 +62,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...landingRoutes
   ];
 
-  return allRoutes.map((r) => ({
-    url: `${siteUrl}${r}/`.replace(/\/\/$/, "/"),
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: r === "" ? 1 : 0.8
-  }));
+  return locales.flatMap((locale) =>
+    allRoutes.map((route) => ({
+      url: localizedCanonical(route, locale),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: route === "" ? 1 : 0.8,
+      alternates: {
+        languages: Object.fromEntries(
+          locales.map((l) => [l, localizedCanonical(route, l)])
+        )
+      }
+    }))
+  );
 }

@@ -1,13 +1,9 @@
-﻿import Link from "next/link";
+﻿"use client";
+
 import type { ReactNode } from "react";
-import {
-  footerServiceLinks,
-  footerCompanyLinks,
-  footerContactPageLink,
-  footerLocationLine,
-  footerPhones,
-  type FooterLink
-} from "@/lib/footer-nav";
+import { getFooterNav } from "@/lib/i18n/nav-content";
+import { useLocale, useTranslations } from "@/lib/i18n/locale-context";
+import { LocaleLink } from "@/lib/i18n/locale-link";
 import { FooterLegalBar } from "@/components/FooterLegalBar";
 import { company } from "@/lib/site";
 
@@ -15,12 +11,14 @@ function telHref(phone: string) {
   return `tel:${phone.replace(/\s/g, "")}`;
 }
 
+type FooterLink = { href: string; label: string };
+
 function FooterLinkList({ links }: { links: readonly FooterLink[] }) {
   return (
     <ul className="footer-links">
       {links.map((item) => (
         <li key={item.href}>
-          <Link href={item.href}>{item.label}</Link>
+          <LocaleLink href={item.href}>{item.label}</LocaleLink>
         </li>
       ))}
     </ul>
@@ -46,42 +44,49 @@ function FooterColumn({
   );
 }
 
-function FooterContact() {
-  return (
-    <FooterColumn title="Kontakt" ariaLabel="Kontakt v patičce" className="footer-zone--contact">
-      <p className="footer-contact-meta">{footerLocationLine}</p>
-      <p className="footer-contact-lines">
-        {footerPhones.map((phone) => (
-          <a key={phone} href={telHref(phone)}>
-            {phone}
-          </a>
-        ))}
-        <a href={`mailto:${company.email}`}>{company.email}</a>
-      </p>
-      <p className="footer-contact-more">
-        <Link href={footerContactPageLink.href}>{footerContactPageLink.label}</Link>
-      </p>
-    </FooterColumn>
-  );
-}
-
-
 export function Footer() {
+  const locale = useLocale();
+  const t = useTranslations("footer");
   const currentYear = new Date().getFullYear();
+  const {
+    footerCompanyLinks,
+    footerServiceLinks,
+    footerContactPageLink,
+    footerPhones,
+    footerLocationLine
+  } = getFooterNav(locale);
 
   return (
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-grid">
-          <FooterColumn title="Společnost" ariaLabel="Společnost v patičce" className="footer-zone--brand">
+          <FooterColumn title={t.company} ariaLabel={t.companyAria} className="footer-zone--brand">
             <FooterLinkList links={footerCompanyLinks} />
           </FooterColumn>
-          <FooterColumn title="Služby" ariaLabel="Služby v patičce" className="footer-zone--services">
+          <FooterColumn title={t.services} ariaLabel={t.servicesAria} className="footer-zone--services">
             <FooterLinkList links={footerServiceLinks} />
           </FooterColumn>
-          <FooterContact />
+          <FooterColumn title={t.contact} ariaLabel={t.contactAria} className="footer-zone--contact">
+            <p className="footer-contact-meta">{footerLocationLine}</p>
+            <p className="footer-contact-lines">
+              {footerPhones.map((phone) => (
+                <a key={phone} href={telHref(phone)}>
+                  {phone}
+                </a>
+              ))}
+              <a href={`mailto:${company.email}`}>{company.email}</a>
+            </p>
+            <p className="footer-contact-more">
+              <LocaleLink href={footerContactPageLink.href}>{footerContactPageLink.label}</LocaleLink>
+            </p>
+          </FooterColumn>
         </div>
-        <FooterLegalBar year={currentYear} ico={company.ico} dic={company.dic} />
+        <FooterLegalBar
+          copyright={t.copyright
+            .replace("{year}", String(currentYear))
+            .replace("{ico}", company.ico)
+            .replace("{dic}", company.dic)}
+        />
       </div>
     </footer>
   );

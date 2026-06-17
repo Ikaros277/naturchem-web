@@ -1,0 +1,103 @@
+{
+  "language": {
+    "ariaLabel": "Přepínání jazyka",
+    "switchToCs": "Přepnout na češtinu",
+    "switchToEn": "Přepnout na angličtinu",
+    "currentCs": "Aktuální jazyk: čeština",
+    "currentEn": "Aktuální jazyk: angličtina"
+  },
+  "header": {
+    "topbarLabel": "Akreditovaná laboratoř č. 1599 · ČSN EN ISO/IEC 17025",
+    "brandTagline": "Měření · studie · dokumentace",
+    "navAria": "Hlavní navigace",
+    "services": "Služby",
+    "servicesOverview": "Přehled služeb",
+    "about": "O nás",
+    "contact": "Kontakt",
+    "cta": "Nezávazně poptat",
+    "mobileMenu": "Hlavní menu",
+    "openMenu": "Otevřít menu",
+    "closeMenu": "Zavřít menu",
+    "homeAria": "NATURCHEM domů"
+  },
+  "nav": {
+    "sectors": "Provozy",
+    "caseStudies": "Typické zakázky",
+    "references": "Reference",
+    "aboutCompany": "O společnosti",
+    "accreditation": "Akreditace a oprávnění",
+    "equipment": "Přístrojové vybavení",
+    "articles": "Odborné články",
+    "faq": "Časté dotazy"
+  },
+  "footer": {
+    "company": "Společnost",
+    "services": "Služby",
+    "contact": "Kontakt",
+    "companyAria": "Společnost v patičce",
+    "servicesAria": "Služby v patičce",
+    "contactAria": "Kontakt v patičce",
+    "contactPage": "Kontakt a formulář",
+    "location": "České Budějovice · Praha 5 · Havlíčkův Brod",
+    "legal": "Právní informace",
+    "privacy": "Ochrana osobních údajů",
+    "cookies": "Zásady cookies",
+    "manageCookies": "Spravovat cookies",
+    "copyright": "© NATURCHEM, s.r.o. {year} · IČO {ico} · DIČ {dic}"
+  },
+  "common": {
+    "home": "Úvod",
+    "readMore": "Přečíst článek",
+    "allArticles": "Všechny odborné články",
+    "breadcrumbHome": "Úvod"
+  },
+  "home": {
+    "metaTitle": "NATURCHEM – měření, studie a dokumentace",
+    "metaDescription": "Akreditovaná měření emisí a pracovního prostředí, hlukové a rozptylové studie, EIA, posudky, provozní řády, IPPC, ISPOP a GHG — pro provozovatele, investory a veřejný sektor.",
+    "heroTitle": "Akreditovaná měření, studie a podklady pro úřady",
+    "heroLead": "Postaráme se o vše, co Váš provoz potřebuje — pro provozovatele, investory i projektanty, bez nutnosti poptávat více dodavatelů.",
+    "trustAria": "Důvěryhodnost a oprávnění",
+    "statsAria": "Zkušenosti v číslech",
+    "offerAria": "Co zajišťujeme",
+    "offerTitle": "Co zajišťujeme",
+    "clientsAria": "Naši zákazníci",
+    "clientsTitle": "Naši zákazníci",
+    "articlesAria": "Aktuální odborné články",
+    "articlesTitle": "Aktuální odborné články"
+  },
+  "contact": {
+    "metaTitle": "Kontakt a dotaz | NATURCHEM",
+    "metaDescription": "Napište nám popis situace nebo přiložte podklady od úřadu. Ozveme se s návrhem dalšího postupu — formulář nebo přímý kontakt.",
+    "eyebrow": "Kontakt",
+    "title": "Ozvěte se nám — rádi pomůžeme",
+    "lead": "Stačí poslat stručný popis nebo přílohu od úřadu. Posoudíme situaci a ozveme se s dalším postupem.",
+    "detailsTitle": "Kontaktní údaje",
+    "company": "Společnost",
+    "contactPerson": "Kontakt",
+    "contactPersonLabel": "Kontaktní osoba",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "offices": "Provozovny",
+    "mapLabel": "Mapa provozoven NATURCHEM"
+  },
+  "cookies": {
+    "bannerTitle": "Souhlas s cookies",
+    "settingsTitle": "Nastavení cookies",
+    "bannerText": "Používáme cookies pro provoz webu, statistiku návštěvnosti a případně online reklamu. Volitelné cookies spustíme až po Vašem souhlasu. Více v",
+    "bannerConjunction": "a",
+    "cookiePolicy": "Zásadách cookies",
+    "privacyPolicy": "Zásadách ochrany osobních údajů",
+    "acceptAll": "Přijmout vše",
+    "rejectOptional": "Odmítnout volitelné",
+    "settings": "Nastavení",
+    "necessary": "Nezbytné",
+    "necessaryDesc": "Vždy aktivní — provoz webu a uložení Vašeho rozhodnutí.",
+    "statistics": "Statistické",
+    "statisticsDesc": "Google Analytics — pomáhá nám pochopit, jak je web používán.",
+    "marketing": "Marketingové",
+    "marketingDesc": "Google Ads, Meta, LinkedIn — měření a remarketing reklam.",
+    "savePreferences": "Uložit předvolby",
+    "back": "Zpět",
+    "manageCookies": "Spravovat cookies"
+  }
+}

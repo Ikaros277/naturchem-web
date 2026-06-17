@@ -1,25 +1,24 @@
 "use client";
 
-import Link from "next/link";
 import { CookieSettingsButton } from "@/components/CookieConsentBanner";
+import { useTranslations } from "@/lib/i18n/locale-context";
+import { LocaleLink } from "@/lib/i18n/locale-link";
 import { legalPaths } from "@/lib/legal";
 
 type Props = {
-  year: number;
-  ico: string;
-  dic: string;
+  copyright: string;
 };
 
-export function FooterLegalBar({ year, ico, dic }: Props) {
+export function FooterLegalBar({ copyright }: Props) {
+  const t = useTranslations("footer");
+
   return (
     <div className="footer-bottom">
-      <p className="footer-bottom-copy">
-        © NATURCHEM, s.r.o. {year} · IČO {ico} · DIČ {dic}
-      </p>
-      <nav className="footer-legal-nav" aria-label="Právní informace">
-        <Link href={legalPaths.privacy}>Ochrana osobních údajů</Link>
+      <p className="footer-bottom-copy">{copyright}</p>
+      <nav className="footer-legal-nav" aria-label={t.legal}>
+        <LocaleLink href={legalPaths.privacy}>{t.privacy}</LocaleLink>
         <span aria-hidden="true">·</span>
-        <Link href={legalPaths.cookies}>Zásady cookies</Link>
+        <LocaleLink href={legalPaths.cookies}>{t.cookies}</LocaleLink>
         <span aria-hidden="true">·</span>
         <CookieSettingsButton />
       </nav>

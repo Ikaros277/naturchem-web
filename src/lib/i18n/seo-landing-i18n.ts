@@ -16,6 +16,14 @@ const copy = {
       "Send a brief description of your operation or an authority requirement. Based on your documents we will propose the scope of work and a possible schedule.",
     generalServicePage: "General service page",
     relatedFacility: "Related facility type"
+  },
+  de: {
+    breadcrumbHome: "Startseite",
+    breadcrumbServices: "Leistungen",
+    ctaText:
+      "Senden Sie eine kurze Beschreibung Ihres Betriebs oder eine Behördenanforderung. Auf Basis Ihrer Unterlagen schlagen wir den Arbeitsumfang und einen möglichen Termin vor.",
+    generalServicePage: "Allgemeine Leistungsseite",
+    relatedFacility: "Verwandter Betriebstyp"
   }
 } as const;
 

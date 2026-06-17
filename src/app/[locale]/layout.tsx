@@ -14,6 +14,7 @@ import { company, siteUrl } from "@/lib/site";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
+import { schemaLanguage } from "@/lib/i18n/locale-pick";
 
 const fontBody = Source_Sans_3({
   subsets: ["latin", "latin-ext"],
@@ -99,7 +100,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         telephone: company.phones[0],
         email: company.email,
         areaServed: "CZ",
-        availableLanguage: locale === "en" ? ["en", "cs"] : ["cs", "en"]
+        availableLanguage: [...locales]
       }
     ]
   };
@@ -126,7 +127,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     "@type": "WebSite",
     name: "NATURCHEM",
     url: siteUrl,
-    inLanguage: locale === "en" ? "en-CZ" : "cs-CZ",
+    inLanguage: schemaLanguage(locale),
     publisher: { "@type": "Organization", name: company.name, url: siteUrl }
   };
 

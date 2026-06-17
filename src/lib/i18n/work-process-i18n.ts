@@ -46,6 +46,29 @@ const copy = {
     heading: "How a project works",
     intro: "Four steps from documents to a deliverable for authorities or your operation.",
     stepFallback: (n: number) => `Step ${n}`
+  },
+  de: {
+    steps: [
+      {
+        title: "Prüfung der Unterlagen",
+        text: "Wir prüfen Ihre Unterlagen, Behördenanforderungen und schlagen das beste Vorgehen vor."
+      },
+      {
+        title: "Umfang und Terminplan",
+        text: "Wir klären den Umfang von Messungen, Studien oder Dokumentation und planen die Termine."
+      },
+      {
+        title: "Messung und Auswertung",
+        text: "Wir führen Messungen, Berechnungen oder die Aufbereitung der Unterlagen wie vereinbart durch."
+      },
+      {
+        title: "Fachlicher Bericht",
+        text: "Wir übergeben einen Bericht, eine Studie oder Dokumentation für das weitere Genehmigungsverfahren."
+      }
+    ],
+    heading: "Ablauf eines Projekts",
+    intro: "Vier Schritte von den Unterlagen bis zum Ergebnis für Behörden oder Ihren Betrieb.",
+    stepFallback: (n: number) => `Schritt ${n}`
   }
 } as const;
 

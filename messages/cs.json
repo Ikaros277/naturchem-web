@@ -4,7 +4,9 @@
     "switchToCs": "Přepnout na češtinu",
     "switchToEn": "Přepnout na angličtinu",
     "currentCs": "Aktuální jazyk: čeština",
-    "currentEn": "Aktuální jazyk: angličtina"
+    "currentEn": "Aktuální jazyk: angličtina",
+    "switchToDe": "Přepnout do němčiny",
+    "currentDe": "Aktuální jazyk: němčina"
   },
   "header": {
     "topbarLabel": "Akreditovaná laboratoř č. 1599 · ČSN EN ISO/IEC 17025",

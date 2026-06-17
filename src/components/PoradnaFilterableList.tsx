@@ -7,6 +7,7 @@ import { ServiceIcon } from '@/components/ServiceIcon';
 import { getPoradnaTopicLabel } from '@/lib/i18n/content';
 import { useLocale, useTranslations } from '@/lib/i18n/locale-context';
 import type { Locale } from '@/lib/i18n/locales';
+import { localeTag } from '@/lib/i18n/locale-pick';
 import { localizeHref } from '@/lib/i18n/navigation';
 import {
   heroThemeForArticle,
@@ -23,8 +24,7 @@ type Props = {
 };
 
 function normalizeSearchQuery(query: string, locale: Locale): string {
-  const localeTag = locale === 'en' ? 'en-US' : 'cs-CZ';
-  return query.trim().toLocaleLowerCase(localeTag);
+  return query.trim().toLocaleLowerCase(localeTag(locale));
 }
 
 export function PoradnaFilterableList({ articles, locale: localeProp }: Props) {

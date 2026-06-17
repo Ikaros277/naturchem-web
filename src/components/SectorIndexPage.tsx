@@ -88,7 +88,7 @@ export async function SectorIndexPage({ locale }: Props) {
         <p className="muted">{indexData.introMuted}</p>
       </section>
 
-      <SectorGroupsIndex sectors={sectors} />
+      <SectorGroupsIndex sectors={sectors} locale={locale} />
 
       <section className="section content-block container" aria-labelledby="sector-assessment-heading">
         <h2 id="sector-assessment-heading">{indexData.assessmentHeading}</h2>

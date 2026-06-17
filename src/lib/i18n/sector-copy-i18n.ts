@@ -28,6 +28,20 @@ const copy = {
     viewService: "View service",
     breadcrumbHome: "Home",
     relatedListName: (title: string) => `Related services for ${title}`
+  },
+  de: {
+    overviewHeading: "Betriebsüberblick",
+    processHeading: "Ablauf eines Projekts",
+    processIntro:
+      "Vier Schritte von der Bewertung Ihres Betriebs bis zum Bericht und Empfehlungen für Behörden oder Ihren Standort.",
+    typicalProblems: "Typische Probleme",
+    docs: "Einzureichende Unterlagen",
+    outputs: "Ergebnisse",
+    pitfalls: "Typische Fehler und Risiken",
+    relatedServices: "Verwandte Leistungen",
+    viewService: "Leistung anzeigen",
+    breadcrumbHome: "Startseite",
+    relatedListName: (title: string) => `Verwandte Leistungen für ${title}`
   }
 } as const;
 

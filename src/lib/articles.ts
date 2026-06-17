@@ -6,7 +6,8 @@ import type { Locale } from "@/lib/i18n/locales";
 import { defaultLocale } from "@/lib/i18n/locales";
 
 function articlesDirectoryForLocale(locale: Locale): string {
-  const subdir = locale === "en" ? "articles-en" : "articles";
+  const subdir =
+    locale === "en" ? "articles-en" : locale === "de" ? "articles-de" : "articles";
   return path.join(process.cwd(), "content", subdir);
 }
 

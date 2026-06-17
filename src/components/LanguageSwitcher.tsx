@@ -1,9 +1,9 @@
 "use client";
 
 import type { ReactElement } from "react";
+import { locales, localeLabels, type Locale } from "@/lib/i18n/locales";
 import { useLocaleSwitchHref } from "@/lib/i18n/locale-link";
 import { useLocale, useTranslations } from "@/lib/i18n/locale-context";
-import type { Locale } from "@/lib/i18n/locales";
 
 function CzechFlag() {
   return (
@@ -27,9 +27,26 @@ function BritishFlag() {
   );
 }
 
+function GermanFlag() {
+  return (
+    <svg viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="60" height="12" fill="#000" />
+      <rect y="12" width="60" height="12" fill="#dd0000" />
+      <rect y="24" width="60" height="12" fill="#ffce00" />
+    </svg>
+  );
+}
+
 const flags: Record<Locale, { Flag: () => ReactElement; label: string }> = {
-  cs: { Flag: CzechFlag, label: "Čeština" },
-  en: { Flag: BritishFlag, label: "English" }
+  cs: { Flag: CzechFlag, label: localeLabels.cs },
+  en: { Flag: BritishFlag, label: localeLabels.en },
+  de: { Flag: GermanFlag, label: localeLabels.de }
+};
+
+const switchLabels: Record<Locale, "switchToCs" | "switchToEn" | "switchToDe"> = {
+  cs: "switchToCs",
+  en: "switchToEn",
+  de: "switchToDe"
 };
 
 function LanguageOption({ locale, isActive }: { locale: Locale; isActive: boolean }) {
@@ -44,7 +61,7 @@ function LanguageOption({ locale, isActive }: { locale: Locale; isActive: boolea
       hrefLang={locale}
       lang={locale}
       aria-current={isActive ? "page" : undefined}
-      aria-label={locale === "cs" ? t.switchToCs : t.switchToEn}
+      aria-label={t[switchLabels[locale]]}
       title={label}
     >
       <span className="language-switcher-flag">
@@ -60,8 +77,9 @@ export function LanguageSwitcher() {
 
   return (
     <div className="language-switcher" role="navigation" aria-label={t.ariaLabel}>
-      <LanguageOption locale="cs" isActive={locale === "cs"} />
-      <LanguageOption locale="en" isActive={locale === "en"} />
+      {locales.map((optionLocale) => (
+        <LanguageOption key={optionLocale} locale={optionLocale} isActive={locale === optionLocale} />
+      ))}
     </div>
   );
 }

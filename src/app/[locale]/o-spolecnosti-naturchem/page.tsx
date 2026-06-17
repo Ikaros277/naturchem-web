@@ -10,7 +10,7 @@ import { getAboutPage, getGuaranteeIntro, getTeamMembers } from "@/lib/i18n/cont
 import { getHomeTrustBandItems } from "@/lib/i18n/home-content";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { company, siteUrl } from "@/lib/site";
 
@@ -61,7 +61,7 @@ export default async function ONaturchemPage({ params }: Props) {
         telephone: "+420 603 216 983",
         email: "naturchem@naturchem.cz",
         areaServed: "CZ",
-        availableLanguage: locale === "en" ? ["en", "cs"] : ["cs", "en"]
+        availableLanguage: [...locales]
       }
     ]
   };

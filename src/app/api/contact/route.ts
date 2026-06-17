@@ -3,6 +3,8 @@ import { Buffer } from "node:buffer";
 import { Resend } from "resend";
 import { INQUIRY_CATEGORY_LABELS, isInquiryCategoryId } from "@/lib/contact-inquiry";
 import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_EN } from "@/lib/contact-inquiry-en";
+import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_DE } from "@/lib/contact-inquiry-de";
+import type { Locale } from "@/lib/i18n/locales";
 import { company } from "@/lib/site";
 
 const MAX_FILE_SIZE = 7 * 1024 * 1024;
@@ -30,12 +32,25 @@ const apiMessages = {
       `We could not send the message. Email ${email} or call ${phone}.`,
     success:
       "We will get back to you with next steps. If we need anything else, we will let you know by email or phone."
+  },
+  de: {
+    requiredFields: "Bitte füllen Sie die Pflichtfelder aus (Name, Kontakt, Beschreibung und Einwilligung).",
+    fileTooLarge: (name: string) => `Die Datei ${name} ist größer als 7 MB.`,
+    configError: "Fehler bei der Empfängerkonfiguration. Bitte kontaktieren Sie uns per E-Mail.",
+    fallbackAccepted:
+      "Ihre Anfrage wurde empfangen. Der E-Mail-Versand ist noch nicht aktiv, die Daten wurden jedoch im System gespeichert.",
+    sendFailure: (email: string, phone: string) =>
+      `Die Nachricht konnte nicht gesendet werden. E-Mail ${email} oder Anruf ${phone}.`,
+    success:
+      "Wir melden uns mit den nächsten Schritten. Falls wir etwas ergänzen müssen, informieren wir Sie per E-Mail oder Telefon."
   }
 } as const;
 
-function resolveApiLocale(request: Request): "cs" | "en" {
+function resolveApiLocale(request: Request): Locale {
   const header = request.headers.get("accept-language")?.toLowerCase() ?? "";
-  return header.startsWith("en") ? "en" : "cs";
+  if (header.startsWith("de")) return "de";
+  if (header.startsWith("en")) return "en";
+  return "cs";
 }
 
 function escapeHtml(text: string): string {
@@ -76,9 +91,11 @@ export async function POST(request: Request) {
     const phone = getString(formData, "phone");
     const inquiryCategoryRaw = getString(formData, "inquiryCategory");
     const inquiryCategory = isInquiryCategoryId(inquiryCategoryRaw)
-      ? (apiLocale === "en"
-          ? INQUIRY_CATEGORY_LABELS_EN[inquiryCategoryRaw]
-          : INQUIRY_CATEGORY_LABELS[inquiryCategoryRaw])
+      ? apiLocale === "en"
+        ? INQUIRY_CATEGORY_LABELS_EN[inquiryCategoryRaw]
+        : apiLocale === "de"
+          ? INQUIRY_CATEGORY_LABELS_DE[inquiryCategoryRaw]
+          : INQUIRY_CATEGORY_LABELS[inquiryCategoryRaw]
       : inquiryCategoryRaw || "neuvedeno";
     const selectedServices = formData
       .getAll("services")

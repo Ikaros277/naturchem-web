@@ -3,12 +3,15 @@ import {
   type DedicatedServicePage
 } from "@/lib/dedicated-service-pages";
 import { dedicatedServicePagesEn } from "@/lib/dedicated-service-pages-en";
+import { dedicatedServicePagesEn as dedicatedServicePagesDe } from "@/lib/dedicated-service-pages-de";
 import type { Locale } from "@/lib/i18n/locales";
 
 export type { DedicatedServicePage };
 
 export function getDedicatedServicePages(locale: Locale): Record<string, DedicatedServicePage> {
-  return locale === "en" ? dedicatedServicePagesEn : dedicatedServicePages;
+  if (locale === "de") return dedicatedServicePagesDe;
+  if (locale === "en") return dedicatedServicePagesEn;
+  return dedicatedServicePages;
 }
 
 export function getDedicatedService(slug: string, locale: Locale): DedicatedServicePage {

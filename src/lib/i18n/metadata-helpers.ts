@@ -15,6 +15,7 @@ export function localeAlternates(path: string, locale: Locale): Metadata["altern
     languages: {
       cs: localizedCanonical(path, "cs"),
       en: localizedCanonical(path, "en"),
+      de: localizedCanonical(path, "de"),
       "x-default": localizedCanonical(path, defaultLocale)
     }
   };

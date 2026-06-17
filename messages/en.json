@@ -4,7 +4,9 @@
     "switchToCs": "Switch to Czech",
     "switchToEn": "Switch to English",
     "currentCs": "Current language: Czech",
-    "currentEn": "Current language: English"
+    "currentEn": "Current language: English",
+    "switchToDe": "Switch to German",
+    "currentDe": "Current language: German"
   },
   "header": {
     "topbarLabel": "Accredited laboratory No. 1599 · ČSN EN ISO/IEC 17025",

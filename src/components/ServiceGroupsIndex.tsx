@@ -27,6 +27,15 @@ const groupAriaVerbs: Record<string, string> = {
   "skoleni-podpora": "školení"
 };
 
+const groupAriaVerbsDe: Record<string, string> = {
+  "mericke-sluzby": "Messungen",
+  "studie-vypocty": "Studien",
+  "povolovaci-podklady": "Genehmigungsleistungen",
+  "eia-investice": "EIA",
+  "evidence-reporting": "Berichterstattung",
+  "skoleni-podpora": "Schulungen"
+};
+
 const groupAriaVerbsEn: Record<string, string> = {
   "mericke-sluzby": "measurements",
   "studie-vypocty": "studies",
@@ -107,7 +116,8 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
   const common = useTranslations("common");
   const accordion = useTranslations("accordion");
   const { isOpen, onToggle } = useAccordionHashOpen(groups.map((group) => group.id));
-  const ariaVerbs = locale === "en" ? groupAriaVerbsEn : groupAriaVerbs;
+  const ariaVerbs =
+    locale === "en" ? groupAriaVerbsEn : locale === "de" ? groupAriaVerbsDe : groupAriaVerbs;
 
   return (
     <section className="section section-surface accordion-index-surface service-groups-accordion">

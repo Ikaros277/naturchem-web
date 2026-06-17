@@ -2,9 +2,10 @@
 
 import { SectorCard } from "@/components/SectorCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { accordionExpandClosed, accordionExpandOpen } from "@/lib/accordion-expand-labels";
+import { useTranslations } from "@/lib/i18n/locale-context";
+import type { Locale } from "@/lib/i18n/locales";
+import { getSectorGroups } from "@/lib/i18n/sector-groups-i18n";
 import type { ServiceIconKey } from "@/lib/service-icons";
-import { sectorGroups } from "@/lib/sector-groups";
 import type { Sector } from "@/lib/sectors";
 
 const groupIcons: Record<string, ServiceIconKey> = {
@@ -25,7 +26,33 @@ const groupAriaVerbs: Record<string, string> = {
   "investicni-zamery": "investiční záměry"
 };
 
-function sectorCountLabel(count: number): string {
+const groupAriaVerbsEn: Record<string, string> = {
+  "prumysl-vyroba": "industry and manufacturing",
+  "energetika-emise": "energy and emissions",
+  "odpady-recyklace": "waste and recycling",
+  zemedelstvi: "agriculture",
+  "budovy-vzt": "buildings and HVAC",
+  "investicni-zamery": "investment projects"
+};
+
+const groupAriaVerbsDe: Record<string, string> = {
+  "prumysl-vyroba": "Industrie und Fertigung",
+  "energetika-emise": "Energie und Emissionen",
+  "odpady-recyklace": "Abfall und Recycling",
+  zemedelstvi: "Landwirtschaft",
+  "budovy-vzt": "Gebäude und HLK",
+  "investicni-zamery": "Investitionsprojekte"
+};
+
+function sectorCountLabel(count: number, locale: Locale): string {
+  if (locale === "en") {
+    if (count === 1) return "1 facility type";
+    return `${count} facility types`;
+  }
+  if (locale === "de") {
+    if (count === 1) return "1 Betriebstyp";
+    return `${count} Betriebstypen`;
+  }
   if (count === 1) return "1 provoz";
   if (count >= 2 && count <= 4) return `${count} provozy`;
   return `${count} provozů`;
@@ -33,6 +60,7 @@ function sectorCountLabel(count: number): string {
 
 type Props = {
   sectors: readonly Sector[];
+  locale: Locale;
 };
 
 function SectorCards({ hrefs, sectors }: { hrefs: readonly string[]; sectors: readonly Sector[] }) {
@@ -47,12 +75,17 @@ function SectorCards({ hrefs, sectors }: { hrefs: readonly string[]; sectors: re
   );
 }
 
-export function SectorGroupsIndex({ sectors }: Props) {
+export function SectorGroupsIndex({ sectors, locale }: Props) {
+  const accordion = useTranslations("accordion");
+  const sectorGroups = getSectorGroups(locale);
+  const ariaVerbs =
+    locale === "en" ? groupAriaVerbsEn : locale === "de" ? groupAriaVerbsDe : groupAriaVerbs;
+
   return (
     <section className="section section-surface accordion-index-surface sector-groups-accordion" aria-labelledby="sector-groups-heading">
       <div className="container service-groups-accordion-inner">
         {sectorGroups.map((group) => {
-          const ariaVerb = groupAriaVerbs[group.id] ?? group.title;
+          const ariaVerb = ariaVerbs[group.id] ?? group.title;
           const count = group.hrefs.length;
 
           return (
@@ -63,7 +96,7 @@ export function SectorGroupsIndex({ sectors }: Props) {
             >
               <summary
                 className="service-group-summary"
-                aria-label={`${group.title}, ${sectorCountLabel(count)} — zobrazit nebo skrýt ${ariaVerb}`}
+                aria-label={`${group.title}, ${sectorCountLabel(count, locale)} — ${accordion.showOrHide} ${ariaVerb}`}
               >
                 <ServiceIcon
                   icon={groupIcons[group.id]}
@@ -73,14 +106,14 @@ export function SectorGroupsIndex({ sectors }: Props) {
                 <div className="service-group-summary-text">
                   <div className="service-group-summary-title-row">
                     <h2>{group.title}</h2>
-                    <span className="service-group-count muted">{sectorCountLabel(count)}</span>
+                    <span className="service-group-count muted">{sectorCountLabel(count, locale)}</span>
                   </div>
                   <p className="muted service-group-intro">{group.intro}</p>
                 </div>
                 <span className="service-group-expand" aria-hidden="true">
                   <span className="service-group-expand-text">
-                    <span className="service-group-expand-when-closed">{accordionExpandClosed}</span>
-                    <span className="service-group-expand-when-open">{accordionExpandOpen}</span>
+                    <span className="service-group-expand-when-closed">{accordion.expandClosed}</span>
+                    <span className="service-group-expand-when-open">{accordion.expandOpen}</span>
                   </span>
                   <span className="service-group-expand-icon">
                     <svg

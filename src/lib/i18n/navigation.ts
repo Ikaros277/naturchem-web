@@ -1,4 +1,4 @@
-import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/locales";
+import { defaultLocale, isLocale, locales, type Locale } from "@/lib/i18n/locales";
 
 export function stripLocaleFromPathname(pathname: string): string {
   const parts = pathname.split("/");
@@ -21,12 +21,13 @@ export function localizeHref(href: string, locale: Locale): string {
     locale === defaultLocale
       ? basePath
       : basePath === "/"
-        ? "/en"
-        : `/en${basePath}`;
+        ? `/${locale}`
+        : `/${locale}${basePath}`;
 
   return `${localized}${query ? `?${query}` : ""}${hash ? `#${hash}` : ""}`;
 }
 
 export function getAlternateLocale(locale: Locale): Locale {
-  return locale === "cs" ? "en" : "cs";
+  const index = locales.indexOf(locale);
+  return locales[(index + 1) % locales.length];
 }

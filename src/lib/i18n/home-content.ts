@@ -14,6 +14,13 @@ const trustBand = {
     "EIA authorisation, dispersion studies, expert reports, GHG",
     "Court-appointed expert",
     "Outputs for KHS, ČIŽP, regional authorities and building offices"
+  ],
+  de: [
+    "Akkreditiertes Labor Nr. 1599",
+    "ČSN EN ISO/IEC 17025",
+    "EIA-Autorisierung, Ausbreitungsstudien, Gutachten, THG",
+    "Gerichtlich beeideter Sachverständiger",
+    "Ergebnisse für KHS, ČIŽP, Krajschaftsbehörden und Bauämter"
   ]
 } as const;
 
@@ -29,6 +36,12 @@ const serviceTrustBand = {
     "ČSN EN ISO/IEC 17025",
     "Outputs for KHS, ČIŽP and regional authorities",
     "EIA authorisation and expert reports"
+  ],
+  de: [
+    "Akkreditiertes Labor Nr. 1599",
+    "ČSN EN ISO/IEC 17025",
+    "Ergebnisse für KHS, ČIŽP und Krajschaftsbehörden",
+    "EIA-Autorisierung und Gutachten"
   ]
 } as const;
 
@@ -120,6 +133,51 @@ const offerPillars = {
         { label: "EIA and expert reports", href: "/sluzby/eia-posudky-poradenstvi" },
         { label: "IPPC / ISPOP / GHG", href: "/sluzby/ippc-integrovana-povoleni" },
         { label: "Contact", href: "/kontakt" }
+      ]
+    }
+  ],
+  de: [
+    {
+      icon: "pillar-mereni" as const,
+      title: "Akkreditierte Messungen",
+      teaser:
+        "Emissionen, Lärm, Arbeitsumfeld und Vibrationen — akkreditiert, mit Ergebnissen für KHS und ČIŽP…",
+      text: "Wir messen Emissionen, Arbeitsumfeld, Lärm, Vibrationen, Beleuchtung, Mikroklima und Reinräume — akkreditiert, mit Ergebnissen für Behörden.",
+      cta: "Messungen anzeigen",
+      href: "/sluzby#mericke-sluzby",
+      tags: ["KHS", "ČIŽP", "ISO 17025"],
+      links: [
+        { label: "Emissionsmessungen", href: "/sluzby/mereni-emisi" },
+        { label: "Arbeitsumfeld", href: "/sluzby/pracovni-prostredi" },
+        { label: "Vibrationen", href: "/sluzby/mereni-vibraci" }
+      ]
+    },
+    {
+      icon: "pillar-studie" as const,
+      title: "Studien und Fachberechnungen",
+      teaser: "Ausbreitungs- und Lärmstudien, Gutachten und Berechnungen für Genehmigungen, KHS oder EIA…",
+      text: "Wir erstellen Ausbreitungs- und Lärmstudien, akustische Gutachten und Modellberechnungen für KHS, Baugenehmigungen oder EIA.",
+      cta: "Studien anzeigen",
+      href: "/sluzby#studie-vypocty",
+      tags: ["EIA", "KHS", "KÚ"],
+      links: [
+        { label: "Ausbreitungsstudien", href: "/sluzby/rozptylove-studie" },
+        { label: "Lärmstudien", href: "/sluzby/hlukove-studie" },
+        { label: "Modellberechnungen", href: "/sluzby/modelove-vypocty" }
+      ]
+    },
+    {
+      icon: "pillar-dokumentace" as const,
+      title: "Dokumentation und EIA",
+      teaser: "EIA, Gutachten, Betriebsanweisungen, IPPC und ISPOP — Unterlagen für Behörden und Genehmigungen…",
+      text: "Wir erstellen EIA, Gutachten, Betriebsanweisungen, IPPC, ISPOP, THG und weitere Dokumentation für Verwaltungsbehörden.",
+      cta: "Dokumentation anzeigen",
+      href: "/sluzby#povolovaci-podklady",
+      tags: ["EIA", "IPPC", "ČIŽP"],
+      links: [
+        { label: "EIA und Gutachten", href: "/sluzby/eia-posudky-poradenstvi" },
+        { label: "IPPC / ISPOP / THG", href: "/sluzby/ippc-integrovana-povoleni" },
+        { label: "Kontakt", href: "/kontakt" }
       ]
     }
   ]

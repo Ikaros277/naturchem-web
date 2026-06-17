@@ -3,6 +3,7 @@ import { shortenListingExcerpt } from "@/lib/excerpt";
 import { normalizeArticleDate } from "@/lib/format-date";
 import type { Locale } from "@/lib/i18n/locales";
 import { defaultLocale } from "@/lib/i18n/locales";
+import { localeTag } from "@/lib/i18n/locale-pick";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { PoradnaTopic } from "@/lib/poradna-topic";
 
@@ -35,10 +36,9 @@ function stripMarkdownForSearch(body: string): string {
 }
 
 function buildSearchText(article: Article, locale: Locale): string {
-  const localeTag = locale === "en" ? "en-US" : "cs-CZ";
   return [article.title, article.excerpt, stripMarkdownForSearch(article.body)]
     .join(" ")
-    .toLocaleLowerCase(localeTag);
+    .toLocaleLowerCase(localeTag(locale));
 }
 
 export async function getPoradnaArticles(locale: Locale = defaultLocale): Promise<PoradnaArticleListing[]> {

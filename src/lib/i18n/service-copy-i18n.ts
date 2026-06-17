@@ -44,6 +44,28 @@ const copy = {
     breadcrumbServices: "Services",
     accreditationLink: "Accreditation & authorisations",
     relatedListName: (title: string) => `Related links for ${title}`
+  },
+  de: {
+    overviewHeading: "Leistungsüberblick",
+    scopeHeading: "Was wir anbieten",
+    whenNeededHeading: "Wann Sie diese Leistung benötigen",
+    mistakesHeading: "Typische Fehler und Risiken",
+    docsIntro: "Für eine erste Einschätzung des Umfangs senden Sie bitte:",
+    ctaStripText:
+      "Senden Sie eine Beschreibung der Technologie, Behördenanforderungen oder vorhandene Unterlagen. Wir schlagen die für Ihren Zweck erforderlichen Messungen, Studien oder Dokumentation vor.",
+    outputsHeading: "Was Sie erhalten",
+    howToStartHeading: "So starten Sie",
+    practicalExamplesHeading: "Praktische Projektbeispiele",
+    extraInfoSummary: "Zusätzliche Informationen zur Vorbereitung Ihrer Anfrage",
+    relatedHeading: "Das könnte Sie auch interessieren",
+    trustAria: "Glaubwürdigkeit und Autorisierungen",
+    overviewAria: "Kurzer Leistungsüberblick",
+    viewService: "Leistung anzeigen",
+    viewSector: "Betriebstyp anzeigen",
+    breadcrumbHome: "Startseite",
+    breadcrumbServices: "Leistungen",
+    accreditationLink: "Akkreditierung und Autorisierungen",
+    relatedListName: (title: string) => `Verwandte Links für ${title}`
   }
 } as const;
 

@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
+import { localeTag } from "@/lib/i18n/locale-pick";
 import { getFaqCategoryIconKey } from "@/lib/service-icons";
 import type { FaqCategory, FaqItem } from "@/lib/faq";
 
@@ -83,7 +84,7 @@ function FaqAccordionItem({
 
 export function FaqPageContent({ categories, uiLabels, locale }: Props) {
   const [query, setQuery] = useState("");
-  const normalizedQuery = query.trim().toLocaleLowerCase(locale === "en" ? "en-US" : "cs-CZ");
+  const normalizedQuery = query.trim().toLocaleLowerCase(localeTag(locale));
   const filteredCategories = useMemo(() => {
     if (!normalizedQuery) return categories;
 
@@ -99,7 +100,7 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
             item.legal?.summary ?? ""
           ]
             .join(" ")
-            .toLocaleLowerCase(locale === "en" ? "en-US" : "cs-CZ");
+            .toLocaleLowerCase(localeTag(locale));
           return haystack.includes(normalizedQuery);
         })
       }))

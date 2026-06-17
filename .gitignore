@@ -25,3 +25,11 @@ pnpm-debug.log*
 .cursor/commands
 Podklady/
 .agents/report-hook.log
+
+# python / script artifacts
+scripts/__pycache__/
+scripts/*.pyc
+scripts/.de_translation_cache.json
+scripts/*.log
+scripts/inspect_out.txt
+scripts/coord_mismatches.json

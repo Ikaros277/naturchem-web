@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { getArticleBySlug, getArticles } from "@/lib/articles";
 import { formatArticleDate, normalizeArticleDate } from "@/lib/format-date";
-import { getPoradnaTopicLabel } from "@/lib/i18n/content";
+import { getPoradnaTopicLabel } from "@/lib/i18n/poradna-topic-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";

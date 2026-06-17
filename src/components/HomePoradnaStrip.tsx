@@ -2,7 +2,7 @@ import { ArticleCardThumb } from "@/components/ArticleCardThumb";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { formatArticleDate } from "@/lib/format-date";
-import { getPoradnaTopicLabel } from "@/lib/i18n/content";
+import { getPoradnaTopicLabel } from "@/lib/i18n/poradna-topic-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";

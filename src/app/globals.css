@@ -1024,12 +1024,6 @@ main ol {
   max-width: 18ch;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 1.25rem;
-}
 
 
 .kpi-row {
@@ -1139,18 +1133,7 @@ main ol {
 
 
 
-.footer-claim {
-  margin: 0;
-  color: #dbe9ff;
-  font-size: 0.98rem;
-  line-height: 1.5;
-  text-align: center;
-  max-width: 52rem;
-  margin-inline: auto;
-}
 
-@media (max-width: 720px) {
-}
 
 .breadcrumbs {
   font-size: 0.95rem;
@@ -2137,12 +2120,6 @@ fieldset.card legend {
   line-height: 1.55;
 }
 
-.footer-claim-muted {
-  margin: 0.45rem 0 0;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  max-width: 52rem;
-}
 
 .service-group-intro {
   margin: 0.65rem 0 0;
@@ -2561,49 +2538,11 @@ section.content-block.page-first-section + .section.equipment-groups-accordion,
   text-align: center;
 }
 
-.typical-scenario-actions .section-link {
-  white-space: nowrap;
-  justify-self: end;
-}
 
-.hero .hero-trust {
-  list-style: none;
-  margin: 1.75rem 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: 0.5rem 1.5rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.45;
-}
 
-.hero-trust li {
-  position: relative;
-  padding-left: 1rem;
-}
 
-.hero-trust li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--primary);
-  opacity: 0.75;
-}
 
-.hero-unsure {
-  margin: 1rem 0 0;
-  font-size: 0.95rem;
-}
 
-.hero-unsure a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
 
 .why-naturchem-card h3 {
   margin-top: 0;
@@ -3488,9 +3427,6 @@ main.page:has(.page-hero-band) {
   color: #fff;
 }
 
-.page-hero--photo .proof-panel-label {
-  color: #b8d4c8;
-}
 
 .page-hero--photo .service-hero-icon {
   border-color: rgba(255, 255, 255, 0.22);
@@ -3674,12 +3610,6 @@ main.page:has(.page-hero-band) {
   color: #d8eee6;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: center;
-}
 
 .hero-copy {
   /* padding-right řeší .hero-diagonal-spacer + pravidla u .page-hero-band .hero-band-text */
@@ -3718,78 +3648,16 @@ main.page:has(.page-hero-band) {
   box-shadow: none;
 }
 
-.hero-actions {
-  margin-top: 1.7rem;
-  gap: 0.75rem;
-}
 
-.hero-unsure {
-  margin: 0.85rem 0 0;
-}
 
-.hero-unsure a {
-  color: #d8eee6;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
 
-.hero .hero-trust {
-  max-width: none;
-  margin: 1.6rem 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  color: #dce7f2;
-}
 
-.hero-trust li {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.06);
-}
 
-.hero-trust li::before {
-  display: none;
-}
 
-.hero-proof-panel {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: var(--radius-sharp);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
-  padding: clamp(1.4rem, 3vw, 2rem);
-  backdrop-filter: blur(14px);
-}
 
-.proof-panel-label {
-  margin: 0 0 0.5rem;
-  color: #b8d6ca;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
 
-.hero-proof-panel strong {
-  display: block;
-  color: #fff;
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-}
 
-.proof-metrics {
-  display: grid;
-  gap: 0.75rem;
-  margin: 1.5rem 0;
-}
 
-.proof-panel-note {
-  margin: 0;
-  font-size: 0.96rem;
-}
 
 .trust-band {
   background: #fff;
@@ -4005,25 +3873,9 @@ main.page:has(.page-hero-band) {
   margin-bottom: 0;
 }
 
-.proof-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  gap: 2rem;
-  align-items: center;
-  background:
-    linear-gradient(135deg, rgba(11, 31, 53, 0.98), rgba(14, 44, 69, 0.98)),
-    var(--primary);
-  color: #fff;
-}
 
 .proof-section h2,
-.proof-section .eyebrow {
-  color: #fff;
-}
 
-.proof-section .muted {
-  color: #d9e5ef;
-}
 
 .proof-list {
   max-width: none;
@@ -5924,9 +5776,6 @@ main.contact-page + .site-footer {
     margin-inline: auto;
   }
 
-  .hero-grid {
-    gap: 1.5rem;
-  }
 
   .hero h1 {
     font-size: clamp(1.9rem, 8.6vw, 2.125rem);
@@ -6716,49 +6565,16 @@ main.contact-page + .site-footer {
   }
 }
 
-.hero-grid {
-  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
-}
 
 .hero h1 {
   max-width: none;
   font-size: clamp(2rem, 3.2vw, 3.15rem);
 }
 
-.proof-metrics {
-  display: grid;
-  gap: 0.65rem;
-  margin: 1.35rem 0;
-}
 
-.proof-metric-card {
-  padding: 0.85rem 1rem;
-  border-radius: var(--radius-sharp);
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
 
-.proof-metrics div {
-  border-left: 0;
-  padding: 0;
-}
 
-.proof-metric-value {
-  display: block;
-  color: #fff;
-  font-size: 1.55rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
 
-.proof-metric-label {
-  display: block;
-  margin-top: 0.2rem;
-  color: #dce7f2;
-  font-size: 0.92rem;
-  line-height: 1.35;
-}
 
 
 /* Homepage: mezera pod logy = dvojnásobek section padding nad patičkou */
@@ -7358,15 +7174,8 @@ main.home-page + .site-footer {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1.25rem;
-  }
 
   .hero-copy,
-  .hero-proof-panel {
-    min-width: 0;
-  }
 
   .hero-copy,
   .hero-band-text {
@@ -7405,43 +7214,12 @@ main.home-page + .site-footer {
     margin-top: 1rem;
   }
 
-  .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    margin-top: 1.25rem;
-  }
 
-  .hero-actions .button {
-    width: 100%;
-    justify-content: center;
-  }
 
-  .hero-unsure {
-    margin-top: 0.75rem;
-    font-size: 0.92rem;
-  }
 
-  .hero-proof-panel {
-    display: block;
-    padding: 1.05rem clamp(1rem, 3vw, 1.35rem);
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
 
-  .proof-metrics {
-    grid-template-columns: 1fr;
-    gap: 0.55rem;
-    margin: 1rem 0 0.75rem;
-  }
 
-  .proof-metric-card {
-    padding: 0.9rem 1.05rem;
-  }
 
-  .proof-metric-value {
-    font-size: 1.35rem;
-  }
 
   /* Mobil/tablet: eyebrow skryt sitewide — H1/H2 stačí; text zůstává v HTML pro desktop */
   .eyebrow {

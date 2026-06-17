@@ -2,10 +2,41 @@ import { NextResponse } from "next/server";
 import { Buffer } from "node:buffer";
 import { Resend } from "resend";
 import { INQUIRY_CATEGORY_LABELS, isInquiryCategoryId } from "@/lib/contact-inquiry";
+import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_EN } from "@/lib/contact-inquiry-en";
 import { company } from "@/lib/site";
 
 const MAX_FILE_SIZE = 7 * 1024 * 1024;
 const MAX_SUBJECT_LEN = 200;
+
+const apiMessages = {
+  cs: {
+    requiredFields: "Vyplňte prosím povinná pole (jméno, kontakt, popis a souhlas).",
+    fileTooLarge: (name: string) => `Soubor ${name} je větší než 7 MB.`,
+    configError: "Chyba konfigurace příjemců. Kontaktujte nás prosím e-mailem.",
+    fallbackAccepted:
+      "Poptávka je přijata. E-mailová služba zatím není aktivní, ale data byla zaznamenána v systému.",
+    sendFailure: (email: string, phone: string) =>
+      `Zprávu se nepodařilo odeslat. Napište na ${email} nebo zavolejte ${phone}.`,
+    success:
+      "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky."
+  },
+  en: {
+    requiredFields: "Please fill in the required fields (name, contact, description and consent).",
+    fileTooLarge: (name: string) => `File ${name} is larger than 7 MB.`,
+    configError: "Recipient configuration error. Please contact us by email.",
+    fallbackAccepted:
+      "Your inquiry has been received. Email delivery is not active yet, but the data was recorded in the system.",
+    sendFailure: (email: string, phone: string) =>
+      `We could not send the message. Email ${email} or call ${phone}.`,
+    success:
+      "We will get back to you with next steps. If we need anything else, we will let you know by email or phone."
+  }
+} as const;
+
+function resolveApiLocale(request: Request): "cs" | "en" {
+  const header = request.headers.get("accept-language")?.toLowerCase() ?? "";
+  return header.startsWith("en") ? "en" : "cs";
+}
 
 function escapeHtml(text: string): string {
   return text
@@ -35,6 +66,9 @@ function getOptionalLines(formData: FormData): string[] {
 }
 
 export async function POST(request: Request) {
+  const apiLocale = resolveApiLocale(request);
+  const msg = apiMessages[apiLocale];
+
   try {
     const formData = await request.formData();
     const name = getString(formData, "name");
@@ -42,7 +76,9 @@ export async function POST(request: Request) {
     const phone = getString(formData, "phone");
     const inquiryCategoryRaw = getString(formData, "inquiryCategory");
     const inquiryCategory = isInquiryCategoryId(inquiryCategoryRaw)
-      ? INQUIRY_CATEGORY_LABELS[inquiryCategoryRaw]
+      ? (apiLocale === "en"
+          ? INQUIRY_CATEGORY_LABELS_EN[inquiryCategoryRaw]
+          : INQUIRY_CATEGORY_LABELS[inquiryCategoryRaw])
       : inquiryCategoryRaw || "neuvedeno";
     const selectedServices = formData
       .getAll("services")
@@ -56,7 +92,7 @@ export async function POST(request: Request) {
 
     if (!name || (!email && !phone) || !message || !consent) {
       return NextResponse.json(
-        { ok: false, message: "Vyplňte prosím povinná pole (jméno, kontakt, popis a souhlas)." },
+        { ok: false, message: msg.requiredFields },
         { status: 400 }
       );
     }
@@ -65,7 +101,7 @@ export async function POST(request: Request) {
     const oversized = files.find((f) => f.size > MAX_FILE_SIZE);
     if (oversized) {
       return NextResponse.json(
-        { ok: false, message: `Soubor ${oversized.name} je větší než 7 MB.` },
+        { ok: false, message: msg.fileTooLarge(oversized.name) },
         { status: 400 }
       );
     }
@@ -107,7 +143,7 @@ export async function POST(request: Request) {
     if (recipients.length === 0) {
       console.error("[CONTACT_FORM_NO_RECIPIENTS]");
       return NextResponse.json(
-        { ok: false, message: "Chyba konfigurace příjemců. Kontaktujte nás prosím e-mailem." },
+        { ok: false, message: msg.configError },
         { status: 500 }
       );
     }
@@ -116,8 +152,7 @@ export async function POST(request: Request) {
       console.log("[CONTACT_FORM_FALLBACK]", emailBody, attachments.map((a) => a.filename));
       return NextResponse.json({
         ok: true,
-        message:
-          "Poptávka je přijata. E-mailová služba zatím není aktivní, ale data byla zaznamenána v systému."
+        message: msg.fallbackAccepted
       });
     }
 
@@ -165,7 +200,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           ok: false,
-          message: `Zprávu se nepodařilo odeslat. Napište na ${company.email} nebo zavolejte ${company.phones[0]}.`
+          message: msg.sendFailure(company.email, company.phones[0])
         },
         { status: 502 }
       );
@@ -203,15 +238,14 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       ok: true,
-      message:
-        "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky."
+      message: msg.success
     });
   } catch (error) {
     console.error("[CONTACT_FORM_ERROR]", error);
     return NextResponse.json(
       {
         ok: false,
-        message: `Zprávu se nepodařilo odeslat. Napište na ${company.email} nebo zavolejte ${company.phones[0]}.`
+        message: msg.sendFailure(company.email, company.phones[0])
       },
       { status: 500 }
     );

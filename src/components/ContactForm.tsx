@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 
-import { CONTACT_ATTACHMENT_TOOLTIP } from "@/lib/contact-attachment-hints";
 import { legalPaths } from "@/lib/legal";
-import { INQUIRY_CATEGORIES, type InquiryCategoryId } from "@/lib/contact-inquiry";
+import { type InquiryCategoryId } from "@/lib/contact-inquiry";
+import { getInquiryCategories } from "@/lib/i18n/content";
 import { sendGtagEvent } from "@/lib/gtag";
+import { useLocale, useTranslations } from "@/lib/i18n/locale-context";
+import { LocaleLink } from "@/lib/i18n/locale-link";
 import { company } from "@/lib/site";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -16,18 +17,20 @@ type Props = {
   initialMessage?: string;
 };
 
-const SUCCESS_MESSAGE =
-  "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.";
-
-const SEND_FAILURE_MESSAGE = `Zprávu se nepodařilo odeslat. Napište na ${company.email} nebo zavolejte ${company.phones[0]}.`;
-
 export function ContactForm({
   initialCategory = "nevim",
   initialMessage = ""
 }: Props) {
+  const locale = useLocale();
+  const t = useTranslations("contactForm");
+  const categories = getInquiryCategories(locale);
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
   const [inquiryCategory, setInquiryCategory] = useState<InquiryCategoryId>(initialCategory);
+
+  const sendFailureMessage = t.sendFailure
+    .replace("{email}", company.email)
+    .replace("{phone}", company.phones[0]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -39,28 +42,29 @@ export function ContactForm({
 
     if (!email && !phone) {
       setStatus("error");
-      setFeedback("Abychom se Vám ozvali, vyplňte prosím e-mail nebo telefon.");
+      setFeedback(t.contactRequired);
       return;
     }
 
     setStatus("loading");
-    setFeedback("Moment, odesílám zprávu…");
+    setFeedback(t.sending);
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
+        headers: { "Accept-Language": locale },
         body: formData
       });
       const result = (await response.json()) as { ok: boolean; message: string };
 
       if (!response.ok || !result.ok) {
         setStatus("error");
-        setFeedback(result.message || SEND_FAILURE_MESSAGE);
+        setFeedback(result.message || sendFailureMessage);
         return;
       }
 
       setStatus("success");
-      setFeedback(result.message || SUCCESS_MESSAGE);
+      setFeedback(result.message || t.successMessage);
       const categoryForEvent = inquiryCategory;
       form.reset();
       setInquiryCategory("nevim");
@@ -70,7 +74,7 @@ export function ContactForm({
       });
     } catch {
       setStatus("error");
-      setFeedback(SEND_FAILURE_MESSAGE);
+      setFeedback(sendFailureMessage);
     }
   }
 
@@ -78,7 +82,7 @@ export function ContactForm({
     return (
       <div id="poptavkovy-formular" className="contact-form-success" role="status">
         <h2 id="poptavka-heading" className="contact-form-title">
-          Díky, zprávu jsme dostali
+          {t.successTitle}
         </h2>
         <p className="contact-form-success-message">{feedback}</p>
       </div>
@@ -89,19 +93,16 @@ export function ContactForm({
     <form id="poptavkovy-formular" className="contact-quick-form" onSubmit={handleSubmit}>
       <header className="contact-form-header">
         <h2 id="poptavka-heading" className="contact-form-title">
-          Napište nám
+          {t.formTitle}
         </h2>
-        <p className="contact-form-lead">
-          Nemusíte mít všechno připravené. Krátká zpráva nebo příloha stačí — ozveme se a domluvíme,
-          co dává smysl.
-        </p>
+        <p className="contact-form-lead">{t.formLead}</p>
       </header>
 
       <div className="contact-form-grid">
         <div className="contact-form-col contact-form-col--identity">
           <p>
             <label>
-              Jméno nebo firma
+              {t.nameLabel}
               <br />
               <input name="name" required autoComplete="name" />
             </label>
@@ -109,7 +110,7 @@ export function ContactForm({
 
           <p>
             <label>
-              E-mail
+              {t.emailLabel}
               <br />
               <input type="email" name="email" autoComplete="email" />
             </label>
@@ -117,7 +118,7 @@ export function ContactForm({
 
           <p>
             <label>
-              Telefon
+              {t.phoneLabel}
               <br />
               <input name="phone" type="tel" autoComplete="tel" />
             </label>
@@ -125,7 +126,7 @@ export function ContactForm({
 
           <p>
             <label>
-              Čeho se Váš dotaz týká?
+              {t.categoryLabel}
               <br />
               <select
                 name="inquiryCategory"
@@ -134,7 +135,7 @@ export function ContactForm({
                 value={inquiryCategory}
                 onChange={(event) => setInquiryCategory(event.target.value as InquiryCategoryId)}
               >
-                {INQUIRY_CATEGORIES.map((category) => (
+                {categories.map((category) => (
                   <option key={category.id} value={category.id}>
                     {category.label}
                   </option>
@@ -147,32 +148,32 @@ export function ContactForm({
         <div className="contact-form-col contact-form-col--message">
           <p className="contact-form-message-field">
             <label>
-              S čím Vám pomůžeme?
+              {t.messageLabel}
               <br />
               <textarea
                 name="message"
                 rows={9}
                 required
                 defaultValue={initialMessage}
-                placeholder="Třeba výzva z úřadu, popis provozu, termín, co už máte po ruce…"
+                placeholder={t.messagePlaceholder}
               />
             </label>
           </p>
 
           <p>
             <span className="contact-form-label-row">
-              <label htmlFor="contact-attachments-input">Příloha (nepovinné)</label>
+              <label htmlFor="contact-attachments-input">{t.attachmentLabel}</label>
               <span className="form-info-tip">
                 <button
                   type="button"
                   className="form-info-tip-trigger"
-                  aria-label="Informace o příloze"
+                  aria-label={t.attachmentTooltipAria}
                   aria-describedby="contact-attachment-tooltip"
                 >
                   i
                 </button>
                 <span id="contact-attachment-tooltip" role="tooltip" className="form-info-tip-panel">
-                  {CONTACT_ATTACHMENT_TOOLTIP}
+                  {t.attachmentTooltip}
                 </span>
               </span>
             </span>
@@ -191,14 +192,14 @@ export function ContactForm({
         <label className="contact-service-option">
           <input type="checkbox" name="consent" required />
           <span>
-            Souhlasím se zpracováním osobních údajů za účelem vyřízení dotazu dle{" "}
-            <Link href={legalPaths.privacy}>zásad ochrany osobních údajů</Link>.
+            {t.consentPrefix}{" "}
+            <LocaleLink href={legalPaths.privacy}>{t.consentPrivacyLink}</LocaleLink>.
           </span>
         </label>
       </p>
 
       <button type="submit" className="button contact-form-submit" disabled={status === "loading"}>
-        {status === "loading" ? "Odesílám…" : "Odeslat zprávu"}
+        {status === "loading" ? t.submitting : t.submit}
       </button>
 
       {feedback ? (

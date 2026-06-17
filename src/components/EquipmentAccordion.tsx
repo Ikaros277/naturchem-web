@@ -1,9 +1,10 @@
-import Link from "next/link";
+import { LocaleLink } from "@/lib/i18n/locale-link";
+import { getMessages } from "@/lib/i18n/get-messages";
+import type { Locale } from "@/lib/i18n/locales";
+import { localizeHref } from "@/lib/i18n/navigation";
 
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { accordionExpandClosed, accordionExpandOpen } from "@/lib/accordion-expand-labels";
 import type { EquipmentGroup } from "@/lib/equipment-content";
-import { equipmentGroupAriaVerbs, equipmentItemCountLabel } from "@/lib/equipment-content";
 import { getEquipmentGroupIconKeyById } from "@/lib/service-icons";
 
 function ExpandChevron() {
@@ -24,15 +25,33 @@ function ExpandChevron() {
   );
 }
 
-export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup[] }) {
+function itemCountLabel(count: number, locale: Locale, messages: Awaited<ReturnType<typeof getMessages>>): string {
+  if (count === 1) return messages.equipment.itemCountOne;
+  if (count >= 2 && count <= 4) {
+    return messages.equipment.itemCountFew.replace("{count}", String(count));
+  }
+  return messages.equipment.itemCountMany.replace("{count}", String(count));
+}
+
+type Props = {
+  groups: readonly EquipmentGroup[];
+  groupAriaVerbs: Record<string, string>;
+  locale: Locale;
+};
+
+export async function EquipmentAccordion({ groups, groupAriaVerbs, locale }: Props) {
+  const messages = await getMessages(locale);
+  const accordion = messages.accordion;
+
   return (
     <section
       className="section section-surface accordion-index-surface equipment-groups-accordion"
-      aria-label="Skupiny přístrojového vybavení"
+      aria-label={messages.equipment.groupsAria}
     >
       <div className="container service-groups-accordion-inner">
         {groups.map((group) => {
-          const ariaVerb = equipmentGroupAriaVerbs[group.id] ?? group.title;
+          const ariaVerb = groupAriaVerbs[group.id] ?? group.title;
+          const countLabel = itemCountLabel(group.items.length, locale, messages);
 
           return (
             <details
@@ -42,7 +61,7 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
             >
               <summary
                 className="service-group-summary"
-                aria-label={`${group.title}, ${equipmentItemCountLabel(group.items.length)} — zobrazit nebo skrýt ${ariaVerb}`}
+                aria-label={`${group.title}, ${countLabel} — ${accordion.showOrHide} ${ariaVerb}`}
               >
                 <ServiceIcon
                   icon={getEquipmentGroupIconKeyById(group.id)}
@@ -53,15 +72,13 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
                 <div className="service-group-summary-text">
                   <div className="service-group-summary-title-row">
                     <h2>{group.title}</h2>
-                    <span className="service-group-count muted">
-                      {equipmentItemCountLabel(group.items.length)}
-                    </span>
+                    <span className="service-group-count muted">{countLabel}</span>
                   </div>
                 </div>
                 <span className="service-group-expand" aria-hidden="true">
                   <span className="service-group-expand-text">
-                    <span className="service-group-expand-when-closed">{accordionExpandClosed}</span>
-                    <span className="service-group-expand-when-open">{accordionExpandOpen}</span>
+                    <span className="service-group-expand-when-closed">{accordion.expandClosed}</span>
+                    <span className="service-group-expand-when-open">{accordion.expandOpen}</span>
                   </span>
                   <span className="service-group-expand-icon">
                     <ExpandChevron />
@@ -76,7 +93,7 @@ export function EquipmentAccordion({ groups }: { groups: readonly EquipmentGroup
                 </ul>
                 {group.serviceHref && group.serviceLabel ? (
                   <p className="equipment-service-link">
-                    <Link href={group.serviceHref}>{group.serviceLabel} →</Link>
+                    <LocaleLink href={group.serviceHref}>{group.serviceLabel} →</LocaleLink>
                   </p>
                 ) : null}
               </div>

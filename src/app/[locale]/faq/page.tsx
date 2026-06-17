@@ -4,25 +4,44 @@ import { FaqPageContent } from "@/components/FaqPageContent";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
-import { pageCtaPresets } from "@/lib/cta";
-import { faqFlatItems, faqIntroCtas, faqPageIntro, faqPageTitle } from "@/lib/faq";
+import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
+import { getFaqContent } from "@/lib/i18n/content";
+import { getMessages } from "@/lib/i18n/get-messages";
+import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { localizeHref } from "@/lib/i18n/navigation";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "FAQ – měření emisí, studie, EIA, posudky a provozní řády | NATURCHEM"
-  },
-  description:
-    "Časté dotazy k měření emisí, pracovnímu prostředí, hluku, rozptylovým a hlukovým studiím, EIA, odborným posudkům, provozním řádům, ISPOP a podkladům pro úřady.",
-  alternates: { canonical: `${siteUrl}/faq/` }
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function FaqPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const { metadata } = getFaqContent(locale);
+  return pageMetadata({
+    locale,
+    path: "/faq",
+    absoluteTitle: metadata.absoluteTitle,
+    description: metadata.description
+  });
+}
+
+export default async function FaqPage({ params }: Props) {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const faq = getFaqContent(locale);
+  const messages = await getMessages(locale);
+  const pageCtaPresets = getPageCtaPresets(locale);
+  const link = (href: string) => localizeHref(href, locale);
+  const faqUrl = `${siteUrl}${link("/faq")}/`.replace(/([^:]\/)\/+/g, "$1");
+
   const faqData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqFlatItems.map((item) => ({
+    mainEntity: faq.flatItems.map((item) => ({
       "@type": "Question",
       name: item.q,
       acceptedAnswer: {
@@ -36,8 +55,8 @@ export default function FaqPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Úvod", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "FAQ", item: `${siteUrl}/faq/` }
+      { "@type": "ListItem", position: 1, name: messages.common.breadcrumbHome, item: `${siteUrl}${link("/")}/` },
+      { "@type": "ListItem", position: 2, name: faq.pageTitle, item: faqUrl }
     ]
   };
 
@@ -47,16 +66,19 @@ export default function FaqPage() {
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         theme={getPageHeroTheme("/faq")}
-        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "FAQ" }]}
+        breadcrumbs={[
+          { name: messages.common.breadcrumbHome, href: link("/") },
+          { name: faq.pageTitle }
+        ]}
       >
         <header className="premium-page-hero page-hero--photo">
-          <h1>{faqPageTitle}</h1>
-          <p className="page-lead faq-page-intro">{faqPageIntro}</p>
+          <h1>{faq.pageTitle}</h1>
+          <p className="page-lead faq-page-intro">{faq.pageIntro}</p>
           <div className="btn-row faq-intro-ctas">
-            {faqIntroCtas.map((cta, i) => (
+            {faq.introCtas.map((cta, i) => (
               <Link
                 key={cta.href}
-                href={cta.href}
+                href={link(cta.href)}
                 className={i === 0 ? "button" : "button secondary"}
               >
                 {cta.label}
@@ -66,7 +88,7 @@ export default function FaqPage() {
         </header>
       </PageHeroBand>
       <div className="container page-first-section">
-        <FaqPageContent />
+        <FaqPageContent categories={faq.categories} uiLabels={faq.uiLabels} locale={locale} />
         <PageCtaStrip {...pageCtaPresets.contact} />
       </div>
     </main>

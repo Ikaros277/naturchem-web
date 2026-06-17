@@ -1,22 +1,21 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   clientLogoItemClass,
-  clientLogosMoreAriaLabel,
-  clientLogosMoreLabel,
   getLogoGridCap,
   referenceClients,
   type ClientLogo
 } from "@/lib/client-logos";
+import { getClientLogosLabels } from "@/lib/i18n/client-logos-i18n";
+import { useLocale } from "@/lib/i18n/locale-context";
+import { LocaleLink } from "@/lib/i18n/locale-link";
 
 type Props = {
   clients?: ClientLogo[];
-  /** When set, the overflow hint links here instead of expanding the grid inline. */
   moreHref?: string;
-  /** When true, hidden logos are revealed inline after clicking the overflow hint. */
   expandable?: boolean;
 };
 
@@ -43,14 +42,6 @@ function ClientLogoLink({ client, className }: { client: ClientLogo; className?:
   );
 }
 
-function ClientLogosMoreContent() {
-  return (
-    <span className="client-logo-more-text" aria-hidden="true">
-      {clientLogosMoreLabel}
-    </span>
-  );
-}
-
 function useLogoGridCap(clientCount: number) {
   const [cap, setCap] = useState(() =>
     typeof window === "undefined"
@@ -68,11 +59,9 @@ function useLogoGridCap(clientCount: number) {
   return cap;
 }
 
-export function ClientLogosGrid({
-  clients = referenceClients,
-  moreHref,
-  expandable = false
-}: Props) {
+export function ClientLogosGrid({ clients = referenceClients, moreHref, expandable = false }: Props) {
+  const locale = useLocale();
+  const { moreLabel, moreAriaLabel } = getClientLogosLabels(locale);
   const [expanded, setExpanded] = useState(false);
   const { previewCount, showMore } = useLogoGridCap(clients.length);
   const overflowClients = clients.slice(previewCount);
@@ -81,7 +70,7 @@ export function ClientLogosGrid({
   if (expanded) {
     return (
       <div className="client-logos-grid client-logos-grid--expanded">
-        {clients.map(client => (
+        {clients.map((client) => (
           <ClientLogoLink key={client.name} client={client} />
         ))}
       </div>
@@ -93,34 +82,40 @@ export function ClientLogosGrid({
 
   return (
     <div className={["client-logos-grid", capped ? "client-logos-grid--capped" : ""].filter(Boolean).join(" ")}>
-      {previewClients.map(client => (
+      {previewClients.map((client) => (
         <ClientLogoLink key={client.name} client={client} />
       ))}
 
       {capped &&
         (hasHiddenLogos ? (
           moreHref ? (
-            <Link href={moreHref} className="client-logo-item client-logo-more" aria-label={clientLogosMoreAriaLabel}>
-              <ClientLogosMoreContent />
-            </Link>
+            <LocaleLink href={moreHref} className="client-logo-item client-logo-more" aria-label={moreAriaLabel}>
+              <span className="client-logo-more-text" aria-hidden="true">
+                {moreLabel}
+              </span>
+            </LocaleLink>
           ) : (
             <button
               type="button"
               className="client-logo-item client-logo-more"
               onClick={() => setExpanded(true)}
               aria-expanded={false}
-              aria-label={clientLogosMoreAriaLabel}
+              aria-label={moreAriaLabel}
             >
-              <ClientLogosMoreContent />
+              <span className="client-logo-more-text" aria-hidden="true">
+                {moreLabel}
+              </span>
             </button>
           )
         ) : (
           <span className="client-logo-item client-logo-more client-logo-more--static">
-            <ClientLogosMoreContent />
+            <span className="client-logo-more-text" aria-hidden="true">
+              {moreLabel}
+            </span>
           </span>
         ))}
 
-      {overflowClients.map(client => (
+      {overflowClients.map((client) => (
         <ClientLogoLink key={client.name} client={client} className="client-logo-item--overflow" />
       ))}
     </div>

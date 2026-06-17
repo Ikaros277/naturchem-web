@@ -5,6 +5,7 @@ import { HomeOfferCard } from "@/components/HomeOfferCard";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
+import { getCompanyStatsContent, getHomeHeroPillars } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { getHomeOfferPillars, getHomeTrustBandItems } from "@/lib/i18n/home-content";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
@@ -34,7 +35,10 @@ export default async function Home({ params }: Props) {
   const messages = await getMessages(locale);
   const offerPillars = getHomeOfferPillars(locale);
   const trustItems = getHomeTrustBandItems(locale);
-  const homeUrl = `${siteUrl}${localizeHref("/", locale)}/`.replace(/([^:]\/)\/+/g, "$1");
+  const heroPillars = getHomeHeroPillars(locale);
+  const statsContent = getCompanyStatsContent(locale);
+  const link = (href: string) => localizeHref(href, locale);
+  const homeUrl = `${siteUrl}${link("/")}/`.replace(/([^:]\/)\/+/g, "$1");
 
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -47,7 +51,13 @@ export default async function Home({ params }: Props) {
   return (
     <main className="home-page">
       <JsonLd data={breadcrumbData} />
-      <HomeHeroSection title={messages.home.heroTitle} lead={messages.home.heroLead} />
+      <HomeHeroSection
+        title={messages.home.heroTitle}
+        lead={messages.home.heroLead}
+        pillars={heroPillars}
+        ariaLabel={messages.homeHero.ariaLabel}
+        pillarsAriaLabel={messages.homeHero.pillarsAria}
+      />
 
       <section className="trust-band home-fade-in-section" aria-labelledby="duveryhodnost-heading">
         <div className="container trust-band-inner">
@@ -65,7 +75,7 @@ export default async function Home({ params }: Props) {
         aria-label={messages.home.statsAria}
       >
         <div className="container">
-          <ExperienceStats variant="compact" showNote={false} />
+          <ExperienceStats variant="compact" showNote={false} statsContent={statsContent} />
         </div>
       </section>
 
@@ -85,7 +95,7 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
-      <HomePoradnaStrip />
+      <HomePoradnaStrip locale={locale} />
 
       <section
         className="home-section container home-clients-section section--forest-tint"
@@ -94,7 +104,7 @@ export default async function Home({ params }: Props) {
         <h2 id="home-clients-heading" className="sr-only">
           {messages.home.clientsTitle}
         </h2>
-        <ClientLogosGrid moreHref="/reference#zakaznici" />
+        <ClientLogosGrid expandable moreHref={link("/reference#zakaznici")} />
       </section>
     </main>
   );

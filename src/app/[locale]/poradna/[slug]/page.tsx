@@ -6,42 +6,56 @@ import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { getArticleBySlug, getArticles } from "@/lib/articles";
 import { formatArticleDate, normalizeArticleDate } from "@/lib/format-date";
-import { articlesNav } from "@/lib/navigation";
+import { getPoradnaTopicLabel } from "@/lib/i18n/content";
+import { getMessages } from "@/lib/i18n/get-messages";
+import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { localizeHref } from "@/lib/i18n/navigation";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { heroThemeForArticle } from "@/lib/poradna-topic";
 import { siteUrl } from "@/lib/site";
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = {
+  params: Promise<{ locale: string; slug: string }>;
+};
 
 export async function generateStaticParams() {
-  const articles = await getArticles();
+  const articles = await getArticles("cs");
   return articles.map((article) => ({ slug: article.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const article = await getArticleBySlug(slug);
+  const { locale: localeParam, slug } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+  const article = await getArticleBySlug(slug, locale);
 
   if (!article) {
-    return { title: "Článek" };
+    return { title: messages.poradna.articleFallback };
   }
 
-  return {
+  return pageMetadata({
+    locale,
+    path: `/poradna/${article.slug}`,
     title: article.title,
-    description: article.excerpt || "Odborný článek NATURCHEM.",
-    alternates: { canonical: `${siteUrl}/poradna/${article.slug}/` }
-  };
+    description: article.excerpt || messages.poradna.articleMetaFallback
+  });
 }
 
 export default async function CmsArticlePage({ params }: Props) {
-  const { slug } = await params;
-  const article = await getArticleBySlug(slug);
+  const { locale: localeParam, slug } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+  const article = await getArticleBySlug(slug, locale);
 
   if (!article) {
     notFound();
   }
 
-  const displayDate = formatArticleDate(article.updatedAt || article.publishedAt);
-  const articleUrl = `${siteUrl}/poradna/${article.slug}/`;
+  const link = (href: string) => localizeHref(href, locale);
+  const displayDate = formatArticleDate(article.updatedAt || article.publishedAt, locale);
+  const topicLabel = getPoradnaTopicLabel(article.topic, locale);
+  const articleUrl = `${siteUrl}${link(`/poradna/${article.slug}`)}/`.replace(/([^:]\/)\/+/g, "$1");
+  const poradnaUrl = `${siteUrl}${link("/poradna")}/`.replace(/([^:]\/)\/+/g, "$1");
 
   const articleData = {
     "@context": "https://schema.org",
@@ -62,8 +76,8 @@ export default async function CmsArticlePage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Úvod", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: articlesNav.label, item: `${siteUrl}/poradna/` },
+      { "@type": "ListItem", position: 1, name: messages.common.breadcrumbHome, item: `${siteUrl}${link("/")}/` },
+      { "@type": "ListItem", position: 2, name: messages.nav.articles, item: poradnaUrl },
       { "@type": "ListItem", position: 3, name: article.title, item: articleUrl }
     ]
   };
@@ -76,13 +90,13 @@ export default async function CmsArticlePage({ params }: Props) {
         theme={heroThemeForArticle(article)}
         imageSrc={article.heroImage}
         breadcrumbs={[
-          { name: "Úvod", href: "/" },
-          { name: articlesNav.label, href: articlesNav.href },
+          { name: messages.common.breadcrumbHome, href: link("/") },
+          { name: messages.nav.articles, href: link("/poradna") },
           { name: article.title }
         ]}
       >
         <header className="premium-page-hero page-hero--photo">
-          <p className="eyebrow">{article.topic}</p>
+          <p className="eyebrow">{topicLabel}</p>
           <h1>{article.title}</h1>
           <p className="article-hero-meta muted">
             {article.author || "NATURCHEM"}
@@ -93,8 +107,8 @@ export default async function CmsArticlePage({ params }: Props) {
 
       <div className="container article-page-body page-first-section">
         {article.excerpt ? (
-          <aside className="article-tldr" aria-label="Shrnutí článku">
-            <p className="article-tldr-label">Stručně</p>
+          <aside className="article-tldr" aria-label={messages.poradna.tldrAria}>
+            <p className="article-tldr-label">{messages.poradna.tldrLabel}</p>
             <p className="article-tldr-text">{article.excerpt}</p>
           </aside>
         ) : null}
@@ -105,11 +119,7 @@ export default async function CmsArticlePage({ params }: Props) {
           </div>
         </div>
 
-        <ArticleRelatedServices
-          title={article.title}
-          slug={article.slug}
-          topic={article.topic}
-        />
+        <ArticleRelatedServices title={article.title} slug={article.slug} topic={article.topic} />
       </div>
     </main>
   );

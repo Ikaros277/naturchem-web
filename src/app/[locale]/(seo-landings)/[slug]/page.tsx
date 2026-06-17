@@ -1,31 +1,37 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SeoLandingPage } from "@/components/SeoLandingPage";
-import { getSeoLanding, seoLandings } from "@/lib/seo-landings";
-import { siteUrl } from "@/lib/site";
+import { getSeoLanding, getSeoLandings } from "@/lib/i18n/content";
+import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
 
-type Props = { params: Promise<{ slug: string }> };
+type Props = {
+  params: Promise<{ locale: string; slug: string }>;
+};
 
 export function generateStaticParams() {
-  return seoLandings.map((l) => ({ slug: l.slug }));
+  return getSeoLandings("cs").map((l) => ({ slug: l.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const landing = getSeoLanding(slug);
+  const { slug, locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const landing = getSeoLanding(slug, locale);
   if (!landing) return { title: "Služba" };
 
-  return {
+  return pageMetadata({
+    locale,
+    path: `/${landing.slug}`,
     title: landing.title,
-    description: landing.metaDescription,
-    alternates: { canonical: `${siteUrl}/${landing.slug}/` }
-  };
+    description: landing.metaDescription
+  });
 }
 
 export default async function SeoLandingRoute({ params }: Props) {
-  const { slug } = await params;
-  const landing = getSeoLanding(slug);
+  const { slug, locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const landing = getSeoLanding(slug, locale);
   if (!landing) notFound();
 
-  return <SeoLandingPage landing={landing} />;
+  return <SeoLandingPage landing={landing} locale={locale} />;
 }

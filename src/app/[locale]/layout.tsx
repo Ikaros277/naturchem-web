@@ -29,38 +29,43 @@ const fontDisplay = IBM_Plex_Sans({
   display: "swap"
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "NATURCHEM, s.r.o. | Akreditovaná měření a poradenství",
-    template: "%s | NATURCHEM"
-  },
-  description:
-    "Akreditovaná měření emisí, pracovního prostředí a hluku. Rozptylové studie, EIA, odborné posudky a environmentální poradenství.",
-  openGraph: {
-    type: "website",
-    siteName: "NATURCHEM",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
-  },
-  robots: {
-    index: true,
-    follow: true
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico?v=3", sizes: "any" },
-      { url: "/favicon.png?v=3", type: "image/png", sizes: "32x32" },
-      { url: "/favicon.png?v=3", type: "image/png", sizes: "192x192" }
-    ],
-    apple: [{ url: "/apple-touch-icon.png?v=3", sizes: "180x180", type: "image/png" }],
-    shortcut: "/favicon.png?v=3"
-  }
-};
-
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: messages.site.metaTitleDefault,
+      template: messages.site.metaTitleTemplate
+    },
+    description: messages.site.metaDescription,
+    openGraph: {
+      type: "website",
+      siteName: "NATURCHEM",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
+    },
+    robots: {
+      index: true,
+      follow: true
+    },
+    icons: {
+      icon: [
+        { url: "/favicon.ico?v=3", sizes: "any" },
+        { url: "/favicon.png?v=3", type: "image/png", sizes: "32x32" },
+        { url: "/favicon.png?v=3", type: "image/png", sizes: "192x192" }
+      ],
+      apple: [{ url: "/apple-touch-icon.png?v=3", sizes: "180x180", type: "image/png" }],
+      shortcut: "/favicon.png?v=3"
+    }
+  };
+}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

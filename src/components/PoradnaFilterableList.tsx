@@ -4,6 +4,10 @@ import { useMemo, useState } from 'react';
 import { ArticleCardThumb } from '@/components/ArticleCardThumb';
 import { IndexCard } from '@/components/IndexCard';
 import { ServiceIcon } from '@/components/ServiceIcon';
+import { getPoradnaTopicLabel } from '@/lib/i18n/content';
+import { useLocale, useTranslations } from '@/lib/i18n/locale-context';
+import type { Locale } from '@/lib/i18n/locales';
+import { localizeHref } from '@/lib/i18n/navigation';
 import {
   heroThemeForArticle,
   PORADNA_TOPICS,
@@ -15,17 +19,23 @@ export type PoradnaArticleDisplay = PoradnaArticleListing & { displayDate: strin
 
 type Props = {
   articles: PoradnaArticleDisplay[];
+  locale?: Locale;
 };
 
-function normalizeSearchQuery(query: string): string {
-  return query.trim().toLocaleLowerCase('cs-CZ');
+function normalizeSearchQuery(query: string, locale: Locale): string {
+  const localeTag = locale === 'en' ? 'en-US' : 'cs-CZ';
+  return query.trim().toLocaleLowerCase(localeTag);
 }
 
-export function PoradnaFilterableList({ articles }: Props) {
+export function PoradnaFilterableList({ articles, locale: localeProp }: Props) {
+  const contextLocale = useLocale();
+  const locale = localeProp ?? contextLocale;
+  const poradna = useTranslations('poradna');
+  const common = useTranslations('common');
   const [activeTopics, setActiveTopics] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState('');
 
-  const normalizedQuery = normalizeSearchQuery(searchQuery);
+  const normalizedQuery = normalizeSearchQuery(searchQuery, locale);
 
   function toggleTopic(topic: string) {
     setActiveTopics(prev => {
@@ -62,35 +72,34 @@ export function PoradnaFilterableList({ articles }: Props) {
   const hasSearch = normalizedQuery.length > 0;
   const hasAnyFilter = hasTopicFilters || hasSearch;
 
-  const countLabel = (() => {
-    if (hasAnyFilter) {
-      return `${filtered.length} z ${articles.length} článků`;
-    }
-    return `${articles.length} článků — nejnovější nahoře`;
-  })();
+  const countLabel = hasAnyFilter
+    ? poradna.countFiltered
+        .replace('{filtered}', String(filtered.length))
+        .replace('{total}', String(articles.length))
+    : poradna.countAll.replace('{total}', String(articles.length));
 
   return (
     <>
       <label className="poradna-search">
-        <span>Vyhledat v článcích</span>
+        <span>{poradna.searchLabel}</span>
         <input
           type="search"
           value={searchQuery}
           onChange={event => setSearchQuery(event.target.value)}
-          placeholder="Např. emise, hluková studie, povolení provozu"
+          placeholder={poradna.searchPlaceholder}
           aria-controls="poradna-article-list"
         />
       </label>
 
       <div className="poradna-filter-bar">
-        <nav className="topic-filter-pills" role="list" aria-label="Témata odborných článků">
+        <nav className="topic-filter-pills" role="list" aria-label={poradna.topicsAria}>
           <button
             type="button"
             className="topic-pill"
             aria-pressed={!hasTopicFilters}
             onClick={clearTopicFilters}
           >
-            Vše
+            {common.allTopics}
           </button>
           {PORADNA_TOPICS.map(topic => (
             <button
@@ -100,7 +109,7 @@ export function PoradnaFilterableList({ articles }: Props) {
               aria-pressed={activeTopics.has(topic)}
               onClick={() => toggleTopic(topic)}
             >
-              {topic}
+              {getPoradnaTopicLabel(topic, locale)}
             </button>
           ))}
         </nav>
@@ -111,23 +120,24 @@ export function PoradnaFilterableList({ articles }: Props) {
         {filtered.length === 0 ? (
           <p className="muted poradna-empty-state">
             {hasSearch
-              ? `Pro výraz „${searchQuery.trim()}“ jsme nenašli článek. `
-              : 'K tomuto tématu zatím nemáme článek. '}
+              ? `${poradna.emptySearch.replace('{query}', searchQuery.trim())} `
+              : `${poradna.emptyTopic} `}
             <button type="button" className="text-link-button" onClick={clearAllFilters}>
-              Zobrazit všechny články
+              {poradna.showAll}
             </button>
           </p>
         ) : (
           filtered.map(article => {
             const articleRef = { slug: article.slug, title: article.title, topic: article.topic };
             const iconKey = poradnaTopicIconKey(articleRef);
+            const topicLabel = getPoradnaTopicLabel(article.topic, locale);
             return (
               <IndexCard
                 key={article.href}
-                href={article.href}
+                href={localizeHref(article.href, locale)}
                 title={article.title}
                 className="article-list-card article-card article-card--with-thumb article-card--mobile-row"
-                cta="Přečíst článek"
+                cta={common.readMore}
                 icon={<ServiceIcon icon={iconKey} size={22} variant="inline" />}
                 meta={
                   <>
@@ -143,7 +153,7 @@ export function PoradnaFilterableList({ articles }: Props) {
                       ) : (
                         <span />
                       )}
-                      <span className="tag">{article.topic}</span>
+                      <span className="tag">{topicLabel}</span>
                     </div>
                   </>
                 }

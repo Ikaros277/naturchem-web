@@ -4,40 +4,55 @@ import { EquipmentAccordion } from "@/components/EquipmentAccordion";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
-import { pageCtaPresets } from "@/lib/cta";
-import {
-  equipmentGroups,
-  equipmentSectionHeading,
-  equipmentSectionIntro
-} from "@/lib/equipment-content";
+import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
+import { getEquipmentContent } from "@/lib/i18n/content";
+import { getMessages } from "@/lib/i18n/get-messages";
+import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { localizeHref } from "@/lib/i18n/navigation";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Přístrojové vybavení NATURCHEM"
-  },
-  description:
-    "Jaké analyzátory a odběrové sestavy NATURCHEM používá pro emise, pracovní prostředí, hluk a laboratorní zpracování vzorků — pro orientaci před zakázkou nebo ve výběrovém řízení.",
-  alternates: { canonical: `${siteUrl}/pristrojove-vybaveni/` }
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Page() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+  return pageMetadata({
+    locale,
+    path: "/pristrojove-vybaveni",
+    absoluteTitle: messages.equipment.metaTitle,
+    description: messages.equipment.metaDescription
+  });
+}
+
+export default async function Page({ params }: Props) {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+  const equipment = getEquipmentContent(locale);
+  const pageCtaPresets = getPageCtaPresets(locale);
+  const link = (href: string) => localizeHref(href, locale);
+  const pageUrl = `${siteUrl}${link("/pristrojove-vybaveni")}/`.replace(/([^:]\/)\/+/g, "$1");
+
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Úvod", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: "Přístrojové vybavení", item: `${siteUrl}/pristrojove-vybaveni/` }
+      { "@type": "ListItem", position: 1, name: messages.common.breadcrumbHome, item: `${siteUrl}${link("/")}/` },
+      { "@type": "ListItem", position: 2, name: messages.equipment.breadcrumb, item: pageUrl }
     ]
   };
 
   const webPageData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Čím měříme v terénu i v laboratoři | NATURCHEM",
-    url: `${siteUrl}/pristrojove-vybaveni/`,
-    description: metadata.description
+    name: messages.equipment.schemaName,
+    url: pageUrl,
+    description: messages.equipment.metaDescription
   };
 
   return (
@@ -46,15 +61,15 @@ export default function Page() {
       <JsonLd data={webPageData} />
       <PageHeroBand
         theme={getPageHeroTheme("/pristrojove-vybaveni")}
-        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Přístrojové vybavení" }]}
+        breadcrumbs={[
+          { name: messages.common.breadcrumbHome, href: link("/") },
+          { name: messages.equipment.breadcrumb }
+        ]}
       >
         <header className="premium-page-hero page-hero--photo">
-          <p className="eyebrow">Technické zázemí laboratoře</p>
-          <h1>Čím měříme v terénu i v laboratoři</h1>
-          <p className="page-lead">
-            Měřicí a odběrová technika podle oblasti — pro orientaci před zakázkou nebo ve
-            výběrovém řízení.
-          </p>
+          <p className="eyebrow">{messages.equipment.eyebrow}</p>
+          <h1>{messages.equipment.pageTitle}</h1>
+          <p className="page-lead">{messages.equipment.lead}</p>
         </header>
       </PageHeroBand>
 
@@ -62,11 +77,15 @@ export default function Page() {
         className="section content-block container page-first-section"
         aria-labelledby="equipment-index-intro-heading"
       >
-        <h2 id="equipment-index-intro-heading">{equipmentSectionHeading}</h2>
-        <p>{equipmentSectionIntro}</p>
+        <h2 id="equipment-index-intro-heading">{equipment.equipmentSectionHeading}</h2>
+        <p>{equipment.equipmentSectionIntro}</p>
       </section>
 
-      <EquipmentAccordion groups={equipmentGroups} />
+      <EquipmentAccordion
+        groups={equipment.equipmentGroups}
+        groupAriaVerbs={equipment.equipmentGroupAriaVerbs}
+        locale={locale}
+      />
 
       <PageCtaStrip {...pageCtaPresets.equipment} className="container" />
     </main>

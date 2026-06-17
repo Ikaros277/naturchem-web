@@ -10,16 +10,16 @@ import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
 import { getCtaCopy } from "@/lib/i18n/cta-i18n";
+import { getProvozyNavLabel, getSectors, getSiteServices } from "@/lib/i18n/content";
 import { getServiceTrustBandItems } from "@/lib/i18n/home-content";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { contactUrl } from "@/lib/contact-url";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
-import { provozyNavLabel, sectors } from "@/lib/sectors";
 import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
-import { company, services, siteUrl } from "@/lib/site";
+import { company, siteUrl } from "@/lib/site";
 
 type Props = {
   title: string;
@@ -49,6 +49,8 @@ export async function ServicePage(props: Props) {
   const copy = getServiceCopy(locale);
   const ctaCopy = getCtaCopy(locale);
   const trustItems = getServiceTrustBandItems(locale);
+  const services = getSiteServices(locale);
+  const sectors = getSectors(locale);
   const link = (href: string) => localizeHref(href, locale);
 
   const bareSlug = props.slug.split("/").pop() ?? props.slug;
@@ -65,7 +67,7 @@ export async function ServicePage(props: Props) {
   const keyOutputs = props.outputs.slice(0, 3);
   const keyDocs = props.docs.slice(0, 3);
   const practicalExamples = props.practicalSituations?.slice(0, 3) ?? [];
-  const sectorLabel = locale === "en" ? "Industries" : provozyNavLabel;
+  const sectorLabel = getProvozyNavLabel(locale);
   const detailGroups = [
     practicalExamples.length > 0
       ? { title: copy.practicalExamplesHeading, items: practicalExamples }

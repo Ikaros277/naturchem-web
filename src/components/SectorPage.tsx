@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { IndexCard } from "@/components/IndexCard";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
@@ -7,17 +8,16 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { SectorFaqTeaser } from "@/components/SectorFaqTeaser";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
 import { JsonLd } from "@/components/Schema";
-import { pageCtaPresets } from "@/lib/cta";
+import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
+import { getProvozyNavLabel } from "@/lib/i18n/content";
+import { localizedCanonical } from "@/lib/i18n/metadata-helpers";
+import { localizeHref } from "@/lib/i18n/navigation";
+import { getSectorCopy } from "@/lib/i18n/sector-copy-i18n";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { sectorProcessSteps } from "@/lib/i18n/work-process-i18n";
 import { sectorContactUrl } from "@/lib/contact-url";
 import { getPageHeroTheme } from "@/lib/hero-images";
-import {
-  sectorOverviewHeading,
-  sectorProcessHeading,
-  sectorProcessIntro,
-  sectorProcessSteps
-} from "@/lib/sector-copy";
 import { getDetailGroupIconKey } from "@/lib/service-icons";
-import { provozyNavLabel } from "@/lib/sectors";
 import { siteUrl } from "@/lib/site";
 
 type Props = {
@@ -33,21 +33,38 @@ type Props = {
   faq: { q: string; a: string }[];
 };
 
-export function SectorPage(props: Props) {
-  const url = `${siteUrl}/provozy-a-technologie/${props.slug}/`;
+async function getRequestLocale(): Promise<Locale> {
+  const headerStore = await headers();
+  const locale = headerStore.get("x-locale");
+  return locale && isLocale(locale) ? locale : "cs";
+}
+
+export async function SectorPage(props: Props) {
+  const locale = await getRequestLocale();
+  const copy = getSectorCopy(locale);
+  const provozyNavLabel = getProvozyNavLabel(locale);
+  const pageCtaPresets = getPageCtaPresets(locale);
+  const link = (href: string) => localizeHref(href, locale);
+  const sectorPath = `/provozy-a-technologie/${props.slug}`;
+  const url = `${siteUrl}${link(sectorPath)}/`.replace(/([^:]\/)\/+/g, "$1");
   const contactHref = sectorContactUrl(
     props.title,
     props.relatedServices.map((s) => s.title)
   );
-  const heroTheme = getPageHeroTheme(`/provozy-a-technologie/${props.slug}`);
-  const processSteps = sectorProcessSteps(props.process);
+  const heroTheme = getPageHeroTheme(sectorPath);
+  const processSteps = sectorProcessSteps(props.process, locale);
 
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Úvod", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: provozyNavLabel, item: `${siteUrl}/provozy-a-technologie/` },
+      { "@type": "ListItem", position: 1, name: copy.breadcrumbHome, item: localizedCanonical("/", locale) },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: provozyNavLabel,
+        item: localizedCanonical("/provozy-a-technologie", locale)
+      },
       { "@type": "ListItem", position: 3, name: props.title, item: url }
     ]
   };
@@ -65,12 +82,12 @@ export function SectorPage(props: Props) {
   const relatedServiceListData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `Související služby pro ${props.title}`,
+    name: copy.relatedListName(props.title),
     itemListElement: props.relatedServices.map((service, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: service.title,
-      url: `${siteUrl}${service.href}/`.replace(/([^:]\/)\/+/g, "$1")
+      url: `${siteUrl}${link(service.href)}/`.replace(/([^:]\/)\/+/g, "$1")
     }))
   };
 
@@ -82,8 +99,8 @@ export function SectorPage(props: Props) {
       <PageHeroBand
         theme={heroTheme}
         breadcrumbs={[
-          { name: "Úvod", href: "/" },
-          { name: provozyNavLabel, href: "/provozy-a-technologie" },
+          { name: copy.breadcrumbHome, href: link("/") },
+          { name: provozyNavLabel, href: link("/provozy-a-technologie") },
           { name: props.title }
         ]}
       >
@@ -93,13 +110,13 @@ export function SectorPage(props: Props) {
         </header>
       </PageHeroBand>
 
-      <section className="service-overview-section section-surface" aria-label={sectorOverviewHeading}>
+      <section className="service-overview-section section-surface" aria-label={copy.overviewHeading}>
         <div className="container">
-          <h2 className="service-overview-title">{sectorOverviewHeading}</h2>
+          <h2 className="service-overview-title">{copy.overviewHeading}</h2>
           <div className="service-overview-layout">
             <div className="service-overview-panel">
               <div className="service-overview-grid">
-                <OverviewGridCell icon="audience-prumysl" title="Typické problémy">
+                <OverviewGridCell icon="audience-prumysl" title={copy.typicalProblems}>
                   <ul className="check-list">
                     {props.typicalProblems.map((item) => (
                       <li key={item}>{item}</li>
@@ -107,7 +124,7 @@ export function SectorPage(props: Props) {
                   </ul>
                 </OverviewGridCell>
 
-                <OverviewGridCell icon="pillar-dokumentace" title="Podklady">
+                <OverviewGridCell icon="pillar-dokumentace" title={copy.docs}>
                   <ul className="check-list">
                     {props.docs.map((item) => (
                       <li key={item}>{item}</li>
@@ -115,7 +132,7 @@ export function SectorPage(props: Props) {
                   </ul>
                 </OverviewGridCell>
 
-                <OverviewGridCell icon="process-vystup" title="Výstup">
+                <OverviewGridCell icon="process-vystup" title={copy.outputs}>
                   <ul className="check-list">
                     {props.outputs.map((item) => (
                       <li key={item}>{item}</li>
@@ -123,10 +140,7 @@ export function SectorPage(props: Props) {
                   </ul>
                 </OverviewGridCell>
 
-                <OverviewGridCell
-                  icon={getDetailGroupIconKey("Typické chyby a rizika")}
-                  title="Typické chyby a rizika"
-                >
+                <OverviewGridCell icon={getDetailGroupIconKey("Typické chyby a rizika")} title={copy.pitfalls}>
                   <ul className="check-list">
                     {props.pitfalls.map((item) => (
                       <li key={item}>{item}</li>
@@ -144,21 +158,21 @@ export function SectorPage(props: Props) {
         className="section content-block container sector-process-section typicke-zakazky-process"
         aria-labelledby="sector-process-heading"
       >
-        <h2 id="sector-process-heading">{sectorProcessHeading}</h2>
-        <p className="muted section-intro">{sectorProcessIntro}</p>
+        <h2 id="sector-process-heading">{copy.processHeading}</h2>
+        <p className="muted section-intro">{copy.processIntro}</p>
         <WorkProcessTimeline steps={processSteps} />
       </section>
 
       <div className="container page-inner">
         <section className="content-block">
-          <h2>Související služby</h2>
+          <h2>{copy.relatedServices}</h2>
           <div className="grid grid-3 index-card-grid">
             {props.relatedServices.map((service) => (
               <IndexCard
                 key={service.href}
-                href={service.href}
+                href={link(service.href)}
                 title={service.title}
-                cta="Zobrazit službu"
+                cta={copy.viewService}
                 className="service-related-card"
                 icon={<ServiceIcon href={service.href} variant="inline" size={20} />}
               />

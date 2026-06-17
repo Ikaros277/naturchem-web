@@ -3,13 +3,39 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { localizeHref } from "@/lib/i18n/navigation";
+import type { Locale } from "@/lib/i18n/locales";
 import { getFaqCategoryIconKey } from "@/lib/service-icons";
-import {
-  faqCategories,
-  type FaqItem
-} from "@/lib/faq";
+import type { FaqCategory, FaqItem } from "@/lib/faq";
 
-function FaqAccordionItem({ item }: { item: FaqItem }) {
+export type FaqUiLabels = {
+  searchLabel: string;
+  searchPlaceholder: string;
+  categoriesNavAria: string;
+  emptyTitle: string;
+  emptyText: string;
+  tip: string;
+  legal: string;
+  related: string;
+};
+
+type Props = {
+  categories: FaqCategory[];
+  uiLabels: FaqUiLabels;
+  locale: Locale;
+};
+
+function FaqAccordionItem({
+  item,
+  uiLabels,
+  locale
+}: {
+  item: FaqItem;
+  uiLabels: FaqUiLabels;
+  locale: Locale;
+}) {
+  const link = (href: string) => localizeHref(href, locale);
+
   return (
     <details className="faq-accordion">
       <summary className="faq-accordion-summary">{item.q}</summary>
@@ -19,12 +45,12 @@ function FaqAccordionItem({ item }: { item: FaqItem }) {
         ))}
         {item.tip ? (
           <p className="faq-tip">
-            <strong>Doporučení:</strong> {item.tip}
+            <strong>{uiLabels.tip}</strong> {item.tip}
           </p>
         ) : null}
         {item.legal ? (
           <details className="faq-legal">
-            <summary>Právní opora</summary>
+            <summary>{uiLabels.legal}</summary>
             <p>{item.legal.summary}</p>
             {item.legal.refs?.length ? (
               <ul>
@@ -41,11 +67,11 @@ function FaqAccordionItem({ item }: { item: FaqItem }) {
         ) : null}
         {item.links?.length ? (
           <p className="faq-related">
-            <strong>Související služby:</strong>{" "}
-            {item.links.map((link, i) => (
-              <span key={`${link.href}-${link.label}`}>
+            <strong>{uiLabels.related}</strong>{" "}
+            {item.links.map((itemLink, i) => (
+              <span key={`${itemLink.href}-${itemLink.label}`}>
                 {i > 0 ? " | " : null}
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link(itemLink.href)}>{itemLink.label}</Link>
               </span>
             ))}
           </p>
@@ -55,13 +81,13 @@ function FaqAccordionItem({ item }: { item: FaqItem }) {
   );
 }
 
-export function FaqPageContent() {
+export function FaqPageContent({ categories, uiLabels, locale }: Props) {
   const [query, setQuery] = useState("");
-  const normalizedQuery = query.trim().toLocaleLowerCase("cs-CZ");
+  const normalizedQuery = query.trim().toLocaleLowerCase(locale === "en" ? "en-US" : "cs-CZ");
   const filteredCategories = useMemo(() => {
-    if (!normalizedQuery) return faqCategories;
+    if (!normalizedQuery) return categories;
 
-    return faqCategories
+    return categories
       .map((category) => ({
         ...category,
         items: category.items.filter((item) => {
@@ -73,27 +99,27 @@ export function FaqPageContent() {
             item.legal?.summary ?? ""
           ]
             .join(" ")
-            .toLocaleLowerCase("cs-CZ");
+            .toLocaleLowerCase(locale === "en" ? "en-US" : "cs-CZ");
           return haystack.includes(normalizedQuery);
         })
       }))
       .filter((category) => category.items.length > 0);
-  }, [normalizedQuery]);
+  }, [categories, locale, normalizedQuery]);
 
   return (
     <>
       <label className="faq-search">
-          <span>Vyhledat v dotazech</span>
-          <input
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Např. emise, hluk, KHS, ISPOP"
-          />
-        </label>
+        <span>{uiLabels.searchLabel}</span>
+        <input
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder={uiLabels.searchPlaceholder}
+        />
+      </label>
 
-      <nav className="faq-tiles" aria-label="Kategorie častých dotazů">
-        {faqCategories.map((cat) => (
+      <nav className="faq-tiles" aria-label={uiLabels.categoriesNavAria}>
+        {categories.map((cat) => (
           <a key={cat.id} href={`#${cat.id}`} className="card faq-tile">
             <span className="faq-tile-icon-wrap" aria-hidden="true">
               <ServiceIcon icon={getFaqCategoryIconKey(cat.id)} variant="plain" size={28} className="faq-tile-icon" />
@@ -105,8 +131,8 @@ export function FaqPageContent() {
 
       {filteredCategories.length === 0 ? (
         <section className="section faq-category">
-          <h2>Nic jsme nenašli</h2>
-          <p className="muted">Zkuste obecnější výraz nebo nám pošlete dotaz přes kontaktní formulář.</p>
+          <h2>{uiLabels.emptyTitle}</h2>
+          <p className="muted">{uiLabels.emptyText}</p>
         </section>
       ) : null}
 
@@ -123,7 +149,7 @@ export function FaqPageContent() {
           </h2>
           <div className="faq-accordion-list">
             {category.items.map((item) => (
-              <FaqAccordionItem key={item.q} item={item} />
+              <FaqAccordionItem key={item.q} item={item} uiLabels={uiLabels} locale={locale} />
             ))}
           </div>
         </section>

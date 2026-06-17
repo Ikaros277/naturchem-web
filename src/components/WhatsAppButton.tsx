@@ -1,6 +1,11 @@
+"use client";
+
 import { buildWhatsAppUrl, isWhatsAppEnabled } from "@/lib/live-chat";
+import { useTranslations } from "@/lib/i18n/locale-context";
 
 export function WhatsAppButton() {
+  const t = useTranslations("common");
+
   if (!isWhatsAppEnabled()) return null;
 
   return (
@@ -9,7 +14,7 @@ export function WhatsAppButton() {
       href={buildWhatsAppUrl()}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Napsat zprávu na WhatsApp"
+      aria-label={t.whatsappAria}
     >
       <span className="live-chat-whatsapp-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="26" height="26" focusable="false">

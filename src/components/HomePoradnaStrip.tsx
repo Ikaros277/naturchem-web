@@ -1,15 +1,23 @@
-import Link from "next/link";
 import { ArticleCardThumb } from "@/components/ArticleCardThumb";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { formatArticleDate } from "@/lib/format-date";
-import { articlesNav } from "@/lib/navigation";
+import { getPoradnaTopicLabel } from "@/lib/i18n/content";
+import { getMessages } from "@/lib/i18n/get-messages";
+import { localizeHref } from "@/lib/i18n/navigation";
+import type { Locale } from "@/lib/i18n/locales";
+import { LocaleLink } from "@/lib/i18n/locale-link";
 import { getLatestPoradnaArticles } from "@/lib/poradna-articles";
 import { heroThemeForArticle, poradnaTopicIconKey } from "@/lib/poradna-topic";
 
-/** Homepage P5-26 variant B — 3 nejnovější články v gridu s náhledy (stejný vzor jako /poradna). */
-export async function HomePoradnaStrip() {
-  const articles = await getLatestPoradnaArticles(3);
+type Props = {
+  locale: Locale;
+};
+
+/** Homepage — 3 latest articles in a grid with thumbnails (same pattern as /poradna). */
+export async function HomePoradnaStrip({ locale }: Props) {
+  const messages = await getMessages(locale);
+  const articles = await getLatestPoradnaArticles(3, locale);
 
   if (articles.length === 0) return null;
 
@@ -21,7 +29,7 @@ export async function HomePoradnaStrip() {
     >
       <div className="container">
         <header className="section-header home-poradna-header">
-          <h2 id="home-poradna-heading">Aktuální odborné články</h2>
+          <h2 id="home-poradna-heading">{messages.home.articlesTitle}</h2>
         </header>
         <div className="article-list-grid home-poradna-grid">
           {articles.map((article) => {
@@ -31,15 +39,16 @@ export async function HomePoradnaStrip() {
               topic: article.topic
             };
             const iconKey = poradnaTopicIconKey(articleRef);
-            const displayDate = formatArticleDate(article.publishedAt);
+            const displayDate = formatArticleDate(article.publishedAt, locale);
+            const topicLabel = getPoradnaTopicLabel(article.topic, locale);
 
             return (
               <IndexCard
                 key={article.href}
-                href={article.href}
+                href={localizeHref(article.href, locale)}
                 title={article.title}
                 className="article-list-card article-card article-card--with-thumb article-card--mobile-row"
-                cta="Přečíst článek"
+                cta={messages.common.readMore}
                 icon={<ServiceIcon icon={iconKey} size={22} variant="inline" />}
                 meta={
                   <>
@@ -55,7 +64,7 @@ export async function HomePoradnaStrip() {
                       ) : (
                         <span />
                       )}
-                      <span className="tag">{article.topic}</span>
+                      <span className="tag">{topicLabel}</span>
                     </div>
                   </>
                 }
@@ -68,9 +77,9 @@ export async function HomePoradnaStrip() {
           })}
         </div>
         <p className="home-poradna-footer">
-          <Link href={articlesNav.href} className="button secondary home-poradna-all-link">
-            Všechny odborné články
-          </Link>
+          <LocaleLink href="/poradna" className="button secondary home-poradna-all-link">
+            {messages.common.allArticles}
+          </LocaleLink>
         </p>
       </div>
     </section>

@@ -51,6 +51,25 @@ export const faqIntroCtas: FaqLink[] = [
   { label: "Poslat podklady k posouzení", href: contactUrl("Nejsem si jistý") }
 ];
 
+export const faqPageMetadata = {
+  absoluteTitle: "FAQ – měření emisí, studie, EIA, posudky a provozní řády | NATURCHEM",
+  description:
+    "Časté dotazy k měření emisí, pracovnímu prostředí, hluku, rozptylovým a hlukovým studiím, EIA, odborným posudkům, provozním řádům, ISPOP a podkladům pro úřady."
+} as const;
+
+export const faqUiLabels = {
+  searchLabel: "Vyhledat v dotazech",
+  searchPlaceholder: "Např. emise, hluk, KHS, ISPOP",
+  categoriesNavAria: "Kategorie častých dotazů",
+  emptyTitle: "Nic jsme nenašli",
+  emptyText: "Zkuste obecnější výraz nebo nám pošlete dotaz přes kontaktní formulář.",
+  tip: "Doporučení:",
+  legal: "Právní opora",
+  related: "Související služby:",
+  serviceTeaserTitle: "Časté dotazy k této službě",
+  viewAllCategory: "Zobrazit všechny časté dotazy — {category}"
+} as const;
+
 export const faqCategories: FaqCategory[] = [
   {
     id: "obecne",

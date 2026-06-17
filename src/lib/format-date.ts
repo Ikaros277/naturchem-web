@@ -6,11 +6,11 @@ export function normalizeArticleDate(value: unknown): string | undefined {
   return date.toISOString();
 }
 
-/** Datum pro zobrazení na webu (česky, bez časové zóny v textu). */
-export function formatArticleDate(value: unknown): string | null {
+/** Datum pro zobrazení na webu. */
+export function formatArticleDate(value: unknown, locale: "cs" | "en" = "cs"): string | null {
   const iso = normalizeArticleDate(value);
   if (!iso) return null;
-  return new Date(iso).toLocaleDateString("cs-CZ", {
+  return new Date(iso).toLocaleDateString(locale === "en" ? "en-GB" : "cs-CZ", {
     day: "numeric",
     month: "long",
     year: "numeric"

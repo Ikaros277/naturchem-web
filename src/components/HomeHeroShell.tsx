@@ -3,28 +3,31 @@
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { getHeroImageSrc } from "@/lib/hero-images";
-import { homeHeroPillars, type HomeHeroPillarId } from "@/lib/home-hero-pillars";
+import type { HomeHeroPillar, HomeHeroPillarId } from "@/lib/home-hero-pillars";
 
 const AUTO_ROTATE_MS = 5000;
 const MANUAL_PAUSE_MS = 10000;
 const INITIAL_PILLAR_ID: HomeHeroPillarId = "mereni";
 
-function nextPillarId(currentId: HomeHeroPillarId): HomeHeroPillarId {
-  const currentIndex = homeHeroPillars.findIndex((pillar) => pillar.id === currentId);
-  return homeHeroPillars[(currentIndex + 1) % homeHeroPillars.length].id;
+function nextPillarId(pillars: HomeHeroPillar[], currentId: HomeHeroPillarId): HomeHeroPillarId {
+  const currentIndex = pillars.findIndex((pillar) => pillar.id === currentId);
+  return pillars[(currentIndex + 1) % pillars.length].id;
 }
 
 type Props = {
   /** Server-rendered úvodní fotka (LCP) — zůstane v HTML bez čekání na hydrataci. */
   initialPhoto: ReactNode;
   children: ReactNode;
+  pillars: HomeHeroPillar[];
+  ariaLabel: string;
+  pillarsAriaLabel: string;
 };
 
-export function HomeHeroShell({ initialPhoto, children }: Props) {
+export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pillarsAriaLabel }: Props) {
   const [activeId, setActiveId] = useState<HomeHeroPillarId>(INITIAL_PILLAR_ID);
   const [autoplayPaused, setAutoplayPaused] = useState(false);
   const manualPauseUntilRef = useRef(0);
-  const activePillar = homeHeroPillars.find((pillar) => pillar.id === activeId) ?? homeHeroPillars[0];
+  const activePillar = pillars.find((pillar) => pillar.id === activeId) ?? pillars[0];
 
   const selectPillar = useCallback((id: HomeHeroPillarId, fromUser = false) => {
     setActiveId(id);
@@ -39,13 +42,13 @@ export function HomeHeroShell({ initialPhoto, children }: Props) {
       event.preventDefault();
       const nextIndex =
         event.key === "ArrowRight"
-          ? (index + 1) % homeHeroPillars.length
-          : (index - 1 + homeHeroPillars.length) % homeHeroPillars.length;
-      selectPillar(homeHeroPillars[nextIndex].id, true);
+          ? (index + 1) % pillars.length
+          : (index - 1 + pillars.length) % pillars.length;
+      selectPillar(pillars[nextIndex].id, true);
       const pills = event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]');
       pills?.[nextIndex]?.focus();
     },
-    [selectPillar]
+    [pillars, selectPillar]
   );
 
   useEffect(() => {
@@ -54,15 +57,15 @@ export function HomeHeroShell({ initialPhoto, children }: Props) {
 
     const timer = window.setInterval(() => {
       if (autoplayPaused || Date.now() < manualPauseUntilRef.current) return;
-      setActiveId((currentId) => nextPillarId(currentId));
+      setActiveId((currentId) => nextPillarId(pillars, currentId));
     }, AUTO_ROTATE_MS);
 
     return () => window.clearInterval(timer);
-  }, [autoplayPaused]);
+  }, [autoplayPaused, pillars]);
 
   useEffect(() => {
     const prefetch = () => {
-      for (const pillar of homeHeroPillars) {
+      for (const pillar of pillars) {
         if (pillar.id === INITIAL_PILLAR_ID) continue;
         const img = new window.Image();
         img.src = getHeroImageSrc(pillar.theme);
@@ -74,7 +77,7 @@ export function HomeHeroShell({ initialPhoto, children }: Props) {
       return () => window.clearTimeout(t);
     }
     return () => window.cancelIdleCallback(idle);
-  }, []);
+  }, [pillars]);
 
   const photo =
     activeId === INITIAL_PILLAR_ID ? (
@@ -86,7 +89,7 @@ export function HomeHeroShell({ initialPhoto, children }: Props) {
   return (
     <section
       className="hero hero--split home-hero"
-      aria-label="Úvod"
+      aria-label={ariaLabel}
       onMouseEnter={() => setAutoplayPaused(true)}
       onMouseLeave={() => setAutoplayPaused(false)}
       onFocusCapture={() => setAutoplayPaused(true)}
@@ -102,9 +105,9 @@ export function HomeHeroShell({ initialPhoto, children }: Props) {
           <div
             className="home-hero-pills home-hero-enter home-hero-enter-3"
             role="tablist"
-            aria-label="Oblasti služeb"
+            aria-label={pillarsAriaLabel}
           >
-            {homeHeroPillars.map((pillar, index) => (
+            {pillars.map((pillar, index) => (
               <button
                 key={pillar.id}
                 type="button"

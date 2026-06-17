@@ -1,122 +1,84 @@
 import type { Metadata } from "next";
 
 import { CaseStudiesCategoryGrid } from "@/components/CaseStudiesCategoryGrid";
-
 import { PageCtaStrip } from "@/components/PageCtaStrip";
-
 import { PageHeroBand } from "@/components/PageHeroBand";
-
 import { TypicalScenarios } from "@/components/TypicalScenarios";
-
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
-
-import { pageCtaPresets } from "@/lib/cta";
-
-import { caseStudyCategories } from "@/lib/case-studies";
-
+import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
+import {
+  getCaseStudyCategories,
+  getTypickeZakazkyContent,
+  getTypicalScenarios
+} from "@/lib/i18n/content";
+import { getWorkProcessCopy } from "@/lib/i18n/work-process-i18n";
+import { getMessages } from "@/lib/i18n/get-messages";
+import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { localizeHref } from "@/lib/i18n/navigation";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 
-import { siteUrl } from "@/lib/site";
-
-import {
-
-  typickeZakazkyExamplesHeading,
-
-  typickeZakazkyExamplesIntro,
-
-  typickeZakazkyEyebrow,
-
-  typickeZakazkyHeroLead,
-
-  typickeZakazkyScenariosHeading
-
-} from "@/lib/typicke-zakazky-content";
-
-import { workProcessHeading, workProcessIntro } from "@/lib/work-process";
-
-
-
-export const metadata: Metadata = {
-
-  title: "Typické zakázky – měření, studie, ISPOP a školení",
-
-  description:
-
-    "Přehled měření, studií a podkladů z praxe NATURCHEM — emise, hygiena, hluk, EIA, ISPOP a typické situace provozů.",
-
-  alternates: { canonical: `${siteUrl}/typicke-zakazky/` }
-
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-
-
-export default function TypickeZakazkyPage() {
-
-  return (
-
-    <main className="section premium-page typicke-zakazky-page">
-
-      <PageHeroBand
-
-        theme={getPageHeroTheme("/typicke-zakazky")}
-
-        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: "Typické zakázky" }]}
-
-      >
-
-        <header className="premium-page-hero page-hero--photo">
-
-          <p className="eyebrow">{typickeZakazkyEyebrow}</p>
-
-          <h1>Typické zakázky</h1>
-
-          <p className="page-lead">{typickeZakazkyHeroLead}</p>
-
-        </header>
-
-      </PageHeroBand>
-
-
-
-      <section className="section content-block container page-first-section typicke-zakazky-process">
-
-        <h2>{workProcessHeading}</h2>
-
-        <p className="muted section-intro">{workProcessIntro}</p>
-
-        <WorkProcessTimeline />
-
-      </section>
-
-
-
-      <section className="section content-block container">
-
-        <h2>{typickeZakazkyScenariosHeading}</h2>
-
-        <TypicalScenarios />
-
-      </section>
-
-
-
-      <section className="section content-block container">
-
-        <h2>{typickeZakazkyExamplesHeading}</h2>
-
-        <p className="muted section-intro">{typickeZakazkyExamplesIntro}</p>
-
-        <CaseStudiesCategoryGrid categories={caseStudyCategories} />
-
-      </section>
-
-
-
-      <PageCtaStrip {...pageCtaPresets.typicalOrders} className="container" />
-
-    </main>
-
-  );
-
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+  return pageMetadata({
+    locale,
+    path: "/typicke-zakazky",
+    title: messages.caseStudies.metaTitle,
+    description: messages.caseStudies.metaDescription
+  });
 }
 
+export default async function TypickeZakazkyPage({ params }: Props) {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+  const content = getTypickeZakazkyContent(locale);
+  const workProcess = getWorkProcessCopy(locale);
+  const categories = getCaseStudyCategories(locale);
+  const scenarios = getTypicalScenarios(locale);
+  const pageCtaPresets = getPageCtaPresets(locale);
+  const link = (href: string) => localizeHref(href, locale);
+
+  return (
+    <main className="section premium-page typicke-zakazky-page">
+      <PageHeroBand
+        theme={getPageHeroTheme("/typicke-zakazky")}
+        breadcrumbs={[
+          { name: messages.common.breadcrumbHome, href: link("/") },
+          { name: messages.caseStudies.breadcrumb }
+        ]}
+      >
+        <header className="premium-page-hero page-hero--photo">
+          <p className="eyebrow">{content.typickeZakazkyEyebrow}</p>
+          <h1>{messages.caseStudies.pageTitle}</h1>
+          <p className="page-lead">{content.typickeZakazkyHeroLead}</p>
+        </header>
+      </PageHeroBand>
+
+      <section className="section content-block container page-first-section typicke-zakazky-process">
+        <h2>{workProcess.heading}</h2>
+        <p className="muted section-intro">{workProcess.intro}</p>
+        <WorkProcessTimeline steps={workProcess.steps} processAria={messages.common.cooperationProcess} />
+      </section>
+
+      <section className="section content-block container">
+        <h2>{content.typickeZakazkyScenariosHeading}</h2>
+        <TypicalScenarios scenarios={scenarios} locale={locale} />
+      </section>
+
+      <section className="section content-block container">
+        <h2>{content.typickeZakazkyExamplesHeading}</h2>
+        <p className="muted section-intro">{content.typickeZakazkyExamplesIntro}</p>
+        <CaseStudiesCategoryGrid categories={categories} />
+      </section>
+
+      <PageCtaStrip {...pageCtaPresets.typicalOrders} className="container" />
+    </main>
+  );
+}

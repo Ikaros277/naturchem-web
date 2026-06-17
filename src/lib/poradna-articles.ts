@@ -1,6 +1,9 @@
 import { getArticles, type Article } from "@/lib/articles";
 import { shortenListingExcerpt } from "@/lib/excerpt";
 import { normalizeArticleDate } from "@/lib/format-date";
+import type { Locale } from "@/lib/i18n/locales";
+import { defaultLocale } from "@/lib/i18n/locales";
+import { localizeHref } from "@/lib/i18n/navigation";
 import type { PoradnaTopic } from "@/lib/poradna-topic";
 
 export type PoradnaArticleListing = {
@@ -31,21 +34,22 @@ function stripMarkdownForSearch(body: string): string {
     .trim();
 }
 
-function buildSearchText(article: Article): string {
+function buildSearchText(article: Article, locale: Locale): string {
+  const localeTag = locale === "en" ? "en-US" : "cs-CZ";
   return [article.title, article.excerpt, stripMarkdownForSearch(article.body)]
     .join(" ")
-    .toLocaleLowerCase("cs-CZ");
+    .toLocaleLowerCase(localeTag);
 }
 
-export async function getPoradnaArticles(): Promise<PoradnaArticleListing[]> {
-  const mdArticles = await getArticles();
+export async function getPoradnaArticles(locale: Locale = defaultLocale): Promise<PoradnaArticleListing[]> {
+  const mdArticles = await getArticles(locale);
   const fromMarkdown: PoradnaArticleListing[] = mdArticles.map((article) => ({
     slug: article.slug,
     title: article.title,
-    href: `/poradna/${article.slug}`,
+    href: localizeHref(`/poradna/${article.slug}`, locale),
     excerpt: shortenListingExcerpt(article.excerpt?.trim() || ""),
     topic: article.topic,
-    searchText: buildSearchText(article),
+    searchText: buildSearchText(article, locale),
     publishedAt: normalizeArticleDate(article.publishedAt) || new Date().toISOString(),
     author: article.author,
     heroImage: article.heroImage
@@ -54,7 +58,10 @@ export async function getPoradnaArticles(): Promise<PoradnaArticleListing[]> {
   return sortByPublishedAt(fromMarkdown);
 }
 
-export async function getLatestPoradnaArticles(limit: number): Promise<PoradnaArticleListing[]> {
-  const articles = await getPoradnaArticles();
+export async function getLatestPoradnaArticles(
+  limit: number,
+  locale: Locale = defaultLocale
+): Promise<PoradnaArticleListing[]> {
+  const articles = await getPoradnaArticles(locale);
   return articles.slice(0, limit);
 }

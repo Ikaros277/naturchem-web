@@ -2,15 +2,24 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
+import { getCtaCopy } from "@/lib/i18n/cta-i18n";
+import { localizeHref } from "@/lib/i18n/navigation";
+import { getSeoLandingCopy } from "@/lib/i18n/seo-landing-i18n";
+import type { Locale } from "@/lib/i18n/locales";
 import { contactUrl } from "@/lib/contact-url";
-import { globalCta } from "@/lib/cta";
 import type { SeoLanding } from "@/lib/seo-landings";
 import { siteUrl } from "@/lib/site";
 
-type Props = { landing: SeoLanding };
+type Props = {
+  landing: SeoLanding;
+  locale: Locale;
+};
 
-export function SeoLandingPage({ landing }: Props) {
-  const pageUrl = `${siteUrl}/${landing.slug}/`;
+export function SeoLandingPage({ landing, locale }: Props) {
+  const copy = getSeoLandingCopy(locale);
+  const ctaCopy = getCtaCopy(locale);
+  const link = (href: string) => localizeHref(href, locale);
+  const pageUrl = `${siteUrl}${link(`/${landing.slug}`)}/`.replace(/([^:]\/)\/+/g, "$1");
   const contactHref = contactUrl(landing.contactService);
 
   const serviceData = {
@@ -28,8 +37,8 @@ export function SeoLandingPage({ landing }: Props) {
       <JsonLd data={serviceData} />
       <Breadcrumbs
         items={[
-          { name: "Úvod", href: "/" },
-          { name: "Služby", href: "/sluzby" },
+          { name: copy.breadcrumbHome, href: link("/") },
+          { name: copy.breadcrumbServices, href: link("/sluzby") },
           { name: landing.h1 }
         ]}
       />
@@ -46,16 +55,16 @@ export function SeoLandingPage({ landing }: Props) {
       ))}
 
       <PageCtaStrip
-        text="Pošlete stručný popis provozu nebo požadavek úřadu. Na základě podkladů navrhneme rozsah prací a možný termín realizace."
-        primaryLabel={globalCta}
+        text={copy.ctaText}
+        primaryLabel={ctaCopy.globalCta}
         primaryHref={contactHref}
-        secondaryLabel="Obecná stránka služby"
-        secondaryHref={landing.serviceHref}
+        secondaryLabel={copy.generalServicePage}
+        secondaryHref={link(landing.serviceHref)}
         className="content-block"
       />
       {landing.oboryHref ? (
         <p className="content-block">
-          <Link href={landing.oboryHref}>Související provoz</Link>
+          <Link href={link(landing.oboryHref)}>{copy.relatedFacility}</Link>
         </p>
       ) : null}
     </main>

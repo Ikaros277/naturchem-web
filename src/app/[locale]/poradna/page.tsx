@@ -3,33 +3,52 @@ import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { PoradnaFilterableList } from "@/components/PoradnaFilterableList";
 import { JsonLd } from "@/components/Schema";
-import { pageCtaPresets } from "@/lib/cta";
+import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
+import { getMessages } from "@/lib/i18n/get-messages";
+import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { localizeHref } from "@/lib/i18n/navigation";
+import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
-import { articlesNav } from "@/lib/navigation";
 import { siteUrl } from "@/lib/site";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
 import { formatArticleDate } from "@/lib/format-date";
 
-export const metadata: Metadata = {
-  title: `${articlesNav.label} – měření, studie a povolování`,
-  description:
-    "Články z praxe i z oboru — měření, studie, EIA a legislativa. Orientace v oboru dřív, než poptáte službu.",
-  alternates: { canonical: `${siteUrl}/poradna/` }
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default async function Page() {
-  const rawArticles = await getPoradnaArticles();
-  const mergedArticles = rawArticles.map(a => ({
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+  return pageMetadata({
+    locale,
+    path: "/poradna",
+    title: messages.poradna.metaTitle,
+    description: messages.poradna.metaDescription
+  });
+}
+
+export default async function Page({ params }: Props) {
+  const { locale: localeParam } = await params;
+  const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
+  const messages = await getMessages(locale);
+  const pageCtaPresets = getPageCtaPresets(locale);
+  const link = (href: string) => localizeHref(href, locale);
+  const poradnaUrl = `${siteUrl}${link("/poradna")}/`.replace(/([^:]\/)\/+/g, "$1");
+
+  const rawArticles = await getPoradnaArticles(locale);
+  const mergedArticles = rawArticles.map((a) => ({
     ...a,
-    displayDate: formatArticleDate(a.publishedAt)
+    displayDate: formatArticleDate(a.publishedAt, locale)
   }));
 
   const collectionPageData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: articlesNav.label,
-    url: `${siteUrl}/poradna/`,
-    description: metadata.description
+    name: messages.nav.articles,
+    url: poradnaUrl,
+    description: messages.poradna.metaDescription
   };
 
   const itemListData = {
@@ -47,8 +66,8 @@ export default async function Page() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Úvod", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: articlesNav.label, item: `${siteUrl}/poradna/` }
+      { "@type": "ListItem", position: 1, name: messages.common.breadcrumbHome, item: `${siteUrl}${link("/")}/` },
+      { "@type": "ListItem", position: 2, name: messages.nav.articles, item: poradnaUrl }
     ]
   };
 
@@ -59,19 +78,19 @@ export default async function Page() {
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         theme={getPageHeroTheme("/poradna")}
-        breadcrumbs={[{ name: "Úvod", href: "/" }, { name: articlesNav.label }]}
+        breadcrumbs={[
+          { name: messages.common.breadcrumbHome, href: link("/") },
+          { name: messages.nav.articles }
+        ]}
       >
         <header className="premium-page-hero page-hero--photo">
-          <p className="eyebrow">Články z praxe · legislativa · měření</p>
-          <h1>{articlesNav.label}</h1>
-          <p className="page-lead">
-            Články z praxe — měření, studie a legislativa pro provozy, které řeší podobné situace
-            jako ten Váš.
-          </p>
+          <p className="eyebrow">{messages.poradna.eyebrow}</p>
+          <h1>{messages.nav.articles}</h1>
+          <p className="page-lead">{messages.poradna.lead}</p>
         </header>
       </PageHeroBand>
       <div className="container page-first-section">
-        <PoradnaFilterableList articles={mergedArticles} />
+        <PoradnaFilterableList articles={mergedArticles} locale={locale} />
         <PageCtaStrip {...pageCtaPresets.poradna} />
       </div>
     </main>

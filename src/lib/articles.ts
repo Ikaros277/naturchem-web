@@ -2,8 +2,13 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
 import { normalizeArticleDate } from "@/lib/format-date";
+import type { Locale } from "@/lib/i18n/locales";
+import { defaultLocale } from "@/lib/i18n/locales";
 
-const articlesDirectory = path.join(process.cwd(), "content", "articles");
+function articlesDirectoryForLocale(locale: Locale): string {
+  const subdir = locale === "en" ? "articles-en" : "articles";
+  return path.join(process.cwd(), "content", subdir);
+}
 
 import type { PoradnaTopic } from "@/lib/poradna-topic";
 import { resolveArticleTopic } from "@/lib/poradna-topic";
@@ -65,19 +70,20 @@ function toArticle(fileSlug: string, fileContents: string): Article {
   };
 }
 
-async function readArticleFiles(): Promise<string[]> {
+async function readArticleFiles(locale: Locale = defaultLocale): Promise<string[]> {
+  const articlesDirectory = articlesDirectoryForLocale(locale);
   const files = await fs.readdir(articlesDirectory);
   return files.filter((file) => file.endsWith(".md"));
 }
 
-export async function getArticles(): Promise<Article[]> {
+export async function getArticles(locale: Locale = defaultLocale): Promise<Article[]> {
   try {
-    const mdFiles = await readArticleFiles();
+    const mdFiles = await readArticleFiles(locale);
 
     const articles = await Promise.all(
       mdFiles.map(async (file) => {
         const fileSlug = file.replace(/\.md$/, "");
-        const fullPath = path.join(articlesDirectory, file);
+        const fullPath = path.join(articlesDirectoryForLocale(locale), file);
         const fileContents = await fs.readFile(fullPath, "utf8");
         return toArticle(fileSlug, fileContents);
       })
@@ -91,10 +97,11 @@ export async function getArticles(): Promise<Article[]> {
   }
 }
 
-export async function getArticleBySlug(slug: string): Promise<Article | null> {
+export async function getArticleBySlug(slug: string, locale: Locale = defaultLocale): Promise<Article | null> {
   try {
     const decoded = decodeURIComponent(slug);
-    const mdFiles = await readArticleFiles();
+    const mdFiles = await readArticleFiles(locale);
+    const articlesDirectory = articlesDirectoryForLocale(locale);
 
     for (const file of mdFiles) {
       const fileSlug = file.replace(/\.md$/, "");

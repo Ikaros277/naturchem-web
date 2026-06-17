@@ -1,12 +1,13 @@
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { getAboutWorkStepIconKey } from "@/lib/service-icons";
-import { workProcessSteps, type WorkProcessStep } from "@/lib/work-process";
+import type { WorkProcessStep } from "@/lib/work-process";
 
 type Props = {
-  steps?: readonly WorkProcessStep[];
+  steps: readonly WorkProcessStep[];
+  processAria?: string;
 };
 
-export function WorkProcessTimeline({ steps = workProcessSteps }: Props) {
+export function WorkProcessTimeline({ steps, processAria = "Postup spolupráce" }: Props) {
   const lastIndex = steps.length - 1;
 
   return (
@@ -25,7 +26,7 @@ export function WorkProcessTimeline({ steps = workProcessSteps }: Props) {
           </div>
         ))}
       </div>
-      <ol className="work-process-columns" aria-label="Postup spolupráce">
+      <ol className="work-process-columns" aria-label={processAria}>
         {steps.map((step, index) => (
           <li key={step.title} className="work-process-step">
             <div className="work-process-step-head">

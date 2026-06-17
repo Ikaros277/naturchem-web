@@ -2,6 +2,7 @@
 
 import { Component, useEffect, type ReactNode } from "react";
 import { CONTACT_FORM_ID } from "@/lib/contact-url";
+import { useTranslations } from "@/lib/i18n/locale-context";
 import { company } from "@/lib/site";
 import { ContactForm } from "@/components/ContactForm";
 import type { InquiryCategoryId } from "@/lib/contact-inquiry";
@@ -13,21 +14,22 @@ type Props = {
 };
 
 export function ContactFormFallback() {
+  const t = useTranslations("contactForm");
   const phoneHref = `tel:${company.phones[0].replace(/\s/g, "")}`;
 
   return (
     <div className="contact-form-fallback card" id={CONTACT_FORM_ID}>
       <p>
-        Formulář teď nejde zobrazit. Napište nám na{" "}
-        <a href={`mailto:${company.email}`}>{company.email}</a> nebo zavolejte{" "}
-        <a href={phoneHref}>{company.phones[0]}</a> — kontakty najdete níže.
+        {t.fallbackIntro}{" "}
+        <a href={`mailto:${company.email}`}>{company.email}</a> {t.fallbackOr}{" "}
+        <a href={phoneHref}>{company.phones[0]}</a> {t.fallbackSuffix}
       </p>
       <div className="btn-row">
         <a className="button" href={`mailto:${company.email}`}>
-          Napsat e-mail
+          {t.fallbackEmail}
         </a>
         <a className="button secondary" href={phoneHref}>
-          Zavolat
+          {t.fallbackCall}
         </a>
       </div>
     </div>

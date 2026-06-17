@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { LocaleLink } from "@/lib/i18n/locale-link";
+import { useTranslations } from "@/lib/i18n/locale-context";
 import { contactFormHref } from "@/lib/contact-url";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { CaseStudy, CaseStudyCategory } from "@/lib/case-studies";
@@ -11,6 +12,7 @@ type Props = {
 };
 
 export function CaseStudiesCategoryGrid({ categories }: Props) {
+  const common = useTranslations("common");
   const [openSlug, setOpenSlug] = useState<string | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
@@ -51,7 +53,7 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
             </div>
             <p className="muted case-category-card-short">{cat.short}</p>
             <span className="card-inline-link case-category-card-cta">
-              Zobrazit více
+              {common.viewMore}
             </span>
           </button>
         ))}
@@ -62,7 +64,7 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
           <button
             type="button"
             className="case-study-modal-backdrop"
-            aria-label="Zavřít"
+            aria-label={common.close}
             onClick={close}
           />
           <div
@@ -82,7 +84,7 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
                 type="button"
                 className="case-study-modal-close"
                 onClick={close}
-                aria-label="Zavřít příklady"
+                aria-label={common.closeExamples}
               >
                 ×
               </button>
@@ -91,16 +93,16 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
               <p className="muted case-study-modal-lead">{openCategory.short}</p>
               <div className="case-study-modal-list">
                 {openCategory.cases.map((item) => (
-                  <CaseStudyDetail key={item.title} item={item} />
+                  <CaseStudyDetail key={item.title} item={item} outputLabel={common.output} />
                 ))}
               </div>
               <p className="case-study-modal-actions btn-row">
-                <Link href={openCategory.serviceHref} className="button secondary" onClick={close}>
-                  Související služba
-                </Link>
-                <Link href={contactFormHref} className="button" onClick={close}>
-                  Poptat službu
-                </Link>
+                <LocaleLink href={openCategory.serviceHref} className="button secondary" onClick={close}>
+                  {common.relatedService}
+                </LocaleLink>
+                <LocaleLink href={contactFormHref} className="button" onClick={close}>
+                  {common.requestService}
+                </LocaleLink>
               </p>
             </div>
           </div>
@@ -110,13 +112,13 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
   );
 }
 
-function CaseStudyDetail({ item }: { item: CaseStudy }) {
+function CaseStudyDetail({ item, outputLabel }: { item: CaseStudy; outputLabel: string }) {
   return (
     <article className="card case-study-detail-card">
       <h3>{item.title}</h3>
       <p>{item.narrative}</p>
       <p className="muted">
-        <strong>Výstup:</strong> {item.output}
+        <strong>{outputLabel}:</strong> {item.output}
       </p>
     </article>
   );

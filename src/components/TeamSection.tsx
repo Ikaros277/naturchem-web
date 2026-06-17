@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { getTeamInitials } from "@/lib/team-initials";
-import { teamMembers } from "@/lib/team";
+import { teamMembers as defaultTeamMembers } from "@/lib/team";
+import type { TeamMember } from "@/lib/team";
 
-function TeamCard({ member, compact = false }: { member: (typeof teamMembers)[number]; compact?: boolean }) {
+function TeamCard({ member, compact = false }: { member: TeamMember; compact?: boolean }) {
   const detailLines = compact ? member.details.slice(0, 1) : member.details;
 
   return (
@@ -43,10 +44,10 @@ function TeamCard({ member, compact = false }: { member: (typeof teamMembers)[nu
   );
 }
 
-export function TeamMemberCards() {
+export function TeamMemberCards({ members = defaultTeamMembers }: { members?: TeamMember[] }) {
   return (
     <div className="grid grid-2 team-member-cards">
-      {teamMembers.map((member) => (
+      {members.map((member) => (
         <TeamCard key={member.name} member={member} />
       ))}
     </div>
@@ -54,7 +55,7 @@ export function TeamMemberCards() {
 }
 
 export function TeamSectionContact() {
-  const contactTeamMembers = teamMembers.slice(0, 3);
+  const contactTeamMembers = defaultTeamMembers.slice(0, 3);
 
   return (
     <section className="section content-block" aria-labelledby="tym-kontakt-heading">

@@ -5,7 +5,7 @@ import { HomeOfferCard } from "@/components/HomeOfferCard";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
-import { getCompanyStatsContent, getHomeHeroPillars } from "@/lib/i18n/content";
+import { getHomeHeroPillars } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { getHomeOfferPillars, getHomeTrustBandItems } from "@/lib/i18n/home-content";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
@@ -36,7 +36,6 @@ export default async function Home({ params }: Props) {
   const offerPillars = getHomeOfferPillars(locale);
   const trustItems = getHomeTrustBandItems(locale);
   const heroPillars = getHomeHeroPillars(locale);
-  const statsContent = getCompanyStatsContent(locale);
   const link = (href: string) => localizeHref(href, locale);
   const homeUrl = `${siteUrl}${link("/")}/`.replace(/([^:]\/)\/+/g, "$1");
 
@@ -75,7 +74,7 @@ export default async function Home({ params }: Props) {
         aria-label={messages.home.statsAria}
       >
         <div className="container">
-          <ExperienceStats variant="compact" showNote={false} statsContent={statsContent} />
+          <ExperienceStats variant="compact" showNote={false} />
         </div>
       </section>
 

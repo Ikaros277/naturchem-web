@@ -4025,12 +4025,15 @@ main.page:has(.page-hero-band) {
   gap: 0.65rem;
 }
 
-.home-offer-card-head h3 {
+.home-offer-card-head h3,
+.home-offer-card-title {
   margin: 0;
   min-width: 0;
   flex: 1;
   font-size: clamp(1.15rem, 1.8vw, 1.5rem);
   line-height: 1.2;
+  font-weight: 700;
+  color: inherit;
 }
 
 .card-symbol,
@@ -7069,6 +7072,17 @@ main.home-page + .site-footer {
   flex-direction: column;
   gap: 0.85rem;
   flex: 1;
+}
+
+.home-offer-card .home-offer-card-head--desktop,
+.home-offer-card .home-offer-panel--desktop {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.home-offer-card .home-offer-panel--desktop .card-interactive-nested {
+  pointer-events: auto;
 }
 
 .home-offer-details--mobile {

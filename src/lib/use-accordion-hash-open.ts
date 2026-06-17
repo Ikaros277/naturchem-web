@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export const ACCORDION_HASH_SYNC_EVENT = "naturchem:accordion-hash-sync";
@@ -25,15 +25,20 @@ function scrollToAccordion(id: string) {
 
 export function useAccordionHashOpen(validIds: readonly string[]) {
   const pathname = usePathname();
+  const validIdsKey = validIds.join("\0");
+  const stableValidIds = useMemo(() => validIds, [validIdsKey]);
   const [openIds, setOpenIds] = useState<Set<string>>(() => new Set());
 
   const syncFromHash = useCallback(() => {
-    const id = getHashTarget(validIds);
+    const id = getHashTarget(stableValidIds);
     if (!id) return;
 
-    setOpenIds(new Set([id]));
+    setOpenIds((current) => {
+      if (current.size === 1 && current.has(id)) return current;
+      return new Set([id]);
+    });
     scrollToAccordion(id);
-  }, [validIds]);
+  }, [stableValidIds]);
 
   useLayoutEffect(() => {
     syncFromHash();

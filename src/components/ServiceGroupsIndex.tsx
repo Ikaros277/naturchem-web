@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { useTranslations } from "@/lib/i18n/locale-context";
@@ -115,7 +116,8 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
   const servicesIndex = useTranslations("servicesIndex");
   const common = useTranslations("common");
   const accordion = useTranslations("accordion");
-  const { isOpen, onToggle } = useAccordionHashOpen(groups.map((group) => group.id));
+  const groupIds = useMemo(() => groups.map((group) => group.id), [groups]);
+  const { isOpen, onToggle } = useAccordionHashOpen(groupIds);
   const ariaVerbs =
     locale === "en" ? groupAriaVerbsEn : locale === "de" ? groupAriaVerbsDe : groupAriaVerbs;
 

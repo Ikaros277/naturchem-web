@@ -86,14 +86,14 @@ export function HomeOfferCard({ pillar }: { pillar: HomeOfferPillar }) {
       </div>
       <details className="home-offer-details home-offer-details--mobile">
         <summary className="home-offer-summary">
-          <div className="home-offer-summary-head">
-            <header className="home-offer-card-head">
+          <span className="home-offer-summary-head">
+            <span className="home-offer-card-head">
               <ServiceIcon icon={pillar.icon} variant="card" className="home-offer-icon" />
-              <h3>{pillar.title}</h3>
-            </header>
+              <span className="home-offer-card-title">{pillar.title}</span>
+            </span>
             <span className="home-offer-chevron" aria-hidden="true" />
-          </div>
-          <p className="home-offer-teaser muted">{pillar.teaser}</p>
+          </span>
+          <span className="home-offer-teaser muted">{pillar.teaser}</span>
         </summary>
         <div className="home-offer-panel home-offer-panel--mobile">
           <OfferPanel pillar={pillar} />

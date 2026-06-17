@@ -146,9 +146,39 @@ import { guaranteeIntroParagraph as guaranteeIntroCs } from "@/lib/guarantee-cop
 import { guaranteeIntroParagraph as guaranteeIntroEn } from "@/lib/guarantee-copy-en";
 import { guaranteeIntroParagraph as guaranteeIntroDe } from "@/lib/guarantee-copy-de";
 
-import * as companyStatsCs from "@/lib/company-stats";
-import * as companyStatsEn from "@/lib/company-stats-en";
-import * as companyStatsDe from "@/lib/company-stats-de";
+import {
+  companyStats as companyStatsListCs,
+  companyStatsIntro as companyStatsIntroCs,
+  companyStatsNote as companyStatsNoteCs
+} from "@/lib/company-stats";
+import {
+  companyStats as companyStatsListEn,
+  companyStatsIntro as companyStatsIntroEn,
+  companyStatsNote as companyStatsNoteEn
+} from "@/lib/company-stats-en";
+import {
+  companyStats as companyStatsListDe,
+  companyStatsIntro as companyStatsIntroDe,
+  companyStatsNote as companyStatsNoteDe
+} from "@/lib/company-stats-de";
+
+const companyStatsContentCs = {
+  companyStats: companyStatsListCs,
+  companyStatsIntro: companyStatsIntroCs,
+  companyStatsNote: companyStatsNoteCs
+};
+
+const companyStatsContentEn = {
+  companyStats: companyStatsListEn,
+  companyStatsIntro: companyStatsIntroEn,
+  companyStatsNote: companyStatsNoteEn
+};
+
+const companyStatsContentDe = {
+  companyStats: companyStatsListDe,
+  companyStatsIntro: companyStatsIntroDe,
+  companyStatsNote: companyStatsNoteDe
+};
 
 import { homeHeroPillars as homeHeroPillarsCs } from "@/lib/home-hero-pillars";
 import { homeHeroPillars as homeHeroPillarsEn } from "@/lib/home-hero-pillars-en";
@@ -371,7 +401,7 @@ export function getGuaranteeIntro(locale: Locale) {
 }
 
 export function getCompanyStatsContent(locale: Locale) {
-  return localized(locale, companyStatsCs, companyStatsEn, companyStatsDe);
+  return localized(locale, companyStatsContentCs, companyStatsContentEn, companyStatsContentDe);
 }
 
 export function getHomeHeroPillars(locale: Locale) {

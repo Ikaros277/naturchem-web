@@ -15,7 +15,7 @@ export function createSectorDetailPageExports(slug: string) {
   async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { locale: localeParam } = await params;
     const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-    const data = getSectorPage(slug, locale);
+    const data = await getSectorPage(slug, locale);
     if (!isSectorDetailPage(data)) {
       return { title: "Provoz" };
     }
@@ -30,7 +30,7 @@ export function createSectorDetailPageExports(slug: string) {
   async function Page({ params }: PageProps) {
     const { locale: localeParam } = await params;
     const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-    const data = getSectorPage(slug, locale);
+    const data = await getSectorPage(slug, locale);
     if (!isSectorDetailPage(data)) notFound();
     return <SectorPage locale={locale} {...data} />;
   }
@@ -42,7 +42,7 @@ export function createSectorIndexPageExports() {
   async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { locale: localeParam } = await params;
     const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-    const data = getSectorPage("index", locale);
+    const data = await getSectorPage("index", locale);
     return pageMetadata({
       locale,
       path: "/provozy-a-technologie",

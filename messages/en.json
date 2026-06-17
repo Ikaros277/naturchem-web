@@ -207,6 +207,11 @@
     "serviceCountFew": "{count} services",
     "serviceCountMany": "{count} services"
   },
+  "sectorsIndex": {
+    "sectorCountOne": "1 facility type",
+    "sectorCountFew": "{count} facility types",
+    "sectorCountMany": "{count} facility types"
+  },
   "homeHero": {
     "ariaLabel": "Introduction",
     "pillarsAria": "Service areas"

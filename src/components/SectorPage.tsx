@@ -33,10 +33,10 @@ type Props = {
   faq: { q: string; a: string }[];
 };
 
-export function SectorPage(props: Props) {
+export async function SectorPage(props: Props) {
   const { locale } = props;
   const copy = getSectorCopy(locale);
-  const provozyNavLabel = getProvozyNavLabel(locale);
+  const provozyNavLabel = await getProvozyNavLabel(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
   const sectorPath = `/provozy-a-technologie/${props.slug}`;

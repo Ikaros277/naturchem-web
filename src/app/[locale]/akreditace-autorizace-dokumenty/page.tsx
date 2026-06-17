@@ -27,7 +27,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const { metadata } = getAccreditationPage(locale);
+  const { metadata } = await getAccreditationPage(locale);
   return pageMetadata({
     locale,
     path: "/akreditace-autorizace-dokumenty",
@@ -39,9 +39,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AkreditaceAutorizaceDokumentyPage({ params }: Props) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const { content, facts, benefits, scopeGroups } = getAccreditationPage(locale);
-  const { accreditedLabScope, authorizations } = getAccreditationScope(locale);
-  const accreditationDocuments = getAccreditationDocuments(locale);
+  const { content, facts, benefits, scopeGroups } = await getAccreditationPage(locale);
+  const { accreditedLabScope, authorizations } = await getAccreditationScope(locale);
+  const accreditationDocuments = await getAccreditationDocuments(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/akreditace-autorizace-dokumenty")}/`.replace(/([^:]\/)\/+/g, "$1");
@@ -51,7 +51,7 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
     "@type": "WebPage",
     name: content.schemaName,
     url: pageUrl,
-    description: getAccreditationPage(locale).metadata.description
+    description: (await getAccreditationPage(locale)).metadata.description
   };
 
   const orgData = {

@@ -12,7 +12,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const { metadata } = getCookiesPage(locale);
+  const { metadata } = await getCookiesPage(locale);
   return {
     ...pageMetadata({
       locale,

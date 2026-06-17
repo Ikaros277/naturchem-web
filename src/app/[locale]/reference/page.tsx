@@ -33,8 +33,8 @@ export default async function ReferencePage({ params }: Props) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
-  const reference = getReferenceContent(locale);
-  const exampleGroups = getReferenceExampleGroups(locale);
+  const reference = await getReferenceContent(locale);
+  const exampleGroups = await getReferenceExampleGroups(locale);
   const examplesById = reference.getReferenceExamplesById();
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);

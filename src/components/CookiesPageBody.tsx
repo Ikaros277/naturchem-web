@@ -10,8 +10,8 @@ function splitAroundLabel(text: string, label: string): [string, string] {
   return [parts[0] ?? "", parts.slice(1).join(label)];
 }
 
-export function CookiesPageBody({ locale }: { locale: Locale }) {
-  const { content } = getCookiesPage(locale);
+export async function CookiesPageBody({ locale }: { locale: Locale }) {
+  const { content } = await getCookiesPage(locale);
   const s = content.sections;
   const [rightsBefore, rightsAfter] = splitAroundLabel(
     s.rights.paragraph,

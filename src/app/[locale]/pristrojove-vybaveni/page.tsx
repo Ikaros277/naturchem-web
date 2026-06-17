@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { EquipmentAccordion } from "@/components/EquipmentAccordion";
+import { EquipmentGroupsIndex } from "@/components/EquipmentGroupsIndex";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
@@ -33,7 +33,7 @@ export default async function Page({ params }: Props) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
-  const equipment = getEquipmentContent(locale);
+  const equipment = await getEquipmentContent(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/pristrojove-vybaveni")}/`.replace(/([^:]\/)\/+/g, "$1");
@@ -82,7 +82,7 @@ export default async function Page({ params }: Props) {
         <p>{equipment.equipmentSectionIntro}</p>
       </section>
 
-      <EquipmentAccordion
+      <EquipmentGroupsIndex
         groups={equipment.equipmentGroups}
         groupAriaVerbs={equipment.equipmentGroupAriaVerbs}
         locale={locale}

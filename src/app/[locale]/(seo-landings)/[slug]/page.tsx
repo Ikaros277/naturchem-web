@@ -9,14 +9,15 @@ type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-export function generateStaticParams() {
-  return getSeoLandings("cs").map((l) => ({ slug: l.slug }));
+export async function generateStaticParams() {
+  const landings = await getSeoLandings("cs");
+  return landings.map((landing) => ({ slug: landing.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const landing = getSeoLanding(slug, locale);
+  const landing = await getSeoLanding(slug, locale);
   if (!landing) return { title: "Služba" };
 
   return pageMetadata({
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function SeoLandingRoute({ params }: Props) {
   const { slug, locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const landing = getSeoLanding(slug, locale);
+  const landing = await getSeoLanding(slug, locale);
   if (!landing) notFound();
 
   return <SeoLandingPage landing={landing} locale={locale} />;

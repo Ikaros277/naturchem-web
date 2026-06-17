@@ -15,7 +15,7 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const categories = getCaseStudyCategories("cs");
+  const categories = await getCaseStudyCategories("cs");
   return categories.map((c) => ({ category: c.slug }));
 }
 
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam, category: slug } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
-  const category = getCaseStudyCategory(slug, locale);
+  const category = await getCaseStudyCategory(slug, locale);
   if (!category) {
     return { title: messages.caseStudies.categoryFallbackTitle };
   }
@@ -40,10 +40,10 @@ export default async function CaseStudyCategoryPage({ params }: Props) {
   const { locale: localeParam, category: slug } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
-  const category = getCaseStudyCategory(slug, locale);
+  const category = await getCaseStudyCategory(slug, locale);
   if (!category) notFound();
 
-  const categories = getCaseStudyCategories(locale);
+  const categories = await getCaseStudyCategories(locale);
   const link = (href: string) => localizeHref(href, locale);
 
   return (

@@ -38,13 +38,13 @@ type Props = {
   faqCategoryId?: string;
 };
 
-export function ServicePage(props: Props) {
+export async function ServicePage(props: Props) {
   const { locale } = props;
   const copy = getServiceCopy(locale);
   const ctaCopy = getCtaCopy(locale);
   const trustItems = getServiceTrustBandItems(locale);
-  const services = getSiteServices(locale);
-  const sectors = getSectors(locale);
+  const services = await getSiteServices(locale);
+  const sectors = await getSectors(locale);
   const link = (href: string) => localizeHref(href, locale);
 
   const bareSlug = props.slug.split("/").pop() ?? props.slug;
@@ -61,7 +61,7 @@ export function ServicePage(props: Props) {
   const keyOutputs = props.outputs.slice(0, 3);
   const keyDocs = props.docs.slice(0, 3);
   const practicalExamples = props.practicalSituations?.slice(0, 3) ?? [];
-  const sectorLabel = getProvozyNavLabel(locale);
+  const sectorLabel = await getProvozyNavLabel(locale);
   const detailGroups = [
     practicalExamples.length > 0
       ? { title: copy.practicalExamplesHeading, items: practicalExamples }

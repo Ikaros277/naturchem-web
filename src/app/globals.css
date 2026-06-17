@@ -647,11 +647,6 @@ section.content-block:has(+ .container) {
   border-collapse: collapse;
 }
 
-.kpi .muted {
-  display: block;
-  margin-top: 0.25rem;
-  font-weight: 400;
-}
 
 h1,
 h2,
@@ -1026,25 +1021,8 @@ main ol {
 
 
 
-.kpi-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.8rem;
-  margin-top: 1.25rem;
-}
 
-.kpi {
-  background: #f8fbff;
-  border: 1px solid #d1e1fd;
-  border-radius: var(--radius-ui);
-  padding: 0.9rem;
-  min-height: 100%;
-}
 
-.kpi strong {
-  display: block;
-  color: #0f43a7;
-}
 
 .stats-grid {
   display: grid;
@@ -1100,36 +1078,10 @@ main ol {
   font-size: 0.88rem;
 }
 
-.stats-bullets {
-  margin: 1rem 0 0;
-  padding-left: 1.2rem;
-  max-width: none;
-}
 
-.claims-block {
-  margin: 0;
-}
 
-.claims-block-compact .claims-list {
-  margin-top: 0;
-}
 
-.claims-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-  display: grid;
-  gap: 0.85rem;
-}
 
-.claims-list li {
-  padding: 0.85rem 1rem 0.85rem 1rem;
-  border-left: 3px solid var(--primary);
-  background: #f8fbff;
-  border-radius: 0 var(--radius-ui) var(--radius-ui) 0;
-  color: #1a3a6b;
-  line-height: 1.5;
-}
 
 
 
@@ -1707,17 +1659,9 @@ main ol {
 
 
 
-.footer-mobile-accordions {
-  display: none;
-}
 
 /* Rozložení patičky — viz .site-footer níže */
 
-.footer-subheading {
-  margin: 1.1rem 0 0.35rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
 
 .footer-compact {
   font-size: 0.9rem;
@@ -1745,9 +1689,6 @@ main ol {
   margin: 1rem 0 0;
 }
 
-.kpi-row-four {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
 
 .team-member-cards {
   margin-bottom: var(--section-padding-y);
@@ -7475,19 +7416,8 @@ main.home-page + .site-footer {
   }
 
 
-  .footer-mobile-intro {
-    padding-top: 1.25rem;
-    padding-bottom: 0.25rem;
-  }
 
-  .footer-mobile-contact {
-    line-height: 1.65;
-  }
 
-  .footer-mobile-contact a {
-    display: inline-block;
-    padding: 0.15rem 0;
-  }
 
 
 

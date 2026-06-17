@@ -207,6 +207,11 @@
     "serviceCountFew": "{count} Leistungen",
     "serviceCountMany": "{count} Leistungen"
   },
+  "sectorsIndex": {
+    "sectorCountOne": "1 Betriebstyp",
+    "sectorCountFew": "{count} Betriebstypen",
+    "sectorCountMany": "{count} Betriebstypen"
+  },
   "homeHero": {
     "ariaLabel": "Einführung",
     "pillarsAria": "Leistungsbereiche"

@@ -11,10 +11,10 @@ type Props = {
   limit?: number;
 };
 
-export function ServiceFaqTeaser({ locale, categoryId, limit = 5 }: Props) {
-  const { uiLabels } = getFaqContent(locale);
-  const category = getFaqCategoryForLocale(categoryId, locale);
-  const items = getFaqTeaserItemsForLocale(categoryId, locale, limit);
+export async function ServiceFaqTeaser({ locale, categoryId, limit = 5 }: Props) {
+  const { uiLabels } = await getFaqContent(locale);
+  const category = await getFaqCategoryForLocale(categoryId, locale);
+  const items = await getFaqTeaserItemsForLocale(categoryId, locale, limit);
   if (!category || items.length === 0) return null;
 
   const faqHref = localizeHref(`/faq#${categoryId}`, locale);

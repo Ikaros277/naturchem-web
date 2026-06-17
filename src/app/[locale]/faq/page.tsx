@@ -20,7 +20,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const { metadata } = getFaqContent(locale);
+  const { metadata } = await getFaqContent(locale);
   return pageMetadata({
     locale,
     path: "/faq",
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function FaqPage({ params }: Props) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const faq = getFaqContent(locale);
+  const faq = await getFaqContent(locale);
   const messages = await getMessages(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);

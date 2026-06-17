@@ -32,7 +32,7 @@ export default async function Page({ params }: Props) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
-  const serviceGroups = getServiceGroups(locale);
+  const serviceGroups = await getServiceGroups(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/sluzby")}/`.replace(/([^:]\/)\/+/g, "$1");

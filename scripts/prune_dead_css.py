@@ -43,6 +43,18 @@ DEAD = frozenset(
         ".proof-panel-label",
         ".proof-panel-note",
         ".proof-section",
+        ".kpi-row",
+        ".kpi-row-four",
+        ".kpi",
+        ".customer-needs-list",
+        ".stats-bullets",
+        ".claims-block",
+        ".claims-block-compact",
+        ".claims-list",
+        ".footer-mobile-accordions",
+        ".footer-subheading",
+        ".footer-mobile-intro",
+        ".footer-mobile-contact",
     }
 )
 

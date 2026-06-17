@@ -17,13 +17,13 @@ type Props = {
 };
 
 export async function SectorIndexPage({ locale }: Props) {
-  const indexData = getSectorPage("index", locale);
+  const indexData = await getSectorPage("index", locale);
   if (isSectorDetailPage(indexData)) {
     throw new Error("Sector index page data must not be a detail page");
   }
 
-  const sectors = getSectors(locale);
-  const provozyNavLabel = getProvozyNavLabel(locale);
+  const sectors = await getSectors(locale);
+  const provozyNavLabel = await getProvozyNavLabel(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const messages = await getMessages(locale);
   const homeLabel = messages.common.breadcrumbHome;

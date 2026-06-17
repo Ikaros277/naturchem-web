@@ -1,23 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
+import { FaqAccordionList, type FaqAccordionUiLabels } from "@/components/FaqAccordionList";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
 import { localeTag } from "@/lib/i18n/locale-pick";
 import { getFaqCategoryIconKey } from "@/lib/service-icons";
-import type { FaqCategory, FaqItem } from "@/lib/faq";
+import type { FaqCategory } from "@/lib/faq";
 
-export type FaqUiLabels = {
+export type FaqUiLabels = FaqAccordionUiLabels & {
   searchLabel: string;
   searchPlaceholder: string;
   categoriesNavAria: string;
   emptyTitle: string;
   emptyText: string;
-  tip: string;
-  legal: string;
-  related: string;
 };
 
 type Props = {
@@ -25,62 +21,6 @@ type Props = {
   uiLabels: FaqUiLabels;
   locale: Locale;
 };
-
-function FaqAccordionItem({
-  item,
-  uiLabels,
-  locale
-}: {
-  item: FaqItem;
-  uiLabels: FaqUiLabels;
-  locale: Locale;
-}) {
-  const link = (href: string) => localizeHref(href, locale);
-
-  return (
-    <details className="faq-accordion">
-      <summary className="faq-accordion-summary">{item.q}</summary>
-      <div className="faq-accordion-body">
-        {item.paragraphs.map((p) => (
-          <p key={p.slice(0, 40)}>{p}</p>
-        ))}
-        {item.tip ? (
-          <p className="faq-tip">
-            <strong>{uiLabels.tip}</strong> {item.tip}
-          </p>
-        ) : null}
-        {item.legal ? (
-          <details className="faq-legal">
-            <summary>{uiLabels.legal}</summary>
-            <p>{item.legal.summary}</p>
-            {item.legal.refs?.length ? (
-              <ul>
-                {item.legal.refs.map((ref) => (
-                  <li key={ref.href}>
-                    <a href={ref.href} target="_blank" rel="noopener noreferrer">
-                      {ref.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </details>
-        ) : null}
-        {item.links?.length ? (
-          <p className="faq-related">
-            <strong>{uiLabels.related}</strong>{" "}
-            {item.links.map((itemLink, i) => (
-              <span key={`${itemLink.href}-${itemLink.label}`}>
-                {i > 0 ? " | " : null}
-                <Link href={link(itemLink.href)}>{itemLink.label}</Link>
-              </span>
-            ))}
-          </p>
-        ) : null}
-      </div>
-    </details>
-  );
-}
 
 export function FaqPageContent({ categories, uiLabels, locale }: Props) {
   const [query, setQuery] = useState("");
@@ -106,6 +46,12 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
       }))
       .filter((category) => category.items.length > 0);
   }, [categories, locale, normalizedQuery]);
+
+  const accordionLabels: FaqAccordionUiLabels = {
+    tip: uiLabels.tip,
+    legal: uiLabels.legal,
+    related: uiLabels.related
+  };
 
   return (
     <>
@@ -148,11 +94,11 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
             />
             {category.title}
           </h2>
-          <div className="faq-accordion-list">
-            {category.items.map((item) => (
-              <FaqAccordionItem key={item.q} item={item} uiLabels={uiLabels} locale={locale} />
-            ))}
-          </div>
+          <FaqAccordionList
+            items={category.items}
+            uiLabels={accordionLabels}
+            locale={locale}
+          />
         </section>
       ))}
     </>

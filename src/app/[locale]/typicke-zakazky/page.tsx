@@ -38,10 +38,10 @@ export default async function TypickeZakazkyPage({ params }: Props) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
-  const content = getTypickeZakazkyContent(locale);
+  const content = await getTypickeZakazkyContent(locale);
   const workProcess = getWorkProcessCopy(locale);
-  const categories = getCaseStudyCategories(locale);
-  const scenarios = getTypicalScenarios(locale);
+  const categories = await getCaseStudyCategories(locale);
+  const scenarios = await getTypicalScenarios(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
 

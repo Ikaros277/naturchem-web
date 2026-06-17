@@ -1,5 +1,7 @@
 "use client";
 
+import { useMemo } from "react";
+import { AccordionIndexDetails } from "@/components/AccordionIndexDetails";
 import { SectorCard } from "@/components/SectorCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { useTranslations } from "@/lib/i18n/locale-context";
@@ -7,6 +9,7 @@ import type { Locale } from "@/lib/i18n/locales";
 import { getSectorGroups } from "@/lib/i18n/sector-groups-i18n";
 import type { ServiceIconKey } from "@/lib/service-icons";
 import type { Sector } from "@/lib/sectors";
+import { useAccordionHashOpen } from "@/lib/use-accordion-hash-open";
 
 const groupIcons: Record<string, ServiceIconKey> = {
   "prumysl-vyroba": "audience-prumysl",
@@ -44,18 +47,15 @@ const groupAriaVerbsDe: Record<string, string> = {
   "investicni-zamery": "Investitionsprojekte"
 };
 
-function sectorCountLabel(count: number, locale: Locale): string {
-  if (locale === "en") {
-    if (count === 1) return "1 facility type";
-    return `${count} facility types`;
+function sectorCountLabel(
+  count: number,
+  messages: ReturnType<typeof useTranslations<"sectorsIndex">>
+): string {
+  if (count === 1) return messages.sectorCountOne;
+  if (count >= 2 && count <= 4) {
+    return messages.sectorCountFew.replace("{count}", String(count));
   }
-  if (locale === "de") {
-    if (count === 1) return "1 Betriebstyp";
-    return `${count} Betriebstypen`;
-  }
-  if (count === 1) return "1 provoz";
-  if (count >= 2 && count <= 4) return `${count} provozy`;
-  return `${count} provozů`;
+  return messages.sectorCountMany.replace("{count}", String(count));
 }
 
 type Props = {
@@ -77,62 +77,47 @@ function SectorCards({ hrefs, sectors }: { hrefs: readonly string[]; sectors: re
 
 export function SectorGroupsIndex({ sectors, locale }: Props) {
   const accordion = useTranslations("accordion");
+  const sectorsIndex = useTranslations("sectorsIndex");
   const sectorGroups = getSectorGroups(locale);
+  const groupIds = useMemo(() => sectorGroups.map((group) => group.id), [sectorGroups]);
+  const { isOpen, onToggle } = useAccordionHashOpen(groupIds);
   const ariaVerbs =
     locale === "en" ? groupAriaVerbsEn : locale === "de" ? groupAriaVerbsDe : groupAriaVerbs;
 
   return (
-    <section className="section section-surface accordion-index-surface sector-groups-accordion" aria-labelledby="sector-groups-heading">
+    <section
+      className="section section-surface accordion-index-surface sector-groups-accordion"
+      aria-labelledby="sector-groups-heading"
+    >
       <div className="container service-groups-accordion-inner">
         {sectorGroups.map((group) => {
           const ariaVerb = ariaVerbs[group.id] ?? group.title;
           const count = group.hrefs.length;
+          const countLabel = sectorCountLabel(count, sectorsIndex);
 
           return (
-            <details
+            <AccordionIndexDetails
               key={group.id}
               id={group.id}
               className="card service-group-details sector-group-details"
-            >
-              <summary
-                className="service-group-summary"
-                aria-label={`${group.title}, ${sectorCountLabel(count, locale)} — ${accordion.showOrHide} ${ariaVerb}`}
-              >
+              ariaLabel={`${group.title}, ${countLabel} — ${accordion.showOrHide} ${ariaVerb}`}
+              icon={
                 <ServiceIcon
                   icon={groupIcons[group.id]}
                   variant="inline"
                   className="service-group-summary-icon"
                 />
-                <div className="service-group-summary-text">
-                  <div className="service-group-summary-title-row">
-                    <h2>{group.title}</h2>
-                    <span className="service-group-count muted">{sectorCountLabel(count, locale)}</span>
-                  </div>
-                  <p className="muted service-group-intro">{group.intro}</p>
-                </div>
-                <span className="service-group-expand" aria-hidden="true">
-                  <span className="service-group-expand-text">
-                    <span className="service-group-expand-when-closed">{accordion.expandClosed}</span>
-                    <span className="service-group-expand-when-open">{accordion.expandOpen}</span>
-                  </span>
-                  <span className="service-group-expand-icon">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </span>
-                </span>
-              </summary>
+              }
+              title={group.title}
+              countLabel={countLabel}
+              intro={group.intro}
+              expandClosed={accordion.expandClosed}
+              expandOpen={accordion.expandOpen}
+              open={isOpen(group.id)}
+              onToggle={(open) => onToggle(group.id, open)}
+            >
               <SectorCards hrefs={group.hrefs} sectors={sectors} />
-            </details>
+            </AccordionIndexDetails>
           );
         })}
       </div>

@@ -207,6 +207,11 @@
     "serviceCountFew": "{count} služby",
     "serviceCountMany": "{count} služeb"
   },
+  "sectorsIndex": {
+    "sectorCountOne": "1 provoz",
+    "sectorCountFew": "{count} provozy",
+    "sectorCountMany": "{count} provozů"
+  },
   "homeHero": {
     "ariaLabel": "Úvod",
     "pillarsAria": "Oblasti služeb"

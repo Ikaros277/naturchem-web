@@ -23,7 +23,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const { metadata } = getAboutPage(locale);
+  const { metadata } = await getAboutPage(locale);
   return pageMetadata({
     locale,
     path: "/o-spolecnosti-naturchem",
@@ -35,10 +35,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ONaturchemPage({ params }: Props) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const { content } = getAboutPage(locale);
-  const guaranteeIntro = getGuaranteeIntro(locale);
+  const { content } = await getAboutPage(locale);
+  const guaranteeIntro = await getGuaranteeIntro(locale);
   const trustItems = getHomeTrustBandItems(locale);
-  const teamMembers = getTeamMembers(locale);
+  const teamMembers = await getTeamMembers(locale);
   const messages = await getMessages(locale);
   const statsContent = getCompanyStatsContent(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
@@ -50,7 +50,7 @@ export default async function ONaturchemPage({ params }: Props) {
     "@type": "AboutPage",
     name: content.schemaName,
     url: pageUrl,
-    description: getAboutPage(locale).metadata.description
+    description: (await getAboutPage(locale)).metadata.description
   };
 
   const orgData = {

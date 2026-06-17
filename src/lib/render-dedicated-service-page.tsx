@@ -4,12 +4,12 @@ import { getDedicatedService } from "@/lib/i18n/service-pages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 
-export function getDedicatedServiceForLocale(slug: string, locale: Locale) {
+export async function getDedicatedServiceForLocale(slug: string, locale: Locale) {
   return getDedicatedService(slug, locale);
 }
 
-export function dedicatedServiceMetadata(slug: string, locale: Locale): Metadata {
-  const service = getDedicatedService(slug, locale);
+export async function dedicatedServiceMetadata(slug: string, locale: Locale): Promise<Metadata> {
+  const service = await getDedicatedService(slug, locale);
   return pageMetadata({
     locale,
     path: `/${service.slug}`,
@@ -23,9 +23,9 @@ type RouteProps = {
   locale?: string;
 };
 
-export function DedicatedServiceRoute({ slug, locale: localeParam }: RouteProps) {
+export async function DedicatedServiceRoute({ slug, locale: localeParam }: RouteProps) {
   const locale: Locale = localeParam && isLocale(localeParam) ? localeParam : "cs";
-  return <ServicePage locale={locale} {...getDedicatedService(slug, locale)} />;
+  return <ServicePage locale={locale} {...(await getDedicatedService(slug, locale))} />;
 }
 
 type PageProps = {

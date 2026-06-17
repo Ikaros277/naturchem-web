@@ -1,20 +1,35 @@
 import type { Locale } from "@/lib/i18n/locales";
-import { getFaqCategory, getFaqTeaserItems } from "@/lib/faq";
-import { getFaqCategoryEn, getFaqTeaserItemsEn } from "@/lib/faq-en";
-import { getFaqCategoryEn as getFaqCategoryDe, getFaqTeaserItemsEn as getFaqTeaserItemsDe } from "@/lib/faq-de";
 import type { FaqCategory, FaqItem } from "@/lib/faq";
-export function getFaqCategoryForLocale(id: string, locale: Locale): FaqCategory | undefined {
-  if (locale === "de") return getFaqCategoryDe(id);
-  if (locale === "en") return getFaqCategoryEn(id);
+
+export async function getFaqCategoryForLocale(
+  id: string,
+  locale: Locale
+): Promise<FaqCategory | undefined> {
+  if (locale === "de") {
+    const { getFaqCategoryEn } = await import("@/lib/faq-de");
+    return getFaqCategoryEn(id);
+  }
+  if (locale === "en") {
+    const { getFaqCategoryEn } = await import("@/lib/faq-en");
+    return getFaqCategoryEn(id);
+  }
+  const { getFaqCategory } = await import("@/lib/faq");
   return getFaqCategory(id);
 }
 
-export function getFaqTeaserItemsForLocale(
+export async function getFaqTeaserItemsForLocale(
   categoryId: string,
   locale: Locale,
   limit = 5
-): FaqItem[] {
-  if (locale === "de") return getFaqTeaserItemsDe(categoryId, limit);
-  if (locale === "en") return getFaqTeaserItemsEn(categoryId, limit);
+): Promise<FaqItem[]> {
+  if (locale === "de") {
+    const { getFaqTeaserItemsEn } = await import("@/lib/faq-de");
+    return getFaqTeaserItemsEn(categoryId, limit);
+  }
+  if (locale === "en") {
+    const { getFaqTeaserItemsEn } = await import("@/lib/faq-en");
+    return getFaqTeaserItemsEn(categoryId, limit);
+  }
+  const { getFaqTeaserItems } = await import("@/lib/faq");
   return getFaqTeaserItems(categoryId, limit);
 }

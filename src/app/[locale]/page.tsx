@@ -36,7 +36,7 @@ export default async function Home({ params }: Props) {
   const messages = await getMessages(locale);
   const offerPillars = getHomeOfferPillars(locale);
   const trustItems = getHomeTrustBandItems(locale);
-  const heroPillars = getHomeHeroPillars(locale);
+  const heroPillars = await getHomeHeroPillars(locale);
   const statsContent = getCompanyStatsContent(locale);
   const link = (href: string) => localizeHref(href, locale);
   const homeUrl = `${siteUrl}${link("/")}/`.replace(/([^:]\/)\/+/g, "$1");

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { AccordionIndexDetails } from "@/components/AccordionIndexDetails";
 import { IndexCard } from "@/components/IndexCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { useTranslations } from "@/lib/i18n/locale-context";
@@ -48,7 +49,6 @@ const groupAriaVerbsEn: Record<string, string> = {
 
 function serviceCountLabel(
   count: number,
-  locale: Locale,
   messages: ReturnType<typeof useTranslations<"servicesIndex">>
 ): string {
   if (count === 1) return messages.serviceCountOne;
@@ -126,49 +126,28 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
       <div className="container service-groups-accordion-inner">
         {groups.map((group) => {
           const ariaVerb = ariaVerbs[group.id] ?? group.title;
-          const countLabel = serviceCountLabel(group.items.length, locale, servicesIndex);
+          const countLabel = serviceCountLabel(group.items.length, servicesIndex);
 
           return (
-            <details
+            <AccordionIndexDetails
               key={group.id}
               id={group.id}
-              className="card service-group-details"
+              ariaLabel={`${group.title}, ${countLabel} — ${accordion.showOrHide} ${ariaVerb}`}
+              icon={
+                <ServiceIcon
+                  icon={groupIcons[group.id]}
+                  variant="inline"
+                  className="service-group-summary-icon"
+                />
+              }
+              title={group.title}
+              countLabel={countLabel}
+              intro={group.intro}
+              expandClosed={accordion.expandClosed}
+              expandOpen={accordion.expandOpen}
               open={isOpen(group.id)}
-              onToggle={(event) => onToggle(group.id, event.currentTarget.open)}
+              onToggle={(open) => onToggle(group.id, open)}
             >
-              <summary
-                className="service-group-summary"
-                aria-label={`${group.title}, ${countLabel} — ${accordion.showOrHide} ${ariaVerb}`}
-              >
-                <ServiceIcon icon={groupIcons[group.id]} variant="inline" className="service-group-summary-icon" />
-                <div className="service-group-summary-text">
-                  <div className="service-group-summary-title-row">
-                    <h2>{group.title}</h2>
-                    <span className="service-group-count muted">{countLabel}</span>
-                  </div>
-                  <p className="muted service-group-intro">{group.intro}</p>
-                </div>
-                <span className="service-group-expand" aria-hidden="true">
-                  <span className="service-group-expand-text">
-                    <span className="service-group-expand-when-closed">{accordion.expandClosed}</span>
-                    <span className="service-group-expand-when-open">{accordion.expandOpen}</span>
-                  </span>
-                  <span className="service-group-expand-icon">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </span>
-                </span>
-              </summary>
               <ServiceCards
                 groupId={group.id}
                 items={group.items}
@@ -176,7 +155,7 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
                 viewServiceLabel={common.viewService}
                 relatedAreasLabel={common.relatedAreas}
               />
-            </details>
+            </AccordionIndexDetails>
           );
         })}
       </div>

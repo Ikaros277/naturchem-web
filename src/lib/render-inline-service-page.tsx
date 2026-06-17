@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
-import { inlineServicePagesEn } from "@/lib/inline-service-pages-en";
-import { inlineServicePagesEn as inlineServicePagesDe } from "@/lib/inline-service-pages-de";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import type { ComponentProps } from "react";
@@ -12,9 +10,15 @@ type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-function inlinePropsForLocale(slug: string, locale: Locale, czech: ServicePageContent) {
-  if (locale === "de") return inlineServicePagesDe[slug] ?? czech;
-  if (locale === "en") return inlineServicePagesEn[slug] ?? czech;
+async function inlinePropsForLocale(slug: string, locale: Locale, czech: ServicePageContent) {
+  if (locale === "de") {
+    const mod = await import("@/lib/inline-service-pages-de");
+    return mod.inlineServicePagesEn[slug] ?? czech;
+  }
+  if (locale === "en") {
+    const mod = await import("@/lib/inline-service-pages-en");
+    return mod.inlineServicePagesEn[slug] ?? czech;
+  }
   return czech;
 }
 
@@ -25,7 +29,7 @@ export function createInlineServicePageExports(
   async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { locale: localeParam } = await params;
     const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-    const props = inlinePropsForLocale(slug, locale, czech);
+    const props = await inlinePropsForLocale(slug, locale, czech);
     return pageMetadata({
       locale,
       path: `/${props.slug}`,
@@ -37,7 +41,7 @@ export function createInlineServicePageExports(
   async function Page({ params }: PageProps) {
     const { locale: localeParam } = await params;
     const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-    const props = inlinePropsForLocale(slug, locale, czech);
+    const props = await inlinePropsForLocale(slug, locale, czech);
     if (!props) {
       return <ServicePage locale={locale} {...czech} />;
     }

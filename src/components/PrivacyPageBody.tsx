@@ -5,8 +5,8 @@ import type { Locale } from "@/lib/i18n/locales";
 import { fillLegalTemplate } from "@/lib/legal-template";
 import { inquiryRetentionMonths, legalController, legalEffectiveDate, legalPaths } from "@/lib/legal";
 
-export function PrivacyPageBody({ locale }: { locale: Locale }) {
-  const { content } = getPrivacyPage(locale);
+export async function PrivacyPageBody({ locale }: { locale: Locale }) {
+  const { content } = await getPrivacyPage(locale);
   const s = content.sections;
 
   return (

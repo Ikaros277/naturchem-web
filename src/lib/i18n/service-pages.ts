@@ -1,21 +1,25 @@
-import {
-  dedicatedServicePages,
-  type DedicatedServicePage
-} from "@/lib/dedicated-service-pages";
-import { dedicatedServicePagesEn } from "@/lib/dedicated-service-pages-en";
-import { dedicatedServicePagesEn as dedicatedServicePagesDe } from "@/lib/dedicated-service-pages-de";
+import type { DedicatedServicePage } from "@/lib/dedicated-service-pages";
 import type { Locale } from "@/lib/i18n/locales";
 
 export type { DedicatedServicePage };
 
-export function getDedicatedServicePages(locale: Locale): Record<string, DedicatedServicePage> {
-  if (locale === "de") return dedicatedServicePagesDe;
-  if (locale === "en") return dedicatedServicePagesEn;
-  return dedicatedServicePages;
+async function loadDedicatedServicePages(locale: Locale): Promise<Record<string, DedicatedServicePage>> {
+  switch (locale) {
+    case "de":
+      return (await import("@/lib/dedicated-service-pages-de")).dedicatedServicePagesEn;
+    case "en":
+      return (await import("@/lib/dedicated-service-pages-en")).dedicatedServicePagesEn;
+    default:
+      return (await import("@/lib/dedicated-service-pages")).dedicatedServicePages;
+  }
 }
 
-export function getDedicatedService(slug: string, locale: Locale): DedicatedServicePage {
-  const pages = getDedicatedServicePages(locale);
+export async function getDedicatedServicePages(locale: Locale): Promise<Record<string, DedicatedServicePage>> {
+  return loadDedicatedServicePages(locale);
+}
+
+export async function getDedicatedService(slug: string, locale: Locale): Promise<DedicatedServicePage> {
+  const pages = await loadDedicatedServicePages(locale);
   const service = pages[slug];
   if (!service) {
     throw new Error(`Unknown service: ${slug}`);

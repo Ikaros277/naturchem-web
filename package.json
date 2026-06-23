@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "seo:smoke-sitemap": "python scripts/smoke_test_urls.py https://www.naturchem.cz",
-    "seo:gsc-report": "python scripts/gsc_monthly_report.py"
+    "seo:gsc-report": "python scripts/gsc_monthly_report.py",
+    "seo:gsc-404-import": "python scripts/gsc_import_404_redirects.py"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

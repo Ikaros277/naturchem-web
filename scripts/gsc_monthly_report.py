@@ -57,6 +57,10 @@ def manual_instructions(start: str, end: str) -> None:
     print()
     print("4) Uložte CSV do reports/gsc/YYYY-MM-queries.csv pro srovnání měsíců")
     print()
+    print("5) 404 stránky: Indexing -> Pages -> Not found (404) -> Export")
+    print("   Uložte jako reports/gsc/YYYY-MM-404.csv")
+    print("   Navrhy redirectu: npm run seo:gsc-404-import -- reports/gsc/YYYY-MM-404.csv")
+    print()
     print("Volitelně API: nastavte GSC_SEARCH_CONSOLE_CREDENTIALS a spusťte znovu.")
 
 

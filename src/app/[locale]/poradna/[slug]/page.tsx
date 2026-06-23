@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleMarkdown } from "@/components/ArticleMarkdown";
+import { ArticleRelatedArticles } from "@/components/ArticleRelatedArticles";
 import { ArticleRelatedServices } from "@/components/ArticleRelatedServices";
 import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
@@ -41,7 +42,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/poradna/${article.slug}`,
     title: article.title,
     description: article.excerpt || messages.poradna.articleMetaFallback,
-    availableLocales
+    availableLocales,
+    ogImage: article.heroImage,
+    ogType: "article"
   });
 }
 
@@ -130,6 +133,8 @@ export default async function CmsArticlePage({ params }: Props) {
           slug={article.slug}
           topic={article.topic}
         />
+
+        <ArticleRelatedArticles locale={locale} slug={article.slug} topic={article.topic} />
       </div>
     </main>
   );

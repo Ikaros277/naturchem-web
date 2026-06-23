@@ -65,3 +65,16 @@ export async function getLatestPoradnaArticles(
   const articles = await getPoradnaArticles(locale);
   return articles.slice(0, limit);
 }
+
+export function getRelatedArticlesForArticle(
+  currentSlug: string,
+  topic: PoradnaTopic,
+  articles: PoradnaArticleListing[],
+  limit = 3
+): PoradnaArticleListing[] {
+  const others = articles.filter((article) => article.slug !== currentSlug);
+  const sameTopic = others.filter((article) => article.topic === topic);
+  const differentTopic = others.filter((article) => article.topic !== topic);
+
+  return [...sameTopic, ...differentTopic].slice(0, limit);
+}

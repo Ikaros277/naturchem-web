@@ -6310,6 +6310,45 @@ main.contact-page + .site-footer {
   font-size: 1.25rem;
 }
 
+.article-related-articles {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle, #e2e8f0);
+}
+
+.article-related-articles h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.article-related-articles-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.article-related-articles-item {
+  margin: 0;
+}
+
+.article-related-articles-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--forest);
+}
+
+.article-related-articles-link:hover {
+  text-decoration: underline;
+}
+
+.article-related-articles-item .muted {
+  margin: 0.35rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
 .article-related-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

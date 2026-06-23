@@ -2606,15 +2606,54 @@ section.content-block.page-first-section + .section.equipment-groups-accordion,
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 0.5rem;
+  gap: 0;
   width: 100%;
-  min-height: 11.5rem;
-  padding: 1rem 1.1rem;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
   border: 0;
   text-align: left;
   font: inherit;
   color: inherit;
   cursor: pointer;
+}
+
+.case-study-hub-tile-body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  flex: 1;
+  padding: 0.85rem 1rem 1rem;
+}
+
+.case-study-tile-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #e4ebf2;
+}
+
+.case-study-tile-thumb-img {
+  object-fit: cover;
+  filter: saturate(0.58) brightness(1.04) contrast(0.96);
+  transition: filter 0.2s ease;
+}
+
+.case-study-tile-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(248, 251, 253, 0.42) 100%),
+    linear-gradient(135deg, rgba(20, 74, 52, 0.07) 0%, rgba(13, 54, 130, 0.09) 100%);
+  pointer-events: none;
+}
+
+.case-study-hub-tile:hover .case-study-tile-thumb-img,
+.case-study-hub-tile:focus-visible .case-study-tile-thumb-img {
+  filter: saturate(0.72) brightness(1.02) contrast(0.98);
 }
 
 .case-study-hub-tile:hover .card-inline-link,
@@ -2726,6 +2765,10 @@ section.content-block.page-first-section + .section.equipment-groups-accordion,
   flex-wrap: wrap;
   gap: 0.35rem;
   margin-top: auto;
+}
+
+.case-study-hub-tile .card-inline-link {
+  margin-top: 0.15rem;
 }
 
 .case-study-hub-modal-portal {

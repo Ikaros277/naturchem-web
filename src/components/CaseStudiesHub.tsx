@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
+import { CaseStudyTileThumb } from "@/components/CaseStudyTileThumb";
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { contactFormHref } from "@/lib/contact-url";
@@ -130,22 +131,25 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles }: Props) {
             onClick={() => handleOpen(study.id)}
             aria-haspopup="dialog"
           >
-            <span className="case-study-hub-tags">
-              <span className="case-study-tag case-study-tag--category">{study.category}</span>
-              <span className="case-study-tag">{study.facilityType}</span>
-            </span>
-            <span className="case-study-hub-tile-title">{study.title}</span>
-            <span className="muted case-study-hub-perex">{study.shortDescription}</span>
-            {study.relatedServices.length > 0 ? (
-              <span className="case-study-service-tags" aria-hidden="true">
-                {study.relatedServices.slice(0, 3).map((service) => (
-                  <span key={service} className="case-study-service-tag">
-                    {service}
-                  </span>
-                ))}
+            <CaseStudyTileThumb study={study} />
+            <span className="case-study-hub-tile-body">
+              <span className="case-study-hub-tags">
+                <span className="case-study-tag case-study-tag--category">{study.category}</span>
+                <span className="case-study-tag">{study.facilityType}</span>
               </span>
-            ) : null}
-            <span className="card-inline-link">{caseStudiesUi.showDetail}</span>
+              <span className="case-study-hub-tile-title">{study.title}</span>
+              <span className="muted case-study-hub-perex">{study.shortDescription}</span>
+              {study.relatedServices.length > 0 ? (
+                <span className="case-study-service-tags" aria-hidden="true">
+                  {study.relatedServices.slice(0, 3).map((service) => (
+                    <span key={service} className="case-study-service-tag">
+                      {service}
+                    </span>
+                  ))}
+                </span>
+              ) : null}
+              <span className="card-inline-link">{caseStudiesUi.showDetail}</span>
+            </span>
           </button>
         ))}
       </div>

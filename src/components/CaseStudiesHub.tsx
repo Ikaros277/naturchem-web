@@ -6,7 +6,6 @@ import { useTranslations } from "@/lib/i18n/locale-context";
 import { contactFormHref } from "@/lib/contact-url";
 import {
   CASE_STUDY_CATEGORIES,
-  caseStudySearchBlob,
   type CaseStudy
 } from "@/lib/case-studies";
 import type { Locale } from "@/lib/i18n/locales";
@@ -20,36 +19,24 @@ type Props = {
   serviceTitles: ServiceTitle[];
 };
 
-function normalizeSearch(value: string): string {
-  return value
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/\p{M}/gu, "");
-}
-
 export function CaseStudiesHub({ locale, caseStudies, serviceTitles }: Props) {
   const common = useTranslations("common");
   const caseStudiesUi = useTranslations("caseStudies");
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
-  const [searchQuery, setSearchQuery] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
   const detailsPrefix = useId();
-  const searchInputId = `${detailsPrefix}-search`;
 
   const serviceTitleByHref = useMemo(
     () => new Map(serviceTitles.map((item) => [item.href, item.title])),
     [serviceTitles]
   );
 
-  const normalizedQuery = normalizeSearch(searchQuery.trim());
-
   const filtered = useMemo(() => {
     return caseStudies.filter((study) => {
       if (categoryFilter !== "all" && study.categoryId !== categoryFilter) return false;
-      if (!normalizedQuery) return true;
-      return normalizeSearch(caseStudySearchBlob(study)).includes(normalizedQuery);
+      return true;
     });
-  }, [caseStudies, categoryFilter, normalizedQuery]);
+  }, [caseStudies, categoryFilter]);
 
   const openFromHash = useCallback(() => {
     const hash = window.location.hash.replace(/^#/, "");
@@ -75,21 +62,6 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles }: Props) {
 
   return (
     <div className="case-studies-hub">
-      <div className="case-studies-search">
-        <label className="mini-label" htmlFor={searchInputId}>
-          {caseStudiesUi.searchLabel}
-        </label>
-        <input
-          id={searchInputId}
-          type="search"
-          className="case-studies-search-input"
-          value={searchQuery}
-          onChange={(event) => setSearchQuery(event.target.value)}
-          placeholder={caseStudiesUi.searchPlaceholder}
-          autoComplete="off"
-        />
-      </div>
-
       <div className="case-studies-filters" role="group" aria-label={caseStudiesUi.filterCategoryAria}>
         <p className="mini-label">{caseStudiesUi.filterCategory}</p>
         <div className="case-studies-filter-row">

@@ -103,12 +103,6 @@ export default async function TypickeZakazkyPage({ params }: Props) {
 
       <section className="section content-block container" aria-labelledby="case-studies-heading">
         <h2 id="case-studies-heading">{content.typickeZakazkyCasesHeading}</h2>
-        <p className="muted section-intro">{content.typickeZakazkyCasesIntro}</p>
-        <p className="typicke-zakazky-crosslink">
-          <Link href={link("/provozy-a-technologie")} className="text-link">
-            {content.typickeZakazkyProvozyLink}
-          </Link>
-        </p>
         <CaseStudiesHub
           locale={locale}
           caseStudies={caseStudies}

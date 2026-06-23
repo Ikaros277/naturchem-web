@@ -1,8 +1,9 @@
 import type { Locale } from "@/lib/i18n/locales";
-import { sectorGroups as sectorGroupsCs } from "@/lib/sector-groups";
-import { sectorGroups as sectorGroupsDe } from "@/lib/sector-groups-de";
+import type { SectorGroup } from "@/lib/sector-groups";
 
-export function getSectorGroups(locale: Locale) {
-  if (locale === "de") return sectorGroupsDe;
-  return sectorGroupsCs;
+export async function getSectorGroups(locale: Locale): Promise<readonly SectorGroup[]> {
+  if (locale === "de") {
+    return (await import("@/lib/sector-groups-de")).sectorGroups;
+  }
+  return (await import("@/lib/sector-groups")).sectorGroups;
 }

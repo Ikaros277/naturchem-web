@@ -6,8 +6,8 @@ import { SectorCard } from "@/components/SectorCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import type { Locale } from "@/lib/i18n/locales";
-import { getSectorGroups } from "@/lib/i18n/sector-groups-i18n";
 import type { ServiceIconKey } from "@/lib/service-icons";
+import type { SectorGroup } from "@/lib/sector-groups";
 import type { Sector } from "@/lib/sectors";
 import { useAccordionHashOpen } from "@/lib/use-accordion-hash-open";
 
@@ -61,6 +61,7 @@ function sectorCountLabel(
 type Props = {
   sectors: readonly Sector[];
   locale: Locale;
+  sectorGroups: readonly SectorGroup[];
 };
 
 function SectorCards({ hrefs, sectors }: { hrefs: readonly string[]; sectors: readonly Sector[] }) {
@@ -75,10 +76,9 @@ function SectorCards({ hrefs, sectors }: { hrefs: readonly string[]; sectors: re
   );
 }
 
-export function SectorGroupsIndex({ sectors, locale }: Props) {
+export function SectorGroupsIndex({ sectors, locale, sectorGroups }: Props) {
   const accordion = useTranslations("accordion");
   const sectorsIndex = useTranslations("sectorsIndex");
-  const sectorGroups = getSectorGroups(locale);
   const groupIds = useMemo(() => sectorGroups.map((group) => group.id), [sectorGroups]);
   const { isOpen, onToggle } = useAccordionHashOpen(groupIds);
   const ariaVerbs =

@@ -4,6 +4,7 @@ import { SectorGroupsIndex } from "@/components/SectorGroupsIndex";
 import { JsonLd } from "@/components/Schema";
 import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
 import { getProvozyNavLabel, getSectorPage, getSectors } from "@/lib/i18n/content";
+import { getSectorGroups } from "@/lib/i18n/sector-groups-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { localizedCanonical } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -23,6 +24,7 @@ export async function SectorIndexPage({ locale }: Props) {
   }
 
   const sectors = await getSectors(locale);
+  const sectorGroups = await getSectorGroups(locale);
   const provozyNavLabel = await getProvozyNavLabel(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const messages = await getMessages(locale);
@@ -89,7 +91,7 @@ export async function SectorIndexPage({ locale }: Props) {
         <p className="muted">{indexData.introMuted}</p>
       </section>
 
-      <SectorGroupsIndex sectors={sectors} locale={locale} />
+      <SectorGroupsIndex sectors={sectors} locale={locale} sectorGroups={sectorGroups} />
 
       <section className="section content-block container" aria-labelledby="sector-assessment-heading">
         <h2 id="sector-assessment-heading">{indexData.assessmentHeading}</h2>

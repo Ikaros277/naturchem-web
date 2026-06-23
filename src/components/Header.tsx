@@ -14,6 +14,11 @@ type Props = {
 export async function Header({ locale }: Props) {
   const messages = await getMessages(locale);
   const t = messages.header;
+  const headerMainNav = getHeaderMainNav(locale);
+  const [serviceMegaGroups, oNasMegaGroups] = await Promise.all([
+    getServiceMegaGroups(locale),
+    getONasMegaGroups(locale)
+  ]);
 
   return (
     <header className="site-header">
@@ -37,9 +42,9 @@ export async function Header({ locale }: Props) {
       </div>
       <HeaderClient
         labels={t}
-        headerMainNav={getHeaderMainNav(locale)}
-        serviceMegaGroups={getServiceMegaGroups(locale)}
-        oNasMegaGroups={getONasMegaGroups(locale)}
+        headerMainNav={headerMainNav}
+        serviceMegaGroups={serviceMegaGroups}
+        oNasMegaGroups={oNasMegaGroups}
       />
     </header>
   );

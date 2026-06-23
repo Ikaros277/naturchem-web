@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SeoLandingPage } from "@/components/SeoLandingPage";
 import { getSeoLanding, getSeoLandings } from "@/lib/i18n/content";
+import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 
@@ -18,7 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const landing = await getSeoLanding(slug, locale);
-  if (!landing) return { title: "Služba" };
+  if (!landing) {
+    const messages = await getMessages(locale);
+    return { title: messages.common.viewService };
+  }
 
   return pageMetadata({
     locale,

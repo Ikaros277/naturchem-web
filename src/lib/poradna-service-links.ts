@@ -1,30 +1,47 @@
 import { resolveArticleTopic, type PoradnaTopic } from "@/lib/poradna-topic";
 import type { PoradnaArticleListing } from "@/lib/poradna-articles";
-
+import type { Locale } from "@/lib/i18n/locales";
+import { defaultLocale } from "@/lib/i18n/locales";
+import { services as servicesCs } from "@/lib/site";
+import { services as servicesDe } from "@/lib/site-services-de";
+import { services as servicesEn } from "@/lib/site-services-en";
 export type ServiceLink = {
   href: string;
   title: string;
 };
 
 const S = {
-  emise: { href: "/sluzby/mereni-emisi", title: "Měření emisí" },
-  pracovni: { href: "/sluzby/pracovni-prostredi", title: "Měření pracovního prostředí" },
-  hluk: { href: "/sluzby/mereni-hluku", title: "Měření hluku a akustika" },
-  hlukStudie: { href: "/sluzby/hlukove-studie", title: "Hlukové studie" },
-  rozptyl: { href: "/sluzby/rozptylove-studie", title: "Rozptylové studie" },
-  eia: { href: "/sluzby/eia-oznameni-zameru", title: "EIA a oznámení záměru" },
-  posudky: { href: "/sluzby/odborne-posudky", title: "Odborné posudky" },
-  provozni: { href: "/sluzby/provozni-rady", title: "Provozní řády" },
-  ippc: { href: "/sluzby/ippc-integrovana-povoleni", title: "IPPC a integrovaná povolení" },
-  ispop: { href: "/sluzby/ispop", title: "ISPOP a provozní evidence" },
-  ghg: { href: "/sluzby/ghg-overovani", title: "GHG a ověřování emisí" },
-  chemLatky: { href: "/sluzby/chemicke-latky", title: "Chemické látky v provozu" },
-  bezpecnostni: { href: "/sluzby/bezpecnostni-listy", title: "Bezpečnostní listy" },
-  skoleni: { href: "/sluzby/skoleni-chemicke-legislativy", title: "Školení chemické legislativy" },
-  povoleni: { href: "/sluzby/povoleni-provozu", title: "Povolení provozu zdroje" }
-} satisfies Record<string, ServiceLink>;
+  emise: "/sluzby/mereni-emisi",
+  pracovni: "/sluzby/pracovni-prostredi",
+  hluk: "/sluzby/mereni-hluku",
+  hlukStudie: "/sluzby/hlukove-studie",
+  rozptyl: "/sluzby/rozptylove-studie",
+  eia: "/sluzby/eia-oznameni-zameru",
+  posudky: "/sluzby/odborne-posudky",
+  provozni: "/sluzby/provozni-rady",
+  ippc: "/sluzby/ippc-integrovana-povoleni",
+  ispop: "/sluzby/ispop",
+  ghg: "/sluzby/ghg-overovani",
+  chemLatky: "/sluzby/chemicke-latky",
+  bezpecnostni: "/sluzby/bezpecnostni-listy",
+  skoleni: "/sluzby/skoleni-chemicke-legislativy",
+  povoleni: "/sluzby/povoleni-provozu"
+} as const;
 
-const topicServices: Record<string, ServiceLink[]> = {
+type ServiceHref = (typeof S)[keyof typeof S];
+
+function serviceCatalog(locale: Locale) {
+  if (locale === "en") return servicesEn;
+  if (locale === "de") return servicesDe;
+  return servicesCs;
+}
+
+function toServiceLink(href: ServiceHref, locale: Locale): ServiceLink {
+  const title = serviceCatalog(locale).find((service) => service.href === href)?.title ?? href;
+  return { href, title };
+}
+
+const topicServiceHrefs: Record<string, ServiceHref[]> = {
   Emise: [S.emise, S.posudky, S.rozptyl],
   Hluk: [S.hluk, S.hlukStudie, S.eia],
   "Rozptylové studie": [S.rozptyl, S.emise, S.eia],
@@ -35,7 +52,7 @@ const topicServices: Record<string, ServiceLink[]> = {
 };
 
 /** Klíčová slova v názvu/slugu → doplnění souvisejících služeb. */
-const keywordRules: { pattern: RegExp; services: ServiceLink[] }[] = [
+const keywordRules: { pattern: RegExp; services: ServiceHref[] }[] = [
   { pattern: /ispop|provozní evidence|hlášen/i, services: [S.ispop, S.ghg, S.emise] },
   { pattern: /ghg|skleníkov/i, services: [S.ghg, S.ispop] },
   { pattern: /kotel|plynov|spalov|voc|lakovn|imise|ovzduší|emis/i, services: [S.emise, S.posudky] },
@@ -61,17 +78,18 @@ function dedupeLinks(links: ServiceLink[]): ServiceLink[] {
 export function getRelatedServicesForArticle(
   title: string,
   slug: string,
-  topic?: PoradnaTopic
+  topic?: PoradnaTopic,
+  locale: Locale = defaultLocale
 ): ServiceLink[] {
   const haystack = `${title} ${slug}`.toLocaleLowerCase("cs-CZ");
   const resolvedTopic = topic ?? resolveArticleTopic({ title });
-  const base = topicServices[resolvedTopic] ?? [S.emise];
+  const base = topicServiceHrefs[resolvedTopic] ?? [S.emise];
 
   const fromKeywords = keywordRules
     .filter((rule) => rule.pattern.test(haystack))
     .flatMap((rule) => rule.services);
 
-  return dedupeLinks([...fromKeywords, ...base]).slice(0, 3);
+  return dedupeLinks([...fromKeywords, ...base].map((href) => toServiceLink(href, locale))).slice(0, 3);
 }
 
 export function serviceHrefToSlug(href: string): string {

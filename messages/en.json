@@ -110,7 +110,10 @@
     "phone": "Phone",
     "email": "Email",
     "offices": "Offices",
-    "mapLabel": "NATURCHEM office map"
+    "mapLabel": "NATURCHEM office map",
+    "openInGoogleMaps": "Open in Google Maps",
+    "navigateInGoogleMaps": "Navigate in Google Maps",
+    "selectOfficeAria": "Select office"
   },
   "contactForm": {
     "successTitle": "Thank you — we received your message",
@@ -157,6 +160,7 @@
     "tldrAria": "Article summary",
     "tldrLabel": "In brief",
     "relatedArticlesTitle": "Related knowledge articles",
+    "relatedServicesTitle": "Related NATURCHEM services",
     "allArticles": "All knowledge articles"
   },
   "reference": {

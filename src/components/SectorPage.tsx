@@ -8,6 +8,7 @@ import { SectorFaqTeaser } from "@/components/SectorFaqTeaser";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
 import { JsonLd } from "@/components/Schema";
 import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
+import { getMessages } from "@/lib/i18n/get-messages";
 import { getProvozyNavLabel } from "@/lib/i18n/content";
 import { localizedCanonical } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -36,6 +37,7 @@ type Props = {
 export async function SectorPage(props: Props) {
   const { locale } = props;
   const copy = getSectorCopy(locale);
+  const messages = await getMessages(locale);
   const provozyNavLabel = await getProvozyNavLabel(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
@@ -155,7 +157,10 @@ export async function SectorPage(props: Props) {
       >
         <h2 id="sector-process-heading">{copy.processHeading}</h2>
         <p className="muted section-intro">{copy.processIntro}</p>
-        <WorkProcessTimeline steps={processSteps} />
+        <WorkProcessTimeline
+          steps={processSteps}
+          processAria={messages.common.cooperationProcess}
+        />
       </section>
 
       <div className="container page-inner">

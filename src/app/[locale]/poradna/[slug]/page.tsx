@@ -4,7 +4,7 @@ import { ArticleMarkdown } from "@/components/ArticleMarkdown";
 import { ArticleRelatedServices } from "@/components/ArticleRelatedServices";
 import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
-import { getArticleBySlug, getArticles } from "@/lib/articles";
+import { getArticleBySlug, getArticleStaticParams, getLocalesForArticleSlug } from "@/lib/articles";
 import { formatArticleDate, normalizeArticleDate } from "@/lib/format-date";
 import { getPoradnaTopicLabel } from "@/lib/i18n/poradna-topic-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
@@ -19,9 +19,10 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const articles = await getArticles("cs");
-  return articles.map((article) => ({ slug: article.slug }));
+  return getArticleStaticParams();
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam, slug } = await params;
@@ -33,11 +34,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: messages.poradna.articleFallback };
   }
 
+  const availableLocales = await getLocalesForArticleSlug(article.slug);
+
   return pageMetadata({
     locale,
     path: `/poradna/${article.slug}`,
     title: article.title,
-    description: article.excerpt || messages.poradna.articleMetaFallback
+    description: article.excerpt || messages.poradna.articleMetaFallback,
+    availableLocales
   });
 }
 
@@ -120,7 +124,12 @@ export default async function CmsArticlePage({ params }: Props) {
           </div>
         </div>
 
-        <ArticleRelatedServices title={article.title} slug={article.slug} topic={article.topic} />
+        <ArticleRelatedServices
+          locale={locale}
+          title={article.title}
+          slug={article.slug}
+          topic={article.topic}
+        />
       </div>
     </main>
   );

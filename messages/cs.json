@@ -110,7 +110,10 @@
     "phone": "Telefon",
     "email": "E-mail",
     "offices": "Provozovny",
-    "mapLabel": "Mapa provozoven NATURCHEM"
+    "mapLabel": "Mapa provozoven NATURCHEM",
+    "openInGoogleMaps": "Otevřít v Mapách Google",
+    "navigateInGoogleMaps": "Navigovat v Google Maps",
+    "selectOfficeAria": "Vyberte provozovnu"
   },
   "contactForm": {
     "successTitle": "Díky, zprávu jsme dostali",
@@ -157,6 +160,7 @@
     "tldrAria": "Shrnutí článku",
     "tldrLabel": "Stručně",
     "relatedArticlesTitle": "Související odborné články",
+    "relatedServicesTitle": "Související služby NATURCHEM",
     "allArticles": "Všechny odborné články"
   },
   "reference": {

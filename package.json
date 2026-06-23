@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "python scripts/generate_article_locale_map.py",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo:smoke-sitemap": "python scripts/smoke_test_urls.py https://www.naturchem.cz",
+    "seo:gsc-report": "python scripts/gsc_monthly_report.py"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

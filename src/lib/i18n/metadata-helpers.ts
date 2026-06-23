@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { getAlternateLocale } from "@/lib/i18n/navigation";
 import { localizeHref } from "@/lib/i18n/navigation";
-import { defaultLocale, type Locale } from "@/lib/i18n/locales";
+import { defaultLocale, locales, type Locale } from "@/lib/i18n/locales";
 import { siteUrl } from "@/lib/site";
 
 export function localizedCanonical(path: string, locale: Locale): string {
@@ -9,15 +8,38 @@ export function localizedCanonical(path: string, locale: Locale): string {
   return `${siteUrl}${href === "/" ? "" : href}/`.replace(/([^:]\/)\/+/g, "$1");
 }
 
+export function buildLocaleAlternatesLanguages(
+  path: string,
+  availableLocales: readonly Locale[]
+): Record<string, string> {
+  const uniqueLocales = [...new Set(availableLocales)];
+  const languages = Object.fromEntries(
+    uniqueLocales.map((locale) => [locale, localizedCanonical(path, locale)])
+  ) as Record<string, string>;
+
+  const xDefaultLocale = uniqueLocales.includes(defaultLocale)
+    ? defaultLocale
+    : uniqueLocales[0] ?? defaultLocale;
+  languages["x-default"] = localizedCanonical(path, xDefaultLocale);
+
+  return languages;
+}
+
 export function localeAlternates(path: string, locale: Locale): Metadata["alternates"] {
   return {
     canonical: localizedCanonical(path, locale),
-    languages: {
-      cs: localizedCanonical(path, "cs"),
-      en: localizedCanonical(path, "en"),
-      de: localizedCanonical(path, "de"),
-      "x-default": localizedCanonical(path, defaultLocale)
-    }
+    languages: buildLocaleAlternatesLanguages(path, locales)
+  };
+}
+
+export function localeAlternatesForLanguages(
+  path: string,
+  locale: Locale,
+  availableLocales: readonly Locale[]
+): Metadata["alternates"] {
+  return {
+    canonical: localizedCanonical(path, locale),
+    languages: buildLocaleAlternatesLanguages(path, availableLocales)
   };
 }
 
@@ -26,17 +48,21 @@ export function pageMetadata({
   path,
   title,
   description,
-  absoluteTitle
+  absoluteTitle,
+  availableLocales
 }: {
   locale: Locale;
   path: string;
   title?: string;
   description: string;
   absoluteTitle?: string;
+  availableLocales?: readonly Locale[];
 }): Metadata {
   return {
     title: absoluteTitle ? { absolute: absoluteTitle } : title,
     description,
-    alternates: localeAlternates(path, locale)
+    alternates: availableLocales
+      ? localeAlternatesForLanguages(path, locale, availableLocales)
+      : localeAlternates(path, locale)
   };
 }

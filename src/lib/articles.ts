@@ -3,7 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { normalizeArticleDate } from "@/lib/format-date";
 import type { Locale } from "@/lib/i18n/locales";
-import { defaultLocale } from "@/lib/i18n/locales";
+import { defaultLocale, locales } from "@/lib/i18n/locales";
 
 function articlesDirectoryForLocale(locale: Locale): string {
   const subdir =
@@ -102,6 +102,53 @@ export async function getArticles(locale: Locale = defaultLocale): Promise<Artic
   } catch {
     return [];
   }
+}
+
+let articleSlugLocaleMapCache: Map<string, Locale[]> | null = null;
+
+export async function getArticleSlugLocaleMap(): Promise<ReadonlyMap<string, readonly Locale[]>> {
+  if (articleSlugLocaleMapCache) {
+    return articleSlugLocaleMapCache;
+  }
+
+  const map = new Map<string, Set<Locale>>();
+
+  await Promise.all(
+    locales.map(async (locale) => {
+      const articles = await getArticles(locale);
+      for (const article of articles) {
+        const existing = map.get(article.slug) ?? new Set<Locale>();
+        existing.add(locale);
+        map.set(article.slug, existing);
+      }
+    })
+  );
+
+  articleSlugLocaleMapCache = new Map(
+    [...map.entries()].map(([slug, localeSet]) => [slug, [...localeSet]])
+  );
+
+  return articleSlugLocaleMapCache;
+}
+
+export async function getLocalesForArticleSlug(slug: string): Promise<Locale[]> {
+  const map = await getArticleSlugLocaleMap();
+  return [...(map.get(slug) ?? [defaultLocale])];
+}
+
+export async function getArticleStaticParams(): Promise<{ locale: Locale; slug: string }[]> {
+  const params: { locale: Locale; slug: string }[] = [];
+
+  await Promise.all(
+    locales.map(async (locale) => {
+      const articles = await getArticles(locale);
+      for (const article of articles) {
+        params.push({ locale, slug: article.slug });
+      }
+    })
+  );
+
+  return params;
 }
 
 export async function getArticleBySlug(slug: string, locale: Locale = defaultLocale): Promise<Article | null> {

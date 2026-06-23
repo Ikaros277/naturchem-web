@@ -1,6 +1,7 @@
 "use client";
 
 import { LocaleLink } from "@/lib/i18n/locale-link";
+import { useTranslations } from "@/lib/i18n/locale-context";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
 import type { ServiceIconKey } from "@/lib/service-icons";
@@ -31,12 +32,12 @@ function onHashLinkClick() {
   window.setTimeout(notifyAccordionHashSync, 300);
 }
 
-function OfferPanel({ pillar }: { pillar: HomeOfferPillar }) {
+function OfferPanel({ pillar, areasLabel }: { pillar: HomeOfferPillar; areasLabel: string }) {
   const scroll = hasHashHref(pillar.href) ? false : undefined;
 
   return (
     <>
-      <ul className="tag-row home-offer-tags" aria-label="Typické oblasti">
+      <ul className="tag-row home-offer-tags" aria-label={areasLabel}>
         {pillar.tags.map((tag) => (
           <li key={tag}>
             <span className="tag">{tag}</span>
@@ -66,6 +67,7 @@ function OfferPanel({ pillar }: { pillar: HomeOfferPillar }) {
 }
 
 export function HomeOfferCard({ pillar }: { pillar: HomeOfferPillar }) {
+  const t = useTranslations("common");
   const scroll = hasHashHref(pillar.href) ? false : undefined;
 
   return (
@@ -82,7 +84,7 @@ export function HomeOfferCard({ pillar }: { pillar: HomeOfferPillar }) {
         <h3>{pillar.title}</h3>
       </header>
       <div className="home-offer-panel home-offer-panel--desktop">
-        <OfferPanel pillar={pillar} />
+        <OfferPanel pillar={pillar} areasLabel={t.areas} />
       </div>
       <details className="home-offer-details home-offer-details--mobile">
         <summary className="home-offer-summary">
@@ -96,7 +98,7 @@ export function HomeOfferCard({ pillar }: { pillar: HomeOfferPillar }) {
           <span className="home-offer-teaser muted">{pillar.teaser}</span>
         </summary>
         <div className="home-offer-panel home-offer-panel--mobile">
-          <OfferPanel pillar={pillar} />
+          <OfferPanel pillar={pillar} areasLabel={t.areas} />
         </div>
       </details>
     </article>

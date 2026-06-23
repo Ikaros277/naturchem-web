@@ -1,9 +1,12 @@
 ﻿import type { MetadataRoute } from "next";
+import { getArticles, getArticleSlugLocaleMap } from "@/lib/articles";
 import { caseStudyCategories } from "@/lib/case-studies";
-import { getArticles } from "@/lib/articles";
 import { dedicatedServicePages } from "@/lib/dedicated-service-pages";
-import { localizedCanonical } from "@/lib/i18n/metadata-helpers";
-import { locales } from "@/lib/i18n/locales";
+import {
+  buildLocaleAlternatesLanguages,
+  localizedCanonical
+} from "@/lib/i18n/metadata-helpers";
+import { locales, type Locale } from "@/lib/i18n/locales";
 import { seoLandings } from "@/lib/seo-landings";
 
 const routes = [
@@ -47,32 +50,66 @@ const routes = [
   "/zasady-cookies"
 ];
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
-  const articles = await getArticles();
-  const caseRoutes = caseStudyCategories.map((c) => `/typicke-zakazky/${c.slug}`);
-  const articleRoutes = articles.map((a) => `/poradna/${a.slug}`);
-  const landingRoutes = seoLandings.map((l) => `/${l.slug}`);
-  const dedicatedRoutes = Object.values(dedicatedServicePages).map((p) => `/${p.slug}`);
-  const allRoutes = [
-    ...routes,
-    ...dedicatedRoutes,
-    ...caseRoutes,
-    ...articleRoutes,
-    ...landingRoutes
-  ];
+function uniquePaths(paths: string[]): string[] {
+  return [...new Set(paths)];
+}
 
+function articleLastModified(article: { updatedAt?: string; publishedAt: string }): Date {
+  const raw = article.updatedAt || article.publishedAt;
+  const parsed = new Date(raw);
+  return Number.isNaN(parsed.getTime()) ? new Date() : parsed;
+}
+
+function staticSitemapEntries(now: Date, staticPaths: string[]): MetadataRoute.Sitemap {
   return locales.flatMap((locale) =>
-    allRoutes.map((route) => ({
+    staticPaths.map((route) => ({
       url: localizedCanonical(route, locale),
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: route === "" ? 1 : 0.8,
       alternates: {
-        languages: Object.fromEntries(
-          locales.map((l) => [l, localizedCanonical(route, l)])
-        )
+        languages: buildLocaleAlternatesLanguages(route, locales)
       }
     }))
   );
+}
+
+async function articleSitemapEntries(
+  slugLocaleMap: ReadonlyMap<string, readonly Locale[]>
+): Promise<MetadataRoute.Sitemap> {
+  const entries: MetadataRoute.Sitemap = [];
+
+  await Promise.all(
+    locales.map(async (locale) => {
+      const articles = await getArticles(locale);
+
+      for (const article of articles) {
+        const route = `/poradna/${article.slug}`;
+        const availableLocales = slugLocaleMap.get(article.slug) ?? [locale];
+
+        entries.push({
+          url: localizedCanonical(route, locale),
+          lastModified: articleLastModified(article),
+          changeFrequency: "monthly",
+          priority: 0.7,
+          alternates: {
+            languages: buildLocaleAlternatesLanguages(route, availableLocales)
+          }
+        });
+      }
+    })
+  );
+
+  return entries;
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date();
+  const caseRoutes = caseStudyCategories.map((c) => `/typicke-zakazky/${c.slug}`);
+  const landingRoutes = seoLandings.map((l) => `/${l.slug}`);
+  const dedicatedRoutes = Object.values(dedicatedServicePages).map((p) => `/${p.slug}`);
+  const staticPaths = uniquePaths([...routes, ...dedicatedRoutes, ...caseRoutes, ...landingRoutes]);
+  const slugLocaleMap = await getArticleSlugLocaleMap();
+
+  return [...staticSitemapEntries(now, staticPaths), ...(await articleSitemapEntries(slugLocaleMap))];
 }

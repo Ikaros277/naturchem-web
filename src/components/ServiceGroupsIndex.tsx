@@ -58,7 +58,7 @@ function serviceCountLabel(
   return messages.serviceCountMany.replace("{count}", String(count));
 }
 
-const groupTags: Record<string, string[]> = {
+const groupTagsCs: Record<string, string[]> = {
   "mericke-sluzby": ["KHS", "ČIŽP", "KÚ"],
   "studie-vypocty": ["EIA", "KHS", "KÚ"],
   "povolovaci-podklady": ["KÚ", "ČIŽP", "IPPC"],
@@ -67,6 +67,30 @@ const groupTags: Record<string, string[]> = {
   "skoleni-podpora": ["Chemie", "BOZP", "Praxe"]
 };
 
+const groupTagsEn: Record<string, string[]> = {
+  "mericke-sluzby": ["KHS", "ČIŽP", "KÚ"],
+  "studie-vypocty": ["EIA", "KHS", "KÚ"],
+  "povolovaci-podklady": ["KÚ", "ČIŽP", "IPPC"],
+  "eia-investice": ["EIA", "Investor", "Designer"],
+  "evidence-reporting": ["ISPOP", "GHG", "Reporting"],
+  "skoleni-podpora": ["Chemicals", "OSH", "Practice"]
+};
+
+const groupTagsDe: Record<string, string[]> = {
+  "mericke-sluzby": ["KHS", "ČIŽP", "KÚ"],
+  "studie-vypocty": ["EIA", "KHS", "KÚ"],
+  "povolovaci-podklady": ["KÚ", "ČIŽP", "IPPC"],
+  "eia-investice": ["EIA", "Investor", "Planer"],
+  "evidence-reporting": ["ISPOP", "GHG", "Reporting"],
+  "skoleni-podpora": ["Chemie", "Arbeitsschutz", "Praxis"]
+};
+
+function groupTagsForLocale(locale: Locale): Record<string, string[]> {
+  if (locale === "en") return groupTagsEn;
+  if (locale === "de") return groupTagsDe;
+  return groupTagsCs;
+}
+
 type ServiceGroup = (typeof serviceGroupsCs)[number];
 
 function ServiceCards({
@@ -74,13 +98,15 @@ function ServiceCards({
   items,
   locale,
   viewServiceLabel,
-  relatedAreasLabel
+  relatedAreasLabel,
+  groupTags
 }: {
   groupId: string;
   items: ServiceGroup["items"];
   locale: Locale;
   viewServiceLabel: string;
   relatedAreasLabel: string;
+  groupTags: Record<string, string[]>;
 }) {
   return (
     <div className="service-card-grid">
@@ -120,6 +146,7 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
   const { isOpen, onToggle } = useAccordionHashOpen(groupIds);
   const ariaVerbs =
     locale === "en" ? groupAriaVerbsEn : locale === "de" ? groupAriaVerbsDe : groupAriaVerbs;
+  const groupTags = groupTagsForLocale(locale);
 
   return (
     <section className="section section-surface accordion-index-surface service-groups-accordion">
@@ -154,6 +181,7 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
                 locale={locale}
                 viewServiceLabel={common.viewService}
                 relatedAreasLabel={common.relatedAreas}
+                groupTags={groupTags}
               />
             </AccordionIndexDetails>
           );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "@/lib/i18n/locale-context";
 import {
   getCompanyOfficeMapPoints,
   officeAddressLine,
@@ -146,28 +147,30 @@ function loadLeafletAssets(): Promise<void> {
   return leafletAssetsPromise;
 }
 
-function officeInfoContent(office: CompanyOfficeMapPoint): string {
+function officeInfoContent(office: CompanyOfficeMapPoint, openInGoogleMaps: string): string {
   const address = officeAddressLine(office);
   const mapsUrl = officeMapsSearchUrl(office);
-  return `<div class="contact-map-infowindow"><strong>${office.label}</strong><br>${address}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Otevřít v Mapách Google</a></div>`;
+  return `<div class="contact-map-infowindow"><strong>${office.label}</strong><br>${address}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">${openInGoogleMaps}</a></div>`;
 }
 
-function officePopupContent(office: CompanyOfficeMapPoint): string {
+function officePopupContent(office: CompanyOfficeMapPoint, navigateInGoogleMaps: string): string {
   const mapsUrl = officeMapsSearchUrl(office);
-  return `<strong>${office.label}</strong><br>${officeAddressLine(office)}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">Navigovat v Google Maps</a>`;
+  return `<strong>${office.label}</strong><br>${officeAddressLine(office)}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">${navigateInGoogleMaps}</a>`;
 }
 
 function OfficePicker({
   variant,
   activeIndex,
-  onSelect
+  onSelect,
+  selectOfficeAria
 }: {
   variant: "hero" | "panel";
   activeIndex: number;
   onSelect: (index: number) => void;
+  selectOfficeAria: string;
 }) {
   return (
-    <div className="contact-offices-map-picker" role="tablist" aria-label="Vyberte provozovnu">
+    <div className="contact-offices-map-picker" role="tablist" aria-label={selectOfficeAria}>
       {offices.map((office, index) => {
         const tabId = `contact-map-tab-${variant}-${index}`;
         const isActive = index === activeIndex;
@@ -189,12 +192,21 @@ function OfficePicker({
   );
 }
 
+type MapLabels = {
+  mapAria: string;
+  openInGoogleMaps: string;
+  navigateInGoogleMaps: string;
+  selectOfficeAria: string;
+};
+
 function ContactOfficesMapInteractive({
   apiKey,
-  variant
+  variant,
+  labels
 }: {
   apiKey: string;
   variant: "hero" | "panel";
+  labels: MapLabels;
 }) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const [loadError, setLoadError] = useState(false);
@@ -228,7 +240,7 @@ function ContactOfficesMapInteractive({
           });
 
           const info = new InfoWindow({
-            content: officeInfoContent(office)
+            content: officeInfoContent(office, labels.openInGoogleMaps)
           });
 
           marker.addListener("click", () => {
@@ -245,10 +257,10 @@ function ContactOfficesMapInteractive({
     return () => {
       cancelled = true;
     };
-  }, [apiKey]);
+  }, [apiKey, labels.openInGoogleMaps]);
 
   if (loadError) {
-    return <ContactOfficesMapLeaflet variant={variant} />;
+    return <ContactOfficesMapLeaflet variant={variant} labels={labels} />;
   }
 
   return (
@@ -256,13 +268,19 @@ function ContactOfficesMapInteractive({
       ref={mapContainerRef}
       className="contact-offices-map-canvas"
       role="application"
-      aria-label="Mapa provozoven NATURCHEM"
+      aria-label={labels.mapAria}
     />
   );
 }
 
 /** Plně posuvná mapa bez API klíče (OpenStreetMap + Leaflet, zdarma). */
-function ContactOfficesMapLeaflet({ variant }: { variant: "hero" | "panel" }) {
+function ContactOfficesMapLeaflet({
+  variant,
+  labels
+}: {
+  variant: "hero" | "panel";
+  labels: MapLabels;
+}) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<LeafletMap | null>(null);
   const markersRef = useRef<LeafletMarker[]>([]);
@@ -292,7 +310,7 @@ function ContactOfficesMapLeaflet({ variant }: { variant: "hero" | "panel" }) {
         const markers = offices.map((office) => {
           const marker = L.marker([office.lat, office.lng])
             .addTo(map)
-            .bindPopup(officePopupContent(office));
+            .bindPopup(officePopupContent(office, labels.navigateInGoogleMaps));
           return marker;
         });
 
@@ -313,7 +331,7 @@ function ContactOfficesMapLeaflet({ variant }: { variant: "hero" | "panel" }) {
       mapRef.current = null;
       markersRef.current = [];
     };
-  }, []);
+  }, [labels.navigateInGoogleMaps]);
 
   const focusOffice = (index: number) => {
     setActiveIndex(index);
@@ -328,13 +346,18 @@ function ContactOfficesMapLeaflet({ variant }: { variant: "hero" | "panel" }) {
 
   return (
     <div className={`contact-offices-map-leaflet contact-offices-map-embed--${variant}`}>
-      <OfficePicker variant={variant} activeIndex={activeIndex} onSelect={focusOffice} />
+      <OfficePicker
+        variant={variant}
+        activeIndex={activeIndex}
+        onSelect={focusOffice}
+        selectOfficeAria={labels.selectOfficeAria}
+      />
       <div className="contact-offices-map-frame-wrap">
         <div
           ref={mapContainerRef}
           className="contact-offices-map-canvas contact-offices-map-canvas--leaflet"
           role="application"
-          aria-label="Interaktivní mapa provozoven NATURCHEM"
+          aria-label={labels.mapAria}
         />
       </div>
       <div className="contact-offices-map-embed-foot">
@@ -345,7 +368,7 @@ function ContactOfficesMapLeaflet({ variant }: { variant: "hero" | "panel" }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Otevřít v Mapách Google
+          {labels.openInGoogleMaps}
         </a>
       </div>
     </div>
@@ -358,10 +381,18 @@ type Props = {
 };
 
 export function ContactOfficesMap({ variant = "hero" }: Props) {
+  const contact = useTranslations("contact");
+  const labels: MapLabels = {
+    mapAria: contact.mapLabel,
+    openInGoogleMaps: contact.openInGoogleMaps,
+    navigateInGoogleMaps: contact.navigateInGoogleMaps,
+    selectOfficeAria: contact.selectOfficeAria
+  };
+
   const content = mapsApiKey ? (
-    <ContactOfficesMapInteractive apiKey={mapsApiKey} variant={variant} />
+    <ContactOfficesMapInteractive apiKey={mapsApiKey} variant={variant} labels={labels} />
   ) : (
-    <ContactOfficesMapLeaflet variant={variant} />
+    <ContactOfficesMapLeaflet variant={variant} labels={labels} />
   );
 
   return <div className={`contact-offices-map contact-offices-map--${variant}`}>{content}</div>;

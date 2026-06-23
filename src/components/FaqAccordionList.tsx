@@ -24,6 +24,7 @@ type Props = {
   items: FaqAccordionItemData[];
   uiLabels?: FaqAccordionUiLabels;
   locale?: Locale;
+  layout?: "stack" | "grid";
 };
 
 function toAccordionItem(item: FaqItem): FaqAccordionItemData {
@@ -36,11 +37,11 @@ function toAccordionItem(item: FaqItem): FaqAccordionItemData {
   };
 }
 
-export function FaqAccordionList({ items, uiLabels, locale }: Props) {
+export function FaqAccordionList({ items, uiLabels, locale, layout = "stack" }: Props) {
   if (items.length === 0) return null;
 
   return (
-    <div className="faq-accordion-list">
+    <div className={`faq-accordion-list${layout === "grid" ? " faq-accordion-list--grid" : ""}`}>
       {items.map((item) => (
         <FaqAccordionEntry key={item.q} item={item} uiLabels={uiLabels} locale={locale} />
       ))}

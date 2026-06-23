@@ -23,7 +23,8 @@ export const faqPageIntro =
   "Finden Sie heraus, ob Sie ein Aufmaß, eine Studie oder eine Betriebsanleitung benötigen – und was Sie als Erstdokumentation an ČIŽP, KHS oder an das Bauamt senden können.";
 
 export const faqIntroCtas: FaqLink[] = [
-  { label: "Senden Sie Materialien zur Bewertung", href: contactUrl("Nejsem si jistý") }
+  { label: "Senden Sie Materialien zur Bewertung", href: contactUrl("Nejsem si jistý") },
+  { label: "Unverbindlich anfragen", href: contactFormHref }
 ];
 
 export const faqPageMetadata = {
@@ -42,23 +43,52 @@ export const faqUiLabels = {
   legal: "Rechtsgrundlage",
   related: "Verwandte Dienstleistungen:",
   serviceTeaserTitle: "FAQ für diesen Service",
-  viewAllCategory: "Alle FAQ anzeigen – {category}"
+  viewAllCategory: "Alle FAQ anzeigen – {category}",
+  contactStripLabel: "Schnellkontakt",
+  submitMaterialsCta: "Senden Sie Materialien zur Bewertung",
+  inquiryCta: "Unverbindlich anfragen"
 } as const;
 
 export const faqCategories: FaqCategory[] = [
   {
     id: "obecne",
-    title: "Allgemeine Fragen",
-    tileLabel: "Allgemeine Fragen",
+    title: "Kontrollen, Behördenaufforderungen und erste Orientierung",
+    tileLabel: "Kontrollen und Behördenaufforderungen",
     ctas: [
-      { label: "Fordern Sie einen Service an", href: contactFormHref },
-      { label: "Senden Sie Materialien zur Bewertung", href: contactUrl("Nejsem si jistý") }
+      { label: "Behördenaufforderung zur Bewertung senden", href: contactUrl("Nejsem si jistý") },
+      { label: "Unverbindlich anfragen", href: contactFormHref }
     ],
     items: [
       {
+        q: "Wir haben eine Aufforderung von KHS, ČIŽP, der Landesbehörde oder dem Bauamt erhalten. Was sollen wir zuerst tun?",
+        paragraphs: [
+          "Senden Sie uns zunächst die vollständige Aufforderung einschließlich Anlagen, Entscheidungen, Kontrollprotokolle oder früherer Kommunikation mit der Behörde. Aus dem Wortlaut der Anforderung ermitteln wir, ob die Behörde eine Messung, ein Gutachten, eine Ausbreitungs- oder Lärmstudie, eine Betriebsanleitung, Ergänzungen zum Antrag, eine Änderung der Betriebsgenehmigung oder eine andere fachliche Unterlage verlangt.",
+          "Wichtig ist, nicht nur allgemein zu antworten. Die Behörde verlangt in der Regel einen bestimmten Dokumenttyp, einen bestimmten Messumfang oder eine bestimmte Erläuterung des Betriebszustands. Wir helfen zu unterscheiden, was sofort eingereicht werden muss, was später ergänzt werden kann und wo es sinnvoll ist, zuerst den technischen Betriebszustand zu prüfen."
+        ]
+      },
+      {
+        q: "Können Sie uns sagen, ob die Anforderung der Behörde angemessen ist?",
+        paragraphs: [
+          "Ja. Wir können fachlich beurteilen, ob die Anforderung zum Betriebstyp, zur Genehmigung, zur Quelleneinstufung, zu den Technologieeigenschaften und zu den verfügbaren Unterlagen passt. Ist die Anforderung unklar, zu allgemein oder technisch problematisch, kann eine sachliche Stellungnahme oder ein Vorschlag für das weitere Vorgehen erstellt werden.",
+          "Ziel ist es nicht, unnötig mit der Behörde zu streiten, sondern die richtige fachliche Unterlage zu liefern und zu verhindern, dass der Betreiber unnötige, unvollständige oder methodisch ungeeignete Messungen beauftragt."
+        ]
+      },
+      {
+        q: "Können wir Ihnen nur die Behördenaufforderung ohne weitere Unterlagen senden?",
+        paragraphs: [
+          "Ja. Die Behördenaufforderung reicht oft für eine erste Orientierung. Anschließend fordern wir nur die Unterlagen an, die für den jeweiligen Fall wirklich erforderlich sind – zum Beispiel die Betriebsgenehmigung, die Betriebsanleitung, die Projektdokumentation, Sicherheitsdatenblätter, Fotos der Technologie, frühere Messprotokolle oder eine Beschreibung des Betriebsregimes."
+        ]
+      },
+      {
+        q: "Können Sie auch einen Entwurf der Antwort an die Behörde erstellen?",
+        paragraphs: [
+          "Ja. In komplexeren Fällen können wir einen sachlichen technischen Antwortentwurf oder Unterlagen zur Ergänzung eines Antrags, eine Stellungnahme zur Kontrolle, eine Begründung des Betriebsregimes oder einen Vorschlag für weitere Messungen erstellen. Den Text formulieren wir so, dass er technisch präzise, angemessen und im Verwaltungsverfahren verwendbar ist."
+        ]
+      },
+      {
         q: "Wie ermitteln wir, welchen Service wir benötigen?",
         paragraphs: [
-          "Senden Sie eine behördliche Entscheidung oder Anfrage, eine Bedienungsanleitung, eine Projektdokumentation, eine Technologiebeschreibung oder eine kurze Beschreibung der Situation. Anhand dieser Materialien ermitteln wir, ob eine Messung, eine Studie, eine Bewertung, ein Betriebshandbuch, eine UVP-Dokumentation, ein ISPOP oder eine andere Leistung erforderlich ist."
+          "Senden Sie eine behördliche Entscheidung oder Anfrage, eine Betriebsanleitung, eine Projektdokumentation, eine Technologiebeschreibung oder eine kurze Beschreibung der Situation. Anhand dieser Materialien ermitteln wir, ob eine Messung, eine Studie, eine Bewertung, ein Betriebshandbuch, eine UVP-Dokumentation, ein ISPOP oder eine andere Leistung erforderlich ist."
         ],
         links: [
           { label: "Emissionsmessung", href: "/sluzby/mereni-emisi" },
@@ -77,7 +107,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Sind die Ergebnisse für die Behörden akzeptabel?",
         paragraphs: [
-          "Ja. Für Protokolle, Studien und Gutachten richten wir uns nach den konkreten Adressaten: Betreiber, Planer, Investor, KHS, ČIŽP, Landesbehörde, Baubehörde oder EIA Verfahren."
+          "Ja. Für Protokolle, Studien und Gutachten richten wir uns nach den konkreten Adressaten: Betreiber, Planer, Investor, KHS, ČIŽP, Landesbehörde, Baubehörde oder EIA-Verfahren."
         ]
       },
       {
@@ -168,12 +198,47 @@ export const faqCategories: FaqCategory[] = [
             "Gesetz Nr. 201/2012 Slg. verlangt von der autorisierten Person, autorisierte Tätigkeiten professionell durchzuführen und genaue und vollständige Daten bereitzustellen.",
           refs: [{ label: "Gesetz Nr. 201/2012 Slg.", href: L.z201 }]
         }
+      },
+      {
+        q: "Wie sollen wir uns auf die Emissionsmessung vorbereiten?",
+        paragraphs: [
+          "Vor der Messung sollten insbesondere der Messpunkt, der sichere Zugang zum Auslass oder Schornstein, das Betriebsregime der Technologie, die Verfügbarkeit des Bedienpersonals und die Möglichkeit, die Anlage mit repräsentativer Leistung zu betreiben, geprüft werden. Außerdem ist es sinnvoll, die Betriebsgenehmigung, die Betriebsanleitung, frühere Protokolle, Brennstoffe oder Rohstoffe, Leistungsdaten und Betriebsaufzeichnungen vorzubereiten.",
+          "Bei einigen Quellen muss der Messtermin vorab über ISPOP angemeldet werden. Deshalb ist es sinnvoll, den Termin mit ausreichendem Vorlauf zu planen."
+        ]
+      },
+      {
+        q: "Was bedeutet repräsentativer Betrieb bei der Emissionsmessung?",
+        paragraphs: [
+          "Repräsentativer Betrieb bedeutet, dass die Anlage während der Messung so arbeitet, dass die Ergebnisse dem normalen oder geforderten Betriebszustand entsprechen. Es reicht nicht aus, dass die Quelle nur läuft. Es muss erkennbar sein, bei welcher Leistung, welchem Rohstoff, welchem Brennstoff, welcher Temperatur, welcher Belastung oder welchem Betriebsregime gemessen wurde.",
+          "Ist die Technologie zyklisch, chargenweise oder variabel, muss beschrieben werden, welcher Teil des Zyklus gemessen wurde und warum er für die jeweilige Bewertung relevant ist."
+        ]
+      },
+      {
+        q: "Was ist, wenn bei der Emissionsmessung ein Grenzwert überschritten wird?",
+        paragraphs: [
+          "Zuerst muss die Ursache ermittelt werden. Eine Überschreitung kann mit dem technischen Zustand der Anlage, dem Brennstoff, dem Rohstoff, einem falschen Betriebsregime, einem Filterausfall, unzureichender Verbrennung, schlechter Absaugleistung oder einem ungeeigneten Messpunkt zusammenhängen.",
+          "In einer solchen Situation helfen wir, das Protokoll, die Betriebsbedingungen und mögliche technische Schritte zu bewerten. Je nach Fall können wir Wartung der Anlage, Anpassung des Betriebsregimes, ergänzende Emissionsminderungstechnik, Wiederholungsmessung oder eine fachliche Stellungnahme für die Behörde vorschlagen."
+        ]
+      },
+      {
+        q: "Lassen sich Emissionen auch an Technologien ohne klassischen Schornstein messen?",
+        paragraphs: [
+          "Das hängt von der konkreten technischen Lösung ab. Hat die Technologie einen Auslass, eine Absaugung, eine lokale Entlüftung oder einen anderen definierten Luftabzug, kann die Messmöglichkeit beurteilt werden. Entweichen Emissionen fugitiv in die Halle oder durch offene Bereiche, ist die Situation komplexer und es kann sinnvoll sein, technische Bewertung, Messung der Arbeitsplatzumgebung, Beurteilung der Lüftung oder einen Absaugsentwurf zu kombinieren.",
+          "Im Voraus ist es sinnvoll, Fotos der Anlage, Auslässe, Leitungen, Ventilatoren und des Technologiebereichs zu senden."
+        ]
+      },
+      {
+        q: "Ist es besser, zuerst zu messen oder zuerst eine technische Bewertung durchzuführen?",
+        paragraphs: [
+          "Bei der regulären wiederkehrenden Messung kann die Messung meist direkt geplant werden. Bei neuer, geänderter oder problematischer Technologie ist oft zuerst eine technische Bewertung sinnvoll. Diese hilft zu bestimmen, was gemessen werden soll, wo gemessen werden soll, unter welchem Betriebsregime und ob die Messung eine verwertbare Aussage liefern kann.",
+          "Dieses Vorgehen ist besonders geeignet für atypische Technologien, zyklische Betriebe, Verbrennungsanlagen, Trockner, Lackieranlagen, Filteranlagen, Waschanlagen, Pyrolyse- oder thermische Prozesse."
+        ]
       }
     ]
   },
   {
     id: "pracovni-prostredi",
-    title: "Arbeitsplatzumgebung und Jobkategorisierung",
+    title: "Arbeitsplatzumgebung und Arbeitsplatzkategorisierung",
     tileLabel: "Arbeitsumgebung",
     ctas: [
       { label: "Fordern Sie eine Messung der Arbeitsplatzumgebung an", href: contactUrl("Měření pracovního prostředí") },
@@ -229,13 +294,45 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Eine Beschreibung der Arbeitsaktivitäten, der Schichtlänge, der Anzahl der Arbeiter, der verwendeten Rohstoffe, der Sicherheitsdatenblätter, des Betriebsregimes, der Belüftung, der Arbeitsabläufe, früherer Protokolle und jeglicher KHS-Kommunikation sind hilfreich."
         ]
+      },
+      {
+        q: "Wie erkennen wir, welche Faktoren der Arbeitsplatzumgebung wir messen sollen?",
+        paragraphs: [
+          "Ausgangspunkt sind die konkrete Arbeitsaktivität, verwendete Stoffe, Sicherheitsdatenblätter, Technologie, Schichtlänge, Belüftung, Arbeitsabläufe und die voraussichtliche Exposition der Mitarbeiter. An manchen Arbeitsplätzen ist der Hauptfaktor offensichtlich – zum Beispiel Lärm, Staub oder chemische Stoffe. An anderen ist es sinnvoll, mehrere Faktoren gleichzeitig zu beurteilen – zum Beispiel Lärm, Mikroklima, Beleuchtung, chemische Stoffe und körperliche Belastung."
+        ]
+      },
+      {
+        q: "Reicht für die Arbeitsplatzkategorisierung ein Messungstag?",
+        paragraphs: [
+          "Oft ja, wenn der Messungstag für die normale Arbeit repräsentativ ist. Bei wechselnden Betrieben muss jedoch geprüft werden, ob die Messung typische, risikoreichste oder von der Behörde geforderte Tätigkeit erfasst. Unterscheiden sich die Arbeiten von Tag zu Tag erheblich, kann die Messung durch eine Tätigkeitsbeschreibung, eine Schichtzeitanalyse oder eine Wiederholungsmessung ergänzt werden."
+        ]
+      },
+      {
+        q: "Können wir die Arbeitsplatzumgebung messen, wenn ein Mitarbeiter nur einen kurzen Teil der Schicht eine risikoreiche Tätigkeit ausführt?",
+        paragraphs: [
+          "Ja. Gerade bei solchen Tätigkeiten ist es wichtig, die Expositionsdauer und das Arbeitsregime korrekt zu beschreiben. Das Messergebnis bezieht sich dann auf die tatsächliche Arbeitszeit und kann nach der jeweiligen Methodik und den hygienischen Grenzwerten umgerechnet oder bewertet werden.",
+          "Typisch sind zum Beispiel kurzzeitiges Schweißen, Schleifen, Arbeit mit Lösungsmitteln, Reinigung, Mischen chemischer Stoffe oder Wartung der Technologie."
+        ]
+      },
+      {
+        q: "Was ist, wenn Mitarbeiter Atemschutzmasken oder andere PSA verwenden?",
+        paragraphs: [
+          "PSA ist wichtig, ersetzt aber allein keine Beurteilung der Arbeitsplatzumgebung. Bei der Bewertung muss zwischen Schadstoffkonzentration in der Arbeitsluft, technischen und organisatorischen Maßnahmen, Belüftung, Expositionsdauer und tatsächlicher Nutzung der Schutzausrüstung unterschieden werden.",
+          "Bei risikoreicheren Arbeiten ist es sinnvoll, nicht nur die Messung, sondern auch das Schutzsystem der Mitarbeiter, Schulungen, Auswahl geeigneter PSA und Kontrolle ihrer Nutzung nachzuweisen."
+        ]
+      },
+      {
+        q: "Können Sie eine Arbeitskategorie auf Basis der Messergebnisse empfehlen?",
+        paragraphs: [
+          "Ja. Auf Basis der Messergebnisse, der Arbeitsbeschreibung und der geltenden Grenzwerte kann eine fachliche Auswertung erstellt werden, die als Grundlage für einen Vorschlag zur Arbeitskategorisierung dient. Die eigentliche Einstufung ist Pflicht des Arbeitgebers und unterliegt den einschlägigen Regeln sowie einer möglichen Beurteilung durch die KHS."
+        ]
       }
     ]
   },
   {
     id: "hluk",
-    title: "Lärm, Akustik und Lärmstudien",
-    tileLabel: "Lärm und Akustik",
+    title: "Lärm, Vibration und Akustik",
+    tileLabel: "Lärm und Vibration",
     ctas: [
       { label: "Lärmmessung anfordern", href: contactUrl("Měření hluku a akustika") },
       { label: "Fordern Sie eine Lärmstudie an", href: contactUrl("Hlukové studie") }
@@ -294,13 +391,41 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Ja. Nach der Messung oder Berechnung können wir Maßnahmen empfehlen – zum Beispiel eine Schallschutzhülle, einen Schirm, einen Schalldämpfer, eine Quellenverlegung, eine Betriebsmodusbeschränkung oder eine Gebäudeänderung."
         ]
+      },
+      {
+        q: "Was ist der Unterschied zwischen Lärm am Arbeitsplatz und Lärm in die Umgebung?",
+        paragraphs: [
+          "Lärm am Arbeitsplatz wird im Hinblick auf die Exposition der Mitarbeiter bewertet. Es geht um den Arbeitsplatz, die Schichtlänge, die Tätigkeit des Arbeitnehmers und arbeitsmedizinische Grenzwerte.",
+          "Lärm in die Umgebung wird im Hinblick auf geschützte Außen- oder Innenbereiche bewertet – zum Beispiel bei Wohngebäuden. Es geht um die Auswirkung der Anlage, Technologie, des Verkehrs, von Wärmepumpen, HVAC oder anderen Quellen auf die Umgebung. Das sind zwei unterschiedliche Messungen, unterschiedliche Zwecke und oft unterschiedliche Unterlagen für die Behörde."
+        ]
+      },
+      {
+        q: "Wann ist eine Vibrationsmessung erforderlich?",
+        paragraphs: [
+          "Vibrationsmessungen werden vor allem dann behandelt, wenn Mitarbeiter mit vibrierenden Werkzeugen, Maschinen, Fahrzeugen oder Geräten arbeiten, die Vibrationen auf Hände oder den ganzen Körper übertragen können. Typisch sind Schleifmaschinen, Hämmer, Verdichtungsgeräte, Fördertechnik, Baumaschinen, Traktoren oder Arbeitsmaschinen.",
+          "Die Messung kann als Grundlage für die Arbeitskategorisierung, die Risikobewertung oder die Reaktion auf eine KHS-Anforderung dienen."
+        ]
+      },
+      {
+        q: "Wann ist es sinnvoll, vor dem Kauf der Technologie eine Lärmstudie durchzuführen?",
+        paragraphs: [
+          "Vor dem Kauf oder der Installation der Technologie ist eine Lärmstudie immer dann sinnvoll, wenn die Anlage in der Nähe von Wohnbebauung betrieben wird, nachts arbeitet, eine deutliche akustische Leistung hat oder Teil eines größeren Betriebs ist. Typisch sind HVAC-Geräte, Kompressoren, Kühlung, Wärmepumpen, Produktionslinien, Brecher, Förderer, Be- und Entladung, Lager oder Außenhandling.",
+          "Eine frühzeitige Bewertung kann verhindern, dass später teure Lärmschutzmaßnahmen nachgerüstet werden müssen."
+        ]
+      },
+      {
+        q: "Was ist, wenn sich Nachbarn über Lärm aus unserem Betrieb beschweren?",
+        paragraphs: [
+          "Zuerst ist es sinnvoll zu unterscheiden, ob der Lärm von einer stationären Quelle, vom Verkehr, vom Handling, von der Technologie, von der Lüftung oder von mehreren Quellen gleichzeitig stammt. Je nach Situation können Lärmmessung, akustische Bewertung oder technische Maßnahmen durchgeführt werden.",
+          "Wichtig ist, eine Beschwerde nicht nur nach Schätzung zu lösen. Der Betreiber muss wissen, ob der Lärm tatsächlich über dem Grenzwert liegt, wann eine Überschreitung auftritt und welche Quelle entscheidend ist."
+        ]
       }
     ]
   },
   {
     id: "studie",
-    title: "Ausbreitungs- und Lärmstudien",
-    tileLabel: "Ausbreitungs- und Lärmstudien",
+    title: "Ausbreitungsstudien, Immissionen und Geruch",
+    tileLabel: "Ausbreitungsstudien und Geruch",
     ctas: [
       { label: "Fordern Sie eine Ausbreitungsstudie an", href: contactUrl("Rozptylové studie") },
       { label: "Fordern Sie eine Lärmstudie an", href: contactUrl("Hlukové studie") },
@@ -347,13 +472,41 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Typischerweise Projektlayout, Standorte von Lärmquellen, akustische Parameter von Geräten, Betriebsmodus, Transportdaten, Zeichnungen, Standorte von Schutzgebieten und der Studienzweck."
         ]
+      },
+      {
+        q: "Was ist der häufigste Fehler bei der Beauftragung einer Ausbreitungsstudie?",
+        paragraphs: [
+          "Der häufigste Fehler sind unvollständige oder unrealistische Eingangsdaten. Eine Ausbreitungsstudie benötigt eine technisch korrekte Beschreibung der Quellen, Auslässe, Emissionsparameter, Betriebszeiten, Rohstoffe, Kapazität, Verkehr und umgebender Bebauung. Sind die Eingaben zu hoch, zu niedrig oder entsprechen sie nicht dem tatsächlichen Betrieb, kann das Studienergebnis irreführend sein.",
+          "Deshalb ist es sinnvoll, die Eingaben vor der Modellierung fachlich zu prüfen."
+        ]
+      },
+      {
+        q: "Kann eine Ausbreitungsstudie prüfen, ob eine Erhöhung der Produktionskapazität durchkommt?",
+        paragraphs: [
+          "Ja. Eine Ausbreitungsstudie kann den bestehenden und den geplanten Zustand oder mehrere Betriebsvarianten vergleichen. Sie ermöglicht die Beurteilung, ob eine Kapazitätserhöhung die Immissionsbeiträge deutlich erhöht und ob das Vorhaben aus Sicht des Luftschutzes vertretbar ist.",
+          "Bei größeren Änderungen ist es auch sinnvoll, die Anbindung an die Betriebsgenehmigung, UVP, Gutachten, Betriebsanleitung und Verkehrslärm zu klären."
+        ]
+      },
+      {
+        q: "Behandeln Sie auch Geruch aus Betrieben?",
+        paragraphs: [
+          "Ja. Bei Betrieben mit Geruch können Technologie, Quellen geruchsaktiver Stoffe, Lüftung, Betriebsregime und Möglichkeiten zur Emissionsbegrenzung beurteilt werden. Je nach Situation kann es um fachliche Bewertung, Maßnahmenvorschläge, Messung ausgewählter Stoffe, Ausbreitungsbewertung oder Vorbereitung von Unterlagen für Gespräche mit der Behörde gehen.",
+          "Typisch sind Kläranlagen, Abfallanlagen, Kompostieranlagen, Lebensmittelbetriebe, Lackieranlagen, chemische Betriebe, Schlammverarbeitung, landwirtschaftliche Betriebe und bestimmte Produktionstechnologien."
+        ]
+      },
+      {
+        q: "Können wir eine Ausbreitungsstudie als Argument nutzen, dass kein zusätzlicher Filter nötig ist?",
+        paragraphs: [
+          "Manchmal ja, aber es hängt von der konkreten Quelle, den Emissionen, dem Immissionshintergrund, den gesetzlichen Anforderungen und der Anforderung der Behörde ab. Eine Ausbreitungsstudie bewertet die Immissionswirkung in der Umgebung, ersetzt aber allein nicht unbedingt die Pflicht zur Einhaltung von Emissionsgrenzwerten oder zur Anwendung vorgeschriebener technischer Maßnahmen.",
+          "Der richtige Ansatz ist, Emissionen, Immissionen, Technologie, Betriebsgenehmigung und verfügbare Maßnahmen gleichzeitig zu beurteilen."
+        ]
       }
     ]
   },
   {
     id: "eia",
-    title: "UVP, Gutachten, Betriebshandbücher und IPPC",
-    tileLabel: "UVP, Gutachten und Betriebshandbücher",
+    title: "UVP, JES, Gutachten und Genehmigung",
+    tileLabel: "UVP und Genehmigung",
     ctas: [
       { label: "Fordern Sie eine UVP/Projektbenachrichtigung an", href: contactUrl("EIA a oznámení záměru") },
       {
@@ -361,7 +514,7 @@ export const faqCategories: FaqCategory[] = [
         href: contactUrl("Odborné posudky")
       },
       {
-        label: "Fordern Sie eine Bedienungsanleitung an",
+        label: "Fordern Sie eine Betriebsanleitung an",
         href: contactUrl("Provozní řády")
       }
     ],
@@ -403,7 +556,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Was muss eine Quellbetriebsanleitung enthalten?",
         paragraphs: [
-          "Ein Betriebshandbuch enthält in der Regel eine Identifizierung der stationären Quellen und der Anlage, Daten zur Auslegungskapazität, eine Beschreibung der technologischen Abläufe, Methoden zur Betriebssteuerung und -überwachung, ein Blockdiagramm sowie Daten zu Schornsteinen, Schornsteinen und Geräten zur Emissionsreduzierung."
+          "Ein Betriebshandbuch enthält in der Regel eine Identifizierung der stationären Quellen und der Anlage, Daten zur Auslegungskapazität, eine Beschreibung der technologischen Abläufe, Methoden zur Betriebssteuerung und -überwachung, ein Blockdiagramm sowie Daten zu Schornsteinen, Abgasführungen und Geräten zur Emissionsreduzierung."
         ],
         legal: {
           summary:
@@ -423,16 +576,49 @@ export const faqCategories: FaqCategory[] = [
           "Ja. Je nach Projektumfang erstellen oder ergänzen wir Dokumentationen für integrierte Genehmigungen und deren Änderungen, insbesondere in Bezug auf Luftqualität, Lärm, Abfall, Betriebsweise und technische Quellenparameter."
         ],
         links: [{ label: "IPPC und integrierte Genehmigungen", href: "/sluzby/ippc-integrovana-povoleni" }]
+      },
+      {
+        q: "Wie erkennen wir, ob ein Vorhaben eine UVP oder nur andere Genehmigungen benötigt?",
+        paragraphs: [
+          "Das hängt von der Art des Vorhabens, der Kapazität, dem Standort, der Betriebsänderung und der Einordnung nach dem Gesetz über die Umweltverträglichkeitsprüfung ab. Bei manchen Vorhaben ist klar, dass eine UVP erforderlich sein wird. Bei anderen muss beurteilt werden, ob es sich um ein unterhalb der Schwelle liegendes Vorhaben, eine Vorhabensänderung, ein Folgeverfahren oder nur um eine fachliche Unterlage für eine andere Genehmigung handelt.",
+          "In der Praxis ist es sinnvoll, vor Antragstellung ein vorläufiges Screening durchzuführen."
+        ]
+      },
+      {
+        q: "Was ist das einheitliche Umweltgutachten (JES) und wann sollte es behandelt werden?",
+        paragraphs: [
+          "Das einheitliche Umweltgutachten ist eine zusammengefasste Umweltgrundlage für die Genehmigung eines Vorhabens. In der Praxis kann es mehrere Anforderungen aus dem Umweltbereich verbinden. Für den Investor ist es wichtig, rechtzeitig festzustellen, welche Anlagen benötigt werden – zum Beispiel Lärmstudie, Ausbreitungsstudie, biologische Bewertung, Abfallwirtschaft, Gewässerschutz oder andere fachliche Unterlagen.",
+          "Wir helfen zu bestimmen, welche Teile der Umweltdokumentation im Voraus vorbereitet werden sollten."
+        ]
+      },
+      {
+        q: "Wann ist ein Gutachten im Luftschutz erforderlich?",
+        paragraphs: [
+          "Ein Gutachten wird in der Regel bei aufgeführten stationären Quellen, bei der Betriebsgenehmigung, bei Technologieänderungen, bei Brennstoff- oder Rohstoffwechsel, bei Kapazitätserhöhung, bei Anpassung der Rauchgasreinigung oder auf Anforderung der Landesbehörde behandelt. Das Gutachten bewertet technische, emissionsbezogene und betriebliche Zusammenhänge der Quelle und schlägt Bedingungen vor, die dem tatsächlichen Betrieb angemessen sein sollten."
+        ]
+      },
+      {
+        q: "Macht es Sinn, ein Gutachten noch vor dem Gespräch mit der Behörde zu erstellen?",
+        paragraphs: [
+          "Ja, besonders bei komplexeren oder ungewöhnlichen Technologien. Eine vorläufige fachliche Analyse hilft, technische Argumentation vorzubereiten, angemessene Emissionsgrenzwerte, Messhäufigkeit, Betriebsbedingungen und den Umfang der Unterlagen vorzuschlagen. Der Betreiber verhandelt dann mit der Behörde auf Basis von Daten und nicht nur auf Basis einer allgemeinen Technologiebeschreibung."
+        ]
+      },
+      {
+        q: "Was ist, wenn sich während des Projekts Technologie, Kapazität oder Betriebsregime ändern?",
+        paragraphs: [
+          "Eine Änderung von Technologie, Kapazität oder Betriebsregime kann Emissionsmessung, Ausbreitungsstudie, Lärmstudie, Gutachten, Betriebsanleitung und Betriebsgenehmigung beeinflussen. Deshalb ist es sinnvoll, die Änderung zu beurteilen, bevor Unterlagen an die Behörde gesendet werden.",
+          "Bei wesentlicheren Änderungen kann es notwendig sein, bereits erstellte Dokumentation zu aktualisieren."
+        ]
       }
     ]
   },
   {
     id: "ispop",
-    title: "ISPOP, Betriebsaufzeichnungen und Treibhausgasemissionen",
-    tileLabel: "ISPOP, GHG und Rekorde",
+    title: "Betriebsvorschriften, Aufzeichnungen und ISPOP",
+    tileLabel: "Betriebsvorschriften und ISPOP",
     ctas: [
-      { label: "Fordern Sie ISPOP-/Betriebsunterlagen an", href: contactUrl("ISPOP") },
-      { label: "Treibhausgas anfordern", href: contactUrl("Treibhausgas") }
+      { label: "Betriebsanleitung anfordern", href: contactUrl("Provozní řády") },
+      { label: "ISPOP / Betriebsaufzeichnungen anfordern", href: contactUrl("ISPOP") }
     ],
     items: [
       {
@@ -449,7 +635,7 @@ export const faqCategories: FaqCategory[] = [
         ],
         legal: {
           summary:
-            "ISPOP listet das Formular F_OVZ_SPE für die Meldung konsolidierter Betriebsaufzeichnungen gemäß Abschnitt 17(3)(c) des Gesetzes Nr. 201/2012 Slg. auf. mit einer Frist bis zum 31. März.",
+            "ISPOP listet das Formular F_OVZ_SPE für die Meldung konsolidierter Betriebsaufzeichnungen gemäß Abschnitt 17(3)(c) des Gesetzes Nr. 201/2012 Slg. mit einer Frist bis zum 31. März.",
           refs: [
             { label: "ISPOP", href: L.ispop },
             { label: "§ 17 des Gesetzes Nr. 201/2012 Slg.", href: L.p17 }
@@ -478,22 +664,70 @@ export const faqCategories: FaqCategory[] = [
           refs: [{ label: "§ 32 des Gesetzes Nr. 201/2012 Slg.", href: L.p32 }]
         },
         links: [{ label: "Überprüfung der Treibhausgasemissionen", href: "/sluzby/ghg-overovani" }]
+      },
+      {
+        q: "Wann sollte die Betriebsanleitung aktualisiert werden?",
+        paragraphs: [
+          "Die Betriebsanleitung sollte bei Änderungen von Technologie, Quelle, Kapazität, Brennstoff, Rohstoff, Auslass, Filteranlage, Betriebsregime, Emissionsgrenzwerten oder Bedingungen der Betriebsgenehmigung aktualisiert werden. Eine Aktualisierung ist auch sinnvoll, wenn die Betriebsanleitung den tatsächlichen Zustand der Anlage nicht mehr widerspiegelt."
+        ]
+      },
+      {
+        q: "Sollten Anfahren und Stillstand der Technologie in der Betriebsanleitung beschrieben werden?",
+        paragraphs: [
+          "Ja, wenn diese Betriebszustände für Emissionen oder die sichere Betriebsführung bedeutsam sind. Bei zyklischen, chargenweisen, Verbrennungs-, Trocknungs-, Pyrolyse- oder sonst variablen Technologien ist es sinnvoll, Normalbetrieb, Anfahren, Stillstand, Störzustände und außergewöhnliche Situationen zu beschreiben.",
+          "Eine gute Betriebsanleitung sollte nicht nur ein formales Dokument sein. Sie sollte widerspiegeln, wie die Technologie tatsächlich arbeitet."
+        ]
+      },
+      {
+        q: "Was muss der Betreiber bei einer Luftschadstoffquelle alles aufzeichnen?",
+        paragraphs: [
+          "Der Umfang der Aufzeichnungen hängt von der Quellenart und der Betriebsgenehmigung ab. In der Regel werden Betriebszeiten, Verbrauch von Brennstoffen oder Rohstoffen, Produktmengen, Betrieb von Abscheideanlagen, Störungen, Stillstände, Emissionsmessungen, Wartung und weitere für die konsolidierte Betriebsaufzeichnung oder Kontrolle erforderliche Daten erfasst.",
+          "Wir helfen, die Aufzeichnungen so einzurichten, dass sie zur Genehmigung passen und bei der Kontrolle praktisch nutzbar sind."
+        ]
+      },
+      {
+        q: "Wer reicht Meldungen in ISPOP ein – der Betreiber oder der Messdienstleister?",
+        paragraphs: [
+          "Die Verantwortung für die Erfüllung der Pflichten liegt beim Betreiber. Einige Schritte können jedoch technisch von einer beauftragten Person vorbereitet oder eingereicht werden. Für jedes Projekt ist es sinnvoll, im Voraus festzulegen, wer den Messtermin meldet, wer das Protokoll einreicht, wer die konsolidierte Betriebsaufzeichnung vorbereitet und wer die Anbindung an die Betriebsgenehmigung prüft."
+        ]
       }
     ]
   },
   {
     id: "poptavka",
-    title: "Anfragen, Termine und Dokumentation",
-    tileLabel: "Anfragen und Dokumentation",
+    title: "Anfrage, Preis und Termine",
+    tileLabel: "Preis und Termine",
     ctas: [
-      { label: "Fordern Sie einen Service an", href: contactFormHref },
+      { label: "Unverbindlich anfragen", href: contactFormHref },
       { label: "Senden Sie Materialien zur Bewertung", href: contactUrl("Nejsem si jistý") }
     ],
     items: [
       {
-        q: "Welche Materialien sollten wir mit einer Anfrage senden?",
+        q: "Was kosten Messung, Studie oder Gutachten?",
         paragraphs: [
-          "Best Practice ist das Senden einer behördlichen Entscheidung oder Anfrage, einer Projektdokumentation, einer Technologiebeschreibung, des Standorts, der Betriebsart, verfügbarer Protokolle, eines Betriebshandbuchs, Sicherheitsdatenblättern und Fotos von Messpunkten, Schornsteinen oder Lärmquellen."
+          "Der Preis hängt vom Arbeitsumfang, der Technologieart, der Anzahl der Messpunkte, der Anzahl der gemessenen Stoffe, der Verfügbarkeit von Unterlagen, dem Standort, der Komplexität der Berechnung, den Anforderungen der Behörde und dem Termin ab. Bei einfachen Aufträgen kann der Preis schnell festgelegt werden. Bei komplexeren Betrieben ist es zuerst sinnvoll, die Unterlagen zu beurteilen und den Umfang genau abzugrenzen.",
+          "Für ein schnelles Angebot hilft es, die Behördenaufforderung, die Betriebsgenehmigung, die Technologiebeschreibung, Fotos, die Projektdokumentation und frühere Protokolle zu senden."
+        ]
+      },
+      {
+        q: "Wie lange dauert die Erstellung einer Studie oder eines Gutachtens?",
+        paragraphs: [
+          "Der Termin hängt vom Auftragsumfang, der Vollständigkeit der Unterlagen, dem Messbedarf, der Komplexität der Technologie und der Anbindung an Planer oder Behörde ab. Am schnellsten geht es, wenn zu Beginn alle verfügbaren Unterlagen einschließlich der Behördenanforderung und des Termins für die Fertigstellung gesendet werden.",
+          "Ist der Termin sehr kurz, bestimmen wir zuerst, was realistisch bearbeitet werden kann und was methodisch oder prozessual riskant wäre."
+        ]
+      },
+      {
+        q: "Kann ein Auftrag in eine schnelle Vorabbeurteilung und finale Dokumentation aufgeteilt werden?",
+        paragraphs: [
+          "Ja. Bei komplexeren Fällen ist es oft sinnvoll, zuerst eine schnelle Vorabbeurteilung durchzuführen. Diese hilft, Hauptrisiken, fehlende Unterlagen, erforderliche Messungen und den wahrscheinlichen Umfang der finalen Dokumentation zu bestimmen.",
+          "Dieses Vorgehen ist besonders geeignet für neue Technologien, Betriebsänderungen, UVP, IPPC, Geruch, Lärm, Ausbreitungsstudien und strittige Behördenanforderungen."
+        ]
+      },
+      {
+        q: "Was sollen wir senden, damit das Angebot nicht nur orientierend ist?",
+        paragraphs: [
+          "Ideal ist die Behördenaufforderung oder -anforderung, die Betriebsgenehmigung oder frühere Entscheidung, eine kurze Technologiebeschreibung, Betriebsregime und Kapazität, Projektdokumentation oder Standortplan, Fotos der Technologie, Auslässe, Schornsteine, Messpunkte oder Lärmquellen, Sicherheitsdatenblätter verwendeter Stoffe, frühere Protokolle und Studien sowie der gewünschte Fertigstellungstermin.",
+          "Je genauer die Unterlagen sind, die wir erhalten, desto präziser lassen sich Preis, Termin und Auftragsumfang festlegen."
         ],
         links: [{ label: "Kontakt und Anfrage", href: contactFormHref }]
       },
@@ -501,18 +735,6 @@ export const faqCategories: FaqCategory[] = [
         q: "Können wir mit einer unvollständigen Dokumentation beginnen?",
         paragraphs: [
           "Ja. Bei unvollständiger Dokumentation ermitteln wir zunächst, was wesentlich ist, was nachträglich ergänzt werden kann und was vom Planer, Betreiber oder Techniklieferanten mitgeliefert werden muss."
-        ]
-      },
-      {
-        q: "Können Sie eine Autoritätsanforderung beurteilen?",
-        paragraphs: [
-          "Ja. Anhand einer KHS-, ČIŽP-, regionalen oder bauaufsichtlichen Anforderung ermitteln wir, welche Art von Leistung benötigt wird und welche Anlagen für das weitere Verfahren maßgebend sind."
-        ]
-      },
-      {
-        q: "Kann zunächst eine erste Orientierungsbeurteilung durchgeführt werden?",
-        paragraphs: [
-          "Ja. Bei komplexeren Projekten führen wir zunächst eine Orientierungsbewertung zu Technik, Messstellen, Lärm, Emissionen oder behördlichen Auflagen durch – und definieren dann den genauen Projektumfang."
         ]
       }
     ]

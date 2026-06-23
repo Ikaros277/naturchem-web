@@ -71,7 +71,8 @@ export const faqUiLabels = {
   viewAllCategory: "Zobrazit všechny časté dotazy — {category}",
   contactStripLabel: "Rychlý kontakt",
   submitMaterialsCta: "Poslat podklady k posouzení",
-  inquiryCta: "Nezávazně poptat"
+  inquiryCta: "Nezávazně poptat",
+  categoryItemCount: "{count} dotazů"
 } as const;
 
 export const faqCategories: FaqCategory[] = [

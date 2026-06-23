@@ -10,7 +10,7 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import { getFaqCategoryIconKey } from "@/lib/service-icons";
 import type { FaqCategory } from "@/lib/faq";
 import { company } from "@/lib/site";
-import { contactFormHref, contactUrl } from "@/lib/contact-url";
+import { contactFormHref } from "@/lib/contact-url";
 
 export type FaqUiLabels = FaqAccordionUiLabels & {
   searchLabel: string;
@@ -19,8 +19,8 @@ export type FaqUiLabels = FaqAccordionUiLabels & {
   emptyTitle: string;
   emptyText: string;
   contactStripLabel?: string;
-  submitMaterialsCta?: string;
   inquiryCta?: string;
+  categoryItemCount?: string;
 };
 
 type Props = {
@@ -33,6 +33,10 @@ function readHashCategory(validIds: readonly string[]): string | null {
   if (typeof window === "undefined") return null;
   const id = decodeURIComponent(window.location.hash.replace(/^#/, ""));
   return validIds.includes(id) ? id : null;
+}
+
+function formatCategoryCount(template: string | undefined, count: number): string {
+  return (template ?? "{count}").replace("{count}", String(count));
 }
 
 export function FaqPageContent({ categories, uiLabels, locale }: Props) {
@@ -108,7 +112,7 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
                 <ServiceIcon
                   icon={getFaqCategoryIconKey(cat.id)}
                   variant="plain"
-                  size={28}
+                  size={30}
                   className="faq-tile-icon"
                 />
               </span>
@@ -118,20 +122,23 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
         })}
       </nav>
 
-      <aside className="faq-contact-strip" aria-label={uiLabels.contactStripLabel ?? "Rychlý kontakt"}>
-        <Link href={link(contactUrl("Nejsem si jistý"))} className="button faq-contact-strip-cta">
-          {uiLabels.submitMaterialsCta ?? "Poslat podklady k posouzení"}
-        </Link>
-        <Link href={link(contactFormHref)} className="button secondary faq-contact-strip-cta">
-          {uiLabels.inquiryCta ?? "Nezávazně poptat"}
-        </Link>
-        <a className="faq-contact-strip-link" href={`mailto:${company.email}`}>
+      <p className="faq-contact-inline" aria-label={uiLabels.contactStripLabel ?? "Rychlý kontakt"}>
+        <a className="faq-contact-inline-link" href={`mailto:${company.email}`}>
           {company.email}
         </a>
-        <a className="faq-contact-strip-link" href={`tel:${company.phones[0].replace(/\s/g, "")}`}>
+        <span className="faq-contact-inline-sep" aria-hidden="true">
+          ·
+        </span>
+        <a className="faq-contact-inline-link" href={`tel:${company.phones[0].replace(/\s/g, "")}`}>
           {company.phones[0]}
         </a>
-      </aside>
+        <span className="faq-contact-inline-sep" aria-hidden="true">
+          ·
+        </span>
+        <Link className="faq-contact-inline-link" href={link(contactFormHref)}>
+          {uiLabels.inquiryCta ?? "Nezávazně poptat"}
+        </Link>
+      </p>
 
       {filteredCategories.length === 0 ? (
         <section className="section faq-category">
@@ -140,40 +147,34 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
         </section>
       ) : null}
 
-      {filteredCategories.map((category) => (
-        <section key={category.id} id={category.id} className="section faq-category">
-          <h2 className="faq-category-heading">
-            <ServiceIcon
-              icon={getFaqCategoryIconKey(category.id)}
-              variant="plain"
-              size={32}
-              className="faq-category-icon"
-            />
-            {category.title}
-          </h2>
-          <div className="faq-category-body">
-            <FaqAccordionList
-              items={category.items}
-              uiLabels={accordionLabels}
-              locale={locale}
-              layout="grid"
-            />
-          </div>
-          {category.ctas.length > 0 ? (
-            <div className="btn-row faq-category-ctas">
-              {category.ctas.map((cta, index) => (
-                <Link
-                  key={cta.href}
-                  href={link(cta.href)}
-                  className={index === 0 ? "button" : "button secondary"}
-                >
-                  {cta.label}
-                </Link>
-              ))}
+      <div className="faq-categories">
+        {filteredCategories.map((category) => (
+          <section key={category.id} id={category.id} className="section faq-category">
+            <div className="faq-category-heading">
+              <h2>{category.title}</h2>
+              <span className="faq-category-count">
+                {formatCategoryCount(uiLabels.categoryItemCount, category.items.length)}
+              </span>
             </div>
-          ) : null}
-        </section>
-      ))}
+            <div className="faq-category-body">
+              <FaqAccordionList items={category.items} uiLabels={accordionLabels} locale={locale} />
+            </div>
+            {category.ctas.length > 0 ? (
+              <div className="btn-row faq-category-ctas">
+                {category.ctas.map((cta, index) => (
+                  <Link
+                    key={cta.href}
+                    href={link(cta.href)}
+                    className={index === 0 ? "button" : "button secondary"}
+                  >
+                    {cta.label}
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+          </section>
+        ))}
+      </div>
     </div>
   );
 }

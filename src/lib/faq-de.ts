@@ -46,7 +46,8 @@ export const faqUiLabels = {
   viewAllCategory: "Alle FAQ anzeigen – {category}",
   contactStripLabel: "Schnellkontakt",
   submitMaterialsCta: "Senden Sie Materialien zur Bewertung",
-  inquiryCta: "Unverbindlich anfragen"
+  inquiryCta: "Unverbindlich anfragen",
+  categoryItemCount: "{count} Fragen"
 } as const;
 
 export const faqCategories: FaqCategory[] = [

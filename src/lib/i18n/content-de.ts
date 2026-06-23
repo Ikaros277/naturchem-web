@@ -12,6 +12,7 @@ import type { SectorPageData } from "@/lib/sector-pages";
 import { sectorsEn, provozyNavLabelEn } from "@/lib/sectors-de";
 import {
   caseStudyCategories,
+  caseStudies,
   getCaseStudyCategory
 } from "@/lib/case-studies-de";
 import { referenceExampleGroupsEn } from "@/lib/reference-example-groups-de";
@@ -54,6 +55,7 @@ export const localeContent = {
   sectors: sectorsEn,
   provozyNavLabel: provozyNavLabelEn,
   caseStudyCategories,
+  caseStudies,
   getCaseStudyCategory,
   referenceExampleGroups: referenceExampleGroupsEn,
   referenceContent,

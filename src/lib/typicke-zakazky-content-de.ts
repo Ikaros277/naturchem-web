@@ -1,22 +1,21 @@
-/**
- * Copy for the /typicke-zakazky page.
- *
- * Page purpose: visitors should see what measurements, studies and documentation
- * NATURCHEM provides for operations; then find their situation and project workflow.
- */
+/** Copy für die Seite /typicke-zakazky — anonymisierte Fallstudien. */
 
-/** Eyebrow — hero context (what the page shows). */
-export const typickeZakazkyEyebrow = "Messungen, Studien und Dokumentationen aus der Praxis";
+export const typickeZakazkyEyebrow = "Anonymisierte Beispiele aus der Praxis";
 
-/** Combined hero lead — inspiration + what visitors find on the page (single layer). */
 export const typickeZakazkyHeroLead =
-  "Was wir messen und für den Betrieb vorbereiten – von Emissionen bis hin zu Studien, UVP und ISPOP.";
+  "Anonymisierte Projektbeispiele aus der Praxis — von Emissionen und Arbeitsumfeld bis zu Studien, EIA und ISPOP.";
 
-/** Scenarios section heading — "was Sie brauchen" without repeating in cards. */
-export const typickeZakazkyScenariosHeading = "Was wir ansprechen";
+export const typickeZakazkyProcessHeading = "Wie ein Auftrag üblicherweise abläuft";
 
-/** Examples section heading (modal on the same page). */
-export const typickeZakazkyExamplesHeading = "Projektbeispiele aus der Praxis";
+export const typickeZakazkyCasesHeading = "Fallstudien aus der Praxis";
 
-export const typickeZakazkyExamplesIntro =
-  "Kurzgeschichten aus anonymisierten Projekten – sie öffnen sich hier, ohne die Seite zu verlassen.";
+export const typickeZakazkyCasesIntro =
+  "Filtern Sie nach Kategorie oder suchen Sie nach Betrieb, Leistung, Schadstoff oder Behörde. Nach dem Aufklappen sehen Sie Situation, Aufgabe, Vorgehen NATURCHEM, Ergebnis und Verwendung — ohne Kundennamen und sensible Daten.";
+
+export const typickeZakazkyCtaHeading = "Haben Sie ein ähnliches Projekt?";
+
+export const typickeZakazkyCtaText =
+  "Senden Sie uns eine Behördenaufforderung, Betriebserlaubnis, Projektdokumentation, Technologiebeschreibung, Sicherheitsdatenblätter oder frühere Protokolle. Wir prüfen, ob Sie Messungen, eine Studie, ein Gutachten, eine Betriebsanweisung, EIA/JES, ISPOP oder ein anderes Fachdokument benötigen.";
+
+export const typickeZakazkyProvozyLink =
+  "Suchen Sie eher einen Überblick über Betriebstypen? Siehe Betriebe und Technologien.";

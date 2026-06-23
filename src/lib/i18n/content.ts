@@ -48,6 +48,10 @@ export async function getCaseStudyCategories(locale: Locale) {
   return (await loadLocaleContent(locale)).caseStudyCategories;
 }
 
+export async function getCaseStudies(locale: Locale) {
+  return (await loadLocaleContent(locale)).caseStudies;
+}
+
 export async function getCaseStudyCategory(slug: string, locale: Locale) {
   return (await loadLocaleContent(locale)).getCaseStudyCategory(slug);
 }

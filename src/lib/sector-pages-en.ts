@@ -8,7 +8,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     eyebrow: "By facility type",
     heroTitle: "Facilities and technologies — measurement, studies and authority documentation",
     heroLead:
-      "See which facility types we support with measurement, studies and permitting documentation — from boiler plants and paint shops through biogas to recycling, welding shops or outdoor HVAC units.",
+      "Which facility types we support with measurement, studies and documentation — from boiler plants and paint shops through biogas to recycling or HVAC.",
     introHeading: "Manufacturing, energy, agriculture and other sectors",
     introParagraphs: [
       "We work across sectors — from manufacturing and energy through waste and recycling to farms, food processing and site technologies. For each facility type we address measurement, studies and authority documentation in the context of the specific technology, not just a generic service list."

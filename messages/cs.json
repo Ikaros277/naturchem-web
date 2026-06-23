@@ -174,9 +174,9 @@
     "orderCountMany": "{count} zakázek"
   },
   "caseStudies": {
-    "metaTitle": "Typické zakázky – měření, studie, ISPOP a školení",
-    "metaDescription": "Přehled měření, studií a podkladů z praxe NATURCHEM — emise, hygiena, hluk, EIA, ISPOP a typické situace provozů.",
-    "pageTitle": "Typické zakázky",
+    "metaTitle": "Typické zakázky z praxe | Měření emisí, hluku, pracovní prostředí, EIA a ISPOP | NATURCHEM",
+    "metaDescription": "Anonymizované příklady zakázek NATURCHEM: měření emisí, pracovní prostředí, hlukové a rozptylové studie, odborné posudky, EIA/JES, provozní řády a ISPOP.",
+    "pageTitle": "Typické zakázky z praxe",
     "breadcrumb": "Typické zakázky",
     "backLink": "← Zpět na typické zakázky",
     "categoryMetaTitle": "{title} – typy realizovaných zakázek",
@@ -185,7 +185,30 @@
     "intro": "Příklady zadání, ve kterých se propojuje měření, studie, provozní dokumentace a výstupy pro úřady.",
     "exampleCount": "{count} příkladů zakázek",
     "exampleCountAria": "{title} — {count} příkladů",
-    "moreAboutService": "Více o službě: {title}"
+    "moreAboutService": "Více o službě: {title}",
+    "filterOutput": "Typ výstupu",
+    "filterFacility": "Typ provozu",
+    "filterCategory": "Kategorie",
+    "filterAll": "Vše",
+    "filterOutputAria": "Filtrovat podle typu výstupu",
+    "filterFacilityAria": "Filtrovat podle typu provozu",
+    "filterCategoryAria": "Filtrovat podle kategorie případové studie",
+    "searchLabel": "Vyhledávání",
+    "searchPlaceholder": "Název, provoz, služba, škodlivina, úřad nebo štítek…",
+    "resultCount": "Zobrazeno {count} případových studií",
+    "showDetail": "Zobrazit detail",
+    "hideDetail": "Skrýt detail",
+    "fieldFacility": "Typ provozu",
+    "fieldSituation": "Výchozí situace",
+    "fieldChallenge": "Co bylo potřeba vyřešit",
+    "fieldTask": "Co bylo potřeba vyřešit",
+    "fieldApproach": "Postup NATURCHEM",
+    "fieldOutput": "Výstup",
+    "fieldUsedFor": "K čemu slouží výstup",
+    "fieldAuthorities": "Typické úřady",
+    "fieldTags": "Štítky",
+    "relatedServices": "Související služby",
+    "relatedSector": "Typ provozu v katalogu"
   },
   "equipment": {
     "metaTitle": "Přístrojové vybavení NATURCHEM",
@@ -214,7 +237,13 @@
   "sectorsIndex": {
     "sectorCountOne": "1 provoz",
     "sectorCountFew": "{count} provozy",
-    "sectorCountMany": "{count} provozů"
+    "sectorCountMany": "{count} provozů",
+    "serviceTagsLabel": "Štítky služeb",
+    "factorsLabel": "Typické faktory",
+    "relatedServicesLabel": "Související služby",
+    "typicalOrdersLabel": "Typické zakázky z praxe",
+    "detailPageLabel": "Detail provozu",
+    "exampleFromPractice": "Příklad z praxe"
   },
   "homeHero": {
     "ariaLabel": "Úvod",

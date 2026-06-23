@@ -1,65 +1,44 @@
-export type SectorGroup = {
-  id: string;
-  title: string;
-  /** Úvod skupiny na indexu provozů — delší než popisek karty. */
-  intro: string;
-  hrefs: readonly string[];
-};
+import { sectorGroups as csGroups, type SectorGroup } from "./sector-groups";
 
-export const sectorGroups: SectorGroup[] = [
-  {
-    id: "prumysl-vyroba",
+const DE_TEXT: Record<string, Pick<SectorGroup, "title" | "intro">> = {
+  "prumysl-vyroba": {
     title: "Industrie und Fertigung",
     intro:
-      "Lackierereien, Schweißbetriebe, Glaswerke, Holzverarbeitung und Automotive — typischerweise geht es gleichzeitig um Emissionen, Lärm und Arbeitsumfeld. Wählen Sie Ihre Branche und sehen Sie die zugehörigen Leistungen.",
-    hrefs: [
-      "/provozy-a-technologie/lakovny",
-      "/provozy-a-technologie/svarovny",
-      "/provozy-a-technologie/sklarstvi",
-      "/provozy-a-technologie/drevozpracujici",
-      "/provozy-a-technologie/automotive"
-    ]
+      "Lackierereien, Galvanik, Schweißbetriebe, Druckereien, Holzverarbeitung, Glas und Automotive — typischerweise Emissionen, Lärm und Arbeitsumfeld zusammen. Wählen Sie Ihre Branche und sehen Sie Leistungen sowie Beispielaufträge."
   },
-  {
-    id: "energetika-emise",
-    title: "Energie und Emissionsquellen",
+  "energetika-emise": {
+    title: "Energie und Verbrennungsquellen",
     intro:
-      "Heizwerke, Verbrennungsanlagen, Kogeneration und Biogas — Emissionsmessungen, Betriebsnachweise und Anbindung an die Betriebsgenehmigung. Hier finden Sie, was wir für Betreiber und Investoren in der Energiebranche lösen.",
-    hrefs: ["/provozy-a-technologie/kotelny", "/provozy-a-technologie/bioplyn-biometan"]
+      "Kesselanlagen, Verbrennung, KWK, Biogas, Heizwerke und Krematorien — Emissionsmessungen, Betriebsnachweise und Betriebsgenehmigungen."
   },
-  {
-    id: "odpady-recyklace",
-    title: "Abfall und Recycling",
+  "odpady-recyklace": {
+    title: "Abfall, Recycling und Bauvorhaben",
     intro:
-      "Deponien, Recyclinganlagen und Kompostieranlagen — Lärm, Staub, Verkehr und Ausbreitung bei Kapazitätsänderungen oder im Rahmen der EIA. Leistungen für Areale, in denen technische Daten mit der Projektsteuerung zusammenlaufen.",
-    hrefs: ["/provozy-a-technologie/odpady-recyklace"]
+      "Deponien, Recyclingareale, Kompostierung, Bauvorhaben und Steinbrüche — Lärm, Staub, Verkehr und Ausbreitung bei Kapazitätsänderungen oder EIA."
   },
-  {
-    id: "zemedelstvi",
-    title: "Landwirtschaft und Lebensmittelindustrie",
+  zemedelstvi: {
+    title: "Landwirtschaft, Lebensmittel und Trocknung",
     intro:
-      "Landwirtschaftliche Areale, Ställe, Trocknungsanlagen und Betriebe mit Emissionen, Lärm, Gerüchen oder arbeitsbedingten Expositionen. Überblick über Leistungen für Betriebe und Lebensmitteltechnologien in einem Block.",
-    hrefs: ["/provozy-a-technologie/zemedelske-provozy"]
+      "Landwirtschaftliche Betriebe, Ställe, Getreidetrockner und Lebensmittelbetriebe mit Emissionen, Lärm, Gerüchen oder Expositionen."
   },
-  {
-    id: "budovy-vzt",
-    title: "Gebäude, HLK und Technik",
+  "voda-kaly": {
+    title: "Wasser, Schlamm und Kläranlagentechnik",
     intro:
-      "Außeneinheiten von Wärmepumpen, Lüftung, Kühlung und Reinräume in Gebäuden — Lärmbewertung, Messungen und Unterlagen vor der Installation sowie bei Beschwerden.",
-    hrefs: [
-      "/provozy-a-technologie/tepelna-cerpadla-vzt",
-      "/sluzby/pracovni-prostredi"
-    ]
+      "Kläranlagen, Schlammwirtschaft, Schlamm­trocknung, Pyrolyse und Abgasreinigung — Gutachten, Emissionen und Genehmigungsänderungen."
   },
-  {
-    id: "investicni-zamery",
-    title: "Bau- und Investitionsvorhaben",
+  "budovy-vzt": {
+    title: "Gebäude, Dienstleistungen und Arbeitsumfeld",
     intro:
-      "Neue Technologien, Kapazitätsänderungen und Vorhaben in Vorbereitung — EIA, Lärm, Ausbreitung und Unterlagen für Planer und Investoren. Betriebe, die oft schon vor der Inbetriebnahme bearbeitet werden.",
-    hrefs: [
-      "/provozy-a-technologie/automotive",
-      "/provozy-a-technologie/odpady-recyklace",
-      "/provozy-a-technologie/tepelna-cerpadla-vzt"
-    ]
+      "HLK, Wärmepumpen, öffentliche Gebäude, Labore und Betriebe mit Lärm und Vibrationen — Messungen, Studien und Unterlagen für KHS."
+  },
+  "evidence-dokumentace": {
+    title: "Nachweise, Reporting und Betriebsdokumentation",
+    intro:
+      "ISPOP, THG-Reporting, Betriebsanleitungen und Gutachten — Unterlagen für Betreiber von Emissionsquellen und Behörden."
   }
-];
+};
+
+export const sectorGroups: SectorGroup[] = csGroups.map((group) => ({
+  ...group,
+  ...(DE_TEXT[group.id] ?? { title: group.title, intro: group.intro })
+}));

@@ -12,3 +12,12 @@ export function shortenListingExcerpt(text: string, maxSentences = 2): string {
     .join(" ")
     .trim();
 }
+
+/** Jedna věta pro kartu provozu na indexu — bez protáhlého sloupce textu. */
+export function shortenSectorCardLead(text: string, maxLength = 120): string {
+  const lead = shortenListingExcerpt(text, 1);
+  if (lead.length <= maxLength) return lead;
+  const cut = lead.slice(0, maxLength);
+  const space = cut.lastIndexOf(" ");
+  return `${cut.slice(0, space > 80 ? space : maxLength).trimEnd()}…`;
+}

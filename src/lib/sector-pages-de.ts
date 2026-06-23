@@ -6,9 +6,9 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     metadataDescription:
       "Messungen, Studien und Genehmigungsunterlagen für Kesselanlagen, Lackierereien, Biogasanlagen, Schweißereien, Recycling, landwirtschaftliche Betriebe, HVAC und andere Technologien.",
     eyebrow: "Nach Einrichtungstyp",
-    heroTitle: "Einrichtungen und Technologien – Messung, Studien und behördliche Dokumentation",
+    heroTitle: "Betriebe und Technologien – Messung, Studien und Unterlagen für Behörden",
     heroLead:
-      "Sehen Sie, welche Anlagentypen wir mit Messungen, Studien und Genehmigungsunterlagen unterstützen – von Kesselanlagen und Lackierereien über Biogasanlagen bis hin zu Recyclinganlagen, Schweißereien oder HVAC-Außenanlagen.",
+      "Für welche Betriebe wir Messungen, Studien und Unterlagen lösen — von Kesselanlagen und Lackierereien über Biogas bis zu Recycling oder HLK.",
     introHeading: "Fertigung, Energie, Landwirtschaft und andere Sektoren",
     introParagraphs: [
       "Wir arbeiten branchenübergreifend – von der Fertigung und Energie über Abfall und Recycling bis hin zu landwirtschaftlichen Betrieben, Lebensmittelverarbeitung und Standorttechnologien. Für jeden Anlagentyp befassen wir uns mit Messungen, Studien und behördlicher Dokumentation im Kontext der spezifischen Technologie und nicht nur mit einer allgemeinen Serviceliste."

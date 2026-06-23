@@ -1,116 +1,85 @@
-import type { Sector } from "./sectors";
+import { sectors, type Sector } from "./sectors";
 
-export const provozyNavLabelEn = "Einrichtungen und Technologien";
+export const provozyNavLabelDe = "Betriebe und Technologien";
 
-export const sectorsEn: Sector[] = [
-  {
-    title: "Kesselanlagen und Verbrennungsquellen",
-    href: "/provozy-a-technologie/kotelny",
-    homeFeatured: true,
-    description:
-      "Wir messen Emissionen und erstellen Dokumentationen für Kesselanlagen, Brenner und Kraft-Wärme-Kopplung – einschließlich ISPOP und Betriebsgenehmigungen.",
-    typical: "NOx, CO, O₂, TSP, Betriebsarten, ISPOP, Gutachten, Betriebsgenehmigungen",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für Kesselanlagen und Verbrennungsquellen an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
-  },
-  {
-    title: "Biogasanlagen und Blockheizkraftwerke",
-    href: "/provozy-a-technologie/bioplyn-biometan",
-    homeFeatured: true,
-    description:
-      "Motoremissionen, Lärm, Ausbreitung und UVP für Biogas und Kraft-Wärme-Kopplung – koordinierte Behördenverbindung in einem Sektor.",
-    typical: "Emissionsmessung, Ausbreitungsstudien, Lärmstudien, EIA, ČIŽP, ISPOP",
-    ariaLabel: "Leistungen für Biogasanlagen und Blockheizkraftwerke ansehen",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
-  },
-  {
-    title: "Landwirtschaftliche Betriebe und Trockner",
-    href: "/provozy-a-technologie/zemedelske-provozy",
-    homeFeatured: true,
-    description:
-      "Stallgebäude, Trockner und Standorte – Emissionen, Lärm, Arbeitsplätze und Genehmigungsunterlagen für KHS und regionale Behörden.",
-    typical: "Emissionen, Lärm, Arbeitsplatzumgebung, Ausbreitungsstudien, UVP, Genehmigungsdokumentation",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für landwirtschaftliche Betriebe und Trockner an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
-  },
-  {
+type SectorText = Pick<
+  Sector,
+  "title" | "description" | "serviceTags" | "factors" | "ariaLabel" | "linkHint"
+>;
+
+const DE: Partial<Record<string, SectorText>> = {
+  lakovny: {
     title: "Lackierereien und Oberflächenbehandlung",
-    href: "/provozy-a-technologie/lakovny",
-    homeFeatured: true,
     description:
-      "VOC/TOC, Absaugung und Arbeitsplatzexposition an Lackierstraßen – Protokolle für regionale Behörden und ČIŽP.",
-    typical:
-      "VOC/TOC, TSP, Datenblätter der Beschichtungsstoffe, Betriebsanleitung, Dispersionsstudien",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für Lackierereien und Oberflächenbehandlung an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
+      "Für Lackierereien bearbeiten wir TOC/VOC-Messungen, Beschichtungsverbrauch, Datenblätter, Lackierkabinen, Trocknung, Strahlen, Filter, Aktivkohle, Absaugung, Betriebsanleitungen und Anbindung an Betriebsgenehmigungen.",
+    serviceTags: "Emissionen, VOC/TOC, Arbeitsumfeld, Betriebsanleitung, ČIŽP, Krajs",
+    factors: "VOC, TOC, TSP, Lösemittel, Absaugung, Filtration",
+    ariaLabel: "Leistungen für Lackierereien anzeigen",
+    linkHint: "Leistungen für diesen Betriebstyp anzeigen"
   },
-  {
-    title: "Holzverarbeitungsbetriebe",
-    href: "/provozy-a-technologie/drevozpracujici",
+  kotelny: {
+    title: "Kesselanlagen und Verbrennungsquellen",
     description:
-      "Sägewerke und Tischlereien – Staub, TSP, Biomasse-Emissionen und Dokumentation für KHS und regionale Behörden.",
-    typical: "TSP, Staub, Lärm, Emissionen aus Verbrennungsquellen, Arbeitsumgebung, KHS und regionale Behörden",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für Holzverarbeitungsbetriebe an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
+      "Für Kesselanlagen bearbeiten wir CO-, NOx-, O₂-, TSP- und SO₂-Messungen, ISPOP, Betriebsanleitungen und Betriebsgenehmigungen.",
+    serviceTags: "Emissionen, ISPOP, Betriebsanleitung, Gutachten, ČIŽP",
+    factors: "CO, NOx, O₂, TSP, SO₂, feste Brennstoffe, Gase",
+    ariaLabel: "Leistungen für Kesselanlagen anzeigen",
+    linkHint: "Leistungen für diesen Betriebstyp anzeigen"
   },
-  {
-    title: "Abfall, Deponien, Recycling und Kompostierung",
-    href: "/provozy-a-technologie/odpady-recyklace",
-    homeFeatured: true,
+  "bioplyn-biometan": {
+    title: "Biogasanlagen und Blockheizkraftwerke",
     description:
-      "Recycling, Deponien und Kompostierung – UVP, Lärm, Ausbreitung und Betriebsdokumentation bei Kapazitätsänderungen.",
-    typical: "UVP, Lärmstudien, Ausbreitungsstudien, Transport, Staub, Betriebsdokumentation",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für Abfall, Deponierung, Recycling und Kompostierung an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
+      "Für Biogas und KWK bearbeiten wir Motoremissionen, Ausbreitung, Lärm, EIA, ISPOP und Betriebsgenehmigungen.",
+    serviceTags: "Emissionen, Ausbreitungsstudien, Lärmstudien, EIA, ISPOP",
+    factors: "Motoremissionen, KWK, Katalysator, Methan, NOx",
+    ariaLabel: "Leistungen für Biogasanlagen anzeigen",
+    linkHint: "Leistungen für diesen Betriebstyp anzeigen"
   },
-  {
-    title: "Automobil- und technische Textilien",
-    href: "/provozy-a-technologie/automotive",
+  svarovny: {
+    title: "Schweißbetriebe und Metallverarbeitung",
     description:
-      "Komponenten- und Textilherstellung – Emissionen, chemische Stoffe, Lärm und Dokumentation für Investoren und Behörden.",
-    typical: "chemische Substanzen, VOC, Luft am Arbeitsplatz, Lärm, Technologie, UVP und Investorendokumentation",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für Automobil- und technische Textilien an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
+      "In Schweißbetrieben bearbeiten wir Schweißrauch, Metalle, Lärm, Absaugung, Mikroklima und Einstufung der Arbeiten für KHS.",
+    serviceTags: "Arbeitsumfeld, Emissionen, Einstufung der Arbeiten, KHS",
+    factors: "Schweißrauch, Metalle, NOx, Ozon, Lärm, Staub",
+    ariaLabel: "Leistungen für Schweißbetriebe anzeigen",
+    linkHint: "Leistungen für diesen Betriebstyp anzeigen"
   },
-  {
-    title: "Schweißereien und Metallverarbeitung",
-    href: "/provozy-a-technologie/svarovny",
-    homeFeatured: true,
+  "odpady-recyklace": {
+    title: "Recyclinganlagen, Brecher, Sortierer und Lagerflächen",
     description:
-      "Staub, Metalle, Lärm und Absaugung in Schweißereien – Messungen zur Berufseinstufung und Arbeitsschutz.",
-    typical: "Metalle, Staub, NOx, Ozon, lokale Absaugung, Berufseinteilung, Lärm",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für Schweißbetriebe und Metallverarbeitung an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
+      "Für Recyclingareale bearbeiten wir Lärm, Staub, Ausbreitung, Verkehr und EIA bei Kapazitätsänderungen.",
+    serviceTags: "EIA, Lärmstudien, Ausbreitungsstudien, Gutachten",
+    factors: "Lärm, Staub, Verkehr, Immissionen, Kapazität",
+    ariaLabel: "Leistungen für Recycling anzeigen",
+    linkHint: "Leistungen für diesen Betriebstyp anzeigen"
   },
-  {
-    title: "Glas- und Keramikbetriebe",
-    href: "/provozy-a-technologie/sklarstvi",
+  "tepelna-cerpadla-vzt": {
+    title: "HLK, Kühlung und Wärmepumpen",
     description:
-      "Ofenquellen und Schornsteine ​​– Emissionen, Dispersion und Betriebshandbücher für Glasbetriebe.",
-    typical: "Emissionen, Schornsteine, Filterung, Messstellen, Gutachten, Betriebsanleitungen",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für Glas- und Keramikbetriebe an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
-  },
-  {
-    title: "HVAC, Kühlung und Wärmepumpen",
-    href: "/provozy-a-technologie/tepelna-cerpadla-vzt",
-    description:
-      "Lärm von Außengeräten und HVAC – Messung, Studien und Maßnahmen vor der Belegungsgenehmigung und bei Beschwerden.",
-    typical: "Lärmmessung, Lärmstudien, Maßnahmenplanung, Belegungsgenehmigung, Beschwerden, KHS",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für HVAC, Kühlung und Wärmepumpen an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
-  },
-  {
-    title: "Gesundheitswesen, Labore und Reinräume",
-    href: "/sluzby/pracovni-prostredi",
-    description:
-      "Labore und Reinräume – Mikroklima, Stoffe und Dokumentation für KHS.",
-    typical: "Reinräume, Mikroklima, Beleuchtung, chemische Stoffe, Dokumentation für KHS",
-    ariaLabel: "Sehen Sie sich Dienstleistungen für das Gesundheitswesen, Labore und Reinräume an",
-    linkHint: "Dienste für diesen Einrichtungstyp anzeigen"
+      "Für HLK und Wärmepumpen bearbeiten wir Lärm von Außeneinheiten, Messungen, Studien und Maßnahmen vor Abnahme und bei Beschwerden.",
+    serviceTags: "Lärmstudien, Lärmmessung, KHS, Bauamt",
+    factors: "Lärm, HLK, Kühlung, Wärmepumpen, Nachtbetrieb",
+    ariaLabel: "Leistungen für HLK anzeigen",
+    linkHint: "Leistungen für diesen Betriebstyp anzeigen"
   }
-];
+};
 
-export const homeSectorsEn = sectorsEn
+function localizeSector(sector: Sector): Sector {
+  const text = DE[sector.id];
+  if (!text) return sector;
+  return {
+    ...sector,
+    ...text,
+    typical: `${text.serviceTags}; ${text.factors}`
+  };
+}
+
+export const sectorsDe: Sector[] = sectors.map(localizeSector);
+
+export const homeSectorsDe = sectorsDe
   .filter((s) => s.homeFeatured)
   .map((s) => ({ title: s.title, href: s.href }));
+
+export const sectorsEn = sectorsDe;
+export const provozyNavLabelEn = provozyNavLabelDe;
+export const homeSectorsEn = homeSectorsDe;

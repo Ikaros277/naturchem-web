@@ -7,10 +7,12 @@ type Props = {
   id: string;
   className?: string;
   ariaLabel: string;
-  icon: ReactNode;
+  icon?: ReactNode;
+  visual?: ReactNode;
   title: string;
   countLabel: string;
   intro?: string;
+  summaryExtra?: ReactNode;
   expandClosed: string;
   expandOpen: string;
   open: boolean;
@@ -23,9 +25,11 @@ export function AccordionIndexDetails({
   className = "card service-group-details",
   ariaLabel,
   icon,
+  visual,
   title,
   countLabel,
   intro,
+  summaryExtra,
   expandClosed,
   expandOpen,
   open,
@@ -40,12 +44,13 @@ export function AccordionIndexDetails({
       onToggle={(event) => onToggle(event.currentTarget.open)}
     >
       <summary className="service-group-summary" aria-label={ariaLabel}>
-        {icon}
+        {visual ?? icon}
         <div className="service-group-summary-text">
           <div className="service-group-summary-title-row">
             <h2>{title}</h2>
             <span className="service-group-count muted">{countLabel}</span>
           </div>
+          {summaryExtra}
           {intro ? <p className="muted service-group-intro">{intro}</p> : null}
         </div>
         <span className="service-group-expand" aria-hidden="true">

@@ -174,9 +174,9 @@
     "orderCountMany": "{count} Projekte"
   },
   "caseStudies": {
-    "metaTitle": "Typische Projekte – Messungen, Studien, ISPOP und Schulungen",
-    "metaDescription": "Überblick über Messungen, Studien und Dokumentation aus der NATURCHEM-Praxis — Emissionen, Hygiene, Lärm, EIA, ISPOP und typische Betriebssituationen.",
-    "pageTitle": "Typische Projekte",
+    "metaTitle": "Typische Projekte aus der Praxis | Emissionen, Lärm, Arbeitsumfeld, EIA und ISPOP | NATURCHEM",
+    "metaDescription": "Anonymisierte NATURCHEM-Projektbeispiele: Emissionsmessungen, Arbeitsumfeld, Lärm- und Ausbreitungsstudien, Gutachten, EIA/JES, Betriebsanleitungen und ISPOP.",
+    "pageTitle": "Typische Projekte aus der Praxis",
     "breadcrumb": "Typische Projekte",
     "backLink": "← Zurück zu typischen Projekten",
     "categoryMetaTitle": "{title} – Arten abgeschlossener Projekte",
@@ -185,7 +185,30 @@
     "intro": "Beispiele für Aufträge, die Messungen, Studien, Betriebsdokumentation und Ergebnisse für Behörden kombinieren.",
     "exampleCount": "{count} Projektbeispiele",
     "exampleCountAria": "{title} — {count} Beispiele",
-    "moreAboutService": "Mehr zu: {title}"
+    "moreAboutService": "Mehr zu: {title}",
+    "filterOutput": "Ergebnistyp",
+    "filterFacility": "Betriebstyp",
+    "filterCategory": "Kategorie",
+    "filterAll": "Alle",
+    "filterOutputAria": "Nach Ergebnistyp filtern",
+    "filterFacilityAria": "Nach Betriebstyp filtern",
+    "filterCategoryAria": "Nach Fallstudien-Kategorie filtern",
+    "searchLabel": "Suche",
+    "searchPlaceholder": "Titel, Betrieb, Leistung, Schadstoff, Behörde oder Tag…",
+    "resultCount": "{count} Fallstudien angezeigt",
+    "showDetail": "Detail anzeigen",
+    "hideDetail": "Detail ausblenden",
+    "fieldFacility": "Betriebstyp",
+    "fieldSituation": "Ausgangssituation",
+    "fieldChallenge": "Was zu lösen war",
+    "fieldTask": "Was zu lösen war",
+    "fieldApproach": "Vorgehen NATURCHEM",
+    "fieldOutput": "Ergebnis",
+    "fieldUsedFor": "Wofür das Ergebnis dient",
+    "fieldAuthorities": "Typische Behörden",
+    "fieldTags": "Tags",
+    "relatedServices": "Zugehörige Leistungen",
+    "relatedSector": "Betriebstyp im Katalog"
   },
   "equipment": {
     "metaTitle": "NATURCHEM Laborausstattung",
@@ -214,7 +237,13 @@
   "sectorsIndex": {
     "sectorCountOne": "1 Betriebstyp",
     "sectorCountFew": "{count} Betriebstypen",
-    "sectorCountMany": "{count} Betriebstypen"
+    "sectorCountMany": "{count} Betriebstypen",
+    "serviceTagsLabel": "Leistungs-Tags",
+    "factorsLabel": "Typische Faktoren",
+    "relatedServicesLabel": "Zugehörige Leistungen",
+    "typicalOrdersLabel": "Typische Projekte aus der Praxis",
+    "detailPageLabel": "Betriebsdetail",
+    "exampleFromPractice": "Praxisbeispiel"
   },
   "homeHero": {
     "ariaLabel": "Einführung",

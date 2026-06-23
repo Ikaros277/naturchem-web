@@ -36,19 +36,21 @@ export function isSectorDetailPage(data: SectorPageData): data is SectorDetailPa
 
 export const sectorPages: Record<string, SectorPageData> = {
   index: {
-    metadataTitle: "Provozy a technologie – měření, studie a povolovací podklady",
+    metadataTitle:
+      "Provozy a technologie | Měření emisí, hluku, pracovního prostředí, EIA a posudky | NATURCHEM",
     metadataDescription:
-      "Měření, studie a povolovací podklady pro kotelny, lakovny, bioplynové stanice, svařovny, recyklaci, zemědělské provozy, VZT a další technologie.",
+      "Přehled provozů a technologií, pro které NATURCHEM zajišťuje měření emisí, hluku, pracovního prostředí, rozptylové a hlukové studie, odborné posudky, EIA/JES, provozní řády a ISPOP.",
     eyebrow: "Podle typu provozu",
     heroTitle: "Provozy a technologie — měření, studie a podklady pro úřad",
     heroLead:
-      "Podívejte se, pro které provozy u nás řešíme měření, studie a povolovací podklady — od kotelny a lakovny přes bioplyn až po recyklaci, svařovnu nebo venkovní jednotku VZT.",
-    introHeading: "Výroba, energetika, zemědělství a další obory",
+      "Pro které provozy řešíme měření, studie a podklady — od kotelny a lakovny přes bioplyn až po recyklaci nebo VZT.",
+    introHeading: "Najděte svůj typ provozu",
     introParagraphs: [
-      "Pracujeme napříč odvětvími — od výroby a energetiky přes odpady a recyklaci až po farmy, potravinářství a technologie v areálech. U každého typu provozu řešíme měření, studie i podklady pro úřad v kontextu konkrétní technologie, ne jen obecný seznam služeb."
+      "Na této stránce rychle zjistíte, zda váš typ provozu spadá do oblasti, kterou řešíme, a jaké služby s ním typicky souvisejí. U každého provozu najdete štítky služeb, typické faktory a odkazy na anonymizované příklady zakázek z praxe.",
+      "Jde o přehled typů provozů a technologií — ne o případové studie. Konkrétní anonymizované scénáře zakázek najdete na stránce Typické zakázky."
     ],
     introMuted:
-      "Najděte obor, který je vám nejblíž — u provozu uvidíte typické situace, související služby a jak u vás zakázka obvykle proběhne.",
+      "U provozů s vlastní detailní stránkou uvidíte také typické situace, dokumentaci a postup zakázky. U ostatních provozů vás odkážeme na související služby a příklady z praxe.",
     assessmentHeading: "Nejste si jistí, kam váš provoz zařadit?",
     assessmentIntro:
       "Pošlete nám stručný popis provozu, technologii, požadavek úřadu nebo projektovou dokumentaci. Podle situace určíme, zda je potřeba měření, studie, odborný posudek, provozní řád nebo jiný podklad.",

@@ -7,7 +7,7 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import { contactFormHref } from "@/lib/contact-url";
 import { SemanticCard } from "@/components/SemanticCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import type { CaseStudy, CaseStudyCategory } from "@/lib/case-studies";
+import type { CaseStudyCategory, LegacyCaseStudy } from "@/lib/case-studies";
 
 type Props = {
   category?: CaseStudyCategory;
@@ -70,7 +70,7 @@ function CaseCard({
   serviceHref,
   outputLabel
 }: {
-  item: CaseStudy;
+  item: LegacyCaseStudy;
   serviceHref?: string;
   outputLabel: string;
 }) {

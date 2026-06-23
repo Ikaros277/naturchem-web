@@ -174,9 +174,9 @@
     "orderCountMany": "{count} projects"
   },
   "caseStudies": {
-    "metaTitle": "Typical projects – measurements, studies, ISPOP and training",
-    "metaDescription": "Overview of measurements, studies and documentation from NATURCHEM practice — emissions, hygiene, noise, EIA, ISPOP and typical operation situations.",
-    "pageTitle": "Typical projects",
+    "metaTitle": "Typical projects from practice | Emissions, noise, workplace, EIA and ISPOP | NATURCHEM",
+    "metaDescription": "Anonymised NATURCHEM project examples: emission measurements, workplace environment, noise and dispersion studies, expert assessments, EIA/EIA screening, operating manuals and ISPOP.",
+    "pageTitle": "Typical projects from practice",
     "breadcrumb": "Typical projects",
     "backLink": "← Back to typical projects",
     "categoryMetaTitle": "{title} – types of completed projects",
@@ -185,7 +185,30 @@
     "intro": "Examples of assignments combining measurements, studies, operating documentation and outputs for authorities.",
     "exampleCount": "{count} project examples",
     "exampleCountAria": "{title} — {count} examples",
-    "moreAboutService": "More about: {title}"
+    "moreAboutService": "More about: {title}",
+    "filterOutput": "Output type",
+    "filterFacility": "Facility type",
+    "filterCategory": "Category",
+    "filterAll": "All",
+    "filterOutputAria": "Filter by output type",
+    "filterFacilityAria": "Filter by facility type",
+    "filterCategoryAria": "Filter by case study category",
+    "searchLabel": "Search",
+    "searchPlaceholder": "Title, facility, service, pollutant, authority or tag…",
+    "resultCount": "Showing {count} case studies",
+    "showDetail": "Show detail",
+    "hideDetail": "Hide detail",
+    "fieldFacility": "Facility type",
+    "fieldSituation": "Initial situation",
+    "fieldChallenge": "What needed to be resolved",
+    "fieldTask": "What needed to be resolved",
+    "fieldApproach": "NATURCHEM approach",
+    "fieldOutput": "Output",
+    "fieldUsedFor": "What the output is used for",
+    "fieldAuthorities": "Typical authorities",
+    "fieldTags": "Tags",
+    "relatedServices": "Related services",
+    "relatedSector": "Facility type in catalogue"
   },
   "equipment": {
     "metaTitle": "NATURCHEM laboratory equipment",
@@ -214,7 +237,13 @@
   "sectorsIndex": {
     "sectorCountOne": "1 facility type",
     "sectorCountFew": "{count} facility types",
-    "sectorCountMany": "{count} facility types"
+    "sectorCountMany": "{count} facility types",
+    "serviceTagsLabel": "Service tags",
+    "factorsLabel": "Typical factors",
+    "relatedServicesLabel": "Related services",
+    "typicalOrdersLabel": "Typical projects from practice",
+    "detailPageLabel": "Facility detail",
+    "exampleFromPractice": "Practice example"
   },
   "homeHero": {
     "ariaLabel": "Introduction",

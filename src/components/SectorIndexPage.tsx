@@ -3,7 +3,7 @@ import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { SectorGroupsIndex } from "@/components/SectorGroupsIndex";
 import { JsonLd } from "@/components/Schema";
 import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
-import { getProvozyNavLabel, getSectorPage, getSectors } from "@/lib/i18n/content";
+import { getCaseStudies, getProvozyNavLabel, getSectorPage, getSectors, getSiteServices } from "@/lib/i18n/content";
 import { getSectorGroups } from "@/lib/i18n/sector-groups-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { localizedCanonical } from "@/lib/i18n/metadata-helpers";
@@ -25,7 +25,9 @@ export async function SectorIndexPage({ locale }: Props) {
 
   const sectors = await getSectors(locale);
   const sectorGroups = await getSectorGroups(locale);
+  const caseStudies = await getCaseStudies(locale);
   const provozyNavLabel = await getProvozyNavLabel(locale);
+  const siteServices = await getSiteServices(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
   const messages = await getMessages(locale);
   const homeLabel = messages.common.breadcrumbHome;
@@ -91,7 +93,17 @@ export async function SectorIndexPage({ locale }: Props) {
         <p className="muted">{indexData.introMuted}</p>
       </section>
 
-      <SectorGroupsIndex sectors={sectors} locale={locale} sectorGroups={sectorGroups} />
+      <SectorGroupsIndex
+        sectors={sectors}
+        locale={locale}
+        sectorGroups={sectorGroups}
+        caseStudies={caseStudies}
+        serviceTitles={siteServices.map((service) => ({ href: service.href, title: service.title }))}
+        sectorCardLabels={{
+          detailPage: messages.sectorsIndex.detailPageLabel,
+          exampleFromPractice: messages.sectorsIndex.exampleFromPractice
+        }}
+      />
 
       <section className="section content-block container" aria-labelledby="sector-assessment-heading">
         <h2 id="sector-assessment-heading">{indexData.assessmentHeading}</h2>

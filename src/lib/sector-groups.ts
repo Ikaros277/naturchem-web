@@ -3,7 +3,7 @@ export type SectorGroup = {
   title: string;
   /** Úvod skupiny na indexu provozů — delší než popisek karty. */
   intro: string;
-  hrefs: readonly string[];
+  sectorIds: readonly string[];
 };
 
 export const sectorGroups: SectorGroup[] = [
@@ -11,55 +11,68 @@ export const sectorGroups: SectorGroup[] = [
     id: "prumysl-vyroba",
     title: "Průmysl a výroba",
     intro:
-      "Lakovny, svařovny, sklářství, dřevozpracující provozy i automotive — typicky řešíte emise, hluk i pracovní prostředí najednou. Vyberte svůj obor a uvidíte související služby.",
-    hrefs: [
-      "/provozy-a-technologie/lakovny",
-      "/provozy-a-technologie/svarovny",
-      "/provozy-a-technologie/sklarstvi",
-      "/provozy-a-technologie/drevozpracujici",
-      "/provozy-a-technologie/automotive"
+      "Lakovny, galvanovny, svařovny, tiskárny, dřevozpracující provozy, sklářství i automotive — typicky řešíte emise, hluk i pracovní prostředí najednou. Vyberte svůj obor a uvidíte související služby i typické zakázky z praxe.",
+    sectorIds: [
+      "lakovny",
+      "galvanovny",
+      "svarovny",
+      "tiskarny-textilie",
+      "drevozpracujici",
+      "sklarstvi",
+      "automotive"
     ]
   },
   {
     id: "energetika-emise",
-    title: "Energetika a zdroje emisí",
+    title: "Energetika a spalovací zdroje",
     intro:
-      "Kotelny, spalovací zdroje, kogenerace a bioplyn — měření emisí, provozní evidence a návaznost na povolení provozu. Najdete zde, co řešíme pro provozovatele i investory v energetice.",
-    hrefs: ["/provozy-a-technologie/kotelny", "/provozy-a-technologie/bioplyn-biometan"]
+      "Kotelny, spalovací zdroje, kogenerace, bioplyn, teplárny i krematoria — měření emisí, provozní evidence a návaznost na povolení provozu.",
+    sectorIds: ["kotelny", "bioplyn-biometan", "teplarny", "krematoria"]
   },
   {
     id: "odpady-recyklace",
-    title: "Odpady a recyklace",
+    title: "Odpady, recyklace a stavební záměry",
     intro:
-      "Skládky, recyklační areály a kompostárny — hluk, prašnost, doprava a rozptyl při změně kapacity nebo v EIA. Služby pro areály, kde se skládají technická data s řízením záměru.",
-    hrefs: ["/provozy-a-technologie/odpady-recyklace"]
+      "Skládky, recyklační areály, kompostárny, stavební záměry i kamenolomy — hluk, prašnost, doprava a rozptyl při změně kapacity nebo v EIA.",
+    sectorIds: [
+      "skladky-odpady",
+      "odpady-recyklace",
+      "kompostarny",
+      "stavebni-zamery",
+      "kamenolomy"
+    ]
   },
   {
     id: "zemedelstvi",
-    title: "Zemědělství a potravinářství",
+    title: "Zemědělství, potravinářství a sušárny",
     intro:
-      "Zemědělské areály, stáje, sušárny a provozy s emisemi, hlukem, pachem nebo pracovní expozicí. Přehled služeb pro farmy a potravinářské technologie v jednom bloku.",
-    hrefs: ["/provozy-a-technologie/zemedelske-provozy"]
+      "Zemědělské areály, stáje, sušárny obilí a biomasy i potravinářské provozy s emisemi, hlukem, pachem nebo pracovní expozicí.",
+    sectorIds: ["zemedelske-provozy", "susarny-zemedelstvi", "potravinarstvi"]
+  },
+  {
+    id: "voda-kaly",
+    title: "Voda, kaly a čistírenské technologie",
+    intro:
+      "ČOV, kalové hospodářství, sušárny kalů, pyrolýza a technologie čištění spalin — odborné podklady, emise a změny povolení provozu.",
+    sectorIds: ["cov-kaly", "susarny-kalu", "pyrolyza-kalu", "cisteni-spalin"]
   },
   {
     id: "budovy-vzt",
-    title: "Budovy, VZT a technologie",
+    title: "Budovy, služby a pracovní prostředí",
     intro:
-      "Venkovní jednotky tepelných čerpadel, vzduchotechnika, chlazení i čisté prostory v objektech — hlukové posouzení, měření a podklady před instalací i při stížnostech.",
-    hrefs: [
-      "/provozy-a-technologie/tepelna-cerpadla-vzt",
-      "/sluzby/pracovni-prostredi"
+      "VZT, tepelná čerpadla, veřejné budovy, laboratoře i provozy s hlukem a vibracemi — měření, studie a podklady pro KHS.",
+    sectorIds: [
+      "tepelna-cerpadla-vzt",
+      "verejne-budovy",
+      "laboratore",
+      "lesnictvi-doprava"
     ]
   },
   {
-    id: "investicni-zamery",
-    title: "Stavební a investiční záměry",
+    id: "evidence-dokumentace",
+    title: "Evidence, reporting a provozní dokumentace",
     intro:
-      "Nové technologie, změny kapacity a záměry v přípravě — EIA, hluk, rozptyl a podklady pro projektanty i investory. Provozy, které často řešíte ještě před spuštěním provozu.",
-    hrefs: [
-      "/provozy-a-technologie/automotive",
-      "/provozy-a-technologie/odpady-recyklace",
-      "/provozy-a-technologie/tepelna-cerpadla-vzt"
-    ]
+      "ISPOP, GHG reporting, provozní řády a odborné posudky — podklady pro provozovatele zdrojů a plnění povinností vůči úřadům.",
+    sectorIds: ["ispop-evidence", "ghg-cnr", "provozni-rady", "odborne-posudky-povoleni"]
   }
 ];

@@ -1,22 +1,19 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
-import { CaseStudiesCategoryGrid } from "@/components/CaseStudiesCategoryGrid";
-import { PageCtaStrip } from "@/components/PageCtaStrip";
+import { CaseStudiesHub } from "@/components/CaseStudiesHub";
+import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
-import { TypicalScenarios } from "@/components/TypicalScenarios";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
-import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
-import {
-  getCaseStudyCategories,
-  getTypickeZakazkyContent,
-  getTypicalScenarios
-} from "@/lib/i18n/content";
+import { getCaseStudies, getSiteServices, getTypickeZakazkyContent } from "@/lib/i18n/content";
 import { getWorkProcessCopy } from "@/lib/i18n/work-process-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
-import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { localizedCanonical, pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
+import { company } from "@/lib/site";
+import { contactFormHref } from "@/lib/contact-url";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -40,13 +37,49 @@ export default async function TypickeZakazkyPage({ params }: Props) {
   const messages = await getMessages(locale);
   const content = await getTypickeZakazkyContent(locale);
   const workProcess = getWorkProcessCopy(locale);
-  const categories = await getCaseStudyCategories(locale);
-  const scenarios = await getTypicalScenarios(locale);
-  const pageCtaPresets = getPageCtaPresets(locale);
+  const caseStudies = await getCaseStudies(locale);
+  const siteServices = await getSiteServices(locale);
   const link = (href: string) => localizeHref(href, locale);
+  const pageUrl = localizedCanonical("/typicke-zakazky", locale);
+
+  const webPageData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: messages.caseStudies.pageTitle,
+    url: pageUrl,
+    description: messages.caseStudies.metaDescription
+  };
+
+  const itemListData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: caseStudies.map((study, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: study.title,
+      url: `${pageUrl}#${study.id}`
+    }))
+  };
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: messages.common.breadcrumbHome,
+        item: localizedCanonical("/", locale)
+      },
+      { "@type": "ListItem", position: 2, name: messages.caseStudies.breadcrumb, item: pageUrl }
+    ]
+  };
 
   return (
     <main className="section premium-page typicke-zakazky-page">
+      <JsonLd data={webPageData} />
+      <JsonLd data={itemListData} />
+      <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}
         theme={getPageHeroTheme("/typicke-zakazky")}
@@ -63,23 +96,40 @@ export default async function TypickeZakazkyPage({ params }: Props) {
       </PageHeroBand>
 
       <section className="section content-block container page-first-section typicke-zakazky-process">
-        <h2>{workProcess.heading}</h2>
+        <h2>{content.typickeZakazkyProcessHeading}</h2>
         <p className="muted section-intro">{workProcess.intro}</p>
         <WorkProcessTimeline steps={workProcess.steps} processAria={messages.common.cooperationProcess} />
       </section>
 
-      <section className="section content-block container">
-        <h2>{content.typickeZakazkyScenariosHeading}</h2>
-        <TypicalScenarios scenarios={scenarios} locale={locale} />
+      <section className="section content-block container" aria-labelledby="case-studies-heading">
+        <h2 id="case-studies-heading">{content.typickeZakazkyCasesHeading}</h2>
+        <p className="muted section-intro">{content.typickeZakazkyCasesIntro}</p>
+        <p className="typicke-zakazky-crosslink">
+          <Link href={link("/provozy-a-technologie")} className="text-link">
+            {content.typickeZakazkyProvozyLink}
+          </Link>
+        </p>
+        <CaseStudiesHub
+          locale={locale}
+          caseStudies={caseStudies}
+          serviceTitles={siteServices.map((service) => ({ href: service.href, title: service.title }))}
+        />
       </section>
 
-      <section className="section content-block container">
-        <h2>{content.typickeZakazkyExamplesHeading}</h2>
-        <p className="muted section-intro">{content.typickeZakazkyExamplesIntro}</p>
-        <CaseStudiesCategoryGrid categories={categories} />
+      <section className="section content-block container typicke-zakazky-cta">
+        <h2>{content.typickeZakazkyCtaHeading}</h2>
+        <p className="section-intro">{content.typickeZakazkyCtaText}</p>
+        <p className="typicke-zakazky-contact">
+          <a href={`mailto:${company.email}`}>{company.email}</a>
+          <span aria-hidden="true"> · </span>
+          <a href={`tel:${company.phones[0]?.replace(/\s/g, "")}`}>{company.phones[0]}</a>
+        </p>
+        <div className="btn-row">
+          <Link href={link(contactFormHref)} className="button">
+            {messages.common.requestService}
+          </Link>
+        </div>
       </section>
-
-      <PageCtaStrip {...pageCtaPresets.typicalOrders} className="container" />
     </main>
   );
 }

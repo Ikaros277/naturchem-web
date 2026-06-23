@@ -5,7 +5,7 @@ import { LocaleLink } from "@/lib/i18n/locale-link";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { contactFormHref } from "@/lib/contact-url";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import type { CaseStudy, CaseStudyCategory } from "@/lib/case-studies";
+import type { CaseStudyCategory, LegacyCaseStudy } from "@/lib/case-studies";
 
 type Props = {
   categories: CaseStudyCategory[];
@@ -112,7 +112,7 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
   );
 }
 
-function CaseStudyDetail({ item, outputLabel }: { item: CaseStudy; outputLabel: string }) {
+function CaseStudyDetail({ item, outputLabel }: { item: LegacyCaseStudy; outputLabel: string }) {
   return (
     <article className="card case-study-detail-card">
       <h3>{item.title}</h3>

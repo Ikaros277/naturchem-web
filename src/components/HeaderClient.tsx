@@ -422,7 +422,8 @@ export function HeaderClient({
         ) : (
           <>
             <LocaleLink className="button nav-cta-mobile" href={contactFormHref}>
-              {t.cta}
+              <span className="nav-cta-mobile-full">{t.cta}</span>
+              <span className="nav-cta-mobile-short">{t.ctaShort}</span>
             </LocaleLink>
             <button
               ref={mobileToggleRef}

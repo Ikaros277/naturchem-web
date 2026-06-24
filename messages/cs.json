@@ -174,9 +174,9 @@
     "orderCountMany": "{count} zakázek"
   },
   "caseStudies": {
-    "metaTitle": "Typické zakázky z praxe | Měření emisí, hluku, pracovní prostředí, EIA a ISPOP | NATURCHEM",
+    "metaTitle": "Typické zakázky, které řešíme | Měření emisí, hluku, pracovní prostředí, EIA a ISPOP | NATURCHEM",
     "metaDescription": "Anonymizované příklady zakázek NATURCHEM: měření emisí, pracovní prostředí, hlukové a rozptylové studie, odborné posudky, EIA/JES, provozní řády a ISPOP.",
-    "pageTitle": "Typické zakázky z praxe",
+    "pageTitle": "Typické zakázky, které řešíme",
     "breadcrumb": "Typické zakázky",
     "backLink": "← Zpět na typické zakázky",
     "categoryMetaTitle": "{title} – typy realizovaných zakázek",
@@ -241,7 +241,7 @@
     "serviceTagsLabel": "Štítky služeb",
     "factorsLabel": "Typické faktory",
     "relatedServicesLabel": "Související služby",
-    "typicalOrdersLabel": "Typické zakázky z praxe",
+    "typicalOrdersLabel": "Typické zakázky, které řešíme",
     "detailPageLabel": "Detail provozu",
     "exampleFromPractice": "Příklad z praxe"
   },

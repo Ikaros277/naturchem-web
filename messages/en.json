@@ -174,9 +174,9 @@
     "orderCountMany": "{count} projects"
   },
   "caseStudies": {
-    "metaTitle": "Typical projects from practice | Emissions, noise, workplace, EIA and ISPOP | NATURCHEM",
+    "metaTitle": "Typical projects we handle | Emissions, noise, workplace, EIA and ISPOP | NATURCHEM",
     "metaDescription": "Anonymised NATURCHEM project examples: emission measurements, workplace environment, noise and dispersion studies, expert assessments, EIA/EIA screening, operating manuals and ISPOP.",
-    "pageTitle": "Typical projects from practice",
+    "pageTitle": "Typical projects we handle",
     "breadcrumb": "Typical projects",
     "backLink": "← Back to typical projects",
     "categoryMetaTitle": "{title} – types of completed projects",
@@ -241,7 +241,7 @@
     "serviceTagsLabel": "Service tags",
     "factorsLabel": "Typical factors",
     "relatedServicesLabel": "Related services",
-    "typicalOrdersLabel": "Typical projects from practice",
+    "typicalOrdersLabel": "Typical projects we handle",
     "detailPageLabel": "Facility detail",
     "exampleFromPractice": "Practice example"
   },

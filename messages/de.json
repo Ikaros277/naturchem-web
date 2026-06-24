@@ -174,9 +174,9 @@
     "orderCountMany": "{count} Projekte"
   },
   "caseStudies": {
-    "metaTitle": "Typische Projekte aus der Praxis | Emissionen, Lärm, Arbeitsumfeld, EIA und ISPOP | NATURCHEM",
+    "metaTitle": "Typische Aufträge, die wir bearbeiten | Emissionen, Lärm, Arbeitsumfeld, EIA und ISPOP | NATURCHEM",
     "metaDescription": "Anonymisierte NATURCHEM-Projektbeispiele: Emissionsmessungen, Arbeitsumfeld, Lärm- und Ausbreitungsstudien, Gutachten, EIA/JES, Betriebsanleitungen und ISPOP.",
-    "pageTitle": "Typische Projekte aus der Praxis",
+    "pageTitle": "Typische Aufträge, die wir bearbeiten",
     "breadcrumb": "Typische Projekte",
     "backLink": "← Zurück zu typischen Projekten",
     "categoryMetaTitle": "{title} – Arten abgeschlossener Projekte",
@@ -241,7 +241,7 @@
     "serviceTagsLabel": "Leistungs-Tags",
     "factorsLabel": "Typische Faktoren",
     "relatedServicesLabel": "Zugehörige Leistungen",
-    "typicalOrdersLabel": "Typische Projekte aus der Praxis",
+    "typicalOrdersLabel": "Typische Aufträge, die wir bearbeiten",
     "detailPageLabel": "Betriebsdetail",
     "exampleFromPractice": "Praxisbeispiel"
   },

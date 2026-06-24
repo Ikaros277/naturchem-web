@@ -7,7 +7,7 @@ export const typickeZakazkyHeroLead =
 
 export const typickeZakazkyProcessHeading = "Wie ein Auftrag üblicherweise abläuft";
 
-export const typickeZakazkyCasesHeading = "Fallstudien aus der Praxis";
+export const typickeZakazkyCasesHeading = "Fallstudien";
 
 export const typickeZakazkyCasesIntro =
   "Filtern Sie nach Kategorie oder suchen Sie nach Betrieb, Leistung, Schadstoff oder Behörde. Nach dem Aufklappen sehen Sie Situation, Aufgabe, Vorgehen NATURCHEM, Ergebnis und Verwendung — ohne Kundennamen und sensible Daten.";

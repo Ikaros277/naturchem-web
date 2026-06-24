@@ -31,11 +31,11 @@
   --hero-band-min-height-standard: 430px;
   --hero-band-min-height-service: 430px;
   /* Mobilní rezerva v hlavičce: CTA + hamburger + mezery (logo se vejde do zbytku) */
-  --header-mobile-actions-reserve: 10.5rem;
-  --header-mobile-actions-reserve-narrow: 8.75rem;
-  /* Hero pod fixní hlavičkou — platí kde main nemá padding-top */
-  --hero-band-safe-top: calc(var(--site-header-offset) + 0.85rem);
-  --hero-band-safe-bottom: clamp(1.5rem, 4vw, 2.25rem);
+  --header-mobile-actions-reserve: 13rem;
+  --header-mobile-actions-reserve-narrow: 13rem;
+  /* Tělo už má padding-top = výška hlavičky; uvnitř hero jen malá mezera */
+  --hero-band-safe-top: clamp(0.35rem, 1.5vw, 0.65rem);
+  --hero-band-safe-bottom: clamp(1rem, 3vw, 1.75rem);
 
   /*
    * Breakpointy (CSS neumí var() v @media — hodnoty držte konzistentní):
@@ -45,7 +45,7 @@
    * | mobile             | max-width: 767px     | Telefon — 1 sloupec, hero pod hlavičkou, topbar skrytý |
    * | tablet             | 768px – 1023px       | Tablet — mobilní menu (JS), topbar viditelný |
    * | desktop            | min-width: 1024px    | Desktop navigace (HeaderClient matchMedia) |
-   * | narrow             | max-width: 480px     | Úzký telefon — zkrácené CTA v hlavičce |
+   * | narrow             | max-width: 480px     | Úzký telefon — menší CTA padding (text zůstává plný) |
    * | layout-stack       | max-width: 960px     | VÝJIMKA: sidebar / 2sloupce → 1 (hustota obsahu) |
    * | wide-grid          | max-width: 1100px    | VÝJIMKA: marketing gridy 3 → 2 sloupce |
    * | mega-menu          | 1120px, 1279px       | VÝJIMKA: šířka megamenu podle viewportu |
@@ -1417,14 +1417,6 @@ main ol {
 
 .nav-cta-mobile {
   display: none;
-}
-
-.nav-cta-mobile-short {
-  display: none;
-}
-
-.nav-cta-mobile-full {
-  display: inline;
 }
 
 .nav-toggle:hover {
@@ -4051,8 +4043,11 @@ p {
   /* Na mobilu výška hero řízená obsahem — foto pokrývá celé pozadí */
   .hero--split,
   .page-hero-band,
+  .page-hero-band--standard,
+  .page-hero-band--service,
   .service-hero-band {
     height: auto;
+    min-height: 0;
   }
 
   .hero-band-grid,
@@ -7899,7 +7894,7 @@ main.home-page + .site-footer {
     align-items: center;
     min-height: 0;
     gap: 0.35rem;
-    padding-block: 0.5rem;
+    padding-block: 0.35rem;
   }
 
   .nav-brand {
@@ -7963,10 +7958,10 @@ main.home-page + .site-footer {
   }
 
   .button.nav-cta-mobile {
-    padding: 0 0.85rem;
-    font-size: 0.8125rem;
+    padding: 0 0.6rem;
+    font-size: clamp(0.68rem, 2.8vw, 0.78rem);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
     box-shadow: none;
     flex-shrink: 0;
     white-space: nowrap;
@@ -7977,17 +7972,13 @@ main.home-page + .site-footer {
       max-width: calc(100% - var(--header-mobile-actions-reserve-narrow));
     }
 
-    .nav-cta-mobile-full {
-      display: none;
-    }
-
-    .nav-cta-mobile-short {
-      display: inline;
-    }
-
     .button.nav-cta-mobile {
-      padding-inline: 0.65rem;
-      font-size: 0.78rem;
+      padding-inline: 0.5rem;
+      font-size: clamp(0.65rem, 2.6vw, 0.72rem);
+    }
+
+    .brand-logo-img {
+      height: clamp(1.85rem, 5.2vw, 2.15rem);
     }
   }
 
@@ -8064,7 +8055,7 @@ main.home-page + .site-footer {
 /* —— Mobilní opravy: přehledný layout, bez překryvů ——
    Principy (platí sitewide pod 1024px):
    1. Flex/grid děti s textem/obrázky: min-width: 0 (jinak nejde zmenšit)
-   2. Hlavička: logo max. calc(100% - --header-mobile-actions-reserve), CTA zkrácené ≤480px
+   2. Hlavička: logo max. calc(100% - --header-mobile-actions-reserve), plné CTA „Nezávazně poptat“
    3. Hero pod fixní hlavičkou: --hero-band-safe-top / --hero-band-safe-bottom
    4. Žádné overflow: hidden na hero textu na mobilu (řeže obsah)
 */
@@ -8380,7 +8371,7 @@ main.home-page + .site-footer {
     grid-template-columns: minmax(0, 1fr) auto auto;
     align-items: center;
     gap: 0.35rem;
-    padding-block: 0.5rem;
+    padding-block: 0.35rem;
   }
 
   .brand-logo-img {

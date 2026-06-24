@@ -5,11 +5,59 @@
 |---|---|
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
-| Počet sezení celkem | 45 |
-| Celkový odhadovaný čas | ~37 hodiny |
+| Počet sezení celkem | 47 |
+| Celkový odhadovaný čas | ~38,2 hodiny |
 | Aktuální fáze | Tým a fotografie — sekce /o-spolecnosti-naturchem |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
+
+---
+
+## Sezení: 24. 6. 2026, 23:44-23:54
+
+### Přehled
+Automaticky založené sezení po commitu `7174c4f`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### Fix mobile header overlap and hero spacing; unify breakpoints to 768/...
+**Co bylo uděláno:** Fix mobile header overlap and hero spacing; unify breakpoints to 768/1024. (commit `7174c4f`). Dotcene oblasti: app, components, cs.json, de.json, en.json.  
+**Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 24. 6. 2026 23:44-23:54 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `7174c4f94a7b45b504e6ee91fab07b71626dd2bf`
+
+---
+
+## Sezení: 24. 6. 2026, 22:44-22:54
+
+### Přehled
+Automaticky založené sezení po commitu `f95744f`.
+
+**Zdroj popisu:** Git commit (automatická synchronizace)
+
+### Provedené změny
+#### fix: Decap CMS repo path after GitHub transfer to Ikaros277
+**Co bylo uděláno:** fix: Decap CMS repo path after GitHub transfer to Ikaros277 (commit `f95744f`). Dotcene oblasti: config.yml.  
+**Proč:** Technicka nebo vizualni oprava - stabilnejsi a srozumitelnejsi web pro navstevniky.
+
+### Časová náročnost
+**Odhadovaná doba práce:** ~10 min  
+**Rozložení:** 24. 6. 2026 22:44-22:54 (~10 min)  
+**Metoda odhadu:** git  
+**Počet výměn s AI:** —  
+*Poznámka: automatický záznam z post-commit hooku.*
+
+### Technická poznámka
+Commit: `f95744fecd275439387a0fb72d702494b4f3444c`
 
 ---
 

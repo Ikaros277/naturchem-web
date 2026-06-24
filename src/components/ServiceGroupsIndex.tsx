@@ -47,17 +47,6 @@ const groupAriaVerbsEn: Record<string, string> = {
   "skoleni-podpora": "training"
 };
 
-function serviceCountLabel(
-  count: number,
-  messages: ReturnType<typeof useTranslations<"servicesIndex">>
-): string {
-  if (count === 1) return messages.serviceCountOne;
-  if (count >= 2 && count <= 4) {
-    return messages.serviceCountFew.replace("{count}", String(count));
-  }
-  return messages.serviceCountMany.replace("{count}", String(count));
-}
-
 const groupTagsCs: Record<string, string[]> = {
   "mericke-sluzby": ["KHS", "ČIŽP", "KÚ"],
   "studie-vypocty": ["EIA", "KHS", "KÚ"],
@@ -139,7 +128,6 @@ type Props = {
 };
 
 export function ServiceGroupsIndex({ groups, locale }: Props) {
-  const servicesIndex = useTranslations("servicesIndex");
   const common = useTranslations("common");
   const accordion = useTranslations("accordion");
   const groupIds = useMemo(() => groups.map((group) => group.id), [groups]);
@@ -153,13 +141,12 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
       <div className="container service-groups-accordion-inner">
         {groups.map((group) => {
           const ariaVerb = ariaVerbs[group.id] ?? group.title;
-          const countLabel = serviceCountLabel(group.items.length, servicesIndex);
 
           return (
             <AccordionIndexDetails
               key={group.id}
               id={group.id}
-              ariaLabel={`${group.title}, ${countLabel} — ${accordion.showOrHide} ${ariaVerb}`}
+              ariaLabel={`${group.title} — ${accordion.showOrHide} ${ariaVerb}`}
               icon={
                 <ServiceIcon
                   icon={groupIcons[group.id]}
@@ -168,7 +155,6 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
                 />
               }
               title={group.title}
-              countLabel={countLabel}
               intro={group.intro}
               expandClosed={accordion.expandClosed}
               expandOpen={accordion.expandOpen}

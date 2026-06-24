@@ -12,7 +12,7 @@ type Props = {
   /** inline = malý náhled v řádku; backdrop = vizuál přes celou dlaždici pod textem */
   visualLayout?: "inline" | "backdrop";
   title: string;
-  countLabel: string;
+  countLabel?: string;
   intro?: string;
   summaryExtra?: ReactNode;
   expandClosed: string;
@@ -45,7 +45,9 @@ export function AccordionIndexDetails({
     <div className="service-group-summary-text">
       <div className="service-group-summary-title-row">
         <h2>{title}</h2>
-        <span className="service-group-count muted">{countLabel}</span>
+        {countLabel ? (
+          <span className="service-group-count muted">{countLabel}</span>
+        ) : null}
       </div>
       {summaryExtra}
       {intro ? <p className="muted service-group-intro">{intro}</p> : null}

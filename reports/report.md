@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 48 |
-| Celkový odhadovaný čas | ~38,5 hodiny |
+| Celkový odhadovaný čas | ~38,6 hodiny |
 | Aktuální fáze | Tým a fotografie — sekce /o-spolecnosti-naturchem |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
 
 ---
 
-## Sezení: 25. 6. 2026, 23:57-00:07
+## Sezení: 25. 6. 2026, 23:57–00:07
 
 ### Přehled
 Automaticky založené sezení po commitu `13f5993`.
@@ -21,14 +21,18 @@ Automaticky založené sezení po commitu `13f5993`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Slightly increase hero band vertical padding above breadcrumbs and be...
+**Co bylo uděláno:** Slightly increase hero band vertical padding above breadcrumbs and below content. (commit `cc354d9`). Dotcene oblasti: app, report, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### Fix mobile header logo visibility by removing double width reserve.
 **Co bylo uděláno:** Fix mobile header logo visibility by removing double width reserve. (commit `13f5993`). Dotcene oblasti: app, components, report, workflow.  
 **Proč:** Oprava zobrazeni log partneru - spolehlive a citelne reference pro navstevniky.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 25. 6. 2026 23:57-00:07 (~10 min)  
-**Metoda odhadu:** git  
+**Odhadovaná doba práce:** ~10 min
+**Rozložení:** 25. 6. 2026 23:57–00:07 (~10 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*
 

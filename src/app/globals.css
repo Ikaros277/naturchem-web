@@ -4050,8 +4050,11 @@ p {
   }
 
   .hero-band-grid,
-  .page-hero-band-inner {
+  .page-hero-band-inner,
+  .service-hero-band-inner {
     grid-template-columns: 1fr;
+    height: auto;
+    min-height: 0;
   }
 
   .hero-photo-frame {
@@ -4072,6 +4075,20 @@ p {
   .service-hero-band .service-hero-band-inner {
     padding-top: var(--hero-band-safe-top);
     padding-bottom: var(--hero-band-safe-bottom);
+    height: auto;
+    min-height: 0;
+  }
+
+  .page-hero-band > .container,
+  .service-hero-band > .container {
+    flex: none;
+    height: auto;
+    min-height: 0;
+  }
+
+  .page-hero-band .breadcrumbs,
+  .service-hero-band .breadcrumbs {
+    display: none;
   }
 
   .page-hero-band .hero-band-text,
@@ -4104,12 +4121,14 @@ p {
     linear-gradient(135deg, #071827 0%, #0b1f35 58%, #102c47 100%);
 }
 
-.page-hero-band--standard {
-  height: var(--hero-band-min-height-standard);
-}
+@media (min-width: 768px) {
+  .page-hero-band--standard {
+    height: var(--hero-band-min-height-standard);
+  }
 
-.page-hero-band--service {
-  height: var(--hero-band-min-height-service);
+  .page-hero-band--service {
+    height: var(--hero-band-min-height-service);
+  }
 }
 
 .page-hero-band-inner,
@@ -7914,32 +7933,30 @@ main.home-page + .site-footer {
 
   .brand-mark {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
     gap: 0;
-    width: 100%;
+    width: auto;
     max-width: 100%;
     min-width: 0;
     line-height: 0;
   }
 
-  .brand-logo {
+  .brand-logo,
+  .brand-logo-img {
     display: block;
     width: auto;
     max-width: 100%;
     margin: 0;
+    margin-inline: 0;
+    object-fit: contain;
+    object-position: left center;
   }
 
   .brand-logo-img {
-    display: block;
     height: var(--header-mobile-logo-height);
     max-height: none;
-    width: auto;
-    max-width: 100%;
-    margin: 0;
-    object-fit: contain;
-    object-position: left center;
   }
 
   .brand-tagline {
@@ -8051,7 +8068,7 @@ main.home-page + .site-footer {
    Principy (platí sitewide pod 1024px):
    1. Flex/grid děti s textem/obrázky: min-width: 0 (jinak nejde zmenšit)
    2. Hlavička: grid minmax(0,1fr) auto auto — logo výrazné, CTA se zmenší dřív než logo
-   3. Hero pod fixní hlavičkou: --hero-band-safe-top / --hero-band-safe-bottom
+   3. Hero na mobilu: drobečky skryté, výška dle obsahu (bez pevného height)
    4. Žádné overflow: hidden na hero textu na mobilu (řeže obsah)
 */
 
@@ -8083,14 +8100,26 @@ main.home-page + .site-footer {
   }
 
   .hero-band-grid,
-  .page-hero-band-inner {
+  .page-hero-band-inner,
+  .service-hero-band-inner {
     grid-template-columns: 1fr;
+    height: auto;
+    min-height: 0;
   }
 
   .page-hero-band .page-hero-band-inner,
   .service-hero-band .service-hero-band-inner {
     padding-top: var(--hero-band-safe-top);
     padding-bottom: var(--hero-band-safe-bottom);
+    height: auto;
+    min-height: 0;
+  }
+
+  .page-hero-band > .container,
+  .service-hero-band > .container {
+    flex: none;
+    height: auto;
+    min-height: 0;
   }
 
   .page-hero-band .hero-band-text,

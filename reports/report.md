@@ -6,14 +6,14 @@
 | Projekt | naturchem.cz |
 | Zahájení spolupráce | 25. 5. 2026 |
 | Počet sezení celkem | 47 |
-| Celkový odhadovaný čas | ~38,2 hodiny |
+| Celkový odhadovaný čas | ~38,3 hodiny |
 | Aktuální fáze | Tým a fotografie — sekce /o-spolecnosti-naturchem |
 
 *Poznámka: ke každému sezení se k odhadu přičítá +5 min před začátkem (tvorba prvního zadání) a +5 min po konci kvůli testu nasazené úpravy (`report-config.json`). Do reportu se započítávají jen commity Martina (`Zluti`, `zluti90@gmail.com`); práce Fandy (`Ikaros27`) a reportové commity se nepočítají.*
 
 ---
 
-## Sezení: 24. 6. 2026, 23:44-23:54
+## Sezení: 24. 6. 2026, 23:44–00:02
 
 ### Přehled
 Automaticky založené sezení po commitu `7174c4f`.
@@ -21,14 +21,18 @@ Automaticky založené sezení po commitu `7174c4f`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Fix mobile hero clipping, full CTA text, remove service counts on /sl...
+**Co bylo uděláno:** Fix mobile hero clipping, full CTA text, remove service counts on /sluzby. (commit `7e9ca0f`). Dotcene oblasti: app, components, report, workflow.  
+**Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
+
 #### Fix mobile header overlap and hero spacing; unify breakpoints to 768/...
 **Co bylo uděláno:** Fix mobile header overlap and hero spacing; unify breakpoints to 768/1024. (commit `7174c4f`). Dotcene oblasti: app, components, cs.json, de.json, en.json.  
 **Proč:** Oprava zarovnani a rozlozeni hero sekce - konzistentni prvni dojem a lepsi citelnost na vsech zarizenich.
 
 ### Časová náročnost
-**Odhadovaná doba práce:** ~10 min  
-**Rozložení:** 24. 6. 2026 23:44-23:54 (~10 min)  
-**Metoda odhadu:** git  
+**Odhadovaná doba práce:** ~18 min
+**Rozložení:** 24. 6. 2026 23:44–00:02 (~18 min)
+**Metoda odhadu:** git
 **Počet výměn s AI:** —  
 *Poznámka: automatický záznam z post-commit hooku.*
 

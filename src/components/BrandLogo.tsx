@@ -46,7 +46,7 @@ export function BrandLogo({
       height={52}
       className={`brand-logo ${className}`.trim()}
       priority={priority}
-      sizes="(max-width: 480px) 130px, (max-width: 1023px) 180px, 248px"
+      sizes="(max-width: 480px) 160px, (max-width: 1023px) 200px, 248px"
     />
   );
 }

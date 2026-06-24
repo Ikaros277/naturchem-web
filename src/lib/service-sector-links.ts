@@ -68,6 +68,8 @@ export const relatedSectorsByServiceSlug: Record<string, SectorLink[]> = {
   "mereni-vibraci": [P.svarovny, P.automotive, P.lakovny, P.odpady],
   "mereni-osvetleni": [P.automotive, P.ciste, P.lakovny, P.odpady],
   "mereni-mikroklimatu": [P.zemedelstvi, P.kotelny, P.lakovny, P.automotive],
+  "mereni-tepelna-chladova-zatez": [P.zemedelstvi, P.kotelny, P.svarovny, P.automotive],
+  "mereni-diisokyanatu": [P.lakovny, P.automotive],
   "akusticke-posudky": [P.vzt, P.automotive, P.lakovny, P.kotelny],
   "modelove-vypocty": [P.kotelny, P.bioplyn, P.odpady, P.sklarstvi],
   "imisni-a-hlukove-dopady-zameru": [P.odpady, P.bioplyn, P.kotelny, P.vzt],

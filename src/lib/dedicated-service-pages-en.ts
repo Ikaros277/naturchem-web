@@ -667,9 +667,136 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
         description: "Comprehensive measurement of risk factors at workplaces."
       },
       {
+        title: "Heat and cold stress measurement",
+        href: "/sluzby/mereni-tepelna-chladova-zatez",
+        description: "Metabolic rate, work class and recommendations for hot and cold operations."
+      },
+      {
         title: "Agricultural operations and dryers",
         href: "/provozy-a-technologie/zemedelske-provozy",
         description: "Microclimate, dust and chemicals in agriculture."
+      }
+    ]
+  },
+  "mereni-tepelna-chladova-zatez": {
+    slug: "sluzby/mereni-tepelna-chladova-zatez",
+    title: "Heat and cold stress measurement",
+    description:
+      "Authorised measurement of heat and cold stress at workplaces: microclimate, metabolic rate per ČSN EN ISO 8996, work class. Documentation for regional hygiene station and job categorisation.",
+    intro:
+      "Does the regional hygiene station require assessment of heat or cold stress? We measure microclimatic parameters and metabolic rate in actual operation — report with work class and permissible exposure time recommendations.",
+    contactService: "Měření pracovního prostředí",
+    faqCategoryId: "pracovni-prostredi",
+    scope: [
+      "We measure microclimatic parameters according to Czech Ministry of Health methodology",
+      "We determine metabolic rate by heart rate monitoring per ČSN EN ISO 8996",
+      "We assess thermal insulation of clothing and physical work load",
+      "We recommend work class, permissible exposure times and fluid replacement"
+    ],
+    whenNeeded: [
+      "Regional hygiene station or job categorisation requires heat or cold stress measurement",
+      "Workers are exposed to heat at furnaces, dryers or outdoor work in summer",
+      "Operations in cold stores, freezers or unheated halls in winter",
+      "You need documentation for shift organisation and technical measures"
+    ],
+    practicalSituations: [
+      "heat stress measurement at furnaces, dryers and hot operations",
+      "cold stress assessment in cold stores and freezers",
+      "measurement during outdoor construction and agricultural work",
+      "documentation for updating job categorisation and OHS"
+    ],
+    docs: [
+      "description of work operations and physical load",
+      "workplace layout, ventilation type and clothing",
+      "shift pattern and number of workers",
+      "regional hygiene station requirement or complaint description"
+    ],
+    outputs: [
+      "heat or cold stress measurement report with assessment",
+      "work class and permissible exposure time recommendations",
+      "documentation for job categorisation, OHS and operational measures"
+    ],
+    commonMistakes: [
+      "Assessment based only on air temperature without metabolic rate",
+      "Measurement without considering actual physical load and clothing",
+      "Incomplete description of operating mode and shift pattern"
+    ],
+    relatedLinks: [
+      {
+        title: "Microclimate measurement",
+        href: "/sluzby/mereni-mikroklimatu",
+        description: "Simpler option — temperature, humidity and air flow without metabolic rate."
+      },
+      {
+        title: "Workplace environment measurement",
+        href: "/sluzby/pracovni-prostredi",
+        description: "Comprehensive hygienic measurements including dust, chemicals and noise."
+      },
+      {
+        title: "Agricultural operations and dryers",
+        href: "/provozy-a-technologie/zemedelske-provozy",
+        description: "Heat stress, dust and microclimate in agriculture."
+      }
+    ]
+  },
+  "mereni-diisokyanatu": {
+    slug: "sluzby/mereni-diisokyanatu",
+    title: "Diisocyanate measurement (MDI, TDI, HDI)",
+    description:
+      "Authorised measurement of diisocyanate exposure at workplaces: MDI, TDI, HDI and others. Personal and stationary sampling for regional hygiene station, job categorisation and exposure reduction measures.",
+    intro:
+      "PUR foams, painting or bonding with isocyanates? We measure exposure to MDI, TDI, HDI and other diisocyanates in actual operation — report for regional hygiene station, job categorisation and measure proposals.",
+    contactService: "Měření pracovního prostředí",
+    faqCategoryId: "pracovni-prostredi",
+    scope: [
+      "We measure diisocyanate exposure (MDI, TDI, HDI and others) with personal and stationary sampling",
+      "We focus on concentration peaks during spraying, pouring and hot processes",
+      "We assess exposure against hygiene limits and regional hygiene station requirements",
+      "We propose technical and organisational measures to reduce exposure"
+    ],
+    whenNeeded: [
+      "Job categorisation or regional hygiene station request regarding isocyanates",
+      "PUR spraying, painting or bonding with diisocyanates in operation",
+      "Technology, materials or ventilation change for reactive systems",
+      "Verifying extraction and PPE effectiveness after a complaint or inspection"
+    ],
+    practicalSituations: [
+      "MDI measurement during PUR foam production and processing",
+      "TDI exposure in paint shops and polyurethane system application",
+      "measurement during bonding and lamination with isocyanate adhesives",
+      "secondary emissions during heating or cutting cured PUR materials"
+    ],
+    docs: [
+      "safety data sheets of materials and mixtures used",
+      "description of work operations, extraction and PPE",
+      "workplace layout and shift pattern",
+      "regional hygiene station requirement or internal audit documentation"
+    ],
+    outputs: [
+      "diisocyanate measurement report with exposure assessment",
+      "documentation for job categorisation and measures under public health legislation",
+      "technical and organisational measure recommendations"
+    ],
+    commonMistakes: [
+      "Exposure estimated from safety data sheet only without operational measurement",
+      "Measurement outside peaks during spraying or pouring",
+      "Failure to consider secondary emissions during further PUR processing"
+    ],
+    relatedLinks: [
+      {
+        title: "Workplace environment measurement",
+        href: "/sluzby/pracovni-prostredi",
+        description: "Comprehensive measurement of chemicals, dust and other factors."
+      },
+      {
+        title: "Automotive and production halls",
+        href: "/provozy-a-technologie/automotive",
+        description: "Isocyanates in painting, bonding and PUR in interior production."
+      },
+      {
+        title: "Chemical substances in operation",
+        href: "/sluzby/chemicke-latky",
+        description: "Rules for storage, handling and responsibilities for chemicals."
       }
     ]
   },

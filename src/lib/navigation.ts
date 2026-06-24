@@ -35,12 +35,14 @@ export const pristrojoveVybaveniNav = {
 } as const;
 
 export const serviceNav = [
-  { href: "/sluzby/mereni-emisi", label: "Měření emisí" },
   { href: "/sluzby/pracovni-prostredi", label: "Měření pracovního prostředí" },
+  { href: "/sluzby/mereni-tepelna-chladova-zatez", label: "Měření tepelné a chladové zátěže" },
+  { href: "/sluzby/mereni-diisokyanatu", label: "Měření diisokyanátů" },
+  { href: "/sluzby/mereni-hluku", label: "Měření hluku a akustika" },
+  { href: "/sluzby/mereni-emisi", label: "Měření emisí" },
   { href: "/sluzby/mereni-vibraci", label: "Měření vibrací" },
   { href: "/sluzby/mereni-osvetleni", label: "Měření osvětlení" },
   { href: "/sluzby/mereni-mikroklimatu", label: "Měření mikroklimatu" },
-  { href: "/sluzby/mereni-hluku", label: "Měření hluku a akustika" },
   { href: "/sluzby/akusticke-posudky", label: "Akustické posudky" },
   { href: "/sluzby/rozptylove-studie", label: "Rozptylové studie" },
   { href: "/sluzby/hlukove-studie", label: "Hlukové studie" },

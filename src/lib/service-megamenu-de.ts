@@ -2,9 +2,11 @@ export const serviceMegaGroupsDe = [
   {
     title: "Messungen",
     links: [
-      { href: "/sluzby/mereni-emisi", label: "Emissionsmessungen" },
       { href: "/sluzby/pracovni-prostredi", label: "Arbeitsumfeld" },
+      { href: "/sluzby/mereni-tepelna-chladova-zatez", label: "Wärme- und Kältebelastung" },
+      { href: "/sluzby/mereni-diisokyanatu", label: "Diisocyanat-Messung" },
       { href: "/sluzby/mereni-hluku", label: "Lärm und Akustik" },
+      { href: "/sluzby/mereni-emisi", label: "Emissionsmessungen" },
       { href: "/sluzby/mereni-vibraci", label: "Vibrationen" },
       { href: "/sluzby/mereni-osvetleni", label: "Beleuchtung" },
       { href: "/sluzby/mereni-mikroklimatu", label: "Mikroklima" }

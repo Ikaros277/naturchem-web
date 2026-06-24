@@ -3,9 +3,11 @@ export const serviceMegaGroups = [
   {
     title: "Měření",
     links: [
-      { href: "/sluzby/mereni-emisi", label: "Měření emisí" },
       { href: "/sluzby/pracovni-prostredi", label: "Pracovní prostředí" },
+      { href: "/sluzby/mereni-tepelna-chladova-zatez", label: "Tepelná a chladová zátěž" },
+      { href: "/sluzby/mereni-diisokyanatu", label: "Měření diisokyanátů" },
       { href: "/sluzby/mereni-hluku", label: "Hluk a akustika" },
+      { href: "/sluzby/mereni-emisi", label: "Měření emisí" },
       { href: "/sluzby/mereni-vibraci", label: "Vibrace" },
       { href: "/sluzby/mereni-osvetleni", label: "Osvětlení" },
       { href: "/sluzby/mereni-mikroklimatu", label: "Mikroklima" }

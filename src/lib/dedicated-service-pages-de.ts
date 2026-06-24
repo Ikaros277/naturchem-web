@@ -667,9 +667,136 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
         description: "Umfassende Messung von Risikofaktoren am Arbeitsplatz."
       },
       {
+        title: "Messung von Wärme- und Kältebelastung",
+        href: "/sluzby/mereni-tepelna-chladova-zatez",
+        description: "Energieumsatz, Arbeitsklasse und Empfehlungen für heiße und kalte Betriebe."
+      },
+      {
         title: "Landwirtschaftliche Betriebe und Trockner",
         href: "/provozy-a-technologie/zemedelske-provozy",
         description: "Mikroklima, Staub und Chemikalien in der Landwirtschaft."
+      }
+    ]
+  },
+  "mereni-tepelna-chladova-zatez": {
+    slug: "sluzby/mereni-tepelna-chladova-zatez",
+    title: "Messung von Wärme- und Kältebelastung",
+    description:
+      "Autorisierte Messung von Wärme- und Kältebelastung am Arbeitsplatz: Mikroklima, Energieumsatz nach ČSN EN ISO 8996, Arbeitsklasse. Unterlagen für Hygienestation und Berufseinstufung.",
+    intro:
+      "Fordert die Hygienestation eine Beurteilung der Wärme- oder Kältebelastung? Wir messen mikroklimatische Parameter und Energieumsatz im realen Betrieb — Bericht mit Arbeitsklasse und Empfehlungen zu zulässigen Arbeitszeiten.",
+    contactService: "Měření pracovního prostředí",
+    faqCategoryId: "pracovni-prostredi",
+    scope: [
+      "Wir messen mikroklimatische Parameter nach der Methodik des tschechischen Gesundheitsministeriums",
+      "Wir bestimmen den Energieumsatz durch Herzfrequenzmonitoring nach ČSN EN ISO 8996",
+      "Wir beurteilen die Wärmedämmung der Kleidung und die körperliche Arbeitsbelastung",
+      "Wir empfehlen Arbeitsklasse, zulässige Arbeitszeiten und Flüssigkeitsersatz"
+    ],
+    whenNeeded: [
+      "Hygienestation oder Berufseinstufung erfordert Messung der Wärme- oder Kältebelastung",
+      "Mitarbeiter sind Hitze an Öfen, Trocknern oder bei Außenarbeiten im Sommer ausgesetzt",
+      "Betrieb in Kühlhäusern, Gefrieranlagen oder unbeheizten Hallen im Winter",
+      "Sie benötigen Unterlagen für Schichtorganisation und technische Maßnahmen"
+    ],
+    practicalSituations: [
+      "Messung der Wärmebelastung an Öfen, Trocknern und heißen Prozessen",
+      "Beurteilung der Kältebelastung in Kühlhäusern und Gefrieranlagen",
+      "Messung bei Außenbau- und landwirtschaftlichen Arbeiten",
+      "Unterlage zur Aktualisierung der Berufseinstufung und des Arbeitsschutzes"
+    ],
+    docs: [
+      "Beschreibung der Arbeitsvorgänge und körperlichen Belastung",
+      "Arbeitsplatzplan, Belüftungsart und Kleidung",
+      "Schichtmodell und Anzahl der Mitarbeiter",
+      "Anforderung der Hygienestation oder Beschreibung der Beschwerde"
+    ],
+    outputs: [
+      "Messbericht zur Wärme- oder Kältebelastung mit Bewertung",
+      "Empfehlungen zur Arbeitsklasse und zulässigen Arbeitszeiten",
+      "Unterlage für Berufseinstufung, Arbeitsschutz und betriebliche Maßnahmen"
+    ],
+    commonMistakes: [
+      "Beurteilung nur nach Lufttemperatur ohne Energieumsatz",
+      "Messung ohne Berücksichtigung der tatsächlichen körperlichen Belastung und Kleidung",
+      "Unvollständige Beschreibung des Betriebsmodus und Schichtmodells"
+    ],
+    relatedLinks: [
+      {
+        title: "Mikroklimamessung",
+        href: "/sluzby/mereni-mikroklimatu",
+        description: "Einfachere Variante — Temperatur, Luftfeuchtigkeit und Luftströmung ohne Energieumsatz."
+      },
+      {
+        title: "Messung der Arbeitsplatzumgebung",
+        href: "/sluzby/pracovni-prostredi",
+        description: "Umfassende hygienische Messungen einschließlich Staub, Chemikalien und Lärm."
+      },
+      {
+        title: "Landwirtschaftliche Betriebe und Trockner",
+        href: "/provozy-a-technologie/zemedelske-provozy",
+        description: "Wärmebelastung, Staub und Mikroklima in der Landwirtschaft."
+      }
+    ]
+  },
+  "mereni-diisokyanatu": {
+    slug: "sluzby/mereni-diisokyanatu",
+    title: "Diisocyanat-Messung (MDI, TDI, HDI)",
+    description:
+      "Autorisierte Messung der Diisocyanat-Exposition am Arbeitsplatz: MDI, TDI, HDI und weitere. Persönliche und stationäre Probenahme für Hygienestation, Berufseinstufung und Maßnahmen zur Expositionsreduzierung.",
+    intro:
+      "PUR-Schäume, Lackierung oder Verklebung mit Isocyanaten? Wir messen die Exposition gegenüber MDI, TDI, HDI und weiteren Diisocyanaten im realen Betrieb — Bericht für Hygienestation, Berufseinstufung und Maßnahmenvorschläge.",
+    contactService: "Měření pracovního prostředí",
+    faqCategoryId: "pracovni-prostredi",
+    scope: [
+      "Wir messen die Diisocyanat-Exposition (MDI, TDI, HDI und weitere) mit persönlicher und stationärer Probenahme",
+      "Wir konzentrieren uns auf Konzentrationsspitzen beim Sprühen, Gießen und bei heißen Prozessen",
+      "Wir bewerten die Exposition gegenüber Hygienegrenzwerten und Anforderungen der Hygienestation",
+      "Wir schlagen technische und organisatorische Maßnahmen zur Expositionsreduzierung vor"
+    ],
+    whenNeeded: [
+      "Berufseinstufung oder Anforderung der Hygienestation wegen Isocyanaten",
+      "PUR-Sprühen, Lackierung oder Verklebung mit Diisocyanaten im Betrieb",
+      "Technologie-, Material- oder Belüftungsänderung bei reaktiven Systemen",
+      "Überprüfung der Absaugung und PSA nach Beschwerde oder Kontrolle"
+    ],
+    practicalSituations: [
+      "MDI-Messung bei PUR-Schaumproduktion und -verarbeitung",
+      "TDI-Exposition in Lackierereien und bei Polyurethan-Systemen",
+      "Messung bei Verklebung und Kaschierung mit isocyanathaltigen Klebstoffen",
+      "Sekundäremissionen beim Erhitzen oder Schneiden ausgehärteter PUR-Materialien"
+    ],
+    docs: [
+      "Sicherheitsdatenblätter der verwendeten Materialien und Gemische",
+      "Beschreibung der Arbeitsvorgänge, Absaugung und PSA",
+      "Arbeitsplatzplan und Schichtmodell",
+      "Anforderung der Hygienestation oder interne Auditunterlagen"
+    ],
+    outputs: [
+      "Diisocyanat-Messbericht mit Expositionsbewertung",
+      "Unterlage für Berufseinstufung und Maßnahmen nach dem Gesundheitsschutzgesetz",
+      "Empfehlungen zu technischen und organisatorischen Maßnahmen"
+    ],
+    commonMistakes: [
+      "Exposition nur aus dem Sicherheitsdatenblatt abgeschätzt ohne Betriebsmessung",
+      "Messung außerhalb der Spitzen beim Sprühen oder Gießen",
+      "Keine Berücksichtigung sekundärer Emissionen bei weiterer PUR-Verarbeitung"
+    ],
+    relatedLinks: [
+      {
+        title: "Messung der Arbeitsplatzumgebung",
+        href: "/sluzby/pracovni-prostredi",
+        description: "Umfassende Messung von Chemikalien, Staub und weiteren Faktoren."
+      },
+      {
+        title: "Automotive und Produktionshallen",
+        href: "/provozy-a-technologie/automotive",
+        description: "Isocyanate bei Lackierung, Verklebung und PUR in der Innenraumproduktion."
+      },
+      {
+        title: "Chemische Substanzen im Betrieb",
+        href: "/sluzby/chemicke-latky",
+        description: "Regeln für Lagerung, Handhabung und Verantwortlichkeiten bei Chemikalien."
       }
     ]
   },

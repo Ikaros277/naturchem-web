@@ -20,19 +20,29 @@ export const serviceGroups: ServiceGroup[] = [
       "Potřebujete protokol pro úřad nebo provoz? Zajistíme terénní měření emisí, hluku, pracovního prostředí i dalších veličin — s výstupem pro KHS, ČIŽP nebo krajský úřad.",
     items: [
       {
-        title: "Měření emisí ze stacionárních zdrojů",
-        href: "/sluzby/mereni-emisi",
-        text: "Kotelny, lakovny, kogenerační jednotky, technologické výduchy. NOx, CO, TOC/VOC, TZL."
-      },
-      {
         title: "Měření pracovního prostředí",
         href: "/sluzby/pracovni-prostredi",
         text: "Prašnost, chemické látky, hluk, mikroklima, osvětlení, vibrace. Kategorizace prací, KHS."
       },
       {
+        title: "Měření tepelné a chladové zátěže",
+        href: "/sluzby/mereni-tepelna-chladova-zatez",
+        text: "Mikroklima, energetický výdej dle ČSN EN ISO 8996, třída práce. Podklad pro KHS a kategorizaci."
+      },
+      {
+        title: "Měření diisokyanátů (MDI, TDI, HDI)",
+        href: "/sluzby/mereni-diisokyanatu",
+        text: "Expozice izokyanátů při PUR, lakování a lepení. Osobní i stacionární odběry pro KHS."
+      },
+      {
         title: "Měření hluku a akustika",
         href: "/sluzby/mereni-hluku",
         text: "Terénní měření hluku, hodnocení zátěže okolí, provozoven a technologií."
+      },
+      {
+        title: "Měření emisí ze stacionárních zdrojů",
+        href: "/sluzby/mereni-emisi",
+        text: "Kotelny, lakovny, kogenerační jednotky, technologické výduchy. NOx, CO, TOC/VOC, TZL."
       },
       {
         title: "Měření vibrací",

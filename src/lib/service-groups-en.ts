@@ -20,19 +20,29 @@ export const serviceGroups: ServiceGroup[] = [
       "Need a report for an authority or your operation? We provide field measurements of emissions, noise, workplace environment and other parameters — with outputs for the regional hygiene station, Czech Environmental Inspectorate or regional authority.",
     items: [
       {
-        title: "Emission measurements from stationary sources",
-        href: "/sluzby/mereni-emisi",
-        text: "Boiler plants, paint shops, cogeneration units, process exhaust stacks. NOx, CO, TOC/VOC, PM."
-      },
-      {
         title: "Workplace environment measurements",
         href: "/sluzby/pracovni-prostredi",
         text: "Dust, chemical substances, noise, microclimate, lighting, vibration. Job categorisation, regional hygiene station."
       },
       {
+        title: "Heat and cold stress measurement",
+        href: "/sluzby/mereni-tepelna-chladova-zatez",
+        text: "Microclimate, metabolic rate per ČSN EN ISO 8996, work class. Documentation for regional hygiene station and job categorisation."
+      },
+      {
+        title: "Diisocyanate measurement (MDI, TDI, HDI)",
+        href: "/sluzby/mereni-diisokyanatu",
+        text: "Isocyanate exposure in PUR, painting and bonding. Personal and stationary sampling for regional hygiene station."
+      },
+      {
         title: "Noise measurement and acoustics",
         href: "/sluzby/mereni-hluku",
         text: "Field noise measurements, assessment of impact on surroundings, operations and technologies."
+      },
+      {
+        title: "Emission measurements from stationary sources",
+        href: "/sluzby/mereni-emisi",
+        text: "Boiler plants, paint shops, cogeneration units, process exhaust stacks. NOx, CO, TOC/VOC, PM."
       },
       {
         title: "Vibration measurements",

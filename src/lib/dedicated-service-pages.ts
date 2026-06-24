@@ -685,9 +685,136 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
         description: "Komplexní měření rizikových faktorů na pracovištích."
       },
       {
+        title: "Měření tepelné a chladové zátěže",
+        href: "/sluzby/mereni-tepelna-chladova-zatez",
+        description: "Energetický výdej, třída práce a doporučení pro horké a chladné provozy."
+      },
+      {
         title: "Zemědělské provozy a sušárny",
         href: "/provozy-a-technologie/zemedelske-provozy",
         description: "Mikroklima, prach a chemické látky v zemědělství."
+      }
+    ]
+  },
+  "mereni-tepelna-chladova-zatez": {
+    slug: "sluzby/mereni-tepelna-chladova-zatez",
+    title: "Měření tepelné a chladové zátěže",
+    description:
+      "Autorizované měření tepelné a chladové zátěže na pracovištích: mikroklima, energetický výdej dle ČSN EN ISO 8996, třída práce. Podklady pro KHS a kategorizaci prací.",
+    intro:
+      "KHS požaduje posouzení tepelné nebo chladové zátěže? Změříme mikroklimatické parametry a energetický výdej v reálném provozu — protokol s doporučením třídy práce a přípustných dob.",
+    contactService: "Měření pracovního prostředí",
+    faqCategoryId: "pracovni-prostredi",
+    scope: [
+      "Změříme mikroklimatické parametry podle metodického návodu MZ ČR",
+      "Stanovíme energetický výdej monitorováním srdeční frekvence dle ČSN EN ISO 8996",
+      "Posoudíme termoizolační vlastnosti oděvů a fyzickou zátěž práce",
+      "Doporučíme třídu práce, přípustné doby a náhrady ztráty tekutin"
+    ],
+    whenNeeded: [
+      "KHS nebo kategorizace prací vyžaduje měření tepelné či chladové zátěže",
+      "Pracovníci jsou vystaveni horku u pecí, sušáren nebo venkovním pracím v létě",
+      "Provoz v chladírnách, mrazírnách nebo nevyhřívaných halách v zimě",
+      "Potřebujete podklad pro organizaci směn a technická opatření"
+    ],
+    practicalSituations: [
+      "měření tepelné zátěže u pecí, sušáren a horkých operací",
+      "posouzení chladové zátěže v chladírnách a mrazírnách",
+      "měření při venkovních stavebních a zemědělských pracích",
+      "podklad pro aktualizaci kategorizace prací a BOZP"
+    ],
+    docs: [
+      "popis pracovních operací a fyzické zátěže",
+      "plánek pracoviště, typ větrání a oděvů",
+      "směnnost a počet pracovníků",
+      "požadavek KHS nebo popis stížnosti"
+    ],
+    outputs: [
+      "protokol z měření tepelné nebo chladové zátěže s vyhodnocením",
+      "doporučení třídy práce a přípustných dob",
+      "podklad pro kategorizaci prací, BOZP a opatření v provozu"
+    ],
+    commonMistakes: [
+      "Posouzení jen podle teploty vzduchu bez energetického výdeje",
+      "Měření bez zohlednění skutečné fyzické zátěže a oděvů",
+      "Neúplný popis provozního režimu a směnnosti"
+    ],
+    relatedLinks: [
+      {
+        title: "Měření mikroklimatu",
+        href: "/sluzby/mereni-mikroklimatu",
+        description: "Jednodušší varianta — teplota, vlhkost a proudění vzduchu bez energetického výdeje."
+      },
+      {
+        title: "Měření pracovního prostředí",
+        href: "/sluzby/pracovni-prostredi",
+        description: "Komplexní hygienická měření včetně prachu, chemických látek a hluku."
+      },
+      {
+        title: "Zemědělské provozy a sušárny",
+        href: "/provozy-a-technologie/zemedelske-provozy",
+        description: "Tepelná zátěž, prach a mikroklima v zemědělství."
+      }
+    ]
+  },
+  "mereni-diisokyanatu": {
+    slug: "sluzby/mereni-diisokyanatu",
+    title: "Měření diisokyanátů (MDI, TDI, HDI)",
+    description:
+      "Autorizované měření expozice diisokyanátům na pracovištích: MDI, TDI, HDI a další. Osobní i stacionární odběry pro KHS, kategorizaci prací a opatření ke snížení expozice.",
+    intro:
+      "PUR pěny, lakování nebo lepení s izokyanáty? Změříme expozici MDI, TDI, HDI a dalším diisokyanátům v reálném provozu — protokol pro KHS, kategorizaci prací a návrh opatření.",
+    contactService: "Měření pracovního prostředí",
+    faqCategoryId: "pracovni-prostredi",
+    scope: [
+      "Změříme expozici diisokyanátům (MDI, TDI, HDI a další) osobními i stacionárními odběry",
+      "Zaměříme se na špičky koncentrací při nástřiku, lití a horkých procesech",
+      "Vyhodnotíme expozici vůči hygienickým limitům a požadavkům KHS",
+      "Navrhneme technická a organizační opatření ke snížení expozice"
+    ],
+    whenNeeded: [
+      "Kategorizace prací nebo výzva KHS kvůli izokyanátům",
+      "Nástřik PUR, lakování nebo lepení s diisokyanáty v provozu",
+      "Změna technologie, materiálů nebo větrání u reaktivních systémů",
+      "Ověření účinnosti odsávání a OOPP po stížnosti nebo kontrole"
+    ],
+    practicalSituations: [
+      "měření MDI při výrobě a zpracování PUR pěn",
+      "expozice TDI v lakovnách a při aplikaci polyuretanových systémů",
+      "měření při lepení a kasírování s izokyanátovými lepidly",
+      "sekundární emise při ohřevu nebo řezání vytvrzených PUR materiálů"
+    ],
+    docs: [
+      "bezpečnostní listy používaných materiálů a směsí",
+      "popis pracovních operací, odsávání a OOPP",
+      "plánek pracoviště a směnnost",
+      "požadavek KHS nebo interní auditní podklad"
+    ],
+    outputs: [
+      "protokol z měření diisokyanátů s vyhodnocením expozice",
+      "podklad pro kategorizaci prací a opatření dle zákona o ochraně veřejného zdraví",
+      "doporučení technických a organizačních opatření"
+    ],
+    commonMistakes: [
+      "Odhad expozice jen z bezpečnostního listu bez měření v provozu",
+      "Měření mimo špičky při nástřiku nebo lití",
+      "Nezohlednění sekundárních emisí při dalším zpracování PUR"
+    ],
+    relatedLinks: [
+      {
+        title: "Měření pracovního prostředí",
+        href: "/sluzby/pracovni-prostredi",
+        description: "Komplexní měření chemických látek, prachu a dalších faktorů."
+      },
+      {
+        title: "Automotive a výrobní haly",
+        href: "/provozy-a-technologie/automotive",
+        description: "Izokyanáty při lakování, lepení a PUR ve výrobě interiérů."
+      },
+      {
+        title: "Chemické látky v provozu",
+        href: "/sluzby/chemicke-latky",
+        description: "Pravidla pro skladování, manipulaci a odpovědnosti u chemických látek."
       }
     ]
   },

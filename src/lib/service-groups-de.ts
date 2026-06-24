@@ -20,19 +20,29 @@ export const serviceGroups: ServiceGroup[] = [
       "Benötigen Sie einen Bericht für eine Behörde oder Ihren Betrieb? Wir bieten Feldmessungen von Emissionen, Lärm, Arbeitsplatzumgebung und anderen Parametern an – mit Ergebnissen für die regionale Hygienestation, die tschechische Umweltinspektion oder die regionale Behörde.",
     items: [
       {
-        title: "Emissionsmessungen aus stationären Quellen",
-        href: "/sluzby/mereni-emisi",
-        text: "Kesselanlagen, Lackierereien, Blockheizkraftwerke, Prozessabgaskamine. NOx, CO, TOC/VOC, PM."
-      },
-      {
         title: "Messungen der Arbeitsplatzumgebung",
         href: "/sluzby/pracovni-prostredi",
         text: "Staub, chemische Substanzen, Lärm, Mikroklima, Beleuchtung, Vibration. Berufseinstufung, regionale Hygienestation."
       },
       {
+        title: "Messung von Wärme- und Kältebelastung",
+        href: "/sluzby/mereni-tepelna-chladova-zatez",
+        text: "Mikroklima, Energieumsatz nach ČSN EN ISO 8996, Arbeitsklasse. Unterlage für Hygienestation und Berufseinstufung."
+      },
+      {
+        title: "Diisocyanat-Messung (MDI, TDI, HDI)",
+        href: "/sluzby/mereni-diisokyanatu",
+        text: "Isocyanat-Exposition bei PUR, Lackierung und Verklebung. Persönliche und stationäre Probenahme für die Hygienestation."
+      },
+      {
         title: "Lärmmessung und Akustik",
         href: "/sluzby/mereni-hluku",
         text: "Feldlärmmessungen, Bewertung der Auswirkungen auf Umgebung, Betrieb und Technologien."
+      },
+      {
+        title: "Emissionsmessungen aus stationären Quellen",
+        href: "/sluzby/mereni-emisi",
+        text: "Kesselanlagen, Lackierereien, Blockheizkraftwerke, Prozessabgaskamine. NOx, CO, TOC/VOC, PM."
       },
       {
         title: "Vibrationsmessungen",

@@ -50,6 +50,8 @@ const hrefToIcon: Record<string, ServiceIconKey> = {
   "/sluzby/mereni-vibraci": "vibrace",
   "/sluzby/mereni-osvetleni": "osvetleni",
   "/sluzby/mereni-mikroklimatu": "mikroklima",
+  "/sluzby/mereni-tepelna-chladova-zatez": "mikroklima",
+  "/sluzby/mereni-diisokyanatu": "chemie",
   "/sluzby/rozptylove-studie": "rozptyl",
   "/sluzby/hlukove-studie": "hlukova-studie",
   "/sluzby/akusticke-posudky": "akustika",

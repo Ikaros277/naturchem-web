@@ -64,7 +64,6 @@ export default async function Home({ params }: Props) {
       <TrustBand
         items={trustItems}
         heading={messages.home.trustAria}
-        showHeading
         className="home-fade-in-section"
       />
 

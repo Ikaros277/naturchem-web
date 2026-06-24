@@ -108,7 +108,7 @@ export default async function ONaturchemPage({ params }: Props) {
         </header>
       </PageHeroBand>
 
-      <TrustBand items={trustItems} heading={content.trustBandHeading} showHeading />
+      <TrustBand items={trustItems} heading={content.trustBandHeading} />
 
       <section className="home-stats-compact" aria-label={content.statsAriaLabel}>
         <div className="container">

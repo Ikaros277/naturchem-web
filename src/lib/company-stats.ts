@@ -16,7 +16,7 @@ export const companyStats: ReadonlyArray<{
     icon: "process-vystup"
   },
   {
-    value: "6 000+",
+    value: "7 000+",
     label: "měření",
     icon: "emise"
   },
@@ -47,7 +47,7 @@ export const practiceFromRecordsParagraphs = [
 
 export const experienceBullets = [
   "14 000+ zakázek",
-  "6 000+ měření",
+  "7 000+ měření",
   "36 let praxe",
   "dlouhodobá práce pro průmyslové, energetické, zemědělské, komunální a veřejné zadavatele"
 ] as const;

@@ -14,7 +14,7 @@ export const companyStats: ReadonlyArray<{
     icon: "process-vystup"
   },
   {
-    value: "6,000+",
+    value: "7,000+",
     label: "Messungen",
     icon: "emise"
   },
@@ -45,7 +45,7 @@ export const practiceFromRecordsParagraphs = [
 
 export const experienceBullets = [
   "Über 14.000 Projekte",
-  "Über 6.000 Messungen",
+  "Über 7.000 Messungen",
   "36 Jahre Erfahrung",
   "langjährige Tätigkeit für Kunden aus Industrie, Energie, Landwirtschaft, Kommunen und der öffentlichen Hand"
 ] as const;

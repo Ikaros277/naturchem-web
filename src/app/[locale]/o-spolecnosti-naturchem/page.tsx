@@ -9,6 +9,7 @@ import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
 import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getAboutPage, getGuaranteeIntro, getTeamMembers } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
+import { TrustBand } from "@/components/TrustBand";
 import { getHomeTrustBandItems } from "@/lib/i18n/home-content";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -107,16 +108,7 @@ export default async function ONaturchemPage({ params }: Props) {
         </header>
       </PageHeroBand>
 
-      <section className="trust-band" aria-labelledby="duveryhodnost-heading">
-        <div className="container trust-band-inner">
-          <h2 id="duveryhodnost-heading" className="sr-only">
-            {content.trustBandHeading}
-          </h2>
-          {trustItems.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
-      </section>
+      <TrustBand items={trustItems} heading={content.trustBandHeading} showHeading />
 
       <section className="home-stats-compact" aria-label={content.statsAriaLabel}>
         <div className="container">

@@ -8,6 +8,7 @@ import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
 import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getHomeHeroPillars } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
+import { TrustBand } from "@/components/TrustBand";
 import { getHomeOfferPillars, getHomeTrustBandItems } from "@/lib/i18n/home-content";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
@@ -60,16 +61,12 @@ export default async function Home({ params }: Props) {
         pillarsAriaLabel={messages.homeHero.pillarsAria}
       />
 
-      <section className="trust-band home-fade-in-section" aria-labelledby="duveryhodnost-heading">
-        <div className="container trust-band-inner">
-          <h2 id="duveryhodnost-heading" className="sr-only">
-            {messages.home.trustAria}
-          </h2>
-          {trustItems.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
-      </section>
+      <TrustBand
+        items={trustItems}
+        heading={messages.home.trustAria}
+        showHeading
+        className="home-fade-in-section"
+      />
 
       <section
         className="home-stats-compact home-fade-in-section home-fade-in-section-delay-1"

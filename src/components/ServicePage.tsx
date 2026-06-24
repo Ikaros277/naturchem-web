@@ -10,6 +10,7 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
 import { getCtaCopy } from "@/lib/i18n/cta-i18n";
 import { getProvozyNavLabel, getSectors, getSiteServices } from "@/lib/i18n/content";
+import { TrustBand } from "@/components/TrustBand";
 import { getServiceTrustBandItems } from "@/lib/i18n/home-content";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
@@ -162,16 +163,7 @@ export async function ServicePage(props: Props) {
         </header>
       </PageHeroBand>
 
-      <section className="trust-band trust-band--compact" aria-labelledby="service-trust-heading">
-        <div className="container trust-band-inner">
-          <h2 id="service-trust-heading" className="sr-only">
-            {copy.trustAria}
-          </h2>
-          {trustItems.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
-      </section>
+      <TrustBand items={trustItems} heading={copy.trustAria} compact />
 
       <section className="service-overview-section section--forest-tint" aria-label={copy.overviewAria}>
         <div className="container">

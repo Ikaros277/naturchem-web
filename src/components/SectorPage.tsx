@@ -17,6 +17,7 @@ import type { Locale } from "@/lib/i18n/locales";
 import { sectorProcessSteps } from "@/lib/i18n/work-process-i18n";
 import { sectorContactUrl } from "@/lib/contact-url";
 import { getPageHeroTheme } from "@/lib/hero-images";
+import { getSectorHeroImageConfig, hasSectorPhoto } from "@/lib/custom-hero-photos";
 import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { siteUrl } from "@/lib/site";
 
@@ -48,6 +49,9 @@ export async function SectorPage(props: Props) {
     props.relatedServices.map((s) => s.title)
   );
   const heroTheme = getPageHeroTheme(sectorPath);
+  const sectorHeroImage = hasSectorPhoto(props.slug)
+    ? getSectorHeroImageConfig(props.slug).src
+    : undefined;
   const processSteps = sectorProcessSteps(props.process, locale);
 
   const breadcrumbData = {
@@ -95,6 +99,7 @@ export async function SectorPage(props: Props) {
       <PageHeroBand
         locale={locale}
         theme={heroTheme}
+        imageSrc={sectorHeroImage}
         breadcrumbs={[
           { name: copy.breadcrumbHome, href: link("/") },
           { name: provozyNavLabel, href: link("/provozy-a-technologie") },

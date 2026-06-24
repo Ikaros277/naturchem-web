@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { caseStudyHeroTheme } from "@/lib/case-study-visuals";
-import { getHeroImageConfig } from "@/lib/hero-images";
+import { getCaseStudyHeroImageConfig } from "@/lib/custom-hero-photos";
 import type { CaseStudy } from "@/lib/case-studies";
 
 type Props = {
@@ -9,7 +8,7 @@ type Props = {
 
 /** Tlumený náhled provozu nebo typu zakázky na dlaždici případové studie. */
 export function CaseStudyTileThumb({ study }: Props) {
-  const config = getHeroImageConfig(caseStudyHeroTheme(study));
+  const config = getCaseStudyHeroImageConfig(study);
 
   return (
     <div className="case-study-tile-thumb" aria-hidden="true">

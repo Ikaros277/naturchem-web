@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { getHeroImageConfig } from "@/lib/hero-images";
-import { sectorHeroTheme } from "@/lib/sector-group-visuals";
+import { getSectorHeroImageConfig } from "@/lib/custom-hero-photos";
 import type { Sector } from "@/lib/sectors";
 
 type Props = {
@@ -30,7 +29,7 @@ export function SectorGroupCollage({ sectorIds, sectors, maxTiles = 4 }: Props) 
   return (
     <div className={collageClass} aria-hidden="true">
       {tiles.map((sector) => {
-        const config = getHeroImageConfig(sectorHeroTheme(sector.id));
+        const config = getSectorHeroImageConfig(sector.id);
         return (
           <div key={sector.id} className="sector-group-collage-item">
             <Image

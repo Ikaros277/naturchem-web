@@ -6,7 +6,7 @@ type Props = {
   study: CaseStudy;
 };
 
-/** Náhled fotky v horní polovině dlaždice — přechod do bílého těla karty. */
+/** Náhled fotky v horní části dlaždice — čistý oddělený pás nad textem karty. */
 export function CaseStudyTileThumb({ study }: Props) {
   const config = getCaseStudyHeroImageConfig(study);
 
@@ -19,6 +19,7 @@ export function CaseStudyTileThumb({ study }: Props) {
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         className="case-study-tile-thumb-img"
         style={{ objectPosition: config.position ?? "center center" }}
+        quality={82}
       />
       <span className="case-study-tile-thumb-overlay" />
     </div>

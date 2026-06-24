@@ -64,9 +64,29 @@ export function caseStudyPhotoSrc(studyId: string): string {
   return `/hero/case-studies/${studyId}.jpg`;
 }
 
+const caseStudyPhotoPositions: Record<string, string> = {
+  "mereni-emisi-filtr-aktivni-uhli": "center 40%",
+  "mereni-emisi-kotel-biomasa": "center 42%",
+  "mereni-emisi-novy-kotel": "center 38%",
+  "mereni-emisi-plynova-kotelna-verejna-budova": "center 45%",
+  "mereni-emisi-plynovy-horak": "center 40%",
+  "mereni-emisi-pradelna": "center 42%",
+  "mereni-emisi-tryskani": "center 35%",
+  "mereni-emisi-voc-tisk": "center 40%",
+  "mereni-hluku-dieselgenerator": "center 42%",
+  "mereni-vibraci-cele-telo": "center 40%",
+  "mereni-vibraci-ruce": "center 38%",
+  "hlukova-studie-vzt": "center 42%",
+  "pracovni-prostredi-chemicke-latky": "center 40%",
+  "pracovni-prostredi-hluk-hala": "center 38%",
+  "pracovni-prostredi-komplex": "center 40%",
+  "pracovni-prostredi-mikroklima": "center 42%",
+  "pracovni-prostredi-osvetleni": "center 40%"
+};
+
 export function getSectorHeroImageConfig(sectorId: string): HeroImageConfig {
   if (hasSectorPhoto(sectorId)) {
-    return { src: sectorPhotoSrc(sectorId), position: "center center" };
+    return { src: sectorPhotoSrc(sectorId), position: "center 40%" };
   }
   return getHeroImageConfig(sectorHeroTheme(sectorId));
 }
@@ -80,10 +100,13 @@ type CaseStudyPhotoInput = {
 /** Priorita: vlastní fotka zakázky → fotka provozu → kategorie služby. */
 export function getCaseStudyHeroImageConfig(study: CaseStudyPhotoInput): HeroImageConfig {
   if (hasCaseStudyPhoto(study.id)) {
-    return { src: caseStudyPhotoSrc(study.id), position: "center center" };
+    return {
+      src: caseStudyPhotoSrc(study.id),
+      position: caseStudyPhotoPositions[study.id] ?? "center 40%"
+    };
   }
   if (study.sectorId && hasSectorPhoto(study.sectorId)) {
-    return { src: sectorPhotoSrc(study.sectorId), position: "center center" };
+    return { src: sectorPhotoSrc(study.sectorId), position: "center 40%" };
   }
   return getHeroImageConfig(caseStudyHeroTheme(study));
 }

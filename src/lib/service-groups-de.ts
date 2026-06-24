@@ -27,7 +27,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Messung von Wärme- und Kältebelastung",
         href: "/sluzby/mereni-tepelna-chladova-zatez",
-        text: "Mikroklima, Energieumsatz nach ČSN EN ISO 8996, Arbeitsklasse. Unterlage für Hygienestation und Berufseinstufung."
+        text: "Mikroklimatische Parameter, Arbeitsklasse und zulässige Arbeitszeiten. Unterlage für Hygienestation und Berufseinstufung."
       },
       {
         title: "Diisocyanat-Messung (MDI, TDI, HDI)",

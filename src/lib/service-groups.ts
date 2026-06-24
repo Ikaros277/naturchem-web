@@ -27,7 +27,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Měření tepelné a chladové zátěže",
         href: "/sluzby/mereni-tepelna-chladova-zatez",
-        text: "Mikroklima, energetický výdej dle ČSN EN ISO 8996, třída práce. Podklad pro KHS a kategorizaci."
+        text: "Mikroklimatické parametry, třída práce a přípustné doby. Podklad pro KHS a kategorizaci."
       },
       {
         title: "Měření diisokyanátů (MDI, TDI, HDI)",

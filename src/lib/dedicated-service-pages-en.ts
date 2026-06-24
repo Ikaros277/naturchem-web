@@ -669,7 +669,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       {
         title: "Heat and cold stress measurement",
         href: "/sluzby/mereni-tepelna-chladova-zatez",
-        description: "Metabolic rate, work class and recommendations for hot and cold operations."
+        description: "Specialised measurement for hot and cold operations, work class and permissible exposure times."
       },
       {
         title: "Agricultural operations and dryers",
@@ -682,15 +682,15 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     slug: "sluzby/mereni-tepelna-chladova-zatez",
     title: "Heat and cold stress measurement",
     description:
-      "Authorised measurement of heat and cold stress at workplaces: microclimate, metabolic rate per ČSN EN ISO 8996, work class. Documentation for regional hygiene station and job categorisation.",
+      "Authorised measurement of heat and cold stress at workplaces: microclimatic parameters, work class and permissible exposure times. Documentation for regional hygiene station and job categorisation.",
     intro:
-      "Does the regional hygiene station require assessment of heat or cold stress? We measure microclimatic parameters and metabolic rate in actual operation — report with work class and permissible exposure time recommendations.",
+      "Does the regional hygiene station require assessment of heat or cold stress? We measure microclimatic parameters in actual operation — report with work class and permissible exposure time recommendations.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "We measure microclimatic parameters according to Czech Ministry of Health methodology",
-      "We determine metabolic rate by heart rate monitoring per ČSN EN ISO 8996",
-      "We assess thermal insulation of clothing and physical work load",
+      "We assess conditions according to physical work load (light / moderate / heavy)",
+      "We measure in halls, dryers, cold stores and during outdoor work",
       "We recommend work class, permissible exposure times and fluid replacement"
     ],
     whenNeeded: [
@@ -717,15 +717,15 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "documentation for job categorisation, OHS and operational measures"
     ],
     commonMistakes: [
-      "Assessment based only on air temperature without metabolic rate",
-      "Measurement without considering actual physical load and clothing",
-      "Incomplete description of operating mode and shift pattern"
+      "Assessment based only on air temperature without considering physical work load",
+      "Measurement without considering actual operating mode and clothing",
+      "Incomplete description of ventilation, technology and shift pattern"
     ],
     relatedLinks: [
       {
         title: "Microclimate measurement",
         href: "/sluzby/mereni-mikroklimatu",
-        description: "Simpler option — temperature, humidity and air flow without metabolic rate."
+        description: "General measurement of temperature, humidity and air flow at workplaces."
       },
       {
         title: "Workplace environment measurement",

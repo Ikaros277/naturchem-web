@@ -669,7 +669,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       {
         title: "Messung von Wärme- und Kältebelastung",
         href: "/sluzby/mereni-tepelna-chladova-zatez",
-        description: "Energieumsatz, Arbeitsklasse und Empfehlungen für heiße und kalte Betriebe."
+        description: "Spezialisierte Messung für heiße und kalte Betriebe, Arbeitsklasse und zulässige Arbeitszeiten."
       },
       {
         title: "Landwirtschaftliche Betriebe und Trockner",
@@ -682,15 +682,15 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     slug: "sluzby/mereni-tepelna-chladova-zatez",
     title: "Messung von Wärme- und Kältebelastung",
     description:
-      "Autorisierte Messung von Wärme- und Kältebelastung am Arbeitsplatz: Mikroklima, Energieumsatz nach ČSN EN ISO 8996, Arbeitsklasse. Unterlagen für Hygienestation und Berufseinstufung.",
+      "Autorisierte Messung von Wärme- und Kältebelastung am Arbeitsplatz: mikroklimatische Parameter, Arbeitsklasse und zulässige Arbeitszeiten. Unterlagen für Hygienestation und Berufseinstufung.",
     intro:
-      "Fordert die Hygienestation eine Beurteilung der Wärme- oder Kältebelastung? Wir messen mikroklimatische Parameter und Energieumsatz im realen Betrieb — Bericht mit Arbeitsklasse und Empfehlungen zu zulässigen Arbeitszeiten.",
+      "Fordert die Hygienestation eine Beurteilung der Wärme- oder Kältebelastung? Wir messen mikroklimatische Parameter im realen Betrieb — Bericht mit Arbeitsklasse und Empfehlungen zu zulässigen Arbeitszeiten.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "Wir messen mikroklimatische Parameter nach der Methodik des tschechischen Gesundheitsministeriums",
-      "Wir bestimmen den Energieumsatz durch Herzfrequenzmonitoring nach ČSN EN ISO 8996",
-      "Wir beurteilen die Wärmedämmung der Kleidung und die körperliche Arbeitsbelastung",
+      "Wir beurteilen die Bedingungen nach körperlicher Arbeitsbelastung (leicht / mittel / schwer)",
+      "Wir messen in Hallen, Trocknern, Kühlhäusern und bei Außenarbeiten",
       "Wir empfehlen Arbeitsklasse, zulässige Arbeitszeiten und Flüssigkeitsersatz"
     ],
     whenNeeded: [
@@ -717,15 +717,15 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Unterlage für Berufseinstufung, Arbeitsschutz und betriebliche Maßnahmen"
     ],
     commonMistakes: [
-      "Beurteilung nur nach Lufttemperatur ohne Energieumsatz",
-      "Messung ohne Berücksichtigung der tatsächlichen körperlichen Belastung und Kleidung",
-      "Unvollständige Beschreibung des Betriebsmodus und Schichtmodells"
+      "Beurteilung nur nach Lufttemperatur ohne Berücksichtigung der körperlichen Arbeitsbelastung",
+      "Messung ohne Berücksichtigung des tatsächlichen Betriebsmodus und der Kleidung",
+      "Unvollständige Beschreibung der Belüftung, Technik und des Schichtmodells"
     ],
     relatedLinks: [
       {
         title: "Mikroklimamessung",
         href: "/sluzby/mereni-mikroklimatu",
-        description: "Einfachere Variante — Temperatur, Luftfeuchtigkeit und Luftströmung ohne Energieumsatz."
+        description: "Allgemeine Messung von Temperatur, Luftfeuchtigkeit und Luftströmung am Arbeitsplatz."
       },
       {
         title: "Messung der Arbeitsplatzumgebung",

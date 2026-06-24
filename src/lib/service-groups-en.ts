@@ -27,7 +27,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Heat and cold stress measurement",
         href: "/sluzby/mereni-tepelna-chladova-zatez",
-        text: "Microclimate, metabolic rate per ČSN EN ISO 8996, work class. Documentation for regional hygiene station and job categorisation."
+        text: "Microclimatic parameters, work class and permissible exposure times. Documentation for regional hygiene station and job categorisation."
       },
       {
         title: "Diisocyanate measurement (MDI, TDI, HDI)",

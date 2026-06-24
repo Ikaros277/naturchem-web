@@ -18,7 +18,12 @@ export function TrustBand({ items, heading, compact = false, className = "" }: P
           {heading}
         </h2>
         {items.map((item, index) => (
-          <span key={item} className={index === 0 ? "trust-band-lead" : undefined}>
+          <span
+            key={item}
+            className={
+              index === 0 ? "trust-band-lead" : index === 1 ? "trust-band-accent" : undefined
+            }
+          >
             {item}
           </span>
         ))}

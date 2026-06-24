@@ -687,7 +687,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       {
         title: "Měření tepelné a chladové zátěže",
         href: "/sluzby/mereni-tepelna-chladova-zatez",
-        description: "Energetický výdej, třída práce a doporučení pro horké a chladné provozy."
+        description: "Specializované měření pro horké a chladné provozy, třída práce a přípustné doby."
       },
       {
         title: "Zemědělské provozy a sušárny",
@@ -700,15 +700,15 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     slug: "sluzby/mereni-tepelna-chladova-zatez",
     title: "Měření tepelné a chladové zátěže",
     description:
-      "Autorizované měření tepelné a chladové zátěže na pracovištích: mikroklima, energetický výdej dle ČSN EN ISO 8996, třída práce. Podklady pro KHS a kategorizaci prací.",
+      "Autorizované měření tepelné a chladové zátěže na pracovištích: mikroklimatické parametry, třída práce a přípustné doby. Podklady pro KHS a kategorizaci prací.",
     intro:
-      "KHS požaduje posouzení tepelné nebo chladové zátěže? Změříme mikroklimatické parametry a energetický výdej v reálném provozu — protokol s doporučením třídy práce a přípustných dob.",
+      "KHS požaduje posouzení tepelné nebo chladové zátěže? Změříme mikroklimatické parametry v reálném provozu — protokol s doporučením třídy práce a přípustných dob.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "Změříme mikroklimatické parametry podle metodického návodu MZ ČR",
-      "Stanovíme energetický výdej monitorováním srdeční frekvence dle ČSN EN ISO 8996",
-      "Posoudíme termoizolační vlastnosti oděvů a fyzickou zátěž práce",
+      "Posoudíme podmínky podle fyzické zátěže práce (lehká / střední / těžká)",
+      "Změříme v halách, sušárnách, chladírnách a při venkovních pracích",
       "Doporučíme třídu práce, přípustné doby a náhrady ztráty tekutin"
     ],
     whenNeeded: [
@@ -735,15 +735,15 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "podklad pro kategorizaci prací, BOZP a opatření v provozu"
     ],
     commonMistakes: [
-      "Posouzení jen podle teploty vzduchu bez energetického výdeje",
-      "Měření bez zohlednění skutečné fyzické zátěže a oděvů",
-      "Neúplný popis provozního režimu a směnnosti"
+      "Posouzení jen podle teploty vzduchu bez zohlednění fyzické zátěže práce",
+      "Měření bez zohlednění skutečného provozního režimu a oděvů",
+      "Neúplný popis větrání, technologie a směnnosti"
     ],
     relatedLinks: [
       {
         title: "Měření mikroklimatu",
         href: "/sluzby/mereni-mikroklimatu",
-        description: "Jednodušší varianta — teplota, vlhkost a proudění vzduchu bez energetického výdeje."
+        description: "Obecné měření teploty, vlhkosti a proudění vzduchu na pracovištích."
       },
       {
         title: "Měření pracovního prostředí",

@@ -52,6 +52,17 @@ export async function getCaseStudies(locale: Locale) {
   return (await loadLocaleContent(locale)).caseStudies;
 }
 
+export async function getCaseStudyFilterCategories(locale: Locale) {
+  switch (locale) {
+    case "en":
+      return (await import("@/lib/case-studies-en")).CASE_STUDY_CATEGORIES;
+    case "de":
+      return (await import("@/lib/case-studies-de")).CASE_STUDY_CATEGORIES;
+    default:
+      return (await import("@/lib/case-studies")).CASE_STUDY_CATEGORIES;
+  }
+}
+
 export async function getCaseStudyCategory(slug: string, locale: Locale) {
   return (await loadLocaleContent(locale)).getCaseStudyCategory(slug);
 }

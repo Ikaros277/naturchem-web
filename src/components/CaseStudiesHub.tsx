@@ -6,7 +6,6 @@ import { LocaleLink } from "@/lib/i18n/locale-link";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { contactFormHref } from "@/lib/contact-url";
 import {
-  CASE_STUDY_CATEGORIES,
   type CaseStudy
 } from "@/lib/case-studies";
 import type { Locale } from "@/lib/i18n/locales";
@@ -18,9 +17,10 @@ type Props = {
   locale: Locale;
   caseStudies: CaseStudy[];
   serviceTitles: ServiceTitle[];
+  categoryFilters: ReadonlyArray<{ id: string; label: string }>;
 };
 
-export function CaseStudiesHub({ locale, caseStudies, serviceTitles }: Props) {
+export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFilters }: Props) {
   const common = useTranslations("common");
   const caseStudiesUi = useTranslations("caseStudies");
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
@@ -103,7 +103,7 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles }: Props) {
           >
             {caseStudiesUi.filterAll}
           </button>
-          {CASE_STUDY_CATEGORIES.map((item) => (
+          {categoryFilters.map((item) => (
             <button
               key={item.id}
               type="button"

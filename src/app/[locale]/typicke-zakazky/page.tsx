@@ -5,7 +5,7 @@ import { CaseStudiesHub } from "@/components/CaseStudiesHub";
 import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
-import { getCaseStudies, getSiteServices, getTypickeZakazkyContent } from "@/lib/i18n/content";
+import { getCaseStudies, getCaseStudyFilterCategories, getSiteServices, getTypickeZakazkyContent } from "@/lib/i18n/content";
 import { getWorkProcessCopy } from "@/lib/i18n/work-process-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { localizedCanonical, pageMetadata } from "@/lib/i18n/metadata-helpers";
@@ -38,6 +38,7 @@ export default async function TypickeZakazkyPage({ params }: Props) {
   const content = await getTypickeZakazkyContent(locale);
   const workProcess = getWorkProcessCopy(locale);
   const caseStudies = await getCaseStudies(locale);
+  const categoryFilters = await getCaseStudyFilterCategories(locale);
   const siteServices = await getSiteServices(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = localizedCanonical("/typicke-zakazky", locale);
@@ -106,6 +107,7 @@ export default async function TypickeZakazkyPage({ params }: Props) {
         <CaseStudiesHub
           locale={locale}
           caseStudies={caseStudies}
+          categoryFilters={categoryFilters}
           serviceTitles={siteServices.map((service) => ({ href: service.href, title: service.title }))}
         />
       </section>

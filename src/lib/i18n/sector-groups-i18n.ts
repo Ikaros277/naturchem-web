@@ -5,5 +5,8 @@ export async function getSectorGroups(locale: Locale): Promise<readonly SectorGr
   if (locale === "de") {
     return (await import("@/lib/sector-groups-de")).sectorGroups;
   }
+  if (locale === "en") {
+    return (await import("@/lib/sector-groups-en")).sectorGroups;
+  }
   return (await import("@/lib/sector-groups")).sectorGroups;
 }

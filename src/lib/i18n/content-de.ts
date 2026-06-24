@@ -9,7 +9,7 @@ import {
 } from "@/lib/faq-de";
 import { sectorPagesEn } from "@/lib/sector-pages-de";
 import type { SectorPageData } from "@/lib/sector-pages";
-import { sectorsEn, provozyNavLabelEn } from "@/lib/sectors-de";
+import { sectorsDe, provozyNavLabelDe } from "@/lib/sectors-de";
 import {
   caseStudyCategories,
   caseStudies,
@@ -52,8 +52,8 @@ export const localeContent = {
     uiLabels: faqUiLabels
   },
   sectorPages: sectorPagesEn as Record<string, SectorPageData>,
-  sectors: sectorsEn,
-  provozyNavLabel: provozyNavLabelEn,
+  sectors: sectorsDe,
+  provozyNavLabel: provozyNavLabelDe,
   caseStudyCategories,
   caseStudies,
   getCaseStudyCategory,

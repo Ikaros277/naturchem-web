@@ -131,6 +131,7 @@ export function SectorGroupsIndex({
               className="card service-group-details sector-group-details"
               ariaLabel={`${group.title}, ${countLabel} — ${accordion.showOrHide} ${ariaVerb}`}
               visual={<SectorGroupCollage sectorIds={group.sectorIds} sectors={sectors} />}
+              visualLayout="backdrop"
               summaryExtra={<SectorGroupChips sectorIds={group.sectorIds} sectors={sectors} />}
               title={group.title}
               countLabel={countLabel}

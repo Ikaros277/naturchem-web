@@ -9,6 +9,8 @@ type Props = {
   ariaLabel: string;
   icon?: ReactNode;
   visual?: ReactNode;
+  /** inline = malý náhled v řádku; backdrop = vizuál přes celou dlaždici pod textem */
+  visualLayout?: "inline" | "backdrop";
   title: string;
   countLabel: string;
   intro?: string;
@@ -26,6 +28,7 @@ export function AccordionIndexDetails({
   ariaLabel,
   icon,
   visual,
+  visualLayout = "inline",
   title,
   countLabel,
   intro,
@@ -36,6 +39,31 @@ export function AccordionIndexDetails({
   onToggle,
   children
 }: Props) {
+  const useBackdrop = visualLayout === "backdrop" && Boolean(visual);
+
+  const summaryText = (
+    <div className="service-group-summary-text">
+      <div className="service-group-summary-title-row">
+        <h2>{title}</h2>
+        <span className="service-group-count muted">{countLabel}</span>
+      </div>
+      {summaryExtra}
+      {intro ? <p className="muted service-group-intro">{intro}</p> : null}
+    </div>
+  );
+
+  const expandControl = (
+    <span className="service-group-expand" aria-hidden="true">
+      <span className="service-group-expand-text">
+        <span className="service-group-expand-when-closed">{expandClosed}</span>
+        <span className="service-group-expand-when-open">{expandOpen}</span>
+      </span>
+      <span className="service-group-expand-icon">
+        <AccordionExpandChevron />
+      </span>
+    </span>
+  );
+
   return (
     <details
       id={id}
@@ -43,25 +71,27 @@ export function AccordionIndexDetails({
       open={open}
       onToggle={(event) => onToggle(event.currentTarget.open)}
     >
-      <summary className="service-group-summary" aria-label={ariaLabel}>
-        {visual ?? icon}
-        <div className="service-group-summary-text">
-          <div className="service-group-summary-title-row">
-            <h2>{title}</h2>
-            <span className="service-group-count muted">{countLabel}</span>
-          </div>
-          {summaryExtra}
-          {intro ? <p className="muted service-group-intro">{intro}</p> : null}
-        </div>
-        <span className="service-group-expand" aria-hidden="true">
-          <span className="service-group-expand-text">
-            <span className="service-group-expand-when-closed">{expandClosed}</span>
-            <span className="service-group-expand-when-open">{expandOpen}</span>
-          </span>
-          <span className="service-group-expand-icon">
-            <AccordionExpandChevron />
-          </span>
-        </span>
+      <summary
+        className={`service-group-summary${useBackdrop ? " service-group-summary--backdrop" : ""}`}
+        aria-label={ariaLabel}
+      >
+        {useBackdrop ? (
+          <>
+            <div className="service-group-summary-backdrop" aria-hidden="true">
+              {visual}
+            </div>
+            <div className="service-group-summary-foreground">
+              {summaryText}
+              {expandControl}
+            </div>
+          </>
+        ) : (
+          <>
+            {visual ?? icon}
+            {summaryText}
+            {expandControl}
+          </>
+        )}
       </summary>
       {children}
     </details>

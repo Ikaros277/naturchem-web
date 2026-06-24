@@ -1,55 +1,59 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
-import { getSectorHeroImageConfig } from "@/lib/custom-hero-photos";
+import { getSectorHeroImageConfig, hasSectorPhoto } from "@/lib/custom-hero-photos";
 import type { Sector } from "@/lib/sectors";
 
 type Props = {
   sectorIds: readonly string[];
   sectors: readonly Sector[];
-  maxTiles?: number;
+  maxLayers?: number;
 };
 
-export function SectorGroupCollage({ sectorIds, sectors, maxTiles = 4 }: Props) {
-  const tiles = sectorIds
+function pickBackdropSectors(
+  sectorIds: readonly string[],
+  sectors: readonly Sector[],
+  maxLayers: number
+): Sector[] {
+  return sectorIds
     .map((id) => sectors.find((sector) => sector.id === id))
     .filter((sector): sector is Sector => Boolean(sector))
-    .slice(0, maxTiles);
+    .sort((a, b) => Number(hasSectorPhoto(b.id)) - Number(hasSectorPhoto(a.id)))
+    .slice(0, maxLayers);
+}
 
-  if (tiles.length === 0) return null;
+/** Prolínající se fotky provozů jako pozadí celé dlaždice skupiny. */
+export function SectorGroupCollage({ sectorIds, sectors, maxLayers = 4 }: Props) {
+  const layers = pickBackdropSectors(sectorIds, sectors, maxLayers);
 
-  const tileCount = tiles.length;
-  const collageClass =
-    tileCount === 1
-      ? "sector-group-collage sector-group-collage--1"
-      : tileCount === 2
-        ? "sector-group-collage sector-group-collage--2"
-        : tileCount === 3
-          ? "sector-group-collage sector-group-collage--3"
-          : "sector-group-collage sector-group-collage--4";
+  if (layers.length === 0) return null;
 
   return (
-    <div className={collageClass} aria-hidden="true">
-      {tiles.map((sector) => {
+    <div className="sector-group-backdrop" data-count={layers.length} aria-hidden="true">
+      {layers.map((sector, index) => {
         const config = getSectorHeroImageConfig(sector.id);
         return (
-          <div key={sector.id} className="sector-group-collage-item">
+          <div
+            key={sector.id}
+            className="sector-group-backdrop-layer"
+            style={{ "--layer-index": index } as CSSProperties}
+          >
             <Image
               src={config.src}
               alt=""
-              width={160}
-              height={160}
-              sizes="(min-width: 1024px) 120px, (min-width: 768px) 96px, 80px"
-              className="sector-group-collage-image"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="sector-group-backdrop-image"
               style={{ objectPosition: config.position ?? "center center" }}
             />
-            <span className="sector-group-collage-label">{sector.title}</span>
           </div>
         );
       })}
+      <span className="sector-group-backdrop-scrim" />
     </div>
   );
 }
 
-export function SectorGroupChips({ sectorIds, sectors }: Omit<Props, "maxTiles">) {
+export function SectorGroupChips({ sectorIds, sectors }: Omit<Props, "maxLayers">) {
   const labels = sectorIds
     .map((id) => sectors.find((sector) => sector.id === id))
     .filter((sector): sector is Sector => Boolean(sector))

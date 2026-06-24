@@ -6,7 +6,7 @@ type Props = {
   study: CaseStudy;
 };
 
-/** Tlumený náhled provozu nebo typu zakázky na dlaždici případové studie. */
+/** Náhled fotky v horní polovině dlaždice — přechod do bílého těla karty. */
 export function CaseStudyTileThumb({ study }: Props) {
   const config = getCaseStudyHeroImageConfig(study);
 

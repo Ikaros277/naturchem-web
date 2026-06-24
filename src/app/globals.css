@@ -33,8 +33,8 @@
   /* Rezerva jen pro dokumentaci — grid sloupce auto auto rezervu řeší samy */
   --header-mobile-logo-height: clamp(2.35rem, 7.2vw, 2.75rem);
   /* Tělo už má padding-top = výška hlavičky; uvnitř hero jen malá mezera */
-  --hero-band-safe-top: clamp(0.35rem, 1.5vw, 0.65rem);
-  --hero-band-safe-bottom: clamp(1rem, 3vw, 1.75rem);
+  --hero-band-safe-top: clamp(0.55rem, 2vw, 0.9rem);
+  --hero-band-safe-bottom: clamp(1.15rem, 3.25vw, 1.9rem);
 
   /*
    * Breakpointy (CSS neumí var() v @media — hodnoty držte konzistentní):

@@ -4086,11 +4086,6 @@ p {
     min-height: 0;
   }
 
-  .page-hero-band .breadcrumbs,
-  .service-hero-band .breadcrumbs {
-    display: none;
-  }
-
   .page-hero-band .hero-band-text,
   .service-hero-band .hero-band-text {
     overflow: visible;
@@ -8068,7 +8063,7 @@ main.home-page + .site-footer {
    Principy (platí sitewide pod 1024px):
    1. Flex/grid děti s textem/obrázky: min-width: 0 (jinak nejde zmenšit)
    2. Hlavička: grid minmax(0,1fr) auto auto — logo výrazné, CTA se zmenší dřív než logo
-   3. Hero na mobilu: drobečky skryté, výška dle obsahu (bez pevného height)
+   3. Hero na mobilu: výška dle obsahu (bez pevného height)
    4. Žádné overflow: hidden na hero textu na mobilu (řeže obsah)
 */
 

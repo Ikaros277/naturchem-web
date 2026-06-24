@@ -99,8 +99,7 @@ export default async function CmsArticlePage({ params }: Props) {
         imageSrc={article.heroImage}
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },
-          { name: messages.nav.articles, href: link("/poradna") },
-          { name: article.title }
+          { name: messages.nav.articles, href: link("/poradna") }
         ]}
       >
         <header className="premium-page-hero page-hero--photo">

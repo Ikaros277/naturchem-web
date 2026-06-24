@@ -21,6 +21,10 @@ Automaticky založené sezení po commitu `13f5993`.
 **Zdroj popisu:** Git commit (automatická synchronizace)
 
 ### Provedené změny
+#### Left-align mobile logo, hide hero breadcrumbs on mobile, let hero gro...
+**Co bylo uděláno:** Left-align mobile logo, hide hero breadcrumbs on mobile, let hero grow with content. (commit `a9769c6`). Dotcene oblasti: app, report, workflow.  
+**Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.
+
 #### Slightly increase hero band vertical padding above breadcrumbs and be...
 **Co bylo uděláno:** Slightly increase hero band vertical padding above breadcrumbs and below content. (commit `cc354d9`). Dotcene oblasti: app, report, workflow.  
 **Proč:** Uprava procesu reportovani prace - pruhledna evidence casu a zmen pro klienta.

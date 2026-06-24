@@ -2411,6 +2411,38 @@ fieldset.card legend {
   line-height: 1.2;
 }
 
+.sector-group-details .service-group-summary--backdrop .sector-group-chip {
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--navy);
+  border: 1px solid rgba(11, 31, 53, 0.14);
+  box-shadow: 0 1px 5px rgba(12, 26, 42, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-weight: 650;
+}
+
+.sector-group-details .service-group-summary--backdrop .service-group-summary-title-row h2 {
+  color: var(--navy);
+  text-shadow: 0 1px 14px rgba(255, 255, 255, 0.92);
+}
+
+.sector-group-details .service-group-summary--backdrop .service-group-count {
+  color: var(--muted);
+  text-shadow: 0 1px 10px rgba(255, 255, 255, 0.88);
+}
+
+.sector-group-details .sector-group-backdrop-scrim {
+  background: linear-gradient(
+    102deg,
+    rgba(248, 251, 249, 0.98) 0%,
+    rgba(248, 251, 249, 0.94) 26%,
+    rgba(248, 251, 249, 0.78) 44%,
+    rgba(236, 244, 240, 0.42) 58%,
+    rgba(12, 26, 42, 0.16) 78%,
+    rgba(8, 20, 32, 0.24) 100%
+  );
+}
+
 .sector-group-open-intro {
   margin: 0 0 1rem;
   padding: 0 1.25rem;
@@ -6716,13 +6748,13 @@ main.contact-page + .site-footer {
     width: 62%;
   }
 
-  .sector-group-backdrop-scrim {
+  .sector-group-details .sector-group-backdrop-scrim {
     background: linear-gradient(
       102deg,
-      rgba(248, 251, 249, 0.97) 0%,
-      rgba(248, 251, 249, 0.88) 30%,
-      rgba(248, 251, 249, 0.45) 48%,
-      rgba(20, 74, 52, 0.18) 100%
+      rgba(248, 251, 249, 0.98) 0%,
+      rgba(248, 251, 249, 0.92) 34%,
+      rgba(248, 251, 249, 0.62) 52%,
+      rgba(12, 26, 42, 0.18) 100%
     );
   }
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { IBM_Plex_Sans, Source_Sans_3 } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import "../globals.css";
 import { DeferredClientWidgets } from "@/components/DeferredClientWidgets";
 import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
@@ -15,17 +15,10 @@ import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 import { schemaLanguage } from "@/lib/i18n/locale-pick";
 
-const fontBody = Source_Sans_3({
+const fontSans = Source_Sans_3({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-body",
-  weight: ["400", "600", "700"],
-  display: "swap"
-});
-
-const fontDisplay = IBM_Plex_Sans({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-display",
-  weight: ["500", "600", "700"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
   display: "swap"
 });
 
@@ -131,8 +124,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   };
 
   return (
-    <html lang={locale} className={`${fontBody.variable} ${fontDisplay.variable}`}>
-      <body className={fontBody.className}>
+    <html lang={locale} className={fontSans.variable}>
+      <body className={fontSans.className}>
         <LocaleProvider locale={locale} messages={messages}>
           <GoogleConsentModeInit />
           <JsonLd data={websiteData} />

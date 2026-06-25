@@ -99,7 +99,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-body), "Source Sans 3", "Segoe UI", sans-serif;
+  font-family: var(--font-sans), "Source Sans 3", "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text);
 }
@@ -107,7 +107,9 @@ body {
 body {
   padding-top: var(--site-header-offset);
   font-size: 16px;
+  line-height: 1.55;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -115,27 +117,9 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.eyebrow,
-.button,
-.nav-links a,
-.nav-dropdown-link,
-.nav-mobile-link,
-.nav-mobile-sub-link,
-.brand-tagline,
-.footer-brand-name,
-.footer-heading,
-.footer-docs-heading,
-.stats-highlight-value,
-.reference-segment-title,
-.reference-example-title,
-.index-card-heading,
-.service-index-card h3,
-.card h3,
-.team-card-name,
-.faq-accordion-summary,
-.topbar-link {
-  font-family: var(--font-display), "IBM Plex Sans", "Segoe UI", sans-serif;
+h6 {
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 
 a {
@@ -1820,7 +1804,6 @@ main ol {
 }
 
 .brand-logo--wordmark-on-dark .brand-wordmark-text {
-  font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: 0.03em;
@@ -7738,17 +7721,17 @@ main.contact-page + .site-footer {
 
 .mega-menu-column-title {
   display: block;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--mega-accent-strong);
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .mega-menu-column-sub {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   line-height: 1.4;
   color: #6b7c8d;
 }
@@ -8465,7 +8448,6 @@ main.home-page + .site-footer {
   margin: 0 0 14px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(184, 214, 202, 0.35);
-  font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;

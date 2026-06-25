@@ -41,6 +41,7 @@ export type ServiceIconKey =
   | "contact-phone"
   | "contact-mail"
   | "contact-map-pin"
+  | "faq"
   | "default";
 
 const hrefToIcon: Record<string, ServiceIconKey> = {
@@ -83,9 +84,10 @@ const hrefToIcon: Record<string, ServiceIconKey> = {
   "/typicke-zakazky": "process-posouzeni",
   "/reference": "audience-prumysl",
   "/poradna": "posudek",
-  "/faq": "process-posouzeni",
-  "/akreditace-autorizace-dokumenty": "pillar-mereni",
-  "/pristrojove-vybaveni": "pillar-mereni"
+  "/faq": "faq",
+  "/o-spolecnosti-naturchem": "contact-building",
+  "/akreditace-autorizace-dokumenty": "povoleni",
+  "/pristrojove-vybaveni": "process-zpracovani"
 };
 
 export function getServiceIconKey(href: string): ServiceIconKey {
@@ -186,7 +188,7 @@ export function getDetailGroupIconKey(title: string): ServiceIconKey {
 }
 
 const faqCategoryToIcon: Record<string, ServiceIconKey> = {
-  obecne: "process-posouzeni",
+  obecne: "faq",
   emise: "emise",
   "pracovni-prostredi": "pracovni-prostredi",
   hluk: "hluk",

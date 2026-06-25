@@ -16,6 +16,8 @@
     "servicesOverview": "Alle Leistungen",
     "megaUnsure": "Welche Leistung Sie benötigen?",
     "about": "Über uns",
+    "aboutOverview": "Über das Unternehmen",
+    "megaAboutHint": "Sie suchen eine Antwort? Siehe FAQ",
     "contact": "Kontakt",
     "cta": "Angebot anfragen",
     "ctaShort": "Anfragen",
@@ -99,7 +101,8 @@
     "clientsAria": "Unsere Kunden",
     "clientsTitle": "Unsere Kunden",
     "articlesAria": "Neueste Wissensartikel",
-    "articlesTitle": "Neueste Wissensartikel"
+    "articlesTitle": "Neueste Wissensartikel",
+    "unsureAria": "Hilfe bei der Leistungsauswahl"
   },
   "contact": {
     "metaTitle": "Kontakt & Anfrage | NATURCHEM",

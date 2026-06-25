@@ -16,6 +16,8 @@
     "servicesOverview": "Přehled služeb",
     "megaUnsure": "Nevíte, kterou službu potřebujete?",
     "about": "O nás",
+    "aboutOverview": "O společnosti",
+    "megaAboutHint": "Hledáte odpověď? Podívejte se na FAQ",
     "contact": "Kontakt",
     "cta": "Nezávazně poptat",
     "ctaShort": "Poptat",
@@ -99,7 +101,8 @@
     "clientsAria": "Naši zákazníci",
     "clientsTitle": "Naši zákazníci",
     "articlesAria": "Aktuální odborné články",
-    "articlesTitle": "Aktuální odborné články"
+    "articlesTitle": "Aktuální odborné články",
+    "unsureAria": "Pomoc s výběrem služby"
   },
   "contact": {
     "metaTitle": "Kontakt a dotaz | NATURCHEM",

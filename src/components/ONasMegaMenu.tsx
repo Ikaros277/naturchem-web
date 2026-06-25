@@ -1,10 +1,9 @@
 "use client";
 
 import { ServiceIcon } from "@/components/ServiceIcon";
-import type { HeaderLabels, ServiceHeaderMegaGroup } from "@/lib/header-nav-data";
+import type { HeaderLabels, ONasHeaderMegaGroup } from "@/lib/header-nav-data";
 import { LocaleLink } from "@/lib/i18n/locale-link";
-import { getServiceCategoryFromHref } from "@/lib/service-categories";
-import { serviceMegaGroupIcons, type ServiceMegaGroupId } from "@/lib/megamenu-types";
+import { oNasMegaGroupIcons, type ONasMegaGroupId } from "@/lib/megamenu-types";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
 
 function hasHashHref(href: string) {
@@ -27,7 +26,7 @@ function MegaMenuLinkRow({
   href: string;
   label: string;
   description: string;
-  groupId?: ServiceMegaGroupId;
+  groupId?: ONasMegaGroupId;
   onNavigate?: () => void;
 }) {
   return (
@@ -37,7 +36,6 @@ function MegaMenuLinkRow({
         scroll={hasHashHref(href) ? false : undefined}
         onClick={hasHashHref(href) ? onHashLinkClick : onNavigate}
         className="mega-menu-link-row"
-        data-category={getServiceCategoryFromHref(href) ?? undefined}
       >
         <span className={`mega-menu-link-icon mega-menu-link-icon--${groupId ?? "default"}`}>
           <ServiceIcon href={href} variant="plain" size={18} />
@@ -55,7 +53,7 @@ function MegaMenuColumn({
   group,
   onNavigate
 }: {
-  group: ServiceHeaderMegaGroup;
+  group: ONasHeaderMegaGroup;
   onNavigate?: () => void;
 }) {
   const groupId = group.id;
@@ -65,7 +63,7 @@ function MegaMenuColumn({
       <div className="mega-menu-column-head">
         <span className={`mega-menu-column-badge mega-menu-column-badge--${groupId ?? "default"}`}>
           {groupId ? (
-            <ServiceIcon icon={serviceMegaGroupIcons[groupId]} variant="plain" size={22} />
+            <ServiceIcon icon={oNasMegaGroupIcons[groupId]} variant="plain" size={22} />
           ) : null}
         </span>
         <div className="mega-menu-column-heading">
@@ -91,15 +89,15 @@ function MegaMenuColumn({
 
 type Props = {
   labels: HeaderLabels;
-  serviceMegaGroups: readonly ServiceHeaderMegaGroup[];
+  oNasMegaGroups: readonly ONasHeaderMegaGroup[];
   onNavigate?: () => void;
 };
 
-export function ServiceMegaMenu({ labels, serviceMegaGroups, onNavigate }: Props) {
+export function ONasMegaMenu({ labels, oNasMegaGroups, onNavigate }: Props) {
   return (
-    <div id="nav-mega-sluzby" className="nav-dropdown nav-dropdown-wide nav-mega-panel" aria-label={labels.services}>
+    <div id="nav-mega-o-nas" className="nav-dropdown nav-dropdown-wide nav-mega-panel" aria-label={labels.about}>
       <div className="mega-menu-columns">
-        {serviceMegaGroups.map((group) => (
+        {oNasMegaGroups.map((group) => (
           <MegaMenuColumn key={group.id ?? group.title} group={group} onNavigate={onNavigate} />
         ))}
       </div>
@@ -107,11 +105,11 @@ export function ServiceMegaMenu({ labels, serviceMegaGroups, onNavigate }: Props
   );
 }
 
-export function MobileServiceMegaGroups({
+export function MobileONasMegaGroups({
   groups,
   onNavigate
 }: {
-  groups: readonly ServiceHeaderMegaGroup[];
+  groups: readonly ONasHeaderMegaGroup[];
   onNavigate?: () => void;
 }) {
   return (
@@ -125,7 +123,7 @@ export function MobileServiceMegaGroups({
             <span className="mega-menu-mobile-summary">
               {group.id ? (
                 <span className={`mega-menu-column-badge mega-menu-column-badge--${group.id}`}>
-                  <ServiceIcon icon={serviceMegaGroupIcons[group.id]} variant="plain" size={18} />
+                  <ServiceIcon icon={oNasMegaGroupIcons[group.id]} variant="plain" size={18} />
                 </span>
               ) : null}
               <span className="mega-menu-mobile-heading">

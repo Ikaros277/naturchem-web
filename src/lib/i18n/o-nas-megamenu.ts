@@ -1,9 +1,9 @@
 import type { Locale } from "@/lib/i18n/locales";
-import type { MegaMenuGroup } from "@/lib/megamenu-types";
+import type { ONasMegaMenuGroup } from "@/lib/megamenu-types";
 
-export type { MegaMenuGroup };
+export type { ONasMegaMenuGroup };
 
-export async function getONasMegaGroups(locale: Locale): Promise<readonly MegaMenuGroup[]> {
+export async function getONasMegaGroups(locale: Locale): Promise<readonly ONasMegaMenuGroup[]> {
   if (locale === "en") {
     return (await import("@/lib/o-nas-megamenu-en")).oNasMegaGroupsEn;
   }

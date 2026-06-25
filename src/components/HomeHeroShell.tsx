@@ -92,13 +92,6 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
     return () => window.cancelIdleCallback(idle);
   }, [pillars]);
 
-  const photo =
-    activeId === INITIAL_PILLAR_ID ? (
-      initialPhoto
-    ) : (
-      <HeroPhoto key={activeId} theme={activePillar.theme} priority={false} />
-    );
-
   return (
     <section
       className="hero hero--split home-hero"
@@ -153,7 +146,19 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
         role="tabpanel"
         aria-labelledby={`home-hero-tab-${activeId}`}
       >
-        <div className="hero-photo-layer is-active">{photo}</div>
+        {pillars.map((pillar) => (
+          <div
+            key={pillar.id}
+            className={activeId === pillar.id ? "hero-photo-layer is-active" : "hero-photo-layer"}
+            aria-hidden={activeId !== pillar.id}
+          >
+            {pillar.id === INITIAL_PILLAR_ID ? (
+              initialPhoto
+            ) : (
+              <HeroPhoto theme={pillar.theme} priority={false} />
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

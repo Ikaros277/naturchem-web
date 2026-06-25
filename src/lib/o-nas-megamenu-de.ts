@@ -1,20 +1,50 @@
-export const oNasMegaGroupsDe = [
+import type { ONasMegaMenuGroup } from "@/lib/megamenu-types";
+
+export const oNasMegaGroupsDe: readonly ONasMegaMenuGroup[] = [
   {
+    id: "spolecnost",
     title: "Unternehmen",
-    links: [{ href: "/o-spolecnosti-naturchem", label: "Über NATURCHEM" }]
-  },
-  {
-    title: "Fachkompetenz",
+    subtitle: "Geschichte, Team und Zusammenarbeit",
     links: [
-      { href: "/akreditace-autorizace-dokumenty", label: "Akkreditierung und Autorisierungen" },
-      { href: "/pristrojove-vybaveni", label: "Laborausstattung" }
+      {
+        href: "/o-spolecnosti-naturchem",
+        label: "Über NATURCHEM",
+        description: "Laborprofil, Standorte und Kontakte"
+      }
     ]
   },
   {
-    title: "Informationen",
+    id: "odbornost",
+    title: "Fachkompetenz",
+    subtitle: "Akkreditierung, Autorisierungen und Ausstattung",
     links: [
-      { href: "/poradna", label: "Wissensdatenbank" },
-      { href: "/faq", label: "FAQ" }
+      {
+        href: "/akreditace-autorizace-dokumenty",
+        label: "Akkreditierung und Autorisierungen",
+        description: "ISO/IEC 17025, UVP- und Studienautorisierungen"
+      },
+      {
+        href: "/pristrojove-vybaveni",
+        label: "Laborausstattung",
+        description: "Messgeräte für Feld und Labor"
+      }
+    ]
+  },
+  {
+    id: "informace",
+    title: "Informationen",
+    subtitle: "Artikel, Antworten und praktische Hinweise",
+    links: [
+      {
+        href: "/poradna",
+        label: "Wissensdatenbank",
+        description: "Recht, Messungen und Betrieb in der Praxis"
+      },
+      {
+        href: "/faq",
+        label: "FAQ",
+        description: "Häufige Fragen zu Messungen und Genehmigungen"
+      }
     ]
   }
-] as const;
+];

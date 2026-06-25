@@ -1,15 +1,15 @@
 "use client";
 
-import type { ReactNode } from "react";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { contactFormHref } from "@/lib/contact-url";
-import type { HeaderClientProps, HeaderMegaGroup } from "@/lib/header-nav-data";
+import type { HeaderClientProps } from "@/lib/header-nav-data";
 import { kontaktNav } from "@/lib/navigation";
 import { LocaleLink, useLocalizedPathname } from "@/lib/i18n/locale-link";
 import { BrandLogo } from "@/components/BrandLogo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { MobileServiceMegaGroups, ServiceMegaMenu } from "@/components/ServiceMegaMenu";
+import { MobileONasMegaGroups, ONasMegaMenu } from "@/components/ONasMegaMenu";
 
 function useIsDesktopNav() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -61,119 +61,6 @@ function useDelayedHover(delayMs = 240) {
   return { open, openMenu, scheduleClose, closeNow };
 }
 
-function ONasDropdown({
-  labels,
-  oNasMegaGroups
-}: {
-  labels: HeaderClientProps["labels"];
-  oNasMegaGroups: readonly HeaderMegaGroup[];
-}) {
-  return (
-    <div id="nav-dropdown-o-nas" className="nav-dropdown nav-dropdown-o-nas" aria-label={labels.about}>
-      {oNasMegaGroups.map((group) => (
-        <div key={group.title} className="nav-dropdown-group">
-          <span className="nav-dropdown-label">{group.title}</span>
-          {group.links.map((item) => (
-            <LocaleLink key={item.href} href={item.href} className="nav-dropdown-link">
-              {item.label}
-            </LocaleLink>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function MobileONasGroups({
-  groups,
-  onNavigate
-}: {
-  groups: readonly HeaderMegaGroup[];
-  onNavigate?: () => void;
-}) {
-  return (
-    <>
-      {groups.map((group) => (
-        <details key={group.title} className="nav-mobile-details nav-mobile-nested">
-          <summary>{group.title}</summary>
-          <div className="nav-mobile-sub">
-            {group.links.map((item) => (
-              <LocaleLink
-                key={`${group.title}-${item.label}`}
-                href={item.href}
-                className="nav-mobile-sub-link"
-                onClick={onNavigate}
-              >
-                {item.label}
-              </LocaleLink>
-            ))}
-          </div>
-        </details>
-      ))}
-    </>
-  );
-}
-
-function NavDropdownItem({
-  id,
-  label,
-  open,
-  onOpen,
-  onClose,
-  children
-}: {
-  id: string;
-  label: string;
-  open: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-  children: ReactNode;
-}) {
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const triggerRef = useRef<HTMLSpanElement>(null);
-  const [flyoutLeft, setFlyoutLeft] = useState(0);
-
-  useLayoutEffect(() => {
-    if (!open || !wrapRef.current || !triggerRef.current) return;
-
-    const nav = wrapRef.current.closest(".nav");
-    if (!(nav instanceof HTMLElement)) return;
-
-    const navRect = nav.getBoundingClientRect();
-    const triggerRect = triggerRef.current.getBoundingClientRect();
-    setFlyoutLeft(triggerRect.left - navRect.left);
-  }, [open, label]);
-
-  return (
-    <div
-      ref={wrapRef}
-      className="nav-item nav-item--flyout"
-      onMouseEnter={onOpen}
-      onMouseLeave={onClose}
-      onFocusCapture={onOpen}
-      onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
-          onClose();
-        }
-      }}
-    >
-      <span
-        ref={triggerRef}
-        className="nav-item-link nav-item-trigger"
-        aria-expanded={open}
-        aria-controls={id}
-      >
-        {label}
-      </span>
-      {open ? (
-        <div className="nav-dropdown-flyout" style={{ left: flyoutLeft }}>
-          {children}
-        </div>
-      ) : null}
-    </div>
-  );
-}
-
 export function HeaderClient({
   labels: t,
   headerMainNav,
@@ -184,7 +71,7 @@ export function HeaderClient({
   const isDesktop = useIsDesktopNav();
   const [menuOpen, setMenuOpen] = useState(false);
   const servicesMenu = useDelayedHover();
-  const [oNasOpen, setONasOpen] = useState(false);
+  const aboutMenu = useDelayedHover();
   const [mounted, setMounted] = useState(false);
   const mobileSheetRef = useRef<HTMLDivElement>(null);
   const mobileToggleRef = useRef<HTMLButtonElement>(null);
@@ -196,7 +83,7 @@ export function HeaderClient({
   useEffect(() => {
     setMenuOpen(false);
     servicesMenu.closeNow();
-    setONasOpen(false);
+    aboutMenu.closeNow();
   }, [pathname]);
 
   useEffect(() => {
@@ -298,8 +185,11 @@ export function HeaderClient({
                 ))}
                 <details className="nav-mobile-details">
                   <summary>{t.about}</summary>
-                  <div className="nav-mobile-sub">
-                    <MobileONasGroups groups={oNasMegaGroups} onNavigate={closeMenu} />
+                  <LocaleLink href="/o-spolecnosti-naturchem" className="nav-mobile-overview" onClick={closeMenu}>
+                    {t.aboutOverview}
+                  </LocaleLink>
+                  <div className="nav-mobile-sub nav-mobile-sub--mega">
+                    <MobileONasMegaGroups groups={oNasMegaGroups} onNavigate={closeMenu} />
                   </div>
                 </details>
                 <LocaleLink href={kontaktNav.href} className="nav-mobile-link" onClick={closeMenu}>
@@ -366,15 +256,35 @@ export function HeaderClient({
                 {item.label}
               </LocaleLink>
             ))}
-            <NavDropdownItem
-              id="nav-dropdown-o-nas"
-              label={t.about}
-              open={oNasOpen}
-              onOpen={() => setONasOpen(true)}
-              onClose={() => setONasOpen(false)}
+            <div
+              className="nav-mega-wrap"
+              onMouseEnter={aboutMenu.openMenu}
+              onMouseLeave={aboutMenu.scheduleClose}
+              onFocusCapture={aboutMenu.openMenu}
+              onBlurCapture={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                  aboutMenu.scheduleClose();
+                }
+              }}
             >
-              <ONasDropdown labels={t} oNasMegaGroups={oNasMegaGroups} />
-            </NavDropdownItem>
+              <LocaleLink
+                className="nav-item-link"
+                href="/o-spolecnosti-naturchem"
+                aria-expanded={aboutMenu.open}
+                aria-controls="nav-mega-o-nas"
+              >
+                {t.about}
+              </LocaleLink>
+              {aboutMenu.open ? (
+                <div
+                  className="nav-mega-flyout"
+                  onMouseEnter={aboutMenu.openMenu}
+                  onMouseLeave={aboutMenu.scheduleClose}
+                >
+                  <ONasMegaMenu labels={t} oNasMegaGroups={oNasMegaGroups} />
+                </div>
+              ) : null}
+            </div>
             <LocaleLink href={kontaktNav.href}>{t.contact}</LocaleLink>
           </nav>
         ) : null}

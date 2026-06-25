@@ -1,5 +1,5 @@
 import type { Messages } from "@/lib/i18n/get-messages";
-import type { ServiceMegaGroupId } from "@/lib/megamenu-types";
+import type { ONasMegaMenuGroup, ServiceMegaMenuGroup } from "@/lib/megamenu-types";
 
 export type HeaderLabels = Messages["header"];
 
@@ -9,16 +9,16 @@ export type HeaderNavLink = {
   readonly description?: string;
 };
 
-export type HeaderMegaGroup = {
-  readonly id?: ServiceMegaGroupId;
-  readonly title: string;
-  readonly subtitle?: string;
-  readonly links: readonly HeaderNavLink[];
-};
+export type ServiceHeaderMegaGroup = ServiceMegaMenuGroup;
+
+export type ONasHeaderMegaGroup = ONasMegaMenuGroup;
+
+/** @deprecated Use ServiceHeaderMegaGroup or ONasHeaderMegaGroup */
+export type HeaderMegaGroup = ServiceHeaderMegaGroup;
 
 export type HeaderClientProps = {
   labels: HeaderLabels;
   headerMainNav: readonly HeaderNavLink[];
-  serviceMegaGroups: readonly HeaderMegaGroup[];
-  oNasMegaGroups: readonly HeaderMegaGroup[];
+  serviceMegaGroups: readonly ServiceHeaderMegaGroup[];
+  oNasMegaGroups: readonly ONasHeaderMegaGroup[];
 };

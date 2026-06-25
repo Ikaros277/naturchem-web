@@ -16,6 +16,8 @@
     "servicesOverview": "All services",
     "megaUnsure": "Not sure which service you need?",
     "about": "About us",
+    "aboutOverview": "About the company",
+    "megaAboutHint": "Looking for an answer? See the FAQ",
     "contact": "Contact",
     "cta": "Request a quote",
     "ctaShort": "Inquire",
@@ -99,7 +101,8 @@
     "clientsAria": "Our clients",
     "clientsTitle": "Our clients",
     "articlesAria": "Latest knowledge articles",
-    "articlesTitle": "Latest knowledge articles"
+    "articlesTitle": "Latest knowledge articles",
+    "unsureAria": "Help choosing a service"
   },
   "contact": {
     "metaTitle": "Contact & inquiry | NATURCHEM",

@@ -132,7 +132,13 @@ export function SectorGroupsIndex({
               ariaLabel={`${group.title}, ${countLabel} — ${accordion.showOrHide} ${ariaVerb}`}
               visual={<SectorGroupCollage sectorIds={group.sectorIds} sectors={sectors} />}
               visualLayout="backdrop"
-              summaryExtra={<SectorGroupChips sectorIds={group.sectorIds} sectors={sectors} />}
+              summaryExtra={
+                <SectorGroupChips
+                  sectorIds={group.sectorIds}
+                  sectors={sectors}
+                  ariaLabel={sectorsIndex.groupChipsAria}
+                />
+              }
               title={group.title}
               countLabel={countLabel}
               expandClosed={accordion.expandClosed}

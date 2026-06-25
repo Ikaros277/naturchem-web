@@ -127,6 +127,46 @@ export function getCaseStudiesBySectorId(sectorId: string): CaseStudy[] {
   return caseStudies.filter((study) => study.sectorId === sectorId);
 }
 
+/** Pořadí kategorií pro střídání v hubu — měření emisí až na konec cyklu. */
+const CASE_STUDY_HUB_INTERLEAVE_ORDER: CaseStudyCategoryId[] = [
+  "pracovni-prostredi",
+  "hluk-vibrace",
+  "rozptylove-studie",
+  "hlukove-studie",
+  "eia-jes",
+  "odborne-posudky",
+  "provozni-rady",
+  "ispop-evidence",
+  "specificke-technologie",
+  "mereni-emisi"
+];
+
+/** Střídá zakázky podle kategorie, aby v mřížce neležely stejné typy pohromadě. */
+export function interleaveCaseStudiesByCategory(studies: CaseStudy[]): CaseStudy[] {
+  const buckets = new Map<CaseStudyCategoryId, CaseStudy[]>();
+
+  for (const study of studies) {
+    const bucket = buckets.get(study.categoryId) ?? [];
+    bucket.push(study);
+    buckets.set(study.categoryId, bucket);
+  }
+
+  const result: CaseStudy[] = [];
+  let hasMore = true;
+
+  while (hasMore) {
+    hasMore = false;
+    for (const categoryId of CASE_STUDY_HUB_INTERLEAVE_ORDER) {
+      const bucket = buckets.get(categoryId);
+      if (!bucket?.length) continue;
+      result.push(bucket.shift()!);
+      if (bucket.length) hasMore = true;
+    }
+  }
+
+  return result;
+}
+
 export function getCategoryLabel(categoryId: CaseStudyCategoryId): string {
   return CASE_STUDY_CATEGORY_LABELS[categoryId];
 }

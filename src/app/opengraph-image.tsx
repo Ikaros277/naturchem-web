@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { OgImageLayout } from "@/components/OgImageLayout";
+import { getHomeOgImageCopy } from "@/lib/i18n/og-image-copy";
 
 export const size = {
   width: 1200,
@@ -9,15 +10,10 @@ export const size = {
 export const contentType = "image/png";
 
 export default function OpenGraphImage() {
+  const copy = getHomeOgImageCopy("cs");
+
   return new ImageResponse(
-    (
-      <OgImageLayout
-        title="Měření, studie a dokumentace pro provozy a úřady"
-        subtitle="Emise · pracovní prostředí · hluk · rozptylové studie · EIA"
-      />
-    ),
-    {
-      ...size
-    }
+    <OgImageLayout title={copy.title} subtitle={copy.subtitle} footer={copy.footer} />,
+    { ...size }
   );
 }

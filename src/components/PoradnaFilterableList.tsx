@@ -3,7 +3,9 @@
 import { useMemo, useState } from 'react';
 import { ArticleCardThumb } from '@/components/ArticleCardThumb';
 import { IndexCard } from '@/components/IndexCard';
-import { ServiceIcon } from '@/components/ServiceIcon';
+import { CategoryBadge } from "@/components/CategoryBadge";
+import { ServiceIcon } from "@/components/ServiceIcon";
+import { categoryFromPoradnaTopic } from "@/lib/service-categories";
 import type { PoradnaTopic } from '@/lib/poradna-topic';
 import { useLocale, useTranslations } from '@/lib/i18n/locale-context';
 import type { Locale } from '@/lib/i18n/locales';
@@ -132,6 +134,7 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
             const articleRef = { slug: article.slug, title: article.title, topic: article.topic };
             const iconKey = poradnaTopicIconKey(articleRef);
             const topicLabel = topicLabels[article.topic];
+            const serviceCategory = categoryFromPoradnaTopic(article.topic);
             return (
               <IndexCard
                 key={article.href}
@@ -139,6 +142,7 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
                 title={article.title}
                 className="article-list-card article-card article-card--with-thumb article-card--mobile-row"
                 cta={common.readMore}
+                serviceCategory={serviceCategory}
                 icon={<ServiceIcon icon={iconKey} size={22} variant="inline" />}
                 meta={
                   <>
@@ -154,7 +158,11 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
                       ) : (
                         <span />
                       )}
-                      <span className="tag">{topicLabel}</span>
+                      {serviceCategory ? (
+                        <CategoryBadge category={serviceCategory} locale={locale} />
+                      ) : (
+                        <span className="tag">{topicLabel}</span>
+                      )}
                     </div>
                   </>
                 }

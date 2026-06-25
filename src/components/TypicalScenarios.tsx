@@ -3,6 +3,7 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { getMessages } from "@/lib/i18n/get-messages";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
+import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import type { typicalScenarios as typicalScenariosCs } from "@/lib/typical-scenarios";
 
 type Scenario = (typeof typicalScenariosCs)[number];
@@ -24,6 +25,7 @@ export async function TypicalScenarios({ scenarios, locale }: Props) {
           href={link(scenario.learnMoreHref)}
           className="typical-scenario-card"
           cta={messages.common.viewSolution}
+          serviceCategory={getServiceCategoryFromHref(scenario.learnMoreHref)}
           aria-label={messages.caseStudies.moreAboutService.replace("{title}", scenario.title)}
         >
           <div className="typical-scenario-card-head">

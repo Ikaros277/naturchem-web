@@ -4,6 +4,7 @@ import { LocaleLink } from "@/lib/i18n/locale-link";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
+import { getServiceCategoryFromIconKey } from "@/lib/service-categories";
 import type { ServiceIconKey } from "@/lib/service-icons";
 
 type OfferLink = {
@@ -69,9 +70,13 @@ function OfferPanel({ pillar, areasLabel }: { pillar: HomeOfferPillar; areasLabe
 export function HomeOfferCard({ pillar }: { pillar: HomeOfferPillar }) {
   const t = useTranslations("common");
   const scroll = hasHashHref(pillar.href) ? false : undefined;
+  const category = getServiceCategoryFromIconKey(pillar.icon);
 
   return (
-    <article className="card institutional-card home-offer-card card-interactive">
+    <article
+      className="card institutional-card home-offer-card card-interactive"
+      data-category={category ?? undefined}
+    >
       <LocaleLink
         href={pillar.href}
         scroll={scroll}

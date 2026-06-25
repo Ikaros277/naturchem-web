@@ -68,6 +68,7 @@ export const faqUiLabels = {
   legal: "Právní opora",
   related: "Související služby:",
   serviceTeaserTitle: "Časté dotazy k této službě",
+  sectorTeaserTitle: "Časté dotazy k tomuto provozu",
   viewAllCategory: "Zobrazit všechny časté dotazy — {category}",
   contactStripLabel: "Rychlý kontakt",
   submitMaterialsCta: "Poslat podklady k posouzení",

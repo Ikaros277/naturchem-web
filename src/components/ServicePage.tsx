@@ -17,6 +17,8 @@ import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
 import type { Locale } from "@/lib/i18n/locales";
 import { contactUrl } from "@/lib/contact-url";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
+import { CategoryBadge } from "@/components/CategoryBadge";
+import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
 import { company, siteUrl } from "@/lib/site";
@@ -139,6 +141,7 @@ export async function ServicePage(props: Props) {
   };
 
   const heroTheme = getServiceHeroTheme(props.slug);
+  const serviceCategory = getServiceCategoryFromHref(`/${props.slug}`);
 
   return (
     <main className="page">
@@ -158,6 +161,9 @@ export async function ServicePage(props: Props) {
         ]}
       >
         <header className="page-header service-hero service-hero--photo service-hero--single">
+          {serviceCategory ? (
+            <CategoryBadge category={serviceCategory} locale={locale} className="service-hero-category" />
+          ) : null}
           <h1>{props.title}</h1>
           <p className="page-lead">{props.intro}</p>
         </header>
@@ -165,7 +171,13 @@ export async function ServicePage(props: Props) {
 
       <TrustBand items={trustItems} heading={copy.trustAria} compact />
 
-      <section className="service-overview-section section--forest-tint" aria-label={copy.overviewAria}>
+      <section
+        className={[
+          "service-overview-section",
+          serviceCategory ? `service-overview-section--${serviceCategory}` : "section--forest-tint"
+        ].join(" ")}
+        aria-label={copy.overviewAria}
+      >
         <div className="container">
           <h2 className="service-overview-title">{copy.overviewHeading}</h2>
           <div className="service-overview-layout">
@@ -272,6 +284,7 @@ export async function ServicePage(props: Props) {
                   title={item.title}
                   cta={item.cta}
                   className="service-related-card"
+                  serviceCategory={getServiceCategoryFromHref(item.href)}
                   icon={<ServiceIcon href={item.href} variant="inline" size={20} />}
                   meta={
                     item.sectionLabel ? (

@@ -53,7 +53,11 @@ export function SectorGroupCollage({ sectorIds, sectors, maxLayers = 4 }: Props)
   );
 }
 
-export function SectorGroupChips({ sectorIds, sectors }: Omit<Props, "maxLayers">) {
+export function SectorGroupChips({
+  sectorIds,
+  sectors,
+  ariaLabel
+}: Omit<Props, "maxLayers"> & { ariaLabel: string }) {
   const labels = sectorIds
     .map((id) => sectors.find((sector) => sector.id === id))
     .filter((sector): sector is Sector => Boolean(sector))
@@ -62,7 +66,7 @@ export function SectorGroupChips({ sectorIds, sectors }: Omit<Props, "maxLayers"
   if (labels.length === 0) return null;
 
   return (
-    <ul className="sector-group-chip-list" aria-label="Provozy ve skupině">
+    <ul className="sector-group-chip-list" aria-label={ariaLabel}>
       {labels.map((label) => (
         <li key={label}>
           <span className="sector-group-chip">{label}</span>

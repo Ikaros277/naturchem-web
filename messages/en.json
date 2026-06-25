@@ -14,6 +14,7 @@
     "navAria": "Main navigation",
     "services": "Services",
     "servicesOverview": "All services",
+    "megaUnsure": "Not sure which service you need?",
     "about": "About us",
     "contact": "Contact",
     "cta": "Request a quote",
@@ -93,6 +94,8 @@
     "statsAria": "Experience in numbers",
     "offerAria": "What we provide",
     "offerTitle": "What we provide",
+    "choiceTitle": "What do you need?",
+    "choiceAria": "Choose where to start",
     "clientsAria": "Our clients",
     "clientsTitle": "Our clients",
     "articlesAria": "Latest knowledge articles",
@@ -244,11 +247,13 @@
     "relatedServicesLabel": "Related services",
     "typicalOrdersLabel": "Typical projects we handle",
     "detailPageLabel": "Facility detail",
-    "exampleFromPractice": "Practice example"
+    "exampleFromPractice": "Practice example",
+    "groupChipsAria": "Facilities in this group"
   },
   "homeHero": {
     "ariaLabel": "Introduction",
-    "pillarsAria": "Service areas"
+    "pillarsAria": "Service areas",
+    "callLabel": "Call"
   },
   "cookies": {
     "bannerTitle": "Cookie consent",

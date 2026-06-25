@@ -6,8 +6,9 @@ import { LocaleLink } from "@/lib/i18n/locale-link";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { contactFormHref } from "@/lib/contact-url";
 import {
-  type CaseStudy
-} from "@/lib/case-studies";
+  getServiceCategoryFromCaseStudyCategoryId
+} from "@/lib/service-categories";
+import { type CaseStudy, interleaveCaseStudiesByCategory } from "@/lib/case-studies";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
 
@@ -34,10 +35,11 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
   );
 
   const filtered = useMemo(() => {
-    return caseStudies.filter((study) => {
+    const list = caseStudies.filter((study) => {
       if (categoryFilter !== "all" && study.categoryId !== categoryFilter) return false;
       return true;
     });
+    return categoryFilter === "all" ? interleaveCaseStudiesByCategory(list) : list;
   }, [caseStudies, categoryFilter]);
 
   const close = useCallback(() => {
@@ -122,12 +124,16 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
       </p>
 
       <div className="case-studies-grid">
-        {filtered.map((study) => (
+        {filtered.map((study) => {
+          const category = getServiceCategoryFromCaseStudyCategoryId(study.categoryId);
+
+          return (
           <button
             key={study.id}
             id={study.id}
             type="button"
             className="card case-study-hub-tile"
+            data-category={category ?? undefined}
             onClick={() => handleOpen(study.id)}
             aria-haspopup="dialog"
           >
@@ -151,7 +157,8 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
               <span className="card-inline-link">{caseStudiesUi.showDetail}</span>
             </span>
           </button>
-        ))}
+          );
+        })}
       </div>
 
       {activeStudy ? (

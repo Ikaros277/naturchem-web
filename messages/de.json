@@ -14,6 +14,7 @@
     "navAria": "Hauptnavigation",
     "services": "Leistungen",
     "servicesOverview": "Alle Leistungen",
+    "megaUnsure": "Welche Leistung Sie benötigen?",
     "about": "Über uns",
     "contact": "Kontakt",
     "cta": "Angebot anfragen",
@@ -93,6 +94,8 @@
     "statsAria": "Erfahrung in Zahlen",
     "offerAria": "Was wir anbieten",
     "offerTitle": "Was wir anbieten",
+    "choiceTitle": "Was benötigen Sie?",
+    "choiceAria": "Wählen Sie, wo Sie beginnen",
     "clientsAria": "Unsere Kunden",
     "clientsTitle": "Unsere Kunden",
     "articlesAria": "Neueste Wissensartikel",
@@ -244,11 +247,13 @@
     "relatedServicesLabel": "Zugehörige Leistungen",
     "typicalOrdersLabel": "Typische Aufträge, die wir bearbeiten",
     "detailPageLabel": "Betriebsdetail",
-    "exampleFromPractice": "Praxisbeispiel"
+    "exampleFromPractice": "Praxisbeispiel",
+    "groupChipsAria": "Betriebe in dieser Gruppe"
   },
   "homeHero": {
     "ariaLabel": "Einführung",
-    "pillarsAria": "Leistungsbereiche"
+    "pillarsAria": "Leistungsbereiche",
+    "callLabel": "Anrufen"
   },
   "cookies": {
     "bannerTitle": "Cookie-Einwilligung",

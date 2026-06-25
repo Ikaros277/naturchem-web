@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "website",
       siteName: "NATURCHEM",
-      images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
+      images: [{ url: `/${locale}/opengraph-image`, width: 1200, height: 630 }]
     },
     robots: {
       index: true,

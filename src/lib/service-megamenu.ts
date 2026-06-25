@@ -1,46 +1,139 @@
 ﻿/** Položky megamenu Služby — jeden zdroj pravdy pro Header a navigaci. */
 export const serviceMegaGroups = [
   {
+    id: "mereni",
     title: "Měření",
+    subtitle: "Akreditovaná měření emisí, hluku a pracovního prostředí",
     links: [
-      { href: "/sluzby/pracovni-prostredi", label: "Pracovní prostředí" },
-      { href: "/sluzby/mereni-tepelna-chladova-zatez", label: "Tepelná a chladová zátěž" },
-      { href: "/sluzby/mereni-diisokyanatu", label: "Měření diisokyanátů" },
-      { href: "/sluzby/mereni-hluku", label: "Hluk a akustika" },
-      { href: "/sluzby/mereni-emisi", label: "Měření emisí" },
-      { href: "/sluzby/mereni-vibraci", label: "Vibrace" },
-      { href: "/sluzby/mereni-osvetleni", label: "Osvětlení" },
-      { href: "/sluzby/mereni-mikroklimatu", label: "Mikroklima" }
+      {
+        href: "/sluzby/pracovni-prostredi",
+        label: "Pracovní prostředí",
+        description: "Kategorizace práce, expozice a roční přehledy"
+      },
+      {
+        href: "/sluzby/mereni-emisi",
+        label: "Měření emisí",
+        description: "Emise ze zdrojů, VOC a imisní měření"
+      },
+      {
+        href: "/sluzby/mereni-hluku",
+        label: "Hluk a akustika",
+        description: "Hluk v provozu i v okolí závodu"
+      },
+      {
+        href: "/sluzby/mereni-tepelna-chladova-zatez",
+        label: "Tepelná a chladová zátěž",
+        description: "Hodnocení tepelné a chladové zátěže při práci"
+      },
+      {
+        href: "/sluzby/mereni-diisokyanatu",
+        label: "Měření diisokyanátů",
+        description: "Expozice diisokyanátů ve výrobě"
+      },
+      {
+        href: "/sluzby/mereni-vibraci",
+        label: "Vibrace",
+        description: "Celkové a lokální vibrace"
+      },
+      {
+        href: "/sluzby/mereni-osvetleni",
+        label: "Osvětlení",
+        description: "Intenzita osvětlení na pracovištích"
+      },
+      {
+        href: "/sluzby/mereni-mikroklimatu",
+        label: "Mikroklima",
+        description: "Teplota, vlhkost a proudění vzduchu"
+      }
     ]
   },
   {
+    id: "studie",
     title: "Studie a výpočty",
+    subtitle: "Rozptylové a hlukové studie, výpočty a posudky",
     links: [
-      { href: "/sluzby/rozptylove-studie", label: "Rozptylové studie" },
-      { href: "/sluzby/hlukove-studie", label: "Hlukové studie" },
-      { href: "/sluzby/akusticke-posudky", label: "Akustické posudky" },
-      { href: "/sluzby/modelove-vypocty", label: "Modelové výpočty" },
-      { href: "/sluzby/imisni-dopady", label: "Imisní a hlukové dopady" }
+      {
+        href: "/sluzby/rozptylove-studie",
+        label: "Rozptylové studie",
+        description: "Šíření znečišťujících látek ve vzduchu"
+      },
+      {
+        href: "/sluzby/hlukove-studie",
+        label: "Hlukové studie",
+        description: "Hlukové studie pro povolení staveb"
+      },
+      {
+        href: "/sluzby/modelove-vypocty",
+        label: "Modelové výpočty",
+        description: "Atmosférické a akustické modely"
+      },
+      {
+        href: "/sluzby/akusticke-posudky",
+        label: "Akustické posudky",
+        description: "Posudky hluku a vibrací"
+      },
+      {
+        href: "/sluzby/imisni-dopady",
+        label: "Imisní a hlukové dopady",
+        description: "Dopady záměrů na okolí a imise"
+      },
+      {
+        href: "/sluzby/ispop",
+        label: "ISPOP a provozní evidence",
+        description: "Provozní evidence odpadů a látek"
+      },
+      {
+        href: "/sluzby/ghg-overovani",
+        label: "Emise skleníkových plynů (GHG)",
+        description: "Výkazy a ověřování emisí GHG"
+      }
     ]
   },
   {
-    title: "Dokumentace a povolování",
+    id: "dokumentace",
+    title: "Dokumentace a povolení",
+    subtitle: "EIA, povolení provozu a provozní dokumentace",
     links: [
-      { href: "/sluzby/eia-oznameni-zameru", label: "EIA a oznámení záměru" },
-      { href: "/sluzby/odborne-posudky", label: "Odborné posudky" },
-      { href: "/sluzby/povoleni-provozu", label: "Povolení provozu zdroje" },
-      { href: "/sluzby/provozni-rady", label: "Provozní řády" },
-      { href: "/sluzby/ippc-integrovana-povoleni", label: "IPPC a integrovaná povolení" },
-      { href: "/sluzby/ispop", label: "ISPOP a provozní evidence" },
-      { href: "/sluzby/ghg-overovani", label: "Emise skleníkových plynů (GHG)" }
-    ]
-  },
-  {
-    title: "Školení a podpora",
-    links: [
-      { href: "/sluzby/skoleni-chemicke-legislativy", label: "Školení chemické legislativy" },
-      { href: "/sluzby/bezpecnostni-listy", label: "Bezpečnostní listy" },
-      { href: "/sluzby/chemicke-latky", label: "Chemické látky v provozu" }
+      {
+        href: "/sluzby/eia-oznameni-zameru",
+        label: "EIA a oznámení záměru",
+        description: "EIA, oznámení záměru a závěrečné zprávy"
+      },
+      {
+        href: "/sluzby/odborne-posudky",
+        label: "Odborné posudky",
+        description: "Podklady pro povolování a provoz"
+      },
+      {
+        href: "/sluzby/ippc-integrovana-povoleni",
+        label: "IPPC a integrovaná povolení",
+        description: "Integrovaná povolení a dokumentace BAT"
+      },
+      {
+        href: "/sluzby/povoleni-provozu",
+        label: "Povolení provozu zdroje",
+        description: "Povolení provozu a změny technologie"
+      },
+      {
+        href: "/sluzby/provozni-rady",
+        label: "Provozní řády",
+        description: "Provozní řády ke zdrojům a technologiím"
+      },
+      {
+        href: "/sluzby/skoleni-chemicke-legislativy",
+        label: "Školení chemické legislativy",
+        description: "Školení na míru podle REACH a CLP"
+      },
+      {
+        href: "/sluzby/bezpecnostni-listy",
+        label: "Bezpečnostní listy",
+        description: "Tvorba a aktualizace bezpečnostních listů"
+      },
+      {
+        href: "/sluzby/chemicke-latky",
+        label: "Chemické látky v provozu",
+        description: "Evidence a posouzení chemických látek"
+      }
     ]
   }
 ] as const;

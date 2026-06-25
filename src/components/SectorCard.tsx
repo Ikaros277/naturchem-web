@@ -57,22 +57,20 @@ export function SectorCard({ sector, caseStudies, serviceTitles, labels }: Props
         onClick={isHashLink ? onHashLinkClick : undefined}
       />
 
-      <div className="sector-card-thumb">
-        <div className="sector-card-thumb-media" aria-hidden="true">
-          <Image
-            src={heroConfig.src}
-            alt=""
-            fill
-            sizes="(min-width: 1024px) 42vw, 100vw"
-            className="sector-card-thumb-img"
-            style={{ objectPosition: heroConfig.position ?? "center center" }}
-          />
-          <span className="sector-card-thumb-overlay" />
-        </div>
-        <h3 className="sector-card-thumb-label index-card-heading">{sector.title}</h3>
+      <div className="sector-card-thumb" aria-hidden="true">
+        <Image
+          src={heroConfig.src}
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 42vw, 100vw"
+          className="sector-card-thumb-img"
+          style={{ objectPosition: heroConfig.position ?? "center center" }}
+        />
+        <span className="sector-card-thumb-overlay" />
       </div>
 
       <div className="sector-card-body">
+        <h3 className="sector-card-title index-card-heading">{sector.title}</h3>
         <p className="sector-card-lead muted">{shortenSectorCardLead(sector.description)}</p>
 
         {chipItems.length > 0 ? (

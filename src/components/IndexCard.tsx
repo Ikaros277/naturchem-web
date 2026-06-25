@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { ServiceCategory } from "@/lib/service-categories";
 import { SemanticCard } from "@/components/SemanticCard";
 
 type Props = {
@@ -6,6 +7,7 @@ type Props = {
   title: string;
   cta?: string;
   className?: string;
+  serviceCategory?: ServiceCategory | null;
   /** Ikona v jednom řádku s nadpisem (card-head), bez rámečku. */
   icon?: ReactNode;
   meta?: ReactNode;
@@ -18,12 +20,19 @@ export function IndexCard({
   title,
   cta = "Zobrazit",
   className = "",
+  serviceCategory,
   icon,
   meta,
   children
 }: Props) {
   return (
-    <SemanticCard href={href} className={className} cta={cta} aria-label={title}>
+    <SemanticCard
+      href={href}
+      className={className}
+      cta={cta}
+      serviceCategory={serviceCategory}
+      aria-label={title}
+    >
       {meta}
       {icon ? (
         <div className="index-card-head">

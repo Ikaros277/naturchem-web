@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { contactFormHref } from "@/lib/contact-url";
 import type { HeaderClientProps, HeaderMegaGroup } from "@/lib/header-nav-data";
@@ -9,6 +9,7 @@ import { kontaktNav } from "@/lib/navigation";
 import { LocaleLink, useLocalizedPathname } from "@/lib/i18n/locale-link";
 import { BrandLogo } from "@/components/BrandLogo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { MobileServiceMegaGroups, ServiceMegaMenu } from "@/components/ServiceMegaMenu";
 
 function useIsDesktopNav() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -58,38 +59,6 @@ function useDelayedHover(delayMs = 240) {
   };
 
   return { open, openMenu, scheduleClose, closeNow };
-}
-
-function ServiceMegaMenu({
-  labels,
-  serviceMegaGroups
-}: {
-  labels: HeaderClientProps["labels"];
-  serviceMegaGroups: readonly HeaderMegaGroup[];
-}) {
-  return (
-    <div id="nav-mega-sluzby" className="nav-dropdown nav-dropdown-wide nav-mega" aria-label={labels.services}>
-      <LocaleLink href="/sluzby" className="nav-dropdown-link nav-dropdown-overview">
-        {labels.servicesOverview}
-      </LocaleLink>
-      <div className="mega-menu-grid mega-menu-grid-four">
-        {serviceMegaGroups.map((group) => (
-          <div key={group.title} className="mega-menu-group">
-            <span className="nav-dropdown-label">{group.title}</span>
-            {group.links.map((item) => (
-              <LocaleLink
-                key={`${group.title}-${item.label}`}
-                href={item.href}
-                className="nav-dropdown-link"
-              >
-                {item.label}
-              </LocaleLink>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
 }
 
 function ONasDropdown({
@@ -160,9 +129,25 @@ function NavDropdownItem({
   onClose: () => void;
   children: ReactNode;
 }) {
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLSpanElement>(null);
+  const [flyoutLeft, setFlyoutLeft] = useState(0);
+
+  useLayoutEffect(() => {
+    if (!open || !wrapRef.current || !triggerRef.current) return;
+
+    const nav = wrapRef.current.closest(".nav");
+    if (!(nav instanceof HTMLElement)) return;
+
+    const navRect = nav.getBoundingClientRect();
+    const triggerRect = triggerRef.current.getBoundingClientRect();
+    setFlyoutLeft(triggerRect.left - navRect.left);
+  }, [open, label]);
+
   return (
     <div
-      className="nav-item"
+      ref={wrapRef}
+      className="nav-item nav-item--flyout"
       onMouseEnter={onOpen}
       onMouseLeave={onClose}
       onFocusCapture={onOpen}
@@ -172,41 +157,20 @@ function NavDropdownItem({
         }
       }}
     >
-      <span className="nav-item-link nav-item-trigger" aria-expanded={open} aria-controls={id}>
+      <span
+        ref={triggerRef}
+        className="nav-item-link nav-item-trigger"
+        aria-expanded={open}
+        aria-controls={id}
+      >
         {label}
       </span>
-      {open ? children : null}
+      {open ? (
+        <div className="nav-dropdown-flyout" style={{ left: flyoutLeft }}>
+          {children}
+        </div>
+      ) : null}
     </div>
-  );
-}
-
-function MobileServiceGroups({
-  groups,
-  onNavigate
-}: {
-  groups: readonly HeaderMegaGroup[];
-  onNavigate?: () => void;
-}) {
-  return (
-    <>
-      {groups.map((group) => (
-        <details key={group.title} className="nav-mobile-details nav-mobile-nested">
-          <summary>{group.title}</summary>
-          <div className="nav-mobile-sub">
-            {group.links.map((item) => (
-              <LocaleLink
-                key={`${group.title}-${item.label}`}
-                href={item.href}
-                className="nav-mobile-sub-link"
-                onClick={onNavigate}
-              >
-                {item.label}
-              </LocaleLink>
-            ))}
-          </div>
-        </details>
-      ))}
-    </>
   );
 }
 
@@ -318,8 +282,8 @@ export function HeaderClient({
                   <LocaleLink href="/sluzby" className="nav-mobile-overview" onClick={closeMenu}>
                     {t.servicesOverview}
                   </LocaleLink>
-                  <div className="nav-mobile-sub">
-                    <MobileServiceGroups groups={serviceMegaGroups} onNavigate={closeMenu} />
+                  <div className="nav-mobile-sub nav-mobile-sub--mega">
+                    <MobileServiceMegaGroups groups={serviceMegaGroups} onNavigate={closeMenu} />
                   </div>
                 </details>
                 {headerMainNav.map((item) => (

@@ -43,6 +43,7 @@ export const faqUiLabels = {
   legal: "Rechtsgrundlage",
   related: "Verwandte Dienstleistungen:",
   serviceTeaserTitle: "FAQ für diesen Service",
+  sectorTeaserTitle: "FAQ für diesen Betriebstyp",
   viewAllCategory: "Alle FAQ anzeigen – {category}",
   contactStripLabel: "Schnellkontakt",
   submitMaterialsCta: "Senden Sie Materialien zur Bewertung",

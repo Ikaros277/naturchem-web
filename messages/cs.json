@@ -14,6 +14,7 @@
     "navAria": "Hlavní navigace",
     "services": "Služby",
     "servicesOverview": "Přehled služeb",
+    "megaUnsure": "Nevíte, kterou službu potřebujete?",
     "about": "O nás",
     "contact": "Kontakt",
     "cta": "Nezávazně poptat",
@@ -93,6 +94,8 @@
     "statsAria": "Zkušenosti v číslech",
     "offerAria": "Co zajišťujeme",
     "offerTitle": "Co zajišťujeme",
+    "choiceTitle": "Co řešíte?",
+    "choiceAria": "Vyberte, odkud začít",
     "clientsAria": "Naši zákazníci",
     "clientsTitle": "Naši zákazníci",
     "articlesAria": "Aktuální odborné články",
@@ -244,11 +247,13 @@
     "relatedServicesLabel": "Související služby",
     "typicalOrdersLabel": "Typické zakázky, které řešíme",
     "detailPageLabel": "Detail provozu",
-    "exampleFromPractice": "Příklad z praxe"
+    "exampleFromPractice": "Příklad z praxe",
+    "groupChipsAria": "Provozy ve skupině"
   },
   "homeHero": {
     "ariaLabel": "Úvod",
-    "pillarsAria": "Oblasti služeb"
+    "pillarsAria": "Oblasti služeb",
+    "callLabel": "Zavolat"
   },
   "cookies": {
     "bannerTitle": "Souhlas s cookies",

@@ -18,7 +18,7 @@ import { sectorProcessSteps } from "@/lib/i18n/work-process-i18n";
 import { sectorContactUrl } from "@/lib/contact-url";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { getSectorHeroImageConfig, hasSectorPhoto } from "@/lib/custom-hero-photos";
-import { getDetailGroupIconKey } from "@/lib/service-icons";
+import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { siteUrl } from "@/lib/site";
 
 type Props = {
@@ -142,7 +142,7 @@ export async function SectorPage(props: Props) {
                   </ul>
                 </OverviewGridCell>
 
-                <OverviewGridCell icon={getDetailGroupIconKey("Typické chyby a rizika")} title={copy.pitfalls}>
+                <OverviewGridCell icon="process-posouzeni" title={copy.pitfalls}>
                   <ul className="check-list">
                     {props.pitfalls.map((item) => (
                       <li key={item}>{item}</li>
@@ -179,13 +179,14 @@ export async function SectorPage(props: Props) {
                 title={service.title}
                 cta={copy.viewService}
                 className="service-related-card"
+                serviceCategory={getServiceCategoryFromHref(service.href)}
                 icon={<ServiceIcon href={service.href} variant="inline" size={20} />}
               />
             ))}
           </div>
         </section>
 
-        <SectorFaqTeaser items={props.faq} />
+        <SectorFaqTeaser locale={locale} items={props.faq} />
 
         <PageCtaStrip {...pageCtaPresets.sectorDetail} primaryHref={contactHref} />
       </div>

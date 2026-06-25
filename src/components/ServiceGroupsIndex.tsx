@@ -8,6 +8,10 @@ import { useTranslations } from "@/lib/i18n/locale-context";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { ServiceIconKey } from "@/lib/service-icons";
+import {
+  getServiceCategoryFromHref,
+  getServiceCategoryFromServiceGroupId
+} from "@/lib/service-categories";
 import type { serviceGroups as serviceGroupsCs } from "@/lib/service-groups";
 import { useAccordionHashOpen } from "@/lib/use-accordion-hash-open";
 
@@ -47,55 +51,16 @@ const groupAriaVerbsEn: Record<string, string> = {
   "skoleni-podpora": "training"
 };
 
-const groupTagsCs: Record<string, string[]> = {
-  "mericke-sluzby": ["KHS", "ČIŽP", "KÚ"],
-  "studie-vypocty": ["EIA", "KHS", "KÚ"],
-  "povolovaci-podklady": ["KÚ", "ČIŽP", "IPPC"],
-  "eia-investice": ["EIA", "Investor", "Projektant"],
-  "evidence-reporting": ["ISPOP", "GHG", "Reporting"],
-  "skoleni-podpora": ["Chemie", "BOZP", "Praxe"]
-};
-
-const groupTagsEn: Record<string, string[]> = {
-  "mericke-sluzby": ["KHS", "ČIŽP", "KÚ"],
-  "studie-vypocty": ["EIA", "KHS", "KÚ"],
-  "povolovaci-podklady": ["KÚ", "ČIŽP", "IPPC"],
-  "eia-investice": ["EIA", "Investor", "Designer"],
-  "evidence-reporting": ["ISPOP", "GHG", "Reporting"],
-  "skoleni-podpora": ["Chemicals", "OSH", "Practice"]
-};
-
-const groupTagsDe: Record<string, string[]> = {
-  "mericke-sluzby": ["KHS", "ČIŽP", "KÚ"],
-  "studie-vypocty": ["EIA", "KHS", "KÚ"],
-  "povolovaci-podklady": ["KÚ", "ČIŽP", "IPPC"],
-  "eia-investice": ["EIA", "Investor", "Planer"],
-  "evidence-reporting": ["ISPOP", "GHG", "Reporting"],
-  "skoleni-podpora": ["Chemie", "Arbeitsschutz", "Praxis"]
-};
-
-function groupTagsForLocale(locale: Locale): Record<string, string[]> {
-  if (locale === "en") return groupTagsEn;
-  if (locale === "de") return groupTagsDe;
-  return groupTagsCs;
-}
-
 type ServiceGroup = (typeof serviceGroupsCs)[number];
 
 function ServiceCards({
-  groupId,
   items,
   locale,
-  viewServiceLabel,
-  relatedAreasLabel,
-  groupTags
+  viewServiceLabel
 }: {
-  groupId: string;
   items: ServiceGroup["items"];
   locale: Locale;
   viewServiceLabel: string;
-  relatedAreasLabel: string;
-  groupTags: Record<string, string[]>;
 }) {
   return (
     <div className="service-card-grid">
@@ -106,16 +71,10 @@ function ServiceCards({
           title={item.title}
           className="service-index-card service-card"
           cta={viewServiceLabel}
+          serviceCategory={getServiceCategoryFromHref(item.href)}
           icon={<ServiceIcon href={item.href} variant="inline" size={20} />}
         >
           <p className="muted">{item.text}</p>
-          <ul className="tag-row service-index-card-tags" aria-label={relatedAreasLabel}>
-            {(groupTags[groupId] ?? []).slice(0, 4).map((tag) => (
-              <li key={tag}>
-                <span className="tag">{tag}</span>
-              </li>
-            ))}
-          </ul>
         </IndexCard>
       ))}
     </div>
@@ -134,18 +93,19 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
   const { isOpen, onToggle } = useAccordionHashOpen(groupIds);
   const ariaVerbs =
     locale === "en" ? groupAriaVerbsEn : locale === "de" ? groupAriaVerbsDe : groupAriaVerbs;
-  const groupTags = groupTagsForLocale(locale);
 
   return (
     <section className="section section-surface accordion-index-surface service-groups-accordion">
       <div className="container service-groups-accordion-inner">
         {groups.map((group) => {
           const ariaVerb = ariaVerbs[group.id] ?? group.title;
+          const groupCategory = getServiceCategoryFromServiceGroupId(group.id);
 
           return (
             <AccordionIndexDetails
               key={group.id}
               id={group.id}
+              className={`card service-group-details${groupCategory ? ` service-group-details--${groupCategory}` : ""}`}
               ariaLabel={`${group.title} — ${accordion.showOrHide} ${ariaVerb}`}
               icon={
                 <ServiceIcon
@@ -162,12 +122,9 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
               onToggle={(open) => onToggle(group.id, open)}
             >
               <ServiceCards
-                groupId={group.id}
                 items={group.items}
                 locale={locale}
                 viewServiceLabel={common.viewService}
-                relatedAreasLabel={common.relatedAreas}
-                groupTags={groupTags}
               />
             </AccordionIndexDetails>
           );

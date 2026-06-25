@@ -8,6 +8,7 @@ export type HomeHeroPillar = {
   theme: HeroTheme;
   /** Jedna věta pod chipy — co pro zákazníka uděláme (aktivní sloveso) */
   detail: string;
+  href: string;
 };
 
 export const homeHeroPillars: HomeHeroPillar[] = [
@@ -16,20 +17,23 @@ export const homeHeroPillars: HomeHeroPillar[] = [
     label: "Měření",
     theme: "homepage-mereni",
     detail:
-      "Změříme emise, pracovní prostředí, hluk i vibrace — akreditovaně, s protokolem pro KHS a ČIŽP."
+      "Změříme emise, pracovní prostředí, hluk i vibrace — akreditovaně, s protokolem pro KHS a ČIŽP.",
+    href: "/sluzby#mericke-sluzby"
   },
   {
     id: "studie",
     label: "Studie",
     theme: "homepage-studie",
     detail:
-      "Připravíme rozptylové a hlukové studie, posudky a výpočty pro stavební řízení, KHS nebo EIA."
+      "Připravíme rozptylové a hlukové studie, posudky a výpočty pro stavební řízení, KHS nebo EIA.",
+    href: "/sluzby#studie-vypocty"
   },
   {
     id: "dokumentace",
-    label: "EIA",
+    label: "Dokumentace",
     theme: "homepage-eia",
     detail:
-      "Zpracujeme EIA, odborné posudky, provozní řády, IPPC a ISPOP — podklady pro správní orgány."
+      "Zpracujeme EIA, odborné posudky, provozní řády, IPPC a ISPOP — podklady pro správní orgány.",
+    href: "/sluzby#povolovaci-podklady"
   }
 ];

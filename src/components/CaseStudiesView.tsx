@@ -7,6 +7,7 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import { contactFormHref } from "@/lib/contact-url";
 import { SemanticCard } from "@/components/SemanticCard";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import type { CaseStudyCategory, LegacyCaseStudy } from "@/lib/case-studies";
 
 type Props = {
@@ -49,6 +50,7 @@ export function CaseStudiesView({ category, categories, locale }: Props) {
           href={link(`/typicke-zakazky/${cat.slug}`)}
           className="case-category-card"
           cta={common.viewExamples}
+          serviceCategory={getServiceCategoryFromHref(cat.serviceHref)}
           aria-label={caseStudies.exampleCountAria
             .replace("{title}", cat.title)
             .replace("{count}", String(cat.cases.length))}

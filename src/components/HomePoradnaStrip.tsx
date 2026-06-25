@@ -8,7 +8,9 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import { getLatestPoradnaArticles } from "@/lib/poradna-articles";
-import { heroThemeForArticle, poradnaTopicIconKey } from "@/lib/poradna-topic";
+import { CategoryBadge } from "@/components/CategoryBadge";
+import { categoryFromPoradnaTopic } from "@/lib/service-categories";
+import { heroThemeForArticle, poradnaTopicIconKey, resolveArticleTopic } from "@/lib/poradna-topic";
 
 type Props = {
   locale: Locale;
@@ -38,9 +40,11 @@ export async function HomePoradnaStrip({ locale }: Props) {
               title: article.title,
               topic: article.topic
             };
+            const topic = resolveArticleTopic(articleRef);
             const iconKey = poradnaTopicIconKey(articleRef);
             const displayDate = formatArticleDate(article.publishedAt, locale);
             const topicLabel = getPoradnaTopicLabel(article.topic, locale);
+            const serviceCategory = categoryFromPoradnaTopic(topic);
 
             return (
               <IndexCard
@@ -49,6 +53,7 @@ export async function HomePoradnaStrip({ locale }: Props) {
                 title={article.title}
                 className="article-list-card article-card article-card--with-thumb article-card--mobile-row"
                 cta={messages.common.readMore}
+                serviceCategory={serviceCategory}
                 icon={<ServiceIcon icon={iconKey} size={22} variant="inline" />}
                 meta={
                   <>
@@ -64,7 +69,11 @@ export async function HomePoradnaStrip({ locale }: Props) {
                       ) : (
                         <span />
                       )}
-                      <span className="tag">{topicLabel}</span>
+                      {serviceCategory ? (
+                        <CategoryBadge category={serviceCategory} locale={locale} />
+                      ) : (
+                        <span className="tag">{topicLabel}</span>
+                      )}
                     </div>
                   </>
                 }

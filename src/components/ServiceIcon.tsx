@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { getServiceCategory, serviceCategoryClass } from "@/lib/service-categories";
 import { getServiceIconKey, type ServiceIconKey } from "@/lib/service-icons";
 
 type Props = {
@@ -348,7 +349,10 @@ function resolveKey(props: Props): ServiceIconKey {
 export function ServiceIcon({ href, icon, size, variant = "inline", className }: Props) {
   const key = resolveKey({ href, icon });
   const resolvedSize = size ?? variantSvgSize[variant];
-  const classes = ["service-icon-plain", "card-symbol", className].filter(Boolean).join(" ");
+  const category = getServiceCategory({ href, icon: key });
+  const classes = ["service-icon-plain", "card-symbol", serviceCategoryClass(category), className]
+    .filter(Boolean)
+    .join(" ");
 
   return <span className={classes}>{iconGlyphs[key](resolvedSize)}</span>;
 }

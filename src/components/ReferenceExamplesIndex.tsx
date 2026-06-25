@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { ReferenceExampleGroup } from "@/lib/reference-example-groups";
 import type { ServiceIconKey } from "@/lib/service-icons";
+import { getServiceCategoryFromHref, type ServiceCategory } from "@/lib/service-categories";
 
 type ReferenceExampleItem = {
   id: string;
@@ -22,6 +23,15 @@ const groupIcons: Record<string, ServiceIconKey> = {
   "studie-posudky": "pillar-studie",
   "eia-povolovani": "eia",
   "evidence-dokumentace": "ispop"
+};
+
+const groupCategories: Record<string, ServiceCategory> = {
+  "mereni-emisi": "measurement",
+  "pracovni-prostredi": "measurement",
+  "hluk-akustika": "measurement",
+  "studie-posudky": "studies",
+  "eia-povolovani": "docs",
+  "evidence-dokumentace": "docs"
 };
 
 function orderCountLabel(count: number, locale: Locale, messages: Awaited<ReturnType<typeof getMessages>>): string {
@@ -50,9 +60,14 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
           .map((id) => examplesById.get(id))
           .filter((e): e is ReferenceExampleItem => e !== undefined);
         const countLabel = orderCountLabel(groupExamples.length, locale, messages);
+        const groupCategory = groupCategories[group.id];
 
         return (
-          <details key={group.id} id={group.id} className="card service-group-details reference-example-group">
+          <details
+            key={group.id}
+            id={group.id}
+            className={`card service-group-details reference-example-group${groupCategory ? ` service-group-details--${groupCategory}` : ""}`}
+          >
             <summary
               className="service-group-summary"
               aria-label={`${group.title}, ${countLabel} — ${accordion.showOrCollapse}`}
@@ -98,6 +113,7 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
                   title={example.title}
                   cta={common.viewService}
                   className="service-index-card service-card"
+                  serviceCategory={getServiceCategoryFromHref(example.href)}
                   icon={<ServiceIcon href={example.href} variant="inline" size={20} />}
                 >
                   <p className="muted">{example.text}</p>

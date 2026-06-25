@@ -4,6 +4,9 @@ import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type Reac
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { getHeroImageSrc } from "@/lib/hero-images";
 import type { HomeHeroPillar, HomeHeroPillarId } from "@/lib/home-hero-pillars";
+import { LocaleLink } from "@/lib/i18n/locale-link";
+import { getServiceCategoryFromPillarId } from "@/lib/service-categories";
+import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
 
 const AUTO_ROTATE_MS = 5000;
 const MANUAL_PAUSE_MS = 10000;
@@ -12,6 +15,16 @@ const INITIAL_PILLAR_ID: HomeHeroPillarId = "mereni";
 function nextPillarId(pillars: HomeHeroPillar[], currentId: HomeHeroPillarId): HomeHeroPillarId {
   const currentIndex = pillars.findIndex((pillar) => pillar.id === currentId);
   return pillars[(currentIndex + 1) % pillars.length].id;
+}
+
+function hasHashHref(href: string) {
+  return href.includes("#");
+}
+
+function onHashLinkClick() {
+  window.setTimeout(notifyAccordionHashSync, 0);
+  window.setTimeout(notifyAccordionHashSync, 100);
+  window.setTimeout(notifyAccordionHashSync, 300);
 }
 
 type Props = {
@@ -37,7 +50,7 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
   }, []);
 
   const onPillKeyDown = useCallback(
-    (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    (event: KeyboardEvent<HTMLAnchorElement>, index: number) => {
       if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
       event.preventDefault();
       const nextIndex =
@@ -45,7 +58,7 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
           ? (index + 1) % pillars.length
           : (index - 1 + pillars.length) % pillars.length;
       selectPillar(pillars[nextIndex].id, true);
-      const pills = event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]');
+      const pills = event.currentTarget.parentElement?.querySelectorAll<HTMLAnchorElement>('[role="tab"]');
       pills?.[nextIndex]?.focus();
     },
     [pillars, selectPillar]
@@ -108,9 +121,9 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
             aria-label={pillarsAriaLabel}
           >
             {pillars.map((pillar, index) => (
-              <button
+              <LocaleLink
                 key={pillar.id}
-                type="button"
+                href={pillar.href}
                 role="tab"
                 id={`home-hero-tab-${pillar.id}`}
                 aria-selected={activeId === pillar.id}
@@ -118,11 +131,15 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
                 aria-describedby="home-hero-detail"
                 tabIndex={activeId === pillar.id ? 0 : -1}
                 className="home-hero-pill"
-                onClick={() => selectPillar(pillar.id, true)}
+                data-category={getServiceCategoryFromPillarId(pillar.id) ?? undefined}
+                scroll={hasHashHref(pillar.href) ? false : undefined}
+                onMouseEnter={() => selectPillar(pillar.id, true)}
+                onFocus={() => selectPillar(pillar.id, true)}
+                onClick={hasHashHref(pillar.href) ? onHashLinkClick : undefined}
                 onKeyDown={(event) => onPillKeyDown(event, index)}
               >
                 {pillar.label}
-              </button>
+              </LocaleLink>
             ))}
           </div>
           <p key={activeId} id="home-hero-detail" className="home-hero-detail" aria-live="polite">

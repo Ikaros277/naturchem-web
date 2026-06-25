@@ -5,6 +5,7 @@ import { LocaleLink } from "@/lib/i18n/locale-link";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { contactFormHref } from "@/lib/contact-url";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import type { CaseStudyCategory, LegacyCaseStudy } from "@/lib/case-studies";
 
 type Props = {
@@ -39,11 +40,15 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
   return (
     <>
       <div className="grid typicke-zakazky-examples-grid">
-        {categories.map((cat) => (
+        {categories.map((cat) => {
+          const category = getServiceCategoryFromHref(cat.serviceHref);
+
+          return (
           <button
             key={cat.slug}
             type="button"
             className="card case-category-card"
+            data-category={category ?? undefined}
             onClick={() => setOpenSlug(cat.slug)}
             aria-haspopup="dialog"
           >
@@ -56,7 +61,8 @@ export function CaseStudiesCategoryGrid({ categories }: Props) {
               {common.viewMore}
             </span>
           </button>
-        ))}
+          );
+        })}
       </div>
 
       {openCategory ? (

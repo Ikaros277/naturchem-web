@@ -743,7 +743,7 @@ export const faqCategories: FaqCategory[] = [
   }
 ];
 
-export const faqFlatItemsEn = faqCategories.flatMap((c) => c.items);
+export const faqFlatItems = faqCategories.flatMap((c) => c.items);
 
 export function getFaqCategoryEn(id: string): FaqCategory | undefined {
   return faqCategories.find((c) => c.id === id);

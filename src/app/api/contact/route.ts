@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Buffer } from "node:buffer";
 import { Resend } from "resend";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 import { INQUIRY_CATEGORY_LABELS, isInquiryCategoryId } from "@/lib/contact-inquiry";
 import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_EN } from "@/lib/contact-inquiry-en";
 import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_DE } from "@/lib/contact-inquiry-de";
@@ -20,7 +21,8 @@ const apiMessages = {
     sendFailure: (email: string, phone: string) =>
       `Zprávu se nepodařilo odeslat. Napište na ${email} nebo zavolejte ${phone}.`,
     success:
-      "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky."
+      "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.",
+    rateLimited: "Příliš mnoho odeslaných zpráv. Zkuste to prosím později nebo nás kontaktujte telefonicky."
   },
   en: {
     requiredFields: "Please fill in the required fields (name, contact, description and consent).",
@@ -31,7 +33,8 @@ const apiMessages = {
     sendFailure: (email: string, phone: string) =>
       `We could not send the message. Email ${email} or call ${phone}.`,
     success:
-      "We will get back to you with next steps. If we need anything else, we will let you know by email or phone."
+      "We will get back to you with next steps. If we need anything else, we will let you know by email or phone.",
+    rateLimited: "Too many messages sent. Please try again later or call us."
   },
   de: {
     requiredFields: "Bitte füllen Sie die Pflichtfelder aus (Name, Kontakt, Beschreibung und Einwilligung).",
@@ -42,7 +45,8 @@ const apiMessages = {
     sendFailure: (email: string, phone: string) =>
       `Die Nachricht konnte nicht gesendet werden. E-Mail ${email} oder Anruf ${phone}.`,
     success:
-      "Wir melden uns mit den nächsten Schritten. Falls wir etwas ergänzen müssen, informieren wir Sie per E-Mail oder Telefon."
+      "Wir melden uns mit den nächsten Schritten. Falls wir etwas ergänzen müssen, informieren wir Sie per E-Mail oder Telefon.",
+    rateLimited: "Zu viele Nachrichten. Bitte versuchen Sie es später erneut oder rufen Sie uns an."
   }
 } as const;
 
@@ -84,8 +88,24 @@ export async function POST(request: Request) {
   const apiLocale = resolveApiLocale(request);
   const msg = apiMessages[apiLocale];
 
+  const rate = checkRateLimit(`contact:${getClientIp(request)}`, 8, 60 * 60 * 1000);
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { ok: false, message: msg.rateLimited },
+      {
+        status: 429,
+        headers: rate.retryAfterSec ? { "Retry-After": String(rate.retryAfterSec) } : undefined
+      }
+    );
+  }
+
   try {
     const formData = await request.formData();
+
+    if (getString(formData, "website")) {
+      return NextResponse.json({ ok: true, message: msg.success });
+    }
+
     const name = getString(formData, "name");
     const email = getString(formData, "email");
     const phone = getString(formData, "phone");

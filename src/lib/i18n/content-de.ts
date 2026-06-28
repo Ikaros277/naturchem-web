@@ -1,6 +1,6 @@
 import {
   faqCategories,
-  faqFlatItemsEn,
+  faqFlatItems,
   faqIntroCtas,
   faqPageIntro,
   faqPageMetadata,
@@ -47,7 +47,7 @@ export const localeContent = {
     pageIntro: faqPageIntro,
     introCtas: faqIntroCtas,
     categories: faqCategories,
-    flatItems: faqFlatItemsEn,
+    flatItems: faqFlatItems,
     metadata: faqPageMetadata,
     uiLabels: faqUiLabels
   },

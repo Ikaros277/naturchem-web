@@ -43,17 +43,6 @@ export async function SectorIndexPage({ locale }: Props) {
     description: indexData.metadataDescription
   };
 
-  const itemListData = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: sectors.map((sector, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: sector.title,
-      url: `${siteUrl}${localizeHref(sector.href, locale)}/`.replace(/([^:]\/)\/+/g, "$1")
-    }))
-  };
-
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -66,7 +55,6 @@ export async function SectorIndexPage({ locale }: Props) {
   return (
     <main className="section sectors-index-page premium-page">
       <JsonLd data={collectionPageData} />
-      <JsonLd data={itemListData} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}

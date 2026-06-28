@@ -99,6 +99,13 @@ export function ContactForm({
         <p className="contact-form-lead">{t.formLead}</p>
       </header>
 
+      <p className="contact-form-honeypot" aria-hidden="true">
+        <label>
+          Website
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
+
       <div className="contact-form-grid">
         <div className="contact-form-col contact-form-col--identity">
           <p>

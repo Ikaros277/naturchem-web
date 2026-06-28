@@ -74,7 +74,7 @@ function ServiceCards({
           cta={viewServiceLabel}
           serviceCategory={getServiceCategoryFromHref(item.href)}
           icon={<ServiceIcon href={item.href} variant="inline" size={20} />}
-          meta={<ServiceCardThumb href={item.href} />}
+          meta={<ServiceCardThumb href={item.href} alt={item.title} />}
         >
           <p className="muted service-index-card-lead">{item.text}</p>
         </IndexCard>

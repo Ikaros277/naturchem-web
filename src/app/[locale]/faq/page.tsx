@@ -11,6 +11,7 @@ import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
+import { shortenListingExcerpt } from "@/lib/excerpt";
 import { siteUrl } from "@/lib/site";
 
 type Props = {
@@ -46,7 +47,7 @@ export default async function FaqPage({ params }: Props) {
       name: item.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: [...item.paragraphs, item.tip].filter(Boolean).join(" ")
+        text: shortenListingExcerpt(item.paragraphs[0] ?? item.tip ?? "", 1)
       }
     }))
   };

@@ -52,17 +52,6 @@ export default async function TypickeZakazkyPage({ params }: Props) {
     description: messages.caseStudies.metaDescription
   };
 
-  const itemListData = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: caseStudies.map((study, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: study.title,
-      url: `${pageUrl}#${study.id}`
-    }))
-  };
-
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -80,7 +69,6 @@ export default async function TypickeZakazkyPage({ params }: Props) {
   return (
     <main className="section premium-page typicke-zakazky-page">
       <JsonLd data={webPageData} />
-      <JsonLd data={itemListData} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}

@@ -6092,6 +6092,15 @@ main.contact-page + .site-footer {
   margin-bottom: 1rem;
 }
 
+.contact-form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .contact-form-grid {
   display: grid;
   grid-template-columns: minmax(220px, 0.36fr) minmax(0, 0.64fr);

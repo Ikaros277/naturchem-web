@@ -6,6 +6,7 @@ import { DeferredClientWidgets } from "@/components/DeferredClientWidgets";
 import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { OutboundLinkTelemetry } from "@/components/OutboundLinkTelemetry";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/Schema";
@@ -137,6 +138,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <CookieConsentBanner />
           <DeferredClientWidgets />
           <OutboundLinkTelemetry />
+          <SpeedInsights />
         </LocaleProvider>
       </body>
     </html>

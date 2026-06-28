@@ -13,6 +13,7 @@
     "seo:gsc-404-import": "python scripts/gsc_import_404_redirects.py"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "gray-matter": "^4.0.3",
     "next": "^16.2.6",
     "react": "^19.2.3",

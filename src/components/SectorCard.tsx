@@ -57,7 +57,7 @@ export function SectorCard({ sector, serviceTitles, labels }: Props) {
       <div className="sector-card-thumb" aria-hidden="true">
         <Image
           src={heroConfig.src}
-          alt=""
+          alt={sector.title}
           fill
           sizes="(min-width: 1024px) 42vw, 100vw"
           className="sector-card-thumb-img"

@@ -53,17 +53,6 @@ export default async function Page({ params }: Props) {
     description: messages.poradna.metaDescription
   };
 
-  const itemListData = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: mergedArticles.map((article, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: article.title,
-      url: `${siteUrl}${article.href}`
-    }))
-  };
-
   const breadcrumbData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -76,7 +65,6 @@ export default async function Page({ params }: Props) {
   return (
     <main className="section poradna-page premium-page">
       <JsonLd data={collectionPageData} />
-      <JsonLd data={itemListData} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}

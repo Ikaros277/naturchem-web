@@ -14,7 +14,7 @@ export function CaseStudyTileThumb({ study }: Props) {
     <div className="case-study-tile-thumb" aria-hidden="true">
       <Image
         src={config.src}
-        alt=""
+        alt={study.title}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         className="case-study-tile-thumb-img"

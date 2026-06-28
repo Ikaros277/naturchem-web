@@ -4,17 +4,9 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { ReferenceExampleGroup } from "@/lib/reference-example-groups";
+import type { ReferenceExampleListing } from "@/lib/reference-example-listing";
 import type { ServiceIconKey } from "@/lib/service-icons";
 import { getServiceCategoryFromHref, type ServiceCategory } from "@/lib/service-categories";
-
-type ReferenceExampleItem = {
-  id: string;
-  title: string;
-  operationType: string;
-  text: string;
-  tags: readonly string[];
-  href: string;
-};
 
 const groupIcons: Record<string, ServiceIconKey> = {
   "mereni-emisi": "pillar-mereni",
@@ -43,7 +35,7 @@ function orderCountLabel(count: number, locale: Locale, messages: Awaited<Return
 }
 
 type Props = {
-  examplesById: Map<string, ReferenceExampleItem>;
+  examplesById: Map<string, ReferenceExampleListing>;
   groups: ReferenceExampleGroup[];
   locale: Locale;
 };
@@ -58,7 +50,7 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
       {groups.map((group) => {
         const groupExamples = group.exampleIds
           .map((id) => examplesById.get(id))
-          .filter((e): e is ReferenceExampleItem => e !== undefined);
+          .filter((e): e is ReferenceExampleListing => e !== undefined);
         const countLabel = orderCountLabel(groupExamples.length, locale, messages);
         const groupCategory = groupCategories[group.id];
 
@@ -116,7 +108,7 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
                   serviceCategory={getServiceCategoryFromHref(example.href)}
                   icon={<ServiceIcon href={example.href} variant="inline" size={20} />}
                 >
-                  <p className="muted">{example.text}</p>
+                  <p className="muted">{example.shortText}</p>
                   <span className="muted reference-example-card-type">{example.operationType}</span>
                   <ul className="tag-row service-index-card-tags" aria-label={common.areas}>
                     {example.tags.slice(0, 3).map((tag) => (

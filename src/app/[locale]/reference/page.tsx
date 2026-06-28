@@ -11,6 +11,7 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
+import { toReferenceExampleListingMap } from "@/lib/reference-example-listing";
 import { siteUrl } from "@/lib/site";
 
 type Props = {
@@ -35,7 +36,7 @@ export default async function ReferencePage({ params }: Props) {
   const messages = await getMessages(locale);
   const reference = await getReferenceContent(locale);
   const exampleGroups = await getReferenceExampleGroups(locale);
-  const examplesById = reference.getReferenceExamplesById();
+  const examplesById = toReferenceExampleListingMap(reference.getReferenceExamplesById());
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/reference")}/`.replace(/([^:]\/)\/+/g, "$1");

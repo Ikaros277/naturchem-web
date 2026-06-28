@@ -1,11 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
 import { FaqAccordionList, type FaqAccordionUiLabels } from "@/components/FaqAccordionList";
+import { FaqSearchClient } from "@/components/FaqSearchClient";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { Locale } from "@/lib/i18n/locales";
-import { localeTag } from "@/lib/i18n/locale-pick";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getFaqCategoryIconKey } from "@/lib/service-icons";
 import type { FaqCategory } from "@/lib/faq";
@@ -29,54 +26,11 @@ type Props = {
   locale: Locale;
 };
 
-function readHashCategory(validIds: readonly string[]): string | null {
-  if (typeof window === "undefined") return null;
-  const id = decodeURIComponent(window.location.hash.replace(/^#/, ""));
-  return validIds.includes(id) ? id : null;
-}
-
 function formatCategoryCount(template: string | undefined, count: number): string {
   return (template ?? "{count}").replace("{count}", String(count));
 }
 
 export function FaqPageContent({ categories, uiLabels, locale }: Props) {
-  const [query, setQuery] = useState("");
-  const categoryIds = useMemo(() => categories.map((category) => category.id), [categories]);
-  const [activeCategoryId, setActiveCategoryId] = useState<string | null>(null);
-
-  const syncActiveFromHash = useCallback(() => {
-    setActiveCategoryId(readHashCategory(categoryIds));
-  }, [categoryIds]);
-
-  useEffect(() => {
-    syncActiveFromHash();
-    window.addEventListener("hashchange", syncActiveFromHash);
-    return () => window.removeEventListener("hashchange", syncActiveFromHash);
-  }, [syncActiveFromHash]);
-
-  const normalizedQuery = query.trim().toLocaleLowerCase(localeTag(locale));
-  const filteredCategories = useMemo(() => {
-    if (!normalizedQuery) return categories;
-
-    return categories
-      .map((category) => ({
-        ...category,
-        items: category.items.filter((item) => {
-          const haystack = [
-            category.title,
-            item.q,
-            ...item.paragraphs,
-            item.tip ?? "",
-            item.legal?.summary ?? ""
-          ]
-            .join(" ")
-            .toLocaleLowerCase(localeTag(locale));
-          return haystack.includes(normalizedQuery);
-        })
-      }))
-      .filter((category) => category.items.length > 0);
-  }, [categories, locale, normalizedQuery]);
-
   const accordionLabels: FaqAccordionUiLabels = {
     tip: uiLabels.tip,
     legal: uiLabels.legal,
@@ -87,39 +41,27 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
 
   return (
     <div className="faq-page-content">
-      <label className="faq-search">
-        <span>{uiLabels.searchLabel}</span>
-        <input
-          type="search"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder={uiLabels.searchPlaceholder}
-        />
-      </label>
+      <FaqSearchClient
+        searchLabel={uiLabels.searchLabel}
+        searchPlaceholder={uiLabels.searchPlaceholder}
+        emptyTitle={uiLabels.emptyTitle}
+        emptyText={uiLabels.emptyText}
+      />
 
       <nav className="faq-tiles" aria-label={uiLabels.categoriesNavAria}>
-        {categories.map((cat) => {
-          const isActive = activeCategoryId === cat.id;
-          return (
-            <a
-              key={cat.id}
-              href={`#${cat.id}`}
-              className={`card faq-tile${isActive ? " faq-tile--active" : ""}`}
-              aria-current={isActive ? "location" : undefined}
-              onClick={() => setActiveCategoryId(cat.id)}
-            >
-              <span className="faq-tile-icon-wrap" aria-hidden="true">
-                <ServiceIcon
-                  icon={getFaqCategoryIconKey(cat.id)}
-                  variant="plain"
-                  size={30}
-                  className="faq-tile-icon"
-                />
-              </span>
-              <span className="faq-tile-label">{cat.tileLabel}</span>
-            </a>
-          );
-        })}
+        {categories.map((cat) => (
+          <a key={cat.id} href={`#${cat.id}`} className="card faq-tile">
+            <span className="faq-tile-icon-wrap" aria-hidden="true">
+              <ServiceIcon
+                icon={getFaqCategoryIconKey(cat.id)}
+                variant="plain"
+                size={30}
+                className="faq-tile-icon"
+              />
+            </span>
+            <span className="faq-tile-label">{cat.tileLabel}</span>
+          </a>
+        ))}
       </nav>
 
       <p className="faq-contact-inline" aria-label={uiLabels.contactStripLabel ?? "Rychlý kontakt"}>
@@ -140,15 +82,8 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
         </Link>
       </p>
 
-      {filteredCategories.length === 0 ? (
-        <section className="section faq-category">
-          <h2>{uiLabels.emptyTitle}</h2>
-          <p className="muted">{uiLabels.emptyText}</p>
-        </section>
-      ) : null}
-
       <div className="faq-categories">
-        {filteredCategories.map((category) => (
+        {categories.map((category) => (
           <section key={category.id} id={category.id} className="section faq-category">
             <div className="faq-category-heading">
               <h2>{category.title}</h2>
@@ -157,7 +92,11 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
               </span>
             </div>
             <div className="faq-category-body">
-              <FaqAccordionList items={category.items} uiLabels={accordionLabels} locale={locale} />
+              <FaqAccordionList
+                items={category.items}
+                uiLabels={accordionLabels}
+                locale={locale}
+              />
             </div>
             {category.ctas.length > 0 ? (
               <div className="btn-row faq-category-ctas">

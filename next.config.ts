@@ -17,7 +17,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   images: {
-    formats: ["image/avif", "image/webp"]
+    formats: ["image/avif", "image/webp"],
+    qualities: [50, 55, 72, 75]
   },
   experimental: {
     optimizePackageImports: ["react-markdown"]

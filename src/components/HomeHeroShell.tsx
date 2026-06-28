@@ -146,19 +146,13 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
         role="tabpanel"
         aria-labelledby={`home-hero-tab-${activeId}`}
       >
-        {pillars.map((pillar) => (
-          <div
-            key={pillar.id}
-            className={activeId === pillar.id ? "hero-photo-layer is-active" : "hero-photo-layer"}
-            aria-hidden={activeId !== pillar.id}
-          >
-            {pillar.id === INITIAL_PILLAR_ID ? (
-              initialPhoto
-            ) : (
-              <HeroPhoto theme={pillar.theme} priority={false} />
-            )}
-          </div>
-        ))}
+        <div key={activeId} className="hero-photo-layer is-active">
+          {activeId === INITIAL_PILLAR_ID ? (
+            initialPhoto
+          ) : (
+            <HeroPhoto theme={activePillar.theme} />
+          )}
+        </div>
       </div>
     </section>
   );

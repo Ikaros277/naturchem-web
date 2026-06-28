@@ -142,8 +142,10 @@ const CASE_STUDY_HUB_INTERLEAVE_ORDER: CaseStudyCategoryId[] = [
 ];
 
 /** Střídá zakázky podle kategorie, aby v mřížce neležely stejné typy pohromadě. */
-export function interleaveCaseStudiesByCategory(studies: CaseStudy[]): CaseStudy[] {
-  const buckets = new Map<CaseStudyCategoryId, CaseStudy[]>();
+export function interleaveCaseStudiesByCategory<T extends { categoryId: CaseStudyCategoryId }>(
+  studies: T[]
+): T[] {
+  const buckets = new Map<CaseStudyCategoryId, T[]>();
 
   for (const study of studies) {
     const bucket = buckets.get(study.categoryId) ?? [];
@@ -151,7 +153,7 @@ export function interleaveCaseStudiesByCategory(studies: CaseStudy[]): CaseStudy
     buckets.set(study.categoryId, bucket);
   }
 
-  const result: CaseStudy[] = [];
+  const result: T[] = [];
   let hasMore = true;
 
   while (hasMore) {

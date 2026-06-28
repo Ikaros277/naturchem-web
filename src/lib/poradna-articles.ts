@@ -1,9 +1,8 @@
-import { getArticles, type Article } from "@/lib/articles";
+import { getArticles } from "@/lib/articles";
 import { shortenListingExcerpt } from "@/lib/excerpt";
 import { normalizeArticleDate } from "@/lib/format-date";
 import type { Locale } from "@/lib/i18n/locales";
 import { defaultLocale } from "@/lib/i18n/locales";
-import { localeTag } from "@/lib/i18n/locale-pick";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { PoradnaTopic } from "@/lib/poradna-topic";
 
@@ -13,7 +12,6 @@ export type PoradnaArticleListing = {
   href: string;
   excerpt: string;
   topic: PoradnaTopic;
-  searchText: string;
   publishedAt: string;
   author?: string;
   heroImage?: string;
@@ -25,22 +23,6 @@ function sortByPublishedAt(articles: PoradnaArticleListing[]): PoradnaArticleLis
   );
 }
 
-function stripMarkdownForSearch(body: string): string {
-  return body
-    .replace(/```[\s\S]*?```/g, " ")
-    .replace(/#{1,6}\s+/g, "")
-    .replace(/\|[^\n]+\|/g, " ")
-    .replace(/[*_~`>#-]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function buildSearchText(article: Article, locale: Locale): string {
-  return [article.title, article.excerpt, stripMarkdownForSearch(article.body)]
-    .join(" ")
-    .toLocaleLowerCase(localeTag(locale));
-}
-
 export async function getPoradnaArticles(locale: Locale = defaultLocale): Promise<PoradnaArticleListing[]> {
   const mdArticles = await getArticles(locale);
   const fromMarkdown: PoradnaArticleListing[] = mdArticles.map((article) => ({
@@ -49,7 +31,6 @@ export async function getPoradnaArticles(locale: Locale = defaultLocale): Promis
     href: localizeHref(`/poradna/${article.slug}`, locale),
     excerpt: shortenListingExcerpt(article.excerpt?.trim() || ""),
     topic: article.topic,
-    searchText: buildSearchText(article, locale),
     publishedAt: normalizeArticleDate(article.publishedAt) || new Date().toISOString(),
     author: article.author,
     heroImage: article.heroImage

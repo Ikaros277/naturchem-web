@@ -1,22 +1,24 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import { getSectorHeroImageConfig, hasSectorPhoto } from "@/lib/custom-hero-photos";
-import type { Sector } from "@/lib/sectors";
+import type { SectorCardModel } from "@/lib/sector-card-model";
+
+type SectorRef = Pick<SectorCardModel, "id" | "title">;
 
 type Props = {
   sectorIds: readonly string[];
-  sectors: readonly Sector[];
+  sectors: readonly SectorRef[];
   maxLayers?: number;
 };
 
 function pickBackdropSectors(
   sectorIds: readonly string[],
-  sectors: readonly Sector[],
+  sectors: readonly SectorRef[],
   maxLayers: number
-): Sector[] {
+): SectorRef[] {
   return sectorIds
     .map((id) => sectors.find((sector) => sector.id === id))
-    .filter((sector): sector is Sector => Boolean(sector))
+    .filter((sector): sector is SectorRef => Boolean(sector))
     .sort((a, b) => Number(hasSectorPhoto(b.id)) - Number(hasSectorPhoto(a.id)))
     .slice(0, maxLayers);
 }
@@ -60,7 +62,7 @@ export function SectorGroupChips({
 }: Omit<Props, "maxLayers"> & { ariaLabel: string }) {
   const labels = sectorIds
     .map((id) => sectors.find((sector) => sector.id === id))
-    .filter((sector): sector is Sector => Boolean(sector))
+    .filter((sector): sector is SectorRef => Boolean(sector))
     .map((sector) => sector.title);
 
   if (labels.length === 0) return null;

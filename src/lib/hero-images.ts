@@ -11,8 +11,8 @@ export type HeroImageConfig = {
 
 /** Záložní kategorie (vždy definované). */
 const heroFallbackImages: Record<string, HeroImageConfig> = {
-  home: { src: "/hero/forge-worker.jpg", position: "65% center" },
-  emise: { src: "/hero/industrial-plant.jpg", position: "center 35%" },
+  home: { src: "/hero/homepage-mereni.webp", position: "65% center" },
+  emise: { src: "/hero/mereni-emisi.webp", position: "center 35%" },
   hluk: { src: "/hero/hluk-fallback.webp", position: "center 40%" },
   dokumentace: { src: "/hero/dokumentace-fallback.webp", position: "center 35%" }
 };
@@ -74,9 +74,6 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   faq: hero("faq"),
   "typicke-zakazky": hero("typicke-zakazky"),
   "provozy-a-technologie": hero("provozy-a-technologie"),
-
-  "forge-worker": { src: "/hero/forge-worker.jpg", position: "65% center" },
-  "industrial-plant": { src: "/hero/industrial-plant.jpg" },
 
   "poradna-air-quality": { src: "/hero/poradna/air-quality.jpg", position: "center 40%" },
   "poradna-laptop-forms": { src: "/hero/poradna/laptop-forms.jpg" },

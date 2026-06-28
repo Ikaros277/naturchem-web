@@ -10,6 +10,19 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["react-markdown"]
   },
+  async headers() {
+    return [
+      {
+        source: "/search/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, stale-while-revalidate=604800"
+          }
+        ]
+      }
+    ];
+  },
   async redirects() {
     return permanentRedirects;
   }

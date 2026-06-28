@@ -2,17 +2,14 @@
 
 import Image from "next/image";
 import { LocaleLink } from "@/lib/i18n/locale-link";
-import { shortenSectorCardLead } from "@/lib/excerpt";
 import { getSectorHeroImageConfig } from "@/lib/custom-hero-photos";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
-import type { CaseStudy } from "@/lib/case-studies";
-import type { Sector } from "@/lib/sectors";
+import type { SectorCardModel } from "@/lib/sector-card-model";
 
 type ServiceTitle = { href: string; title: string };
 
 type Props = {
-  sector: Sector;
-  caseStudies: CaseStudy[];
+  sector: SectorCardModel;
   serviceTitles: ServiceTitle[];
   labels: {
     detailPage: string;
@@ -30,14 +27,14 @@ function onHashLinkClick() {
   window.setTimeout(notifyAccordionHashSync, 300);
 }
 
-export function SectorCard({ sector, caseStudies, serviceTitles, labels }: Props) {
+export function SectorCard({ sector, serviceTitles, labels }: Props) {
   const chipItems = [...sector.serviceTags.split(/[,;]/), ...sector.factors.split(/[,;]/)]
     .map((item) => item.trim())
     .filter(Boolean)
     .filter((item, index, items) => items.indexOf(item) === index)
     .slice(0, 5);
 
-  const linkedStudy = caseStudies.find((study) => sector.caseStudyIds.includes(study.id));
+  const linkedStudyId = sector.caseStudyIds[0];
   const primaryService = sector.serviceHrefs[0];
   const serviceTitleByHref = new Map(serviceTitles.map((item) => [item.href, item.title]));
   const hasDetailPage = sector.href.startsWith("/provozy-a-technologie/") && !sector.href.includes("#");
@@ -71,7 +68,7 @@ export function SectorCard({ sector, caseStudies, serviceTitles, labels }: Props
 
       <div className="sector-card-body">
         <h3 className="sector-card-title index-card-heading">{sector.title}</h3>
-        <p className="sector-card-lead muted">{shortenSectorCardLead(sector.description)}</p>
+        <p className="sector-card-lead muted">{sector.description}</p>
 
         {chipItems.length > 0 ? (
           <ul className="sector-tag-list" aria-label={sector.title}>
@@ -92,9 +89,9 @@ export function SectorCard({ sector, caseStudies, serviceTitles, labels }: Props
               {serviceTitleByHref.get(primaryService) ?? labels.detailPage}
             </LocaleLink>
           ) : null}
-          {linkedStudy ? (
+          {linkedStudyId ? (
             <LocaleLink
-              href={`/typicke-zakazky#${linkedStudy.id}`}
+              href={`/typicke-zakazky#${linkedStudyId}`}
               className="sector-card-footer-link card-interactive-nested"
             >
               {labels.exampleFromPractice}

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { getCaseStudyHeroImageConfig } from "@/lib/custom-hero-photos";
-import type { CaseStudy } from "@/lib/case-studies";
+import type { CaseStudyListing } from "@/lib/case-study-listing";
 
 type Props = {
-  study: CaseStudy;
+  study: CaseStudyListing;
 };
 
 /** Náhled fotky v horní části dlaždice — čistý oddělený pás nad textem karty. */

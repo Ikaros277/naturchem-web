@@ -5,6 +5,7 @@ import { CaseStudiesHub } from "@/components/CaseStudiesHub";
 import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
+import { toCaseStudyListing } from "@/lib/case-study-listing";
 import { getCaseStudies, getCaseStudyFilterCategories, getSiteServices, getTypickeZakazkyContent } from "@/lib/i18n/content";
 import { getWorkProcessCopy } from "@/lib/i18n/work-process-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
@@ -106,7 +107,7 @@ export default async function TypickeZakazkyPage({ params }: Props) {
         <h2 id="case-studies-heading">{content.typickeZakazkyCasesHeading}</h2>
         <CaseStudiesHub
           locale={locale}
-          caseStudies={caseStudies}
+          caseStudyListings={caseStudies.map(toCaseStudyListing)}
           categoryFilters={categoryFilters}
           serviceTitles={siteServices.map((service) => ({ href: service.href, title: service.title }))}
         />

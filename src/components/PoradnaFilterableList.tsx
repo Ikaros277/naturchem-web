@@ -1,10 +1,11 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ArticleCardThumb } from '@/components/ArticleCardThumb';
 import { IndexCard } from '@/components/IndexCard';
 import { CategoryBadge } from "@/components/CategoryBadge";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { usePoradnaSearchIndex } from "@/hooks/usePoradnaSearchIndex";
 import { categoryFromPoradnaTopic } from "@/lib/service-categories";
 import type { PoradnaTopic } from '@/lib/poradna-topic';
 import { useLocale, useTranslations } from '@/lib/i18n/locale-context';
@@ -30,15 +31,37 @@ function normalizeSearchQuery(query: string, locale: Locale): string {
   return query.trim().toLocaleLowerCase(localeTag(locale));
 }
 
+function articleMatchesQuery(
+  article: PoradnaArticleDisplay,
+  query: string,
+  locale: Locale,
+  searchIndex: Map<string, string> | null
+): boolean {
+  if (!query) return true;
+  const indexed = searchIndex?.get(article.slug);
+  if (indexed) return indexed.includes(query);
+  return [article.title, article.excerpt]
+    .join(" ")
+    .toLocaleLowerCase(localeTag(locale))
+    .includes(query);
+}
+
 export function PoradnaFilterableList({ articles, locale: localeProp, topicLabels }: Props) {
   const contextLocale = useLocale();
   const locale = localeProp ?? contextLocale;
   const poradna = useTranslations('poradna');
   const common = useTranslations('common');
+  const { index: searchIndex, ensureLoaded } = usePoradnaSearchIndex(locale);
   const [activeTopics, setActiveTopics] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState('');
 
   const normalizedQuery = normalizeSearchQuery(searchQuery, locale);
+
+  useEffect(() => {
+    if (normalizedQuery) {
+      void ensureLoaded();
+    }
+  }, [normalizedQuery, ensureLoaded]);
 
   function toggleTopic(topic: string) {
     setActiveTopics(prev => {
@@ -65,11 +88,15 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
     return articles.filter(article => {
       const matchesTopic =
         activeTopics.size === 0 || activeTopics.has(article.topic);
-      const matchesSearch =
-        !normalizedQuery || article.searchText.includes(normalizedQuery);
+      const matchesSearch = articleMatchesQuery(
+        article,
+        normalizedQuery,
+        locale,
+        searchIndex
+      );
       return matchesTopic && matchesSearch;
     });
-  }, [articles, activeTopics, normalizedQuery]);
+  }, [articles, activeTopics, normalizedQuery, locale, searchIndex]);
 
   const hasTopicFilters = activeTopics.size > 0;
   const hasSearch = normalizedQuery.length > 0;
@@ -89,6 +116,7 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
           type="search"
           value={searchQuery}
           onChange={event => setSearchQuery(event.target.value)}
+          onFocus={() => void ensureLoaded()}
           placeholder={poradna.searchPlaceholder}
           aria-controls="poradna-article-list"
         />

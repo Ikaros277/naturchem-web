@@ -40,7 +40,7 @@ export const poradnaArticleHeroThemes: Record<string, HeroTheme> = {
   "skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi":
     "poradna-waste-landfill",
   "kategorizace-praci-jake-mereni-je-potreba-jako-podklad": "pracovni-prostredi",
-  "svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise": "forge-worker",
+  "svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise": "pracovni-prostredi",
   "mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs": "pracovni-prostredi-context",
   "institut-minimalni-vzdalenosti-ochrana-ovzdusi": "poradna-factory-aerial",
   "kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox": "poradna-boiler-room",

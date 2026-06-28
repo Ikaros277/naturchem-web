@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "python scripts/generate_article_locale_map.py",
+    "prebuild": "python scripts/generate_article_locale_map.py && python scripts/generate_poradna_search_index.py",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

@@ -5,10 +5,12 @@ import { CaseStudyTileThumb } from "@/components/CaseStudyTileThumb";
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { contactFormHref } from "@/lib/contact-url";
+import { getCaseStudyById } from "@/lib/case-studies-client";
 import {
   getServiceCategoryFromCaseStudyCategoryId
 } from "@/lib/service-categories";
 import { type CaseStudy, interleaveCaseStudiesByCategory } from "@/lib/case-studies";
+import type { CaseStudyListing } from "@/lib/case-study-listing";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
 
@@ -16,18 +18,25 @@ type ServiceTitle = { href: string; title: string };
 
 type Props = {
   locale: Locale;
-  caseStudies: CaseStudy[];
+  caseStudyListings: CaseStudyListing[];
   serviceTitles: ServiceTitle[];
   categoryFilters: ReadonlyArray<{ id: string; label: string }>;
 };
 
-export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFilters }: Props) {
+export function CaseStudiesHub({ locale, caseStudyListings, serviceTitles, categoryFilters }: Props) {
   const common = useTranslations("common");
   const caseStudiesUi = useTranslations("caseStudies");
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
   const [openId, setOpenId] = useState<string | null>(null);
+  const [activeStudy, setActiveStudy] = useState<CaseStudy | null>(null);
+  const [detailLoading, setDetailLoading] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const titleId = useId();
+
+  const listingIds = useMemo(
+    () => new Set(caseStudyListings.map((study) => study.id)),
+    [caseStudyListings]
+  );
 
   const serviceTitleByHref = useMemo(
     () => new Map(serviceTitles.map((item) => [item.href, item.title])),
@@ -35,34 +44,54 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
   );
 
   const filtered = useMemo(() => {
-    const list = caseStudies.filter((study) => {
+    const list = caseStudyListings.filter((study) => {
       if (categoryFilter !== "all" && study.categoryId !== categoryFilter) return false;
       return true;
     });
     return categoryFilter === "all" ? interleaveCaseStudiesByCategory(list) : list;
-  }, [caseStudies, categoryFilter]);
+  }, [caseStudyListings, categoryFilter]);
 
   const close = useCallback(() => {
     setOpenId(null);
+    setActiveStudy(null);
     const url = window.location.pathname + window.location.search;
     window.history.replaceState(null, "", url);
   }, []);
 
   const openFromHash = useCallback(() => {
     const hash = window.location.hash.replace(/^#/, "");
-    if (!hash) {
+    if (!hash || !listingIds.has(hash)) {
       setOpenId(null);
+      setActiveStudy(null);
       return;
     }
-    const match = caseStudies.find((study) => study.id === hash);
-    if (match) setOpenId(match.id);
-  }, [caseStudies]);
+    setOpenId(hash);
+  }, [listingIds]);
 
   useEffect(() => {
     openFromHash();
     window.addEventListener("hashchange", openFromHash);
     return () => window.removeEventListener("hashchange", openFromHash);
   }, [openFromHash]);
+
+  useEffect(() => {
+    if (!openId) {
+      setActiveStudy(null);
+      return;
+    }
+
+    let cancelled = false;
+    setDetailLoading(true);
+    void getCaseStudyById(openId, locale).then((study) => {
+      if (cancelled) return;
+      setActiveStudy(study ?? null);
+      setDetailLoading(false);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [openId, locale]);
 
   useEffect(() => {
     if (!openId) return;
@@ -90,7 +119,7 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
     return localizeHref(`/provozy-a-technologie#${sectorId}`, locale);
   };
 
-  const activeStudy = openId ? caseStudies.find((study) => study.id === openId) : undefined;
+  const activeListing = openId ? caseStudyListings.find((study) => study.id === openId) : undefined;
 
   return (
     <div className="case-studies-hub">
@@ -147,7 +176,7 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
               <span className="muted case-study-hub-perex">{study.shortDescription}</span>
               {study.relatedServices.length > 0 ? (
                 <span className="case-study-service-tags" aria-hidden="true">
-                  {study.relatedServices.slice(0, 3).map((service) => (
+                  {study.relatedServices.map((service) => (
                     <span key={service} className="case-study-service-tag">
                       {service}
                     </span>
@@ -161,7 +190,7 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
         })}
       </div>
 
-      {activeStudy ? (
+      {openId && activeListing ? (
         <div className="case-study-modal-portal case-study-hub-modal-portal">
           <button
             type="button"
@@ -180,11 +209,11 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
             <header className="case-study-modal-header case-study-hub-modal-header">
               <div className="case-study-hub-modal-head">
                 <span className="case-study-hub-tags">
-                  <span className="case-study-tag case-study-tag--category">{activeStudy.category}</span>
-                  <span className="case-study-tag">{activeStudy.facilityType}</span>
+                  <span className="case-study-tag case-study-tag--category">{activeListing.category}</span>
+                  <span className="case-study-tag">{activeListing.facilityType}</span>
                 </span>
-                <h2 id={titleId}>{activeStudy.title}</h2>
-                <p className="muted case-study-hub-modal-lead">{activeStudy.shortDescription}</p>
+                <h2 id={titleId}>{activeListing.title}</h2>
+                <p className="muted case-study-hub-modal-lead">{activeListing.shortDescription}</p>
               </div>
               <button
                 type="button"
@@ -196,76 +225,82 @@ export function CaseStudiesHub({ locale, caseStudies, serviceTitles, categoryFil
               </button>
             </header>
             <div className="case-study-modal-body case-study-hub-modal-body">
-              <dl className="case-study-fields">
-                <div>
-                  <dt>{caseStudiesUi.fieldFacility}</dt>
-                  <dd>{activeStudy.facilityType}</dd>
-                </div>
-                <div>
-                  <dt>{caseStudiesUi.fieldSituation}</dt>
-                  <dd>{activeStudy.situation}</dd>
-                </div>
-                <div>
-                  <dt>{caseStudiesUi.fieldTask}</dt>
-                  <dd>{activeStudy.task}</dd>
-                </div>
-                <div>
-                  <dt>{caseStudiesUi.fieldApproach}</dt>
-                  <dd>{activeStudy.naturchemApproach}</dd>
-                </div>
-                <div>
-                  <dt>{caseStudiesUi.fieldOutput}</dt>
-                  <dd>{activeStudy.output}</dd>
-                </div>
-                <div>
-                  <dt>{caseStudiesUi.fieldUsedFor}</dt>
-                  <dd>{activeStudy.usedFor}</dd>
-                </div>
-                <div>
-                  <dt>{caseStudiesUi.fieldAuthorities}</dt>
-                  <dd>{activeStudy.authorities}</dd>
-                </div>
-              </dl>
+              {detailLoading || !activeStudy ? (
+                <p className="muted">Načítání…</p>
+              ) : (
+                <>
+                  <dl className="case-study-fields">
+                    <div>
+                      <dt>{caseStudiesUi.fieldFacility}</dt>
+                      <dd>{activeStudy.facilityType}</dd>
+                    </div>
+                    <div>
+                      <dt>{caseStudiesUi.fieldSituation}</dt>
+                      <dd>{activeStudy.situation}</dd>
+                    </div>
+                    <div>
+                      <dt>{caseStudiesUi.fieldTask}</dt>
+                      <dd>{activeStudy.task}</dd>
+                    </div>
+                    <div>
+                      <dt>{caseStudiesUi.fieldApproach}</dt>
+                      <dd>{activeStudy.naturchemApproach}</dd>
+                    </div>
+                    <div>
+                      <dt>{caseStudiesUi.fieldOutput}</dt>
+                      <dd>{activeStudy.output}</dd>
+                    </div>
+                    <div>
+                      <dt>{caseStudiesUi.fieldUsedFor}</dt>
+                      <dd>{activeStudy.usedFor}</dd>
+                    </div>
+                    <div>
+                      <dt>{caseStudiesUi.fieldAuthorities}</dt>
+                      <dd>{activeStudy.authorities}</dd>
+                    </div>
+                  </dl>
 
-              {activeStudy.tags.length > 0 ? (
-                <ul className="case-study-tag-list" aria-label={caseStudiesUi.fieldTags}>
-                  {activeStudy.tags.map((tag) => (
-                    <li key={tag}>
-                      <span className="case-study-detail-tag">{tag}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
+                  {activeStudy.tags.length > 0 ? (
+                    <ul className="case-study-tag-list" aria-label={caseStudiesUi.fieldTags}>
+                      {activeStudy.tags.map((tag) => (
+                        <li key={tag}>
+                          <span className="case-study-detail-tag">{tag}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
 
-              {activeStudy.serviceHrefs.length > 0 ? (
-                <div className="case-study-hub-links">
-                  <p className="mini-label">{caseStudiesUi.relatedServices}</p>
-                  <ul className="compact-list">
-                    {activeStudy.serviceHrefs.map((href) => (
-                      <li key={href}>
-                        <LocaleLink href={href} onClick={close}>
-                          {serviceTitleByHref.get(href) ?? href}
-                        </LocaleLink>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
+                  {activeStudy.serviceHrefs.length > 0 ? (
+                    <div className="case-study-hub-links">
+                      <p className="mini-label">{caseStudiesUi.relatedServices}</p>
+                      <ul className="compact-list">
+                        {activeStudy.serviceHrefs.map((href) => (
+                          <li key={href}>
+                            <LocaleLink href={href} onClick={close}>
+                              {serviceTitleByHref.get(href) ?? href}
+                            </LocaleLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
 
-              {activeStudy.sectorId ? (
-                <p>
-                  <LocaleLink href={sectorHref(activeStudy.sectorId)!} className="text-link" onClick={close}>
-                    {caseStudiesUi.relatedSector}
-                  </LocaleLink>
-                </p>
-              ) : null}
+                  {activeStudy.sectorId ? (
+                    <p>
+                      <LocaleLink href={sectorHref(activeStudy.sectorId)!} className="text-link" onClick={close}>
+                        {caseStudiesUi.relatedSector}
+                      </LocaleLink>
+                    </p>
+                  ) : null}
 
-              <p className="case-study-hub-cta muted">{activeStudy.ctaText}</p>
-              <p className="btn-row case-study-modal-actions">
-                <LocaleLink href={contactFormHref} className="button" onClick={close}>
-                  {common.requestService}
-                </LocaleLink>
-              </p>
+                  <p className="case-study-hub-cta muted">{activeStudy.ctaText}</p>
+                  <p className="btn-row case-study-modal-actions">
+                    <LocaleLink href={contactFormHref} className="button" onClick={close}>
+                      {common.requestService}
+                    </LocaleLink>
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>

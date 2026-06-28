@@ -7,8 +7,7 @@ import { SectorGroupChips, SectorGroupCollage } from "@/components/SectorGroupCo
 import { useTranslations } from "@/lib/i18n/locale-context";
 import type { Locale } from "@/lib/i18n/locales";
 import type { SectorGroup } from "@/lib/sector-groups";
-import type { Sector } from "@/lib/sectors";
-import type { CaseStudy } from "@/lib/case-studies";
+import type { SectorCardModel } from "@/lib/sector-card-model";
 import { useAccordionHashOpen } from "@/lib/use-accordion-hash-open";
 
 const groupAriaVerbs: Record<string, string> = {
@@ -60,10 +59,9 @@ type SectorCardLabels = {
 };
 
 type Props = {
-  sectors: readonly Sector[];
+  sectors: readonly SectorCardModel[];
   locale: Locale;
   sectorGroups: readonly SectorGroup[];
-  caseStudies: CaseStudy[];
   serviceTitles: ServiceTitle[];
   sectorCardLabels: SectorCardLabels;
 };
@@ -71,13 +69,11 @@ type Props = {
 function SectorCards({
   sectorIds,
   sectors,
-  caseStudies,
   serviceTitles,
   sectorCardLabels
 }: {
   sectorIds: readonly string[];
-  sectors: readonly Sector[];
-  caseStudies: CaseStudy[];
+  sectors: readonly SectorCardModel[];
   serviceTitles: ServiceTitle[];
   sectorCardLabels: SectorCardLabels;
 }) {
@@ -89,7 +85,6 @@ function SectorCards({
         <SectorCard
           key={sector.id}
           sector={sector}
-          caseStudies={caseStudies}
           serviceTitles={serviceTitles}
           labels={sectorCardLabels}
         />
@@ -102,7 +97,6 @@ export function SectorGroupsIndex({
   sectors,
   locale,
   sectorGroups,
-  caseStudies,
   serviceTitles,
   sectorCardLabels
 }: Props) {
@@ -150,7 +144,6 @@ export function SectorGroupsIndex({
               <SectorCards
                 sectorIds={group.sectorIds}
                 sectors={sectors}
-                caseStudies={caseStudies}
                 serviceTitles={serviceTitles}
                 sectorCardLabels={sectorCardLabels}
               />

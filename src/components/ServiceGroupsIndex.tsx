@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import { AccordionIndexDetails } from "@/components/AccordionIndexDetails";
 import { IndexCard } from "@/components/IndexCard";
+import { ServiceCardThumb } from "@/components/ServiceCardThumb";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import type { Locale } from "@/lib/i18n/locales";
@@ -69,12 +70,13 @@ function ServiceCards({
           key={item.title}
           href={localizeHref(item.href, locale)}
           title={item.title}
-          className="service-index-card service-card"
+          className="service-index-card service-card service-index-card--with-thumb article-card--with-thumb"
           cta={viewServiceLabel}
           serviceCategory={getServiceCategoryFromHref(item.href)}
           icon={<ServiceIcon href={item.href} variant="inline" size={20} />}
+          meta={<ServiceCardThumb href={item.href} />}
         >
-          <p className="muted">{item.text}</p>
+          <p className="muted service-index-card-lead">{item.text}</p>
         </IndexCard>
       ))}
     </div>

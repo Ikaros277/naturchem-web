@@ -13,8 +13,8 @@ export type HeroImageConfig = {
 const heroFallbackImages: Record<string, HeroImageConfig> = {
   home: { src: "/hero/forge-worker.jpg", position: "65% center" },
   emise: { src: "/hero/industrial-plant.jpg", position: "center 35%" },
-  hluk: { src: "/hero/field-measurement.jpg" },
-  dokumentace: { src: "/hero/planning-documents.jpg" }
+  hluk: { src: "/hero/hluk-fallback.webp", position: "center 40%" },
+  dokumentace: { src: "/hero/dokumentace-fallback.webp", position: "center 35%" }
 };
 
 function hero(slug: string, contextSlug?: string, position?: string): HeroImageConfig {
@@ -39,8 +39,8 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   "mereni-vibraci": hero("mereni-vibraci"),
   "mereni-osvetleni": hero("mereni-osvetleni"),
   "mereni-mikroklimatu": hero("mereni-mikroklimatu"),
-  "mereni-tepelna-chladova-zatez": hero("mereni-mikroklimatu"),
-  "mereni-diisokyanatu": hero("pracovni-prostredi", "chemicke-latky-context"),
+  "mereni-tepelna-chladova-zatez": hero("mereni-tepelna-chladova-zatez", undefined, "center 40%"),
+  "mereni-diisokyanatu": hero("mereni-diisokyanatu", "mereni-diisokyanatu-context", "center 35%"),
   "pracovni-prostredi": hero("pracovni-prostredi", "pracovni-prostredi-context"),
   "chemicke-latky": hero("chemicke-latky", "chemicke-latky-context"),
   "bezpecnostni-listy": hero("bezpecnostni-listy"),
@@ -51,13 +51,16 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   "modelove-vypocty": hero("modelove-vypocty", "modelove-vypocty-context"),
   "akusticke-posudky": hero("akusticke-posudky"),
 
-  "eia-posudky-poradenstvi": eiaHero,
+  "eia-posudky-poradenstvi": hero("eia-posudky-poradenstvi", "eia-context"),
   "eia-oznameni-zameru": eiaHero,
-  "zjistovaci-rizeni-eia": eiaHero,
+  "zjistovaci-rizeni-eia": hero("zjistovaci-rizeni-eia", undefined, "center 35%"),
 
   "odborne-posudky": hero("odborne-posudky", "odborne-posudky-context"),
   "provozni-rady": hero("provozni-rady", "provozni-rady-context"),
   "ippc-integrovana-povoleni": hero("ippc-integrovana-povoleni"),
+  "povoleni-provozu": hero("povoleni-provozu", undefined, "center 40%"),
+  "technicke-prilohy": hero("technicke-prilohy", "technicke-prilohy-context"),
+  "imisni-dopady": hero("imisni-dopady", "imisni-dopady-context", "center 35%"),
   "ispop": hero("ispop", "ispop-context"),
   "ghg-overovani": hero("ghg-overovani", "ghg-overovani-context"),
 

@@ -10,6 +10,8 @@ import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
 
 const AUTO_ROTATE_MS = 5000;
 const MANUAL_PAUSE_MS = 10000;
+/** Autoplay až po ustálení LCP — jinak lazy slide při 5 s zhorší LCP metriku. */
+const AUTOPLAY_START_DELAY_MS = 12000;
 const INITIAL_PILLAR_ID: HomeHeroPillarId = "mereni";
 
 function nextPillarId(pillars: HomeHeroPillar[], currentId: HomeHeroPillarId): HomeHeroPillarId {
@@ -68,12 +70,19 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (reducedMotion.matches) return;
 
-    const timer = window.setInterval(() => {
-      if (autoplayPaused || Date.now() < manualPauseUntilRef.current) return;
-      setActiveId((currentId) => nextPillarId(pillars, currentId));
-    }, AUTO_ROTATE_MS);
+    let intervalId: number | undefined;
 
-    return () => window.clearInterval(timer);
+    const startTimer = window.setTimeout(() => {
+      intervalId = window.setInterval(() => {
+        if (autoplayPaused || Date.now() < manualPauseUntilRef.current) return;
+        setActiveId((currentId) => nextPillarId(pillars, currentId));
+      }, AUTO_ROTATE_MS);
+    }, AUTOPLAY_START_DELAY_MS);
+
+    return () => {
+      window.clearTimeout(startTimer);
+      if (intervalId !== undefined) window.clearInterval(intervalId);
+    };
   }, [autoplayPaused, pillars]);
 
   useEffect(() => {
@@ -84,9 +93,9 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
         img.src = getHeroImageSrc(pillar.theme);
       }
     };
-    const idle = window.requestIdleCallback?.(prefetch, { timeout: 3000 });
+    const idle = window.requestIdleCallback?.(prefetch, { timeout: AUTOPLAY_START_DELAY_MS });
     if (idle === undefined) {
-      const t = window.setTimeout(prefetch, 1500);
+      const t = window.setTimeout(prefetch, AUTOPLAY_START_DELAY_MS);
       return () => window.clearTimeout(t);
     }
     return () => window.cancelIdleCallback(idle);
@@ -146,13 +155,19 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
         role="tabpanel"
         aria-labelledby={`home-hero-tab-${activeId}`}
       >
-        <div key={activeId} className="hero-photo-layer is-active">
-          {activeId === INITIAL_PILLAR_ID ? (
-            initialPhoto
-          ) : (
-            <HeroPhoto theme={activePillar.theme} />
-          )}
-        </div>
+        {pillars.map((pillar) => (
+          <div
+            key={pillar.id}
+            className={activeId === pillar.id ? "hero-photo-layer is-active" : "hero-photo-layer"}
+            aria-hidden={activeId !== pillar.id}
+          >
+            {pillar.id === INITIAL_PILLAR_ID ? (
+              initialPhoto
+            ) : (
+              <HeroPhoto theme={pillar.theme} />
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

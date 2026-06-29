@@ -1,8 +1,6 @@
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { HomeHeroShell } from "@/components/HomeHeroShell";
 import type { HomeHeroPillar } from "@/lib/home-hero-pillars";
-import { getHeroImageConfig } from "@/lib/hero-images";
-import { preloadLcpHeroImage } from "@/lib/lcp-hero-image";
 
 type Props = {
   title: string;
@@ -15,8 +13,6 @@ type Props = {
 /** Server komponenta — H1, lead a LCP fotka v prvním HTML bez čekání na JS. */
 export function HomeHeroSection({ title, lead, pillars, ariaLabel, pillarsAriaLabel }: Props) {
   const initialPillar = pillars[0];
-  const { src: lcpSrc } = getHeroImageConfig(initialPillar.theme);
-  preloadLcpHeroImage(lcpSrc);
 
   return (
     <HomeHeroShell

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { getHeroImageConfig, type HeroTheme } from "@/lib/hero-images";
-import { LCP_HERO_QUALITY, LCP_HERO_SIZES } from "@/lib/lcp-hero-image";
 
 type Props = {
   theme: HeroTheme;
@@ -17,8 +16,8 @@ export function HeroPhoto({ theme, src, priority = false }: Props) {
       src={imageSrc}
       alt=""
       fill
-      sizes={priority ? LCP_HERO_SIZES : "(max-width: 767px) 100vw, 48vw"}
-      quality={priority ? LCP_HERO_QUALITY : 72}
+      sizes="(max-width: 767px) 100vw, 48vw"
+      quality={priority ? 70 : 75}
       className="hero-photo-img"
       style={{ objectPosition: position }}
       priority={priority}

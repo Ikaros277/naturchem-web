@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
 import { HeroPhoto } from "@/components/HeroPhoto";
-import { getHeroImageSrc } from "@/lib/hero-images";
 import type { HomeHeroPillar, HomeHeroPillarId } from "@/lib/home-hero-pillars";
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import { getServiceCategoryFromPillarId } from "@/lib/service-categories";
@@ -10,8 +9,7 @@ import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
 
 const AUTO_ROTATE_MS = 5000;
 const MANUAL_PAUSE_MS = 10000;
-/** Autoplay až po ustálení LCP — jinak lazy slide při 5 s zhorší LCP metriku. */
-const AUTOPLAY_START_DELAY_MS = 12000;
+const AUTOPLAY_START_DELAY_MS = 15000;
 const INITIAL_PILLAR_ID: HomeHeroPillarId = "mereni";
 
 function nextPillarId(pillars: HomeHeroPillar[], currentId: HomeHeroPillarId): HomeHeroPillarId {
@@ -29,8 +27,15 @@ function onHashLinkClick() {
   window.setTimeout(notifyAccordionHashSync, 300);
 }
 
+function isDesktopViewport() {
+  return window.matchMedia("(min-width: 768px)").matches;
+}
+
+function isFinePointer() {
+  return typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches;
+}
+
 type Props = {
-  /** Server-rendered úvodní fotka (LCP) — zůstane v HTML bez čekání na hydrataci. */
   initialPhoto: ReactNode;
   children: ReactNode;
   pillars: HomeHeroPillar[];
@@ -40,16 +45,32 @@ type Props = {
 
 export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pillarsAriaLabel }: Props) {
   const [activeId, setActiveId] = useState<HomeHeroPillarId>(INITIAL_PILLAR_ID);
+  const [mountedIds, setMountedIds] = useState<ReadonlySet<HomeHeroPillarId>>(
+    () => new Set([INITIAL_PILLAR_ID])
+  );
   const [autoplayPaused, setAutoplayPaused] = useState(false);
   const manualPauseUntilRef = useRef(0);
   const activePillar = pillars.find((pillar) => pillar.id === activeId) ?? pillars[0];
 
-  const selectPillar = useCallback((id: HomeHeroPillarId, fromUser = false) => {
-    setActiveId(id);
-    if (fromUser) {
-      manualPauseUntilRef.current = Date.now() + MANUAL_PAUSE_MS;
-    }
+  const mountPillar = useCallback((id: HomeHeroPillarId) => {
+    setMountedIds((current) => {
+      if (current.has(id)) return current;
+      const next = new Set(current);
+      next.add(id);
+      return next;
+    });
   }, []);
+
+  const selectPillar = useCallback(
+    (id: HomeHeroPillarId, fromUser = false) => {
+      mountPillar(id);
+      setActiveId(id);
+      if (fromUser) {
+        manualPauseUntilRef.current = Date.now() + MANUAL_PAUSE_MS;
+      }
+    },
+    [mountPillar]
+  );
 
   const onPillKeyDown = useCallback(
     (event: KeyboardEvent<HTMLAnchorElement>, index: number) => {
@@ -68,14 +89,18 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
 
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (reducedMotion.matches) return;
+    if (reducedMotion.matches || !isDesktopViewport()) return;
 
     let intervalId: number | undefined;
 
     const startTimer = window.setTimeout(() => {
       intervalId = window.setInterval(() => {
         if (autoplayPaused || Date.now() < manualPauseUntilRef.current) return;
-        setActiveId((currentId) => nextPillarId(pillars, currentId));
+        setActiveId((currentId) => {
+          const nextId = nextPillarId(pillars, currentId);
+          mountPillar(nextId);
+          return nextId;
+        });
       }, AUTO_ROTATE_MS);
     }, AUTOPLAY_START_DELAY_MS);
 
@@ -83,23 +108,7 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
       window.clearTimeout(startTimer);
       if (intervalId !== undefined) window.clearInterval(intervalId);
     };
-  }, [autoplayPaused, pillars]);
-
-  useEffect(() => {
-    const prefetch = () => {
-      for (const pillar of pillars) {
-        if (pillar.id === INITIAL_PILLAR_ID) continue;
-        const img = new window.Image();
-        img.src = getHeroImageSrc(pillar.theme);
-      }
-    };
-    const idle = window.requestIdleCallback?.(prefetch, { timeout: AUTOPLAY_START_DELAY_MS });
-    if (idle === undefined) {
-      const t = window.setTimeout(prefetch, AUTOPLAY_START_DELAY_MS);
-      return () => window.clearTimeout(t);
-    }
-    return () => window.cancelIdleCallback(idle);
-  }, [pillars]);
+  }, [autoplayPaused, mountPillar, pillars]);
 
   return (
     <section
@@ -135,7 +144,9 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
                 className="home-hero-pill"
                 data-category={getServiceCategoryFromPillarId(pillar.id) ?? undefined}
                 scroll={hasHashHref(pillar.href) ? false : undefined}
-                onMouseEnter={() => selectPillar(pillar.id, true)}
+                onMouseEnter={() => {
+                  if (isFinePointer()) selectPillar(pillar.id, true);
+                }}
                 onFocus={() => selectPillar(pillar.id, true)}
                 onClick={hasHashHref(pillar.href) ? onHashLinkClick : undefined}
                 onKeyDown={(event) => onPillKeyDown(event, index)}
@@ -155,19 +166,19 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
         role="tabpanel"
         aria-labelledby={`home-hero-tab-${activeId}`}
       >
-        {pillars.map((pillar) => (
-          <div
-            key={pillar.id}
-            className={activeId === pillar.id ? "hero-photo-layer is-active" : "hero-photo-layer"}
-            aria-hidden={activeId !== pillar.id}
-          >
-            {pillar.id === INITIAL_PILLAR_ID ? (
-              initialPhoto
-            ) : (
-              <HeroPhoto theme={pillar.theme} />
-            )}
-          </div>
-        ))}
+        {pillars.map((pillar) => {
+          if (!mountedIds.has(pillar.id)) return null;
+
+          return (
+            <div
+              key={pillar.id}
+              className={activeId === pillar.id ? "hero-photo-layer is-active" : "hero-photo-layer"}
+              aria-hidden={activeId !== pillar.id}
+            >
+              {pillar.id === INITIAL_PILLAR_ID ? initialPhoto : <HeroPhoto theme={pillar.theme} />}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

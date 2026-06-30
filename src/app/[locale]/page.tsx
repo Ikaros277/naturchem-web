@@ -65,11 +65,11 @@ export default async function Home({ params }: Props) {
       <TrustBand
         items={trustItems}
         heading={messages.home.trustAria}
-        className="home-fade-in-section"
+        className="home-fade-in-section home-below-fold"
       />
 
       <section
-        className="home-stats-compact home-fade-in-section home-fade-in-section-delay-1"
+        className="home-stats-compact home-fade-in-section home-fade-in-section-delay-1 home-below-fold"
         aria-label={messages.home.statsAria}
       >
         <div className="container">
@@ -83,7 +83,7 @@ export default async function Home({ params }: Props) {
       </section>
 
       <section
-        className="home-section home-section-offer home-fade-in-section home-fade-in-section-delay-2"
+        className="home-section home-section-offer home-fade-in-section home-fade-in-section-delay-2 home-below-fold"
         aria-labelledby="home-offer-heading"
       >
         <div className="container">
@@ -103,7 +103,7 @@ export default async function Home({ params }: Props) {
       <HomePoradnaStrip locale={locale} />
 
       <section
-        className="home-section container home-clients-section section--forest-tint"
+        className="home-section container home-clients-section section--forest-tint home-below-fold"
         aria-labelledby="home-clients-heading"
       >
         <h2 id="home-clients-heading" className="sr-only">

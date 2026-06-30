@@ -19,7 +19,7 @@ import { schemaLanguage } from "@/lib/i18n/locale-pick";
 const fontSans = Source_Sans_3({
   subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   display: "swap"
 });
 

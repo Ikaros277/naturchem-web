@@ -3836,6 +3836,13 @@ p {
   object-fit: cover;
 }
 
+.hero-photo-img--lcp {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .hero-photo-layer {
   position: absolute;
   inset: 0;
@@ -3967,6 +3974,14 @@ p {
     animation: home-hero-fade-in 0.55s ease forwards;
   }
 
+  @media (max-width: 767px) {
+    .home-hero-enter {
+      opacity: 1;
+      animation: none;
+      transform: none;
+    }
+  }
+
   .home-hero-enter-1 {
     animation-delay: 0.05s;
   }
@@ -3992,6 +4007,11 @@ p {
   .home-fade-in-section-delay-2 {
     animation-delay: 0.48s;
   }
+}
+
+.home-below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 480px;
 }
 
 @media (prefers-reduced-motion: reduce) {

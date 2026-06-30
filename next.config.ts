@@ -22,8 +22,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000
   },
   experimental: {
-    optimizePackageImports: ["react-markdown"],
-    optimizeCss: true
+    optimizePackageImports: ["react-markdown"]
   },
   async headers() {
     return [

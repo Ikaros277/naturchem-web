@@ -2,6 +2,8 @@ export type HeroTheme = string;
 
 export type HeroImageConfig = {
   src: string;
+  /** Menší varianta pro mobilní LCP (srcset / picture). */
+  mobileSrc?: string;
   /** Jiná fotka pro přehledovou sekci na stránce služby (ServiceContextPhoto). */
   contextSrc?: string;
   /** CSS object-position — kde má být fokus (např. "70% 30%", "center top"). Výchozí: "center center". */
@@ -30,7 +32,7 @@ const eiaHero = hero("eia", "eia-context");
  * Per-slug přiřazení fotek. Klíč = bare slug (bez lomítek).
  */
 const heroSlugImages: Record<string, HeroImageConfig> = {
-  "homepage-mereni": hero("homepage-mereni"),
+  "homepage-mereni": { ...hero("homepage-mereni"), mobileSrc: "/hero/homepage-mereni-640.webp" },
   "homepage-studie": hero("homepage-studie"),
   "homepage-eia": hero("homepage-eia"),
 
@@ -99,6 +101,14 @@ export function getHeroImageSrc(theme: string): string {
 
 export function getHeroImageConfig(theme: string): HeroImageConfig {
   return resolveConfig(theme);
+}
+
+export function getHeroLcpSources(theme: string): { src: string; mobileSrc: string } {
+  const config = resolveConfig(theme);
+  return {
+    src: config.src,
+    mobileSrc: config.mobileSrc ?? config.src
+  };
 }
 
 export function getHeroContextImageConfig(theme: string): HeroImageConfig {

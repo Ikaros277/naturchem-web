@@ -38,7 +38,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
       "Feinstaub-Messset AMS Analytica AIR CUBE HE ISO",
       "Probenahme- und isokinetische Sonden AMS Analytica",
       "integrierte isokinetische Sonden mit Staurohr und Temperatursensor",
-      "Staurohre und Differenzdruckwandler Senseca Italy Srl, ehemals Delta OHM",
+      "Staurohre und Differenzdruckwandler (Delta OHM)",
       "Labor- und Membrangaszähler",
       "Durchflusskalibratoren SXF2024-6000",
       "Peltier-Kühler und Probenaufbereitungseinheiten",
@@ -52,8 +52,8 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceHref: "/sluzby/pracovni-prostredi",
     serviceLabel: "Messungen der Arbeitsplatzumgebung",
     items: [
-      "Multifunktionsmesssysteme Senseca Italy Srl, ehemals Delta OHM DO9847",
-      "Temperatur-, Feuchtigkeits- und Drucksensoren Senseca Italy Srl, ehemals Delta OHM",
+      "Multifunktionsmesssysteme Delta OHM DO9847",
+      "Temperatur-, Feuchtigkeits- und Drucksensoren Delta OHM",
       "Globusthermometer für thermische Belastung",
       "Anemometer und Luftströmungssensoren",
       "Persönliche Probenahmepumpen SKC AirChek",
@@ -69,9 +69,9 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceLabel: "Lärmmessung und Akustik",
     items: [
       "Schallpegelmesser SVAN 979",
-      "Akustischer Kalibrator Senseca Italy Srl, ehemals Delta OHM HD 2020",
-      "Schwingungsanalysator Senseca Italy Srl, ehemals Delta OHM HD2030",
-      "Schwingungskalibrator Senseca Italy Srl, ehemals Delta OHM HD2060",
+      "Akustischer Kalibrator Delta OHM HD 2020",
+      "Schwingungsanalysator Delta OHM HD2030",
+      "Schwingungskalibrator Delta OHM HD2060",
       "weiße und rosa Rauschquelle Ntek OMNI 4 HP",
       "Verstärker AMG Mini Ion+"
     ]
@@ -83,7 +83,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceLabel: "Beleuchtungsmessungen",
     items: [
       "Luxmeter GOSSEN Mavolux 5032 C USB",
-      "Lichtsensoren Senseca Italy Srl, ehemals Delta OHM LP 471 PHOT / RAD / LUM",
+      "Lichtsensoren Delta OHM LP 471 PHOT / RAD / LUM",
       "Laser-Partikelzähler Trotec PC 200",
       "Wärmebildkamera FLIR TG267",
       "Laser-Entfernungsmesser",

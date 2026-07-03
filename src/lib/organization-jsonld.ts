@@ -28,7 +28,7 @@ const knowsAbout = [
   "ověřování emisí skleníkových plynů (GHG)",
   "chemická legislativa a bezpečnostní listy",
   "environmentální poradenství pro úřady a provozovatele",
-  "prodej měřicí techniky Senseca a PCF Elettronica"
+  "prodej analytických přístrojů PCF Elettronica"
 ] as const;
 
 export function buildOrganizationJsonLd() {

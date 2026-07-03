@@ -1,11 +1,11 @@
 import { pcfElettronicaCatalog } from "@/lib/pcf-elettronica-catalog";
-import { sensecaCatalog } from "@/lib/senseca-catalog";
 import { getSalesCategoryOverview } from "@/lib/sales-category-overview-data";
 import type { SalesProduct } from "@/lib/sales-types";
 
+const PCF_BRAND = "pcf-elettronica" as const;
+
 export function getSalesCatalog(brandSlug: string) {
-  if (brandSlug === "senseca") return sensecaCatalog;
-  if (brandSlug === "pcf-elettronica") return pcfElettronicaCatalog;
+  if (brandSlug === PCF_BRAND) return pcfElettronicaCatalog;
   return undefined;
 }
 
@@ -26,8 +26,5 @@ export function getSalesCategoryProducts(
 }
 
 export function getAllSalesCategoryParams() {
-  const brands = ["senseca", "pcf-elettronica"] as const;
-  return brands.flatMap((brand) =>
-    getSalesCategoryIds(brand).map((slug) => ({ brand, slug }))
-  );
+  return getSalesCategoryIds(PCF_BRAND).map((slug) => ({ brand: PCF_BRAND, slug }));
 }

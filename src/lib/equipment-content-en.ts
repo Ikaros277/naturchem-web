@@ -38,7 +38,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
       "particulate matter measurement set AMS Analytica AIR CUBE HE ISO",
       "sampling and isokinetic probes AMS Analytica",
       "integrated isokinetic probes with Pitot tube and temperature sensor",
-      "Pitot tubes and pressure differential transducers Senseca Italy Srl, formerly Delta OHM",
+      "Pitot tubes and pressure differential transducers (Delta OHM)",
       "laboratory and membrane gas meters",
       "flow calibrators SXF2024-6000",
       "Peltier coolers and sample conditioning units",
@@ -52,8 +52,8 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceHref: "/sluzby/pracovni-prostredi",
     serviceLabel: "Workplace environment measurements",
     items: [
-      "multifunction measurement systems Senseca Italy Srl, formerly Delta OHM DO9847",
-      "temperature, humidity and pressure sensors Senseca Italy Srl, formerly Delta OHM",
+      "multifunction measurement systems Delta OHM DO9847",
+      "temperature, humidity and pressure sensors Delta OHM",
       "globe thermometers for thermal load",
       "anemometers and air flow sensors",
       "personal sampling pumps SKC AirChek",
@@ -69,9 +69,9 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceLabel: "Noise measurement and acoustics",
     items: [
       "sound level meter SVAN 979",
-      "acoustic calibrator Senseca Italy Srl, formerly Delta OHM HD 2020",
-      "vibration analyser Senseca Italy Srl, formerly Delta OHM HD2030",
-      "vibration calibrator Senseca Italy Srl, formerly Delta OHM HD2060",
+      "acoustic calibrator Delta OHM HD 2020",
+      "vibration analyser Delta OHM HD2030",
+      "vibration calibrator Delta OHM HD2060",
       "white and pink noise source Ntek OMNI 4 HP",
       "amplifier AMG mini Ion+"
     ]
@@ -83,7 +83,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceLabel: "Lighting measurements",
     items: [
       "lux meter GOSSEN Mavolux 5032 C USB",
-      "light sensors Senseca Italy Srl, formerly Delta OHM LP 471 PHOT / RAD / LUM",
+      "light sensors Delta OHM LP 471 PHOT / RAD / LUM",
       "laser particle counter Trotec PC 200",
       "thermal camera FLIR TG267",
       "laser distance meter",

@@ -10,9 +10,7 @@ import { getPcfCategoryLabel } from "@/lib/pcf-category-labels";
 
 import { getPcfSubcategoryLabel } from "@/lib/pcf-subcategory-labels";
 
-import { getSensecaCategoryLabel } from "@/lib/senseca-category-labels";
-
-import { getPcfCategoryIconKey, getSensecaCategoryIconKey } from "@/lib/sales-category-icons";
+import { getPcfCategoryIconKey } from "@/lib/sales-category-icons";
 
 import type { Locale } from "@/lib/i18n/locales";
 
@@ -123,25 +121,17 @@ export function SalesProductCatalog({
 
   const groups = groupProducts(products);
 
-  const isSenseca = brand.slug === "senseca";
-
-
-
   return (
 
     <div className="sales-product-catalog">
 
       {groups.map((group) => {
 
-        const categoryTitle = isSenseca
-          ? getSensecaCategoryLabel(group.categoryId, locale, group.category)
-          : getPcfCategoryLabel(group.categoryId, locale, group.category);
+        const categoryTitle = getPcfCategoryLabel(group.categoryId, locale, group.category);
 
         const subgroups = groupBySubcategory(group.items);
 
-        const iconKey = isSenseca
-          ? getSensecaCategoryIconKey(group.categoryId)
-          : getPcfCategoryIconKey(group.categoryId);
+        const iconKey = getPcfCategoryIconKey(group.categoryId);
 
 
 

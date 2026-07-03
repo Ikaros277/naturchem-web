@@ -10,7 +10,6 @@ import { locales, type Locale } from "@/lib/i18n/locales";
 import { seoLandings } from "@/lib/seo-landings";
 import { getAllSalesCategoryParams } from "@/lib/sales-categories";
 import { pcfElettronicaProducts } from "@/lib/pcf-elettronica-catalog";
-import { sensecaProducts } from "@/lib/senseca-catalog";
 
 const salesCategoryRoutes = getAllSalesCategoryParams().flatMap(({ brand, slug }) => [
   `/prodej/${brand}/${slug}`
@@ -18,10 +17,8 @@ const salesCategoryRoutes = getAllSalesCategoryParams().flatMap(({ brand, slug }
 
 const salesRoutes = [
   "/prodej",
-  "/prodej/senseca",
   "/prodej/pcf-elettronica",
   ...salesCategoryRoutes,
-  ...sensecaProducts.map((product) => `/prodej/senseca/${product.slug}`),
   ...pcfElettronicaProducts.map((product) => `/prodej/pcf-elettronica/${product.slug}`)
 ];
 

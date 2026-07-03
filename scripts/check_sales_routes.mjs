@@ -5,11 +5,9 @@
 const base = (process.argv[2] ?? "http://localhost:3011").replace(/\/$/, "");
 
 const categoryChecks = [
-  "/prodej/senseca/sound-vibration/",
-  "/prodej/senseca/temperature/",
-  "/prodej/senseca/data-acquisition-systems/",
   "/prodej/pcf-elettronica/portable-monitors/",
-  "/prodej/senseca/aeolus-3-3-axis-ultrasonic-anemometer/"
+  "/prodej/pcf-elettronica/emission-monitors/",
+  "/prodej/pcf-elettronica/mod-2005-for-total-voc/"
 ];
 
 const siteChecks = [

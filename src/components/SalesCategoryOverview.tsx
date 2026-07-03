@@ -1,8 +1,7 @@
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { getPcfCategoryLabel } from "@/lib/pcf-category-labels";
-import { getSensecaCategoryLabel } from "@/lib/senseca-category-labels";
 import { getSalesCategoryOverview } from "@/lib/sales-category-overview-data";
-import { getPcfCategoryIconKey, getSensecaCategoryIconKey } from "@/lib/sales-category-icons";
+import { getPcfCategoryIconKey } from "@/lib/sales-category-icons";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
 
@@ -14,19 +13,14 @@ type Props = {
 
 export function SalesCategoryOverview({ locale, brandSlug, productCountLabel }: Props) {
   const link = (href: string) => localizeHref(href, locale);
-  const isSenseca = brandSlug === "senseca";
   const categories = getSalesCategoryOverview(brandSlug);
 
   return (
     <ul className="sales-category-list">
       {categories.map((category) => {
-        const title = isSenseca
-          ? getSensecaCategoryLabel(category.id, locale, category.title)
-          : getPcfCategoryLabel(category.id, locale, category.title);
+        const title = getPcfCategoryLabel(category.id, locale, category.title);
         const href = link(`/prodej/${brandSlug}/${category.id}`);
-        const iconKey = isSenseca
-          ? getSensecaCategoryIconKey(category.id)
-          : getPcfCategoryIconKey(category.id);
+        const iconKey = getPcfCategoryIconKey(category.id);
         const countLabel = productCountLabel(category.productCount);
 
         return (

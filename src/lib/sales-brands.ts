@@ -1,34 +1,7 @@
 import { pcfElettronicaProducts } from "@/lib/pcf-elettronica-catalog";
 import { localizePcfProducts } from "@/lib/pcf-elettronica-product-localize";
 import { pcfProductTranslationsCs } from "@/lib/pcf-elettronica-products-cs";
-import { sensecaProductsCs } from "@/lib/senseca-products-cs";
 import type { SalesBrand, SalesContent, SalesHubContent } from "@/lib/sales-types";
-
-export const sensecaBrand: SalesBrand = {
-  slug: "senseca",
-  name: "Senseca",
-  legalName: "Senseca Italy Srl, dříve Delta OHM",
-  website: "https://www.senseca.com/",
-  logoSrc: "/graphics/brands/senseca.png",
-  heroTheme: "prodej-senseca",
-  tagline:
-    "Měřicí přístroje a čidla pro environmentální monitorování, hygienické kontroly a průmysl",
-  introParagraphs: [
-    "Senseca Italy Srl (dříve Delta OHM) vyvíjí a vyrábí měřicí přístroje, přenosná zařízení, transmitory a záznamníky dat pro fyzikální veličiny — teplotu, vlhkost, tlak, rychlost vzduchu, osvětlení, akustiku, vibrace, kvalitu ovzduší a související parametry v budovách, v terénu i v průmyslu.",
-    "Portfolio zahrnuje přístroje pro hygienické měření na pracovišti, meteorologické stanice i čidla pro monitorování půdy, vody a ovzduší. Přístroje dodáváme s kalibrací podle platných evropských norem; stacionární měřidla ověřuje akreditovaná laboratoř výrobce (ACCREDIA LAT N.º 124). Kalibrační certifikáty jsou uznávány i Českým hydrometeorologickým ústavem.",
-    "V České republice zajistíme konzultaci výběru, cenovou nabídku, dodání, servis a případnou návaznost na akreditovaná měření NATURCHEM."
-  ],
-  offerItems: [
-    "Konzultace výběru přístroje podle měřeného parametru, normy a podmínek provozu",
-    "Cenová nabídka včetně příslušenství, kalibrace a ověření",
-    "Koordinace dodání, uvedení do provozu a servisních kontaktů výrobce",
-    "Propojení s akreditovanými měřeními NATURCHEM — emise, pracovní prostředí, hluk, osvětlení, mikroklima"
-  ],
-  categoriesHeading: "Kategorie přístrojů Senseca",
-  categoriesLead:
-    "Kompletní portfolio výrobce rozdělené podle měřených veličin. U každého modelu najdete popis, datové listy a odkazy na dokumentaci.",
-  products: sensecaProductsCs
-};
 
 export const pcfElettronicaBrand: SalesBrand = {
   slug: "pcf-elettronica",
@@ -56,7 +29,7 @@ export const salesHubContent: SalesHubContent = {
   pageTitle: "Prodej přístrojů a příslušenství",
   metaTitle: "Prodej laboratorních přístrojů | NATURCHEM",
   metaDescription:
-    "Měřicí technika Senseca a PCF Elettronica — přístroje pro environmentální monitorování, VOC/THC, emisní měření a laboratorní příslušenství. Konzultace, nabídka a podpora v ČR.",
+    "Analytické přístroje PCF Elettronica pro VOC, THC, emisní měření a laboratorní příslušenství. Konzultace, nabídka a podpora v ČR.",
   eyebrow: "Nabídka měřicí techniky",
   lead: "Analytické přístroje a laboratorní příslušenství pro měření VOC, THC a souvisejících parametrů — s odborným zázemím akreditovaného měřicího střediska.",
   introHeading: "",
@@ -81,14 +54,14 @@ export const salesHubContent: SalesHubContent = {
       text: "Zkoordinujeme dodání, uvedení do provozu a servisní kontakty. V případě potřeby zajistíme i akreditované měření."
     }
   ],
-  brandsHeading: "Značky v nabídce",
+  brandsHeading: "Výrobce v nabídce",
   distributorNote: "",
   schemaName: "Prodej laboratorních přístrojů NATURCHEM"
 };
 
 export const salesContentCs: SalesContent = {
   hub: salesHubContent,
-  brands: [sensecaBrand, pcfElettronicaBrand]
+  brands: [pcfElettronicaBrand]
 };
 
 export function getSalesBrand(slug: string, brands: readonly SalesBrand[]): SalesBrand | undefined {

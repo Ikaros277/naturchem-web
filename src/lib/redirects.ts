@@ -146,5 +146,15 @@ export const permanentRedirects = [
   { source: "/technicke-prilohy-pro-investory", destination: "/sluzby/technicke-prilohy", permanent: true },
   { source: "/technicke-prilohy-pro-investory/", destination: "/sluzby/technicke-prilohy", permanent: true },
   { source: "/technicke-prilohy", destination: "/sluzby/technicke-prilohy", permanent: true },
-  { source: "/technicke-prilohy/", destination: "/sluzby/technicke-prilohy", permanent: true }
+  { source: "/technicke-prilohy/", destination: "/sluzby/technicke-prilohy", permanent: true },
+
+  { source: "/prodej/senseca", destination: "/prodej/pcf-elettronica", permanent: true },
+  { source: "/prodej/senseca/", destination: "/prodej/pcf-elettronica/", permanent: true },
+  { source: "/prodej/senseca/:path*", destination: "/prodej/pcf-elettronica/", permanent: true },
+  { source: "/en/prodej/senseca", destination: "/en/prodej/pcf-elettronica", permanent: true },
+  { source: "/en/prodej/senseca/", destination: "/en/prodej/pcf-elettronica/", permanent: true },
+  { source: "/en/prodej/senseca/:path*", destination: "/en/prodej/pcf-elettronica/", permanent: true },
+  { source: "/de/prodej/senseca", destination: "/de/prodej/pcf-elettronica", permanent: true },
+  { source: "/de/prodej/senseca/", destination: "/de/prodej/pcf-elettronica/", permanent: true },
+  { source: "/de/prodej/senseca/:path*", destination: "/de/prodej/pcf-elettronica/", permanent: true }
 ];

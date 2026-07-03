@@ -23,8 +23,6 @@ import { isSalesCategorySlug } from "@/lib/sales-categories";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { getPcfCategoryLabel } from "@/lib/pcf-category-labels";
 import { getPcfCategorySummary } from "@/lib/pcf-category-summaries";
-import { getSensecaCategoryLabel } from "@/lib/senseca-category-labels";
-import { getSensecaCategorySummary } from "@/lib/senseca-category-summaries";
 import { buildSalesProductSchema } from "@/lib/sales-product-schema";
 import { siteUrl } from "@/lib/site";
 
@@ -54,20 +52,16 @@ export async function generateStaticParams() {
 }
 
 function getCategoryLabel(
-  brandSlug: string,
+  _brandSlug: string,
   categoryId: string,
   locale: Locale,
   fallback: string
 ) {
-  return brandSlug === "senseca"
-    ? getSensecaCategoryLabel(categoryId, locale, fallback)
-    : getPcfCategoryLabel(categoryId, locale, fallback);
+  return getPcfCategoryLabel(categoryId, locale, fallback);
 }
 
-function getCategorySummary(brandSlug: string, categoryId: string, locale: Locale) {
-  return brandSlug === "senseca"
-    ? getSensecaCategorySummary(categoryId, locale)
-    : getPcfCategorySummary(categoryId, locale);
+function getCategorySummary(_brandSlug: string, categoryId: string, locale: Locale) {
+  return getPcfCategorySummary(categoryId, locale);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

@@ -74,7 +74,6 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   "pristrojove-vybaveni": hero("pristrojove-vybaveni"),
   prodej: hero("pristrojove-vybaveni"),
   "prodej-pcf-elettronica": hero("pristrojove-vybaveni"),
-  "prodej-senseca": hero("pristrojove-vybaveni"),
   poradna: hero("poradna"),
   faq: hero("faq"),
   "typicke-zakazky": hero("typicke-zakazky"),

@@ -19,7 +19,7 @@ const P = {
   odpady: { title: "Odpady, skládky, recyklace", href: "/provozy-a-technologie/odpady-recyklace" },
   svarovny: { title: "Svařovny a kovovýroba", href: "/provozy-a-technologie/svarovny" },
   sklarstvi: { title: "Sklářské a keramické provozy", href: "/provozy-a-technologie/sklarstvi" },
-  automotive: { title: "Automotive a výrobní haly", href: "/provozy-a-technologie/automotive" },
+  automotive: { title: "Automobilová výroba a výrobní haly", href: "/provozy-a-technologie/automotive" },
   drevo: { title: "Dřevozpracující provozy", href: "/provozy-a-technologie/drevozpracujici" },
   zemedelstvi: {
     title: "Zemědělské provozy a sušárny",

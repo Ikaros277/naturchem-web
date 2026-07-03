@@ -33,7 +33,7 @@ export const companyStatsNote =
 export const longTermPracticeTitle = "Dlouhodobá praxe v měření a povolovacích podkladech";
 
 export const longTermPracticeParagraphs = [
-  "Navazujeme na tisíce realizovaných zakázek a měření v provozech. Dlouhodobě pracujeme pro kotelny, lakovny, bioplynové stanice, sklárské provozy, svařovny, recyklační areály, zemědělské provozy, automotive i komunální a veřejné zadavatele.",
+  "Navazujeme na tisíce realizovaných zakázek a měření v provozech. Dlouhodobě pracujeme pro kotelny, lakovny, bioplynové stanice, sklárské provozy, svařovny, recyklační areály, zemědělské provozy, automobilové provozy i komunální a veřejné zadavatele.",
   "Typicky zajišťujeme měření emisí, měření pracovního prostředí, měření hluku, rozptylové a hlukové studie, EIA podklady, odborné posudky, provozní řády, ISPOP a technické poradenství pro povolování i provozní rozhodování."
 ] as const;
 

@@ -25,7 +25,7 @@ export const referenceIntro =
   "Za 36 let na trhu jsme spolupracovali s mnoha významnými společnostmi v průmyslu i energetice.";
 
 export const referenceCustomersIntro =
-  "Společnosti, které u nás řeší měření, studie a podklady pro úřad — od automotive a energetiky po veřejný sektor.";
+  "Společnosti, které u nás řeší měření, studie a podklady pro úřad — od automobilové výroby a energetiky po veřejný sektor.";
 
 export const referenceExamplesHeading = "Příklady zakázek z praxe";
 
@@ -37,7 +37,7 @@ export function getReferenceExamplesById(): Map<string, ReferenceExample> {
 
 export const referenceAreas: readonly ReferenceArea[] = [
   {
-    title: "Průmysl a automotive",
+    title: "Průmysl a automobilová výroba",
     description:
       "Měření emisí a pracovního prostředí, hluk technologií, VOC/TOC, provozní dokumentace a podklady pro změny výroby.",
     contactService: "Měření emisí"
@@ -90,8 +90,8 @@ export const referenceAreas: readonly ReferenceArea[] = [
 export const referenceExamples: readonly ReferenceExample[] = [
   {
     id: "lak-automotive-emise",
-    title: "Lakovna automotive — měření VOC/TOC a TZL",
-    operationType: "lakovna, automotive",
+    title: "Lakovna automobilových dílů — měření VOC/TOC a TZL",
+    operationType: "lakovna, automobilová výroba",
     scope: "měření VOC/TOC a TZL na technologických výduších",
     output: "protokol z měření emisí a podklad pro povolení provozu / kontrolu plnění podmínek",
     text: "Změřili jsme emise z lakovací technologie včetně VOC/TOC a tuhých látek na výduších. Protokol šel do plnění podmínek provozu a komunikace s úřadem.",

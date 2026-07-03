@@ -17,7 +17,7 @@ Problém vzniká tehdy, když se environmentální část začne řešit až po 
 
 > Environmentální posouzení má největší hodnotu před tím, než je projekt „hotový“. Včasný vstup odborníka často ušetří přepracování výduchů, hlukových opatření, dopravního řešení nebo povolovacích podkladů.
 
-Typicky se to týká lakoven, kotelen, dieselagregátů, dřevozpracujících provozů, svařoven, recyklačních areálů, odpadových zařízení, automotive provozů, VZT jednotek, tepelných čerpadel, kompresoroven, skladů chemických látek nebo provozů s významnou dopravou.
+Typicky se to týká lakoven, kotelen, dieselagregátů, dřevozpracujících provozů, svařoven, recyklačních areálů, odpadových zařízení, automobilových provozů, VZT jednotek, tepelných čerpadel, kompresoroven, skladů chemických látek nebo provozů s významnou dopravou.
 
 ## Projektant a ekologický konzultant mají rozdílnou roli
 
@@ -146,7 +146,7 @@ Třetí chybou je obecná komunikace s úřady bez jasných podkladů. Dotaz typ
 
 ## Jak postupovat prakticky
 
-První krok by měl být jednoduchý environmentální screening. Ten ověří, zda záměr obsahuje vyjmenované zdroje ovzduší, zda může vyžadovat rozptylovou studii, odborný posudek, hlukovou studii, EIA, JES, odpadové nebo vodoprávní podklady.
+První krok by měl být jednoduché předběžné posouzení záměru. To ověří, zda záměr obsahuje vyjmenované zdroje ovzduší, zda může vyžadovat rozptylovou studii, odborný posudek, hlukovou studii, EIA, JES, odpadové nebo vodoprávní podklady.
 
 Následně se doporučuje projít projekt společně s projektantem a investorem. Cílem není vytvořit dlouhý seznam požadavků, ale označit konkrétní body, které mohou ovlivnit povolení: výduchy, VZT, hlučné zdroje, dopravu, kapacity, skladování, vody a odpady.
 
@@ -156,7 +156,7 @@ Teprve potom se připravují studie, posudky a žádosti. Takový postup je rych
 
 Projektant a ekologický konzultant by u průmyslového záměru neměli pracovat odděleně. Projektant zná technické řešení, ekologický konzultant hlídá dopady na ovzduší, hluk, EIA, JES, provozní podmínky a komunikaci s úřady. Největší přínos má tato spolupráce v rané fázi projektu, kdy lze ještě snadno upravit výduchy, hlukové zdroje, dopravní trasy nebo umístění technologie.
 
-Včasné zapojení odborníka snižuje riziko přepracování projektu, doplňování žádostí a zdržení při povolování. U záměrů s technologickými výduchy, významným hlukem, dopravou, odpady, emisemi nebo možnou EIA by měl být environmentální screening součástí přípravy projektu už od začátku.
+Včasné zapojení odborníka snižuje riziko přepracování projektu, doplňování žádostí a zdržení při povolování. U záměrů s technologickými výduchy, významným hlukem, dopravou, odpady, emisemi nebo možnou EIA by mělo být předběžné posouzení záměru součástí přípravy projektu už od začátku.
 
 Pošlete nám základní situaci záměru, technický popis provozu, kapacity, výduchy, VZT, dopravní údaje a polohu nejbližší obytné zástavby. Ověříme, kdy je vhodné zapojit odborníka na ovzduší, hluk nebo EIA a jaké podklady je potřeba připravit pro jednání s úřady.
 

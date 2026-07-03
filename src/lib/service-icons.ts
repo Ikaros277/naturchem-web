@@ -96,7 +96,7 @@ export function getServiceIconKey(href: string): ServiceIconKey {
 }
 
 const referenceSegmentToIcon: Record<string, ServiceIconKey> = {
-  "Průmysl a automotive": "audience-prumysl",
+  "Průmysl a automobilová výroba": "audience-prumysl",
   "Energetika, kotelny a kogenerace": "audience-energetika",
   "Energetika a spalovací zdroje": "audience-energetika",
   "Lakovny a povrchové úpravy": "emise",

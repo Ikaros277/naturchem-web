@@ -8,7 +8,7 @@ topic: Emise
 ---
 ## Proč má smysl poslat podklady hned na začátku
 
-U průmyslových, výrobních, skladových, odpadových nebo technologických záměrů se často řeší otázka: „Co po nás bude úřad chtít?“ Odpověď ale obvykle nelze dát jen podle názvu záměru. Jiný rozsah podkladů bude mít malá dílna, jiný lakovna, kotelna, recyklační středisko, svařovna, kompostárna, automotive provoz nebo záložní dieselagregát.
+U průmyslových, výrobních, skladových, odpadových nebo technologických záměrů se často řeší otázka: „Co po nás bude úřad chtít?“ Odpověď ale obvykle nelze dát jen podle názvu záměru. Jiný rozsah podkladů bude mít malá dílna, jiný lakovna, kotelna, recyklační středisko, svařovna, kompostárna, automobilový provoz nebo záložní dieselagregát.
 
 Pro rychlé posouzení je potřeba znát základní technické parametry: kde záměr bude, co se tam bude dělat, jaká bude kapacita, jaké vzniknou výduchy, jaká bude provozní doba, kolik bude dopravy a co přesně požaduje úřad.
 

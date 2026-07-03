@@ -391,7 +391,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     outputs: [
       "ověření nebo kontrola emisních údajů",
       "přehled vstupů, metodiky a zjištěných nesouladů",
-      "podklad pro výkaz GHG"
+      "podklad pro hlášení GHG"
     ],
     commonMistakes: [
       "Neaktuální emisní faktory nebo metodika výpočtu",
@@ -402,7 +402,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       {
         title: "ISPOP a souhrnná provozní evidence",
         href: "/sluzby/ispop",
-        description: "Reportingové agendy často sdílejí provozní data a bilance."
+        description: "Hlášení ISPOP a ověřování emisí skleníkových plynů často vycházejí ze stejných provozních dat a bilancí."
       },
       {
         title: "Měření emisí",
@@ -1178,7 +1178,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     ],
     practicalSituations: [
       "školení pro výrobní podnik, sklad nebo laboratoř",
-      "školení pro lakovnu, galvanovnu nebo automotive provoz",
+      "školení pro lakovnu, galvanovnu nebo automobilový provoz",
       "školení provozních ekologů, BOZP pracovníků a vedoucích směn",
       "školení osob odpovědných za chemické látky a směsi v provozu"
     ],

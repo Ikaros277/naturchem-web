@@ -632,7 +632,7 @@ export const faqCategories: FaqCategory[] = [
         q: "Jak poznáme, zda záměr potřebuje EIA nebo jen jiné povolení?",
         paragraphs: [
           "Záleží na typu záměru, kapacitě, lokalitě, změně provozu a zařazení podle zákona o posuzování vlivů na životní prostředí. U některých záměrů je zřejmé, že EIA bude potřeba. U jiných je nutné posoudit, zda jde o podlimitní záměr, změnu záměru, navazující řízení nebo pouze odborný podklad pro jiné povolení.",
-          "V praxi je vhodné provést předběžné screeningové posouzení ještě před podáním žádosti."
+          "V praxi je vhodné provést předběžné posouzení záměru ještě před podáním žádosti."
         ]
       },
       {

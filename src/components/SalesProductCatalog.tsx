@@ -152,7 +152,7 @@ export function SalesProductCatalog({
 
               <div className="sales-category-band-main">
 
-                <ServiceIcon icon={iconKey} variant="inline" size={24} className="sales-category-band-icon" />
+                <ServiceIcon icon={iconKey} variant="inline" size={28} className="sales-category-band-icon" />
 
                 <h3 className="sales-category-title">{categoryTitle}</h3>
 

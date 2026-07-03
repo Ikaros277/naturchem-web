@@ -506,18 +506,18 @@ export const caseStudyTextEn: Record<string, CaseStudyTextOverlay> = {
     ctaText: "Do you have an ISPOP problem or a correction request? Send us the report, permit, and operating data."
   },
   "ghg-cnr-vykaz": {
-    title: "GHG / CNR and greenhouse gas reporting",
+    title: "GHG and greenhouse gas reporting",
     facilityType: "Energy or industrial operation",
     shortDescription: "The operator needed documentation, calculations, or data verification for greenhouse gas reporting.",
     situation: "The assignment concerned reports, capacity data, fuel consumption, or link to greenhouse gas reporting.",
     task: "Check operating data, calculations, and link to sources and fuels used.",
     naturchemApproach: "We reviewed available data, fuel consumption, capacities, operating regimes, and prepared documentation or calculations for reporting.",
-    output: "Documentation for GHG/CNR reporting or report verification.",
+    output: "Documentation for GHG reporting or report verification.",
     usedFor: "Annual report, internal records, reporting, or data verification.",
-    relatedServices: ["GHG", "CNR", "operating records", "emission balance"],
+    relatedServices: ["GHG", "operating records", "emission balance"],
     authorities: "Relevant reporting systems and authorities according to obligation type.",
-    tags: ["GHG", "CNR", "greenhouse gases", "carbon report", "operating data"],
-    ctaText: "Are you addressing GHG or CNR reporting? Send us operating data, fuels, and the previous report."
+    tags: ["GHG", "greenhouse gases", "emission reporting", "operating data"],
+    ctaText: "Are you addressing greenhouse gas reporting? Send us operating data, fuels, and the previous report."
   },
   "cov-kalovy-vyduch": {
     title: "WWTP, sludge management, and post-filter exhaust",

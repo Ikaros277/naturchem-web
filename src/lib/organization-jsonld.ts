@@ -7,7 +7,7 @@ const organizationDescription =
 const audienceTypes = [
   "Provozovatelé zdrojů znečišťování ovzduší",
   "Podnikoví ekologové",
-  "EHS a HSE manažeři",
+  "environmentální a bezpečnostní manažeři",
   "Průmyslové podniky",
   "Investoři a projektanti",
   "Obce a veřejný sektor",

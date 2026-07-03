@@ -536,10 +536,10 @@ export const sectorPages: Record<string, SectorPageData> = {
     ]
   },
   automotive: {
-    metadataTitle: "Měření a podklady pro automotive a technické textilie",
+    metadataTitle: "Měření a podklady pro automobilovou výrobu a technické textilie",
     metadataDescription:
-      "Měření emisí, pracovního prostředí a hluku pro automotive, technické textilie a výrobní linky.",
-    title: "Automotive a technické textilie",
+      "Měření emisí, pracovního prostředí a hluku pro automobilovou výrobu, technické textilie a výrobní linky.",
+    title: "Automobilová výroba a technické textilie",
     slug: "automotive",
     intro:
       "Ve výrobě komponent řešíte chemické látky, VOC i hluk technologií? Měření a podklady připravíme pro provoz, investora i úřad.",
@@ -578,7 +578,7 @@ export const sectorPages: Record<string, SectorPageData> = {
     ],
     faq: [
       {
-        q: "Měříte i emise z lakovacích linek v automotive?",
+        q: "Měříte i emise z lakovacích linek v automobilové výrobě?",
         a: "Ano, včetně VOC/TOC a návaznosti na pracovní prostředí v lakovně."
       },
       {

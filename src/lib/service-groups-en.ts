@@ -162,9 +162,9 @@ export const serviceGroups: ServiceGroup[] = [
         text: "Verification of emission data, supporting documentation for greenhouse gas reporting."
       },
       {
-        title: "Legislative support for operators",
+        title: "Chemical substances in operations",
         href: "/sluzby/chemicke-latky",
-        text: "Review of calculated and measured values, authorised verification as required."
+        text: "Storage, safety data sheets, labelling and operating rules for chemicals in production."
       }
     ]
   },

@@ -1,6 +1,7 @@
 import type { Locale } from "@/lib/i18n/locales";
 import type { SalesProduct, SalesProductSpec } from "@/lib/sales-types";
 import { getPcfSpecLabel } from "@/lib/pcf-spec-labels";
+import { getPcfSpecValue } from "@/lib/pcf-spec-values";
 
 export type PcfProductTranslation = {
   title: string;
@@ -13,7 +14,7 @@ export type PcfProductTranslation = {
 function localizeSpecs(specs: readonly SalesProductSpec[], locale: Locale): SalesProductSpec[] {
   return specs.map((row) => ({
     label: getPcfSpecLabel(row.label, locale),
-    value: row.value
+    value: getPcfSpecValue(row.value, locale)
   }));
 }
 

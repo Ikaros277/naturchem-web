@@ -1,6 +1,6 @@
 # NATURCHEM — odborné články (poradna)
 
-> 47 articles on Czech environmental permitting, measurements, EIA, ISPOP, and operations.
+> 49 articles on Czech environmental permitting, measurements, EIA, ISPOP, and operations.
 
 ## Index
 
@@ -8,9 +8,10 @@
 
 ## Articles
 
-- Automotive provoz: co se typicky měří a posuzuje?: https://www.naturchem.cz/poradna/automotive-provoz-co-se-typicky-meri-a-posuzuje/
+- Automobilový provoz: co se typicky měří a posuzuje?: https://www.naturchem.cz/poradna/automotive-provoz-co-se-typicky-meri-a-posuzuje/
 - Co poslat pro rychlé posouzení záměru?: https://www.naturchem.cz/poradna/co-poslat-pro-rychle-posouzeni-zameru/
 - Co se mění v povolování zdrojů znečišťování ovzduší v roce 2026?: https://www.naturchem.cz/poradna/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026/
+- Deponie materiálu v areálu: kdy je potřeba povolení, rozptylová studie: https://www.naturchem.cz/poradna/deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek/
 - Dřevozpracující provoz: prach, piliny, odsávání, hluk a povolení zdroje: https://www.naturchem.cz/poradna/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje/
 - Elektronické oznamování měření emisí a předávání protokolů: praktický dopad na provozovatele: https://www.naturchem.cz/poradna/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele/
 - Emise vs. imise: proč provozovatel řeší obojí?: https://www.naturchem.cz/poradna/emise-vs-imise-proc-provozovatel-resi-oboji/
@@ -47,6 +48,7 @@
 - Proč nestačí katalogový údaj zařízení pro hlukové posouzení?: https://www.naturchem.cz/poradna/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni/
 - Projekt ARAMIS: co mohou nové emisní faktory a metodiky znamenat pro: https://www.naturchem.cz/poradna/projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi/
 - Projektant vs. ekologický konzultant: kdy zapojit odborníka na ovzduší, hluk a EIA?: https://www.naturchem.cz/poradna/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia/
+- Protiprašná opatření na stavbě: co má být v dokumentaci a co může chtít úřad: https://www.naturchem.cz/poradna/protiprasna-opatreni-na-stavbe-dokumentace-urad/
 - Provozní parametr u zdroje emisí: kdy ho musí provozovatel sledovat a: https://www.naturchem.cz/poradna/provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat/
 - Recyklační středisko stavebních odpadů: hluk, prach, doprava a EIA: https://www.naturchem.cz/poradna/recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia/
 - Rozptylová studie: kdy je povinná a jaké podklady jsou potřeba?: https://www.naturchem.cz/poradna/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba/

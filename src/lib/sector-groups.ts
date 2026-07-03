@@ -11,7 +11,7 @@ export const sectorGroups: SectorGroup[] = [
     id: "prumysl-vyroba",
     title: "Průmysl a výroba",
     intro:
-      "Lakovny, galvanovny, svařovny, tiskárny, dřevozpracující provozy, sklářství i automotive — typicky řešíte emise, hluk i pracovní prostředí najednou. Vyberte svůj obor a uvidíte související služby i typické zakázky z praxe.",
+      "Lakovny, galvanovny, svařovny, tiskárny, dřevozpracující provozy, sklářství i automobilové provozy — typicky řešíte emise, hluk i pracovní prostředí najednou. Vyberte svůj obor a uvidíte související služby i typické zakázky z praxe.",
     sectorIds: [
       "lakovny",
       "galvanovny",
@@ -70,7 +70,7 @@ export const sectorGroups: SectorGroup[] = [
   },
   {
     id: "evidence-dokumentace",
-    title: "Evidence, výkaznictví a provozní dokumentace",
+    title: "Evidence, vykazování a provozní dokumentace",
     intro:
       "ISPOP, výkazování GHG, provozní řády a odborné posudky — podklady pro provozovatele zdrojů a plnění povinností vůči úřadům.",
     sectorIds: ["ispop-evidence", "ghg-cnr", "provozni-rady", "odborne-posudky-povoleni"]

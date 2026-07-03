@@ -31,10 +31,10 @@ export function SalesProductFigure({ src, alt }: Props) {
         <Image
           src={src}
           alt={alt}
-          width={640}
-          height={420}
+          width={800}
+          height={520}
           className="sales-product-figure-img"
-          sizes="(max-width: 768px) 100vw, 640px"
+          sizes="(max-width: 768px) 100vw, min(42vw, 800px)"
           loading="lazy"
           fetchPriority="low"
         />

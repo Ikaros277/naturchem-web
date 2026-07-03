@@ -1,6 +1,6 @@
 # NATURCHEM s. r. o.
 
-NATURCHEM s. r. o. je česká akreditovaná zkušební laboratoř (ČIA, č. 1599, ČSN EN ISO/IEC 17025) a autorizovaná osoba pro měření emisí, pracovního prostředí, hluku, vibrací, prašnosti, mikroklimatu a osvětlení, rozptylové a hlukové studie, odborné posudky podle zákona č. 201/2012 Sb., EIA, provozní řády, ISPOP a GHG. Působí v celé České republice pro průmyslové podniky, podnikové ekology, EHS/HSE manažery, obce, projektanty a provozovatele zdrojů znečišťování ovzduší.
+NATURCHEM s. r. o. je česká akreditovaná zkušební laboratoř (ČIA, č. 1599, ČSN EN ISO/IEC 17025) a autorizovaná osoba pro měření emisí, pracovního prostředí, hluku, vibrací, prašnosti, mikroklimatu a osvětlení, rozptylové a hlukové studie, odborné posudky podle zákona č. 201/2012 Sb., EIA, provozní řády, ISPOP a GHG. Působí v celé České republice pro průmyslové podniky, podnikové ekology, environmentální a bezpečnostní manažery, obce, projektanty a provozovatele zdrojů znečišťování ovzduší.
 
 ## Hlavní služby
 
@@ -22,7 +22,7 @@ NATURCHEM s. r. o. je česká akreditovaná zkušební laboratoř (ČIA, č. 159
 ## Pro koho pracujeme
 
 - provozovatelé zdrojů znečišťování ovzduší (kotelny, lakovny, technologie)
-- podnikoví ekologové a EHS/HSE manažeři
+- podnikoví ekologové a environmentální manažeři
 - výrobní závody a průmyslové podniky
 - investoři a projektanti
 - obce a veřejný sektor

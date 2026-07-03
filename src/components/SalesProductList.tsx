@@ -22,7 +22,7 @@ export function SalesProductList({
   const link = (href: string) => localizeHref(href, locale);
 
   return (
-    <ul className="sales-product-list">
+    <ul className="sales-product-grid">
       {products.map((product) => {
         const subLabel =
           product.subcategory && subcategoryLabel
@@ -30,30 +30,33 @@ export function SalesProductList({
             : undefined;
 
         return (
-          <li key={product.slug} className="sales-product-list-item">
+          <li key={product.slug} className="sales-product-grid-item">
             <a
               href={link(`/prodej/${brandSlug}/${product.slug}`)}
-              className={`sales-product-list-link${product.imageSrc ? "" : " sales-product-list-link--no-thumb"}`}
+              className="sales-product-grid-link"
+              aria-label={product.title}
             >
               {product.imageSrc ? (
-                <span className="sales-product-list-thumb" aria-hidden="true">
+                <span className="sales-product-grid-thumb" aria-hidden="true">
                   <Image
                     src={product.imageSrc}
                     alt=""
-                    width={40}
-                    height={40}
-                    className="sales-product-list-thumb-img"
-                    sizes="40px"
+                    fill
+                    className="sales-product-grid-thumb-img"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
                     fetchPriority="low"
                   />
                 </span>
               ) : null}
-              <span className="sales-product-list-body">
-                <span className="sales-product-list-title">{product.title}</span>
-                {subLabel ? <span className="sales-product-list-subcategory">{subLabel}</span> : null}
+              <span className="sales-product-grid-body">
+                <span className="sales-product-grid-title">{product.title}</span>
+                {subLabel ? <span className="sales-product-grid-subcategory">{subLabel}</span> : null}
+                {product.tagline ? (
+                  <span className="sales-product-grid-tagline">{product.tagline}</span>
+                ) : null}
               </span>
-              <span className="sales-product-list-cta">{ctaLabel}</span>
+              <span className="sales-product-grid-cta">{ctaLabel}</span>
             </a>
           </li>
         );

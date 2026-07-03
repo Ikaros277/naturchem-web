@@ -261,12 +261,12 @@ const EN: Partial<Record<string, SectorText>> = {
     linkHint: "View services for this facility type"
   },
   "ghg-cnr": {
-    title: "GHG, CNR and greenhouse gases",
+    title: "GHG and greenhouse gases",
     description:
       "For operations we handle greenhouse gas reporting, GHG verification and links to measurements and operating data.",
     serviceTags: "GHG, ISPOP, emissions, reporting",
     factors: "CO₂, greenhouse gases, fuels, emission factors",
-    ariaLabel: "View services for GHG reporting",
+    ariaLabel: "View services for greenhouse gas reporting",
     linkHint: "View services for this facility type"
   },
   "provozni-rady": {

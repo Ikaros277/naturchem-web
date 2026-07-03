@@ -8,12 +8,12 @@ export const serviceMegaGroups = [
       {
         href: "/sluzby/pracovni-prostredi",
         label: "Pracovní prostředí",
-        description: "Kategorizace práce, expozice a roční přehledy"
+        description: "Kategorizace prací, expozice a protokoly z měření"
       },
       {
         href: "/sluzby/mereni-emisi",
         label: "Měření emisí",
-        description: "Emise ze zdrojů, VOC a imisní měření"
+        description: "Emise ze zdrojů, VOC, TOC a TZL"
       },
       {
         href: "/sluzby/mereni-hluku",
@@ -80,7 +80,7 @@ export const serviceMegaGroups = [
       {
         href: "/sluzby/ispop",
         label: "ISPOP a provozní evidence",
-        description: "Provozní evidence odpadů a látek"
+        description: "Souhrnná provozní evidence a roční hlášení ISPOP"
       },
       {
         href: "/sluzby/ghg-overovani",

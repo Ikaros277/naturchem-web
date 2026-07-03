@@ -261,12 +261,12 @@ const DE: Partial<Record<string, SectorText>> = {
     linkHint: "Leistungen für diesen Betriebstyp anzeigen"
   },
   "ghg-cnr": {
-    title: "THG, CNR und Treibhausgase",
+    title: "THG und Treibhausgase",
     description:
-      "Für Betriebe bearbeiten wir Treibhausgas-Reporting, THG-Verifizierung und Anbindung an Messungen und Betriebsdaten.",
-    serviceTags: "THG, ISPOP, Emissionen, Reporting",
+      "Für Betriebe bearbeiten wir Treibhausgas-Berichterstattung, THG-Verifizierung und Anbindung an Messungen und Betriebsdaten.",
+    serviceTags: "THG, ISPOP, Emissionen, Berichterstattung",
     factors: "CO₂, Treibhausgase, Brennstoffe, Emissionsfaktoren",
-    ariaLabel: "Leistungen für THG-Reporting anzeigen",
+    ariaLabel: "Leistungen für Treibhausgas-Berichterstattung anzeigen",
     linkHint: "Leistungen für diesen Betriebstyp anzeigen"
   },
   "provozni-rady": {

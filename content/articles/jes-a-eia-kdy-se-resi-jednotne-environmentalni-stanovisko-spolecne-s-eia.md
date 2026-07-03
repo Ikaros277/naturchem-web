@@ -160,7 +160,7 @@ Při přípravě podkladů se často opakují podobné problémy:
 - přílohy se zpracovávají izolovaně bez koordinace,
 - podklady neodpovídají požadavku příslušného úřadu.
 
-U větších záměrů je vhodné udělat nejprve vstupní screening: co záměr spouští z hlediska EIA, co bude řešit JES, jaké odborné studie budou potřeba a jaké údaje musí dodat projektant nebo investor.
+U větších záměrů je vhodné udělat nejprve vstupní posouzení: co záměr spouští z hlediska EIA, co bude řešit JES, jaké odborné studie budou potřeba a jaké údaje musí dodat projektant nebo investor.
 
 ## Praktický postup pro investora nebo projektanta
 

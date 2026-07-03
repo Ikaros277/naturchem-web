@@ -506,18 +506,18 @@ export const caseStudyTextDe: Record<string, CaseStudyTextOverlay> = {
     ctaText: "Haben Sie ein ISPOP-Problem oder eine Korrekturaufforderung? Senden Sie uns die Meldung, Genehmigung und Betriebsdaten."
   },
   "ghg-cnr-vykaz": {
-    title: "GHG / CNR und Bericht über Treibhausgase",
+    title: "THG und Berichterstattung über Treibhausgase",
     facilityType: "Energie- oder Industriebetrieb",
     shortDescription: "Der Betreiber benötigte Unterlagen, Nachrechnungen oder Datenprüfung im Bereich Treibhausgase.",
-    situation: "Der Auftrag betraf Berichte, Kapazitätsdaten, Brennstoffverbräuche oder Bezug zum Treibhausgas-Reporting.",
+    situation: "Der Auftrag betraf Berichte, Kapazitätsdaten, Brennstoffverbräuche oder Bezug zur Treibhausgas-Berichterstattung.",
     task: "Betriebsdaten, Berechnungen und Bezug zu Quellen und verwendeten Brennstoffen prüfen.",
-    naturchemApproach: "Wir haben verfügbare Daten, Brennstoffverbräuche, Kapazitäten, Betriebsregime geprüft und Unterlagen oder Berechnungen für das Reporting vorbereitet.",
-    output: "Unterlagen für GHG/CNR-Reporting oder Berichtsprüfung.",
-    usedFor: "Jahresbericht, interne Dokumentation, Reporting oder Datenprüfung.",
-    relatedServices: ["GHG", "CNR", "Betriebsdokumentation", "Emissionsbilanz"],
+    naturchemApproach: "Wir haben verfügbare Daten, Brennstoffverbräuche, Kapazitäten, Betriebsregime geprüft und Unterlagen oder Berechnungen für die Berichterstattung vorbereitet.",
+    output: "Unterlagen für THG-Berichterstattung oder Berichtsprüfung.",
+    usedFor: "Jahresbericht, interne Dokumentation, Berichterstattung oder Datenprüfung.",
+    relatedServices: ["THG", "Betriebsdokumentation", "Emissionsbilanz"],
     authorities: "Zuständige Meldesysteme und Behörden je nach Pflichtart.",
-    tags: ["GHG", "CNR", "Treibhausgase", "Kohlenstoffbericht", "Betriebsdaten"],
-    ctaText: "Bearbeiten Sie einen GHG- oder CNR-Bericht? Senden Sie uns Betriebsdaten, Brennstoffe und den vorherigen Bericht."
+    tags: ["THG", "Treibhausgase", "Emissionsbericht", "Betriebsdaten"],
+    ctaText: "Bearbeiten Sie die Berichterstattung über Treibhausgase? Senden Sie uns Betriebsdaten, Brennstoffe und den vorherigen Bericht."
   },
   "cov-kalovy-vyduch": {
     title: "Kläranlage, Schlammwirtschaft und Abgas nach dem Filter",

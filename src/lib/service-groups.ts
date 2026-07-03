@@ -147,7 +147,7 @@ export const serviceGroups: ServiceGroup[] = [
   },
   {
     id: "evidence-reporting",
-    title: "Provozní evidence, výkaznictví a legislativní podpora",
+    title: "Provozní evidence, vykazování a legislativní poradenství",
     intro:
       "Blíží se hlášení ISPOP nebo kontrola údajů? Zkontrolujeme souhrnnou evidenci a emise skleníkových plynů v návaznosti na měření a povolení.",
     items: [
@@ -162,9 +162,9 @@ export const serviceGroups: ServiceGroup[] = [
         text: "Ověřování emisních údajů, podklady pro výkazování skleníkových plynů."
       },
       {
-        title: "Legislativní péče o provozovatele",
+        title: "Chemické látky v provozu",
         href: "/sluzby/chemicke-latky",
-        text: "Kontrola vypočtených a měřených hodnot, autorizované ověřování dle požadavků."
+        text: "Skladování, bezpečnostní listy, označování a provozní pravidla pro chemii ve výrobě."
       }
     ]
   },

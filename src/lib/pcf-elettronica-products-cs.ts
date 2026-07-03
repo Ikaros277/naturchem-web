@@ -238,7 +238,7 @@ export const pcfProductTranslationsCs: Record<string, PcfProductTranslation> = {
     ],
     applications: [
       "Terénní průzkumy NMH a VOC",
-      "Přenosný screening emisí",
+      "Přenosná orientační kontrola emisí",
       "Lokální audity bez pevného CEMS",
       "Výzkumné a mobilní monitorovací kampaně"
     ]

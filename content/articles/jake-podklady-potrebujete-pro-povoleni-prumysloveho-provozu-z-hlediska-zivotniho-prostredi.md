@@ -14,7 +14,7 @@ Pokud se environmentální požadavky řeší až dodatečně, může se zjistit
 
 > U průmyslových provozů je největší úspora času často v tom, že se ovzduší, hluk, voda a odpady posoudí ještě před finálním technickým návrhem.
 
-Typicky se to týká lakoven, svařoven, kotelen, záložních zdrojů, dřevozpracujících provozů, recyklačních areálů, potravinářských provozů, skladů chemických látek, automotive výroby, odpadových zařízení nebo technologií s významnou vzduchotechnikou.
+Typicky se to týká lakoven, svařoven, kotelen, záložních zdrojů, dřevozpracujících provozů, recyklačních areálů, potravinářských provozů, skladů chemických látek, automobilové výroby, odpadových zařízení nebo technologií s významnou vzduchotechnikou.
 
 ## Základní přehled podkladů
 
@@ -201,7 +201,7 @@ Právě jednotnost dokumentace často rozhoduje, zda úřad požádá jen o drob
 
 ## Doporučený postup
 
-U nového průmyslového provozu nebo významné změny je vhodné nejdříve udělat environmentální screening. Ten ověří, zda záměr spadá do EIA, zda bude potřeba JES, zda obsahuje vyjmenované zdroje ovzduší, zda vyžaduje odpadové povolení, zda může být problém s hlukem a jaké podklady je potřeba připravit pro stavební povolení nebo navazující řízení.
+U nového průmyslového provozu nebo významné změny je vhodné nejdříve udělat předběžné posouzení záměru. To ověří, zda záměr spadá do EIA, zda bude potřeba JES, zda obsahuje vyjmenované zdroje ovzduší, zda vyžaduje odpadové povolení, zda může být problém s hlukem a jaké podklady je potřeba připravit pro stavební povolení nebo navazující řízení.
 
 Poté se doplní konkrétní studie a dokumenty. U větších záměrů je vhodné, aby se projektant, investor a environmentální specialista domluvili už před finálním návrhem technologie. Předejde se tím situaci, kdy je nutné dodatečně měnit výduchy, tlumiče hluku, skladování odpadů nebo odvodnění ploch.
 

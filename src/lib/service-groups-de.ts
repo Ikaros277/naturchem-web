@@ -157,14 +157,14 @@ export const serviceGroups: ServiceGroup[] = [
         text: "Jährliche Berichterstattung, integrierte Aufzeichnungen zur Schadstoffberichterstattung, Verknüpfung zu Emissionsmessungen."
       },
       {
-        title: "Treibhausgase und Treibhausgase",
+        title: "THG und Treibhausgase",
         href: "/sluzby/ghg-overovani",
-        text: "Überprüfung der Emissionsdaten, unterstützende Dokumentation für die Treibhausgasberichterstattung."
+        text: "Überprüfung der Emissionsdaten, unterstützende Dokumentation für die Treibhausgas-Berichterstattung."
       },
       {
-        title: "Gesetzliche Unterstützung für Betreiber",
+        title: "Chemische Stoffe im Betrieb",
         href: "/sluzby/chemicke-latky",
-        text: "Überprüfung der berechneten und gemessenen Werte, ggf. autorisierte Überprüfung."
+        text: "Lagerung, Sicherheitsdatenblätter, Kennzeichnung und Betriebsregeln für Chemikalien in der Produktion."
       }
     ]
   },

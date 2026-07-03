@@ -120,8 +120,8 @@ export const sectors: Sector[] = [
   ),
   sector(
     "automotive",
-    "Automotive a výrobní linky",
-    "U automotive a výrobních linek řešíme emise, chemické látky, hluk, pracovní prostředí a podklady pro investora nebo úřad.",
+    "Automobilová výroba a výrobní linky",
+    "V automobilové výrobě a na výrobních linkách řešíme emise, chemické látky, hluk, pracovní prostředí a podklady pro investora nebo úřad.",
     "Emise, pracovní prostředí, chemické látky, EIA",
     "VOC, chemické látky, hluk, technologie, doprava",
     ["/sluzby/mereni-emisi", "/sluzby/pracovni-prostredi", "/sluzby/eia-oznameni-zameru"],
@@ -329,9 +329,9 @@ export const sectors: Sector[] = [
   ),
   sector(
     "ghg-cnr",
-    "GHG, CNR a skleníkové plyny",
+    "GHG a skleníkové plyny",
     "U provozů řešíme výkazování skleníkových plynů, GHG ověřování a návaznost na měření a provozní data.",
-    "GHG, ISPOP, emise, výkaznictví",
+    "GHG, ISPOP, emise, vykazování",
     "CO₂, skleníkové plyny, paliva, emisní faktory",
     ["/sluzby/ghg-overovani", "/sluzby/ispop"],
     ["ghg-cnr-vykaz"]

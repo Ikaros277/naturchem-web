@@ -12,7 +12,6 @@ const categoryChecks = [
 
 const siteChecks = [
   "/",
-  "/proc-naturchem/",
   "/sluzby/mereni-emisi/",
   "/mereni-prasnosti/",
   "/llms.txt"

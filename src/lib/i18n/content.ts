@@ -164,10 +164,6 @@ export async function getAboutPage(locale: Locale) {
   return (await loadLocaleContent(locale)).aboutPage;
 }
 
-export async function getWhyNaturchemPage(locale: Locale) {
-  return (await loadLocaleContent(locale)).whyNaturchemPage;
-}
-
 export async function getAccreditationPage(locale: Locale) {
   return (await loadLocaleContent(locale)).accreditationPage;
 }

@@ -38,7 +38,6 @@ import { cookiesPageContent, cookiesPageMetadata } from "@/lib/cookies-page";
 import { teamMembers } from "@/lib/team";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy";
 import { homeHeroPillars } from "@/lib/home-hero-pillars";
-import { whyNaturchemPageContent, whyNaturchemPageMetadata } from "@/lib/why-naturchem-page";
 import { salesContentCs } from "@/lib/sales-brands";
 
 export const localeContent = {
@@ -71,7 +70,6 @@ export const localeContent = {
   typicalScenarios,
   siteServices: services,
   aboutPage: { metadata: aboutPageMetadata, content: aboutPageContent },
-  whyNaturchemPage: { metadata: whyNaturchemPageMetadata, content: whyNaturchemPageContent },
   accreditationPage: {
     metadata: accreditationPageMetadata,
     content: accreditationPageContent,

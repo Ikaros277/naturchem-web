@@ -130,7 +130,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Yes. We carry out field measurements of emissions, workplace environment, noise and other parameters throughout the Czech Republic. Studies, expert reports and operational documentation are prepared regardless of site location — what matters is access to the technology and a representative operating regime."
         ],
-        links: [{ label: "Why NATURCHEM", href: "/proc-naturchem" }]
+        links: [{ label: "Accreditation & authorisations", href: "/akreditace-autorizace-dokumenty" }]
       },
       {
         q: "What documents does NATURCHEM need for a quote?",

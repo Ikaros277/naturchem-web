@@ -10385,16 +10385,23 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
 
 .sales-category-list {
   list-style: none;
-  margin: 0.5rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  gap: 0.85rem;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 640px) {
   .sales-category-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .sales-category-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
   }
 }
 
@@ -10403,34 +10410,65 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
 }
 
 .sales-category-list-link {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.34rem 0.55rem;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  height: 100%;
+  padding: 1.15rem 1.2rem 1.1rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  box-shadow: var(--sales-card-shadow);
   text-decoration: none;
   color: inherit;
-  transition: background-color 0.15s ease;
-  min-height: 0;
+  background: #fff;
+  overflow: hidden;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.15s ease;
+}
+
+.sales-category-list-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sales-accent-strong), #d4894a);
 }
 
 .sales-category-list-link:hover,
 .sales-category-list-link:focus-visible {
-  background: var(--sales-accent-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--sales-card-shadow-hover);
+  border-color: rgba(143, 79, 26, 0.22);
+  background: #fff;
   outline: none;
 }
 
-.sales-category-list-link .service-icon-plain {
+.sales-category-list-icon.service-icon-plain {
   flex-shrink: 0;
   color: var(--sales-accent-strong);
 }
 
 .sales-category-list-title {
-  font-weight: 600;
-  font-size: 0.88rem;
-  line-height: 1.25;
+  flex: 1;
+  font-weight: 650;
+  font-size: 1.08rem;
+  line-height: 1.35;
   color: var(--navy);
   min-width: 0;
+  padding-right: 0.25rem;
+}
+
+.sales-category-list-link .sales-count-badge {
+  margin-top: auto;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.72rem;
 }
 
 .sales-category-list-count {
@@ -10444,11 +10482,12 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
 }
 
 .sales-brand-categories {
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.75rem;
 }
 
 .sales-brand-categories h2 {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.15rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.55rem);
 }
 
 .sales-product-list {

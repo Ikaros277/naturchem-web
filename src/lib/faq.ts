@@ -155,7 +155,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Ano. Terénní měření emisí, pracovního prostředí, hluku a dalších veličin zajišťujeme v celé ČR. Studie, posudky a provozní dokumentaci zpracováváme bez ohledu na lokalitu provozu — důležitá je dostupnost technologie a reprezentativní provozní režim."
         ],
-        links: [{ label: "Proč NATURCHEM", href: "/proc-naturchem" }]
+        links: [{ label: "Akreditace a oprávnění", href: "/akreditace-autorizace-dokumenty" }]
       },
       {
         q: "Jaké podklady potřebuje NATURCHEM pro nabídku?",

@@ -10,11 +10,6 @@ export const oNasMegaGroupsDe: readonly ONasMegaMenuGroup[] = [
         href: "/o-spolecnosti-naturchem",
         label: "Über NATURCHEM",
         description: "Laborprofil, Standorte und Kontakte"
-      },
-      {
-        href: "/proc-naturchem",
-        label: "Warum NATURCHEM",
-        description: "Akkreditierung, Autorisierungen und Behördenerfahrung"
       }
     ]
   },

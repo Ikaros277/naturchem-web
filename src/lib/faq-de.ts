@@ -130,7 +130,7 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Ja. Feldmessungen von Emissionen, Arbeitsumfeld, Lärm und weiteren Parametern führen wir in der gesamten Tschechischen Republik durch. Studien, Gutachten und Betriebsdokumentation erstellen wir unabhängig vom Standort — entscheidend sind Zugang zur Technologie und ein repräsentativer Betriebszustand."
         ],
-        links: [{ label: "Warum NATURCHEM", href: "/proc-naturchem" }]
+        links: [{ label: "Akkreditierung und Autorisierungen", href: "/akreditace-autorizace-dokumenty" }]
       },
       {
         q: "Welche Unterlagen benötigt NATURCHEM für ein Angebot?",

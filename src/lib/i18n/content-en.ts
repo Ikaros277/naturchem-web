@@ -40,7 +40,6 @@ import { CONTACT_SERVICE_LABELS_EN } from "@/lib/contact-services-en";
 import { teamMembers } from "@/lib/team-en";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy-en";
 import { homeHeroPillars } from "@/lib/home-hero-pillars-en";
-import { whyNaturchemPageContent, whyNaturchemPageMetadata } from "@/lib/why-naturchem-page-en";
 import { salesContentEn } from "@/lib/sales-brands-en";
 import type { LocaleContent } from "@/lib/i18n/content-cs";
 
@@ -74,7 +73,6 @@ export const localeContent = {
   typicalScenarios,
   siteServices: services,
   aboutPage: { metadata: aboutPageMetadata, content: aboutPageContent },
-  whyNaturchemPage: { metadata: whyNaturchemPageMetadata, content: whyNaturchemPageContent },
   accreditationPage: {
     metadata: accreditationPageMetadata,
     content: accreditationPageContent,

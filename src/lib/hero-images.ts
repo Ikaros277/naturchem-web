@@ -158,7 +158,6 @@ const pageThemeMap: Record<string, string> = {
   "/prodej": "prodej",
   "/poradna": "poradna",
   "/faq": "faq",
-  "/proc-naturchem": "akreditace-autorizace-dokumenty",
   "/dotaznik-spokojenosti": "reference",
   "/sluzby": "sluzby"
 };

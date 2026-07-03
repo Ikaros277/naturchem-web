@@ -181,7 +181,7 @@ export async function ServicePage(props: Props) {
       <div className="container">
         <p className="service-entity-blurb muted">
           {copy.entityBlurb}
-          <Link href={link("/proc-naturchem")}>{copy.entityBlurbLink}</Link>.
+          <Link href={link("/akreditace-autorizace-dokumenty")}>{copy.accreditationLink}</Link>.
         </p>
       </div>
 

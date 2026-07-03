@@ -23,7 +23,6 @@ const copy = {
     accreditationLink: "Akreditace a oprávnění",
     entityBlurb:
       "NATURCHEM je akreditovaná zkušební laboratoř č. 1599 (ČIA) a autorizovaná osoba pro měření emisí, pracovního prostředí a hluku v celé ČR. Více o oprávněních a zkušenostech: ",
-    entityBlurbLink: "Proč NATURCHEM",
     relatedListName: (title: string) => `Související odkazy pro ${title}`
   },
   en: {
@@ -48,7 +47,6 @@ const copy = {
     accreditationLink: "Accreditation & authorisations",
     entityBlurb:
       "NATURCHEM is an accredited testing laboratory No. 1599 (ČIA) and an authorised body for emission, workplace and noise measurements across the Czech Republic. More on credentials and experience: ",
-    entityBlurbLink: "Why NATURCHEM",
     relatedListName: (title: string) => `Related links for ${title}`
   },
   de: {
@@ -73,7 +71,6 @@ const copy = {
     accreditationLink: "Akkreditierung und Autorisierungen",
     entityBlurb:
       "NATURCHEM ist akkreditiertes Prüflabor Nr. 1599 (ČIA) und autorisierte Stelle für Emissions-, Arbeitsumfeld- und Lärmmessungen in der gesamten Tschechischen Republik. Mehr zu Berechtigungen und Erfahrung: ",
-    entityBlurbLink: "Warum NATURCHEM",
     relatedListName: (title: string) => `Verwandte Links für ${title}`
   }
 } as const;

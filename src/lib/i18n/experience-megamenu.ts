@@ -148,8 +148,13 @@ export async function getExperienceMegaGroups(locale: Locale): Promise<readonly 
           description: labels.reference.overviewDesc
         },
         {
-          href: "/proc-naturchem",
-          label: locale === "de" ? "Warum NATURCHEM" : locale === "en" ? "Why NATURCHEM" : "Proč NATURCHEM",
+          href: "/akreditace-autorizace-dokumenty",
+          label:
+            locale === "de"
+              ? "Akkreditierung und Autorisierungen"
+              : locale === "en"
+                ? "Accreditation & authorisations"
+                : "Akreditace a oprávnění",
           description:
             locale === "de"
               ? "Akkreditierung, Autorisierungen und Erfahrung"

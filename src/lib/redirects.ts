@@ -156,5 +156,12 @@ export const permanentRedirects = [
   { source: "/en/prodej/senseca/:path*", destination: "/en/prodej/pcf-elettronica/", permanent: true },
   { source: "/de/prodej/senseca", destination: "/de/prodej/pcf-elettronica", permanent: true },
   { source: "/de/prodej/senseca/", destination: "/de/prodej/pcf-elettronica/", permanent: true },
-  { source: "/de/prodej/senseca/:path*", destination: "/de/prodej/pcf-elettronica/", permanent: true }
+  { source: "/de/prodej/senseca/:path*", destination: "/de/prodej/pcf-elettronica/", permanent: true },
+
+  { source: "/proc-naturchem", destination: "/akreditace-autorizace-dokumenty", permanent: true },
+  { source: "/proc-naturchem/", destination: "/akreditace-autorizace-dokumenty/", permanent: true },
+  { source: "/en/proc-naturchem", destination: "/en/akreditace-autorizace-dokumenty", permanent: true },
+  { source: "/en/proc-naturchem/", destination: "/en/akreditace-autorizace-dokumenty/", permanent: true },
+  { source: "/de/proc-naturchem", destination: "/de/akreditace-autorizace-dokumenty", permanent: true },
+  { source: "/de/proc-naturchem/", destination: "/de/akreditace-autorizace-dokumenty/", permanent: true }
 ];

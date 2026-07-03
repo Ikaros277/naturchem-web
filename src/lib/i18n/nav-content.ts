@@ -12,7 +12,6 @@ const footerCompanyLabels: Record<
   Locale,
   {
     about: string;
-    whyNaturchem: string;
     references: string;
     accreditation: string;
     articles: string;
@@ -22,7 +21,6 @@ const footerCompanyLabels: Record<
 > = {
   cs: {
     about: "O společnosti",
-    whyNaturchem: "Proč NATURCHEM",
     references: "Reference",
     accreditation: "Akreditace a oprávnění",
     articles: "Odborné články",
@@ -31,7 +29,6 @@ const footerCompanyLabels: Record<
   },
   en: {
     about: "About NATURCHEM",
-    whyNaturchem: "Why NATURCHEM",
     references: "References",
     accreditation: "Accreditation & authorisations",
     articles: "Knowledge base",
@@ -40,7 +37,6 @@ const footerCompanyLabels: Record<
   },
   de: {
     about: "Über NATURCHEM",
-    whyNaturchem: "Warum NATURCHEM",
     references: "Referenzen",
     accreditation: "Akkreditierung und Autorisierungen",
     articles: "Wissensdatenbank",
@@ -106,7 +102,6 @@ export function getFooterNav(locale: Locale) {
 
   const footerCompanyLinks: readonly FooterLink[] = [
     { href: "/o-spolecnosti-naturchem", label: companyLabels.about },
-    { href: "/proc-naturchem", label: companyLabels.whyNaturchem },
     { href: "/reference", label: companyLabels.references },
     { href: "/akreditace-autorizace-dokumenty", label: companyLabels.accreditation },
     { href: "/poradna", label: companyLabels.articles },

@@ -1,4 +1,5 @@
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { SalesCountBadge } from "@/components/SalesCountBadge";
 import { getPcfCategoryLabel } from "@/lib/pcf-category-labels";
 import { getSalesCategoryOverview } from "@/lib/sales-category-overview-data";
 import { getPcfCategoryIconKey } from "@/lib/sales-category-icons";
@@ -26,11 +27,9 @@ export function SalesCategoryOverview({ locale, brandSlug, productCountLabel }: 
         return (
           <li key={category.id} className="sales-category-list-item">
             <a href={href} className="sales-category-list-link" aria-label={`${title}, ${countLabel}`}>
-              <ServiceIcon icon={iconKey} variant="inline" size={16} />
+              <ServiceIcon icon={iconKey} variant="inline" size={28} className="sales-category-list-icon" />
               <span className="sales-category-list-title">{title}</span>
-              <span className="sales-category-list-count" aria-hidden="true">
-                {category.productCount}
-              </span>
+              <SalesCountBadge>{String(category.productCount)}</SalesCountBadge>
             </a>
           </li>
         );

@@ -45,6 +45,7 @@ const routes = [
   ...salesRoutes,
   "/faq",
   "/o-spolecnosti-naturchem",
+  "/proc-naturchem",
   "/reference",
   "/typicke-zakazky",
   "/provozy-a-technologie",

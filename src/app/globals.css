@@ -10471,6 +10471,42 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   padding: 0.35rem 0.72rem;
 }
 
+.sales-category-list-link--with-thumb {
+  padding: 0 0 1.1rem;
+}
+
+.sales-category-list-link--with-thumb .sales-category-list-title,
+.sales-category-list-link--with-thumb .sales-count-badge {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+
+.sales-category-list-link--with-thumb .sales-category-list-title {
+  margin-top: 0.15rem;
+}
+
+.sales-category-list-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.sales-category-list-thumb-img {
+  object-fit: contain;
+  object-position: center;
+  padding: 0.75rem;
+  transition: transform 0.22s ease;
+}
+
+.sales-category-list-link--with-thumb:hover .sales-category-list-thumb-img,
+.sales-category-list-link--with-thumb:focus-visible .sales-category-list-thumb-img {
+  transform: scale(1.03);
+}
+
 .sales-category-list-count {
   margin-left: auto;
   flex-shrink: 0;

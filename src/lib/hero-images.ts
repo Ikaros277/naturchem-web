@@ -152,6 +152,7 @@ const pageThemeMap: Record<string, string> = {
   "/typicke-zakazky": "typicke-zakazky",
   "/reference": "reference",
   "/o-spolecnosti-naturchem": "o-spolecnosti-naturchem",
+  "/proc-naturchem": "akreditace-autorizace-dokumenty",
   "/kontakt": "kontakt",
   "/akreditace-autorizace-dokumenty": "akreditace-autorizace-dokumenty",
   "/pristrojove-vybaveni": "pristrojove-vybaveni",

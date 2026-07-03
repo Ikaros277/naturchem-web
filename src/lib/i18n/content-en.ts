@@ -28,6 +28,10 @@ import { typicalScenarios } from "@/lib/typical-scenarios-en";
 import { services } from "@/lib/site-services-en";
 import { aboutPageContent, aboutPageMetadata } from "@/lib/about-page-en";
 import {
+  whyNaturchemPageContent,
+  whyNaturchemPageMetadata
+} from "@/lib/why-naturchem-page-en";
+import {
   accreditationPageContent,
   accreditationPageMetadata,
   accreditationFacts,
@@ -73,6 +77,7 @@ export const localeContent = {
   typicalScenarios,
   siteServices: services,
   aboutPage: { metadata: aboutPageMetadata, content: aboutPageContent },
+  whyNaturchemPage: { metadata: whyNaturchemPageMetadata, content: whyNaturchemPageContent },
   accreditationPage: {
     metadata: accreditationPageMetadata,
     content: accreditationPageContent,

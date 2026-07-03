@@ -26,7 +26,7 @@ export function TawkToChat() {
   const tawk = getTawkConfig();
   const isMobile = useIsMobileViewport();
 
-  if (!tawk || !consent.updatedAt || isMobile) return null;
+  if (!tawk || !consent.updatedAt || !consent.marketing || isMobile) return null;
 
   return (
     <Script id="tawk-to-live-chat" strategy="lazyOnload">

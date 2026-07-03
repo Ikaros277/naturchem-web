@@ -10,28 +10,42 @@ export type FooterLink = {
 
 const footerCompanyLabels: Record<
   Locale,
-  { about: string; references: string; accreditation: string; articles: string; faq: string }
+  {
+    about: string;
+    whyNaturchem: string;
+    references: string;
+    accreditation: string;
+    articles: string;
+    faq: string;
+    satisfactionSurvey: string;
+  }
 > = {
   cs: {
     about: "O společnosti",
+    whyNaturchem: "Proč NATURCHEM",
     references: "Reference",
     accreditation: "Akreditace a oprávnění",
     articles: "Odborné články",
-    faq: "Časté dotazy"
+    faq: "Časté dotazy",
+    satisfactionSurvey: "Dotazník spokojenosti"
   },
   en: {
     about: "About NATURCHEM",
+    whyNaturchem: "Why NATURCHEM",
     references: "References",
     accreditation: "Accreditation & authorisations",
     articles: "Knowledge base",
-    faq: "FAQ"
+    faq: "FAQ",
+    satisfactionSurvey: "Satisfaction survey"
   },
   de: {
     about: "Über NATURCHEM",
+    whyNaturchem: "Warum NATURCHEM",
     references: "Referenzen",
     accreditation: "Akkreditierung und Autorisierungen",
     articles: "Wissensdatenbank",
-    faq: "FAQ"
+    faq: "FAQ",
+    satisfactionSurvey: "Zufriedenheitsfragebogen"
   }
 } ;
 
@@ -64,17 +78,17 @@ const headerNavLabels: Record<
   { sectors: string; caseStudies: string; references: string }
 > = {
   cs: {
-    sectors: "Provozy",
+    sectors: "Podle typu provozu",
     caseStudies: "Typické zakázky",
     references: "Reference"
   },
   en: {
-    sectors: "Industries",
+    sectors: "By plant type",
     caseStudies: "Typical projects",
     references: "References"
   },
   de: {
-    sectors: "Betriebe",
+    sectors: "Nach Betriebstyp",
     caseStudies: "Typische Projekte",
     references: "Referenzen"
   }
@@ -92,10 +106,12 @@ export function getFooterNav(locale: Locale) {
 
   const footerCompanyLinks: readonly FooterLink[] = [
     { href: "/o-spolecnosti-naturchem", label: companyLabels.about },
+    { href: "/proc-naturchem", label: companyLabels.whyNaturchem },
     { href: "/reference", label: companyLabels.references },
     { href: "/akreditace-autorizace-dokumenty", label: companyLabels.accreditation },
     { href: "/poradna", label: companyLabels.articles },
-    { href: "/faq", label: companyLabels.faq }
+    { href: "/faq", label: companyLabels.faq },
+    { href: "/dotaznik-spokojenosti", label: companyLabels.satisfactionSurvey }
   ];
 
   const footerServiceLinks: readonly FooterLink[] = [
@@ -128,6 +144,7 @@ export function getFooterNav(locale: Locale) {
   };
 }
 
+/** @deprecated Use getExperienceMegaGroups */
 export function getHeaderMainNav(locale: Locale) {
   const labels = pickLocale(locale, headerNavLabels);
   return [
@@ -135,4 +152,20 @@ export function getHeaderMainNav(locale: Locale) {
     { href: "/typicke-zakazky", label: labels.caseStudies },
     { href: "/reference", label: labels.references }
   ] as const;
+}
+
+const salesNavLabels: Record<Locale, string> = {
+  cs: "Nabídka měřicí techniky",
+  en: "Measuring equipment offer",
+  de: "Angebot Messtechnik"
+};
+
+/** Query bypasses stale browser 301 cache from legacy /prodej → / redirect. */
+const salesNavHref = "/prodej?menu=nav";
+
+export function getSalesNavLink(locale: Locale) {
+  return {
+    href: salesNavHref,
+    label: pickLocale(locale, salesNavLabels)
+  } as const;
 }

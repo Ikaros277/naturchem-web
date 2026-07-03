@@ -27,6 +27,7 @@ export function ContactForm({
   const t = useTranslations("contactForm");
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
+  const [contactChannelError, setContactChannelError] = useState(false);
   const [inquiryCategory, setInquiryCategory] = useState<InquiryCategoryId>(initialCategory);
 
   const sendFailureMessage = t.sendFailure
@@ -42,10 +43,13 @@ export function ContactForm({
     const phone = String(formData.get("phone") ?? "").trim();
 
     if (!email && !phone) {
+      setContactChannelError(true);
       setStatus("error");
       setFeedback(t.contactRequired);
       return;
     }
+
+    setContactChannelError(false);
 
     setStatus("loading");
     setFeedback(t.sending);
@@ -86,6 +90,10 @@ export function ContactForm({
           {t.successTitle}
         </h2>
         <p className="contact-form-success-message">{feedback}</p>
+        <p className="contact-form-survey-note muted">
+          {t.surveyAfterSuccess}{" "}
+          <LocaleLink href="/dotaznik-spokojenosti">{t.surveyAfterSuccessLink}</LocaleLink>.
+        </p>
       </div>
     );
   }
@@ -106,29 +114,49 @@ export function ContactForm({
         </label>
       </p>
 
+      <p id="contact-channel-hint" className="contact-form-channel-hint muted">
+        {t.contactChannelHint}
+      </p>
+
       <div className="contact-form-grid">
         <div className="contact-form-col contact-form-col--identity">
           <p>
             <label>
               {t.nameLabel}
               <br />
-              <input name="name" required autoComplete="name" />
+              <input name="name" required autoComplete="name" maxLength={200} />
             </label>
           </p>
 
           <p>
-            <label>
+            <label htmlFor="contact-email-input">
               {t.emailLabel}
               <br />
-              <input type="email" name="email" autoComplete="email" />
+              <input
+                id="contact-email-input"
+                type="email"
+                name="email"
+                autoComplete="email"
+                maxLength={254}
+                aria-describedby="contact-channel-hint"
+                aria-invalid={contactChannelError || undefined}
+              />
             </label>
           </p>
 
           <p>
-            <label>
+            <label htmlFor="contact-phone-input">
               {t.phoneLabel}
               <br />
-              <input name="phone" type="tel" autoComplete="tel" />
+              <input
+                id="contact-phone-input"
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                maxLength={40}
+                aria-describedby="contact-channel-hint"
+                aria-invalid={contactChannelError || undefined}
+              />
             </label>
           </p>
 
@@ -162,6 +190,7 @@ export function ContactForm({
                 name="message"
                 rows={9}
                 required
+                maxLength={10000}
                 defaultValue={initialMessage}
                 placeholder={t.messagePlaceholder}
               />

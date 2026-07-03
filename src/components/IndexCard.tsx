@@ -10,6 +10,8 @@ type Props = {
   serviceCategory?: ServiceCategory | null;
   /** Ikona v jednom řádku s nadpisem (card-head), bez rámečku. */
   icon?: ReactNode;
+  /** Vizuální náhrada textového nadpisu (např. logo značky). */
+  heading?: ReactNode;
   meta?: ReactNode;
   children?: ReactNode;
 };
@@ -22,6 +24,7 @@ export function IndexCard({
   className = "",
   serviceCategory,
   icon,
+  heading,
   meta,
   children
 }: Props) {
@@ -34,7 +37,9 @@ export function IndexCard({
       aria-label={title}
     >
       {meta}
-      {icon ? (
+      {heading ? (
+        <div className="index-card-heading index-card-heading--custom">{heading}</div>
+      ) : icon ? (
         <div className="index-card-head">
           {icon}
           <h3 className="index-card-heading">{title}</h3>

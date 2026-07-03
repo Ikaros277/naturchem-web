@@ -147,7 +147,7 @@ export const serviceGroups: ServiceGroup[] = [
   },
   {
     id: "evidence-reporting",
-    title: "Provozní evidence, reporting a legislativní podpora",
+    title: "Provozní evidence, výkaznictví a legislativní podpora",
     intro:
       "Blíží se hlášení ISPOP nebo kontrola údajů? Zkontrolujeme souhrnnou evidenci a emise skleníkových plynů v návaznosti na měření a povolení.",
     items: [
@@ -159,7 +159,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "GHG a skleníkové plyny",
         href: "/sluzby/ghg-overovani",
-        text: "Ověřování emisních údajů, podklady pro reporting skleníkových plynů."
+        text: "Ověřování emisních údajů, podklady pro výkazování skleníkových plynů."
       },
       {
         title: "Legislativní péče o provozovatele",

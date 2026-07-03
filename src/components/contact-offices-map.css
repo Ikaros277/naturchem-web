@@ -227,3 +227,47 @@
   color: #0f43a7;
   font-weight: 600;
 }
+
+.contact-offices-map-placeholder {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem 1.1rem;
+  background: #e8eef4;
+  color: #203247;
+}
+
+.contact-offices-map-placeholder-lead {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.contact-offices-map-placeholder-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-offices-map-placeholder-list li {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.contact-offices-map-placeholder-list a {
+  color: #0f43a7;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.contact-offices-map-placeholder-manage {
+  justify-self: start;
+}
+
+.contact-offices-map--hero.contact-offices-map-placeholder {
+  align-content: center;
+  min-height: 100%;
+}

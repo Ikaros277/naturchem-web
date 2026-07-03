@@ -80,7 +80,7 @@ export default async function Page({ params }: Props) {
           <p className="page-lead">{messages.poradna.lead}</p>
         </header>
       </PageHeroBand>
-      <div className="container page-first-section">
+      <div className="container page-first-section page-below-fold">
         <PoradnaFilterableList articles={mergedArticles} locale={locale} topicLabels={topicLabels} />
         <PageCtaStrip {...pageCtaPresets.poradna} />
       </div>

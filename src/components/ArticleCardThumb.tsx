@@ -17,6 +17,8 @@ export function ArticleCardThumb({ theme, src }: Props) {
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
         className="article-card-thumb-img"
+        loading="lazy"
+        fetchPriority="low"
       />
       <div className="article-card-thumb-overlay" />
     </div>

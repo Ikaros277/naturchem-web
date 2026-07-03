@@ -73,7 +73,7 @@ Pokud se například filtr vymění za jiný typ, změní se odlučovací účin
 **Pozornost je vhodné věnovat zejména těmto změnám:**
 
 - nový nebo přemístěný výduch,
-- změna výšky komína,
+- změna výšky výduchu,
 - změna průtoku odpadní vzdušiny,
 - změna filtračního zařízení,
 - změna odlučovače nebo dopalovací jednotky,
@@ -137,7 +137,7 @@ Před podáním žádosti o změnu povolení provozu je vhodné udělat jednoduc
 | Zvyšuje se projektovaný výkon? | pokud ano, odborný posudek je obvykle potřeba |
 | Zvyšuje se projektovaná kapacita? | kapacita je jeden z hlavních rozhodných parametrů |
 | Zvyšují se emise? | rozhoduje nejen koncentrace, ale i hmotnostní tok a provozní doba |
-| Mění se výduch nebo komín? | může se změnit rozptyl a měřitelnost emisí |
+| Mění se výduch? | může se změnit rozptyl a měřitelnost emisí |
 | Mění se filtrace nebo odlučování? | může se změnit plnění emisních limitů |
 | Mění se palivo, suroviny nebo chemické látky? | může se změnit druh emisí |
 | Stanovuje se technická podmínka místo limitu? | odborný posudek je podstatný podklad |

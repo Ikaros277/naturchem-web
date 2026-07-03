@@ -39,7 +39,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
       "souprava pro měření TZL AMS Analytica AIR CUBE HE ISO",
       "odběrové a izokinetické sondy AMS Analytica",
       "integrované izokinetické sondy s Pitotovou trubicí a teplotním čidlem",
-      "Pitotovy trubice a převodníky tlakové diference Delta Ohm / Senseca",
+      "Pitotovy trubice a převodníky tlakové diference Senseca Italy Srl, dříve Delta OHM",
       "laboratorní a membránové plynoměry",
       "kalibrátory průtoku SXF2024-6000",
       "Peltierovy chladiče a úpravny vzorku",
@@ -53,8 +53,8 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceHref: "/sluzby/pracovni-prostredi",
     serviceLabel: "Měření pracovního prostředí",
     items: [
-      "multifunkční měřicí systémy Delta Ohm / Senseca DO9847",
-      "teplotní, vlhkostní a tlaková čidla Delta Ohm / Senseca",
+      "multifunkční měřicí systémy Senseca Italy Srl, dříve Delta OHM DO9847",
+      "teplotní, vlhkostní a tlaková čidla Senseca Italy Srl, dříve Delta OHM",
       "kulové teploměry pro tepelnou zátěž",
       "anemometry a snímače proudění vzduchu",
       "osobní odběrová čerpadla SKC AirChek",
@@ -70,9 +70,9 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceLabel: "Měření hluku a akustika",
     items: [
       "zvukoměr SVAN 979",
-      "akustický kalibrátor Delta Ohm HD 2020",
-      "analyzátor vibrací Delta Ohm HD2030",
-      "kalibrátor vibrací Delta Ohm HD2060",
+      "akustický kalibrátor Senseca Italy Srl, dříve Delta OHM HD 2020",
+      "analyzátor vibrací Senseca Italy Srl, dříve Delta OHM HD2030",
+      "kalibrátor vibrací Senseca Italy Srl, dříve Delta OHM HD2060",
       "zdroj bílého a růžového šumu Ntek OMNI 4 HP",
       "zesilovač AMG mini Ion+"
     ]
@@ -84,7 +84,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
     serviceLabel: "Měření osvětlení",
     items: [
       "luxmetr GOSSEN Mavolux 5032 C USB",
-      "světelná čidla Delta Ohm LP 471 PHOT / RAD / LUM",
+      "světelná čidla Senseca Italy Srl, dříve Delta OHM LP 471 PHOT / RAD / LUM",
       "laserový čítač částic Trotec PC 200",
       "termokamera FLIR TG267",
       "laserový dálkoměr",

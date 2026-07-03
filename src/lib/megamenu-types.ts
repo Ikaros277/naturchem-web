@@ -4,7 +4,9 @@ export type ServiceMegaGroupId = "mereni" | "studie" | "dokumentace";
 
 export type ONasMegaGroupId = "spolecnost" | "odbornost" | "informace";
 
-export type MegaMenuGroupId = ServiceMegaGroupId | ONasMegaGroupId;
+export type ExperienceMegaGroupId = "provozy" | "zakazky" | "reference";
+
+export type MegaMenuGroupId = ServiceMegaGroupId | ONasMegaGroupId | ExperienceMegaGroupId;
 
 export type MegaMenuLink = {
   href: string;
@@ -26,6 +28,13 @@ export type ONasMegaMenuGroup = {
   links: readonly MegaMenuLink[];
 };
 
+export type ExperienceMegaMenuGroup = {
+  id?: ExperienceMegaGroupId;
+  title: string;
+  subtitle?: string;
+  links: readonly MegaMenuLink[];
+};
+
 /** @deprecated Use ServiceMegaMenuGroup or ONasMegaMenuGroup */
 export type MegaMenuGroup = ServiceMegaMenuGroup | ONasMegaMenuGroup;
 
@@ -39,4 +48,10 @@ export const oNasMegaGroupIcons: Record<ONasMegaGroupId, ServiceIconKey> = {
   spolecnost: "contact-user",
   odbornost: "ippc",
   informace: "skoleni"
+};
+
+export const experienceMegaGroupIcons: Record<ExperienceMegaGroupId, ServiceIconKey> = {
+  provozy: "audience-prumysl",
+  zakazky: "process-posouzeni",
+  reference: "emise"
 };

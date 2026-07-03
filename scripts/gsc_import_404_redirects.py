@@ -85,7 +85,7 @@ def suggest_destination(path: str) -> str | None:
         "/sluzby.html": "/sluzby",
         "/reference.php": "/reference",
         "/reference.html": "/reference",
-        "/prodej": "/",
+        "/prodej": "/prodej",
         "/kariera": "/",
         "/index.php": "/",
         "/index.html": "/",

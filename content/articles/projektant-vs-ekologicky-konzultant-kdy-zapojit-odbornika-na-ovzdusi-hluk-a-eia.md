@@ -9,13 +9,11 @@ topic: Hluk
 
 U průmyslových a technických záměrů nestačí vyřešit pouze stavební a technologickou část projektu. Už v rané fázi může rozhodovat umístění výduchů, hlukových zdrojů, dopravních tras, ochranných odstupů a provozní kapacity. Ekologický konzultant pomáhá projektantovi ověřit, jaké podklady budou potřeba pro ovzduší, hluk, EIA, JES a komunikaci s úřady, aby se projekt nemusel později zbytečně přepracovávat.
 
-## OBSAH
-
 ## Proč nestačí řešit životní prostředí až na konci projektu
 
 Projektant navrhuje stavbu, technologii, dispozici, napojení objektu a technické řešení. Ekologický konzultant se na stejný záměr dívá jinou optikou: jak bude provoz působit na okolí, jaké zdroje emisí a hluku vzniknou, zda záměr spadá do EIA, zda bude potřeba jednotné environmentální stanovisko, rozptylová studie, hluková studie, odborný posudek, provozní řád nebo povolení provozu zdroje.
 
-Problém vzniká tehdy, když se environmentální část začne řešit až po dokončení projektu. V tu chvíli už bývají pevně dané výduchy, VZT jednotky, komíny, dopravní napojení, dispozice technologie nebo umístění venkovních zdrojů hluku. Pokud se následně ukáže, že výduch je příliš nízko, technologie je blízko obytné zástavbě nebo chybí měřicí místo, nejde už o drobnou administrativní úpravu, ale o zásah do projektu.
+Problém vzniká tehdy, když se environmentální část začne řešit až po dokončení projektu. V tu chvíli už bývají pevně dané výduchy, VZT jednotky, dopravní napojení, dispozice technologie nebo umístění venkovních zdrojů hluku. Pokud se následně ukáže, že výduch je příliš nízko, technologie je blízko obytné zástavbě nebo chybí měřicí místo, nejde už o drobnou administrativní úpravu, ale o zásah do projektu.
 
 > Environmentální posouzení má největší hodnotu před tím, než je projekt „hotový“. Včasný vstup odborníka často ušetří přepracování výduchů, hlukových opatření, dopravního řešení nebo povolovacích podkladů.
 
@@ -28,7 +26,7 @@ Projektant řeší technické provedení stavby a technologie. Ekologický konzu
 | Oblast | Projektant typicky řeší | Ekologický konzultant ověřuje |
 |---|---|---|
 | technologie | dispoziční řešení, napojení, výkon, provozní vazby | emise, hluk, odpady, vody, provozní režim |
-| výduchy | trasy VZT, komíny, fasáda, střecha | rozptyl, měřitelnost, zařazení zdroje, imisní dopad |
+| výduchy | trasy VZT, výduchy, fasáda, střecha | rozptyl, měřitelnost, zařazení zdroje, imisní dopad |
 | hlukové zdroje | umístění zařízení, technické parametry | dopad na chráněné prostory, denní/noční provoz |
 | doprava | napojení areálu, logistika | intenzita TNA, hluk, prašnost, EIA |
 | dokumentace | stavební a technické řešení | JES, EIA, posudky, studie, provozní řády |
@@ -38,13 +36,13 @@ Dobrá spolupráce funguje tak, že ekologický konzultant nepřichází až s h
 
 ## Riziko přepracování projektu
 
-Největší riziko vzniká tam, kde se environmentální požadavky týkají fyzického návrhu stavby. Typicky jde o výduchy, komíny, VZT, hlučná zařízení, venkovní technologie, dopravní trasy, skladovací plochy a umístění provozu vůči obytné zástavbě.
+Největší riziko vzniká tam, kde se environmentální požadavky týkají fyzického návrhu stavby. Typicky jde o výduchy, VZT, hlučná zařízení, venkovní technologie, dopravní trasy, skladovací plochy a umístění provozu vůči obytné zástavbě.
 
 Pokud se problém zjistí včas, často stačí projektově jednoduchá úprava. Pokud se zjistí pozdě, může znamenat změnu střechy, fasády, technologie, dispozice areálu nebo provozního režimu.
 
 | Pozdě zjištěný problém | Možný dopad na projekt |
 |---|---|
-| nízký nebo špatně umístěný výduch | změna komína, trasy VZT nebo výšky vyústění |
+| nízký nebo špatně umístěný výduch | změna výduchu, trasy VZT nebo výšky vyústění |
 | chybějící měřicí místo | úprava potrubí, plošiny, přístupů a bezpečnosti |
 | hlučná VZT jednotka u obytné zástavby | tlumiče, přesun zařízení, akustický kryt |
 | podhodnocená doprava | přepracování hlukové nebo rozptylové studie |

@@ -81,6 +81,24 @@ export const cookiesPageContent = {
           category: "Marketing",
           purpose: "Messung von LinkedIn-Werbung und Remarketing",
           expiry: "Gemäß LinkedIn-Einstellungen"
+        },
+        {
+          name: "Tawk.to (tawk.to, embed.tawk.to)",
+          category: "Marketing",
+          purpose: "Live-Chat auf der Website und zugehörige Sitzungskennungen",
+          expiry: "Gemäß Tawk.to-Einstellungen, typischerweise sitzungsbasiert bis zu mehreren Monaten"
+        },
+        {
+          name: "Google Maps (Maps JavaScript API)",
+          category: "Statistisch",
+          purpose: "Interaktive Standortkarte auf der Kontaktseite",
+          expiry: "Gemäß Google-Einstellungen; wird erst nach Zustimmung zu statistischen Cookies geladen"
+        },
+        {
+          name: "OpenStreetMap / Leaflet (unpkg.com, tile.openstreetmap.org)",
+          category: "Statistisch",
+          purpose: "Alternative interaktive Standortkarte ohne Google-API-Schlüssel",
+          expiry: "Keine dauerhaften Cookies; wird erst nach Zustimmung zu statistischen Cookies geladen"
         }
       ],
       note:

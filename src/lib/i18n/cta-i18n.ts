@@ -128,6 +128,15 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         primaryHref: contactUrl("Nejsem si jistý"),
         secondaryLabel: isDe ? "Akkreditierung und Laborumfang" : "Accreditation & lab scope",
         secondaryHref: "/akreditace-autorizace-dokumenty"
+      },
+      sales: {
+        text: isDe
+          ? "Interesse an einem Gerät oder Zubehör aus unserem Angebot? Nennen Sie Gerätetyp, Parameter oder senden Sie eine Anfrage — wir erstellen ein Angebot."
+          : "Interested in an instrument or accessory from our range? Send the product type, parameters or your inquiry — we will prepare a quote.",
+        primaryLabel: isDe ? "Gerät anfragen" : "Request a quote",
+        primaryHref: contactUrl(isDe ? "Gerätevertrieb / Angebotsanfrage" : "Instrument sales inquiry"),
+        secondaryLabel: isDe ? "Markenübersicht" : "Brand overview",
+        secondaryHref: "/prodej"
       }
     };
   }

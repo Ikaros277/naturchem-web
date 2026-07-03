@@ -8,6 +8,7 @@ import { kontaktNav } from "@/lib/navigation";
 import { LocaleLink, useLocalizedPathname } from "@/lib/i18n/locale-link";
 import { BrandLogo } from "@/components/BrandLogo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ExperienceMegaMenu, MobileExperienceMegaGroups } from "@/components/ExperienceMegaMenu";
 import { MobileServiceMegaGroups, ServiceMegaMenu } from "@/components/ServiceMegaMenu";
 import { MobileONasMegaGroups, ONasMegaMenu } from "@/components/ONasMegaMenu";
 
@@ -63,7 +64,8 @@ function useDelayedHover(delayMs = 240) {
 
 export function HeaderClient({
   labels: t,
-  headerMainNav,
+  experienceMegaGroups,
+  salesNavLink,
   serviceMegaGroups,
   oNasMegaGroups
 }: HeaderClientProps) {
@@ -71,6 +73,7 @@ export function HeaderClient({
   const isDesktop = useIsDesktopNav();
   const [menuOpen, setMenuOpen] = useState(false);
   const servicesMenu = useDelayedHover();
+  const experienceMenu = useDelayedHover();
   const aboutMenu = useDelayedHover();
   const [mounted, setMounted] = useState(false);
   const mobileSheetRef = useRef<HTMLDivElement>(null);
@@ -83,6 +86,7 @@ export function HeaderClient({
   useEffect(() => {
     setMenuOpen(false);
     servicesMenu.closeNow();
+    experienceMenu.closeNow();
     aboutMenu.closeNow();
   }, [pathname]);
 
@@ -173,16 +177,23 @@ export function HeaderClient({
                     <MobileServiceMegaGroups groups={serviceMegaGroups} onNavigate={closeMenu} />
                   </div>
                 </details>
-                {headerMainNav.map((item) => (
-                  <LocaleLink
-                    key={item.href}
-                    href={item.href}
-                    className="nav-mobile-link"
-                    onClick={closeMenu}
-                  >
-                    {item.label}
+                <details className="nav-mobile-details">
+                  <summary>{t.experience}</summary>
+                  <LocaleLink href="/provozy-a-technologie" className="nav-mobile-overview" onClick={closeMenu}>
+                    {t.experienceOverview}
                   </LocaleLink>
-                ))}
+                  <div className="nav-mobile-sub nav-mobile-sub--mega">
+                    <MobileExperienceMegaGroups groups={experienceMegaGroups} onNavigate={closeMenu} />
+                  </div>
+                </details>
+                <LocaleLink
+                  href={salesNavLink.href}
+                  className="nav-mobile-link nav-sales-link"
+                  prefetch={false}
+                  onClick={closeMenu}
+                >
+                  {salesNavLink.label}
+                </LocaleLink>
                 <details className="nav-mobile-details">
                   <summary>{t.about}</summary>
                   <LocaleLink href="/o-spolecnosti-naturchem" className="nav-mobile-overview" onClick={closeMenu}>
@@ -251,11 +262,41 @@ export function HeaderClient({
                 </div>
               ) : null}
             </div>
-            {headerMainNav.map((item) => (
-              <LocaleLink key={item.href} href={item.href}>
-                {item.label}
+            <div
+              className="nav-mega-wrap"
+              onMouseEnter={experienceMenu.openMenu}
+              onMouseLeave={experienceMenu.scheduleClose}
+              onFocusCapture={experienceMenu.openMenu}
+              onBlurCapture={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                  experienceMenu.scheduleClose();
+                }
+              }}
+            >
+              <LocaleLink
+                className="nav-item-link"
+                href="/provozy-a-technologie"
+                aria-expanded={experienceMenu.open}
+                aria-controls="nav-mega-zkusenosti"
+              >
+                {t.experience}
               </LocaleLink>
-            ))}
+              {experienceMenu.open ? (
+                <div
+                  className="nav-mega-flyout"
+                  onMouseEnter={experienceMenu.openMenu}
+                  onMouseLeave={experienceMenu.scheduleClose}
+                >
+                  <ExperienceMegaMenu
+                    labels={t}
+                    experienceMegaGroups={experienceMegaGroups}
+                  />
+                </div>
+              ) : null}
+            </div>
+            <LocaleLink href={salesNavLink.href} className="nav-sales-link" prefetch={false}>
+              {salesNavLink.label}
+            </LocaleLink>
             <div
               className="nav-mega-wrap"
               onMouseEnter={aboutMenu.openMenu}

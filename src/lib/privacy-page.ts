@@ -60,7 +60,19 @@ export const privacyPageContent = {
       marketing: {
         subheading: "3.4 Online marketing",
         paragraph:
-          "Pokud udělíte souhlas s marketingovými cookies, můžeme zpracovávat údaje o návštěvě webu za účelem měření a optimalizace reklamních kampaní (např. Google Ads, Meta, LinkedIn) včetně remarketingu. Tyto technologie nespouštíme bez Vašeho souhlasu."
+          "Pokud udělíte souhlas s marketingovými cookies, můžeme zpracovávat údaje o návštěvě webu za účelem měření a optimalizace reklamních kampaní (např. Google Ads, Meta, LinkedIn) včetně cílení reklam. Tyto technologie nespouštíme bez Vašeho souhlasu."
+      },
+      satisfactionSurvey: {
+        subheading: "3.5 Dotazník spokojenosti",
+        intro: "Pokud vyplníte dotazník spokojenosti na webu, zpracováváme zejména:",
+        items: [
+          "hodnocení spokojenosti a doporučení (NPS),",
+          "volitelně e-mail pro zpětnou vazbu,",
+          "volitelně název firmy nebo provozu a typ služby,",
+          "volitelné textové připomínky."
+        ],
+        sourceNote:
+          "Údaje získáváme přímo od Vás odesláním formuláře. Vyplnění dotazníku je dobrovolné."
       }
     },
     purposes: {
@@ -77,6 +89,11 @@ export const privacyPageContent = {
           note: "Kontakt je nezbytný k tomu, abychom Vám mohli odpovědět."
         },
         {
+          purpose: "Vyhodnocení dotazníku spokojenosti zákazníků",
+          legalBasis: "čl. 6 odst. 1 písm. f) — oprávněný zájem správce",
+          note: "Zpětná vazba slouží ke zlepšování služeb; údaje nejsou povinné."
+        },
+        {
           purpose: "Technický provoz webu a bezpečnost",
           legalBasis: "čl. 6 odst. 1 písm. f) — oprávněný zájem správce",
           note: "Serverové logy, ochrana proti zneužití formuláře."
@@ -87,7 +104,7 @@ export const privacyPageContent = {
           note: "Spouští se až po souhlasu v cookie liště."
         },
         {
-          purpose: "Online reklama a remarketing",
+          purpose: "Online reklama a cílení reklam",
           legalBasis: "čl. 6 odst. 1 písm. a) — souhlas",
           note: "Google Ads, Meta, LinkedIn — pouze po souhlasu."
         },
@@ -107,6 +124,10 @@ export const privacyPageContent = {
         {
           label: "Poptávky a komunikace bez uzavřené smlouvy:",
           text: "{months} měsíců od posledního kontaktu, pokud nevznikne smluvní vztah nebo delší archivační povinnost."
+        },
+        {
+          label: "Dotazník spokojenosti:",
+          text: "12 měsíců od vyplnění, pokud nevznikne delší archivační povinnost ze smluvního vztahu."
         },
         {
           label: "Údaje z cookies:",
@@ -131,15 +152,19 @@ export const privacyPageContent = {
         },
         {
           name: "Meta Platforms Ireland Limited",
-          description: "reklamní a remarketingové nástroje Meta (EU/USA)"
+          description: "reklamní nástroje a cílení reklam Meta (EU/USA)"
         },
         {
           name: "LinkedIn Ireland Unlimited Company",
-          description: "reklamní a remarketingové nástroje LinkedIn (EU/USA)"
+          description: "reklamní nástroje a cílení reklam LinkedIn (EU/USA)"
         },
         {
           name: "GitHub Inc.",
           description: "redakční systém webu (Decap CMS, přístup pouze pro pověřené editory)"
+        },
+        {
+          name: "Tawk.to (tawk.to)",
+          description: "živý chat na webu po souhlasu s marketingovými cookies (USA)"
         },
         {
           name: "poskytovatelé IT podpory a dalších technických služeb",

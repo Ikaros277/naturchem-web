@@ -25,7 +25,7 @@ export async function HomePoradnaStrip({ locale }: Props) {
 
   return (
     <section
-      className="home-section home-section-surface home-poradna-section"
+      className="home-section home-section-surface home-poradna-section page-below-fold"
       data-variant="cards"
       aria-labelledby="home-poradna-heading"
     >

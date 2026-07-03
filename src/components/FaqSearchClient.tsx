@@ -64,7 +64,11 @@ export function FaqSearchClient({ searchLabel, searchPlaceholder, emptyTitle, em
       document.querySelectorAll<HTMLAnchorElement>(".faq-tile").forEach((tile) => {
         const target = tile.getAttribute("href")?.replace(/^#/, "") ?? "";
         tile.classList.toggle("faq-tile--active", Boolean(hash) && target === hash);
-        tile.setAttribute("aria-current", hash && target === hash ? "location" : "false");
+        if (hash && target === hash) {
+          tile.setAttribute("aria-current", "location");
+        } else {
+          tile.removeAttribute("aria-current");
+        }
       });
     };
 

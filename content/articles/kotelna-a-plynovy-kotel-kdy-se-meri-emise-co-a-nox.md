@@ -43,7 +43,7 @@ U kotlů je klíčová hranice **0,3 MW celkového jmenovitého tepelného pří
 | kotelna nad 5 MW | vyjmenovaný zdroj s přísnějším režimem a obvykle širší dokumentací |
 | více kotlů v jedné provozovně | může se posuzovat součet příkonů podle sčítacích pravidel |
 
-U více kotlů v jedné kotelně je potřeba posoudit, zda se jejich příkony sčítají. Nestačí proto hodnotit každý kotel izolovaně. Rozhodující může být společné umístění, společný komín nebo technické uspořádání zdrojů.
+U více kotlů v jedné kotelně je potřeba posoudit, zda se jejich příkony sčítají. Nestačí proto hodnotit každý kotel izolovaně. Rozhodující může být společné umístění, společný výduch nebo technické uspořádání zdrojů.
 
 ## Palivo: proč je zemní plyn jednodušší než pevná paliva
 
@@ -95,13 +95,13 @@ Servisní měření může být užitečné pro seřízení kotle. Úředně pou
 
 U vyjmenovaných zdrojů je důležité vést provozní evidenci. Ta má doložit, jak byl zdroj provozován, jaké palivo bylo používáno, jaké byly provozní hodiny a jak byly plněny podmínky povolení provozu. U menších plynových kotelen bývá rozsah evidence jednodušší než u velkých průmyslových zdrojů, ale neměla by chybět základní provozní data.
 
-Provozní evidence obvykle obsahuje zejména údaje o identifikaci zdroje, kotlích, palivu, provozních hodinách, komínech nebo výduších, provedených měřeních, poruchách, údržbě a případných změnách technologie. U plynových kotelen do 5 MW spalujících výhradně zemní plyn mohou být některé požadavky jednodušší, ale vždy je nutné respektovat konkrétní podmínky povolení a aktuální právní režim zdroje.
+Provozní evidence obvykle obsahuje zejména údaje o identifikaci zdroje, kotlích, palivu, provozních hodinách, výduších, provedených měřeních, poruchách, údržbě a případných změnách technologie. U plynových kotelen do 5 MW spalujících výhradně zemní plyn mohou být některé požadavky jednodušší, ale vždy je nutné respektovat konkrétní podmínky povolení a aktuální právní režim zdroje.
 
 *Prakticky důležité:* provozní evidence není jen archiv protokolů. Je to průběžný důkaz, že kotelna byla provozována v souladu s povolením a že zdroj nepřekročil stanovený režim.
 
 ## Povolení provozu a dokumentace
 
-Pokud je kotelna vyjmenovaným stacionárním zdrojem, obvykle vstupuje do hry povolení provozu vydávané krajským úřadem. U kotlů na zemní plyn do 5 MW může být dokumentace jednodušší než u pevných paliv nebo velkých kotelen, ale stále je potřeba správně určit zařazení, příkon, palivo, komín, emisní limity a způsob zjišťování emisí.
+Pokud je kotelna vyjmenovaným stacionárním zdrojem, obvykle vstupuje do hry povolení provozu vydávané krajským úřadem. U kotlů na zemní plyn do 5 MW může být dokumentace jednodušší než u pevných paliv nebo velkých kotelen, ale stále je potřeba správně určit zařazení, příkon, palivo, výduch, emisní limity a způsob zjišťování emisí.
 
 Při nové kotelně, výměně kotlů, navýšení výkonu, změně paliva nebo rekonstrukci spalinové cesty je vhodné ověřit, zda je potřeba nové povolení provozu nebo změna stávajícího povolení. Častým problémem je, že v provozu technicky proběhne výměna kotle, ale dokumentace ochrany ovzduší zůstane nastavena na původní zařízení.
 
@@ -109,13 +109,13 @@ Při nové kotelně, výměně kotlů, navýšení výkonu, změně paliva nebo 
 
 U plynových kotelen se často chybuje v tom, že se zamění výkon za příkon. Pro zařazení zdroje je ale rozhodující příkon. Další častý problém vzniká u více kotlů, kdy se neověří sčítací pravidla a provozovatel posuzuje každý kotel samostatně, přestože kotelna může jako celek spadat do režimu vyjmenovaného zdroje.
 
-Časté je také spoléhání na servisní záznam místo protokolu o měření emisí. Servisní kontrola je důležitá, ale sama o sobě nemusí splnit povinnost jednorázového nebo periodického měření emisí podle ochrany ovzduší. U starších provozů bývá problém i v tom, že povolení provozu neodpovídá aktuálním kotlům, palivu nebo komínům.
+Časté je také spoléhání na servisní záznam místo protokolu o měření emisí. Servisní kontrola je důležitá, ale sama o sobě nemusí splnit povinnost jednorázového nebo periodického měření emisí podle ochrany ovzduší. U starších provozů bývá problém i v tom, že povolení provozu neodpovídá aktuálním kotlům, palivu nebo výduchům.
 
 ## Jak postupovat při posouzení kotelny
 
-Nejprve je vhodné zjistit skutečný technický stav: kolik kotlů je instalováno, jaký mají jmenovitý tepelný příkon, jaké palivo spalují, zda pracují do společného komína a zda jde o hlavní nebo záložní zdroj. Poté se ověří zařazení podle přílohy č. 2 zákona o ochraně ovzduší a podmínky případného povolení provozu.
+Nejprve je vhodné zjistit skutečný technický stav: kolik kotlů je instalováno, jaký mají jmenovitý tepelný příkon, jaké palivo spalují, zda pracují do společného výduchu a zda jde o hlavní nebo záložní zdroj. Poté se ověří zařazení podle přílohy č. 2 zákona o ochraně ovzduší a podmínky případného povolení provozu.
 
-Pokud má kotelna platné povolení, je nutné zkontrolovat, zda odpovídá skutečnosti. Pokud zdroj povolení nemá, ale příkonem už spadá do vyjmenovaných zdrojů, je potřeba řešit právní stav provozu. Teprve potom dává smysl přesně určit, zda se emise CO a NOx mají měřit, v jakém intervalu a na kterém komíně nebo měřicím místě.
+Pokud má kotelna platné povolení, je nutné zkontrolovat, zda odpovídá skutečnosti. Pokud zdroj povolení nemá, ale příkonem už spadá do vyjmenovaných zdrojů, je potřeba řešit právní stav provozu. Teprve potom dává smysl přesně určit, zda se emise CO a NOx mají měřit, v jakém intervalu a na kterém výduchu nebo měřicím místě.
 
 ## Shrnutí
 
@@ -123,7 +123,7 @@ U plynového kotle se emise CO a NOx neměří jen podle obecného dojmu, že jd
 
 Kotle od 0,3 MW celkového jmenovitého tepelného příkonu obvykle spadají mezi vyjmenované stacionární zdroje. U plynných paliv se v praxi nejčastěji řeší měření NOx a CO, provozní evidence a doložení plnění emisních limitů. U menších plynových zdrojů může být režim jednodušší, ale i tam je potřeba rozlišit servisní kontrolu, provozní evidenci a měření emisí pro účely ochrany ovzduší.
 
-Pošlete nám typy kotlů, jejich jmenovitý tepelný příkon nebo výkon a účinnost, druh paliva, schéma kotelny, informace o komínu a případné povolení provozu. Ověříme zařazení zdroje a navrhneme, zda je potřeba měření emisí CO a NOx, provozní evidence, změna povolení provozu nebo další dokumentace.
+Pošlete nám typy kotlů, jejich jmenovitý tepelný příkon nebo výkon a účinnost, druh paliva, schéma kotelny, informace o výduchu a případné povolení provozu. Ověříme zařazení zdroje a navrhneme, zda je potřeba měření emisí CO a NOx, provozní evidence, změna povolení provozu nebo další dokumentace.
 
 ## Věcná opora článku
 

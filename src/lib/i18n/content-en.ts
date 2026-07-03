@@ -5,6 +5,7 @@ import {
   faqPageIntro,
   faqPageMetadata,
   faqPageTitle,
+  faqHomeGeo,
   faqUiLabels
 } from "@/lib/faq-en";
 import { sectorPagesEn } from "@/lib/sector-pages-en";
@@ -39,6 +40,8 @@ import { CONTACT_SERVICE_LABELS_EN } from "@/lib/contact-services-en";
 import { teamMembers } from "@/lib/team-en";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy-en";
 import { homeHeroPillars } from "@/lib/home-hero-pillars-en";
+import { whyNaturchemPageContent, whyNaturchemPageMetadata } from "@/lib/why-naturchem-page-en";
+import { salesContentEn } from "@/lib/sales-brands-en";
 import type { LocaleContent } from "@/lib/i18n/content-cs";
 
 export const localeContent = {
@@ -49,7 +52,10 @@ export const localeContent = {
     categories: faqCategories,
     flatItems: faqFlatItemsEn,
     metadata: faqPageMetadata,
-    uiLabels: faqUiLabels
+    uiLabels: faqUiLabels,
+    homeSectionTitle: faqHomeGeo.homeSectionTitle,
+    homeSectionLead: faqHomeGeo.homeSectionLead,
+    homeViewAll: faqHomeGeo.homeViewAll
   },
   sectorPages: sectorPagesEn as Record<string, SectorPageData>,
   sectors: sectorsEn,
@@ -68,6 +74,7 @@ export const localeContent = {
   typicalScenarios,
   siteServices: services,
   aboutPage: { metadata: aboutPageMetadata, content: aboutPageContent },
+  whyNaturchemPage: { metadata: whyNaturchemPageMetadata, content: whyNaturchemPageContent },
   accreditationPage: {
     metadata: accreditationPageMetadata,
     content: accreditationPageContent,
@@ -80,5 +87,6 @@ export const localeContent = {
   teamMembers,
   guaranteeIntro: guaranteeIntroParagraph,
   homeHeroPillars,
+  salesContent: salesContentEn,
   contactServiceLabels: CONTACT_SERVICE_LABELS_EN
 } as unknown as LocaleContent;

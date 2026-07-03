@@ -11,7 +11,7 @@ export async function HomeUnsureStrip({ locale }: Props) {
   const messages = await getMessages(locale);
 
   return (
-    <section className="home-unsure-strip home-fade-in-section home-fade-in-section-delay-2" aria-label={messages.home.unsureAria}>
+    <section className="home-unsure-strip home-fade-in-section home-fade-in-section-delay-2 home-below-fold" aria-label={messages.home.unsureAria}>
       <div className="container home-unsure-strip-inner">
         <LocaleLink href={contactFormHref} className="home-unsure-strip-link" scroll={false}>
           {messages.header.megaUnsure}

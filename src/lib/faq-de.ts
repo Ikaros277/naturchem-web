@@ -33,6 +33,13 @@ export const faqPageMetadata = {
     "Häufig gestellte Fragen zu Emissionsmessungen, Arbeitsplatzumgebung, Lärm, Ausbreitung und Lärmstudien, UVP, Gutachten, Betriebsregeln, ISPOP und Dokumentation für Behörden."
 } as const;
 
+export const faqHomeGeo = {
+  homeSectionTitle: "Häufige Fragen von Betreibern und Umweltfachleuten",
+  homeSectionLead:
+    "Antworten auf typische Situationen — behördliche Aufforderungen, Emissionsmessungen, Studien, Gutachten und welche Unterlagen zuerst einzureichen sind.",
+  homeViewAll: "Alle häufig gestellten Fragen"
+} as const;
+
 export const faqUiLabels = {
   searchLabel: "Suchfragen",
   searchPlaceholder: "z.B. Emissionen, Lärm, KHS, ISPOP",
@@ -117,6 +124,21 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Wir sind in Havlíčkův Brod, České Budějovice und Prag ansässig. Abhängig von der Leistungsart, der Erreichbarkeit des Standorts, der repräsentativen Betriebsweise und etwaigen Anmeldefristen wickeln wir auch Projekte in anderen Regionen ab."
         ]
+      },
+      {
+        q: "Arbeitet NATURCHEM in der gesamten Tschechischen Republik?",
+        paragraphs: [
+          "Ja. Feldmessungen von Emissionen, Arbeitsumfeld, Lärm und weiteren Parametern führen wir in der gesamten Tschechischen Republik durch. Studien, Gutachten und Betriebsdokumentation erstellen wir unabhängig vom Standort — entscheidend sind Zugang zur Technologie und ein repräsentativer Betriebszustand."
+        ],
+        links: [{ label: "Warum NATURCHEM", href: "/proc-naturchem" }]
+      },
+      {
+        q: "Welche Unterlagen benötigt NATURCHEM für ein Angebot?",
+        paragraphs: [
+          "Für eine erste Einschätzung reicht meist eine Behördenaufforderung, Technologiebeschreibung, Betriebsgenehmigung oder kurze Situationsbeschreibung. Je nach Leistung ergänzen wir um Betriebsordnung, Projektdokumentation, Sicherheitsdatenblätter, frühere Messprotokolle oder Betriebsplan.",
+          "Sie müssen nicht alles vorbereitet haben — senden Sie, was vorliegt. Umfang und Termin klären wir nach fachlicher Prüfung."
+        ],
+        links: [{ label: "Kontakt", href: contactPageHref }]
       }
     ]
   },

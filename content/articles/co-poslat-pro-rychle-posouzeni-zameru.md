@@ -27,7 +27,7 @@ Z projektové dokumentace lze obvykle vyčíst umístění záměru, popis provo
 | souhrnná technická zpráva | základní popis stavby a provozu |
 | situace stavby | vztah k okolí, komunikacím a obytné zástavbě |
 | půdorysy | umístění technologií, skladů, pracovišť a VZT |
-| řezy a pohledy | výšky objektů, střech, výduchů a komínů |
+| řezy a pohledy | výšky objektů, střech, výduchů |
 | technologická část | kapacity, zařízení, pracovní postupy |
 | požárně bezpečnostní řešení | může souviset se sklady chemikálií, odpady a haváriemi |
 
@@ -43,7 +43,7 @@ Pokud není k dispozici projektová situace, pomůže i jednoduchý zákres do m
 
 - hranici areálu,
 - místo technologie,
-- výduchy nebo komíny,
+- výduchy,
 - vjezd a výjezd,
 - trasu nákladní dopravy,
 - nejbližší obytnou zástavbu,
@@ -61,7 +61,7 @@ Popis technologie by měl být stručný, ale konkrétní. Důležité je uvést
 |---|---|
 | lakování | druh nátěrových hmot, spotřeba rozpouštědel, výduchy, filtrace |
 | svařování | metoda, příkon, materiál, odsávání, filtrace |
-| kotelna | palivo, tepelný příkon, komín, provozní režim |
+| kotelna | palivo, tepelný příkon, výduch, provozní režim |
 | dřevozpracující provoz | spotřeba dřeva, odsávání, filtr, výduchy, hluk |
 | recyklační zařízení | kapacity, drcení, třídění, prašnost, doprava |
 | lepení a kašírování | chemické látky, VOC, teplota, odsávání |
@@ -89,7 +89,7 @@ Kapacita se nemá uvádět jen obecně. Podle typu provozu může být důležit
 
 *Prakticky řečeno:* kapacita v projektu, studiích, žádosti a provozním řádu musí být stejná. Rozpory v kapacitách jsou jedním z nejčastějších důvodů doplňování podkladů.
 
-## Výduchy, komíny a vzduchotechnika
+## Výduchy a vzduchotechnika
 
 Výduchy jsou klíčové pro posouzení ovzduší i hluku. Je potřeba vědět, zda výduch odvádí pouze větrací vzduch, nebo technologické emise. Výduch z lakovny, kotelny, svařovny, filtru dřevního prachu nebo dieselagregátu se posuzuje jinak než běžné větrání administrativy.
 
@@ -180,7 +180,7 @@ Pro první posouzení nemusí být podklady dokonalé. Důležité je, aby bylo 
 3. situace areálu,
 4. popis technologie,
 5. kapacity a provozní doba,
-6. údaje o výduších, VZT a komínech,
+6. údaje o výduších, VZT a výduších,
 7. dopravní údaje,
 8. mapový podklad nebo parcela,
 9. bezpečnostní listy používaných chemických látek, pokud jsou relevantní,

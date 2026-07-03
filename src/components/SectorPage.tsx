@@ -112,7 +112,7 @@ export async function SectorPage(props: Props) {
         </header>
       </PageHeroBand>
 
-      <section className="service-overview-section section-surface" aria-label={copy.overviewHeading}>
+      <section className="service-overview-section section-surface page-below-fold" aria-label={copy.overviewHeading}>
         <div className="container">
           <h2 className="service-overview-title">{copy.overviewHeading}</h2>
           <div className="service-overview-layout">
@@ -157,7 +157,7 @@ export async function SectorPage(props: Props) {
       </section>
 
       <section
-        className="section content-block container sector-process-section typicke-zakazky-process"
+        className="section content-block container sector-process-section typicke-zakazky-process page-below-fold"
         aria-labelledby="sector-process-heading"
       >
         <h2 id="sector-process-heading">{copy.processHeading}</h2>
@@ -168,7 +168,7 @@ export async function SectorPage(props: Props) {
         />
       </section>
 
-      <div className="container page-inner">
+      <div className="container page-inner page-below-fold">
         <section className="content-block">
           <h2>{copy.relatedServices}</h2>
           <div className="grid grid-3 index-card-grid">

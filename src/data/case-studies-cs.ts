@@ -68,7 +68,7 @@ const caseStudyInputs: CaseStudyInput[] = [
   },
   {
     id: "mereni-emisi-lakovna",
-    title: "Měření emisí z lakovny s více výduchy",
+    title: "Měření emisí z více výduchů lakovny",
     categoryId: "mereni-emisi",
     facilityType: "Lakovna a povrchové úpravy",
     sectorId: "lakovny",
@@ -401,14 +401,14 @@ const caseStudyInputs: CaseStudyInput[] = [
     sectorId: "kotelny",
     shortDescription: "Investor nebo projektant potřeboval rozptylovou studii pro novou nebo měněnou plynovou kotelnu.",
     situation: "Nový zdroj znečišťování ovzduší měl být součástí stavby nebo rekonstrukce. Úřad požadoval posouzení imisního vlivu.",
-    task: "Zpracovat rozptylovou studii pro NOx, případně další relevantní látky, včetně popisu zdroje a komína.",
-    naturchemApproach: "Získali jsme parametry kotlů, komína, provozní doby a lokality. Vypočetli jsme imisní příspěvky a vyhodnotili je vůči imisním limitům a pozadí.",
+    task: "Zpracovat rozptylovou studii pro NOx, případně další relevantní látky, včetně popisu zdroje a výduchu.",
+    naturchemApproach: "Získali jsme parametry kotlů, výduchu, provozní doby a lokality. Vypočetli jsme imisní příspěvky a vyhodnotili je vůči imisním limitům a pozadí.",
     output: "Rozptylová studie.",
     usedFor: "Podklad pro povolení zdroje, stavební řízení, krajský úřad nebo EIA/JES.",
     relatedServices: ["Rozptylová studie", "odborný posudek", "povolení provozu"],
     authorities: "Krajský úřad, stavební úřad.",
-    tags: ["rozptylová studie", "plynová kotelna", "NOx", "komín", "povolení provozu"],
-    ctaText: "Připravujete novou kotelnu? Pošlete nám technické listy kotlů, výšku komína a provozní dobu."
+    tags: ["rozptylová studie", "plynová kotelna", "NOx", "výduch", "povolení provozu"],
+    ctaText: "Připravujete novou kotelnu? Pošlete nám technické listy kotlů, výšku výduchu a provozní dobu."
   },
   {
     id: "rozptylova-hlukova-terenni-upravy",
@@ -607,7 +607,7 @@ const caseStudyInputs: CaseStudyInput[] = [
     usedFor: "Roční výkaz, interní evidence, reporting nebo ověření dat.",
     relatedServices: ["GHG", "CNR", "provozní evidence", "emisní bilance"],
     authorities: "Příslušné reportingové systémy a orgány podle typu povinnosti.",
-    tags: ["GHG", "CNR", "skleníkové plyny", "uhlíkový report", "provozní data"],
+    tags: ["GHG", "CNR", "skleníkové plyny", "uhlíkové hlášení", "provozní data"],
     ctaText: "Řešíte GHG nebo CNR výkaz? Pošlete nám provozní údaje, paliva a předchozí výkaz."
   },
   {
@@ -653,7 +653,7 @@ const caseStudyInputs: CaseStudyInput[] = [
     shortDescription: "Technologie tepelného zpracování kalů vyžadovala odborný posudek, návrh emisních limitů a provozní řád.",
     situation: "Technologie zahrnovala sušení, pyrolýzu nebo tepelné zpracování kalů, spalování vznikajícího plynu, čištění spalin a více provozních režimů.",
     task: "Vyhodnotit zdroje emisí, výduchy, čištění spalin, běžný a mimořádný provoz, najíždění, odstavování a vhodný rozsah měření.",
-    naturchemApproach: "Zpracovali jsme odborné posouzení technologie, navrhli emisní parametry, provozní podmínky, monitoring a strukturu provozního řádu.",
+    naturchemApproach: "Zpracovali jsme odborné posouzení technologie, navrhli emisní parametry, provozní podmínky, monitorování a strukturu provozního řádu.",
     output: "Odborný posudek, provozní řád, návrh měření nebo podklad pro změnu povolení provozu.",
     usedFor: "Změna povolení provozu, integrované povolení, provozní řád a jednání s úřadem.",
     relatedServices: ["Odborný posudek", "provozní řád", "měření emisí", "rozptylová studie", "emisní limity"],
@@ -705,7 +705,7 @@ const caseStudyInputs: CaseStudyInput[] = [
     task: "Navrhnout vhodný rozsah analýzy, odběrové místo a způsob interpretace výsledků.",
     naturchemApproach: "Prošli jsme používané chemikálie, technologii a možné výstupy z provozu. Navrhli jsme odběr, zadání analýzy a následné vyhodnocení výsledků.",
     output: "Návrh analýzy, odběr vzorku, zadání laboratoři a odborná interpretace výsledků.",
-    usedFor: "Interní posouzení rizika, komunikace s úřadem nebo rozhodnutí o dalším monitoringu.",
+    usedFor: "Interní posouzení rizika, komunikace s úřadem nebo rozhodnutí o dalším monitorování.",
     relatedServices: ["Analýzy", "odborné posouzení", "chemické látky", "odpady", "vody"],
     authorities: "Podle účelu: vodoprávní úřad, krajský úřad, ČIŽP.",
     tags: ["PFAS", "povrchové úpravy", "analýza", "perfluorované látky", "chemický provoz"],

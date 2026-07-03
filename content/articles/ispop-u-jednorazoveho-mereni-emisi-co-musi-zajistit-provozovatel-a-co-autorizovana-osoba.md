@@ -62,7 +62,7 @@ Před objednáním nebo ohlášením termínu doporučujeme připravit:
 - poslední protokoly z měření emisí,
 - informaci, zda se měření týká běžného provozu, změny, zkušebního provozu nebo požadavku úřadu.
 
-U provozů s více výduchy je potřeba předem vyjasnit, zda se má měřit každý výduch, nebo zda povolení provozu stanoví jiný postup. Zákon vychází z toho, že pokud zdroj znečišťuje více komíny nebo výduchy, úroveň znečišťování se zjišťuje na každém z nich, pokud není v povolení provozu stanoveno jinak.
+U provozů s více výduchů je potřeba předem vyjasnit, zda se má měřit každý výduch, nebo zda povolení provozu stanoví jiný postup. Zákon vychází z toho, že pokud zdroj má více výduchů, úroveň znečišťování se zjišťuje na každém z nich, pokud není v povolení provozu stanoveno jinak.
 
 ## Ohlášení termínu měření
 
@@ -184,7 +184,7 @@ Pro použitelnost měření je důležité, aby byl termín ohlášen včas, mě
 
 Z praktického hlediska z těchto podkladů vyplývá, že jednorázové měření emisí musí být správně ohlášeno, odborně provedeno a následně doloženo protokolem. Provozovatel by měl mít pod kontrolou zejména ohlášení termínu, přípravu zdroje, provozní režim a návaznost výsledků na evidenci. Autorizovaná osoba odpovídá za odborné provedení měření a za ohlášování údajů z protokolu v ISPOP.
 
-U provozů s více výduchy, starším povolením, nejasným měřicím místem nebo změnou technologie doporučujeme prověřit rozsah měření ještě před ohlášením termínu. Předejde se tím situaci, kdy měření proběhne v nesprávném rozsahu nebo za podmínek, které později nebudou pro daný účel dostatečné.
+U provozů s více výduchů, starším povolením, nejasným měřicím místem nebo změnou technologie doporučujeme prověřit rozsah měření ještě před ohlášením termínu. Předejde se tím situaci, kdy měření proběhne v nesprávném rozsahu nebo za podmínek, které později nebudou pro daný účel dostatečné.
 
 ## Užitečné odkazy
 

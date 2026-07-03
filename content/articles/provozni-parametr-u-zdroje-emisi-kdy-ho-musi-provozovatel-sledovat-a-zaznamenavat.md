@@ -99,7 +99,7 @@ Záznamy musí být vedeny tak, aby bylo možné zpětně doložit provoz zdroje
 Podle typu provozu může jít o:
 
 - automatický záznam z řídicího systému,
-- datalogger,
+- záznamník dat,
 - pravidelný ruční záznam do provozního deníku,
 - výstup z měřidla nebo čidla,
 - evidenci provozních hodin,

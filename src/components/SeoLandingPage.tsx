@@ -9,7 +9,7 @@ import { getSeoLandingCopy } from "@/lib/i18n/seo-landing-i18n";
 import type { Locale } from "@/lib/i18n/locales";
 import { contactUrl } from "@/lib/contact-url";
 import type { SeoLanding } from "@/lib/seo-landings";
-import { siteUrl } from "@/lib/site";
+import { company, siteUrl } from "@/lib/site";
 
 type Props = {
   landing: SeoLanding;
@@ -28,15 +28,31 @@ export async function SeoLandingPage({ landing, locale }: Props) {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: landing.h1,
-    provider: { "@type": "Organization", name: "NATURCHEM, s.r.o.", url: siteUrl },
-    areaServed: "CZ",
+    name: landing.h1,
+    provider: { "@id": `${siteUrl}/#organization`, "@type": "Organization", name: company.name },
+    areaServed: { "@type": "Country", name: "Czech Republic" },
     url: pageUrl,
     description: landing.intro
   };
 
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: copy.breadcrumbHome, item: `${siteUrl}${link("/")}/` },
+      { "@type": "ListItem", position: 2, name: copy.breadcrumbServices, item: `${siteUrl}${link("/sluzby")}/` },
+      { "@type": "ListItem", position: 3, name: landing.h1, item: pageUrl }
+    ]
+  };
+
+  const entitySummary = copy.entitySummary
+    .replace("{company}", company.name)
+    .replace("{service}", landing.h1);
+
   return (
     <main className="container section">
       <JsonLd data={serviceData} />
+      <JsonLd data={breadcrumbData} />
       <Breadcrumbs
         breadcrumbsAria={messages.common.breadcrumbsAria}
         items={[
@@ -46,6 +62,7 @@ export async function SeoLandingPage({ landing, locale }: Props) {
         ]}
       />
       <h1>{landing.h1}</h1>
+      <p className="seo-landing-entity-summary">{entitySummary}</p>
       <p className="page-lead">{landing.intro}</p>
 
       {landing.sections.map((section) => (

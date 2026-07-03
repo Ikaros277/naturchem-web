@@ -84,7 +84,7 @@ Umístění výduchu spalin má velký význam pro rozptyl znečišťujících l
 
 U výduchu se hodnotí zejména výška nad terénem a střechou, směr vyústění, vzdálenost od nasávacích otvorů vzduchotechniky, blízkost oken a pobytových prostor, okolní zástavba a možnost kumulace emisí v uzavřeném prostoru. U výduchu na střeše může být důležitá i aerodynamika budovy, atiky, technologické nástavby a proudění kolem objektu.
 
-> U dieselagregátu je vhodné řešit výduch už v projektu. Dodatečné zvyšování komína, přesun výduchu nebo úprava spalinové cesty bývá technicky i finančně nepříjemná.
+> U dieselagregátu je vhodné řešit výduch už v projektu. Dodatečné zvyšování výduchu, přesun výduchu nebo úprava spalinové cesty bývá technicky i finančně nepříjemná.
 
 Při návrhu je potřeba myslet také na měřitelnost. Pokud by v konkrétním režimu vznikla povinnost měření emisí, musí být výduch technicky přístupný a měřicí místo musí umožnit reprezentativní odběr. U záložních zdrojů to nemusí být vždy hlavní téma, ale u větších nebo provozně významnějších zařízení je vhodné na to nezapomenout.
 

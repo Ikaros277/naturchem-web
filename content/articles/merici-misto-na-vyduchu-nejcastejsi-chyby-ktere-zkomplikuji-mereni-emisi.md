@@ -118,7 +118,7 @@ Zpozornět je vhodné zejména při těchto situacích:
 - přemístění ventilátoru,
 - doplnění klapky, tlumiče nebo směšovací komory,
 - změna průměru nebo tvaru potrubí,
-- rekonstrukce střechy nebo přístupu ke komínu,
+- rekonstrukce střechy nebo přístupu ke výduchu,
 - starší výduch, na kterém se dosud neměřilo,
 - požadavek úřadu na nové měření emisí,
 - příprava změny povolení provozu.

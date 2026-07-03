@@ -1,7 +1,7 @@
 ---
 title: 'Měřicí místo na výduchu: proč je důležité už ve fázi projektu?'
 slug: merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu
-excerpt: 'Měřicí místo na výduchu není jen technický detail pro laboratoř. Pokud má být v budoucnu provedeno autorizované měření emisí, musí být výduch přístupný, bezpečný a vhodný pro reprezentativní odběr vzorku. Chybně navržené potrubí, krátké rovné úseky nebo nepřístupný komín mohou způsobit problém při kolaudaci, povolení provozu nebo následné kontrole ČIŽP.'
+excerpt: 'Měřicí místo na výduchu není jen technický detail pro laboratoř. Pokud má být v budoucnu provedeno autorizované měření emisí, musí být výduch přístupný, bezpečný a vhodný pro reprezentativní odběr vzorku. Chybně navržené potrubí, krátké rovné úseky nebo nepřístupný výduch mohou způsobit problém při kolaudaci, povolení provozu nebo následné kontrole ČIŽP.'
 author: Ing. František Hezina
 publishedAt: 2026-05-05T00:00:00.000Z
 topic: Emise
@@ -115,7 +115,7 @@ U některých zdrojů se první měření emisí provádí po uvedení zdroje do
 
 Projektová dokumentace by měla u zdrojů s možným měřením emisí obsahovat nejen polohu výduchu, ale i základní údaje o měřicím místě. Ideálně by mělo být zřejmé, kde bude měřicí profil, jaký bude přístup, kde budou měřicí hrdla a zda je k dispozici bezpečné stanoviště.
 
-U větších nebo povolovaných zdrojů je vhodné, aby projektant VZT, technolog, komínář, statik a odborník na měření emisí řešili výduch společně. Měřicí místo totiž může ovlivnit trasu potrubí, výšku výduchu, umístění plošiny i koordinaci s ostatními technologiemi.
+U větších nebo povolovaných zdrojů je vhodné, aby projektant VZT, technolog, specialista na výduchy, statik a odborník na měření emisí řešili výduch společně. Měřicí místo totiž může ovlivnit trasu potrubí, výšku výduchu, umístění plošiny i koordinaci s ostatními technologiemi.
 
 **V projektové dokumentaci je vhodné uvést zejména:**
 
@@ -138,7 +138,7 @@ U lakovny může být výduch z boxu navržen správně z hlediska odvětrání,
 
 U dřevozpracujícího provozu se často řeší výduch z filtru dřevního prachu. Pokud je měřicí místo příliš blízko filtru, kolenu nebo výduchové hlavici, může být měření TZL problematické. U prachových emisí je reprezentativní odběr zvlášť citlivý.
 
-U kotelny nebo dieselagregátu může být komín technicky hotový, ale bez měřicích hrdel a bezpečné plošiny. Dodatečná instalace pak vyžaduje zásah do komína, koordinaci s provozem a někdy i stavební úpravy.
+U kotelny nebo dieselagregátu může být výduch technicky hotový, ale bez měřicích hrdel a bezpečné plošiny. Dodatečná instalace pak vyžaduje zásah do výduchu, koordinaci s provozem a někdy i stavební úpravy.
 
 U svařovny může být centrální odsávání zakončeno výduchem, ale projekt neřeší, zda jde o výduch měřitelný pro tuhé znečišťující látky. Pokud provoz spadá do režimu vyjmenovaného zdroje, může se absence měřicího místa projevit až při požadavku na měření emisí.
 

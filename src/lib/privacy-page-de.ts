@@ -61,6 +61,18 @@ export const privacyPageContent = {
         subheading: "3.4 Online-Marketing",
         paragraph:
           "Wenn Sie Marketing-Cookies zustimmen, können wir Daten über Ihren Website-Besuch zum Zweck der Messung und Optimierung von Werbekampagnen (z. B. Google Ads, Meta, LinkedIn), einschließlich Remarketing, verarbeiten. Wir aktivieren diese Technologien nicht ohne Ihre Zustimmung."
+      },
+      satisfactionSurvey: {
+        subheading: "3.5 Zufriedenheitsumfrage",
+        intro: "Wenn Sie die Zufriedenheitsumfrage auf der Website ausfüllen, verarbeiten wir insbesondere:",
+        items: [
+          "Zufriedenheitsbewertungen und Empfehlungsscore (NPS),",
+          "optional eine E-Mail-Adresse für Rückmeldungen,",
+          "optional Firmen- oder Standortname und Art der Dienstleistung,",
+          "optionale schriftliche Anmerkungen."
+        ],
+        sourceNote:
+          "Die Daten erhalten wir direkt von Ihnen durch Absenden des Formulars. Die Teilnahme an der Umfrage ist freiwillig."
       }
     },
     purposes: {
@@ -75,6 +87,11 @@ export const privacyPageContent = {
           purpose: "Bearbeitung von Anfragen über die Website, E-Mail oder Telefon",
           legalBasis: "Kunst. 6(1)(b) – Schritte vor Vertragsabschluss/Vertragserfüllung",
           note: "Die Kontaktdaten sind erforderlich, damit wir Ihnen antworten können."
+        },
+        {
+          purpose: "Auswertung von Kundenzufriedenheitsumfragen",
+          legalBasis: "Kunst. 6(1)(f) – berechtigtes Interesse des Verantwortlichen",
+          note: "Rückmeldungen dienen der Verbesserung unserer Leistungen; die Angabe ist freiwillig."
         },
         {
           purpose: "Technischer Betrieb der Website und Sicherheit",
@@ -109,6 +126,10 @@ export const privacyPageContent = {
           text: "{Monate} Monate ab dem letzten Kontakt, sofern kein Vertragsverhältnis zustande kommt oder eine längere Archivierungspflicht besteht."
         },
         {
+          label: "Zufriedenheitsumfrage:",
+          text: "12 Monate ab dem Ausfüllen, sofern keine längere Archivierungspflicht aus einem Vertragsverhältnis entsteht."
+        },
+        {
           label: "Cookie-Daten:",
           textPrefix: "je nach Ablauf einzelner Cookies – siehe",
           cookiesLinkLabel: "Cookie-Richtlinie"
@@ -140,6 +161,10 @@ export const privacyPageContent = {
         {
           name: "GitHub Inc.",
           description: "Website-Content-Management-System (Decap CMS, Zugriff nur für autorisierte Redakteure)"
+        },
+        {
+          name: "Tawk.to (tawk.to)",
+          description: "Live-Chat auf der Website nach Zustimmung zu Marketing-Cookies (USA)"
         },
         {
           name: "IT-Supportanbieter und andere technische Dienstleister",

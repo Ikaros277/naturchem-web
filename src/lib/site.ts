@@ -10,6 +10,8 @@ export const company = {
   whatsapp: "+420 736 778 391",
   web: "www.naturchem.cz",
   person: "Ing. František Hezina",
+  /** Public profile URLs for schema.org sameAs — fill when available. */
+  socialProfiles: [] as string[],
   address: {
     street: "Ledečská 3015",
     city: "Havlíčkův Brod",
@@ -161,7 +163,7 @@ export const services = [
   {
     href: "/sluzby/ghg-overovani",
     title: "Emise skleníkových plynů (GHG)",
-    short: "Ověřování emisí skleníkových plynů, emisní údaje a reporting.",
+    short: "Ověřování emisí skleníkových plynů, emisní údaje a výkaznictví.",
     cta: "Zjistit více o GHG",
     contactCta: "Poptat GHG",
     contactService: "GHG"

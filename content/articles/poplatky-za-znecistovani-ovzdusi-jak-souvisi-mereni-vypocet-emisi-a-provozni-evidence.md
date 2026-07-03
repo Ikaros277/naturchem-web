@@ -86,7 +86,7 @@ Před odesláním doporučujeme projít zejména tyto body:
 5. Je možné vysvětlit meziroční změny emisí?
 6. Jsou uložené podklady k výpočtu tak, aby obstály při kontrole?
 
-Tento postup pomáhá odhalit chyby ještě před odesláním. U provozů s více zdroji, více výduchy nebo významnými emisemi se vyplatí udělat technickou kontrolu výpočtů s předstihem.
+Tento postup pomáhá odhalit chyby ještě před odesláním. U provozů s více zdroji, více výduchů nebo významnými emisemi se vyplatí udělat technickou kontrolu výpočtů s předstihem.
 
 ## Co nám můžete poslat k posouzení
 
@@ -98,7 +98,7 @@ Prověříme, zda jsou emisní údaje navázané na měření, výpočty a provo
 
 Poplatky za znečišťování ovzduší nelze řešit odděleně od provozní evidence, měření emisí a výpočtů emisí. Poplatkové přiznání musí vycházet z technicky správných a zpětně doložitelných údajů.
 
-Nejčastější chyby vznikají tehdy, když provozovatel převezme čísla bez kontroly návaznosti na povolení provozu, měření, spotřeby a SPE. U větších provozů, lakoven, energetických zdrojů a technologií s více výduchy doporučujeme zkontrolovat údaje před odesláním, ne až po výzvě úřadu nebo při kontrole.
+Nejčastější chyby vznikají tehdy, když provozovatel převezme čísla bez kontroly návaznosti na povolení provozu, měření, spotřeby a SPE. U větších provozů, lakoven, energetických zdrojů a technologií s více výduchů doporučujeme zkontrolovat údaje před odesláním, ne až po výzvě úřadu nebo při kontrole.
 
 ## Věcná opora článku
 

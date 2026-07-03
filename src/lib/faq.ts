@@ -58,6 +58,13 @@ export const faqPageMetadata = {
     "Časté dotazy k měření emisí, pracovnímu prostředí, hluku, rozptylovým a hlukovým studiím, EIA, odborným posudkům, provozním řádům, ISPOP a podkladům pro úřady."
 } as const;
 
+export const faqHomeGeo = {
+  homeSectionTitle: "Časté dotazy provozovatelů a ekologů",
+  homeSectionLead:
+    "Odpovědi na typické situace — výzvy úřadů, měření emisí, studie, posudky a co poslat jako první podklad.",
+  homeViewAll: "Všechny časté dotazy"
+} as const;
+
 export const faqUiLabels = {
   searchLabel: "Vyhledat v dotazech",
   searchPlaceholder: "Např. emise, hluk, KHS, ISPOP",
@@ -142,6 +149,21 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "Působíme z Havlíčkova Brodu, Českých Budějovic a Prahy. Zakázky řešíme i v dalších regionech podle typu služby, dostupnosti provozu, reprezentativního režimu a případných oznamovacích lhůt."
         ]
+      },
+      {
+        q: "Pracuje NATURCHEM po celé České republice?",
+        paragraphs: [
+          "Ano. Terénní měření emisí, pracovního prostředí, hluku a dalších veličin zajišťujeme v celé ČR. Studie, posudky a provozní dokumentaci zpracováváme bez ohledu na lokalitu provozu — důležitá je dostupnost technologie a reprezentativní provozní režim."
+        ],
+        links: [{ label: "Proč NATURCHEM", href: "/proc-naturchem" }]
+      },
+      {
+        q: "Jaké podklady potřebuje NATURCHEM pro nabídku?",
+        paragraphs: [
+          "Pro první orientaci obvykle stačí výzva úřadu, popis technologie, povolení provozu nebo stručný popis situace. Podle typu služby doplníme požadavek o provozní řád, projektovou dokumentaci, bezpečnostní listy, předchozí protokoly měření nebo harmonogram provozu.",
+          "Nemusíte mít vše připravené — pošlete, co máte k dispozici. Rozsah a termín upřesníme po odborném posouzení."
+        ],
+        links: [{ label: "Kontakt", href: contactPageHref }]
       }
     ]
   },
@@ -205,9 +227,9 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Co když nemáme vhodné měřicí místo?",
         paragraphs: [
-          "Měřicí místo posoudíme ještě před měřením. Pokud výduch nebo komín není ideální, navrhneme technicky dosažitelné řešení, upravíme přístup, doplníme příruby nebo v protokolu odborně popíšeme omezení a reprezentativnost měření."
+          "Měřicí místo posoudíme ještě před měřením. Pokud výduch není ideální, navrhneme technicky dosažitelné řešení, upravíme přístup, doplníme příruby nebo v protokolu odborně popíšeme omezení a reprezentativnost měření."
         ],
-        tip: "K poptávce přiložte fotografie výduchu, komínu, přístupu, přírub a dostupnou projektovou dokumentaci."
+        tip: "K poptávce přiložte fotografie výduchu, přístupu, přírub a dostupnou projektovou dokumentaci."
       },
       {
         q: "Jaké látky se při měření emisí obvykle sledují?",
@@ -229,7 +251,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Jak se máme připravit na měření emisí?",
         paragraphs: [
-          "Před měřením je potřeba ověřit zejména měřicí místo, bezpečný přístup k výduchu nebo komínu, provozní režim technologie, dostupnost obsluhy a možnost provozovat zařízení v reprezentativním výkonu. Dále je vhodné připravit povolení provozu, provozní řád, předchozí protokoly, paliva nebo suroviny, údaje o výkonu a provozní evidenci.",
+          "Před měřením je potřeba ověřit zejména měřicí místo, bezpečný přístup k výduchu, provozní režim technologie, dostupnost obsluhy a možnost provozovat zařízení v reprezentativním výkonu. Dále je vhodné připravit povolení provozu, provozní řád, předchozí protokoly, paliva nebo suroviny, údaje o výkonu a provozní evidenci.",
           "U některých zdrojů je nutné předem ohlásit termín měření prostřednictvím ISPOP. Proto je vhodné řešit termín s dostatečným předstihem."
         ]
       },
@@ -248,7 +270,7 @@ export const faqCategories: FaqCategory[] = [
         ]
       },
       {
-        q: "Lze měřit emise i na technologii, která nemá klasický komín?",
+        q: "Lze měřit emise i na technologii, která nemá klasický výduch?",
         paragraphs: [
           "Záleží na konkrétním technickém řešení. Pokud má technologie výduch, odsávání, lokální odtah nebo jiný definovaný odvod vzdušiny, lze posoudit možnost měření. Pokud emise unikají fugitivně do haly nebo přes otevřené prostory, je situace složitější a může být vhodnější kombinovat technické posouzení, měření pracovního prostředí, posouzení větrání nebo návrh odsávání.",
           "Předem je vhodné poslat fotografie zařízení, výduchů, potrubí, ventilátorů a prostoru technologie."
@@ -585,7 +607,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Co musí obsahovat provozní řád zdroje?",
         paragraphs: [
-          "Provozní řád typicky obsahuje identifikaci stacionárních zdrojů a provozovny, údaje o projektované kapacitě, popis technologických operací, způsob řízení a kontroly provozu, blokové schéma, údaje o výduších, komínech a zařízeních ke snižování emisí."
+          "Provozní řád typicky obsahuje identifikaci stacionárních zdrojů a provozovny, údaje o projektované kapacitě, popis technologických operací, způsob řízení a kontroly provozu, blokové schéma, údaje o výduších a zařízeních ke snižování emisí."
         ],
         legal: {
           summary:
@@ -755,7 +777,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: "Co máme poslat, aby nabídka nebyla jen orientační?",
         paragraphs: [
-          "Ideální je poslat výzvu nebo požadavek úřadu, povolení provozu nebo předchozí rozhodnutí, stručný popis technologie, provozní režim a kapacitu, projektovou dokumentaci nebo situaci areálu, fotografie technologie, výduchů, komínů, měřicích míst nebo zdrojů hluku, bezpečnostní listy používaných látek, předchozí protokoly a studie a požadovaný termín dokončení.",
+          "Ideální je poslat výzvu nebo požadavek úřadu, povolení provozu nebo předchozí rozhodnutí, stručný popis technologie, provozní režim a kapacitu, projektovou dokumentaci nebo situaci areálu, fotografie technologie, výduchů, měřicích míst nebo zdrojů hluku, bezpečnostní listy používaných látek, předchozí protokoly a studie a požadovaný termín dokončení.",
           "Čím přesnější podklady obdržíme, tím přesněji lze stanovit cenu, termín a rozsah zakázky."
         ],
         links: [{ label: "Kontakt a poptávka", href: contactFormHref }]

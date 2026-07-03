@@ -33,6 +33,13 @@ export const faqPageMetadata = {
     "Frequently asked questions about emission measurements, workplace environment, noise, dispersion and noise studies, EIA, expert reports, operating rules, ISPOP and documentation for authorities."
 } as const;
 
+export const faqHomeGeo = {
+  homeSectionTitle: "Frequently asked questions from operators and environmental managers",
+  homeSectionLead:
+    "Answers to typical situations — authority requests, emission measurements, studies, expert reports and what to send first.",
+  homeViewAll: "All frequently asked questions"
+} as const;
+
 export const faqUiLabels = {
   searchLabel: "Search questions",
   searchPlaceholder: "e.g. emissions, noise, KHS, ISPOP",
@@ -117,6 +124,21 @@ export const faqCategories: FaqCategory[] = [
         paragraphs: [
           "We are based in Havlíčkův Brod, České Budějovice and Prague. We also handle projects in other regions depending on the service type, site accessibility, representative operating mode and any notification deadlines."
         ]
+      },
+      {
+        q: "Does NATURCHEM work across the entire Czech Republic?",
+        paragraphs: [
+          "Yes. We carry out field measurements of emissions, workplace environment, noise and other parameters throughout the Czech Republic. Studies, expert reports and operational documentation are prepared regardless of site location — what matters is access to the technology and a representative operating regime."
+        ],
+        links: [{ label: "Why NATURCHEM", href: "/proc-naturchem" }]
+      },
+      {
+        q: "What documents does NATURCHEM need for a quote?",
+        paragraphs: [
+          "For an initial assessment, an authority notice, technology description, operating permit or brief situation summary is usually enough. Depending on the service, we may also request the operating rules, project documentation, safety data sheets, previous measurement reports or an operating schedule.",
+          "You do not need everything ready — send what you have. We will clarify scope and timing after a technical review."
+        ],
+        links: [{ label: "Contact", href: contactPageHref }]
       }
     ]
   },

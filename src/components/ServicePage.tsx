@@ -8,6 +8,8 @@ import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
+import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
+import { getFaqTeaserItemsForLocale } from "@/lib/i18n/faq-helpers";
 import { getCtaCopy } from "@/lib/i18n/cta-i18n";
 import { getProvozyNavLabel, getSectors, getSiteServices } from "@/lib/i18n/content";
 import { TrustBand } from "@/components/TrustBand";
@@ -65,6 +67,9 @@ export async function ServicePage(props: Props) {
   const keyDocs = props.docs.slice(0, 3);
   const practicalExamples = props.practicalSituations?.slice(0, 3) ?? [];
   const sectorLabel = await getProvozyNavLabel(locale);
+  const faqTeaserItems = props.faqCategoryId
+    ? await getFaqTeaserItemsForLocale(props.faqCategoryId, locale, 5)
+    : [];
   const detailGroups = [
     practicalExamples.length > 0
       ? { title: copy.practicalExamplesHeading, items: practicalExamples }
@@ -107,8 +112,9 @@ export async function ServicePage(props: Props) {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: props.title,
-    provider: { "@type": "Organization", name: company.name, url: siteUrl },
-    areaServed: "CZ",
+    name: props.title,
+    provider: { "@id": `${siteUrl}/#organization`, "@type": "Organization", name: company.name },
+    areaServed: { "@type": "Country", name: "Czech Republic" },
     url: pageUrl,
     description: props.intro
   };
@@ -147,6 +153,7 @@ export async function ServicePage(props: Props) {
     <main className="page">
       <JsonLd data={serviceData} />
       <JsonLd data={breadcrumbData} />
+      {faqTeaserItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(faqTeaserItems)} /> : null}
       {relatedLinks.length > 0 || sectorCrossLinks.length > 0 ? (
         <JsonLd data={relatedItemListData} />
       ) : null}
@@ -171,9 +178,16 @@ export async function ServicePage(props: Props) {
 
       <TrustBand items={trustItems} heading={copy.trustAria} compact />
 
+      <div className="container">
+        <p className="service-entity-blurb muted">
+          {copy.entityBlurb}
+          <Link href={link("/proc-naturchem")}>{copy.entityBlurbLink}</Link>.
+        </p>
+      </div>
+
       <section
         className={[
-          "service-overview-section",
+          "service-overview-section page-below-fold",
           serviceCategory ? `service-overview-section--${serviceCategory}` : "section--forest-tint"
         ].join(" ")}
         aria-label={copy.overviewAria}
@@ -243,7 +257,7 @@ export async function ServicePage(props: Props) {
         </div>
       </section>
 
-      <div className="container page-inner">
+      <div className="container page-inner page-below-fold">
         {detailGroups.length > 0 ? (
           <section className="content-block service-extra-section">
             <details className="service-extra-details">

@@ -8,6 +8,22 @@ import {
 } from "@/lib/i18n/metadata-helpers";
 import { locales, type Locale } from "@/lib/i18n/locales";
 import { seoLandings } from "@/lib/seo-landings";
+import { getAllSalesCategoryParams } from "@/lib/sales-categories";
+import { pcfElettronicaProducts } from "@/lib/pcf-elettronica-catalog";
+import { sensecaProducts } from "@/lib/senseca-catalog";
+
+const salesCategoryRoutes = getAllSalesCategoryParams().flatMap(({ brand, slug }) => [
+  `/prodej/${brand}/${slug}`
+]);
+
+const salesRoutes = [
+  "/prodej",
+  "/prodej/senseca",
+  "/prodej/pcf-elettronica",
+  ...salesCategoryRoutes,
+  ...sensecaProducts.map((product) => `/prodej/senseca/${product.slug}`),
+  ...pcfElettronicaProducts.map((product) => `/prodej/pcf-elettronica/${product.slug}`)
+];
 
 const routes = [
   "",
@@ -29,6 +45,7 @@ const routes = [
   "/sluzby/chemicke-latky",
   "/akreditace-autorizace-dokumenty",
   "/pristrojove-vybaveni",
+  ...salesRoutes,
   "/faq",
   "/o-spolecnosti-naturchem",
   "/reference",
@@ -45,9 +62,7 @@ const routes = [
   "/provozy-a-technologie/drevozpracujici",
   "/provozy-a-technologie/automotive",
   "/poradna",
-  "/kontakt",
-  "/ochrana-osobnich-udaju",
-  "/zasady-cookies"
+  "/kontakt"
 ];
 
 function uniquePaths(paths: string[]): string[] {

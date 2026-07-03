@@ -35,6 +35,8 @@ export function SalesBrandsGrid({ brands, locale, ctaLabel, productCountLabel }:
                   height={48}
                   className="sales-brand-logo-img"
                   sizes="160px"
+                  loading="lazy"
+                  fetchPriority="low"
                 />
               </div>
             ) : undefined

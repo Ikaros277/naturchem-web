@@ -164,7 +164,7 @@ export default async function ProdejPage({ params }: Props) {
 
 
       <section
-        className="section section-surface sales-surface-section page-first-section"
+        className="section section-surface sales-surface-section page-first-section page-below-fold"
         aria-labelledby="sales-brands-heading"
       >
         <div className="content-block container">

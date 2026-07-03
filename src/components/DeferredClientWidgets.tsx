@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { DelayedMount } from "@/components/DelayedMount";
 
 const ConsentAwareTracking = dynamic(
   () => import("@/components/ConsentAwareTracking").then((m) => m.ConsentAwareTracking),
@@ -15,7 +16,9 @@ const LiveChatWidgets = dynamic(
 export function DeferredClientWidgets() {
   return (
     <>
-      <LiveChatWidgets />
+      <DelayedMount delayMs={6000}>
+        <LiveChatWidgets />
+      </DelayedMount>
       <ConsentAwareTracking />
     </>
   );

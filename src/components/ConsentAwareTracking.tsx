@@ -29,8 +29,8 @@ function GoogleTagScripts() {
 
   return (
     <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`} strategy="afterInteractive" />
-      <Script id="google-tags" strategy="afterInteractive">
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${primaryId}`} strategy="lazyOnload" />
+      <Script id="google-tags" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -46,7 +46,7 @@ function MarketingScripts() {
   return (
     <>
       {metaPixelId ? (
-        <Script id="meta-pixel" strategy="afterInteractive">
+        <Script id="meta-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -63,7 +63,7 @@ function MarketingScripts() {
       ) : null}
 
       {linkedInPartnerId ? (
-        <Script id="linkedin-insight" strategy="afterInteractive">
+        <Script id="linkedin-insight" strategy="lazyOnload">
           {`
             _linkedin_partner_id = "${linkedInPartnerId}";
             window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];

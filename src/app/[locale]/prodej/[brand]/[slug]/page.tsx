@@ -17,7 +17,7 @@ import {
 import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 import { formatSalesProductCount } from "@/lib/sales-i18n";
 import { isSalesCategorySlug } from "@/lib/sales-categories";
 import { getPageHeroTheme } from "@/lib/hero-images";
@@ -32,10 +32,25 @@ type Props = {
   params: Promise<{ locale: string; brand: string; slug: string }>;
 };
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return getAllSalesSlugParams("cs");
+  const slugKeys = new Set<string>();
+  const slugParams: { brand: string; slug: string }[] = [];
+
+  for (const locale of locales) {
+    const params = await getAllSalesSlugParams(locale);
+    for (const entry of params) {
+      const key = `${entry.brand}/${entry.slug}`;
+      if (slugKeys.has(key)) continue;
+      slugKeys.add(key);
+      slugParams.push({ brand: entry.brand, slug: entry.slug });
+    }
+  }
+
+  return locales.flatMap((locale) =>
+    slugParams.map(({ brand, slug }) => ({ locale, brand, slug }))
+  );
 }
 
 function getCategoryLabel(
@@ -160,7 +175,7 @@ export default async function SalesSlugPage({ params }: Props) {
           </header>
         </PageHeroBand>
 
-        <section className="section container page-first-section sales-category-main">
+        <section className="section container page-first-section sales-category-main page-below-fold">
           <SalesPageToolbar
             href={link(`/prodej/${brandSlug}`)}
             label={messages.sales.backToBrand.replace("{brand}", brand.name)}
@@ -263,7 +278,7 @@ export default async function SalesSlugPage({ params }: Props) {
         </header>
       </PageHeroBand>
 
-      <section className="section container page-first-section sales-product-main">
+      <section className="section container page-first-section sales-product-main page-below-fold">
         <SalesPageToolbar
           href={
             product.categoryId

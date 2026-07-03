@@ -31,7 +31,7 @@ export async function PageHeroBand({
   locale,
   children,
   className = "",
-  priority = true,
+  priority = false,
   variant = "standard",
   media,
   mediaLabel

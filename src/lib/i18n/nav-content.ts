@@ -18,9 +18,6 @@ const footerCompanyLabels: Record<
     articles: string;
     faq: string;
     satisfactionSurvey: string;
-    sales: string;
-    sectors: string;
-    caseStudies: string;
   }
 > = {
   cs: {
@@ -30,10 +27,7 @@ const footerCompanyLabels: Record<
     accreditation: "Akreditace a oprávnění",
     articles: "Odborné články",
     faq: "Časté dotazy",
-    satisfactionSurvey: "Dotazník spokojenosti",
-    sales: "Nabídka měřicí techniky",
-    sectors: "Podle typu provozu",
-    caseStudies: "Typické zakázky"
+    satisfactionSurvey: "Dotazník spokojenosti"
   },
   en: {
     about: "About NATURCHEM",
@@ -42,10 +36,7 @@ const footerCompanyLabels: Record<
     accreditation: "Accreditation & authorisations",
     articles: "Knowledge base",
     faq: "FAQ",
-    satisfactionSurvey: "Satisfaction survey",
-    sales: "Instrument sales",
-    sectors: "By plant type",
-    caseStudies: "Typical projects"
+    satisfactionSurvey: "Satisfaction survey"
   },
   de: {
     about: "Über NATURCHEM",
@@ -54,10 +45,7 @@ const footerCompanyLabels: Record<
     accreditation: "Akkreditierung und Autorisierungen",
     articles: "Wissensdatenbank",
     faq: "FAQ",
-    satisfactionSurvey: "Zufriedenheitsfragebogen",
-    sales: "Geräteangebot",
-    sectors: "Nach Betriebstyp",
-    caseStudies: "Typische Projekte"
+    satisfactionSurvey: "Zufriedenheitsfragebogen"
   }
 } ;
 
@@ -123,9 +111,6 @@ export function getFooterNav(locale: Locale) {
     { href: "/akreditace-autorizace-dokumenty", label: companyLabels.accreditation },
     { href: "/poradna", label: companyLabels.articles },
     { href: "/faq", label: companyLabels.faq },
-    { href: "/prodej", label: companyLabels.sales },
-    { href: "/provozy-a-technologie", label: companyLabels.sectors },
-    { href: "/typicke-zakazky", label: companyLabels.caseStudies },
     { href: "/dotaznik-spokojenosti", label: companyLabels.satisfactionSurvey }
   ];
 

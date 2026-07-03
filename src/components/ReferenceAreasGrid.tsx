@@ -14,7 +14,7 @@ export function ReferenceAreasGrid({ areas, locale, heading }: Props) {
   const link = (href: string) => localizeHref(href, locale);
 
   return (
-    <section className="section content-block container reference-areas-section" id="obory">
+    <section className="section content-block container reference-areas-section page-below-fold" id="obory">
       <h2>{heading}</h2>
       <div className="reference-areas-grid">
         {areas.map((area) => (

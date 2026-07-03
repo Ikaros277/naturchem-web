@@ -187,7 +187,7 @@ export async function ServicePage(props: Props) {
 
       <section
         className={[
-          "service-overview-section",
+          "service-overview-section page-below-fold",
           serviceCategory ? `service-overview-section--${serviceCategory}` : "section--forest-tint"
         ].join(" ")}
         aria-label={copy.overviewAria}
@@ -257,7 +257,7 @@ export async function ServicePage(props: Props) {
         </div>
       </section>
 
-      <div className="container page-inner">
+      <div className="container page-inner page-below-fold">
         {detailGroups.length > 0 ? (
           <section className="content-block service-extra-section">
             <details className="service-extra-details">

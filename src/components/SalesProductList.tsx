@@ -44,6 +44,8 @@ export function SalesProductList({
                     height={40}
                     className="sales-product-list-thumb-img"
                     sizes="40px"
+                    loading="lazy"
+                    fetchPriority="low"
                   />
                 </span>
               ) : null}

@@ -70,7 +70,7 @@ export default async function ReferencePage({ params }: Props) {
         </header>
       </PageHeroBand>
 
-      <section className="section content-block container page-first-section" id="zakaznici">
+      <section className="section content-block container page-first-section page-below-fold" id="zakaznici">
         <h2>{messages.reference.customersTitle}</h2>
         <p className="muted section-intro">{reference.referenceCustomersIntro}</p>
         <ClientLogosGrid expandable moreHref={link("/reference#zakaznici")} />
@@ -82,12 +82,12 @@ export default async function ReferencePage({ params }: Props) {
         heading={reference.referenceAreasHeading}
       />
 
-      <section className="section section-surface accordion-index-surface content-block container" id="priklady">
+      <section className="section section-surface accordion-index-surface content-block container page-below-fold" id="priklady">
         <h2>{reference.referenceExamplesHeading}</h2>
         <ReferenceExamplesIndex examplesById={examplesById} groups={exampleGroups} locale={locale} />
       </section>
 
-      <section className="section content-block container satisfaction-survey-teaser">
+      <section className="section content-block container satisfaction-survey-teaser page-below-fold">
         <article className="card satisfaction-survey-teaser-card">
           <h2>{messages.reference.surveyTeaserTitle}</h2>
           <p className="muted">{messages.reference.surveyTeaserText}</p>

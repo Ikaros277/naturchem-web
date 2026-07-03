@@ -15,6 +15,8 @@ export function SalesProductThumb({ src, alt }: Props) {
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
         className="article-card-thumb-img sales-product-thumb-img"
+        loading="lazy"
+        fetchPriority="low"
       />
       <div className="article-card-thumb-overlay sales-product-thumb-overlay" />
     </div>
@@ -33,6 +35,8 @@ export function SalesProductFigure({ src, alt }: Props) {
           height={420}
           className="sales-product-figure-img"
           sizes="(max-width: 768px) 100vw, 640px"
+          loading="lazy"
+          fetchPriority="low"
         />
       </div>
     </figure>

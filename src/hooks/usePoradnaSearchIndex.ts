@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import type { Locale } from "@/lib/i18n/locales";
 import {
   poradnaSearchIndexUrl,
@@ -34,17 +34,6 @@ export function usePoradnaSearchIndex(locale: Locale) {
       return new Map<string, string>();
     }
   }, [index, locale]);
-
-  useEffect(() => {
-    const idle = window.requestIdleCallback?.(() => {
-      void load();
-    }, { timeout: 4000 });
-    if (idle === undefined) {
-      const timer = window.setTimeout(() => void load(), 2500);
-      return () => window.clearTimeout(timer);
-    }
-    return () => window.cancelIdleCallback(idle);
-  }, [load]);
 
   return { index, loading, ensureLoaded: load };
 }

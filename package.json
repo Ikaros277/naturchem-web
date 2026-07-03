@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:webpack": "next dev --webpack",
+    "preview": "npm run build && next start",
     "prebuild": "python scripts/generate_article_locale_map.py && python scripts/generate_poradna_search_index.py && python scripts/generate_llms_articles.py",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "seo:smoke-sitemap": "python scripts/smoke_test_urls.py https://www.naturchem.cz",
+    "seo:smoke-local": "python scripts/smoke_test_urls.py http://localhost:3000",
     "seo:gsc-report": "python scripts/gsc_monthly_report.py",
     "seo:gsc-404-import": "python scripts/gsc_import_404_redirects.py"
   },

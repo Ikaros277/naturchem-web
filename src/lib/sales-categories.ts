@@ -1,5 +1,6 @@
 import { pcfElettronicaCatalog } from "@/lib/pcf-elettronica-catalog";
 import { sensecaCatalog } from "@/lib/senseca-catalog";
+import { getSalesCategoryOverview } from "@/lib/sales-category-overview-data";
 import type { SalesProduct } from "@/lib/sales-types";
 
 export function getSalesCatalog(brandSlug: string) {
@@ -13,7 +14,8 @@ export function getSalesCategoryIds(brandSlug: string): string[] {
 }
 
 export function isSalesCategorySlug(brandSlug: string, slug: string): boolean {
-  return getSalesCategoryIds(brandSlug).includes(slug);
+  if (getSalesCategoryIds(brandSlug).includes(slug)) return true;
+  return getSalesCategoryOverview(brandSlug).some((category) => category.id === slug);
 }
 
 export function getSalesCategoryProducts(

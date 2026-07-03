@@ -24,7 +24,7 @@ import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 
 import { localizeHref } from "@/lib/i18n/navigation";
 
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 
 import { formatSalesProductCount } from "@/lib/sales-i18n";
 
@@ -44,11 +44,10 @@ type Props = {
 
 
 export async function generateStaticParams() {
-
   const sales = await getSalesContent("cs");
-
-  return sales.brands.map((brand: SalesBrand) => ({ brand: brand.slug }));
-
+  return locales.flatMap((locale) =>
+    sales.brands.map((brand: SalesBrand) => ({ locale, brand: brand.slug }))
+  );
 }
 
 
@@ -198,7 +197,7 @@ export default async function SalesBrandPage({ params }: Props) {
 
 
 
-      <section className="section content-block container page-first-section sales-brand-main">
+      <section className="section content-block container page-first-section sales-brand-main page-below-fold">
 
         <SalesPageToolbar href={link("/prodej")} label={messages.sales.backToHub} />
 

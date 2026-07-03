@@ -4098,7 +4098,8 @@ p {
   }
 }
 
-.home-below-fold {
+.home-below-fold,
+.page-below-fold {
   content-visibility: auto;
   contain-intrinsic-size: auto 480px;
 }

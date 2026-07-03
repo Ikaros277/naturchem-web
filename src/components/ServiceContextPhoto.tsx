@@ -19,6 +19,8 @@ export function ServiceContextPhoto({ theme, className }: Props) {
         sizes="(max-width: 768px) 100vw, 1200px"
         className="service-context-photo-img"
         style={{ objectPosition: position }}
+        loading="lazy"
+        fetchPriority="low"
       />
       <div className="service-context-photo-overlay" />
     </div>

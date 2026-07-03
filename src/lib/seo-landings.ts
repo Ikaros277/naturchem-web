@@ -150,7 +150,178 @@ export const seoLandings: SeoLanding[] = [
     serviceHref: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí"
   },
-  
+  {
+    slug: "rozptylova-studie-povoleni",
+    title: "Rozptylová studie pro povolení provozu a EIA",
+    metaDescription:
+      "Rozptylová studie imisí pro povolení provozu, změnu zdroje nebo EIA. Autorizovaná osoba, modelování a podklady pro úřady.",
+    h1: "Rozptylová studie pro povolení provozu",
+    intro:
+      "Zpracujeme rozptylovou studii imisních příspěvků zdroje pro povolení provozu, změnu technologie, EIA nebo jednání s úřadem. Studii provádí autorizovaná osoba v příslušném rozsahu.",
+    sections: [
+      {
+        paragraphs: [
+          "Posoudíme zdroje, meteorologii, terén a varianty provozu. Výstup slouží jako odborný podklad pro krajský úřad, ČIŽP, stavební úřad nebo EIA.",
+          "Navážeme na měření emisí, provozní řád a existující projektovou dokumentaci."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/rozptylove-studie",
+    contactService: "Rozptylové studie"
+  },
+  {
+    slug: "odborny-posudek-zdroj-znecistovani",
+    title: "Odborný posudek zdroje znečišťování ovzduší",
+    metaDescription:
+      "Odborný posudek podle zákona o ochraně ovzduší — změna provozu, povolení, technologie. Autorizovaná osoba NATURCHEM.",
+    h1: "Odborný posudek zdroje znečišťování ovzduší",
+    intro:
+      "Připravíme odborný posudek pro změnu provozu, nový zdroj, aktualizaci povolení nebo požadavek úřadu. Posudek zpracuje autorizovaná osoba podle zákona č. 201/2012 Sb.",
+    sections: [
+      {
+        paragraphs: [
+          "Vyhodnotíme technické a emisní souvislosti zdroje, navrhneme rozsah měření nebo modelování a připravíme výstup použitelný v správním řízení.",
+          "Typicky navazujeme na měření emisí, rozptylovou studii nebo provozní dokumentaci."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/odborne-posudky",
+    contactService: "Odborné posudky"
+  },
+  {
+    slug: "ispop-rocni-hlaseni-emise",
+    title: "ISPOP — roční hlášení a provozní evidence emisí",
+    metaDescription:
+      "ISPOP, provozní evidence a roční hlášení emisí. Podklady z měření, ověření zprávy a návaznost na povinnosti provozovatele.",
+    h1: "ISPOP a roční hlášení emisí",
+    intro:
+      "Pomůžeme s provozní evidencí, ročním hlášením emisí v ISPOP a ověřením zprávy o emisích. Navážeme na měření emisí a dokumentaci zdroje.",
+    sections: [
+      {
+        paragraphs: [
+          "Zkontrolujeme úplnost údajů, soulad s měřením a povolením provozu. U vybraných povinností zajistíme autorizované ověření.",
+          "Vhodné pro provozovatele po kontrole, změně technologie nebo při převzetí nového zdroje."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/ispop",
+    contactService: "ISPOP"
+  },
+  {
+    slug: "mereni-emisi-dieselagregat",
+    title: "Měření emisí dieselagregátu a záložního zdroje",
+    metaDescription:
+      "Měření emisí dieselagregátu, záložního zdroje a pohotovostního provozu. Autorizované měření a protokol pro úřad.",
+    h1: "Měření emisí dieselagregátu a záložního zdroje",
+    intro:
+      "Zajistíme jednorázové měření emisí z dieselagregátů a záložních zdrojů včetně přípravy na oznámení termínu v ISPOP. Měření provádí autorizovaná osoba.",
+    sections: [
+      {
+        paragraphs: [
+          "Typicky měříme NOx, CO, prašnost a další parametry dle povolení a charakteru zdroje.",
+          "Výstup slouží pro provozní řád, povolení provozu i roční hlášení emisí."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-emisi",
+    contactService: "Měření emisí"
+  },
+  {
+    slug: "autorizovana-osoba-mereni-emisi",
+    title: "Autorizovaná osoba pro měření emisí v ČR",
+    metaDescription:
+      "Jednorázové měření emisí může provádět jen autorizovaná osoba. NATURCHEM — akreditovaná laboratoř č. 1599 s autorizací pro emise.",
+    h1: "Autorizovaná osoba pro měření emisí",
+    intro:
+      "NATURCHEM je akreditovaná laboratoř č. 1599 a autorizovaná osoba pro jednorázové měření emisí, rozptylové studie a odborné posudky podle zákona o ochraně ovzduší.",
+    sections: [
+      {
+        paragraphs: [
+          "Při výběru dodavatele ověřte rozsah autorizace, akreditované metody a zkušenost s vaším typem zdroje — kotelna, lakovna, bioplyn, výduch technologie.",
+          "Zajistíme kompletní protokol, oznámení termínu v ISPOP a podklady pro úřad."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-emisi",
+    contactService: "Měření emisí"
+  },
+  {
+    slug: "mereni-prasnosti",
+    title: "Měření prašnosti na pracovišti a v provozu",
+    metaDescription:
+      "Měření prašnosti — vdechovatelná a respirabilní frakce, pracovní prostředí a kategorizace prací. Akreditovaná laboratoř NATURCHEM č. 1599.",
+    h1: "Měření prašnosti na pracovišti",
+    intro:
+      "NATURCHEM, s. r. o. měří prašnost v pracovním prostředí včetně vdechovatelné a respirabilní frakce. Výstupy slouží pro KHS, kategorizaci prací, BOZP a návrh technických opatření.",
+    sections: [
+      {
+        paragraphs: [
+          "Měření provádíme na vybraných pracovištích podle skutečných operací a směnnosti. U sypkých materiálů a technologií s odsáváním posoudíme i účinnost ochranných opatření.",
+          "Protokol je použitelný pro hygienickou stanici, aktualizaci kategorizace prací a interní dokumentaci BOZP."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/pracovni-prostredi",
+    contactService: "Měření pracovního prostředí"
+  },
+  {
+    slug: "mereni-tezkych-kovu-emise",
+    title: "Měření těžkých kovů ve spalinách a pracovním prostředí",
+    metaDescription:
+      "Měření těžkých kovů v emisích ze stacionárních zdrojů a v pracovním ovzduší. Akreditovaný rozsah laboratoře NATURCHEM.",
+    h1: "Měření těžkých kovů",
+    intro:
+      "V akreditovaném rozsahu laboratoře NATURCHEM měříme těžké kovy v emisích ze stacionárních zdrojů i v pracovním ovzduší. Typicky As, Cd, Cr, Ni, Pb, Hg a další kovy dle požadavku povolení nebo KHS.",
+    sections: [
+      {
+        paragraphs: [
+          "U emisí zajišťujeme odběr do kapalného sorbentu a analytické vyhodnocení. V pracovním prostředí měříme expozici na pracovištích se svařováním, broušením nebo manipulací s kovy.",
+          "Výstup je protokol s hodnocením vůči limitům nebo podkladům pro kategorizaci prací."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-emisi",
+    contactService: "Měření emisí",
+    oboryHref: "/provozy-a-technologie/svarovny"
+  },
+  {
+    slug: "podklady-pro-khs",
+    title: "Podklady pro KHS — měření pracovního prostředí a hluku",
+    metaDescription:
+      "Příprava podkladů pro hygienickou stanici (KHS): měření hluku, prašnosti, chemických látek, mikroklimatu a kategorizace prací.",
+    h1: "Podklady pro hygienickou stanici (KHS)",
+    intro:
+      "Pomůžeme provozovateli připravit podklady pro KHS po výzvě z kontroly, při kategorizaci prací nebo změně technologie. NATURCHEM měří faktory pracovního prostředí v akreditovaném rozsahu.",
+    sections: [
+      {
+        paragraphs: [
+          "Typicky řešíme hluk na pracovišti, prašnost, chemické látky, mikroklima, osvětlení a vibrace. Navrhneme rozsah měření podle operací a požadavku úřadu.",
+          "Protokoly slouží jako odborný podklad pro zařazení prací do kategorií a komunikaci s hygienickou stanicí."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/pracovni-prostredi",
+    contactService: "Měření pracovního prostředí"
+  },
+  {
+    slug: "podklady-pro-cizp",
+    title: "Podklady pro ČIŽP a krajský úřad — emise a ovzduší",
+    metaDescription:
+      "Měření emisí, odborné posudky a provozní dokumentace jako podklad pro ČIŽP, krajský úřad a povolení provozu zdroje.",
+    h1: "Podklady pro ČIŽP a krajský úřad",
+    intro:
+      "Zajistíme měření emisí, odborný posudek, rozptylovou studii nebo provozní řád jako podklad pro Český inspektorát životního prostředí, krajský úřad nebo správní řízení o povolení provozu.",
+    sections: [
+      {
+        paragraphs: [
+          "Jednorázové měření emisí provádí autorizovaná osoba. Navážeme na povolení provozu, výzvu z kontroly nebo změnu technologie.",
+          "Výstupy připravujeme tak, aby byly použitelné v komunikaci s úřadem — včetně ISPOP a ročního hlášení emisí, pokud je potřeba."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-emisi",
+    contactService: "Měření emisí"
+  }
 ];
 
 export function getSeoLanding(slug: string): SeoLanding | undefined {

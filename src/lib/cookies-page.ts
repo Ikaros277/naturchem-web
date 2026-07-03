@@ -40,7 +40,7 @@ export const cookiesPageContent = {
       marketing: {
         subheading: "3.3 Marketingové",
         paragraph:
-          "Slouží k měření reklamních kampaní a remarketingu (např. Google Ads, Meta, LinkedIn). Spouštíme je až po Vašem souhlasu."
+          "Slouží k měření reklamních kampaní a cílení reklam (např. Google Ads, Meta, LinkedIn). Spouštíme je až po Vašem souhlasu."
       }
     },
     cookieList: {
@@ -67,20 +67,38 @@ export const cookiesPageContent = {
         {
           name: "Google Ads (_gcl_*, conversion linker)",
           category: "Marketingové",
-          purpose: "Měření reklam a remarketing",
+          purpose: "Měření reklam a cílení reklam",
           expiry: "Dle nastavení Google"
         },
         {
           name: "Meta Pixel (_fbp)",
           category: "Marketingové",
-          purpose: "Měření reklam Meta a remarketing",
+          purpose: "Měření reklam Meta a cílení reklam",
           expiry: "Typicky až 90 dnů"
         },
         {
           name: "LinkedIn Insight Tag (li_*, AnalyticsSyncHistory)",
           category: "Marketingové",
-          purpose: "Měření reklam LinkedIn a remarketing",
+          purpose: "Měření reklam LinkedIn a cílení reklam",
           expiry: "Dle nastavení LinkedIn"
+        },
+        {
+          name: "Tawk.to (tawk.to, embed.tawk.to)",
+          category: "Marketingové",
+          purpose: "Živý chat na webu a související identifikátory relace",
+          expiry: "Dle nastavení Tawk.to, typicky relační až několik měsíců"
+        },
+        {
+          name: "Google Maps (Maps JavaScript API)",
+          category: "Statistické",
+          purpose: "Interaktivní mapa provozoven na stránce Kontakt",
+          expiry: "Dle nastavení Google; načte se až po souhlasu se statistickými cookies"
+        },
+        {
+          name: "OpenStreetMap / Leaflet (unpkg.com, tile.openstreetmap.org)",
+          category: "Statistické",
+          purpose: "Alternativní interaktivní mapa provozoven bez API klíče Google",
+          expiry: "Bez trvalých cookies; načte se až po souhlasu se statistickými cookies"
         }
       ],
       note:

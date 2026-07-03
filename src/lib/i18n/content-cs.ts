@@ -5,6 +5,7 @@ import {
   faqPageIntro,
   faqPageMetadata,
   faqPageTitle,
+  faqHomeGeo,
   faqUiLabels
 } from "@/lib/faq";
 import { sectorPages } from "@/lib/sector-pages";
@@ -37,6 +38,8 @@ import { cookiesPageContent, cookiesPageMetadata } from "@/lib/cookies-page";
 import { teamMembers } from "@/lib/team";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy";
 import { homeHeroPillars } from "@/lib/home-hero-pillars";
+import { whyNaturchemPageContent, whyNaturchemPageMetadata } from "@/lib/why-naturchem-page";
+import { salesContentCs } from "@/lib/sales-brands";
 
 export const localeContent = {
   faq: {
@@ -46,7 +49,10 @@ export const localeContent = {
     categories: faqCategories,
     flatItems: faqFlatItems,
     metadata: faqPageMetadata,
-    uiLabels: faqUiLabels
+    uiLabels: faqUiLabels,
+    homeSectionTitle: faqHomeGeo.homeSectionTitle,
+    homeSectionLead: faqHomeGeo.homeSectionLead,
+    homeViewAll: faqHomeGeo.homeViewAll
   },
   sectorPages,
   sectors,
@@ -65,6 +71,7 @@ export const localeContent = {
   typicalScenarios,
   siteServices: services,
   aboutPage: { metadata: aboutPageMetadata, content: aboutPageContent },
+  whyNaturchemPage: { metadata: whyNaturchemPageMetadata, content: whyNaturchemPageContent },
   accreditationPage: {
     metadata: accreditationPageMetadata,
     content: accreditationPageContent,
@@ -77,6 +84,7 @@ export const localeContent = {
   teamMembers,
   guaranteeIntro: guaranteeIntroParagraph,
   homeHeroPillars,
+  salesContent: salesContentCs,
   contactServiceLabels: null
 };
 

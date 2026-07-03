@@ -19,19 +19,20 @@ function jsonResponseScript(payload: Record<string, unknown>, success: boolean):
   const message = `authorization:github:${status}:${JSON.stringify(payload)}`;
   return `
 const msg = ${JSON.stringify(message)};
+const targetOrigin = window.location.origin;
 function sendResult(origin) {
   if (window.opener) {
-    window.opener.postMessage(msg, origin || "*");
+    window.opener.postMessage(msg, origin || targetOrigin);
   }
   window.close();
 }
 window.addEventListener("message", function (e) {
-  if (e.data === "authorizing:github") {
+  if (e.data === "authorizing:github" && e.origin === targetOrigin) {
     sendResult(e.origin);
   }
 }, false);
 if (window.opener) {
-  window.opener.postMessage("authorizing:github", "*");
+  window.opener.postMessage("authorizing:github", targetOrigin);
 }
 `;
 }

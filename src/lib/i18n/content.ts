@@ -2,6 +2,8 @@ import type { Locale } from "@/lib/i18n/locales";
 import type { LocaleContent } from "@/lib/i18n/content-cs";
 import type { SectorPageData } from "@/lib/sector-pages";
 import type { ContactServiceOption } from "@/lib/contact-services";
+import type { SalesBrand, SalesContent } from "@/lib/sales-types";
+import { isSalesCategorySlug, getSalesCategoryProducts, getAllSalesCategoryParams } from "@/lib/sales-categories";
 
 const cache: Partial<Record<Locale, Promise<LocaleContent>>> = {};
 
@@ -81,11 +83,57 @@ export async function getSeoLandings(locale: Locale) {
 
 export async function getSeoLanding(slug: string, locale: Locale) {
   const landings = await getSeoLandings(locale);
-  return landings.find((landing) => landing.slug === slug) ?? null;
+  const match = landings.find((landing) => landing.slug === slug);
+  if (match) return match;
+  if (locale === "cs") return null;
+  const csLandings = await getSeoLandings("cs");
+  return csLandings.find((landing) => landing.slug === slug) ?? null;
 }
 
 export async function getEquipmentContent(locale: Locale) {
   return (await loadLocaleContent(locale)).equipmentContent;
+}
+
+export async function getSalesContent(locale: Locale): Promise<SalesContent> {
+  return (await loadLocaleContent(locale)).salesContent;
+}
+
+export async function getSalesBrand(slug: string, locale: Locale): Promise<SalesBrand | undefined> {
+  const sales = await getSalesContent(locale);
+  return sales.brands.find((brand) => brand.slug === slug);
+}
+
+export async function getSalesProduct(brandSlug: string, productSlug: string, locale: Locale) {
+  const sales = await getSalesContent(locale);
+  const brand = sales.brands.find((item) => item.slug === brandSlug);
+  if (!brand) return undefined;
+  const product = brand.products.find((item) => item.slug === productSlug);
+  if (!product) return undefined;
+  return { brand, product };
+}
+
+export async function getSalesCategory(brandSlug: string, categoryId: string, locale: Locale) {
+  if (!isSalesCategorySlug(brandSlug, categoryId)) return undefined;
+  const brand = await getSalesBrand(brandSlug, locale);
+  if (!brand) return undefined;
+  const products = getSalesCategoryProducts(brand.products, categoryId);
+  return { brand, categoryId, products };
+}
+
+export async function getAllSalesSlugParams(locale: Locale) {
+  const productParams = await getAllSalesProductParams(locale);
+  const categoryParams = getAllSalesCategoryParams();
+  return [
+    ...categoryParams,
+    ...productParams.map(({ brand, product }) => ({ brand, slug: product }))
+  ];
+}
+
+export async function getAllSalesProductParams(locale: Locale) {
+  const sales = await getSalesContent(locale);
+  return sales.brands.flatMap((brand) =>
+    brand.products.map((product) => ({ brand: brand.slug, product: product.slug }))
+  );
 }
 
 export async function getAccreditationScope(locale: Locale) {
@@ -114,6 +162,10 @@ export async function getSiteServices(locale: Locale) {
 
 export async function getAboutPage(locale: Locale) {
   return (await loadLocaleContent(locale)).aboutPage;
+}
+
+export async function getWhyNaturchemPage(locale: Locale) {
+  return (await loadLocaleContent(locale)).whyNaturchemPage;
 }
 
 export async function getAccreditationPage(locale: Locale) {

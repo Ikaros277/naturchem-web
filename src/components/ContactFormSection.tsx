@@ -1,8 +1,8 @@
 "use client";
 
-import { Component, useEffect, type ReactNode } from "react";
+import { Component, useEffect, useState, type ReactNode } from "react";
 import { CONTACT_FORM_ID } from "@/lib/contact-url";
-import type { ContactUrlPrefill } from "@/lib/contact-url-prefill";
+import { readContactUrlPrefill } from "@/lib/contact-url-prefill";
 import type { getInquiryCategories } from "@/lib/i18n/contact-inquiry-i18n";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { company } from "@/lib/site";
@@ -10,8 +10,6 @@ import { ContactForm } from "@/components/ContactForm";
 
 type Props = {
   categories: ReturnType<typeof getInquiryCategories>;
-  initialCategory?: ContactUrlPrefill["initialCategory"];
-  initialMessage?: string;
 };
 
 export function ContactFormFallback() {
@@ -55,14 +53,17 @@ class ContactFormErrorBoundary extends Component<
   }
 }
 
-export function ContactFormSection({
-  categories,
-  initialCategory,
-  initialMessage = ""
-}: Props) {
+export function ContactFormSection({ categories }: Props) {
+  const [prefill, setPrefill] = useState(() => readContactUrlPrefill(""));
+
+  useEffect(() => {
+    setPrefill(readContactUrlPrefill(window.location.search));
+  }, []);
+
   useEffect(() => {
     function shouldScrollToForm() {
-      const hasQueryPrefill = Boolean(initialMessage) || initialCategory !== undefined;
+      const hasQueryPrefill =
+        Boolean(prefill.initialMessage) || prefill.initialCategory !== undefined;
       const hasFormHash = window.location.hash === `#${CONTACT_FORM_ID}`;
       return hasQueryPrefill || hasFormHash;
     }
@@ -76,17 +77,17 @@ export function ContactFormSection({
     scrollToForm();
     window.addEventListener("hashchange", scrollToForm);
     return () => window.removeEventListener("hashchange", scrollToForm);
-  }, [initialCategory, initialMessage]);
+  }, [prefill.initialCategory, prefill.initialMessage]);
 
-  const formKey = [initialCategory ?? "nevim", initialMessage].join("|");
+  const formKey = [prefill.initialCategory ?? "nevim", prefill.initialMessage].join("|");
 
   return (
     <ContactFormErrorBoundary>
       <ContactForm
         key={formKey}
         categories={categories}
-        initialCategory={initialCategory}
-        initialMessage={initialMessage}
+        initialCategory={prefill.initialCategory}
+        initialMessage={prefill.initialMessage}
       />
     </ContactFormErrorBoundary>
   );

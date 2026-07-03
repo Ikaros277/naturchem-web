@@ -315,7 +315,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "Zapracujeme změnu paliva, kapacity nebo provozních hodin"
     ],
     whenNeeded: [
-      "Plánujete roční reporting a souhrnnou provozní evidenci",
+      "Plánujete roční hlášení a souhrnnou provozní evidenci",
       "Měníte zdroj nebo provozní údaje",
       "Kontrolujete návaznost na měření emisí",
       "Úřad požaduje doplnění nebo provádíte interní kontrolu"
@@ -359,26 +359,26 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     slug: "sluzby/ghg-overovani",
     title: "GHG a ověřování emisí skleníkových plynů",
     description:
-      "GHG, ověřování emisí skleníkových plynů, kontrola emisních údajů a podklady pro reporting provozovatelů.",
+      "GHG, ověřování emisí skleníkových plynů, kontrola emisních údajů a podklady pro výkazování provozovatelů.",
     intro:
-      "Ověřujete emise skleníkových plynů před reportingem? Posoudíme metodiku, vstupy a návaznost na spotřeby, měření a provozní bilanci.",
+      "Ověřujete emise skleníkových plynů před odevzdáním hlášení? Posoudíme metodiku, vstupy a návaznost na spotřeby, měření a provozní bilanci.",
     contactService: "GHG",
     faqCategoryId: "ispop",
     scope: [
       "Ověříme emise skleníkových plynů a výpočtové listy",
       "Zkontrolujeme emisní faktory, spotřeby a provozní data",
       "Navážeme na měření emisí a provozní evidenci",
-      "Připravíme přehled nesouladů před odevzdáním reportingu"
+      "Připravíme přehled nesouladů před odevzdáním hlášení"
     ],
     whenNeeded: [
-      "Plánujete reporting emisí skleníkových plynů",
+      "Plánujete hlášení emisí skleníkových plynů",
       "Potřebujete ověřit výpočty nebo emisní údaje",
       "Měníte technologii, palivo nebo provozní data",
       "Investor, audit nebo úřad požaduje kontrolu"
     ],
     practicalSituations: [
       "kontrola výpočtu emisí skleníkových plynů",
-      "ověření vstupních dat před reportingem",
+      "ověření vstupních dat před odevzdáním hlášení",
       "návaznost GHG údajů na měření emisí a provozní bilance",
       "příprava podkladů pro audit nebo investora"
     ],
@@ -386,12 +386,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "metodika výpočtu a vstupní data",
       "spotřeby paliv, surovin a provozní bilance",
       "protokoly z měření emisí a provozní evidence",
-      "požadavek reportingu nebo auditu"
+      "požadavek na hlášení nebo audit"
     ],
     outputs: [
       "ověření nebo kontrola emisních údajů",
       "přehled vstupů, metodiky a zjištěných nesouladů",
-      "podklad pro reporting GHG"
+      "podklad pro výkaz GHG"
     ],
     commonMistakes: [
       "Neaktuální emisní faktory nebo metodika výpočtu",
@@ -880,9 +880,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Modelové výpočty imisí a hluku pro záměry, změny provozu a varianty technologií. Podklady pro rozptylové a hlukové studie.",
     intro:
-      "Potřebujete rychle porovnat varianty komína, strojovny nebo dopravy? Provedeme imisní a hlukové modelové výpočty — podklad pro studii, EIA nebo jednání s úřadem.",
+      "Potřebujete rychle porovnat varianty výduchu, strojovny nebo dopravy? Provedeme imisní a hlukové modelové výpočty — podklad pro studii, EIA nebo jednání s úřadem.",
     contactService: "Rozptylové studie",
-    faqCategoryId: "rozptyl",
+    faqCategoryId: "studie",
     scope: [
       "Zmodelujeme imisní příspěvky zdrojů ovzduší a dopravy v areálu",
       "Zpracujeme výpočet hluku technologií, areálu a komunikací",
@@ -938,7 +938,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     intro:
       "Záměr ovlivňuje ovzduší i hluk najednou? Zpracujeme propojené posouzení ve stejných datech — konzistentní podklad pro EIA, krajský úřad a KHS.",
     contactService: "Rozptylové studie",
-    faqCategoryId: "rozptyl",
+    faqCategoryId: "studie",
     scope: [
       "Sjednotíme zadání imisí a hluku pro jeden záměr",
       "Zmodelujeme varianty umístění technologií",

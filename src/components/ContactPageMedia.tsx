@@ -1,9 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useCookieConsentState } from "@/components/CookieConsentBanner";
 import { ContactOfficesMap } from "@/components/ContactOfficesMap";
 import { HeroPhoto } from "@/components/HeroPhoto";
 import type { HeroTheme } from "@/lib/hero-images";
+
+function useMapsAllowed() {
+  const consent = useCookieConsentState();
+  return consent.updatedAt !== "" && consent.statistics;
+}
 
 function useIsDesktopNav() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -28,8 +34,9 @@ function useMounted() {
 export function ContactPageHeroMedia({ theme }: { theme: HeroTheme }) {
   const isDesktop = useIsDesktopNav();
   const mounted = useMounted();
+  const mapsAllowed = useMapsAllowed();
 
-  if (!mounted || !isDesktop) {
+  if (!mounted || !isDesktop || !mapsAllowed) {
     return <HeroPhoto theme={theme} priority />;
   }
 

@@ -72,6 +72,9 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   kontakt: hero("kontakt"),
   "akreditace-autorizace-dokumenty": hero("akreditace-autorizace-dokumenty"),
   "pristrojove-vybaveni": hero("pristrojove-vybaveni"),
+  prodej: hero("pristrojove-vybaveni"),
+  "prodej-pcf-elettronica": hero("pristrojove-vybaveni"),
+  "prodej-senseca": hero("pristrojove-vybaveni"),
   poradna: hero("poradna"),
   faq: hero("faq"),
   "typicke-zakazky": hero("typicke-zakazky"),
@@ -153,8 +156,11 @@ const pageThemeMap: Record<string, string> = {
   "/kontakt": "kontakt",
   "/akreditace-autorizace-dokumenty": "akreditace-autorizace-dokumenty",
   "/pristrojove-vybaveni": "pristrojove-vybaveni",
+  "/prodej": "prodej",
   "/poradna": "poradna",
   "/faq": "faq",
+  "/proc-naturchem": "akreditace-autorizace-dokumenty",
+  "/dotaznik-spokojenosti": "reference",
   "/sluzby": "sluzby"
 };
 
@@ -189,5 +195,10 @@ export function getPageHeroTheme(path: string): HeroTheme {
     return "emise";
   }
   if (normalized.startsWith("/sluzby/")) return getServiceHeroTheme(normalized);
+  if (normalized.startsWith("/prodej/")) {
+    const brandSlug = normalized.split("/").filter(Boolean)[1];
+    if (brandSlug && heroSlugImages[`prodej-${brandSlug}`]) return `prodej-${brandSlug}`;
+    return "prodej";
+  }
   return "dokumentace";
 }

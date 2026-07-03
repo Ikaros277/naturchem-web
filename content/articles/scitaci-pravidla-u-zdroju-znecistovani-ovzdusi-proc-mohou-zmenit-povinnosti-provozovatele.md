@@ -35,19 +35,19 @@ Jinými slovy: jednotlivé stacionární zdroje zůstávají jednotlivými zdroj
 
 ## Tři základní otázky: stejný kód, stejná provozovna, společný výduch
 
-U technologických zdrojů je potřeba uvažovat zejména tři základní podmínky. Zjednodušeně řečeno se ptáme, zda zdroje typově spadají pod stejný kód přílohy č. 2, zda jsou ve stejné provozovně a zda znečišťují společným výduchem nebo komínem, případně by tak s ohledem na technické uspořádání činit mohly.
+U technologických zdrojů je potřeba uvažovat zejména tři základní podmínky. Zjednodušeně řečeno se ptáme, zda zdroje typově spadají pod stejný kód přílohy č. 2, zda jsou ve stejné provozovně a zda znečišťují společným výduchem, případně by tak s ohledem na technické uspořádání činit mohly.
 
 | Otázka | Praktický význam |
 |---|---|
 | Spadají zdroje typově pod stejný kód? | nesčítají se technologie z různých kódů, pokud zákon nebo metodika nevedou k jinému závěru |
 | Jsou ve stejné provozovně? | typicky jeden areál nebo provozní celek |
-| Mají společný výduch nebo by jej technicky mohly mít? | důležitý je i princip takzvaného „virtuálního komína“ |
+| Mají společný výduch nebo by jej technicky mohly mít? | důležitý je i princip takzvaného „virtuálního výduchu“ |
 
-Třetí otázka bývá v praxi nejsložitější. Nejde jen o to, zda už dnes fyzicky existuje jeden společný komín. Posuzuje se i to, zda by s ohledem na uspořádání zdrojů mohlo dojít ke společnému odvádění emisí. Právě tomu se v metodických výkladech říká „virtuální komín“.
+Třetí otázka bývá v praxi nejsložitější. Nejde jen o to, zda už dnes fyzicky existuje jeden společný výduch. Posuzuje se i to, zda by s ohledem na uspořádání zdrojů mohlo dojít ke společnému odvádění emisí. Právě tomu se v metodických výkladech říká „virtuální výduch“.
 
-## Virtuální komín: proč nestačí říci, že každý výduch je zvlášť
+## Virtuální výduch: proč nestačí říci, že každý výduch je zvlášť
 
-Princip virtuálního komína je důležitý hlavně v provozech, kde je více podobných technologií umístěno v jedné hale, v těsně sousedících objektech nebo v jednom areálu. Pokud by jejich emise technicky mohly být svedeny do jednoho výduchu, může se uplatnit sčítací pravidlo, i když jsou dnes výduchy fyzicky oddělené.
+Princip virtuálního výduchu je důležitý hlavně v provozech, kde je více podobných technologií umístěno v jedné hale, v těsně sousedících objektech nebo v jednom areálu. Pokud by jejich emise technicky mohly být svedeny do jednoho výduchu, může se uplatnit sčítací pravidlo, i když jsou dnes výduchy fyzicky oddělené.
 
 To neznamená, že se má teoreticky sčítat všechno v celém areálu. Rozhoduje reálná technická a provozní souvislost. Pokud jsou zdroje v jiných objektech, oddělené velkou vzdáleností, bez reálné možnosti společného odtahu nebo jde o odlišné typy činností, může být závěr jiný.
 
@@ -55,7 +55,7 @@ To neznamená, že se má teoreticky sčítat všechno v celém areálu. Rozhodu
 |---|---|
 | více podobných pracovišť v jedné hale | často relevantní pro sčítání |
 | více výduchů ze stejné technologie | je nutné posoudit technologický celek |
-| samostatné objekty v těsné blízkosti | může být relevantní virtuální komín |
+| samostatné objekty v těsné blízkosti | může být relevantní virtuální výduch |
 | vzdálené provozy v jednom areálu | záleží na technické možnosti společného odtahu |
 | různé technologie pod různými kódy | obvykle se mezi sebou nesčítají |
 | samostatné provozovny | zpravidla se neposuzují jako jedna provozovna |
@@ -140,7 +140,7 @@ U každého provozu s více technologiemi je vhodné udělat základní kontrolu
 | Jaké technologie v provozovně jsou stacionárními zdroji? | bez vymezení zdrojů nelze správně sčítat |
 | Pod jaký kód přílohy č. 2 typově spadají? | sčítají se kapacity zdrojů typově pod stejným kódem |
 | Jsou ve stejné provozovně? | typicky stejný areál nebo provozní celek |
-| Mají společný výduch nebo by jej mohly mít? | rozhoduje fyzický nebo virtuální komín |
+| Mají společný výduch nebo by jej mohly mít? | rozhoduje fyzický nebo virtuální výduch |
 | Jaká je projektovaná kapacita každé části? | rozhoduje o překročení prahových hodnot |
 | Nejde o překryv se speciálnějším kódem? | konkrétnější kód má přednost před obecným |
 | Odpovídá povolení skutečnému stavu? | starší povolení nemusí pokrývat dnešní provoz |
@@ -158,7 +158,7 @@ Chyba ve sčítání se proto může přenést do celé dokumentace. Pokud je š
 
 ## Nejčastější chyby
 
-Nejčastější chybou je posuzování každého zařízení samostatně jen proto, že má vlastní ventilátor nebo vlastní výduch. Druhou chybou je záměna projektované kapacity za skutečný roční provoz. Třetí chybou je opomenutí virtuálního komína u zdrojů umístěných v jednom objektu nebo v technicky související části areálu.
+Nejčastější chybou je posuzování každého zařízení samostatně jen proto, že má vlastní ventilátor nebo vlastní výduch. Druhou chybou je záměna projektované kapacity za skutečný roční provoz. Třetí chybou je opomenutí virtuálního výduchu u zdrojů umístěných v jednom objektu nebo v technicky související části areálu.
 
 Častý je také opačný problém: zbytečné sčítání technologií, které spolu typově nesouvisejí nebo spadají pod odlišné kódy. Takový postup může provozovatele zatížit přísnějšími povinnostmi, než jaké skutečně vyplývají ze zákona.
 

@@ -10,7 +10,9 @@ import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
+import { ReferenceAreasGrid } from "@/components/ReferenceAreasGrid";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
+import { LocaleLink } from "@/lib/i18n/locale-link";
 import { toReferenceExampleListingMap } from "@/lib/reference-example-listing";
 import { siteUrl } from "@/lib/site";
 
@@ -74,9 +76,27 @@ export default async function ReferencePage({ params }: Props) {
         <ClientLogosGrid expandable moreHref={link("/reference#zakaznici")} />
       </section>
 
+      <ReferenceAreasGrid
+        areas={reference.referenceAreas}
+        locale={locale}
+        heading={reference.referenceAreasHeading}
+      />
+
       <section className="section section-surface accordion-index-surface content-block container" id="priklady">
         <h2>{reference.referenceExamplesHeading}</h2>
         <ReferenceExamplesIndex examplesById={examplesById} groups={exampleGroups} locale={locale} />
+      </section>
+
+      <section className="section content-block container satisfaction-survey-teaser">
+        <article className="card satisfaction-survey-teaser-card">
+          <h2>{messages.reference.surveyTeaserTitle}</h2>
+          <p className="muted">{messages.reference.surveyTeaserText}</p>
+          <div className="btn-row">
+            <LocaleLink href="/dotaznik-spokojenosti" className="button secondary">
+              {messages.reference.surveyTeaserLink}
+            </LocaleLink>
+          </div>
+        </article>
       </section>
 
       <PageCtaStrip {...pageCtaPresets.reference} className="container" />

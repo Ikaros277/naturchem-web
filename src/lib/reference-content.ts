@@ -29,6 +29,8 @@ export const referenceCustomersIntro =
 
 export const referenceExamplesHeading = "Příklady zakázek z praxe";
 
+export const referenceAreasHeading = "Reference podle oborů a typu provozu";
+
 export function getReferenceExamplesById(): Map<string, ReferenceExample> {
   return new Map(referenceExamples.map((example) => [example.id, example]));
 }

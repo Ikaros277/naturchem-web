@@ -116,9 +116,12 @@ export function getReferenceSegmentIconKey(title: string): ServiceIconKey {
 const poradnaTopicToIcon: Record<string, ServiceIconKey> = {
   Emise: "emise",
   "Rozptylové studie": "rozptyl",
-  Hluk: "hluk",
+  "Hluk a vibrace": "hluk",
   "Pracovní prostředí": "pracovni-prostredi",
+  "Prašnost a deponie": "emise",
   "EIA a povolování": "pillar-dokumentace",
+  "KHS, ČIŽP a úřady": "posudek",
+  "Provozní praxe pro ekology": "pillar-dokumentace",
   Legislativa: "posudek",
   "Chemická legislativa": "skoleni"
 };
@@ -222,6 +225,16 @@ const aboutWorkStepIcons: ServiceIconKey[] = [
 
 export function getAboutWorkStepIconKey(index: number): ServiceIconKey {
   return aboutWorkStepIcons[index] ?? "default";
+}
+
+const salesInquiryStepIcons: ServiceIconKey[] = [
+  "process-posouzeni",
+  "process-rozsah",
+  "process-vystup"
+];
+
+export function getSalesInquiryStepIconKey(index: number): ServiceIconKey {
+  return salesInquiryStepIcons[index] ?? "default";
 }
 
 /** Ikony u rychlých poptávkových cest na /kontakt (podle hodnoty service ve formuláři). */

@@ -94,5 +94,12 @@ export const pageCtaPresets = {
     primaryHref: contactUrl("Nejsem si jistý"),
     secondaryLabel: "Akreditace a rozsah laboratoře",
     secondaryHref: "/akreditace-autorizace-dokumenty"
+  },
+  sales: {
+    text: "Máte zájem o přístroj nebo příslušenství z naší nabídky? Napište typ přístroje, parametry nebo přiložte poptávku — připravíme nabídku.",
+    primaryLabel: "Poptat přístroj",
+    primaryHref: contactUrl("Prodej přístrojů"),
+    secondaryLabel: "Přehled značek",
+    secondaryHref: "/prodej"
   }
 } as const satisfies Record<string, PageCtaStripProps>;

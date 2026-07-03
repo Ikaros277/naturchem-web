@@ -66,6 +66,15 @@ export async function PrivacyPageBody({ locale }: { locale: Locale }) {
       <h3>{s.dataCollected.marketing.subheading}</h3>
       <p>{s.dataCollected.marketing.paragraph}</p>
 
+      <h3>{s.dataCollected.satisfactionSurvey.subheading}</h3>
+      <p>{s.dataCollected.satisfactionSurvey.intro}</p>
+      <ul>
+        {s.dataCollected.satisfactionSurvey.items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+      <p>{s.dataCollected.satisfactionSurvey.sourceNote}</p>
+
       <h2>{s.purposes.heading}</h2>
       <div className="legal-table-wrap">
         <table className="legal-table">

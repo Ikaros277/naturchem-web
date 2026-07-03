@@ -9,11 +9,11 @@ import { getArticleBySlug, getArticleStaticParams, getLocalesForArticleSlug } fr
 import { formatArticleDate, normalizeArticleDate } from "@/lib/format-date";
 import { getPoradnaTopicLabel } from "@/lib/i18n/poradna-topic-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
-import { pageMetadata } from "@/lib/i18n/metadata-helpers";
+import { pageMetadata, resolveOgImageUrl } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { heroThemeForArticle } from "@/lib/poradna-topic";
-import { siteUrl } from "@/lib/site";
+import { company, siteUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -67,16 +67,35 @@ export default async function CmsArticlePage({ params }: Props) {
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${articleUrl}#article`,
     headline: article.title,
     description: article.excerpt || "",
-    author: { "@type": "Person", name: article.author || "NATURCHEM" },
-    publisher: { "@type": "Organization", name: "NATURCHEM, s.r.o." },
+    url: articleUrl,
+    inLanguage: locale,
+    ...(article.heroImage ? { image: resolveOgImageUrl(article.heroImage) } : {}),
+    author: { "@type": "Organization", name: article.author || company.name },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: company.name,
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/graphics/naturchem-mark.svg`
+      }
+    },
+    isPartOf: {
+      "@type": "Blog",
+      "@id": `${poradnaUrl}#blog`,
+      name: messages.nav.articles,
+      url: poradnaUrl
+    },
     datePublished: normalizeArticleDate(article.publishedAt) || new Date().toISOString(),
     dateModified:
       normalizeArticleDate(article.updatedAt) ||
       normalizeArticleDate(article.publishedAt) ||
       new Date().toISOString(),
-    mainEntityOfPage: articleUrl
+    mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl }
   };
 
   const breadcrumbData = {
@@ -99,7 +118,8 @@ export default async function CmsArticlePage({ params }: Props) {
         imageSrc={article.heroImage}
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },
-          { name: messages.nav.articles, href: link("/poradna") }
+          { name: messages.nav.articles, href: link("/poradna") },
+          { name: article.title }
         ]}
       >
         <header className="premium-page-hero page-hero--photo">

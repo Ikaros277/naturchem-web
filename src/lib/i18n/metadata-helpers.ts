@@ -64,6 +64,12 @@ export function localeAlternatesForLanguages(
   };
 }
 
+export const noindexRobots: Metadata["robots"] = { index: false, follow: true };
+
+export function withNoindex(metadata: Metadata): Metadata {
+  return { ...metadata, robots: noindexRobots };
+}
+
 export function pageMetadata({
   locale,
   path,

@@ -1,17 +1,25 @@
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { getAboutWorkStepIconKey } from "@/lib/service-icons";
+import { getAboutWorkStepIconKey, type ServiceIconKey } from "@/lib/service-icons";
 import type { WorkProcessStep } from "@/lib/work-process";
 
 type Props = {
   steps: readonly WorkProcessStep[];
   processAria?: string;
+  iconForStep?: (index: number) => ServiceIconKey;
 };
 
-export function WorkProcessTimeline({ steps, processAria = "Postup spolupráce" }: Props) {
+export function WorkProcessTimeline({
+  steps,
+  processAria = "Postup spolupráce",
+  iconForStep = getAboutWorkStepIconKey
+}: Props) {
   const lastIndex = steps.length - 1;
 
   return (
-    <div className="work-process-flow">
+    <div
+      className="work-process-flow"
+      style={{ "--work-process-steps": steps.length } as React.CSSProperties}
+    >
       <div className="work-process-rail" aria-hidden="true">
         {steps.map((step, index) => (
           <div key={step.title} className="work-process-rail-segment">
@@ -31,7 +39,7 @@ export function WorkProcessTimeline({ steps, processAria = "Postup spolupráce" 
           <li key={step.title} className="work-process-step">
             <div className="work-process-step-head">
               <ServiceIcon
-                icon={getAboutWorkStepIconKey(index)}
+                icon={iconForStep(index)}
                 variant="inline"
                 className="work-process-step-icon"
               />

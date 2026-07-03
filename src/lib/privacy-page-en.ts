@@ -61,6 +61,18 @@ export const privacyPageContent = {
         subheading: "3.4 Online marketing",
         paragraph:
           "If you give consent to marketing cookies, we may process data about your website visit for the purpose of measuring and optimising advertising campaigns (e.g. Google Ads, Meta, LinkedIn), including remarketing. We do not activate these technologies without your consent."
+      },
+      satisfactionSurvey: {
+        subheading: "3.5 Satisfaction survey",
+        intro: "If you complete the satisfaction survey on the website, we process in particular:",
+        items: [
+          "satisfaction ratings and recommendation score (NPS),",
+          "optionally an email address for follow-up,",
+          "optionally company or site name and type of service,",
+          "optional written comments."
+        ],
+        sourceNote:
+          "We obtain the data directly from you when you submit the form. Completing the survey is voluntary."
       }
     },
     purposes: {
@@ -75,6 +87,11 @@ export const privacyPageContent = {
           purpose: "Handling inquiries from the website, email or telephone",
           legalBasis: "Art. 6(1)(b) — steps prior to entering into a contract / performance of a contract",
           note: "Contact details are necessary for us to be able to respond to you."
+        },
+        {
+          purpose: "Evaluating customer satisfaction surveys",
+          legalBasis: "Art. 6(1)(f) — legitimate interest of the controller",
+          note: "Feedback helps us improve our services; providing data is not mandatory."
         },
         {
           purpose: "Technical operation of the website and security",
@@ -109,6 +126,10 @@ export const privacyPageContent = {
           text: "{months} months from the last contact, unless a contractual relationship arises or a longer archiving obligation applies."
         },
         {
+          label: "Satisfaction survey:",
+          text: "12 months from submission, unless a longer archiving obligation arises from a contractual relationship."
+        },
+        {
           label: "Cookie data:",
           textPrefix: "according to the expiry of individual cookies — see",
           cookiesLinkLabel: "Cookie Policy"
@@ -140,6 +161,10 @@ export const privacyPageContent = {
         {
           name: "GitHub Inc.",
           description: "website content management system (Decap CMS, access for authorised editors only)"
+        },
+        {
+          name: "Tawk.to (tawk.to)",
+          description: "live chat on the website after consent to marketing cookies (USA)"
         },
         {
           name: "IT support providers and other technical service providers",

@@ -11,6 +11,11 @@ export const oNasMegaGroups: readonly ONasMegaMenuGroup[] = [
         href: "/o-spolecnosti-naturchem",
         label: "O společnosti",
         description: "Profil laboratoře, pobočky a kontakty"
+      },
+      {
+        href: "/proc-naturchem",
+        label: "Proč NATURCHEM",
+        description: "Akreditace, autorizace a zkušenosti s úřady"
       }
     ]
   },

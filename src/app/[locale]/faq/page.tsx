@@ -10,8 +10,8 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
 import { getPageHeroTheme } from "@/lib/hero-images";
-import { shortenListingExcerpt } from "@/lib/excerpt";
 import { siteUrl } from "@/lib/site";
 
 type Props = {
@@ -39,18 +39,7 @@ export default async function FaqPage({ params }: Props) {
   const link = (href: string) => localizeHref(href, locale);
   const faqUrl = `${siteUrl}${link("/faq")}/`.replace(/([^:]\/)\/+/g, "$1");
 
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faq.flatItems.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: shortenListingExcerpt(item.paragraphs[0] ?? item.tip ?? "", 1)
-      }
-    }))
-  };
+  const faqData = buildFaqPageJsonLd(faq.flatItems);
 
   const breadcrumbData = {
     "@context": "https://schema.org",

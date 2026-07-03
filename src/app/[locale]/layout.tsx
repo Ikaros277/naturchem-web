@@ -8,9 +8,16 @@ import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { OutboundLinkTelemetry } from "@/components/OutboundLinkTelemetry";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/Header";
+import { SkipToContent } from "@/components/SkipToContent";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/Schema";
-import { company, siteUrl } from "@/lib/site";
+import { siteUrl } from "@/lib/site";
+import {
+  buildLocalBusinessJsonLd,
+  buildOrganizationJsonLd,
+  buildWebSiteJsonLd
+} from "@/lib/organization-jsonld";
+import { pickClientMessages } from "@/lib/i18n/client-messages";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
@@ -72,68 +79,44 @@ export default async function LocaleLayout({ children, params }: Props) {
   const locale: Locale = localeParam;
   const messages = await getMessages(locale);
 
-  const orgData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: company.name,
-    url: siteUrl,
-    email: company.email,
-    identifier: `IČO ${company.ico}`,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: company.address.street,
-      postalCode: company.address.postalCode,
-      addressLocality: company.address.city,
-      addressCountry: company.address.country
-    },
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-        telephone: company.phones[0],
-        email: company.email,
-        areaServed: "CZ",
-        availableLanguage: [...locales]
-      }
-    ]
-  };
-
-  const localBusinessData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: company.name,
-    telephone: company.phones[0],
-    email: company.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: company.labAddress.street,
-      postalCode: company.labAddress.postalCode,
-      addressLocality: company.labAddress.city,
-      addressCountry: company.labAddress.country
-    },
-    areaServed: "CZ",
-    url: siteUrl
-  };
-
-  const websiteData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "NATURCHEM",
-    url: siteUrl,
-    inLanguage: schemaLanguage(locale),
-    publisher: { "@type": "Organization", name: company.name, url: siteUrl }
-  };
+  const orgData = buildOrganizationJsonLd();
+  const localBusinessData = buildLocalBusinessJsonLd();
+  const websiteData = buildWebSiteJsonLd(schemaLanguage(locale));
 
   return (
     <html lang={locale} className={fontSans.variable}>
+      <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          href={`${siteUrl}/llms.txt`}
+          title="NATURCHEM — summary for AI assistants"
+        />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href={`${siteUrl}/llms-full.txt`}
+          title="NATURCHEM — extended summary for AI assistants"
+        />
+        <link rel="help" type="text/plain" href={`${siteUrl}/ai.txt`} title="NATURCHEM — AI discovery" />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href={`${siteUrl}/llms-articles.txt`}
+          title="NATURCHEM — article index for AI assistants"
+        />
+      </head>
       <body className={fontSans.className}>
-        <LocaleProvider locale={locale} messages={messages}>
+        <LocaleProvider locale={locale} messages={pickClientMessages(messages)}>
           <GoogleConsentModeInit />
           <JsonLd data={websiteData} />
           <JsonLd data={orgData} />
           <JsonLd data={localBusinessData} />
+          <SkipToContent locale={locale} />
           <Header locale={locale} />
-          {children}
+          <div id="page-content" tabIndex={-1}>
+            {children}
+          </div>
           <Footer locale={locale} />
           <CookieConsentBanner />
           <DeferredClientWidgets />

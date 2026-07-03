@@ -2,6 +2,7 @@
 
 import "./contact-offices-map.css";
 import { useEffect, useRef, useState } from "react";
+import { useCookieConsentState } from "@/components/CookieConsentBanner";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import {
   getCompanyOfficeMapPoints,
@@ -12,6 +13,39 @@ import {
 
 const offices = getCompanyOfficeMapPoints();
 const mapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY?.trim() ?? "";
+
+function useMapsAllowed() {
+  const consent = useCookieConsentState();
+  return consent.updatedAt !== "" && consent.statistics;
+}
+
+function ContactOfficesMapPlaceholder({ variant }: { variant: "hero" | "panel" }) {
+  const contact = useTranslations("contact");
+
+  return (
+    <div className={`contact-offices-map-placeholder contact-offices-map--${variant}`}>
+      <p className="contact-offices-map-placeholder-lead">{contact.mapConsentLead}</p>
+      <ul className="contact-offices-map-placeholder-list" aria-label={contact.mapConsentOfficesAria}>
+        {offices.map((office) => (
+          <li key={office.label}>
+            <strong>{office.label}</strong>
+            <span>{officeAddressLine(office)}</span>
+            <a href={officeMapsSearchUrl(office)} target="_blank" rel="noopener noreferrer">
+              {contact.openInGoogleMaps}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <button
+        type="button"
+        className="button ghost contact-offices-map-placeholder-manage"
+        onClick={() => window.dispatchEvent(new Event("naturchem:open-cookie-settings"))}
+      >
+        {contact.mapConsentManage}
+      </button>
+    </div>
+  );
+}
 
 type GoogleMapsNamespace = {
   maps: {
@@ -382,6 +416,7 @@ type Props = {
 };
 
 export function ContactOfficesMap({ variant = "hero" }: Props) {
+  const mapsAllowed = useMapsAllowed();
   const contact = useTranslations("contact");
   const labels: MapLabels = {
     mapAria: contact.mapLabel,
@@ -389,6 +424,10 @@ export function ContactOfficesMap({ variant = "hero" }: Props) {
     navigateInGoogleMaps: contact.navigateInGoogleMaps,
     selectOfficeAria: contact.selectOfficeAria
   };
+
+  if (!mapsAllowed) {
+    return <ContactOfficesMapPlaceholder variant={variant} />;
+  }
 
   const content = mapsApiKey ? (
     <ContactOfficesMapInteractive apiKey={mapsApiKey} variant={variant} labels={labels} />

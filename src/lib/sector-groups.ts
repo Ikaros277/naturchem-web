@@ -70,9 +70,9 @@ export const sectorGroups: SectorGroup[] = [
   },
   {
     id: "evidence-dokumentace",
-    title: "Evidence, reporting a provozní dokumentace",
+    title: "Evidence, výkaznictví a provozní dokumentace",
     intro:
-      "ISPOP, GHG reporting, provozní řády a odborné posudky — podklady pro provozovatele zdrojů a plnění povinností vůči úřadům.",
+      "ISPOP, výkazování GHG, provozní řády a odborné posudky — podklady pro provozovatele zdrojů a plnění povinností vůči úřadům.",
     sectorIds: ["ispop-evidence", "ghg-cnr", "provozni-rady", "odborne-posudky-povoleni"]
   }
 ];

@@ -1,12 +1,12 @@
 "use client";
 
 import { createContext, useContext, type ReactNode } from "react";
-import type { Messages } from "@/lib/i18n/get-messages";
+import type { ClientMessages } from "@/lib/i18n/client-messages";
 import type { Locale } from "@/lib/i18n/locales";
 
 type LocaleContextValue = {
   locale: Locale;
-  messages: Messages;
+  messages: ClientMessages;
 };
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
@@ -25,13 +25,13 @@ export function useLocale(): Locale {
   return value.locale;
 }
 
-export function useMessages(): Messages {
+export function useMessages(): ClientMessages {
   const value = useContext(LocaleContext);
   if (!value) throw new Error("useMessages must be used within LocaleProvider");
   return value.messages;
 }
 
-export function useTranslations<N extends keyof Messages>(namespace: N): Messages[N] {
+export function useTranslations<N extends keyof ClientMessages>(namespace: N): ClientMessages[N] {
   const messages = useMessages();
   return messages[namespace];
 }

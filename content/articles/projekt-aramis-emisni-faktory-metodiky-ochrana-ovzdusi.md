@@ -53,7 +53,7 @@ U stavební prašnosti je důležité posuzovat konkrétní činnosti. Jiný emi
 
 ## Recyklační linky, deponie a sypké materiály
 
-Recyklační linky stavebních hmot, deponie a manipulace se sypkými materiály patří mezi provozy, kde je správné stanovení emisí často složitější než u běžného bodového výduchu. Emise vznikají fugitivně, tedy z ploch, přesypů, drcení, třídění, manipulace, dopravy a pohybu materiálu, nikoli pouze z jednoho komína.
+Recyklační linky stavebních hmot, deponie a manipulace se sypkými materiály patří mezi provozy, kde je správné stanovení emisí často složitější než u běžného bodového výduchu. Emise vznikají fugitivně, tedy z ploch, přesypů, drcení, třídění, manipulace, dopravy a pohybu materiálu, nikoli pouze z jednoho výduchu.
 
 To má přímý dopad na rozptylové studie, odborné posudky a povolení provozu. U těchto zdrojů je potřeba pečlivě popsat technologii, materiálové toky, kapacitu, provozní režim, plochy deponií, manipulaci, vnitroareálovou dopravu a protiprašná opatření.
 
@@ -69,7 +69,7 @@ U staveb, recyklačních provozů, kameniva, skladování sypkých materiálů, 
 
 ## Skleníkové plyny a emisní bilance
 
-ARAMIS se nevěnuje pouze klasickým znečišťujícím látkám, ale také skleníkovým plynům. To je důležité zejména s ohledem na rostoucí význam uhlíkové stopy, GHG bilancí, ESG reportingu, energetických koncepcí a posuzování dopadů provozů na klima.
+ARAMIS se nevěnuje pouze klasickým znečišťujícím látkám, ale také skleníkovým plynům. To je důležité zejména s ohledem na rostoucí význam uhlíkové stopy, GHG bilancí, ESG výkazování, energetických koncepcí a posuzování dopadů provozů na klima.
 
 Pro běžné povolení provozu podle zákona o ochraně ovzduší nejsou skleníkové plyny vždy hlavním rozhodovacím parametrem. V širším environmentálním řízení ale jejich význam roste. Týká se to energetiky, průmyslových procesů, zemědělství, odpadového hospodářství, bioplynových stanic, spalovacích procesů i projektů, kde investor potřebuje doložit dopady záměru na klima.
 

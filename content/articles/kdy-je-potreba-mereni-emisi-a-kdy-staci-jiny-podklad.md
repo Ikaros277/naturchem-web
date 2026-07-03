@@ -116,7 +116,7 @@ Problémem může být například:
 - turbulence proudění,
 - špatná přístupnost,
 - chybějící pracovní plošina,
-- nebezpečný přístup ke komínu nebo výduchu,
+- nebezpečný přístup ke výduchu,
 - nemožnost bezpečně manipulovat s měřicí technikou.
 
 Pokud zdroj nemá vhodné měřicí místo, neznamená to automaticky, že se povinnost měření neuplatní. Naopak je obvykle nutné hledat technické řešení: doplnit měřicí hrdla, upravit přístup, vytvořit bezpečné pracovní místo nebo zvolit nejlepší technicky dosažitelné měřicí místo.

@@ -864,7 +864,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     intro:
       "Sie müssen schnell Stapel-, Technikraum- oder Transportvarianten vergleichen? Wir führen Immissions- und Lärmmodellierungsberechnungen durch – Dokumentation für eine Studie, UVP oder Behördenberatung.",
     contactService: "Rozptylové studie",
-    faqCategoryId: "rozptyl",
+    faqCategoryId: "studie",
     scope: [
       "Wir modellieren Immissionsbeiträge aus Luftquellen und Transport vor Ort",
       "Wir erstellen Lärmberechnungen für Technologien, Standort und Straßen",
@@ -920,7 +920,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     intro:
       "Beeinflusst ein Projekt sowohl die Luftqualität als auch den Lärm? Wir erstellen eine integrierte Bewertung mit denselben Daten – konsistente Dokumentation für EIA, die Gebietskörperschaft und KHS.",
     contactService: "Rozptylové studie",
-    faqCategoryId: "rozptyl",
+    faqCategoryId: "studie",
     scope: [
       "Wir bündeln Immissions- und Lärmschutzunterlagen für ein Projekt",
       "Wir modellieren Technologiestandortvarianten",

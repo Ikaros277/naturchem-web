@@ -11,11 +11,9 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
-import { readContactUrlPrefill } from "@/lib/contact-url-prefill";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -33,16 +31,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 const companyOffices = getCompanyOffices();
 const primaryPhoneHref = `tel:${company.phones[0].replaceAll(" ", "")}`;
 
-export default async function Page({ params, searchParams }: PageProps) {
+export default async function Page({ params }: PageProps) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const sp = await searchParams;
-  const query = new URLSearchParams();
-  for (const [key, value] of Object.entries(sp)) {
-    if (typeof value === "string") query.set(key, value);
-    else if (Array.isArray(value)) value.forEach((v) => query.append(key, v));
-  }
-  const prefill = readContactUrlPrefill(query.size ? `?${query.toString()}` : "");
   const categories = getInquiryCategories(locale);
   const messages = await getMessages(locale);
   const link = (href: string) => localizeHref(href, locale);
@@ -71,6 +62,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         ]}
         className="page-hero-band--map"
         media={<ContactPageHeroMedia theme={heroTheme} />}
+        mediaLabel={messages.contact.mapLabel}
       >
         <header className="premium-page-hero contact-hero page-hero--photo">
           <div>
@@ -86,11 +78,7 @@ export default async function Page({ params, searchParams }: PageProps) {
         aria-labelledby="poptavka-heading"
       >
         <article className="card contact-form-panel contact-page-card">
-          <ContactFormSection
-            categories={categories}
-            initialCategory={prefill.initialCategory}
-            initialMessage={prefill.initialMessage}
-          />
+          <ContactFormSection categories={categories} />
         </article>
       </section>
 

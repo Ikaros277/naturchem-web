@@ -1,7 +1,8 @@
 import { HeaderClient } from "@/components/HeaderClient";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { getMessages } from "@/lib/i18n/get-messages";
-import { getHeaderMainNav } from "@/lib/i18n/nav-content";
+import { getSalesNavLink } from "@/lib/i18n/nav-content";
+import { getExperienceMegaGroups } from "@/lib/i18n/experience-megamenu";
 import { getONasMegaGroups } from "@/lib/i18n/o-nas-megamenu";
 import { getServiceMegaGroups } from "@/lib/i18n/service-megamenu";
 import type { Locale } from "@/lib/i18n/locales";
@@ -14,10 +15,11 @@ type Props = {
 export async function Header({ locale }: Props) {
   const messages = await getMessages(locale);
   const t = messages.header;
-  const headerMainNav = getHeaderMainNav(locale);
-  const [serviceMegaGroups, oNasMegaGroups] = await Promise.all([
+  const salesNavLink = getSalesNavLink(locale);
+  const [serviceMegaGroups, oNasMegaGroups, experienceMegaGroups] = await Promise.all([
     getServiceMegaGroups(locale),
-    getONasMegaGroups(locale)
+    getONasMegaGroups(locale),
+    getExperienceMegaGroups(locale)
   ]);
 
   return (
@@ -42,7 +44,8 @@ export async function Header({ locale }: Props) {
       </div>
       <HeaderClient
         labels={t}
-        headerMainNav={headerMainNav}
+        experienceMegaGroups={experienceMegaGroups}
+        salesNavLink={salesNavLink}
         serviceMegaGroups={serviceMegaGroups}
         oNasMegaGroups={oNasMegaGroups}
       />

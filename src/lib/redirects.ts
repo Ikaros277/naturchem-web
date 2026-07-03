@@ -1,8 +1,6 @@
 ﻿/** 301 přesměrování ze starých URL na finální strukturu. */
 export const permanentRedirects = [
   // --- Starý web Forpsi (2026) → homepage. Doplň podle GSC → Stránky → Nenalezeno (404). ---
-  { source: "/prodej", destination: "/", permanent: true },
-  { source: "/prodej/", destination: "/", permanent: true },
   { source: "/kariera", destination: "/", permanent: true },
   { source: "/kariera/", destination: "/", permanent: true },
   { source: "/index.php", destination: "/", permanent: true },

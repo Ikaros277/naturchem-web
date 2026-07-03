@@ -864,7 +864,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     intro:
       "Do you need to quickly compare stack, plant room or transport variants? We perform immission and noise modelling calculations — documentation for a study, EIA or authority consultation.",
     contactService: "Rozptylové studie",
-    faqCategoryId: "rozptyl",
+    faqCategoryId: "studie",
     scope: [
       "We model immission contributions from air sources and transport on site",
       "We prepare noise calculations for technologies, site and roads",
@@ -920,7 +920,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     intro:
       "Does a project affect both air quality and noise? We prepare an integrated assessment using the same data — consistent documentation for EIA, the regional authority and KHS.",
     contactService: "Rozptylové studie",
-    faqCategoryId: "rozptyl",
+    faqCategoryId: "studie",
     scope: [
       "We consolidate immission and noise briefs for one project",
       "We model technology location variants",

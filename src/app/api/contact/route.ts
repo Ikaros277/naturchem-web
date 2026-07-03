@@ -2,6 +2,11 @@ import { NextResponse } from "next/server";
 import { Buffer } from "node:buffer";
 import { Resend } from "resend";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
+import {
+  ALLOWED_ATTACHMENT_EXT,
+  ALLOWED_ATTACHMENT_MIME,
+  FORM_LIMITS
+} from "@/lib/form-validation-limits";
 import { INQUIRY_CATEGORY_LABELS, isInquiryCategoryId } from "@/lib/contact-inquiry";
 import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_EN } from "@/lib/contact-inquiry-en";
 import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_DE } from "@/lib/contact-inquiry-de";
@@ -22,7 +27,10 @@ const apiMessages = {
       `Zprávu se nepodařilo odeslat. Napište na ${email} nebo zavolejte ${phone}.`,
     success:
       "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.",
-    rateLimited: "Příliš mnoho odeslaných zpráv. Zkuste to prosím později nebo nás kontaktujte telefonicky."
+    rateLimited: "Příliš mnoho odeslaných zpráv. Zkuste to prosím později nebo nás kontaktujte telefonicky.",
+    fieldTooLong: "Jedno z polí je příliš dlouhé. Zkuste text zkrátit.",
+    tooManyAttachments: "Můžete nahrát maximálně 5 příloh.",
+    invalidAttachment: "Nepodporovaný typ souboru. Povolené formáty: PDF, Word, Excel, obrázek nebo ZIP."
   },
   en: {
     requiredFields: "Please fill in the required fields (name, contact, description and consent).",
@@ -34,7 +42,10 @@ const apiMessages = {
       `We could not send the message. Email ${email} or call ${phone}.`,
     success:
       "We will get back to you with next steps. If we need anything else, we will let you know by email or phone.",
-    rateLimited: "Too many messages sent. Please try again later or call us."
+    rateLimited: "Too many messages sent. Please try again later or call us.",
+    fieldTooLong: "One of the fields is too long. Please shorten the text.",
+    tooManyAttachments: "You can upload at most 5 attachments.",
+    invalidAttachment: "Unsupported file type. Allowed: PDF, Word, Excel, image or ZIP."
   },
   de: {
     requiredFields: "Bitte füllen Sie die Pflichtfelder aus (Name, Kontakt, Beschreibung und Einwilligung).",
@@ -46,7 +57,10 @@ const apiMessages = {
       `Die Nachricht konnte nicht gesendet werden. E-Mail ${email} oder Anruf ${phone}.`,
     success:
       "Wir melden uns mit den nächsten Schritten. Falls wir etwas ergänzen müssen, informieren wir Sie per E-Mail oder Telefon.",
-    rateLimited: "Zu viele Nachrichten. Bitte versuchen Sie es später erneut oder rufen Sie uns an."
+    rateLimited: "Zu viele Nachrichten. Bitte versuchen Sie es später erneut oder rufen Sie uns an.",
+    fieldTooLong: "Ein Feld ist zu lang. Bitte kürzen Sie den Text.",
+    tooManyAttachments: "Sie können höchstens 5 Anhänge hochladen.",
+    invalidAttachment: "Nicht unterstützter Dateityp. Erlaubt: PDF, Word, Excel, Bild oder ZIP."
   }
 } as const;
 
@@ -134,7 +148,30 @@ export async function POST(request: Request) {
       );
     }
 
+    if (
+      name.length > FORM_LIMITS.name ||
+      email.length > FORM_LIMITS.email ||
+      phone.length > FORM_LIMITS.phone ||
+      message.length > FORM_LIMITS.message
+    ) {
+      return NextResponse.json({ ok: false, message: msg.fieldTooLong }, { status: 400 });
+    }
+
     const files = formData.getAll("attachments").filter((f): f is File => f instanceof File);
+    if (files.length > FORM_LIMITS.maxAttachments) {
+      return NextResponse.json({ ok: false, message: msg.tooManyAttachments }, { status: 400 });
+    }
+
+    const invalidFile = files.find(
+      (file) =>
+        file.size > 0 &&
+        !ALLOWED_ATTACHMENT_MIME.has(file.type) &&
+        !ALLOWED_ATTACHMENT_EXT.test(file.name)
+    );
+    if (invalidFile) {
+      return NextResponse.json({ ok: false, message: msg.invalidAttachment }, { status: 400 });
+    }
+
     const oversized = files.find((f) => f.size > MAX_FILE_SIZE);
     if (oversized) {
       return NextResponse.json(
@@ -186,7 +223,7 @@ export async function POST(request: Request) {
     }
 
     if (!resendApiKey) {
-      console.log("[CONTACT_FORM_FALLBACK]", emailBody, attachments.map((a) => a.filename));
+      console.log("[CONTACT_FORM_FALLBACK]", { nameLength: name.length, attachmentCount: attachments.length });
       return NextResponse.json({
         ok: true,
         message: msg.fallbackAccepted

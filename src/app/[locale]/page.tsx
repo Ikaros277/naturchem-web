@@ -2,13 +2,10 @@
 import { HomeHeroSection } from "@/components/HomeHeroSection";
 import { ExperienceStats } from "@/components/ExperienceStats";
 import { HomeOfferCard } from "@/components/HomeOfferCard";
-import { HomeFaqSection } from "@/components/HomeFaqSection";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
 import { HomeUnsureStrip } from "@/components/HomeUnsureStrip";
-import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
-import { getHomeGeoFaqItems } from "@/lib/geo-home-faq";
 import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getHomeHeroPillars } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
@@ -44,7 +41,6 @@ export default async function Home({ params }: Props) {
   const heroPillars = await getHomeHeroPillars(locale);
   const statsContent = getCompanyStatsContent(locale);
   const link = (href: string) => localizeHref(href, locale);
-  const homeFaqItems = await getHomeGeoFaqItems(locale);
   const homeUrl = `${siteUrl}${link("/")}/`.replace(/([^:]\/)\/+/g, "$1");
 
   const breadcrumbData = {
@@ -58,7 +54,6 @@ export default async function Home({ params }: Props) {
   return (
     <main className="home-page">
       <JsonLd data={breadcrumbData} />
-      {homeFaqItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(homeFaqItems)} /> : null}
       <HomeHeroSection
         title={messages.home.heroTitle}
         lead={messages.home.heroLead}
@@ -104,8 +99,6 @@ export default async function Home({ params }: Props) {
       </section>
 
       <HomeUnsureStrip locale={locale} />
-
-      <HomeFaqSection locale={locale} />
 
       <HomePoradnaStrip locale={locale} />
 

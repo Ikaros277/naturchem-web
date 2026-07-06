@@ -1,147 +1,152 @@
 ---
-title: "Kogenerační jednotka: emise, hluk, měření a povolení provozu"
-slug: kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu
-excerpt: Kogenerační jednotka může být pro provozovatele výhodným zdrojem
-  elektřiny a tepla, ale z hlediska povolování nejde jen o technické zařízení v
-  kotelně nebo kontejneru. Je nutné řešit emise ze spalovacího motoru, odvod
-  spalin, měření emisí, hluk do okolí, provozní hodiny, palivo, komín, vztah ke
-  stávajícím zdrojům a požadavky úřadů. Rozsah podkladů závisí hlavně na
-  tepelném příkonu, umístění, palivu, provozním režimu a vzdálenosti k chráněné
-  zástavbě.
+title: "Plynová kotelna 0,3 až 50 MW: co řešit u NOx, CO, měření a povolení"
+slug: plynova-kotelna-03-50-mw-nox-co-mereni-povoleni
+excerpt: U plynové kotelny nestačí znát pouze počet kotlů a jejich výkon v kW.
+  Pro povinnosti podle ochrany ovzduší je rozhodující zejména **celkový
+  jmenovitý tepelný příkon**, palivo, počet kotlů, společný komín, provozní
+  hodiny a to, zda jde o nový zdroj, výměnu kotle nebo změnu stávající kotelny.
+  Provozovatel by měl včas ověřit, zda potřebuje povolení provozu, měření emisí,
+  změnu provozní evidence nebo úpravu stávajícího povolení.
 author: Ing. František Hezina
-publishedAt: 2026-07-06
+publishedAt: 2026-07-04
 topic: Emise
-heroImage: /uploads/pxl_20260702_063317620.mp.webp
+heroImage: /uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp
 ---
-## Proč kogenerační jednotku řešit včas
+## Proč u plynové kotelny rozhoduje příkon, ne jen výkon
 
-Kogenerační jednotka se často připravuje jako technická úprava energetiky objektu. Provozovatel řeší výkon, návratnost, připojení k plynu, elektřinu a využití tepla. Z hlediska úřadů ale vzniká nový nebo změněný zdroj emisí a hluku.
+U plynových kotelen se často pracuje s výkonem kotle, protože ten je důležitý pro vytápění objektu. Pro ochranu ovzduší je ale podstatný hlavně **jmenovitý tepelný příkon v palivu**. Ten bývá uveden v technickém listu, na štítku kotle nebo v projektové dokumentaci.
 
-U menších instalací může být povolování jednodušší. U větších jednotek, více jednotek v jedné lokalitě, provozu v nemocnici, průmyslovém areálu, bytové zástavbě nebo obecní kotelně už může být potřeba připravit podklady pro **ochranu ovzduší, hluk, stavební řízení, JES, povolení provozu nebo změnu stávajícího povolení**.
+Rozdíl je praktický. Kotel může mít například tepelný výkon 900 kW, ale příkon v palivu bude vyšší podle účinnosti zařízení. Pro určení povinností se proto nesmí mechanicky vycházet jen z výkonu předávaného do vody.
 
-Největší problémy vznikají tehdy, když se KGJ objedná a stavebně připraví dříve, než je jasné, zda vyhoví emisním požadavkům, zda má správně navržený komín a zda nebude problém s hlukem. Dodatečné řešení výfuku, tlumičů, výšky komína nebo akustických úprav bývá dražší než jejich zapracování do projektu.
+U kotelny se navíc obvykle neposuzuje každý kotel izolovaně. Důležité je, zda kotle tvoří jeden spalovací stacionární zdroj, zda jsou provozně a technicky propojené, zda odvádějí spaliny do společného komína nebo slouží stejnému účelu v jedné provozovně. Právě **sčítání příkonů** často rozhodne, jestli kotelna spadá do režimu vyjmenovaného zdroje a jaké povinnosti se na ni vztahují.
 
-## Co úřady u kogenerace obvykle zajímá
+## Základní hranice: 0,3 MW, 1 MW, 5 MW a 50 MW
 
-Kogenerační jednotka není posuzována pouze podle elektrického výkonu. Pro ochranu ovzduší je zásadní hlavně **jmenovitý tepelný příkon v palivu**, typ spalovacího zařízení, palivo a celkový příkon všech souvisejících spalovacích zdrojů v provozovně.
+U plynových kotelen je potřeba sledovat několik hranic. Provozovatelé se nejčastěji ptají, zda se jich týká povolení provozu, měření emisí nebo jen základní povinnosti provozovatele zdroje.
 
-Pro hluk je důležité umístění jednotky, zda je uvnitř objektu nebo v kontejneru, jak je řešeno sání a výfuk vzduchu, chlazení, výfuk spalin, případný suchý chladič, provozní doba a vzdálenost k nejbližším chráněným prostorům. Kogenerační jednotka může být akusticky problematická i tehdy, když je emisně v pořádku.
+Při orientačním třídění pomáhá tento přehled:
 
-Úřad může chtít zejména technický list KGJ, údaje o palivu, příkonu a výkonu, popis komína nebo výduchu, provozní hodiny, umístění v objektu nebo areálu, vztah ke stávající kotelně, emisní parametry od výrobce, hlukové parametry a návrh provozních podmínek.
-
-## Povolení provozu: rozhoduje tepelný příkon a zařazení zdroje
-
-U kogeneračních jednotek je potřeba nejprve určit, zda jde o vyjmenovaný stacionární zdroj podle zákona o ochraně ovzduší. U plynových KGJ se obvykle jedná o **pístový spalovací motor**. V příloze č. 2 zákona č. 201/2012 Sb. se u spalování paliv v pístových spalovacích motorech sleduje celkový jmenovitý tepelný příkon, a to už od hranice **0,3 MW**.
-
-Prakticky to znamená, že nestačí dívat se pouze na elektrický výkon uvedený v nabídce dodavatele. Pro posouzení je nutné znát příkon v palivu. U jedné jednotky může být elektrický výkon například výrazně nižší než tepelný příkon v palivu. Pokud je v objektu více jednotek nebo jsou součástí jedné provozovny i další spalovací zdroje, musí se posoudit jejich vzájemná vazba.
-
-U vyjmenovaného zdroje může být potřeba **povolení provozu** nebo změna stávajícího povolení. Pokud je KGJ doplňována do stávající kotelny, nelze automaticky předpokládat, že ji pokryje staré povolení pro kotle. Pístový spalovací motor má jiné emisní charakteristiky než kotel a obvykle se posuzuje samostatně.
-
-> **Praktická poznámka:** Před objednáním jednotky si vždy ověřte nejen elektrický výkon, ale hlavně jmenovitý tepelný příkon v palivu. Právě ten často rozhoduje o tom, zda bude zdroj spadat do povolovacího režimu podle zákona o ochraně ovzduší.
-
-## Jaké emise se u kogenerační jednotky řeší
-
-U kogeneračních jednotek na zemní plyn se nejčastěji řeší zejména **NOx** a **CO**. Podle typu zařízení, paliva, provozního režimu a požadavků vyhlášky nebo povolení mohou být relevantní i další látky. U jiných paliv než zemního plynu se rozsah posouzení může významně změnit.
-
-Emisní parametry uvedené výrobcem jsou důležitý podklad, ale samy o sobě nemusí stačit. Úřad nebo zpracovatel odborného posouzení potřebuje vědět, při jakých podmínkách byly hodnoty garantovány, zda jsou přepočteny na správný obsah kyslíku, zda platí pro dané palivo, jaký je provozní režim a zda bude instalována technologie ke snížení emisí, například katalytický systém.
-
-U KGJ je důležité také rozlišit běžný provoz a nestandardní stavy. Emise při startu, najíždění, odstavení nebo poruše mohou být jiné než při ustáleném provozu. Pro povolení se obvykle nastavují provozní podmínky tak, aby bylo jasné, kdy může jednotka běžet, jak se bude sledovat provoz a jak se bude prokazovat plnění emisních požadavků.
-
-## Měření emisí: kdy se provádí a proč ho řešit už v projektu
-
-Pokud je kogenerační jednotka vyjmenovaným zdrojem nebo pokud to stanoví povolení, bude provozovatel obvykle potřebovat autorizované měření emisí. To slouží k ověření, zda zdroj po uvedení do provozu skutečně splňuje emisní limity a podmínky povolení.
-
-Měření emisí se musí připravit technicky. Komín nebo výfukové potrubí musí mít vhodné měřicí místo, bezpečný přístup, odběrové otvory, pracovní plošinu nebo jiné řešení, které umožní provést měření podle požadavků. Pokud se na to zapomene v projektu, může být měření po instalaci obtížné nebo neproveditelné bez dodatečných úprav.
-
-Typický problém je výfuk vyvedený do místa, kde není bezpečný přístup, kde není dostatečný rovný úsek potrubí, kde chybí odběrový otvor nebo kde měření ruší nevhodné proudové poměry. U kompaktních kontejnerových KGJ se proto vyplatí řešit měřicí místo už s dodavatelem technologie.
-
-Více k měřením emisí najdete na stránce [Měření emisí NATURCHEM](https://www.naturchem.cz/sluzby/mereni-emisi).
-
-## Komín, výduch a odvod spalin
-
-Odvod spalin není jen technický detail. Výška, umístění a provedení komína mohou rozhodovat o rozptylu emisí, bezpečnosti provozu, možnosti měření a vztahu k okolní zástavbě. U nízkých výduchů v husté zástavbě může vzniknout problém i u zařízení, které jinak plní emisní limity.
-
-Při návrhu je potřeba zkontrolovat, kam budou spaliny odváděny, zda výduch neústí do nevhodné výšky, zda nebude docházet k obtěžování okolí, zda je možné provést měření emisí a zda komín odpovídá požadavkům projektanta, výrobce i povolovací dokumentace.
-
-U KGJ umístěné v kontejneru se často řeší nejen výfuk spalin, ale i hluk z výfuku, sání a chlazení. Technické řešení proto musí být koordinované. Komín nemá být posouzen izolovaně od akustiky a provozu zařízení.
-
-## Hluk z kogenerační jednotky
-
-Hluk je u kogeneračních jednotek velmi častým problémem. Zdroj hluku není jen samotný motor. Významné mohou být výfuk spalin, sání vzduchu, odvod tepla, ventilátory, chladiče, kontejner, prostupy stavební konstrukcí, vibrace a přenos hluku do konstrukce objektu.
-
-U nemocnic, bytových domů, škol, obcí nebo provozů v blízkosti obytné zástavby je vhodné hluk řešit už před instalací. Kogenerační jednotka může běžet dlouhodobě a někdy i ve večerní nebo noční době. To je z hlediska hygienických limitů zásadní, protože noční provoz je obvykle posuzován přísněji než denní provoz.
-
-Hluková studie by měla pracovat s reálným umístěním jednotky, akustickými parametry technologie, provozní dobou, současným hlukovým pozadím, nejbližšími chráněnými prostory a všemi relevantními zdroji. Pokud je KGJ doplňována do areálu, kde už jsou ventilátory, kotelna, chlazení nebo doprava, je potřeba posoudit i souběh zdrojů.
-
-## Kdy je vhodná hluková studie a kdy měření hluku
-
-Hluková studie je vhodná před instalací nebo před povolením. Umožní odhadnout, zda navržené řešení splní hygienické limity a zda bude potřeba doplnit tlumiče, protihlukové kryty, akustické žaluzie, pružné uložení, úpravu výfuku nebo omezení provozu v noční době.
-
-Měření hluku má smysl po instalaci, při kontrole, při stížnostech nebo při ověření účinnosti protihlukových opatření. Pokud se měří až po spuštění jednotky a zjistí se nevyhovující stav, bývá řešení složitější. Proto je u citlivých lokalit lepší nejprve zpracovat hlukovou studii a měřením později ověřit skutečný stav.
-
-U KGJ je potřeba dávat pozor také na tónové složky a nízkofrekvenční charakter hluku. Subjektivně obtěžující hluk nemusí být vždy jen otázkou celkové hladiny akustického tlaku. Proto je důležité, aby studie i měření odpovídaly skutečnému charakteru zdroje.
-
-## Provozní hodiny a režim provozu
-
-Provozní hodiny jsou důležité pro ovzduší, hluk i ekonomiku provozu. Úřad může požadovat informaci, zda bude jednotka provozována nepřetržitě, jen ve špičkách, sezónně, v pracovní dny, nebo jako záložní zdroj. U kogenerace je obvyklý dlouhodobější provoz, protože ekonomika zařízení závisí na využití tepla a elektřiny.
-
-Z hlediska hluku je zásadní, zda bude jednotka běžet v noci. Z hlediska emisí je důležité, jaký bude roční počet provozních hodin a zda budou emise hodnoceny jako běžný provozní zdroj, nebo zda má zařízení zvláštní režim. U záložních zdrojů mohou platit odlišné úvahy než u kogenerace určené pro pravidelný provoz.
-
-Provozní režim by měl být popsán realisticky. Pokud se do dokumentace uvede krátký provoz, ale jednotka bude ve skutečnosti běžet většinu roku, vzniká riziko nesouladu při kontrole i při řešení stížností.
-
-## Co má být v dokumentaci
-
-Dobrá dokumentace ke kogenerační jednotce musí spojit technické údaje výrobce s reálným umístěním a provozem. Nestačí přiložit prospekt. Úřad potřebuje rozumět tomu, jak bude jednotka skutečně provozována a jaké vlivy bude mít na okolí.
-
-| Oblast | Co je potřeba doložit nebo popsat |
+| Celkový jmenovitý tepelný příkon kotelny | Praktický význam |
 |---|---|
-| Technologie | Typ KGJ, výrobce, model, počet jednotek, elektrický výkon, tepelný výkon a jmenovitý tepelný příkon v palivu. |
-| Palivo | Druh paliva, spotřeba, kvalita paliva a návaznost na plynovou přípojku nebo jiné zásobování. |
-| Emise | Garantované emisní parametry, relevantní znečišťující látky, emisní limity, případná technologie snižování emisí. |
-| Komín a spaliny | Trasa spalin, výška výduchu, průměr, teplota, objemový průtok, měřicí místo a bezpečný přístup pro měření. |
-| Hluk | Akustické parametry jednotky, sání, výfuku, chlazení, umístění a vzdálenost k chráněné zástavbě. |
-| Provoz | Provozní hodiny, denní/noční provoz, sezónnost, běžný a maximální režim. |
-| Povolení | Vazba na stávající kotelnu, povolení provozu, stavební řízení, JES, požadavky krajského úřadu nebo KHS. |
+| Do 0,3 MW včetně | Obvykle nejde o vyjmenovaný zdroj podle přílohy č. 2 zákona o ochraně ovzduší. Přesto platí obecné povinnosti provozovat zdroj v souladu s technickými podmínkami a neobtěžovat okolí. |
+| Více než 0,3 MW až 1 MW | U kotlů jde o oblast, kde je nutné ověřit zařazení podle zákona o ochraně ovzduší, ale měřicí povinnosti se mohou lišit podle paliva, typu zdroje a aktuálního znění vyhlášky. |
+| Od 1 MW do 5 MW včetně | U plynných paliv se typicky řeší pravidelné jednorázové měření emisí a provozní evidence podle prováděcí vyhlášky. |
+| Více než 5 MW | Zpravidla vyšší rozsah povinností, povolení provozu, častější měření, důslednější evidence a u větších změn i potřeba odborných podkladů. |
+| 50 MW a více | Jde už o režim velkých spalovacích zdrojů s odlišnými požadavky. Tento článek se zaměřuje na kotelny do 50 MW. |
 
-U větších instalací nebo citlivých lokalit je vhodné připravit dokumentaci tak, aby byly emise a hluk řešeny souběžně. Technické řešení výfuku, tlumičů, sání, chlazení a komína musí dávat smysl jako celek.
+U konkrétní kotelny je vždy nutné vycházet z aktuálního znění předpisů, rozhodnutí krajského úřadu a technických parametrů zdroje. Hranice příkonu je pouze první krok, nikoli celé posouzení.
+
+> **Praktická poznámka:** Při výměně kotle si vždy nechte od dodavatele potvrdit **jmenovitý tepelný příkon v palivu**, nikoli jen tepelný výkon. Bez tohoto údaje nelze spolehlivě určit povolení, měření emisí ani zařazení kotelny.
+
+## Kdy je potřeba povolení provozu
+
+Povolení provozu se řeší u vyjmenovaných stacionárních zdrojů podle zákona o ochraně ovzduší. U kotlů je relevantní zejména položka pro **spalování paliv v kotlích** podle celkového jmenovitého tepelného příkonu.
+
+Povolení nebo změna povolení bývá potřeba zejména tehdy, když se zřizuje nová kotelna, navyšuje se příkon, mění se palivo, mění se počet kotlů, mění se komín nebo se zásadně mění provozní režim. Pozor také na výměnu starého kotle za nový. I když se provozovateli zdá, že jde jen o technickou obnovu, z hlediska ovzduší může jít o změnu zdroje.
+
+U stávajících kotelen je nutné porovnat skutečný stav s povolením. Rozhodující je, co je uvedeno ve výroku rozhodnutí a v závazných podmínkách provozu. Pokud povolení uvádí konkrétní kotle, příkony, komíny, palivo nebo provozní podmínky, nelze je změnit bez ověření, zda není potřeba změna povolení.
+
+## NOx a CO: co se u plynových kotlů sleduje
+
+U plynových kotlů se při měření emisí běžně sledují zejména **oxidy dusíku (NOx)** a **oxid uhelnatý (CO)**. NOx souvisí hlavně s teplotou spalování, konstrukcí hořáku, nastavením spalování a typem kotle. CO je důležitým ukazatelem kvality spalování; zvýšené hodnoty mohou signalizovat špatné seřízení, nedostatek spalovacího vzduchu, znečištění hořáku nebo technickou závadu.
+
+U nových nízkoemisních kotlů mohou být hodnoty NOx výrazně nižší než u starších zařízení. To ale neznamená, že měření není potřeba, pokud ho stanoví právní předpis nebo povolení. Výrobce může garantovat emisní třídu nebo emisní parametry, ale provozovatel musí být schopen doložit skutečný stav při provozu.
+
+Výsledky měření se obvykle hodnotí po přepočtu na stanovené referenční podmínky, včetně referenčního obsahu kyslíku. Proto není vhodné porovnávat hodnoty z analyzátoru bez znalosti metodiky, režimu kotle a požadavku uvedeného v předpisu nebo povolení.
+
+## Kdy se provádí měření emisí
+
+Měření emisí se řeší při uvedení zdroje do provozu, po některých změnách zdroje a dále pravidelně podle příkonu, paliva a typu spalovacího zdroje. U plynových kotelen v pásmu 1 až 5 MW se běžně setkáváme s intervalem pravidelného jednorázového měření v řádu několika let, u větších zdrojů může být interval kratší. Přesný režim je nutné ověřit podle aktuální vyhlášky a konkrétního povolení.
+
+Prakticky je důležité řešit měření už při návrhu kotelny. Komín nebo kouřovod musí mít vhodné měřicí místo, odběrové otvory a bezpečný přístup. Pokud se na to zapomene, může být autorizované měření technicky obtížné nebo bude vyžadovat dodatečné úpravy.
+
+U více kotlů je potřeba ověřit, zda se měří každý kotel samostatně, nebo zda je možné měřit na společném odvodu spalin. To závisí na technickém provedení, provozním režimu, požadavku povolení a metodických možnostech měření. Nelze automaticky předpokládat, že jeden odběr za společným komínem vždy nahradí měření jednotlivých kotlů.
+
+Více k měření najdete na stránce [Měření emisí NATURCHEM](https://www.naturchem.cz/sluzby/mereni-emisi).
+
+## Sčítání kotlů v jedné kotelně
+
+Sčítání příkonů je jedna z nejčastějších příčin chyb. Provozovatel má například několik menších kotlů a každý samostatně vypadá podlimitně. Pokud ale tvoří jednu kotelnu nebo společný zdroj, může celkový příkon překročit rozhodnou hranici.
+
+Při sčítání je potřeba řešit hlavně technickou a provozní souvislost. Důležité je, zda kotle slouží stejnému účelu, jsou ve stejné provozovně, mají společné řízení, společný komín nebo jsou instalovány jako jeden energetický celek. Samostatný náhradní nebo záložní zdroj může vyžadovat zvláštní posouzení podle reálného provozu a povolení.
+
+U výměn kotlů se často mění jen část kotelny. I tehdy je potřeba posoudit celkový stav po změně. Nestačí říct, že se mění pouze jeden kotel. Důležité je, jaký bude součet příkonů po výměně a jak bude kotelna skutečně provozována.
+
+## Komíny, kouřovody a měřicí místa
+
+Komín je důležitý nejen pro bezpečný odvod spalin, ale i pro měření emisí a pro posouzení vlivu zdroje na okolí. U nové nebo rekonstruované kotelny je vhodné už v projektu zkontrolovat, zda je navrženo vhodné měřicí místo s bezpečným přístupem.
+
+Měřicí místo má být umístěno tak, aby výsledky odpovídaly skutečným emisím zdroje. Problém vzniká u příliš krátkých rovných úseků, nevhodně umístěných odběrových otvorů, nepřístupných komínů, společných kouřovodů nebo míst, kde nelze bezpečně pracovat.
+
+U kotelen v nemocnicích, školách, bytových domech nebo průmyslových areálech se často setkáváme s tím, že měření nebylo při projektování zohledněno. Provozovatel pak musí dodatečně řešit odběrové otvory, lávky, plošiny nebo jiné technické úpravy.
+
+## Provozní hodiny a evidence
+
+Provozní hodiny jsou důležité pro vyhodnocení režimu zdroje, plánování měření i plnění podmínek povolení. U běžné kotelny může jít o sezónní provoz, u nemocnice nebo průmyslu o celoroční provoz, u záložních kotlů o provoz pouze při poruše nebo špičce.
+
+Provozovatel by měl vést přehled o provozu zdroje, spotřebě paliva, provedených servisních zásazích, měřeních, poruchách a případných změnách. U vyjmenovaných zdrojů je provozní evidence důležitá nejen formálně, ale i prakticky. Pomáhá doložit, jak byl zdroj provozován a zda odpovídá povolení.
+
+U plynových kotelen je vhodné sladit provozní evidenci se servisní dokumentací. Zvýšené CO, zhoršené spalování nebo opakované poruchy mohou souviset s technickým stavem hořáku, výměníku, regulace nebo přívodu spalovacího vzduchu.
+
+## Co zkontrolovat při výměně kotle
+
+Výměna kotle je častá situace, při které vznikají nejasnosti. Provozovatel řeší dodávku a montáž, ale zapomene ověřit návaznost na povolení provozu a měření emisí. Přitom právě výměna kotle může změnit příkon, emisní parametry, způsob odvodu spalin i měřicí místo.
+
+Před výměnou je vhodné zkontrolovat zejména aktuální povolení provozu, seznam povolených kotlů, celkový příkon kotelny, druh paliva, komíny, provozní režim a poslední protokoly z měření emisí. Pokud nový kotel nahrazuje starý, je potřeba ověřit, zda jde o změnu podstatnou pro ochranu ovzduší a zda bude potřeba oznámení, změna povolení nebo nové měření po uvedení do provozu.
+
+U kondenzačních kotlů a moderních nízkoemisních hořáků je vhodné zkontrolovat také technické podmínky měření. Nízká teplota spalin, kondenzace, společné kouřovody nebo kaskádové zapojení mohou ovlivnit praktické provedení odběru.
 
 ## Nejčastější chyby z praxe
 
-Nejčastější chybou je posuzování KGJ podle elektrického výkonu místo podle tepelného příkonu v palivu. Provozovatel pak podcení povinnosti podle zákona o ochraně ovzduší a zjistí až pozdě, že jednotka může vyžadovat povolení provozu nebo měření emisí.
+Nejčastější chybou je záměna výkonu a příkonu. Pokud se povinnosti posuzují podle výkonu místo podle jmenovitého tepelného příkonu, může být kotelna zařazena špatně.
 
-Druhou častou chybou je opomenutí měřicího místa na spalinové cestě. Pokud není v projektu připraven odběrový otvor a bezpečný přístup, musí se později řešit dodatečné stavební nebo technologické úpravy.
+Druhou častou chybou je nesčítání kotlů. Několik menších kotlů může dohromady tvořit zdroj, který už má jiné povinnosti než jednotlivé kotle posuzované samostatně.
 
-Třetím problémem je hluk. Dodavatel často uvádí akustický výkon nebo hladinu hluku za určitých podmínek, ale konkrétní umístění v areálu může být jiné. Sání, výfuk, chlazení a odrazy od fasád mohou způsobit, že skutečný stav nebude odpovídat očekávání.
+Třetím problémem je staré povolení, které neodpovídá skutečnému stavu. V kotelně jsou jiné kotle, jiný příkon, jiný komín nebo jiný provozní režim, ale dokumentace zůstala původní.
 
-Častou chybou je také nejasný vztah ke stávající kotelně. Pokud se KGJ přidává do provozu, kde už jsou kotle nebo jiné spalovací zdroje, je nutné posoudit celý energetický soubor a ověřit, zda se nemění povolení, provozní řád nebo emisní a hlukové podmínky.
+Častá je také absence měřicího místa. Kotelna je technicky funkční, ale autorizované měření emisí se provádí obtížně, protože projekt nepočítal s odběrovými otvory a bezpečným přístupem.
+
+## Jaké podklady si připravit
+
+Pro rychlé posouzení kotelny jsou nejdůležitější technické listy kotlů, štítkové údaje, jmenovité tepelné příkony, palivo, zapojení kotlů, počet komínů nebo kouřovodů, provozní hodiny a poslední protokoly z měření emisí.
+
+U stávající kotelny je vhodné poslat také aktuální povolení provozu, provozní řád, provozní evidenci, projektovou dokumentaci a informaci o plánované změně. U nové kotelny pomůže situační výkres, schéma zapojení a návrh měřicích míst.
+
+| Podklad | Proč je důležitý |
+|---|---|
+| Technické listy kotlů | Určení výkonu, příkonu, paliva, emisních parametrů a provozních podmínek. |
+| Seznam kotlů a jejich příkony | Zařazení kotelny podle celkového jmenovitého tepelného příkonu. |
+| Palivo | Emisní limity a měřicí povinnosti závisí na druhu paliva. |
+| Komíny a kouřovody | Ověření možnosti měření a správného odvodu spalin. |
+| Povolení provozu | Porovnání povoleného a skutečného stavu. |
+| Provozní hodiny | Určení režimu provozu, evidence a praktického významu zdroje. |
+| Poslední protokoly z měření emisí | Ověření, zda zdroj plnil limity a jaké látky byly měřeny. |
 
 ## Co nám můžete poslat k posouzení
 
-Pro prvotní posouzení pošlete technický list kogenerační jednotky, údaje o palivu, elektrickém výkonu, tepelném výkonu a jmenovitém tepelném příkonu, návrh umístění, trasu spalin, výšku komína, provozní hodiny a informaci, zda bude jednotka běžet i v noci.
+Pošlete nám technické listy kotlů, přehled příkonů, palivo, schéma komínů, provozní hodiny, stávající povolení a poslední protokoly z měření emisí. Pokud připravujete výměnu kotle, pošlete také údaje o původním i novém kotli.
 
-Dále je vhodné poslat situaci areálu, půdorys nebo řez kotelny, vzdálenost k nejbližším obytným domům nebo jiným chráněným prostorům, údaje o stávajících kotlích a případné stávající povolení provozu. Pokud už máte požadavek krajského úřadu, KHS, stavebního úřadu nebo projektanta, pošlete ho také.
-
-Prověříme požadavky na emise, hluk a povolení kogenerační jednotky. Navrhneme, zda bude potřeba povolení provozu, odborný posudek, rozptylová studie, autorizované měření emisí, hluková studie, měření hluku nebo úprava technického řešení.
+Zkontrolujeme zařazení kotelny, měřicí povinnosti a návaznost na povolení provozu. Prověříme, zda je potřeba změna povolení, nové měření emisí, úprava provozní evidence, doplnění měřicího místa nebo jiné technické řešení.
 
 ## Krátké shrnutí
 
-Kogenerační jednotka se musí posuzovat podle skutečných technických parametrů a provozního režimu. Rozhodující je zejména tepelný příkon v palivu, typ spalovacího motoru, palivo, komín, emise, hluk, provozní hodiny a umístění vůči okolní zástavbě.
+U plynové kotelny 0,3 až 50 MW je potřeba řešit hlavně celkový jmenovitý tepelný příkon, sčítání kotlů, palivo, komíny, provozní hodiny, měření emisí a soulad se stávajícím povolením. Z hlediska emisí se obvykle sledují zejména **NOx** a **CO**.
 
-Před instalací je vhodné ověřit, zda jednotka spadá mezi vyjmenované zdroje znečišťování ovzduší, zda bude potřebovat povolení provozu, jak bude probíhat měření emisí a zda návrh splní hlukové limity. U citlivých lokalit je vhodné řešit hlukovou studii ještě před objednáním finální technologie.
+Nejčastější problémy vznikají při výměně kotlů, navyšování příkonu, změně komína nebo u kotelen, kde skutečný stav už neodpovídá starému povolení. Provozovatel by měl tyto věci zkontrolovat před změnou, ne až při měření nebo kontrole.
 
-Pošlete nám technický list KGJ, palivo, příkon/výkon, komín, umístění a provozní hodiny. Prověříme, jaké podklady budou potřeba pro emise, hluk, povolení provozu a následné měření.
+Pošlete nám technické listy kotlů, příkony, palivo, komíny, povolení a provozní hodiny. Prověříme, jaké povinnosti se na kotelnu vztahují a jaké podklady bude potřeba připravit.
 
 ## Věcná opora článku
 
 | Podklad | Praktický význam |
 |---|---|
-| [Zákon č. 201/2012 Sb., o ochraně ovzduší](https://www.zakonyprolidi.cz/cs/2012-201) | Základní předpis pro povolování a provoz stacionárních zdrojů znečišťování ovzduší. U KGJ je nutné určit, zda jde o vyjmenovaný zdroj podle přílohy č. 2. |
-| Příloha č. 2 zákona č. 201/2012 Sb. | Pro kogenerační jednotky s pístovým spalovacím motorem je relevantní zejména kód 1.2 pro spalování paliv v pístových spalovacích motorech podle celkového jmenovitého tepelného příkonu. |
-| [Vyhláška č. 415/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-415) | Stanovuje emisní limity, způsob zjišťování úrovně znečišťování, náležitosti odborných podkladů, provozní evidence a další požadavky k zákonu o ochraně ovzduší. |
-| Příloha č. 2 vyhlášky č. 415/2012 Sb. | Obsahuje specifické emisní limity a technické podmínky pro spalovací stacionární zdroje. U KGJ je nutné použít správnou část podle typu zdroje, příkonu, paliva a data uvedení do provozu. |
-| [Zákon č. 258/2000 Sb., o ochraně veřejného zdraví](https://www.zakonyprolidi.cz/cs/2000-258) | Právní základ pro ochranu zdraví před hlukem. U KGJ je důležitý vztah k chráněným venkovním a vnitřním prostorům staveb. |
-| [Nařízení vlády č. 272/2011 Sb.](https://www.zakonyprolidi.cz/cs/2011-272) | Stanovuje hygienické limity hluku a způsob hodnocení hluku a vibrací. Používá se pro hlukové studie i měření hluku po instalaci KGJ. |
-| [Zákon č. 148/2023 Sb., o jednotném environmentálním stanovisku](https://www.zakonyprolidi.cz/cs/2023-148) | U některých záměrů může být relevantní pro sjednocení environmentálních požadavků v navazujícím povolovacím procesu. |
-| Povolení provozu, stávající provozní řád a projektová dokumentace | V konkrétním provozu je rozhodující, co je již povoleno, zda se přidáním KGJ mění zdroj, provozní podmínky, emise, komín nebo hlukové poměry. |
+| [Zákon č. 201/2012 Sb., o ochraně ovzduší](https://www.zakonyprolidi.cz/cs/2012-201) | Základní předpis pro stacionární zdroje znečišťování ovzduší. U kotelen je klíčové zařazení podle přílohy č. 2 a povinnosti provozovatele. |
+| Příloha č. 2 zákona č. 201/2012 Sb. | Uvádí vyjmenované stacionární zdroje. Pro plynové kotelny je relevantní zejména kód 1.1 pro spalování paliv v kotlích podle celkového jmenovitého tepelného příkonu. |
+| [Vyhláška č. 415/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-415) | Stanovuje emisní limity, způsob zjišťování úrovně znečišťování, intervaly měření, provozní evidenci a další prováděcí požadavky k zákonu o ochraně ovzduší. |
+| [Vyhláška č. 398/2025 Sb.](https://www.zakonyprolidi.cz/cs/2025-398) | Novelizuje vyhlášku č. 415/2012 Sb. a upravuje mimo jiné některé požadavky na zjišťování úrovně znečišťování u spalovacích zdrojů. U aktuálních posouzení je nutné pracovat s účinným zněním. |
+| Povolení provozu kotelny | V konkrétním provozu rozhoduje, jaké kotle, příkony, palivo, komíny a podmínky jsou povoleny. |
+| Technické listy a štítky kotlů | Základní podklad pro určení jmenovitého tepelného příkonu, výkonu, paliva a emisních parametrů. |
+| Protokoly z autorizovaného měření emisí | Dokládají skutečné hodnoty NOx, CO a dalších relevantních látek při provozu zdroje. |
+| Provozní evidence | Pomáhá doložit provozní hodiny, spotřebu paliva, servis, poruchy, měření a soulad s povolením. |
 
-Z těchto podkladů plyne, že KGJ nelze posuzovat pouze jako ekonomické nebo energetické zařízení. Provozovatel musí včas prověřit požadavky na ovzduší, měření emisí, hluk, komín a povolení provozu. Pokud se tyto otázky řeší až po instalaci, může být náprava technicky i finančně náročná.
+Z těchto podkladů plyne, že plynovou kotelnu je potřeba posuzovat podle skutečného technického a provozního stavu. Nestačí vědět, že jde o zemní plyn a moderní kotle. Rozhodující je součet příkonů, zařazení zdroje, povolení, měřicí povinnosti a možnost bezpečně provést měření emisí.

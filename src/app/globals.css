@@ -11344,9 +11344,12 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   display: block;
   width: 100%;
   max-width: 30rem;
+  height: auto;
   margin-inline: auto;
   border-radius: var(--radius-sharp);
   box-shadow: var(--shadow-soft);
+  object-fit: contain;
+  aspect-ratio: 1024 / 687;
 }
 
 @media (max-width: 900px) {

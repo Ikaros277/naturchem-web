@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { headers } from "next/headers";
-
-import { NotFoundIllustration } from "@/components/NotFoundIllustration";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/locales";
@@ -54,8 +53,16 @@ export default async function LocaleNotFound() {
             </nav>
           </div>
 
-          <figure className="not-found-figure" aria-label={t.illustrationAlt}>
-            <NotFoundIllustration className="not-found-illustration" />
+          <figure className="not-found-figure">
+            <Image
+              src="/graphics/not-found-404.png"
+              alt={t.illustrationAlt}
+              width={1024}
+              height={687}
+              className="not-found-illustration"
+              sizes="(max-width: 900px) 88vw, 28rem"
+              priority
+            />
           </figure>
         </div>
       </div>

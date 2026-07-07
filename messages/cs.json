@@ -52,6 +52,9 @@
     "privacy": "Ochrana osobních údajů",
     "cookies": "Zásady cookies",
     "manageCookies": "Spravovat cookies",
+    "surveyHighlightTitle": "Spolupracovali jste s námi?",
+    "surveyHighlightText": "Krátké hodnocení nám pomůže držet kvalitu měření, studií a komunikace.",
+    "surveyHighlightLink": "Vyplnit dotazník spokojenosti",
     "copyright": "© NATURCHEM, s.r.o. {year} · IČO {ico} · DIČ {dic}"
   },
   "common": {

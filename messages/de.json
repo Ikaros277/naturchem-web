@@ -52,6 +52,9 @@
     "privacy": "Datenschutzerklärung",
     "cookies": "Cookie-Richtlinie",
     "manageCookies": "Cookies verwalten",
+    "surveyHighlightTitle": "Haben Sie mit uns zusammengearbeitet?",
+    "surveyHighlightText": "Eine kurze Bewertung hilft uns, die Qualität von Messungen, Studien und Kommunikation zu halten.",
+    "surveyHighlightLink": "Zufriedenheitsfragebogen ausfüllen",
     "copyright": "© NATURCHEM, s.r.o. {year} · IČO {ico} · DIČ {dic}"
   },
   "common": {

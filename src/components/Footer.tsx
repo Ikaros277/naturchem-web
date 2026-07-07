@@ -54,12 +54,14 @@ export async function Footer({ locale }: Props) {
   const currentYear = new Date().getFullYear();
   const {
     footerCompanyLinks,
+    footerSurveyLink,
     footerServiceLinks,
     footerContactPageLink,
     footerPhones,
     footerLocationLine
   } = getFooterNav(locale);
   const contactHref = localizeHref(footerContactPageLink.href, locale);
+  const surveyHref = localizeHref(footerSurveyLink.href, locale);
 
   return (
     <footer className="site-footer">
@@ -70,6 +72,13 @@ export async function Footer({ locale }: Props) {
           </FooterColumn>
           <FooterColumn title={t.services} ariaLabel={t.servicesAria} className="footer-zone--services">
             <FooterLinkList links={footerServiceLinks} locale={locale} />
+            <aside className="footer-survey-highlight" aria-label={footerSurveyLink.label}>
+              <p className="footer-survey-highlight-title">{t.surveyHighlightTitle}</p>
+              <p className="footer-survey-highlight-text">{t.surveyHighlightText}</p>
+              <Link href={surveyHref} className="footer-survey-highlight-link">
+                {t.surveyHighlightLink}
+              </Link>
+            </aside>
           </FooterColumn>
           <FooterColumn title={t.contact} ariaLabel={t.contactAria} className="footer-zone--contact">
             <p className="footer-contact-meta">{footerLocationLine}</p>

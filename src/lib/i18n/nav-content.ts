@@ -105,15 +105,16 @@ export function getFooterNav(locale: Locale) {
     { href: "/reference", label: companyLabels.references },
     { href: "/akreditace-autorizace-dokumenty", label: companyLabels.accreditation },
     { href: "/poradna", label: companyLabels.articles },
-    { href: "/faq", label: companyLabels.faq },
-    { href: "/dotaznik-spokojenosti", label: companyLabels.satisfactionSurvey }
+    { href: "/faq", label: companyLabels.faq }
   ];
 
+  const footerSurveyLink: FooterLink = {
+    href: "/dotaznik-spokojenosti",
+    label: companyLabels.satisfactionSurvey
+  };
+
   const footerServiceLinks: readonly FooterLink[] = [
-    { href: "/sluzby", label: serviceLabels.all },
-    { href: "/sluzby/mereni-emisi", label: serviceLabels.emissions },
-    { href: "/sluzby/pracovni-prostredi", label: serviceLabels.workplace },
-    { href: "/sluzby/rozptylove-studie", label: serviceLabels.dispersion }
+    { href: "/sluzby", label: serviceLabels.all }
   ];
 
   const footerContactPageLink: FooterLink = {
@@ -132,6 +133,7 @@ export function getFooterNav(locale: Locale) {
 
   return {
     footerCompanyLinks,
+    footerSurveyLink,
     footerServiceLinks,
     footerContactPageLink,
     footerPhones: company.phones,
@@ -155,8 +157,7 @@ const salesNavLabels: Record<Locale, string> = {
   de: "Angebot Messtechnik"
 };
 
-/** Query bypasses stale browser 301 cache from legacy /prodej → / redirect. */
-const salesNavHref = "/prodej?menu=nav";
+const salesNavHref = "/prodej";
 
 export function getSalesNavLink(locale: Locale) {
   return {

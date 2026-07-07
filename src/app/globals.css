@@ -8804,6 +8804,56 @@ main.home-page + .site-footer {
   color: #fff;
 }
 
+.site-footer .footer-survey-highlight {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(184, 214, 202, 0.45);
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(184, 214, 202, 0.14), rgba(184, 214, 202, 0.05));
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.site-footer .footer-survey-highlight-title {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.site-footer .footer-survey-highlight-text {
+  margin: 0 0 12px;
+  color: #dbe7ef;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.site-footer .footer-survey-highlight-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: #b8d6ca;
+  color: #0f2437;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.site-footer .footer-survey-highlight-link:hover {
+  background: #d4ebe2;
+  color: #0a1a28;
+  transform: translateY(-1px);
+}
+
+.site-footer .footer-survey-highlight-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 .site-footer .footer-contact-meta {
   margin: 0 0 10px;
   font-size: 0.875rem;

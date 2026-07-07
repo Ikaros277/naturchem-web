@@ -70,7 +70,7 @@ export function SatisfactionSurveyForm({ categories }: Props) {
 
     try {
       const formData = new FormData(event.currentTarget);
-      const response = await fetch("/api/satisfaction-survey", {
+      const response = await fetch("/api/satisfaction-survey/", {
         method: "POST",
         headers: { "Accept-Language": locale },
         body: formData

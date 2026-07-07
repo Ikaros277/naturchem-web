@@ -210,8 +210,8 @@
     "submit": "Odeslat dotazník",
     "submitting": "Odesílám…",
     "sending": "Moment, odesílám dotazník…",
-    "successTitle": "Děkujeme za zpětnou vazbu",
-    "successMessage": "Vaše hodnocení jsme přijali. Pomůže nám zlepšovat spolupráci s Vámi i dalšími zákazníky.",
+    "successTitle": "Dotazník byl úspěšně odeslán",
+    "successMessage": "Děkujeme za Vaši zpětnou vazbu. Pomůže nám zlepšovat spolupráci s Vámi i dalšími zákazníky.",
     "sendFailure": "Dotazník se nepodařilo odeslat. Napište na {email} nebo zavolejte {phone}."
   },
   "poradna": {

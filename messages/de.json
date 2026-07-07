@@ -210,8 +210,8 @@
     "submit": "Fragebogen absenden",
     "submitting": "Wird gesendet…",
     "sending": "Einen Moment, der Fragebogen wird gesendet…",
-    "successTitle": "Vielen Dank für Ihr Feedback",
-    "successMessage": "Wir haben Ihre Bewertung erhalten. Sie hilft uns, die Zusammenarbeit mit Ihnen und anderen Kunden zu verbessern.",
+    "successTitle": "Fragebogen erfolgreich gesendet",
+    "successMessage": "Vielen Dank für Ihr Feedback. Es hilft uns, die Zusammenarbeit mit Ihnen und anderen Kunden zu verbessern.",
     "sendFailure": "Der Fragebogen konnte nicht gesendet werden. Schreiben Sie an {email} oder rufen Sie {phone} an."
   },
   "poradna": {

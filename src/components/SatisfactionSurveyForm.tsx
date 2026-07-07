@@ -65,11 +65,12 @@ export function SatisfactionSurveyForm({ categories }: Props) {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setStatus("loading");
     setFeedback(t.sending);
 
     try {
-      const formData = new FormData(event.currentTarget);
+      const formData = new FormData(form);
       const response = await fetch("/api/satisfaction-survey/", {
         method: "POST",
         headers: { "Accept-Language": locale },
@@ -90,7 +91,7 @@ export function SatisfactionSurveyForm({ categories }: Props) {
 
       setStatus("success");
       setFeedback(result.message || t.successMessage);
-      event.currentTarget.reset();
+      form.reset();
       try {
         sendGtagEvent("satisfaction_survey_submit", { form_id: "dotaznik-spokojenosti" });
       } catch {

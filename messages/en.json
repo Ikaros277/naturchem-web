@@ -210,8 +210,8 @@
     "submit": "Submit survey",
     "submitting": "Sending…",
     "sending": "One moment, sending your survey…",
-    "successTitle": "Thank you for your feedback",
-    "successMessage": "We received your rating. It helps us improve cooperation with you and other clients.",
+    "successTitle": "Survey submitted successfully",
+    "successMessage": "Thank you for your feedback. It helps us improve cooperation with you and other clients.",
     "sendFailure": "We could not send the survey. Email {email} or call {phone}."
   },
   "poradna": {

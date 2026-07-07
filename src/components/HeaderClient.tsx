@@ -179,9 +179,6 @@ export function HeaderClient({
                 </details>
                 <details className="nav-mobile-details">
                   <summary>{t.experience}</summary>
-                  <LocaleLink href="/provozy-a-technologie" className="nav-mobile-overview" onClick={closeMenu}>
-                    {t.experienceOverview}
-                  </LocaleLink>
                   <div className="nav-mobile-sub nav-mobile-sub--mega">
                     <MobileExperienceMegaGroups groups={experienceMegaGroups} onNavigate={closeMenu} />
                   </div>

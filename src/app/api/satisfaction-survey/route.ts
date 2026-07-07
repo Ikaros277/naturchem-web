@@ -26,7 +26,7 @@ const apiMessages = {
       "Dotazník je přijat. E-mailová služba zatím není aktivní, ale data byla zaznamenána v systému.",
     sendFailure: (email: string, phone: string) =>
       `Dotazník se nepodařilo odeslat. Napište na ${email} nebo zavolejte ${phone}.`,
-    success: "Děkujeme za zpětnou vazbu. Pomůže nám zlepšovat spolupráci s Vámi i dalšími zákazníky.",
+    success: "Dotazník se úspěšně odeslal. Děkujeme za Vaši zpětnou vazbu — pomůže nám zlepšovat spolupráci s Vámi i dalšími zákazníky.",
     rateLimited: "Příliš mnoho odeslaných zpráv. Zkuste to prosím později.",
     fieldTooLong: "Jedno z polí je příliš dlouhé. Zkuste text zkrátit."
   },
@@ -39,7 +39,7 @@ const apiMessages = {
       "Your survey has been received. Email delivery is not active yet, but the data was recorded in the system.",
     sendFailure: (email: string, phone: string) =>
       `We could not send the survey. Email ${email} or call ${phone}.`,
-    success: "Thank you for your feedback. It helps us improve cooperation with you and other clients.",
+    success: "The survey was submitted successfully. Thank you for your feedback — it helps us improve cooperation with you and other clients.",
     rateLimited: "Too many messages sent. Please try again later.",
     fieldTooLong: "One of the fields is too long. Please shorten the text."
   },
@@ -53,7 +53,7 @@ const apiMessages = {
     sendFailure: (email: string, phone: string) =>
       `Der Fragebogen konnte nicht gesendet werden. E-Mail ${email} oder Anruf ${phone}.`,
     success:
-      "Vielen Dank für Ihr Feedback. Es hilft uns, die Zusammenarbeit mit Ihnen und anderen Kunden zu verbessern.",
+      "Der Fragebogen wurde erfolgreich gesendet. Vielen Dank für Ihr Feedback — es hilft uns, die Zusammenarbeit mit Ihnen und anderen Kunden zu verbessern.",
     rateLimited: "Zu viele Nachrichten. Bitte versuchen Sie es später erneut.",
     fieldTooLong: "Ein Feld ist zu lang. Bitte kürzen Sie den Text."
   }

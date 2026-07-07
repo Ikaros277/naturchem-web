@@ -1,5 +1,11 @@
 import { defaultLocale, isLocale, locales, type Locale } from "@/lib/i18n/locales";
 
+/** Matches `trailingSlash: true` in next.config — internal links must include the slash. */
+function withTrailingSlash(pathname: string): string {
+  if (pathname === "/" || /\.[a-z0-9]+$/i.test(pathname)) return pathname;
+  return pathname.endsWith("/") ? pathname : `${pathname}/`;
+}
+
 export function stripLocaleFromPathname(pathname: string): string {
   const parts = pathname.split("/");
   const maybeLocale = parts[1];
@@ -24,7 +30,7 @@ export function localizeHref(href: string, locale: Locale): string {
         ? `/${locale}`
         : `/${locale}${basePath}`;
 
-  return `${localized}${query ? `?${query}` : ""}${hash ? `#${hash}` : ""}`;
+  return `${withTrailingSlash(localized)}${query ? `?${query}` : ""}${hash ? `#${hash}` : ""}`;
 }
 
 export function getAlternateLocale(locale: Locale): Locale {

@@ -26,5 +26,9 @@ export function getSalesCategoryProducts(
 }
 
 export function getAllSalesCategoryParams() {
-  return getSalesCategoryIds(PCF_BRAND).map((slug) => ({ brand: PCF_BRAND, slug }));
+  const slugIds = new Set([
+    ...getSalesCategoryIds(PCF_BRAND),
+    ...getSalesCategoryOverview(PCF_BRAND).map((category) => category.id)
+  ]);
+  return [...slugIds].map((slug) => ({ brand: PCF_BRAND, slug }));
 }

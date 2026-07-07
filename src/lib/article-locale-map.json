@@ -62,6 +62,9 @@
     "en",
     "de"
   ],
+  "izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi": [
+    "cs"
+  ],
   "jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota": [
     "cs",
     "en",
@@ -101,6 +104,12 @@
     "cs",
     "en",
     "de"
+  ],
+  "kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1": [
+    "cs"
+  ],
+  "kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu": [
+    "cs"
   ],
   "kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox": [
     "cs",
@@ -234,6 +243,9 @@
     "cs",
     "en",
     "de"
+  ],
+  "tonove-slozky-hluku-ceska-legislativa-provozovatel": [
+    "cs"
   ],
   "zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady": [
     "cs",

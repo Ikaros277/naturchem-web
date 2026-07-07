@@ -75,9 +75,14 @@ export function SatisfactionSurveyForm({ categories }: Props) {
         headers: { "Accept-Language": locale },
         body: formData
       });
-      const result = (await response.json()) as { ok: boolean; message: string };
+      let result: { ok?: boolean; message?: string } = {};
+      try {
+        result = (await response.json()) as { ok?: boolean; message?: string };
+      } catch {
+        result = {};
+      }
 
-      if (!response.ok || !result.ok) {
+      if (!response.ok || result.ok === false) {
         setStatus("error");
         setFeedback(result.message || sendFailureMessage);
         return;
@@ -86,7 +91,11 @@ export function SatisfactionSurveyForm({ categories }: Props) {
       setStatus("success");
       setFeedback(result.message || t.successMessage);
       event.currentTarget.reset();
-      sendGtagEvent("satisfaction_survey_submit", { form_id: "dotaznik-spokojenosti" });
+      try {
+        sendGtagEvent("satisfaction_survey_submit", { form_id: "dotaznik-spokojenosti" });
+      } catch {
+        // Telemetry must never break successful form submission UX.
+      }
     } catch {
       setStatus("error");
       setFeedback(sendFailureMessage);

@@ -499,6 +499,13 @@ section.content-block:has(+ .container) {
   }
 }
 
+@media (min-width: 1280px) {
+  .sector-grid,
+  .grid-3.sector-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .sector-card {
   display: flex;
   flex-direction: column;
@@ -3522,6 +3529,21 @@ section.content-block.page-first-section + .section.equipment-groups-accordion,
   background: #fff;
 }
 
+.reference-area-media {
+  margin: -0.35rem -0.35rem 0.75rem;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #e8edf2;
+}
+
+.reference-area-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .reference-area-card h3 {
   margin: 0 0 0.5rem;
   font-size: 1.02rem;
@@ -5237,6 +5259,10 @@ main.services-index-page:has(> .page-hero-band) {
   gap: 1rem;
 }
 
+.service-groups-accordion .service-card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .service-index-card {
   display: flex;
   flex-direction: column;
@@ -5250,7 +5276,7 @@ main.services-index-page:has(> .page-hero-band) {
 }
 
 .service-index-card--with-thumb .index-card-head {
-  padding: 0.85rem 1rem 0;
+  padding: 1.25rem 1rem 0;
   margin-top: 0;
 }
 
@@ -5648,7 +5674,8 @@ main.services-index-page:has(> .page-hero-band) {
   /* wide-grid: marketing gridy 3 → 2 sloupce */
   .audience-grid,
   .home-offer-grid,
-  .service-card-grid {
+  .service-card-grid,
+  .service-groups-accordion .service-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -5690,7 +5717,8 @@ main.services-index-page:has(> .page-hero-band) {
 
   .audience-grid,
   .home-offer-grid,
-  .service-card-grid {
+  .service-card-grid,
+  .service-groups-accordion .service-card-grid {
     grid-template-columns: 1fr;
   }
 
@@ -5861,6 +5889,11 @@ main.services-index-page:has(> .page-hero-band) {
 
 .reference-example-group .service-group-details summary h2 {
   font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 760;
+}
+
+.reference-example-group .service-group-details summary.service-group-summary {
+  padding: 1rem 1.2rem;
 }
 
 .reference-examples-list {
@@ -6483,6 +6516,17 @@ main.contact-page + .site-footer {
   margin: 0.55rem 0 0;
   font-size: 0.82rem;
   color: var(--muted);
+}
+
+@media (min-width: 1200px) {
+  .satisfaction-nps-fieldset {
+    max-width: 860px;
+  }
+
+  .satisfaction-nps-fieldset .satisfaction-nps-scale,
+  .satisfaction-nps-fieldset .satisfaction-nps-hints {
+    max-width: 760px;
+  }
 }
 
 .satisfaction-survey-teaser-card {
@@ -9280,12 +9324,20 @@ main.home-page + .site-footer {
 
 /* tablet: topbar viditelný; mobil: skrytý */
 @media (max-width: 1023px) and (min-width: 768px) {
+  :root {
+    --site-header-offset: 6.25rem;
+  }
+
   .topbar {
     display: block;
   }
 }
 
 @media (max-width: 767px) {
+  :root {
+    --site-header-offset: 4rem;
+  }
+
   .topbar {
     display: none;
   }
@@ -9304,6 +9356,52 @@ main.home-page + .site-footer {
   color: #c7d6e3;
 }
 
+@media (max-width: 1279px) {
+  .hero--split,
+  .page-hero-band--standard,
+  .page-hero-band--service,
+  .service-hero-band {
+    height: auto;
+    min-height: clamp(280px, 36vh, var(--hero-band-min-height-standard));
+  }
+
+  .hero--split > .container,
+  .page-hero-band > .container,
+  .service-hero-band > .container {
+    flex: none;
+    height: auto;
+    min-height: 0;
+  }
+
+  .hero-band-grid,
+  .page-hero-band-inner,
+  .service-hero-band-inner {
+    height: auto;
+    min-height: 0;
+  }
+
+  .hero-copy,
+  .hero-band-text,
+  .home-page .hero--split .hero-copy {
+    align-content: start;
+    overflow: visible;
+    height: auto;
+    min-height: 0;
+  }
+
+  .page-hero-band .page-hero-band-inner,
+  .service-hero-band .service-hero-band-inner {
+    padding-top: var(--hero-band-safe-top);
+    padding-bottom: var(--hero-band-safe-bottom);
+  }
+
+  .home-page .hero--split,
+  .home-page .hero--split > .container,
+  .home-page .hero--split .hero-band-grid {
+    min-height: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   body {
     padding-bottom: 0;
@@ -9315,11 +9413,12 @@ main.home-page + .site-footer {
 
 
   .hero-copy,
-
-  .hero-copy,
   .hero-band-text {
     max-width: none;
     padding-right: 0;
+    align-content: start;
+    overflow: visible;
+    height: auto;
   }
 
   .hero-diagonal-spacer {
@@ -9399,7 +9498,7 @@ main.home-page + .site-footer {
   .home-page .hero--split {
     height: auto;
     min-height: 0;
-    padding: 1.15rem 0;
+    padding: clamp(1rem, 2.5vw, 1.35rem) 0 clamp(1.15rem, 3vw, 1.75rem);
   }
 
   .home-page .hero--split > .container {
@@ -10265,7 +10364,9 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   font-weight: 700;
   letter-spacing: 0.01em;
   color: var(--sales-accent-strong);
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.2;
+  max-width: 100%;
 }
 
 .sales-category-overview,
@@ -10441,6 +10542,8 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   margin: 1rem 0 0;
   padding: 0;
   display: grid;
+  width: 100%;
+  max-width: none;
   grid-template-columns: minmax(0, 1fr);
   gap: 0.85rem;
 }
@@ -10455,6 +10558,13 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   .sales-category-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sales-brand-page--pcf-elettronica .sales-category-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.9rem;
   }
 }
 
@@ -10522,6 +10632,7 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   margin-top: auto;
   font-size: 0.88rem;
   padding: 0.35rem 0.72rem;
+  align-self: flex-start;
 }
 
 .sales-category-list-link--with-thumb {

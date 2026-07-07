@@ -10,7 +10,6 @@ import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
-import { ReferenceAreasGrid } from "@/components/ReferenceAreasGrid";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import { toReferenceExampleListingMap } from "@/lib/reference-example-listing";
@@ -75,12 +74,6 @@ export default async function ReferencePage({ params }: Props) {
         <p className="muted section-intro">{reference.referenceCustomersIntro}</p>
         <ClientLogosGrid expandable moreHref={link("/reference#zakaznici")} />
       </section>
-
-      <ReferenceAreasGrid
-        areas={reference.referenceAreas}
-        locale={locale}
-        heading={reference.referenceAreasHeading}
-      />
 
       <section className="section section-surface accordion-index-surface content-block container page-below-fold" id="priklady">
         <h2>{reference.referenceExamplesHeading}</h2>

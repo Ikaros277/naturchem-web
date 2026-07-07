@@ -4,6 +4,7 @@ export const INQUIRY_CATEGORIES = [
   { id: "mereni", label: "Měření" },
   { id: "studie", label: "Studie / posudek" },
   { id: "eia", label: "Úřad, povolení nebo EIA" },
+  { id: "pristroj", label: "Poptávka přístroje" },
   { id: "skoleni", label: "Školení" },
   { id: "nevim", label: "Ještě nevím — chci poradit" }
 ] as const;
@@ -14,6 +15,7 @@ export const INQUIRY_CATEGORY_LABELS: Record<InquiryCategoryId, string> = {
   mereni: "Měření",
   studie: "Studie / posudek",
   eia: "Úřad, povolení nebo EIA",
+  pristroj: "Poptávka přístroje",
   skoleni: "Školení",
   nevim: "Ještě nevím — chci poradit"
 };

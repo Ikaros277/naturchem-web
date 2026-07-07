@@ -42,7 +42,7 @@ export function SalesCategoryOverview({ locale, brandSlug, productCountLabel }: 
                     alt=""
                     fill
                     className="sales-category-list-thumb-img"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 16vw"
                     loading="lazy"
                     fetchPriority="low"
                   />
@@ -51,7 +51,7 @@ export function SalesCategoryOverview({ locale, brandSlug, productCountLabel }: 
                 <ServiceIcon icon={iconKey} variant="inline" size={28} className="sales-category-list-icon" />
               )}
               <span className="sales-category-list-title">{title}</span>
-              <SalesCountBadge>{String(category.productCount)}</SalesCountBadge>
+              <SalesCountBadge>{countLabel}</SalesCountBadge>
             </a>
           </li>
         );

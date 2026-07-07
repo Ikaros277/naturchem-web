@@ -9,7 +9,7 @@
 
 .contact-offices-map--panel {
   margin-top: 1rem;
-  min-height: clamp(320px, 42vh, 440px);
+  min-height: clamp(280px, 34vh, 360px);
   border: 1px solid var(--border);
   border-radius: var(--radius-sharp);
   overflow: hidden;

@@ -4,6 +4,7 @@ export type ReferenceArea = {
   title: string;
   description: string;
   contactService: string;
+  imageSrc: string;
 };
 
 export type ReferenceExample = {
@@ -40,49 +41,57 @@ export const referenceAreas: readonly ReferenceArea[] = [
     title: "Průmysl a automobilová výroba",
     description:
       "Měření emisí a pracovního prostředí, hluk technologií, VOC/TOC, provozní dokumentace a podklady pro změny výroby.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/automotive.webp"
   },
   {
     title: "Energetika, kotelny a kogenerace",
     description:
       "Měření emisí kotelen a kogeneračních jednotek, rozptylové studie, povolení provozu, ISPOP a provozní řády.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/kotelny.webp"
   },
   {
     title: "Lakovny a povrchové úpravy",
     description:
       "Měření VOC/TOC a TZL, nové výduchy, EIA, rozptylové studie a podklady pro povolení provozu lakovacích technologií.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/lakovny.webp"
   },
   {
     title: "Zemědělství a bioplyn",
     description:
       "Měření emisí BPS, EIA a zjišťovací řízení, rozptylové studie, provozní řády a podklady pro zemědělské areály.",
-    contactService: "Rozptylové studie"
+    contactService: "Rozptylové studie",
+    imageSrc: "/hero/provozy/bioplyn-biometan.webp"
   },
   {
     title: "Odpady, recyklace a skládky",
     description:
       "Rozptylové a hlukové studie, odborné posudky, EIA, provozní řády a kapacitní změny odpadových zařízení.",
-    contactService: "Rozptylové studie"
+    contactService: "Rozptylové studie",
+    imageSrc: "/hero/provozy/odpady-recyklace.webp"
   },
   {
     title: "Stavebnictví a infrastruktura",
     description:
       "Hlukové studie, měření hluku pro kolaudace, posouzení VZT a technologií, podklady pro investiční záměry.",
-    contactService: "Měření hluku a akustika"
+    contactService: "Měření hluku a akustika",
+    imageSrc: "/hero/provozy/stavebni-zamery.webp"
   },
   {
     title: "Veřejný sektor a zdravotnictví",
     description:
       "Hlukové a rozptylové posouzení, měření pracovního prostředí, podklady pro veřejné stavby a provozy.",
-    contactService: "Měření hluku a akustika"
+    contactService: "Měření hluku a akustika",
+    imageSrc: "/hero/provozy/verejne-budovy.webp"
   },
   {
     title: "Projektanti, investoři a EIA",
     description:
       "Koordinace měření, studií a technických příloh pro EIA, povolení provozu a komunikaci s úřady.",
-    contactService: "EIA a oznámení záměru"
+    contactService: "EIA a oznámení záměru",
+    imageSrc: "/hero/provozy/odborne-posudky-povoleni.webp"
   }
 ] as const;
 

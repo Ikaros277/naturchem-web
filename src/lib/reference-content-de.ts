@@ -4,6 +4,7 @@ export type ReferenceArea = {
   title: string;
   description: string;
   contactService: string;
+  imageSrc: string;
 };
 
 export type ReferenceExample = {
@@ -40,49 +41,57 @@ export const referenceAreas: readonly ReferenceArea[] = [
     title: "Industrie und Automobil",
     description:
       "Emissions- und Arbeitsplatzmessungen, Technologielärm, VOC/TOC, Betriebsdokumentation und Begleitdokumentation bei Produktionsänderungen.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/automotive.webp"
   },
   {
     title: "Energie, Kesselanlagen und Kraft-Wärme-Kopplung",
     description:
       "Emissionsmessungen an Kesselanlagen und Blockheizkraftwerken, Ausbreitungsstudien, Betriebsgenehmigungen, ISPOP und Betriebsregeln.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/kotelny.webp"
   },
   {
     title: "Lackierereien und Oberflächenbehandlung",
     description:
       "VOC/TOC- und Partikelmessungen, neue Abgaskamine, UVP, Ausbreitungsstudien und unterstützende Dokumentation für die Zulassung von Lacktechnologien.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/lakovny.webp"
   },
   {
     title: "Landwirtschaft und Biogas",
     description:
       "Emissionsmessungen von Biogasanlagen, UVP und Scoping, Ausbreitungsstudien, Betriebsregeln und unterstützende Dokumentation für landwirtschaftliche Standorte.",
-    contactService: "Rozptylové studie"
+    contactService: "Rozptylové studie",
+    imageSrc: "/hero/provozy/bioplyn-biometan.webp"
   },
   {
     title: "Abfall, Recycling und Deponien",
     description:
       "Ausbreitungs- und Lärmstudien, Gutachten, UVP, Betriebsvorschriften und Kapazitätsänderungen bei Abfallentsorgungsanlagen.",
-    contactService: "Rozptylové studie"
+    contactService: "Rozptylové studie",
+    imageSrc: "/hero/provozy/odpady-recyklace.webp"
   },
   {
     title: "Bau und Infrastruktur",
     description:
       "Lärmstudien, Lärmmessungen zur Belegungsgenehmigung, HVAC- und Technikbewertung, Begleitdokumentation für Investitionsvorhaben.",
-    contactService: "Měření hluku a akustika"
+    contactService: "Měření hluku a akustika",
+    imageSrc: "/hero/provozy/stavebni-zamery.webp"
   },
   {
     title: "Öffentlicher Sektor und Gesundheitswesen",
     description:
       "Lärm- und Ausbreitungsbewertung, Arbeitsplatzmessungen, unterstützende Dokumentation für öffentliche Gebäude und Betriebe.",
-    contactService: "Měření hluku a akustika"
+    contactService: "Měření hluku a akustika",
+    imageSrc: "/hero/provozy/verejne-budovy.webp"
   },
   {
     title: "Designer, Investoren und UVP",
     description:
       "Koordination von Messungen, Studien und technischen Anhängen für UVP, Betriebsgenehmigungen und Kommunikation mit Behörden.",
-    contactService: "EIA a oznámení záměru"
+    contactService: "EIA a oznámení záměru",
+    imageSrc: "/hero/provozy/odborne-posudky-povoleni.webp"
   }
 ] as const;
 

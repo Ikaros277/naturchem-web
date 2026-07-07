@@ -4,6 +4,7 @@ export type ReferenceArea = {
   title: string;
   description: string;
   contactService: string;
+  imageSrc: string;
 };
 
 export type ReferenceExample = {
@@ -40,49 +41,57 @@ export const referenceAreas: readonly ReferenceArea[] = [
     title: "Industry and automotive",
     description:
       "Emission and workplace measurements, technology noise, VOC/TOC, operating documentation and supporting documentation for production changes.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/automotive.webp"
   },
   {
     title: "Energy, boiler plants and cogeneration",
     description:
       "Emission measurements at boiler plants and cogeneration units, dispersion studies, operating permits, ISPOP and operating rules.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/kotelny.webp"
   },
   {
     title: "Paint shops and surface treatment",
     description:
       "VOC/TOC and particulate matter measurements, new exhaust stacks, EIA, dispersion studies and supporting documentation for permitting paint technologies.",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    imageSrc: "/hero/provozy/lakovny.webp"
   },
   {
     title: "Agriculture and biogas",
     description:
       "Biogas plant emission measurements, EIA and scoping, dispersion studies, operating rules and supporting documentation for agricultural sites.",
-    contactService: "Rozptylové studie"
+    contactService: "Rozptylové studie",
+    imageSrc: "/hero/provozy/bioplyn-biometan.webp"
   },
   {
     title: "Waste, recycling and landfills",
     description:
       "Dispersion and noise studies, expert reports, EIA, operating rules and capacity changes at waste facilities.",
-    contactService: "Rozptylové studie"
+    contactService: "Rozptylové studie",
+    imageSrc: "/hero/provozy/odpady-recyklace.webp"
   },
   {
     title: "Construction and infrastructure",
     description:
       "Noise studies, noise measurements for occupancy approval, HVAC and technology assessment, supporting documentation for investment projects.",
-    contactService: "Měření hluku a akustika"
+    contactService: "Měření hluku a akustika",
+    imageSrc: "/hero/provozy/stavebni-zamery.webp"
   },
   {
     title: "Public sector and healthcare",
     description:
       "Noise and dispersion assessment, workplace measurements, supporting documentation for public buildings and operations.",
-    contactService: "Měření hluku a akustika"
+    contactService: "Měření hluku a akustika",
+    imageSrc: "/hero/provozy/verejne-budovy.webp"
   },
   {
     title: "Designers, investors and EIA",
     description:
       "Coordination of measurements, studies and technical appendices for EIA, operating permits and communication with authorities.",
-    contactService: "EIA a oznámení záměru"
+    contactService: "EIA a oznámení záměru",
+    imageSrc: "/hero/provozy/odborne-posudky-povoleni.webp"
   }
 ] as const;
 

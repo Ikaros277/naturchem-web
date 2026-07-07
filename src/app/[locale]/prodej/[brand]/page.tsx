@@ -147,7 +147,7 @@ export default async function SalesBrandPage({ params }: Props) {
 
   return (
 
-    <main className="section premium-page sales-page sales-brand-page">
+    <main className={`section premium-page sales-page sales-brand-page sales-brand-page--${brand.slug}`}>
 
       <JsonLd data={breadcrumbData} />
 

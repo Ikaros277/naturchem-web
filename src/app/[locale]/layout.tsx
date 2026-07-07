@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Source_Sans_3 } from "next/font/google";
-import "../globals.css";
 import { DeferredClientWidgets } from "@/components/DeferredClientWidgets";
 import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
+import { HtmlLang } from "@/components/HtmlLang";
 import { OutboundLinkTelemetry } from "@/components/OutboundLinkTelemetry";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/Header";
@@ -22,13 +21,6 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 import { schemaLanguage } from "@/lib/i18n/locale-pick";
-
-const fontSans = Source_Sans_3({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-sans",
-  weight: ["400", "600", "700"],
-  display: "swap"
-});
 
 type Props = {
   children: React.ReactNode;
@@ -84,46 +76,22 @@ export default async function LocaleLayout({ children, params }: Props) {
   const websiteData = buildWebSiteJsonLd(schemaLanguage(locale));
 
   return (
-    <html lang={locale} className={fontSans.variable}>
-      <head>
-        <link
-          rel="alternate"
-          type="text/plain"
-          href={`${siteUrl}/llms.txt`}
-          title="NATURCHEM — summary for AI assistants"
-        />
-        <link
-          rel="alternate"
-          type="text/plain"
-          href={`${siteUrl}/llms-full.txt`}
-          title="NATURCHEM — extended summary for AI assistants"
-        />
-        <link rel="help" type="text/plain" href={`${siteUrl}/ai.txt`} title="NATURCHEM — AI discovery" />
-        <link
-          rel="alternate"
-          type="text/plain"
-          href={`${siteUrl}/llms-articles.txt`}
-          title="NATURCHEM — article index for AI assistants"
-        />
-      </head>
-      <body className={fontSans.className}>
-        <LocaleProvider locale={locale} messages={pickClientMessages(messages)}>
-          <GoogleConsentModeInit />
-          <JsonLd data={websiteData} />
-          <JsonLd data={orgData} />
-          <JsonLd data={localBusinessData} />
-          <SkipToContent locale={locale} />
-          <Header locale={locale} />
-          <div id="page-content" tabIndex={-1}>
-            {children}
-          </div>
-          <Footer locale={locale} />
-          <CookieConsentBanner />
-          <DeferredClientWidgets />
-          <OutboundLinkTelemetry />
-          <SpeedInsights />
-        </LocaleProvider>
-      </body>
-    </html>
+    <LocaleProvider locale={locale} messages={pickClientMessages(messages)}>
+      <HtmlLang locale={locale} />
+      <GoogleConsentModeInit />
+      <JsonLd data={websiteData} />
+      <JsonLd data={orgData} />
+      <JsonLd data={localBusinessData} />
+      <SkipToContent locale={locale} />
+      <Header locale={locale} />
+      <div id="page-content" tabIndex={-1}>
+        {children}
+      </div>
+      <Footer locale={locale} />
+      <CookieConsentBanner />
+      <DeferredClientWidgets />
+      <OutboundLinkTelemetry />
+      <SpeedInsights />
+    </LocaleProvider>
   );
 }

@@ -84,14 +84,17 @@
     "skipToContent": "Skip to content"
   },
   "notFound": {
-    "eyebrow": "Error 404",
-    "title": "Page not found",
-    "lead": "This address does not exist, has moved, or is temporarily unavailable. Return to the homepage or choose one of the main sections.",
+    "eyebrow": "ERROR 404 · PAGE NOT FOUND",
+    "title": "This page got lost in the field",
+    "lead1": "The requested address was not detected during repeated surveying.",
+    "lead2": "It may have been relocated, removed, or changed operating mode without notice.",
+    "authorityNote": "If you are responding to a request from a regional hygiene station, environmental inspectorate, regional authority or building office, send us the notice, project documentation or a brief description of the operation. We will help determine whether you need measurements, a study, an expert report or operating documentation.",
+    "illustrationAlt": "Illustration: technician with map and survey instrument searching for a lost page in the field",
     "navAria": "Navigation from not found page",
+    "ctaContact": "Send request for assessment",
     "home": "Back to home",
     "services": "All services",
-    "articles": "Knowledge base",
-    "contact": "Contact"
+    "articles": "Knowledge base"
   },
   "accordion": {
     "expandClosed": "Show more",

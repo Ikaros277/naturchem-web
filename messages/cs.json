@@ -84,14 +84,17 @@
     "skipToContent": "Přeskočit na obsah"
   },
   "notFound": {
-    "eyebrow": "Chyba 404",
-    "title": "Stránka nenalezena",
-    "lead": "Adresa neexistuje, byla přesunuta nebo je dočasně nedostupná. Zkuste přejít na úvodní stránku nebo vybrat jednu z oblíbených sekcí.",
+    "eyebrow": "CHYBA 404 · STRÁNKA NENALEZENA",
+    "title": "Stránka se nám ztratila v terénu",
+    "lead1": "Hledaná adresa nebyla při opakovaném měření zjištěna.",
+    "lead2": "Možná byla přesunuta, odstraněna nebo změnila provozní režim bez ohlášení.",
+    "authorityNote": "Pokud řešíte požadavek od KHS, ČIŽP, krajského úřadu nebo stavebního úřadu, pošlete nám výzvu, projektovou dokumentaci nebo stručný popis provozu. Pomůžeme určit, zda potřebujete měření, studii, posudek nebo provozní dokumentaci.",
+    "illustrationAlt": "Ilustrace: technik s mapou a měřicím přístrojem hledá ztracenou stránku v terénu",
     "navAria": "Navigace ze stránky nenalezena",
+    "ctaContact": "Poslat požadavek k posouzení",
     "home": "Zpět na úvod",
     "services": "Přehled služeb",
-    "articles": "Odborné články",
-    "contact": "Kontakt"
+    "articles": "Odborné články"
   },
   "accordion": {
     "expandClosed": "Zobrazit více",

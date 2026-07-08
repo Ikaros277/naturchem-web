@@ -1,8 +1,10 @@
 "use client";
 
+import { MegaMenuColumnHead, MegaMenuMobileHeadLink } from "@/components/MegaMenuColumnHead";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { HeaderLabels, ONasHeaderMegaGroup } from "@/lib/header-nav-data";
 import { LocaleLink } from "@/lib/i18n/locale-link";
+import { oNasMegaGroupHeadHrefs } from "@/lib/megamenu-head-hrefs";
 import { oNasMegaGroupIcons, type ONasMegaGroupId } from "@/lib/megamenu-types";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
 
@@ -57,20 +59,24 @@ function MegaMenuColumn({
   onNavigate?: () => void;
 }) {
   const groupId = group.id;
+  const headHref = groupId ? oNasMegaGroupHeadHrefs[groupId] : group.links[0]?.href;
 
   return (
     <div className={`mega-menu-column mega-menu-column--${groupId ?? "default"}`}>
-      <div className="mega-menu-column-head">
-        <span className={`mega-menu-column-badge mega-menu-column-badge--${groupId ?? "default"}`}>
-          {groupId ? (
-            <ServiceIcon icon={oNasMegaGroupIcons[groupId]} variant="plain" size={22} />
-          ) : null}
-        </span>
-        <div className="mega-menu-column-heading">
-          <span className="mega-menu-column-title">{group.title}</span>
-          {group.subtitle ? <span className="mega-menu-column-sub">{group.subtitle}</span> : null}
-        </div>
-      </div>
+      {headHref ? (
+        <MegaMenuColumnHead
+          href={headHref}
+          groupId={groupId}
+          icon={
+            groupId ? (
+              <ServiceIcon icon={oNasMegaGroupIcons[groupId]} variant="plain" size={22} />
+            ) : null
+          }
+          title={group.title}
+          subtitle={group.subtitle}
+          onNavigate={onNavigate}
+        />
+      ) : null}
       <ul className="mega-menu-link-list">
         {group.links.map((item) => (
           <MegaMenuLinkRow
@@ -114,23 +120,41 @@ export function MobileONasMegaGroups({
 }) {
   return (
     <>
-      {groups.map((group) => (
+      {groups.map((group) => {
+        const headHref = group.id ? oNasMegaGroupHeadHrefs[group.id] : group.links[0]?.href;
+
+        return (
         <details
           key={group.id ?? group.title}
           className={`nav-mobile-details nav-mobile-nested mega-menu-mobile-group mega-menu-mobile-group--${group.id ?? "default"}`}
         >
           <summary>
-            <span className="mega-menu-mobile-summary">
-              {group.id ? (
-                <span className={`mega-menu-column-badge mega-menu-column-badge--${group.id}`}>
-                  <ServiceIcon icon={oNasMegaGroupIcons[group.id]} variant="plain" size={18} />
+            {headHref ? (
+              <MegaMenuMobileHeadLink
+                href={headHref}
+                groupId={group.id}
+                icon={
+                  group.id ? (
+                    <ServiceIcon icon={oNasMegaGroupIcons[group.id]} variant="plain" size={18} />
+                  ) : null
+                }
+                title={group.title}
+                subtitle={group.subtitle}
+                onNavigate={onNavigate}
+              />
+            ) : (
+              <span className="mega-menu-mobile-summary">
+                {group.id ? (
+                  <span className={`mega-menu-column-badge mega-menu-column-badge--${group.id}`}>
+                    <ServiceIcon icon={oNasMegaGroupIcons[group.id]} variant="plain" size={18} />
+                  </span>
+                ) : null}
+                <span className="mega-menu-mobile-heading">
+                  <span className="mega-menu-column-title">{group.title}</span>
+                  {group.subtitle ? <span className="mega-menu-column-sub">{group.subtitle}</span> : null}
                 </span>
-              ) : null}
-              <span className="mega-menu-mobile-heading">
-                <span className="mega-menu-column-title">{group.title}</span>
-                {group.subtitle ? <span className="mega-menu-column-sub">{group.subtitle}</span> : null}
               </span>
-            </span>
+            )}
           </summary>
           <ul className="mega-menu-link-list mega-menu-link-list--mobile">
             {group.links.map((item) => (
@@ -145,7 +169,8 @@ export function MobileONasMegaGroups({
             ))}
           </ul>
         </details>
-      ))}
+        );
+      })}
     </>
   );
 }

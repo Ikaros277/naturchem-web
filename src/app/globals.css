@@ -7983,6 +7983,40 @@ main.contact-page + .site-footer {
   margin-bottom: 0.8rem;
 }
 
+.mega-menu-column-head-link {
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-ui);
+  margin: -0.35rem;
+  padding: 0.35rem;
+  transition: background 0.15s ease;
+}
+
+.mega-menu-column-head-link:hover {
+  background: var(--surface-muted);
+}
+
+.mega-menu-column-head-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.mega-menu-mobile-head-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-ui);
+  padding: 0.15rem 0;
+}
+
+.mega-menu-mobile-head-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
 .mega-menu-column-badge {
   display: inline-flex;
   align-items: center;
@@ -10827,6 +10861,76 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   font-size: 0.9rem;
   font-weight: 650;
   color: var(--sales-accent-strong);
+}
+
+.sales-product-grid--rows {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 640px) {
+  .sales-product-grid--rows {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .sales-product-grid--rows {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.sales-product-grid--rows .sales-product-grid-link {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.sales-product-grid--rows .sales-product-grid-thumb {
+  flex: 0 0 clamp(10rem, 17vw, 15rem);
+  width: clamp(10rem, 17vw, 15rem);
+  aspect-ratio: 16 / 10;
+  margin: 0;
+}
+
+.sales-product-grid--rows .sales-product-grid-body {
+  justify-content: center;
+}
+
+.sales-product-grid--rows .sales-product-grid-title {
+  font-size: 1.08rem;
+}
+
+.sales-product-grid--rows .sales-product-grid-cta {
+  margin-top: 0;
+  margin-left: auto;
+  align-self: center;
+  border-top: none;
+  border-left: 1px solid rgba(15, 23, 42, 0.06);
+  padding-top: 0;
+  padding-left: 1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 759px) {
+  .sales-product-grid--rows .sales-product-grid-link {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .sales-product-grid--rows .sales-product-grid-thumb {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .sales-product-grid--rows .sales-product-grid-cta {
+    margin-left: 0;
+    align-self: flex-start;
+    border-left: none;
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+    padding-left: 0;
+    padding-top: 0.75rem;
+  }
 }
 
 .sales-subcategory-block + .sales-subcategory-block {

@@ -184,6 +184,7 @@ export function SalesProductCatalog({
                     locale={locale}
                     products={subgroup.items}
                     ctaLabel={ctaLabel}
+                    fullWidthRows={hideCategoryHeader}
                     subcategoryLabel={
                       subgroup.title
                         ? undefined

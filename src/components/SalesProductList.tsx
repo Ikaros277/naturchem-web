@@ -10,6 +10,7 @@ type Props = {
   products: readonly SalesProduct[];
   ctaLabel: string;
   subcategoryLabel?: (subcategory: string) => string | undefined;
+  fullWidthRows?: boolean;
 };
 
 export function SalesProductList({
@@ -17,12 +18,13 @@ export function SalesProductList({
   locale,
   products,
   ctaLabel,
-  subcategoryLabel
+  subcategoryLabel,
+  fullWidthRows = false
 }: Props) {
   const link = (href: string) => localizeHref(href, locale);
 
   return (
-    <ul className="sales-product-grid">
+    <ul className={`sales-product-grid${fullWidthRows ? " sales-product-grid--rows" : ""}`}>
       {products.map((product) => {
         const subLabel =
           product.subcategory && subcategoryLabel

@@ -7989,6 +7989,7 @@ main.contact-page + .site-footer {
   border-radius: var(--radius-ui);
   margin: -0.35rem;
   padding: 0.35rem;
+  white-space: normal;
   transition: background 0.15s ease;
 }
 
@@ -8010,6 +8011,7 @@ main.contact-page + .site-footer {
   color: inherit;
   border-radius: var(--radius-ui);
   padding: 0.15rem 0;
+  white-space: normal;
 }
 
 .mega-menu-mobile-head-link:focus-visible {
@@ -8064,6 +8066,7 @@ main.contact-page + .site-footer {
   font-size: 0.84rem;
   line-height: 1.4;
   color: #6b7c8d;
+  overflow-wrap: anywhere;
 }
 
 .mega-menu-link-list {

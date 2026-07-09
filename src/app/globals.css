@@ -7978,16 +7978,20 @@ main.contact-page + .site-footer {
 
 .mega-menu-column-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.7rem;
   margin-bottom: 0.8rem;
 }
 
 .mega-menu-column-head-link {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
   text-decoration: none;
   color: inherit;
   border-radius: var(--radius-ui);
-  margin: -0.35rem;
+  margin: 0;
   padding: 0.35rem;
   white-space: normal;
   transition: background 0.15s ease;
@@ -8048,6 +8052,7 @@ main.contact-page + .site-footer {
 .mega-menu-column-heading {
   display: grid;
   gap: 0.2rem;
+  flex: 1 1 auto;
   min-width: 0;
 }
 
@@ -8066,7 +8071,8 @@ main.contact-page + .site-footer {
   font-size: 0.84rem;
   line-height: 1.4;
   color: #6b7c8d;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .mega-menu-link-list {
@@ -8474,7 +8480,9 @@ main.contact-page + .site-footer {
   }
 
   .mega-menu-column-sub {
-    display: none;
+    display: block;
+    font-size: 0.76rem;
+    line-height: 1.35;
   }
 
   .mega-menu-link-row {

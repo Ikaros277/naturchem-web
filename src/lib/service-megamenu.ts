@@ -3,7 +3,7 @@ export const serviceMegaGroups = [
   {
     id: "mereni",
     title: "Měření",
-    subtitle: "Akreditovaná měření emisí, hluku a pracovního prostředí",
+    subtitle: "Měření emisí, hluku a pracovního prostředí",
     links: [
       {
         href: "/sluzby/pracovni-prostredi",

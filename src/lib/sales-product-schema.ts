@@ -11,6 +11,7 @@ export function buildSalesProductSchema({ product, brand, pageUrl }: BuildSalesP
   const description = product.tagline || product.intro;
   const image = product.imageSrc ? resolveOgImageUrl(product.imageSrc) : undefined;
 
+  // No public price on distributor product pages — omit offers to avoid invalid Product snippets.
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -23,19 +24,6 @@ export function buildSalesProductSchema({ product, brand, pageUrl }: BuildSalesP
       name: brand.name,
       ...(brand.website ? { url: brand.website } : {})
     },
-    ...(product.sourceUrl ? { sameAs: product.sourceUrl } : {}),
-    ...(product.datasheetHref
-      ? {
-          offers: {
-            "@type": "Offer",
-            url: pageUrl,
-            availability: "https://schema.org/InStock",
-            seller: {
-              "@type": "Organization",
-              name: "NATURCHEM, s.r.o."
-            }
-          }
-        }
-      : {})
+    ...(product.sourceUrl ? { sameAs: product.sourceUrl } : {})
   };
 }

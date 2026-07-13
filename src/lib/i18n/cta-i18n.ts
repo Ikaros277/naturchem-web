@@ -134,7 +134,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
           ? "Interesse an einem Gerät oder Zubehör aus unserem Angebot? Nennen Sie Gerätetyp, Parameter oder senden Sie eine Anfrage — wir erstellen ein Angebot."
           : "Interested in an instrument or accessory from our range? Send the product type, parameters or your inquiry — we will prepare a quote.",
         primaryLabel: isDe ? "Gerät anfragen" : "Request a quote",
-        primaryHref: contactUrl(isDe ? "Gerätevertrieb / Angebotsanfrage" : "Instrument sales inquiry"),
+        primaryHref: `${contactFormHref}?category=pristroj`,
         secondaryLabel: isDe ? "Markenübersicht" : "Brand overview",
         secondaryHref: "/prodej"
       }

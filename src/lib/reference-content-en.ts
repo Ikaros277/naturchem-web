@@ -104,7 +104,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "VOC/TOC and particulate matter measurements at process exhaust stacks",
     output: "emission measurement report and supporting documentation for operating permit / compliance verification",
     text: "We measured emissions from the paint technology including VOC/TOC and particulates at exhaust stacks. The report supported compliance with operating conditions and communication with the authority.",
-    tags: ["Emise", "VOC", "KÚ"],
+    tags: ["Emissions", "VOC", "Regional authority"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Request a similar project"
@@ -116,7 +116,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "cogeneration unit emissions, operating data, link to ISPOP",
     output: "report and supporting documentation for operating records",
     text: "We measured cogeneration unit emissions under an agreed operating regime and linked the results to operating records and ISPOP.",
-    tags: ["Emise", "ISPOP", "KÚ"],
+    tags: ["Emissions", "ISPOP", "Regional authority"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Request measurement / study"
@@ -128,7 +128,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "multiple sites, multiple cogeneration units",
     output: "set of reports and unified results records",
     text: "At several sites we measured cogeneration unit emissions using a uniform procedure. The outputs served for clear operating records across the group of plants.",
-    tags: ["Emise", "ISPOP"],
+    tags: ["Emissions", "ISPOP"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Request a similar project"
@@ -140,7 +140,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "two gas boilers, flue gases, operating regime",
     output: "emission measurement report",
     text: "We measured emissions from two boilers at representative output. The report served as supporting documentation for the source operator's obligations.",
-    tags: ["Emise", "KÚ", "ČIŽP"],
+    tags: ["Emissions", "Regional authority", "CZ EPA"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Request measurement / study"
@@ -152,7 +152,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "noise, dust, chemical substances, work positions",
     output: "supporting documentation for regional hygiene station and job categorisation",
     text: "We measured noise, dust and chemical substances at selected workplaces. The results supported job categorisation and communication with the regional hygiene station.",
-    tags: ["KHS", "Hluk", "Prašnost"],
+    tags: ["Occupational health", "Noise", "Dust"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
     cta: "Request a similar project"
@@ -164,7 +164,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "dust, metals, ozone, noise, vibration",
     output: "reports for employee exposure assessment",
     text: "We measured dust, metals, noise and vibration in the welding shop. The reports supported occupational health and safety and proposed workplace measures.",
-    tags: ["KHS", "Prašnost", "Hluk"],
+    tags: ["Occupational health", "Dust", "Noise"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
     cta: "Request a similar project"
@@ -176,7 +176,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "outdoor noise in a protected area",
     output: "measurement / acoustic assessment and recommendations for next steps",
     text: "We measured noise from the outdoor unit in a protected area. The output helped in communication with neighbours and planning next steps.",
-    tags: ["Hluk", "KHS"],
+    tags: ["Noise", "Occupational health"],
     href: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
     cta: "Request measurement / study"
@@ -188,7 +188,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "calculation or measurement of technology noise",
     output: "supporting documentation for occupancy approval, regional hygiene station or building authority",
     text: "We prepared a noise assessment of the technology relative to the nearest buildings. The documentation supported occupancy approval and discussions with authorities.",
-    tags: ["Hluk", "KHS", "VZT"],
+    tags: ["Noise", "Occupational health", "HVAC"],
     href: "/sluzby/hlukove-studie",
     contactService: "Měření hluku a akustika",
     cta: "Request measurement / study"
@@ -200,7 +200,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "several gas boilers, exhaust stacks, immission contributions",
     output: "dispersion study for the permitting process",
     text: "We prepared a dispersion study for a new boiler plant with immission contributions to the surroundings. Inputs: exhaust stacks, operating regime and source parameters.",
-    tags: ["Rozptyl", "KÚ", "EIA"],
+    tags: ["Dispersion", "Regional authority", "EIA"],
     href: "/sluzby/rozptylove-studie",
     contactService: "Rozptylové studie",
     cta: "Request measurement / study"
@@ -212,7 +212,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "expert report, dispersion study, noise study",
     output: "set of supporting documentation for permitting proceedings",
     text: "We combined an expert report, dispersion study and noise study for a waste facility. The outputs went into a single permitting process.",
-    tags: ["Rozptyl", "Hluk", "EIA", "KÚ"],
+    tags: ["Dispersion", "Noise", "EIA", "Regional authority"],
     href: "/sluzby/odborne-posudky",
     contactService: "Odborné posudky",
     cta: "Request measurement / study"
@@ -224,7 +224,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "EIA, technology, emissions, operating regime",
     output: "project notification and appendices for the permitting process",
     text: "We prepared EIA and technical appendices for a sheet metal paint shop including emission inputs and operating regime.",
-    tags: ["EIA", "Emise", "KÚ"],
+    tags: ["EIA", "Emissions", "Regional authority"],
     href: "/sluzby/eia-oznameni-zameru",
     contactService: "EIA a oznámení záměru",
     cta: "Request measurement / study"
@@ -236,7 +236,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "EIA, expert report, dispersion study, noise study",
     output: "comprehensive set of permitting documentation",
     text: "For foundry modernisation we aligned EIA, expert report, dispersion and noise into a single set of documentation for the technology change.",
-    tags: ["EIA", "Rozptyl", "Hluk", "KÚ"],
+    tags: ["EIA", "Dispersion", "Noise", "Regional authority"],
     href: "/sluzby/eia-posudky-poradenstvi",
     contactService: "EIA a oznámení záměru",
     cta: "Request measurement / study"
@@ -248,7 +248,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "operating rules, capacity increase, discussions with the authority",
     output: "operating documentation for permitting",
     text: "We prepared operating rules for a capacity increase and processing of construction rubble. The documentation went into official proceedings.",
-    tags: ["KÚ", "ČIŽP", "Ovzduší"],
+    tags: ["Regional authority", "CZ EPA", "Air"],
     href: "/sluzby/provozni-rady",
     contactService: "Provozní řády",
     cta: "Request a similar project"
@@ -260,7 +260,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "air, waste, link to emission measurements",
     output: "annual reporting and operating records",
     text: "We annually prepare integrated pollution reporting records and ISPOP submissions linked to emission measurements and operating permits.",
-    tags: ["ISPOP", "KÚ"],
+    tags: ["ISPOP", "Regional authority"],
     href: "/sluzby/ispop",
     contactService: "ISPOP",
     cta: "Request a similar project"
@@ -284,7 +284,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "EIA / scoping, operating and spatial context",
     output: "project notification",
     text: "We prepared supporting documentation for scoping during modernisation of cattle farming including capacity and impacts on the surroundings.",
-    tags: ["EIA", "KÚ"],
+    tags: ["EIA", "Regional authority"],
     href: "/sluzby/zjistovaci-rizeni-eia",
     contactService: "EIA a oznámení záměru",
     cta: "Request measurement / study"

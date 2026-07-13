@@ -4,7 +4,7 @@ import {
   sectorContactMessage,
   type ContactServiceOption
 } from "@/lib/contact-services";
-import { resolveInquiryCategory, type InquiryCategoryId } from "@/lib/contact-inquiry";
+import { resolveInquiryCategory, type InquiryCategoryId, isInquiryCategoryId } from "@/lib/contact-inquiry";
 
 export type ContactUrlPrefill = {
   initialServices: string[];
@@ -32,7 +32,10 @@ export function readContactUrlPrefill(search = ""): ContactUrlPrefill {
     ? extraParam.split(",").map((s) => s.trim()).filter(Boolean)
     : [];
   const initialServices = resolveContactServices(serviceParam, sectorParam, extraServices);
-  const initialCategory = resolveInquiryCategory(initialServices as ContactServiceOption[]);
+  const categoryParam = queryParam(params.get("category"));
+  const initialCategory = isInquiryCategoryId(categoryParam)
+    ? categoryParam
+    : resolveInquiryCategory(initialServices as ContactServiceOption[]);
   const initialMessage = sectorParam
     ? sectorContactMessage(sectorParam)
     : !isValidContactService(serviceParam) && serviceParam

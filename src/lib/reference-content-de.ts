@@ -104,7 +104,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "VOC/TOC- und Partikelmessungen an Prozessabgaskaminen",
     output: "Emissionsmessbericht und unterstützende Dokumentation für die Betriebsgenehmigung/Konformitätsüberprüfung",
     text: "Wir haben die Emissionen der Lackiertechnik gemessen, einschließlich VOC/TOC und Partikel an den Abgaskaminen. Der Bericht unterstützte die Einhaltung der Betriebsbedingungen und die Kommunikation mit der Behörde.",
-    tags: ["Emise", "VOC", "KÚ"],
+    tags: ["Emissionen", "VOC", "Landesamt"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Fordern Sie ein ähnliches Projekt an"
@@ -116,7 +116,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Emissionen von Blockheizkraftwerken, Betriebsdaten, Link zu ISPOP",
     output: "Bericht und unterstützende Dokumentation für Betriebsaufzeichnungen",
     text: "Wir haben die Emissionen von KWK-Einheiten unter einem vereinbarten Betriebsregime gemessen und die Ergebnisse mit Betriebsaufzeichnungen und ISPOP verknüpft.",
-    tags: ["Emise", "ISPOP", "KÚ"],
+    tags: ["Emissionen", "ISPOP", "Landesamt"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Messung/Studie anfordern"
@@ -128,7 +128,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Mehrere Standorte, mehrere Blockheizkraftwerke",
     output: "Reihe von Berichten und einheitlichen Ergebnisaufzeichnungen",
     text: "An mehreren Standorten haben wir die Emissionen von Blockheizkraftwerken nach einem einheitlichen Verfahren gemessen. Die Ergebnisse dienten der übersichtlichen Betriebsaufzeichnung im gesamten Anlagenverbund.",
-    tags: ["Emise", "ISPOP"],
+    tags: ["Emissionen", "ISPOP"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Fordern Sie ein ähnliches Projekt an"
@@ -140,7 +140,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "zwei Gaskessel, Rauchgase, Betriebsmodus",
     output: "Emissionsmessbericht",
     text: "Wir haben die Emissionen von zwei Kesseln mit repräsentativer Leistung gemessen. Der Bericht diente als Beleg für die Pflichten des Quellenbetreibers.",
-    tags: ["Emise", "KÚ", "ČIŽP"],
+    tags: ["Emissionen", "Landesamt", "Umweltinspektion"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
     cta: "Messung/Studie anfordern"
@@ -152,7 +152,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Lärm, Staub, chemische Substanzen, Arbeitspositionen",
     output: "unterstützende Dokumentation für die regionale Hygienestation und Arbeitsplatzkategorisierung",
     text: "An ausgewählten Arbeitsplätzen haben wir Lärm, Staub und chemische Substanzen gemessen. Die Ergebnisse unterstützten die Arbeitsplatzkategorisierung und die Kommunikation mit der regionalen Hygienestation.",
-    tags: ["KHS", "Hluk", "Prašnost"],
+    tags: ["Hygienebehörde", "Lärm", "Staub"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
     cta: "Fordern Sie ein ähnliches Projekt an"
@@ -164,7 +164,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Staub, Metalle, Ozon, Lärm, Vibration",
     output: "Berichte zur Beurteilung der Mitarbeiterexposition",
     text: "Wir haben Staub, Metalle, Lärm und Vibrationen in der Schweißerei gemessen. Die Berichte unterstützten den Arbeitsschutz und schlugen Maßnahmen am Arbeitsplatz vor.",
-    tags: ["KHS", "Prašnost", "Hluk"],
+    tags: ["Hygienebehörde", "Staub", "Lärm"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
     cta: "Fordern Sie ein ähnliches Projekt an"
@@ -176,7 +176,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Außenlärm in einem geschützten Bereich",
     output: "Messung / akustische Beurteilung und Empfehlungen für die nächsten Schritte",
     text: "Wir haben den Lärm des Außengeräts in einem geschützten Bereich gemessen. Die Ergebnisse halfen bei der Kommunikation mit den Nachbarn und bei der Planung der nächsten Schritte.",
-    tags: ["Hluk", "KHS"],
+    tags: ["Lärm", "Hygienebehörde"],
     href: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
     cta: "Messung/Studie anfordern"
@@ -188,7 +188,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Berechnung oder Messung von Technologielärm",
     output: "Belege für die Belegungsgenehmigung, regionale Hygienestation oder Baubehörde",
     text: "Wir haben eine Lärmbewertung der Technologie im Verhältnis zu den nächstgelegenen Gebäuden erstellt. Die Dokumentation unterstützte die Belegungsgenehmigung und Gespräche mit den Behörden.",
-    tags: ["Hluk", "KHS", "VZT"],
+    tags: ["Lärm", "Hygienebehörde", "HLK"],
     href: "/sluzby/hlukove-studie",
     contactService: "Měření hluku a akustika",
     cta: "Messung/Studie anfordern"
@@ -200,7 +200,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "mehrere Gaskessel, Abgaskamine, Immissionsbeiträge",
     output: "Ausbreitungsstudie für das Genehmigungsverfahren",
     text: "Für eine neue Kesselanlage haben wir eine Ausbreitungsstudie mit Immissionsbeiträgen in die Umgebung erstellt. Eingaben: Abgaskamine, Betriebsmodus und Quellenparameter.",
-    tags: ["Rozptyl", "KÚ", "UVP"],
+    tags: ["Ausbreitung", "Landesamt", "UVP"],
     href: "/sluzby/rozptylove-studie",
     contactService: "Rozptylové studie",
     cta: "Messung/Studie anfordern"
@@ -212,7 +212,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Gutachten, Ausbreitungsstudie, Lärmstudie",
     output: "Satz unterstützender Unterlagen für das Genehmigungsverfahren",
     text: "Für eine Abfallentsorgungsanlage haben wir ein Gutachten, eine Ausbreitungsstudie und eine Lärmstudie kombiniert. Die Ergebnisse gingen in ein einziges Genehmigungsverfahren ein.",
-    tags: ["Rozptyl", "Hluk", "UVP", "KÚ"],
+    tags: ["Ausbreitung", "Lärm", "UVP", "Landesamt"],
     href: "/sluzby/odborne-posudky",
     contactService: "Odborné posudky",
     cta: "Messung/Studie anfordern"
@@ -224,7 +224,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "UVP, Technologie, Emissionen, Betriebsmodus",
     output: "Projektanmeldung und Anhänge für das Genehmigungsverfahren",
     text: "Wir erstellten eine Umweltverträglichkeitsprüfung (UVP) und technische Anhänge für eine Blechlackiererei, einschließlich Emissionsangaben und Betriebsbedingungen.",
-    tags: ["UVP", "Emise", "KÚ"],
+    tags: ["UVP", "Emissionen", "Landesamt"],
     href: "/sluzby/eia-oznameni-zameru",
     contactService: "EIA a oznámení záměru",
     cta: "Messung/Studie anfordern"
@@ -236,7 +236,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "UVP, Gutachten, Ausbreitungsstudie, Lärmstudie",
     output: "umfassende Sammlung von Genehmigungsunterlagen",
     text: "Für die Modernisierung der Gießerei haben wir UVP, Gutachten, Streuung und Lärm in einer einzigen Dokumentation für den Technologiewechsel zusammengefasst.",
-    tags: ["UVP", "Rozptyl", "Hluk", "KÚ"],
+    tags: ["UVP", "Ausbreitung", "Lärm", "Landesamt"],
     href: "/sluzby/eia-posudky-poradenstvi",
     contactService: "EIA a oznámení záměru",
     cta: "Messung/Studie anfordern"
@@ -248,7 +248,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Betriebsregeln, Kapazitätserhöhung, Gespräche mit der Behörde",
     output: "Betriebsdokumentation zur Genehmigung",
     text: "Wir haben Betriebsordnungen für eine Kapazitätserhöhung und Aufbereitung von Bauschutt erstellt. Die Dokumentation ging in das offizielle Verfahren.",
-    tags: ["KÚ", "ČIŽP", "Ovzduší"],
+    tags: ["Landesamt", "Umweltinspektion", "Luft"],
     href: "/sluzby/provozni-rady",
     contactService: "Provozní řády",
     cta: "Fordern Sie ein ähnliches Projekt an"
@@ -260,7 +260,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "Luft, Abfall, Verbindung zu Emissionsmessungen",
     output: "jährliche Berichterstattung und Betriebsaufzeichnungen",
     text: "Wir erstellen jährlich integrierte Aufzeichnungen zur Verschmutzungsberichterstattung und ISPOP-Einreichungen im Zusammenhang mit Emissionsmessungen und Betriebsgenehmigungen.",
-    tags: ["ISPOP", "KÚ"],
+    tags: ["ISPOP", "Landesamt"],
     href: "/sluzby/ispop",
     contactService: "ISPOP",
     cta: "Fordern Sie ein ähnliches Projekt an"
@@ -284,7 +284,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     scope: "UVP / Scoping, betrieblicher und räumlicher Kontext",
     output: "Projektbenachrichtigung",
     text: "Wir haben unterstützende Unterlagen für die Rahmenplanung bei der Modernisierung der Rinderhaltung erstellt, einschließlich Kapazität und Auswirkungen auf die Umgebung.",
-    tags: ["UVP", "KÚ"],
+    tags: ["UVP", "Landesamt"],
     href: "/sluzby/zjistovaci-rizeni-eia",
     contactService: "EIA a oznámení záměru",
     cta: "Messung/Studie anfordern"

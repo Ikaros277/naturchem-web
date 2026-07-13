@@ -12,7 +12,7 @@ const DE: Partial<Record<string, SectorText>> = {
     title: "Lackierereien und Oberflächenbehandlung",
     description:
       "Für Lackierereien bearbeiten wir TOC/VOC-Messungen, Beschichtungsverbrauch, Datenblätter, Lackierkabinen, Trocknung, Strahlen, Filter, Aktivkohle, Absaugung, Betriebsanleitungen und Anbindung an Betriebsgenehmigungen. Bei Betrieben mit Personal bewerten wir auch das Arbeitsumfeld – Chemikalien, Lärm, Mikroklima oder Lüftungswirksamkeit.",
-    serviceTags: "Emissionen, VOC/TOC, Arbeitsumfeld, Betriebsanleitung, ČIŽP, Krajs",
+    serviceTags: "Emissionen, VOC/TOC, Arbeitsumfeld, Betriebsanleitung, ČIŽP, Landesamt",
     factors: "VOC, TOC, TSP, Lösemittel, Absaugung, Filtration",
     ariaLabel: "Leistungen für Lackierereien anzeigen",
     linkHint: "Leistungen für diesen Betriebstyp anzeigen"
@@ -48,7 +48,7 @@ const DE: Partial<Record<string, SectorText>> = {
     title: "Holzverarbeitung und Tischlereien",
     description:
       "Für Sägewerke, Tischlereien und Holzverarbeitung bearbeiten wir Staub, TSP, Emissionen aus Biomasseverbrennung, Lärm und Arbeitsumfeld.",
-    serviceTags: "Emissionen, Arbeitsumfeld, Lärm, KHS, Krajs",
+    serviceTags: "Emissionen, Arbeitsumfeld, Lärm, KHS, Landesamt",
     factors: "TSP, Staub, Lärm, Emissionen aus Biomassekesseln",
     ariaLabel: "Leistungen für Holzverarbeitung anzeigen",
     linkHint: "Leistungen für diesen Betriebstyp anzeigen"
@@ -155,7 +155,7 @@ const DE: Partial<Record<string, SectorText>> = {
   "zemedelske-provozy": {
     title: "Landwirtschaftliche Betriebe und Ställe",
     description:
-      "Für landwirtschaftliche Betriebe und Ställe bearbeiten wir Emissionen, Gerüche, Lärm, Arbeitsumfeld und Unterlagen für KHS und Krajs.",
+      "Für landwirtschaftliche Betriebe und Ställe bearbeiten wir Emissionen, Gerüche, Lärm, Arbeitsumfeld und Unterlagen für KHS und Landesamt.",
     serviceTags: "Emissionen, Lärm, Arbeitsumfeld, Ausbreitungsstudien, UVP",
     factors: "Ammoniak, Gerüche, Lärm, Staub, Mikroklima",
     ariaLabel: "Leistungen für Landwirtschaft anzeigen",

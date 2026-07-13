@@ -55,15 +55,15 @@
     "surveyHighlightTitle": "Haben Sie mit uns zusammengearbeitet?",
     "surveyHighlightText": "Eine kurze Bewertung hilft uns, die Qualität von Messungen, Studien und Kommunikation zu halten.",
     "surveyHighlightLink": "Zufriedenheitsfragebogen ausfüllen",
-    "copyright": "© NATURCHEM, s.r.o. {year} · IČO {ico} · DIČ {dic}"
+    "copyright": "© NATURCHEM, s.r.o. {year} · Unternehmens-ID {ico} · USt-IdNr. {dic}"
   },
   "common": {
     "home": "Startseite",
     "readMore": "Artikel lesen",
     "allArticles": "Alle Wissensartikel",
     "breadcrumbHome": "Startseite",
-    "ico": "IČO",
-    "dic": "DIČ",
+    "ico": "Unternehmens-ID",
+    "dic": "USt-IdNr.",
     "viewService": "Leistung ansehen",
     "viewExamples": "Beispiele ansehen",
     "viewSolution": "Lösung ansehen",
@@ -283,7 +283,8 @@
     "fieldAuthorities": "Typische Behörden",
     "fieldTags": "Tags",
     "relatedServices": "Zugehörige Leistungen",
-    "relatedSector": "Betriebstyp im Katalog"
+    "relatedSector": "Betriebstyp im Katalog",
+    "loadingDetail": "Wird geladen…"
   },
   "equipment": {
     "metaTitle": "NATURCHEM Laborausstattung",

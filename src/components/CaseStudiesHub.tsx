@@ -226,7 +226,7 @@ export function CaseStudiesHub({ locale, caseStudyListings, serviceTitles, categ
             </header>
             <div className="case-study-modal-body case-study-hub-modal-body">
               {detailLoading || !activeStudy ? (
-                <p className="muted">Načítání…</p>
+                <p className="muted">{caseStudiesUi.loadingDetail}</p>
               ) : (
                 <>
                   <dl className="case-study-fields">

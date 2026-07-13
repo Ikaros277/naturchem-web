@@ -1,6 +1,6 @@
 # NATURCHEM — odborné články (poradna)
 
-> 53 articles on Czech environmental permitting, measurements, EIA, ISPOP, and operations.
+> 54 articles on Czech environmental permitting, measurements, EIA, ISPOP, and operations.
 
 ## Index
 
@@ -46,6 +46,7 @@
 - Nové metodické výklady MŽP k dopovolovaným zdrojům: co má provozovatel zkontrolovat?: https://www.naturchem.cz/poradna/nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat/
 - Novela zákona o ochraně ovzduší 2025: co se mění pro provozovatele: https://www.naturchem.cz/poradna/novela-zakona-o-ochrane-ovzdusi-2025/
 - Odborný posudek podle zákona o ochraně ovzduší: kdy je potřeba a co musí obsahovat?: https://www.naturchem.cz/poradna/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat/
+- Oznámení záměru EIA: co to je a kdy ho podnikatel potřebuje před stavbou: https://www.naturchem.cz/poradna/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba/
 - Poplatky za znečišťování ovzduší: jak souvisí měření, výpočet emisí a: https://www.naturchem.cz/poradna/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence/
 - Prach na pracovišti: celkový prach, respirabilní frakce a oxid křemičitý: https://www.naturchem.cz/poradna/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity/
 - Proč nestačí katalogový údaj zařízení pro hlukové posouzení?: https://www.naturchem.cz/poradna/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni/

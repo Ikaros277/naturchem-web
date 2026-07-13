@@ -24,7 +24,7 @@ export const CONTACT_SERVICE_OPTIONS = [
 
 export const CONTACT_SERVICE_OPTIONS_UI = CONTACT_SERVICE_OPTIONS;
 
-export const CONTACT_SERVICE_LABELS_EN: Record<ContactServiceOption, string> = {
+export const CONTACT_SERVICE_LABELS_DE: Record<ContactServiceOption, string> = {
   "Měření emisí": "Emissionsmessungen",
   "Měření pracovního prostředí": "Messungen der Arbeitsplatzumgebung",
   "Měření hluku a akustika": "Lärmmessung und Akustik",

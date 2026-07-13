@@ -40,7 +40,7 @@ import {
 } from "@/lib/accreditation-page-de";
 import { privacyPageContent, privacyPageMetadata } from "@/lib/privacy-page-de";
 import { cookiesPageContent, cookiesPageMetadata } from "@/lib/cookies-page-de";
-import { CONTACT_SERVICE_LABELS_EN } from "@/lib/contact-services-de";
+import { CONTACT_SERVICE_LABELS_DE } from "@/lib/contact-services-de";
 import { teamMembers } from "@/lib/team-de";
 import { guaranteeIntroParagraph } from "@/lib/guarantee-copy-de";
 import { homeHeroPillars } from "@/lib/home-hero-pillars-de";
@@ -91,5 +91,5 @@ export const localeContent = {
   guaranteeIntro: guaranteeIntroParagraph,
   homeHeroPillars,
   salesContent: salesContentDe,
-  contactServiceLabels: CONTACT_SERVICE_LABELS_EN
+  contactServiceLabels: CONTACT_SERVICE_LABELS_DE
 } as unknown as LocaleContent;

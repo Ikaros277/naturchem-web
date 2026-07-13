@@ -283,7 +283,8 @@
     "fieldAuthorities": "Typical authorities",
     "fieldTags": "Tags",
     "relatedServices": "Related services",
-    "relatedSector": "Facility type in catalogue"
+    "relatedSector": "Facility type in catalogue",
+    "loadingDetail": "Loading…"
   },
   "equipment": {
     "metaTitle": "NATURCHEM laboratory equipment",

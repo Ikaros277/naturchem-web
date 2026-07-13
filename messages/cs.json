@@ -283,7 +283,8 @@
     "fieldAuthorities": "Typické úřady",
     "fieldTags": "Štítky",
     "relatedServices": "Související služby",
-    "relatedSector": "Typ provozu v katalogu"
+    "relatedSector": "Typ provozu v katalogu",
+    "loadingDetail": "Načítání…"
   },
   "equipment": {
     "metaTitle": "Přístrojové vybavení NATURCHEM",

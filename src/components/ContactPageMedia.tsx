@@ -25,29 +25,21 @@ function useIsDesktopNav() {
   return isDesktop;
 }
 
-function useMounted() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  return mounted;
-}
-
 export function ContactPageHeroMedia({ theme }: { theme: HeroTheme }) {
   const isDesktop = useIsDesktopNav();
-  const mounted = useMounted();
   const mapsAllowed = useMapsAllowed();
 
-  if (!mounted || !isDesktop || !mapsAllowed) {
-    return <HeroPhoto theme={theme} priority />;
+  if (isDesktop && mapsAllowed) {
+    return <ContactOfficesMap variant="hero" />;
   }
 
-  return <ContactOfficesMap variant="hero" />;
+  return <HeroPhoto theme={theme} priority />;
 }
 
 export function ContactPageOfficesMap() {
   const isDesktop = useIsDesktopNav();
-  const mounted = useMounted();
 
-  if (!mounted || isDesktop) return null;
+  if (isDesktop) return null;
 
   return <ContactOfficesMap variant="panel" />;
 }

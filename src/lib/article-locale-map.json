@@ -59,6 +59,11 @@
     "en",
     "de"
   ],
+  "ippc-kdy-provoz-potrebuje-integrovane-povoleni": [
+    "cs",
+    "en",
+    "de"
+  ],
   "ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba": [
     "cs",
     "en",
@@ -265,6 +270,11 @@
     "de"
   ],
   "zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady": [
+    "cs",
+    "en",
+    "de"
+  ],
+  "zalozni-dieselagregat-emise-povoleni-provozni-hodiny": [
     "cs",
     "en",
     "de"

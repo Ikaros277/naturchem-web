@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { headers } from "next/headers";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { localizeHref } from "@/lib/i18n/navigation";
-import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/locales";
+import { defaultLocale, type Locale } from "@/lib/i18n/locales";
 import { noindexRobots } from "@/lib/i18n/metadata-helpers";
 
 export const metadata: Metadata = {
@@ -12,13 +11,8 @@ export const metadata: Metadata = {
   robots: noindexRobots
 };
 
-async function resolveLocale(): Promise<Locale> {
-  const localeHeader = (await headers()).get("x-locale");
-  return localeHeader && isLocale(localeHeader) ? localeHeader : defaultLocale;
-}
-
 export default async function LocaleNotFound() {
-  const locale = await resolveLocale();
+  const locale: Locale = defaultLocale;
   const messages = await getMessages(locale);
   const t = messages.notFound;
   const link = (href: string) => localizeHref(href, locale);

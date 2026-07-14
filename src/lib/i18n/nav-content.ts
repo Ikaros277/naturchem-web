@@ -114,7 +114,10 @@ export function getFooterNav(locale: Locale) {
   };
 
   const footerServiceLinks: readonly FooterLink[] = [
-    { href: "/sluzby", label: serviceLabels.all }
+    { href: "/sluzby", label: serviceLabels.all },
+    { href: "/mereni-emisi-kotelen", label: serviceLabels.emissions },
+    { href: "/mereni-pracovniho-prostredi-kategorizace-praci", label: serviceLabels.workplace },
+    { href: "/rozptylova-studie-povoleni", label: serviceLabels.dispersion }
   ];
 
   const footerContactPageLink: FooterLink = {

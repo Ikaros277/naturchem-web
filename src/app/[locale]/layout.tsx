@@ -44,6 +44,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "NATURCHEM",
       images: [{ url: `/${locale}/opengraph-image`, width: 1200, height: 630 }]
     },
+    twitter: {
+      card: "summary_large_image",
+      images: [`/${locale}/opengraph-image`]
+    },
     robots: {
       index: true,
       follow: true
@@ -71,8 +75,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   const locale: Locale = localeParam;
   const messages = await getMessages(locale);
 
-  const orgData = buildOrganizationJsonLd();
-  const localBusinessData = buildLocalBusinessJsonLd();
+  const orgData = buildOrganizationJsonLd(locale);
+  const localBusinessData = buildLocalBusinessJsonLd(locale);
   const websiteData = buildWebSiteJsonLd(schemaLanguage(locale));
 
   return (

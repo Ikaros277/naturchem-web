@@ -70,6 +70,7 @@ export default async function CmsArticlePage({ params }: Props) {
     "@id": `${articleUrl}#article`,
     headline: article.title,
     description: article.excerpt || "",
+    articleSection: topicLabel,
     url: articleUrl,
     inLanguage: locale,
     ...(article.heroImage ? { image: resolveOgImageUrl(article.heroImage) } : {}),

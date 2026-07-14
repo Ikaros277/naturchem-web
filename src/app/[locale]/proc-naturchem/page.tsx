@@ -66,7 +66,7 @@ export default async function ProcNaturchemPage({ params }: Props) {
   return (
     <main className="section why-naturchem-page premium-page">
       <JsonLd data={webPageData} />
-      <JsonLd data={buildOrganizationJsonLd()} />
+      <JsonLd data={buildOrganizationJsonLd(locale)} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}

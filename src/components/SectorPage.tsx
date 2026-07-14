@@ -16,6 +16,7 @@ import { getSectorCopy } from "@/lib/i18n/sector-copy-i18n";
 import type { Locale } from "@/lib/i18n/locales";
 import { sectorProcessSteps } from "@/lib/i18n/work-process-i18n";
 import { sectorContactUrl } from "@/lib/contact-url";
+import { getSeoLandingsForSector } from "@/lib/seo-landing-service-links";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { getSectorHeroImageConfig, hasSectorPhoto } from "@/lib/custom-hero-photos";
 import { getServiceCategoryFromHref } from "@/lib/service-categories";
@@ -53,6 +54,7 @@ export async function SectorPage(props: Props) {
     ? getSectorHeroImageConfig(props.slug).src
     : undefined;
   const processSteps = sectorProcessSteps(props.process, locale);
+  const seoLandingLinks = await getSeoLandingsForSector(sectorPath, locale, 2);
 
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -172,6 +174,17 @@ export async function SectorPage(props: Props) {
         <section className="content-block">
           <h2>{copy.relatedServices}</h2>
           <div className="grid grid-3 index-card-grid">
+            {seoLandingLinks.map((landing) => (
+              <IndexCard
+                key={landing.href}
+                href={link(landing.href)}
+                title={landing.title}
+                cta={copy.viewService}
+                className="service-related-card"
+              >
+                <p className="muted">{landing.description}</p>
+              </IndexCard>
+            ))}
             {props.relatedServices.map((service) => (
               <IndexCard
                 key={service.href}

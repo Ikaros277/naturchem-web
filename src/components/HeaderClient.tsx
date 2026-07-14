@@ -223,7 +223,7 @@ export function HeaderClient({
       <div className="container nav">
         <LocaleLink href="/" aria-label={t.homeAria} className="nav-brand">
           <span className="brand-mark">
-            <BrandLogo className="brand-logo-img" />
+            <BrandLogo className="brand-logo-img" priority />
             <span className="brand-tagline">{t.brandTagline}</span>
           </span>
         </LocaleLink>

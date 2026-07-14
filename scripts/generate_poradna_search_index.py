@@ -21,6 +21,8 @@ LOCALE_LOWER = {
     "de": "de-de",
 }
 
+MAX_SEARCH_CHARS = 1800
+
 
 def strip_markdown_for_search(body: str) -> str:
     text = re.sub(r"```[\s\S]*?```", " ", body)
@@ -69,7 +71,7 @@ def main() -> None:
             slug = front.get("slug") or slug_from_file(path)
             title = front.get("title") or slug
             excerpt = front.get("excerpt") or ""
-            search = build_search_text(title, excerpt, body, locale)
+            search = build_search_text(title, excerpt, body, locale)[:MAX_SEARCH_CHARS]
             entries.append({"slug": slug, "s": search})
 
         out = OUT_DIR / f"poradna-{locale}.json"

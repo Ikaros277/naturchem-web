@@ -16,8 +16,10 @@ export function localizedCanonical(path: string, locale: Locale): string {
   return `${siteUrl}${href === "/" ? "" : href}/`.replace(/([^:]\/)\/+/g, "$1");
 }
 
-export function resolveOgImageUrl(imagePath?: string): string {
-  if (!imagePath?.trim()) return DEFAULT_OG_IMAGE;
+export function resolveOgImageUrl(imagePath?: string, locale?: Locale): string {
+  if (!imagePath?.trim()) {
+    return locale ? `${siteUrl}/${locale}/opengraph-image` : DEFAULT_OG_IMAGE;
+  }
   if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) return imagePath;
   return `${siteUrl}${imagePath.startsWith("/") ? imagePath : `/${imagePath}`}`;
 }
@@ -94,7 +96,7 @@ export function pageMetadata({
     : localeAlternates(path, locale);
   const canonical = localizedCanonical(path, locale);
   const shareTitle = resolveShareTitle(title, absoluteTitle);
-  const imageUrl = resolveOgImageUrl(ogImage);
+  const imageUrl = resolveOgImageUrl(ogImage, locale);
 
   return {
     title: absoluteTitle ? { absolute: absoluteTitle } : title,

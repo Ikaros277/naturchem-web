@@ -17,6 +17,7 @@ import { getServiceTrustBandItems } from "@/lib/i18n/home-content";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
 import type { Locale } from "@/lib/i18n/locales";
+import { getSeoLandingsForService } from "@/lib/seo-landing-service-links";
 import { contactUrl } from "@/lib/contact-url";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
 import { CategoryBadge } from "@/components/CategoryBadge";
@@ -60,6 +61,7 @@ export async function ServicePage(props: Props) {
   const quickContactHref = contactUrl(contactServiceValue);
   const sectorMetaByHref = new Map(sectors.map((s) => [s.href, s]));
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
+  const seoLandingLinks = await getSeoLandingsForService(`/sluzby/${bareSlug}`, locale, 2);
   const relatedLinks = props.relatedLinks ?? [];
   const keyScope = props.scope.slice(0, 4);
   const keyWhenNeeded = props.whenNeeded.slice(0, 4);
@@ -80,6 +82,13 @@ export async function ServicePage(props: Props) {
   ].filter((group) => group !== null);
 
   const mergedRelated = [
+    ...seoLandingLinks.map((l) => ({
+      href: l.href,
+      title: l.title,
+      description: l.description,
+      cta: copy.viewService,
+      sectionLabel: undefined as string | undefined
+    })),
     ...relatedLinks.map((l) => ({
       href: l.href,
       title: l.title,
@@ -123,7 +132,7 @@ export async function ServicePage(props: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: copy.breadcrumbHome, item: siteUrl },
+      { "@type": "ListItem", position: 1, name: copy.breadcrumbHome, item: `${siteUrl}${link("/")}/`.replace(/([^:]\/)\/+/g, "$1") },
       { "@type": "ListItem", position: 2, name: copy.breadcrumbServices, item: `${siteUrl}${link("/sluzby")}/` },
       {
         "@type": "ListItem",

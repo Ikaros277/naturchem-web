@@ -1,37 +1,11 @@
+import type { Locale } from "@/lib/i18n/locales";
 import { locales } from "@/lib/i18n/locales";
+import { getOrganizationSchemaCopy } from "@/lib/organization-jsonld-i18n";
 import { company, getCompanyOffices, services, siteUrl } from "@/lib/site";
 
-const organizationDescription =
-  "NATURCHEM, s. r. o. je česká akreditovaná zkušební laboratoř (ČIA, č. 1599) a autorizovaná osoba pro měření emisí, pracovního prostředí, hluku, vibrací, prašnosti, mikroklimatu, rozptylové a hlukové studie, odborné posudky, EIA, provozní řády a ISPOP v celé ČR.";
+export function buildOrganizationJsonLd(locale: Locale = "cs") {
+  const copy = getOrganizationSchemaCopy(locale);
 
-const audienceTypes = [
-  "Provozovatelé zdrojů znečišťování ovzduší",
-  "Podnikoví ekologové",
-  "environmentální a bezpečnostní manažeři",
-  "Průmyslové podniky",
-  "Investoři a projektanti",
-  "Obce a veřejný sektor",
-  "Stavební firmy"
-] as const;
-
-const knowsAbout = [
-  "měření emisí ze stacionárních zdrojů",
-  "měření pracovního prostředí",
-  "měření hluku a akustické posudky",
-  "rozptylové studie",
-  "hlukové studie",
-  "EIA a oznámení záměru",
-  "odborné posudky podle zákona o ochraně ovzduší",
-  "provozní řády zdrojů znečišťování ovzduší",
-  "IPPC a integrovaná povolení",
-  "ISPOP a provozní evidence",
-  "ověřování emisí skleníkových plynů (GHG)",
-  "chemická legislativa a bezpečnostní listy",
-  "environmentální poradenství pro úřady a provozovatele",
-  "prodej analytických přístrojů PCF Elettronica"
-] as const;
-
-export function buildOrganizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -41,28 +15,20 @@ export function buildOrganizationJsonLd() {
     url: siteUrl,
     logo: `${siteUrl}/graphics/naturchem-mark.svg`,
     image: `${siteUrl}/opengraph-image`,
-    description: organizationDescription,
+    description: copy.description,
     identifier: [
-      { "@type": "PropertyValue", name: "IČO", value: company.ico },
-      { "@type": "PropertyValue", name: "DIČ", value: company.dic }
+      { "@type": "PropertyValue", name: copy.identifierNames.ico, value: company.ico },
+      { "@type": "PropertyValue", name: copy.identifierNames.dic, value: company.dic }
     ],
-    knowsAbout: [...knowsAbout],
-    audience: audienceTypes.map((name) => ({ "@type": "Audience", audienceType: name })),
+    knowsAbout: [...copy.knowsAbout],
+    audience: copy.audienceTypes.map((name) => ({ "@type": "Audience", audienceType: name })),
     areaServed: { "@type": "Country", name: "Czech Republic" },
     ...(company.socialProfiles.length > 0 ? { sameAs: company.socialProfiles } : {}),
-    hasCredential: [
-      {
-        "@type": "EducationalOccupationalCredential",
-        name: "Akreditovaná zkušební laboratoř č. 1599 (ČIA)",
-        credentialCategory: "ČSN EN ISO/IEC 17025"
-      },
-      {
-        "@type": "EducationalOccupationalCredential",
-        name: "Autorizovaná osoba",
-        credentialCategory:
-          "EIA, rozptylové studie, odborné posudky, jednorázové měření emisí, ověřování GHG"
-      }
-    ],
+    hasCredential: copy.credentials.map((credential) => ({
+      "@type": "EducationalOccupationalCredential",
+      name: credential.name,
+      credentialCategory: credential.category
+    })),
     location: getCompanyOffices().map((office) => ({
       "@type": "Place",
       name: `NATURCHEM — ${office.label}`,
@@ -98,7 +64,7 @@ export function buildOrganizationJsonLd() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Služby NATURCHEM",
+      name: copy.offerCatalogName,
       itemListElement: services.map((service, index) => ({
         "@type": "ListItem",
         position: index + 1,
@@ -115,7 +81,9 @@ export function buildOrganizationJsonLd() {
   };
 }
 
-export function buildLocalBusinessJsonLd() {
+export function buildLocalBusinessJsonLd(locale: Locale = "cs") {
+  const copy = getOrganizationSchemaCopy(locale);
+
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -123,7 +91,7 @@ export function buildLocalBusinessJsonLd() {
     name: company.name,
     alternateName: "NATURCHEM",
     url: siteUrl,
-    description: organizationDescription,
+    description: copy.description,
     telephone: company.phones[0],
     email: company.email,
     image: `${siteUrl}/opengraph-image`,
@@ -141,6 +109,9 @@ export function buildLocalBusinessJsonLd() {
 }
 
 export function buildWebSiteJsonLd(locale: string) {
+  const schemaLocale: Locale = locale === "en" || locale === "de" ? locale : "cs";
+  const copy = getOrganizationSchemaCopy(schemaLocale);
+
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -149,7 +120,7 @@ export function buildWebSiteJsonLd(locale: string) {
     alternateName: "NATURCHEM, s.r.o.",
     url: siteUrl,
     inLanguage: locale,
-    description: organizationDescription,
+    description: copy.description,
     publisher: { "@id": `${siteUrl}/#organization` }
   };
 }

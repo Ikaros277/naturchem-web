@@ -12,12 +12,6 @@ publishedAt: 2026-07-14
 topic: EIA a povolování
 heroImage: /uploads/chatgpt-image-14.-7.-2026-09_37_14.webp
 ---
-# IPPC: kdy provoz potřebuje integrované povolení
-
-Slug: ippc-kdy-provoz-potrebuje-integrovane-povoleni
-
-Perex: Integrované povolení se netýká každého průmyslového provozu. Řeší se hlavně u větších zařízení v energetice, odpadech, chemii, zpracování kovů, minerálním průmyslu, potravinářství a intenzivních chovech. Provozovatel nebo investor by měl včas ověřit, zda jeho technologie spadá do přílohy č. 1 zákona o integrované prevenci, jaké má kapacity a zda nejde o změnu stávajícího zařízení, která vyžaduje změnu integrovaného povolení.
-
 ## Co je IPPC a integrované povolení
 
 IPPC znamená integrovaná prevence a omezování znečištění. V českém právu jde zejména o režim podle [zákona č. 76/2002 Sb., o integrované prevenci](https://www.zakonyprolidi.cz/cs/2002-76).

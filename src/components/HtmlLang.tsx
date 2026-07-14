@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 type Props = {
   locale: string;
@@ -8,7 +8,7 @@ type Props = {
 
 /** Ensures <html lang> matches the active locale during client navigation and SSG. */
 export function HtmlLang({ locale }: Props) {
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
 

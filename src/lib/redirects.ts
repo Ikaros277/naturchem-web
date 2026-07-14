@@ -149,12 +149,12 @@ export const permanentRedirects = [
   { source: "/technicke-prilohy/", destination: "/sluzby/technicke-prilohy", permanent: true },
 
   {
-    source: "/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni",
+    source: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1",
     destination: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu",
     permanent: true
   },
   {
-    source: "/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni/",
+    source: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1/",
     destination: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/",
     permanent: true
   },

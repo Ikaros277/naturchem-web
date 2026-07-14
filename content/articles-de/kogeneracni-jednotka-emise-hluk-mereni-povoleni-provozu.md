@@ -1,147 +1,141 @@
 ---
-title: "Gaskesselanlage 0,3 bis 50 MW: Was bei NOx, CO, Messung und Genehmigung zu klären ist"
+title: "Kogenerationsanlage: Emissionen, Lärm, Messung und Betriebsgenehmigung"
 slug: kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu
-excerpt: Bei einer Gaskesselanlage reicht es nicht, nur die Anzahl der Kessel und ihre Leistung in kW zu kennen. Für Pflichten nach dem Luftschutz ist vor allem der **gesamte Nennwärmeinput** entscheidend, dazu Brennstoff, Kesselanzahl, gemeinsamer Schornstein, Betriebsstunden und ob es sich um eine neue Quelle, einen Kesseltausch oder eine Änderung einer bestehenden Kesselanlage handelt. Der Betreiber sollte rechtzeitig prüfen, ob Betriebsgenehmigung, Emissionsmessung, Änderung der Betriebsaufzeichnungen oder Anpassung der bestehenden Genehmigung erforderlich ist.
+excerpt: Eine Kogenerationsanlage kann für den Betreiber eine vorteilhafte Quelle für Strom und Wärme sein, aus Sicht der Genehmigung ist sie jedoch nicht nur technische Anlage in der Kesselanlage oder im Container. Es sind Emissionen des Verbrennungsmotors, Abgasabführung, Emissionsmessung, Lärm in die Umgebung, Betriebsstunden, Brennstoff, Schornstein, Bezug zu bestehenden Quellen und Anforderungen der Behörden zu klären. Der Umfang der Unterlagen hängt vor allem von Wärmeinput, Standort, Brennstoff, Betriebsregime und Abstand zu geschützter Bebauung ab.
 author: Ing. František Hezina
-publishedAt: 2026-07-04
+publishedAt: 2026-07-06
 topic: Emissions
-heroImage: /uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp
+heroImage: /uploads/pxl_20260702_063317620.mp.webp
 ---
-## Warum bei der Gaskesselanlage der Input und nicht nur die Leistung entscheidet
+## Warum die Kogenerationsanlage rechtzeitig behandelt werden sollte
 
-Bei Gaskesselanlagen wird häufig mit der Kesselleistung gearbeitet, weil diese für die Gebäudeheizung wichtig ist. Für den Luftschutz ist jedoch vor allem der **Nennwärmeinput im Brennstoff** maßgeblich. Er steht in der Regel im technischen Datenblatt, auf dem Kesselschild oder in der Projektdokumentation.
+Eine Kogenerationsanlage wird häufig als technische Erweiterung der Gebäudeenergetik vorbereitet. Der Betreiber klärt Leistung, Amortisation, Gasanschluss, Strom und Wärmenutzung. Aus Sicht der Behörden entsteht jedoch eine neue oder geänderte Quelle von Emissionen und Lärm.
 
-Der Unterschied ist praktisch. Ein Kessel kann z. B. eine Wärmeleistung von 900 kW haben, der Input im Brennstoff ist je nach Wirkungsgrad der Anlage höher. Pflichten dürfen daher nicht mechanisch nur aus der ins Wasser abgegebenen Leistung abgeleitet werden.
+Bei kleineren Anlagen kann die Genehmigung einfacher sein. Bei größeren Einheiten, mehreren Einheiten an einem Standort, Betrieb in Krankenhaus, Industrieareal, Wohnbebauung oder kommunaler Kesselanlage können Unterlagen für **Luftschutz, Lärm, Baurecht, einheitliches Umweltgutachten (JES), Betriebsgenehmigung oder Änderung der bestehenden Genehmigung** erforderlich sein.
 
-Bei einer Kesselanlage wird meist nicht jeder Kessel isoliert beurteilt. Entscheidend ist, ob die Kessel eine gemeinsame Verbrennungsstationärquelle bilden, betrieblich und technisch verbunden sind, die Abgase in einen gemeinsamen Schornstein führen oder demselben Zweck in einem Betrieb dienen. Gerade die **Summierung der Inputs** entscheidet oft darüber, ob die Kesselanlage in das Regime aufgeführter Quellen fällt und welche Pflichten gelten.
+Die größten Probleme entstehen, wenn die KGJ bestellt und baulich vorbereitet wird, bevor klar ist, ob sie den Emissionsanforderungen entspricht, ob der Schornstein richtig geplant ist und ob Lärm ein Problem wird. Nachträgliche Lösung von Abgasführung, Schalldämpfern, Schornsteinhöhe oder akustischen Anpassungen ist meist teurer als ihre Einplanung im Projekt.
 
-## Grundgrenzen: 0,3 MW, 1 MW, 5 MW und 50 MW
+## Was Behörden bei der Kogeneration üblicherweise interessiert
 
-Bei Gaskesselanlagen sind mehrere Grenzen zu beachten. Betreiber fragen am häufigsten, ob Betriebsgenehmigung, Emissionsmessung oder nur grundlegende Betreiberpflichten gelten.
+Eine Kogenerationsanlage wird nicht nur nach elektrischer Leistung beurteilt. Für den Luftschutz ist vor allem der **Nennwärmeinput im Brennstoff** maßgeblich, dazu Art der Verbrennungsanlage, Brennstoff und Gesamtinput aller zusammenhängenden Verbrennungsquellen im Betrieb.
 
-Diese Übersicht hilft bei der Orientierung:
+Für den Lärm sind Standort der Einheit, ob sie im Gebäude oder im Container steht, wie Ansaugung und Abluft gelöst sind, Kühlung, Abgasabführung, gegebenenfalls Trockenkühler, Betriebszeit und Abstand zu den nächsten geschützten Räumen wichtig. Eine Kogenerationsanlage kann akustisch problematisch sein, auch wenn sie emissionstechnisch in Ordnung ist.
 
-| Gesamter Nennwärmeinput der Kesselanlage | Praktische Bedeutung |
+Die Behörde kann vor allem technisches Datenblatt der KGJ, Angaben zu Brennstoff, Input und Leistung, Beschreibung von Schornstein oder Abgasführung, Betriebsstunden, Standort im Gebäude oder Areal, Bezug zur bestehenden Kesselanlage, Emissionsparameter des Herstellers, Lärmparameter und Entwurf der Betriebsbedingungen verlangen.
+
+## Betriebsgenehmigung: Wärmeinput und Quelleneinstufung entscheiden
+
+Bei Kogenerationsanlagen ist zuerst zu klären, ob es sich um eine aufgeführte stationäre Quelle nach dem Luftschutzgesetz handelt. Bei gasbetriebenen KGJ handelt es sich in der Regel um einen **Kolbenverbrennungsmotor**. Im Anhang Nr. 2 zum Gesetz Nr. 201/2012 Sb. wird bei Verbrennung von Brennstoffen in Kolbenverbrennungsmotoren der gesamte Nennwärmeinput überwacht, bereits ab der Grenze **0,3 MW**.
+
+Praktisch bedeutet das, dass nicht nur die in der Lieferantenofferte genannte elektrische Leistung betrachtet werden darf. Für die Beurteilung muss der Input im Brennstoff bekannt sein. Bei einer Einheit kann die elektrische Leistung z. B. deutlich niedriger sein als der Wärmeinput im Brennstoff. Gibt es im Objekt mehrere Einheiten oder gehören weitere Verbrennungsquellen zur selben Betriebsstätte, ist ihr Zusammenwirken zu beurteilen.
+
+Bei einer aufgeführten Quelle kann **Betriebsgenehmigung** oder Änderung der bestehenden Genehmigung erforderlich sein. Wird die KGJ in eine bestehende Kesselanlage ergänzt, darf nicht automatisch angenommen werden, dass die alte Kesselgenehmigung sie abdeckt. Ein Kolbenverbrennungsmotor hat andere Emissionscharakteristik als ein Kessel und wird in der Regel gesondert beurteilt.
+
+> **Praktischer Hinweis:** Prüfen Sie vor der Bestellung der Einheit nicht nur die elektrische Leistung, sondern vor allem den Nennwärmeinput im Brennstoff. Gerade dieser entscheidet oft darüber, ob die Quelle in das Genehmigungsregime nach dem Luftschutzgesetz fällt.
+
+## Welche Emissionen bei der Kogenerationsanlage behandelt werden
+
+Bei Kogenerationsanlagen auf Erdgas werden am häufigsten vor allem **NOx** und **CO** behandelt. Je nach Anlagentyp, Brennstoff, Betriebsregime und Anforderungen der Verordnung oder Genehmigung können auch weitere Stoffe relevant sein. Bei anderen Brennstoffen als Erdgas kann sich der Beurteilungsumfang deutlich ändern.
+
+Vom Hersteller angegebene Emissionsparameter sind wichtige Unterlage, allein reichen sie jedoch nicht. Die Behörde oder der Bearbeiter der fachlichen Beurteilung muss wissen, unter welchen Bedingungen die Werte garantiert wurden, ob sie auf den richtigen Sauerstoffgehalt umgerechnet sind, ob sie für den jeweiligen Brennstoff gelten, welches Betriebsregime vorgesehen ist und ob Emissionsminderungstechnik installiert wird, z. B. ein Katalysatorsystem.
+
+Bei der KGJ ist auch zu unterscheiden zwischen Normalbetrieb und Ausnahmezuständen. Emissionen beim Start, Anfahren, Abstellen oder bei Störung können vom eingeschwungenen Betrieb abweichen. Für die Genehmigung werden Betriebsbedingungen in der Regel so gesetzt, dass klar ist, wann die Einheit laufen darf, wie der Betrieb überwacht wird und wie die Einhaltung der Emissionsanforderungen nachgewiesen wird.
+
+## Emissionsmessung: wann sie durchgeführt wird und warum sie schon im Projekt zu klären ist
+
+Ist die Kogenerationsanlage eine aufgeführte Quelle oder schreibt es die Genehmigung vor, wird der Betreiber in der Regel eine autorisierte Emissionsmessung benötigen. Sie dient dem Nachweis, ob die Quelle nach Inbetriebnahme tatsächlich Emissionsgrenzwerte und Genehmigungsbedingungen erfüllt.
+
+Die Emissionsmessung muss technisch vorbereitet werden. Schornstein oder Abgasleitung müssen eine geeignete Messstelle, sicheren Zugang, Probenahmeöffnungen, Arbeitsplattform oder eine andere Lösung haben, die die Messung nach den Anforderungen ermöglicht. Wird das im Projekt vergessen, kann die Messung nach Installation schwierig oder ohne nachträgliche Anpassungen nicht durchführbar sein.
+
+Typisches Problem ist die Abgasführung an einen Ort ohne sicheren Zugang, ohne ausreichenden geraden Leitungsabschnitt, ohne Probenahmeöffnung oder wo ungünstige Strömungsverhältnisse die Messung stören. Bei kompakten Container-KGJ lohnt es sich daher, die Messstelle bereits mit dem Technologielieferanten zu klären.
+
+Mehr zu Emissionsmessungen finden Sie auf der Seite [Emissionsmessung NATURCHEM](https://www.naturchem.cz/sluzby/mereni-emisi).
+
+## Schornstein, Abgasführung und Abgasweg
+
+Der Abgasabzug ist nicht nur technisches Detail. Höhe, Lage und Ausführung des Schornsteins können über Ausbreitung der Emissionen, Betriebssicherheit, Messmöglichkeit und Verhältnis zur Umgebungsbebauung entscheiden. Bei niedrigen Abgasführungen in dichter Bebauung kann ein Problem entstehen, auch wenn die Anlage sonst Emissionsgrenzwerte erfüllt.
+
+Bei der Planung ist zu prüfen, wohin die Abgase abgeführt werden, ob die Abgasführung nicht in ungeeigneter Höhe endet, ob Belästigung der Umgebung entsteht, ob Emissionsmessung möglich ist und ob der Schornstein Anforderungen von Planer, Hersteller und Genehmigungsdokumentation entspricht.
+
+Bei KGJ im Container werden oft nicht nur Abgasabführung, sondern auch Lärm von Abgas, Ansaugung und Kühlung behandelt. Die technische Lösung muss daher abgestimmt sein. Der Schornstein darf nicht isoliert von Akustik und Anlagenbetrieb beurteilt werden.
+
+## Lärm von der Kogenerationsanlage
+
+Lärm ist bei Kogenerationsanlagen ein sehr häufiges Problem. Die Lärmquelle ist nicht nur der Motor selbst. Abgasabführung, Luftansaugung, Wärmeabfuhr, Ventilatoren, Kühler, Container, Durchführungen in der Baukonstruktion, Vibrationen und Lärmübertragung in die Konstruktion können bedeutsam sein.
+
+Bei Krankenhäusern, Wohnhäusern, Schulen, Gemeinden oder Betrieben nahe Wohnbebauung ist Lärm bereits vor der Installation zu klären. Eine Kogenerationsanlage kann langfristig und manchmal auch abends oder nachts laufen. Aus Sicht der Hygienegrenzwerte ist das wesentlich, weil Nachtbetrieb in der Regel strenger beurteilt wird als Tagesbetrieb.
+
+Eine Lärmstudie sollte mit tatsächlichem Standort der Einheit, akustischen Parametern der Technologie, Betriebszeit, aktuellem Lärmhintergrund, nächsten geschützten Räumen und allen relevanten Quellen arbeiten. Wird die KGJ in ein Areal ergänzt, in dem bereits Ventilatoren, Kesselanlage, Kühlung oder Verkehr vorhanden sind, sind auch gleichzeitige Quellen zu beurteilen.
+
+## Wann eine Lärmstudie und wann Lärmmessung sinnvoll ist
+
+Eine Lärmstudie ist vor Installation oder vor Genehmigung sinnvoll. Sie ermöglicht abzuschätzen, ob die geplante Lösung Hygienegrenzwerte erfüllt und ob Schalldämpfer, Lärmschutzgehäuse, akustische Jalousien, elastische Lagerung, Abgasanpassung oder Einschränkung des Nachtbetriebs ergänzt werden müssen.
+
+Eine Lärmmessung ist nach Installation, bei Kontrolle, bei Beschwerden oder zur Überprüfung der Wirksamkeit von Lärmschutzmaßnahmen sinnvoll. Wird erst nach Inbetriebnahme gemessen und ein nicht zutreffender Zustand festgestellt, ist die Lösung meist aufwendiger. In sensiblen Lagen ist es daher besser, zuerst eine Lärmstudie zu erstellen und den tatsächlichen Zustand später durch Messung zu verifizieren.
+
+Bei der KGJ ist auch auf Tonanteile und tieffrequenten Charakter des Lärms zu achten. Subjektiv belästigender Lärm muss nicht immer nur eine Frage der Gesamtschalldruckpegel sein. Studie und Messung sollten daher dem tatsächlichen Charakter der Quelle entsprechen.
+
+## Betriebsstunden und Betriebsregime
+
+Betriebsstunden sind wichtig für Luft, Lärm und Wirtschaftlichkeit des Betriebs. Die Behörde kann verlangen, ob die Einheit dauerhaft, nur in Spitzen, saisonal, an Werktagen oder als Ersatzquelle betrieben wird. Bei der Kogeneration ist längerer Betrieb üblich, weil die Wirtschaftlichkeit von Wärme- und Stromnutzung abhängt.
+
+Aus Lärmsicht ist wesentlich, ob die Einheit nachts läuft. Aus Emissionssicht ist die jährliche Betriebsstundenzahl wichtig und ob Emissionen als normaler Betriebsquelle bewertet werden oder ob die Anlage ein besonderes Regime hat. Bei Ersatzquellen können andere Überlegungen gelten als bei Kogeneration für regelmäßigen Betrieb.
+
+Das Betriebsregime sollte realistisch beschrieben werden. Wird in der Dokumentation kurzer Betrieb angegeben, die Einheit aber in Wirklichkeit den größten Teil des Jahres läuft, entsteht Risiko der Nichteinhaltung bei Kontrolle und bei Beschwerden.
+
+## Was die Dokumentation enthalten sollte
+
+Gute Dokumentation zur Kogenerationsanlage muss technische Herstellerangaben mit tatsächlichem Standort und Betrieb verbinden. Ein Prospekt allein reicht nicht. Die Behörde muss verstehen, wie die Einheit tatsächlich betrieben wird und welche Einwirkungen auf die Umgebung entstehen.
+
+| Bereich | Was nachzuweisen oder zu beschreiben ist |
 |---|---|
-| Bis 0,3 MW einschließlich | In der Regel keine aufgeführte Quelle nach Anhang Nr. 2 zum Luftschutzgesetz. Dennoch gelten allgemeine Pflichten, die Quelle technisch ordnungsgemäß zu betreiben und die Umgebung nicht zu belästigen. |
-| Mehr als 0,3 MW bis 1 MW | Bei Kesseln ist die Einstufung nach dem Luftschutzgesetz zu prüfen, Messpflichten können je nach Brennstoff, Quellentyp und aktuellem Wortlaut der Verordnung variieren. |
-| Von 1 MW bis 5 MW einschließlich | Bei gasförmigen Brennstoffen werden typischerweise regelmäßige einmalige Emissionsmessung und Betriebsaufzeichnungen nach der Durchführungsverordnung behandelt. |
-| Mehr als 5 MW | In der Regel höherer Pflichtenumfang, Betriebsgenehmigung, häufigere Messung, strengere Aufzeichnungen und bei größeren Änderungen auch Bedarf an fachlichen Unterlagen. |
-| 50 MW und mehr | Bereits Regime großer Verbrennungsanlagen mit anderen Anforderungen. Dieser Artikel behandelt Kesselanlagen bis 50 MW. |
+| Technologie | KGJ-Typ, Hersteller, Modell, Anzahl der Einheiten, elektrische Leistung, Wärmeleistung und Nennwärmeinput im Brennstoff. |
+| Brennstoff | Brennstoffart, Verbrauch, Qualität und Anbindung an Gasanschluss oder andere Versorgung. |
+| Emissionen | Garantierte Emissionsparameter, relevante Schadstoffe, Emissionsgrenzwerte, gegebenenfalls Emissionsminderungstechnik. |
+| Schornstein und Abgase | Abgasweg, Abgashöhe, Durchmesser, Temperatur, Volumenstrom, Messstelle und sicherer Zugang für Messung. |
+| Lärm | Akustische Parameter der Einheit, Ansaugung, Abgas, Kühlung, Standort und Abstand zu geschützter Bebauung. |
+| Betrieb | Betriebsstunden, Tag-/Nachtbetrieb, Saisonalität, Normal- und Maximalregime. |
+| Genehmigung | Bezug zur bestehenden Kesselanlage, Betriebsgenehmigung, Baurecht, JES, Anforderungen der Regionsbehörde oder KHS. |
 
-Für eine konkrete Kesselanlage ist stets vom aktuellen Wortlaut der Vorschriften, vom Bescheid der Regionsbehörde und von den technischen Parametern der Quelle auszugehen. Die Inputgrenze ist nur der erste Schritt, nicht die gesamte Beurteilung.
-
-> **Praktischer Hinweis:** Lassen Sie sich beim Kesseltausch vom Lieferanten immer den **Nennwärmeinput im Brennstoff** bestätigen, nicht nur die Wärmeleistung. Ohne diese Angabe lassen sich Genehmigung, Emissionsmessung und Einstufung der Kesselanlage nicht zuverlässig bestimmen.
-
-## Wann eine Betriebsgenehmigung erforderlich ist
-
-Die Betriebsgenehmigung wird bei aufgeführten stationären Quellen nach dem Luftschutzgesetz behandelt. Bei Kesseln ist vor allem der Punkt für **Verbrennung von Brennstoffen in Kesseln** nach dem gesamten Nennwärmeinput relevant.
-
-Eine Genehmigung oder Genehmigungsänderung ist vor allem erforderlich, wenn eine neue Kesselanlage errichtet wird, der Input erhöht wird, der Brennstoff wechselt, die Kesselanzahl sich ändert, der Schornstein wechselt oder sich das Betriebsregime grundlegend ändert. Auch beim Kesseltausch ist Vorsicht geboten. Auch wenn es dem Betreiber nur wie technische Erneuerung erscheint, kann es aus Sicht des Luftschutzes eine Quellenänderung sein.
-
-Bei bestehenden Kesselanlagen ist der tatsächliche Zustand mit der Genehmigung zu vergleichen. Entscheidend ist, was im Tenor des Bescheids und in den verbindlichen Betriebsbedingungen steht. Wenn die Genehmigung konkrete Kessel, Inputs, Schornsteine, Brennstoff oder Betriebsbedingungen nennt, dürfen diese nicht ohne Prüfung geändert werden, ob eine Genehmigungsänderung erforderlich ist.
-
-## NOx und CO: was bei Gaskesseln überwacht wird
-
-Bei Gaskesseln werden bei der Emissionsmessung vor allem **Stickoxide (NOx)** und **Kohlenmonoxid (CO)** überwacht. NOx hängen vor allem mit Verbrennungstemperatur, Brennerkonstruktion, Verbrennungseinstellung und Kesseltyp zusammen. CO ist ein wichtiger Indikator der Verbrennungsqualität; erhöhte Werte können auf schlechte Einstellung, unzureichende Verbrennungsluft, verschmutzten Brenner oder einen technischen Defekt hinweisen.
-
-Bei neuen Niedrigemissionskesseln können NOx-Werte deutlich niedriger sein als bei älteren Anlagen. Das bedeutet nicht, dass keine Messung erforderlich ist, wenn Gesetz oder Genehmigung sie vorschreiben. Der Hersteller kann eine Emissionsklasse oder Emissionsparameter garantieren, der Betreiber muss aber den tatsächlichen Zustand im Betrieb nachweisen können.
-
-Messergebnisse werden in der Regel nach Umrechnung auf festgelegte Referenzbedingungen bewertet, einschließlich Referenzsauerstoffgehalt. Daher ist es nicht sinnvoll, Werte vom Analysator ohne Kenntnis der Methodik, des Kesselregimes und der in Verordnung oder Genehmigung genannten Anforderung zu vergleichen.
-
-## Wann Emissionsmessungen durchgeführt werden
-
-Emissionsmessungen werden bei Inbetriebnahme der Quelle, nach bestimmten Quellenänderungen und weiter regelmäßig nach Input, Brennstoff und Art der Verbrennungsquelle behandelt. Bei Gaskesselanlagen im Bereich 1 bis 5 MW begegnen wir häufig einem Intervall regelmäßiger einmaliger Messung im Bereich mehrerer Jahre; bei größeren Quellen kann das Intervall kürzer sein. Das genaue Regime ist nach aktueller Verordnung und konkreter Genehmigung zu prüfen.
-
-Praktisch ist wichtig, die Messung bereits bei der Planung der Kesselanlage zu behandeln. Schornstein oder Rauchgasweg müssen eine geeignete Messstelle, Probenahmeöffnungen und sicheren Zugang haben. Wird das vergessen, kann die autorisierte Messung technisch schwierig sein oder nachträgliche Anpassungen erfordern.
-
-Bei mehreren Kesseln ist zu prüfen, ob jeder Kessel einzeln gemessen wird oder ob eine Messung am gemeinsamen Abgasabzug möglich ist. Das hängt von technischer Ausführung, Betriebsregime, Genehmigungsanforderung und methodischen Möglichkeiten der Messung ab. Man darf nicht automatisch annehmen, dass eine Probe hinter einem gemeinsamen Schornstein immer die Messung einzelner Kessel ersetzt.
-
-Mehr zur Messung finden Sie auf der Seite [Emissionsmessung NATURCHEM](https://www.naturchem.cz/sluzby/mereni-emisi).
-
-## Summierung der Kessel in einer Kesselanlage
-
-Die Summierung der Inputs ist eine der häufigsten Fehlerursachen. Der Betreiber hat z. B. mehrere kleinere Kessel, von denen jeder einzeln unter der Grenze erscheint. Bilden sie jedoch eine Kesselanlage oder gemeinsame Quelle, kann der Gesamtinput die entscheidende Grenze überschreiten.
-
-Bei der Summierung sind vor allem technische und betriebliche Zusammenhänge zu klären. Entscheidend ist, ob die Kessel demselben Zweck dienen, im selben Betrieb stehen, gemeinsame Regelung haben, einen gemeinsamen Schornstein nutzen oder als ein Energiegesamtsystem installiert sind. Eine separate Ersatz- oder Reservequelle kann je nach realem Betrieb und Genehmigung eine besondere Beurteilung erfordern.
-
-Bei Kesseltauschen ändert sich oft nur ein Teil der Kesselanlage. Auch dann ist der Gesamtzustand nach der Änderung zu beurteilen. Es reicht nicht zu sagen, dass nur ein Kessel getauscht wird. Entscheidend ist, wie hoch die Summe der Inputs nach dem Tausch sein wird und wie die Kesselanlage tatsächlich betrieben wird.
-
-## Schornsteine, Rauchgaswege und Messstellen
-
-Der Schornstein ist wichtig nicht nur für sicheren Abgasabzug, sondern auch für Emissionsmessung und Beurteilung des Einflusses der Quelle auf die Umgebung. Bei einer neuen oder rekonstruierten Kesselanlage ist es sinnvoll, bereits im Projekt zu prüfen, ob eine geeignete Messstelle mit sicherem Zugang vorgesehen ist.
-
-Die Messstelle soll so liegen, dass die Ergebnisse den tatsächlichen Emissionen der Quelle entsprechen. Probleme entstehen bei zu kurzen geraden Abschnitten, ungeeignet angeordneten Probenahmeöffnungen, unzugänglichen Schornsteinen, gemeinsamen Rauchgaswegen oder Stellen, an denen nicht sicher gearbeitet werden kann.
-
-Bei Kesselanlagen in Krankenhäusern, Schulen, Wohnhäusern oder Industriearealen stellen wir häufig fest, dass die Messung bei der Planung nicht berücksichtigt wurde. Der Betreiber muss dann nachträglich Probenahmeöffnungen, Laufstege, Plattformen oder andere technische Anpassungen lösen.
-
-## Betriebsstunden und Aufzeichnungen
-
-Betriebsstunden sind wichtig für die Bewertung des Quellenregimes, die Planung der Messung und die Erfüllung der Genehmigungsbedingungen. Bei einer gewöhnlichen Kesselanlage kann es sich um saisonalen Betrieb handeln, bei Krankenhaus oder Industrie um ganzjährigen Betrieb, bei Ersatzkesseln um Betrieb nur bei Störung oder Spitze.
-
-Der Betreiber sollte einen Überblick über Quellenbetrieb, Brennstoffverbrauch, Wartungseingriffe, Messungen, Störungen und Änderungen führen. Bei aufgeführten Quellen sind Betriebsaufzeichnungen nicht nur formal, sondern auch praktisch wichtig. Sie helfen nachzuweisen, wie die Quelle betrieben wurde und ob sie der Genehmigung entspricht.
-
-Bei Gaskesselanlagen ist es sinnvoll, Betriebsaufzeichnungen mit der Servicedokumentation abzugleichen. Erhöhtes CO, verschlechterte Verbrennung oder wiederholte Störungen können mit dem technischen Zustand von Brenner, Wärmetauscher, Regelung oder Verbrennungsluftzufuhr zusammenhängen.
-
-## Was beim Kesseltausch zu prüfen ist
-
-Der Kesseltausch ist eine häufige Situation mit Unklarheiten. Der Betreiber klärt Lieferung und Montage, vergisst aber die Verknüpfung mit Betriebsgenehmigung und Emissionsmessung. Gerade der Kesseltausch kann Input, Emissionsparameter, Abgasführung und Messstelle ändern.
-
-Vor dem Tausch ist vor allem die aktuelle Betriebsgenehmigung, die Liste der genehmigten Kessel, der Gesamtinput der Kesselanlage, Brennstoffart, Schornsteine, Betriebsregime und die letzten Emissionsmessprotokolle zu prüfen. Ersetzt ein neuer Kessel einen alten, ist zu klären, ob es sich um eine für den Luftschutz wesentliche Änderung handelt und ob Anzeige, Genehmigungsänderung oder neue Messung nach Inbetriebnahme erforderlich ist.
-
-Bei Brennwertkesseln und modernen Niedrigemissionsbrennern sind auch die technischen Bedingungen der Messung zu prüfen. Niedrige Abgastemperatur, Kondensation, gemeinsame Rauchgaswege oder Kaskadenschaltung können die praktische Durchführung der Probenahme beeinflussen.
+Bei größeren Anlagen oder sensiblen Lagen ist es sinnvoll, die Dokumentation so vorzubereiten, dass Emissionen und Lärm gleichzeitig behandelt werden. Die technische Lösung von Abgasführung, Schalldämpfern, Ansaugung, Kühlung und Schornstein muss als Ganzes stimmig sein.
 
 ## Häufigste Fehler aus der Praxis
 
-Der häufigste Fehler ist die Verwechslung von Leistung und Input. Werden Pflichten nach Leistung statt nach Nennwärmeinput beurteilt, kann die Kesselanlage falsch eingestuft werden.
+Der häufigste Fehler ist die Beurteilung der KGJ nach elektrischer Leistung statt nach Wärmeinput im Brennstoff. Der Betreiber unterschätzt dann Pflichten nach dem Luftschutzgesetz und erfährt zu spät, dass die Einheit Betriebsgenehmigung oder Emissionsmessung erfordern kann.
 
-Ein zweiter häufiger Fehler ist die fehlende Summierung der Kessel. Mehrere kleinere Kessel können zusammen eine Quelle bilden, die bereits andere Pflichten hat als einzeln beurteilte Kessel.
+Ein zweiter häufiger Fehler ist das Auslassen der Messstelle am Abgasweg. Fehlen im Projekt Probenahmeöffnung und sicherer Zugang, müssen nachträglich bauliche oder technologische Anpassungen gelöst werden.
 
-Ein drittes Problem ist eine alte Genehmigung, die dem tatsächlichen Zustand nicht entspricht. In der Kesselanlage sind andere Kessel, anderer Input, anderer Schornstein oder anderes Betriebsregime, die Dokumentation blieb unverändert.
+Ein drittes Problem ist Lärm. Der Lieferant gibt oft akustische Leistung oder Lärmpegel unter bestimmten Bedingungen an, der konkrete Standort im Areal kann jedoch anders sein. Ansaugung, Abgas, Kühlung und Reflexionen von Fassaden können dazu führen, dass der tatsächliche Zustand den Erwartungen nicht entspricht.
 
-Häufig fehlt auch eine Messstelle. Die Kesselanlage ist technisch funktionsfähig, aber die autorisierte Emissionsmessung ist schwierig, weil das Projekt keine Probenahmeöffnungen und keinen sicheren Zugang vorsah.
-
-## Welche Unterlagen vorbereiten
-
-Für eine schnelle Beurteilung der Kesselanlage sind vor allem technische Datenblätter der Kessel, Schildangaben, Nennwärmeinputs, Brennstoff, Kesselverbindung, Anzahl der Schornsteine oder Rauchgaswege, Betriebsstunden und letzte Emissionsmessprotokolle wichtig.
-
-Bei einer bestehenden Kesselanlage ist auch die aktuelle Betriebsgenehmigung, Betriebsordnung, Betriebsaufzeichnungen, Projektdokumentation und Information über geplante Änderung sinnvoll. Bei einer neuen Kesselanlage helfen Lageplan, Anschlussschema und Entwurf der Messstellen.
-
-| Unterlage | Warum sie wichtig ist |
-|---|---|
-| Technische Datenblätter der Kessel | Bestimmung von Leistung, Input, Brennstoff, Emissionsparametern und Betriebsbedingungen. |
-| Liste der Kessel und ihrer Inputs | Einstufung der Kesselanlage nach gesamtem Nennwärmeinput. |
-| Brennstoff | Emissionsgrenzwerte und Messpflichten hängen von der Brennstoffart ab. |
-| Schornsteine und Rauchgaswege | Prüfung der Messmöglichkeit und des korrekten Abgasabzugs. |
-| Betriebsgenehmigung | Abgleich genehmigter und tatsächlicher Zustand. |
-| Betriebsstunden | Bestimmung des Betriebsregimes, der Aufzeichnungen und der praktischen Bedeutung der Quelle. |
-| Letzte Emissionsmessprotokolle | Prüfung, ob die Quelle Grenzwerte einhielt und welche Stoffe gemessen wurden. |
+Häufig ist auch der unklare Bezug zur bestehenden Kesselanlage. Wird die KGJ in einen Betrieb ergänzt, in dem bereits Kessel oder andere Verbrennungsquellen sind, ist der gesamte Energieverbund zu beurteilen und zu prüfen, ob sich Genehmigung, Betriebsordnung oder Emissions- und Lärmbedingungen ändern.
 
 ## Was Sie uns zur Beurteilung senden können
 
-Senden Sie uns technische Datenblätter der Kessel, Übersicht der Inputs, Brennstoff, Schornsteinschema, Betriebsstunden, bestehende Genehmigung und letzte Emissionsmessprotokolle. Wenn Sie einen Kesseltausch vorbereiten, senden Sie auch Angaben zum ursprünglichen und neuen Kessel.
+Für eine erste Beurteilung senden Sie das technische Datenblatt der Kogenerationsanlage, Angaben zu Brennstoff, elektrischer Leistung, Wärmeleistung und Nennwärmeinput, geplanten Standort, Abgasweg, Schornsteinhöhe, Betriebsstunden und Information, ob die Einheit auch nachts laufen wird.
 
-Wir prüfen die Einstufung der Kesselanlage, Messpflichten und den Bezug zur Betriebsgenehmigung. Wir klären, ob Genehmigungsänderung, neue Emissionsmessung, Anpassung der Betriebsaufzeichnungen, Ergänzung der Messstelle oder eine andere technische Lösung erforderlich ist.
+Außerdem sind Geländesituation, Grundriss oder Schnitt der Kesselanlage, Abstand zu nächsten Wohnhäusern oder anderen geschützten Räumen, Angaben zu bestehenden Kesseln und gegebenenfalls bestehende Betriebsgenehmigung sinnvoll. Wenn bereits eine Anforderung der Regionsbehörde, KHS, Baubehörde oder des Planers vorliegt, senden Sie diese ebenfalls.
+
+Wir prüfen Anforderungen an Emissionen, Lärm und Genehmigung der Kogenerationsanlage. Wir schlagen vor, ob Betriebsgenehmigung, Gutachten, Ausbreitungsstudie, autorisierte Emissionsmessung, Lärmstudie, Lärmmessung oder Anpassung der technischen Lösung erforderlich ist.
 
 ## Kurze Zusammenfassung
 
-Bei einer Gaskesselanlage 0,3 bis 50 MW sind vor allem gesamter Nennwärmeinput, Summierung der Kessel, Brennstoff, Schornsteine, Betriebsstunden, Emissionsmessung und Übereinstimmung mit der bestehenden Genehmigung zu klären. Aus Emissionssicht werden in der Regel vor allem **NOx** und **CO** überwacht.
+Die Kogenerationsanlage muss nach tatsächlichen technischen Parametern und Betriebsregime beurteilt werden. Entscheidend sind vor allem Wärmeinput im Brennstoff, Art des Verbrennungsmotors, Brennstoff, Schornstein, Emissionen, Lärm, Betriebsstunden und Standort zur Umgebungsbebauung.
 
-Die meisten Probleme entstehen beim Kesseltausch, bei Inputerhöhung, Schornsteinwechsel oder bei Kesselanlagen, deren tatsächlicher Zustand nicht mehr zur alten Genehmigung passt. Der Betreiber sollte dies vor der Änderung prüfen, nicht erst bei Messung oder Kontrolle.
+Vor der Installation ist zu prüfen, ob die Einheit zu den aufgeführten Luftverschmutzungsquellen gehört, ob sie eine Betriebsgenehmigung benötigt, wie die Emissionsmessung abläuft und ob die Planung Lärmgrenzwerte erfüllt. In sensiblen Lagen ist eine Lärmstudie noch vor Bestellung der endgültigen Technologie sinnvoll.
 
-Senden Sie uns technische Datenblätter der Kessel, Inputs, Brennstoff, Schornsteine, Genehmigung und Betriebsstunden. Wir prüfen, welche Pflichten für die Kesselanlage gelten und welche Unterlagen vorbereitet werden müssen.
+Senden Sie uns das KGJ-Datenblatt, Brennstoff, Input/Leistung, Schornstein, Standort und Betriebsstunden. Wir prüfen, welche Unterlagen für Emissionen, Lärm, Betriebsgenehmigung und anschließende Messung erforderlich sind.
 
 ## Sachliche Grundlage des Artikels
 
 | Unterlage | Praktische Bedeutung |
 |---|---|
-| [Gesetz Nr. 201/2012 Sb. über den Luftschutz](https://www.zakonyprolidi.cz/cs/2012-201) | Grundgesetz für stationäre Luftverschmutzungsquellen. Bei Kesselanlagen sind Einstufung nach Anhang Nr. 2 und Betreiberpflichten entscheidend. |
-| Anhang Nr. 2 zum Gesetz Nr. 201/2012 Sb. | Führt aufgeführte stationäre Quellen auf. Für Gaskesselanlagen ist vor allem Code 1.1 für Verbrennung von Brennstoffen in Kesseln nach gesamtem Nennwärmeinput relevant. |
-| [Verordnung Nr. 415/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-415) | Legt Emissionsgrenzwerte, Methode zur Feststellung des Verschmutzungsgrades, Messintervalle, Betriebsaufzeichnungen und weitere Durchführungsanforderungen zum Luftschutzgesetz fest. |
-| [Verordnung Nr. 398/2025 Sb.](https://www.zakonyprolidi.cz/cs/2025-398) | Ändert die Verordnung Nr. 415/2012 Sb. und passt unter anderem einige Anforderungen zur Feststellung des Verschmutzungsgrades bei Verbrennungsquellen an. Für aktuelle Beurteilungen ist der gültige Wortlaut zu verwenden. |
-| Betriebsgenehmigung der Kesselanlage | Im konkreten Betrieb ist entscheidend, welche Kessel, Inputs, Brennstoff, Schornsteine und Bedingungen genehmigt sind. |
-| Technische Datenblätter und Schilder der Kessel | Grundlage zur Bestimmung von Nennwärmeinput, Leistung, Brennstoff und Emissionsparametern. |
-| Protokolle autorisierten Emissionsmessungen | Belegen tatsächliche NOx-, CO- und weitere relevante Stoffwerte im Quellenbetrieb. |
-| Betriebsaufzeichnungen | Helfen, Betriebsstunden, Brennstoffverbrauch, Wartung, Störungen, Messungen und Übereinstimmung mit der Genehmigung nachzuweisen. |
+| [Gesetz Nr. 201/2012 Sb. über den Luftschutz](https://www.zakonyprolidi.cz/cs/2012-201) | Grundgesetz für Genehmigung und Betrieb stationärer Luftverschmutzungsquellen. Bei der KGJ ist zu klären, ob es sich um eine aufgeführte Quelle nach Anhang Nr. 2 handelt. |
+| Anhang Nr. 2 zum Gesetz Nr. 201/2012 Sb. | Für Kogenerationsanlagen mit Kolbenverbrennungsmotor ist vor allem Code 1.2 für Verbrennung von Brennstoffen in Kolbenverbrennungsmotoren nach gesamtem Nennwärmeinput relevant. |
+| [Verordnung Nr. 415/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-415) | Legt Emissionsgrenzwerte, Methode zur Feststellung des Verschmutzungsgrades, Anforderungen an fachliche Unterlagen, Betriebsaufzeichnungen und weitere Anforderungen zum Luftschutzgesetz fest. |
+| Anhang Nr. 2 zur Verordnung Nr. 415/2012 Sb. | Enthält spezifische Emissionsgrenzwerte und technische Bedingungen für stationäre Verbrennungsquellen. Bei der KGJ ist der richtige Teil nach Quellentyp, Input, Brennstoff und Inbetriebnahmedatum zu verwenden. |
+| [Gesetz Nr. 258/2000 Sb. über den Schutz der öffentlichen Gesundheit](https://www.zakonyprolidi.cz/cs/2000-258) | Rechtsgrundlage für Gesundheitsschutz vor Lärm. Bei der KGJ ist der Bezug zu geschützten Außen- und Innenräumen von Gebäuden wichtig. |
+| [Verordnung der Regierung Nr. 272/2011 Sb.](https://www.zakonyprolidi.cz/cs/2011-272) | Legt Hygienegrenzwerte für Lärm und die Methode zur Beurteilung von Lärm und Vibrationen fest. Wird für Lärmstudien und Lärmmessung nach KGJ-Installation verwendet. |
+| [Gesetz Nr. 148/2023 Sb. über das einheitliche Umweltgutachten](https://www.zakonyprolidi.cz/cs/2023-148) | Kann bei einigen Vorhaben für die Vereinheitlichung von Umweltanforderungen im nachfolgenden Genehmigungsprozess relevant sein. |
+| Betriebsgenehmigung, bestehende Betriebsordnung und Projektdokumentation | Im konkreten Betrieb ist entscheidend, was bereits genehmigt ist, ob durch Ergänzung der KGJ Quelle, Betriebsbedingungen, Emissionen, Schornstein oder Lärmsituation geändert werden. |
 
-Aus diesen Unterlagen folgt, dass eine Gaskesselanlage nach tatsächlichem technischem und betrieblichem Zustand beurteilt werden muss. Es reicht nicht zu wissen, dass es Erdgas und moderne Kessel sind. Entscheidend sind Summe der Inputs, Quelleneinstufung, Genehmigung, Messpflichten und die Möglichkeit, Emissionsmessungen sicher durchzuführen.
+Aus diesen Unterlagen folgt, dass die KGJ nicht nur als wirtschaftliche oder energetische Anlage beurteilt werden darf. Der Betreiber muss Anforderungen an Luft, Emissionsmessung, Lärm, Schornstein und Betriebsgenehmigung rechtzeitig prüfen. Werden diese Fragen erst nach der Installation gelöst, kann die Abhilfe technisch und finanziell aufwendig sein.

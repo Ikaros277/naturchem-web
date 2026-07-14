@@ -114,11 +114,6 @@
     "en",
     "de"
   ],
-  "kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1": [
-    "cs",
-    "en",
-    "de"
-  ],
   "kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu": [
     "cs",
     "en",
@@ -195,6 +190,11 @@
     "de"
   ],
   "oznameni-zameru-eia-co-to-je-a-kdy-je-potreba": [
+    "cs",
+    "en",
+    "de"
+  ],
+  "plynova-kotelna-03-50-mw-nox-co-mereni-povoleni": [
     "cs",
     "en",
     "de"

@@ -33,8 +33,7 @@
 - Kdy je potřeba hluková studie a kdy měření hluku?: https://www.naturchem.cz/poradna/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku/
 - Kdy je potřeba měření emisí a kdy stačí jiný podklad?: https://www.naturchem.cz/poradna/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad/
 - Kdy může úřad požadovat odborný posudek i u změny stávajícího zdroje?: https://www.naturchem.cz/poradna/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje/
-- Kogenerační jednotka: emise, hluk, měření a povolení provozu: https://www.naturchem.cz/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1/
-- Plynová kotelna 0,3 až 50 MW: co řešit u NOx, CO, měření a povolení: https://www.naturchem.cz/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
+- Kogenerační jednotka: emise, hluk, měření a povolení provozu: https://www.naturchem.cz/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
 - Kotelna a plynový kotel: kdy se měří emise CO a NOx?: https://www.naturchem.cz/poradna/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox/
 - Lakovna: emise, VOC, provozní řád, měření a povolení provozu: https://www.naturchem.cz/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu/
 - Manipulace se sypkými materiály: kdy se z plochy stává vyjmenovaný zdroj: https://www.naturchem.cz/poradna/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni/
@@ -50,6 +49,7 @@
 - Novela zákona o ochraně ovzduší 2025: co se mění pro provozovatele: https://www.naturchem.cz/poradna/novela-zakona-o-ochrane-ovzdusi-2025/
 - Odborný posudek podle zákona o ochraně ovzduší: kdy je potřeba a co musí obsahovat?: https://www.naturchem.cz/poradna/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat/
 - Oznámení záměru EIA: co to je a kdy ho podnikatel potřebuje před stavbou: https://www.naturchem.cz/poradna/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba/
+- Plynová kotelna 0,3 až 50 MW: co řešit u NOx, CO, měření a povolení: https://www.naturchem.cz/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni/
 - Poplatky za znečišťování ovzduší: jak souvisí měření, výpočet emisí a: https://www.naturchem.cz/poradna/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence/
 - Prach na pracovišti: celkový prach, respirabilní frakce a oxid křemičitý: https://www.naturchem.cz/poradna/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity/
 - Proč nestačí katalogový údaj zařízení pro hlukové posouzení?: https://www.naturchem.cz/poradna/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni/
@@ -92,8 +92,7 @@
 - When is a noise study needed and when is noise measurement needed?: https://www.naturchem.cz/en/poradna/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku/
 - When is emission measurement needed and when is another supporting document sufficient?: https://www.naturchem.cz/en/poradna/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad/
 - When can the authority require an expert opinion even for a change to an existing source?: https://www.naturchem.cz/en/poradna/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje/
-- Cogeneration unit: emissions, noise, measurement, and operating permit: https://www.naturchem.cz/en/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1/
-- Gas boiler plant 0.3 to 50 MW: what to address for NOx, CO, measurement, and permitting: https://www.naturchem.cz/en/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
+- Cogeneration unit: emissions, noise, measurement, and operating permit: https://www.naturchem.cz/en/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
 - Boiler plant and gas boiler: when are CO and NOx emissions measured?: https://www.naturchem.cz/en/poradna/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox/
 - Paint shop: emissions, VOC, operating rules, measurement and operating permit: https://www.naturchem.cz/en/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu/
 - Handling bulk materials: when an area becomes a listed source: https://www.naturchem.cz/en/poradna/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni/
@@ -109,6 +108,7 @@
 - Amendment to the Air Protection Act 2025: what is changing for emission source operators: https://www.naturchem.cz/en/poradna/novela-zakona-o-ochrane-ovzdusi-2025/
 - Expert opinion under the Air Protection Act: when is it needed and what must it contain?: https://www.naturchem.cz/en/poradna/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat/
 - EIA project notification: what it is and when a business needs it before construction or a new operation: https://www.naturchem.cz/en/poradna/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba/
+- Gas boiler plant 0.3 to 50 MW: what to address for NOx, CO, measurement, and permitting: https://www.naturchem.cz/en/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni/
 - Air pollution fees: how measurement, emission calculation, and operating records are linked: https://www.naturchem.cz/en/poradna/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence/
 - Workplace dust: total dust, respirable fraction, and silicon dioxide: https://www.naturchem.cz/en/poradna/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity/
 - Why is an equipment catalogue value not enough for noise assessment?: https://www.naturchem.cz/en/poradna/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni/
@@ -151,8 +151,7 @@
 - Wann ist eine Lärmstudie erforderlich und wann ist eine Lärmmessung erforderlich?: https://www.naturchem.cz/de/poradna/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku/
 - Wann ist eine Emissionsmessung erforderlich und wann reicht ein weiteres Belegdokument aus?: https://www.naturchem.cz/de/poradna/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad/
 - Wann kann die Behörde auch für eine Änderung einer bestehenden Quelle ein Gutachten verlangen?: https://www.naturchem.cz/de/poradna/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje/
-- Kogenerationsanlage: Emissionen, Lärm, Messung und Betriebsgenehmigung: https://www.naturchem.cz/de/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1/
-- Gaskesselanlage 0,3 bis 50 MW: Was bei NOx, CO, Messung und Genehmigung zu klären ist: https://www.naturchem.cz/de/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
+- Kogenerationsanlage: Emissionen, Lärm, Messung und Betriebsgenehmigung: https://www.naturchem.cz/de/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
 - Kesselanlage und Gaskessel: Wann werden CO- und NOx-Emissionen gemessen?: https://www.naturchem.cz/de/poradna/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox/
 - Lackiererei: Emissionen, VOC, Betriebsvorschriften, Messung und Betriebserlaubnis: https://www.naturchem.cz/de/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu/
 - Umgang mit Schüttgütern: Wann wird aus einer Fläche eine gelistete Quelle: https://www.naturchem.cz/de/poradna/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni/
@@ -168,6 +167,7 @@
 - Novelle des Luftschutzgesetzes 2025: Was sich für Betreiber von Emissionsquellen ändert: https://www.naturchem.cz/de/poradna/novela-zakona-o-ochrane-ovzdusi-2025/
 - Gutachten nach dem Luftschutzgesetz: Wann wird es benötigt und was muss es enthalten?: https://www.naturchem.cz/de/poradna/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat/
 - EIA-Projektanzeige: Was sie ist und wann ein Unternehmen sie vor Bau oder neuem Betrieb benötigt: https://www.naturchem.cz/de/poradna/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba/
+- Gaskesselanlage 0,3 bis 50 MW: Was bei NOx, CO, Messung und Genehmigung zu klären ist: https://www.naturchem.cz/de/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni/
 - Luftverschmutzungsgebühren: Wie Messung, Emissionsberechnung und Betriebsaufzeichnungen zusammenhängen: https://www.naturchem.cz/de/poradna/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence/
 - Arbeitsplatzstaub: Gesamtstaub, alveolengängige Fraktion und Siliziumdioxid: https://www.naturchem.cz/de/poradna/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity/
 - Warum reicht ein Gerätekatalogwert für die Lärmbeurteilung nicht aus?: https://www.naturchem.cz/de/poradna/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni/

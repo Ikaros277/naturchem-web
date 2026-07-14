@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+import { defaultLocale, isLocale } from "@/lib/i18n/locales";
 import { siteUrl } from "@/lib/site";
 
 const fontSans = Source_Sans_3({
@@ -14,9 +16,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl)
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const headerLocale = (await headers()).get("x-locale");
+  const lang = headerLocale && isLocale(headerLocale) ? headerLocale : defaultLocale;
+
   return (
-    <html lang="cs" className={fontSans.variable} suppressHydrationWarning>
+    <html lang={lang} className={fontSans.variable} suppressHydrationWarning>
       <head>
         <link
           rel="alternate"

@@ -47,25 +47,38 @@ const footerCompanyLabels: Record<
 
 const footerServiceLabels: Record<
   Locale,
-  { all: string; emissions: string; workplace: string; dispersion: string }
+  {
+    all: string;
+    emissions: string;
+    workplace: string;
+    dispersion: string;
+    authorizedEmissions: string;
+    dust: string;
+  }
 > = {
   cs: {
     all: "Přehled služeb",
     emissions: "Měření emisí",
     workplace: "Pracovní prostředí",
-    dispersion: "Rozptylové studie"
+    dispersion: "Rozptylové studie",
+    authorizedEmissions: "Autorizovaná osoba — emise",
+    dust: "Měření prašnosti"
   },
   en: {
     all: "All services",
     emissions: "Emission measurements",
     workplace: "Workplace environment",
-    dispersion: "Dispersion studies"
+    dispersion: "Dispersion studies",
+    authorizedEmissions: "Authorized body — emissions",
+    dust: "Dust measurements"
   },
   de: {
     all: "Alle Leistungen",
     emissions: "Emissionsmessungen",
     workplace: "Arbeitsumfeld",
-    dispersion: "Ausbreitungsstudien"
+    dispersion: "Ausbreitungsstudien",
+    authorizedEmissions: "Autorisierte Stelle — Emissionen",
+    dust: "Staubmessungen"
   }
 } ;
 
@@ -117,7 +130,9 @@ export function getFooterNav(locale: Locale) {
     { href: "/sluzby", label: serviceLabels.all },
     { href: "/mereni-emisi-kotelen", label: serviceLabels.emissions },
     { href: "/mereni-pracovniho-prostredi-kategorizace-praci", label: serviceLabels.workplace },
-    { href: "/rozptylova-studie-povoleni", label: serviceLabels.dispersion }
+    { href: "/rozptylova-studie-povoleni", label: serviceLabels.dispersion },
+    { href: "/autorizovana-osoba-mereni-emisi", label: serviceLabels.authorizedEmissions },
+    { href: "/mereni-prasnosti", label: serviceLabels.dust }
   ];
 
   const footerContactPageLink: FooterLink = {

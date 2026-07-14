@@ -8,7 +8,6 @@ import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
-import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
 import { getFaqTeaserItemsForLocale } from "@/lib/i18n/faq-helpers";
 import { getCtaCopy } from "@/lib/i18n/cta-i18n";
 import { getProvozyNavLabel, getSectors, getSiteServices } from "@/lib/i18n/content";
@@ -162,7 +161,6 @@ export async function ServicePage(props: Props) {
     <main className="page">
       <JsonLd data={serviceData} />
       <JsonLd data={breadcrumbData} />
-      {faqTeaserItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(faqTeaserItems)} /> : null}
       {relatedLinks.length > 0 || sectorCrossLinks.length > 0 ? (
         <JsonLd data={relatedItemListData} />
       ) : null}

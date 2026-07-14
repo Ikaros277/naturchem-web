@@ -1,6 +1,7 @@
 "use client";
 
 import { MegaMenuColumnHead, MegaMenuMobileHeadLink } from "@/components/MegaMenuColumnHead";
+import { MobileNavSummaryRow } from "@/components/MobileNavSummaryRow";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { ExperienceHeaderMegaGroup, HeaderLabels } from "@/lib/header-nav-data";
 import { LocaleLink } from "@/lib/i18n/locale-link";
@@ -136,6 +137,7 @@ export function MobileExperienceMegaGroups({
           className={`nav-mobile-details nav-mobile-nested mega-menu-mobile-group mega-menu-mobile-group--${group.id ?? "default"}`}
         >
           <summary>
+            <MobileNavSummaryRow>
             {headHref ? (
               <MegaMenuMobileHeadLink
                 href={headHref}
@@ -162,6 +164,7 @@ export function MobileExperienceMegaGroups({
                 </span>
               </span>
             )}
+            </MobileNavSummaryRow>
           </summary>
           <ul className="mega-menu-link-list mega-menu-link-list--mobile">
             {group.links.map((item) => (

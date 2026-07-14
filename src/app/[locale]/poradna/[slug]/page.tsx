@@ -44,7 +44,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: article.excerpt || messages.poradna.articleMetaFallback,
     availableLocales,
     ogImage: article.heroImage,
-    ogType: "article"
+    ogType: "article",
+    publishedTime: normalizeArticleDate(article.publishedAt),
+    modifiedTime:
+      normalizeArticleDate(article.updatedAt) || normalizeArticleDate(article.publishedAt)
   });
 }
 

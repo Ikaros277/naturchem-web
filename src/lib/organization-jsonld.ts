@@ -1,10 +1,33 @@
 import type { Locale } from "@/lib/i18n/locales";
 import { locales } from "@/lib/i18n/locales";
+import { localizedCanonical } from "@/lib/i18n/metadata-helpers";
 import { getOrganizationSchemaCopy } from "@/lib/organization-jsonld-i18n";
 import { company, getCompanyOffices, services, siteUrl } from "@/lib/site";
 
-export function buildOrganizationJsonLd(locale: Locale = "cs") {
+export type OrganizationCatalogService = {
+  href: string;
+  title: string;
+  short: string;
+};
+
+function resolveCatalogServices(
+  locale: Locale,
+  catalogServices?: readonly OrganizationCatalogService[]
+): readonly OrganizationCatalogService[] {
+  if (catalogServices?.length) return catalogServices;
+  return services.map((service) => ({
+    href: service.href,
+    title: service.title,
+    short: service.short
+  }));
+}
+
+export function buildOrganizationJsonLd(
+  locale: Locale = "cs",
+  catalogServices?: readonly OrganizationCatalogService[]
+) {
   const copy = getOrganizationSchemaCopy(locale);
+  const offerServices = resolveCatalogServices(locale, catalogServices);
 
   return {
     "@context": "https://schema.org",
@@ -12,7 +35,7 @@ export function buildOrganizationJsonLd(locale: Locale = "cs") {
     "@id": `${siteUrl}/#organization`,
     name: company.name,
     alternateName: "NATURCHEM",
-    url: siteUrl,
+    url: localizedCanonical("/", locale),
     logo: `${siteUrl}/graphics/naturchem-mark.svg`,
     image: `${siteUrl}/opengraph-image`,
     description: copy.description,
@@ -65,13 +88,13 @@ export function buildOrganizationJsonLd(locale: Locale = "cs") {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: copy.offerCatalogName,
-      itemListElement: services.map((service, index) => ({
+      itemListElement: offerServices.map((service, index) => ({
         "@type": "ListItem",
         position: index + 1,
         item: {
           "@type": "Service",
           name: service.title,
-          url: `${siteUrl}${service.href}/`,
+          url: localizedCanonical(service.href, locale),
           description: service.short,
           provider: { "@id": `${siteUrl}/#organization` },
           areaServed: "CZ"
@@ -90,7 +113,7 @@ export function buildLocalBusinessJsonLd(locale: Locale = "cs") {
     "@id": `${siteUrl}/#localbusiness`,
     name: company.name,
     alternateName: "NATURCHEM",
-    url: siteUrl,
+    url: localizedCanonical("/", locale),
     description: copy.description,
     telephone: company.phones[0],
     email: company.email,
@@ -108,9 +131,8 @@ export function buildLocalBusinessJsonLd(locale: Locale = "cs") {
   };
 }
 
-export function buildWebSiteJsonLd(locale: string) {
-  const schemaLocale: Locale = locale === "en" || locale === "de" ? locale : "cs";
-  const copy = getOrganizationSchemaCopy(schemaLocale);
+export function buildWebSiteJsonLd(locale: Locale) {
+  const copy = getOrganizationSchemaCopy(locale);
 
   return {
     "@context": "https://schema.org",
@@ -118,9 +140,27 @@ export function buildWebSiteJsonLd(locale: string) {
     "@id": `${siteUrl}/#website`,
     name: "NATURCHEM",
     alternateName: "NATURCHEM, s.r.o.",
-    url: siteUrl,
+    url: localizedCanonical("/", locale),
     inLanguage: locale,
     description: copy.description,
     publisher: { "@id": `${siteUrl}/#organization` }
+  };
+}
+
+export function buildContactPageJsonLd(locale: Locale) {
+  const copy = getOrganizationSchemaCopy(locale);
+  const pageUrl = localizedCanonical("/kontakt", locale);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${pageUrl}#contactpage`,
+    name: copy.contactPageName,
+    url: pageUrl,
+    inLanguage: locale,
+    description: copy.description,
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#organization` },
+    mainEntity: { "@id": `${siteUrl}/#organization` }
   };
 }

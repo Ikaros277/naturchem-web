@@ -71,16 +71,6 @@ export async function SectorPage(props: Props) {
     ]
   };
 
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: props.faq.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a }
-    }))
-  };
-
   const relatedServiceListData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -96,7 +86,6 @@ export async function SectorPage(props: Props) {
   return (
     <main className="page sector-detail-page">
       <JsonLd data={breadcrumbData} />
-      <JsonLd data={faqData} />
       <JsonLd data={relatedServiceListData} />
       <PageHeroBand
         locale={locale}

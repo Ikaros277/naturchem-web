@@ -12,6 +12,7 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { buildOrganizationJsonLd } from "@/lib/organization-jsonld";
+import { getSiteServices } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { siteUrl } from "@/lib/site";
 
@@ -38,6 +39,7 @@ export default async function ProcNaturchemPage({ params }: Props) {
   const messages = await getMessages(locale);
   const trustItems = getHomeTrustBandItems(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
+  const siteServices = await getSiteServices(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/proc-naturchem")}/`.replace(/([^:]\/)\/+/g, "$1");
   const s = content.sections;
@@ -66,7 +68,7 @@ export default async function ProcNaturchemPage({ params }: Props) {
   return (
     <main className="section why-naturchem-page premium-page">
       <JsonLd data={webPageData} />
-      <JsonLd data={buildOrganizationJsonLd(locale)} />
+      <JsonLd data={buildOrganizationJsonLd(locale, siteServices)} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}

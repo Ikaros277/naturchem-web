@@ -5,6 +5,7 @@ type OrganizationSchemaCopy = {
   audienceTypes: readonly string[];
   knowsAbout: readonly string[];
   offerCatalogName: string;
+  contactPageName: string;
   credentials: readonly { name: string; category: string }[];
   identifierNames: { ico: string; dic: string };
 };
@@ -39,6 +40,7 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       "prodej analytických přístrojů PCF Elettronica"
     ],
     offerCatalogName: "Služby NATURCHEM",
+    contactPageName: "Kontakt — NATURCHEM",
     credentials: [
       {
         name: "Akreditovaná zkušební laboratoř č. 1599 (ČIA)",
@@ -81,6 +83,7 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       "sale of PCF Elettronica analytical instruments"
     ],
     offerCatalogName: "NATURCHEM services",
+    contactPageName: "Contact — NATURCHEM",
     credentials: [
       {
         name: "Accredited testing laboratory No. 1599 (CAI)",
@@ -122,6 +125,7 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       "Verkauf analytischer Geräte PCF Elettronica"
     ],
     offerCatalogName: "NATURCHEM Leistungen",
+    contactPageName: "Kontakt — NATURCHEM",
     credentials: [
       {
         name: "Akkreditiertes Prüflabor Nr. 1599 (CAI)",

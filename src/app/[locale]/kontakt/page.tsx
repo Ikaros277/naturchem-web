@@ -11,6 +11,7 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { buildContactPageJsonLd } from "@/lib/organization-jsonld";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -52,6 +53,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <main className="section contact-page premium-page">
+      <JsonLd data={buildContactPageJsonLd(locale)} />
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}

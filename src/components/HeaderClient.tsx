@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { contactFormHref } from "@/lib/contact-url";
@@ -8,9 +9,32 @@ import { kontaktNav } from "@/lib/navigation";
 import { LocaleLink, useLocalizedPathname } from "@/lib/i18n/locale-link";
 import { BrandLogo } from "@/components/BrandLogo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import { ExperienceMegaMenu, MobileExperienceMegaGroups } from "@/components/ExperienceMegaMenu";
-import { MobileServiceMegaGroups, ServiceMegaMenu } from "@/components/ServiceMegaMenu";
-import { MobileONasMegaGroups, ONasMegaMenu } from "@/components/ONasMegaMenu";
+import { MobileNavSummaryRow } from "@/components/MobileNavSummaryRow";
+
+const ServiceMegaMenu = dynamic(
+  () => import("@/components/ServiceMegaMenu").then((mod) => mod.ServiceMegaMenu),
+  { loading: () => null }
+);
+const MobileServiceMegaGroups = dynamic(
+  () => import("@/components/ServiceMegaMenu").then((mod) => mod.MobileServiceMegaGroups),
+  { loading: () => null }
+);
+const ExperienceMegaMenu = dynamic(
+  () => import("@/components/ExperienceMegaMenu").then((mod) => mod.ExperienceMegaMenu),
+  { loading: () => null }
+);
+const MobileExperienceMegaGroups = dynamic(
+  () => import("@/components/ExperienceMegaMenu").then((mod) => mod.MobileExperienceMegaGroups),
+  { loading: () => null }
+);
+const ONasMegaMenu = dynamic(
+  () => import("@/components/ONasMegaMenu").then((mod) => mod.ONasMegaMenu),
+  { loading: () => null }
+);
+const MobileONasMegaGroups = dynamic(
+  () => import("@/components/ONasMegaMenu").then((mod) => mod.MobileONasMegaGroups),
+  { loading: () => null }
+);
 
 function useIsDesktopNav() {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -82,6 +106,42 @@ export function HeaderClient({
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    const header = document.querySelector<HTMLElement>("header.site-header");
+    if (!header) return;
+
+    const syncHeaderOffset = () => {
+      const height = Math.ceil(header.getBoundingClientRect().height);
+      if (height > 0) {
+        document.documentElement.style.setProperty("--site-header-offset", `${height}px`);
+      }
+    };
+
+    const scheduleSync = () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(syncHeaderOffset);
+      });
+    };
+
+    scheduleSync();
+    const observer = new ResizeObserver(scheduleSync);
+    observer.observe(header);
+
+    const logo = header.querySelector<HTMLImageElement>(".brand-logo-img");
+    logo?.addEventListener("load", scheduleSync);
+
+    if (document.fonts?.ready) {
+      void document.fonts.ready.then(scheduleSync);
+    }
+    window.addEventListener("load", scheduleSync, { once: true });
+
+    return () => {
+      observer.disconnect();
+      logo?.removeEventListener("load", scheduleSync);
+      window.removeEventListener("load", scheduleSync);
+    };
+  }, [isDesktop]);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -169,7 +229,9 @@ export function HeaderClient({
               </div>
               <nav className="nav-mobile-nav" aria-label={t.navAria}>
                 <details className="nav-mobile-details">
-                  <summary>{t.services}</summary>
+                  <summary>
+                    <MobileNavSummaryRow>{t.services}</MobileNavSummaryRow>
+                  </summary>
                   <LocaleLink href="/sluzby" className="nav-mobile-overview" onClick={closeMenu}>
                     {t.servicesOverview}
                   </LocaleLink>
@@ -178,7 +240,9 @@ export function HeaderClient({
                   </div>
                 </details>
                 <details className="nav-mobile-details">
-                  <summary>{t.experience}</summary>
+                  <summary>
+                    <MobileNavSummaryRow>{t.experience}</MobileNavSummaryRow>
+                  </summary>
                   <div className="nav-mobile-sub nav-mobile-sub--mega">
                     <MobileExperienceMegaGroups groups={experienceMegaGroups} onNavigate={closeMenu} />
                   </div>
@@ -192,7 +256,9 @@ export function HeaderClient({
                   {salesNavLink.label}
                 </LocaleLink>
                 <details className="nav-mobile-details">
-                  <summary>{t.about}</summary>
+                  <summary>
+                    <MobileNavSummaryRow>{t.about}</MobileNavSummaryRow>
+                  </summary>
                   <LocaleLink href="/o-spolecnosti-naturchem" className="nav-mobile-overview" onClick={closeMenu}>
                     {t.aboutOverview}
                   </LocaleLink>

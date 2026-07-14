@@ -27,6 +27,10 @@ pnpm-debug.log*
 Podklady/
 .agents/report-hook.log
 
+# ČÚZK KN API klíč (lokální, necommitovat)
+cuzk-kn-api.key
+scripts/cuzk-kn-api.key.local
+
 # python / script artifacts
 scripts/__pycache__/
 scripts/*.pyc

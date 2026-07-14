@@ -10,6 +10,7 @@ import { Header } from "@/components/Header";
 import { SkipToContent } from "@/components/SkipToContent";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/Schema";
+import { getSiteServices } from "@/lib/i18n/content";
 import { siteUrl } from "@/lib/site";
 import {
   buildLocalBusinessJsonLd,
@@ -20,7 +21,6 @@ import { pickClientMessages } from "@/lib/i18n/client-messages";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
-import { schemaLanguage } from "@/lib/i18n/locale-pick";
 
 type Props = {
   children: React.ReactNode;
@@ -75,9 +75,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const locale: Locale = localeParam;
   const messages = await getMessages(locale);
 
-  const orgData = buildOrganizationJsonLd(locale);
+  const siteServices = await getSiteServices(locale);
+  const orgData = buildOrganizationJsonLd(locale, siteServices);
   const localBusinessData = buildLocalBusinessJsonLd(locale);
-  const websiteData = buildWebSiteJsonLd(schemaLanguage(locale));
+  const websiteData = buildWebSiteJsonLd(locale);
 
   return (
     <LocaleProvider locale={locale} messages={pickClientMessages(messages)}>

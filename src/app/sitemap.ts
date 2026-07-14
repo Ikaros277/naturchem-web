@@ -73,11 +73,42 @@ function articleLastModified(article: { updatedAt?: string; publishedAt: string 
   return Number.isNaN(parsed.getTime()) ? new Date() : parsed;
 }
 
-function staticSitemapEntries(now: Date, staticPaths: string[]): MetadataRoute.Sitemap {
+const CONTENT_REFRESH = new Date("2026-07-14T00:00:00.000Z");
+const CATALOG_REFRESH = new Date("2026-03-01T00:00:00.000Z");
+
+function staticRouteLastModified(route: string, buildDate: Date, poradnaHubDate?: Date): Date {
+  if (route === "") return buildDate;
+  if (route === "/poradna" && poradnaHubDate) return poradnaHubDate;
+  if (route === "/kontakt" || route === "/proc-naturchem") return buildDate;
+  if (route.startsWith("/prodej")) return CATALOG_REFRESH;
+  return CONTENT_REFRESH;
+}
+
+async function poradnaHubLastModified(): Promise<Date> {
+  let latest = new Date("2020-01-01T00:00:00.000Z");
+
+  await Promise.all(
+    locales.map(async (locale) => {
+      const articles = await getArticles(locale);
+      for (const article of articles) {
+        const modified = articleLastModified(article);
+        if (modified > latest) latest = modified;
+      }
+    })
+  );
+
+  return latest;
+}
+
+function staticSitemapEntries(
+  buildDate: Date,
+  staticPaths: string[],
+  poradnaHubDate: Date
+): MetadataRoute.Sitemap {
   return locales.flatMap((locale) =>
     staticPaths.map((route) => ({
       url: localizedCanonical(route, locale),
-      lastModified: now,
+      lastModified: staticRouteLastModified(route, buildDate, poradnaHubDate),
       changeFrequency: "monthly" as const,
       priority: route === "" ? 1 : 0.8,
       alternates: {
@@ -117,12 +148,16 @@ async function articleSitemapEntries(
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
+  const buildDate = new Date();
   const caseRoutes = caseStudyCategories.map((c) => `/typicke-zakazky/${c.slug}`);
   const landingRoutes = seoLandings.map((l) => `/${l.slug}`);
   const dedicatedRoutes = Object.values(dedicatedServicePages).map((p) => `/${p.slug}`);
   const staticPaths = uniquePaths([...routes, ...dedicatedRoutes, ...caseRoutes, ...landingRoutes]);
   const slugLocaleMap = await getArticleSlugLocaleMap();
+  const poradnaHubDate = await poradnaHubLastModified();
 
-  return [...staticSitemapEntries(now, staticPaths), ...(await articleSitemapEntries(slugLocaleMap))];
+  return [
+    ...staticSitemapEntries(buildDate, staticPaths, poradnaHubDate),
+    ...(await articleSitemapEntries(slugLocaleMap))
+  ];
 }

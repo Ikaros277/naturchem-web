@@ -132,7 +132,7 @@
 - Was ist für eine schnelle Projektbewertung einzusenden?: https://www.naturchem.cz/de/poradna/co-poslat-pro-rychle-posouzeni-zameru/
 - Was ändert sich im Jahr 2026 bei der Genehmigung von Luftverschmutzungsquellen?: https://www.naturchem.cz/de/poradna/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026/
 - Materialdeponie im Betriebsgelände: Wann sind Genehmigung, Ausbreitungsstudie oder Gutachten erforderlich?: https://www.naturchem.cz/de/poradna/deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek/
-- Holzverarbeitungsbetrieb: Staub, Sägemehl, Absaugung, Lärm und Quelle sofern es dies zulässt: https://www.naturchem.cz/de/poradna/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje/
+- Holzverarbeitungsbetrieb: Staub, Sägemehl, Absaugung, Lärm und Genehmigung der Quelle: https://www.naturchem.cz/de/poradna/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje/
 - Elektronische Meldung von Emissionsmessungen und Einreichung von Protokollen: praktische Auswirkungen auf Betreiber: https://www.naturchem.cz/de/poradna/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele/
 - Emissionen vs. Immissionen: Warum muss der Betreiber beides berücksichtigen?: https://www.naturchem.cz/de/poradna/emise-vs-imise-proc-provozovatel-resi-oboji/
 - Emissionsfaktoren und Emissionsberechnung: Wann eine Berechnung ausreicht und wann eine Messung erforderlich ist: https://www.naturchem.cz/de/poradna/emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni/

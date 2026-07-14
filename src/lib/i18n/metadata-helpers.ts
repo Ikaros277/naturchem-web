@@ -80,7 +80,9 @@ export function pageMetadata({
   absoluteTitle,
   availableLocales,
   ogImage,
-  ogType = "website"
+  ogType = "website",
+  publishedTime,
+  modifiedTime
 }: {
   locale: Locale;
   path: string;
@@ -90,6 +92,8 @@ export function pageMetadata({
   availableLocales?: readonly Locale[];
   ogImage?: string;
   ogType?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
 }): Metadata {
   const alternates = availableLocales
     ? localeAlternatesForLanguages(path, locale, availableLocales)
@@ -110,6 +114,8 @@ export function pageMetadata({
       siteName: "NATURCHEM",
       title: shareTitle,
       description,
+      ...(publishedTime ? { publishedTime } : {}),
+      ...(modifiedTime ? { modifiedTime } : {}),
       images: [
         {
           url: imageUrl,

@@ -1,6 +1,6 @@
 ---
 title: "Kogenerační jednotka: emise, hluk, měření a povolení provozu"
-slug: kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu
+slug: kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1
 excerpt: Kogenerační jednotka může být pro provozovatele výhodným zdrojem
   elektřiny a tepla, ale z hlediska povolování nejde jen o technické zařízení v
   kotelně nebo kontejneru. Je nutné řešit emise ze spalovacího motoru, odvod

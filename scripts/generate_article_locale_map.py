@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Write public/article-locale-map.json for client-side language switching on poradna articles."""
+"""Write src/lib/article-locale-map.json for client-side language switching on poradna articles."""
 
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,7 +17,12 @@ LOCALES = {
 OUT = ROOT / "src" / "lib" / "article-locale-map.json"
 
 
-def slug_from_filename(name: str) -> str:
+def slug_from_file(path: Path) -> str:
+    text = path.read_text(encoding="utf-8")
+    match = re.search(r"^slug:\s*(.+)$", text, re.M)
+    if match:
+        return match.group(1).strip().strip('"')
+    name = path.name
     return name[:-3] if name.endswith(".md") else name
 
 
@@ -27,7 +33,7 @@ def main() -> None:
         if not directory.is_dir():
             continue
         for path in sorted(directory.glob("*.md")):
-            slug = slug_from_filename(path.name)
+            slug = slug_from_file(path)
             slug_locales.setdefault(slug, [])
             if locale not in slug_locales[slug]:
                 slug_locales[slug].append(locale)

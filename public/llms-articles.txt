@@ -30,8 +30,8 @@
 - Kdy je potřeba hluková studie a kdy měření hluku?: https://www.naturchem.cz/poradna/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku/
 - Kdy je potřeba měření emisí a kdy stačí jiný podklad?: https://www.naturchem.cz/poradna/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad/
 - Kdy může úřad požadovat odborný posudek i u změny stávajícího zdroje?: https://www.naturchem.cz/poradna/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje/
-- Kogenerační jednotka: emise, hluk, měření a povolení provozu: https://www.naturchem.cz/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
-- Plynová kotelna 0,3 až 50 MW: co řešit u NOx, CO, měření a povolení: https://www.naturchem.cz/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni/
+- Kogenerační jednotka: emise, hluk, měření a povolení provozu: https://www.naturchem.cz/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu-1/
+- Plynová kotelna 0,3 až 50 MW: co řešit u NOx, CO, měření a povolení: https://www.naturchem.cz/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
 - Kotelna a plynový kotel: kdy se měří emise CO a NOx?: https://www.naturchem.cz/poradna/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox/
 - Lakovna: emise, VOC, provozní řád, měření a povolení provozu: https://www.naturchem.cz/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu/
 - Manipulace se sypkými materiály: kdy se z plochy stává vyjmenovaný zdroj: https://www.naturchem.cz/poradna/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni/

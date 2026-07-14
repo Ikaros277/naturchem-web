@@ -148,6 +148,17 @@ export const permanentRedirects = [
   { source: "/technicke-prilohy", destination: "/sluzby/technicke-prilohy", permanent: true },
   { source: "/technicke-prilohy/", destination: "/sluzby/technicke-prilohy", permanent: true },
 
+  {
+    source: "/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni",
+    destination: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu",
+    permanent: true
+  },
+  {
+    source: "/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni/",
+    destination: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/",
+    permanent: true
+  },
+
   { source: "/prodej/senseca", destination: "/prodej/pcf-elettronica", permanent: true },
   { source: "/prodej/senseca/", destination: "/prodej/pcf-elettronica/", permanent: true },
   { source: "/prodej/senseca/:path*", destination: "/prodej/pcf-elettronica/", permanent: true },

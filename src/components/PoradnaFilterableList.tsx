@@ -15,7 +15,8 @@ import { localizeHref } from '@/lib/i18n/navigation';
 import {
   heroThemeForArticle,
   PORADNA_TOPICS,
-  poradnaTopicIconKey
+  poradnaTopicIconKey,
+  resolveArticleTopic
 } from '@/lib/poradna-topic';
 import type { PoradnaArticleListing } from '@/lib/poradna-articles';
 
@@ -160,9 +161,10 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
         ) : (
           filtered.map(article => {
             const articleRef = { slug: article.slug, title: article.title, topic: article.topic };
+            const topic = resolveArticleTopic(articleRef);
             const iconKey = poradnaTopicIconKey(articleRef);
-            const topicLabel = topicLabels[article.topic];
-            const serviceCategory = categoryFromPoradnaTopic(article.topic);
+            const topicLabel = topicLabels[topic] ?? topicLabels[article.topic];
+            const serviceCategory = categoryFromPoradnaTopic(topic);
             return (
               <IndexCard
                 key={article.href}

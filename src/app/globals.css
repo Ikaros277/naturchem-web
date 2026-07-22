@@ -7448,8 +7448,8 @@ main.contact-page + .site-footer {
   }
 }
 
-/* Článkové karty — CTA jako patička, ne tmavá pill v rohu */
-.article-card.card-service[data-category] .card-inline-link {
+/* Článkové karty — CTA jako patička, ne tmavá pill v rohu (i bez data-category) */
+.article-card.card-service .card-inline-link {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -7475,12 +7475,12 @@ main.contact-page + .site-footer {
     border-color 0.18s ease;
 }
 
-.article-card.card-service[data-category] .card-inline-link::after {
+.article-card.card-service .card-inline-link::after {
   color: var(--forest);
 }
 
-.article-card.card-service[data-category]:hover .card-inline-link,
-.article-card.card-service[data-category]:focus-visible .card-inline-link {
+.article-card.card-service:hover .card-inline-link,
+.article-card.card-service:focus-visible .card-inline-link {
   background: rgba(47, 111, 94, 0.1);
   color: var(--secondary) !important;
   text-decoration: none;
@@ -7489,8 +7489,8 @@ main.contact-page + .site-footer {
   border-top-color: rgba(47, 111, 94, 0.22);
 }
 
-.article-card.card-service[data-category]:hover .card-inline-link::after,
-.article-card.card-service[data-category]:focus-visible .card-inline-link::after {
+.article-card.card-service:hover .card-inline-link::after,
+.article-card.card-service:focus-visible .card-inline-link::after {
   transform: translateX(3px);
 }
 

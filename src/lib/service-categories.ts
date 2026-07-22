@@ -166,9 +166,14 @@ export function categoryFromPoradnaTopic(topic: string): ServiceCategory | null 
   const map: Record<string, ServiceCategory> = {
     Emise: "measurement",
     "Pracovní prostředí": "measurement",
+    /** Legacy alias still present in some article frontmatter */
     Hluk: "measurement",
+    "Hluk a vibrace": "measurement",
+    "Prašnost a deponie": "measurement",
     "Rozptylové studie": "studies",
     "EIA a povolování": "docs",
+    "KHS, ČIŽP a úřady": "docs",
+    "Provozní praxe pro ekology": "docs",
     Legislativa: "docs",
     "Chemická legislativa": "docs"
   };

@@ -18,6 +18,9 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+/** Listing picks up newly due scheduled articles without full redeploy. */
+export const revalidate = 300;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";

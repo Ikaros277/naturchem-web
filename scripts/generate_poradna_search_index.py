@@ -48,6 +48,29 @@ def parse_frontmatter(raw: str) -> tuple[dict[str, str], str]:
     return front, parts[2]
 
 
+def is_public(front: dict[str, str]) -> bool:
+    """Match src/lib/articles.ts: hide draft and future publishedAt."""
+    status = (front.get("status") or "published").strip().lower()
+    if status == "draft":
+        return False
+    published_raw = (front.get("publishedAt") or "").strip()
+    if not published_raw:
+        return True
+    # Accept YYYY-MM-DD or ISO; compare as date-only when no time given.
+    try:
+        from datetime import datetime, timezone
+
+        if "T" in published_raw:
+            published = datetime.fromisoformat(published_raw.replace("Z", "+00:00"))
+        else:
+            published = datetime.fromisoformat(published_raw).replace(tzinfo=timezone.utc)
+        if published.tzinfo is None:
+            published = published.replace(tzinfo=timezone.utc)
+        return published <= datetime.now(timezone.utc)
+    except ValueError:
+        return True
+
+
 def build_search_text(title: str, excerpt: str, body: str, locale: str) -> str:
     combined = " ".join([title, excerpt, strip_markdown_for_search(body)])
     return combined.casefold()
@@ -68,6 +91,8 @@ def main() -> None:
         entries: list[dict[str, str]] = []
         for path in sorted(directory.glob("*.md")):
             front, body = parse_frontmatter(path.read_text(encoding="utf-8"))
+            if not is_public(front):
+                continue
             slug = front.get("slug") or slug_from_file(path)
             title = front.get("title") or slug
             excerpt = front.get("excerpt") or ""

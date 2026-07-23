@@ -20,7 +20,7 @@
 ## Jak publikovat článek (3 kroky)
 
 1. Otevřete **https://www.naturchem.cz/admin** a přihlaste se přes **GitHub**.
-2. V sekci **Poradna** vyberte článek (nebo **New Poradna** u nového).
+2. V levém menu klikněte **Poradna** → vyberte článek, nebo nahoře **New Poradna**.
 3. Upravte text a klikněte **Publish** (ne jen zavřít okno).
 
 Po úspěšném Publish:
@@ -28,6 +28,27 @@ Po úspěšném Publish:
 - v GitHubu vznikne nový commit u souboru v `content/articles/`,
 - Vercel spustí deploy (klient to nevidí, ale proběhne automaticky),
 - po **1–3 minutách** je změna na webu (ověřte v anonymním okně prohlížeče).
+
+---
+
+## Odložená publikace (naplánovat na budoucí den)
+
+Přesné místo v redakci:
+
+1. **https://www.naturchem.cz/admin** → Login with GitHub  
+2. Kolekce **Poradna** → nový nebo existující článek  
+3. Pole **Stav publikace** → nechte **„Publikovat (podle data níže)“**  
+4. Pole **Datum publikace (i odložené)** → nastavte **budoucí datum** (např. 15. 8. 2026)  
+5. Klikněte **Publish**
+
+Výsledek:
+
+- článek se uloží do GitHubu hned,
+- na veřejném webu (`/poradna`) **není vidět**, dokud nenastane zvolené datum,
+- ten den se objeví sám (obvykle do cca 5 minut od půlnoci / od data), bez dalšího klikání.
+
+**Koncept bez data publikace:**  
+**Stav publikace** → **„Koncept (skrytý na webu)“** → Publish. Článek zůstane skrytý, dokud stav nezměníte na Publikovat a nedáte datum dnes/v minulosti (nebo budoucí pro odložení).
 
 ---
 
@@ -39,7 +60,8 @@ Po úspěšném Publish:
 | **Slug** | URL adresa — **neměnit**, pokud už článek běží |
 | **Perex** | Box „Stručně“ nahoře pod titulkem |
 | **Autor** | Jméno pod titulkem |
-| **Datum publikace** | Kdy článek poprvé vyšel |
+| **Stav publikace** | Publikovat podle data / Koncept (navždy skrytý, dokud nezměníte) |
+| **Datum publikace (i odložené)** | Dnes/minulost = hned; **budoucnost = odložená publikace** |
 | **Datum aktualizace** | Zobrazí se u autora — při větší úpravě změňte |
 | **Téma** | Filtr v přehledu poradny; bez vyplnění se odvodí z nadpisu |
 | **Úvodní obrázek** | Foto v hero pruhu a náhledu karty; bez něj stock fotka podle tématu |

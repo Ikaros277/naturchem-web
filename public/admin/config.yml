@@ -29,11 +29,24 @@ collections:
       - { label: "Perex", name: "excerpt", widget: "text" }
       - { label: "Autor", name: "author", widget: "string", default: "NATURCHEM" }
       - {
-          label: "Datum publikace",
+          label: "Stav publikace",
+          name: "status",
+          widget: "select",
+          options:
+            [
+              { label: "Publikovat (podle data níže)", value: "published" },
+              { label: "Koncept (skrytý na webu)", value: "draft" }
+            ],
+          default: "published",
+          hint: "Koncept = článek se na webu neukáže, i když dáte Publish. Pro odložení nechte „Publikovat“ a níže nastavte budoucí datum."
+        }
+      - {
+          label: "Datum publikace (i odložené)",
           name: "publishedAt",
           widget: "datetime",
           format: "YYYY-MM-DD",
-          time_format: false
+          time_format: false,
+          hint: "Budoucí datum = článek se na webu objeví až ten den (odložená publikace). Dnešní nebo minulé = hned po nasazení."
         }
       - {
           label: "Datum aktualizace",

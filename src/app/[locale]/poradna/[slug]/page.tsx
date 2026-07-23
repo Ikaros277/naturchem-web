@@ -19,6 +19,9 @@ type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
+/** Revalidate often enough for scheduled publishedAt to go live without redeploy. */
+export const revalidate = 300;
+
 export async function generateStaticParams() {
   return getArticleStaticParams();
 }

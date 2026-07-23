@@ -20,6 +20,9 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+/** Homepage Poradna strip picks up newly published scheduled articles. */
+export const revalidate = 300;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";

@@ -21,7 +21,7 @@ type Props = {
 };
 
 /** Homepage Poradna strip picks up newly published scheduled articles. */
-export const revalidate = 300;
+export const revalidate = 60;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;

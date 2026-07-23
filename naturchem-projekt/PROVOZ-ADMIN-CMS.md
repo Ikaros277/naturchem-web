@@ -45,7 +45,8 @@ Výsledek:
 
 - článek se uloží do GitHubu hned,
 - na veřejném webu (`/poradna`) **není vidět**, dokud nenastane zvolené datum,
-- ten den se objeví sám (obvykle do cca 5 minut od půlnoci / od data), bez dalšího klikání.
+- od **půlnoci středoevropského času** daného dne je článek způsobilý ke zveřejnění,
+- na webu se objeví při další návštěvě poradny / článku (obvykle do cca 1 minuty; není to cron přesně ve 00:00:00 bez provozu).
 
 **Koncept bez data publikace:**  
 **Stav publikace** → **„Koncept (skrytý na webu)“** → Publish. Článek zůstane skrytý, dokud stav nezměníte na Publikovat a nedáte datum dnes/v minulosti (nebo budoucí pro odložení).

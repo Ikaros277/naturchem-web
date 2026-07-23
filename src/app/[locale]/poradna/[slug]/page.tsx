@@ -19,8 +19,11 @@ type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
-/** Revalidate often enough for scheduled publishedAt to go live without redeploy. */
-export const revalidate = 300;
+/**
+ * Always evaluate publishedAt against "now" so scheduled articles go live
+ * reliably (ISR + notFound() can stick on 404 in some Next/Vercel cases).
+ */
+export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   return getArticleStaticParams();

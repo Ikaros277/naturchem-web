@@ -90,6 +90,8 @@ def main() -> None:
 
         entries: list[dict[str, str]] = []
         for path in sorted(directory.glob("*.md")):
+            if path.stem.lower() in {"readme", "changelog"} or path.name.startswith("_"):
+                continue
             front, body = parse_frontmatter(path.read_text(encoding="utf-8"))
             if not is_public(front):
                 continue

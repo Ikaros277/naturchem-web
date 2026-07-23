@@ -104,7 +104,12 @@ export function isArticlePublic(article: Pick<Article, "status" | "publishedAt">
 async function readArticleFiles(locale: Locale = defaultLocale): Promise<string[]> {
   const articlesDirectory = articlesDirectoryForLocale(locale);
   const files = await fs.readdir(articlesDirectory);
-  return files.filter((file) => file.endsWith(".md"));
+  return files.filter((file) => {
+    if (!file.endsWith(".md")) return false;
+    const base = file.replace(/\.md$/i, "").toLowerCase();
+    // Docs/meta files must never become /poradna/* pages
+    return base !== "readme" && base !== "changelog" && !base.startsWith("_");
+  });
 }
 
 async function readAllArticles(locale: Locale = defaultLocale): Promise<Article[]> {

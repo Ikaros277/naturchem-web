@@ -18,18 +18,18 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "emise",
     title: "Emission measurement from stationary sources",
     intro:
-      "Authority request or scheduled compliance measurement? We measure emissions from a stack or vent and deliver an accredited report for operating permits, ČIŽP, the regional authority or ISPOP.",
+      "Authority request or scheduled compliance measurement? We measure **emissions** from a stack or vent and deliver an accredited **report** for **operating permits**, ČIŽP, the regional authority or ISPOP.",
     scope: [
-      "We measure NOx, CO, SO₂, O₂, TOC/VOC, particulates, HCl, metals and other components per operating permit and brief",
-      "We assess the measurement point, vent and consistency with the operating manual",
+      "We measure NOx, CO, SO₂, O₂, TOC/VOC, particulates, HCl, metals and other components per **operating permit** and brief",
+      "We assess the measurement point, vent and consistency with the **operating manual**",
       "We agree preparation and conduct of measurement with operations",
       "We evaluate results against limits, the permit and any authority request"
     ],
     whenNeeded: [
-      "You need periodic or one-off measurement under Decree No. 415/2012 Coll. and the operating permit",
-      "The regional authority, ČIŽP or inspection body requires measurement",
+      "You need periodic or one-off measurement under Decree No. 415/2012 Coll. and the **operating permit**",
+      "The regional authority, **ČIŽP** or inspection body requires measurement",
       "You are changing fuel, raw material, technology or source capacity",
-      "You need documentation for a dispersion study, EIA, expert assessment or operating documentation"
+      "You need documentation for a **dispersion study**, **EIA**, expert assessment or operating documentation"
     ],
     practicalSituations: [
       "emission measurement at a paint shop after technology or filtration change",
@@ -40,13 +40,13 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       "measurement following regional authority or ČIŽP request"
     ],
     docs: [
-      "operating permit decision or extract from integrated permit / operating manual",
+      "**operating permit** decision or extract from **integrated permit** / operating manual",
       "technical source description, vent and filtration diagrams and current operating mode",
       "measurement history or previous reports (if available)",
       "photographs of the vent, measurement point and access conditions"
     ],
     outputs: [
-      "emission measurement report with methodology and evaluation against limits",
+      "emission measurement **report** with methodology and evaluation against limits",
       "brief summary for authority consultation or documentation supplement",
       "recommendations for next steps (repeat measurement, technology adjustment, follow-up studies)"
     ],
@@ -79,7 +79,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "hluk",
     title: "Noise measurement and acoustics",
     intro:
-      "Noise complaint, occupancy approval or authority requirement? We perform field measurement and acoustic calculations according to noise sources and protected areas in the neighbourhood.",
+      "Noise complaint, **occupancy approval** or authority requirement? We perform field **noise measurement** and acoustic calculations according to noise sources and protected areas in the neighbourhood.",
     scope: [
       "We measure LAeq and LAFmax during normal operation in the field",
       "We assess transport and technology noise on site",
@@ -87,9 +87,9 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       "We measure noise from HVAC, heat pumps and plant rooms"
     ],
     whenNeeded: [
-      "Building permitting or occupancy approval is in progress",
+      "Building permitting or **occupancy approval** is in progress",
       "You are addressing a noise complaint from operation",
-      "You need a noise study for EIA or project change",
+      "You need a **noise study** for **EIA** or project change",
       "You are assessing noise from a heat pump, HVAC, cooling or industrial site"
     ],
     practicalSituations: [
@@ -101,13 +101,13 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     docs: [
       "noise source locations and operating schedule",
-      "building authority or KHS requirement",
+      "building authority or **KHS** requirement",
       "layout of nearest protected development, transport and day/night operating mode"
     ],
     outputs: [
-      "noise measurement report",
+      "**noise measurement** **report**",
       "acoustic statement on technologies within a building",
-      "noise study with measure recommendations"
+      "**noise study** with measure recommendations"
     ],
     commonMistakes: [
       "Measurement at an unsuitable time or without considering operating mode",
@@ -137,16 +137,16 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "pracovni-prostredi",
     title: "Workplace environment measurement",
     intro:
-      "Do you need to update job categorisation or have you received a KHS request? We measure noise, dust, chemicals, microclimate, lighting and vibration in operation — outputs for KHS, job categorisation and occupational health and safety.",
+      "Do you need to update **job categorisation** or have a **KHS** request? We measure noise, dust, chemicals, microclimate, lighting (including **outdoor artificial lighting**) and vibration — outputs for KHS, job categorisation and OHS.",
     scope: [
       "We measure noise, dust, chemicals, vibration, microclimate and lighting according to operations and shift patterns",
       "We assess exposure in welding shops, paint shops, halls and clean rooms",
       "We evaluate results in the context of limits and actual work load",
-      "We prepare documentation for job categorisation, occupational health and safety and KHS consultation"
+      "We prepare documentation for **job categorisation**, occupational health and safety and **KHS** consultation"
     ],
     whenNeeded: [
-      "You need job categorisation or an update",
-      "KHS requires workplace environment measurement",
+      "You need **job categorisation** or an update",
+      "**KHS** requires workplace environment measurement",
       "You are changing technology or workplace layout",
       "Occupancy approval, internal occupational health and safety audit or verification of extraction and technical measures is in progress"
     ],
@@ -159,13 +159,13 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     docs: [
       "description of work operations and shift patterns",
-      "safety data sheets of substances in use",
+      "**safety data sheets** of substances in use",
       "workplace layout and source locations",
       "information on extraction, technology, protective equipment and number of exposed workers"
     ],
     outputs: [
       "measurement reports with evaluation",
-      "documentation for job categorisation and occupational health and safety",
+      "documentation for **job categorisation** and occupational health and safety",
       "recommendations for organisational and technical measures"
     ],
     commonMistakes: [
@@ -182,7 +182,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       {
         title: "Lighting measurement",
         href: "/sluzby/mereni-osvetleni",
-        description: "Workplace lighting for KHS and job categorisation."
+        description: "Workplace and outdoor artificial lighting for KHS and job categorisation."
       },
       {
         title: "Microclimate measurement",
@@ -211,7 +211,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "studie",
     title: "Dispersion studies",
     intro:
-      "Has the regional authority or EIA requested a dispersion study? We model immission contributions from sources and transport — documentation for the investor, designer and authority.",
+      "Has the regional authority or **EIA** requested a **dispersion study**? We model **immission contributions** from sources and transport — documentation for the investor, designer and authority.",
     scope: [
       "We model immission contribution of stationary sources and transport on site",
       "We assess operational variants and technical measures",
@@ -220,7 +220,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     whenNeeded: [
       "You are planning a new project or operation expansion",
-      "The regional authority or EIA requires a dispersion study",
+      "The regional authority or **EIA** requires a **dispersion study**",
       "You need to compare technical solution variants",
       "You are changing the source, capacity, fuel, transport or emission parameters"
     ],
@@ -235,10 +235,10 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       "source parameters and emission data",
       "operating schedules and transport on site",
       "project layout and map documentation",
-      "stack height, flue gas temperature and velocity, filtration technical data sheets and previous emission measurements"
+      "stack height, flue gas temperature and velocity, filtration technical data sheets and previous **emission measurements**"
     ],
     outputs: [
-      "dispersion study with conclusions and recommendations",
+      "**dispersion study** with conclusions and recommendations",
       "variant assessment (if part of the brief)",
       "documentation for the investor, designer and authority"
     ],
@@ -270,18 +270,18 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "eia",
     title: "EIA, assessments, operating manuals and IPPC",
     intro:
-      "EIA, assessment, measurement and operating manual for one source? We coordinate permitting steps so data for the regional authority are consistent.",
+      "**EIA**, assessment, measurement and operating manual for one source? We coordinate permitting steps so data for the regional authority are consistent — including **IPPC** and **ISPOP**.",
     scope: [
-      "We coordinate EIA — notification, screening proceedings, technical appendices",
-      "We arrange expert assessments and source operating permits",
-      "We prepare operating manuals and IPPC changes",
-      "We review ISPOP, consolidated records and GHG"
+      "We coordinate **EIA** — notification, screening proceedings, **technical appendices**",
+      "We arrange expert assessments and source **operating permits**",
+      "We prepare operating manuals and **IPPC** changes",
+      "We review **ISPOP**, **consolidated records** and GHG"
     ],
     whenNeeded: [
       "You are planning a new project or capacity change",
-      "EIA screening proceedings are in progress or you are supplementing after authority comments",
-      "You are changing technology, operating permit, operating manual or integrated permit",
-      "You are addressing annual ISPOP, consolidated records or GHG reporting"
+      "**EIA screening** proceedings are in progress or you are supplementing after authority comments",
+      "You are changing technology, **operating permit**, **operating manual** or integrated permit",
+      "You are addressing annual **ISPOP**, **consolidated records** or GHG reporting"
     ],
     practicalSituations: [
       "EIA project notification for capacity change",
@@ -293,13 +293,13 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     docs: [
       "project description and process diagram",
       "site layout and transport",
-      "existing decisions, opinions, integrated permit or operating permit",
+      "existing decisions, opinions, **integrated permit** or **operating permit**",
       "emission, noise, transport and operating data including available reports"
     ],
     outputs: [
-      "expert assessment or technical statement",
-      "operating manual or update",
-      "EIA project notification, IPPC, ISPOP or GHG documentation",
+      "**expert assessment** or technical statement",
+      "**operating manual** or update",
+      "**EIA** project notification, **IPPC**, ISPOP or GHG documentation",
       "structured response to authority comments"
     ],
     commonMistakes: [

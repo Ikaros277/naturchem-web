@@ -52,7 +52,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Beleuchtungsmessungen",
         href: "/sluzby/mereni-osvetleni",
-        text: "Arbeitsplatzbeleuchtung für regionale Hygienestation, Arbeitsplatzkategorisierung und Belegungsfreigabe."
+        text: "Arbeitsplatz- und künstliche Außenbeleuchtung für regionale Hygienestation, Berufseinstufung und Belegungsfreigabe."
       },
       {
         title: "Mikroklimamessungen",

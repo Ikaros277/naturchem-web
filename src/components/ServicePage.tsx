@@ -3,6 +3,7 @@ import { PageHeroBand } from "@/components/PageHeroBand";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
 import { IndexCard } from "@/components/IndexCard";
+import { InlineEmphasis } from "@/components/InlineEmphasis";
 import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
 import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
@@ -179,7 +180,9 @@ export async function ServicePage(props: Props) {
             <CategoryBadge category={serviceCategory} locale={locale} className="service-hero-category" />
           ) : null}
           <h1>{props.title}</h1>
-          <p className="page-lead">{props.intro}</p>
+          <p className="page-lead">
+            <InlineEmphasis text={props.intro} />
+          </p>
         </header>
       </PageHeroBand>
 
@@ -215,7 +218,9 @@ export async function ServicePage(props: Props) {
                   <OverviewGridCell icon="process-posouzeni" title={copy.whenNeededHeading}>
                     <ul className="check-list">
                       {keyWhenNeeded.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item}>
+                          <InlineEmphasis text={item} />
+                        </li>
                       ))}
                     </ul>
                   </OverviewGridCell>
@@ -224,7 +229,9 @@ export async function ServicePage(props: Props) {
                 <OverviewGridCell icon="process-rozsah" title={props.scopeHeading ?? copy.scopeHeading}>
                   <ul className="check-list">
                     {keyScope.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>
+                        <InlineEmphasis text={item} />
+                      </li>
                     ))}
                   </ul>
                 </OverviewGridCell>
@@ -232,7 +239,9 @@ export async function ServicePage(props: Props) {
                 <OverviewGridCell icon="process-vystup" title={copy.outputsHeading}>
                   <ul className="check-list">
                     {keyOutputs.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>
+                        <InlineEmphasis text={item} />
+                      </li>
                     ))}
                   </ul>
                 </OverviewGridCell>
@@ -245,7 +254,9 @@ export async function ServicePage(props: Props) {
                   <p className="muted">{copy.docsIntro}</p>
                   <ul className="check-list">
                     {keyDocs.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>
+                        <InlineEmphasis text={item} />
+                      </li>
                     ))}
                   </ul>
                   <Link className="button service-overview-cta--in-cell" href={quickContactHref}>
@@ -278,7 +289,9 @@ export async function ServicePage(props: Props) {
                     </div>
                     <ul className="compact-list">
                       {group.items.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item}>
+                          <InlineEmphasis text={item} />
+                        </li>
                       ))}
                     </ul>
                   </article>
@@ -313,7 +326,11 @@ export async function ServicePage(props: Props) {
                     ) : null
                   }
                 >
-                  {item.description ? <p className="muted">{item.description}</p> : null}
+                  {item.description ? (
+                    <p className="muted">
+                      <InlineEmphasis text={item.description} />
+                    </p>
+                  ) : null}
                 </IndexCard>
               ))}
             </div>

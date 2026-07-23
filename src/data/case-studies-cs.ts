@@ -249,19 +249,19 @@ const caseStudyInputs: CaseStudyInput[] = [
   },
   {
     id: "pracovni-prostredi-osvetleni",
-    title: "Měření umělého osvětlení v hale, škole nebo veřejné budově",
+    title: "Měření umělého osvětlení v hale, škole, areálu nebo na komunikacích",
     categoryId: "pracovni-prostredi",
-    facilityType: "Výrobní hala / škola / veřejná budova",
-    shortDescription: "Provozovatel potřeboval ověřit intenzitu umělého osvětlení po instalaci svítidel nebo při kontrole pracoviště.",
-    situation: "V objektu bylo nutné doložit, zda osvětlení odpovídá požadavkům pro daný druh práce nebo provozu.",
-    task: "Změřit osvětlenost na pracovních nebo uživatelských místech a vyhodnotit výsledky podle charakteru prostoru.",
-    naturchemApproach: "Navrhli jsme měřicí síť, provedli měření osvětlenosti a zpracovali přehledné vyhodnocení pro jednotlivé prostory nebo pracovní pozice.",
+    facilityType: "Výrobní hala / škola / veřejná budova / venkovní plochy",
+    shortDescription: "Provozovatel potřeboval ověřit intenzitu umělého osvětlení uvnitř nebo venku — po instalaci svítidel, kontrole pracoviště nebo ověření venkovního umělého osvětlení.",
+    situation: "Bylo nutné doložit, zda umělé osvětlení (vnitřní nebo venkovní) odpovídá požadavkům pro daný druh práce, provozu nebo plochy.",
+    task: "Změřit osvětlenost na pracovních, uživatelských nebo venkovních místech a vyhodnotit výsledky podle charakteru prostoru.",
+    naturchemApproach: "Navrhli jsme měřicí síť, provedli měření osvětlenosti a zpracovali přehledné vyhodnocení pro jednotlivé prostory, pracovní pozice nebo venkovní plochy.",
     output: "Protokol z měření umělého osvětlení.",
     usedFor: "Podklad pro KHS, kolaudaci, provozovatele nebo interní kontrolu BOZP.",
     relatedServices: ["Měření osvětlení", "pracovní prostředí", "KHS"],
     authorities: "KHS, stavební úřad.",
-    tags: ["měření osvětlení", "hala", "škola", "pracoviště", "KHS"],
-    ctaText: "Potřebujete ověřit osvětlení? Pošlete nám půdorys, typ prostoru a účel měření."
+    tags: ["měření osvětlení", "venkovní umělé osvětlení", "hala", "škola", "pracoviště", "KHS"],
+    ctaText: "Potřebujete ověřit osvětlení uvnitř nebo venku? Pošlete nám půdorys, typ prostoru a účel měření."
   },
   {
     id: "pracovni-prostredi-komplex",

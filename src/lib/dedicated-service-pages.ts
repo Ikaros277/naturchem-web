@@ -25,20 +25,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Hlukové studie pro technologie, areály, dopravu, VZT, tepelná čerpadla a stavební záměry. Podklady pro KHS, stavební řízení a EIA.",
     intro:
-      "Úřad požaduje hlukovou studii nebo řešíte stížnost okolí? Zpracujeme výpočet technologií, areálu a dopravy — podklad pro KHS, stavební řízení i EIA.",
+      "Úřad požaduje **hlukovou studii** nebo řešíte stížnost okolí? Zpracujeme výpočet technologií, areálu a dopravy — podklad pro **KHS**, stavební řízení i **EIA**.",
     contactService: "Hlukové studie",
     faqCategoryId: "hluk",
     scope: [
-      "Zpracujeme výpočet hluku technologií, areálů, VZT, tepelných čerpadel a dopravy",
+      "Zpracujeme výpočet hluku technologií, areálů, **VZT**, tepelných čerpadel a dopravy",
       "Posoudíme denní i noční režim a varianty umístění zdroje",
-      "Vyhodnotíme výsledky vůči limitům a chráněnému venkovnímu prostoru",
+      "Vyhodnotíme výsledky vůči limitům a **chráněnému venkovnímu prostoru**",
       "Navrhneme odhlučnění nebo úpravu provozu při hrozbě překročení limitu"
     ],
     whenNeeded: [
       "Vzniká nový zdroj hluku nebo měníte technologii",
-      "KHS, stavební úřad nebo EIA požaduje hlukovou studii",
-      "Probíhá kolaudace, změna užívání nebo stížnost okolí",
-      "Ověřujete účinnost protihlukového opatření před realizací"
+      "**KHS**, stavební úřad nebo **EIA** požaduje hlukovou studii",
+      "Probíhá **kolaudace**, změna užívání nebo stížnost okolí",
+      "Ověřujete účinnost **protihlukového** opatření před realizací"
     ],
     practicalSituations: [
       "hluková studie pro venkovní jednotky tepelných čerpadel a VZT",
@@ -50,12 +50,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "situace záměru a umístění zdrojů hluku",
       "projektová dokumentace nebo technické listy zařízení",
       "provozní režim v denní a noční době",
-      "požadavek KHS, stavebního úřadu nebo příslušného úřadu"
+      "požadavek **KHS**, stavebního úřadu nebo příslušného úřadu"
     ],
     outputs: [
-      "hluková studie s výpočtem a vyhodnocením",
-      "návrh protihlukových nebo provozních opatření",
-      "podklad pro KHS, stavební řízení, kolaudaci nebo EIA"
+      "**hluková studie** s výpočtem a vyhodnocením",
+      "návrh **protihlukových** nebo provozních opatření",
+      "podklad pro **KHS**, **stavební řízení**, kolaudaci nebo EIA"
     ],
     commonMistakes: [
       "Záměna hlukové studie za měření hluku u dosud nerealizovaného záměru",
@@ -81,19 +81,19 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Odborné posudky podle zákona o ochraně ovzduší pro zdroje, technologie, změny provozu a povolovací řízení.",
     intro:
-      "Krajský úřad požaduje odborný posudek ke zdroji nebo změně technologie? Zpracujeme posudek podle zákona o ochraně ovzduší — v návaznosti na měření emisí a povolení provozu.",
+      "Krajský úřad požaduje **odborný posudek** ke zdroji nebo změně technologie? Zpracujeme posudek podle zákona o ochraně ovzduší — v návaznosti na měření emisí a **povolení provozu**.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
       "Zpracujeme posudek ke zdroji, změně technologie nebo kapacity",
-      "Propojíme měření emisí, rozptylovou studii a provozní řád",
-      "Připravíme vyjádření k výzvě krajského úřadu nebo ČIŽP",
-      "Shrnutí pro investora před podáním žádosti o povolení provozu"
+      "Propojíme **měření emisí**, **rozptylovou studii** a provozní řád",
+      "Připravíme vyjádření k výzvě krajského úřadu nebo **ČIŽP**",
+      "Shrnutí pro investora před podáním žádosti o **povolení provozu**"
     ],
     whenNeeded: [
       "Plánujete nový zdroj nebo změnu technologie",
       "Měníte kapacitu, palivo, filtraci nebo provozní režim",
-      "Úřad požaduje posudek v řízení o povolení provozu",
+      "Úřad požaduje posudek v řízení o **povolení provozu**",
       "Potřebujete technicky podložené stanovisko"
     ],
     practicalSituations: [
@@ -105,11 +105,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     docs: [
       "technický popis zdroje nebo technologie",
       "projektová dokumentace a situace areálu",
-      "povolení provozu, rozhodnutí nebo výzva úřadu",
-      "dostupné protokoly z měření, emisní údaje a provozní režim"
+      "**povolení provozu**, rozhodnutí nebo výzva úřadu",
+      "dostupné **protokoly** z měření, emisní údaje a provozní režim"
     ],
     outputs: [
-      "odborný posudek nebo odborné vyjádření",
+      "**odborný posudek** nebo odborné vyjádření",
       "shrnutí podkladů a závěrů pro správní řízení",
       "doporučení návazných kroků, měření nebo dokumentace"
     ],
@@ -137,20 +137,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Příprava a aktualizace provozních řádů stacionárních zdrojů znečišťování ovzduší pro provozovatele a krajské úřady.",
     intro:
-      "Provozní řád neodpovídá skutečnému provozu po změně filtrace, paliva nebo výkonu? Připravíme nový řád nebo revizi — sladěnou s povolením a měřením emisí.",
+      "**Provozní řád** neodpovídá skutečnému provozu po změně filtrace, paliva nebo výkonu? Připravíme nový řád nebo revizi — sladěnou s **povolením provozu** a **měřením emisí**.",
     contactService: "Provozní řády",
     faqCategoryId: "eia",
     scope: [
-      "Připravíme nový provozní řád zdroje znečišťování ovzduší",
+      "Připravíme nový **provozní řád** zdroje znečišťování ovzduší",
       "Aktualizujeme po změně technologie, výduchu nebo havarijních postupů",
       "Sladíme s povolením provozu a posledním měřením emisí",
-      "Upravíme na výzvu krajského úřadu nebo ČIŽP"
+      "Upravíme na výzvu krajského úřadu nebo **ČIŽP**"
     ],
     whenNeeded: [
-      "Plánujete nový zdroj nebo změnu povolení provozu",
+      "Plánujete nový zdroj nebo změnu **povolení provozu**",
       "Měníte technologii, palivo, výduch nebo odlučovací zařízení",
-      "Provozní řád neodpovídá skutečnému provozu",
-      "Krajský úřad nebo ČIŽP požaduje úpravu dokumentace"
+      "**Provozní řád** neodpovídá skutečnému provozu",
+      "Krajský úřad nebo **ČIŽP** požaduje úpravu dokumentace"
     ],
     practicalSituations: [
       "aktualizace provozního řádu po výměně filtrace",
@@ -159,13 +159,13 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "sjednocení dokumentace s výsledky měření emisí"
     ],
     docs: [
-      "stávající provozní řád a povolení provozu",
+      "stávající **provozní řád** a **povolení provozu**",
       "popis technologie, filtrace, výduchů a havarijních stavů",
-      "protokoly z měření emisí a provozní evidence",
+      "**protokoly** z **měření emisí** a provozní evidence",
       "výzva nebo požadavek úřadu"
     ],
     outputs: [
-      "provozní řád nebo aktualizace provozního řádu",
+      "**provozní řád** nebo aktualizace **provozního řádu**",
       "přehled zapracovaných provozních podmínek",
       "doporučení pro návaznou evidenci a měření"
     ],
@@ -193,18 +193,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Podklady pro integrovaná povolení, změny IPPC a odbornou koordinaci měření, studií a provozní dokumentace.",
     intro:
-      "Měníte zařízení s integrovaným povolením? Sjednotíme měření, studie a provozní podklady pro řízení o IPPC nebo jeho změně.",
+      "Měníte zařízení s **integrovaným povolením**? Sjednotíme měření, studie a provozní podklady pro řízení o **IPPC** nebo jeho změně.",
     contactService: "IPPC a integrovaná povolení",
     faqCategoryId: "eia",
     scope: [
-      "Připravíme podklady pro nové integrované povolení nebo změnu IPPC",
+      "Připravíme podklady pro nové **integrované povolení** nebo změnu **IPPC**",
       "Sjednotíme měření, studie a provozní vstupy v jednom celku",
       "Popíšeme změnu vůči stávajícímu povolení a BAT",
       "Doplníme dokumentaci po připomínkách krajského úřadu"
     ],
     whenNeeded: [
-      "Plánujete nové integrované povolení",
-      "Řešíte podstatnou nebo nepodstatnou změnu IPPC",
+      "Plánujete nové **integrované povolení**",
+      "Řešíte podstatnou nebo nepodstatnou změnu **IPPC**",
       "Měníte kapacitu, technologii nebo emisní parametry",
       "Úřad požaduje doplnění podkladů"
     ],
@@ -215,13 +215,13 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "reakce na připomínky úřadu během řízení"
     ],
     docs: [
-      "aktuální integrované povolení a popis změny",
+      "aktuální **integrované povolení** a popis změny",
       "projektová dokumentace a technologické schéma",
       "provozní data, měření, bilance a evidence",
       "výzva úřadu nebo seznam požadovaných doplnění"
     ],
     outputs: [
-      "odborné podklady pro IPPC nebo změnu integrovaného povolení",
+      "odborné podklady pro **IPPC** nebo změnu **integrovaného povolení**",
       "koordinační přehled měření, studií a provozních údajů",
       "doplnění dokumentace pro správní řízení"
     ],
@@ -249,19 +249,19 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Oznámení záměru EIA, odborné přílohy a koordinace podkladů pro zjišťovací řízení a navazující povolování.",
     intro:
-      "Připravujete záměr s vlivy na životní prostředí? Zpracujeme oznámení EIA a sladíme podklady pro ovzduší, hluk a dopravu v jednom dokumentu.",
+      "Připravujete záměr s vlivy na životní prostředí? Zpracujeme oznámení **EIA** a sladíme podklady pro **ovzduší**, hluk a dopravu v jednom dokumentu.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "Zpracujeme oznámení záměru podle zákona o EIA",
+      "Zpracujeme oznámení záměru podle zákona o **EIA**",
       "Sjednotíme rozptylové, hlukové a dopravní přílohy",
-      "Připravíme technické přílohy pro investora a zpracovatele EIA",
+      "Připravíme **technické přílohy** pro investora a zpracovatele **EIA**",
       "Upravíme po připomínkách úřadu nebo veřejnosti"
     ],
     whenNeeded: [
       "Plánujete nový záměr s vlivy na životní prostředí",
       "Měníte kapacitu, technologii nebo areál",
-      "Úřad požaduje zjišťovací řízení",
+      "Úřad požaduje **zjišťovací řízení**",
       "Potřebujete doplnit odborné přílohy k povolování"
     ],
     practicalSituations: [
@@ -277,9 +277,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "požadavky úřadů nebo předchozí stanoviska"
     ],
     outputs: [
-      "oznámení záměru EIA",
+      "oznámení záměru **EIA**",
       "koordinační přehled odborných příloh",
-      "podklady pro zjišťovací řízení a navazující povolování"
+      "podklady pro **zjišťovací řízení** a navazující povolování"
     ],
     commonMistakes: [
       "Nekoordinované technické přílohy s rozdílnými vstupními údaji",
@@ -305,19 +305,19 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "ISPOP, souhrnná provozní evidence a roční hlášení pro provozovatele zdrojů v návaznosti na měření emisí a povolení provozu.",
     intro:
-      "Blíží se roční hlášení ISPOP nebo kontrola úřadu? Zkontrolujeme souhrnnou evidenci vůči měření emisí, povolení a skutečnému provozu.",
+      "Blíží se roční hlášení **ISPOP** nebo kontrola úřadu? Zkontrolujeme **souhrnnou evidenci** vůči **měření emisí**, povolení a skutečnému provozu.",
     contactService: "ISPOP",
     faqCategoryId: "ispop",
     scope: [
       "Zpracujeme souhrnnou provozní evidenci zdroje",
-      "Zkontrolujeme a doplníme roční hlášení ISPOP",
+      "Zkontrolujeme a doplníme roční hlášení **ISPOP**",
       "Sladíme s měřením emisí, povolením a provozním řádem",
       "Zapracujeme změnu paliva, kapacity nebo provozních hodin"
     ],
     whenNeeded: [
       "Plánujete roční hlášení a souhrnnou provozní evidenci",
       "Měníte zdroj nebo provozní údaje",
-      "Kontrolujete návaznost na měření emisí",
+      "Kontrolujete návaznost na **měření emisí**",
       "Úřad požaduje doplnění nebo provádíte interní kontrolu"
     ],
     practicalSituations: [
@@ -327,14 +327,14 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "doplnění údajů po výzvě nebo kontrole"
     ],
     docs: [
-      "povolení provozu a provozní řád",
-      "protokoly z měření emisí",
+      "**povolení provozu** a **provozní řád**",
+      "**protokoly** z **měření emisí**",
       "provozní hodiny, spotřeby paliv nebo surovin",
       "předchozí hlášení a dostupná evidence"
     ],
     outputs: [
-      "podklady pro ISPOP a souhrnnou provozní evidenci",
-      "kontrola návaznosti na povolení provozu a měření",
+      "podklady pro **ISPOP** a souhrnnou provozní evidenci",
+      "kontrola návaznosti na **povolení provozu** a měření",
       "přehled chybějících nebo rizikových údajů"
     ],
     commonMistakes: [
@@ -361,17 +361,17 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "GHG, ověřování emisí skleníkových plynů, kontrola emisních údajů a podklady pro výkazování provozovatelů.",
     intro:
-      "Ověřujete emise skleníkových plynů před odevzdáním hlášení? Posoudíme metodiku, vstupy a návaznost na spotřeby, měření a provozní bilanci.",
+      "Ověřujete emise **skleníkových plynů** před odevzdáním hlášení? Posoudíme metodiku, vstupy a návaznost na spotřeby, **měření** a provozní bilanci.",
     contactService: "GHG",
     faqCategoryId: "ispop",
     scope: [
-      "Ověříme emise skleníkových plynů a výpočtové listy",
+      "Ověříme emise **skleníkových plynů** a výpočtové listy",
       "Zkontrolujeme emisní faktory, spotřeby a provozní data",
-      "Navážeme na měření emisí a provozní evidenci",
+      "Navážeme na **měření emisí** a provozní evidenci",
       "Připravíme přehled nesouladů před odevzdáním hlášení"
     ],
     whenNeeded: [
-      "Plánujete hlášení emisí skleníkových plynů",
+      "Plánujete hlášení emisí **skleníkových plynů**",
       "Potřebujete ověřit výpočty nebo emisní údaje",
       "Měníte technologii, palivo nebo provozní data",
       "Investor, audit nebo úřad požaduje kontrolu"
@@ -385,7 +385,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     docs: [
       "metodika výpočtu a vstupní data",
       "spotřeby paliv, surovin a provozní bilance",
-      "protokoly z měření emisí a provozní evidence",
+      "**protokoly** z **měření emisí** a provozní evidence",
       "požadavek na hlášení nebo audit"
     ],
     outputs: [
@@ -417,18 +417,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Kontrola bezpečnostních listů, označování chemických látek a směsí, štítků, interních nádob a návaznosti na BOZP.",
     intro:
-      "Bezpečnostní listy musí odpovídat skladování a manipulaci s látkami v provozu. Zkontrolujeme dokumentaci, označení a navrhneme úpravy tam, kde chybí.",
+      "**Bezpečnostní listy** musí odpovídat skladování a manipulaci s látkami v provozu. Zkontrolujeme dokumentaci, **označení** a navrhneme úpravy tam, kde chybí.",
     contactService: "Bezpečnostní listy",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "revize bezpečnostních listů a jejich dostupnosti u pracoviště",
       "štítky na interních nádobách, skladech a pracovních místech",
-      "soulad skladování a OOPP s údaji v listu",
+      "soulad skladování a **OOPP** s údaji v listu",
       "podklad pro školení a interní provozní pokyn"
     ],
     whenNeeded: [
-      "nové chemické látky nebo směsi v provozu",
-      "nejasné bezpečnostní listy, štítky nebo skladování",
+      "nové **chemické látky** nebo směsi v provozu",
+      "nejasné **bezpečnostní listy**, štítky nebo skladování",
       "příprava na kontrolu nebo interní audit",
       "potřeba praktického podkladu pro školení zaměstnanců"
     ],
@@ -440,7 +440,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     ],
     docs: [
       "seznam chemických látek a směsí",
-      "bezpečnostní listy a štítky",
+      "**bezpečnostní listy** a štítky",
       "popis skladování a používání v provozu",
       "interní postupy, provozní pravidla nebo požadavek kontroly"
     ],
@@ -473,13 +473,13 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Praktická podpora pro nakládání s chemickými látkami v provozu, skladování, značení, pravidla pro zaměstnance a návaznost na BOZP.",
     intro:
-      "Chemické látky posuzujeme v místě skladování, přelévání a použití. Zpracujeme pravidla pro vedoucí směn na základě skutečné manipulace, ne jen evidenčních tabulek.",
+      "**Chemické látky** posuzujeme v místě skladování, přelévání a použití. Zpracujeme pravidla pro vedoucí směn na základě skutečné **manipulace**, ne jen evidenčních tabulek.",
     contactService: "Chemické látky v provozu",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "mapování látek a směsí od dodávky po pracoviště",
       "pravidla manipulace, přelévání a skladování",
-      "propojení s bezpečnostními listy a BOZP",
+      "propojení s bezpečnostními listy a **BOZP**",
       "návrh odpovědností a podklad pro školení obsluhy"
     ],
     whenNeeded: [
@@ -496,7 +496,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     ],
     docs: [
       "seznam látek a směsí používaných v provozu",
-      "bezpečnostní listy, štítky a skladová evidence",
+      "**bezpečnostní listy**, štítky a skladová evidence",
       "popis pracovních činností a skladovacích míst",
       "interní pravidla, auditní zjištění nebo požadavek kontroly"
     ],
@@ -529,7 +529,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Akreditované měření vibrací na pracovištích pro kategorizaci prací, BOZP a požadavky KHS. Ruční nářadí, stroje, dopravní technika.",
     intro:
-      "Kategorizace prací nebo výzva KHS kvůli vibracím? Změříme expozici u nářadí a strojů podle skutečných operací — protokol pro KHS a BOZP.",
+      "**Kategorizace prací** nebo výzva **KHS** kvůli vibracím? Změříme expozici u nářadí a strojů podle skutečných operací — protokol pro KHS a **BOZP**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -539,8 +539,8 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "Navrhneme střídání práce nebo technické opatření při překročení"
     ],
     whenNeeded: [
-      "Potřebujete kategorizaci prací nebo její aktualizaci",
-      "KHS nebo interní audit BOZP požaduje měření vibrací",
+      "Potřebujete **kategorizaci prací** nebo její aktualizaci",
+      "**KHS** nebo interní audit **BOZP** požaduje měření vibrací",
       "Zavádíte novou technologii nebo měníte pracovní operace",
       "Ověřujete stížnosti zaměstnanců nebo účinnost opatření"
     ],
@@ -554,11 +554,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "popis pracovních operací a směnnosti",
       "seznam používaného nářadí a strojů",
       "plánek pracoviště a počet exponovaných pracovníků",
-      "požadavek KHS nebo interní auditní podklad"
+      "požadavek **KHS** nebo interní auditní podklad"
     ],
     outputs: [
-      "protokol z měření vibrací s vyhodnocením",
-      "podklad pro kategorizaci prací a BOZP",
+      "**protokol** z měření vibrací s vyhodnocením",
+      "podklad pro **kategorizaci prací** a **BOZP**",
       "doporučení technických a organizačních opatření"
     ],
     commonMistakes: [
@@ -583,20 +583,22 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     slug: "sluzby/mereni-osvetleni",
     title: "Měření osvětlení",
     description:
-      "Měření osvětlení na pracovištích pro KHS, kategorizaci prací a BOZP. Umělé i denní osvětlení, kanceláře i výrobní haly.",
+      "Měření umělého i denního osvětlení na pracovištích a venku. Podklady pro KHS, kategorizaci prací, BOZP i ověření venkovního umělého osvětlení.",
     intro:
-      "Kolaudace, výzva KHS nebo nové pracoviště? Změříme umělé i denní osvětlení podle zrakové náročnosti — výstup pro KHS, kategorizaci prací a BOZP.",
+      "Kolaudace, výzva **KHS** nebo nové pracoviště? Změříme umělé i denní osvětlení uvnitř i **venkovní umělé osvětlení** — výstup pro KHS, **kategorizaci prací** a BOZP.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "Změříme umělé i denní osvětlení na pracovišti",
+      "Změříme také **venkovní umělé osvětlení** (areály, komunikace, parkoviště, sportoviště)",
       "Vyhodnotíme podmínky podle typu činnosti a zrakové námahy",
-      "Posoudíme haly, laboratoře, sklady i administrativu",
+      "Posoudíme haly, laboratoře, sklady, administrativu i venkovní plochy",
       "Navrhneme úpravu svítidel nebo dispozice při nedostatku"
     ],
     whenNeeded: [
-      "Potřebujete kategorizaci prací nebo nové pracoviště",
-      "KHS nebo kolaudace vyžaduje měření osvětlení",
+      "Potřebujete **kategorizaci prací** nebo nové pracoviště",
+      "**KHS** nebo **kolaudace** vyžaduje měření osvětlení",
+      "Ověřujete **venkovní umělé osvětlení** areálu, komunikací nebo sportoviště",
       "Měníte dispozici, technologii nebo typ osvětlení",
       "Řešíte stížnosti na nedostatečné osvětlení"
     ],
@@ -604,23 +606,25 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "měření osvětlení ve výrobní hale po změně technologie",
       "posouzení osvětlení kanceláří a zasedacích místností",
       "měření osvětlení v laboratoři nebo čistém prostoru",
+      "měření venkovního umělého osvětlení areálu, komunikací nebo parkoviště",
       "podklad pro kolaudaci nebo rekonstrukci pracoviště"
     ],
     docs: [
-      "plánek pracoviště a popis činností",
-      "typ osvětlení a dispozice pracovišť",
+      "plánek pracoviště / venkovních ploch a popis činností",
+      "typ osvětlení a dispozice pracovišť nebo venkovních svítidel",
       "směnnost a počet pracovníků na stanovištích",
-      "požadavek KHS nebo projektová dokumentace"
+      "požadavek **KHS** nebo projektová dokumentace"
     ],
     outputs: [
-      "protokol z měření osvětlení s vyhodnocením",
-      "podklad pro kategorizaci prací a BOZP",
+      "**protokol** z měření osvětlení s vyhodnocením",
+      "podklad pro **kategorizaci prací** a **BOZP**",
       "doporučení úprav osvětlení nebo dispozice"
     ],
     commonMistakes: [
       "Měření bez zohlednění skutečné zrakové námahy a operací",
       "Posouzení jen podle projektu bez měření v provozu",
-      "Neúplný popis typu činnosti na pracovišti"
+      "Neúplný popis typu činnosti na pracovišti",
+      "Opomenutí venkovního umělého osvětlení, když je součástí požadavku"
     ],
     relatedLinks: [
       {
@@ -641,7 +645,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Měření mikroklimatických podmínek na pracovištích: teplota, vlhkost, proudění vzduchu. Podklady pro KHS a kategorizaci prací.",
     intro:
-      "Tepelná zátěž, výzva KHS nebo změna větrání? Změříme teplotu, vlhkost a proudění vzduchu v reálném provozu — protokol pro KHS a kategorizaci prací.",
+      "**Tepelná zátěž**, výzva **KHS** nebo změna větrání? Změříme teplotu, vlhkost a proudění vzduchu v reálném provozu — protokol pro KHS a **kategorizaci prací**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -651,10 +655,10 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "Navrhneme úpravu větrání, klimatizace nebo organizace směn"
     ],
     whenNeeded: [
-      "Potřebujete kategorizaci prací nebo její aktualizaci",
-      "KHS reaguje na stížnosti na tepelnou zátěž",
+      "Potřebujete **kategorizaci prací** nebo její aktualizaci",
+      "**KHS** reaguje na stížnosti na tepelnou zátěž",
       "Zavádíte novou technologii nebo měníte větrání",
-      "Probíhá kolaudace nebo změna provozního režimu"
+      "Probíhá **kolaudace** nebo změna provozního režimu"
     ],
     practicalSituations: [
       "měření mikroklimatu ve skladu nebo výrobní hale",
@@ -666,11 +670,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "popis pracovních operací a fyzické zátěže",
       "plánek pracoviště a typ větrání",
       "směnnost a počet pracovníků",
-      "požadavek KHS nebo popis stížnosti"
+      "požadavek **KHS** nebo popis stížnosti"
     ],
     outputs: [
-      "protokol z měření mikroklimatu s vyhodnocením",
-      "podklad pro kategorizaci prací a BOZP",
+      "**protokol** z měření mikroklimatu s vyhodnocením",
+      "podklad pro **kategorizaci prací** a **BOZP**",
       "doporučení technických a organizačních opatření"
     ],
     commonMistakes: [
@@ -702,7 +706,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Autorizované měření tepelné a chladové zátěže na pracovištích: mikroklimatické parametry, třída práce a přípustné doby. Podklady pro KHS a kategorizaci prací.",
     intro:
-      "KHS požaduje posouzení tepelné nebo chladové zátěže? Změříme mikroklimatické parametry v reálném provozu — protokol s doporučením třídy práce a přípustných dob.",
+      "**KHS** požaduje posouzení **tepelné nebo chladové zátěže**? Změříme mikroklimatické parametry v reálném provozu — protokol s doporučením **třídy práce** a přípustných dob.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -712,7 +716,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "Doporučíme třídu práce, přípustné doby a náhrady ztráty tekutin"
     ],
     whenNeeded: [
-      "KHS nebo kategorizace prací vyžaduje měření tepelné či chladové zátěže",
+      "**KHS** nebo kategorizace prací vyžaduje měření tepelné či chladové zátěže",
       "Pracovníci jsou vystaveni horku u pecí, sušáren nebo venkovním pracím v létě",
       "Provoz v chladírnách, mrazírnách nebo nevyhřívaných halách v zimě",
       "Potřebujete podklad pro organizaci směn a technická opatření"
@@ -727,12 +731,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "popis pracovních operací a fyzické zátěže",
       "plánek pracoviště, typ větrání a oděvů",
       "směnnost a počet pracovníků",
-      "požadavek KHS nebo popis stížnosti"
+      "požadavek **KHS** nebo popis stížnosti"
     ],
     outputs: [
-      "protokol z měření tepelné nebo chladové zátěže s vyhodnocením",
+      "**protokol** z měření **tepelné nebo chladové zátěže** s vyhodnocením",
       "doporučení třídy práce a přípustných dob",
-      "podklad pro kategorizaci prací, BOZP a opatření v provozu"
+      "podklad pro **kategorizaci prací**, **BOZP** a opatření v provozu"
     ],
     commonMistakes: [
       "Posouzení jen podle teploty vzduchu bez zohlednění fyzické zátěže práce",
@@ -763,20 +767,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Autorizované měření expozice diisokyanátům na pracovištích: MDI, TDI, HDI a další. Osobní i stacionární odběry pro KHS, kategorizaci prací a opatření ke snížení expozice.",
     intro:
-      "PUR pěny, lakování nebo lepení s izokyanáty? Změříme expozici MDI, TDI, HDI a dalším diisokyanátům v reálném provozu — protokol pro KHS, kategorizaci prací a návrh opatření.",
+      "PUR pěny, lakování nebo lepení s izokyanáty? Změříme expozici **MDI, TDI, HDI** a dalším diisokyanátům v reálném provozu — protokol pro **KHS** a **kategorizaci prací**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
-      "Změříme expozici diisokyanátům (MDI, TDI, HDI a další) osobními i stacionárními odběry",
-      "Zaměříme se na špičky koncentrací při nástřiku, lití a horkých procesech",
-      "Vyhodnotíme expozici vůči hygienickým limitům a požadavkům KHS",
+      "Změříme expozici **diisokyanátům** (**MDI, TDI, HDI** a další) osobními i stacionárními odběry",
+      "Zaměříme se na **špičky koncentrací** při nástřiku, lití a horkých procesech",
+      "Vyhodnotíme expozici vůči **hygienickým limitům** a požadavkům **KHS**",
       "Navrhneme technická a organizační opatření ke snížení expozice"
     ],
     whenNeeded: [
-      "Kategorizace prací nebo výzva KHS kvůli izokyanátům",
-      "Nástřik PUR, lakování nebo lepení s diisokyanáty v provozu",
+      "**Kategorizace prací** nebo výzva **KHS** kvůli izokyanátům",
+      "Nástřik **PUR**, lakování nebo lepení s **diisokyanáty** v provozu",
       "Změna technologie, materiálů nebo větrání u reaktivních systémů",
-      "Ověření účinnosti odsávání a OOPP po stížnosti nebo kontrole"
+      "Ověření účinnosti **odsávání** a **OOPP** po stížnosti nebo kontrole"
     ],
     practicalSituations: [
       "měření MDI při výrobě a zpracování PUR pěn",
@@ -785,14 +789,14 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "sekundární emise při ohřevu nebo řezání vytvrzených PUR materiálů"
     ],
     docs: [
-      "bezpečnostní listy používaných materiálů a směsí",
-      "popis pracovních operací, odsávání a OOPP",
+      "**bezpečnostní listy** používaných materiálů a směsí",
+      "popis pracovních operací, **odsávání** a **OOPP**",
       "plánek pracoviště a směnnost",
-      "požadavek KHS nebo interní auditní podklad"
+      "požadavek **KHS** nebo interní auditní podklad"
     ],
     outputs: [
-      "protokol z měření diisokyanátů s vyhodnocením expozice",
-      "podklad pro kategorizaci prací a opatření dle zákona o ochraně veřejného zdraví",
+      "**protokol** z měření diisokyanátů s vyhodnocením expozice",
+      "podklad pro **kategorizaci prací** a opatření dle zákona o ochraně veřejného zdraví",
       "doporučení technických a organizačních opatření"
     ],
     commonMistakes: [
@@ -824,19 +828,19 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Akustické posudky a odborná vyjádření k hluku technologií, strojoven a stavebních úprav s technologickým provozem. Podklady pro stavební řízení a KHS.",
     intro:
-      "Potřebujete akustický posudek ke strojovně nebo technologii v budově? Posoudíme hluk pro stavební řízení a KHS — jiný rozsah než hluková studie záměru v okolí.",
+      "Potřebujete **akustický posudek** ke strojovně nebo technologii v budově? Posoudíme hluk pro **stavební řízení** a **KHS** — jiný rozsah než hluková studie záměru v okolí.",
     contactService: "Měření hluku a akustika",
     faqCategoryId: "hluk",
     scope: [
       "Zpracujeme posudek ke stavební úpravě nebo změně užívání budovy",
-      "Navrhneme odhlučnění strojoven, VZT a technologií v objektu",
-      "Připravíme vyjádření pro stavební řízení a kolaudaci",
+      "Navrhneme odhlučnění strojoven, **VZT** a technologií v objektu",
+      "Připravíme vyjádření pro **stavební řízení** a **kolaudaci**",
       "Navážeme na měření v provozu nebo akustický výpočet"
     ],
     whenNeeded: [
       "Plánujete stavební úpravy s dopadem na hluk v budově",
-      "Probíhá kolaudace nebo změna užívání budovy",
-      "Stavební úřad nebo KHS požaduje akustické vyjádření",
+      "Probíhá **kolaudace** nebo změna užívání budovy",
+      "Stavební úřad nebo **KHS** požaduje akustické vyjádření",
       "Potřebujete návrh odhlučnění před realizací"
     ],
     practicalSituations: [
@@ -852,9 +856,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "existující měření nebo technické listy zařízení"
     ],
     outputs: [
-      "akustický posudek s vyhodnocením a doporučením",
-      "návrh protihlukových opatření",
-      "podklad pro stavební řízení nebo KHS"
+      "**akustický posudek** s vyhodnocením a doporučením",
+      "návrh **protihlukových** opatření",
+      "podklad pro **stavební řízení** nebo **KHS**"
     ],
     commonMistakes: [
       "Záměna akustického posudku za hlukovou studii záměru v okolí",
@@ -880,20 +884,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Modelové výpočty imisí a hluku pro záměry, změny provozu a varianty technologií. Podklady pro rozptylové a hlukové studie.",
     intro:
-      "Potřebujete rychle porovnat varianty výduchu, strojovny nebo dopravy? Provedeme imisní a hlukové modelové výpočty — podklad pro studii, EIA nebo jednání s úřadem.",
+      "Potřebujete rychle porovnat varianty výduchu, strojovny nebo dopravy? Provedeme **imisní** a **hlukové** modelové výpočty — podklad pro studii, **EIA** nebo jednání s úřadem.",
     contactService: "Rozptylové studie",
     faqCategoryId: "studie",
     scope: [
       "Zmodelujeme imisní příspěvky zdrojů ovzduší a dopravy v areálu",
       "Zpracujeme výpočet hluku technologií, areálu a komunikací",
       "Porovnáme varianty provozu nebo umístění zdrojů",
-      "Připravíme výstupy pro studii, EIA nebo jednání s úřadem"
+      "Připravíme výstupy pro studii, **EIA** nebo jednání s úřadem"
     ],
     whenNeeded: [
       "Plánujete nový záměr nebo změnu kapacity zdroje",
       "Potřebujete variantní posouzení provozu",
       "Úřad požaduje imisní nebo hlukové hodnocení",
-      "Připravujete rozptylovou nebo hlukovou studii"
+      "Připravujete rozptylovou nebo **hlukovou studii**"
     ],
     practicalSituations: [
       "modelový výpočet imisí pro novou technologii v areálu",
@@ -909,7 +913,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     ],
     outputs: [
       "výsledky modelových výpočtů s vyhodnocením",
-      "podklad pro rozptylovou nebo hlukovou studii",
+      "podklad pro rozptylovou nebo **hlukovou studii**",
       "variantní srovnání a doporučení dalšího postupu"
     ],
     commonMistakes: [
@@ -936,19 +940,19 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Propojené posouzení imisí a hluku pro investiční záměry, změny provozu a EIA. Rozptyl, hluk a varianty v jednom postupu.",
     intro:
-      "Záměr ovlivňuje ovzduší i hluk najednou? Zpracujeme propojené posouzení ve stejných datech — konzistentní podklad pro EIA, krajský úřad a KHS.",
+      "Záměr ovlivňuje **ovzduší** i **hluk** najednou? Zpracujeme propojené posouzení ve stejných datech — konzistentní podklad pro **EIA**, krajský úřad a KHS.",
     contactService: "Rozptylové studie",
     faqCategoryId: "studie",
     scope: [
       "Sjednotíme zadání imisí a hluku pro jeden záměr",
       "Zmodelujeme varianty umístění technologií",
-      "Připravíme podklad pro EIA, krajský úřad a KHS",
+      "Připravíme podklad pro **EIA**, krajský úřad a **KHS**",
       "Dodáme jeden souhrnný výstup pro investora a projektanta"
     ],
     whenNeeded: [
       "Záměr má souběžný vliv na ovzduší i hluk",
       "Úřad požaduje imisní i hlukové hodnocení",
-      "Připravujete EIA nebo oznámení záměru",
+      "Připravujete **EIA** nebo oznámení záměru",
       "Potřebujete variantní srovnání umístění technologií"
     ],
     practicalSituations: [
@@ -966,7 +970,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     outputs: [
       "propojené posouzení imisních a hlukových dopadů",
       "variantní srovnání a doporučení opatření",
-      "podklad pro EIA, úřady a investora"
+      "podklad pro **EIA**, úřady a investora"
     ],
     commonMistakes: [
       "Řešení hluku a imisí odděleně bez návaznosti na stejný záměr",
@@ -992,18 +996,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Podklady pro vydání nebo změnu povolení provozu stacionárního zdroje. Měření, posudky, provozní řády a komunikace s úřadem.",
     intro:
-      "Řešíte vydání nebo změnu povolení provozu zdroje? Navrhneme rozsah měření, posudku a provozního řádu podle typu technologie a požadavků krajského úřadu.",
+      "Řešíte vydání nebo změnu **povolení provozu** zdroje? Navrhneme rozsah **měření emisí**, posudku a **provozního řádu** podle typu technologie a požadavků krajského úřadu.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
       "Navrhneme rozsah podkladů před podáním na krajský úřad",
-      "Zkoordinujeme měření emisí, posudek a provozní řád",
-      "Zohledníme návaznost na IPPC a ISPOP u větších zdrojů",
+      "Zkoordinujeme **měření emisí**, posudek a **provozní řád**",
+      "Zohledníme návaznost na **IPPC** a **ISPOP** u větších zdrojů",
       "Poskytneme technickou podporu při doplňování žádosti"
     ],
     whenNeeded: [
       "Plánujete nový zdroj nebo změnu kapacity",
-      "Potřebujete povolení provozu po technologické změně",
+      "Potřebujete **povolení provozu** po technologické změně",
       "Úřad požaduje doplnění podkladů",
       "Měníte palivo, filtraci nebo provozní režim"
     ],
@@ -1021,7 +1025,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     ],
     outputs: [
       "návrh rozsahu podkladů pro řízení",
-      "odborný posudek, protokoly z měření nebo provozní řád",
+      "**odborný posudek**, **protokoly** z měření nebo provozní řád",
       "technická podpora při jednání s úřadem"
     ],
     commonMistakes: [
@@ -1048,18 +1052,18 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Odborné podklady pro zjišťovací řízení EIA. Technické vstupy, koordinace měření a studií pro investora a zpracovatele.",
     intro:
-      "Záměr vstupuje do zjišťovacího řízení EIA? Zajistíme technické vstupy z měření a studií včas — ve formě použitelné pro zpracovatele EIA.",
+      "Záměr vstupuje do **zjišťovacího řízení EIA**? Zajistíme technické vstupy z **měření** a **studií** včas — ve formě použitelné pro zpracovatele EIA.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "Připravíme technické přílohy pro zjišťovací řízení",
-      "Zajistíme měření emisí, rozptyl a hluk podle zadání EIA",
+      "Připravíme **technické přílohy** pro **zjišťovací řízení**",
+      "Zajistíme **měření emisí**, rozptyl a hluk podle zadání **EIA**",
       "Sladíme data od provozu a z projektu",
       "Doplníme po připomínkách úřadu ve fázi zjišťování"
     ],
     whenNeeded: [
       "Záměr spadá do zjišťovacího řízení",
-      "Potřebujete technické přílohy včas v procesu",
+      "Potřebujete **technické přílohy** včas v procesu",
       "Chcete sladit měření, studie a projekt",
       "Připravujete podklady pro veřejnost a úřady"
     ],
@@ -1073,12 +1077,12 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "popis záměru a projektová dokumentace",
       "podklady o stávajícím stavu a provozu",
       "zadání zjišťovacího řízení",
-      "harmonogram a požadavky zpracovatele EIA"
+      "harmonogram a požadavky zpracovatele **EIA**"
     ],
     outputs: [
-      "technické podklady pro zjišťovací řízení",
+      "technické podklady pro **zjišťovací řízení**",
       "koordinované vstupy z měření a studií",
-      "doporučení dalšího postupu v procesu EIA"
+      "doporučení dalšího postupu v procesu **EIA**"
     ],
     commonMistakes: [
       "Pozdní dodání technických podkladů do EIA",
@@ -1104,20 +1108,20 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Technické přílohy pro investory a projektanty: rozptyl, hluk, emise, doprava a návaznost na povolování a EIA.",
     intro:
-      "Rozhodujete o variantě umístění technologie před podáním na úřady? Připravíme technické přílohy k imisím, hluku a dopravě pro investora i projektanta.",
+      "Rozhodujete o variantě umístění technologie před podáním na úřady? Připravíme **technické přílohy** k **imisím**, **hluku** a dopravě pro investora i projektanta.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
       "Připravíme přílohy pro studii proveditelnosti a projektovou přípravu",
       "Posoudíme rozptyl, hluk, emise a dopravu u variant záměru",
       "Zkoordinujeme měření a studie pro projektanta",
-      "Navážeme na EIA, stavební řízení a povolení provozu"
+      "Navážeme na **EIA**, **stavební řízení** a povolení provozu"
     ],
     whenNeeded: [
       "Připravujete investici před podáním na úřady",
       "Potřebujete sladit projekt s požadavky na životní prostředí",
       "Porovnáváte varianty umístění technologií",
-      "Chcete včas připravit podklady pro EIA nebo povolení"
+      "Chcete včas připravit podklady pro **EIA** nebo povolení"
     ],
     practicalSituations: [
       "technické přílohy pro nový výrobní areál",
@@ -1132,7 +1136,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "požadavky investora nebo projektanta"
     ],
     outputs: [
-      "technické přílohy pro investiční rozhodování",
+      "**technické přílohy** pro investiční rozhodování",
       "souhrn měření a studií v použitelné podobě",
       "doporučení dalšího postupu v povolování"
     ],
@@ -1160,19 +1164,19 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     description:
       "Praktické školení chemického zákona, bezpečnostních listů, označování, skladování a nakládání s chemickými látkami pro provozy, sklady, výrobu a laboratoře.",
     intro:
-      "Praktické školení chemického zákona pro provozy nakládající s látkami a směsmi. Projdeme povinnosti, bezpečnostní listy a pravidla pro skladování i manipulaci.",
+      "Praktické školení **chemického zákona** pro provozy nakládající s látkami a směsmi. Projdeme povinnosti, **bezpečnostní listy** a pravidla pro **skladování** i manipulaci.",
     contactService: "Školení chemického zákona / chemické legislativy",
     heroPanelTitle: "Typické důvody poptávky",
     scope: [
       "základní povinnosti při nakládání s chemickými látkami a směsmi",
       "orientace v bezpečnostních listech a jejich praktické použití",
       "označování, skladování a bezpečné používání chemických látek",
-      "návaznost na BOZP, ochranu zdraví a životní prostředí",
+      "návaznost na **BOZP**, ochranu zdraví a životní prostředí",
       "provozní evidence, interní pravidla a časté chyby v provozech"
     ],
     whenNeeded: [
-      "nové chemické látky nebo směsi v provozu",
-      "příprava na kontrolu nebo interní audit BOZP",
+      "nové **chemické látky** nebo směsi v provozu",
+      "příprava na kontrolu nebo interní audit **BOZP**",
       "potřeba praktického podkladu pro zaměstnance",
       "rozšíření provozu, skladu nebo pracovních činností s chemií"
     ],
@@ -1184,7 +1188,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     ],
     docs: [
       "seznam používaných chemických látek a směsí",
-      "bezpečnostní listy a interní postupy",
+      "**bezpečnostní listy** a interní postupy",
       "popis provozu, skladu nebo pracovních činností",
       "požadovaný okruh zaměstnanců a rozsah školení"
     ],

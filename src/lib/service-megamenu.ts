@@ -38,7 +38,7 @@ export const serviceMegaGroups = [
       {
         href: "/sluzby/mereni-osvetleni",
         label: "Osvětlení",
-        description: "Intenzita osvětlení na pracovištích"
+        description: "Intenzita osvětlení na pracovištích i venku"
       },
       {
         href: "/sluzby/mereni-mikroklimatu",

@@ -7,7 +7,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Lärmstudien für Technologien, Standorte, Verkehr, HVAC, Wärmepumpen und Bauprojekte. Unterstützende Dokumentation für KHS, Baugenehmigung und UVP.",
     intro:
-      "Hat eine Behörde eine Lärmstudie angefordert oder bearbeiten Sie eine Nachbarschaftsbeschwerde? Wir erstellen Berechnungen für Technologien, Standort und Transport – Dokumentation für KHS, Baugenehmigung und UVP.",
+      "Hat eine Behörde eine **Lärmstudie** angefordert oder bearbeiten Sie eine Nachbarschaftsbeschwerde? Wir erstellen Berechnungen für Technologien, Standort und Transport – Dokumentation für **KHS**, Baugenehmigung und **UVP**.",
     contactService: "Hlukové studie",
     faqCategoryId: "hluk",
     scope: [
@@ -18,8 +18,8 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     whenNeeded: [
       "Eine neue Lärmquelle wird eingeführt oder die Technologie ändert sich",
-      "KHS, das Bauamt oder die UVP verlangen eine Lärmstudie",
-      "Eine Belegungsgenehmigung, eine Nutzungsänderung oder eine Nachbarschaftsbeschwerde ist in Bearbeitung",
+      "**KHS**, das Bauamt oder die **UVP** verlangen eine Lärmstudie",
+      "Eine **Belegungsgenehmigung**, eine Nutzungsänderung oder eine Nachbarschaftsbeschwerde ist in Bearbeitung",
       "Sie überprüfen die Wirksamkeit von Lärmschutzmaßnahmen vor der Umsetzung"
     ],
     practicalSituations: [
@@ -32,12 +32,12 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Projektlayout und Standorte von Lärmquellen",
       "Projektdokumentation oder technische Datenblätter der Ausrüstung",
       "Betriebsplan für Tages- und Nachtzeiten",
-      "Anforderung durch KHS, das Bauamt oder die zuständige Behörde"
+      "Anforderung durch **KHS**, das Bauamt oder die zuständige Behörde"
     ],
     outputs: [
-      "Lärmstudie mit Berechnung und Bewertung",
+      "**Lärmstudie** mit Berechnung und Bewertung",
       "Vorschlag für Lärmschutz- oder Betriebsmaßnahmen",
-      "unterstützende Unterlagen für KHS, Baugenehmigung, Belegungsgenehmigung oder UVP"
+      "unterstützende Unterlagen für **KHS**, **Baugenehmigung**, Belegungsgenehmigung oder UVP"
     ],
     commonMistakes: [
       "Verwechslung einer Lärmstudie mit einer Lärmmessung für ein noch nicht umgesetztes Projekt",
@@ -63,13 +63,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Gutachterliche Gutachten nach dem Luftschutzgesetz für Quellen, Technologien, betriebliche Änderungen und Genehmigungsverfahren.",
     intro:
-      "Hat die Gebietskörperschaft ein Gutachten für eine Quellen- oder Technologieänderung angefordert? Wir erstellen Gutachten nach dem Luftschutzgesetz – im Zusammenhang mit Emissionsmessungen und Betriebsgenehmigungen.",
+      "Hat die Gebietskörperschaft ein **Gutachten** für eine Quellen- oder Technologieänderung angefordert? Wir erstellen Gutachten nach dem Luftschutzgesetz – im Zusammenhang mit Emissionsmessungen und **Betriebsgenehmigungen**.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
       "Wir erstellen Beurteilungen für eine Quelle, einen Technologiewechsel oder eine Kapazitätsänderung",
-      "Wir verknüpfen Emissionsmessungen, Ausbreitungsstudien und Betriebsanleitungen",
-      "Wir bereiten Antworten auf Anfragen der Regionalbehörde oder ČIŽP vor",
+      "Wir verknüpfen **Emissionsmessungen**, Ausbreitungsstudien und Betriebsanleitungen",
+      "Wir bereiten Antworten auf Anfragen der Regionalbehörde oder **ČIŽP** vor",
       "Zusammenfassung für den Investor vor Einreichung eines Betriebsgenehmigungsantrags"
     ],
     whenNeeded: [
@@ -119,20 +119,20 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Erstellung und Aktualisierung von Betriebshandbüchern für stationäre Luftschadstoffquellen für Betreiber und regionale Behörden.",
     intro:
-      "Gibt die Betriebsanleitung nach einer Filterung, Brennstoff- oder Kapazitätsänderung nicht mehr den tatsächlichen Betrieb wieder? Wir erstellen ein neues Handbuch oder eine Überarbeitung – abgestimmt auf die Genehmigungs- und Emissionsmessungen.",
+      "Gibt die **Betriebsanleitung** nach einer Filterung, Brennstoff- oder Kapazitätsänderung nicht mehr den tatsächlichen Betrieb wieder? Wir erstellen ein neues Handbuch oder eine Überarbeitung – abgestimmt auf die **Genehmigung** und **Emissionsmessungen**.",
     contactService: "Provozní řády",
     faqCategoryId: "eia",
     scope: [
-      "Wir erstellen eine neue Betriebsanleitung für eine Luftverschmutzungsquelle",
+      "Wir erstellen eine neue **Betriebsanleitung** für eine Luftverschmutzungsquelle",
       "Wir aktualisieren nach Technologie-, Stack- oder Notfallverfahrensänderungen",
-      "Wir richten uns nach der Betriebserlaubnis und den neuesten Emissionsmessungen",
-      "Wir überarbeiten auf Anfrage bei der Regionalbehörde oder ČIŽP"
+      "Wir richten uns nach der Betriebserlaubnis und den neuesten **Emissionsmessungen**",
+      "Wir überarbeiten auf Anfrage bei der Regionalbehörde oder **ČIŽP**"
     ],
     whenNeeded: [
       "Sie planen eine neue Quelle oder eine Betriebsgenehmigungsänderung",
       "Sie ändern Technologie, Brennstoff, Schornstein oder Abgasreinigungsausrüstung",
-      "Die Betriebsanleitung spiegelt nicht mehr den tatsächlichen Betrieb wider",
-      "Die regionale Behörde oder ČIŽP verlangt eine Überarbeitung der Dokumentation"
+      "Die **Betriebsanleitung** spiegelt nicht mehr den tatsächlichen Betrieb wider",
+      "Die regionale Behörde oder **ČIŽP** verlangt eine Überarbeitung der Dokumentation"
     ],
     practicalSituations: [
       "Aktualisierung der Bedienungsanleitung nach Filteraustausch",
@@ -141,13 +141,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Abgleich der Dokumentation mit den Ergebnissen der Emissionsmessung"
     ],
     docs: [
-      "vorhandene Betriebsanleitung und Betriebserlaubnis",
+      "vorhandene **Betriebsanleitung** und Betriebserlaubnis",
       "Beschreibung von Technologie, Filterung, Schornsteinen und Notfallzuständen",
       "Emissionsmessberichte und Betriebsaufzeichnungen",
       "Anfrage oder Anforderung einer Behörde"
     ],
     outputs: [
-      "Betriebsanleitung bzw. Betriebsanleitungsupdate",
+      "**Betriebsanleitung** bzw. Betriebsanleitungsupdate",
       "Übersicht über die eingebauten Betriebsbedingungen",
       "Empfehlungen für Folgeaufzeichnungen und Messungen"
     ],
@@ -175,18 +175,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Unterstützende Dokumentation für integrierte Genehmigungen, IPPC-Änderungen und fachmännische Koordination von Messungen, Studien und Betriebsdokumentationen.",
     intro:
-      "Ändern Sie eine Anlage mit integrierter Genehmigung? Wir konsolidieren Messungen, Studien und Betriebsvorgaben für IPPC-Verfahren oder eine Genehmigungsänderung.",
+      "Ändern Sie eine Anlage mit **integrierter Genehmigung**? Wir konsolidieren Messungen, Studien und Betriebsvorgaben für **IPPC**-Verfahren oder eine Genehmigungsänderung.",
     contactService: "IPPC a integrovaná povolení",
     faqCategoryId: "eia",
     scope: [
-      "Wir bereiten die Dokumentation für eine neue integrierte Genehmigung oder IPPC-Änderung vor",
+      "Wir bereiten die Dokumentation für eine neue **integrierte Genehmigung** oder **IPPC**-Änderung vor",
       "Wir bündeln Messungen, Studien und Betriebsdaten in einem Paket",
       "Wir beschreiben die Änderung im Vergleich zur bestehenden Genehmigung und BVT",
       "Wir ergänzen die Dokumentation nach Anmerkungen der regionalen Behörde"
     ],
     whenNeeded: [
-      "Sie planen eine neue integrierte Genehmigung",
-      "Sie befassen sich mit einer wesentlichen oder nicht wesentlichen IPPC-Änderung",
+      "Sie planen eine neue **integrierte Genehmigung**",
+      "Sie befassen sich mit einer wesentlichen oder nicht wesentlichen **IPPC**-Änderung",
       "Sie ändern Kapazität, Technologie oder Emissionsparameter",
       "Eine Behörde verlangt ergänzende Unterlagen"
     ],
@@ -197,13 +197,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Beantwortung von Behördenkommentaren während des Verfahrens"
     ],
     docs: [
-      "aktuelle integrierte Genehmigung und Beschreibung der Änderung",
+      "aktuelle **integrierte Genehmigung** und Beschreibung der Änderung",
       "Projektdokumentation und Prozessdiagramm",
       "Betriebsdaten, Messungen, Bilanzen und Aufzeichnungen",
       "behördliche Anfrage oder Liste der erforderlichen Ergänzungen"
     ],
     outputs: [
-      "Expertendokumentation für IPPC oder integrierte Genehmigungsänderung",
+      "Expertendokumentation für **IPPC** oder integrierte Genehmigungsänderung",
       "Koordinationsübersicht über Messungen, Studien und Betriebsdaten",
       "Dokumentationsergänzungen für Verwaltungsverfahren"
     ],
@@ -231,13 +231,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "UVP-Projektanmeldung, Gutachteranhänge und Koordination der Dokumentation für Prüfverfahren und Folgegenehmigungen.",
     intro:
-      "Bereiten Sie ein Projekt mit Auswirkungen auf die Umwelt vor? Wir bereiten die UVP-Benachrichtigung vor und bündeln die Dokumentation zu Luftqualität, Lärm und Verkehr in einem Dokument.",
+      "Bereiten Sie ein Projekt mit Auswirkungen auf die Umwelt vor? Wir bereiten die **UVP**-Benachrichtigung vor und bündeln die Dokumentation zu **Luftqualität**, Lärm und Verkehr in einem Dokument.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "Wir bereiten die Projektanmeldung nach dem UVP-Gesetz vor",
+      "Wir bereiten die Projektanmeldung nach dem **UVP**-Gesetz vor",
       "Wir konsolidieren Ausbreitungs-, Lärm- und Verkehrsanhänge",
-      "Wir erstellen technische Anhänge für den Investor und UVP-Praktiker",
+      "Wir erstellen **technische Anhänge** für den Investor und **UVP**-Praktiker",
       "Wir überarbeiten nach Kommentaren von Behörden oder der Öffentlichkeit"
     ],
     whenNeeded: [
@@ -259,7 +259,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "behördliche Anforderungen oder frühere Meinungen"
     ],
     outputs: [
-      "UVP-Projektbenachrichtigung",
+      "**UVP**-Projektbenachrichtigung",
       "Koordinationsübersicht der Fachanhänge",
       "Dokumentation für Prüfverfahren und Folgegenehmigungen"
     ],
@@ -287,19 +287,19 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "ISPOP, konsolidierte Betriebsaufzeichnungen und jährliche Berichterstattung für Quellenbetreiber im Zusammenhang mit Emissionsmessungen und Betriebsgenehmigungen.",
     intro:
-      "Steht die jährliche ISPOP-Berichterstattung bevor oder ist eine behördliche Inspektion fällig? Wir vergleichen konsolidierte Aufzeichnungen mit Emissionsmessungen, Genehmigungen und dem tatsächlichen Betrieb.",
+      "Steht die jährliche **ISPOP**-Berichterstattung bevor oder ist eine behördliche Inspektion fällig? Wir vergleichen **konsolidierte Aufzeichnungen** mit **Emissionsmessungen**, Genehmigungen und dem tatsächlichen Betrieb.",
     contactService: "ISPOP",
     faqCategoryId: "ispop",
     scope: [
       "Wir erstellen konsolidierte Betriebsunterlagen für eine Quelle",
-      "Wir überprüfen und ergänzen die jährliche ISPOP-Berichterstattung",
-      "Wir richten uns nach Emissionsmessungen, Genehmigungen und Betriebshandbüchern",
+      "Wir überprüfen und ergänzen die jährliche **ISPOP**-Berichterstattung",
+      "Wir richten uns nach **Emissionsmessungen**, Genehmigungen und Betriebshandbüchern",
       "Wir berücksichtigen Kraftstoff-, Kapazitäts- oder Betriebsstundenänderungen"
     ],
     whenNeeded: [
       "Sie planen die jährliche Berichterstattung und konsolidierte Betriebsaufzeichnungen",
       "Sie ändern die Quell- oder Betriebsdaten",
-      "Sie überprüfen den Link zu Emissionsmessungen",
+      "Sie überprüfen den Link zu **Emissionsmessungen**",
       "Eine Behörde verlangt Nachträge oder Sie führen eine interne Prüfung durch"
     ],
     practicalSituations: [
@@ -309,13 +309,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Ergänzung von Daten nach einer Anfrage oder Inspektion"
     ],
     docs: [
-      "Betriebserlaubnis und Betriebsanleitung",
+      "Betriebserlaubnis und **Betriebsanleitung**",
       "Emissionsmessberichte",
       "Betriebsstunden, Kraftstoff- oder Rohstoffverbrauch",
       "frühere Berichte und verfügbare Aufzeichnungen"
     ],
     outputs: [
-      "Dokumentation für ISPOP und konsolidierte Betriebsaufzeichnungen",
+      "Dokumentation für **ISPOP** und konsolidierte Betriebsaufzeichnungen",
       "Überprüfung der Übereinstimmung mit Betriebserlaubnis und Messungen",
       "Überblick über fehlende oder gefährdete Daten"
     ],
@@ -343,17 +343,17 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Überprüfung von Treibhausgasemissionen, Treibhausgasemissionen, Überprüfung von Emissionsdaten und Berichtsdokumentation für Betreiber.",
     intro:
-      "Überprüfen Sie die Treibhausgasemissionen vor der Berichterstattung? Wir bewerten Methodik, Inputs und die Verbindung zu Verbrauch, Messungen und Betriebsbilanzen.",
+      "Überprüfen Sie die **Treibhausgasemissionen** vor der Berichterstattung? Wir bewerten Methodik, Inputs und die Verbindung zu Verbrauch, **Messungen** und Betriebsbilanzen.",
     contactService: "Treibhausgas",
     faqCategoryId: "ispop",
     scope: [
-      "Wir überprüfen Treibhausgasemissionen und Berechnungsblätter",
+      "Wir überprüfen **Treibhausgasemissionen** und Berechnungsblätter",
       "Wir überprüfen Emissionsfaktoren, Verbrauchs- und Betriebsdaten",
-      "Wir verlinken auf Emissionsmessungen und Betriebsaufzeichnungen",
+      "Wir verlinken auf **Emissionsmessungen** und Betriebsaufzeichnungen",
       "Wir erstellen vor der Meldungsabgabe eine Unstimmigkeitsübersicht"
     ],
     whenNeeded: [
-      "Sie planen eine Berichterstattung über Treibhausgasemissionen",
+      "Sie planen eine Berichterstattung über **Treibhausgasemissionen**",
       "Sie müssen Berechnungen oder Emissionsdaten überprüfen",
       "Sie verändern Technik, Kraftstoff oder Betriebsdaten",
       "Ein Investor, Wirtschaftsprüfer oder eine Behörde verlangt eine Prüfung"
@@ -399,18 +399,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Überprüfung von Sicherheitsdatenblättern, Kennzeichnung von chemischen Stoffen und Gemischen, Etiketten, internen Behältern und Links zu Gesundheit und Sicherheit am Arbeitsplatz.",
     intro:
-      "Sicherheitsdatenblätter müssen der Lagerung und Handhabung der Stoffe vor Ort entsprechen. Wir überprüfen die Dokumentation und Kennzeichnung und schlagen bei Lücken Überarbeitungen vor.",
+      "**Sicherheitsdatenblätter** müssen der Lagerung und Handhabung der Stoffe vor Ort entsprechen. Wir überprüfen die Dokumentation und **Kennzeichnung** und schlagen bei Lücken Überarbeitungen vor.",
     contactService: "Bezpečnostní listy",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "Überarbeitung von Sicherheitsdatenblättern und deren Verfügbarkeit am Arbeitsplatz",
       "Etiketten auf internen Behältern, Lagern und Arbeitsplätzen",
       "Konsistenz von Lagerung und PSA mit Blattinformationen",
-      "Dokumentation für Schulungen und interne Betriebsanweisungen"
+      "Dokumentation für Schulungen und interne **Betriebsanweisungen**"
     ],
     whenNeeded: [
-      "neue chemische Stoffe oder Gemische im Einsatz",
-      "unklare Sicherheitsdatenblätter, Etiketten oder Lagerungsvorschriften",
+      "neue **chemische Stoffe** oder Gemische im Einsatz",
+      "unklare **Sicherheitsdatenblätter**, Etiketten oder Lagerungsvorschriften",
       "Vorbereitung auf Inspektion oder internes Audit",
       "Bedarf an praktischer Dokumentation für die Mitarbeiterschulung"
     ],
@@ -422,12 +422,12 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     docs: [
       "Liste chemischer Stoffe und Gemische",
-      "Sicherheitsdatenblätter und Etiketten",
+      "**Sicherheitsdatenblätter** und Etiketten",
       "Beschreibung der Lagerung und Verwendung im Betrieb",
       "interne Verfahren, Betriebsvorschriften oder Inspektionsanforderungen"
     ],
     outputs: [
-      "Befundübersicht für Sicherheitsdatenblätter und Kennzeichnung",
+      "Befundübersicht für **Sicherheitsdatenblätter** und Kennzeichnung",
       "Empfehlungen für Etiketten-, Lagerungs- und interne Verfahrensüberarbeitungen",
       "Dokumentation für Schulungen oder interne Aufzeichnungen"
     ],
@@ -455,13 +455,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Praktische Hilfestellungen zum Umgang mit chemischen Stoffen im Betrieb, Lagerung, Kennzeichnung, Regeln für Mitarbeiter und Links zum Arbeitsschutz.",
     intro:
-      "Wir bewerten chemische Stoffe am Ort der Lagerung, Umfüllung und Verwendung. Wir bereiten Regeln für Schichtleiter vor, die auf der tatsächlichen Handhabung basieren und nicht nur auf Inventartabellen.",
+      "Wir bewerten **chemische Stoffe** am Ort der Lagerung, Umfüllung und Verwendung. Wir bereiten Regeln für Schichtleiter vor, die auf der tatsächlichen **Handhabung** basieren und nicht nur auf Inventartabellen.",
     contactService: "Chemické látky v provozu",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "Kartierung von Stoffen und Gemischen von der Anlieferung bis zum Arbeitsplatz",
       "Regeln für Handhabung, Umfüllen und Lagerung",
-      "Link zu Sicherheitsdatenblättern und Arbeitsschutz",
+      "Link zu Sicherheitsdatenblättern und **Arbeitsschutz**",
       "Verantwortungsgestaltung und Dokumentation für die Bedienerschulung"
     ],
     whenNeeded: [
@@ -478,7 +478,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     docs: [
       "Liste der im Betrieb verwendeten Stoffe und Gemische",
-      "Sicherheitsdatenblätter, Etiketten und Lagerinventar",
+      "**Sicherheitsdatenblätter**, Etiketten und Lagerinventar",
       "Beschreibung der Arbeitstätigkeiten und Lagerorte",
       "B. interne Regeln, Auditfeststellungen oder Inspektionsanforderungen"
     ],
@@ -511,7 +511,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Akkreditierte Schwingungsmessung an Arbeitsplätzen für Berufseinstufung, Arbeitssicherheit und KHS-Anforderungen. Handwerkzeuge, Maschinen, Transportgeräte.",
     intro:
-      "Stelleneinstufung oder eine KHS-Anfrage zum Thema Vibrationen? Wir messen die Exposition an Werkzeugen und Maschinen auf der Grundlage tatsächlicher Abläufe – Bericht für KHS sowie Gesundheit und Sicherheit am Arbeitsplatz.",
+      "**Stelleneinstufung** oder eine **KHS**-Anfrage zum Thema Vibrationen? Wir messen die Exposition an Werkzeugen und Maschinen auf der Grundlage tatsächlicher Abläufe – Bericht für KHS sowie **Arbeitsschutz**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -522,7 +522,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     whenNeeded: [
       "Sie benötigen eine Jobkategorisierung oder ein Update",
-      "KHS oder ein internes Arbeitsschutzaudit erfordern eine Schwingungsmessung",
+      "**KHS** oder ein internes Arbeitsschutzaudit erfordern eine Schwingungsmessung",
       "Sie führen neue Technologien ein oder ändern Arbeitsabläufe",
       "Sie überprüfen Mitarbeiterbeschwerden oder messen die Wirksamkeit"
     ],
@@ -536,11 +536,11 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Beschreibung der Arbeitsabläufe und Schichtpläne",
       "Liste der verwendeten Werkzeuge und Maschinen",
       "Arbeitsplatzgestaltung und Anzahl der exponierten Arbeitnehmer",
-      "KHS-Anforderung oder interne Auditdokumentation"
+      "**KHS**-Anforderung oder interne Auditdokumentation"
     ],
     outputs: [
       "Schwingungsmessbericht mit Auswertung",
-      "Dokumentation zur Berufseinstufung und zum Arbeitsschutz",
+      "Dokumentation zur **Berufseinstufung** und zum **Arbeitsschutz**",
       "Empfehlungen für technische und organisatorische Maßnahmen"
     ],
     commonMistakes: [
@@ -565,20 +565,22 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     slug: "sluzby/mereni-osvetleni",
     title: "Beleuchtungsmessung",
     description:
-      "Messung der Arbeitsplatzbeleuchtung für KHS, Arbeitsplatzkategorisierung und Arbeitssicherheit. Kunst- und Tageslicht, Büros und Produktionshallen.",
+      "Messung von Kunst- und Tageslicht am Arbeitsplatz und im Außenbereich. Unterlagen für KHS, Berufseinstufung, Arbeitssicherheit und Prüfung der künstlichen Außenbeleuchtung.",
     intro:
-      "Belegungsgenehmigung, KHS-Anfrage oder ein neuer Arbeitsplatz? Wir messen Kunst- und Tageslichtbeleuchtung entsprechend den visuellen Anforderungen – Leistung für KHS, Berufseinstufung und Arbeitssicherheit.",
+      "Belegungsgenehmigung, **KHS**-Anfrage oder neuer Arbeitsplatz? Wir messen Kunst- und Tageslichtbeleuchtung innen sowie **künstliche Außenbeleuchtung** — Leistung für KHS, **Berufseinstufung** und Arbeitssicherheit.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "Wir messen Kunst- und Tageslichtbeleuchtung am Arbeitsplatz",
+      "Wir messen auch **künstliche Außenbeleuchtung** (Areale, Verkehrsflächen, Parkplätze, Sportanlagen)",
       "Wir bewerten die Bedingungen nach Art der Aktivität und visuellen Anforderungen",
-      "Wir begutachten Hallen, Labore, Lager und Verwaltungsbereiche",
+      "Wir begutachten Hallen, Labore, Lager, Verwaltung und Außenflächen",
       "Wir schlagen Leuchten- oder Layoutanpassungen vor, wenn die Pegel nicht ausreichen"
     ],
     whenNeeded: [
-      "Sie benötigen eine Jobkategorisierung oder einen neuen Arbeitsplatz",
-      "KHS oder Belegungsgenehmigung erfordern eine Beleuchtungsmessung",
+      "Sie benötigen eine **Berufseinstufung** oder einen neuen Arbeitsplatz",
+      "**KHS** oder **Belegungsgenehmigung** erfordern eine Beleuchtungsmessung",
+      "Sie prüfen **künstliche Außenbeleuchtung** von Areal, Straße oder Sportanlage",
       "Sie ändern das Layout, die Technologie oder die Beleuchtungsart",
       "Sie gehen auf Beschwerden über unzureichende Beleuchtung ein"
     ],
@@ -586,23 +588,25 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Beleuchtungsmessung in einer Produktionshalle nach Technologiewechsel",
       "Beleuchtungsbewertung für Büros und Besprechungsräume",
       "Beleuchtungsmessung in einem Labor oder Reinraum",
+      "Messung der künstlichen Außenbeleuchtung von Areal, Straße oder Parkplatz",
       "Dokumentation für die Belegungsgenehmigung oder den Umbau des Arbeitsplatzes"
     ],
     docs: [
-      "Arbeitsplatzgestaltung und Tätigkeitsbeschreibung",
-      "Beleuchtungsart und Arbeitsplatzgestaltung",
-      "Schichtmuster und Anzahl der Arbeiter an den Bahnhöfen",
-      "KHS-Anforderung oder Projektdokumentation"
+      "Plan des Arbeitsplatzes / der Außenflächen und Tätigkeitsbeschreibung",
+      "Beleuchtungsart und Layout der Arbeitsplätze oder Außenleuchten",
+      "Schichtmuster und Anzahl der Beschäftigten an den Stationen",
+      "**KHS**-Anforderung oder Projektdokumentation"
     ],
     outputs: [
-      "Lichtmessbericht mit Auswertung",
-      "Dokumentation zur Berufseinstufung und zum Arbeitsschutz",
+      "**Protokoll** der Beleuchtungsmessung mit Auswertung",
+      "Unterlage für **Berufseinstufung** und **Arbeitsschutz**",
       "Empfehlungen für Beleuchtungs- oder Layoutanpassungen"
     ],
     commonMistakes: [
       "Messung ohne Berücksichtigung tatsächlicher visueller Anforderungen und Vorgänge",
-      "Die Bewertung basiert nur auf der Konstruktion ohne Messung im Betrieb",
-      "Unvollständige Beschreibung der Tätigkeitsart am Arbeitsplatz"
+      "Bewertung nur nach Planung ohne Messung im Betrieb",
+      "Unvollständige Beschreibung der Tätigkeitsart am Arbeitsplatz",
+      "Auslassen der künstlichen Außenbeleuchtung, obwohl sie Teil der Anforderung ist"
     ],
     relatedLinks: [
       {
@@ -623,7 +627,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Messung mikroklimatischer Bedingungen an Arbeitsplätzen: Temperatur, Luftfeuchtigkeit, Luftbewegung. Dokumentation für KHS und Stellenkategorisierung.",
     intro:
-      "Thermische Belastung, KHS-Anforderung oder Lüftungswechsel? Wir messen Temperatur, Luftfeuchtigkeit und Luftbewegung im realen Betrieb – Bericht für KHS und Auftragskategorisierung.",
+      "**Thermische Belastung**, **KHS**-Anforderung oder Lüftungswechsel? Wir messen Temperatur, Luftfeuchtigkeit und Luftbewegung im realen Betrieb – Bericht für KHS und **Berufseinstufung**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -634,9 +638,9 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     whenNeeded: [
       "Sie benötigen eine Jobkategorisierung oder ein Update",
-      "KHS reagiert auf Beschwerden über thermische Belastung",
+      "**KHS** reagiert auf Beschwerden über thermische Belastung",
       "Sie führen eine neue Technologie ein oder ändern die Beatmung",
-      "Belegungsgenehmigung oder Betriebsmodusänderung wird durchgeführt"
+      "**Belegungsgenehmigung** oder Betriebsmodusänderung wird durchgeführt"
     ],
     practicalSituations: [
       "Mikroklimamessung in einem Lager oder einer Produktionshalle",
@@ -648,11 +652,11 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Beschreibung der Arbeitsabläufe und der körperlichen Belastung",
       "Arbeitsplatzaufteilung und Belüftungsart",
       "Schichtmuster und Anzahl der Arbeitnehmer",
-      "KHS-Anforderungs- oder Reklamationsbeschreibung"
+      "**KHS**-Anforderungs- oder Reklamationsbeschreibung"
     ],
     outputs: [
       "Mikroklima-Messbericht mit Auswertung",
-      "Dokumentation zur Berufseinstufung und zum Arbeitsschutz",
+      "Dokumentation zur **Berufseinstufung** und zum **Arbeitsschutz**",
       "Empfehlungen für technische und organisatorische Maßnahmen"
     ],
     commonMistakes: [
@@ -684,17 +688,17 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Autorisierte Messung von Wärme- und Kältebelastung am Arbeitsplatz: mikroklimatische Parameter, Arbeitsklasse und zulässige Arbeitszeiten. Unterlagen für Hygienestation und Berufseinstufung.",
     intro:
-      "Fordert die Hygienestation eine Beurteilung der Wärme- oder Kältebelastung? Wir messen mikroklimatische Parameter im realen Betrieb — Bericht mit Arbeitsklasse und Empfehlungen zu zulässigen Arbeitszeiten.",
+      "Fordert die **Hygienestation** eine Beurteilung der **Wärme- oder Kältebelastung**? Wir messen mikroklimatische Parameter im realen Betrieb — Bericht mit **Arbeitsklasse** und Empfehlungen zu zulässigen Arbeitszeiten.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "Wir messen mikroklimatische Parameter nach der Methodik des tschechischen Gesundheitsministeriums",
       "Wir beurteilen die Bedingungen nach körperlicher Arbeitsbelastung (leicht / mittel / schwer)",
       "Wir messen in Hallen, Trocknern, Kühlhäusern und bei Außenarbeiten",
-      "Wir empfehlen Arbeitsklasse, zulässige Arbeitszeiten und Flüssigkeitsersatz"
+      "Wir empfehlen **Arbeitsklasse**, zulässige Arbeitszeiten und Flüssigkeitsersatz"
     ],
     whenNeeded: [
-      "Hygienestation oder Berufseinstufung erfordert Messung der Wärme- oder Kältebelastung",
+      "**Hygienestation** oder **Berufseinstufung** erfordert Messung der Wärme- oder Kältebelastung",
       "Mitarbeiter sind Hitze an Öfen, Trocknern oder bei Außenarbeiten im Sommer ausgesetzt",
       "Betrieb in Kühlhäusern, Gefrieranlagen oder unbeheizten Hallen im Winter",
       "Sie benötigen Unterlagen für Schichtorganisation und technische Maßnahmen"
@@ -709,12 +713,12 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Beschreibung der Arbeitsvorgänge und körperlichen Belastung",
       "Arbeitsplatzplan, Belüftungsart und Kleidung",
       "Schichtmodell und Anzahl der Mitarbeiter",
-      "Anforderung der Hygienestation oder Beschreibung der Beschwerde"
+      "Anforderung der **Hygienestation** oder Beschreibung der Beschwerde"
     ],
     outputs: [
-      "Messbericht zur Wärme- oder Kältebelastung mit Bewertung",
-      "Empfehlungen zur Arbeitsklasse und zulässigen Arbeitszeiten",
-      "Unterlage für Berufseinstufung, Arbeitsschutz und betriebliche Maßnahmen"
+      "Messbericht zur **Wärme- oder Kältebelastung** mit Bewertung",
+      "Empfehlungen zur **Arbeitsklasse** und zulässigen Arbeitszeiten",
+      "Unterlage für **Berufseinstufung**, **Arbeitsschutz** und betriebliche Maßnahmen"
     ],
     commonMistakes: [
       "Beurteilung nur nach Lufttemperatur ohne Berücksichtigung der körperlichen Arbeitsbelastung",
@@ -745,18 +749,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Autorisierte Messung der Diisocyanat-Exposition am Arbeitsplatz: MDI, TDI, HDI und weitere. Persönliche und stationäre Probenahme für Hygienestation, Berufseinstufung und Maßnahmen zur Expositionsreduzierung.",
     intro:
-      "PUR-Schäume, Lackierung oder Verklebung mit Isocyanaten? Wir messen die Exposition gegenüber MDI, TDI, HDI und weiteren Diisocyanaten im realen Betrieb — Bericht für Hygienestation, Berufseinstufung und Maßnahmenvorschläge.",
+      "PUR-Schäume, Lackierung oder Verklebung mit Isocyanaten? Wir messen die Exposition gegenüber **MDI, TDI, HDI** und weiteren Diisocyanaten im realen Betrieb — Bericht für **KHS** und **Berufseinstufung**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
-      "Wir messen die Diisocyanat-Exposition (MDI, TDI, HDI und weitere) mit persönlicher und stationärer Probenahme",
+      "Wir messen die Diisocyanat-Exposition (**MDI, TDI, HDI** und weitere) mit persönlicher und stationärer Probenahme",
       "Wir konzentrieren uns auf Konzentrationsspitzen beim Sprühen, Gießen und bei heißen Prozessen",
-      "Wir bewerten die Exposition gegenüber Hygienegrenzwerten und Anforderungen der Hygienestation",
+      "Wir bewerten die Exposition gegenüber Hygienegrenzwerten und Anforderungen der **Hygienestation**",
       "Wir schlagen technische und organisatorische Maßnahmen zur Expositionsreduzierung vor"
     ],
     whenNeeded: [
-      "Berufseinstufung oder Anforderung der Hygienestation wegen Isocyanaten",
-      "PUR-Sprühen, Lackierung oder Verklebung mit Diisocyanaten im Betrieb",
+      "**Berufseinstufung** oder Anforderung der **Hygienestation** wegen Isocyanaten",
+      "**PUR**-Sprühen, Lackierung oder Verklebung mit **Diisocyanaten** im Betrieb",
       "Technologie-, Material- oder Belüftungsänderung bei reaktiven Systemen",
       "Überprüfung der Absaugung und PSA nach Beschwerde oder Kontrolle"
     ],
@@ -767,14 +771,14 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Sekundäremissionen beim Erhitzen oder Schneiden ausgehärteter PUR-Materialien"
     ],
     docs: [
-      "Sicherheitsdatenblätter der verwendeten Materialien und Gemische",
+      "**Sicherheitsdatenblätter** der verwendeten Materialien und Gemische",
       "Beschreibung der Arbeitsvorgänge, Absaugung und PSA",
       "Arbeitsplatzplan und Schichtmodell",
-      "Anforderung der Hygienestation oder interne Auditunterlagen"
+      "Anforderung der **Hygienestation** oder interne Auditunterlagen"
     ],
     outputs: [
       "Diisocyanat-Messbericht mit Expositionsbewertung",
-      "Unterlage für Berufseinstufung und Maßnahmen nach dem Gesundheitsschutzgesetz",
+      "Unterlage für **Berufseinstufung** und Maßnahmen nach dem Gesundheitsschutzgesetz",
       "Empfehlungen zu technischen und organisatorischen Maßnahmen"
     ],
     commonMistakes: [
@@ -806,19 +810,19 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Akustische Gutachten und Gutachten zu Geräuschen aus Technologien, Technikräumen und Gebäudeumbauten mit Prozessbetrieb. Dokumentation für Baugenehmigung und KHS.",
     intro:
-      "Sie benötigen eine akustische Begutachtung für einen Technikraum oder die Technik innerhalb eines Gebäudes? Wir bewerten Lärm für Baugenehmigungen und KHS – ein anderer Umfang als eine Nachbarschaftslärmstudie für ein Projekt.",
+      "Sie benötigen eine **akustische Begutachtung** für einen Technikraum oder die Technik innerhalb eines Gebäudes? Wir bewerten Lärm für **Baugenehmigungen** und **KHS** – ein anderer Umfang als eine Nachbarschaftslärmstudie für ein Projekt.",
     contactService: "Měření hluku a akustika",
     faqCategoryId: "hluk",
     scope: [
       "Wir erstellen Gutachten für Bauumbauten oder Gebäudenutzungsänderungen",
       "Wir schlagen Schallschutz für Technikräume, HVAC und Technologien innerhalb eines Gebäudes vor",
-      "Wir erstellen Stellungnahmen zur Baugenehmigung und Belegungsgenehmigung",
+      "Wir erstellen Stellungnahmen zur **Baugenehmigung** und **Belegungsgenehmigung**",
       "Wir verknüpfen mit Betriebsmessungen oder Akustikberechnungen"
     ],
     whenNeeded: [
       "Sie planen bauliche Veränderungen mit Auswirkungen auf den Lärm im Gebäude",
-      "Die Belegungsgenehmigung bzw. Nutzungsänderung des Gebäudes ist in Bearbeitung",
-      "Das Bauamt oder die KHS verlangt eine akustische Stellungnahme",
+      "Die **Belegungsgenehmigung** bzw. Nutzungsänderung des Gebäudes ist in Bearbeitung",
+      "Das Bauamt oder die **KHS** verlangt eine akustische Stellungnahme",
       "Vor der Umsetzung benötigen Sie einen Schallschutzentwurf"
     ],
     practicalSituations: [
@@ -836,7 +840,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     outputs: [
       "Akustische Beurteilung mit Bewertung und Empfehlungen",
       "Gestaltung von Lärmschutzmaßnahmen",
-      "Dokumentation für Baugenehmigung oder KHS"
+      "Dokumentation für **Baugenehmigung** oder **KHS**"
     ],
     commonMistakes: [
       "Verwechslung einer akustischen Beurteilung mit einer Nachbarschaftslärmstudie für ein Projekt",
@@ -862,20 +866,20 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Immissions- und Lärmmodellierungsberechnungen für Projekte, Betriebsänderungen und Technologievarianten. Dokumentation für Ausbreitungs- und Lärmstudien.",
     intro:
-      "Sie müssen schnell Stapel-, Technikraum- oder Transportvarianten vergleichen? Wir führen Immissions- und Lärmmodellierungsberechnungen durch – Dokumentation für eine Studie, UVP oder Behördenberatung.",
+      "Sie müssen schnell Stapel-, Technikraum- oder Transportvarianten vergleichen? Wir führen **Immissions**- und **Lärmmodellierungsberechnungen** durch – Dokumentation für eine Studie, **UVP** oder Behördenberatung.",
     contactService: "Rozptylové studie",
     faqCategoryId: "studie",
     scope: [
       "Wir modellieren Immissionsbeiträge aus Luftquellen und Transport vor Ort",
       "Wir erstellen Lärmberechnungen für Technologien, Standort und Straßen",
       "Wir vergleichen Betriebs- oder Quellstandortvarianten",
-      "Wir bereiten Ergebnisse für eine Studie, UVP oder eine Behördenkonsultation vor"
+      "Wir bereiten Ergebnisse für eine Studie, **UVP** oder eine Behördenkonsultation vor"
     ],
     whenNeeded: [
       "Sie planen ein neues Projekt oder eine Quellkapazitätsänderung",
       "Sie benötigen eine Variantenbewertung des Betriebs",
       "Eine Behörde verlangt eine Immissions- oder Lärmbewertung",
-      "Sie bereiten eine Ausbreitungs- oder Lärmstudie vor"
+      "Sie bereiten eine Ausbreitungs- oder **Lärmstudie** vor"
     ],
     practicalSituations: [
       "Immissionsmodellberechnung für neue Technologie vor Ort",
@@ -918,19 +922,19 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Integrierte Immissions- und Lärmbewertung für Investitionsvorhaben, Betriebsänderungen und UVP. Streuung, Rauschen und Varianten in einem Prozess.",
     intro:
-      "Beeinflusst ein Projekt sowohl die Luftqualität als auch den Lärm? Wir erstellen eine integrierte Bewertung mit denselben Daten – konsistente Dokumentation für EIA, die Gebietskörperschaft und KHS.",
+      "Beeinflusst ein Projekt sowohl die **Luftqualität** als auch den **Lärm**? Wir erstellen eine integrierte Bewertung mit denselben Daten – konsistente Dokumentation für **UVP**, die Gebietskörperschaft und KHS.",
     contactService: "Rozptylové studie",
     faqCategoryId: "studie",
     scope: [
       "Wir bündeln Immissions- und Lärmschutzunterlagen für ein Projekt",
       "Wir modellieren Technologiestandortvarianten",
-      "Wir erstellen Dokumentationen für EIA, die Regionalbehörde und KHS",
+      "Wir erstellen Dokumentationen für **EIA**, die Regionalbehörde und **KHS**",
       "Wir liefern ein konsolidiertes Ergebnis für den Investor und Designer"
     ],
     whenNeeded: [
       "Ein Projekt hat gleichzeitig Auswirkungen auf die Luftqualität und den Lärm",
       "Eine Behörde verlangt eine Immissions- und Lärmbewertung",
-      "Sie bereiten eine UVP oder eine Projektanmeldung vor",
+      "Sie bereiten eine **UVP** oder eine Projektanmeldung vor",
       "Sie benötigen einen Variantenvergleich des Technologiestandortes"
     ],
     practicalSituations: [
@@ -948,7 +952,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     outputs: [
       "Integrierte Immissions- und Lärmverträglichkeitsprüfung",
       "Variantenvergleich und Maßnahmenempfehlungen",
-      "Dokumentation für UVP, Behörden und Investor"
+      "Dokumentation für **UVP**, Behörden und Investor"
     ],
     commonMistakes: [
       "Separate Behandlung von Lärm und Immissionen ohne Bezug zum gleichen Projekt",
@@ -974,13 +978,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Dokumentation zur Erteilung oder Änderung einer Betriebserlaubnis für eine stationäre Quelle. Messungen, Gutachten, Betriebshandbücher und Behördenkontakte.",
     intro:
-      "Befassen Sie sich mit der Erteilung oder Änderung einer Quellenbetriebserlaubnis? Wir schlagen den Umfang der Messungen, Beurteilungen und Betriebsanweisungen je nach Technologietyp und regionalen behördlichen Anforderungen vor.",
+      "Befassen Sie sich mit der Erteilung oder Änderung einer **Quellenbetriebserlaubnis**? Wir schlagen den Umfang der **Emissionsmessungen**, Beurteilungen und **Betriebsanweisungen** je nach Technologietyp und regionalen behördlichen Anforderungen vor.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
       "Wir schlagen den Dokumentationsumfang vor der Einreichung bei der regionalen Behörde vor",
-      "Wir koordinieren Emissionsmessungen, Beurteilung und Betriebsanleitung",
-      "Für größere Quellen ziehen wir Links zu IPPC und ISPOP in Betracht",
+      "Wir koordinieren **Emissionsmessungen**, Beurteilung und **Betriebsanleitung**",
+      "Für größere Quellen ziehen wir Links zu **IPPC** und **ISPOP** in Betracht",
       "Wir leisten technische Unterstützung bei der Ergänzung des Antrags"
     ],
     whenNeeded: [
@@ -1030,18 +1034,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Sachverständigendokumentation für UVP-Prüfverfahren. Technische Inputs, Koordination von Messungen und Studien für den Investor und UVP-Praktiker.",
     intro:
-      "Befindet sich ein Projekt im UVP-Prüfungsverfahren? Wir liefern termingerecht technische Inputs aus Messungen und Studien – in einer für den UVP-Anwender nutzbaren Form.",
+      "Befindet sich ein Projekt im **UVP-Prüfungsverfahren**? Wir liefern termingerecht technische Inputs aus **Messungen** und **Studien** – in einer für den UVP-Anwender nutzbaren Form.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "Wir erstellen technische Anhänge für Screening-Verfahren",
-      "Wir veranlassen Emissions-, Ausbreitungs- und Lärmmessungen gemäß UVP-Auftrag",
+      "Wir erstellen **technische Anhänge** für Screening-Verfahren",
+      "Wir veranlassen Emissions-, Ausbreitungs- und **Lärmmessungen** gemäß **UVP**-Auftrag",
       "Wir gleichen Daten aus Betrieb und Projekt ab",
       "Wir ergänzen nach Autoritätskommentaren während des Screenings"
     ],
     whenNeeded: [
       "Ein Projekt fällt in ein Screening-Verfahren",
-      "Dabei benötigen Sie rechtzeitig technische Anhänge",
+      "Dabei benötigen Sie rechtzeitig **technische Anhänge**",
       "Sie möchten Messungen, Studien und Projekt in Einklang bringen",
       "Sie erstellen Dokumentationen für die Öffentlichkeit und Behörden"
     ],
@@ -1055,12 +1059,12 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Projektbeschreibung und Projektdokumentation",
       "Dokumentation zum Ist-Zustand und Betrieb",
       "Kurzfassung des Screening-Verfahrens",
-      "Zeitplan und Anforderungen des EIA-Praktikers"
+      "Zeitplan und Anforderungen des **EIA**-Praktikers"
     ],
     outputs: [
       "technische Dokumentation für Screening-Verfahren",
       "koordinierte Inputs aus Messungen und Studien",
-      "Empfehlungen für die nächsten Schritte im UVP-Prozess"
+      "Empfehlungen für die nächsten Schritte im **UVP**-Prozess"
     ],
     commonMistakes: [
       "Verspätete Lieferung der technischen Dokumentation an EIA",
@@ -1086,20 +1090,20 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Technische Anhänge für Investoren und Planer: Ausbreitung, Lärm, Emissionen, Transport und Links zu Genehmigungen und UVP.",
     intro:
-      "Entscheiden Sie sich für den Technologiestandort, bevor Sie ihn den Behörden vorlegen? Für den Investor und Planer erstellen wir technische Anhänge zu Immissionen, Lärm und Verkehr.",
+      "Entscheiden Sie sich für den Technologiestandort, bevor Sie ihn den Behörden vorlegen? Für den Investor und Planer erstellen wir **technische Anhänge** zu **Immissionen**, **Lärm** und Verkehr.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
       "Wir erstellen Anhänge für Machbarkeitsstudien und Projektvorbereitungen",
       "Wir bewerten Ausbreitung, Lärm, Emissionen und Transport für Projektvarianten",
       "Wir koordinieren Messungen und Studien für den Designer",
-      "Wir verweisen auf UVP, Baugenehmigungen und Betriebsgenehmigungen"
+      "Wir verweisen auf **UVP**, **Baugenehmigungen** und Betriebsgenehmigungen"
     ],
     whenNeeded: [
       "Sie bereiten eine Investition vor, bevor Sie sie bei den Behörden einreichen",
       "Sie müssen das Projekt an den Umweltanforderungen ausrichten",
       "Sie vergleichen Technologiestandortvarianten",
-      "Sie möchten rechtzeitig eine UVP oder eine Genehmigungsdokumentation erstellen"
+      "Sie möchten rechtzeitig eine **UVP** oder eine Genehmigungsdokumentation erstellen"
     ],
     practicalSituations: [
       "Technische Anhänge für einen neuen Produktionsstandort",
@@ -1142,7 +1146,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Praktische Schulung zu Chemikalienrecht, Sicherheitsdatenblättern, Kennzeichnung, Lagerung und Umgang mit chemischen Stoffen für Betriebe, Lager, Produktion und Labore.",
     intro:
-      "Praktische Schulung zum Chemikalienrecht für den Umgang mit Stoffen und Gemischen. Wir decken Pflichten, Sicherheitsdatenblätter und Regeln zur Lagerung und Handhabung ab.",
+      "Praktische Schulung zum **Chemikalienrecht** für den Umgang mit Stoffen und Gemischen. Wir decken Pflichten, **Sicherheitsdatenblätter** und Regeln zur **Lagerung** und Handhabung ab.",
     contactService: "Školení chemického zákona / chemické legislativy",
     heroPanelTitle: "Typische Gründe für eine Anfrage",
     scope: [
@@ -1153,7 +1157,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Betriebsaufzeichnungen, interne Regeln und häufige Fehler im Betrieb"
     ],
     whenNeeded: [
-      "neue chemische Stoffe oder Gemische im Einsatz",
+      "neue **chemische Stoffe** oder Gemische im Einsatz",
       "Vorbereitung auf eine Inspektion oder ein internes Arbeitsschutzaudit",
       "Bedarf an praktischer Dokumentation für Mitarbeiter",
       "Ausweitung von Betriebs-, Lager- oder Arbeitstätigkeiten im Zusammenhang mit Chemikalien"
@@ -1166,7 +1170,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     docs: [
       "Liste der verwendeten chemischen Stoffe und Gemische",
-      "Sicherheitsdatenblätter und interne Verfahren",
+      "**Sicherheitsdatenblätter** und interne Verfahren",
       "Beschreibung der Betriebs-, Lager- oder Arbeitsaktivitäten",
       "Zielgruppe und Schulungsumfang"
     ],

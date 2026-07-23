@@ -18,18 +18,18 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "emise",
     title: "Emissionsmessung aus stationären Quellen",
     intro:
-      "Behördenanfrage oder geplante Compliance-Messung? Wir messen die Emissionen eines Schornsteins oder einer Entlüftung und liefern einen akkreditierten Bericht für Betriebsgenehmigungen, ČIŽP, die regionale Behörde oder ISPOP.",
+      "Behördenanfrage oder geplante Compliance-Messung? Wir messen die **Emissionen** eines Schornsteins oder einer Entlüftung und liefern einen akkreditierten **Bericht** für **Betriebsgenehmigungen**, ČIŽP, die regionale Behörde oder ISPOP.",
     scope: [
       "Wir messen NOx, CO, SO₂, O₂, TOC/VOC, Partikel, HCl, Metalle und andere Bestandteile gemäß Betriebserlaubnis und Auftrag",
-      "Wir beurteilen den Messpunkt, die Entlüftung und die Übereinstimmung mit der Betriebsanleitung",
+      "Wir beurteilen den Messpunkt, die Entlüftung und die Übereinstimmung mit der **Betriebsanleitung**",
       "Wir stimmen die Vorbereitung und Durchführung der Messung mit dem Betrieb ab",
       "Wir bewerten die Ergebnisse anhand von Grenzwerten, der Genehmigung und etwaigen behördlichen Anfragen"
     ],
     whenNeeded: [
       "Sie benötigen eine regelmäßige oder einmalige Messung gemäß der Verordnung Nr. 415/2012 Slg. und die Betriebserlaubnis",
-      "Die regionale Behörde, ČIŽP oder Inspektionsstelle verlangt eine Messung",
+      "Die regionale Behörde, **ČIŽP** oder Inspektionsstelle verlangt eine Messung",
       "Sie ändern Brennstoff, Rohstoff, Technologie oder Quellenkapazität",
-      "Sie benötigen Unterlagen für eine Ausbreitungsstudie, UVP, Gutachten oder Betriebsdokumentation"
+      "Sie benötigen Unterlagen für eine **Ausbreitungsstudie**, **UVP**, Gutachten oder Betriebsdokumentation"
     ],
     practicalSituations: [
       "Emissionsmessung in einer Lackiererei nach Technologie- oder Filterwechsel",
@@ -40,7 +40,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       "Messung auf Anfrage der regionalen Behörde oder ČIŽP"
     ],
     docs: [
-      "Betriebserlaubnisbescheid oder Auszug aus integrierter Genehmigung/Bedienungsanleitung",
+      "Betriebserlaubnisbescheid oder Auszug aus **integrierter Genehmigung**/Bedienungsanleitung",
       "technische Quellenbeschreibung, Entlüftungs- und Filterdiagramme und aktuelle Betriebsart",
       "Messhistorie oder frühere Berichte (falls verfügbar)",
       "Fotos des Schlots, der Messstelle und der Zugangsbedingungen"
@@ -79,7 +79,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "hluk",
     title: "Lärmmessung und Akustik",
     intro:
-      "Lärmbeschwerde, Belegungsgenehmigung oder behördliche Auflage? Wir führen Feldmessungen und akustische Berechnungen nach Lärmquellen und Schutzgebieten in der Nachbarschaft durch.",
+      "Lärmbeschwerde, **Belegungsgenehmigung** oder Behördenanforderung? Wir führen **Lärmmessungen** vor Ort und akustische Berechnungen entsprechend den Lärmquellen und Schutzbereichen in der Nachbarschaft durch.",
     scope: [
       "Wir messen LAeq und LAFmax während des normalen Betriebs im Feld",
       "Wir beurteilen Verkehrs- und Techniklärm vor Ort",
@@ -87,9 +87,9 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       "Wir messen Lärm von Klimaanlagen, Wärmepumpen und Technikräumen"
     ],
     whenNeeded: [
-      "Die Baugenehmigung bzw. Nutzungsgenehmigung ist in Bearbeitung",
+      "Die **Baugenehmigung** bzw. Nutzungsgenehmigung ist in Bearbeitung",
       "Sie bearbeiten eine Lärmbeschwerde aus dem Betrieb",
-      "Sie benötigen eine Lärmstudie für eine UVP oder eine Projektänderung",
+      "Sie benötigen eine **Lärmstudie** für eine **UVP** oder eine Projektänderung",
       "Sie bewerten den Lärm einer Wärmepumpe, Heizungs-, Lüftungs- und Klimatechnik, Kühlung oder eines Industriestandorts"
     ],
     practicalSituations: [
@@ -101,13 +101,13 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     docs: [
       "Standorte der Lärmquellen und Betriebsplan",
-      "bauaufsichtliche bzw. KHS-Anforderung",
+      "bauaufsichtliche bzw. **KHS**-Anforderung",
       "Anordnung der nächstgelegenen geschützten Siedlung, Transport und Tag-/Nachtbetriebsmodus"
     ],
     outputs: [
       "Lärmmessbericht",
       "akustische Aussage zu Technologien innerhalb eines Gebäudes",
-      "Lärmstudie mit Maßnahmenempfehlungen"
+      "**Lärmstudie** mit Maßnahmenempfehlungen"
     ],
     commonMistakes: [
       "Messung zu einem ungeeigneten Zeitpunkt oder ohne Berücksichtigung der Betriebsart",
@@ -137,16 +137,16 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "pracovni-prostredi",
     title: "Messung der Arbeitsplatzumgebung",
     intro:
-      "Müssen Sie die Stellenkategorisierung aktualisieren oder haben Sie eine KHS-Anfrage erhalten? Wir messen Lärm, Staub, Chemikalien, Mikroklima, Beleuchtung und Vibrationen im Betrieb – Ergebnisse für KHS, Arbeitsplatzkategorisierung sowie Gesundheit und Sicherheit am Arbeitsplatz.",
+      "Brauchen Sie eine Aktualisierung der **Berufseinstufung** oder eine **KHS**-Anforderung? Wir messen Lärm, Staub, Chemikalien, Mikroklima, Beleuchtung (einschließlich **künstlicher Außenbeleuchtung**) und Vibrationen — Unterlagen für KHS, Berufseinstufung und Arbeitsschutz.",
     scope: [
       "Wir messen Lärm, Staub, Chemikalien, Vibrationen, Mikroklima und Beleuchtung je nach Betriebs- und Schichtplan",
       "Wir beurteilen die Belastung in Schweißereien, Lackierereien, Hallen und Reinräumen",
       "Wir bewerten Ergebnisse im Kontext von Grenzen und tatsächlicher Arbeitsbelastung",
-      "Wir erstellen Dokumentationen für die Berufseinstufung, den Arbeitsschutz und die KHS-Beratung"
+      "Wir erstellen Dokumentationen für die **Berufseinstufung**, den **Arbeitsschutz** und die KHS-Beratung"
     ],
     whenNeeded: [
       "Sie benötigen eine Jobkategorisierung oder ein Update",
-      "KHS verlangt eine Messung der Arbeitsplatzumgebung",
+      "**KHS** verlangt eine Messung der Arbeitsplatzumgebung",
       "Sie ändern die Technologie oder die Arbeitsplatzgestaltung",
       "Belegungsfreigabe, internes Arbeitsschutzaudit bzw. Überprüfung der Absaugung und technischer Maßnahmen sind in Bearbeitung"
     ],
@@ -159,13 +159,13 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     docs: [
       "Beschreibung der Arbeitsabläufe und Schichtpläne",
-      "Sicherheitsdatenblätter der verwendeten Stoffe",
+      "**Sicherheitsdatenblätter** der verwendeten Stoffe",
       "Arbeitsplatzlayout und Quellstandorte",
       "Informationen zu Absaugung, Technologie, Schutzausrüstung und Anzahl der exponierten Arbeitnehmer"
     ],
     outputs: [
       "Messberichte mit Auswertung",
-      "Dokumentation zur Berufseinstufung und zum Arbeitsschutz",
+      "Dokumentation zur **Berufseinstufung** und zum **Arbeitsschutz**",
       "Empfehlungen für organisatorische und technische Maßnahmen"
     ],
     commonMistakes: [
@@ -182,7 +182,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       {
         title: "Beleuchtungsmessung",
         href: "/sluzby/mereni-osvetleni",
-        description: "Arbeitsplatzbeleuchtung für KHS und Arbeitsplatzkategorisierung."
+        description: "Arbeitsplatz- und künstliche Außenbeleuchtung für KHS und Berufseinstufung."
       },
       {
         title: "Mikroklimamessung",
@@ -211,7 +211,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "studie",
     title: "Ausbreitungsstudien",
     intro:
-      "Hat die regionale Behörde oder die UVP eine Ausbreitungsstudie angefordert? Wir modellieren Immissionsbeiträge aus Quellen und Transport – Dokumentation für den Investor, Planer und die Behörde.",
+      "Hat die regionale Behörde oder die **UVP** eine **Ausbreitungsstudie** angefordert? Wir modellieren **Immissionsbeiträge** aus Quellen und Transport – Dokumentation für den Investor, Planer und die Behörde.",
     scope: [
       "Wir modellieren den Immissionsbeitrag stationärer Quellen und des Transports vor Ort",
       "Wir bewerten betriebliche Varianten und technische Maßnahmen",
@@ -220,7 +220,7 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     whenNeeded: [
       "Sie planen ein neues Projekt oder eine Betriebserweiterung",
-      "Die regionale Behörde oder die UVP verlangt eine Ausbreitungsstudie",
+      "Die regionale Behörde oder die **UVP** verlangt eine **Ausbreitungsstudie**",
       "Sie müssen technische Lösungsvarianten vergleichen",
       "Sie ändern die Quellen-, Kapazitäts-, Kraftstoff-, Transport- oder Emissionsparameter"
     ],
@@ -235,10 +235,10 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
       "Quellparameter und Emissionsdaten",
       "Betriebspläne und Transport vor Ort",
       "Projektlayout und Kartendokumentation",
-      "Schornsteinhöhe, Rauchgastemperatur und -geschwindigkeit, technische Datenblätter zur Filterung und frühere Emissionsmessungen"
+      "Schornsteinhöhe, Rauchgastemperatur und -geschwindigkeit, technische Datenblätter zur Filterung und frühere **Emissionsmessungen**"
     ],
     outputs: [
-      "Ausbreitungsstudie mit Schlussfolgerungen und Empfehlungen",
+      "**Ausbreitungsstudie** mit Schlussfolgerungen und Empfehlungen",
       "Variantenbewertung (falls Bestandteil des Briefings)",
       "Dokumentation für den Investor, Designer und die Behörde"
     ],
@@ -270,18 +270,18 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     faqCategoryId: "eia",
     title: "UVP, Bewertungen, Betriebshandbücher und IPPC",
     intro:
-      "UVP, Begutachtung, Messung und Betriebshandbuch aus einer Hand? Wir koordinieren die Genehmigungsschritte, damit die Daten für die regionale Behörde konsistent sind.",
+      "**UVP**, Begutachtung, Messung und Betriebshandbuch aus einer Hand? Wir koordinieren die Genehmigungsschritte, damit die Daten für die regionale Behörde konsistent sind — inklusive **IPPC** und **ISPOP**.",
     scope: [
-      "Wir koordinieren die UVP – Meldung, Prüfungsverfahren, technische Anhänge",
-      "Wir veranlassen Gutachten und besorgen Betriebsgenehmigungen",
-      "Wir erstellen Betriebsanleitungen und IPPC-Änderungen",
-      "Wir überprüfen ISPOP, konsolidierte Aufzeichnungen und Treibhausgasemissionen"
+      "Wir koordinieren die **UVP** – Meldung, Prüfungsverfahren, **technische Anhänge**",
+      "Wir veranlassen Gutachten und besorgen **Betriebsgenehmigungen**",
+      "Wir erstellen Betriebsanleitungen und **IPPC**-Änderungen",
+      "Wir überprüfen **ISPOP**, **konsolidierte Aufzeichnungen** und Treibhausgasemissionen"
     ],
     whenNeeded: [
       "Sie planen ein neues Projekt oder eine Kapazitätsänderung",
-      "Das UVP-Prüfungsverfahren ist im Gange oder Sie ergänzen nach behördlichen Stellungnahmen",
-      "Sie ändern die Technik, die Betriebserlaubnis, die Betriebsanleitung oder die integrierte Genehmigung",
-      "Sie beschäftigen sich mit jährlichen ISPOP-, konsolidierten Aufzeichnungen oder Treibhausgasberichten"
+      "Das **UVP-Prüfungsverfahren** ist im Gange oder Sie ergänzen nach behördlichen Stellungnahmen",
+      "Sie ändern die Technik, die Betriebserlaubnis, die **Betriebsanleitung** oder die **integrierte Genehmigung**",
+      "Sie beschäftigen sich mit jährlichen **ISPOP**-, konsolidierten Aufzeichnungen oder Treibhausgasberichten"
     ],
     practicalSituations: [
       "EIA-Projektbenachrichtigung wegen Kapazitätsänderung",
@@ -293,13 +293,13 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     docs: [
       "Projektbeschreibung und Prozessdiagramm",
       "Standortlayout und Transport",
-      "bestehende Entscheidungen, Stellungnahmen, integrierte Genehmigung oder Betriebserlaubnis",
+      "bestehende Entscheidungen, Stellungnahmen, **integrierte Genehmigung** oder Betriebserlaubnis",
       "Emissions-, Lärm-, Transport- und Betriebsdaten einschließlich verfügbarer Berichte"
     ],
     outputs: [
       "Gutachten oder technische Stellungnahme",
       "Bedienungsanleitung oder Update",
-      "UVP-Projektbenachrichtigung, IPPC-, ISPOP- oder GHG-Dokumentation",
+      "**UVP**-Projektbenachrichtigung, **IPPC**-, ISPOP- oder GHG-Dokumentation",
       "Strukturierte Reaktion auf Autoritätskommentare"
     ],
     commonMistakes: [

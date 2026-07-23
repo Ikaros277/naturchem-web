@@ -212,18 +212,18 @@ export const caseStudyTextEn: Record<string, CaseStudyTextOverlay> = {
     ctaText: "Do you need to measure noise at multiple workplaces? Send us the position list and shift description."
   },
   "pracovni-prostredi-osvetleni": {
-    title: "Artificial lighting measurement in a hall, school, or public building",
-    facilityType: "Production hall / school / public building",
-    shortDescription: "The operator needed to verify artificial lighting intensity after luminaire installation or during workplace inspection.",
-    situation: "It was necessary to demonstrate whether lighting met requirements for the type of work or operation in the building.",
-    task: "Measure illuminance at work or user locations and evaluate results according to the space characteristics.",
-    naturchemApproach: "We designed a measurement grid, performed illuminance measurements, and prepared a clear evaluation for individual spaces or work positions.",
+    title: "Artificial lighting measurement in a hall, school, site, or outdoor areas",
+    facilityType: "Production hall / school / public building / outdoor areas",
+    shortDescription: "The operator needed to verify artificial lighting intensity indoors or outdoors — after luminaire installation, workplace inspection, or an outdoor artificial lighting check.",
+    situation: "It was necessary to demonstrate whether artificial lighting (indoor or outdoor) met requirements for the type of work, operation, or area.",
+    task: "Measure illuminance at work, user, or outdoor points and evaluate results according to the space characteristics.",
+    naturchemApproach: "We designed a measurement grid, performed illuminance measurements, and prepared a clear evaluation for individual spaces, work positions, or outdoor areas.",
     output: "Artificial lighting measurement report.",
     usedFor: "Documentation for KHS, building approval, operator, or internal occupational health and safety inspection.",
     relatedServices: ["Lighting measurement", "workplace environment", "KHS"],
     authorities: "KHS, building authority.",
-    tags: ["lighting measurement", "hall", "school", "workplace", "KHS"],
-    ctaText: "Do you need to verify lighting? Send us the floor plan, space type, and purpose of measurement."
+    tags: ["lighting measurement", "outdoor artificial lighting", "hall", "school", "workplace", "KHS"],
+    ctaText: "Do you need to verify lighting indoors or outdoors? Send us the floor plan, space type, and purpose of measurement."
   },
   "pracovni-prostredi-komplex": {
     title: "Comprehensive workplace environment measurement: noise, microclimate, and chemical substances",

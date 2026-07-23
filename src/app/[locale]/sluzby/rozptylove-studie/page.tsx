@@ -5,7 +5,7 @@ const czech = {
   faqCategoryId: "studie",
   title: "Rozptylové studie",
   intro:
-    "Krajský úřad nebo EIA požaduje rozptylovou studii? Zmodelujeme imisní příspěvky zdrojů a dopravy — podklad pro investora, projektanta i úřad.",
+    "Krajský úřad nebo **EIA** požaduje **rozptylovou studii**? Zmodelujeme **imisní příspěvky** zdrojů a dopravy — podklad pro investora, projektanta i úřad.",
   scope: [
     "Zmodelujeme imisní příspěvek stacionárních zdrojů a dopravy v areálu",
     "Posoudíme varianty provozu a technická opatření",
@@ -14,7 +14,7 @@ const czech = {
   ],
   whenNeeded: [
     "Plánujete nový záměr nebo rozšíření provozu",
-    "Krajský úřad nebo EIA požaduje rozptylovou studii",
+    "Krajský úřad nebo **EIA** požaduje **rozptylovou studii**",
     "Potřebujete porovnat varianty technického řešení",
     "Měníte zdroj, kapacitu, palivo, dopravu nebo emisní parametry"
   ],
@@ -29,7 +29,7 @@ const czech = {
     "parametry zdrojů a emisní údaje",
     "provozní režimy a doprava v areálu",
     "situace záměru a mapové podklady",
-    "výška výduchů, teplota a rychlost spalin, technické listy filtrace a předchozí měření emisí"
+    "výška výduchů, teplota a rychlost spalin, technické listy filtrace a předchozí **měření emisí**"
   ],
   outputs: [
     "rozptylová studie se závěrem a doporučením",

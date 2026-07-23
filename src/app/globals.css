@@ -194,6 +194,19 @@ textarea:focus {
   margin: 0;
 }
 
+.page-lead strong,
+.service-overview-cell .check-list strong,
+.service-extra-card .compact-list strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.service-hero--photo .page-lead strong,
+.page-hero--photo .page-lead strong {
+  color: #fff;
+  font-weight: 700;
+}
+
 .article-perex {
   font-size: 1.1rem;
   line-height: 1.55;
@@ -4585,6 +4598,11 @@ main.page:has(.page-hero-band) {
 
 .service-hero--photo .page-lead {
   color: #dce7f2;
+}
+
+.service-hero--photo .page-lead strong {
+  color: #fff;
+  font-weight: 700;
 }
 
 .service-hero--photo .button.secondary {

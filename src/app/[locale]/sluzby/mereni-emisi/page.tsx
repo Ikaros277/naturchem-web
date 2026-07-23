@@ -5,18 +5,18 @@ const czech = {
   faqCategoryId: "emise",
   title: "Měření emisí ze stacionárních zdrojů",
   intro:
-    "Výzva úřadu nebo termín kontrolního měření? Změříme emise z výduchu a předáme akreditovaný protokol pro povolení provozu, ČIŽP, krajský úřad nebo ISPOP.",
+    "Výzva úřadu nebo termín kontrolního měření? Změříme **emise** z výduchu a předáme akreditovaný **protokol** pro **povolení provozu**, ČIŽP, krajský úřad nebo ISPOP.",
   scope: [
-    "Změříme NOx, CO, SO₂, O₂, TOC/VOC, TZL, HCl, kovy a další složky dle povolení provozu a zadání",
+    "Změříme NOx, CO, SO₂, O₂, TOC/VOC, TZL, HCl, kovy a další složky dle **povolení provozu** a zadání",
     "Posoudíme měřicí místo, výduch a soulad s provozním řádem",
     "Dohodneme s provozem přípravu a průběh měření",
     "Vyhodnotíme výsledky vůči limitům, povolení a případné výzvě úřadu"
   ],
   whenNeeded: [
-    "Potřebujete periodické nebo jednorázové měření dle vyhlášky č. 415/2012 Sb. a povolení provozu",
-    "Krajský úřad, ČIŽP nebo kontrolní orgán požaduje měření",
+    "Potřebujete periodické nebo jednorázové měření dle vyhlášky č. 415/2012 Sb. a **povolení provozu**",
+    "Krajský úřad, **ČIŽP** nebo kontrolní orgán požaduje měření",
     "Měníte palivo, surovinu, technologii nebo kapacitu zdroje",
-    "Potřebujete podklad pro rozptylovou studii, EIA, odborný posudek nebo provozní dokumentaci"
+    "Potřebujete podklad pro **rozptylovou studii**, **EIA**, odborný posudek nebo provozní dokumentaci"
   ],
   practicalSituations: [
     "měření emisí lakovny po změně technologie nebo filtrace",
@@ -27,13 +27,13 @@ const czech = {
     "měření po výzvě krajského úřadu nebo ČIŽP"
   ],
   docs: [
-    "rozhodnutí o povolení provozu nebo výňatek z integrovaného povolení / provozní řád",
+    "rozhodnutí o **povolení provozu** nebo výňatek z **integrovaného povolení** / provozní řád",
     "technický popis zdroje, schémata výduchů, filtrace a aktuální režim provozu",
-    "historie měření nebo předchozí protokoly (pokud existují)",
+    "historie měření nebo předchozí **protokoly** (pokud existují)",
     "fotografie výduchu, měřicího místa a přístupových podmínek"
   ],
   outputs: [
-    "protokol z měření emisí s metodikou a vyhodnocením vůči limitům",
+    "**protokol** z **měření emisí** s metodikou a vyhodnocením vůči limitům",
     "stručné shrnutí pro jednání s úřadem nebo doplnění dokumentace",
     "doporučení pro další krok (opakování měření, úprava technologie, návazné studie)"
   ],

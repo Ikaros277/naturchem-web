@@ -52,7 +52,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Lighting measurements",
         href: "/sluzby/mereni-osvetleni",
-        text: "Workplace lighting for regional hygiene station, job categorisation and occupancy approval."
+        text: "Workplace and outdoor artificial lighting for the regional hygiene station, job categorisation and occupancy approval."
       },
       {
         title: "Microclimate measurements",

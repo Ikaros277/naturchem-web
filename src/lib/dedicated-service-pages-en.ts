@@ -7,7 +7,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Noise studies for technologies, sites, transport, HVAC, heat pumps and construction projects. Supporting documentation for KHS, building permitting and EIA.",
     intro:
-      "Has an authority requested a noise study or are you addressing a neighbourhood complaint? We prepare calculations for technologies, the site and transport — documentation for KHS, building permitting and EIA.",
+      "Has an authority requested a **noise study** or are you addressing a neighbourhood complaint? We prepare calculations for technologies, the site and transport — documentation for **KHS**, building permitting and **EIA**.",
     contactService: "Hlukové studie",
     faqCategoryId: "hluk",
     scope: [
@@ -18,7 +18,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     whenNeeded: [
       "A new noise source is being introduced or technology is changing",
-      "KHS, the building authority or EIA requires a noise study",
+      "**KHS**, the building authority or **EIA** requires a noise study",
       "Occupancy approval, change of use or a neighbourhood complaint is in progress",
       "You are verifying the effectiveness of noise control measures before implementation"
     ],
@@ -32,12 +32,12 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "project layout and noise source locations",
       "project documentation or equipment technical data sheets",
       "operating schedule for daytime and nighttime periods",
-      "requirement from KHS, the building authority or the competent authority"
+      "requirement from **KHS**, the building authority or the competent authority"
     ],
     outputs: [
-      "noise study with calculation and evaluation",
+      "**noise study** with calculation and evaluation",
       "proposal of noise control or operational measures",
-      "supporting documentation for KHS, building permitting, occupancy approval or EIA"
+      "supporting documentation for **KHS**, **building permitting**, occupancy approval or EIA"
     ],
     commonMistakes: [
       "Confusing a noise study with noise measurement for a project not yet implemented",
@@ -63,19 +63,19 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Expert assessments under the Air Protection Act for sources, technologies, operational changes and permitting procedures.",
     intro:
-      "Has the regional authority requested an expert assessment for a source or technology change? We prepare assessments under the Air Protection Act — in connection with emission measurements and operating permits.",
+      "Has the regional authority requested an **expert assessment** for a source or technology change? We prepare assessments under the Air Protection Act — in connection with emission measurements and **operating permits**.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
       "We prepare assessments for a source, technology change or capacity change",
-      "We link emission measurements, dispersion studies and operating manuals",
-      "We prepare responses to requests from the regional authority or ČIŽP",
-      "Summary for the investor before submitting an operating permit application"
+      "We link **emission measurements**, dispersion studies and operating manuals",
+      "We prepare responses to requests from the regional authority or **ČIŽP**",
+      "Summary for the investor before submitting an **operating permit** application"
     ],
     whenNeeded: [
       "You are planning a new source or technology change",
       "You are changing capacity, fuel, filtration or operating mode",
-      "An authority requires an assessment in operating permit proceedings",
+      "An authority requires an assessment in **operating permit** proceedings",
       "You need a technically substantiated opinion"
     ],
     practicalSituations: [
@@ -87,11 +87,11 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     docs: [
       "technical description of the source or technology",
       "project documentation and site layout",
-      "operating permit, decision or authority request",
+      "**operating permit**, decision or authority request",
       "available measurement reports, emission data and operating schedule"
     ],
     outputs: [
-      "expert assessment or expert statement",
+      "**expert assessment** or expert statement",
       "summary of documentation and conclusions for administrative proceedings",
       "recommendations for follow-up steps, measurements or documentation"
     ],
@@ -119,20 +119,20 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Preparation and updates of operating manuals for stationary air pollution sources for operators and regional authorities.",
     intro:
-      "Does the operating manual no longer reflect actual operation after a filtration, fuel or capacity change? We prepare a new manual or revision — aligned with the permit and emission measurements.",
+      "Does the **operating manual** no longer reflect actual operation after a filtration, fuel or capacity change? We prepare a new manual or revision — aligned with the **permit** and **emission measurements**.",
     contactService: "Provozní řády",
     faqCategoryId: "eia",
     scope: [
-      "We prepare a new operating manual for an air pollution source",
+      "We prepare a new **operating manual** for an air pollution source",
       "We update after technology, stack or emergency procedure changes",
-      "We align with the operating permit and latest emission measurements",
-      "We revise on request from the regional authority or ČIŽP"
+      "We align with the **operating permit** and latest **emission measurements**",
+      "We revise on request from the regional authority or **ČIŽP**"
     ],
     whenNeeded: [
-      "You are planning a new source or operating permit change",
+      "You are planning a new source or **operating permit** change",
       "You are changing technology, fuel, stack or abatement equipment",
-      "The operating manual no longer reflects actual operation",
-      "The regional authority or ČIŽP requires documentation revision"
+      "The **operating manual** no longer reflects actual operation",
+      "The regional authority or **ČIŽP** requires documentation revision"
     ],
     practicalSituations: [
       "operating manual update after filtration replacement",
@@ -141,13 +141,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "aligning documentation with emission measurement results"
     ],
     docs: [
-      "existing operating manual and operating permit",
+      "existing **operating manual** and **operating permit**",
       "description of technology, filtration, stacks and emergency states",
       "emission measurement reports and operating records",
       "authority request or requirement"
     ],
     outputs: [
-      "operating manual or operating manual update",
+      "**operating manual** or **operating manual** update",
       "overview of incorporated operating conditions",
       "recommendations for follow-up records and measurements"
     ],
@@ -175,18 +175,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Supporting documentation for integrated permits, IPPC changes and expert coordination of measurements, studies and operating documentation.",
     intro:
-      "Are you changing a facility with an integrated permit? We consolidate measurements, studies and operating inputs for IPPC proceedings or a permit change.",
+      "Are you changing a facility with an **integrated permit**? We consolidate measurements, studies and operating inputs for **IPPC** proceedings or a permit change.",
     contactService: "IPPC a integrovaná povolení",
     faqCategoryId: "eia",
     scope: [
-      "We prepare documentation for a new integrated permit or IPPC change",
+      "We prepare documentation for a new **integrated permit** or **IPPC** change",
       "We consolidate measurements, studies and operating inputs in one package",
       "We describe the change relative to the existing permit and BAT",
       "We supplement documentation after comments from the regional authority"
     ],
     whenNeeded: [
-      "You are planning a new integrated permit",
-      "You are addressing a substantial or non-substantial IPPC change",
+      "You are planning a new **integrated permit**",
+      "You are addressing a substantial or non-substantial **IPPC** change",
       "You are changing capacity, technology or emission parameters",
       "An authority requires supplementary documentation"
     ],
@@ -197,13 +197,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "responding to authority comments during proceedings"
     ],
     docs: [
-      "current integrated permit and description of the change",
+      "current **integrated permit** and description of the change",
       "project documentation and process diagram",
       "operating data, measurements, balances and records",
       "authority request or list of required supplements"
     ],
     outputs: [
-      "expert documentation for IPPC or integrated permit change",
+      "expert documentation for **IPPC** or **integrated permit** change",
       "coordination overview of measurements, studies and operating data",
       "documentation supplements for administrative proceedings"
     ],
@@ -231,13 +231,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "EIA project notification, expert appendices and coordination of documentation for screening proceedings and follow-on permitting.",
     intro:
-      "Are you preparing a project with environmental impacts? We prepare EIA notification and align documentation for air quality, noise and transport in one document.",
+      "Are you preparing a project with environmental impacts? We prepare **EIA** notification and align documentation for **air quality**, noise and transport in one document.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "We prepare project notification under the EIA Act",
+      "We prepare project notification under the **EIA** Act",
       "We consolidate dispersion, noise and transport appendices",
-      "We prepare technical appendices for the investor and EIA practitioner",
+      "We prepare **technical appendices** for the investor and **EIA** practitioner",
       "We revise after comments from authorities or the public"
     ],
     whenNeeded: [
@@ -259,7 +259,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "authority requirements or previous opinions"
     ],
     outputs: [
-      "EIA project notification",
+      "**EIA** project notification",
       "coordination overview of expert appendices",
       "documentation for screening proceedings and follow-on permitting"
     ],
@@ -287,19 +287,19 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "ISPOP, consolidated operating records and annual reporting for source operators in connection with emission measurements and operating permits.",
     intro:
-      "Is annual ISPOP reporting approaching or is an authority inspection due? We check consolidated records against emission measurements, permits and actual operation.",
+      "Is annual **ISPOP** reporting approaching or is an authority inspection due? We check **consolidated records** against **emission measurements**, permits and actual operation.",
     contactService: "ISPOP",
     faqCategoryId: "ispop",
     scope: [
       "We prepare consolidated operating records for a source",
-      "We review and supplement annual ISPOP reporting",
-      "We align with emission measurements, permits and operating manuals",
+      "We review and supplement annual **ISPOP** reporting",
+      "We align with **emission measurements**, permits and operating manuals",
       "We incorporate fuel, capacity or operating hours changes"
     ],
     whenNeeded: [
       "You are planning annual reporting and consolidated operating records",
       "You are changing the source or operating data",
-      "You are checking the link to emission measurements",
+      "You are checking the link to **emission measurements**",
       "An authority requires supplements or you are conducting an internal review"
     ],
     practicalSituations: [
@@ -309,14 +309,14 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "supplementing data after a request or inspection"
     ],
     docs: [
-      "operating permit and operating manual",
+      "**operating permit** and **operating manual**",
       "emission measurement reports",
       "operating hours, fuel or raw material consumption",
       "previous reports and available records"
     ],
     outputs: [
-      "documentation for ISPOP and consolidated operating records",
-      "review of consistency with operating permit and measurements",
+      "documentation for **ISPOP** and consolidated operating records",
+      "review of consistency with **operating permit** and measurements",
       "overview of missing or at-risk data"
     ],
     commonMistakes: [
@@ -343,17 +343,17 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "GHG, greenhouse gas emission verification, emission data review and reporting documentation for operators.",
     intro:
-      "Are you verifying greenhouse gas emissions before reporting? We assess methodology, inputs and the link to consumption, measurements and operating balances.",
+      "Are you verifying **greenhouse gas** emissions before reporting? We assess methodology, inputs and the link to consumption, **measurements** and operating balances.",
     contactService: "GHG",
     faqCategoryId: "ispop",
     scope: [
-      "We verify greenhouse gas emissions and calculation sheets",
+      "We verify **greenhouse gas** emissions and calculation sheets",
       "We review emission factors, consumption and operating data",
-      "We link to emission measurements and operating records",
-      "We prepare an overview of discrepancies before report submission"
+      "We link to **emission measurements** and operating records",
+      "We prepare an overview of discrepancies before **report** submission"
     ],
     whenNeeded: [
-      "You are planning greenhouse gas emission reporting",
+      "You are planning **greenhouse gas** emission reporting",
       "You need to verify calculations or emission data",
       "You are changing technology, fuel or operating data",
       "An investor, auditor or authority requires a review"
@@ -399,18 +399,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Review of safety data sheets, labelling of chemical substances and mixtures, labels, internal containers and links to occupational health and safety.",
     intro:
-      "Safety data sheets must match storage and handling of substances on site. We review documentation, labelling and propose revisions where gaps exist.",
+      "**Safety data sheets** must match storage and handling of substances on site. We review documentation, **labelling** and propose revisions where gaps exist.",
     contactService: "Bezpečnostní listy",
     faqCategoryId: "pracovni-prostredi",
     scope: [
-      "revision of safety data sheets and their availability at the workplace",
+      "revision of **safety data sheets** and their availability at the workplace",
       "labels on internal containers, stores and workstations",
       "consistency of storage and PPE with sheet information",
       "documentation for training and internal operating instructions"
     ],
     whenNeeded: [
-      "new chemical substances or mixtures in operation",
-      "unclear safety data sheets, labels or storage arrangements",
+      "new **chemical substances** or mixtures in operation",
+      "unclear **safety data sheets**, labels or storage arrangements",
       "preparation for inspection or internal audit",
       "need for practical documentation for employee training"
     ],
@@ -421,13 +421,13 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "aligning operating rules for chemical substances"
     ],
     docs: [
-      "list of chemical substances and mixtures",
-      "safety data sheets and labels",
+      "list of **chemical substances** and mixtures",
+      "**safety data sheets** and labels",
       "description of storage and use in operation",
       "internal procedures, operating rules or inspection requirement"
     ],
     outputs: [
-      "findings overview for safety data sheets and labelling",
+      "findings overview for **safety data sheets** and labelling",
       "recommendations for label, storage and internal procedure revisions",
       "documentation for training or internal records"
     ],
@@ -455,17 +455,17 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Practical support for handling chemical substances in operation, storage, labelling, rules for employees and links to occupational health and safety.",
     intro:
-      "We assess chemical substances at the point of storage, decanting and use. We prepare rules for shift supervisors based on actual handling, not just inventory tables.",
+      "We assess **chemical substances** at the point of storage, decanting and use. We prepare rules for shift supervisors based on actual **handling**, not just inventory tables.",
     contactService: "Chemické látky v provozu",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "mapping substances and mixtures from delivery to workstations",
       "rules for handling, decanting and storage",
-      "link to safety data sheets and occupational health and safety",
+      "link to **safety data sheets** and occupational health and safety",
       "responsibility design and documentation for operator training"
     ],
     whenNeeded: [
-      "expansion of chemical substances or mixtures in use",
+      "expansion of **chemical substances** or mixtures in use",
       "preparing a store, operation or workstations",
       "uncertainties in labelling, handling or responsibilities",
       "preparing training or responding to inspection findings"
@@ -478,12 +478,12 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     docs: [
       "list of substances and mixtures used in operation",
-      "safety data sheets, labels and store inventory",
+      "**safety data sheets**, labels and store inventory",
       "description of work activities and storage locations",
       "internal rules, audit findings or inspection requirement"
     ],
     outputs: [
-      "recommendations for safe use and storage of chemical substances",
+      "recommendations for safe use and storage of **chemical substances**",
       "overview of weaknesses in labelling and operating rules",
       "documentation for training, internal procedure or inspection"
     ],
@@ -511,7 +511,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Accredited vibration measurement at workplaces for job categorisation, occupational health and safety and KHS requirements. Hand tools, machinery, transport equipment.",
     intro:
-      "Job categorisation or a KHS request regarding vibrations? We measure exposure at tools and machinery based on actual operations — report for KHS and occupational health and safety.",
+      "**Job categorisation** or a **KHS** request regarding vibrations? We measure exposure at tools and machinery based on actual operations — report for KHS and **OHS**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -521,8 +521,8 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "We propose job rotation or technical measures when limits are exceeded"
     ],
     whenNeeded: [
-      "You need job categorisation or an update",
-      "KHS or an internal occupational health and safety audit requires vibration measurement",
+      "You need **job categorisation** or an update",
+      "**KHS** or an internal occupational health and safety audit requires vibration measurement",
       "You are introducing new technology or changing work operations",
       "You are verifying employee complaints or measure effectiveness"
     ],
@@ -536,11 +536,11 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "description of work operations and shift patterns",
       "list of tools and machinery in use",
       "workplace layout and number of exposed workers",
-      "KHS requirement or internal audit documentation"
+      "**KHS** requirement or internal audit documentation"
     ],
     outputs: [
-      "vibration measurement report with evaluation",
-      "documentation for job categorisation and occupational health and safety",
+      "vibration measurement **report** with evaluation",
+      "documentation for **job categorisation** and occupational health and safety",
       "recommendations for technical and organisational measures"
     ],
     commonMistakes: [
@@ -565,20 +565,22 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     slug: "sluzby/mereni-osvetleni",
     title: "Lighting measurement",
     description:
-      "Workplace lighting measurement for KHS, job categorisation and occupational health and safety. Artificial and daylight, offices and production halls.",
+      "Artificial and daylight lighting measurement at workplaces and outdoors. Documentation for KHS, job categorisation, occupational health and safety, and outdoor artificial lighting checks.",
     intro:
-      "Occupancy approval, KHS request or a new workplace? We measure artificial and daylight lighting according to visual demands — output for KHS, job categorisation and occupational health and safety.",
+      "Occupancy approval, **KHS** request or a new workplace? We measure artificial and daylight lighting indoors and **outdoor artificial lighting** — output for KHS, **job categorisation** and occupational health and safety.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "We measure artificial and daylight lighting at the workplace",
+      "We also measure **outdoor artificial lighting** (sites, roads, parking areas, sports grounds)",
       "We evaluate conditions according to activity type and visual demands",
-      "We assess halls, laboratories, stores and administrative areas",
+      "We assess halls, laboratories, stores, offices and outdoor areas",
       "We propose luminaire or layout adjustments when levels are insufficient"
     ],
     whenNeeded: [
-      "You need job categorisation or a new workplace",
-      "KHS or occupancy approval requires lighting measurement",
+      "You need **job categorisation** or a new workplace",
+      "**KHS** or **occupancy approval** requires lighting measurement",
+      "You need to verify **outdoor artificial lighting** for a site, road or sports ground",
       "You are changing layout, technology or lighting type",
       "You are addressing complaints about insufficient lighting"
     ],
@@ -586,23 +588,25 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "lighting measurement in a production hall after technology change",
       "lighting assessment for offices and meeting rooms",
       "lighting measurement in a laboratory or clean room",
+      "measurement of outdoor artificial lighting for a site, road or car park",
       "documentation for occupancy approval or workplace reconstruction"
     ],
     docs: [
-      "workplace layout and activity description",
-      "lighting type and workplace layout",
+      "workplace / outdoor area layout and activity description",
+      "lighting type and layout of workplaces or outdoor luminaires",
       "shift patterns and number of workers at stations",
-      "KHS requirement or project documentation"
+      "**KHS** requirement or project documentation"
     ],
     outputs: [
-      "lighting measurement report with evaluation",
-      "documentation for job categorisation and occupational health and safety",
+      "lighting measurement **report** with evaluation",
+      "documentation for **job categorisation** and occupational health and safety",
       "recommendations for lighting or layout adjustments"
     ],
     commonMistakes: [
       "Measurement without considering actual visual demands and operations",
       "Assessment based only on design without measurement in operation",
-      "Incomplete description of activity type at the workplace"
+      "Incomplete description of activity type at the workplace",
+      "Omitting outdoor artificial lighting when it is part of the requirement"
     ],
     relatedLinks: [
       {
@@ -623,7 +627,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Measurement of microclimatic conditions at workplaces: temperature, humidity, air movement. Documentation for KHS and job categorisation.",
     intro:
-      "Thermal load, KHS request or ventilation change? We measure temperature, humidity and air movement in actual operation — report for KHS and job categorisation.",
+      "**Thermal load**, **KHS** request or ventilation change? We measure temperature, humidity and air movement in actual operation — report for KHS and **job categorisation**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
@@ -633,8 +637,8 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "We propose ventilation, air conditioning or shift organisation adjustments"
     ],
     whenNeeded: [
-      "You need job categorisation or an update",
-      "KHS is responding to thermal load complaints",
+      "You need **job categorisation** or an update",
+      "**KHS** is responding to thermal load complaints",
       "You are introducing new technology or changing ventilation",
       "Occupancy approval or operating mode change is in progress"
     ],
@@ -648,11 +652,11 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "description of work operations and physical load",
       "workplace layout and ventilation type",
       "shift patterns and number of workers",
-      "KHS requirement or complaint description"
+      "**KHS** requirement or complaint description"
     ],
     outputs: [
-      "microclimate measurement report with evaluation",
-      "documentation for job categorisation and occupational health and safety",
+      "microclimate measurement **report** with evaluation",
+      "documentation for **job categorisation** and occupational health and safety",
       "recommendations for technical and organisational measures"
     ],
     commonMistakes: [
@@ -684,17 +688,17 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Authorised measurement of heat and cold stress at workplaces: microclimatic parameters, work class and permissible exposure times. Documentation for regional hygiene station and job categorisation.",
     intro:
-      "Does the regional hygiene station require assessment of heat or cold stress? We measure microclimatic parameters in actual operation — report with work class and permissible exposure time recommendations.",
+      "Does the **regional hygiene station** require assessment of **heat or cold stress**? We measure microclimatic parameters in actual operation — report with **work class** and permissible exposure time recommendations.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
       "We measure microclimatic parameters according to Czech Ministry of Health methodology",
       "We assess conditions according to physical work load (light / moderate / heavy)",
       "We measure in halls, dryers, cold stores and during outdoor work",
-      "We recommend work class, permissible exposure times and fluid replacement"
+      "We recommend **work class**, permissible exposure times and fluid replacement"
     ],
     whenNeeded: [
-      "Regional hygiene station or job categorisation requires heat or cold stress measurement",
+      "Regional hygiene station or **job categorisation** requires **heat or cold stress** measurement",
       "Workers are exposed to heat at furnaces, dryers or outdoor work in summer",
       "Operations in cold stores, freezers or unheated halls in winter",
       "You need documentation for shift organisation and technical measures"
@@ -709,12 +713,12 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "description of work operations and physical load",
       "workplace layout, ventilation type and clothing",
       "shift pattern and number of workers",
-      "regional hygiene station requirement or complaint description"
+      "**regional hygiene station** requirement or complaint description"
     ],
     outputs: [
-      "heat or cold stress measurement report with assessment",
-      "work class and permissible exposure time recommendations",
-      "documentation for job categorisation, OHS and operational measures"
+      "**heat or cold stress** measurement **report** with assessment",
+      "**work class** and permissible exposure time recommendations",
+      "documentation for **job categorisation**, **OHS** and operational measures"
     ],
     commonMistakes: [
       "Assessment based only on air temperature without considering physical work load",
@@ -745,18 +749,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Authorised measurement of diisocyanate exposure at workplaces: MDI, TDI, HDI and others. Personal and stationary sampling for regional hygiene station, job categorisation and exposure reduction measures.",
     intro:
-      "PUR foams, painting or bonding with isocyanates? We measure exposure to MDI, TDI, HDI and other diisocyanates in actual operation — report for regional hygiene station, job categorisation and measure proposals.",
+      "PUR foams, painting or bonding with isocyanates? We measure exposure to **MDI, TDI, HDI** and other diisocyanates in actual operation — report for **KHS** and **job categorisation**.",
     contactService: "Měření pracovního prostředí",
     faqCategoryId: "pracovni-prostredi",
     scope: [
-      "We measure diisocyanate exposure (MDI, TDI, HDI and others) with personal and stationary sampling",
-      "We focus on concentration peaks during spraying, pouring and hot processes",
-      "We assess exposure against hygiene limits and regional hygiene station requirements",
+      "We measure diisocyanate exposure (**MDI, TDI, HDI** and others) with personal and stationary sampling",
+      "We focus on **concentration peaks** during spraying, pouring and hot processes",
+      "We assess exposure against **hygiene limits** and **regional hygiene station** requirements",
       "We propose technical and organisational measures to reduce exposure"
     ],
     whenNeeded: [
-      "Job categorisation or regional hygiene station request regarding isocyanates",
-      "PUR spraying, painting or bonding with diisocyanates in operation",
+      "**Job categorisation** or **regional hygiene station** request regarding isocyanates",
+      "**PUR** spraying, painting or bonding with **diisocyanates** in operation",
       "Technology, materials or ventilation change for reactive systems",
       "Verifying extraction and PPE effectiveness after a complaint or inspection"
     ],
@@ -767,14 +771,14 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "secondary emissions during heating or cutting cured PUR materials"
     ],
     docs: [
-      "safety data sheets of materials and mixtures used",
+      "**safety data sheets** of materials and mixtures used",
       "description of work operations, extraction and PPE",
       "workplace layout and shift pattern",
-      "regional hygiene station requirement or internal audit documentation"
+      "**regional hygiene station** requirement or internal audit documentation"
     ],
     outputs: [
-      "diisocyanate measurement report with exposure assessment",
-      "documentation for job categorisation and measures under public health legislation",
+      "diisocyanate measurement **report** with exposure assessment",
+      "documentation for **job categorisation** and measures under public health legislation",
       "technical and organisational measure recommendations"
     ],
     commonMistakes: [
@@ -806,19 +810,19 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Acoustic assessments and expert statements on noise from technologies, plant rooms and building modifications with process operation. Documentation for building permitting and KHS.",
     intro:
-      "Do you need an acoustic assessment for a plant room or technology within a building? We assess noise for building permitting and KHS — a different scope than a neighbourhood noise study for a project.",
+      "Do you need an **acoustic assessment** for a plant room or technology within a building? We assess noise for **building permitting** and **KHS** — a different scope than a neighbourhood noise study for a project.",
     contactService: "Měření hluku a akustika",
     faqCategoryId: "hluk",
     scope: [
       "We prepare assessments for building modifications or change of building use",
       "We propose soundproofing for plant rooms, HVAC and technologies within a building",
-      "We prepare statements for building permitting and occupancy approval",
+      "We prepare statements for **building permitting** and **occupancy approval**",
       "We link to operational measurements or acoustic calculation"
     ],
     whenNeeded: [
       "You are planning building modifications with impact on noise within the building",
       "Occupancy approval or change of building use is in progress",
-      "The building authority or KHS requires an acoustic statement",
+      "The building authority or **KHS** requires an acoustic statement",
       "You need a soundproofing design before implementation"
     ],
     practicalSituations: [
@@ -834,9 +838,9 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "existing measurements or equipment technical data sheets"
     ],
     outputs: [
-      "acoustic assessment with evaluation and recommendations",
+      "**acoustic assessment** with evaluation and recommendations",
       "noise control measure design",
-      "documentation for building permitting or KHS"
+      "documentation for **building permitting** or **KHS**"
     ],
     commonMistakes: [
       "Confusing an acoustic assessment with a neighbourhood noise study for a project",
@@ -862,20 +866,20 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Immission and noise modelling calculations for projects, operational changes and technology variants. Documentation for dispersion and noise studies.",
     intro:
-      "Do you need to quickly compare stack, plant room or transport variants? We perform immission and noise modelling calculations — documentation for a study, EIA or authority consultation.",
+      "Do you need to quickly compare stack, plant room or transport variants? We perform **immission** and **noise** modelling calculations — documentation for a study, **EIA** or authority consultation.",
     contactService: "Rozptylové studie",
     faqCategoryId: "studie",
     scope: [
       "We model immission contributions from air sources and transport on site",
       "We prepare noise calculations for technologies, site and roads",
       "We compare operational or source location variants",
-      "We prepare outputs for a study, EIA or authority consultation"
+      "We prepare outputs for a study, **EIA** or authority consultation"
     ],
     whenNeeded: [
       "You are planning a new project or source capacity change",
       "You need variant assessment of operation",
       "An authority requires immission or noise evaluation",
-      "You are preparing a dispersion or noise study"
+      "You are preparing a dispersion or **noise study**"
     ],
     practicalSituations: [
       "immission modelling calculation for new technology on site",
@@ -891,7 +895,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     outputs: [
       "modelling calculation results with evaluation",
-      "documentation for dispersion or noise study",
+      "documentation for dispersion or **noise study**",
       "variant comparison and recommendations for next steps"
     ],
     commonMistakes: [
@@ -918,19 +922,19 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Integrated immission and noise assessment for investment projects, operational changes and EIA. Dispersion, noise and variants in one process.",
     intro:
-      "Does a project affect both air quality and noise? We prepare an integrated assessment using the same data — consistent documentation for EIA, the regional authority and KHS.",
+      "Does a project affect both **air quality** and **noise**? We prepare an integrated assessment using the same data — consistent documentation for **EIA**, the regional authority and KHS.",
     contactService: "Rozptylové studie",
     faqCategoryId: "studie",
     scope: [
       "We consolidate immission and noise briefs for one project",
       "We model technology location variants",
-      "We prepare documentation for EIA, the regional authority and KHS",
+      "We prepare documentation for **EIA**, the regional authority and **KHS**",
       "We deliver one consolidated output for the investor and designer"
     ],
     whenNeeded: [
       "A project has concurrent impact on air quality and noise",
       "An authority requires immission and noise evaluation",
-      "You are preparing EIA or project notification",
+      "You are preparing **EIA** or project notification",
       "You need variant comparison of technology location"
     ],
     practicalSituations: [
@@ -948,7 +952,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     outputs: [
       "integrated immission and noise impact assessment",
       "variant comparison and measure recommendations",
-      "documentation for EIA, authorities and investor"
+      "documentation for **EIA**, authorities and investor"
     ],
     commonMistakes: [
       "Addressing noise and immissions separately without link to the same project",
@@ -974,18 +978,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Documentation for issuing or changing an operating permit for a stationary source. Measurements, assessments, operating manuals and authority liaison.",
     intro:
-      "Are you addressing issuance or change of a source operating permit? We propose the scope of measurements, assessment and operating manual according to technology type and regional authority requirements.",
+      "Are you addressing issuance or change of a source **operating permit**? We propose the scope of **emission measurements**, assessment and **operating manual** according to technology type and regional authority requirements.",
     contactService: "Odborné posudky",
     faqCategoryId: "eia",
     scope: [
       "We propose documentation scope before submission to the regional authority",
-      "We coordinate emission measurements, assessment and operating manual",
-      "We consider links to IPPC and ISPOP for larger sources",
+      "We coordinate **emission measurements**, assessment and **operating manual**",
+      "We consider links to **IPPC** and **ISPOP** for larger sources",
       "We provide technical support when supplementing the application"
     ],
     whenNeeded: [
       "You are planning a new source or capacity change",
-      "You need an operating permit after a technology change",
+      "You need an **operating permit** after a technology change",
       "An authority requires supplementary documentation",
       "You are changing fuel, filtration or operating mode"
     ],
@@ -1003,7 +1007,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     ],
     outputs: [
       "proposed documentation scope for proceedings",
-      "expert assessment, measurement reports or operating manual",
+      "**expert assessment**, measurement reports or **operating manual**",
       "technical support during authority consultation"
     ],
     commonMistakes: [
@@ -1030,18 +1034,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Expert documentation for EIA screening proceedings. Technical inputs, coordination of measurements and studies for the investor and EIA practitioner.",
     intro:
-      "Is a project entering EIA screening proceedings? We deliver technical inputs from measurements and studies on time — in a form usable by the EIA practitioner.",
+      "Is a project entering **EIA screening** proceedings? We deliver technical inputs from **measurements** and **studies** on time — in a form usable by the EIA practitioner.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
-      "We prepare technical appendices for screening proceedings",
-      "We arrange emission measurements, dispersion and noise per EIA brief",
+      "We prepare **technical appendices** for screening proceedings",
+      "We arrange **emission measurements**, dispersion and noise per **EIA** brief",
       "We align data from operation and project",
       "We supplement after authority comments during screening"
     ],
     whenNeeded: [
       "A project falls within screening proceedings",
-      "You need technical appendices on time in the process",
+      "You need **technical appendices** on time in the process",
       "You want to align measurements, studies and project",
       "You are preparing documentation for the public and authorities"
     ],
@@ -1055,12 +1059,12 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "project description and project documentation",
       "documentation on existing state and operation",
       "screening proceedings brief",
-      "schedule and EIA practitioner requirements"
+      "schedule and **EIA** practitioner requirements"
     ],
     outputs: [
       "technical documentation for screening proceedings",
       "coordinated inputs from measurements and studies",
-      "recommendations for next steps in the EIA process"
+      "recommendations for next steps in the **EIA** process"
     ],
     commonMistakes: [
       "Late delivery of technical documentation to EIA",
@@ -1086,20 +1090,20 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Technical appendices for investors and designers: dispersion, noise, emissions, transport and links to permitting and EIA.",
     intro:
-      "Are you deciding on technology location before submission to authorities? We prepare technical appendices on immissions, noise and transport for the investor and designer.",
+      "Are you deciding on technology location before submission to authorities? We prepare **technical appendices** on **immissions**, **noise** and transport for the investor and designer.",
     contactService: "EIA a oznámení záměru",
     faqCategoryId: "eia",
     scope: [
       "We prepare appendices for feasibility studies and project preparation",
       "We assess dispersion, noise, emissions and transport for project variants",
       "We coordinate measurements and studies for the designer",
-      "We link to EIA, building permitting and operating permits"
+      "We link to **EIA**, **building permitting** and operating permits"
     ],
     whenNeeded: [
       "You are preparing an investment before submission to authorities",
       "You need to align the project with environmental requirements",
       "You are comparing technology location variants",
-      "You want to prepare EIA or permitting documentation in good time"
+      "You want to prepare **EIA** or permitting documentation in good time"
     ],
     practicalSituations: [
       "technical appendices for a new production site",
@@ -1114,7 +1118,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "investor or designer requirements"
     ],
     outputs: [
-      "technical appendices for investment decisions",
+      "**technical appendices** for investment decisions",
       "summary of measurements and studies in usable form",
       "recommendations for next steps in permitting"
     ],
@@ -1142,18 +1146,18 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
     description:
       "Practical training on chemical legislation, safety data sheets, labelling, storage and handling of chemical substances for operations, stores, production and laboratories.",
     intro:
-      "Practical chemical legislation training for operations handling substances and mixtures. We cover obligations, safety data sheets and rules for storage and handling.",
+      "Practical **chemical legislation** training for operations handling substances and mixtures. We cover obligations, **safety data sheets** and rules for **storage** and handling.",
     contactService: "Školení chemického zákona / chemické legislativy",
     heroPanelTitle: "Typical reasons for enquiry",
     scope: [
-      "basic obligations when handling chemical substances and mixtures",
-      "orientation in safety data sheets and their practical use",
-      "labelling, storage and safe use of chemical substances",
+      "basic obligations when handling **chemical substances** and mixtures",
+      "orientation in **safety data sheets** and their practical use",
+      "labelling, storage and safe use of **chemical substances**",
       "links to occupational health and safety, health protection and the environment",
       "operating records, internal rules and common mistakes in operations"
     ],
     whenNeeded: [
-      "new chemical substances or mixtures in operation",
+      "new **chemical substances** or mixtures in operation",
       "preparation for inspection or internal occupational health and safety audit",
       "need for practical documentation for employees",
       "expansion of operation, store or work activities involving chemicals"
@@ -1165,8 +1169,8 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "training for persons responsible for chemical substances and mixtures on site"
     ],
     docs: [
-      "list of chemical substances and mixtures in use",
-      "safety data sheets and internal procedures",
+      "list of **chemical substances** and mixtures in use",
+      "**safety data sheets** and internal procedures",
       "description of operation, store or work activities",
       "target employee group and training scope"
     ],

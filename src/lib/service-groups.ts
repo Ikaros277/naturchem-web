@@ -52,7 +52,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Měření osvětlení",
         href: "/sluzby/mereni-osvetleni",
-        text: "Osvětlení pracovišť pro KHS, kategorizaci prací a kolaudace."
+        text: "Osvětlení pracovišť i venkovní umělé osvětlení — pro KHS, kategorizaci prací a kolaudace."
       },
       {
         title: "Měření mikroklimatu",

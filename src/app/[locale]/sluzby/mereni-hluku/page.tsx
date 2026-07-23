@@ -5,18 +5,18 @@ const czech = {
   faqCategoryId: "hluk",
   title: "Měření hluku a akustika",
   intro:
-    "Stížnost na hluk, kolaudace nebo požadavek úřadu? Provedeme terénní měření i akustické výpočty podle zdrojů hluku a chráněných prostor v okolí.",
+    "Stížnost na hluk, **kolaudace** nebo požadavek úřadu? Provedeme terénní **měření hluku** i akustické výpočty podle zdrojů hluku a chráněných prostor v okolí.",
   scope: [
     "Změříme LAeq a LAFmax u běžícího provozu v terénu",
     "Posoudíme hluk z dopravy a technologií v areálu",
-    "Ověříme účinnost protihlukového opatření po realizaci",
-    "Změříme hluk u VZT, tepelných čerpadel a strojoven"
+    "Ověříme účinnost **protihlukového** opatření po realizaci",
+    "Změříme hluk u **VZT**, tepelných čerpadel a strojoven"
   ],
   whenNeeded: [
-    "Probíhá stavební řízení nebo kolaudace",
+    "Probíhá **stavební řízení** nebo **kolaudace**",
     "Řešíte stížnost na hluk z provozu",
-    "Potřebujete hlukovou studii pro EIA nebo změnu záměru",
-    "Posuzujete hluk tepelného čerpadla, VZT, chlazení nebo průmyslového areálu"
+    "Potřebujete **hlukovou studii** pro **EIA** nebo změnu záměru",
+    "Posuzujete hluk tepelného čerpadla, **VZT**, chlazení nebo průmyslového areálu"
   ],
   practicalSituations: [
     "měření hluku pro kolaudaci nebo změnu užívání",
@@ -27,13 +27,13 @@ const czech = {
   ],
   docs: [
     "umístění zdrojů hluku a provozní režim",
-    "požadavek stavebního úřadu nebo KHS",
+    "požadavek stavebního úřadu nebo **KHS**",
     "situace nejbližší chráněné zástavby, doprava a denní/noční režim provozu"
   ],
   outputs: [
-    "protokol z měření hluku",
+    "**protokol** z **měření hluku**",
     "akustické vyjádření k technologiím v objektu",
-    "hluková studie s doporučením opatření"
+    "**hluková studie** s doporučením opatření"
   ],
   commonMistakes: [
     "Měření v nevhodném čase nebo bez zohlednění provozního režimu",

@@ -37,7 +37,7 @@ export const serviceMegaGroupsEn = [
       {
         href: "/sluzby/mereni-osvetleni",
         label: "Lighting",
-        description: "Illuminance levels at workplaces"
+        description: "Illuminance at workplaces and outdoors"
       },
       {
         href: "/sluzby/mereni-mikroklimatu",

@@ -5,35 +5,35 @@ const czech = {
   faqCategoryId: "pracovni-prostredi",
   title: "Měření pracovního prostředí",
   intro:
-    "Potřebujete aktualizovat kategorizaci nebo máte výzvu KHS? Změříme hluk, prach, chemické látky, mikroklima, osvětlení a vibrace v provozu — výstupy pro KHS, kategorizaci prací a BOZP.",
+    "Potřebujete aktualizovat **kategorizaci** nebo máte výzvu **KHS**? Změříme hluk, prach, chemické látky, mikroklima, osvětlení (včetně **venkovního umělého osvětlení**) a vibrace v provozu — výstupy pro KHS, kategorizaci prací a BOZP.",
   scope: [
-    "Změříme hluk, prašnost, chemické látky, vibrace, mikroklima a osvětlení podle operací a směnnosti",
+    "Změříme hluk, prašnost, **chemické látky**, vibrace, mikroklima a osvětlení podle operací a směnnosti",
     "Posoudíme expozici ve svařovnách, lakovnách, halách i čistých prostorech",
     "Vyhodnotíme výsledky v kontextu limitů a skutečné pracovní zátěže",
-    "Připravíme podklady pro kategorizaci prací, BOZP a jednání s KHS"
+    "Připravíme podklady pro **kategorizaci prací**, **BOZP** a jednání s KHS"
   ],
   whenNeeded: [
-    "Potřebujete kategorizaci prací nebo její aktualizaci",
-    "KHS požaduje měření pracovního prostředí",
+    "Potřebujete **kategorizaci prací** nebo její aktualizaci",
+    "**KHS** požaduje měření pracovního prostředí",
     "Měníte technologii nebo dispozici pracoviště",
-    "Probíhá kolaudace, interní audit BOZP nebo ověření odsávání a technických opatření"
+    "Probíhá **kolaudace**, interní audit **BOZP** nebo ověření odsávání a technických opatření"
   ],
   practicalSituations: [
     "měření pracovního prostředí ve svařovně při aktualizaci kategorizace prací",
     "měření prašnosti na pracovišti po změně technologie nebo odsávání",
     "měření chemických látek v pracovním ovzduší u lakování, čištění nebo výroby",
-    "ověření mikroklimatu, osvětlení nebo vibrací pro BOZP a KHS",
+    "ověření mikroklimatu, osvětlení (včetně venkovního) nebo vibrací pro BOZP a KHS",
     "podklady pro kolaudaci nebo kontrolu hygienické stanice"
   ],
   docs: [
     "popis pracovních operací a směnnosti",
-    "bezpečnostní listy používaných látek",
+    "**bezpečnostní listy** používaných látek",
     "plánek pracoviště a umístění zdrojů",
-    "informace o odsávání, technologii, ochranných pomůckách a počtu exponovaných pracovníků"
+    "informace o **odsávání**, technologii, ochranných pomůckách a počtu exponovaných pracovníků"
   ],
   outputs: [
-    "protokoly z měření s vyhodnocením",
-    "podklad pro kategorizaci prací a BOZP",
+    "**protokoly** z měření s vyhodnocením",
+    "podklad pro **kategorizaci prací** a **BOZP**",
     "doporučení organizačních a technických opatření"
   ],
   commonMistakes: [
@@ -50,7 +50,7 @@ const czech = {
     {
       title: "Měření osvětlení",
       href: "/sluzby/mereni-osvetleni",
-      description: "Osvětlení pracovišť pro KHS a kategorizaci prací."
+      description: "Osvětlení pracovišť i venkovní umělé osvětlení — pro KHS a kategorizaci prací."
     },
     {
       title: "Měření mikroklimatu",

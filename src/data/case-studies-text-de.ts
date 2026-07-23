@@ -212,18 +212,18 @@ export const caseStudyTextDe: Record<string, CaseStudyTextOverlay> = {
     ctaText: "Müssen Sie den Lärm an mehreren Arbeitsplätzen messen? Senden Sie uns die Liste der Positionen und eine Beschreibung der Schichten."
   },
   "pracovni-prostredi-osvetleni": {
-    title: "Messung der künstlichen Beleuchtung in Halle, Schule oder öffentlichem Gebäude",
-    facilityType: "Produktionshalle / Schule / öffentliches Gebäude",
-    shortDescription: "Der Betreiber musste die Beleuchtungsstärke nach Installation neuer Leuchten oder bei einer Arbeitsplatzkontrolle nachweisen.",
-    situation: "Im Objekt musste nachgewiesen werden, ob die Beleuchtung den Anforderungen für die jeweilige Art der Arbeit oder des Betriebs entspricht.",
-    task: "Beleuchtungsstärke an Arbeits- oder Nutzungsplätzen messen und die Ergebnisse entsprechend dem Charakter des Raums auswerten.",
-    naturchemApproach: "Wir haben ein Messnetz geplant, Beleuchtungsstärkemessungen durchgeführt und eine übersichtliche Auswertung für einzelne Räume oder Arbeitsplätze erstellt.",
+    title: "Messung der künstlichen Beleuchtung in Halle, Schule, Areal oder Außenbereichen",
+    facilityType: "Produktionshalle / Schule / öffentliches Gebäude / Außenflächen",
+    shortDescription: "Der Betreiber musste die Beleuchtungsstärke innen oder außen nachweisen — nach Installation neuer Leuchten, bei einer Arbeitsplatzkontrolle oder zur Prüfung der künstlichen Außenbeleuchtung.",
+    situation: "Es musste nachgewiesen werden, ob die künstliche Beleuchtung (innen oder außen) den Anforderungen für die jeweilige Art der Arbeit, des Betriebs oder der Fläche entspricht.",
+    task: "Beleuchtungsstärke an Arbeits-, Nutzungs- oder Außenplätzen messen und die Ergebnisse entsprechend dem Charakter des Raums auswerten.",
+    naturchemApproach: "Wir haben ein Messnetz geplant, Beleuchtungsstärkemessungen durchgeführt und eine übersichtliche Auswertung für einzelne Räume, Arbeitsplätze oder Außenflächen erstellt.",
     output: "Protokoll der Messung der künstlichen Beleuchtung.",
     usedFor: "Grundlage für KHS, Abnahme, Betreiber oder interne Arbeitsschutzkontrolle.",
     relatedServices: ["Beleuchtungsmessung", "Arbeitsumfeld", "KHS"],
     authorities: "KHS, Bauamt.",
-    tags: ["Beleuchtungsmessung", "Halle", "Schule", "Arbeitsplatz", "KHS"],
-    ctaText: "Müssen Sie die Beleuchtung nachweisen? Senden Sie uns den Grundriss, den Raumtyp und den Zweck der Messung."
+    tags: ["Beleuchtungsmessung", "künstliche Außenbeleuchtung", "Halle", "Schule", "Arbeitsplatz", "KHS"],
+    ctaText: "Müssen Sie die Beleuchtung innen oder außen nachweisen? Senden Sie uns den Grundriss, den Raumtyp und den Zweck der Messung."
   },
   "pracovni-prostredi-komplex": {
     title: "Umfassende Arbeitsumfeldmessung: Lärm, Mikroklima und chemische Stoffe",

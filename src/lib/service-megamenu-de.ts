@@ -37,7 +37,7 @@ export const serviceMegaGroupsDe = [
       {
         href: "/sluzby/mereni-osvetleni",
         label: "Beleuchtung",
-        description: "Beleuchtungsstärke an Arbeitsplätzen"
+        description: "Beleuchtungsstärke am Arbeitsplatz und im Außenbereich"
       },
       {
         href: "/sluzby/mereni-mikroklimatu",

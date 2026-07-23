@@ -5,18 +5,18 @@ const czech = {
   faqCategoryId: "eia",
   title: "EIA, posudky, provozní řády a IPPC",
   intro:
-    "EIA, posudek, měření i provozní řád u jednoho zdroje? Zkoordinujeme povolovací kroky tak, aby údaje pro krajský úřad byly konzistentní.",
+    "**EIA**, posudek, měření i provozní řád u jednoho zdroje? Zkoordinujeme povolovací kroky tak, aby údaje pro krajský úřad byly konzistentní — včetně **IPPC** a **ISPOP**.",
   scope: [
-    "Zkoordinujeme EIA — oznámení, zjišťovací řízení, technické přílohy",
-    "Zajistíme odborné posudky a povolení provozu zdroje",
-    "Připravíme provozní řády a změny IPPC",
-    "Zkontrolujeme ISPOP, souhrnnou evidenci a GHG"
+    "Zkoordinujeme **EIA** — oznámení, **zjišťovací řízení**, technické přílohy",
+    "Zajistíme odborné posudky a **povolení provozu** zdroje",
+    "Připravíme provozní řády a změny **IPPC**",
+    "Zkontrolujeme **ISPOP**, **souhrnnou evidenci** a GHG"
   ],
   whenNeeded: [
     "Plánujete nový záměr nebo změnu kapacity",
-    "Probíhá zjišťovací řízení EIA nebo doplňujete po připomínkách úřadu",
-    "Měníte technologii, povolení provozu, provozní řád nebo integrované povolení",
-    "Řešíte roční ISPOP, souhrnnou evidenci nebo GHG reporting"
+    "Probíhá **zjišťovací řízení** **EIA** nebo doplňujete po připomínkách úřadu",
+    "Měníte technologii, **povolení provozu**, **provozní řád** nebo integrované povolení",
+    "Řešíte roční **ISPOP**, **souhrnnou evidenci** nebo GHG reporting"
   ],
   practicalSituations: [
     "EIA oznámení záměru pro kapacitní změnu provozu",
@@ -28,13 +28,13 @@ const czech = {
   docs: [
     "popis záměru a technologické schéma",
     "situace areálu a doprava",
-    "dosavadní rozhodnutí, stanoviska, integrované povolení nebo povolení provozu",
+    "dosavadní rozhodnutí, stanoviska, **integrované povolení** nebo **povolení provozu**",
     "emisní, hlukové, dopravní a provozní údaje včetně dostupných protokolů"
   ],
   outputs: [
-    "odborný posudek nebo technické vyjádření",
-    "provozní řád nebo jeho aktualizace",
-    "EIA oznámení záměru, podklady pro IPPC, ISPOP nebo GHG",
+    "**odborný posudek** nebo technické vyjádření",
+    "**provozní řád** nebo jeho aktualizace",
+    "**EIA** oznámení záměru, podklady pro **IPPC**, ISPOP nebo GHG",
     "strukturovaná odpověď na připomínky úřadů"
   ],
   commonMistakes: [

@@ -16,7 +16,13 @@ collections:
     extension: md
     format: frontmatter
     slug: "{{fields.slug}}"
-    summary: "{{title}}"
+    summary: "{{publishedAt}} — {{title}}"
+    sortable_fields:
+      - { field: publishedAt, default_sort: desc }
+      - title
+      - status
+      - updatedAt
+      - author
     fields:
       - { label: "Nadpis", name: "title", widget: "string" }
       - {

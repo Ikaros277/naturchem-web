@@ -21,6 +21,7 @@
 
 1. Otevřete **https://www.naturchem.cz/admin** a přihlaste se přes **GitHub**.
 2. V levém menu klikněte **Poradna** → vyberte článek, nebo nahoře **New Poradna**.
+   - V přehledu Poradny jsou články řazené podle **data publikace** (nejnovější nahoře). Řazení změníte v UI (sort podle data / názvu / stavu).
 3. Upravte text a klikněte **Publish** (ne jen zavřít okno).
 
 Po úspěšném Publish:

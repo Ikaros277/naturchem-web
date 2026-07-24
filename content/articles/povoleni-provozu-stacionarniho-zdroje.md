@@ -1,178 +1,129 @@
 ---
-title: "Povolení provozu stacionárního zdroje: jaké přílohy připravit k žádosti"
-slug: povoleni-provozu-stacionarniho-zdroje
-excerpt: Vyjmenovaný stacionární zdroj lze provozovat pouze na základě platného
-  povolení provozu. Krajský úřad v něm stanoví zařazení zdroje, povolenou
-  kapacitu, emisní limity, způsob měření emisí a další závazné podmínky.
-  Kvalitně připravená žádost musí obsahovat technický popis zdroje, údaje o
-  výduších, emisích a materiálových tocích a podle typu technologie také odborný
-  posudek, rozptylovou studii nebo provozní řád.
+title: Kolik stojí odborný posudek, rozptylová studie, provozní řád a povolení provozu
+slug: cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu
+excerpt: Cena podkladů pro povolení zdroje znečišťování ovzduší závisí na typu
+  technologie, počtu zdrojů a výduchů, rozsahu emisí a kvalitě dostupné
+  dokumentace. Jednoduchý plynový kotel nebo menší lakovna vyžadují jiný rozsah
+  práce než výrobní areál s více technologiemi, filtry a desítkami emisních
+  výstupů. Přinášíme orientační přehled nákladů a vysvětlení, co má být součástí
+  nabídky.
 author: Ing. František Hezina
 status: published
-publishedAt: 2026-08-03
+publishedAt: 2026-08-06
 topic: EIA a povolování
 ---
-## Kdy je povolení provozu povinné
+## Orientační ceny podkladů pro ochranu ovzduší
 
-Povolení provozu se vyžaduje pro stacionární zdroje uvedené v příloze č. 2 [zákona č. 201/2012 Sb., o ochraně ovzduší](https://www.zakonyprolidi.cz/cs/2012-201). Jde například o vybrané kotle, kogenerační jednotky, lakovny, slévárny, zařízení povrchových úprav, technologické pece, zpracování nerostných surovin, zařízení využívající organická rozpouštědla nebo některé provozy nakládající s odpady.
+Následující ceny představují **obvyklé orientační rozpětí pro běžné průmyslové a energetické zdroje**. Uváděné částky jsou bez DPH a nezahrnují případná měření emisí, laboratorní rozbory, správní poplatky ani rozsáhlé doplňování projektové dokumentace.
 
-Rozhodující je **přesné zařazení zdroje podle typu činnosti a celkových projektovaných parametrů**. U některých technologií se příkony nebo kapacity více zařízení sčítají. Samotný obchodní název stroje ani jeho označení výrobcem proto nestačí.
+| Podklad nebo služba | Orientační cena bez DPH | Typický rozsah |
+|---|---:|---|
+| Odborný posudek | 14 000–30 000 Kč | Jeden nebo několik souvisejících zdrojů s dostupnými technickými podklady |
+| Rozptylová studie | 18 000–40 000 Kč | Bodové zdroje, několik znečišťujících látek a standardní modelové území |
+| Provozní řád | 9 000–20 000 Kč | Jedna technologie nebo ucelený soubor souvisejících zdrojů |
+| Žádost o povolení provozu | 6 000–15 000 Kč | Zpracování žádosti, přehledu zdrojů a kompletace příloh |
+| Komplet odborný posudek, rozptylová studie, provozní řád a žádost | přibližně 40 000–75 000 Kč | Běžný nový nebo měněný technologický zdroj |
+| Aktualizace existujícího dokumentu | individuálně, obvykle od 5 000 Kč | Změna kapacity, zařízení, výduchu, surovin nebo legislativních požadavků |
 
-Povolení je potřeba vyřešit zejména:
+U složitého areálu s více provozy, významnými fugitivními emisemi, pachovými látkami, dopravou nebo nestandardními technologiemi může být cena vyšší. Rozsah zakázky je vhodné stanovit až po kontrole platného povolení a technických podkladů.
 
-- před zahájením provozu nového vyjmenovaného zdroje,
-- při změně technologie, kapacity, paliva, surovin, emisí, výduchů nebo zařízení ke snižování emisí,
-- při převzetí provozovny, pokud se mění provozovatel nebo podmínky uvedené v dosavadním povolení.
+## Co ovlivňuje konečnou cenu
 
-V pochybnostech, zda technologie patří mezi vyjmenované zdroje, rozhoduje krajský úřad. Pokud úřad rozhodne, že již provozovaná technologie vyjmenovaným zdrojem je, musí provozovatel podat žádost o povolení provozu do **90 dnů od nabytí právní moci rozhodnutí**.
+Největší vliv má množství podkladů, které musí zpracovatel ověřit, dopočítat nebo získat od dodavatele technologie.
 
-## Kdo povolení vydává
+Rozhodující bývá zejména:
 
-Povolení provozu vydává **krajský úřad příslušný podle umístění zdroje**. Na území hlavního města Prahy tuto působnost vykonává Magistrát hlavního města Prahy.
+- počet zdrojů, technologických uzlů, výduchů a znečišťujících látek,
+- dostupnost projektových kapacit, emisních údajů, materiálových bilancí, technických listů a dřívějších rozhodnutí,
+- potřeba místního šetření, výpočtu emisí, dopravního modelu, variantního posouzení nebo koordinace s projektantem a úřadem.
 
-Žádost lze podat prostřednictvím datové schránky, poštou nebo osobně. Pokud zdroj současně vyžaduje povolení podle stavebního zákona, lze žádost podat také prostřednictvím portálu stavebníka.
+Pokud provozovatel předá úplné a vzájemně shodné podklady, lze nabídku připravit přesněji a zpracování bývá rychlejší. Rozdílné kapacity v projektu, odborném posudku a žádosti obvykle vedou k doplňování dokumentace.
 
-Pro více stacionárních zdrojů v jedné provozovně se vede společné řízení a zpravidla se vydává jedno společné povolení. Žádost proto musí obsahovat přehled celé provozovny, nikoliv pouze izolovaný popis jednoho nového zařízení.
+## Kolik stojí odborný posudek
 
-## Závazné stanovisko a povolení provozu jsou rozdílné podklady
+Odborný posudek hodnotí stacionární zdroj z technologického a emisního hlediska. Obsahuje jeho zařazení podle přílohy č. 2 [zákona č. 201/2012 Sb., o ochraně ovzduší](https://www.zakonyprolidi.cz/cs/2012-201), popis technologie, vstupní materiály, emise, zařízení ke snižování emisí a návrh podmínek provozu.
 
-U nového záměru vyžadujícího povolení podle stavebního zákona se ochrana ovzduší řeší již během přípravy stavby. Pro povolení záměru obsahujícího vyjmenovaný stacionární zdroj se vydává závazné stanovisko krajského úřadu, případně je příslušný správní úkon zahrnut do jednotného environmentálního stanoviska.
+Odborný posudek může podle zákona zpracovat pouze osoba s autorizací Ministerstva životního prostředí.
 
-**Povolení provozu se vydává pro následné skutečné provozování zdroje.** Bez platného povolení provozu nelze vydat kolaudační rozhodnutí, povolit předčasné užívání ani povolit nebo nařídit zkušební provoz podle stavebního zákona.
+U jednoduššího zdroje s jednou technologií, jedním výduchem a kvalitní dokumentací lze obvykle počítat s cenou přibližně **14 000 až 20 000 Kč bez DPH**. Cena složitějšího posudku pro výrobní areál s více zdroji, technologickými operacemi a emisními výpočty se může pohybovat přibližně mezi **20 000 a 30 000 Kč bez DPH**, případně výše.
 
-Technické údaje v žádosti o povolení provozu musí odpovídat schválenému projektu a skutečně instalované technologii. Pokud byl během realizace změněn typ zařízení, kapacita, výduch nebo filtrace, musí být změna v žádosti řádně popsána a vyhodnocena.
+Cenu zvyšuje zejména nutnost sestavit chybějící materiálovou bilanci, vypočítat emise z více surovin, posoudit několik variant filtrace nebo sjednotit nesourodé technické podklady.
 
-## Základní náležitosti žádosti
+Podrobnosti o službě najdete na stránce [Odborné posudky – NATURCHEM](https://www.naturchem.cz/sluzby/odborne-posudky/).
 
-Obsahové náležitosti žádosti stanoví příloha č. 7 zákona o ochraně ovzduší.
+## Kolik stojí rozptylová studie
 
-| Část žádosti | Co je potřeba uvést |
-|---|---|
-| Identifikace žadatele | Název, sídlo, IČO, kontaktní údaje a osoba oprávněná jednat |
-| Zastupování | Plná moc, pokud žádost podává projektant, poradenská firma nebo jiný zástupce |
-| Umístění provozovny | Adresa, parcelní čísla, katastrální území a situační výkres |
-| Dosavadní rozhodnutí | Povolení, závazná stanoviska, JES, stavební rozhodnutí a další související akty |
-| Přehled provozovny | Soupis všech stacionárních zdrojů, komínů a výduchů |
-| Zařazení zdroje | Návrh kódu podle přílohy č. 2 zákona |
-| Projektované parametry | Kapacita, výkon nebo celkový jmenovitý tepelný příkon |
-| Technický popis | Princip technologie, výrobce, typ zařízení, provozní režim a návazné procesy |
-| Materiálové toky | Suroviny, paliva, rozpouštědla, odpady a další vstupy a výstupy |
-| Emise | Znečišťující látky, předpokládané koncentrace a hmotnostní toky |
-| Odvádění emisí | Odsávání, odlučování, komíny, výduchy a fugitivní emise |
-| Zjišťování emisí | Měřicí místa, způsob a navrhovaná četnost měření |
-| Provozní parametr | Návrh sledovaného parametru filtrace nebo jiné technologie, pokud jej právní předpis vyžaduje |
+Rozptylová studie modeluje příspěvek zdroje ke koncentracím znečišťujících látek v okolním ovzduší. Do výpočtu vstupují emise, poloha a parametry výduchů, provozní doba, okolní terén, stávající imisní zatížení a případně doprava nebo plošné zdroje.
 
-U stávajícího zdroje se doplňují také informace o dosavadních emisích. Vhodným podkladem jsou protokoly z autorizovaného měření, souhrnná provozní evidence a skutečné spotřeby materiálů za poslední kalendářní roky.
+Rozptylovou studii může pro účely podle zákona o ochraně ovzduší zpracovat pouze autorizovaná osoba.
 
-## Projektová a technická dokumentace
+U jednoho nebo několika standardních bodových zdrojů se cena zpravidla pohybuje přibližně mezi **18 000 a 30 000 Kč bez DPH**. Rozsáhlejší studie pro průmyslový areál, větší množství zdrojů, více variant záměru, prašné plochy nebo významnou dopravu může stát přibližně **30 000 až 50 000 Kč bez DPH**.
 
-Přílohou žádosti má být projektová dokumentace použitá v řízení o povolení záměru nebo jiná obdobná dokumentace, ze které lze zdroj spolehlivě posoudit.
+Významný vliv má počet modelovaných látek a zdrojů. Vyhodnocení jednoho plynového kotle je podstatně jednodušší než modelování výrobního areálu s komíny, nízkými technologickými výduchy, plošnou prašností a nákladní dopravou.
 
-Technický popis by měl jednoznačně uvádět označení zařízení, výrobce, typ, projektovanou kapacitu, provozní dobu a vazby mezi jednotlivými částmi technologie. U spalovacího zdroje se doplňuje druh paliva, počet a typ spalovacích zařízení, příkony, výkony, hořáky a společné nebo samostatné komíny.
+## Kolik stojí provozní řád
 
-U technologického zdroje je nutné popsat výrobní operace, používané látky, místa vzniku emisí, způsob odsávání a zařízení ke snižování emisí. Z dokumentace musí být zřejmé, zda jsou emise odváděny organizovaně výduchem, nebo vznikají také jako fugitivní emise v prostoru haly či při manipulaci.
+Provozní řád stanovuje technické a organizační podmínky provozu zdroje. Popisuje obsluhu technologie, kontrolu filtrů, provozní parametry, údržbu, poruchové stavy, způsob omezování emisí a odpovědnosti pracovníků.
 
-Pokud zařízení slouží jako záložní zdroj energie, musí být tato skutečnost u konkrétního zdroje výslovně uvedena.
+Povinnost zpracovat provozní řád se vztahuje na zdroje označené ve sloupci C přílohy č. 2 zákona o ochraně ovzduší. Dokument schvaluje krajský úřad jako součást povolení provozu. Pro jeho zpracování zákon nevyžaduje zvláštní autorizaci.
 
-## Údaje o kapacitě a materiálových tocích
+Cena provozního řádu pro jednoduchou a dobře popsanou technologii obvykle začíná přibližně na **9 000 až 12 000 Kč bez DPH**. U lakovny, slévárny, odpadového provozu nebo technologie s několika odlučovacími zařízeními a poruchovými režimy se může pohybovat přibližně mezi **12 000 a 20 000 Kč bez DPH**.
 
-Projektovaná kapacita patří mezi nejdůležitější údaje žádosti. Podle ní se zdroj zařazuje, stanovují se emisní požadavky a v některých případech se posuzuje potřeba odborného posudku nebo rozptylové studie.
+Velmi stručný univerzální dokument může být při správním řízení obtížně použitelný. Provozní řád musí odpovídat skutečnému zařízení, platnému povolení, číslování výduchů a způsobu vedení provozní evidence.
 
-Kapacita musí být vyjádřena jednotkou odpovídající danému typu činnosti, například v tunách výrobků za rok, kilogramech rozpouštědel za hodinu, metrech čtverečních upravené plochy, objemu procesních lázní nebo tunách zpracovaného odpadu.
+Více informací uvádíme na stránce [Provozní řády – NATURCHEM](https://www.naturchem.cz/sluzby/provozni-rady/).
 
-Materiálová bilance by měla uvádět maximální projektované i očekávané běžné spotřeby. U nátěrových hmot a čisticích prostředků je potřeba doložit obsah organických rozpouštědel. U paliv se uvádí druh, výhřevnost a roční spotřeba. U odpadů musí být zřejmé jejich druhy, kategorie, množství a způsob využití nebo odstranění.
+## Kolik stojí zpracování žádosti o povolení provozu
 
-Údaje v žádosti musí být shodné s projektovou dokumentací, odborným posudkem, rozptylovou studií a provozním řádem.
+Žádost o povolení provozu obsahuje identifikaci provozovatele a provozovny, přehled zdrojů, návrh jejich zařazení, projektované kapacity, technický popis, materiálové vstupy, emise, výduchy a navržený způsob zjišťování emisí.
 
-## Výduchy, emise a měřicí místa
+Cena za sestavení žádosti a kompletaci podkladů se u běžného zdroje pohybuje přibližně mezi **6 000 a 15 000 Kč bez DPH**. Vyšší cena může odpovídat provozovně s větším počtem zdrojů, složitou historií rozhodnutí nebo nutností sjednotit číslování technologií a výduchů.
 
-Každý komín nebo výduch je vhodné označit jednoznačným číslem, které bude později používáno také v provozní evidenci, systému ISPOP a protokolech z autorizovaného měření emisí.
+Samotná žádost nenahrazuje odborný posudek, rozptylovou studii ani provozní řád, pokud je zákon nebo krajský úřad pro daný zdroj vyžaduje.
 
-| Parametr výduchu | Požadovaný údaj |
-|---|---|
-| Umístění | Poloha v situaci a vazba na konkrétní zařízení |
-| Výška | Výška nad terénem a případně nad úrovní střechy |
-| Rozměr | Vnitřní průměr nebo rozměry průřezu |
-| Objemový tok | Projektovaný nebo garantovaný průtok odpadního plynu |
-| Teplota | Předpokládaná teplota vzdušiny nebo spalin |
-| Výstupní rychlost | Rychlost odpadního plynu v ústí výduchu |
-| Emise | Druhy znečišťujících látek, koncentrace a hmotnostní toky |
-| Měřicí místo | Poloha, rozměry, přístup a splnění technických podmínek měření |
+Podrobnosti najdete na stránce [Povolení provozu – NATURCHEM](https://www.naturchem.cz/sluzby/povoleni-provozu/).
 
-Měřicí místo musí umožnit bezpečný a reprezentativní odběr vzorků. U nových zdrojů je vhodné jeho provedení konzultovat před výrobou potrubí nebo komína. Dodatečná instalace přírub, pracovních plošin a přístupových cest bývá technicky i finančně náročnější.
+## Správní poplatek za povolení provozu
 
-## Kdy je potřeba odborný posudek
+Vedle ceny odborného zpracování je potřeba počítat se správním poplatkem hrazeným příslušnému krajskému úřadu.
 
-Odborný posudek zpracovává osoba autorizovaná Ministerstvem životního prostředí. Posudek hodnotí zejména zařazení zdroje, emisní požadavky, technické řešení, způsob snižování emisí a podmínky budoucího provozu.
+| Správní úkon | Poplatek |
+|---|---:|
+| Vydání povolení provozu zdroje uvedeného v příloze č. 2 zákona | 5 000 Kč |
+| Vydání rozhodnutí o změně povolení provozu | 3 000 Kč |
+| Vydání povolení provozu zdroje neuvedeného v příloze č. 2, pokud se povolení vydává | 3 000 Kč |
 
-U záměru, který vyžaduje povolení podle jiného právního předpisu, se odborný posudek obvykle předkládá již k žádosti o závazné stanovisko. Pokud takové řízení vedeno není, přikládá se k žádosti o vydání nebo změnu povolení provozu.
+Správní poplatek je oddělený od ceny odborného posudku, studie, provozního řádu a zpracování žádosti. Aktuální údaje uvádí také [Portál veřejné správy](https://portal.gov.cz/sluzby-vs/zadost-o-vydani-povoleni-provozu-S8830).
 
-Zákon stanoví výjimky například pro některé spalovací zdroje spalující výlučně zemní plyn do celkového jmenovitého tepelného příkonu **5 MW včetně** a pro vybrané záložní zdroje energie do 5 MW s provozem nejvýše **300 hodin za kalendářní rok**.
+Pokud se v jednom řízení vydává společné povolení pro více zdrojů v rámci stejné provozovny, poplatek za vydání povolení se podle výkladu Ministerstva životního prostředí hradí pouze jednou.
 
-Při změně povolení se odborný posudek zpravidla nevyžaduje, pokud se nezvyšuje projektovaný výkon, kapacita ani emise. Výjimkou může být řízení o stanovení technické podmínky provozu nahrazující specifický emisní limit.
+## Je výhodnější objednat podklady společně
 
-## Kdy se přikládá rozptylová studie
+Společné zpracování odborného posudku, rozptylové studie, provozního řádu a žádosti snižuje riziko rozdílných údajů. Všechny dokumenty mohou pracovat se stejnou kapacitou, spotřebou surovin, emisemi, provozní dobou a označením výduchů.
 
-Rozptylová studie se vyžaduje zejména pro zdroje označené ve sloupci A přílohy č. 2 zákona, pokud se posuzuje nový zdroj nebo změna spojená se zvýšením projektovaného výkonu, kapacity či emisí.
+Samostatné objednávání jednotlivých podkladů může být vhodné, pokud jsou některé dokumenty již platné a změna se jich nedotýká. Před objednáním je proto účelné nejprve prověřit, které přílohy jsou skutečně povinné.
 
-Studii zpracovává autorizovaná osoba. Posuzují se znečišťující látky, pro které jsou stanoveny příslušné imisní limity. Výpočet vychází z parametrů výduchů, emisních toků, provozní doby, okolního terénu a stávající kvality ovzduší.
+U běžného technologického zdroje lze za celý soubor podkladů orientačně počítat s částkou přibližně **40 000 až 75 000 Kč bez DPH**. Rozsáhlé průmyslové provozy, variantní studie nebo chybějící technická dokumentace mohou výslednou cenu zvýšit.
 
-Zákon stanoví výjimky například pro některé zdroje spalující výlučně zemní plyn. Krajský úřad si však může rozptylovou studii vyžádat s ohledem na místní podmínky.
+## Jak předejít dodatečným nákladům
 
-## Kdy musí být přiložen provozní řád
+Největší úsporu obvykle přinese včasné prověření technologie před jejím objednáním. Dodavatel by měl poskytnout kapacitu, garantované emise, spotřeby surovin, parametry odsávání, filtraci a údaje o výduchu.
 
-Návrh provozního řádu se přikládá u zdrojů označených ve **sloupci C přílohy č. 2 zákona o ochraně ovzduší**.
+Dodatečné náklady mohou vzniknout při chybějícím měřicím místě, nevhodně navrženém výduchu, nedostatečné filtraci nebo při zjištění, že technologie vyžaduje rozsáhlejší rozptylovou studii.
 
-Provozní řád popisuje závazné technické a organizační postupy, provozní parametry, kontroly filtrace, údržbu, poruchové stavy, odpovědnosti obsluhy a opatření ke snižování prašnosti, zápachu nebo jiných emisí.
+Včasná kontrola také pomůže odlišit povinné podklady od dokumentů, které konkrétní zdroj nepotřebuje.
 
-Po schválení krajským úřadem se provozní řád stává součástí povolení provozu. Jeho obsah musí odpovídat technické dokumentaci a skutečnému provedení zdroje.
+## Co nám můžete poslat pro přesnou cenovou nabídku
 
-Podrobnosti jsou uvedeny v článku [Provozní řád zdroje znečišťování ovzduší: kdy je povinný a kdo jej schvaluje](/poradna/provozni-rad-zdroje-znecistovani-ovzdusi).
+Pro stanovení rozsahu a ceny nám můžete zaslat:
 
-## Povolení pro nový zdroj a změna stávajícího povolení
+- projektovou dokumentaci, technické listy, situační výkres a stručný popis stávajícího a navrhovaného provozu,
+- projektovanou kapacitu, provozní dobu, spotřebu paliv, surovin a rozpouštědel, parametry výduchů a zařízení ke snižování emisí,
+- platné povolení provozu, starší odborný posudek, rozptylovou studii, provozní řád, protokoly z měření emisí nebo výzvu úřadu.
 
-Při změně již povoleného zdroje se nejprve porovnává nový záměr s výrokovou částí platného povolení. Rozhodující jsou především povolená kapacita, používané suroviny, emisní limity, výduchy, způsob měření a technické podmínky provozu.
+Ověříme zařazení zdroje, určíme skutečně potřebné podklady a připravíme položkovou cenovou nabídku. Upozorníme také na chybějící technické údaje, které mohou ovlivnit povolení nebo cenu zpracování.
 
-Změnu povolení je vhodné řešit při výměně technologie, zvýšení kapacity, instalaci nového odsávání, změně filtru, přemístění výduchu, změně paliva nebo při zavedení nové suroviny s odlišnými emisemi.
-
-Krajský úřad může povolení změnit také z moci úřední, pokud nastala změna podmínek rozhodných pro jeho vydání nebo byly zjištěny nové skutečnosti významné pro ochranu ovzduší.
-
-## Správní poplatek
-
-Od 1. března 2025 činí správní poplatek za vydání povolení provozu zdroje uvedeného v příloze č. 2 zákona **5 000 Kč**. Za vydání rozhodnutí o změně takového povolení se hradí **3 000 Kč**.
-
-Pokud jedno povolení zahrnuje více stacionárních zdrojů v rámci téže provozovny, poplatek za jeho vydání se hradí jednou, nikoliv samostatně za každý zdroj.
-
-Poplatek se váže na vydání kladného rozhodnutí. Způsob a termín úhrady sdělí příslušný správní orgán.
-
-## Nejčastější nedostatky žádostí
-
-Prodloužení řízení často způsobuje nejednotný nebo příliš obecný technický popis. Krajský úřad potřebuje z předložených podkladů určit konkrétní zdroj, jeho zákonné zařazení a podmínky, za kterých může být provozován.
-
-| Nedostatek | Praktický důsledek |
-|---|---|
-| Neuvedená maximální kapacita | Nelze ověřit zařazení ani emisní požadavky |
-| Neúplný soupis zdrojů a výduchů | Není zřejmá návaznost na celou provozovnu |
-| Rozdílné údaje v přílohách | Výzva k vysvětlení nebo přepracování dokumentace |
-| Chybějící obsah VOC v materiálech | Nelze posoudit spotřebu rozpouštědel a emise |
-| Výduch bez průtoku a rozměrů | Nelze vyhodnotit emise ani proveditelnost měření |
-| Nevhodně navržené měřicí místo | Nutnost stavebních nebo technologických úprav |
-| Chybějící údaje o filtraci | Nelze stanovit kontrolní provozní parametry |
-| Neaktuální provozní řád | Dokument neodpovídá povolované technologii |
-
-Žádost je vhodné dokončit až po kontrole všech technických příloh. Kapacita, provozní doba, spotřeby surovin, emise a označení výduchů musí být ve všech dokumentech stejné.
-
-## Co nám můžete poslat a co ověříme
-
-Pro přípravu žádosti nám můžete zaslat:
-
-- projektovou dokumentaci, technické listy zařízení, situační výkres a popis výrobního procesu,
-- údaje o kapacitě, provozní době, surovinách, palivech, emisích, odsávání, filtraci a výduších,
-- dosavadní povolení, provozní řád, odborný posudek, rozptylovou studii, protokoly z měření a údaje z ISPOP.
-
-Ověříme zařazení zdroje podle přílohy č. 2 zákona, rozsah potřebných příloh a soulad technických údajů. Připravíme žádost o vydání nebo změnu povolení provozu, případně zajistíme návazný odborný posudek, rozptylovou studii nebo provozní řád.
-
-Více informací najdete na stránce [Povolení provozu – NATURCHEM](https://www.naturchem.cz/sluzby/povoleni-provozu/).
+Více informací najdete na stránce [Odborné posudky – NATURCHEM](https://www.naturchem.cz/sluzby/odborne-posudky/).
 
 ## Související právní předpisy a zdroje
 
@@ -180,4 +131,4 @@ Více informací najdete na stránce [Povolení provozu – NATURCHEM](https://w
 
 [Vyhláška č. 415/2012 Sb., o přípustné úrovni znečišťování a jejím zjišťování](https://www.zakonyprolidi.cz/cs/2012-415)
 
-[Ministerstvo životního prostředí – žádost o vydání povolení provozu](https://mzp.gov.cz/cz/pro-media-a-verejnost/katalog-sluzeb/vydavani-povoleni-provozu-s8830)
+[Portál veřejné správy – žádost o vydání povolení provozu](https://portal.gov.cz/sluzby-vs/zadost-o-vydani-povoleni-provozu-S8830)

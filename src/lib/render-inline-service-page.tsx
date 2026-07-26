@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ServicePage } from "@/components/ServicePage";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { metaDescriptionFrom } from "@/lib/plain-text";
 import type { ComponentProps } from "react";
 
 type ServicePageContent = Omit<ComponentProps<typeof ServicePage>, "locale">;
@@ -34,7 +35,7 @@ export function createInlineServicePageExports(
       locale,
       path: `/${props.slug}`,
       title: props.title,
-      description: props.intro.slice(0, 160)
+      description: metaDescriptionFrom(props.intro)
     });
   }
 

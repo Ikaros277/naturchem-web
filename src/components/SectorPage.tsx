@@ -1,3 +1,6 @@
+import { faqAnswerToParagraphs } from "@/components/FaqAccordionList";
+import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
+import type { FaqItem } from "@/lib/faq";
 import { IndexCard } from "@/components/IndexCard";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
@@ -83,10 +86,16 @@ export async function SectorPage(props: Props) {
     }))
   };
 
+  const faqItems: FaqItem[] = props.faq.map((item) => ({
+    q: item.q,
+    paragraphs: faqAnswerToParagraphs(item.a)
+  }));
+
   return (
     <main className="page sector-detail-page">
       <JsonLd data={breadcrumbData} />
       <JsonLd data={relatedServiceListData} />
+      {faqItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(faqItems)} /> : null}
       <PageHeroBand
         locale={locale}
         theme={heroTheme}

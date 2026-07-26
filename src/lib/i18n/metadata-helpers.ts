@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { defaultLocale, locales, type Locale } from "@/lib/i18n/locales";
+import { stripInlineMarkdown } from "@/lib/plain-text";
 import { siteUrl } from "@/lib/site";
 
 const OPEN_GRAPH_LOCALE: Record<Locale, string> = {
@@ -101,10 +102,11 @@ export function pageMetadata({
   const canonical = localizedCanonical(path, locale);
   const shareTitle = resolveShareTitle(title, absoluteTitle);
   const imageUrl = resolveOgImageUrl(ogImage, locale);
+  const plainDescription = stripInlineMarkdown(description);
 
   return {
     title: absoluteTitle ? { absolute: absoluteTitle } : title,
-    description,
+    description: plainDescription,
     alternates,
     openGraph: {
       type: ogType,
@@ -113,7 +115,7 @@ export function pageMetadata({
       url: canonical,
       siteName: "NATURCHEM",
       title: shareTitle,
-      description,
+      description: plainDescription,
       ...(publishedTime ? { publishedTime } : {}),
       ...(modifiedTime ? { modifiedTime } : {}),
       images: [
@@ -128,7 +130,7 @@ export function pageMetadata({
     twitter: {
       card: "summary_large_image",
       title: shareTitle,
-      description,
+      description: plainDescription,
       images: [imageUrl]
     }
   };

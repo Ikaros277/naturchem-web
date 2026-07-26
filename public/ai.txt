@@ -4,7 +4,9 @@
 
 ## Primary resources
 
-- Short summary: https://www.naturchem.cz/llms.txt
+- Short summary (CS): https://www.naturchem.cz/llms.txt
+- Short summary (EN): https://www.naturchem.cz/llms-en.txt
+- Short summary (DE): https://www.naturchem.cz/llms-de.txt
 - Extended reference: https://www.naturchem.cz/llms-full.txt
 - Article index: https://www.naturchem.cz/llms-articles.txt
 - Sitemap: https://www.naturchem.cz/sitemap.xml

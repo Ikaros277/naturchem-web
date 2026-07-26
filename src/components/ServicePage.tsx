@@ -24,6 +24,8 @@ import { CategoryBadge } from "@/components/CategoryBadge";
 import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { getDetailGroupIconKey } from "@/lib/service-icons";
 import { getServiceHeroTheme } from "@/lib/hero-images";
+import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
+import { stripInlineMarkdown } from "@/lib/plain-text";
 import { company, siteUrl } from "@/lib/site";
 
 type Props = {
@@ -125,7 +127,7 @@ export async function ServicePage(props: Props) {
     provider: { "@id": `${siteUrl}/#organization`, "@type": "Organization", name: company.name },
     areaServed: { "@type": "Country", name: "Czech Republic" },
     url: pageUrl,
-    description: props.intro
+    description: stripInlineMarkdown(props.intro)
   };
 
   const breadcrumbData = {
@@ -162,6 +164,7 @@ export async function ServicePage(props: Props) {
     <main className="page">
       <JsonLd data={serviceData} />
       <JsonLd data={breadcrumbData} />
+      {faqTeaserItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(faqTeaserItems)} /> : null}
       {relatedLinks.length > 0 || sectorCrossLinks.length > 0 ? (
         <JsonLd data={relatedItemListData} />
       ) : null}

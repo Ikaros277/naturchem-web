@@ -99,7 +99,7 @@ export const pageCtaPresets = {
     text: "Máte zájem o přístroj nebo příslušenství z naší nabídky? Napište typ přístroje, parametry nebo přiložte poptávku — připravíme nabídku.",
     primaryLabel: "Poptat přístroj",
     primaryHref: contactUrl("Prodej přístrojů"),
-    secondaryLabel: "Přehled značek",
-    secondaryHref: "/prodej"
+    secondaryLabel: "Laboratorní služby — měření emisí",
+    secondaryHref: "/sluzby/mereni-emisi"
   }
 } as const satisfies Record<string, PageCtaStripProps>;

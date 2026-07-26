@@ -95,7 +95,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     path: `/prodej/${brandSlug}/${slug}`,
     title: `${match.product.title} | ${match.brand.name}`,
-    description: match.product.tagline || match.product.intro || match.brand.tagline
+    description: match.product.tagline || match.product.intro || match.brand.tagline,
+    ogImage: match.product.imageSrc
   });
 }
 

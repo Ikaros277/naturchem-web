@@ -105,6 +105,30 @@ export const services = [
     contactService: "Měření hluku a akustika"
   },
   {
+    href: "/sluzby/mereni-vibraci",
+    title: "Měření vibrací",
+    short: "Celotělové a místní vibrace, hodnocení expozice a podklady pro KHS.",
+    cta: "Zjistit více o měření vibrací",
+    contactCta: "Poptat měření vibrací",
+    contactService: "Měření vibrací"
+  },
+  {
+    href: "/sluzby/mereni-mikroklimatu",
+    title: "Měření mikroklimatu",
+    short: "Teplota, vlhkost, proudění vzduchu a tepelná zátěž na pracovišti.",
+    cta: "Zjistit více o měření mikroklimatu",
+    contactCta: "Poptat měření mikroklimatu",
+    contactService: "Měření mikroklimatu"
+  },
+  {
+    href: "/sluzby/mereni-osvetleni",
+    title: "Měření osvětlení",
+    short: "Denní a umělé osvětlení pracovišť, srovnání s hygienickými limity.",
+    cta: "Zjistit více o měření osvětlení",
+    contactCta: "Poptat měření osvětlení",
+    contactService: "Měření osvětlení"
+  },
+  {
     href: "/sluzby/rozptylove-studie",
     title: "Rozptylové studie",
     short: "Modelování imisí, varianty provozu, dopady zdrojů na okolí záměru.",

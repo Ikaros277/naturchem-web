@@ -37,14 +37,12 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         />
         <link
           rel="alternate"
-          hrefLang="en"
           type="text/plain"
           href={`${siteUrl}/llms-en.txt`}
           title="NATURCHEM — summary for AI assistants (English)"
         />
         <link
           rel="alternate"
-          hrefLang="de"
           type="text/plain"
           href={`${siteUrl}/llms-de.txt`}
           title="NATURCHEM — summary for AI assistants (German)"

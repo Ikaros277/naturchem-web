@@ -24,6 +24,30 @@ export const services = [
     contactService: "Měření hluku a akustika"
   },
   {
+    href: "/sluzby/mereni-vibraci",
+    title: "Vibrationsmessungen",
+    short: "Ganzkörper- und Hand-Arm-Vibration, Expositionsbewertung und Unterlagen für KHS.",
+    cta: "Erfahren Sie mehr über Vibrationsmessungen",
+    contactCta: "Vibrationsmessungen anfordern",
+    contactService: "Měření vibrací"
+  },
+  {
+    href: "/sluzby/mereni-mikroklimatu",
+    title: "Mikroklimamessungen",
+    short: "Temperatur, Feuchte, Luftströmung und Hitzebelastung am Arbeitsplatz.",
+    cta: "Erfahren Sie mehr über Mikroklimamessungen",
+    contactCta: "Mikroklimamessungen anfordern",
+    contactService: "Měření mikroklimatu"
+  },
+  {
+    href: "/sluzby/mereni-osvetleni",
+    title: "Beleuchtungsmessungen",
+    short: "Tages- und Kunstlicht am Arbeitsplatz im Vergleich zu Hygienelimits.",
+    cta: "Erfahren Sie mehr über Beleuchtungsmessungen",
+    contactCta: "Beleuchtungsmessungen anfordern",
+    contactService: "Měření osvětlení"
+  },
+  {
     href: "/sluzby/rozptylove-studie",
     title: "Ausbreitungsstudien",
     short: "Immissionsmodellierung, Betriebsvarianten, Quelleneinwirkungen auf die Projektumgebung.",

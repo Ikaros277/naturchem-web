@@ -24,6 +24,30 @@ export const services = [
     contactService: "Měření hluku a akustika"
   },
   {
+    href: "/sluzby/mereni-vibraci",
+    title: "Vibration measurements",
+    short: "Whole-body and hand-arm vibration, exposure assessment and documentation for KHS.",
+    cta: "Learn more about vibration measurements",
+    contactCta: "Request vibration measurements",
+    contactService: "Měření vibrací"
+  },
+  {
+    href: "/sluzby/mereni-mikroklimatu",
+    title: "Microclimate measurements",
+    short: "Temperature, humidity, air flow and heat stress in the workplace.",
+    cta: "Learn more about microclimate measurements",
+    contactCta: "Request microclimate measurements",
+    contactService: "Měření mikroklimatu"
+  },
+  {
+    href: "/sluzby/mereni-osvetleni",
+    title: "Lighting measurements",
+    short: "Daylight and artificial workplace lighting versus hygiene limits.",
+    cta: "Learn more about lighting measurements",
+    contactCta: "Request lighting measurements",
+    contactService: "Měření osvětlení"
+  },
+  {
     href: "/sluzby/rozptylove-studie",
     title: "Dispersion studies",
     short: "Immission modelling, operating variants, source impacts on project surroundings.",

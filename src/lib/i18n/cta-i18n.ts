@@ -1,6 +1,7 @@
 import { contactFormHref, contactUrl } from "@/lib/contact-url";
 import { pageCtaPresets } from "@/lib/cta";
 import type { Locale } from "@/lib/i18n/locales";
+import { localizeHref } from "@/lib/i18n/navigation";
 import type { PageCtaStripProps } from "@/lib/cta";
 
 const cta = {
@@ -24,6 +25,7 @@ export function getCtaCopy(locale: Locale) {
 
 export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripProps> {
   const { globalCta } = getCtaCopy(locale);
+  const link = (href: string) => localizeHref(href, locale);
 
   if (locale === "en" || locale === "de") {
     const isDe = locale === "de";
@@ -56,7 +58,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         primaryLabel: isDe ? "NATURCHEM kontaktieren" : "Contact NATURCHEM",
         primaryHref: contactFormHref,
         secondaryLabel: isDe ? "Alle Leistungen" : "All services",
-        secondaryHref: "/sluzby"
+        secondaryHref: link("/sluzby")
       },
       cooperation: {
         text: isDe
@@ -65,7 +67,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         primaryLabel: isDe ? "NATURCHEM kontaktieren" : "Contact NATURCHEM",
         primaryHref: contactFormHref,
         secondaryLabel: isDe ? "Alle Leistungen" : "All services",
-        secondaryHref: "/sluzby"
+        secondaryHref: link("/sluzby")
       },
       training: {
         text: isDe
@@ -81,7 +83,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         primaryLabel: isDe ? "Messungen anfragen" : "Request measurements",
         primaryHref: contactUrl("Měření emisí"),
         secondaryLabel: isDe ? "Akkreditierung und Autorisierungen" : "Accreditation & authorisations",
-        secondaryHref: "/akreditace-autorizace-dokumenty"
+        secondaryHref: link("/akreditace-autorizace-dokumenty")
       },
       reference: {
         text: isDe
@@ -104,7 +106,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         primaryLabel: isDe ? "Unterlagen zur Prüfung senden" : "Send documents for review",
         primaryHref: contactUrl("Nejsem si jistý"),
         secondaryLabel: isDe ? "Alle Betriebe" : "All industries",
-        secondaryHref: "/provozy-a-technologie"
+        secondaryHref: link("/provozy-a-technologie")
       },
       typicalOrders: {
         text: isDe
@@ -127,7 +129,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
         primaryLabel: isDe ? "Geräteverfügbarkeit prüfen" : "Check equipment availability",
         primaryHref: contactUrl("Nejsem si jistý"),
         secondaryLabel: isDe ? "Akkreditierung und Laborumfang" : "Accreditation & lab scope",
-        secondaryHref: "/akreditace-autorizace-dokumenty"
+        secondaryHref: link("/akreditace-autorizace-dokumenty")
       },
       sales: {
         text: isDe
@@ -135,8 +137,10 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
           : "Interested in an instrument or accessory from our range? Send the product type, parameters or your inquiry — we will prepare a quote.",
         primaryLabel: isDe ? "Gerät anfragen" : "Request a quote",
         primaryHref: `${contactFormHref}?category=pristroj`,
-        secondaryLabel: isDe ? "Markenübersicht" : "Brand overview",
-        secondaryHref: "/prodej"
+        secondaryLabel: isDe
+          ? "Labordienstleistungen — Emissionsmessung"
+          : "Lab services — emission measurements",
+        secondaryHref: link("/sluzby/mereni-emisi")
       }
     };
   }

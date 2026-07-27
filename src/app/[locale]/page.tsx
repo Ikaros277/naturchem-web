@@ -4,7 +4,6 @@ import { ExperienceStats } from "@/components/ExperienceStats";
 import { HomeOfferCard } from "@/components/HomeOfferCard";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
-import { HomeFaqSection } from "@/components/HomeFaqSection";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
 import { HomeUnsureStrip } from "@/components/HomeUnsureStrip";
 import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
@@ -15,8 +14,6 @@ import { getHomeOfferPillars, getHomeTrustBandItems } from "@/lib/i18n/home-cont
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
-import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
-import { getHomeGeoFaqItems } from "@/lib/geo-home-faq";
 import { siteUrl } from "@/lib/site";
 
 type Props = {
@@ -48,7 +45,6 @@ export default async function Home({ params }: Props) {
   const statsContent = getCompanyStatsContent(locale);
   const link = (href: string) => localizeHref(href, locale);
   const homeUrl = `${siteUrl}${link("/")}/`.replace(/([^:]\/)\/+/g, "$1");
-  const homeFaqItems = await getHomeGeoFaqItems(locale);
 
   const breadcrumbData = {
     "@context": "https://schema.org",
@@ -61,7 +57,6 @@ export default async function Home({ params }: Props) {
   return (
     <main className="home-page">
       <JsonLd data={breadcrumbData} />
-      {homeFaqItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(homeFaqItems)} /> : null}
       <HomeHeroSection
         title={messages.home.heroTitle}
         lead={messages.home.heroLead}
@@ -107,8 +102,6 @@ export default async function Home({ params }: Props) {
       </section>
 
       <HomeUnsureStrip locale={locale} />
-
-      <HomeFaqSection locale={locale} />
 
       <HomePoradnaStrip locale={locale} />
 

@@ -11,7 +11,7 @@ author: Ing. František Hezina
 status: published
 publishedAt: 2026-08-06
 topic: EIA a povolování
-heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-2-.png
+heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-2-.webp
 ---
 ## Orientační ceny podkladů pro ochranu ovzduší
 

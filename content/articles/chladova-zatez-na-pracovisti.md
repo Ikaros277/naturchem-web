@@ -11,6 +11,7 @@ author: Ing. František Hezina
 status: published
 publishedAt: 2026-08-10
 topic: Pracovní prostředí
+heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-3-.webp
 ---
 ## Kdy se práce považuje za práci v zátěži chladem
 

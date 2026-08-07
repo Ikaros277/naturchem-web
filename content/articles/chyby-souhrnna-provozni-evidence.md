@@ -12,6 +12,7 @@ author: Ing. František Hezina
 status: published
 publishedAt: 2026-08-17
 topic: Legislativa
+heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-1-.webp
 ---
 ## Kdo podává souhrnnou provozní evidenci
 

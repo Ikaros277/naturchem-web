@@ -12,6 +12,7 @@ author: Ing. František Hezina
 status: published
 publishedAt: 2026-08-13
 topic: Hluk
+heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-4-.webp
 ---
 ## Proč je noční provoz z hlediska hluku kritický
 

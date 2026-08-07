@@ -12,6 +12,7 @@ author: Ing. František Hezina
 status: published
 publishedAt: 2026-08-24
 topic: Emise
+heroImage: /uploads/chatgpt-image-7.-8.-2026-14_35_37.webp
 ---
 ## Kdy je galvanovna vyjmenovaným zdrojem
 

@@ -11,7 +11,7 @@ excerpt: Oznámení záměru je odborný podklad, kterým podnikatel, investor n
   tak, aby příslušný úřad mohl rozhodnout, zda bude potřeba další posuzování
   EIA, nebo zda záměr po zjišťovacím řízení dále posuzován nebude.
 author: Ing. František Hezina
-publishedAt: 2026-07-08
+publishedAt: "2026-07-08"
 topic: EIA a povolování
 heroImage: /uploads/eia.webp
 ---

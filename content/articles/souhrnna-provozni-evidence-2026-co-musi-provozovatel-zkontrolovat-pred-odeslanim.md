@@ -8,7 +8,7 @@ excerpt: Souhrnná provozní evidence není jen administrativní formulář v IS
   poplatkovým povinnostem. Chyby v SPE se mohou projevit při kontrole, změně
   povolení nebo při ověřování ročních emisí.
 author: Ing. František Hezina
-publishedAt: 2026-01-23
+publishedAt: "2026-01-23"
 topic: Legislativa
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_12_13.webp
 ---

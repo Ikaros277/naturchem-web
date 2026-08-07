@@ -4,7 +4,7 @@ title: "Unzureichende Arbeitsplatzbeleuchtung: Was wird gemessen und welche Doku
 slug: nedostatecne-osvetleni-pracoviste-co-se-meri-podklady
 excerpt: Unzureichende Beleuchtung am Arbeitsplatz wird häufig erst behoben, wenn Mitarbeiter sich über Augenbelastung, schlechte Sicht, Blendung oder ungeeignete Arbeitsbedingungen beschweren. Dasselbe Problem tritt auch an neuen Arbeitsplätzen, bei Umbauten, bei der Fertigstellung von Gebäuden oder bei Inspektionen der regionalen Gesundheitsbehörden auf. Der Betreiber soll wissen, was bei der Beleuchtungsmessung eigentlich beurteilt wird, wann es sinnvoll ist, den aktuellen Zustand zu messen und wann es besser ist, zuerst die Beleuchtung oder das Design anzupassen.
 author: Ing. František Hezina
-publishedAt: 2026-06-04
+publishedAt: "2026-06-04"
 topic: Work environment
 heroImage: /uploads/chatgpt-image-15.-6.-2026-12_22_27.webp
 ---

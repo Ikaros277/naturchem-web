@@ -9,7 +9,7 @@ excerpt: Měření hluku na pracovišti a měření hluku do okolí nejsou toté
   za druhý, může mít sice protokol, ale ne takový, který úřad skutečně
   potřebuje.
 author: NATURCHEM
-publishedAt: 2026-06-23
+publishedAt: "2026-06-23"
 heroImage: /uploads/chatgpt-image-23.-6.-2026-12_24_16.webp
 ---
 ## Proč se hluk na pracovišti a hluk do okolí nesmí zaměňovat

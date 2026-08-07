@@ -3,7 +3,7 @@ title: "Gas boiler plant 0.3 to 50 MW: what to address for NOx, CO, measurement,
 slug: plynova-kotelna-03-50-mw-nox-co-mereni-povoleni
 excerpt: For a gas boiler plant it is not enough to know only the number of boilers and their output in kW. For air protection obligations what matters most is especially **total rated thermal input**, fuel, number of boilers, common chimney, operating hours, and whether it is a new source, boiler replacement, or change to an existing boiler plant. The operator should verify in time whether an operating permit, emission measurement, change of operating records, or amendment of the existing permit is needed.
 author: Ing. František Hezina
-publishedAt: 2026-07-04
+publishedAt: "2026-07-04"
 topic: Emissions
 heroImage: /uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp
 ---

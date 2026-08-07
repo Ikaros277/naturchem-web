@@ -10,7 +10,7 @@ excerpt: Novela zákona o ochraně ovzduší provedená zákonem č. 42/2025 Sb.
   provozní řád, měřicí povinnosti a provozní evidence odpovídají aktuálním
   požadavkům.
 author: Naturchem s.r.o.
-publishedAt: 2025-04-29T00:00:00.000Z
+publishedAt: "2025-04-29"
 updatedAt: ""
 topic: Legislativa
 heroImage: /uploads/chatgpt-image-jun-14-2026-08_02_34-pm.webp

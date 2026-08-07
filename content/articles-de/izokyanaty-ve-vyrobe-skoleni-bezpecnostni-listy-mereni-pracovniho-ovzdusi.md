@@ -3,7 +3,7 @@ title: "Isocyanate in der Produktion: Schulung, Sicherheitsdatenblätter und Mes
 slug: izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi
 excerpt: Isocyanate kommen in Betrieben vor allem bei PUR-Systemen, Zweikomponenten-Beschichtungen, Härtern, Klebstoffen, Schäumen, Dichtmassen und einigen Reparatur- oder Wartungsarbeiten vor. Der Betreiber muss wissen, welche Erzeugnisse Isocyanate enthalten, ob die REACH-Schulungspflicht gilt, welche Anforderungen in den Sicherheitsdatenblättern stehen und ob die Exposition der Beschäftigten durch Messung der Luft am Arbeitsplatz nachgewiesen werden muss.
 author: Ing. František Hezina
-publishedAt: 2026-07-05
+publishedAt: "2026-07-05"
 topic: Work environment
 heroImage: /uploads/clipboard_07-06-2026_01.webp
 ---

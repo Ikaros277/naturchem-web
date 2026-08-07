@@ -8,7 +8,7 @@ excerpt: Izokyanáty se v provozech objevují hlavně u PUR systémů, dvouslož
   bezpečnostních listech a zda je potřeba ověřit expozici zaměstnanců měřením
   pracovního ovzduší.
 author: Ing. František Hezina
-publishedAt: 2026-07-05
+publishedAt: "2026-07-05"
 topic: Pracovní prostředí
 heroImage: /uploads/clipboard_07-06-2026_01.webp
 ---

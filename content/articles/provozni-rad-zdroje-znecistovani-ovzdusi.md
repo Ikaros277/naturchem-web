@@ -8,7 +8,7 @@ excerpt: Provozní řád stanovuje závazné podmínky provozu vybraného zdroje
   příloze č. 2 zákona o ochraně ovzduší.
 author: Ing. František Hezina
 status: published
-publishedAt: 2026-07-30
+publishedAt: "2026-07-30"
 topic: Legislativa
 ---
 ## Kdy je provozní řád povinný

@@ -3,7 +3,7 @@ title: "Cogeneration unit: emissions, noise, measurement, and operating permit"
 slug: kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu
 excerpt: A cogeneration unit can be an advantageous source of electricity and heat for the operator, but from the permitting perspective it is not just technical equipment in a boiler plant or container. It is necessary to address emissions from the combustion engine, flue gas discharge, emission measurement, noise to surroundings, operating hours, fuel, chimney, relationship to existing sources, and authority requirements. The scope of supporting documents depends mainly on thermal input, location, fuel, operating regime, and distance to protected development.
 author: Ing. František Hezina
-publishedAt: 2026-07-06
+publishedAt: "2026-07-06"
 topic: Emissions
 heroImage: /uploads/pxl_20260702_063317620.mp.webp
 ---

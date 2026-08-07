@@ -3,7 +3,7 @@ title: "Handling bulk materials: when an area becomes a listed source"
 slug: manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni
 excerpt: "An area with soil, aggregate, recyclate, rubble or other bulk material may not be just a routine storage area. If it involves active handling of bulk materials on open areas and the total designed deposit area reaches 3,000 m² or more, it may be a listed stationary source under code 12.1 of the Air Protection Act. The operator may then need an operating permit, operating rules, and a dispersion study. What decides is not only the immediate pile size, but the designed area, material type, handling method, link to other technology, and whether the source does not already fall under another code in Annex No. 2."
 author: Ing. František Hezina
-publishedAt: 2026-06-24
+publishedAt: "2026-06-24"
 topic: Work environment
 heroImage: /uploads/fcb8f524-381e-4c0a-baf5-3fe088f9d036.webp
 ---

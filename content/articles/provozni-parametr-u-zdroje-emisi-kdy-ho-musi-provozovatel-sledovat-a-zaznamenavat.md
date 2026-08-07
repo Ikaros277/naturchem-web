@@ -9,7 +9,7 @@ excerpt: Provozní parametr slouží k průběžnému prokazování, že technol
   povinnost vztahuje i na jeho zdroj, zda je parametr uveden v povolení provozu
   a zda jsou záznamy vedeny tak, aby obstály při kontrole.
 author: Ing. František Hezina
-publishedAt: 2026-05-12
+publishedAt: "2026-05-12"
 topic: Emise
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_23_43.webp
 ---

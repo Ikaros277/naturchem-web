@@ -3,7 +3,7 @@ title: 'Job categorisation after technology change: when new measurement is nece
 slug: kategorizace-praci-po-zmene-technologie-nove-mereni
 excerpt: 'Job categorisation must correspond to actual conditions at the workplace. If a company changes technology, work procedure, chemical substances used, shift pattern, ventilation or time employees spend at an exposure source, old measurements may no longer be usable. That does not always mean measuring everything again. It does mean comparing original supporting materials with the new operation and verifying whether job categorisation still corresponds to reality.'
 author: Ing. František Hezina
-publishedAt: 2026-06-23T00:00:00.000Z
+publishedAt: "2026-06-23"
 topic: Work environment
 heroImage: /uploads/chatgpt-image-23.-6.-2026-12_42_59.webp
 ---

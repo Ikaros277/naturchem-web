@@ -4,7 +4,7 @@ title: "Umgang mit Schüttgütern: Wann wird aus einer Fläche eine gelistete Qu
 slug: manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni
 excerpt: Eine Fläche mit Erde, Schotter, Rezyklat, Bauschutt oder anderem Schüttgut muss nicht nur eine gewöhnliche Lagerfläche sein. Handelt es sich um aktiven Umgang mit Schüttgütern auf offenen Flächen und erreicht die gesamte projektierte Lagerfläche 3 000 m² oder mehr, kann es sich um eine gelistete ortsfeste Quelle gemäß Code 12.1 des Luftschutzgesetzes handeln. Der Betreiber benötigt dann möglicherweise eine Betriebsgenehmigung, Betriebsvorschriften und eine Ausbreitungsstudie. Entscheidend ist nicht nur die unmittelbare Größe des Haufens, sondern die projektierte Fläche, die Materialart, die Handhabungsweise, der Bezug zu anderer Technologie und ob die Quelle nicht bereits unter einen anderen Code der Anlage Nr. 2 fällt.
 author: Ing. František Hezina
-publishedAt: 2026-06-24
+publishedAt: "2026-06-24"
 topic: Work environment
 heroImage: /uploads/fcb8f524-381e-4c0a-baf5-3fe088f9d036.webp
 ---

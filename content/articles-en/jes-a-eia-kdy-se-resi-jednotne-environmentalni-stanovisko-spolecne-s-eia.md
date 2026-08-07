@@ -3,7 +3,7 @@ title: 'JES and EIA: when is the unified environmental opinion addressed togethe
 slug: jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia
 excerpt: 'The unified environmental opinion, abbreviated JES, consolidates multiple environmental statements, binding opinions, and decisions into a single basis for permitting a project. For projects subject to EIA, it is important to decide correctly whether JES should be addressed together with the EIA process, or only subsequently after the EIA opinion is issued.'
 author: Ing. František Hezina
-publishedAt: 2025-10-23T00:00:00.000Z
+publishedAt: "2025-10-23"
 topic: EIA and permitting
 ---
 ## What is the unified environmental opinion

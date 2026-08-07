@@ -10,7 +10,7 @@ excerpt: Tónová složka hluku je pro provozovatele důležitá proto, že zhor
   Provozovatel proto musí řešit nejen celkovou hlučnost zařízení, ale i jeho
   frekvenční charakter.
 author: NATURCHEM
-publishedAt: 2026-07-07
+publishedAt: "2026-07-07"
 topic: Legislativa
 heroImage: /uploads/0ee63946-ea53-49b5-9635-170da9c81ee7.webp
 ---

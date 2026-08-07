@@ -3,7 +3,7 @@ title: 'Wood-processing operation: dust, sawdust, extraction, noise, and source 
 slug: drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje
 excerpt: 'Wood-processing operations are typical sources of dust, sawdust, noise, and emissions of total suspended particulates (TSP). During cutting, planing, sanding, milling, or production of chips and pellets, wood dust arises that matters both from a work environment perspective and from an air protection perspective. For larger operations, extraction, filtration equipment, exhausts, emission measurement, noise load, and possible operating permit for the source must be addressed.'
 author: Ing. František Hezina
-publishedAt: 2026-04-14T00:00:00.000Z
+publishedAt: "2026-04-14"
 topic: Noise
 ---
 ## Why a wood-processing operation is sensitive regarding dust and noise

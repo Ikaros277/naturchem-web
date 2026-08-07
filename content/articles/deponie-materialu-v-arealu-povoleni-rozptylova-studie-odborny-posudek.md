@@ -9,7 +9,7 @@ excerpt: Skladování sypkých materiálů v areálu může být z pohledu ochra
   větších nebo prašných deponií může být potřeba povolení provozu, rozptylová
   studie, odborný posudek nebo úprava provozního řádu.
 author: Ing. František Hezina
-publishedAt: 2026-06-28
+publishedAt: "2026-06-28"
 topic: EIA a povolování
 heroImage: /uploads/chatgpt-image-2.-7.-2026-09_41_15.webp
 ---

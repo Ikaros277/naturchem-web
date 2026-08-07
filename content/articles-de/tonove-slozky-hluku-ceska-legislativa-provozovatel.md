@@ -3,7 +3,7 @@ title: 'Tonale Lärmkomponenten und die tschechische Gesetzgebung'
 slug: tonove-slozky-hluku-ceska-legislativa-provozovatel
 excerpt: 'Die tonale Lärmkomponente ist für Betreiber wichtig, weil sie die Lärmbewertung verschlechtert, auch wenn die Gesamtpegel in dB auf den ersten Blick nicht hoch wirken. Sie betrifft typischerweise Ventilatoren, Kompressoren, Pumpen, Kühlung, KWK-Anlagen, Transformatoren, Lüftung, Absaugung, Wärmepumpen oder Produktionstechnologien. Wird eine tonale Komponente nachgewiesen, wird der Hygienegrenzwert bei den meisten stationären Quellen um 5 dB verschärft. Der Betreiber muss daher nicht nur die Gesamtlautstärke der Anlage, sondern auch ihren Frequenzcharakter behandeln.'
 author: NATURCHEM
-publishedAt: 2026-07-07T00:00:00.000Z
+publishedAt: "2026-07-07"
 topic: Legislation
 heroImage: /uploads/0ee63946-ea53-49b5-9635-170da9c81ee7.webp
 ---

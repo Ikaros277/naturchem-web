@@ -4,7 +4,7 @@ title: "Messung chemischer Stoffe in der Luft am Arbeitsplatz: Was bestimmt den 
 slug: mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni
 excerpt: "Den Messumfang chemischer Stoffe in der Luft am Arbeitsplatz kann man nicht allein aus dem Namen des Betriebs oder aus einer allgemeinen Anfrage „chemische Stoffe messen“ ableiten."
 author: Ing. František Hezina
-publishedAt: 2026-03-05T00:00:00.000Z
+publishedAt: "2026-03-05"
 topic: Work environment
 ---
 

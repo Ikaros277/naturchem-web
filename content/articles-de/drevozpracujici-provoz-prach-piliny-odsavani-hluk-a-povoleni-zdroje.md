@@ -4,7 +4,7 @@ title: "Holzverarbeitungsbetrieb: Staub, Sägemehl, Absaugung, Lärm und Genehmi
 slug: drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje
 excerpt: "Holzverarbeitungsbetriebe sind typische Quellen für Staub, Sägemehl, Lärm und Emissionen von Schwebstaub (TSP). Beim Schneiden, Hobeln, Schleifen, Fräsen oder bei der Herstellung von Hackschnitzeln und Pellets entsteht Holzstaub, der sowohl aus Sicht der Arbeitsumgebung als auch aus Sicht des Luftschutzes von Bedeutung ist. Bei größeren Betrieben müssen Absaugung, Filterausrüstung, Abgase, Emissionsmessung, Lärmbelastung und eine mögliche Betriebsgenehmigung für die Quelle berücksichtigt werden."
 author: Ing. František Hezina
-publishedAt: 2026-04-14T00:00:00.000Z
+publishedAt: "2026-04-14"
 topic: Noise
 ---## Warum ein holzverarbeitender Betrieb staub- und lärmempfindlich ist
 

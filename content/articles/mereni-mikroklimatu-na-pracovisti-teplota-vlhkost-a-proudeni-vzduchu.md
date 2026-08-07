@@ -7,7 +7,7 @@ excerpt: Měření mikroklimatu se řeší tam, kde zaměstnanci pociťují hork
   podmínky tak, aby bylo možné objektivně posoudit pracovní prostředí, tepelnou
   nebo chladovou zátěž a vhodnost technických či organizačních opatření.
 author: Ing. František Hezina
-publishedAt: 2026-06-16
+publishedAt: "2026-06-16"
 heroImage: /uploads/chatgpt-image-16.-6.-2026-06_56_15.webp
 ---
 ## Kdy se mikroklima na pracovišti řeší

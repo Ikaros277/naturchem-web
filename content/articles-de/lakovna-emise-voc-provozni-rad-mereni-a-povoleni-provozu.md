@@ -4,7 +4,7 @@ title: "Lackiererei: Emissionen, VOC, Betriebsvorschriften, Messung und Betriebs
 slug: lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu
 excerpt: "Aus Sicht des Luftschutzes ist eine Lackiererei oft eine erhebliche Quelle von VOC-Emissionen – flüchtigen organischen Verbindungen.“ Der Betreiber muss sich nicht nur mit dem Lackieren selbst befassen, sondern auch mit dem Verbrauch organischer Lösungsmittel, der Filterung, den Abgasen, der VOC-Bilanz, den Betriebsaufzeichnungen, der Emissionsmessung und gegebenenfalls einer Betriebserlaubnis. Eine ordnungsgemäß erstellte Dokumentation und Aufzeichnung trägt dazu bei, Probleme bei Inspektionen durch die tschechische Umweltinspektion oder die regionale Behörde zu vermeiden."
 author: NATURCHEM
-publishedAt: 2026-03-20T00:00:00.000Z
+publishedAt: "2026-03-20"
 topic: EIA and permitting
 ---
 ## Paint shop: emissions, VOC, operating rules, measurement and operating permit

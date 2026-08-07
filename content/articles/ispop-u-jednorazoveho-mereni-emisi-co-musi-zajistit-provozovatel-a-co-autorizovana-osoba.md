@@ -9,7 +9,7 @@ excerpt: Od roku 2026 se u jednorázového měření emisí řeší v ISPOP neje
   podcení, může vzniknout problém s uznatelností měření pro splnění zákonné
   povinnosti.
 author: Ing. František Hezina
-publishedAt: 2026-05-26
+publishedAt: "2026-05-26"
 topic: Emise
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_30_49.webp
 ---

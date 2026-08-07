@@ -3,7 +3,7 @@ title: 'Emise vs. imise: proč provozovatel řeší obojí?'
 slug: emise-vs-imise-proc-provozovatel-resi-oboji
 excerpt: 'Emise a imise jsou dva rozdílné pohledy na znečišťování ovzduší. Emise popisují, co zdroj vypouští výduchem nebo z technologické plochy. Imise popisují, jaká koncentrace znečišťující látky je následně v okolním ovzduší, tedy tam, kde působí na lidi a životní prostředí. Provozovatel proto často musí řešit obojí: splnění emisních limitů na zdroji i příspěvek záměru k imisní situaci v lokalitě.'
 author: Ing. František Hezina
-publishedAt: 2026-05-03T00:00:00.000Z
+publishedAt: "2026-05-03"
 topic: Emise
 ---
 ## Proč je rozdíl mezi emisemi a imisemi důležitý

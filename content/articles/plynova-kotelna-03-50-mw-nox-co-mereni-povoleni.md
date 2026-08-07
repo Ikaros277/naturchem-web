@@ -8,7 +8,7 @@ excerpt: U plynové kotelny nestačí znát pouze počet kotlů a jejich výkon 
   Provozovatel by měl včas ověřit, zda potřebuje povolení provozu, měření emisí,
   změnu provozní evidence nebo úpravu stávajícího povolení.
 author: Ing. František Hezina
-publishedAt: 2026-07-04
+publishedAt: "2026-07-04"
 topic: Emise
 heroImage: /uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp
 ---

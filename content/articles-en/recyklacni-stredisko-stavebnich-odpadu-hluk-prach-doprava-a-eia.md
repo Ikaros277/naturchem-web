@@ -3,7 +3,7 @@ title: 'Construction waste recycling centre: noise, dust, traffic, and EIA'
 slug: recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia
 excerpt: 'A construction waste recycling centre can be a sensitive project from a permitting perspective, even though its purpose is material recovery of waste. Crushing, sorting, loading, and transport generate noise, dust, and increased traffic load, which must be assessed already at the project preparation stage. In practice, a noise study, dispersion study, operational dust control measures, and verification of whether the project is subject to EIA or screening procedure are often addressed.'
 author: Ing. František Hezina
-publishedAt: 2026-04-03T00:00:00.000Z
+publishedAt: "2026-04-03"
 topic: Noise
 ---
 ## Why a recycling centre cannot be described only as "waste recovery"

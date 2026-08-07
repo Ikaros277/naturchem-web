@@ -3,7 +3,7 @@ title: 'Minimum distance requirement: a new tool for protecting air quality from
 slug: institut-minimalni-vzdalenosti-ochrana-ovzdusi
 excerpt: 'The amendment to the Air Protection Act introduces a minimum distance requirement for selected stationary sources that may significantly affect the surroundings through dust or odour. The new rules are important especially when siting new sources, when making changes in spatial planning, and when preparing expert reports and operating rules.'
 author: Naturchem s.r.o.
-publishedAt: 2025-11-15T00:00:00.000Z
+publishedAt: "2025-11-15"
 topic: Legislation
 ---
 ## What is the minimum distance requirement

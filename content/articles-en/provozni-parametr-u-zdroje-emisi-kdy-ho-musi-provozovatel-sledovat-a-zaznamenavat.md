@@ -3,7 +3,7 @@ title: 'Operating parameter at an emission source: when must the operator monito
 slug: provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat
 excerpt: 'An operating parameter serves to demonstrate on an ongoing basis that emission reduction technology or emission reduction measures are actually working. It may involve temperature, pressure, flow rate, filter pressure drop, sorbent dosing, or wetting operation. The operator should verify whether this obligation applies to their source, whether the parameter is stated in the operating permit, and whether records are kept in a form that will withstand inspection.'
 author: Ing. František Hezina
-publishedAt: 2026-05-12T00:00:00.000Z
+publishedAt: "2026-05-12"
 topic: Emissions
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_23_43.webp
 ---

@@ -3,7 +3,7 @@ title: 'New Ministry of the Environment methodological guidance on sources requi
 slug: nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat
 excerpt: 'The amendment to the Air Protection Act and related methodological guidance from the Ministry of the Environment have raised a new practical question: which sources must be additionally permitted or brought into compliance with new requirements? The topic concerns especially sources that were previously only mentioned in a permit, were treated as related activity, or newly fall under Annex No. 2 to the Air Protection Act. The operator should check mainly the operative part of the permit, source classification, capacity, deadlines, need for an expert opinion, dispersion studies, and operating conditions.'
 author: Ing. František Hezina
-publishedAt: 2026-05-14T00:00:00.000Z
+publishedAt: "2026-05-14"
 topic: Emissions
 ---
 ## Why the topic of sources requiring additional permitting is being addressed

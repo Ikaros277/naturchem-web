@@ -4,7 +4,7 @@ slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity
 excerpt: |
   Prach na pracovišti není jen viditelný nepořádek ve vzduchu nebo na podlaze. Z hlediska ochrany zdraví zaměstnanců je důležité, jaký prach vzniká, jak velké částice obsahuje a zda je v něm přítomen například krystalický oxid křemičitý. Jinak se hodnotí celkový prach, jinak respirabilní frakce a jinak prach s fibrogenním účinkem, který může pronikat hluboko do plic.
 author: Ing. František Hezina
-publishedAt: 2026-02-24T00:00:00.000Z
+publishedAt: "2026-02-24"
 topic: Pracovní prostředí
 ---
 ## Proč se prach na pracovišti musí hodnotit odborně

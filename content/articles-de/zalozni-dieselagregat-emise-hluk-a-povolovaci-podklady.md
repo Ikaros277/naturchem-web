@@ -4,7 +4,7 @@ title: "Backup-Dieselgenerator: Emissionen, Lärm und Genehmigungsunterlagen"
 slug: zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady
 excerpt: "Ein Backup-Dieselgenerator kommt in der Praxis an Industriestandorten, Wasserwerken, Krankenhäusern, Rechenzentren, Bürogebäuden, Logistikzentren oder Technologiebetrieben zum Einsatz, wo die Stromversorgung bei Stromausfällen sichergestellt werden muss.“ Auf den ersten Blick mag es sich um Geräte handeln, die nur ausnahmsweise laufen. Für die Genehmigung reicht jedoch die Angabe, dass es sich um eine „Backup-Quelle“ handelt, nicht aus. Nennleistung, thermische Aufnahme, Kraftstoff, Betriebsstunden, Abgasplatzierung, Lärm und örtliche Gegebenheiten entscheiden."
 author: Ing. František Hezina
-publishedAt: 2026-03-30T00:00:00.000Z
+publishedAt: "2026-03-30"
 topic: Noise
 ---Ein Dieselgenerator kann aus mehreren Perspektiven gleichzeitig betrachtet werden: als stationäre Verbrennungsquelle im Sinne des Luftschutzgesetzes, als Lärmquelle im Sinne der Hygienevorschriften und als technisches Gerät, das in der Projektdokumentation korrekt platziert werden muss. Bei größeren Quellen oder sensiblen Standorten kann auch eine Ausbreitungsstudie oder Lärmstudie erforderlich sein.
 

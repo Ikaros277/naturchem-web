@@ -11,7 +11,7 @@ excerpt: Jednotné environmentální stanovisko, zkráceně JES, má soustředit
   nedostatečně popsané technologie, dopravy, hluku, ovzduší, vod, odpadů, ZPF,
   přírody a návaznosti na EIA.
 author: Ing. František Hezina
-publishedAt: 2026-07-16
+publishedAt: "2026-07-16"
 topic: Legislativa
 heroImage: /uploads/chatgpt-image-16.-7.-2026-09_47_59.webp
 ---

@@ -4,7 +4,7 @@ title: "Arbeitsplatzstaub: Gesamtstaub, alveolengängige Fraktion und Siliziumdi
 slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity
 excerpt: "Arbeitsplatzstaub ist nicht nur sichtbare Verschmutzung in der Luft oder auf dem Boden. Für den Gesundheitsschutz der Beschäftigten ist entscheidend, welcher Staub entsteht und welche Partikelgrößen er enthält."
 author: Ing. František Hezina
-publishedAt: 2026-02-24T00:00:00.000Z
+publishedAt: "2026-02-24"
 topic: Work environment
 ---
 

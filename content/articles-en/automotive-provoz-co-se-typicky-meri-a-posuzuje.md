@@ -3,7 +3,7 @@ title: "Automotive operations: what is typically measured and assessed?"
 slug: automotive-provoz-co-se-typicky-meri-a-posuzuje
 excerpt: Automotive operations combine many technologies that can affect the work environment, air emissions, and noise in the surroundings. Painting, bonding, component covering, PUR foams, flame lamination, welding, chemical substances in workplace air, VOC, dust, metals, and technological noise are typically addressed. The correct scope of measurement always follows the specific technology, materials used, safety data sheets, exhausts, extraction, operating time, and requirements from the regional public health authority, regional authority, or Czech Environmental Inspectorate (CEI).
 author: Ing. František Hezina
-publishedAt: 2026-04-22T00:00:00.000Z
+publishedAt: "2026-04-22"
 topic: Emissions
 ---
 ## Automotive is not one technology

@@ -3,7 +3,7 @@ title: "Berufskategorisierung nach Technologieänderung: wann eine neue Messung 
 slug: kategorizace-praci-po-zmene-technologie-nove-mereni
 excerpt: "Die Berufskategorisierung muss den tatsächlichen Bedingungen am Arbeitsplatz entsprechen. Wenn ein Unternehmen Technologie, Arbeitsverfahren, verwendete chemische Stoffe, Schichtmodell, Lüftung oder die Arbeitszeit der Mitarbeiter an einer Expositionsquelle ändert, sind alte Messungen möglicherweise nicht mehr verwendbar. Das bedeutet nicht immer, alles erneut zu messen. Es bedeutet aber, die ursprünglichen Unterlagen mit dem neuen Betrieb zu vergleichen und zu prüfen, ob die Berufskategorisierung noch der Realität entspricht."
 author: Ing. František Hezina
-publishedAt: 2026-06-23T00:00:00.000Z
+publishedAt: "2026-06-23"
 topic: Work environment
 heroImage: /uploads/chatgpt-image-23.-6.-2026-12_42_59.webp
 ---

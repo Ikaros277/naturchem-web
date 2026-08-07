@@ -4,7 +4,7 @@ title: Welche Unterlagen benötigen Sie, um einen Industriebetrieb aus umweltrec
 slug: jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi
 excerpt: „Die Genehmigung eines Industriebetriebs aus Umweltgesichtspunkten betrifft in der Regel nicht nur einen Bereich. Abhängig von der Art des Projekts kann es erforderlich sein, Luftqualität, Lärm, Abfall, Wasser, UVP, das einheitliche Umweltgutachten, Betriebsvorschriften, Gutachten und Ausbreitungsstudien zu bewerten. „Für Investoren und Planer ist es wichtig, die Dokumentation rechtzeitig zu erstellen, denn Fehler bei Kapazitäten, Abgasen, Verkehr oder Betriebsführung fallen oft erst im Verfahren vor den Behörden auf.“
 author: Ing. František Hezina
-publishedAt: 2026-04-29T00:00:00.000Z
+publishedAt: "2026-04-29"
 topic: EIA and permitting
 ---
 ## Why it is appropriate to address the environment already in the project

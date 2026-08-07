@@ -8,7 +8,7 @@ excerpt: Nedostatečné osvětlení na pracovišti se často začne řešit až 
   vědět, co se při měření osvětlení skutečně hodnotí, kdy má smysl měřit
   současný stav a kdy je vhodnější nejprve upravit osvětlení nebo projekt.
 author: Ing. František Hezina
-publishedAt: 2026-06-04
+publishedAt: "2026-06-04"
 topic: Pracovní prostředí
 heroImage: /uploads/chatgpt-image-15.-6.-2026-12_22_27.webp
 ---

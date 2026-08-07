@@ -8,7 +8,7 @@ excerpt: Protokol z měření osvětlení bývá potřeba při kolaudaci, změn�
   odpovídá účelu místnosti, zrakové náročnosti práce, rozmístění pracovních míst
   a požadavkům právních předpisů a technických norem.
 author: Ing. František Hezina
-publishedAt: 2026-06-13
+publishedAt: "2026-06-13"
 topic: Pracovní prostředí
 heroImage: /uploads/chatgpt-image-15.-6.-2026-12_14_55.webp
 ---

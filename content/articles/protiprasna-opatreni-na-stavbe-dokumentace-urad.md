@@ -8,7 +8,7 @@ excerpt: Prašnost ze stavby, demolice, zemních prací nebo dopravy po staveni�
   řeší v EIA, JES, rozptylové studii nebo stavebním řízení a jak připravit
   podklady tak, aby byly použitelné pro povolení i následnou kontrolu.
 author: Ing. František Hezina
-publishedAt: 2026-07-02
+publishedAt: "2026-07-02"
 topic: Legislativa
 heroImage: /uploads/chatgpt-image-2.-7.-2026-09_53_57.webp
 ---

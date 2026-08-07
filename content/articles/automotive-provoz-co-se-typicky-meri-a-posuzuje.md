@@ -9,7 +9,7 @@ excerpt: Automobilové provozy kombinují řadu technologií, které mohou mít 
   bezpečnostních listů, výduchů, odsávání, provozní doby a požadavků KHS,
   krajského úřadu nebo ČIŽP.
 author: Ing. František Hezina
-publishedAt: 2026-04-22T00:00:00.000Z
+publishedAt: "2026-04-22"
 topic: Emise
 ---
 ## Automobilová výroba není jedna technologie

@@ -9,7 +9,7 @@ excerpt: Projekt ARAMIS přináší nové odborné podklady pro hodnocení kvali
   recyklačních linek, skleníkových plynů a posuzování významnosti zdrojů podle
   zákona o ochraně ovzduší.
 author: Ing. František Hezina
-publishedAt: 2026-06-14
+publishedAt: "2026-06-14"
 topic: Legislativa
 heroImage: /uploads/chatgpt-image-16.-6.-2026-12_34_52.webp
 ---

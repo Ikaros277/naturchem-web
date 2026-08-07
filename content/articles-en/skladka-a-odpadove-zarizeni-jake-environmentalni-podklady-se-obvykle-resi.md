@@ -3,7 +3,7 @@ title: 'Landfill and waste facility: what environmental documentation is usually
 slug: skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi
 excerpt: 'Landfills and waste facilities are among projects where not only waste management itself is usually addressed. Capacities, instantaneous capacity, waste types, operating rules, noise, air, water, traffic, EIA, and for larger facilities also IPPC are important. Quality preparation of documentation helps prevent problems arising only in proceedings before the regional authority, building authority, Regional Public Health Authority (RHA), Czech Environmental Inspectorate (CEI), or in public comments.'
 author: Ing. František Hezina
-publishedAt: 2026-04-09T00:00:00.000Z
+publishedAt: "2026-04-09"
 topic: Emissions
 ---
 ## Why a waste list alone is not enough for a waste facility

@@ -3,7 +3,7 @@ title: "Gaskesselanlage 0,3 bis 50 MW: Was bei NOx, CO, Messung und Genehmigung 
 slug: plynova-kotelna-03-50-mw-nox-co-mereni-povoleni
 excerpt: Bei einer Gaskesselanlage reicht es nicht, nur die Anzahl der Kessel und ihre Leistung in kW zu kennen. Für Pflichten nach dem Luftschutz ist vor allem der **gesamte Nennwärmeinput** entscheidend, dazu Brennstoff, Kesselanzahl, gemeinsamer Schornstein, Betriebsstunden und ob es sich um eine neue Quelle, einen Kesseltausch oder eine Änderung einer bestehenden Kesselanlage handelt. Der Betreiber sollte rechtzeitig prüfen, ob Betriebsgenehmigung, Emissionsmessung, Änderung der Betriebsaufzeichnungen oder Anpassung der bestehenden Genehmigung erforderlich ist.
 author: Ing. František Hezina
-publishedAt: 2026-07-04
+publishedAt: "2026-07-04"
 topic: Emissions
 heroImage: /uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp
 ---

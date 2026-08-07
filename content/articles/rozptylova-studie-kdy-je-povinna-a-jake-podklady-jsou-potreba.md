@@ -3,7 +3,7 @@ title: 'Rozptylová studie: kdy je povinná a jaké podklady jsou potřeba?'
 slug: rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba
 excerpt: 'Rozptylová studie hodnotí, jak se emise ze stacionárního zdroje, dopravy nebo jiného záměru projeví v kvalitě ovzduší v okolí. V praxi se řeší zejména při povolování nových zdrojů, změnách provozu, navýšení kapacity, významné související dopravě nebo v řízeních, kde krajský úřad potřebuje posoudit imisní příspěvky záměru.'
 author: NATURCHEM
-publishedAt: 2025-06-25T00:00:00.000Z
+publishedAt: "2025-06-25"
 topic: Rozptylové studie
 ---
 ## K čemu slouží rozptylová studie

@@ -4,7 +4,7 @@ title: "Luftverschmutzungsgebühren: Wie Messung, Emissionsberechnung und Betrie
 slug: poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence
 excerpt: Eine Gebührenrückgabe im Flugplatz entsteht nicht von alleine. Grundlage hierfür sind Betriebsaufzeichnungen, Emissionsmessungen, Emissionsberechnungen, Kraftstoff- und Rohstoffverbräuche, Betriebsstunden sowie die in der Betriebserlaubnis genannten Daten. Wenn diese Eingaben nicht aufeinander abgestimmt sind, kann es passieren, dass der Betreiber einen Fehler in der Emissionsbilanz, den zusammenfassenden Betriebsaufzeichnungen und der Gebührenrückerstattung selbst macht.
 author: Ing. František Hezina
-publishedAt: 2026-06-15
+publishedAt: "2026-06-15"
 topic: Legislation
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_57_05.webp
 ---## Warum Gebühren zusammen mit Aufzeichnungen und Messungen berücksichtigt werden sollten

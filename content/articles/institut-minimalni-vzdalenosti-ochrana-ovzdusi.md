@@ -3,7 +3,7 @@ title: 'Institut minimální vzdálenosti: nový nástroj ochrany ovzduší pře
 slug: institut-minimalni-vzdalenosti-ochrana-ovzdusi
 excerpt: 'Novela zákona o ochraně ovzduší zavádí institut minimální vzdálenosti pro vybrané stacionární zdroje, které mohou významně působit prašností nebo zápachem. Nová pravidla jsou důležitá zejména při umisťování nových zdrojů, při změnách v územním plánování a při přípravě odborných posudků a provozních řádů.'
 author: Naturchem s.r.o.
-publishedAt: 2025-11-15T00:00:00.000Z
+publishedAt: "2025-11-15"
 topic: Legislativa
 ---
 ## Co je institut minimální vzdálenosti

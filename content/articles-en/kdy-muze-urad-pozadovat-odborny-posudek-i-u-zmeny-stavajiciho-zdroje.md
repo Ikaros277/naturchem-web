@@ -3,8 +3,8 @@ title: When can the authority require an expert opinion even for a change to an 
 slug: kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje
 excerpt: 'An expert opinion under the Air Protection Act is not addressed only for new sources. In some cases it must also be submitted when changing an existing listed stationary source, especially if designed output, capacity, or emissions increase, or if an operating technical condition replacing a specific emission limit is being set. The operator should therefore before every change of technology, capacity, fuel, exhaust, or filtration verify whether it is a change that requires expert assessment by an authorised person.'
 author: Ing. František Hezina
-publishedAt: 2026-05-20T00:00:00.000Z
-updatedAt: 2026-05-21T00:00:00.000Z
+publishedAt: "2026-05-20"
+updatedAt: "2026-05-21"
 topic: EIA and permitting
 ---
 ## Why an expert opinion is addressed even for source changes

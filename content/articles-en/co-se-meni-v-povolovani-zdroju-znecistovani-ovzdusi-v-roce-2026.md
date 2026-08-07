@@ -3,7 +3,7 @@ title: What is changing in the permitting of air pollution sources in 2026?
 slug: co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026
 excerpt: '2026 is important for air protection mainly because of the practical impact of the amendment to the Air Protection Act No. 42/2025 Coll. and related changes to Decree No. 415/2012 Coll. Operators of listed stationary sources must pay attention to changes in operating permits, operating parameters, notification of one-off emission measurement, backup sources, fees, capacity aggregation, and the new code 12.1 for handling bulk materials. The changes are not merely formal — they can affect expert opinions, dispersion studies, operating rules, records, and communication with the regional authority or the Czech Environmental Inspectorate (CEI).'
 author: Ing. František Hezina
-publishedAt: 2026-05-10T00:00:00.000Z
+publishedAt: "2026-05-10"
 topic: Emissions
 ---
 ## 2026 as the practical impact of the air protection amendment

@@ -4,7 +4,7 @@ slug: mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni
 excerpt: |
   The scope of measurement of chemical substances in workplace air cannot be determined from the name of the operation alone or from a general request to "measure chemicals". What matters is the technology used, safety data sheets, work procedure, exposure duration, ventilation method, PEL and NPK-P limit values, and whether sampling should be personal or stationary. Properly designed measurement must answer the question of what the employee is actually exposed to during a representative shift.
 author: Ing. František Hezina
-publishedAt: 2026-03-05T00:00:00.000Z
+publishedAt: "2026-03-05"
 topic: Work environment
 ---
 ## Why a general brief to "measure chemicals" is not enough

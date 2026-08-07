@@ -4,7 +4,7 @@ title: Was ist für eine schnelle Projektbewertung einzusenden?
 slug: co-poslat-pro-rychle-posouzeni-zameru
 excerpt: „Eine schnelle Projektbewertung ist nur möglich, wenn grundlegende Informationen zu Gebäude, Technik, Kapazität, Abgasen, Betriebsstunden, Transport und den behördlichen Anforderungen vorliegen.“ Eine vollständige Projektdokumentation ist nicht immer sofort erforderlich, aber anhand der Materialien muss festgestellt werden können, ob eine Messung, eine Lärmstudie, eine Ausbreitungsstudie, ein Gutachten, eine UVP, JES, Betriebsvorschriften oder andere Umweltdokumentationen erforderlich sind. „Je präziser die Eingaben, die Sie zu Beginn senden, desto schneller kann der richtige Ansatz vorgeschlagen werden.“
 author: Ing. František Hezina
-publishedAt: 2026-04-30T00:00:00.000Z
+publishedAt: "2026-04-30"
 topic: Emissions
 ---
 ## Why it makes sense to send materials right at the start

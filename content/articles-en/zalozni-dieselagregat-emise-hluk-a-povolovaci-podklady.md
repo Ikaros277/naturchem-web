@@ -3,7 +3,7 @@ title: 'Backup diesel generator: emissions, noise, and permitting documentation'
 slug: zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady
 excerpt: 'A backup diesel generator appears in practice at industrial sites, waterworks, hospitals, data centres, office buildings, logistics centres, or technological operations where power supply must be secured during electricity outage. At first glance it may be equipment that runs only exceptionally. For permitting, however, it is not enough to state it is a "backup source". Rated output, thermal input, fuel, operating hours, exhaust placement, noise, and local conditions decide.'
 author: Ing. František Hezina
-publishedAt: 2026-03-30T00:00:00.000Z
+publishedAt: "2026-03-30"
 topic: Noise
 ---
 A diesel generator may be addressed simultaneously from several perspectives: as a combustion stationary source under the Air Protection Act, as a noise source under hygiene regulations, and as technical equipment that must be correctly placed in project documentation. For larger sources or sensitive locations a dispersion study or noise study may also be required.

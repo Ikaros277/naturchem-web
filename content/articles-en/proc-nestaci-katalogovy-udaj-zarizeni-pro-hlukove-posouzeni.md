@@ -3,7 +3,7 @@ title: Why is an equipment catalogue value not enough for noise assessment?
 slug: proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni
 excerpt: 'A catalogue value for equipment noise is a useful orientational input, but on its own it usually is not enough for professional noise assessment. What matters is whether the manufacturer states sound power level or sound pressure level, at what distance the value was determined, under what operating regime, with what directivity, and with what uncertainty. For industrial operations this is essential especially when equipment runs at night or is located close to residential development.'
 author: Ing. František Hezina
-publishedAt: 2026-04-30T00:00:00.000Z
+publishedAt: "2026-04-30"
 topic: Noise
 ---
 ## Why a catalogue value is only the beginning

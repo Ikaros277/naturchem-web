@@ -3,7 +3,7 @@ title: 'Expert opinion under the Air Protection Act: when is it needed and what 
 slug: odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat
 excerpt: 'An expert opinion under the Air Protection Act is an important document when permitting new stationary sources, changing operation, and communicating with the regional authority. It is typically addressed for sources listed in Annex No. 2 to the Air Protection Act, for example boiler plants, paint shops, combustion equipment, technological lines, or other industrial emission sources.'
 author: NATURCHEM
-publishedAt: 2025-07-11T00:00:00.000Z
+publishedAt: "2025-07-11"
 topic: EIA and permitting
 ---
 ## When an expert opinion under the Air Protection Act is addressed

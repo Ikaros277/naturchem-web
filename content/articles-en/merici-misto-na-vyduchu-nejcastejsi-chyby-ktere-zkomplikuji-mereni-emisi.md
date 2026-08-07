@@ -3,7 +3,7 @@ title: "Measurement location on exhaust: most common mistakes that complicate em
 slug: merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi
 excerpt: Emission measurement can be complicated by poorly designed exhaust, missing measurement ports, short straight duct sections, turbulence, poor access or unsafe working conditions. The operator should address the measurement location already when designing technology, replacing filters, modifying the exhaust or preparing authorised emission measurement.
 author: Ing. František Hezina
-publishedAt: 2026-06-01
+publishedAt: "2026-06-01"
 topic: Emissions
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_37_51.webp
 ---

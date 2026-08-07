@@ -3,7 +3,7 @@ title: 'Noise from heat pumps and HVAC units: what to address before building co
 slug: hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci
 excerpt: 'Heat pumps, outdoor air-conditioning units, roof-mounted HVAC units, fans and chillers are among the common noise sources addressed before building completion and after the building is put into operation. The problem usually arises not only from the noise level of the equipment itself, but also from its location, night-time operation, reflections from façades, simultaneous operation of several units, and distance to the nearest protected areas.'
 author: Ing. František Hezina
-publishedAt: 2025-12-03T00:00:00.000Z
+publishedAt: "2025-12-03"
 topic: Noise
 ---
 ## Why address noise already at the design stage

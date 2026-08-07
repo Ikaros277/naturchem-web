@@ -4,8 +4,8 @@ title: Wann kann die Behörde auch für eine Änderung einer bestehenden Quelle 
 slug: kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje
 excerpt: „Ein Gutachten nach dem Luftschutzgesetz ist nicht nur für neue Quellen vorgesehen. In manchen Fällen muss sie auch bei der Änderung einer bestehenden gelisteten stationären Quelle eingereicht werden, insbesondere wenn die geplante Leistung, Kapazität oder Emissionen steigen oder wenn eine betriebstechnische Bedingung festgelegt wird, die einen bestimmten Emissionsgrenzwert ersetzt. Der Betreiber sollte daher vor jeder Änderung von Technologie, Kapazität, Kraftstoff, Abgas oder Filterung prüfen, ob es sich um eine Änderung handelt, die einer sachverständigen Beurteilung durch eine autorisierte Person bedarf.“
 author: Ing. František Hezina
-publishedAt: 2026-05-20T00:00:00.000Z
-updatedAt: 2026-05-21T00:00:00.000Z
+publishedAt: "2026-05-20"
+updatedAt: "2026-05-21"
 topic: EIA and permitting
 ---
 ## Why an expert opinion is addressed even for source changes

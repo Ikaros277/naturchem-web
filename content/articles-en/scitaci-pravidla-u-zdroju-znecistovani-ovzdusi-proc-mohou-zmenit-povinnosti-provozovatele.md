@@ -3,7 +3,7 @@ title: 'Aggregation rules for air pollution sources: why can they change operato
 slug: scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele
 excerpt: 'Aggregation rules for air pollution sources determine whether multiple partial technologies are assessed for capacity separately or jointly. The outcome can change source classification under Annex 2 to the Air Protection Act, the obligation to hold an operating permit, expert opinion, dispersion study, emission measurement, or operating rules. Operators should therefore not assess only an individual machine, exhaust, or line in isolation, but the entire operational and technical whole.'
 author: Ing. František Hezina
-publishedAt: 2026-05-21T00:00:00.000Z
+publishedAt: "2026-05-21"
 topic: Emissions
 ---
 ## Why aggregation rules matter

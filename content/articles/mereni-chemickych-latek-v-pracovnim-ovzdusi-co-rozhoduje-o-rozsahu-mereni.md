@@ -4,7 +4,7 @@ slug: mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni
 excerpt: |
   Rozsah měření chemických látek v pracovním ovzduší nelze určit jen podle názvu provozu nebo obecného požadavku „změřit chemii“. Rozhoduje používaná technologie, bezpečnostní listy, pracovní postup, délka expozice, způsob větrání, limitní hodnoty PEL a NPK-P i to, zda má být odběr osobní nebo stacionární. Správně navržené měření musí odpovědět na otázku, čemu je zaměstnanec skutečně vystaven během reprezentativní směny.
 author: Ing. František Hezina
-publishedAt: 2026-03-05T00:00:00.000Z
+publishedAt: "2026-03-05"
 topic: Pracovní prostředí
 ---
 ## Proč nestačí obecné zadání „změřit chemii“

@@ -3,7 +3,7 @@ title: 'Sčítací pravidla u zdrojů znečišťování ovzduší: proč mohou z
 slug: scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele
 excerpt: 'Sčítací pravidla u zdrojů znečišťování ovzduší rozhodují o tom, zda se více dílčích technologií posuzuje z hlediska kapacity samostatně, nebo společně. Výsledek může změnit zařazení zdroje podle přílohy č. 2 zákona o ochraně ovzduší, povinnost mít povolení provozu, odborný posudek, rozptylovou studii, měření emisí nebo provozní řád. Provozovatel by proto neměl hodnotit jen jednotlivý stroj, výduch nebo linku izolovaně, ale celý provozní a technický celek.'
 author: Ing. František Hezina
-publishedAt: 2026-05-21T00:00:00.000Z
+publishedAt: "2026-05-21"
 topic: Emise
 ---
 ## Proč jsou sčítací pravidla důležitá

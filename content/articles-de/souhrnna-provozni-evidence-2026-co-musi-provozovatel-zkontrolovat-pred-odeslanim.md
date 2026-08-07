@@ -4,7 +4,7 @@ title: "Zusammenfassende Betriebsaufzeichnungen 2026: Was muss der Betreiber vor
 slug: souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim
 excerpt: "Zusammenfassende Betriebsaufzeichnungen sind nicht nur ein Verwaltungsformular in ISPOP. Die Daten im Bericht müssen mit der Betriebsgenehmigung, dem tatsächlichen Betrieb der Quelle, Emissionsmessungen, Emissionsberechnungen, Kraftstoff- und Rohstoffverbräuchen sowie etwaigen Gebührenpflichten übereinstimmen. „Fehler in den zusammenfassenden Betriebsaufzeichnungen können bei Inspektionen, Genehmigungsänderungen oder der Überprüfung der jährlichen Emissionen auftreten."
 author: Ing. František Hezina
-publishedAt: 2026-01-23T00:00:00.000Z
+publishedAt: "2026-01-23"
 topic: Legislation
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_12_13.webp
 ---## Warum sollte man zusammenfassende Betriebsaufzeichnungen nicht unterschätzen?

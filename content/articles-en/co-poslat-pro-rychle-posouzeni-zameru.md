@@ -3,7 +3,7 @@ title: What to send for a quick project assessment?
 slug: co-poslat-pro-rychle-posouzeni-zameru
 excerpt: 'A quick project assessment is only possible when basic information is available on the building, technology, capacity, exhausts, operating hours, transport, and the authority''s requirements. Complete project documentation is not always needed immediately, but the materials must make it possible to determine whether measurement, a noise study, a dispersion study, an expert opinion, EIA, JES, operating rules, or other environmental documentation will be required. The more precise the inputs you send at the outset, the faster the right approach can be proposed.'
 author: Ing. František Hezina
-publishedAt: 2026-04-30T00:00:00.000Z
+publishedAt: "2026-04-30"
 topic: Emissions
 ---
 ## Why it makes sense to send materials right at the start

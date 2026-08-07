@@ -8,7 +8,7 @@ excerpt: Integrované povolení se netýká každého průmyslového provozu. Ř
   o integrované prevenci, jaké má kapacity a zda nejde o změnu stávajícího
   zařízení, která vyžaduje změnu integrovaného povolení.
 author: Ing. František Hezina
-publishedAt: 2026-07-14
+publishedAt: "2026-07-14"
 topic: EIA a povolování
 heroImage: /uploads/chatgpt-image-14.-7.-2026-09_37_14.webp
 ---

@@ -3,7 +3,7 @@ title: "Air pollution fees: how measurement, emission calculation, and operating
 slug: poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence
 excerpt: A fee return in the air field does not arise on its own. It is based on operating records, emission measurement, emission calculations, fuel and raw material consumption, operating hours, and data stated in the operating permit. If these inputs are not aligned with each other, the operator may make a mistake in the emission balance, summary operating records, and the fee return itself.
 author: Ing. František Hezina
-publishedAt: 2026-06-15
+publishedAt: "2026-06-15"
 topic: Legislation
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_57_05.webp
 ---

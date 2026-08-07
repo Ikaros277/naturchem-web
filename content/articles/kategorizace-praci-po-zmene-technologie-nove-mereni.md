@@ -8,7 +8,7 @@ excerpt: Kategorizace prací musí odpovídat skutečným podmínkám na pracovi
   ale porovnat původní podklady s novým provozem a ověřit, zda kategorizace
   prací stále odpovídá realitě.
 author: Ing. František Hezina
-publishedAt: 2026-06-23
+publishedAt: "2026-06-23"
 topic: Pracovní prostředí
 heroImage: /uploads/chatgpt-image-23.-6.-2026-12_42_59.webp
 ---

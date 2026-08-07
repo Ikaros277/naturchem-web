@@ -3,7 +3,7 @@ title: "Materialdeponie im Betriebsgelände: Wann sind Genehmigung, Ausbreitungs
 slug: deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek
 excerpt: Die Lagerung von Schüttgütern im Betriebsgelände kann aus Sicht des Luftschutzes problematisch sein, auch wenn es sich nicht um einen Schornstein, Filter oder eine Produktionstechnologie handelt. Entscheidend sind, was gelagert wird, auf welcher Fläche, wie mit dem Material umgegangen wird, ob Staub entsteht und ob die Fläche tatsächlich in der Betriebsgenehmigung enthalten ist. Bei größeren oder staubenden Deponien können Betriebsgenehmigung, Ausbreitungsstudie, Gutachten oder Anpassung der Betriebsordnung erforderlich sein.
 author: Ing. František Hezina
-publishedAt: 2026-06-28
+publishedAt: "2026-06-28"
 topic: EIA and permitting
 heroImage: /uploads/chatgpt-image-2.-7.-2026-09_41_15.webp
 ---

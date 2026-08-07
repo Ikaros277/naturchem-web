@@ -4,7 +4,7 @@ title: "Automobilbetrieb: Was wird typischerweise gemessen und bewertet?"
 slug: automotive-provoz-co-se-typicky-meri-a-posuzuje
 excerpt: Automobilbetriebe kombinieren viele Technologien, die sich auf die Arbeitsumgebung, Luftemissionen und Lärm in der Umgebung auswirken können. Typischerweise werden Lackierung, Verklebung, Bauteilabdeckung, PUR-Schäume, Flammkaschierung, Schweißen, chemische Stoffe in der Luft am Arbeitsplatz, VOC, Staub, Metalle und technischer Lärm thematisiert. Der korrekte Messumfang richtet sich immer nach der spezifischen Technologie, den verwendeten Materialien, den Sicherheitsdatenblättern, den Abgasen, der Absaugung, der Betriebszeit und den Anforderungen der regionalen Gesundheitsbehörde, der regionalen Behörde oder der tschechischen Umweltinspektion (CEI).
 author: Ing. František Hezina
-publishedAt: 2026-04-22T00:00:00.000Z
+publishedAt: "2026-04-22"
 topic: Emissions
 ---## Automobil ist keine einzelne Technologie
 

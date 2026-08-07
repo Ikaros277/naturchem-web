@@ -3,7 +3,7 @@ title: 'Hluk z tepelných čerpadel a VZT jednotek: co řešit před kolaudací?
 slug: hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci
 excerpt: 'Tepelná čerpadla, venkovní jednotky klimatizací, střešní VZT jednotky, ventilátory a chladiče patří mezi časté zdroje hluku řešené před kolaudací i po uvedení stavby do provozu. Problém obvykle nevzniká jen samotnou hlučností zařízení, ale také jeho umístěním, nočním provozem, odrazy od fasád, souběhem více jednotek a vzdáleností k nejbližším chráněným prostorům.'
 author: Ing. František Hezina
-publishedAt: 2025-12-03T00:00:00.000Z
+publishedAt: "2025-12-03"
 topic: Hluk
 ---
 \## Proč řešit hluk už ve fázi projektu

@@ -3,7 +3,7 @@ title: 'Measurement location on exhaust: why it matters already in the project p
 slug: merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu
 excerpt: 'A measurement location on the exhaust is not just a technical detail for the laboratory. If authorised emission measurement is to be carried out in future, the exhaust must be accessible, safe and suitable for representative sampling. Poorly designed ductwork, short straight sections or an inaccessible stack can cause problems at building approval, operating permit or subsequent Czech Environmental Inspectorate inspection.'
 author: Ing. František Hezina
-publishedAt: 2026-05-05T00:00:00.000Z
+publishedAt: "2026-05-05"
 topic: Emissions
 ---
 ## Why to address the measurement location already when designing technology

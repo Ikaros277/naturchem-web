@@ -7,7 +7,7 @@ excerpt: Měření emisí může zkomplikovat nevhodně navržený výduch, chyb
   návrhu technologie, výměně filtru, úpravě výduchu nebo přípravě autorizovaného
   měření emisí.
 author: Ing. František Hezina
-publishedAt: 2026-06-01
+publishedAt: "2026-06-01"
 topic: Emise
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_37_51.webp
 ---

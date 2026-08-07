@@ -3,7 +3,7 @@ title: 'Designer vs. environmental consultant: when to involve an air, noise, an
 slug: projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia
 excerpt: 'For industrial and technical projects, resolving only the building and technology part is not enough. Already in an early phase, exhaust placement, noise sources, traffic routes, protective setbacks, and operating capacity may decide the outcome. An environmental consultant helps the designer verify what documentation will be needed for air, noise, EIA, JES, and authority communication so the project does not have to be reworked unnecessarily later.'
 author: Ing. František Hezina
-publishedAt: 2026-04-30T00:00:00.000Z
+publishedAt: "2026-04-30"
 topic: Noise
 ---
 

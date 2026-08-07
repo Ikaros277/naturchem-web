@@ -3,7 +3,7 @@ title: 'Dust control measures on construction sites: what documentation should c
 slug: protiprasna-opatreni-na-stavbe-dokumentace-urad
 excerpt: 'Dust from construction, demolition, earthworks, or traffic on the site can be a problem already at the permitting stage. The authority may require a specific and verifiable description of measures, not just a general sentence that dust will be limited. This article explains what documentation should contain, when measures are addressed in EIA, JES, dispersion study, or building procedure, and how to prepare supporting materials so they are usable for permitting and subsequent inspection.'
 author: Ing. František Hezina
-publishedAt: 2026-07-02T00:00:00.000Z
+publishedAt: "2026-07-02"
 topic: Legislation
 heroImage: /uploads/chatgpt-image-2.-7.-2026-09_53_57.webp
 ---

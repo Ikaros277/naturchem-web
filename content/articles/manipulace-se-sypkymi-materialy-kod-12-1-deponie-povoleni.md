@@ -11,7 +11,7 @@ excerpt: Plocha se zeminou, kamenivem, recyklátem, sutí nebo jiným sypkým
   druh materiálu, způsob manipulace, návaznost na jinou technologii a to, zda
   zdroj nespadá pod jiný kód přílohy č. 2.
 author: Ing. František Hezina
-publishedAt: 2026-06-24
+publishedAt: "2026-06-24"
 topic: Pracovní prostředí
 heroImage: /uploads/fcb8f524-381e-4c0a-baf5-3fe088f9d036.webp
 ---

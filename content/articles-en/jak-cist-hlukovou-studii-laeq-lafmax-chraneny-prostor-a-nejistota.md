@@ -3,7 +3,7 @@ title: 'How to read a noise study: LAeq, LAFmax, protected area and uncertainty'
 slug: jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota
 excerpt: 'A noise study or noise measurement report contains terms that may be difficult for the client to read: LAeq, LAFmax, day and night periods, protected outdoor area of buildings, or measurement uncertainty. Correct interpretation is important because not every high number automatically means limit exceedance.'
 author: Ing. František Hezina
-publishedAt: 2026-01-09T00:00:00.000Z
+publishedAt: "2026-01-09"
 topic: Noise
 ---
 ## Why it is not enough to look at just one number

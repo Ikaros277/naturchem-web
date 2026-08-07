@@ -7,7 +7,7 @@ excerpt: Stížnost sousedů nebo obava z překročení hlukových limitů čast
   ventilátoru, výduchu, kompresoru nebo provozního režimu může významně zlepšit
   výsledek následného měření.
 author: Ing. František Hezina
-publishedAt: 2026-07-22
+publishedAt: "2026-07-22"
 topic: Hluk
 heroImage: /uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp
 ---

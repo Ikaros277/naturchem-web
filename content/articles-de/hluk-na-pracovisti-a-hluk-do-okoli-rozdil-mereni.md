@@ -3,7 +3,7 @@ title: "Arbeitsplatzlärm und Umgebungslärm: warum das zwei verschiedene Messun
 slug: hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni
 excerpt: "Die Messung von Arbeitsplatzlärm und Umgebungslärm ist nicht dasselbe. Arbeitsplatzlärm wird wegen des Schutzes der Mitarbeiter, der Berufskategorisierung und der Anforderungen der KHS im Bereich Arbeitsumgebung behandelt. Umgebungslärm wird beurteilt, um die umliegende Bebauung, Wohngebäude und geschützte Bereiche zu schützen. Sie unterscheiden sich in Zweck, Messort, Methodik, Grenzwerten und Ergebnis. Wenn ein Unternehmen eine Messart durch die andere ersetzt, kann es zwar einen Bericht haben, aber nicht den, den die Behörde tatsächlich benötigt."
 author: NATURCHEM
-publishedAt: 2026-06-23T00:00:00.000Z
+publishedAt: "2026-06-23"
 topic: Noise
 heroImage: /uploads/chatgpt-image-23.-6.-2026-12_24_16.webp
 ---

@@ -4,7 +4,7 @@ title: "Emissionsfaktoren und Emissionsberechnung: Wann eine Berechnung ausreich
 slug: emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni
 excerpt: In manchen Fällen können Emissionen rechnerisch ermittelt werden, beispielsweise anhand eines Emissionsfaktors, einer Massenbilanz, spezifischer Produktionsemissionen oder Daten zum Kraftstoff-, Rohstoff- und Lösungsmittelverbrauch. Allerdings reicht die Berechnung nicht immer aus. Wenn für eine Quelle eine Verpflichtung zur autorisierten Emissionsmessung besteht oder die Einhaltung eines Emissionsgrenzwerts nachgewiesen werden muss, kann die Messung nicht einfach durch eine Näherungsberechnung ersetzt werden.
 author: Ing. František Hezina
-publishedAt: 2026-05-30
+publishedAt: "2026-05-30"
 topic: Emissions
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_47_15.webp
 ---## Warum es wichtig ist, Berechnung und Messung zu unterscheiden

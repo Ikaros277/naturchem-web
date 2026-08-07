@@ -3,7 +3,7 @@ title: 'Workplace noise and environmental noise: why these are two different mea
 slug: hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni
 excerpt: 'Workplace noise measurement and environmental noise measurement are not the same thing. Workplace noise is addressed to protect employees, for job categorisation and requirements of KHS in the area of work environment. Environmental noise is assessed to protect surrounding development, residential buildings and protected areas. They differ in purpose, measurement location, methodology, limits and output. If a company substitutes one type of measurement for another, it may have a report, but not one that the authority actually needs.'
 author: NATURCHEM
-publishedAt: 2026-06-23T00:00:00.000Z
+publishedAt: "2026-06-23"
 topic: Noise
 heroImage: /uploads/chatgpt-image-23.-6.-2026-12_24_16.webp
 ---

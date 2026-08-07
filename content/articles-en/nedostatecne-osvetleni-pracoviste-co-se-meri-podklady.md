@@ -3,7 +3,7 @@ title: "Insufficient workplace lighting: what is measured and what documentation
 slug: nedostatecne-osvetleni-pracoviste-co-se-meri-podklady
 excerpt: Insufficient workplace lighting is often addressed only when employees complain of eye strain, poor visibility, glare, or unsuitable working conditions. The same problem also arises at new workplaces, during reconstructions, building completion, or regional public health authority inspections. The operator should know what is actually assessed during lighting measurement, when it makes sense to measure the current state, and when it is better to adjust the lighting or design first.
 author: Ing. František Hezina
-publishedAt: 2026-06-04
+publishedAt: "2026-06-04"
 topic: Work environment
 heroImage: /uploads/chatgpt-image-15.-6.-2026-12_22_27.webp
 ---

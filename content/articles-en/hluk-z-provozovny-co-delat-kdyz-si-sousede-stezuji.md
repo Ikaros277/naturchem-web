@@ -3,7 +3,7 @@ title: 'Noise from an industrial facility: what to do when neighbours complain?'
 slug: hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji
 excerpt: 'Complaints about noise from an industrial facility should be addressed substantively and in good time. First, it is necessary to establish where the noise actually comes from, what operating regime the facility runs under, and whether the problem may occur during the day or at night. Only then does it make sense to propose noise measurement, technical measures, or further steps with the Regional Public Health Authority.'
 author: Ing. František Hezina
-publishedAt: 2025-07-31T00:00:00.000Z
+publishedAt: "2025-07-31"
 topic: Noise
 ---
 ## Why not to underestimate a noise complaint

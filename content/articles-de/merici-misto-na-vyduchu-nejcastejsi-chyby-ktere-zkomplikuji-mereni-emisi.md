@@ -4,7 +4,7 @@ title: "Messort am Abgas: Die häufigsten Fehler, die die Emissionsmessung ersch
 slug: merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi
 excerpt: Die Emissionsmessung kann durch schlecht konstruierte Abgase, fehlende Messanschlüsse, kurze gerade Kanalabschnitte, Turbulenzen, schlechten Zugang oder unsichere Arbeitsbedingungen erschwert werden. Der Betreiber sollte sich bereits bei der Konzeption der Technik, dem Austausch von Filtern, der Änderung der Abgasanlage oder der Vorbereitung einer genehmigten Emissionsmessung mit dem Messort befassen.
 author: Ing. František Hezina
-publishedAt: 2026-06-01
+publishedAt: "2026-06-01"
 topic: Emissions
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_37_51.webp
 ---

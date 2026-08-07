@@ -8,7 +8,7 @@ excerpt: Vibrace na pracovišti se nehodnotí jen obecně. Jinak se posuzují
   důležité nejprve rozlišit typ expozice, popsat pracovní postupy a stanovit
   skutečnou dobu práce se zdroji vibrací.
 author: Ing. František Hezina
-publishedAt: 2026-06-21
+publishedAt: "2026-06-21"
 topic: Pracovní prostředí
 heroImage: /uploads/chatgpt-image-21.-6.-2026-13_15_45.webp
 ---

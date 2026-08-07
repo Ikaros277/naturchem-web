@@ -3,7 +3,7 @@ title: "Kogenerationsanlage: Emissionen, Lärm, Messung und Betriebsgenehmigung"
 slug: kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu
 excerpt: Eine Kogenerationsanlage kann für den Betreiber eine vorteilhafte Quelle für Strom und Wärme sein, aus Sicht der Genehmigung ist sie jedoch nicht nur technische Anlage in der Kesselanlage oder im Container. Es sind Emissionen des Verbrennungsmotors, Abgasabführung, Emissionsmessung, Lärm in die Umgebung, Betriebsstunden, Brennstoff, Schornstein, Bezug zu bestehenden Quellen und Anforderungen der Behörden zu klären. Der Umfang der Unterlagen hängt vor allem von Wärmeinput, Standort, Brennstoff, Betriebsregime und Abstand zu geschützter Bebauung ab.
 author: Ing. František Hezina
-publishedAt: 2026-07-06
+publishedAt: "2026-07-06"
 topic: Emissions
 heroImage: /uploads/pxl_20260702_063317620.mp.webp
 ---

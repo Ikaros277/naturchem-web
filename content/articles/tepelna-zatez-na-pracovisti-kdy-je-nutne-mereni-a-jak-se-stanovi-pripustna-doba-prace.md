@@ -9,7 +9,7 @@ excerpt: Vysoká teplota ve výrobní hale, práce u pece nebo letní provoz na
   proudění vzduchu a délce směny.
 author: Ing. František Hezina
 status: published
-publishedAt: 2026-07-27
+publishedAt: "2026-07-27"
 topic: Pracovní prostředí
 heroImage: /uploads/chatgpt-image-23.-7.-2026-16_28_56.webp
 ---

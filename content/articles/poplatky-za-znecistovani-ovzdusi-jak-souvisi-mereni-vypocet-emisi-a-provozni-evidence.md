@@ -8,7 +8,7 @@ excerpt: Poplatkové přiznání v oblasti ovzduší nevzniká samo od sebe. Vyc
   nejsou vzájemně sladěné, může provozovatel udělat chybu v emisní bilanci,
   souhrnné provozní evidenci i samotném poplatkovém přiznání.
 author: Ing. František Hezina
-publishedAt: 2026-06-15
+publishedAt: "2026-06-15"
 topic: Legislativa
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_57_05.webp
 ---

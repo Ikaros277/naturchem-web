@@ -7,7 +7,7 @@ excerpt: Výměna výrobní linky, zvýšení kapacity, nový výduch nebo rozš
   Environmentální požadavky je proto vhodné řešit ještě před objednáním
   technologie a dokončením projektu.
 author: Ing. František Hezina
-publishedAt: 2026-07-20
+publishedAt: "2026-07-20"
 topic: EIA a povolování
 heroImage: /uploads/chatgpt-image-20.-7.-2026-11_08_54.webp
 ---

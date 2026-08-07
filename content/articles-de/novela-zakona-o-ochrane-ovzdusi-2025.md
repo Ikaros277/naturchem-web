@@ -4,7 +4,7 @@ title: "Novelle des Luftschutzgesetzes 2025: Was sich für Betreiber von Emissio
 slug: novela-zakona-o-ochrane-ovzdusi-2025
 excerpt: Die Änderung des Luftschutzgesetzes durch das Gesetz Nr. 42/2025 Slg. bringt eine Reihe praktischer Änderungen für Betreiber stationärer Emissionsquellen mit sich. Dabei geht es um Quellenklassifizierung, Aggregationsregeln, Inhalt von Betriebsgenehmigungen, Emissionsmessung, Überwachung von Betriebsparametern, Staub, Mindestabstände, Gebühren und Aufzeichnungen. Wir empfehlen den Betreibern zu prüfen, ob ihre Genehmigungen, Betriebsvorschriften, Messpflichten und Betriebsaufzeichnungen den aktuellen Anforderungen entsprechen.
 author: Naturchem s.r.o.
-publishedAt: 2025-04-29T00:00:00.000Z
+publishedAt: "2025-04-29"
 updatedAt: ""
 topic: Legislation
 heroImage: /uploads/chatgpt-image-jun-14-2026-08_02_34-pm.webp

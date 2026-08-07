@@ -3,7 +3,7 @@ title: 'Projektant vs. ekologický konzultant: kdy zapojit odborníka na ovzduš
 slug: projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia
 excerpt: 'U průmyslových a technických záměrů nestačí vyřešit pouze stavební a technologickou část projektu. Už v rané fázi může rozhodovat umístění výduchů, hlukových zdrojů, dopravních tras, ochranných odstupů a provozní kapacity. Ekologický konzultant pomáhá projektantovi ověřit, jaké podklady budou potřeba pro ovzduší, hluk, EIA, JES a komunikaci s úřady, aby se projekt nemusel později zbytečně přepracovávat.'
 author: Ing. František Hezina
-publishedAt: 2026-04-30T00:00:00.000Z
+publishedAt: "2026-04-30"
 topic: Hluk
 ---
 

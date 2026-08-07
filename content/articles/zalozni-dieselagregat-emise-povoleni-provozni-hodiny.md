@@ -9,7 +9,7 @@ excerpt: Záložní dieselagregát se často pořizuje pro případ výpadku ele
   jak se testuje, jaký má tepelný příkon, kde je výduch a co je uvedeno v
   povolení provozu.
 author: Ing. František Hezina
-publishedAt: 2026-07-13
+publishedAt: "2026-07-13"
 topic: Legislativa
 heroImage: /uploads/48b959ca-90d0-432e-b083-31f4ef5e4625.webp
 ---

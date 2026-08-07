@@ -3,7 +3,7 @@ title: What documentation do you need for permitting an industrial operation fro
 slug: jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi
 excerpt: 'Permitting an industrial operation from an environmental perspective usually does not address just one area. Depending on the type of project, it may be necessary to assess air quality, noise, waste, water, EIA, the unified environmental opinion, operating rules, expert reports and dispersion studies. For investors and designers it is essential to prepare documentation in good time, because errors in capacities, exhausts, traffic or operating regime often only become apparent during proceedings before the authorities.'
 author: Ing. František Hezina
-publishedAt: 2026-04-29T00:00:00.000Z
+publishedAt: "2026-04-29"
 topic: EIA and permitting
 ---
 ## Why it is appropriate to address the environment already in the project

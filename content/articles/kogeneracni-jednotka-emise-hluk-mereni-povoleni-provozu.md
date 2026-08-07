@@ -9,7 +9,7 @@ excerpt: Kogenerační jednotka může být pro provozovatele výhodným zdrojem
   tepelném příkonu, umístění, palivu, provozním režimu a vzdálenosti k chráněné
   zástavbě.
 author: Ing. František Hezina
-publishedAt: 2026-07-06
+publishedAt: "2026-07-06"
 topic: Emise
 heroImage: /uploads/pxl_20260702_063317620.mp.webp
 ---

@@ -10,6 +10,7 @@ author: Ing. František Hezina
 status: published
 publishedAt: 2026-08-20
 topic: Emise
+heroImage: /uploads/chatgpt-image-7.-8.-2026-14_33_50.webp
 ---
 ## Prášková lakovna je vyjmenovaný stacionární zdroj
 

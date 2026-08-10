@@ -3,9 +3,9 @@
 const czech = {
   slug: "sluzby/mereni-emisi",
   faqCategoryId: "emise",
-  title: "Měření emisí ze stacionárních zdrojů",
+  title: "Měření emisí",
   intro:
-    "Výzva úřadu nebo termín kontrolního měření? Změříme **emise** z výduchu a předáme akreditovaný **protokol** pro **povolení provozu**, ČIŽP, krajský úřad nebo ISPOP.",
+    "Výzva úřadu nebo termín kontrolního měření? Změříme **emise ze stacionárních zdrojů** a předáme akreditovaný **protokol** pro **povolení provozu**, ČIŽP, krajský úřad nebo ISPOP.",
   scope: [
     "Změříme NOx, CO, SO₂, O₂, TOC/VOC, TZL, HCl, kovy a další složky dle **povolení provozu** a zadání",
     "Posoudíme měřicí místo, výduch a soulad s provozním řádem",

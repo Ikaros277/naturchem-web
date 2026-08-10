@@ -2,10 +2,10 @@ import type { ServiceIconKey } from "@/lib/service-icons";
 
 export const accreditationPageMetadata = {
   title: {
-    absolute: "Akkreditierung, Zulassungen und Berufsqualifikationen | NATURCHEM"
+    absolute: "Akkreditierung und Zulassungen | NATURCHEM"
   },
   description:
-    "Übersicht über die NATURCHEM-Laborakkreditierung Nr. 1599, UVP-Genehmigungen, Ausbreitungsstudien, Gutachten und Treibhausgasemissionen. Dokumente zum Download verfügbar."
+    "Akkreditierungsumfang ČIA Nr. 1599, UVP-Genehmigungen, Ausbreitungsstudien, Gutachten und GHG. Dokumente zum Download."
 } as const;
 
 export const accreditationFacts = [

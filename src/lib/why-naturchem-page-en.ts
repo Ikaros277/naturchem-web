@@ -1,9 +1,9 @@
 export const whyNaturchemPageMetadata = {
   title: {
-    absolute: "Why NATURCHEM | Accredited measurements and expert outputs for authorities"
+    absolute: "Why choose NATURCHEM"
   },
   description:
-    "Why choose NATURCHEM: accredited testing laboratory No. 1599, EIA authorisations, experience with public health and environmental authorities, measurements and follow-up studies across the Czech Republic."
+    "Laboratory No. 1599, EIA authorisations and experience with authorities — measurements and studies in one team."
 } as const;
 
 export const whyNaturchemPageContent = {

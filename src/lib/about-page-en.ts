@@ -1,9 +1,9 @@
 export const aboutPageMetadata = {
   title: {
-    absolute: "About NATURCHEM – measurements, studies and permitting documentation"
+    absolute: "About NATURCHEM"
   },
   description:
-    "An accredited measurement and consulting company — a team under the professional supervision of Ing. František Hezina. Measurements, studies and permitting documentation for industry, investors and public authorities — more than 36 years of experience."
+    "Accredited laboratory under the professional supervision of Ing. František Hezina. Team, history and expertise — more than 36 years of practice."
 } as const;
 
 export const aboutPageContent = {

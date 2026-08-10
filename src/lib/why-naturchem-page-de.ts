@@ -1,9 +1,9 @@
 export const whyNaturchemPageMetadata = {
   title: {
-    absolute: "Warum NATURCHEM | Akkreditierte Messungen und Gutachten für Behörden"
+    absolute: "Warum NATURCHEM wählen"
   },
   description:
-    "Warum NATURCHEM: akkreditiertes Prüflabor Nr. 1599, UVP-Autorisierungen, Erfahrung mit Behörden, Messungen und Folgeleistungen in der gesamten Tschechischen Republik."
+    "Labor Nr. 1599, UVP-Autorisierungen und Behördenpraxis — Messungen und Studien aus einer Hand."
 } as const;
 
 export const whyNaturchemPageContent = {

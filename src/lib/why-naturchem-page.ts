@@ -1,9 +1,9 @@
 export const whyNaturchemPageMetadata = {
   title: {
-    absolute: "Proč NATURCHEM | Akreditovaná měření a odborné výstupy pro úřady"
+    absolute: "Proč zvolit NATURCHEM"
   },
   description:
-    "Proč zvolit NATURCHEM: akreditovaná zkušební laboratoř č. 1599 (ČIA), autorizace MŽP, zkušenosti s KHS, ČIŽP a krajskými úřady, měření i navazující studie a posudky v celé ČR."
+    "Laboratoř č. 1599, autorizace MŽP a praxe s KHS, ČIŽP i kraji — měření i studie v jednom týmu."
 } as const;
 
 export const whyNaturchemPageContent = {

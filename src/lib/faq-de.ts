@@ -28,9 +28,9 @@ export const faqIntroCtas: FaqLink[] = [
 ];
 
 export const faqPageMetadata = {
-  absoluteTitle: "FAQ – Emissionsmessungen, Studien, UVP, Berichte und Betriebsvorschriften | NATURCHEM",
+  absoluteTitle: "FAQ | NATURCHEM",
   description:
-    "Häufig gestellte Fragen zu Emissionsmessungen, Arbeitsplatzumgebung, Lärm, Ausbreitung und Lärmstudien, UVP, Gutachten, Betriebsregeln, ISPOP und Dokumentation für Behörden."
+    "Antworten zu Emissionen, Arbeitsplatz, Lärm, Studien, UVP, Gutachten, Betriebsordnungen und ISPOP."
 } as const;
 
 export const faqHomeGeo = {

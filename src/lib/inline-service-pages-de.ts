@@ -16,9 +16,9 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
   "mereni-emisi": {
     slug: "sluzby/mereni-emisi",
     faqCategoryId: "emise",
-    title: "Emissionsmessung aus stationären Quellen",
+    title: "Emissionsmessungen",
     intro:
-      "Behördenanfrage oder geplante Compliance-Messung? Wir messen die **Emissionen** eines Schornsteins oder einer Entlüftung und liefern einen akkreditierten **Bericht** für **Betriebsgenehmigungen**, ČIŽP, die regionale Behörde oder ISPOP.",
+      "Behördenanfrage oder geplante Compliance-Messung? Wir messen **Emissionen aus stationären Quellen** und liefern einen akkreditierten **Bericht** für **Betriebsgenehmigungen**, ČIŽP, die regionale Behörde oder ISPOP.",
     scope: [
       "Wir messen NOx, CO, SO₂, O₂, TOC/VOC, Partikel, HCl, Metalle und andere Bestandteile gemäß Betriebserlaubnis und Auftrag",
       "Wir beurteilen den Messpunkt, die Entlüftung und die Übereinstimmung mit der **Betriebsanleitung**",

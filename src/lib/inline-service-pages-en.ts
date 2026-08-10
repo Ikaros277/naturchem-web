@@ -16,9 +16,9 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
   "mereni-emisi": {
     slug: "sluzby/mereni-emisi",
     faqCategoryId: "emise",
-    title: "Emission measurement from stationary sources",
+    title: "Emission measurements",
     intro:
-      "Authority request or scheduled compliance measurement? We measure **emissions** from a stack or vent and deliver an accredited **report** for **operating permits**, ČIŽP, the regional authority or ISPOP.",
+      "Authority request or scheduled compliance measurement? We measure **emissions from stationary sources** and deliver an accredited **report** for **operating permits**, ČIŽP, the regional authority or ISPOP.",
     scope: [
       "We measure NOx, CO, SO₂, O₂, TOC/VOC, particulates, HCl, metals and other components per **operating permit** and brief",
       "We assess the measurement point, vent and consistency with the **operating manual**",

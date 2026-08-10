@@ -53,9 +53,9 @@ export const faqIntroCtas: FaqLink[] = [
 ];
 
 export const faqPageMetadata = {
-  absoluteTitle: "FAQ – měření emisí, studie, EIA, posudky a provozní řády | NATURCHEM",
+  absoluteTitle: "Časté dotazy | NATURCHEM",
   description:
-    "Časté dotazy k měření emisí, pracovnímu prostředí, hluku, rozptylovým a hlukovým studiím, EIA, odborným posudkům, provozním řádům, ISPOP a podkladům pro úřady."
+    "Odpovědi k emisím, pracovnímu prostředí, hluku, studiím, EIA, posudkům, provozním řádům a ISPOP."
 } as const;
 
 export const faqHomeGeo = {

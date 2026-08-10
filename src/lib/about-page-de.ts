@@ -1,9 +1,9 @@
 export const aboutPageMetadata = {
   title: {
-    absolute: "Über NATURCHEM – Messungen, Studien und Genehmigungsunterlagen"
+    absolute: "Über NATURCHEM"
   },
   description:
-    "Ein akkreditiertes Mess- und Beratungsunternehmen – ein Team unter der professionellen Aufsicht von Ing. František Hezina. Messungen, Studien und Genehmigungsunterlagen für Industrie, Investoren und Behörden – mehr als 36 Jahre Erfahrung."
+    "Akkreditiertes Labor unter der fachlichen Aufsicht von Ing. František Hezina. Team, Geschichte und Kompetenz — mehr als 36 Jahre Praxis."
 } as const;
 
 export const aboutPageContent = {

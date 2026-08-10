@@ -2,10 +2,10 @@ import type { ServiceIconKey } from "@/lib/service-icons";
 
 export const accreditationPageMetadata = {
   title: {
-    absolute: "Akreditace, autorizace a odborná oprávnění | NATURCHEM"
+    absolute: "Akreditace a autorizace | NATURCHEM"
   },
   description:
-    "Přehled akreditace laboratoře NATURCHEM č. 1599, autorizací EIA, rozptylových studií, posudků a GHG. Dokumenty ke stažení."
+    "Rozsah akreditace ČIA č. 1599, autorizace EIA, rozptylové studie, posudky a GHG. Dokumenty ke stažení."
 } as const;
 
 export const accreditationFacts = [

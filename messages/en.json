@@ -103,13 +103,13 @@
     "showOrCollapse": "show or collapse projects"
   },
   "site": {
-    "metaTitleDefault": "NATURCHEM, s.r.o. | Accredited measurements and consulting",
+    "metaTitleDefault": "NATURCHEM | Accredited laboratory",
     "metaTitleTemplate": "%s | NATURCHEM",
-    "metaDescription": "Accredited emission, workplace and noise measurements. Dispersion studies, EIA, expert reports and environmental consulting."
+    "metaDescription": "Accredited laboratory No. 1599 — emissions, workplace environment, noise, studies and documentation for authorities."
   },
   "home": {
     "metaTitle": "NATURCHEM – measurements, studies and documentation",
-    "metaDescription": "Accredited emission and workplace measurements, dispersion and noise studies, EIA, expert reports, operating rules, IPPC, ISPOP and GHG — for operators, investors and the public sector.",
+    "metaDescription": "Lab No. 1599: emissions, workplace and noise. Studies, EIA and documentation for operators and investors.",
     "heroTitle": "Accredited measurements, studies and documentation for industry and the environment",
     "heroLead": "Emissions, workplace environment, noise, studies and documents for authorities — for operators, investors and designers, without having to source multiple suppliers.",
     "trustAria": "Credibility and authorisations",
@@ -125,8 +125,8 @@
     "unsureAria": "Help choosing a service"
   },
   "contact": {
-    "metaTitle": "Contact & inquiry | NATURCHEM",
-    "metaDescription": "Send us a brief description or attachments from the authority. We will review the situation and propose the next steps — form or direct contact.",
+    "metaTitle": "Contact | NATURCHEM",
+    "metaDescription": "Havlíčkův Brod and other sites. Send the form or call — we will propose the next steps.",
     "eyebrow": "Contact",
     "title": "Get in touch — we are happy to help",
     "lead": "A short description or an attachment from the authority is enough. We will assess the situation and get back to you with next steps.",
@@ -215,8 +215,8 @@
     "sendFailure": "We could not send the survey. Email {email} or call {phone}."
   },
   "poradna": {
-    "metaTitle": "Knowledge base – measurements, studies and permitting",
-    "metaDescription": "Articles from practice and the field — measurements, studies, EIA and legislation. Orientation before you request a service.",
+    "metaTitle": "Knowledge base – articles",
+    "metaDescription": "Practical articles on emissions, noise, EIA and legislation. Orientation before you request a service.",
     "eyebrow": "Practice articles · legislation · measurements",
     "lead": "Articles from practice — measurements, studies and legislation for operations facing similar situations to yours.",
     "searchLabel": "Search articles",
@@ -236,8 +236,8 @@
     "allArticles": "All knowledge articles"
   },
   "reference": {
-    "metaTitle": "References and customer trust | NATURCHEM",
-    "metaDescription": "NATURCHEM references — 36 years on the market, cooperation with major companies. Anonymised examples of measurements, studies and documentation for authorities.",
+    "metaTitle": "References | NATURCHEM",
+    "metaDescription": "36 years of practice with industry. Anonymised project examples and customer feedback.",
     "pageTitle": "References and customer trust",
     "breadcrumb": "References",
     "customersTitle": "Our clients",
@@ -249,8 +249,8 @@
     "orderCountMany": "{count} projects"
   },
   "caseStudies": {
-    "metaTitle": "Typical projects we handle | Emissions, noise, workplace, EIA and ISPOP | NATURCHEM",
-    "metaDescription": "Anonymised NATURCHEM project examples: emission measurements, workplace environment, noise and dispersion studies, expert assessments, EIA/EIA screening, operating manuals and ISPOP.",
+    "metaTitle": "Typical projects",
+    "metaDescription": "Anonymised examples: emissions, noise, workplace environment, EIA, operating rules and ISPOP.",
     "pageTitle": "Typical projects we handle",
     "breadcrumb": "Typical projects",
     "backLink": "← Back to typical projects",
@@ -287,8 +287,8 @@
     "loadingDetail": "Loading…"
   },
   "equipment": {
-    "metaTitle": "NATURCHEM laboratory equipment",
-    "metaDescription": "Which analysers and sampling systems NATURCHEM uses for emissions, workplace environment, noise and laboratory sample processing — for orientation before a project or in tender proceedings.",
+    "metaTitle": "Laboratory equipment | NATURCHEM",
+    "metaDescription": "Analysers and sampling systems for emissions, workplace environment and noise — laboratory equipment overview.",
     "breadcrumb": "Laboratory equipment",
     "eyebrow": "Laboratory technical facilities",
     "pageTitle": "What we measure with in the field and in the laboratory",
@@ -323,8 +323,8 @@
     "catalogNavAria": "Quick navigation in the instrument catalogue"
   },
   "servicesIndex": {
-    "metaTitle": "Measurement, study, documentation and training services",
-    "metaDescription": "Emission, workplace and noise measurements, dispersion and noise studies, EIA, ISPOP, expert reports, operating rules and chemical legislation training.",
+    "metaTitle": "Services overview",
+    "metaDescription": "Emissions, workplace, noise, dispersion studies, EIA, ISPOP, expert reports and training — full services overview.",
     "breadcrumb": "Services",
     "eyebrow": "Expert service directory",
     "pageTitle": "Services for measurements, studies and permitting documentation",

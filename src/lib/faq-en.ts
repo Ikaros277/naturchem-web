@@ -28,9 +28,9 @@ export const faqIntroCtas: FaqLink[] = [
 ];
 
 export const faqPageMetadata = {
-  absoluteTitle: "FAQ – emissions measurements, studies, EIA, reports and operating rules | NATURCHEM",
+  absoluteTitle: "FAQ | NATURCHEM",
   description:
-    "Frequently asked questions about emission measurements, workplace environment, noise, dispersion and noise studies, EIA, expert reports, operating rules, ISPOP and documentation for authorities."
+    "Answers on emissions, workplace environment, noise, studies, EIA, expert reports, operating rules and ISPOP."
 } as const;
 
 export const faqHomeGeo = {

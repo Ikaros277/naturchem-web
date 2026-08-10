@@ -103,13 +103,13 @@
     "showOrCollapse": "Projekte ein- oder ausblenden"
   },
   "site": {
-    "metaTitleDefault": "NATURCHEM, s.r.o. | Akkreditierte Messungen und Beratung",
+    "metaTitleDefault": "NATURCHEM | Akkreditiertes Labor",
     "metaTitleTemplate": "%s | NATURCHEM",
-    "metaDescription": "Akkreditierte Emissions-, Arbeitsplatz- und Lärmessungen. Ausbreitungsstudien, EIA, Gutachten und Umweltberatung."
+    "metaDescription": "Akkreditiertes Labor Nr. 1599 — Emissionen, Arbeitsplatz, Lärm, Studien und Unterlagen für Behörden."
   },
   "home": {
     "metaTitle": "NATURCHEM – Messungen, Studien und Dokumentation",
-    "metaDescription": "Akkreditierte Emissions- und Arbeitsplatzmessungen, Ausbreitungs- und Lärmstudien, EIA, Gutachten, Betriebsordnungen, IPPC, ISPOP und GHG — für Betreiber, Investoren und den öffentlichen Sektor.",
+    "metaDescription": "Labor Nr. 1599: Emissionen, Arbeitsplatz und Lärm. Studien, UVP und Dokumentation für Betreiber und Investoren.",
     "heroTitle": "Akkreditierte Messungen, Studien und Dokumentation für Industrie und Umwelt",
     "heroLead": "Emissionen, Arbeitsumfeld, Lärm, Studien und Unterlagen für Behörden — für Betreiber, Investoren und Planer, ohne mehrere Anbieter beauftragen zu müssen.",
     "trustAria": "Glaubwürdigkeit und Zulassungen",
@@ -125,8 +125,8 @@
     "unsureAria": "Hilfe bei der Leistungsauswahl"
   },
   "contact": {
-    "metaTitle": "Kontakt & Anfrage | NATURCHEM",
-    "metaDescription": "Senden Sie uns eine kurze Beschreibung oder Anhänge von der Behörde. Wir prüfen die Situation und schlagen die nächsten Schritte vor — per Formular oder direktem Kontakt.",
+    "metaTitle": "Kontakt | NATURCHEM",
+    "metaDescription": "Havlíčkův Brod und weitere Standorte. Formular oder Anruf — wir schlagen die nächsten Schritte vor.",
     "eyebrow": "Kontakt",
     "title": "Kontaktieren Sie uns — wir helfen gerne",
     "lead": "Eine kurze Beschreibung oder ein Anhang von der Behörde genügt. Wir bewerten die Situation und melden uns mit den nächsten Schritten bei Ihnen.",
@@ -215,8 +215,8 @@
     "sendFailure": "Der Fragebogen konnte nicht gesendet werden. Schreiben Sie an {email} oder rufen Sie {phone} an."
   },
   "poradna": {
-    "metaTitle": "Wissensdatenbank – Messungen, Studien und Genehmigungen",
-    "metaDescription": "Artikel aus der Praxis und dem Fachgebiet — Messungen, Studien, EIA und Rechtsvorschriften. Orientierung, bevor Sie eine Leistung anfragen.",
+    "metaTitle": "Wissensdatenbank – Fachartikel",
+    "metaDescription": "Praxisartikel zu Emissionen, Lärm, UVP und Recht. Orientierung, bevor Sie eine Leistung anfragen.",
     "eyebrow": "Praxisartikel · Rechtsvorschriften · Messungen",
     "lead": "Artikel aus der Praxis — Messungen, Studien und Rechtsvorschriften für Betriebe in ähnlichen Situationen wie Ihrer.",
     "searchLabel": "Artikel durchsuchen",
@@ -236,8 +236,8 @@
     "allArticles": "Alle Wissensartikel"
   },
   "reference": {
-    "metaTitle": "Referenzen und Kundenvertrauen | NATURCHEM",
-    "metaDescription": "NATURCHEM Referenzen — 36 Jahre am Markt, Zusammenarbeit mit namhaften Unternehmen. Anonymisierte Beispiele für Messungen, Studien und Dokumentation für Behörden.",
+    "metaTitle": "Referenzen | NATURCHEM",
+    "metaDescription": "36 Jahre Praxis mit der Industrie. Anonymisierte Projektbeispiele und Kundenfeedback.",
     "pageTitle": "Referenzen und Kundenvertrauen",
     "breadcrumb": "Referenzen",
     "customersTitle": "Unsere Kunden",
@@ -249,8 +249,8 @@
     "orderCountMany": "{count} Projekte"
   },
   "caseStudies": {
-    "metaTitle": "Typische Aufträge, die wir bearbeiten | Emissionen, Lärm, Arbeitsumfeld, EIA und ISPOP | NATURCHEM",
-    "metaDescription": "Anonymisierte NATURCHEM-Projektbeispiele: Emissionsmessungen, Arbeitsumfeld, Lärm- und Ausbreitungsstudien, Gutachten, EIA/JES, Betriebsanleitungen und ISPOP.",
+    "metaTitle": "Typische Aufträge",
+    "metaDescription": "Anonymisierte Beispiele: Emissionen, Lärm, Arbeitsumfeld, UVP, Betriebsordnungen und ISPOP.",
     "pageTitle": "Typische Aufträge, die wir bearbeiten",
     "breadcrumb": "Typische Projekte",
     "backLink": "← Zurück zu typischen Projekten",
@@ -287,8 +287,8 @@
     "loadingDetail": "Wird geladen…"
   },
   "equipment": {
-    "metaTitle": "NATURCHEM Laborausstattung",
-    "metaDescription": "Welche Analysatoren und Probenahmesysteme NATURCHEM für Emissionen, Arbeitsplatzumgebung, Lärm und Laborprobenverarbeitung einsetzt — zur Orientierung vor einem Projekt oder in Ausschreibungsverfahren.",
+    "metaTitle": "Laborausstattung | NATURCHEM",
+    "metaDescription": "Analysatoren und Probenahmesysteme für Emissionen, Arbeitsplatz und Lärm — Überblick über die Labortechnik.",
     "breadcrumb": "Laborausstattung",
     "eyebrow": "Labor- und Messtechnik",
     "pageTitle": "Womit wir im Feld und im Labor messen",
@@ -323,8 +323,8 @@
     "catalogNavAria": "Schnellnavigation im Gerätekatalog"
   },
   "servicesIndex": {
-    "metaTitle": "Leistungen für Messungen, Studien, Dokumentation und Schulungen",
-    "metaDescription": "Emissions-, Arbeitsplatz- und Lärmessungen, Ausbreitungs- und Lärmstudien, EIA, ISPOP, Gutachten, Betriebsordnungen und Schulungen im Chemikalienrecht.",
+    "metaTitle": "Leistungsübersicht",
+    "metaDescription": "Emissionen, Arbeitsplatz, Lärm, Ausbreitungsstudien, UVP, ISPOP, Gutachten und Schulungen — vollständige Leistungsübersicht.",
     "breadcrumb": "Leistungen",
     "eyebrow": "Fachlicher Leistungskatalog",
     "pageTitle": "Leistungen für Messungen, Studien und Genehmigungsdokumentation",

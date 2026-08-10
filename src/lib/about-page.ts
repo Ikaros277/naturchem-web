@@ -1,9 +1,9 @@
 export const aboutPageMetadata = {
   title: {
-    absolute: "O NATURCHEM – měření, studie a povolovací podklady"
+    absolute: "O společnosti NATURCHEM"
   },
   description:
-    "Akreditovaná měřicí a poradenská firma — tým pod garancí Ing. Františka Heziny. Měření, studie a povolovací podklady pro průmysl, investory a veřejnou správu — déle než 36 let praxe."
+    "Akreditovaná laboratoř pod garancí Ing. Františka Heziny. Tým, historie a odborné zázemí — více než 36 let praxe."
 } as const;
 
 export const aboutPageContent = {

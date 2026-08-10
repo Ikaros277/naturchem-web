@@ -103,13 +103,13 @@
     "showOrCollapse": "zobrazit nebo sbalit zakázky"
   },
   "site": {
-    "metaTitleDefault": "NATURCHEM, s.r.o. | Akreditovaná měření a poradenství",
+    "metaTitleDefault": "NATURCHEM | Akreditovaná laboratoř",
     "metaTitleTemplate": "%s | NATURCHEM",
-    "metaDescription": "Akreditovaná měření emisí, pracovního prostředí a hluku. Rozptylové studie, EIA, odborné posudky a environmentální poradenství."
+    "metaDescription": "Akreditovaná laboratoř č. 1599 — emise, pracovní prostředí, hluk, studie a podklady pro úřady."
   },
   "home": {
     "metaTitle": "NATURCHEM – měření, studie a dokumentace",
-    "metaDescription": "Akreditovaná měření emisí a pracovního prostředí, hlukové a rozptylové studie, EIA, posudky, provozní řády, IPPC, ISPOP a GHG — pro provozovatele, investory a veřejný sektor.",
+    "metaDescription": "Laboratoř č. 1599: emise, pracovní prostředí a hluk. Studie, EIA a dokumentace pro provozovatele i investory.",
     "heroTitle": "Akreditovaná měření, studie a dokumentace pro průmysl a životní prostředí",
     "heroLead": "Emise, pracovní prostředí, hluk, studie i podklady pro úřady — pro provozovatele, investory i projektanty, bez nutnosti poptávat více dodavatelů.",
     "trustAria": "Důvěryhodnost a oprávnění",
@@ -125,8 +125,8 @@
     "unsureAria": "Pomoc s výběrem služby"
   },
   "contact": {
-    "metaTitle": "Kontakt a dotaz | NATURCHEM",
-    "metaDescription": "Napište nám popis situace nebo přiložte podklady od úřadu. Ozveme se s návrhem dalšího postupu — formulář nebo přímý kontakt.",
+    "metaTitle": "Kontakt | NATURCHEM",
+    "metaDescription": "Havlíčkův Brod a další provozovny. Napište formulář nebo zavolejte — ozveme se s návrhem dalšího postupu.",
     "eyebrow": "Kontakt",
     "title": "Ozvěte se nám — rádi pomůžeme",
     "lead": "Stačí poslat stručný popis nebo přílohu od úřadu. Posoudíme situaci a ozveme se s dalším postupem.",
@@ -215,8 +215,8 @@
     "sendFailure": "Dotazník se nepodařilo odeslat. Napište na {email} nebo zavolejte {phone}."
   },
   "poradna": {
-    "metaTitle": "Odborné články – měření, studie a povolování",
-    "metaDescription": "Články z praxe i z oboru — měření, studie, EIA a legislativa. Orientace v oboru dřív, než poptáte službu.",
+    "metaTitle": "Poradna – odborné články",
+    "metaDescription": "Praktické články k emisím, hluku, EIA a legislativě. Orientace v oboru dřív, než poptáte službu.",
     "eyebrow": "Články z praxe · legislativa · měření",
     "lead": "Články z praxe — měření, studie a legislativa pro provozy, které řeší podobné situace jako ten Váš.",
     "searchLabel": "Vyhledat v článcích",
@@ -236,8 +236,8 @@
     "allArticles": "Všechny odborné články"
   },
   "reference": {
-    "metaTitle": "Reference a důvěra zákazníků | NATURCHEM",
-    "metaDescription": "Reference NATURCHEM — 36 let na trhu, spolupráce s významnými společnostmi. Anonymizované příklady měření, studií a podkladů pro úřady.",
+    "metaTitle": "Reference | NATURCHEM",
+    "metaDescription": "36 let praxe a spolupráce s průmyslem. Anonymizované příklady zakázek a spokojenost zákazníků.",
     "pageTitle": "Reference a důvěra zákazníků",
     "breadcrumb": "Reference",
     "customersTitle": "Naši zákazníci",
@@ -249,8 +249,8 @@
     "orderCountMany": "{count} zakázek"
   },
   "caseStudies": {
-    "metaTitle": "Typické zakázky, které řešíme | Měření emisí, hluku, pracovní prostředí, EIA a ISPOP | NATURCHEM",
-    "metaDescription": "Anonymizované příklady zakázek NATURCHEM: měření emisí, pracovní prostředí, hlukové a rozptylové studie, odborné posudky, EIA/JES, provozní řády a ISPOP.",
+    "metaTitle": "Typické zakázky",
+    "metaDescription": "Anonymizované příklady: emise, hluk, pracovní prostředí, EIA, provozní řády a ISPOP.",
     "pageTitle": "Typické zakázky, které řešíme",
     "breadcrumb": "Typické zakázky",
     "backLink": "← Zpět na typické zakázky",
@@ -287,8 +287,8 @@
     "loadingDetail": "Načítání…"
   },
   "equipment": {
-    "metaTitle": "Přístrojové vybavení NATURCHEM",
-    "metaDescription": "Jaké analyzátory a odběrové sestavy NATURCHEM používá pro emise, pracovní prostředí, hluk a laboratorní zpracování vzorků — pro orientaci před zakázkou nebo ve výběrovém řízení.",
+    "metaTitle": "Přístrojové vybavení | NATURCHEM",
+    "metaDescription": "Analyzátory a odběrové sestavy pro emise, pracovní prostředí a hluk — přehled techniky laboratoře.",
     "breadcrumb": "Přístrojové vybavení",
     "eyebrow": "Technické zázemí laboratoře",
     "pageTitle": "Čím měříme v terénu i v laboratoři",
@@ -323,8 +323,8 @@
     "catalogNavAria": "Rychlá navigace v katalogu přístrojů"
   },
   "servicesIndex": {
-    "metaTitle": "Služby měření, studií, dokumentace a školení",
-    "metaDescription": "Měření emisí, pracovního prostředí, hluku, rozptylové a hlukové studie, EIA, ISPOP, odborné posudky, provozní řády a školení chemické legislativy.",
+    "metaTitle": "Přehled služeb",
+    "metaDescription": "Emise, pracovní prostředí, hluk, rozptylové studie, EIA, ISPOP, posudky a školení — kompletní přehled nabízených služeb.",
     "breadcrumb": "Služby",
     "eyebrow": "Odborný rozcestník služeb",
     "pageTitle": "Služby pro měření, studie a povolovací dokumentaci",

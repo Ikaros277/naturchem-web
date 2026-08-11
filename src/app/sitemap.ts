@@ -11,6 +11,9 @@ import { seoLandings } from "@/lib/seo-landings";
 import { getAllSalesCategoryParams } from "@/lib/sales-categories";
 import { pcfElettronicaProducts } from "@/lib/pcf-elettronica-catalog";
 
+/** Bots hit /sitemap.xml often — cache for a day to cut Fluid CPU. */
+export const revalidate = 86400;
+
 const salesCategoryRoutes = getAllSalesCategoryParams().flatMap(({ brand, slug }) => [
   `/prodej/${brand}/${slug}`
 ]);
@@ -84,22 +87,6 @@ function staticRouteLastModified(route: string, buildDate: Date, poradnaHubDate?
   return CONTENT_REFRESH;
 }
 
-async function poradnaHubLastModified(): Promise<Date> {
-  let latest = new Date("2020-01-01T00:00:00.000Z");
-
-  await Promise.all(
-    locales.map(async (locale) => {
-      const articles = await getArticles(locale);
-      for (const article of articles) {
-        const modified = articleLastModified(article);
-        if (modified > latest) latest = modified;
-      }
-    })
-  );
-
-  return latest;
-}
-
 function staticSitemapEntries(
   buildDate: Date,
   staticPaths: string[],
@@ -118,31 +105,29 @@ function staticSitemapEntries(
   );
 }
 
-async function articleSitemapEntries(
+function articleSitemapEntries(
+  articlesByLocale: Map<Locale, Awaited<ReturnType<typeof getArticles>>>,
   slugLocaleMap: ReadonlyMap<string, readonly Locale[]>
-): Promise<MetadataRoute.Sitemap> {
+): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  await Promise.all(
-    locales.map(async (locale) => {
-      const articles = await getArticles(locale);
+  for (const locale of locales) {
+    const articles = articlesByLocale.get(locale) ?? [];
+    for (const article of articles) {
+      const route = `/poradna/${article.slug}`;
+      const availableLocales = slugLocaleMap.get(article.slug) ?? [locale];
 
-      for (const article of articles) {
-        const route = `/poradna/${article.slug}`;
-        const availableLocales = slugLocaleMap.get(article.slug) ?? [locale];
-
-        entries.push({
-          url: localizedCanonical(route, locale),
-          lastModified: articleLastModified(article),
-          changeFrequency: "monthly",
-          priority: 0.7,
-          alternates: {
-            languages: buildLocaleAlternatesLanguages(route, availableLocales)
-          }
-        });
-      }
-    })
-  );
+      entries.push({
+        url: localizedCanonical(route, locale),
+        lastModified: articleLastModified(article),
+        changeFrequency: "monthly",
+        priority: 0.7,
+        alternates: {
+          languages: buildLocaleAlternatesLanguages(route, availableLocales)
+        }
+      });
+    }
+  }
 
   return entries;
 }
@@ -153,11 +138,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const landingRoutes = seoLandings.map((l) => `/${l.slug}`);
   const dedicatedRoutes = Object.values(dedicatedServicePages).map((p) => `/${p.slug}`);
   const staticPaths = uniquePaths([...routes, ...dedicatedRoutes, ...caseRoutes, ...landingRoutes]);
+
+  const articlesByLocale = new Map(
+    await Promise.all(
+      locales.map(async (locale) => [locale, await getArticles(locale)] as const)
+    )
+  );
+
+  let poradnaHubDate = new Date("2020-01-01T00:00:00.000Z");
+  for (const articles of articlesByLocale.values()) {
+    for (const article of articles) {
+      const modified = articleLastModified(article);
+      if (modified > poradnaHubDate) poradnaHubDate = modified;
+    }
+  }
+
   const slugLocaleMap = await getArticleSlugLocaleMap();
-  const poradnaHubDate = await poradnaHubLastModified();
 
   return [
     ...staticSitemapEntries(buildDate, staticPaths, poradnaHubDate),
-    ...(await articleSitemapEntries(slugLocaleMap))
+    ...articleSitemapEntries(articlesByLocale, slugLocaleMap)
   ];
 }

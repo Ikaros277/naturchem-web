@@ -1,18 +1,19 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { cache } from "react";
+import { unstable_cache } from "next/cache";
 import matter from "gray-matter";
 import { normalizeArticleDate } from "@/lib/format-date";
 import type { Locale } from "@/lib/i18n/locales";
 import { defaultLocale, locales } from "@/lib/i18n/locales";
+import type { PoradnaTopic } from "@/lib/poradna-topic";
+import { resolveArticleTopic } from "@/lib/poradna-topic";
 
 function articlesDirectoryForLocale(locale: Locale): string {
   const subdir =
     locale === "en" ? "articles-en" : locale === "de" ? "articles-de" : "articles";
   return path.join(process.cwd(), "content", subdir);
 }
-
-import type { PoradnaTopic } from "@/lib/poradna-topic";
-import { resolveArticleTopic } from "@/lib/poradna-topic";
 
 export type ArticleStatus = "draft" | "scheduled" | "published";
 
@@ -112,7 +113,7 @@ async function readArticleFiles(locale: Locale = defaultLocale): Promise<string[
   });
 }
 
-async function readAllArticles(locale: Locale = defaultLocale): Promise<Article[]> {
+async function readAllArticlesUncached(locale: Locale): Promise<Article[]> {
   try {
     const mdFiles = await readArticleFiles(locale);
 
@@ -139,27 +140,48 @@ async function readAllArticles(locale: Locale = defaultLocale): Promise<Article[
   }
 }
 
+/** Cached filesystem scan — filter by isArticlePublic at read time for scheduled publish. */
+const getAllArticlesCached = unstable_cache(
+  async (locale: Locale) => readAllArticlesUncached(locale),
+  ["articles-all"],
+  { revalidate: 3600, tags: ["articles"] }
+);
+
+async function readAllArticles(locale: Locale = defaultLocale): Promise<Article[]> {
+  return getAllArticlesCached(locale);
+}
+
 /** Published articles only (hides drafts and future publishedAt). */
 export async function getArticles(locale: Locale = defaultLocale): Promise<Article[]> {
   const articles = await readAllArticles(locale);
   return articles.filter((article) => isArticlePublic(article));
 }
 
+const getArticleSlugLocaleMapCached = unstable_cache(
+  async () => {
+    const map = new Map<string, Set<Locale>>();
+
+    await Promise.all(
+      locales.map(async (locale) => {
+        const articles = await getAllArticlesCached(locale);
+        for (const article of articles) {
+          if (!isArticlePublic(article)) continue;
+          const existing = map.get(article.slug) ?? new Set<Locale>();
+          existing.add(locale);
+          map.set(article.slug, existing);
+        }
+      })
+    );
+
+    return [...map.entries()].map(([slug, localeSet]) => [slug, [...localeSet] as Locale[]] as const);
+  },
+  ["article-slug-locale-map"],
+  { revalidate: 3600, tags: ["articles"] }
+);
+
 export async function getArticleSlugLocaleMap(): Promise<ReadonlyMap<string, readonly Locale[]>> {
-  const map = new Map<string, Set<Locale>>();
-
-  await Promise.all(
-    locales.map(async (locale) => {
-      const articles = await getArticles(locale);
-      for (const article of articles) {
-        const existing = map.get(article.slug) ?? new Set<Locale>();
-        existing.add(locale);
-        map.set(article.slug, existing);
-      }
-    })
-  );
-
-  return new Map([...map.entries()].map(([slug, localeSet]) => [slug, [...localeSet]]));
+  const entries = await getArticleSlugLocaleMapCached();
+  return new Map(entries);
 }
 
 export async function getLocalesForArticleSlug(slug: string): Promise<Locale[]> {
@@ -176,7 +198,7 @@ export async function getArticleStaticParams(): Promise<{ locale: Locale; slug: 
 
   await Promise.all(
     locales.map(async (locale) => {
-      const articles = await readAllArticles(locale);
+      const articles = await readAllArticlesUncached(locale);
       for (const article of articles) {
         if (article.status === "draft") continue;
         params.push({ locale, slug: article.slug });
@@ -187,34 +209,49 @@ export async function getArticleStaticParams(): Promise<{ locale: Locale; slug: 
   return params;
 }
 
-export async function getArticleBySlug(slug: string, locale: Locale = defaultLocale): Promise<Article | null> {
+async function tryReadArticleByFileSlug(
+  fileSlug: string,
+  locale: Locale
+): Promise<Article | null> {
+  const fullPath = path.join(articlesDirectoryForLocale(locale), `${fileSlug}.md`);
   try {
-    const decoded = decodeURIComponent(slug);
-    const mdFiles = await readArticleFiles(locale);
-    const articlesDirectory = articlesDirectoryForLocale(locale);
-
-    for (const file of mdFiles) {
-      const fileSlug = file.replace(/\.md$/, "");
-      const fullPath = path.join(articlesDirectory, file);
-      try {
-        const fileContents = await fs.readFile(fullPath, "utf8");
-        const article = toArticle(fileSlug, fileContents);
-
-        if (
-          article.slug === slug ||
-          article.slug === decoded ||
-          fileSlug === slug ||
-          fileSlug === decoded
-        ) {
-          return isArticlePublic(article) ? article : null;
-        }
-      } catch {
-        continue;
-      }
-    }
-
-    return null;
+    const fileContents = await fs.readFile(fullPath, "utf8");
+    return toArticle(fileSlug, fileContents);
   } catch {
     return null;
   }
 }
+
+/**
+ * Prefer direct `{slug}.md` read; fall back to cached catalog when frontmatter slug differs.
+ * React cache() dedupes metadata + page in the same request.
+ */
+export const getArticleBySlug = cache(
+  async (slug: string, locale: Locale = defaultLocale): Promise<Article | null> => {
+    try {
+      const decoded = decodeURIComponent(slug);
+      const candidates = [...new Set([slug, decoded].filter(Boolean))];
+
+      for (const candidate of candidates) {
+        const direct = await tryReadArticleByFileSlug(candidate, locale);
+        if (
+          direct &&
+          (direct.slug === slug ||
+            direct.slug === decoded ||
+            candidate === slug ||
+            candidate === decoded)
+        ) {
+          return isArticlePublic(direct) ? direct : null;
+        }
+      }
+
+      const articles = await readAllArticles(locale);
+      const found = articles.find(
+        (article) => article.slug === slug || article.slug === decoded
+      );
+      return found && isArticlePublic(found) ? found : null;
+    } catch {
+      return null;
+    }
+  }
+);

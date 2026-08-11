@@ -20,10 +20,10 @@ type Props = {
 };
 
 /**
- * Always evaluate publishedAt against "now" so scheduled articles go live
- * reliably (ISR + notFound() can stick on 404 in some Next/Vercel cases).
+ * ISR instead of force-dynamic: scheduled articles (in generateStaticParams)
+ * become public within this window after publishedAt. Decap publish also redeploys.
  */
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return getArticleStaticParams();

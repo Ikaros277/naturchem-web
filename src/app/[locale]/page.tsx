@@ -20,8 +20,8 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-/** Homepage Poradna strip picks up newly published scheduled articles. */
-export const revalidate = 60;
+/** Homepage Poradna strip; longer ISR cuts Fluid CPU vs bots/traffic. */
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;

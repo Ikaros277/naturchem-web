@@ -82,6 +82,12 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <LocaleProvider locale={locale} messages={pickClientMessages(messages)}>
+      {/* Set <html lang> before paint without making the root layout dynamic. */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang=${JSON.stringify(locale)};`
+        }}
+      />
       <HtmlLang locale={locale} />
       <GoogleConsentModeInit />
       <JsonLd data={websiteData} />

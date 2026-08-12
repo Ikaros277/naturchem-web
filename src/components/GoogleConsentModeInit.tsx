@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-before-interactive-script-outside-document -- App Router requires beforeInteractive scripts in the root layout. */
+import Script from "next/script";
 import { COOKIE_CONSENT_KEY, COOKIE_CONSENT_VERSION } from "@/lib/cookie-consent";
 
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -11,10 +13,11 @@ export function GoogleConsentModeInit() {
   if (!gaId && !googleAdsId) return null;
 
   return (
-    <script
+    <Script
       id="google-consent-mode-init"
-      dangerouslySetInnerHTML={{
-        __html: `
+      strategy="beforeInteractive"
+    >
+      {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
@@ -49,8 +52,7 @@ export function GoogleConsentModeInit() {
             }
           }
         } catch (e) {}
-      `
-      }}
-    />
+      `}
+    </Script>
   );
 }

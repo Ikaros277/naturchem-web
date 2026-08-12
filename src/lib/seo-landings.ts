@@ -8,6 +8,7 @@
   serviceHref: string;
   contactService: string;
   oboryHref?: string;
+  areaServed?: { type: "City" | "AdministrativeArea"; name: string };
 };
 
 export const seoLandings: SeoLanding[] = [
@@ -302,6 +303,41 @@ export const seoLandings: SeoLanding[] = [
     ],
     serviceHref: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí"
+  },
+  {
+    slug: "mereni-hluku-ceske-budejovice",
+    title: "Měření hluku České Budějovice",
+    metaDescription:
+      "Měření hluku v Českých Budějovicích pro provozy, pracoviště, kolaudace a řešení stížností. Laboratoř NATURCHEM na Rudolfovské ulici.",
+    h1: "Měření hluku České Budějovice",
+    intro:
+      "Potřebujete doložit hluk z provozu, na pracovišti nebo pro kolaudaci? NATURCHEM má laboratoř na Rudolfovské 119/57 v Českých Budějovicích a zajišťuje měření hluku i navazující akustické posouzení.",
+    sections: [
+      {
+        heading: "Kdy měření hluku využijete",
+        paragraphs: [
+          "Měříme hluk z výrobních technologií, vzduchotechniky, chlazení a dalších zařízení, hluk na pracovišti i hluk související s kolaudací, změnou provozu nebo podnětem okolí.",
+          "Rozsah měření navrhneme podle zdrojů hluku, provozního režimu a účelu výstupu — například pro KHS, stavební úřad, zaměstnavatele nebo interní rozhodnutí provozovatele."
+        ]
+      },
+      {
+        heading: "Co poslat pro rychlé posouzení",
+        paragraphs: [
+          "Stačí uvést adresu provozu, popsat zdroje hluku a jejich provozní dobu a přiložit dostupnou situaci, fotografie nebo požadavek úřadu. Podle podkladů doporučíme vhodný rozsah a režim měření.",
+          "Pokud řešíte konkrétní stížnost nebo kolaudaci, pomůže také označení chráněného prostoru a informace, kdy je technologie nejvíce zatížena."
+        ]
+      },
+      {
+        heading: "Výstup a navazující řešení",
+        paragraphs: [
+          "Výstupem je protokol podle dohodnutého účelu měření. Je-li potřeba posoudit budoucí stav nebo navrhnout opatření, navážeme hlukovou studií či akustickým posouzením.",
+          "Místní pracoviště v Českých Budějovicích usnadňuje domluvu pro zakázky ve městě a Jihočeském kraji."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-hluku",
+    contactService: "Měření hluku a akustika",
+    areaServed: { type: "City", name: "České Budějovice" }
   },
   {
     slug: "podklady-pro-cizp",

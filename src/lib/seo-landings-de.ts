@@ -8,6 +8,7 @@ export type SeoLanding = {
   serviceHref: string;
   contactService: string;
   oboryHref?: string;
+  areaServed?: { type: "City" | "AdministrativeArea"; name: string };
 };
 
 export const seoLandings: SeoLanding[] = [
@@ -302,6 +303,41 @@ export const seoLandings: SeoLanding[] = [
     ],
     serviceHref: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí"
+  },
+  {
+    slug: "mereni-hluku-ceske-budejovice",
+    title: "Lärmmessung in České Budějovice",
+    metaDescription:
+      "Lärmmessung in České Budějovice für Betriebe, Arbeitsplätze, Abnahmen und Beschwerden. NATURCHEM-Labor in der Rudolfovská-Straße.",
+    h1: "Lärmmessung in České Budějovice",
+    intro:
+      "Benötigen Sie einen Nachweis über Betriebslärm, Arbeitsplatzlärm oder für eine Abnahme? NATURCHEM betreibt ein Labor in der Rudolfovská 119/57 in České Budějovice und bietet Lärmmessungen sowie anschließende akustische Beurteilungen an.",
+    sections: [
+      {
+        heading: "Wann eine Lärmmessung sinnvoll ist",
+        paragraphs: [
+          "Wir messen Lärm von Produktionstechnologien, Lüftung, Kühlung und weiteren Anlagen, Lärm am Arbeitsplatz sowie Lärm im Zusammenhang mit Abnahmen, Betriebsänderungen oder Beschwerden aus der Umgebung.",
+          "Den Messumfang schlagen wir nach den Lärmquellen, dem Betriebszustand und dem Zweck des Berichts vor — etwa für die Hygienebehörde, Baubehörde, den Arbeitgeber oder eine interne Entscheidung des Betreibers."
+        ]
+      },
+      {
+        heading: "Unterlagen für eine erste Einschätzung",
+        paragraphs: [
+          "Senden Sie die Betriebsadresse, eine Beschreibung der Lärmquellen und ihrer Betriebszeiten sowie vorhandene Lagepläne, Fotos oder die Anforderung einer Behörde. Wir empfehlen anschließend einen geeigneten Messumfang und Betriebszustand.",
+          "Bei einer konkreten Beschwerde oder Abnahme helfen außerdem die Kennzeichnung des geschützten Bereichs und die Information, wann die Technologie mit der höchsten Last arbeitet."
+        ]
+      },
+      {
+        heading: "Bericht und anschließende Lösung",
+        paragraphs: [
+          "Das Ergebnis ist ein Bericht für den vereinbarten Zweck der Messung. Wenn ein künftiger Zustand oder Minderungsmaßnahmen zu beurteilen sind, können wir eine Lärmstudie oder akustische Beurteilung anschließen.",
+          "Unser Standort in České Budějovice erleichtert die Abstimmung für Projekte in der Stadt und in der Region Südböhmen."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-hluku",
+    contactService: "Měření hluku a akustika",
+    areaServed: { type: "City", name: "České Budějovice" }
   },
   {
     slug: "podklady-pro-cizp",

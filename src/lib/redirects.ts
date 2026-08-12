@@ -3,6 +3,7 @@ export const permanentRedirects = [
   // --- Starý web Forpsi (2026) → homepage. Doplň podle GSC → Stránky → Nenalezeno (404). ---
   { source: "/kariera", destination: "/", permanent: true },
   { source: "/kariera/", destination: "/", permanent: true },
+  { source: "/kariera.php", destination: "/", permanent: true },
   { source: "/index.php", destination: "/", permanent: true },
   { source: "/index.html", destination: "/", permanent: true },
   { source: "/index.htm", destination: "/", permanent: true },

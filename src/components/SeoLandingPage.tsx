@@ -30,7 +30,9 @@ export async function SeoLandingPage({ landing, locale }: Props) {
     serviceType: landing.h1,
     name: landing.h1,
     provider: { "@id": `${siteUrl}/#organization`, "@type": "Organization", name: company.name },
-    areaServed: { "@type": "Country", name: "Czech Republic" },
+    areaServed: landing.areaServed
+      ? { "@type": landing.areaServed.type, name: landing.areaServed.name }
+      : { "@type": "Country", name: "Czech Republic" },
     url: pageUrl,
     description: landing.intro
   };

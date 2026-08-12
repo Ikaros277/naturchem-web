@@ -8,6 +8,7 @@ export type SeoLanding = {
   serviceHref: string;
   contactService: string;
   oboryHref?: string;
+  areaServed?: { type: "City" | "AdministrativeArea"; name: string };
 };
 
 export const seoLandings: SeoLanding[] = [
@@ -302,6 +303,41 @@ export const seoLandings: SeoLanding[] = [
     ],
     serviceHref: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí"
+  },
+  {
+    slug: "mereni-hluku-ceske-budejovice",
+    title: "Noise measurement in České Budějovice",
+    metaDescription:
+      "Noise measurement in České Budějovice for industrial sites, workplaces, occupancy approval and complaints. NATURCHEM laboratory on Rudolfovská Street.",
+    h1: "Noise measurement in České Budějovice",
+    intro:
+      "Do you need to document noise from an industrial site, at a workplace or for occupancy approval? NATURCHEM has a laboratory at Rudolfovská 119/57 in České Budějovice and provides noise measurements and follow-up acoustic assessments.",
+    sections: [
+      {
+        heading: "When a noise measurement is useful",
+        paragraphs: [
+          "We measure noise from production technologies, ventilation, cooling and other equipment, workplace noise and noise related to occupancy approval, operational changes or complaints from the surrounding area.",
+          "We propose the measurement scope according to the noise sources, operating regime and intended use of the report — for example for a hygiene authority, building authority, employer or the operator's internal decision."
+        ]
+      },
+      {
+        heading: "What to send for an initial assessment",
+        paragraphs: [
+          "Send the site address, a description of the noise sources and their operating hours, plus any available site plan, photographs or authority request. We will recommend a suitable measurement scope and operating regime.",
+          "For a specific complaint or occupancy approval, it also helps to identify the protected area and explain when the technology operates at its highest load."
+        ]
+      },
+      {
+        heading: "Report and follow-up solution",
+        paragraphs: [
+          "The output is a report prepared for the agreed purpose of the measurement. If a future state or mitigation measures must be assessed, we can follow up with a noise study or acoustic assessment.",
+          "Our local office in České Budějovice makes coordination easier for projects in the city and the South Bohemian Region."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-hluku",
+    contactService: "Měření hluku a akustika",
+    areaServed: { type: "City", name: "České Budějovice" }
   },
   {
     slug: "podklady-pro-cizp",

@@ -9,7 +9,7 @@ Web má zdravý technický základ: produkční crawl našel 484 položek v XML 
 Největší riziko není rychlost ani indexovatelnost, ale měření a doručení poptávek:
 
 1. Produkční GA4 inicializace končí chybou `Illegal return statement`. `window.gtag` ani `dataLayer` nejsou aktivní, takže produkce nyní neposkytuje spolehlivé konverzní měření. Oprava už je součástí této větve.
-2. V propojeném Vercel projektu nejsou k 12. 8. 2026 evidovány žádné environmentální proměnné. Produkční kód bez `RESEND_API_KEY` dříve vracel falešný úspěch, přestože data nikam neuložil. V této větvi je chování změněno na viditelnou chybu, aby se neztrácely poptávky potichu. Před produkčním nasazením je nutné bezpečně doplnit a ověřit e-mailovou konfiguraci.
+2. Přímá kontrola Vercel API potvrdila v aktuálním projektu `web-naturchem` proměnné pro Resend, kontaktní příjemce, příjemce dotazníku a GA4 v Preview i Production. Resend klíč byl ověřen autentizovaným validačním požadavkem, který kvůli úmyslně neplatnému tělu skončil HTTP 422 a nevytvořil e-mail. Produkční kód bez `RESEND_API_KEY` dříve vracel falešný úspěch; v této větvi nyní vrací viditelnou chybu. Úplný doručovací test nebyl proveden, protože by znamenal skutečné odeslání zprávy.
 3. Formulář povoloval až 7 MB na jeden soubor a pět příloh, ale Vercel Functions přijímají maximálně 4,5 MB na celý požadavek. Limit je nově 4 MB za všechny přílohy dohromady a API odmítá nepovolenou příponu i podvržený MIME typ. Zdroj: [Vercel Functions request limit](https://vercel.com/kb/guide/how-to-bypass-vercel-body-size-limit-serverless-functions).
 
 ## Datový základ
@@ -97,9 +97,9 @@ Opraven kontrast vybraného měřicího filtru, WhatsApp tlačítka a prodejníh
 - při chybějícím Resend klíči kontaktní formulář ani dotazník spokojenosti nehlásí falešné uložení;
 - český nadpis kontaktu dodržuje tone of voice a nepoužívá zakázanou frázi „rádi pomůžeme“.
 
-### Kritická podmínka před produkcí
+### Stav e-mailové konfigurace před produkcí
 
-Vercel CLI pro propojený projekt `ikaros277s-projects/web-naturchem` nenašlo žádné environmentální proměnné. Před produkčním nasazením je nutné přidat a ověřit nejméně `RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAILS` a `NEXT_PUBLIC_GA_MEASUREMENT_ID`, případně `SATISFACTION_TO_EMAILS` a `NEXT_PUBLIC_GOOGLE_ADS_ID`. Tajné hodnoty se nesmějí commitovat. Bez Resendu Preview správně zobrazí chybu a lead neodešle; bez GA ID se nevytvoří `dataLayer`, nenačte se gtag a nelze ověřit `generate_lead`. Produkční nasazení by proto zatím nebylo bezpečné.
+Přímá kontrola Vercel API pro `ikaros277s-projects/web-naturchem` potvrdila `RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAILS`, `SATISFACTION_TO_EMAILS` a `NEXT_PUBLIC_GA_MEASUREMENT_ID` pro Preview i Production. Citlivé hodnoty nebyly staženy ani zapsány do repozitáře. Autentizace Resend klíče prošla bez vytvoření e-mailu; validační odpověď HTTP 422 potvrzuje přijatý klíč a odmítnuté neplatné tělo požadavku. Zbývající riziko je pouze úplné end-to-end doručení, které má být ověřeno schváleným interním testem, nikoli falešnou zákaznickou poptávkou.
 
 Rate limiting používá paměť procesu a v serverless prostředí není sdílený mezi instancemi. Je to pouze základní ochrana proti spamu; pro spolehlivější ochranu je vhodné sdílené úložiště nebo specializovaná anti-spam vrstva.
 
@@ -120,11 +120,13 @@ Rate limiting používá paměť procesu a v serverless prostředí není sdíle
 - hraniční test API bez odeslání: přílohy nad 4 MB → HTTP 400; nepovolená přípona s podvrženým PDF MIME → HTTP 400;
 - metadata: canonical a CS/EN/DE/x-default hreflang přítomny a správné;
 - připravená přesměrování: ověřena v rámci interního smoke testu;
+- Vercel Preview sestaveno úspěšně (537 stran), kontaktní i dotazníkové API odmítají neúplná multipart data HTTP 400;
+- Vercel proměnné a autentizace Resendu byly ověřeny bez odeslání e-mailu;
 - produkční falešná poptávka nebyla odeslána.
 
 ## Priorita dalšího postupu
 
-1. **P0 před produkcí:** bezpečně nastavit Resend a příjemce ve Vercelu, ověřit doručení pouze schváleným interním testem a teprve potom zvažovat produkční deploy.
+1. **P0 před produkcí:** provést pouze schválený interní end-to-end test doručení na určeného příjemce a teprve potom zvažovat produkční deploy.
 2. **P0 po nasazení:** ověřit v GA4 DebugView/Realtime skutečný `generate_lead` s `inquiry_category` a `service_interest`; produkční syntaktická chyba musí zmizet.
 3. **P1 během 28 dní:** měřit české dotazy a stránky proti předchozím 28 úplným dnům; oddělit kliknutí, CTR, pozici a skutečné kvalifikované poptávky.
 4. **P1 redakční:** odborně ověřit firemní statistiky a právní články, doplnit primární zdroje e-Sbírky/MŽP/MZd/SZÚ podle tématu.

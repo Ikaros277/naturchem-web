@@ -65,7 +65,7 @@ These dimensions will receive data only after the corresponding website branch i
 
 ## Pre-deployment verification
 
-- `npm run verify` passes: lint has 0 errors (19 pre-existing warnings), TypeScript passes and the Next.js 16.2.6 production build generates 537 pages.
+- `npm run verify` passes: lint has 0 errors (18 pre-existing warnings), TypeScript passes and the Next.js 16.2.6 production build generates 537 pages.
 - The local production server returns the Czech root and clean Czech URLs without redirect loops; explicit `/cs/` URLs redirect once to the canonical unprefixed form.
 - The expanded smoke test checked 489 unique sitemap URLs and 135 additional internal links discovered in rendered pages: 0 sitemap failures and 0 broken internal links.
 - Legacy and malformed URLs identified in Search Console, including `about.php`, `prodej.php`, `kariera.php`, `kontakt-Kontakt` and the woodworking-service variants, resolve through permanent redirects to relevant live pages.

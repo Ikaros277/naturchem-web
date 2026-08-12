@@ -10,6 +10,7 @@ import {
 import { INQUIRY_CATEGORY_LABELS, isInquiryCategoryId } from "@/lib/contact-inquiry";
 import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_EN } from "@/lib/contact-inquiry-en";
 import { INQUIRY_CATEGORY_LABELS as INQUIRY_CATEGORY_LABELS_DE } from "@/lib/contact-inquiry-de";
+import { isValidContactService } from "@/lib/contact-services";
 import type { Locale } from "@/lib/i18n/locales";
 import { company } from "@/lib/site";
 
@@ -131,9 +132,15 @@ export async function POST(request: Request) {
           ? INQUIRY_CATEGORY_LABELS_DE[inquiryCategoryRaw]
           : INQUIRY_CATEGORY_LABELS[inquiryCategoryRaw]
       : inquiryCategoryRaw || "neuvedeno";
-    const selectedServices = formData
-      .getAll("services")
-      .filter((item): item is string => typeof item === "string" && item.trim().length > 0);
+    const selectedServices = [
+      ...new Set(
+        formData
+          .getAll("services")
+          .filter((item): item is string => typeof item === "string")
+          .map((item) => item.trim())
+          .filter(isValidContactService)
+      )
+    ].slice(0, 5);
     const detailedService =
       selectedServices.length > 0 ? selectedServices.join(", ") : "neuvedeno";
     const location = getString(formData, "location");

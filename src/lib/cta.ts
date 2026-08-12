@@ -1,6 +1,6 @@
 /** Globální a kontextové texty výzev k akci na webu NATURCHEM. */
 
-import { contactFormHref, contactUrl } from "@/lib/contact-url";
+import { contactCategoryUrl, contactFormHref, contactUrl } from "@/lib/contact-url";
 
 export const globalCta = "Nezávazně poptat";
 
@@ -98,7 +98,7 @@ export const pageCtaPresets = {
   sales: {
     text: "Máte zájem o přístroj nebo příslušenství z naší nabídky? Napište typ přístroje, parametry nebo přiložte poptávku — připravíme nabídku.",
     primaryLabel: "Poptat přístroj",
-    primaryHref: contactUrl("Prodej přístrojů"),
+    primaryHref: contactCategoryUrl("pristroj"),
     secondaryLabel: "Laboratorní služby — měření emisí",
     secondaryHref: "/sluzby/mereni-emisi"
   }

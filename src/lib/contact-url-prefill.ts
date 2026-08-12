@@ -35,7 +35,9 @@ export function readContactUrlPrefill(search = ""): ContactUrlPrefill {
   const categoryParam = queryParam(params.get("category"));
   const initialCategory = isInquiryCategoryId(categoryParam)
     ? categoryParam
-    : resolveInquiryCategory(initialServices as ContactServiceOption[]);
+    : initialServices.length > 0
+      ? resolveInquiryCategory(initialServices as ContactServiceOption[])
+      : undefined;
   const initialMessage = sectorParam
     ? sectorContactMessage(sectorParam)
     : !isValidContactService(serviceParam) && serviceParam

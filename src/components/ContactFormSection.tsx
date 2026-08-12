@@ -63,7 +63,9 @@ export function ContactFormSection({ categories }: Props) {
   useEffect(() => {
     function shouldScrollToForm() {
       const hasQueryPrefill =
-        Boolean(prefill.initialMessage) || prefill.initialCategory !== undefined;
+        Boolean(prefill.initialMessage) ||
+        prefill.initialCategory !== undefined ||
+        prefill.initialServices.length > 0;
       const hasFormHash = window.location.hash === `#${CONTACT_FORM_ID}`;
       return hasQueryPrefill || hasFormHash;
     }
@@ -77,9 +79,13 @@ export function ContactFormSection({ categories }: Props) {
     scrollToForm();
     window.addEventListener("hashchange", scrollToForm);
     return () => window.removeEventListener("hashchange", scrollToForm);
-  }, [prefill.initialCategory, prefill.initialMessage]);
+  }, [prefill.initialCategory, prefill.initialMessage, prefill.initialServices.length]);
 
-  const formKey = [prefill.initialCategory ?? "nevim", prefill.initialMessage].join("|");
+  const formKey = [
+    prefill.initialCategory ?? "nevim",
+    prefill.initialMessage,
+    ...prefill.initialServices
+  ].join("|");
 
   return (
     <ContactFormErrorBoundary>
@@ -88,6 +94,7 @@ export function ContactFormSection({ categories }: Props) {
         categories={categories}
         initialCategory={prefill.initialCategory}
         initialMessage={prefill.initialMessage}
+        initialServices={prefill.initialServices}
       />
     </ContactFormErrorBoundary>
   );

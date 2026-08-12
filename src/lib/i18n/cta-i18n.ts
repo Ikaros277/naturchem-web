@@ -1,4 +1,4 @@
-import { contactFormHref, contactUrl } from "@/lib/contact-url";
+import { contactCategoryUrl, contactFormHref, contactUrl } from "@/lib/contact-url";
 import { pageCtaPresets } from "@/lib/cta";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -136,7 +136,7 @@ export function getPageCtaPresets(locale: Locale): Record<string, PageCtaStripPr
           ? "Interesse an einem Gerät oder Zubehör aus unserem Angebot? Nennen Sie Gerätetyp, Parameter oder senden Sie eine Anfrage — wir erstellen ein Angebot."
           : "Interested in an instrument or accessory from our range? Send the product type, parameters or your inquiry — we will prepare a quote.",
         primaryLabel: isDe ? "Gerät anfragen" : "Request a quote",
-        primaryHref: `${contactFormHref}?category=pristroj`,
+        primaryHref: contactCategoryUrl("pristroj"),
         secondaryLabel: isDe
           ? "Labordienstleistungen — Emissionsmessung"
           : "Lab services — emission measurements",

@@ -3,6 +3,7 @@ import {
   relatedServiceToContact,
   type ContactServiceOption
 } from "@/lib/contact-services";
+import type { InquiryCategoryId } from "@/lib/contact-inquiry";
 
 export const CONTACT_FORM_ID = "poptavkovy-formular";
 
@@ -15,6 +16,11 @@ export const contactFormHref = `${contactPageHref}#${CONTACT_FORM_ID}`;
 export function contactUrl(service: ContactServiceOption | string): string {
   const value = relatedServiceToContact(service) ?? (isValidContactService(service) ? service : "Nejsem si jistý");
   return `${contactPageHref}?service=${encodeURIComponent(value)}#${CONTACT_FORM_ID}`;
+}
+
+/** Poptávka podle hlavní kategorie, například pro prodej přístrojů. */
+export function contactCategoryUrl(category: InquiryCategoryId): string {
+  return `${contactPageHref}?category=${encodeURIComponent(category)}#${CONTACT_FORM_ID}`;
 }
 
 /** Odkaz z oborové stránky — platné služby + název oboru do formuláře. */

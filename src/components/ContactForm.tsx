@@ -16,12 +16,14 @@ type Props = {
   categories: ReturnType<typeof getInquiryCategories>;
   initialCategory?: InquiryCategoryId;
   initialMessage?: string;
+  initialServices?: string[];
 };
 
 export function ContactForm({
   categories,
   initialCategory = "nevim",
-  initialMessage = ""
+  initialMessage = "",
+  initialServices = []
 }: Props) {
   const locale = useLocale();
   const t = useTranslations("contactForm");
@@ -75,7 +77,8 @@ export function ContactForm({
       setInquiryCategory("nevim");
       sendGtagEvent("generate_lead", {
         form_id: "poptavkovy-formular",
-        service_interest: categoryForEvent
+        inquiry_category: categoryForEvent,
+        service_interest: initialServices.join(" | ") || categoryForEvent
       });
     } catch {
       setStatus("error");
@@ -113,6 +116,10 @@ export function ContactForm({
           <input type="text" name="website" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
+
+      {initialServices.map((service) => (
+        <input key={service} type="hidden" name="services" value={service} />
+      ))}
 
       <p id="contact-channel-hint" className="contact-form-channel-hint muted">
         {t.contactChannelHint}

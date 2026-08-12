@@ -37,7 +37,7 @@ export function isSectorDetailPage(data: SectorPageData): data is SectorDetailPa
 export const sectorPages: Record<string, SectorPageData> = {
   index: {
     metadataTitle:
-      "Provozy a technologie | Měření emisí, hluku, pracovního prostředí, EIA a posudky | NATURCHEM",
+      "Provozy a technologie | Měření emisí, hluku, pracovního prostředí, EIA a posudky",
     metadataDescription:
       "Přehled provozů a technologií, pro které NATURCHEM zajišťuje měření emisí, hluku, pracovního prostředí, rozptylové a hlukové studie, odborné posudky, EIA/JES, provozní řády a ISPOP.",
     eyebrow: "Podle typu provozu",
@@ -117,7 +117,7 @@ export const sectorPages: Record<string, SectorPageData> = {
     ]
   },
   kotelny: {
-    metadataTitle: "Měření emisí kotelen a spalovacích zdrojů",
+    metadataTitle: "Kotelny: měření emisí, hluku a podklady",
     metadataDescription:
       "Oborový přehled pro kotelny: NOx, CO, O2, výkonové režimy, měřicí místa a podklady pro provozovatele a úřady.",
     title: "Kotelny a spalovací zdroje",

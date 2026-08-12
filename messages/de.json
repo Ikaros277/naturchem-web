@@ -157,7 +157,7 @@
     "messagePlaceholder": "Zum Beispiel eine behördliche Mitteilung, Betriebsbeschreibung, Frist, was Sie bereits haben…",
     "attachmentLabel": "Anhang (optional)",
     "attachmentTooltipAria": "Informationen zum Anhang",
-    "attachmentTooltip": "PDF, Word, Excel, Bild oder ZIP — max. 7 MB pro Datei.",
+    "attachmentTooltip": "PDF, Word, Excel, Bild oder ZIP — insgesamt max. 4 MB.",
     "consentPrefix": "Ich stimme der Verarbeitung personenbezogener Daten zur Bearbeitung dieser Anfrage gemäß der",
     "consentPrivacyLink": "Datenschutzerklärung",
     "submit": "Nachricht senden",

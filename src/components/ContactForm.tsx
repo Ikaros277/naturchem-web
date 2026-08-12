@@ -57,7 +57,7 @@ export function ContactForm({
     setFeedback(t.sending);
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/contact/", {
         method: "POST",
         headers: { "Accept-Language": locale },
         body: formData

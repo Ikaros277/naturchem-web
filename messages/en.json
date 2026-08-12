@@ -157,7 +157,7 @@
     "messagePlaceholder": "For example an authority notice, operation description, deadline, what you already have…",
     "attachmentLabel": "Attachment (optional)",
     "attachmentTooltipAria": "Attachment information",
-    "attachmentTooltip": "PDF, Word, Excel, image or ZIP — max. 7 MB per file.",
+    "attachmentTooltip": "PDF, Word, Excel, image or ZIP — max. 4 MB in total.",
     "consentPrefix": "I agree to the processing of personal data for handling this inquiry according to the",
     "consentPrivacyLink": "privacy policy",
     "submit": "Send message",

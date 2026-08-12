@@ -26,7 +26,7 @@ const salesRoutes = [
 ];
 
 const routes = [
-  "",
+  "/",
   "/sluzby",
   "/sluzby/mereni-emisi",
   "/sluzby/pracovni-prostredi",
@@ -80,7 +80,7 @@ const CONTENT_REFRESH = new Date("2026-07-14T00:00:00.000Z");
 const CATALOG_REFRESH = new Date("2026-03-01T00:00:00.000Z");
 
 function staticRouteLastModified(route: string, buildDate: Date, poradnaHubDate?: Date): Date {
-  if (route === "") return buildDate;
+  if (route === "/") return buildDate;
   if (route === "/poradna" && poradnaHubDate) return poradnaHubDate;
   if (route === "/kontakt" || route === "/proc-naturchem") return buildDate;
   if (route.startsWith("/prodej")) return CATALOG_REFRESH;
@@ -97,7 +97,7 @@ function staticSitemapEntries(
       url: localizedCanonical(route, locale),
       lastModified: staticRouteLastModified(route, buildDate, poradnaHubDate),
       changeFrequency: "monthly" as const,
-      priority: route === "" ? 1 : 0.8,
+      priority: route === "/" ? 1 : 0.8,
       alternates: {
         languages: buildLocaleAlternatesLanguages(route, locales)
       }

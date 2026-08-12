@@ -14,16 +14,13 @@ import { isValidContactService } from "@/lib/contact-services";
 import type { Locale } from "@/lib/i18n/locales";
 import { company } from "@/lib/site";
 
-const MAX_FILE_SIZE = 7 * 1024 * 1024;
 const MAX_SUBJECT_LEN = 200;
 
 const apiMessages = {
   cs: {
     requiredFields: "Vyplňte prosím povinná pole (jméno, kontakt, popis a souhlas).",
-    fileTooLarge: (name: string) => `Soubor ${name} je větší než 7 MB.`,
+    attachmentsTooLarge: "Přílohy mohou mít dohromady maximálně 4 MB.",
     configError: "Chyba konfigurace příjemců. Kontaktujte nás prosím e-mailem.",
-    fallbackAccepted:
-      "Poptávka je přijata. E-mailová služba zatím není aktivní, ale data byla zaznamenána v systému.",
     sendFailure: (email: string, phone: string) =>
       `Zprávu se nepodařilo odeslat. Napište na ${email} nebo zavolejte ${phone}.`,
     success:
@@ -35,10 +32,8 @@ const apiMessages = {
   },
   en: {
     requiredFields: "Please fill in the required fields (name, contact, description and consent).",
-    fileTooLarge: (name: string) => `File ${name} is larger than 7 MB.`,
+    attachmentsTooLarge: "Attachments may be up to 4 MB in total.",
     configError: "Recipient configuration error. Please contact us by email.",
-    fallbackAccepted:
-      "Your inquiry has been received. Email delivery is not active yet, but the data was recorded in the system.",
     sendFailure: (email: string, phone: string) =>
       `We could not send the message. Email ${email} or call ${phone}.`,
     success:
@@ -50,10 +45,8 @@ const apiMessages = {
   },
   de: {
     requiredFields: "Bitte füllen Sie die Pflichtfelder aus (Name, Kontakt, Beschreibung und Einwilligung).",
-    fileTooLarge: (name: string) => `Die Datei ${name} ist größer als 7 MB.`,
+    attachmentsTooLarge: "Anhänge dürfen insgesamt höchstens 4 MB groß sein.",
     configError: "Fehler bei der Empfängerkonfiguration. Bitte kontaktieren Sie uns per E-Mail.",
-    fallbackAccepted:
-      "Ihre Anfrage wurde empfangen. Der E-Mail-Versand ist noch nicht aktiv, die Daten wurden jedoch im System gespeichert.",
     sendFailure: (email: string, phone: string) =>
       `Die Nachricht konnte nicht gesendet werden. E-Mail ${email} oder Anruf ${phone}.`,
     success:
@@ -83,6 +76,10 @@ function escapeHtml(text: string): string {
 function getString(formData: FormData, key: string): string {
   const value = formData.get(key);
   return typeof value === "string" ? value.trim() : "";
+}
+
+function isUploadedFile(value: FormDataEntryValue): value is File {
+  return typeof value !== "string";
 }
 
 function getOptionalLines(formData: FormData): string[] {
@@ -164,7 +161,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: false, message: msg.fieldTooLong }, { status: 400 });
     }
 
-    const files = formData.getAll("attachments").filter((f): f is File => f instanceof File);
+    const files = formData.getAll("attachments").filter(isUploadedFile);
     if (files.length > FORM_LIMITS.maxAttachments) {
       return NextResponse.json({ ok: false, message: msg.tooManyAttachments }, { status: 400 });
     }
@@ -172,17 +169,19 @@ export async function POST(request: Request) {
     const invalidFile = files.find(
       (file) =>
         file.size > 0 &&
-        !ALLOWED_ATTACHMENT_MIME.has(file.type) &&
-        !ALLOWED_ATTACHMENT_EXT.test(file.name)
+        (!ALLOWED_ATTACHMENT_EXT.test(file.name) ||
+          (file.type !== "" &&
+            file.type !== "application/octet-stream" &&
+            !ALLOWED_ATTACHMENT_MIME.has(file.type)))
     );
     if (invalidFile) {
       return NextResponse.json({ ok: false, message: msg.invalidAttachment }, { status: 400 });
     }
 
-    const oversized = files.find((f) => f.size > MAX_FILE_SIZE);
-    if (oversized) {
+    const totalAttachmentBytes = files.reduce((total, file) => total + file.size, 0);
+    if (totalAttachmentBytes > FORM_LIMITS.maxAttachmentsTotalBytes) {
       return NextResponse.json(
-        { ok: false, message: msg.fileTooLarge(oversized.name) },
+        { ok: false, message: msg.attachmentsTooLarge },
         { status: 400 }
       );
     }
@@ -230,11 +229,11 @@ export async function POST(request: Request) {
     }
 
     if (!resendApiKey) {
-      console.log("[CONTACT_FORM_FALLBACK]", { nameLength: name.length, attachmentCount: attachments.length });
-      return NextResponse.json({
-        ok: true,
-        message: msg.fallbackAccepted
-      });
+      console.error("[CONTACT_FORM_EMAIL_NOT_CONFIGURED]");
+      return NextResponse.json(
+        { ok: false, message: msg.configError },
+        { status: 500 }
+      );
     }
 
     const resend = new Resend(resendApiKey);

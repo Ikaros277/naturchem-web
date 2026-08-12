@@ -4080,8 +4080,8 @@ p {
 }
 
 .home-hero-pill[data-category="measurement"][aria-selected="true"] {
-  background: var(--service-measurement);
-  border-color: var(--service-measurement);
+  background: var(--service-measurement-dark);
+  border-color: var(--service-measurement-dark);
 }
 
 .home-hero-pill[data-category="studies"][aria-selected="true"] {
@@ -10202,7 +10202,7 @@ main.home-page + .site-footer {
   gap: 0.45rem;
   padding: 0.72rem 0.95rem 0.72rem 0.82rem;
   border-radius: var(--radius-pill);
-  background: #25d366;
+  background: #0b7a38;
   color: #fff;
   font-size: 0.9rem;
   font-weight: 700;
@@ -10215,7 +10215,7 @@ main.home-page + .site-footer {
 }
 
 .live-chat-whatsapp:hover {
-  background: #1ebe57;
+  background: #09652f;
   color: #fff;
   transform: translateY(-1px);
   box-shadow: 0 14px 32px rgba(15, 55, 130, 0.26);
@@ -10360,7 +10360,7 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
   border-radius: 0;
   background: none;
   box-shadow: none;
-  color: var(--sales-accent) !important;
+  color: var(--sales-accent-strong) !important;
   font-weight: 700;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.18em;

@@ -4,7 +4,8 @@ export const FORM_LIMITS = {
   phone: 40,
   message: 10_000,
   surveyText: 4_000,
-  maxAttachments: 5
+  maxAttachments: 5,
+  maxAttachmentsTotalBytes: 4 * 1024 * 1024
 } as const;
 
 export const ALLOWED_ATTACHMENT_MIME = new Set([

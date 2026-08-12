@@ -22,8 +22,6 @@ const apiMessages = {
     invalidRating: "Hodnocení musí být číslo od 1 do 5.",
     invalidNps: "Doporučení musí být číslo od 0 do 10.",
     configError: "Chyba konfigurace příjemců. Kontaktujte nás prosím e-mailem.",
-    fallbackAccepted:
-      "Dotazník je přijat. E-mailová služba zatím není aktivní, ale data byla zaznamenána v systému.",
     sendFailure: (email: string, phone: string) =>
       `Dotazník se nepodařilo odeslat. Napište na ${email} nebo zavolejte ${phone}.`,
     success: "Dotazník se úspěšně odeslal. Děkujeme za Vaši zpětnou vazbu — pomůže nám zlepšovat spolupráci s Vámi i dalšími zákazníky.",
@@ -35,8 +33,6 @@ const apiMessages = {
     invalidRating: "Ratings must be a number from 1 to 5.",
     invalidNps: "Recommendation score must be a number from 0 to 10.",
     configError: "Recipient configuration error. Please contact us by email.",
-    fallbackAccepted:
-      "Your survey has been received. Email delivery is not active yet, but the data was recorded in the system.",
     sendFailure: (email: string, phone: string) =>
       `We could not send the survey. Email ${email} or call ${phone}.`,
     success: "The survey was submitted successfully. Thank you for your feedback — it helps us improve cooperation with you and other clients.",
@@ -48,8 +44,6 @@ const apiMessages = {
     invalidRating: "Bewertungen müssen eine Zahl von 1 bis 5 sein.",
     invalidNps: "Empfehlungswert muss eine Zahl von 0 bis 10 sein.",
     configError: "Fehler bei der Empfängerkonfiguration. Bitte kontaktieren Sie uns per E-Mail.",
-    fallbackAccepted:
-      "Ihr Fragebogen wurde empfangen. Der E-Mail-Versand ist noch nicht aktiv, die Daten wurden jedoch im System gespeichert.",
     sendFailure: (email: string, phone: string) =>
       `Der Fragebogen konnte nicht gesendet werden. E-Mail ${email} oder Anruf ${phone}.`,
     success:
@@ -219,8 +213,8 @@ export async function POST(request: Request) {
     }
 
     if (!resendApiKey) {
-      console.log("[SATISFACTION_SURVEY_FALLBACK]", { overallRating, hasEmail: Boolean(email) });
-      return NextResponse.json({ ok: true, message: msg.fallbackAccepted });
+      console.error("[SATISFACTION_SURVEY_EMAIL_NOT_CONFIGURED]");
+      return NextResponse.json({ ok: false, message: msg.configError }, { status: 500 });
     }
 
     const resend = new Resend(resendApiKey);

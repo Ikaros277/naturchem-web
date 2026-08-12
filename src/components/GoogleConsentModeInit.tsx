@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 import { COOKIE_CONSENT_KEY, COOKIE_CONSENT_VERSION } from "@/lib/cookie-consent";
 
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -13,8 +11,10 @@ export function GoogleConsentModeInit() {
   if (!gaId && !googleAdsId) return null;
 
   return (
-    <Script id="google-consent-mode-init" strategy="beforeInteractive">
-      {`
+    <script
+      id="google-consent-mode-init"
+      dangerouslySetInnerHTML={{
+        __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
@@ -33,19 +33,24 @@ export function GoogleConsentModeInit() {
 
         try {
           var raw = localStorage.getItem(${JSON.stringify(COOKIE_CONSENT_KEY)});
-          if (!raw) return;
-          var parsed = JSON.parse(raw);
-          if (parsed.version !== ${JSON.stringify(COOKIE_CONSENT_VERSION)}) return;
-          if (typeof parsed.statistics !== 'boolean' || typeof parsed.marketing !== 'boolean') return;
-
-          gtag('consent', 'update', {
-            analytics_storage: parsed.statistics ? 'granted' : 'denied',
-            ad_storage: parsed.marketing ? 'granted' : 'denied',
-            ad_user_data: parsed.marketing ? 'granted' : 'denied',
-            ad_personalization: parsed.marketing ? 'granted' : 'denied'
-          });
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (
+              parsed.version === ${JSON.stringify(COOKIE_CONSENT_VERSION)} &&
+              typeof parsed.statistics === 'boolean' &&
+              typeof parsed.marketing === 'boolean'
+            ) {
+              gtag('consent', 'update', {
+                analytics_storage: parsed.statistics ? 'granted' : 'denied',
+                ad_storage: parsed.marketing ? 'granted' : 'denied',
+                ad_user_data: parsed.marketing ? 'granted' : 'denied',
+                ad_personalization: parsed.marketing ? 'granted' : 'denied'
+              });
+            }
+          }
         } catch (e) {}
-      `}
-    </Script>
+      `
+      }}
+    />
   );
 }

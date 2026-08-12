@@ -17,8 +17,13 @@ export const permanentRedirects = [
   { source: "/de/redakce/", destination: "/de/poradna", permanent: true },
   { source: "/kontakt.php", destination: "/kontakt", permanent: true },
   { source: "/kontakt.html", destination: "/kontakt", permanent: true },
+  { source: "/kontakt-Kontakt", destination: "/kontakt", permanent: true },
   { source: "/sluzby.php", destination: "/sluzby", permanent: true },
   { source: "/sluzby.html", destination: "/sluzby", permanent: true },
+  { source: "/prodej.php", destination: "/prodej", permanent: true },
+  { source: "/prodej.html", destination: "/prodej", permanent: true },
+  { source: "/about.php", destination: "/o-spolecnosti-naturchem", permanent: true },
+  { source: "/about.html", destination: "/o-spolecnosti-naturchem", permanent: true },
   { source: "/reference.php", destination: "/reference", permanent: true },
   { source: "/reference.html", destination: "/reference", permanent: true },
 
@@ -96,6 +101,28 @@ export const permanentRedirects = [
   // Flat service pages → kanonické /sluzby/ URL (fix duplicitního obsahu)
   { source: "/mereni-emisi", destination: "/sluzby/mereni-emisi", permanent: true },
   { source: "/mereni-emisi/", destination: "/sluzby/mereni-emisi", permanent: true },
+  {
+    source: "/sluzby/mereni-emisi-drevozpracujicich-provoze",
+    destination: "/mereni-emisi-drevozpracujicich-provoze",
+    permanent: true
+  },
+  {
+    source: "/sluzby/mereni-emisi-drevozpracujicich-provoze/",
+    destination: "/mereni-emisi-drevozpracujicich-provoze",
+    permanent: true
+  },
+  { source: "/sluzby/mereni-emisi-lakoven", destination: "/mereni-emisi-lakoven", permanent: true },
+  { source: "/sluzby/mereni-emisi-lakoven/", destination: "/mereni-emisi-lakoven", permanent: true },
+  { source: "/en/sluzby/mereni-emisi-lakoven", destination: "/en/mereni-emisi-lakoven", permanent: true },
+  { source: "/en/sluzby/mereni-emisi-lakoven/", destination: "/en/mereni-emisi-lakoven", permanent: true },
+  { source: "/de/sluzby/mereni-emisi-lakoven", destination: "/de/mereni-emisi-lakoven", permanent: true },
+  { source: "/de/sluzby/mereni-emisi-lakoven/", destination: "/de/mereni-emisi-lakoven", permanent: true },
+  { source: "/sluzby/mereni-hluku-hlukove-studie", destination: "/sluzby/mereni-hluku", permanent: true },
+  { source: "/sluzby/mereni-hluku-hlukove-studie/", destination: "/sluzby/mereni-hluku", permanent: true },
+  { source: "/en/sluzby/mereni-hluku-hlukove-studie", destination: "/en/sluzby/mereni-hluku", permanent: true },
+  { source: "/en/sluzby/mereni-hluku-hlukove-studie/", destination: "/en/sluzby/mereni-hluku", permanent: true },
+  { source: "/de/sluzby/mereni-hluku-hlukove-studie", destination: "/de/sluzby/mereni-hluku", permanent: true },
+  { source: "/de/sluzby/mereni-hluku-hlukove-studie/", destination: "/de/sluzby/mereni-hluku", permanent: true },
   { source: "/pracovni-prostredi", destination: "/sluzby/pracovni-prostredi", permanent: true },
   { source: "/pracovni-prostredi/", destination: "/sluzby/pracovni-prostredi", permanent: true },
   { source: "/mereni-vibraci", destination: "/sluzby/mereni-vibraci", permanent: true },

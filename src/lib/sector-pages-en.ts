@@ -485,7 +485,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
       { title: "Workplace environment measurement", href: "/sluzby/pracovni-prostredi" },
       {
         title: "Emission measurement for wood processing operations",
-        href: "/sluzby/mereni-emisi-drevozpracujicich-provoze"
+        href: "/mereni-emisi-drevozpracujicich-provoze"
       }
     ],
     faq: [
@@ -538,7 +538,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     relatedServices: [
       { title: "Emission measurement", href: "/sluzby/mereni-emisi" },
       { title: "Workplace environment measurement", href: "/sluzby/pracovni-prostredi" },
-      { title: "Paint shop emission measurement", href: "/sluzby/mereni-emisi-lakoven" }
+      { title: "Paint shop emission measurement", href: "/mereni-emisi-lakoven" }
     ],
     faq: [
       {

@@ -521,7 +521,7 @@ export const sectorPages: Record<string, SectorPageData> = {
       { title: "Měření pracovního prostředí", href: "/sluzby/pracovni-prostredi" },
       {
         title: "Měření emisí dřevozpracujících provozů",
-        href: "/sluzby/mereni-emisi-drevozpracujicich-provoze"
+        href: "/mereni-emisi-drevozpracujicich-provoze"
       }
     ],
     faq: [
@@ -574,7 +574,7 @@ export const sectorPages: Record<string, SectorPageData> = {
     relatedServices: [
       { title: "Měření emisí", href: "/sluzby/mereni-emisi" },
       { title: "Měření pracovního prostředí", href: "/sluzby/pracovni-prostredi" },
-      { title: "Měření emisí lakovny", href: "/sluzby/mereni-emisi-lakoven" }
+      { title: "Měření emisí lakovny", href: "/mereni-emisi-lakoven" }
     ],
     faq: [
       {

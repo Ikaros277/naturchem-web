@@ -31,7 +31,7 @@
 - Izokyanáty ve výrobě: školení, bezpečnostní listy a měření pracovního ovzduší: https://www.naturchem.cz/poradna/izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi/
 - Jak číst hlukovou studii: LAeq, LAFmax, chráněný prostor a nejistota: https://www.naturchem.cz/poradna/jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota/
 - Jaké podklady potřebujete pro povolení průmyslového provozu z hlediska životního prostředí?: https://www.naturchem.cz/poradna/jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi/
-- Jednotné environmentální stanovisko: jaké podklady připravit pro: https://www.naturchem.cz/poradna/jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni/
+- Jednotné environmentální stanovisko: podklady pro JES: https://www.naturchem.cz/poradna/jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni/
 - JES a EIA: kdy se řeší jednotné environmentální stanovisko společně s EIA?: https://www.naturchem.cz/poradna/jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia/
 - Kategorizace prací: jaké měření je potřeba jako podklad?: https://www.naturchem.cz/poradna/kategorizace-praci-jake-mereni-je-potreba-jako-podklad/
 - Kategorizace prací po změně technologie: kdy je nutné nové měření: https://www.naturchem.cz/poradna/kategorizace-praci-po-zmene-technologie-nove-mereni/
@@ -56,7 +56,7 @@
 - Nové metodické výklady MŽP k dopovolovaným zdrojům: co má provozovatel zkontrolovat?: https://www.naturchem.cz/poradna/nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat/
 - Novela zákona o ochraně ovzduší 2025: co se mění pro provozovatele: https://www.naturchem.cz/poradna/novela-zakona-o-ochrane-ovzdusi-2025/
 - Odborný posudek podle zákona o ochraně ovzduší: kdy je potřeba a co musí obsahovat?: https://www.naturchem.cz/poradna/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat/
-- Oznámení záměru EIA: co to je a kdy ho podnikatel potřebuje před stavbou: https://www.naturchem.cz/poradna/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba/
+- Oznámení záměru EIA: kdy je potřeba a co obsahuje: https://www.naturchem.cz/poradna/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba/
 - Plynová kotelna 0,3 až 50 MW: co řešit u NOx, CO, měření a povolení: https://www.naturchem.cz/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni/
 - Poplatky za znečišťování ovzduší: jak souvisí měření, výpočet emisí a: https://www.naturchem.cz/poradna/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence/
 - Kolik stojí odborný posudek, rozptylová studie, provozní řád a povolení provozu: https://www.naturchem.cz/poradna/cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu/
@@ -65,7 +65,7 @@
 - Proč nestačí katalogový údaj zařízení pro hlukové posouzení?: https://www.naturchem.cz/poradna/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni/
 - Projekt ARAMIS: co mohou nové emisní faktory a metodiky znamenat pro: https://www.naturchem.cz/poradna/projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi/
 - Projektant vs. ekologický konzultant: kdy zapojit odborníka na ovzduší, hluk a EIA?: https://www.naturchem.cz/poradna/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia/
-- Protihluková opatření: co má smysl řešit před měřením hluku: https://www.naturchem.cz/poradna/protihlukova-opatreni-pred-merenim-hluku/
+- Protihluková opatření před měřením hluku: co pomůže: https://www.naturchem.cz/poradna/protihlukova-opatreni-pred-merenim-hluku/
 - Protiprašná opatření na stavbě: co má být v dokumentaci a co může chtít úřad: https://www.naturchem.cz/poradna/protiprasna-opatreni-na-stavbe-dokumentace-urad/
 - Provozní parametr u zdroje emisí: kdy ho musí provozovatel sledovat a: https://www.naturchem.cz/poradna/provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat/
 - Provozní řád zdroje znečišťování ovzduší: kdy je povinný a kdo jej schvaluje: https://www.naturchem.cz/poradna/provozni-rad-zdroje-znecistovani-ovzdusi/

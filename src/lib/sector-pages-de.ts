@@ -485,7 +485,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
       { title: "Messung der Arbeitsplatzumgebung", href: "/sluzby/pracovni-prostredi" },
       {
         title: "Emissionsmessung für holzverarbeitende Betriebe",
-        href: "/sluzby/mereni-emisi-drevozpracujicich-provoze"
+        href: "/mereni-emisi-drevozpracujicich-provoze"
       }
     ],
     faq: [
@@ -538,7 +538,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     relatedServices: [
       { title: "Emissionsmessung", href: "/sluzby/mereni-emisi" },
       { title: "Messung der Arbeitsplatzumgebung", href: "/sluzby/pracovni-prostredi" },
-      { title: "Emissionsmessung in der Lackiererei", href: "/sluzby/mereni-emisi-lakoven" }
+      { title: "Emissionsmessung in der Lackiererei", href: "/mereni-emisi-lakoven" }
     ],
     faq: [
       {

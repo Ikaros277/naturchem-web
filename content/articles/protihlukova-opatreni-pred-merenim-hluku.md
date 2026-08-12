@@ -1,13 +1,11 @@
 ---
-title: "Protihluková opatření: co má smysl řešit před měřením hluku"
+title: "Protihluková opatření před měřením hluku: co pomůže"
 slug: protihlukova-opatreni-pred-merenim-hluku
-excerpt: Stížnost sousedů nebo obava z překročení hlukových limitů často vede k
-  rychlému objednání měření. Vhodnější bývá nejprve určit rozhodující zdroje
-  hluku, způsob jeho šíření a reálně účinná opatření. Správně navržená úprava
-  ventilátoru, výduchu, kompresoru nebo provozního režimu může významně zlepšit
-  výsledek následného měření.
+excerpt: Jak určit hlavní zdroj hluku a zvolit účinné opatření před měřením.
+  Praktický přehled pro provozovny, VZT, kompresory a další technologie.
 author: Ing. František Hezina
 publishedAt: "2026-07-22"
+updatedAt: "2026-08-12"
 topic: Hluk
 heroImage: /uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp
 ---

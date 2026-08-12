@@ -65,7 +65,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "hluk",
     title: "Lärm, Vibration und Akustik",
-    serviceHref: "/sluzby/mereni-hluku-hlukove-studie",
+    serviceHref: "/sluzby/mereni-hluku",
     serviceLabel: "Lärmmessung und Akustik",
     items: [
       "Schallpegelmesser SVAN 979",

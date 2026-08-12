@@ -65,7 +65,7 @@ export const equipmentGroups: readonly EquipmentGroup[] = [
   {
     id: "hluk",
     title: "Noise, vibration and acoustics",
-    serviceHref: "/sluzby/mereni-hluku-hlukove-studie",
+    serviceHref: "/sluzby/mereni-hluku",
     serviceLabel: "Noise measurement and acoustics",
     items: [
       "sound level meter SVAN 979",

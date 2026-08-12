@@ -1,17 +1,11 @@
 ---
-title: "Oznámení záměru EIA: co to je a kdy ho podnikatel potřebuje před stavbou
-  nebo novým provozem"
+title: "Oznámení záměru EIA: kdy je potřeba a co obsahuje"
 slug: oznameni-zameru-eia-co-to-je-a-kdy-je-potreba
-excerpt: Oznámení záměru je odborný podklad, kterým podnikatel, investor nebo
-  obec zahajuje proces posouzení vlivů plánovaného záměru na životní prostředí.
-  Typicky se řeší u průmyslových provozů, recyklačních zařízení, skladových
-  areálů, energetických zdrojů, zemědělských provozů, dopravních staveb, těžby,
-  zařízení pro odpady nebo větších změn stávajících provozů. Cílem oznámení není
-  stavbu povolit, ale popsat záměr, jeho kapacity, umístění a očekávané vlivy
-  tak, aby příslušný úřad mohl rozhodnout, zda bude potřeba další posuzování
-  EIA, nebo zda záměr po zjišťovacím řízení dále posuzován nebude.
+excerpt: Kdy je potřeba oznámení záměru EIA, co musí obsahovat a jaké podklady
+  připravit, aby mohl úřad posoudit plánovanou stavbu nebo změnu provozu.
 author: Ing. František Hezina
 publishedAt: "2026-07-08"
+updatedAt: "2026-08-12"
 topic: EIA a povolování
 heroImage: /uploads/eia.webp
 ---

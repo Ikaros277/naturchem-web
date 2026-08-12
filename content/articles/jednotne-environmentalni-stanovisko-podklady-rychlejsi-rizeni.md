@@ -1,17 +1,11 @@
 ---
-title: "Jednotné environmentální stanovisko: jaké podklady připravit pro
-  rychlejší řízení"
+title: "Jednotné environmentální stanovisko: podklady pro JES"
 slug: jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni
-excerpt: Jednotné environmentální stanovisko, zkráceně JES, má soustředit více
-  environmentálních požadavků do jednoho závazného stanoviska. Pro investora
-  nebo projektanta to ale neznamená, že stačí podat obecnou žádost a čekat na
-  výsledek. Rychlost řízení závisí hlavně na tom, zda jsou podklady úplné,
-  konkrétní a použitelné pro všechny dotčené složky životního prostředí.
-  Nejčastější zdržení vzniká u nejasného popisu záměru, chybějících situací,
-  nedostatečně popsané technologie, dopravy, hluku, ovzduší, vod, odpadů, ZPF,
-  přírody a návaznosti na EIA.
+excerpt: Co připravit k žádosti o JES, proč se řízení zdržuje a jak sladit
+  podklady pro ovzduší, hluk, vodu, odpady, ZPF, přírodu a případnou EIA.
 author: Ing. František Hezina
 publishedAt: "2026-07-16"
+updatedAt: "2026-08-12"
 topic: Legislativa
 heroImage: /uploads/chatgpt-image-16.-7.-2026-09_47_59.webp
 ---

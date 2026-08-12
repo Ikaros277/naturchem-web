@@ -1,6 +1,8 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/locales";
 
+const DEFAULT_LOCALE_REWRITE_HEADER = "x-naturchem-default-locale-rewrite";
+
 function getLocaleFromPathname(pathname: string): Locale | null {
   const segment = pathname.split("/")[1];
   if (segment && isLocale(segment)) return segment;
@@ -24,6 +26,10 @@ export function middleware(request: NextRequest) {
   const localeFromPath = getLocaleFromPathname(pathname);
 
   if (localeFromPath === defaultLocale && pathname.startsWith(`/${defaultLocale}`)) {
+    if (request.headers.get(DEFAULT_LOCALE_REWRITE_HEADER) === "1") {
+      return NextResponse.next();
+    }
+
     const url = request.nextUrl.clone();
     url.pathname = stripLocalePrefix(pathname);
     return NextResponse.redirect(url, 308);
@@ -35,7 +41,13 @@ export function middleware(request: NextRequest) {
 
   const url = request.nextUrl.clone();
   url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.rewrite(url);
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set(DEFAULT_LOCALE_REWRITE_HEADER, "1");
+  return NextResponse.rewrite(url, {
+    request: {
+      headers: requestHeaders
+    }
+  });
 }
 
 export const config = {

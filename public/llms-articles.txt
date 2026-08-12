@@ -1,6 +1,6 @@
 # NATURCHEM — odborné články (poradna)
 
-> 56+ articles on Czech environmental permitting, measurements, EIA, ISPOP, and operations (CS/EN/DE).
+> 71+ articles on Czech environmental permitting, measurements, EIA, ISPOP, and operations (CS/EN/DE).
 
 ## Index
 
@@ -11,6 +11,8 @@
 ## České články
 
 - Automobilový provoz: co se typicky měří a posuzuje?: https://www.naturchem.cz/poradna/automotive-provoz-co-se-typicky-meri-a-posuzuje/
+- Chladová zátěž v chladírnách, mrazírnách a nevytápěných halách: co musí: https://www.naturchem.cz/poradna/chladova-zatez-na-pracovisti/
+- Souhrnná provozní evidence: nejčastější chyby v údajích o zdrojích,: https://www.naturchem.cz/poradna/chyby-souhrnna-provozni-evidence/
 - Co poslat pro rychlé posouzení záměru?: https://www.naturchem.cz/poradna/co-poslat-pro-rychle-posouzeni-zameru/
 - Co se mění v povolování zdrojů znečišťování ovzduší v roce 2026?: https://www.naturchem.cz/poradna/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026/
 - Deponie materiálu v areálu: kdy je potřeba povolení, rozptylová studie: https://www.naturchem.cz/poradna/deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek/
@@ -18,7 +20,9 @@
 - Elektronické oznamování měření emisí a předávání protokolů: praktický dopad na provozovatele: https://www.naturchem.cz/poradna/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele/
 - Emise vs. imise: proč provozovatel řeší obojí?: https://www.naturchem.cz/poradna/emise-vs-imise-proc-provozovatel-resi-oboji/
 - Emisní faktory a výpočet emisí: kdy stačí výpočet a kdy je potřeba měření: https://www.naturchem.cz/poradna/emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni/
+- Galvanovna a mořírna: emise, pracovní ovzduší, odsávání a povolení provozu: https://www.naturchem.cz/poradna/galvanovna-povoleni-provozu/
 - Hluk na pracovišti a hluk do okolí: proč jsou to dvě různá měření: https://www.naturchem.cz/poradna/hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni/
+- Noční provoz výrobního areálu: které zdroje bývají rozhodující pro: https://www.naturchem.cz/poradna/hluk-nocni-provoz-arealu/
 - Hluk z provozovny: co dělat, když si sousedé stěžují?: https://www.naturchem.cz/poradna/hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji/
 - Hluk z tepelných čerpadel a VZT jednotek: co řešit před kolaudací?: https://www.naturchem.cz/poradna/hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci/
 - Institut minimální vzdálenosti: nový nástroj ochrany ovzduší před prašností a zápachem: https://www.naturchem.cz/poradna/institut-minimalni-vzdalenosti-ochrana-ovzdusi/
@@ -27,6 +31,7 @@
 - Izokyanáty ve výrobě: školení, bezpečnostní listy a měření pracovního ovzduší: https://www.naturchem.cz/poradna/izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi/
 - Jak číst hlukovou studii: LAeq, LAFmax, chráněný prostor a nejistota: https://www.naturchem.cz/poradna/jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota/
 - Jaké podklady potřebujete pro povolení průmyslového provozu z hlediska životního prostředí?: https://www.naturchem.cz/poradna/jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi/
+- Jednotné environmentální stanovisko: jaké podklady připravit pro: https://www.naturchem.cz/poradna/jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni/
 - JES a EIA: kdy se řeší jednotné environmentální stanovisko společně s EIA?: https://www.naturchem.cz/poradna/jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia/
 - Kategorizace prací: jaké měření je potřeba jako podklad?: https://www.naturchem.cz/poradna/kategorizace-praci-jake-mereni-je-potreba-jako-podklad/
 - Kategorizace prací po změně technologie: kdy je nutné nové měření: https://www.naturchem.cz/poradna/kategorizace-praci-po-zmene-technologie-nove-mereni/
@@ -34,6 +39,7 @@
 - Kdy je potřeba měření emisí a kdy stačí jiný podklad?: https://www.naturchem.cz/poradna/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad/
 - Kdy může úřad požadovat odborný posudek i u změny stávajícího zdroje?: https://www.naturchem.cz/poradna/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje/
 - Kogenerační jednotka: emise, hluk, měření a povolení provozu: https://www.naturchem.cz/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
+- Příprava na kontrolu ČIŽP v oblasti ovzduší: dokumenty a skutečnosti,: https://www.naturchem.cz/poradna/kontrola-cizp-ovzdusi/
 - Kotelna a plynový kotel: kdy se měří emise CO a NOx?: https://www.naturchem.cz/poradna/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox/
 - Lakovna: emise, VOC, provozní řád, měření a povolení provozu: https://www.naturchem.cz/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu/
 - Manipulace se sypkými materiály: kdy se z plochy stává vyjmenovaný zdroj: https://www.naturchem.cz/poradna/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni/
@@ -41,6 +47,8 @@
 - Měření mikroklimatu na pracovišti: teplota, vlhkost a proudění vzduchu: https://www.naturchem.cz/poradna/mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu/
 - Měření osvětlení na pracovišti: kdy ho požaduje KHS a kdy je potřeba pro: https://www.naturchem.cz/poradna/mereni-osvetleni-pracoviste-khs-kolaudace/
 - Měření pracovního prostředí: kdy ho může požadovat KHS?: https://www.naturchem.cz/poradna/mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs/
+- Měření rozpouštědel a VOC v pracovním ovzduší: jak vybrat látky z: https://www.naturchem.cz/poradna/mereni-rozpoustedel-pracovniho-ovzdusi/
+- Jak připravit zdroj na autorizované měření emisí, aby se měření nemuselo: https://www.naturchem.cz/poradna/priprava-na-mereni-emisi/
 - Měření vibrací při práci: kdy se řeší ruce, celé tělo a kategorizace prací: https://www.naturchem.cz/poradna/mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci/
 - Měřicí místo na výduchu: nejčastější chyby, které zkomplikují měření emisí: https://www.naturchem.cz/poradna/merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi/
 - Měřicí místo na výduchu: proč je důležité už ve fázi projektu?: https://www.naturchem.cz/poradna/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu/
@@ -51,21 +59,28 @@
 - Oznámení záměru EIA: co to je a kdy ho podnikatel potřebuje před stavbou: https://www.naturchem.cz/poradna/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba/
 - Plynová kotelna 0,3 až 50 MW: co řešit u NOx, CO, měření a povolení: https://www.naturchem.cz/poradna/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni/
 - Poplatky za znečišťování ovzduší: jak souvisí měření, výpočet emisí a: https://www.naturchem.cz/poradna/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence/
+- Kolik stojí odborný posudek, rozptylová studie, provozní řád a povolení provozu: https://www.naturchem.cz/poradna/cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu/
 - Prach na pracovišti: celkový prach, respirabilní frakce a oxid křemičitý: https://www.naturchem.cz/poradna/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity/
+- Prášková lakovna: povolení, měření TZL, filtrace a provozní řád: https://www.naturchem.cz/poradna/praskova-lakovna-povoleni/
 - Proč nestačí katalogový údaj zařízení pro hlukové posouzení?: https://www.naturchem.cz/poradna/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni/
 - Projekt ARAMIS: co mohou nové emisní faktory a metodiky znamenat pro: https://www.naturchem.cz/poradna/projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi/
 - Projektant vs. ekologický konzultant: kdy zapojit odborníka na ovzduší, hluk a EIA?: https://www.naturchem.cz/poradna/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia/
+- Protihluková opatření: co má smysl řešit před měřením hluku: https://www.naturchem.cz/poradna/protihlukova-opatreni-pred-merenim-hluku/
 - Protiprašná opatření na stavbě: co má být v dokumentaci a co může chtít úřad: https://www.naturchem.cz/poradna/protiprasna-opatreni-na-stavbe-dokumentace-urad/
 - Provozní parametr u zdroje emisí: kdy ho musí provozovatel sledovat a: https://www.naturchem.cz/poradna/provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat/
+- Provozní řád zdroje znečišťování ovzduší: kdy je povinný a kdo jej schvaluje: https://www.naturchem.cz/poradna/provozni-rad-zdroje-znecistovani-ovzdusi/
 - Recyklační středisko stavebních odpadů: hluk, prach, doprava a EIA: https://www.naturchem.cz/poradna/recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia/
 - Rozptylová studie: kdy je povinná a jaké podklady jsou potřeba?: https://www.naturchem.cz/poradna/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba/
 - Sčítací pravidla u zdrojů znečišťování ovzduší: proč mohou změnit povinnosti provozovatele?: https://www.naturchem.cz/poradna/scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele/
 - Skládka a odpadové zařízení: jaké environmentální podklady se obvykle řeší?: https://www.naturchem.cz/poradna/skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi/
 - Souhrnná provozní evidence 2026: co musí provozovatel zkontrolovat před: https://www.naturchem.cz/poradna/souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim/
 - Svařovna: prach, kovy, odsávání, pracovní prostředí a emise: https://www.naturchem.cz/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise/
+- Tepelná zátěž na pracovišti: kdy je nutné měření a jak se stanoví: https://www.naturchem.cz/poradna/tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace/
 - Tónové složky hluku a česká legislativa: https://www.naturchem.cz/poradna/tonove-slozky-hluku-ceska-legislativa-provozovatel/
+- Přišla výzva KHS k měření pracovního prostředí: jak sestavit správný rozsah: https://www.naturchem.cz/poradna/vyzva-khs-mereni-pracovniho-prostredi/
 - Záložní dieselagregát: emise, hluk a povolovací podklady: https://www.naturchem.cz/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady/
 - Záložní dieselagregát: kdy je jen záloha a kdy už běžný zdroj emisí: https://www.naturchem.cz/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny/
+- Změna technologie ve výrobním areálu: kdy řešit ovzduší, hluk, odpady a EIA: https://www.naturchem.cz/poradna/zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia/
 
 ## English articles
 

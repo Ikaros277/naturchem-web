@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
+import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
 import "./globals.css";
 import { defaultLocale } from "@/lib/i18n/locales";
 import { siteUrl } from "@/lib/site";
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang={defaultLocale} className={fontSans.variable} suppressHydrationWarning>
       <head>
+        <GoogleConsentModeInit />
         <link
           rel="alternate"
           type="text/plain"

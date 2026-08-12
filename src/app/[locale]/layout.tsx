@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DeferredClientWidgets } from "@/components/DeferredClientWidgets";
-import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { HtmlLang } from "@/components/HtmlLang";
 import { OutboundLinkTelemetry } from "@/components/OutboundLinkTelemetry";
@@ -89,7 +88,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         }}
       />
       <HtmlLang locale={locale} />
-      <GoogleConsentModeInit />
       <JsonLd data={websiteData} />
       <JsonLd data={orgData} />
       <JsonLd data={localBusinessData} />

@@ -2,6 +2,8 @@ export const FORM_LIMITS = {
   name: 200,
   email: 254,
   phone: 40,
+  location: 200,
+  deadline: 200,
   message: 10_000,
   surveyText: 4_000,
   maxAttachments: 5,

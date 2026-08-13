@@ -17,6 +17,7 @@ export async function getSeoLandingsForService(
 
   return landings
     .filter((landing) => landing.serviceHref === normalized)
+    .sort((a, b) => (b.internalLinkPriority ?? 0) - (a.internalLinkPriority ?? 0))
     .slice(0, limit)
     .map((landing) => ({
       href: `/${landing.slug}`,

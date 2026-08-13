@@ -8,6 +8,8 @@ const copy = {
       "Pošlete stručný popis provozu nebo požadavek úřadu. Na základě podkladů navrhneme rozsah prací a možný termín realizace.",
     generalServicePage: "Obecná stránka služby",
     relatedFacility: "Související provoz",
+    relatedSolutions: "Související služby a situace",
+    faqTitle: "Časté dotazy",
     entitySummary:
       "{company} — akreditovaná laboratoř a autorizovaná osoba v České republice. Tato stránka popisuje službu: {service}."
   },
@@ -18,6 +20,8 @@ const copy = {
       "Send a brief description of your operation or an authority requirement. Based on your documents we will propose the scope of work and a possible schedule.",
     generalServicePage: "General service page",
     relatedFacility: "Related facility type",
+    relatedSolutions: "Related services and situations",
+    faqTitle: "Frequently asked questions",
     entitySummary:
       "{company} — accredited laboratory and authorized body in the Czech Republic. This page describes: {service}."
   },
@@ -28,6 +32,8 @@ const copy = {
       "Senden Sie eine kurze Beschreibung Ihres Betriebs oder eine Behördenanforderung. Auf Basis Ihrer Unterlagen schlagen wir den Arbeitsumfang und einen möglichen Termin vor.",
     generalServicePage: "Allgemeine Leistungsseite",
     relatedFacility: "Verwandter Betriebstyp",
+    relatedSolutions: "Verwandte Leistungen und Situationen",
+    faqTitle: "Häufige Fragen",
     entitySummary:
       "{company} — akkreditiertes Labor und autorisierte Stelle in Tschechien. Diese Seite beschreibt: {service}."
   }

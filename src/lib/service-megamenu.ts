@@ -6,6 +6,16 @@ export const serviceMegaGroups = [
     subtitle: "Měření emisí, hluku a pracovního prostředí",
     links: [
       {
+        href: "/mereni-pro-kolaudaci",
+        label: "Měření pro kolaudaci",
+        description: "Hluk, osvětlení a pracoviště podle požadavku úřadu"
+      },
+      {
+        href: "/mereni-nove-haly",
+        label: "Měření nové haly",
+        description: "Více faktorů pracovního prostředí v jednom rozsahu"
+      },
+      {
         href: "/sluzby/pracovni-prostredi",
         label: "Pracovní prostředí",
         description: "Kategorizace prací, expozice a protokoly z měření"
@@ -52,6 +62,11 @@ export const serviceMegaGroups = [
     title: "Studie a výpočty",
     subtitle: "Rozptylové a hlukové studie, výpočty a posudky",
     links: [
+      {
+        href: "/pro-stavebni-firmy",
+        label: "Podklady pro stavební firmy",
+        description: "Studie před realizací a měření před kolaudací"
+      },
       {
         href: "/sluzby/rozptylove-studie",
         label: "Rozptylové studie",

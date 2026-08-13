@@ -132,12 +132,27 @@ function articleSitemapEntries(
   return entries;
 }
 
+function landingSitemapEntries(buildDate: Date): MetadataRoute.Sitemap {
+  return seoLandings.flatMap((landing) => {
+    const availableLocales = landing.availableLocales ?? locales;
+    const route = `/${landing.slug}`;
+    return availableLocales.map((locale) => ({
+      url: localizedCanonical(route, locale),
+      lastModified: buildDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+      alternates: {
+        languages: buildLocaleAlternatesLanguages(route, availableLocales)
+      }
+    }));
+  });
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const buildDate = new Date();
   const caseRoutes = caseStudyCategories.map((c) => `/typicke-zakazky/${c.slug}`);
-  const landingRoutes = seoLandings.map((l) => `/${l.slug}`);
   const dedicatedRoutes = Object.values(dedicatedServicePages).map((p) => `/${p.slug}`);
-  const staticPaths = uniquePaths([...routes, ...dedicatedRoutes, ...caseRoutes, ...landingRoutes]);
+  const staticPaths = uniquePaths([...routes, ...dedicatedRoutes, ...caseRoutes]);
 
   const articlesByLocale = new Map(
     await Promise.all(
@@ -157,6 +172,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticSitemapEntries(buildDate, staticPaths, poradnaHubDate),
+    ...landingSitemapEntries(buildDate),
     ...articleSitemapEntries(articlesByLocale, slugLocaleMap)
   ];
 }

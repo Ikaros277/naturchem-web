@@ -4,7 +4,10 @@ import { useState } from "react";
 
 import { legalPaths } from "@/lib/legal";
 import { type InquiryCategoryId } from "@/lib/contact-inquiry";
-import type { getInquiryCategories } from "@/lib/i18n/contact-inquiry-i18n";
+import type {
+  getInquiryCategories,
+  getPriorityContactServiceChoices
+} from "@/lib/i18n/contact-inquiry-i18n";
 import { sendGtagEvent } from "@/lib/gtag";
 import { useLocale, useTranslations } from "@/lib/i18n/locale-context";
 import { LocaleLink } from "@/lib/i18n/locale-link";
@@ -14,6 +17,7 @@ type Status = "idle" | "loading" | "success" | "error";
 
 type Props = {
   categories: ReturnType<typeof getInquiryCategories>;
+  serviceChoices: ReturnType<typeof getPriorityContactServiceChoices>;
   initialCategory?: InquiryCategoryId;
   initialMessage?: string;
   initialServices?: string[];
@@ -21,6 +25,7 @@ type Props = {
 
 export function ContactForm({
   categories,
+  serviceChoices,
   initialCategory = "nevim",
   initialMessage = "",
   initialServices = []
@@ -31,6 +36,7 @@ export function ContactForm({
   const [feedback, setFeedback] = useState("");
   const [contactChannelError, setContactChannelError] = useState(false);
   const [inquiryCategory, setInquiryCategory] = useState<InquiryCategoryId>(initialCategory);
+  const [selectedServices, setSelectedServices] = useState<string[]>(initialServices);
 
   const sendFailureMessage = t.sendFailure
     .replace("{email}", company.email)
@@ -73,12 +79,19 @@ export function ContactForm({
       setStatus("success");
       setFeedback(result.message || t.successMessage);
       const categoryForEvent = inquiryCategory;
+      const servicesForEvent = [...selectedServices];
+      const locationProvided = Boolean(String(formData.get("location") ?? "").trim());
+      const deadlineProvided = Boolean(String(formData.get("deadline") ?? "").trim());
       form.reset();
       setInquiryCategory("nevim");
+      setSelectedServices([]);
       sendGtagEvent("generate_lead", {
         form_id: "poptavkovy-formular",
         inquiry_category: categoryForEvent,
-        service_interest: initialServices.join(" | ") || categoryForEvent
+        service_interest: servicesForEvent.join(" | ") || categoryForEvent,
+        service_count: servicesForEvent.length,
+        lead_has_location: locationProvided,
+        lead_has_deadline: deadlineProvided
       });
     } catch {
       setStatus("error");
@@ -116,10 +129,6 @@ export function ContactForm({
           <input type="text" name="website" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
-
-      {initialServices.map((service) => (
-        <input key={service} type="hidden" name="services" value={service} />
-      ))}
 
       <p id="contact-channel-hint" className="contact-form-channel-hint muted">
         {t.contactChannelHint}
@@ -169,6 +178,19 @@ export function ContactForm({
 
           <p>
             <label>
+              {t.locationLabel}
+              <br />
+              <input
+                name="location"
+                autoComplete="address-level2"
+                maxLength={200}
+                placeholder={t.locationPlaceholder}
+              />
+            </label>
+          </p>
+
+          <p>
+            <label>
               {t.categoryLabel}
               <br />
               <select
@@ -184,6 +206,14 @@ export function ContactForm({
                   </option>
                 ))}
               </select>
+            </label>
+          </p>
+
+          <p>
+            <label>
+              {t.deadlineLabel}
+              <br />
+              <input name="deadline" maxLength={200} placeholder={t.deadlinePlaceholder} />
             </label>
           </p>
         </div>
@@ -231,6 +261,39 @@ export function ContactForm({
           </p>
         </div>
       </div>
+
+      <fieldset className="contact-service-choices">
+        <legend>{t.serviceLabel}</legend>
+        <p className="contact-service-choices-hint muted">{t.serviceHint}</p>
+        <div className="contact-service-choices-grid">
+          {serviceChoices.map((service) => {
+            const checked = selectedServices.includes(service.value);
+            return (
+              <label key={service.value} className="contact-service-choice">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value={service.value}
+                  checked={checked}
+                  onChange={(event) => {
+                    setSelectedServices((current) =>
+                      event.target.checked
+                        ? [...new Set([...current, service.value])]
+                        : current.filter((value) => value !== service.value)
+                    );
+                  }}
+                />
+                <span>{service.label}</span>
+              </label>
+            );
+          })}
+        </div>
+        {selectedServices
+          .filter((service) => !serviceChoices.some((choice) => choice.value === service))
+          .map((service) => (
+            <input key={service} type="hidden" name="services" value={service} />
+          ))}
+      </fieldset>
 
       <p>
         <label className="contact-service-option">

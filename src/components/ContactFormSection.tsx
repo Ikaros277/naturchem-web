@@ -3,13 +3,17 @@
 import { Component, useEffect, useState, type ReactNode } from "react";
 import { CONTACT_FORM_ID } from "@/lib/contact-url";
 import { readContactUrlPrefill } from "@/lib/contact-url-prefill";
-import type { getInquiryCategories } from "@/lib/i18n/contact-inquiry-i18n";
+import type {
+  getInquiryCategories,
+  getPriorityContactServiceChoices
+} from "@/lib/i18n/contact-inquiry-i18n";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import { company } from "@/lib/site";
 import { ContactForm } from "@/components/ContactForm";
 
 type Props = {
   categories: ReturnType<typeof getInquiryCategories>;
+  serviceChoices: ReturnType<typeof getPriorityContactServiceChoices>;
 };
 
 export function ContactFormFallback() {
@@ -53,7 +57,7 @@ class ContactFormErrorBoundary extends Component<
   }
 }
 
-export function ContactFormSection({ categories }: Props) {
+export function ContactFormSection({ categories, serviceChoices }: Props) {
   const [prefill, setPrefill] = useState(() => readContactUrlPrefill(""));
 
   useEffect(() => {
@@ -92,6 +96,7 @@ export function ContactFormSection({ categories }: Props) {
       <ContactForm
         key={formKey}
         categories={categories}
+        serviceChoices={serviceChoices}
         initialCategory={prefill.initialCategory}
         initialMessage={prefill.initialMessage}
         initialServices={prefill.initialServices}

@@ -38,3 +38,8 @@ scripts/.de_translation_cache.json
 scripts/*.log
 scripts/inspect_out.txt
 scripts/coord_mismatches.json
+
+# internal inquiry analysis (derived from company mailbox; never publish)
+reports/Analyza-poptavek-naturchem-seznam-*.pdf
+reports/Analyza-poptavek-naturchem-seznam-*.html
+reports/mailbox-inquiry-analysis.json

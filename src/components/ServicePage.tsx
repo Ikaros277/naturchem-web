@@ -63,7 +63,7 @@ export async function ServicePage(props: Props) {
   const quickContactHref = contactUrl(contactServiceValue);
   const sectorMetaByHref = new Map(sectors.map((s) => [s.href, s]));
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
-  const seoLandingLinks = await getSeoLandingsForService(`/sluzby/${bareSlug}`, locale, 2);
+  const seoLandingLinks = await getSeoLandingsForService(`/sluzby/${bareSlug}`, locale, 3);
   const relatedLinks = props.relatedLinks ?? [];
   const keyScope = props.scope.slice(0, 4);
   const keyWhenNeeded = props.whenNeeded.slice(0, 4);

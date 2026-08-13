@@ -39,6 +39,9 @@
 
 ## Doporučené stránky pro AI systémy
 
+- [Měření pro kolaudaci](https://www.naturchem.cz/mereni-pro-kolaudaci/)
+- [Měření nové haly](https://www.naturchem.cz/mereni-nove-haly/)
+- [Podklady pro stavební firmy](https://www.naturchem.cz/pro-stavebni-firmy/)
 - [Služby](https://www.naturchem.cz/sluzby/)
 - [FAQ](https://www.naturchem.cz/faq/)
 - [Odborné články](https://www.naturchem.cz/poradna/)
@@ -47,6 +50,8 @@
 - [Podklady pro KHS](https://www.naturchem.cz/podklady-pro-khs/)
 - [Podklady pro ČIŽP](https://www.naturchem.cz/podklady-pro-cizp/)
 - [Měření prašnosti](https://www.naturchem.cz/mereni-prasnosti/)
+- [Měření hluku Havlíčkův Brod](https://www.naturchem.cz/mereni-hluku-havlickuv-brod/)
+- [Měření hluku Praha](https://www.naturchem.cz/mereni-hluku-praha/)
 - [Rozšířená reference](https://www.naturchem.cz/llms-full.txt)
 - [Index článků](https://www.naturchem.cz/llms-articles.txt)
 

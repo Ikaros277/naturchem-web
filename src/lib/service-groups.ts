@@ -20,6 +20,16 @@ export const serviceGroups: ServiceGroup[] = [
       "Potřebujete protokol pro úřad nebo provoz? Zajistíme terénní měření emisí, hluku, pracovního prostředí i dalších veličin — s výstupem pro KHS, ČIŽP nebo krajský úřad.",
     items: [
       {
+        title: "Měření pro kolaudaci",
+        href: "/mereni-pro-kolaudaci",
+        text: "Hluk, osvětlení, mikroklima a pracovní prostředí podle projektu, KHS nebo stavebního úřadu."
+      },
+      {
+        title: "Měření nové haly",
+        href: "/mereni-nove-haly",
+        text: "Společný rozsah více faktorů pro nová pracoviště, kategorizaci prací a uvedení do provozu."
+      },
+      {
         title: "Měření pracovního prostředí",
         href: "/sluzby/pracovni-prostredi",
         text: "Prašnost, chemické látky, hluk, mikroklima, osvětlení, vibrace. Kategorizace prací, KHS."

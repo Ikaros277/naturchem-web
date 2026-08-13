@@ -28,7 +28,20 @@ const apiMessages = {
     rateLimited: "Příliš mnoho odeslaných zpráv. Zkuste to prosím později nebo nás kontaktujte telefonicky.",
     fieldTooLong: "Jedno z polí je příliš dlouhé. Zkuste text zkrátit.",
     tooManyAttachments: "Můžete nahrát maximálně 5 příloh.",
-    invalidAttachment: "Nepodporovaný typ souboru. Povolené formáty: PDF, Word, Excel, obrázek nebo ZIP."
+    invalidAttachment: "Nepodporovaný typ souboru. Povolené formáty: PDF, Word, Excel, obrázek nebo ZIP.",
+    confirmationSubject: "Potvrzení Vaší zprávy — NATURCHEM",
+    confirmationBody: (focus: string) =>
+      [
+        "Dobrý den,",
+        "",
+        "děkujeme za zprávu z webu NATURCHEM.",
+        `Týká se oblasti: ${focus}.`,
+        "",
+        "Ozveme se Vám s dalším postupem.",
+        "Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.",
+        "",
+        "NATURCHEM, s.r.o."
+      ].join("\n")
   },
   en: {
     requiredFields: "Please fill in the required fields (name, contact, description and consent).",
@@ -41,7 +54,20 @@ const apiMessages = {
     rateLimited: "Too many messages sent. Please try again later or call us.",
     fieldTooLong: "One of the fields is too long. Please shorten the text.",
     tooManyAttachments: "You can upload at most 5 attachments.",
-    invalidAttachment: "Unsupported file type. Allowed: PDF, Word, Excel, image or ZIP."
+    invalidAttachment: "Unsupported file type. Allowed: PDF, Word, Excel, image or ZIP.",
+    confirmationSubject: "Confirmation of your message — NATURCHEM",
+    confirmationBody: (focus: string) =>
+      [
+        "Hello,",
+        "",
+        "thank you for your message from the NATURCHEM website.",
+        `It concerns: ${focus}.`,
+        "",
+        "We will contact you with the next steps.",
+        "If we need additional information, we will let you know by email or phone.",
+        "",
+        "NATURCHEM, s.r.o."
+      ].join("\n")
   },
   de: {
     requiredFields: "Bitte füllen Sie die Pflichtfelder aus (Name, Kontakt, Beschreibung und Einwilligung).",
@@ -54,7 +80,20 @@ const apiMessages = {
     rateLimited: "Zu viele Nachrichten. Bitte versuchen Sie es später erneut oder rufen Sie uns an.",
     fieldTooLong: "Ein Feld ist zu lang. Bitte kürzen Sie den Text.",
     tooManyAttachments: "Sie können höchstens 5 Anhänge hochladen.",
-    invalidAttachment: "Nicht unterstützter Dateityp. Erlaubt: PDF, Word, Excel, Bild oder ZIP."
+    invalidAttachment: "Nicht unterstützter Dateityp. Erlaubt: PDF, Word, Excel, Bild oder ZIP.",
+    confirmationSubject: "Bestätigung Ihrer Nachricht — NATURCHEM",
+    confirmationBody: (focus: string) =>
+      [
+        "Guten Tag,",
+        "",
+        "vielen Dank für Ihre Nachricht über die NATURCHEM-Website.",
+        `Sie betrifft den Bereich: ${focus}.`,
+        "",
+        "Wir melden uns mit den nächsten Schritten bei Ihnen.",
+        "Falls wir weitere Angaben benötigen, informieren wir Sie per E-Mail oder Telefon.",
+        "",
+        "NATURCHEM, s.r.o."
+      ].join("\n")
   }
 } as const;
 
@@ -137,7 +176,7 @@ export async function POST(request: Request) {
           .map((item) => item.trim())
           .filter(isValidContactService)
       )
-    ].slice(0, 5);
+    ];
     const detailedService =
       selectedServices.length > 0 ? selectedServices.join(", ") : "neuvedeno";
     const location = getString(formData, "location");
@@ -156,6 +195,8 @@ export async function POST(request: Request) {
       name.length > FORM_LIMITS.name ||
       email.length > FORM_LIMITS.email ||
       phone.length > FORM_LIMITS.phone ||
+      location.length > FORM_LIMITS.location ||
+      getString(formData, "deadline").length > FORM_LIMITS.deadline ||
       message.length > FORM_LIMITS.message
     ) {
       return NextResponse.json({ ok: false, message: msg.fieldTooLong }, { status: 400 });
@@ -288,23 +329,13 @@ export async function POST(request: Request) {
 
     const confirmationFocus =
       detailedService !== "neuvedeno" ? detailedService : inquiryCategory;
-    const confirmationBody = [
-      `Dobrý den,`,
-      ``,
-      `děkujeme za zprávu z webu NATURCHEM.`,
-      `Týká se oblasti: ${confirmationFocus}.`,
-      ``,
-      `Ozveme se Vám s dalším postupem.`,
-      `Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.`,
-      ``,
-      `NATURCHEM, s.r.o.`
-    ].join("\n");
+    const confirmationBody = msg.confirmationBody(confirmationFocus);
 
     if (email) {
       const { error: confirmationError } = await resend.emails.send({
         from: fromEmail,
         to: email,
-        subject: "Potvrzení Vaší zprávy — NATURCHEM",
+        subject: msg.confirmationSubject,
         text: confirmationBody,
         html: `<pre style="font-family:system-ui,sans-serif;white-space:pre-wrap;">${escapeHtml(
           confirmationBody

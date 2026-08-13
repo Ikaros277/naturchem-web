@@ -51,15 +51,15 @@ const offerPillars = {
       icon: "pillar-mereni" as const,
       title: "Akreditovaná měření",
       teaser:
-        "Emise, hluk, pracovní prostředí i vibrace — akreditovaně, s výstupem pro KHS a ČIŽP…",
-      text: "Změříme emise, pracovní prostředí, hluk, vibrace, osvětlení, mikroklima i čisté prostory — akreditovaně, s výstupem pro úřady.",
+        "Emise, hluk, osvětlení i pracovní prostředí — pro provoz, KHS, ČIŽP nebo kolaudaci…",
+      text: "Změříme emise, hluk, osvětlení, vibrace a mikroklima. U nové haly nebo kolaudace připravíme společný rozsah podle projektu a provozu.",
       cta: "Zobrazit měření",
       href: "/sluzby#mericke-sluzby",
       tags: ["KHS", "ČIŽP", "ISO 17025"],
       links: [
         { label: "Měření emisí", href: "/sluzby/mereni-emisi" },
-        { label: "Pracovní prostředí", href: "/sluzby/pracovni-prostredi" },
-        { label: "Vibrace", href: "/sluzby/mereni-vibraci" }
+        { label: "Měření pro kolaudaci", href: "/mereni-pro-kolaudaci" },
+        { label: "Měření nové haly", href: "/mereni-nove-haly" }
       ]
     },
     {

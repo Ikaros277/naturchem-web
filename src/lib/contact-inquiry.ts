@@ -23,7 +23,12 @@ export const INQUIRY_CATEGORY_LABELS: Record<InquiryCategoryId, string> = {
 const MEASUREMENT_SERVICES = new Set<ContactServiceOption>([
   "Měření emisí",
   "Měření pracovního prostředí",
-  "Měření hluku a akustika"
+  "Měření hluku a akustika",
+  "Měření osvětlení",
+  "Měření vibrací",
+  "Měření mikroklimatu",
+  "Kolaudační měření",
+  "Měření nové haly"
 ]);
 
 const STUDY_SERVICES = new Set<ContactServiceOption>([

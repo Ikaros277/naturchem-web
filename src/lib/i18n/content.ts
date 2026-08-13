@@ -87,7 +87,11 @@ export async function getSeoLanding(slug: string, locale: Locale) {
   if (match) return match;
   if (locale === "cs") return null;
   const csLandings = await getSeoLandings("cs");
-  return csLandings.find((landing) => landing.slug === slug) ?? null;
+  const fallback = csLandings.find((landing) => landing.slug === slug);
+  if (!fallback || (fallback.availableLocales && !fallback.availableLocales.includes(locale))) {
+    return null;
+  }
+  return fallback;
 }
 
 export async function getEquipmentContent(locale: Locale) {

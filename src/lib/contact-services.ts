@@ -6,6 +6,11 @@ export const CONTACT_SERVICE_OPTIONS = [
   "Měření emisí",
   "Měření pracovního prostředí",
   "Měření hluku a akustika",
+  "Měření osvětlení",
+  "Měření vibrací",
+  "Měření mikroklimatu",
+  "Kolaudační měření",
+  "Měření nové haly",
   "Rozptylové studie",
   "Hlukové studie",
   "EIA a oznámení záměru",
@@ -22,6 +27,22 @@ export const CONTACT_SERVICE_OPTIONS = [
 
 /** Pouze canonical — pro vykreslení formulářových voleb (bez zastaralých aliasů). */
 export const CONTACT_SERVICE_OPTIONS_UI = CONTACT_SERVICE_OPTIONS;
+
+/** Nejčastější obchodní záměry z reálných poptávek — ve formuláři lze vybrat více možností. */
+export const PRIORITY_CONTACT_SERVICE_OPTIONS = [
+  "Měření emisí",
+  "Měření hluku a akustika",
+  "Měření pracovního prostředí",
+  "Měření osvětlení",
+  "Měření vibrací",
+  "Měření mikroklimatu",
+  "Kolaudační měření",
+  "Měření nové haly",
+  "Hlukové studie",
+  "Rozptylové studie",
+  "Odborné posudky",
+  "Nejsem si jistý"
+] as const satisfies readonly ContactServiceOption[];
 
 const LEGACY_EIA_UMBRELLA = "EIA, posudky a poradenství" as const;
 const LEGACY_POSUDEK_PROVOZNI_RAD = "Odborný posudek a provozní řád" as const;
@@ -59,9 +80,11 @@ const RELATED_SERVICE_MAP: Record<string, ContactServiceOption> = {
   "ISPOP a GHG": "ISPOP",
   "Bezpečnostní listy": "Bezpečnostní listy",
   "Chemické látky v provozu": "Chemické látky v provozu",
-  "Měření vibrací": "Měření pracovního prostředí",
-  "Měření osvětlení": "Měření pracovního prostředí",
-  "Měření mikroklimatu": "Měření pracovního prostředí",
+  "Měření vibrací": "Měření vibrací",
+  "Měření osvětlení": "Měření osvětlení",
+  "Měření mikroklimatu": "Měření mikroklimatu",
+  "Kolaudační měření": "Kolaudační měření",
+  "Měření nové haly": "Měření nové haly",
   "Akustické posudky": "Měření hluku a akustika",
   "Modelové výpočty": "Rozptylové studie",
   "Imisní a hlukové dopady záměrů": "Rozptylové studie",

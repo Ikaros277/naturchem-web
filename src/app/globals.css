@@ -6467,6 +6467,158 @@ main.contact-page + .site-footer {
   max-width: none;
 }
 
+.home-demand-paths {
+  padding-block: clamp(2.2rem, 5vw, 4rem);
+  background: linear-gradient(180deg, #f7fbf9 0%, #eef6f2 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.home-demand-paths-header .section-lead {
+  max-width: 48rem;
+  color: var(--muted);
+}
+
+.home-demand-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-demand-path-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: clamp(1.1rem, 2.5vw, 1.5rem);
+  border-top: 4px solid var(--forest);
+}
+
+.home-demand-path-card h3 {
+  margin: 0 0 0.65rem;
+}
+
+.home-demand-path-card p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.home-demand-path-link {
+  margin-top: auto;
+  color: var(--forest-dark);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.home-demand-path-link:hover,
+.home-demand-path-link:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 820px) {
+  .home-demand-paths-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.seo-demand-landing > h1 {
+  max-width: 58rem;
+}
+
+.seo-demand-landing > .page-lead {
+  max-width: 62rem;
+}
+
+.seo-demand-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+}
+
+.seo-demand-related-card {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 100%;
+  padding: 1rem;
+  border-top: 3px solid var(--forest);
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.seo-demand-related-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.seo-demand-related-card:hover,
+.seo-demand-related-card:focus-visible {
+  border-color: var(--forest);
+  transform: translateY(-1px);
+}
+
+.contact-service-choices {
+  margin: 1.15rem 0;
+  padding: 1rem;
+  border: 1px solid rgba(47, 111, 94, 0.2);
+  border-radius: var(--radius-ui);
+  background: rgba(47, 111, 94, 0.045);
+}
+
+.contact-service-choices legend {
+  padding: 0 0.35rem;
+  color: var(--secondary);
+  font-weight: 750;
+}
+
+.contact-service-choices-hint {
+  margin: 0 0 0.85rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.contact-service-choices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.contact-service-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sharp);
+  background: #fff;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  cursor: pointer;
+}
+
+.contact-service-choice:has(input:checked) {
+  border-color: var(--forest);
+  background: var(--forest-tint);
+}
+
+.contact-service-choice input {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 820px) {
+  .contact-service-choices-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-service-choices-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .contact-form-feedback {
   margin: 0.15rem 0 0;
   line-height: 1.5;

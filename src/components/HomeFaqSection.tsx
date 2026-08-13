@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { FaqAccordionList } from "@/components/FaqAccordionList";
+import { JsonLd } from "@/components/Schema";
 import { getHomeGeoFaqItems } from "@/lib/geo-home-faq";
+import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
 import { getFaqContent } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -20,6 +22,7 @@ export async function HomeFaqSection({ locale }: Props) {
       className="home-section home-faq-section section--forest-tint home-below-fold"
       aria-labelledby="home-faq-heading"
     >
+      <JsonLd data={buildFaqPageJsonLd(items)} />
       <div className="container">
         <header className="section-header">
           <h2 id="home-faq-heading">{faq.homeSectionTitle}</h2>

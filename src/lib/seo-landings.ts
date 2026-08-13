@@ -9,6 +9,10 @@
   contactService: string;
   oboryHref?: string;
   areaServed?: { type: "City" | "AdministrativeArea"; name: string };
+  availableLocales?: readonly ("cs" | "en" | "de")[];
+  relatedLinks?: { href: string; label: string; description: string }[];
+  faq?: { question: string; answer: string }[];
+  internalLinkPriority?: number;
 };
 
 export const seoLandings: SeoLanding[] = [
@@ -337,7 +341,8 @@ export const seoLandings: SeoLanding[] = [
     ],
     serviceHref: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
-    areaServed: { type: "City", name: "České Budějovice" }
+    areaServed: { type: "City", name: "České Budějovice" },
+    internalLinkPriority: 100
   },
   {
     slug: "podklady-pro-cizp",
@@ -357,6 +362,335 @@ export const seoLandings: SeoLanding[] = [
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí"
+  },
+  {
+    slug: "mereni-pro-kolaudaci",
+    title: "Měření pro kolaudaci: hluk, osvětlení a pracoviště",
+    metaDescription:
+      "Měření pro kolaudaci provozu nebo stavby: hluk, osvětlení, mikroklima a pracovní prostředí. Pošlete požadavek KHS či stavebního úřadu.",
+    h1: "Měření pro kolaudaci — hluk, osvětlení a pracovní prostředí",
+    intro:
+      "Potřebujete protokol k užívání nové haly, provozovny nebo technologie? Podle projektu a požadavku KHS či stavebního úřadu určíme, která měření dávají smysl a jaké podklady připravit.",
+    sections: [
+      {
+        heading: "Co se při kolaudaci nejčastěji dokládá",
+        paragraphs: [
+          "Rozsah není u každé stavby stejný. V praxi se řeší zejména hluk technologie nebo provozu, umělé osvětlení, mikroklimatické podmínky a faktory pracovního prostředí.",
+          "Pokud se v objektu používají chemické látky, vzniká prach nebo jsou zaměstnanci vystaveni vibracím, může požadavek zahrnovat také tyto faktory. Rozhodující je účel místností, skutečný provoz a znění stanoviska úřadu."
+        ]
+      },
+      {
+        heading: "Protokol o měření hluku pro kolaudaci",
+        paragraphs: [
+          "U technologických zařízení, vzduchotechniky, chlazení nebo tepelného čerpadla může být potřeba protokol o měření hluku v obytné místnosti, jiném chráněném prostoru nebo okolí stavby. Měření musí odpovídat posuzovanému provoznímu režimu.",
+          "Pokud se hodnotí teprve navrhovaný stav, může být vhodná hluková studie nebo akustický posudek. Předem proto rozlišíme, zda potřebujete měření skutečného stavu, výpočet, nebo oba podklady."
+        ]
+      },
+      {
+        heading: "Co nám poslat před nabídkou",
+        paragraphs: [
+          "Pošlete stanovisko KHS nebo stavebního úřadu, relevantní část projektové dokumentace, půdorys, popis technologie a plánovaný termín kolaudace. U hluku pomohou údaje o zdrojích a jejich provozní době.",
+          "U pracoviště doplňte počet zaměstnanců, pracovní činnosti, směnnost a používané látky. Nemáte-li všechny podklady, začněte požadavkem úřadu; podle něj určíme, co je nutné doplnit."
+        ]
+      },
+      {
+        heading: "Jeden rozsah místo několika nesouvisejících objednávek",
+        paragraphs: [
+          "Pokud potřebujete více veličin, sestavíme společný rozsah měření. Terénní práce koordinujeme podle provozních podmínek jednotlivých metod a podle toho, kdy je hala nebo technologie v reprezentativním stavu.",
+          "Výstup každého měření odpovídá jeho účelu. Před objednávkou ověříme, komu má být protokol předložen a jaký termín potřebujete stihnout."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/pracovni-prostredi",
+    contactService: "Kolaudační měření",
+    availableLocales: ["cs"],
+    internalLinkPriority: 100,
+    relatedLinks: [
+      {
+        href: "/sluzby/mereni-hluku",
+        label: "Měření hluku",
+        description: "Provoz, technologie, VZT a chráněné prostory."
+      },
+      {
+        href: "/sluzby/mereni-osvetleni",
+        label: "Měření osvětlení",
+        description: "Umělé a denní osvětlení pracovišť a prostor."
+      },
+      {
+        href: "/mereni-nove-haly",
+        label: "Měření nové haly",
+        description: "Společný rozsah více faktorů pracovního prostředí."
+      }
+    ],
+    faq: [
+      {
+        question: "Jaké měření potřebujeme pro kolaudaci?",
+        answer:
+          "Záleží na účelu stavby, technologii a požadavku KHS nebo stavebního úřadu. Nejčastěji se řeší hluk, osvětlení, mikroklima a pracovní prostředí."
+      },
+      {
+        question: "Stačí pro nabídku požadavek úřadu?",
+        answer:
+          "Pro první posouzení obvykle ano. Následně si vyžádáme jen relevantní část projektu, popis provozu a údaje potřebné pro konkrétní měření."
+      },
+      {
+        question: "Lze spojit více kolaudačních měření?",
+        answer:
+          "Ano, lze je připravit jako společný rozsah. Harmonogram ale musí respektovat podmínky jednotlivých metod a reprezentativní provoz stavby nebo technologie."
+      }
+    ]
+  },
+  {
+    slug: "mereni-nove-haly",
+    title: "Měření nové výrobní haly pro KHS a kolaudaci",
+    metaDescription:
+      "Měření nové haly: hluk, osvětlení, mikroklima, vibrace, prach a chemické látky. Společný rozsah pro KHS, pracoviště a kolaudaci.",
+    h1: "Měření nové haly a pracovního prostředí",
+    intro:
+      "U nové nebo upravené haly často nestačí jedna veličina. Podle technologie, pracovních míst a požadavku KHS připravíme společný rozsah hluku, osvětlení, mikroklimatu, vibrací, prachu nebo chemických látek.",
+    sections: [
+      {
+        heading: "Kdy společné měření haly dává smysl",
+        paragraphs: [
+          "Balíček je vhodný při uvádění haly do provozu, změně technologie, nové dispozici pracovišť, kategorizaci prací nebo doplnění podkladů pro KHS. Rozsah vždy vychází ze skutečných pracovních činností.",
+          "Jiné faktory se řeší ve svařovně, jiné v lakovně, skladu nebo hale s tepelnou technologií. Proto nejprve projdeme provoz, směnnost, větrání, zdroje hluku a používané látky."
+        ]
+      },
+      {
+        heading: "Které faktory lze zahrnout",
+        paragraphs: [
+          "Typicky jde o hluk na pracovišti, umělé osvětlení, mikroklima, tepelnou nebo chladovou zátěž a vibrace. Podle výroby doplníme měření prachu nebo chemických látek v pracovním ovzduší.",
+          "Neobjednáváte automaticky všechny veličiny. Doporučíme jen ty, které odpovídají provozu, účelu výstupu a dostupným podkladům."
+        ]
+      },
+      {
+        heading: "Podklady pro KHS a kategorizaci prací",
+        paragraphs: [
+          "Připravte půdorys s pracovišti, popis pracovních činností, délku směny, počet pracovníků, seznam technologií a bezpečnostní listy používaných látek. Přiložte také komunikaci s KHS a starší protokoly, pokud existují.",
+          "Měření plánujeme na dobu, kdy zařízení a zaměstnanci pracují v reprezentativním režimu. U nové haly je proto důležité sladit termín s instalací a zkušebním provozem technologie."
+        ]
+      },
+      {
+        heading: "Jak poptávka pokračuje",
+        paragraphs: [
+          "Z podkladů sestavíme návrh měřených faktorů a míst. Upřesníme, co musí být při návštěvě v provozu a které informace bude potřeba zaznamenat.",
+          "Do formuláře uveďte lokalitu, termín kolaudace nebo požadovaný termín KHS. Pokud přesný rozsah neznáte, vyberte měření nové haly a přiložte projekt nebo stanovisko úřadu."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/pracovni-prostredi",
+    contactService: "Měření nové haly",
+    availableLocales: ["cs"],
+    internalLinkPriority: 90,
+    relatedLinks: [
+      {
+        href: "/sluzby/pracovni-prostredi",
+        label: "Pracovní prostředí",
+        description: "Prach, chemické látky, hluk a kategorizace prací."
+      },
+      {
+        href: "/sluzby/mereni-mikroklimatu",
+        label: "Měření mikroklimatu",
+        description: "Teplota, vlhkost a proudění vzduchu."
+      },
+      {
+        href: "/pro-stavebni-firmy",
+        label: "Podklady pro stavební firmy",
+        description: "Měření a studie v návaznosti na projekt a kolaudaci."
+      }
+    ],
+    faq: [
+      {
+        question: "Které faktory se v nové hale měří?",
+        answer:
+          "Podle provozu se může jednat o hluk, osvětlení, mikroklima, tepelnou zátěž, vibrace, prach nebo chemické látky. Rozsah se určuje podle práce a účelu výstupu."
+      },
+      {
+        question: "Musí už být technologie v provozu?",
+        answer:
+          "Pro měření skutečné expozice a provozního hluku musí být relevantní technologie v reprezentativním režimu. Termín proto plánujeme podle připravenosti haly."
+      },
+      {
+        question: "Co poslat pro nacenění měření haly?",
+        answer:
+          "Pomůže půdorys, popis pracovišť a směn, seznam technologií, bezpečnostní listy a požadavek KHS nebo stavebního úřadu."
+      }
+    ]
+  },
+  {
+    slug: "pro-stavebni-firmy",
+    title: "Měření a studie pro stavební firmy a projektanty",
+    metaDescription:
+      "Podklady pro stavební firmy, generální dodavatele a projektanty: hlukové a rozptylové studie, měření pro kolaudaci a nové haly.",
+    h1: "Měření a odborné podklady pro stavební firmy",
+    intro:
+      "Koordinujete projekt, novou halu nebo změnu užívání? Připravíme měření a studie podle fáze záměru — od hlukového či imisního posouzení po protokoly potřebné před kolaudací.",
+    sections: [
+      {
+        heading: "Podklady před realizací",
+        paragraphs: [
+          "Před povolením záměru se často řeší hluková studie, rozptylová studie, akustický posudek nebo technická příloha pro projekt. Správný výstup závisí na zdrojích hluku a emisí, dopravě a požadavku správního orgánu.",
+          "Pošlete situaci, technickou zprávu, parametry technologií a dostupná stanoviska. Určíme, které vstupy musí dodat projektant, dodavatel technologie nebo investor."
+        ]
+      },
+      {
+        heading: "Měření před kolaudací a užíváním",
+        paragraphs: [
+          "Po instalaci technologií může být nutné ověřit hluk, osvětlení, mikroklima nebo pracovní prostředí. U nové haly připravíme společný rozsah podle pracovišť a skutečného provozu.",
+          "Důležité je plánovat měření až na reprezentativní stav, ale s rezervou před termínem kolaudace. Ve formuláři proto uveďte očekávané spuštění technologie i termín, který potřebujete stihnout."
+        ]
+      },
+      {
+        heading: "Co předat do poptávky",
+        paragraphs: [
+          "Pro první posouzení obvykle stačí projektová dokumentace, účel výstupu, lokalita a požadovaný termín. U studie doplňte zdroje hluku, dopravu, výduchy a provozní dobu; u měření také plánovaný režim technologie.",
+          "Pokud je požadavek rozdělen mezi více částí projektu, označte, co má dodat NATURCHEM. Pomůže to předejít překryvům i chybějícím vstupům."
+        ]
+      },
+      {
+        heading: "Návaznost studií a měření",
+        paragraphs: [
+          "Studie popisuje navrhovaný nebo modelovaný stav, zatímco měření ověřuje stav skutečný. U některých projektů proto vznikají v různých fázích oba výstupy.",
+          "Průběžné předávání aktuálních parametrů technologie snižuje riziko, že závěrečné měření bude hodnotit jiný stav, než se kterým pracoval projekt."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/hlukove-studie",
+    contactService: "Kolaudační měření",
+    availableLocales: ["cs"],
+    internalLinkPriority: 100,
+    relatedLinks: [
+      {
+        href: "/mereni-pro-kolaudaci",
+        label: "Měření pro kolaudaci",
+        description: "Hluk, osvětlení a pracovní prostředí podle požadavku úřadu."
+      },
+      {
+        href: "/sluzby/hlukove-studie",
+        label: "Hlukové studie",
+        description: "Výpočet hluku technologií, dopravy a stavebních záměrů."
+      },
+      {
+        href: "/sluzby/rozptylove-studie",
+        label: "Rozptylové studie",
+        description: "Imisní příspěvky a varianty provozu záměru."
+      }
+    ],
+    faq: [
+      {
+        question: "Kdy potřebuje stavební firma studii a kdy měření?",
+        answer:
+          "Studie zpravidla hodnotí navrhovaný stav před realizací. Měření ověřuje skutečný stav po instalaci nebo při provozu. Konkrétní požadavek určuje projekt a správní orgán."
+      },
+      {
+        question: "Jaké podklady má poslat projektant?",
+        answer:
+          "Pro první posouzení pomůže situace, technická zpráva, parametry technologií, provozní doba, doprava a stanoviska příslušných úřadů."
+      },
+      {
+        question: "Lze řešit studii i následné kolaudační měření?",
+        answer:
+          "Ano. Jde však o samostatné výstupy v různých fázích projektu. Je vhodné průběžně aktualizovat parametry podle skutečně instalované technologie."
+      }
+    ]
+  },
+  {
+    slug: "mereni-hluku-havlickuv-brod",
+    title: "Měření hluku Havlíčkův Brod: provozy a kolaudace",
+    metaDescription:
+      "Měření hluku v Havlíčkově Brodě a na Vysočině pro provozy, pracoviště, technologie a kolaudace. Sídlo NATURCHEM v Havlíčkově Brodě.",
+    h1: "Měření hluku Havlíčkův Brod a Vysočina",
+    intro:
+      "Potřebujete změřit hluk provozu, technologie nebo pracoviště v Havlíčkově Brodě a okolí? NATURCHEM zde sídlí a zajišťuje měření hluku pro firmy, stavby i požadavky KHS nebo stavebního úřadu.",
+    sections: [
+      {
+        heading: "Hluk provozu, pracoviště i technologie",
+        paragraphs: [
+          "Řešíme hluk výrobních zařízení, vzduchotechniky, chlazení, dopravy v areálu i expozici zaměstnanců. Účel měření určuje místa, provozní režim a způsob vyhodnocení.",
+          "U plánované technologie může měření doplnit hluková studie nebo akustický posudek. Nejdříve proto ověříme, zda potřebujete výpočet budoucího stavu, nebo protokol ze skutečného provozu."
+        ]
+      },
+      {
+        heading: "Měření pro kolaudaci nebo KHS",
+        paragraphs: [
+          "K poptávce přiložte požadavek úřadu, půdorys nebo situaci a popis zdrojů hluku. Uveďte také jejich provozní dobu a termín, který potřebujete stihnout.",
+          "Pokud jde o novou halu, lze hluk řešit společně s osvětlením, mikroklimatem a dalšími faktory pracovního prostředí."
+        ]
+      },
+      {
+        heading: "Co poslat pro návrh měření",
+        paragraphs: [
+          "Uveďte adresu, zdroj hluku, dobu jeho provozu a účel protokolu. Přiložte fotografie, technické parametry zařízení nebo předchozí měření, pokud je máte.",
+          "Podle podkladů navrhneme rozsah a podmínky měření. Pro použitelný výsledek musí být posuzovaný zdroj v dohodnutém režimu."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-hluku",
+    contactService: "Měření hluku a akustika",
+    areaServed: { type: "AdministrativeArea", name: "Kraj Vysočina" },
+    availableLocales: ["cs"],
+    internalLinkPriority: 80,
+    relatedLinks: [
+      {
+        href: "/mereni-pro-kolaudaci",
+        label: "Měření pro kolaudaci",
+        description: "Více veličin podle projektu a požadavku úřadu."
+      },
+      {
+        href: "/sluzby/hlukove-studie",
+        label: "Hlukové studie",
+        description: "Posouzení navrhovaného stavu a technologií."
+      }
+    ]
+  },
+  {
+    slug: "mereni-hluku-praha",
+    title: "Měření hluku Praha: technologie, VZT a kolaudace",
+    metaDescription:
+      "Měření hluku v Praze pro provozovny, technologie, VZT, tepelná čerpadla a kolaudace. Pracoviště NATURCHEM v Praze 5.",
+    h1: "Měření hluku Praha",
+    intro:
+      "Potřebujete doložit hluk technologie, vzduchotechniky, tepelného čerpadla nebo provozovny v Praze? NATURCHEM má pracoviště v Praze 5 a zajišťuje měření i navazující akustické posouzení.",
+    sections: [
+      {
+        heading: "Technologie, VZT a tepelná čerpadla",
+        paragraphs: [
+          "U budov a provozoven se často hodnotí venkovní jednotky, chlazení, vzduchotechnika, strojovny nebo provozní hluk. Měřicí režim musí odpovídat účelu protokolu a skutečnému provozu zařízení.",
+          "Pokud je zařízení teprve navržené, může být vhodná hluková studie nebo akustický posudek. U existujícího zdroje se vychází z měření v relevantním místě a době."
+        ]
+      },
+      {
+        heading: "Kolaudace, změna užívání a požadavek KHS",
+        paragraphs: [
+          "Pošlete stanovisko úřadu, situaci objektu, umístění zdroje a termín kolaudace. Pomůže také provozní doba, technický list zařízení a informace o nejbližších chráněných prostorech.",
+          "U nové provozovny nebo haly lze vedle hluku posoudit také osvětlení, mikroklima a pracovní prostředí podle konkrétního požadavku."
+        ]
+      },
+      {
+        heading: "Jak připravit poptávku měření hluku",
+        paragraphs: [
+          "Uveďte přesnou adresu, zdroj hluku, účel měření a dobu, kdy může zařízení pracovat v reprezentativním režimu. Přiložte dostupný půdorys, fotografie nebo projektovou dokumentaci.",
+          "Z podkladů určíme, zda je vhodné měření, studie nebo jejich návaznost. Současně upřesníme podmínky potřebné pro použitelný výstup."
+        ]
+      }
+    ],
+    serviceHref: "/sluzby/mereni-hluku",
+    contactService: "Měření hluku a akustika",
+    areaServed: { type: "City", name: "Praha" },
+    availableLocales: ["cs"],
+    internalLinkPriority: 90,
+    relatedLinks: [
+      {
+        href: "/mereni-hluku-tepelneho-cerpadla-vzt",
+        label: "Hluk tepelných čerpadel a VZT",
+        description: "Specializovaná stránka pro venkovní jednotky a chlazení."
+      },
+      {
+        href: "/mereni-pro-kolaudaci",
+        label: "Měření pro kolaudaci",
+        description: "Hluk, osvětlení a pracovní prostředí."
+      }
+    ]
   }
 ];
 

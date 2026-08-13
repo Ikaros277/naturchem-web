@@ -7,6 +7,7 @@ import { useLocale } from "@/lib/i18n/locale-context";
 import type { Locale } from "@/lib/i18n/locales";
 import { isLocale } from "@/lib/i18n/locales";
 import articleLocaleMap from "@/lib/article-locale-map.json";
+import { localesForConstrainedPath } from "@/lib/locale-constrained-paths";
 
 type Props = {
   href: string;
@@ -32,6 +33,10 @@ export function useLocalizedPathname(): string {
 
 export function useLocaleSwitchHref(targetLocale: Locale): string {
   const pathname = useLocalizedPathname();
+  const pageLocales = localesForConstrainedPath(pathname);
+  if (pageLocales && !pageLocales.includes(targetLocale)) {
+    return localizeHref("/sluzby", targetLocale);
+  }
   const match = pathname.match(poradnaArticlePattern);
 
   if (match) {

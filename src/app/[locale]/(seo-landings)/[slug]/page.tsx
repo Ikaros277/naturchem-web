@@ -28,7 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     locale,
     path: `/${landing.slug}`,
     title: landing.title,
-    description: landing.metaDescription
+    description: landing.metaDescription,
+    availableLocales: landing.availableLocales
   });
 }
 

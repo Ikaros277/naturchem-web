@@ -3,11 +3,9 @@
 import { useState } from "react";
 
 import { legalPaths } from "@/lib/legal";
-import { type InquiryCategoryId } from "@/lib/contact-inquiry";
-import type {
-  getInquiryCategories,
-  getPriorityContactServiceChoices
-} from "@/lib/i18n/contact-inquiry-i18n";
+import { resolveInquiryCategory, type InquiryCategoryId } from "@/lib/contact-inquiry";
+import type { ContactServiceOption } from "@/lib/contact-services";
+import type { getPriorityContactServiceChoices } from "@/lib/i18n/contact-inquiry-i18n";
 import { sendGtagEvent } from "@/lib/gtag";
 import { useLocale, useTranslations } from "@/lib/i18n/locale-context";
 import { LocaleLink } from "@/lib/i18n/locale-link";
@@ -15,16 +13,21 @@ import { company } from "@/lib/site";
 
 type Status = "idle" | "loading" | "success" | "error";
 
+const SECONDARY_SERVICE_VALUES = new Set<ContactServiceOption>([
+  "Měření vibrací",
+  "Měření mikroklimatu",
+  "Rozptylové studie",
+  "Odborné posudky"
+]);
+
 type Props = {
-  categories: ReturnType<typeof getInquiryCategories>;
   serviceChoices: ReturnType<typeof getPriorityContactServiceChoices>;
   initialCategory?: InquiryCategoryId;
   initialMessage?: string;
-  initialServices?: string[];
+  initialServices?: ContactServiceOption[];
 };
 
 export function ContactForm({
-  categories,
   serviceChoices,
   initialCategory = "nevim",
   initialMessage = "",
@@ -35,8 +38,15 @@ export function ContactForm({
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
   const [contactChannelError, setContactChannelError] = useState(false);
-  const [inquiryCategory, setInquiryCategory] = useState<InquiryCategoryId>(initialCategory);
-  const [selectedServices, setSelectedServices] = useState<string[]>(initialServices);
+  const [selectedServices, setSelectedServices] = useState<ContactServiceOption[]>(initialServices);
+  const inquiryCategory =
+    selectedServices.length > 0 ? resolveInquiryCategory(selectedServices) : initialCategory;
+  const primaryServiceChoices = serviceChoices.filter(
+    (service) => !SECONDARY_SERVICE_VALUES.has(service.value)
+  );
+  const secondaryServiceChoices = serviceChoices.filter((service) =>
+    SECONDARY_SERVICE_VALUES.has(service.value)
+  );
 
   const sendFailureMessage = t.sendFailure
     .replace("{email}", company.email)
@@ -83,7 +93,6 @@ export function ContactForm({
       const locationProvided = Boolean(String(formData.get("location") ?? "").trim());
       const deadlineProvided = Boolean(String(formData.get("deadline") ?? "").trim());
       form.reset();
-      setInquiryCategory("nevim");
       setSelectedServices([]);
       sendGtagEvent("generate_lead", {
         form_id: "poptavkovy-formular",
@@ -129,6 +138,8 @@ export function ContactForm({
           <input type="text" name="website" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
+
+      <input type="hidden" name="inquiryCategory" value={inquiryCategory} />
 
       <p id="contact-channel-hint" className="contact-form-channel-hint muted">
         {t.contactChannelHint}
@@ -191,26 +202,6 @@ export function ContactForm({
 
           <p>
             <label>
-              {t.categoryLabel}
-              <br />
-              <select
-                name="inquiryCategory"
-                className="contact-inquiry-select"
-                required
-                value={inquiryCategory}
-                onChange={(event) => setInquiryCategory(event.target.value as InquiryCategoryId)}
-              >
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-                    {category.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </p>
-
-          <p>
-            <label>
               {t.deadlineLabel}
               <br />
               <input name="deadline" maxLength={200} placeholder={t.deadlinePlaceholder} />
@@ -266,7 +257,7 @@ export function ContactForm({
         <legend>{t.serviceLabel}</legend>
         <p className="contact-service-choices-hint muted">{t.serviceHint}</p>
         <div className="contact-service-choices-grid">
-          {serviceChoices.map((service) => {
+          {primaryServiceChoices.map((service) => {
             const checked = selectedServices.includes(service.value);
             return (
               <label key={service.value} className="contact-service-choice">
@@ -288,6 +279,37 @@ export function ContactForm({
             );
           })}
         </div>
+        {secondaryServiceChoices.length > 0 ? (
+          <details
+            className="contact-service-more"
+            open={secondaryServiceChoices.some((service) => selectedServices.includes(service.value))}
+          >
+            <summary>{t.serviceMore}</summary>
+            <div className="contact-service-choices-grid contact-service-choices-grid--secondary">
+              {secondaryServiceChoices.map((service) => {
+                const checked = selectedServices.includes(service.value);
+                return (
+                  <label key={service.value} className="contact-service-choice">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value={service.value}
+                      checked={checked}
+                      onChange={(event) => {
+                        setSelectedServices((current) =>
+                          event.target.checked
+                            ? [...new Set([...current, service.value])]
+                            : current.filter((value) => value !== service.value)
+                        );
+                      }}
+                    />
+                    <span>{service.label}</span>
+                  </label>
+                );
+              })}
+            </div>
+          </details>
+        ) : null}
         {selectedServices
           .filter((service) => !serviceChoices.some((choice) => choice.value === service))
           .map((service) => (

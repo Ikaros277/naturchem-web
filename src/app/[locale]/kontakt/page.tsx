@@ -6,10 +6,7 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { company, getCompanyOffices, siteUrl } from "@/lib/site";
 import { JsonLd } from "@/components/Schema";
 import { getPageHeroTheme } from "@/lib/hero-images";
-import {
-  getInquiryCategories,
-  getPriorityContactServiceChoices
-} from "@/lib/i18n/contact-inquiry-i18n";
+import { getPriorityContactServiceChoices } from "@/lib/i18n/contact-inquiry-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -38,7 +35,6 @@ const primaryPhoneHref = `tel:${company.phones[0].replaceAll(" ", "")}`;
 export default async function Page({ params }: PageProps) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
-  const categories = getInquiryCategories(locale);
   const serviceChoices = getPriorityContactServiceChoices(locale);
   const messages = await getMessages(locale);
   const link = (href: string) => localizeHref(href, locale);
@@ -84,7 +80,7 @@ export default async function Page({ params }: PageProps) {
         aria-labelledby="poptavka-heading"
       >
         <article className="card contact-form-panel contact-page-card">
-          <ContactFormSection categories={categories} serviceChoices={serviceChoices} />
+          <ContactFormSection serviceChoices={serviceChoices} />
         </article>
       </section>
 

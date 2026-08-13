@@ -161,7 +161,7 @@
     "serviceHint": "Můžete vybrat více možností. Pokud si nejste jistí, zvolte poslední možnost.",
     "messageLabel": "S čím Vám pomůžeme?",
     "messagePlaceholder": "Třeba výzva z úřadu, popis provozu, termín, co už máte po ruce…",
-    "attachmentLabel": "Příloha (nepovinné)",
+    "attachmentLabel": "Přílohy (nepovinné, celkem max. 4 MB)",
     "attachmentTooltipAria": "Informace o příloze",
     "attachmentTooltip": "PDF, Word, Excel, obrázek nebo ZIP — celkem max. 4 MB.",
     "consentPrefix": "Souhlasím se zpracováním osobních údajů za účelem vyřízení dotazu dle",

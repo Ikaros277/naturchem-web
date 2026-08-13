@@ -161,7 +161,7 @@
     "serviceHint": "Sie können mehrere Optionen wählen. Wenn Sie unsicher sind, wählen Sie die letzte Option.",
     "messageLabel": "Wie können wir helfen?",
     "messagePlaceholder": "Zum Beispiel eine behördliche Mitteilung, Betriebsbeschreibung, Frist, was Sie bereits haben…",
-    "attachmentLabel": "Anhang (optional)",
+    "attachmentLabel": "Anhänge (optional, insgesamt max. 4 MB)",
     "attachmentTooltipAria": "Informationen zum Anhang",
     "attachmentTooltip": "PDF, Word, Excel, Bild oder ZIP — insgesamt max. 4 MB.",
     "consentPrefix": "Ich stimme der Verarbeitung personenbezogener Daten zur Bearbeitung dieser Anfrage gemäß der",

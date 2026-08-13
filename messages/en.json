@@ -161,7 +161,7 @@
     "serviceHint": "You can select more than one. If you are unsure, choose the last option.",
     "messageLabel": "How can we help?",
     "messagePlaceholder": "For example an authority notice, operation description, deadline, what you already have…",
-    "attachmentLabel": "Attachment (optional)",
+    "attachmentLabel": "Attachments (optional, max. 4 MB total)",
     "attachmentTooltipAria": "Attachment information",
     "attachmentTooltip": "PDF, Word, Excel, image or ZIP — max. 4 MB in total.",
     "consentPrefix": "I agree to the processing of personal data for handling this inquiry according to the",

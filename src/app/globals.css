@@ -6829,23 +6829,6 @@ main.contact-page + .site-footer {
   margin-top: 0.15rem;
 }
 
-.contact-service-more {
-  margin-top: 0.75rem;
-}
-
-.contact-service-more summary {
-  width: fit-content;
-  padding: 0.35rem 0.15rem;
-  color: var(--forest-dark);
-  font-size: 0.9rem;
-  font-weight: 750;
-  cursor: pointer;
-}
-
-.contact-service-more[open] summary {
-  margin-bottom: 0.55rem;
-}
-
 @media (max-width: 1000px) {
   .contact-service-choices-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));

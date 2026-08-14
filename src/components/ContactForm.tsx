@@ -13,13 +13,6 @@ import { company } from "@/lib/site";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-const SECONDARY_SERVICE_VALUES = new Set<ContactServiceOption>([
-  "Měření vibrací",
-  "Měření mikroklimatu",
-  "Rozptylové studie",
-  "Odborné posudky"
-]);
-
 type Props = {
   serviceChoices: ReturnType<typeof getPriorityContactServiceChoices>;
   initialCategory?: InquiryCategoryId;
@@ -41,12 +34,6 @@ export function ContactForm({
   const [selectedServices, setSelectedServices] = useState<ContactServiceOption[]>(initialServices);
   const inquiryCategory =
     selectedServices.length > 0 ? resolveInquiryCategory(selectedServices) : initialCategory;
-  const primaryServiceChoices = serviceChoices.filter(
-    (service) => !SECONDARY_SERVICE_VALUES.has(service.value)
-  );
-  const secondaryServiceChoices = serviceChoices.filter((service) =>
-    SECONDARY_SERVICE_VALUES.has(service.value)
-  );
 
   const sendFailureMessage = t.sendFailure
     .replace("{email}", company.email)
@@ -257,7 +244,7 @@ export function ContactForm({
         <legend>{t.serviceLabel}</legend>
         <p className="contact-service-choices-hint muted">{t.serviceHint}</p>
         <div className="contact-service-choices-grid">
-          {primaryServiceChoices.map((service) => {
+          {serviceChoices.map((service) => {
             const checked = selectedServices.includes(service.value);
             return (
               <label key={service.value} className="contact-service-choice">
@@ -279,37 +266,6 @@ export function ContactForm({
             );
           })}
         </div>
-        {secondaryServiceChoices.length > 0 ? (
-          <details
-            className="contact-service-more"
-            open={secondaryServiceChoices.some((service) => selectedServices.includes(service.value))}
-          >
-            <summary>{t.serviceMore}</summary>
-            <div className="contact-service-choices-grid contact-service-choices-grid--secondary">
-              {secondaryServiceChoices.map((service) => {
-                const checked = selectedServices.includes(service.value);
-                return (
-                  <label key={service.value} className="contact-service-choice">
-                    <input
-                      type="checkbox"
-                      name="services"
-                      value={service.value}
-                      checked={checked}
-                      onChange={(event) => {
-                        setSelectedServices((current) =>
-                          event.target.checked
-                            ? [...new Set([...current, service.value])]
-                            : current.filter((value) => value !== service.value)
-                        );
-                      }}
-                    />
-                    <span>{service.label}</span>
-                  </label>
-                );
-              })}
-            </div>
-          </details>
-        ) : null}
         {selectedServices
           .filter((service) => !serviceChoices.some((choice) => choice.value === service))
           .map((service) => (

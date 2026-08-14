@@ -6,7 +6,7 @@ export const homeHeroPillars: HomeHeroPillar[] = [
     label: "Measurements",
     theme: "homepage-mereni",
     detail:
-      "We measure emissions, noise, lighting, vibration, microclimate and other workplace factors — with protocols for KHS and ČIŽP.",
+      "We measure emissions, noise, lighting, vibration, microclimate and other workplace factors — for operations, KHS, ČIŽP or building approval.",
     href: "/sluzby#mericke-sluzby"
   },
   {

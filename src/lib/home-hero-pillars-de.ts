@@ -6,7 +6,7 @@ export const homeHeroPillars: HomeHeroPillar[] = [
     label: "Messungen",
     theme: "homepage-mereni",
     detail:
-      "Wir messen Emissionen, Lärm, Beleuchtung, Schwingungen, Mikroklima und weitere Arbeitsplatzfaktoren — mit Protokollen für KHS und ČIŽP.",
+      "Wir messen Emissionen, Lärm, Beleuchtung, Schwingungen, Mikroklima und weitere Arbeitsplatzfaktoren — für Betrieb, KHS, ČIŽP oder Bauabnahme.",
     href: "/sluzby#mericke-sluzby"
   },
   {

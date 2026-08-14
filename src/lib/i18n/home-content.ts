@@ -96,15 +96,15 @@ const offerPillars = {
       icon: "pillar-mereni" as const,
       title: "Accredited measurements",
       teaser:
-        "Emissions, noise, workplace environment and vibration — accredited, with outputs for KHS and ČIŽP…",
-      text: "We measure emissions, workplace environment, noise, vibration, lighting, microclimate and cleanrooms — accredited, with outputs for authorities.",
+        "Emissions, noise, lighting, vibration, microclimate and other workplace measurements — for operations, KHS, ČIŽP or building approval…",
+      text: "We measure emissions, noise, lighting, vibration and microclimate. For a new hall or building approval, we define one coordinated scope based on the project and operation.",
       cta: "View measurements",
       href: "/sluzby#mericke-sluzby",
       tags: ["KHS", "ČIŽP", "ISO 17025"],
       links: [
         { label: "Emission measurements", href: "/sluzby/mereni-emisi" },
-        { label: "Workplace environment", href: "/sluzby/pracovni-prostredi" },
-        { label: "Vibration", href: "/sluzby/mereni-vibraci" }
+        { label: "Measurements for building approval", href: "/mereni-pro-kolaudaci" },
+        { label: "Measurements for a new hall", href: "/mereni-nove-haly" }
       ]
     },
     {
@@ -141,15 +141,15 @@ const offerPillars = {
       icon: "pillar-mereni" as const,
       title: "Akkreditierte Messungen",
       teaser:
-        "Emissionen, Lärm, Arbeitsumfeld und Vibrationen — akkreditiert, mit Ergebnissen für KHS und ČIŽP…",
-      text: "Wir messen Emissionen, Arbeitsumfeld, Lärm, Vibrationen, Beleuchtung, Mikroklima und Reinräume — akkreditiert, mit Ergebnissen für Behörden.",
+        "Emissionen, Lärm, Beleuchtung, Schwingungen, Mikroklima und weitere Arbeitsplatzmessungen — für Betrieb, KHS, ČIŽP oder Bauabnahme…",
+      text: "Wir messen Emissionen, Lärm, Beleuchtung, Schwingungen und Mikroklima. Bei einer neuen Halle oder Bauabnahme stimmen wir den gemeinsamen Umfang auf Projekt und Betrieb ab.",
       cta: "Messungen anzeigen",
       href: "/sluzby#mericke-sluzby",
       tags: ["KHS", "ČIŽP", "ISO 17025"],
       links: [
         { label: "Emissionsmessungen", href: "/sluzby/mereni-emisi" },
-        { label: "Arbeitsumfeld", href: "/sluzby/pracovni-prostredi" },
-        { label: "Vibrationen", href: "/sluzby/mereni-vibraci" }
+        { label: "Messungen zur Bauabnahme", href: "/mereni-pro-kolaudaci" },
+        { label: "Messungen für eine neue Halle", href: "/mereni-nove-haly" }
       ]
     },
     {

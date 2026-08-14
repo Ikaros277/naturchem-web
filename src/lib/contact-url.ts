@@ -14,7 +14,7 @@ export const contactPageHref = "/kontakt";
 export const contactFormHref = `${contactPageHref}#${CONTACT_FORM_ID}`;
 
 export function contactUrl(service: ContactServiceOption | string): string {
-  const value = relatedServiceToContact(service) ?? (isValidContactService(service) ? service : "Nejsem si jistý");
+  const value = relatedServiceToContact(service) ?? (isValidContactService(service) ? service : "Jiný požadavek");
   return `${contactPageHref}?service=${encodeURIComponent(value)}#${CONTACT_FORM_ID}`;
 }
 
@@ -33,7 +33,7 @@ export function sectorContactUrl(
     .filter((s): s is ContactServiceOption => s !== null);
 
   const unique = [...new Set(services)];
-  const primary = unique[0] ?? "Nejsem si jistý";
+  const primary = unique[0] ?? "Jiný požadavek";
 
   const params = new URLSearchParams();
   params.set("service", primary);

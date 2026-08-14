@@ -24,7 +24,7 @@ export const CONTACT_SERVICE_OPTIONS = [
   "Schulung zum Chemikalienrecht",
   "Sicherheitsdatenblätter",
   "Chemische Substanzen im Betrieb",
-  "Ich bin mir nicht sicher"
+  "Sonstige Anfrage"
 ] as const;
 
 export const CONTACT_SERVICE_OPTIONS_UI = CONTACT_SERVICE_OPTIONS;
@@ -49,7 +49,8 @@ export const CONTACT_SERVICE_LABELS_DE: Record<ContactServiceOption, string> = {
   "Školení chemického zákona / chemické legislativy": "Schulung zum Chemikalienrecht",
   "Bezpečnostní listy": "Sicherheitsdatenblätter",
   "Chemické látky v provozu": "Chemische Substanzen im Betrieb",
-  "Nejsem si jistý": "Ich bin mir nicht sicher",
+  "Jiný požadavek": "Sonstige Anfrage",
+  "Nejsem si jistý": "Sonstige Anfrage",
   "EIA, posudky a poradenství": "UVP und Absichtserklärung",
   "Odborný posudek a provozní řád": "Gutachten",
   "ISPOP a GHG": "ISPOP und Treibhausgase",

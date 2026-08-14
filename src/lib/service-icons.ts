@@ -250,6 +250,7 @@ const contactServiceToIcon: Record<string, ServiceIconKey> = {
   "Rozptylové studie": "rozptyl",
   "EIA a oznámení záměru": "pillar-dokumentace",
   "Školení chemického zákona / chemické legislativy": "skoleni",
+  "Jiný požadavek": "process-posouzeni",
   "Nejsem si jistý": "process-posouzeni"
 };
 

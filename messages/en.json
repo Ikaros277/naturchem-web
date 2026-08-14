@@ -158,7 +158,7 @@
     "deadlineLabel": "Deadline you need to meet (optional)",
     "deadlinePlaceholder": "For example occupancy approval in October",
     "serviceLabel": "How can we help?",
-    "serviceHint": "Select one or more options. If you are unsure, choose “I’m not sure”.",
+    "serviceHint": "Select one or more options. For a different type of request, choose “Other request”.",
     "messageLabel": "Briefly describe your situation",
     "messagePlaceholder": "For example an authority notice, operation description, deadline, what you already have…",
     "attachmentLabel": "Attachments (optional, max. 4 MB total)",

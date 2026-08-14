@@ -22,7 +22,7 @@ export const CONTACT_SERVICE_OPTIONS = [
   "Školení chemického zákona / chemické legislativy",
   "Bezpečnostní listy",
   "Chemické látky v provozu",
-  "Nejsem si jistý"
+  "Jiný požadavek"
 ] as const;
 
 /** Pouze canonical — pro vykreslení formulářových voleb (bez zastaralých aliasů). */
@@ -41,23 +41,26 @@ export const PRIORITY_CONTACT_SERVICE_OPTIONS = [
   "Hlukové studie",
   "Rozptylové studie",
   "Odborné posudky",
-  "Nejsem si jistý"
+  "Jiný požadavek"
 ] as const satisfies readonly ContactServiceOption[];
 
 const LEGACY_EIA_UMBRELLA = "EIA, posudky a poradenství" as const;
 const LEGACY_POSUDEK_PROVOZNI_RAD = "Odborný posudek a provozní řád" as const;
 const LEGACY_ISPOP_GHG = "ISPOP a GHG" as const;
+const LEGACY_UNSURE = "Nejsem si jistý" as const;
 
 export type ContactServiceOption =
   | (typeof CONTACT_SERVICE_OPTIONS)[number]
   | typeof LEGACY_EIA_UMBRELLA
   | typeof LEGACY_POSUDEK_PROVOZNI_RAD
-  | typeof LEGACY_ISPOP_GHG;
+  | typeof LEGACY_ISPOP_GHG
+  | typeof LEGACY_UNSURE;
 
 export function isValidContactService(value: string): value is ContactServiceOption {
   if (value === LEGACY_EIA_UMBRELLA) return true;
   if (value === LEGACY_POSUDEK_PROVOZNI_RAD) return true;
   if (value === LEGACY_ISPOP_GHG) return true;
+  if (value === LEGACY_UNSURE) return true;
   return (CONTACT_SERVICE_OPTIONS as readonly string[]).includes(value);
 }
 
@@ -93,7 +96,8 @@ const RELATED_SERVICE_MAP: Record<string, ContactServiceOption> = {
   "Technické přílohy pro investory": "EIA a oznámení záměru",
   "Školení chemické legislativy": "Školení chemického zákona / chemické legislativy",
   "Školení chemického zákona a chemické legislativy":
-    "Školení chemického zákona / chemické legislativy"
+    "Školení chemického zákona / chemické legislativy",
+  "Nejsem si jistý": "Jiný požadavek"
 };
 
 export function relatedServiceToContact(relatedTitle: string): ContactServiceOption | null {
@@ -125,6 +129,8 @@ export function resolveContactServices(
   extraFromQuery: string[]
 ): ContactServiceOption[] {
   const unique = new Set<ContactServiceOption>();
+  const canonical = (service: ContactServiceOption): ContactServiceOption =>
+    service === LEGACY_UNSURE ? "Jiný požadavek" : service;
 
   if (sectorParam) {
     const preset = SECTOR_SERVICE_PRESETS[sectorParam];
@@ -132,7 +138,7 @@ export function resolveContactServices(
   }
 
   if (serviceParam && isValidContactService(serviceParam)) {
-    unique.add(serviceParam);
+    unique.add(canonical(serviceParam));
   } else if (serviceParam && !sectorParam) {
     const legacyPreset = SECTOR_SERVICE_PRESETS[serviceParam];
     if (legacyPreset) {
@@ -140,7 +146,7 @@ export function resolveContactServices(
     }
   }
 
-  extraFromQuery.filter(isValidContactService).forEach((s) => unique.add(s));
+  extraFromQuery.filter(isValidContactService).forEach((s) => unique.add(canonical(s)));
 
   return [...unique];
 }

@@ -55,7 +55,7 @@ const TRAINING_SERVICES = new Set<ContactServiceOption>([
 ]);
 
 export function serviceToInquiryCategory(service: ContactServiceOption): InquiryCategoryId {
-  if (service === "Nejsem si jistý") return "nevim";
+  if (service === "Jiný požadavek" || service === "Nejsem si jistý") return "nevim";
   if (MEASUREMENT_SERVICES.has(service)) return "mereni";
   if (STUDY_SERVICES.has(service)) return "studie";
   if (EIA_SERVICES.has(service)) return "eia";
@@ -65,7 +65,7 @@ export function serviceToInquiryCategory(service: ContactServiceOption): Inquiry
 
 export function resolveInquiryCategory(services: ContactServiceOption[]): InquiryCategoryId {
   if (services.length === 0) return "nevim";
-  if (services.includes("Nejsem si jistý")) return "nevim";
+  if (services.includes("Jiný požadavek") || services.includes("Nejsem si jistý")) return "nevim";
 
   const categories = new Set(services.map(serviceToInquiryCategory));
   if (categories.size === 1) return [...categories][0];

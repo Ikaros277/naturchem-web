@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 import { HomeHeroSection } from "@/components/HomeHeroSection";
 import { ExperienceStats } from "@/components/ExperienceStats";
-import { HomeOfferCard } from "@/components/HomeOfferCard";
+import { HomeServiceIndex } from "@/components/HomeServiceIndex";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
@@ -96,11 +96,7 @@ export default async function Home({ params }: Props) {
           <header className="section-header home-offer-header">
             <h2 id="home-offer-heading">{messages.home.offerTitle}</h2>
           </header>
-          <div className="home-offer-grid home-offer-grid-three">
-            {offerPillars.map((pillar) => (
-              <HomeOfferCard key={pillar.title} pillar={pillar} />
-            ))}
-          </div>
+          <HomeServiceIndex pillars={offerPillars} />
         </div>
       </section>
 

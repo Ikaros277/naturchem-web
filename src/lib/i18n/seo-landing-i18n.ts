@@ -7,6 +7,9 @@ const copy = {
     ctaText:
       "Pošlete stručný popis provozu nebo požadavek úřadu. Na základě podkladů navrhneme rozsah prací a možný termín realizace.",
     generalServicePage: "Přehled služby",
+    overviewEyebrow: "Stručně a věcně",
+    relatedEyebrow: "Navazující řešení",
+    faqEyebrow: "Praktické informace",
     relatedFacility: "Související provoz",
     relatedSolutions: "Související služby a situace",
     faqTitle: "Časté dotazy",
@@ -19,6 +22,9 @@ const copy = {
     ctaText:
       "Send a brief description of your operation or an authority requirement. Based on your documents we will propose the scope of work and a possible schedule.",
     generalServicePage: "Service overview",
+    overviewEyebrow: "At a glance",
+    relatedEyebrow: "Related solutions",
+    faqEyebrow: "Practical information",
     relatedFacility: "Related facility type",
     relatedSolutions: "Related services and situations",
     faqTitle: "Frequently asked questions",
@@ -31,6 +37,9 @@ const copy = {
     ctaText:
       "Senden Sie eine kurze Beschreibung Ihres Betriebs oder eine Behördenanforderung. Auf Basis Ihrer Unterlagen schlagen wir den Arbeitsumfang und einen möglichen Termin vor.",
     generalServicePage: "Leistungsübersicht",
+    overviewEyebrow: "Kurz und sachlich",
+    relatedEyebrow: "Ergänzende Lösungen",
+    faqEyebrow: "Praktische Informationen",
     relatedFacility: "Verwandter Betriebstyp",
     relatedSolutions: "Verwandte Leistungen und Situationen",
     faqTitle: "Häufige Fragen",

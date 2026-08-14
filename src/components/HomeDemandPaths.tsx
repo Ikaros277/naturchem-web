@@ -39,17 +39,24 @@ export function HomeDemandPaths({ locale }: { locale: Locale }) {
             mohou být potřeba.
           </p>
         </header>
-        <div className="home-demand-paths-grid">
-          {paths.map((item) => (
-            <article key={item.href} className="card home-demand-path-card">
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-              <LocaleLink href={item.href} className="home-demand-path-link">
-                {item.cta} <span aria-hidden="true">→</span>
+        <ol className="home-demand-paths-list">
+          {paths.map((item, index) => (
+            <li key={item.href}>
+              <LocaleLink href={item.href} className="home-demand-path-item">
+                <span className="home-demand-path-index" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="home-demand-path-copy">
+                  <strong>{item.title}</strong>
+                  <span>{item.text}</span>
+                  <span className="home-demand-path-cta">
+                    {item.cta} <span aria-hidden="true">→</span>
+                  </span>
+                </span>
               </LocaleLink>
-            </article>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

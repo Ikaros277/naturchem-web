@@ -109,9 +109,9 @@ export async function SeoLandingPage({ landing, locale }: Props) {
         {landing.highlights?.length ? (
           <section className="seo-demand-highlight-band" aria-label={landing.overviewHeading}>
             <div className="container seo-demand-highlight-grid">
-              {landing.highlights.map((item, index) => (
+              {landing.highlights.map((item) => (
                 <div key={item} className="seo-demand-highlight">
-                  <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                  <span aria-hidden="true">✓</span>
                   <strong>{item}</strong>
                 </div>
               ))}
@@ -123,27 +123,34 @@ export async function SeoLandingPage({ landing, locale }: Props) {
           className="section page-first-section seo-demand-overview"
           aria-labelledby="seo-demand-overview-heading"
         >
-          <div className="container">
+          <div className="container seo-demand-overview-layout">
             <header className="seo-demand-section-header">
-              <p className="eyebrow">Stručně a věcně</p>
+              <p className="eyebrow">{copy.overviewEyebrow}</p>
               <h2 id="seo-demand-overview-heading">
                 {landing.overviewHeading ?? landing.sections[0]?.heading}
               </h2>
             </header>
-            <div className="seo-demand-overview-grid">
+            <ol className="seo-demand-overview-list">
               {landing.sections.map((section, index) => (
-                <article
+                <li
                   key={section.heading ?? section.paragraphs[0]?.slice(0, 40)}
-                  className="seo-demand-overview-card"
+                  className="seo-demand-overview-step"
                 >
-                  <ServiceIcon icon={sectionIcons[index] ?? "process-zpracovani"} variant="inline" />
-                  {section.heading ? <h3>{section.heading}</h3> : null}
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-                  ))}
-                </article>
+                  <span className="seo-demand-step-index" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="seo-demand-step-icon" aria-hidden="true">
+                    <ServiceIcon icon={sectionIcons[index] ?? "process-zpracovani"} variant="inline" />
+                  </span>
+                  <span className="seo-demand-step-copy">
+                    {section.heading ? <strong>{section.heading}</strong> : null}
+                    {section.paragraphs.map((paragraph) => (
+                      <span key={paragraph.slice(0, 48)}>{paragraph}</span>
+                    ))}
+                  </span>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
@@ -151,23 +158,25 @@ export async function SeoLandingPage({ landing, locale }: Props) {
           <section className="section seo-demand-related-section" aria-labelledby="seo-related-heading">
             <div className="container">
               <header className="seo-demand-section-header">
-                <p className="eyebrow">Navazující řešení</p>
+                <p className="eyebrow">{copy.relatedEyebrow}</p>
                 <h2 id="seo-related-heading">{copy.relatedSolutions}</h2>
               </header>
-              <div className="seo-demand-related-grid">
+              <ul className="seo-demand-related-list">
                 {landing.relatedLinks.map((item) => (
-                  <Link key={item.href} href={link(item.href)} className="seo-demand-related-card">
-                    <ServiceIcon href={item.href} variant="inline" />
-                    <span className="seo-demand-related-copy">
-                      <strong>{item.label}</strong>
-                      <small>{item.description}</small>
-                    </span>
-                    <span className="seo-demand-related-arrow" aria-hidden="true">
-                      →
-                    </span>
-                  </Link>
+                  <li key={item.href}>
+                    <Link href={link(item.href)} className="seo-demand-related-row">
+                      <ServiceIcon href={item.href} variant="inline" />
+                      <span className="seo-demand-related-copy">
+                        <strong>{item.label}</strong>
+                        <small>{item.description}</small>
+                      </span>
+                      <span className="seo-demand-related-arrow" aria-hidden="true">
+                        →
+                      </span>
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </section>
         ) : null}
@@ -176,7 +185,7 @@ export async function SeoLandingPage({ landing, locale }: Props) {
           <section className="section seo-demand-faq" aria-labelledby="seo-demand-faq-heading">
             <div className="container seo-demand-faq-inner">
               <header className="seo-demand-section-header">
-                <p className="eyebrow">Praktické informace</p>
+                <p className="eyebrow">{copy.faqEyebrow}</p>
                 <h2 id="seo-demand-faq-heading">{copy.faqTitle}</h2>
               </header>
               <FaqAccordionList

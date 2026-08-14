@@ -9,16 +9,16 @@ const paths = [
     cta: "Zjistit potřebný rozsah"
   },
   {
-    href: "/mereni-nove-haly",
-    title: "Spouštíme novou halu",
-    text: "Společný rozsah měření podle technologie, pracovišť, KHS a termínu uvedení do provozu.",
-    cta: "Připravit měření haly"
+    href: "/mereni-pracovniho-prostredi-kategorizace-praci",
+    title: "Potřebujeme kategorizaci prací",
+    text: "Prach, chemické látky, hluk, osvětlení, mikroklima a vibrace jako podklad pro KHS a BOZP.",
+    cta: "Připravit podklady pro kategorizaci"
   },
   {
     href: "/pro-stavebni-firmy",
-    title: "Koordinuji stavbu nebo projekt",
-    text: "Studie před realizací a měření skutečného stavu před kolaudací nebo užíváním.",
-    cta: "Zobrazit podklady pro stavbu"
+    title: "Potřebuji dokumentaci k projektu",
+    text: "Rozptylové a hlukové studie, odborné posudky, EIA a další podklady pro povolení záměru.",
+    cta: "Zjistit potřebné podklady"
   }
 ] as const;
 

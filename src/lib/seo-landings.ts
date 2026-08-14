@@ -509,21 +509,21 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "pro-stavebni-firmy",
-    title: "Měření a studie pro stavební firmy a projektanty",
+    title: "Dokumentace k projektu pro stavební firmy a projektanty",
     metaDescription:
-      "Podklady pro stavební firmy, generální dodavatele a projektanty: hlukové a rozptylové studie, měření pro kolaudaci a nové haly.",
-    h1: "Měření a odborné podklady pro stavební firmy",
+      "Dokumentace k projektu pro stavební firmy a projektanty: hlukové a rozptylové studie, odborné posudky, EIA a technické přílohy.",
+    h1: "Studie a dokumentace k projektu",
     intro:
-      "Propojíme studie před realizací s měřením skutečného stavu před kolaudací. Rozsah navážeme na projekt, technologii a požadavek úřadu.",
+      "Připravíme rozptylové a hlukové studie, odborné posudky, EIA a technické přílohy podle projektu, technologie a požadavku úřadu.",
     sections: [
       {
         heading: "Podklady před realizací",
         paragraphs: [
-          "Pro navrhovaný stav může být potřeba hluková či rozptylová studie, akustický posudek nebo technická příloha projektu."
+          "Pro navrhovaný stav může být potřeba hluková či rozptylová studie, odborný nebo akustický posudek, EIA či technická příloha projektu."
         ]
       },
       {
-        heading: "Měření před kolaudací",
+        heading: "Ověření po realizaci",
         paragraphs: [
           "Po instalaci technologií lze ověřit hluk, osvětlení, mikroklima a pracovní prostředí. Měření naplánujeme na reprezentativní provoz."
         ]
@@ -535,21 +535,16 @@ export const seoLandings: SeoLanding[] = [
         ]
       }
     ],
-    serviceHref: "/sluzby/hlukove-studie",
-    contactService: "Kolaudační měření",
+    serviceHref: "/sluzby/eia-posudky-poradenstvi",
+    contactService: "Odborné posudky",
     availableLocales: ["cs"],
     internalLinkPriority: 100,
     layout: "demand",
     eyebrow: "Pro projektanty a dodavatele",
-    overviewHeading: "Podklady podle fáze projektu",
-    highlights: ["Studie před realizací", "Měření skutečného stavu", "Podklady pro úřad"],
+    overviewHeading: "Dokumentace podle fáze projektu",
+    highlights: ["Studie před realizací", "Odborné posudky a EIA", "Podklady pro úřad"],
     heroTheme: "technicke-prilohy",
     relatedLinks: [
-      {
-        href: "/mereni-pro-kolaudaci",
-        label: "Měření pro kolaudaci",
-        description: "Hluk, osvětlení a pracovní prostředí podle požadavku úřadu."
-      },
       {
         href: "/sluzby/hlukove-studie",
         label: "Hlukové studie",
@@ -559,6 +554,11 @@ export const seoLandings: SeoLanding[] = [
         href: "/sluzby/rozptylove-studie",
         label: "Rozptylové studie",
         description: "Imisní příspěvky a varianty provozu záměru."
+      },
+      {
+        href: "/sluzby/eia-posudky-poradenstvi",
+        label: "EIA a odborné posudky",
+        description: "Podklady pro posouzení záměru a povolovací řízení."
       }
     ],
     faq: [

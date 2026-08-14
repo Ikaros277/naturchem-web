@@ -51,7 +51,7 @@ const offerPillars = {
       icon: "pillar-mereni" as const,
       title: "Akreditovaná měření",
       teaser:
-        "Emise, hluk, osvětlení i pracovní prostředí — pro provoz, KHS, ČIŽP nebo kolaudaci…",
+        "Emise, hluk, osvětlení, vibrace, mikroklima i další měření pracovního prostředí — pro provoz, KHS, ČIŽP nebo kolaudaci…",
       text: "Změříme emise, hluk, osvětlení, vibrace a mikroklima. U nové haly nebo kolaudace připravíme společný rozsah podle projektu a provozu.",
       cta: "Zobrazit měření",
       href: "/sluzby#mericke-sluzby",

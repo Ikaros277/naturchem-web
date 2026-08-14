@@ -17,7 +17,7 @@ export const homeHeroPillars: HomeHeroPillar[] = [
     label: "Měření",
     theme: "homepage-mereni",
     detail:
-      "Změříme emise, hluk, osvětlení i pracovní prostředí — pro provoz, KHS, ČIŽP nebo kolaudaci.",
+      "Změříme emise, hluk, osvětlení, vibrace, mikroklima i další faktory pracovního prostředí — pro provoz, KHS, ČIŽP nebo kolaudaci.",
     href: "/sluzby#mericke-sluzby"
   },
   {

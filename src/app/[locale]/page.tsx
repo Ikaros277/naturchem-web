@@ -7,7 +7,6 @@ import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
 import { HomeUnsureStrip } from "@/components/HomeUnsureStrip";
 import { HomeDemandPaths } from "@/components/HomeDemandPaths";
-import { HomeFaqSection } from "@/components/HomeFaqSection";
 import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getHomeHeroPillars } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
@@ -108,8 +107,6 @@ export default async function Home({ params }: Props) {
       <HomeUnsureStrip locale={locale} />
 
       <HomePoradnaStrip locale={locale} />
-
-      <HomeFaqSection locale={locale} />
 
       <section
         className="home-section container home-clients-section section--forest-tint home-below-fold"

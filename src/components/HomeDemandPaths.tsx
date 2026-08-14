@@ -1,21 +1,25 @@
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import type { Locale } from "@/lib/i18n/locales";
+import { ServiceIcon } from "@/components/ServiceIcon";
 
 const paths = [
   {
     href: "/mereni-pro-kolaudaci",
+    icon: "povoleni",
     title: "Potřebuji měření pro kolaudaci",
     text: "Hluk, osvětlení, mikroklima a pracovní prostředí podle projektu nebo požadavku úřadu.",
     cta: "Zjistit potřebný rozsah"
   },
   {
     href: "/mereni-pracovniho-prostredi-kategorizace-praci",
+    icon: "pracovni-prostredi",
     title: "Potřebujeme kategorizaci prací",
     text: "Prach, chemické látky, hluk, osvětlení, mikroklima a vibrace jako podklad pro KHS a BOZP.",
     cta: "Připravit podklady pro kategorizaci"
   },
   {
     href: "/pro-stavebni-firmy",
+    icon: "investor",
     title: "Potřebuji dokumentaci k projektu",
     text: "Rozptylové a hlukové studie, odborné posudky, EIA a další podklady pro povolení záměru.",
     cta: "Zjistit potřebné podklady"
@@ -39,13 +43,16 @@ export function HomeDemandPaths({ locale }: { locale: Locale }) {
             mohou být potřeba.
           </p>
         </header>
-        <ol className="home-demand-paths-list">
-          {paths.map((item, index) => (
+        <ul className="home-demand-paths-list">
+          {paths.map((item) => (
             <li key={item.href}>
               <LocaleLink href={item.href} className="home-demand-path-item">
-                <span className="home-demand-path-index" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+                <ServiceIcon
+                  icon={item.icon}
+                  size={24}
+                  variant="plain"
+                  className="home-demand-path-icon"
+                />
                 <span className="home-demand-path-copy">
                   <strong>{item.title}</strong>
                   <span>{item.text}</span>
@@ -56,7 +63,7 @@ export function HomeDemandPaths({ locale }: { locale: Locale }) {
               </LocaleLink>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   );

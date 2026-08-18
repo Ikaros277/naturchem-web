@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { OgImageLayout } from "@/components/OgImageLayout";
 import { getServicesOgImageCopy } from "@/lib/i18n/og-image-copy";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 
 export const size = {
   width: 1200,
@@ -9,6 +9,12 @@ export const size = {
 };
 
 export const contentType = "image/png";
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

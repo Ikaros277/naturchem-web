@@ -72,7 +72,7 @@ function toArticle(fileSlug: string, fileContents: string): Article {
   const slug = resolveSlug(fileSlug, data);
 
   const title = data.title || slug;
-  const publishedAt = normalizeArticleDate(data.publishedAt) || new Date().toISOString();
+  const publishedAt = normalizeArticleDate(data.publishedAt) || "";
   let status = resolveStatus(data.status);
 
   // Future publishedAt without explicit draft → scheduled (even if status omitted).
@@ -140,11 +140,11 @@ async function readAllArticlesUncached(locale: Locale): Promise<Article[]> {
   }
 }
 
-/** Cached filesystem scan — filter by isArticlePublic at read time for scheduled publish. */
+/** Cached filesystem scan — cache until deploy. Time-based ISR lives on Poradna routes only. */
 const getAllArticlesCached = unstable_cache(
   async (locale: Locale) => readAllArticlesUncached(locale),
   ["articles-all"],
-  { revalidate: 3600, tags: ["articles"] }
+  { revalidate: false, tags: ["articles"] }
 );
 
 async function readAllArticles(locale: Locale = defaultLocale): Promise<Article[]> {
@@ -176,7 +176,7 @@ const getArticleSlugLocaleMapCached = unstable_cache(
     return [...map.entries()].map(([slug, localeSet]) => [slug, [...localeSet] as Locale[]] as const);
   },
   ["article-slug-locale-map"],
-  { revalidate: 3600, tags: ["articles"] }
+  { revalidate: false, tags: ["articles"] }
 );
 
 export async function getArticleSlugLocaleMap(): Promise<ReadonlyMap<string, readonly Locale[]>> {

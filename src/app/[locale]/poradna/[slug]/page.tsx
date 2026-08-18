@@ -21,9 +21,10 @@ type Props = {
 
 /**
  * ISR instead of force-dynamic: scheduled articles (in generateStaticParams)
- * become public within this window after publishedAt. Decap publish also redeploys.
+ * become public within a day after publishedAt. Decap publish also redeploys.
+ * Keep this long — short ISR + large article HTML burns Hobby write units.
  */
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   return getArticleStaticParams();
@@ -100,11 +101,11 @@ export default async function CmsArticlePage({ params }: Props) {
       name: messages.nav.articles,
       url: poradnaUrl
     },
-    datePublished: normalizeArticleDate(article.publishedAt) || new Date().toISOString(),
+    datePublished: normalizeArticleDate(article.publishedAt) || article.publishedAt,
     dateModified:
       normalizeArticleDate(article.updatedAt) ||
       normalizeArticleDate(article.publishedAt) ||
-      new Date().toISOString(),
+      article.publishedAt,
     mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl }
   };
 

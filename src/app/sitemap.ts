@@ -11,7 +11,11 @@ import { seoLandings } from "@/lib/seo-landings";
 import { getAllSalesCategoryParams } from "@/lib/sales-categories";
 import { pcfElettronicaProducts } from "@/lib/pcf-elettronica-catalog";
 
-/** Bots hit /sitemap.xml often — cache for a day to cut Fluid CPU. */
+/**
+ * Daily ISR is enough for scheduled Poradna URLs. lastModified must stay
+ * deterministic — a fresh `new Date()` rewrites the whole sitemap every regen
+ * and burns Hobby ISR Writes (8 KB units).
+ */
 export const revalidate = 86400;
 
 const salesCategoryRoutes = getAllSalesCategoryParams().flatMap(({ brand, slug }) => [
@@ -70,32 +74,29 @@ function uniquePaths(paths: string[]): string[] {
   return [...new Set(paths)];
 }
 
-function articleLastModified(article: { updatedAt?: string; publishedAt: string }): Date {
-  const raw = article.updatedAt || article.publishedAt;
-  const parsed = new Date(raw);
-  return Number.isNaN(parsed.getTime()) ? new Date() : parsed;
-}
-
 const CONTENT_REFRESH = new Date("2026-07-14T00:00:00.000Z");
 const CATALOG_REFRESH = new Date("2026-03-01T00:00:00.000Z");
 
-function staticRouteLastModified(route: string, buildDate: Date, poradnaHubDate?: Date): Date {
-  if (route === "/") return buildDate;
+function articleLastModified(article: { updatedAt?: string; publishedAt: string }): Date {
+  const raw = article.updatedAt || article.publishedAt;
+  const parsed = new Date(raw);
+  return Number.isNaN(parsed.getTime()) ? CONTENT_REFRESH : parsed;
+}
+
+function staticRouteLastModified(route: string, poradnaHubDate?: Date): Date {
   if (route === "/poradna" && poradnaHubDate) return poradnaHubDate;
-  if (route === "/kontakt" || route === "/proc-naturchem") return buildDate;
   if (route.startsWith("/prodej")) return CATALOG_REFRESH;
   return CONTENT_REFRESH;
 }
 
 function staticSitemapEntries(
-  buildDate: Date,
   staticPaths: string[],
   poradnaHubDate: Date
 ): MetadataRoute.Sitemap {
   return locales.flatMap((locale) =>
     staticPaths.map((route) => ({
       url: localizedCanonical(route, locale),
-      lastModified: staticRouteLastModified(route, buildDate, poradnaHubDate),
+      lastModified: staticRouteLastModified(route, poradnaHubDate),
       changeFrequency: "monthly" as const,
       priority: route === "/" ? 1 : 0.8,
       alternates: {
@@ -132,13 +133,13 @@ function articleSitemapEntries(
   return entries;
 }
 
-function landingSitemapEntries(buildDate: Date): MetadataRoute.Sitemap {
+function landingSitemapEntries(): MetadataRoute.Sitemap {
   return seoLandings.flatMap((landing) => {
     const availableLocales = landing.availableLocales ?? locales;
     const route = `/${landing.slug}`;
     return availableLocales.map((locale) => ({
       url: localizedCanonical(route, locale),
-      lastModified: buildDate,
+      lastModified: CONTENT_REFRESH,
       changeFrequency: "monthly" as const,
       priority: 0.85,
       alternates: {
@@ -149,7 +150,6 @@ function landingSitemapEntries(buildDate: Date): MetadataRoute.Sitemap {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const buildDate = new Date();
   const caseRoutes = caseStudyCategories.map((c) => `/typicke-zakazky/${c.slug}`);
   const dedicatedRoutes = Object.values(dedicatedServicePages).map((p) => `/${p.slug}`);
   const staticPaths = uniquePaths([...routes, ...dedicatedRoutes, ...caseRoutes]);
@@ -171,8 +171,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const slugLocaleMap = await getArticleSlugLocaleMap();
 
   return [
-    ...staticSitemapEntries(buildDate, staticPaths, poradnaHubDate),
-    ...landingSitemapEntries(buildDate),
+    ...staticSitemapEntries(staticPaths, poradnaHubDate),
+    ...landingSitemapEntries(),
     ...articleSitemapEntries(articlesByLocale, slugLocaleMap)
   ];
 }

@@ -18,8 +18,8 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-/** Listing ISR — scheduled articles appear within this window after publishAt. */
-export const revalidate = 3600;
+/** Listing ISR — scheduled articles appear within a day after publishedAt. */
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;

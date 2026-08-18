@@ -41,7 +41,8 @@ type Props = {
 
 };
 
-
+/** Unknown brand slugs must 404 without on-demand ISR writes. */
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const sales = await getSalesContent("cs");

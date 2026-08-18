@@ -21,8 +21,10 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-/** Homepage Poradna strip; longer ISR cuts Fluid CPU vs bots/traffic. */
-export const revalidate = 3600;
+/**
+ * Fully static: CMS publish already redeploys. Hourly ISR rewrote the home
+ * segment tree (layout + page + metadata) and burned Hobby ISR Writes.
+ */
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;

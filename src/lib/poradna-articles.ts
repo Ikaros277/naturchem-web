@@ -31,7 +31,7 @@ export async function getPoradnaArticles(locale: Locale = defaultLocale): Promis
     href: localizeHref(`/poradna/${article.slug}`, locale),
     excerpt: shortenListingExcerpt(article.excerpt?.trim() || ""),
     topic: article.topic,
-    publishedAt: normalizeArticleDate(article.publishedAt) || new Date().toISOString(),
+    publishedAt: normalizeArticleDate(article.publishedAt) || article.publishedAt,
     author: article.author,
     heroImage: article.heroImage
   }));

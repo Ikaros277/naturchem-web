@@ -30,7 +30,7 @@ type Props = {
   params: Promise<{ locale: string; brand: string; slug: string }>;
 };
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const slugKeys = new Set<string>();

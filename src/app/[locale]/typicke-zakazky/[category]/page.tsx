@@ -7,16 +7,22 @@ import { getCaseStudyCategories, getCaseStudyCategory } from "@/lib/i18n/content
 import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
-import { isLocale, type Locale } from "@/lib/i18n/locales";
+import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 
 type Props = {
   params: Promise<{ locale: string; category: string }>;
 };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  const categories = await getCaseStudyCategories("cs");
-  return categories.map((c) => ({ category: c.slug }));
+  const slugs = new Set<string>();
+  for (const locale of locales) {
+    const categories = await getCaseStudyCategories(locale);
+    for (const category of categories) slugs.add(category.slug);
+  }
+  return [...slugs].map((category) => ({ category }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

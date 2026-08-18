@@ -67,6 +67,9 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+/** Unknown locale prefixes must 404 without writing ISR cache entries. */
+export const dynamicParams = false;
+
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale: localeParam } = await params;
   if (!isLocale(localeParam)) notFound();

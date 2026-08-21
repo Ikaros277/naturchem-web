@@ -22,9 +22,10 @@ type Props = {
 };
 
 /**
- * Fully static: CMS publish already redeploys. Hourly ISR rewrote the home
- * segment tree (layout + page + metadata) and burned Hobby ISR Writes.
+ * Six-hour ISR lets scheduled Poradna articles reach the homepage on publish day.
+ * This stays well below the write-heavy hourly refresh used previously.
  */
+export const revalidate = 21600;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: localeParam } = await params;

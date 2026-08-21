@@ -5,7 +5,6 @@ import { HomeServiceIndex } from "@/components/HomeServiceIndex";
 import { JsonLd } from "@/components/Schema";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
-import { HomeUnsureStrip } from "@/components/HomeUnsureStrip";
 import { HomeDemandPaths } from "@/components/HomeDemandPaths";
 import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getHomeHeroPillars } from "@/lib/i18n/content";
@@ -75,8 +74,6 @@ export default async function Home({ params }: Props) {
         className="home-fade-in-section home-below-fold"
       />
 
-      <HomeDemandPaths locale={locale} />
-
       <section
         className="home-stats-compact home-fade-in-section home-fade-in-section-delay-1 home-below-fold"
         aria-label={messages.home.statsAria}
@@ -91,6 +88,8 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
+      <HomeDemandPaths locale={locale} />
+
       <section
         className="home-section home-section-offer home-fade-in-section home-fade-in-section-delay-2 home-below-fold"
         aria-labelledby="home-offer-heading"
@@ -103,19 +102,19 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
-      <HomeUnsureStrip locale={locale} />
-
-      <HomePoradnaStrip locale={locale} />
-
       <section
-        className="home-section container home-clients-section section--forest-tint home-below-fold"
+        className="home-section home-clients-section section--forest-tint home-below-fold"
         aria-labelledby="home-clients-heading"
       >
-        <h2 id="home-clients-heading" className="sr-only">
-          {messages.home.clientsTitle}
-        </h2>
-        <ClientLogosGrid expandable moreHref={link("/reference#zakaznici")} />
+        <div className="container">
+          <header className="section-header home-clients-header">
+            <h2 id="home-clients-heading">{messages.home.clientsTitle}</h2>
+          </header>
+          <ClientLogosGrid expandable moreHref={link("/reference#zakaznici")} />
+        </div>
       </section>
+
+      <HomePoradnaStrip locale={locale} />
     </main>
   );
 }

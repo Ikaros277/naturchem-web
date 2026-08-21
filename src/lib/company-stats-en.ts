@@ -19,6 +19,11 @@ export const companyStats: ReadonlyArray<{
     icon: "emise"
   },
   {
+    value: "200+",
+    label: "complete EIA project notifications",
+    icon: "eia"
+  },
+  {
     value: "36 years",
     label: "of experience",
     icon: "process-posouzeni"
@@ -46,6 +51,7 @@ export const practiceFromRecordsParagraphs = [
 export const experienceBullets = [
   "14,000+ projects",
   "7,000+ measurements",
+  "200+ complete EIA project notifications",
   "36 years of experience",
   "long-standing work for industrial, energy, agricultural, municipal and public-sector clients"
 ] as const;

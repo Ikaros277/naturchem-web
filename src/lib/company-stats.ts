@@ -21,6 +21,11 @@ export const companyStats: ReadonlyArray<{
     icon: "emise"
   },
   {
+    value: "200+",
+    label: "kompletních oznámení záměru",
+    icon: "eia"
+  },
+  {
     value: "36 let",
     label: "praxe",
     icon: "process-posouzeni"
@@ -48,6 +53,7 @@ export const practiceFromRecordsParagraphs = [
 export const experienceBullets = [
   "14 000+ zakázek",
   "7 000+ měření",
+  "200+ kompletních oznámení záměru",
   "36 let praxe",
   "dlouhodobá práce pro průmyslové, energetické, zemědělské, komunální a veřejné zadavatele"
 ] as const;

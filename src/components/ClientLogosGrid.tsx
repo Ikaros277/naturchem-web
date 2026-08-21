@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
@@ -43,11 +42,7 @@ function ClientLogoLink({ client, className }: { client: ClientLogo; className?:
 }
 
 function useLogoGridCap(clientCount: number) {
-  const [cap, setCap] = useState(() =>
-    typeof window === "undefined"
-      ? getLogoGridCap(clientCount, 1200)
-      : getLogoGridCap(clientCount, window.innerWidth)
-  );
+  const [cap, setCap] = useState(() => getLogoGridCap(clientCount, 1200));
 
   useEffect(() => {
     const update = () => setCap(getLogoGridCap(clientCount, window.innerWidth));

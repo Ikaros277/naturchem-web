@@ -19,6 +19,11 @@ export const companyStats: ReadonlyArray<{
     icon: "emise"
   },
   {
+    value: "200+",
+    label: "vollständige UVP-Vorhabenanzeigen",
+    icon: "eia"
+  },
+  {
     value: "36 Jahre",
     label: "der Erfahrung",
     icon: "process-posouzeni"
@@ -46,6 +51,7 @@ export const practiceFromRecordsParagraphs = [
 export const experienceBullets = [
   "Über 14.000 Projekte",
   "Über 7.000 Messungen",
+  "über 200 vollständige UVP-Vorhabenanzeigen",
   "36 Jahre Erfahrung",
   "langjährige Tätigkeit für Kunden aus Industrie, Energie, Landwirtschaft, Kommunen und der öffentlichen Hand"
 ] as const;

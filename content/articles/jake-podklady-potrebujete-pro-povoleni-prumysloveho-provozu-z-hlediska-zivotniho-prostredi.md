@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/podklady-prumyslovy-provoz.webp
 title: Jaké podklady potřebujete pro povolení průmyslového provozu z hlediska životního prostředí?
 slug: jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi
 excerpt: 'Povolení průmyslového provozu z hlediska životního prostředí obvykle neřeší jen jednu oblast. Podle typu záměru může být potřeba posoudit ovzduší, hluk, odpady, vodu, EIA, jednotné environmentální stanovisko, provozní řády, odborné posudky a rozptylové studie. Pro investory a projektanty je zásadní připravit podklady včas, protože chyby v kapacitách, výduších, dopravě nebo provozním režimu se často projeví až v řízení před úřady.'

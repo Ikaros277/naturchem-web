@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/tepelna-cerpadla-clanek.webp
 
 title: "Lärm von Wärmepumpen und HVAC-Geräten: Was ist vor der Fertigstellung des Gebäudes zu beachten?"
 slug: hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci

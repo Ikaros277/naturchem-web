@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/jes-eia-clanek.webp
 
 title: "JES und EIA: Wann wird die einheitliche Umweltmeinung zusammen mit der EIA behandelt?"
 slug: jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia

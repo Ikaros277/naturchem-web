@@ -22,7 +22,6 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 import "../globals.css";
-import "../home-v2.css";
 
 const fontSans = Source_Sans_3({
   subsets: ["latin", "latin-ext"],

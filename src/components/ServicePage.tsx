@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./service-improvements.module.css";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
@@ -6,14 +7,13 @@ import { IndexCard } from "@/components/IndexCard";
 import { InlineEmphasis } from "@/components/InlineEmphasis";
 import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
 import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
+import { ServiceEvidence } from "@/components/ServiceEvidence";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
 import { getFaqTeaserItemsForLocale } from "@/lib/i18n/faq-helpers";
 import { getCtaCopy } from "@/lib/i18n/cta-i18n";
 import { getProvozyNavLabel, getSectors, getSiteServices } from "@/lib/i18n/content";
-import { TrustBand } from "@/components/TrustBand";
-import { getServiceTrustBandItems } from "@/lib/i18n/home-content";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
 import type { Locale } from "@/lib/i18n/locales";
@@ -50,17 +50,19 @@ export async function ServicePage(props: Props) {
   const { locale } = props;
   const copy = getServiceCopy(locale);
   const ctaCopy = getCtaCopy(locale);
-  const trustItems = getServiceTrustBandItems(locale);
   const services = await getSiteServices(locale);
   const sectors = await getSectors(locale);
   const link = (href: string) => localizeHref(href, locale);
 
   const bareSlug = props.slug.split("/").pop() ?? props.slug;
   const serviceMeta = services.find((s) => s.href === `/${props.slug}`);
-  const relatedServices = services.filter((s) => s.href !== `/${props.slug}`).slice(0, 3);
+  const category = getServiceCategoryFromHref(`/${props.slug}`);
+  const relatedServices = services
+    .filter((s) => s.href !== `/${props.slug}` && getServiceCategoryFromHref(s.href) === category)
+    .slice(0, 2);
   const contactServiceValue = props.contactService || serviceMeta?.contactService || props.title;
   const contactCta = serviceMeta?.contactCta ?? ctaCopy.contactSubmitCta;
-  const quickContactHref = contactUrl(contactServiceValue);
+  const quickContactHref = link(contactUrl(contactServiceValue));
   const sectorMetaByHref = new Map(sectors.map((s) => [s.href, s]));
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
   const seoLandingLinks = await getSeoLandingsForService(`/sluzby/${bareSlug}`, locale, 3);
@@ -69,29 +71,40 @@ export async function ServicePage(props: Props) {
   const keyWhenNeeded = props.whenNeeded.slice(0, 4);
   const keyOutputs = props.outputs.slice(0, 3);
   const keyDocs = props.docs.slice(0, 3);
-  const practicalExamples = props.practicalSituations?.slice(0, 3) ?? [];
+  const practicalExamples = props.practicalSituations ?? [];
   const sectorLabel = await getProvozyNavLabel(locale);
   const faqTeaserItems = props.faqCategoryId
     ? await getFaqTeaserItemsForLocale(props.faqCategoryId, locale, 5)
     : [];
   const detailGroups = [
+    { title: props.scopeHeading ?? copy.scopeHeading, items: props.scope.slice(4) },
+    { title: copy.whenNeededHeading, items: props.whenNeeded.slice(4) },
+    { title: copy.outputsHeading, items: props.outputs.slice(3) },
+    { title: copy.howToStartHeading, items: props.docs.slice(3) },
     practicalExamples.length > 0
       ? { title: copy.practicalExamplesHeading, items: practicalExamples }
       : null,
     props.commonMistakes && props.commonMistakes.length > 0
       ? { title: copy.mistakesHeading, items: props.commonMistakes }
       : null
-  ].filter((group) => group !== null);
+  ].filter((group): group is { title: string; items: string[] } => group !== null && group.items.length > 0);
 
   const mergedRelated = [
-    ...seoLandingLinks.map((l) => ({
+    ...relatedLinks.map((l) => ({
       href: l.href,
       title: l.title,
       description: l.description,
       cta: copy.viewService,
       sectionLabel: undefined as string | undefined
     })),
-    ...relatedLinks.map((l) => ({
+    ...relatedServices.map((s) => ({
+      href: s.href,
+      title: s.title,
+      description: s.short,
+      cta: copy.viewService,
+      sectionLabel: undefined as string | undefined
+    })),
+    ...seoLandingLinks.slice(0, 1).map((l) => ({
       href: l.href,
       title: l.title,
       description: l.description,
@@ -102,20 +115,20 @@ export async function ServicePage(props: Props) {
       const sector = sectorMetaByHref.get(s.href);
       return {
         href: s.href,
-        title: s.title,
+        title: sector?.title ?? s.title,
         description: sector?.description,
         cta: sector?.linkHint ?? copy.viewSector,
         sectionLabel: sectorLabel
       };
     }),
-    ...relatedServices.map((s) => ({
+    ...seoLandingLinks.slice(1).map((s) => ({
       href: s.href,
       title: s.title,
-      description: s.short,
+      description: s.description,
       cta: copy.viewService,
       sectionLabel: undefined as string | undefined
     }))
-  ].slice(0, 3);
+  ].filter((item, index, items) => items.findIndex(other => other.href === item.href) === index);
 
   const pageUrl = `${siteUrl}${link(`/${props.slug}`)}/`.replace(/([^:]\/)\/+/g, "$1");
 
@@ -149,7 +162,7 @@ export async function ServicePage(props: Props) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: copy.relatedListName(props.title),
-    itemListElement: [...relatedLinks, ...sectorCrossLinks].map((item, index) => ({
+    itemListElement: mergedRelated.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: item.title,
@@ -165,7 +178,7 @@ export async function ServicePage(props: Props) {
       <JsonLd data={serviceData} />
       <JsonLd data={breadcrumbData} />
       {faqTeaserItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(faqTeaserItems)} /> : null}
-      {relatedLinks.length > 0 || sectorCrossLinks.length > 0 ? (
+      {mergedRelated.length > 0 ? (
         <JsonLd data={relatedItemListData} />
       ) : null}
       <PageHeroBand
@@ -189,13 +202,18 @@ export async function ServicePage(props: Props) {
         </header>
       </PageHeroBand>
 
-      <TrustBand items={trustItems} heading={copy.trustAria} compact />
-
       <div className="container">
-        <p className="service-entity-blurb muted">
-          {copy.entityBlurb}
-          <Link href={link("/akreditace-autorizace-dokumenty")}>{copy.accreditationLink}</Link>.
-        </p>
+        <nav className={styles.verification} aria-label={copy.trustAria}>
+          <Link href={link("/akreditace-autorizace-dokumenty")}>{copy.accreditationLink} <span aria-hidden="true">↗</span></Link>
+          <Link href={link("/reference#priklady")}>{locale === "cs" ? "Příklady zakázek" : locale === "de" ? "Projektbeispiele" : "Project examples"} <span aria-hidden="true">↗</span></Link>
+          <a href={`tel:${company.phones[0].replace(/\s+/g, "")}`}>{company.phones[0]}</a>
+        </nav>
+        {bareSlug === "mereni-hluku" ? (
+          <p className={styles.intent}>
+            {locale === "cs" ? "Potřebujete posoudit hluk plánované stavby nebo technologie? " : locale === "de" ? "Planen Sie ein Gebäude oder eine Anlage? " : "Planning a building or new equipment? "}
+            <Link href={link("/sluzby/hlukove-studie")}>{locale === "cs" ? "Hlukové studie a výpočty →" : locale === "de" ? "Lärmstudien und Berechnungen →" : "Noise studies and calculations →"}</Link>
+          </p>
+        ) : null}
       </div>
 
       <section
@@ -279,6 +297,7 @@ export async function ServicePage(props: Props) {
       </section>
 
       <div className="container page-inner page-below-fold">
+        <ServiceEvidence locale={locale} slug={props.slug} />
         {detailGroups.length > 0 ? (
           <section className="content-block service-extra-section">
             <details className="service-extra-details">
@@ -314,7 +333,7 @@ export async function ServicePage(props: Props) {
           <section className="content-block">
             <h2>{copy.relatedHeading}</h2>
             <div className="grid grid-3 index-card-grid">
-              {mergedRelated.map((item) => (
+              {mergedRelated.slice(0, 3).map((item) => (
                 <IndexCard
                   key={item.href}
                   href={link(item.href)}
@@ -337,6 +356,11 @@ export async function ServicePage(props: Props) {
                 </IndexCard>
               ))}
             </div>
+            {mergedRelated.length > 3 ? (
+              <ul className={styles.related}>
+                {mergedRelated.slice(3).map(item => <li key={item.href}><Link href={link(item.href)}>{item.title} <span aria-hidden="true">→</span></Link></li>)}
+              </ul>
+            ) : null}
           </section>
         ) : null}
       </div>

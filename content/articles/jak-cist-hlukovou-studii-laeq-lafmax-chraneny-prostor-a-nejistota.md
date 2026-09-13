@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/cteni-hlukove-studie.webp
 title: 'Jak číst hlukovou studii: LAeq, LAFmax, chráněný prostor a nejistota'
 slug: jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota
 excerpt: 'Hluková studie nebo protokol z měření hluku obsahuje pojmy, které mohou být pro zákazníka obtížně čitelné: LAeq, LAFmax, denní a noční doba, chráněný venkovní prostor staveb nebo nejistota měření. Správná interpretace je důležitá, protože ne každé vysoké číslo automaticky znamená překročení limitu.'

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/povolovani-2026.webp
 
 title: Was ändert sich im Jahr 2026 bei der Genehmigung von Luftverschmutzungsquellen?
 slug: co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026

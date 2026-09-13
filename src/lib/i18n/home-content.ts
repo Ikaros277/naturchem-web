@@ -85,7 +85,7 @@ const offerPillars = {
       tags: ["EIA", "IPPC", "ČIŽP"],
       links: [
         { label: "EIA a posudky", href: "/sluzby/eia-posudky-poradenstvi" },
-        { label: "IPPC / ISPOP / GHG", href: "/sluzby/ippc-integrovana-povoleni" },
+        { label: "IPPC – integrovaná povolení", href: "/sluzby/ippc-integrovana-povoleni" },
         { label: "Oznámení záměru EIA", href: "/sluzby/eia-oznameni-zameru" }
       ]
     }
@@ -129,7 +129,7 @@ const offerPillars = {
       tags: ["EIA", "IPPC", "ČIŽP"],
       links: [
         { label: "EIA and expert reports", href: "/sluzby/eia-posudky-poradenstvi" },
-        { label: "IPPC / ISPOP / GHG", href: "/sluzby/ippc-integrovana-povoleni" },
+        { label: "IPPC – integrated permits", href: "/sluzby/ippc-integrovana-povoleni" },
         { label: "EIA project notification", href: "/sluzby/eia-oznameni-zameru" }
       ]
     }
@@ -173,7 +173,7 @@ const offerPillars = {
       tags: ["EIA", "IPPC", "ČIŽP"],
       links: [
         { label: "EIA und Gutachten", href: "/sluzby/eia-posudky-poradenstvi" },
-        { label: "IPPC / ISPOP / THG", href: "/sluzby/ippc-integrovana-povoleni" },
+        { label: "IPPC – integrierte Genehmigungen", href: "/sluzby/ippc-integrovana-povoleni" },
         { label: "EIA-Projektanzeige", href: "/sluzby/eia-oznameni-zameru" }
       ]
     }

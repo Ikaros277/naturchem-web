@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/katalogovy-hluk.webp
 
 title: Warum reicht ein Gerätekatalogwert für die Lärmbeurteilung nicht aus?
 slug: proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni

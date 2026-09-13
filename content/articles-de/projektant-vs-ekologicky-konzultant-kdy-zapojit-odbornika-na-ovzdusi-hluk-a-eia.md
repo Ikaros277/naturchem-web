@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/projektant-konzultant.webp
 
 title: "Planer vs. Umweltberater: Wann sollte ein Luft-, Lärm- und UVP-Spezialist hinzugezogen werden?"
 slug: projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia

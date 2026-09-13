@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/prach-frakce.webp
 title: 'Workplace dust: total dust, respirable fraction, and silicon dioxide'
 slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity
 excerpt: |

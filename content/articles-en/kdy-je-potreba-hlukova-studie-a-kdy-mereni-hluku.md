@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/studie-nebo-mereni-hluku.webp
 title: When is a noise study needed and when is noise measurement needed?
 slug: kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku
 excerpt: 'A noise study and noise measurement are not the same thing. A noise study usually assesses in advance by calculation what noise a project, technology, facility, transport, heat pump, or HVAC unit will produce after implementation. Noise measurement, by contrast, verifies the actual state at a specific place and time. The correct choice depends on whether the project is being prepared, commissioned, operated, or whether a complaint or regional public health authority requirement is being addressed.'

@@ -110,8 +110,8 @@
   "home": {
     "metaTitle": "NATURCHEM – emissions, noise and building approval measurements",
     "metaDescription": "Measurements of emissions, noise, lighting, vibration, microclimate and workplace conditions. Documentation for building approval, KHS, ČIŽP and construction companies.",
-    "heroTitle": "Measurements, studies and technical documentation for operations and projects",
-    "heroLead": "Accredited measurements, studies and documentation for authorities, building approval and operating permits.",
+    "heroTitle": "Measurements and studies for industry and construction",
+    "heroLead": "Emissions, noise and workplace conditions. Documentation for operating permits, building approval and authorities.",
     "trustAria": "Credibility and authorisations",
     "statsAria": "Experience in numbers",
     "offerAria": "What we provide",
@@ -148,7 +148,11 @@
   "contactForm": {
     "successTitle": "Thank you — we received your message",
     "formTitle": "Write to us",
-    "formLead": "You do not need everything prepared. A short message or attachment is enough — we will get back to you and agree on what makes sense.",
+    "formLead": "Describe your requirements. You can attach project documentation or a request from an authority.",
+    "optionalDetails": "Location and timing (optional)",
+    "selectedServices": "Your inquiry:",
+    "changeServices": "Change selected services",
+    "chooseServices": "Select a service (optional)",
     "nameLabel": "Name or company",
     "emailLabel": "Email",
     "phoneLabel": "Phone",

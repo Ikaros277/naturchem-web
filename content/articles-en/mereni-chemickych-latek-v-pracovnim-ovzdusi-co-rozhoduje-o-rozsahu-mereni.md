@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/chemicke-latky-rozsah.webp
 title: 'Measurement of chemical substances in workplace air: what determines the scope of measurement?'
 slug: mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni
 excerpt: |

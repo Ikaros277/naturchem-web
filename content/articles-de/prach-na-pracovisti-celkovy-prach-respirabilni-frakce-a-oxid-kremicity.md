@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/prach-frakce.webp
 
 title: "Arbeitsplatzstaub: Gesamtstaub, alveolengängige Fraktion und Siliziumdioxid"
 slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity

@@ -1,18 +1,17 @@
 ﻿import type { Metadata } from "next";
 import { HomeHeroSection } from "@/components/HomeHeroSection";
-import { ExperienceStats } from "@/components/ExperienceStats";
+import Link from "next/link";
+import { CountUpStatValue } from "@/components/CountUpStatValue";
 import { HomeServiceIndex } from "@/components/HomeServiceIndex";
 import { JsonLd } from "@/components/Schema";
-import { ClientLogosPreview } from "@/components/ClientLogosPreview";
+import { referenceClients } from "@/lib/client-logos";
+import styles from "@/components/homepage.module.css";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
 import { HomeDemandPaths } from "@/components/HomeDemandPaths";
-import { HomeTechnicalMotif } from "@/components/HomeTechnicalMotif";
-import { HomeProjectFlow } from "@/components/HomeProjectFlow";
 import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getHomeHeroPillars } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
-import { TrustBand } from "@/components/TrustBand";
-import { getHomeOfferPillars, getHomeTrustBandItems } from "@/lib/i18n/home-content";
+import { getHomeTrustBandItems } from "@/lib/i18n/home-content";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -41,7 +40,6 @@ export default async function Home({ params }: Props) {
   const { locale: localeParam } = await params;
   const locale: Locale = isLocale(localeParam) ? localeParam : "cs";
   const messages = await getMessages(locale);
-  const offerPillars = getHomeOfferPillars(locale);
   const trustItems = getHomeTrustBandItems(locale);
   const heroPillars = await getHomeHeroPillars(locale);
   const statsContent = getCompanyStatsContent(locale);
@@ -57,7 +55,7 @@ export default async function Home({ params }: Props) {
   };
 
   return (
-    <main className="home-page">
+    <main className={styles.page}>
       <JsonLd data={breadcrumbData} />
       <HomeHeroSection
         title={messages.home.heroTitle}
@@ -65,61 +63,55 @@ export default async function Home({ params }: Props) {
         pillars={heroPillars}
         ariaLabel={messages.homeHero.ariaLabel}
         pillarsAriaLabel={messages.homeHero.pillarsAria}
-      />
-
-      <TrustBand
-        items={trustItems}
-        heading={messages.home.trustAria}
-        className="home-fade-in-section home-below-fold"
+        locale={locale}
+        credential={`${trustItems[0]} · ${trustItems[1]}`}
       />
 
       <section
-        className="home-stats-compact home-fade-in-section home-fade-in-section-delay-1 home-below-fold"
+        className={styles.stats}
         aria-label={messages.home.statsAria}
       >
-        <div className="container">
-          <ExperienceStats
-            variant="compact"
-            showNote={false}
-            animateValues
-            statsContent={statsContent}
-            experienceOverviewAria={messages.common.experienceOverview}
-          />
+        <div className={`${styles.container} ${styles.statsGrid}`}>
+          {statsContent.companyStats.map((stat) => (
+            <div key={stat.label} className={styles.stat}>
+              <CountUpStatValue value={stat.value} />
+              <span className={styles.statLabel}>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className={`${styles.container} ${styles.clients}`}>
+        <Link href={link("/reference#zakaznici")} className={styles.clientsLabel}>
+          {messages.home.clientsTitle} <span aria-hidden="true">↗</span>
+        </Link>
+        <div className={styles.clientLogos}>
+          {referenceClients.slice(0, 5).map((client) => (
+            <Link key={client.name} href={link("/reference#zakaznici")} aria-label={client.name}>
+              {/* eslint-disable-next-line @next/next/no-img-element -- Pre-sized static logos avoid image transformations. */}
+              <img src={client.logo} alt={client.name} width={120} height={40} loading="lazy" decoding="async" />
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <section
+        className={styles.section}
+        id="sluzby"
+        aria-labelledby="home-offer-heading"
+      >
+        <div className={styles.container}>
+          <header className={styles.sectionHeader}>
+            <h2 id="home-offer-heading">{messages.home.offerTitle}</h2>
+            <Link href={link("/sluzby")} className={styles.textLink}>
+              {locale === "cs" ? "Všechny služby" : locale === "de" ? "Alle Leistungen" : "All services"} <span aria-hidden="true">→</span>
+            </Link>
+          </header>
+          <HomeServiceIndex locale={locale} />
         </div>
       </section>
 
       <HomeDemandPaths locale={locale} />
-
-      <HomeProjectFlow locale={locale} />
-
-      <section
-        className="home-section home-section-offer home-fade-in-section home-fade-in-section-delay-2 home-below-fold"
-        aria-labelledby="home-offer-heading"
-      >
-        <HomeTechnicalMotif />
-        <div className="container">
-          <header className="section-header home-offer-header">
-            <h2 id="home-offer-heading">{messages.home.offerTitle}</h2>
-          </header>
-          <HomeServiceIndex pillars={offerPillars} />
-        </div>
-      </section>
-
-      <section
-        className="home-section home-clients-section section--forest-tint home-below-fold"
-        aria-labelledby="home-clients-heading"
-      >
-        <div className="container">
-          <header className="section-header home-clients-header">
-            <p className="eyebrow">
-              {locale === "cs" ? "Reference" : locale === "de" ? "Referenzen" : "References"}
-            </p>
-            <h2 id="home-clients-heading">{messages.home.clientsTitle}</h2>
-          </header>
-          <ClientLogosPreview locale={locale} moreHref={link("/reference#zakaznici")} />
-        </div>
-      </section>
-
       <HomePoradnaStrip locale={locale} />
     </main>
   );

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/dieselagregat-clanek.webp
 title: 'Záložní dieselagregát: emise, hluk a povolovací podklady'
 slug: zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady
 excerpt: 'Záložní dieselagregát se v praxi objevuje u průmyslových areálů, vodáren, nemocnic, datových center, administrativních objektů, logistických center nebo technologických provozů, kde je potřeba zajistit napájení při výpadku elektrické energie. Na první pohled může jít o zařízení, které běží jen výjimečně. Z hlediska povolování ale nestačí uvést, že jde o „záložní zdroj“. Rozhodující je výkon, tepelný příkon, palivo, počet provozních hodin, umístění výduchu, hluk a místní podmínky.'

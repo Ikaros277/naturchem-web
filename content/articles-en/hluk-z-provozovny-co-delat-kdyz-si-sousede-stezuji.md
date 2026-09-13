@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/hluk-sousede.webp
 title: 'Noise from an industrial facility: what to do when neighbours complain?'
 slug: hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji
 excerpt: 'Complaints about noise from an industrial facility should be addressed substantively and in good time. First, it is necessary to establish where the noise actually comes from, what operating regime the facility runs under, and whether the problem may occur during the day or at night. Only then does it make sense to propose noise measurement, technical measures, or further steps with the Regional Public Health Authority.'

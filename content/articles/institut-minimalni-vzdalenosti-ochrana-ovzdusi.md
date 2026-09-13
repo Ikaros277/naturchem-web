@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/minimalni-vzdalenost.webp
 title: 'Institut minimální vzdálenosti: nový nástroj ochrany ovzduší před prašností a zápachem'
 slug: institut-minimalni-vzdalenosti-ochrana-ovzdusi
 excerpt: 'Novela zákona o ochraně ovzduší zavádí institut minimální vzdálenosti pro vybrané stacionární zdroje, které mohou významně působit prašností nebo zápachem. Nová pravidla jsou důležitá zejména při umisťování nových zdrojů, při změnách v územním plánování a při přípravě odborných posudků a provozních řádů.'

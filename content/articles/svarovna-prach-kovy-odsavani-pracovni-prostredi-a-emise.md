@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/svarovna-clanek.webp
 title: 'Svařovna: prach, kovy, odsávání, pracovní prostředí a emise'
 slug: svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise
 excerpt: |

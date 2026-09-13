@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/merici-misto-projekt.webp
 
 title: "Messort am Abgas: Warum es bereits in der Projektphase wichtig ist"
 slug: merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu

@@ -1,0 +1,3 @@
+.value { display: inline-grid; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.reserve, .visible { grid-area: 1 / 1; }
+.reserve { visibility: hidden; }

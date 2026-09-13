@@ -6,16 +6,6 @@ export const serviceMegaGroups = [
     subtitle: "Měření emisí, hluku a pracovního prostředí",
     links: [
       {
-        href: "/mereni-pro-kolaudaci",
-        label: "Měření pro kolaudaci",
-        description: "Hluk, osvětlení a pracoviště podle požadavku úřadu"
-      },
-      {
-        href: "/mereni-nove-haly",
-        label: "Měření nové haly",
-        description: "Více faktorů pracovního prostředí v jednom rozsahu"
-      },
-      {
         href: "/sluzby/pracovni-prostredi",
         label: "Pracovní prostředí",
         description: "Kategorizace prací, expozice a protokoly z měření"

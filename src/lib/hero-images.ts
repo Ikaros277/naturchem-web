@@ -88,18 +88,19 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   "typicke-zakazky": hero("typicke-zakazky"),
   "provozy-a-technologie": hero("provozy-a-technologie"),
 
-  "poradna-air-quality": { src: "/hero/poradna/air-quality.jpg", position: "center 40%" },
-  "poradna-laptop-forms": { src: "/hero/poradna/laptop-forms.jpg" },
-  "poradna-hvac-units": { src: "/hero/poradna/hvac-units.jpg" },
-  "poradna-woodworking": { src: "/hero/poradna/woodworking.jpg" },
-  "poradna-recycling": { src: "/hero/poradna/recycling.jpg" },
-  "poradna-diesel-generator": { src: "/hero/poradna/diesel-generator.jpg" },
-  "poradna-automotive": { src: "/hero/poradna/automotive.jpg" },
-  "poradna-waste-landfill": { src: "/hero/poradna/waste-landfill.jpg" },
-  "poradna-boiler-room": { src: "/hero/poradna/boiler-room.jpg" },
-  "poradna-paint-spray": { src: "/hero/poradna/paint-spray.jpg" },
-  "poradna-documents-desk": { src: "/hero/poradna/documents-desk.jpg" },
-  "poradna-factory-aerial": { src: "/hero/poradna/factory-aerial.jpg", position: "center 30%" }
+  // Keep legacy theme keys usable, but never serve the former stock photographs.
+  "poradna-air-quality": { src: "/hero/generated-2026-09/scitaci-pravidla.webp", position: "center 40%" },
+  "poradna-laptop-forms": { src: "/hero/generated-2026-09/elektronicke-protokoly.webp" },
+  "poradna-hvac-units": { src: "/hero/generated-2026-09/tepelna-cerpadla-clanek.webp" },
+  "poradna-woodworking": { src: "/hero/generated-2026-09/drevozpracujici-clanek.webp" },
+  "poradna-recycling": { src: "/hero/generated-2026-09/recyklace-clanek.webp" },
+  "poradna-diesel-generator": { src: "/hero/generated-2026-09/dieselagregat-clanek.webp" },
+  "poradna-automotive": { src: "/hero/generated-2026-09/automotive-clanek.webp" },
+  "poradna-waste-landfill": { src: "/hero/generated-2026-09/skladka-clanek.webp" },
+  "poradna-boiler-room": { src: "/hero/generated-2026-09/kotelna-clanek.webp" },
+  "poradna-paint-spray": { src: "/hero/generated-2026-09/lakovna-clanek.webp" },
+  "poradna-documents-desk": { src: "/hero/generated-2026-09/podklady-prumyslovy-provoz.webp" },
+  "poradna-factory-aerial": { src: "/hero/generated-2026-09/minimalni-vzdalenost.webp", position: "center 30%" }
 };
 
 function resolveConfig(theme: string): HeroImageConfig {

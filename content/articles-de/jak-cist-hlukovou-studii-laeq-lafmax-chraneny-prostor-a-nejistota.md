@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/cteni-hlukove-studie.webp
 
 title: "Wie man eine Lärmstudie liest: LAeq, LAFmax, Schutzgebiet und Unsicherheit"
 slug: jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota

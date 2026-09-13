@@ -163,6 +163,12 @@ export function ContactForm({
         </h2>
         <p className="contact-form-lead">{t.formLead}</p>
       </header>
+      {selectedServices.length > 0 ? (
+        <p className="contact-selected-services" aria-live="polite">
+          <strong>{t.selectedServices}</strong>{" "}
+          {selectedServices.map(value => visibleServiceChoices.find(choice => choice.value === value)?.label ?? value).join(", ")}
+        </p>
+      ) : null}
 
       <p className="contact-form-honeypot" aria-hidden="true">
         <label>
@@ -219,6 +225,8 @@ export function ContactForm({
             </label>
           </p>
 
+          <details className="contact-form-details">
+            <summary>{t.optionalDetails}</summary>
           <p>
             <label>
               {t.locationLabel}
@@ -239,6 +247,7 @@ export function ContactForm({
               <input name="deadline" maxLength={200} placeholder={t.deadlinePlaceholder} />
             </label>
           </p>
+          </details>
         </div>
 
         <div className="contact-form-col contact-form-col--message">
@@ -248,7 +257,7 @@ export function ContactForm({
               <br />
               <textarea
                 name="message"
-                rows={9}
+                rows={6}
                 required
                 maxLength={10000}
                 defaultValue={initialMessage}
@@ -296,6 +305,8 @@ export function ContactForm({
         </div>
       </div>
 
+      <details className="contact-form-details contact-form-services">
+        <summary>{selectedServices.length > 0 ? t.changeServices : t.chooseServices}</summary>
       <fieldset className="contact-service-choices">
         <legend>{t.serviceLabel}</legend>
         <p className="contact-service-choices-hint muted">{t.serviceHint}</p>
@@ -328,6 +339,7 @@ export function ContactForm({
             <input key={service} type="hidden" name="services" value={service} />
           ))}
       </fieldset>
+      </details>
 
       <p>
         <label className="contact-service-option">

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/svarovna-clanek.webp
 title: 'Welding shop: dust, metals, extraction, work environment, and emissions'
 slug: svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise
 excerpt: 'A welding shop can be a significant workplace from the perspective of employee health protection and air protection. During welding, welding fumes, fine particles, metal oxides, and other substances arise, whose composition depends on welded material, filler material, welding method, and extraction effectiveness. In practice, it is therefore important to address workplace air, local extraction, measurement of dust and metals at the workplace, and whether the welding shop may simultaneously be a stationary emission source to outdoor air.'

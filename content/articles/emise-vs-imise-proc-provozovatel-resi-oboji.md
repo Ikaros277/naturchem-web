@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/emise-imise.webp
 title: 'Emise a imise: rozdíl, měření a limity'
 slug: emise-vs-imise-proc-provozovatel-resi-oboji
 excerpt: 'Emise označují vypouštění znečišťujících látek ze zdroje; imise jejich koncentraci v okolním ovzduší. Přehled měření, limitů a rozptylových studií.'

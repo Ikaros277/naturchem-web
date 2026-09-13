@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/metodicke-vyklady-mzp.webp
 title: 'Nové metodické výklady MŽP k dopovolovaným zdrojům: co má provozovatel zkontrolovat?'
 slug: nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat
 excerpt: 'Novela zákona o ochraně ovzduší a navazující metodické výklady MŽP přinesly novou praktickou otázku: které zdroje je nutné dodatečně povolit nebo uvést do souladu s novými požadavky? Téma se týká zejména zdrojů, které byly dříve v povolení jen zmíněny, byly vedeny jako související činnost, nebo nově spadají pod přílohu č. 2 zákona o ochraně ovzduší. Provozovatel by měl zkontrolovat hlavně výrokovou část povolení, zařazení zdroje, kapacitu, lhůty, potřebu odborného posudku, rozptylové studie a provozní podmínky.'

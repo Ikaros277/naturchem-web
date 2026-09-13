@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/skladka-clanek.webp
 
 title: "Deponie und Abfallentsorgungsanlage: Welche Umweltdokumentation wird normalerweise behandelt?"
 slug: skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi

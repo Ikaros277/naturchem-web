@@ -128,9 +128,9 @@ export function getFooterNav(locale: Locale) {
 
   const footerServiceLinks: readonly FooterLink[] = [
     { href: "/sluzby", label: serviceLabels.all },
-    { href: "/mereni-emisi-kotelen", label: serviceLabels.emissions },
-    { href: "/mereni-pracovniho-prostredi-kategorizace-praci", label: serviceLabels.workplace },
-    { href: "/rozptylova-studie-povoleni", label: serviceLabels.dispersion },
+    { href: "/sluzby/mereni-emisi", label: serviceLabels.emissions },
+    { href: "/sluzby/pracovni-prostredi", label: serviceLabels.workplace },
+    { href: "/sluzby/rozptylove-studie", label: serviceLabels.dispersion },
     { href: "/autorizovana-osoba-mereni-emisi", label: serviceLabels.authorizedEmissions },
     { href: "/mereni-prasnosti", label: serviceLabels.dust }
   ];
@@ -170,9 +170,9 @@ export function getHeaderMainNav(locale: Locale) {
 }
 
 const salesNavLabels: Record<Locale, string> = {
-  cs: "Nabídka měřicí techniky",
-  en: "Measuring equipment offer",
-  de: "Angebot Messtechnik"
+  cs: "Měřicí technika",
+  en: "Measuring equipment",
+  de: "Messtechnik"
 };
 
 const salesNavHref = "/prodej";

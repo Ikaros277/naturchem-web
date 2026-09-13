@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/drevozpracujici-clanek.webp
 
 title: "Holzverarbeitungsbetrieb: Staub, Sägemehl, Absaugung, Lärm und Genehmigung der Quelle"
 slug: drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje

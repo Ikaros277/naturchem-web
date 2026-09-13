@@ -41,6 +41,7 @@ export const sectorPhotoIds = new Set([
 
 /** Typické zakázky s vlastní fotkou (soubor v /public/hero/case-studies/{id}.webp). */
 export const caseStudyPhotoIds = new Set([
+  "pyrolyza-kalu",
   "aktualizace-provozniho-radu",
   "bezpecnostni-list-chemicky-vyrobek",
   "cov-kalovy-vyduch",
@@ -105,6 +106,7 @@ export function sectorPhotoSrc(sectorId: string): string {
 }
 
 export function caseStudyPhotoSrc(studyId: string): string {
+  if (studyId === "pyrolyza-kalu") return "/hero/generated-2026-09/pyrolyza-kalu.webp";
   return `/hero/case-studies/${studyId}.webp`;
 }
 

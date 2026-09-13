@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/khs-pracovni-prostredi.webp
 
 title: "Arbeitsplatzmessung: Wann kann KHS sie verlangen?"
 slug: mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs

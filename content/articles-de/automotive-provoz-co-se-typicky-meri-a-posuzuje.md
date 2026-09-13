@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/automotive-clanek.webp
 
 title: "Automobilbetrieb: Was wird typischerweise gemessen und bewertet?"
 slug: automotive-provoz-co-se-typicky-meri-a-posuzuje

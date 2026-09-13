@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/khs-pracovni-prostredi.webp
 title: 'Měření pracovního prostředí: kdy ho může požadovat KHS?'
 slug: mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs
 excerpt: 'Krajská hygienická stanice může požadovat měření pracovního prostředí zejména tehdy, když je potřeba ověřit expozici zaměstnanců rizikovým faktorům práce. Nejčastěji se řeší chemické látky, prach, hluk, vibrace, mikroklima, osvětlení nebo podklady pro kategorizaci prací.'

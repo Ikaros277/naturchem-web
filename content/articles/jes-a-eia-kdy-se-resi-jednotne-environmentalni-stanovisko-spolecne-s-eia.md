@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/jes-eia-clanek.webp
 title: 'JES a EIA: kdy se řeší jednotné environmentální stanovisko společně s EIA?'
 slug: jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia
 excerpt: 'Jednotné environmentální stanovisko, zkráceně JES, sjednocuje více environmentálních vyjádření, závazných stanovisek a rozhodnutí do jednoho podkladu pro povolení záměru. U záměrů v režimu EIA je důležité správně rozhodnout, zda má být JES řešeno společně s procesem EIA, nebo až následně po vydání stanoviska EIA.'

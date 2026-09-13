@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/kotelna-clanek.webp
 title: 'Kotelna a plynový kotel: kdy se měří emise CO a NOx?'
 slug: kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox
 excerpt: |

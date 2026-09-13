@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/chemicke-latky-rozsah.webp
 title: 'Měření chemických látek v pracovním ovzduší: co rozhoduje o rozsahu měření?'
 slug: mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni
 excerpt: |

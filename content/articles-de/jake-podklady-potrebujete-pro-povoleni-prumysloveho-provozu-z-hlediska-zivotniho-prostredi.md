@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/podklady-prumyslovy-provoz.webp
 
 title: Welche Unterlagen benötigen Sie, um einen Industriebetrieb aus umweltrechtlicher Sicht zu genehmigen?
 slug: jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/rozptylova-studie-clanek.webp
 
 title: "Dispersionsstudie: Wann ist sie obligatorisch und welche Dokumentation ist erforderlich?"
 slug: rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba

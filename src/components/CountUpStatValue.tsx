@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import styles from "./count-up-stat.module.css";
 
 type Props = {
   value: string;
@@ -114,11 +115,11 @@ export function CountUpStatValue({ value }: Props) {
   }, [parsed, value]);
 
   return (
-    <span ref={elementRef} className="stat-value stat-value-countup">
-      <span className="stat-value-countup-reserve" aria-hidden="true">
+    <span ref={elementRef} className={`stat-value ${styles.value}`}>
+      <span className={styles.reserve} aria-hidden="true">
         {value}
       </span>
-      <span className="stat-value-countup-visible" aria-hidden="true">
+      <span className={styles.visible} aria-hidden="true">
         {displayValue}
       </span>
       <span className="sr-only">{value}</span>

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/scitaci-pravidla.webp
 title: 'Sčítací pravidla u zdrojů znečišťování ovzduší: proč mohou změnit povinnosti provozovatele?'
 slug: scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele
 excerpt: 'Sčítací pravidla u zdrojů znečišťování ovzduší rozhodují o tom, zda se více dílčích technologií posuzuje z hlediska kapacity samostatně, nebo společně. Výsledek může změnit zařazení zdroje podle přílohy č. 2 zákona o ochraně ovzduší, povinnost mít povolení provozu, odborný posudek, rozptylovou studii, měření emisí nebo provozní řád. Provozovatel by proto neměl hodnotit jen jednotlivý stroj, výduch nebo linku izolovaně, ale celý provozní a technický celek.'

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/elektronicke-protokoly.webp
 
 title: "Elektronische Meldung von Emissionsmessungen und Einreichung von Protokollen: praktische Auswirkungen auf Betreiber"
 slug: elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele

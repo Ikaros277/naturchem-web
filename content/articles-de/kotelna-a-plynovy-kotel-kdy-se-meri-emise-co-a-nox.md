@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/kotelna-clanek.webp
 
 title: "Kesselanlage und Gaskessel: Wann werden CO- und NOx-Emissionen gemessen?"
 slug: kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox

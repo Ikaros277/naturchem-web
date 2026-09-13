@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/kategorizace-praci-clanek.webp
 
 title: "Berufskategorisierung: Welche Messung wird als unterstützender Nachweis benötigt?"
 slug: kategorizace-praci-jake-mereni-je-potreba-jako-podklad

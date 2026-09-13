@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/minimalni-vzdalenost.webp
 title: 'Minimum distance requirement: a new tool for protecting air quality from dust and odour'
 slug: institut-minimalni-vzdalenosti-ochrana-ovzdusi
 excerpt: 'The amendment to the Air Protection Act introduces a minimum distance requirement for selected stationary sources that may significantly affect the surroundings through dust or odour. The new rules are important especially when siting new sources, when making changes in spatial planning, and when preparing expert reports and operating rules.'

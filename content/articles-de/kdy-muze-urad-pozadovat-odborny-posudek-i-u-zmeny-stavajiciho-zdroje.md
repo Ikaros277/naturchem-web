@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/posudek-zmena-zdroje.webp
 
 title: Wann kann die Behörde auch für eine Änderung einer bestehenden Quelle ein Gutachten verlangen?
 slug: kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje

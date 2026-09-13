@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/hluk-sousede.webp
 
 title: "Lärm einer Industrieanlage: Was tun, wenn sich Nachbarn beschweren?"
 slug: hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji

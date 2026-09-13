@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/kategorizace-praci-clanek.webp
 title: 'Job categorisation: what measurement is needed as supporting evidence?'
 slug: kategorizace-praci-jake-mereni-je-potreba-jako-podklad
 excerpt: 'Job categorisation is the basic tool for assessing health risks in the workplace. In practice, the question often arises when expert assessment is sufficient and when workplace environment measurement must be documented. This typically concerns chemical substances, dust, noise, vibration, microclimate, or other factors that may affect employees'' health.'

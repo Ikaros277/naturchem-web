@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/emise-imise.webp
 
 title: "Emissionen vs. Immissionen: Warum muss der Betreiber beides berücksichtigen?"
 slug: emise-vs-imise-proc-provozovatel-resi-oboji

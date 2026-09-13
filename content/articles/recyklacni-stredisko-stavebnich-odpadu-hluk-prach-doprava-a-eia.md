@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/recyklace-clanek.webp
 title: 'Recyklační středisko stavebních odpadů: hluk, prach, doprava a EIA'
 slug: recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia
 excerpt: 'Recyklační středisko stavebních odpadů může být z pohledu povolování citlivý záměr, i když jeho účelem je materiálové využití odpadu. Při drcení, třídění, nakládce a dopravě vzniká hluk, prašnost a zvýšená dopravní zátěž, které je nutné posoudit už ve fázi přípravy projektu. V praxi se často řeší hluková studie, rozptylová studie, provozní opatření proti prašnosti a také to, zda záměr podléhá EIA nebo zjišťovacímu řízení.'

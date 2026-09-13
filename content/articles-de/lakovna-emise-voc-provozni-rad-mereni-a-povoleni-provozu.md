@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/lakovna-clanek.webp
 
 title: "Lackiererei: Emissionen, VOC, Betriebsvorschriften, Messung und Betriebserlaubnis"
 slug: lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu

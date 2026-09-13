@@ -1,6 +1,6 @@
 # NATURCHEM — odborné články (poradna)
 
-> 70 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
+> 71 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
 
 ## Index
 
@@ -77,6 +77,7 @@
 - Svařovna: prach, kovy, odsávání, pracovní prostředí a emise: https://www.naturchem.cz/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise/
 - Tepelná zátěž na pracovišti: kdy je nutné měření a jak se stanoví přípustná doba práce: https://www.naturchem.cz/poradna/tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace/
 - Tónové složky hluku a česká legislativa: https://www.naturchem.cz/poradna/tonove-slozky-hluku-ceska-legislativa-provozovatel/
+- Přišla výzva KHS k měření pracovního prostředí: jak sestavit správný rozsah: https://www.naturchem.cz/poradna/vyzva-khs-mereni-pracovniho-prostredi/
 - Záložní dieselagregát: emise, hluk a povolovací podklady: https://www.naturchem.cz/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady/
 - Záložní dieselagregát: kdy je jen záloha a kdy už běžný zdroj emisí: https://www.naturchem.cz/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny/
 - Změna technologie ve výrobním areálu: kdy řešit ovzduší, hluk, odpady a EIA: https://www.naturchem.cz/poradna/zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia/

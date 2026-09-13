@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/svarovna-clanek.webp
 
 title: "Schweißerei: Staub, Metalle, Absaugung, Arbeitsumgebung und Emissionen"
 slug: svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/skladka-clanek.webp
 title: 'Skládka a odpadové zařízení: jaké environmentální podklady se obvykle řeší?'
 slug: skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi
 excerpt: |

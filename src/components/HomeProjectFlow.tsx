@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n/locales";
+import styles from "./homepage.module.css";
 
 const copy = {
   cs: {
@@ -41,41 +42,18 @@ const copy = {
 
 export function HomeProjectFlow({ locale }: { locale: Locale }) {
   const content = copy[locale];
-
   return (
-    <section className="home-project-flow home-below-fold" aria-labelledby="home-project-flow-heading">
-      <div className="container home-project-flow-grid">
-        <div className="home-project-flow-media">
-          {/* eslint-disable-next-line @next/next/no-img-element -- Static WebP is served directly to avoid image transformation usage. */}
-          <img
-            src="/hero/case-studies/mereni-emisi-lakovna.webp"
-            alt={content.imageAlt}
-            width="1024"
-            height="576"
-            loading="lazy"
-            decoding="async"
-          />
-          <span className="home-project-flow-media-label">{content.imageLabel}</span>
-          <span className="home-project-flow-reticle" aria-hidden="true" />
-        </div>
-
-        <div className="home-project-flow-copy">
-          <p className="eyebrow">{content.eyebrow}</p>
-          <h2 id="home-project-flow-heading">{content.title}</h2>
-          <ol className="home-project-flow-steps">
-            {content.steps.map((step, index) => (
-              <li key={step.title}>
-                <span className="home-project-flow-step-number" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span>
-                  <strong>{step.title}</strong>
-                  <span>{step.text}</span>
-                </span>
-              </li>
-            ))}
-          </ol>
-        </div>
+    <section className={`${styles.section} ${styles.flow}`} aria-labelledby="home-project-flow-heading">
+      <div className={styles.container}>
+        <header className={styles.sectionHeader}><h2 id="home-project-flow-heading">{content.title}</h2></header>
+        <ol className={styles.steps}>
+          {content.steps.map((step, index) => (
+            <li key={step.title}>
+              <span className={styles.stepNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <div><strong>{step.title}</strong><p>{step.text}</p></div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

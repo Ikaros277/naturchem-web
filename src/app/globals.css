@@ -3982,7 +3982,8 @@ main.page:has(.page-hero-band) {
 }
 
 .home-section-offer .home-offer-header h2 {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
   color: #fff;
 }
 
@@ -8508,6 +8509,59 @@ main.home-page + .site-footer {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
+.site-footer .footer-key-links {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer .footer-key-link {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) 16px;
+  gap: 10px;
+  align-items: center;
+  min-height: 48px;
+  padding: 11px 13px;
+  border: 1px solid rgba(184, 214, 202, 0.45);
+  border-radius: 8px;
+  background: rgba(184, 214, 202, 0.1);
+  color: #f8fafc;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.site-footer .footer-key-link .service-icon-plain,
+.site-footer .footer-key-link-arrow {
+  color: #b8d6ca;
+}
+
+.site-footer .footer-key-link-label {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.site-footer .footer-key-link:hover {
+  background: rgba(184, 214, 202, 0.2);
+  border-color: #b8d6ca;
+  color: #fff;
+}
+
+.site-footer .footer-key-link:focus-visible {
+  outline: 2px solid #f8fafc;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer .footer-key-link {
+    transition: none;
+  }
+}
+
 .site-footer .footer-survey-highlight-title {
   margin: 0 0 6px;
   color: #fff;
@@ -8902,16 +8956,16 @@ main.home-page + .site-footer {
 
   .button.nav-cta-mobile,
   .nav-toggle {
-    height: clamp(2.5rem, 7vw, 2.75rem);
-    min-height: clamp(2.5rem, 7vw, 2.75rem);
-    max-height: clamp(2.5rem, 7vw, 2.75rem);
+    height: 2.75rem;
+    min-height: 2.75rem;
+    max-height: 2.75rem;
     box-sizing: border-box;
     align-self: center;
   }
 
   .button.nav-cta-mobile {
     padding: 0 0.55rem;
-    font-size: clamp(0.7rem, 2.6vw, 0.8rem);
+    font-size: 0.82rem;
     font-weight: 700;
     line-height: 1.15;
     box-shadow: none;
@@ -8922,7 +8976,7 @@ main.home-page + .site-footer {
   @media (max-width: 480px) {
     .button.nav-cta-mobile {
       padding-inline: 0.45rem;
-      font-size: clamp(0.66rem, 2.4vw, 0.74rem);
+      font-size: 0.8rem;
     }
   }
 

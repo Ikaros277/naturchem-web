@@ -2,6 +2,7 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
+const { hashArticleSources, readArticleContentVersion } = require("./lib/article-content-version.js");
 
 const projectRoot = path.resolve(__dirname, "..");
 const appRoot = path.join(projectRoot, "src", "app");
@@ -47,4 +48,10 @@ for (const relativePath of staticPublishingRoutes) {
   );
 }
 
-console.log("PASS static cache-budget checks");
+const first = [["cs/example.md", "---\nheroImage: /first.webp\n---\nBody"]];
+assert.notEqual(hashArticleSources(first), hashArticleSources([["cs/example.md", "---\nheroImage: /second.webp\n---\nBody"]]), "Image-only edits must invalidate article caches");
+assert.equal(hashArticleSources(first), hashArticleSources(first.map(([file, text]) => [file, text.replace(/\n/g, "\r\n")])), "Line endings must not create different content revisions");
+const version = readArticleContentVersion(path.join(projectRoot, "content"));
+assert.ok(fs.readFileSync(path.join(projectRoot, "src/lib/article-content-version.ts"), "utf8").includes(version), "Regenerate article indexes before verification");
+assert.equal((fs.readFileSync(path.join(projectRoot, "src/lib/articles.ts"), "utf8").match(/\["articles?-.*?", articleContentVersion\]/g) || []).length, 2, "Both persistent article caches must be versioned");
+console.log("PASS static cache-budget and content-version checks");

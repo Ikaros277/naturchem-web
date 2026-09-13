@@ -1,9 +1,11 @@
 import { preload } from "react-dom";
 
-import { HomeHeroShell, type HomeHeroPhotoConfig } from "@/components/HomeHeroShell";
+import { HomeHeroShell } from "@/components/HomeHeroShell";
 import { HomeLcpPhoto } from "@/components/HomeLcpPhoto";
-import { getHeroImageConfig, getHeroLcpSources } from "@/lib/hero-images";
+import { getHeroLcpSources } from "@/lib/hero-images";
 import type { HomeHeroPillar } from "@/lib/home-hero-pillars";
+import type { Locale } from "@/lib/i18n/locales";
+import styles from "./homepage.module.css";
 
 type Props = {
   title: string;
@@ -11,16 +13,14 @@ type Props = {
   pillars: HomeHeroPillar[];
   ariaLabel: string;
   pillarsAriaLabel: string;
+  locale: Locale;
+  credential: string;
 };
 
 /** Server komponenta — H1, lead a LCP fotka v prvním HTML bez čekání na JS. */
-export function HomeHeroSection({ title, lead, pillars, ariaLabel, pillarsAriaLabel }: Props) {
+export function HomeHeroSection({ title, lead, pillars, ariaLabel, pillarsAriaLabel, locale, credential }: Props) {
   const initialPillar = pillars[0];
   const { src, avifSrc, mobileAvifSrc } = getHeroLcpSources(initialPillar.theme);
-  const photoConfigs: HomeHeroPhotoConfig[] = pillars.map((pillar) => {
-    const { src: photoSrc, position = "center center" } = getHeroImageConfig(pillar.theme);
-    return { id: pillar.id, src: photoSrc, position };
-  });
   if (avifSrc && mobileAvifSrc) {
     preload(mobileAvifSrc, {
       as: "image",
@@ -41,14 +41,14 @@ export function HomeHeroSection({ title, lead, pillars, ariaLabel, pillarsAriaLa
   return (
     <HomeHeroShell
       pillars={pillars}
-      photoConfigs={photoConfigs}
+      locale={locale}
+      credential={credential}
       ariaLabel={ariaLabel}
       pillarsAriaLabel={pillarsAriaLabel}
       initialPhoto={<HomeLcpPhoto theme={initialPillar.theme} />}
     >
-      <div className="hero-diagonal-spacer" aria-hidden="true" />
-      <h1 className="home-hero-enter home-hero-enter-1">{title}</h1>
-      <p className="hero-lead home-hero-enter home-hero-enter-2">{lead}</p>
+      <h1>{title}</h1>
+      <p className={styles.heroLead}>{lead}</p>
     </HomeHeroShell>
   );
 }

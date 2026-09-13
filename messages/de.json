@@ -110,8 +110,8 @@
   "home": {
     "metaTitle": "NATURCHEM – Emissionen, Lärm und Messungen zur Bauabnahme",
     "metaDescription": "Messungen von Emissionen, Lärm, Beleuchtung, Schwingungen, Mikroklima und Arbeitsplatzfaktoren. Unterlagen für Bauabnahme, KHS, ČIŽP und Bauunternehmen.",
-    "heroTitle": "Messungen, Studien und Fachunterlagen für Betrieb und Projekte",
-    "heroLead": "Akkreditierte Messungen, Studien und Dokumentationen für Behörden, Bauabnahmen und Betriebsgenehmigungen.",
+    "heroTitle": "Messungen und Studien für Industrie und Bauwesen",
+    "heroLead": "Emissionen, Lärm und Arbeitsumgebung. Unterlagen für Betriebsgenehmigungen, Bauabnahmen und Behörden.",
     "trustAria": "Glaubwürdigkeit und Zulassungen",
     "statsAria": "Erfahrung in Zahlen",
     "offerAria": "Was wir anbieten",
@@ -148,7 +148,11 @@
   "contactForm": {
     "successTitle": "Vielen Dank — wir haben Ihre Nachricht erhalten",
     "formTitle": "Schreiben Sie uns",
-    "formLead": "Sie müssen nicht alles vorbereitet haben. Eine kurze Nachricht oder ein Anhang genügt — wir melden uns bei Ihnen und besprechen, was sinnvoll ist.",
+    "formLead": "Beschreiben Sie Ihren Bedarf. Projektunterlagen oder Anforderungen einer Behörde können Sie beifügen.",
+    "optionalDetails": "Ort und Termin (optional)",
+    "selectedServices": "Ihre Anfrage:",
+    "changeServices": "Leistungsauswahl ändern",
+    "chooseServices": "Leistung auswählen (optional)",
     "nameLabel": "Name oder Unternehmen",
     "emailLabel": "E-Mail",
     "phoneLabel": "Telefon",

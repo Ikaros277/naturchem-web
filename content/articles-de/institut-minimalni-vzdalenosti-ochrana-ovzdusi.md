@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/minimalni-vzdalenost.webp
 
 title: "Mindestabstandsanforderung: ein neues Instrument zum Schutz der Luftqualität vor Staub und Gerüchen"
 slug: institut-minimalni-vzdalenosti-ochrana-ovzdusi

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/chemicke-latky-rozsah.webp
 
 title: "Messung chemischer Stoffe in der Luft am Arbeitsplatz: Was bestimmt den Messumfang?"
 slug: mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni

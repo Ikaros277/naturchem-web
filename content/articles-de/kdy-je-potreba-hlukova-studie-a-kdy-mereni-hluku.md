@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/studie-nebo-mereni-hluku.webp
 
 title: Wann ist eine Lärmstudie erforderlich und wann ist eine Lärmmessung erforderlich?
 slug: kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku

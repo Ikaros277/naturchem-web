@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { isChatExcludedPath } from "@/lib/chat-visibility";
 import { buildWhatsAppUrl, isWhatsAppEnabled } from "@/lib/live-chat";
 import { useTranslations } from "@/lib/i18n/locale-context";
 
@@ -9,7 +10,7 @@ export function WhatsAppButton() {
   const pathname = usePathname();
   const isHomepage = pathname === "/" || /^\/(en|de)\/?$/.test(pathname);
 
-  if (!isWhatsAppEnabled() || isHomepage) return null;
+  if (!isWhatsAppEnabled() || isHomepage || isChatExcludedPath(pathname)) return null;
 
   return (
     <a

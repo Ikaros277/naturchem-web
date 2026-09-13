@@ -1,68 +1,49 @@
-import { LocaleLink } from "@/lib/i18n/locale-link";
-import type { Locale } from "@/lib/i18n/locales";
+import Link from "next/link";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { localizeHref } from "@/lib/i18n/navigation";
+import type { Locale } from "@/lib/i18n/locales";
+import styles from "./homepage.module.css";
 
-const paths = [
-  {
-    href: "/mereni-pro-kolaudaci",
-    icon: "povoleni",
-    label: "Kolaudace",
-    title: "Měření pro kolaudaci",
-    text: "Určíme potřebný rozsah podle projektu nebo požadavku úřadu.",
-    cta: "Zjistit rozsah"
-  },
-  {
-    href: "/mereni-pracovniho-prostredi-kategorizace-praci",
-    icon: "pracovni-prostredi",
-    label: "KHS a BOZP",
-    title: "Kategorizace prací",
-    text: "Měření a podklady pro pracovní prostředí.",
-    cta: "Připravit podklady"
-  },
-  {
-    href: "/pro-stavebni-firmy",
-    icon: "investor",
-    label: "Projekt a povolení",
-    title: "Dokumentace k projektu",
-    text: "Studie, posudky a EIA podklady pro povolení.",
-    cta: "Zjistit podklady"
-  }
-] as const;
+const czechPaths = ["/mereni-pro-kolaudaci", "/mereni-pracovniho-prostredi-kategorizace-praci", "/pro-stavebni-firmy"];
+// Two campaign pages deliberately exist only in Czech. Use translated service
+// overviews in EN/DE instead of manufacturing unavailable locale URLs.
+const translatedPaths = ["/sluzby#mericke-sluzby", "/mereni-pracovniho-prostredi-kategorizace-praci", "/sluzby#povolovaci-podklady"];
+const copy = {
+  cs: { title: "Co potřebujete vyřešit?", items: [
+    ["Měření pro kolaudaci", "Rozsah podle projektu nebo požadavku úřadu.", "Zjistit rozsah"],
+    ["Kategorizace prací", "Měření a podklady pro pracovní prostředí.", "Připravit podklady"],
+    ["Dokumentace k projektu", "Studie, posudky a EIA pro povolovací řízení.", "Zjistit podklady"]
+  ]},
+  en: { title: "What do you need to resolve?", items: [
+    ["Building approval measurements", "Scope based on the project or authority requirements.", "View the scope"],
+    ["Work categorisation", "Workplace measurements and supporting documents.", "Prepare documents"],
+    ["Project documentation", "Studies, expert reports and EIA for permitting.", "View requirements"]
+  ]},
+  de: { title: "Welche Aufgabe möchten Sie lösen?", items: [
+    ["Messungen zur Bauabnahme", "Umfang nach Projekt oder Behördenanforderung.", "Umfang ansehen"],
+    ["Arbeitskategorisierung", "Messungen und Unterlagen zum Arbeitsumfeld.", "Unterlagen vorbereiten"],
+    ["Projektunterlagen", "Studien, Gutachten und UVP für Genehmigungen.", "Unterlagen ansehen"]
+  ]}
+} as const;
 
 export function HomeDemandPaths({ locale }: { locale: Locale }) {
-  if (locale !== "cs") return null;
-
+  const content = copy[locale];
+  const paths = locale === "cs" ? czechPaths : translatedPaths;
   return (
-    <section
-      className="home-section home-demand-paths home-below-fold"
-      aria-labelledby="home-demand-paths-heading"
-    >
-      <div className="container">
-        <header className="section-header home-demand-paths-header">
-          <p className="eyebrow">Vyberte svou situaci</p>
-          <h2 id="home-demand-paths-heading">Co potřebujete vyřešit?</h2>
-        </header>
-        <ul className="home-demand-paths-list">
-          {paths.map((item, index) => (
-            <li key={item.href} className={index === 0 ? "home-demand-path-featured" : undefined}>
-              <LocaleLink href={item.href} className="home-demand-path-item">
-                <span className="home-demand-path-topline">
-                  <span className="home-demand-path-label">{item.label}</span>
-                  <ServiceIcon
-                    icon={item.icon}
-                    size={24}
-                    variant="plain"
-                    className="home-demand-path-icon"
-                  />
-                </span>
-                <span className="home-demand-path-copy">
-                  <strong>{item.title}</strong>
-                  <span>{item.text}</span>
-                  <span className="home-demand-path-cta">
-                    {item.cta} <span aria-hidden="true">→</span>
-                  </span>
-                </span>
-              </LocaleLink>
+    <section className={`${styles.section} ${styles.situations}`} aria-labelledby="home-demand-paths-heading">
+      <div className={styles.container}>
+        <header className={styles.sectionHeader}><h2 id="home-demand-paths-heading">{content.title}</h2></header>
+        <ul className={styles.situationGrid}>
+          {content.items.map(([title, , cta], index) => (
+            <li key={paths[index]}>
+              <Link href={localizeHref(paths[index], locale)} className={styles.situation}>
+                <span className={styles.situationIcon}><ServiceIcon icon={index === 0 ? "contact-building" : index === 1 ? "pracovni-prostredi" : "posudek"} size={38} /></span>
+                <div className={styles.situationBody}>
+                  <strong>{title}</strong>
+                  <span className={styles.situationCta}>{cta}</span>
+                </div>
+                <span className={styles.situationArrow} aria-hidden="true">↗</span>
+              </Link>
             </li>
           ))}
         </ul>

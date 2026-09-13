@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/lakovna-clanek.webp
 title: 'Paint shop: emissions, VOC, operating rules, measurement and operating permit'
 slug: lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu
 excerpt: 'From an air-protection perspective, a paint shop is often a significant source of VOC emissions — volatile organic compounds. The operator must address not only painting itself, but also consumption of organic solvents, filtration, exhausts, VOC balance, operating records, emission measurement and, where applicable, an operating permit. Properly set documentation and records help avoid problems during inspections by the Czech Environmental Inspectorate or the regional authority.'

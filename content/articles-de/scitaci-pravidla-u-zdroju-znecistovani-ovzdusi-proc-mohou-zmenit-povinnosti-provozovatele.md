@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/scitaci-pravidla.webp
 
 title: "Aggregationsregeln für Luftverschmutzungsquellen: Warum können sie Betreiberpflichten ändern?"
 slug: scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele

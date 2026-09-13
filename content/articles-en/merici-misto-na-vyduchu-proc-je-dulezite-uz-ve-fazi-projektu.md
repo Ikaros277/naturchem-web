@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/merici-misto-projekt.webp
 title: 'Measurement location on exhaust: why it matters already in the project phase'
 slug: merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu
 excerpt: 'A measurement location on the exhaust is not just a technical detail for the laboratory. If authorised emission measurement is to be carried out in future, the exhaust must be accessible, safe and suitable for representative sampling. Poorly designed ductwork, short straight sections or an inaccessible stack can cause problems at building approval, operating permit or subsequent Czech Environmental Inspectorate inspection.'

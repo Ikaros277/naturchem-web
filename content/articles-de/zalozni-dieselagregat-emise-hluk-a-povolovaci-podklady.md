@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/dieselagregat-clanek.webp
 
 title: "Backup-Dieselgenerator: Emissionen, Lärm und Genehmigungsunterlagen"
 slug: zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/recyklace-clanek.webp
 
 title: "Bauschutt-Recyclingzentrum: Lärm, Staub, Verkehr und UVP"
 slug: recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/hluk-sousede.webp
 title: 'Hluk z provozovny: co dělat, když si sousedé stěžují?'
 slug: hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji
 excerpt: 'Stížnosti na hluk z provozovny je vhodné řešit věcně a včas. Nejdříve je potřeba zjistit, odkud hluk skutečně pochází, v jakém režimu provozovna pracuje a zda může být problém v denní nebo noční době. Teprve potom má smysl navrhnout měření hluku, technická opatření nebo další postup vůči KHS.'

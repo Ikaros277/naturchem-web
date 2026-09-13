@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/merici-misto-projekt.webp
 title: 'Měřicí místo na výduchu: proč je důležité už ve fázi projektu?'
 slug: merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu
 excerpt: 'Měřicí místo na výduchu není jen technický detail pro laboratoř. Pokud má být v budoucnu provedeno autorizované měření emisí, musí být výduch přístupný, bezpečný a vhodný pro reprezentativní odběr vzorku. Chybně navržené potrubí, krátké rovné úseky nebo nepřístupný výduch mohou způsobit problém při kolaudaci, povolení provozu nebo následné kontrole ČIŽP.'

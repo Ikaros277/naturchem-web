@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/elektronicke-protokoly.webp
 title: 'Electronic notification of emission measurement and submission of protocols: practical impact on operators'
 slug: elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele
 excerpt: 'From 2026, the practical method of notifying dates and submitting data from protocols for one-off emission measurement is changing. The measurement date is now notified via ISPOP and data from the measurement protocol are reported by the authorised person using the PROTOKOL form. The operator therefore no longer deals only with ordering measurement, but must correctly plan the date, watch deadlines, communicate with the authorised person, and be sure that measurement and the protocol will be administratively traceable.'

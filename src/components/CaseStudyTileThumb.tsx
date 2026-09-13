@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { getCaseStudyHeroImageConfig } from "@/lib/custom-hero-photos";
 import type { CaseStudyListing } from "@/lib/case-study-listing";
+import { GeneratedIllustration } from "@/components/GeneratedIllustration";
+import { getGeneratedIllustrationSources } from "@/lib/generated-illustrations";
 
 type Props = {
   study: CaseStudyListing;
@@ -12,7 +14,12 @@ export function CaseStudyTileThumb({ study }: Props) {
 
   return (
     <div className="case-study-tile-thumb" aria-hidden="true">
-      <Image
+      {getGeneratedIllustrationSources(config.src) ? (
+        <GeneratedIllustration
+          src={config.src} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="case-study-tile-thumb-img" style={{ objectPosition: config.position ?? "center center" }}
+        />
+      ) : <Image
         src={config.src}
         alt={study.title}
         fill
@@ -20,7 +27,7 @@ export function CaseStudyTileThumb({ study }: Props) {
         className="case-study-tile-thumb-img"
         style={{ objectPosition: config.position ?? "center center" }}
         quality={82}
-      />
+      />}
       <span className="case-study-tile-thumb-overlay" />
     </div>
   );

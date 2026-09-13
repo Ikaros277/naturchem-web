@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/emise-imise.webp
 title: 'Emissions vs. immissions: why does the operator need to address both?'
 slug: emise-vs-imise-proc-provozovatel-resi-oboji
 excerpt: 'Emissions and immissions are two different perspectives on air pollution. Emissions describe what a source releases through a stack, exhaust, or technological area. Immissions describe the concentration of a pollutant subsequently present in ambient air — where it affects people and the environment. Operators therefore often need to address both: compliance with emission limits at the source and the project contribution to the immission situation in the locality.'

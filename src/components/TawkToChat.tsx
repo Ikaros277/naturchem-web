@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useCookieConsentState } from "@/components/CookieConsentBanner";
 import { getTawkConfig } from "@/lib/live-chat";
+import { isChatExcludedPath } from "@/lib/chat-visibility";
+
+type TawkApi = { hideWidget?: () => void; showWidget?: () => void; onLoad?: () => void };
 
 const mobileTawkMq = "(max-width: 1023px)";
 
@@ -29,7 +32,24 @@ export function TawkToChat() {
   const pathname = usePathname();
   const isHomepage = pathname === "/" || /^\/(en|de)\/?$/.test(pathname);
 
-  if (!tawk || !consent.updatedAt || !consent.marketing || isMobile || isHomepage) return null;
+  const visible = Boolean(tawk && consent.updatedAt && consent.marketing && !isMobile && !isHomepage && !isChatExcludedPath(pathname));
+
+  useEffect(() => {
+    const host = window as Window & { Tawk_API?: TawkApi };
+    const api = host.Tawk_API ??= {};
+    const syncVisibility = () => {
+      if (visible) api.showWidget?.();
+      else api.hideWidget?.();
+    };
+    api.onLoad = syncVisibility;
+    syncVisibility();
+    return () => {
+      if (api.onLoad === syncVisibility) api.onLoad = undefined;
+      api.hideWidget?.();
+    };
+  }, [visible]);
+
+  if (!tawk || !visible) return null;
 
   return (
     <Script id="tawk-to-live-chat" strategy="lazyOnload">

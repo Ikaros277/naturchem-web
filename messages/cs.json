@@ -110,8 +110,8 @@
   "home": {
     "metaTitle": "NATURCHEM – emise, hluk a měření pro kolaudaci",
     "metaDescription": "Měření emisí, hluku, osvětlení, vibrací, mikroklimatu a pracovního prostředí. Podklady pro kolaudaci, KHS, ČIŽP a stavební firmy.",
-    "heroTitle": "Měření, studie a odborné podklady pro provoz i projekty",
-    "heroLead": "Akreditovaná měření, studie a dokumentace pro KHS, ČIŽP, kolaudaci a povolení provozu.",
+    "heroTitle": "Měření a studie pro průmysl a stavebnictví",
+    "heroLead": "Emise, hluk a pracovní prostředí. Podklady pro povolení provozu, kolaudaci a jednání s úřady.",
     "trustAria": "Důvěryhodnost a oprávnění",
     "statsAria": "Zkušenosti v číslech",
     "offerAria": "Co zajišťujeme",
@@ -148,7 +148,11 @@
   "contactForm": {
     "successTitle": "Díky, zprávu jsme dostali",
     "formTitle": "Napište nám",
-    "formLead": "Nemusíte mít všechno připravené. Krátká zpráva nebo příloha stačí — ozveme se a domluvíme, co dává smysl.",
+    "formLead": "Popište Váš požadavek. Máte-li projekt nebo požadavek úřadu, můžete jej přiložit.",
+    "optionalDetails": "Místo a termín (nepovinné)",
+    "selectedServices": "Poptáváte:",
+    "changeServices": "Upravit výběr služeb",
+    "chooseServices": "Vybrat službu (nepovinné)",
     "nameLabel": "Jméno nebo firma",
     "emailLabel": "E-mail",
     "phoneLabel": "Telefon",

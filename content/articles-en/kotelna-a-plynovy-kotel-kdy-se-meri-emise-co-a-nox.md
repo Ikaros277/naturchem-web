@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/kotelna-clanek.webp
 title: 'Boiler plant and gas boiler: when are CO and NOx emissions measured?'
 slug: kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox
 excerpt: |

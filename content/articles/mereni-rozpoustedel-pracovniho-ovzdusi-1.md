@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/rozpoustedla-voc.webp
 title: "Měření rozpouštědel a VOC v pracovním ovzduší: jak vybrat látky z
   bezpečnostních listů"
 slug: mereni-rozpoustedel-pracovniho-ovzdusi

@@ -3,6 +3,7 @@ import path from "node:path";
 import { cache } from "react";
 import { unstable_cache } from "next/cache";
 import matter from "gray-matter";
+import { articleContentVersion } from "@/lib/article-content-version";
 import { normalizeArticleDate } from "@/lib/format-date";
 import type { Locale } from "@/lib/i18n/locales";
 import { defaultLocale, locales } from "@/lib/i18n/locales";
@@ -140,10 +141,10 @@ async function readAllArticlesUncached(locale: Locale): Promise<Article[]> {
   }
 }
 
-/** Cached filesystem scan — content changes become public through a CMS-triggered deploy. */
+/** Content-versioned cache: a CMS build must not reuse a previous deployment's article data. */
 const getAllArticlesCached = unstable_cache(
   async (locale: Locale) => readAllArticlesUncached(locale),
-  ["articles-all"],
+  ["articles-all", articleContentVersion],
   { revalidate: false, tags: ["articles"] }
 );
 
@@ -175,7 +176,7 @@ const getArticleSlugLocaleMapCached = unstable_cache(
 
     return [...map.entries()].map(([slug, localeSet]) => [slug, [...localeSet] as Locale[]] as const);
   },
-  ["article-slug-locale-map"],
+  ["article-slug-locale-map", articleContentVersion],
   { revalidate: false, tags: ["articles"] }
 );
 

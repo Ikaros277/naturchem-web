@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/podklady-zamer.webp
 
 title: Was ist für eine schnelle Projektbewertung einzusenden?
 slug: co-poslat-pro-rychle-posouzeni-zameru

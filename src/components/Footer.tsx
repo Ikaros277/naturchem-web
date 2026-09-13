@@ -6,6 +6,7 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
 import { company } from "@/lib/site";
+import { ServiceIcon } from "@/components/ServiceIcon";
 
 function telHref(phone: string) {
   return `tel:${phone.replace(/\s/g, "")}`;
@@ -61,24 +62,33 @@ export async function Footer({ locale }: Props) {
     footerLocationLine
   } = getFooterNav(locale);
   const contactHref = localizeHref(footerContactPageLink.href, locale);
-  const surveyHref = localizeHref(footerSurveyLink.href, locale);
+  const accreditationHref = "/akreditace-autorizace-dokumenty";
+  const companyLinks = footerCompanyLinks.filter((item) => item.href !== accreditationHref);
+  const featuredLinks = [
+    ...footerCompanyLinks.filter((item) => item.href === accreditationHref),
+    footerSurveyLink
+  ];
 
   return (
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-grid">
           <FooterColumn title={t.company} ariaLabel={t.companyAria} className="footer-zone--brand">
-            <FooterLinkList links={footerCompanyLinks} locale={locale} />
+            <FooterLinkList links={companyLinks} locale={locale} />
+            <ul className="footer-key-links">
+              {featuredLinks.map((item) => (
+                <li key={item.href}>
+                  <Link className="footer-key-link" href={localizeHref(item.href, locale)}>
+                    <ServiceIcon icon={item.href === accreditationHref ? "povoleni" : "provozni-rad"} size={22} variant="plain" />
+                    <span className="footer-key-link-label">{item.label}</span>
+                    <span className="footer-key-link-arrow" aria-hidden="true">↗</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </FooterColumn>
           <FooterColumn title={t.services} ariaLabel={t.servicesAria} className="footer-zone--services">
             <FooterLinkList links={footerServiceLinks} locale={locale} />
-            <aside className="footer-survey-highlight" aria-label={footerSurveyLink.label}>
-              <p className="footer-survey-highlight-title">{t.surveyHighlightTitle}</p>
-              <p className="footer-survey-highlight-text">{t.surveyHighlightText}</p>
-              <Link href={surveyHref} className="footer-survey-highlight-link">
-                {t.surveyHighlightLink}
-              </Link>
-            </aside>
           </FooterColumn>
           <FooterColumn title={t.contact} ariaLabel={t.contactAria} className="footer-zone--contact">
             <p className="footer-contact-meta">{footerLocationLine}</p>

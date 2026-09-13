@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/odborny-posudek-clanek.webp
 
 title: "Gutachten nach dem Luftschutzgesetz: Wann wird es benötigt und was muss es enthalten?"
 slug: odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat

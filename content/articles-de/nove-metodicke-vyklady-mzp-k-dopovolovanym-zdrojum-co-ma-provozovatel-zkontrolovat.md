@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/metodicke-vyklady-mzp.webp
 
 title: "Neue methodische Leitlinien des Umweltministeriums zu Quellen, für die eine zusätzliche Genehmigung erforderlich ist: Was sollte der Betreiber überprüfen?"
 slug: nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat

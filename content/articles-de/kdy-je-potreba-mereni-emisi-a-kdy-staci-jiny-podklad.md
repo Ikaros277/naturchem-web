@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/kdy-mereni-emisi.webp
 
 title: Wann ist eine Emissionsmessung erforderlich und wann reicht ein weiteres Belegdokument aus?
 slug: kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad

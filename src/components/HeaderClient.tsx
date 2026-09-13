@@ -36,20 +36,6 @@ const MobileONasMegaGroups = dynamic(
   { loading: () => null }
 );
 
-function useIsDesktopNav() {
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const mqDesktop = window.matchMedia("(min-width: 1024px)");
-    const update = () => setIsDesktop(mqDesktop.matches);
-    update();
-    mqDesktop.addEventListener("change", update);
-    return () => mqDesktop.removeEventListener("change", update);
-  }, []);
-
-  return isDesktop;
-}
-
 function useDelayedHover(delayMs = 240) {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [open, setOpen] = useState(false);
@@ -94,7 +80,6 @@ export function HeaderClient({
   oNasMegaGroups
 }: HeaderClientProps) {
   const pathname = useLocalizedPathname();
-  const isDesktop = useIsDesktopNav();
   const [menuOpen, setMenuOpen] = useState(false);
   const servicesMenu = useDelayedHover();
   const experienceMenu = useDelayedHover();
@@ -105,6 +90,13 @@ export function HeaderClient({
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const closeMobileOnDesktop = () => { if (desktop.matches) setMenuOpen(false); };
+    desktop.addEventListener("change", closeMobileOnDesktop);
+    return () => desktop.removeEventListener("change", closeMobileOnDesktop);
   }, []);
 
   useEffect(() => {
@@ -141,7 +133,7 @@ export function HeaderClient({
       logo?.removeEventListener("load", scheduleSync);
       window.removeEventListener("load", scheduleSync);
     };
-  }, [isDesktop]);
+  }, []);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -294,8 +286,16 @@ export function HeaderClient({
           </span>
         </LocaleLink>
 
-        {isDesktop ? (
-          <nav className="nav-links nav-desktop" aria-label={t.navAria}>
+          <nav className="nav-links nav-desktop" aria-label={t.navAria}
+            onKeyDown={(event) => {
+              if (event.key !== "Escape") return;
+              const trigger = (event.target as HTMLElement).closest(".nav-mega-wrap")?.querySelector<HTMLAnchorElement>(".nav-item-link");
+              trigger?.focus();
+              servicesMenu.closeNow();
+              experienceMenu.closeNow();
+              aboutMenu.closeNow();
+            }}
+          >
             <div
               className="nav-mega-wrap"
               onMouseEnter={servicesMenu.openMenu}
@@ -391,14 +391,10 @@ export function HeaderClient({
             </div>
             <LocaleLink href={kontaktNav.href}>{t.contact}</LocaleLink>
           </nav>
-        ) : null}
 
-        {isDesktop ? (
           <LocaleLink className="button nav-cta-desktop" href={contactFormHref}>
             {t.cta}
           </LocaleLink>
-        ) : (
-          <>
             <LocaleLink className="button nav-cta-mobile" href={contactFormHref}>
               {t.cta}
             </LocaleLink>
@@ -417,8 +413,6 @@ export function HeaderClient({
                 <span />
               </span>
             </button>
-          </>
-        )}
       </div>
 
       {mobileMenu}

@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/odborny-posudek-clanek.webp
 title: 'Odborný posudek podle zákona o ochraně ovzduší: kdy je potřeba a co musí obsahovat?'
 slug: odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat
 excerpt: 'Odborný posudek podle zákona o ochraně ovzduší je důležitým podkladem při povolování nových stacionárních zdrojů, změnách provozu a komunikaci s krajským úřadem. Typicky se řeší u zdrojů uvedených v příloze č. 2 zákona o ochraně ovzduší, například u kotelen, lakoven, spalovacích zařízení, technologických linek nebo jiných průmyslových zdrojů emisí.'

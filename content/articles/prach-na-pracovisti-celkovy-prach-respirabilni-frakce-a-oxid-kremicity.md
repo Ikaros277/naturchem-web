@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/prach-frakce.webp
 title: 'Prach na pracovišti: celkový prach, respirabilní frakce a oxid křemičitý'
 slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity
 excerpt: |

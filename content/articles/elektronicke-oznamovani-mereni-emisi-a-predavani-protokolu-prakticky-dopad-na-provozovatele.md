@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/elektronicke-protokoly.webp
 title: 'Elektronické oznamování měření emisí a předávání protokolů: praktický dopad na provozovatele'
 slug: elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele
 excerpt: 'Od roku 2026 se u jednorázového měření emisí mění praktický způsob oznamování termínů a předávání údajů z protokolů. Termín měření se nově ohlašuje prostřednictvím ISPOP a údaje z protokolu o měření oznamuje autorizovaná osoba formulářem PROTOKOL. Provozovatel už proto neřeší jen objednání měření, ale musí správně naplánovat termín, hlídat lhůty, komunikovat s autorizovanou osobou a mít jistotu, že měření i protokol budou administrativně dohledatelné.'

@@ -1,0 +1,1837 @@
+{
+  "date": "2026-09-11",
+  "mode": "built-in image_gen",
+  "purpose": "Replace stock and shared fallback imagery with dedicated illustrations. Preserve all existing explicitly assigned unique article images, team/product photos, logos and HomeStudyGraphic.",
+  "assets": [
+    {
+      "id": "vyzva-khs",
+      "slug": "vyzva-khs-mereni-pracovniho-prostredi",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: wide 16:9 editorial illustration for a Czech B2B environmental measurement company's article 'Přišla výzva KHS k měření pracovního prostředí: jak sestavit správný rozsah'. Create one original photorealistic illustration in the established website style: naturally lit real-looking Central European industrial interior, restrained navy and teal workwear, steel gray and warm neutral surfaces, practical instruments in focus, professional and calm, realistic texture, no futuristic effects. Scene: preparation for assessing a workplace, an unbranded closed document folder and a simple clipboard with indistinct paper on a waist-high workbench in the foreground, one compact sampling pump and hearing protection neatly placed beside it. In the background a naturally defocused ordinary manufacturing workstation and two anonymous adults in navy workwear discussing the layout, no posed smiles. Wide composition, a single clear focal group within central 65 percent so crops remain legible. Do not imitate a real inspection or specific named company. No readable text, no invented test results, no logos, no stamps, no charts claiming regulatory compliance, no watermarks, no floating UI, no montage. This is illustrative fictional scene not a documentary record.",
+      "output": "/hero/generated-2026-09/vyzva-khs.webp",
+      "thumbnail": "/hero/generated-2026-09/vyzva-khs-640.webp",
+      "articleFiles": [
+        "content/articles/vyzva-khs-mereni-pracovniho-prostredi.md"
+      ]
+    },
+    {
+      "id": "priprava-mereni-emisi",
+      "slug": "priprava-na-mereni-emisi",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Preparing an industrial boiler flue for a scheduled emissions measurement: safely accessible stainless steel vertical flue with closed round sampling ports and a protected grated service platform. In foreground, a technician in navy workwear and a white helmet checks an open equipment case on a stable worktable. Ordinary boiler hall, uncluttered, no smoke, no operating procedure diagram.",
+      "output": "/hero/generated-2026-09/priprava-mereni-emisi.webp",
+      "thumbnail": "/hero/generated-2026-09/priprava-mereni-emisi-640.webp",
+      "articleFiles": [
+        "content/articles/mereni-rozpoustedel-pracovniho-ovzdusi.md"
+      ]
+    },
+    {
+      "id": "rozpoustedla-voc",
+      "slug": "mereni-rozpoustedel-pracovniho-ovzdusi",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Choosing substances for workplace solvent sampling: close view of a small personal air-sampling pump, three capped sorbent tubes in a rack, closed plain chemical containers and a binder with indistinct safety data pages on a clean laboratory workbench. A ventilated industrial mixing workstation is softly visible behind glass. No pouring chemicals, no readable chemical labels.",
+      "output": "/hero/generated-2026-09/rozpoustedla-voc.webp",
+      "thumbnail": "/hero/generated-2026-09/rozpoustedla-voc-640.webp",
+      "articleFiles": [
+        "content/articles/mereni-rozpoustedel-pracovniho-ovzdusi-1.md"
+      ]
+    },
+    {
+      "id": "automotive-clanek",
+      "slug": "automotive-provoz-co-se-typicky-meri-a-posuzuje",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Environmental assessment in an automotive parts manufacturing hall: unbranded silver unfinished vehicle body on an inactive guarded assembly line, ventilation ducting and orderly marked walkways. In the foreground a compact black sound meter on a tripod beside an equipment case, background free of crowds. Three-quarter wide view, not a showroom.",
+      "output": "/hero/generated-2026-09/automotive-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/automotive-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/automotive-provoz-co-se-typicky-meri-a-posuzuje.md",
+        "content/articles-en/automotive-provoz-co-se-typicky-meri-a-posuzuje.md",
+        "content/articles-de/automotive-provoz-co-se-typicky-meri-a-posuzuje.md"
+      ]
+    },
+    {
+      "id": "podklady-zamer",
+      "slug": "co-poslat-pro-rychle-posouzeni-zameru",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Preparing a project dossier for an environmental consultant: architectural site plan with abstract unreadable lines, plain folder, rolled construction drawing, a small sample of building material and an unbranded tablet placed on a tidy oak desk. Through a softly defocused office window, a modest industrial site. Close editorial composition with physical papers, no glowing interface or floating symbols.",
+      "output": "/hero/generated-2026-09/podklady-zamer.webp",
+      "thumbnail": "/hero/generated-2026-09/podklady-zamer-640.webp",
+      "articleFiles": [
+        "content/articles/co-poslat-pro-rychle-posouzeni-zameru.md",
+        "content/articles-en/co-poslat-pro-rychle-posouzeni-zameru.md",
+        "content/articles-de/co-poslat-pro-rychle-posouzeni-zameru.md"
+      ]
+    },
+    {
+      "id": "povolovani-2026",
+      "slug": "co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: An environmental permitting dossier for an industrial plant: several closed navy and muted teal binders, one open technical folder and a silver pen on a desk, with a clean boiler house and steel exhaust stacks visible through the large office window. Natural morning light, orderly working setting, focus on dossier edges and industrial context, no legal stamps or approval checkmarks.",
+      "output": "/hero/generated-2026-09/povolovani-2026.webp",
+      "thumbnail": "/hero/generated-2026-09/povolovani-2026-640.webp",
+      "articleFiles": [
+        "content/articles/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026.md",
+        "content/articles-en/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026.md",
+        "content/articles-de/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026.md"
+      ]
+    },
+    {
+      "id": "drevozpracujici-clanek",
+      "slug": "drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: A Czech woodworking workshop with an inactive guarded CNC woodworking machine, connected dust extraction ducting, stacked timber and traces of sawdust on a work surface. In the foreground an unbranded personal sampling pump and capped filter cassette on a clean tool tray. Natural daylight and subtle warm timber color, no people operating exposed blades, no dramatic airborne dust.",
+      "output": "/hero/generated-2026-09/drevozpracujici-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/drevozpracujici-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje.md",
+        "content/articles-en/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje.md",
+        "content/articles-de/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje.md"
+      ]
+    },
+    {
+      "id": "elektronicke-protokoly",
+      "slug": "elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Electronic submission of measurement documentation: a laptop with a softly out-of-focus generic document interface and a small scanned paper report on a tidy industrial site-office desk, pen and closed blue folder. A field measurement equipment case is visible beside the desk and ductwork through the window. No identifiable application, readable text, invented numeric results or official seals.",
+      "output": "/hero/generated-2026-09/elektronicke-protokoly.webp",
+      "thumbnail": "/hero/generated-2026-09/elektronicke-protokoly-640.webp",
+      "articleFiles": [
+        "content/articles/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele.md",
+        "content/articles-en/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele.md",
+        "content/articles-de/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele.md"
+      ]
+    },
+    {
+      "id": "emise-imise",
+      "slug": "emise-vs-imise-proc-provozovatel-resi-oboji",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: An industrial plant and its surrounding air environment: medium-wide ground-level view from a green grassy perimeter, with an unbranded ambient-air monitoring cabinet and slender sampling inlet in the foreground, modest factory roof and three steel stacks in the middle distance. Light overcast Central European daylight, no dramatic black smoke or pollution plume, one coherent photographic scene.",
+      "output": "/hero/generated-2026-09/emise-imise.webp",
+      "thumbnail": "/hero/generated-2026-09/emise-imise-640.webp",
+      "articleFiles": [
+        "content/articles/emise-vs-imise-proc-provozovatel-resi-oboji.md",
+        "content/articles-en/emise-vs-imise-proc-provozovatel-resi-oboji.md",
+        "content/articles-de/emise-vs-imise-proc-provozovatel-resi-oboji.md"
+      ]
+    },
+    {
+      "id": "hluk-sousede",
+      "slug": "hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Noise assessment at the boundary between a small manufacturing site and nearby homes: black sound-level meter with foam windscreen mounted on a tripod on a quiet grassy edge, a low industrial building and ventilation units behind a fence, residential houses farther away. Calm natural daylight, no angry neighbours, no faces, no dramatic confrontation, no sound-wave overlays.",
+      "output": "/hero/generated-2026-09/hluk-sousede.webp",
+      "thumbnail": "/hero/generated-2026-09/hluk-sousede-640.webp",
+      "articleFiles": [
+        "content/articles/hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji.md",
+        "content/articles-en/hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji.md",
+        "content/articles-de/hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji.md"
+      ]
+    },
+    {
+      "id": "tepelna-cerpadla-clanek",
+      "slug": "hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Exterior of a finished commercial building with two unbranded air-source heat pump units on vibration-isolating supports. A freestanding sound-level meter with a black foam windscreen on a tripod is clearly separated from the units in the foreground, paving and a modest planted border. No technician posed with thumbs up, no illustrated sound waves, overcast soft daylight.",
+      "output": "/hero/generated-2026-09/tepelna-cerpadla-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/tepelna-cerpadla-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci.md",
+        "content/articles-en/hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci.md",
+        "content/articles-de/hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci.md"
+      ]
+    },
+    {
+      "id": "minimalni-vzdalenost",
+      "slug": "institut-minimalni-vzdalenosti-ochrana-ovzdusi",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: High oblique photographic view of a modest Czech industrial yard with aggregate storage bays, a clearly visible band of open grass and trees separating it from distant residential buildings. Readable spatial relationship in one coherent scene, muted roofs and greenery, calm daylight. No marked legal boundary, no numbers or ruler, no dramatic smoke, no landmark identifying a real town.",
+      "output": "/hero/generated-2026-09/minimalni-vzdalenost.webp",
+      "thumbnail": "/hero/generated-2026-09/minimalni-vzdalenost-640.webp",
+      "articleFiles": [
+        "content/articles/institut-minimalni-vzdalenosti-ochrana-ovzdusi.md",
+        "content/articles-en/institut-minimalni-vzdalenosti-ochrana-ovzdusi.md",
+        "content/articles-de/institut-minimalni-vzdalenosti-ochrana-ovzdusi.md"
+      ]
+    },
+    {
+      "id": "cteni-hlukove-studie",
+      "slug": "jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Reading an acoustic study at an engineering desk: a large printed site plan containing restrained green, amber and muted red contour regions without labels, a magnifying glass and plain pen, with an unbranded sound-level meter lying switched off beside the paper. Focus on plan and meter, soft side daylight, sober consulting-office atmosphere. No actual numeric readings, no claim of compliance.",
+      "output": "/hero/generated-2026-09/cteni-hlukove-studie.webp",
+      "thumbnail": "/hero/generated-2026-09/cteni-hlukove-studie-640.webp",
+      "articleFiles": [
+        "content/articles/jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota.md",
+        "content/articles-en/jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota.md",
+        "content/articles-de/jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota.md"
+      ]
+    },
+    {
+      "id": "podklady-prumyslovy-provoz",
+      "slug": "jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Technical preparation of an industrial operating permit: top-down view of an engineering desk with several neatly grouped plain document folders, a folded plant layout, an unbranded calculator and a steel ruler. A white hard hat rests near one corner. Paper surfaces contain only indistinct schematic linework, restrained teal and navy folders, no decorative scales of justice or official stamps.",
+      "output": "/hero/generated-2026-09/podklady-prumyslovy-provoz.webp",
+      "thumbnail": "/hero/generated-2026-09/podklady-prumyslovy-provoz-640.webp",
+      "articleFiles": [
+        "content/articles/jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi.md",
+        "content/articles-en/jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi.md",
+        "content/articles-de/jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi.md"
+      ]
+    },
+    {
+      "id": "jes-eia-clanek",
+      "slug": "jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Coordinating environmental documentation for a construction project: two plain folders, one muted green and one navy, on an engineering table alongside one large site plan showing a modest new industrial building surrounded by trees and a stream. Realistic paper and drafting tools, window daylight. No readable text or acronyms, no official symbols, no approval stamps, no split-screen.",
+      "output": "/hero/generated-2026-09/jes-eia-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/jes-eia-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia.md",
+        "content/articles-en/jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia.md",
+        "content/articles-de/jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia.md"
+      ]
+    },
+    {
+      "id": "kategorizace-praci-clanek",
+      "slug": "kategorizace-praci-jake-mereni-je-potreba-jako-podklad",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Workplace exposure assessment preparation in an ordinary industrial hall: a tidy portable measurement kit with a personal sampling pump, a sound-level meter and a simple small environmental sensor on a stable table. Defocused machining stations and a ventilation hood in the background. Muted navy equipment case, teal details, no displays with readable numeric results, no unsafe work activity.",
+      "output": "/hero/generated-2026-09/kategorizace-praci-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/kategorizace-praci-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/kategorizace-praci-jake-mereni-je-potreba-jako-podklad.md",
+        "content/articles-en/kategorizace-praci-jake-mereni-je-potreba-jako-podklad.md",
+        "content/articles-de/kategorizace-praci-jake-mereni-je-potreba-jako-podklad.md"
+      ]
+    },
+    {
+      "id": "studie-nebo-mereni-hluku",
+      "slug": "kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Relationship between acoustic planning and field measurement in one photographic scene: a black sound-level meter with foam windscreen on a tripod next to a portable field table holding a folded site plan and closed laptop, outside a clean industrial building. Sharp instrument and paper, gently soft background. No collage, no floating waves, no invented readings, restrained natural tones.",
+      "output": "/hero/generated-2026-09/studie-nebo-mereni-hluku.webp",
+      "thumbnail": "/hero/generated-2026-09/studie-nebo-mereni-hluku-640.webp",
+      "articleFiles": [
+        "content/articles/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku.md",
+        "content/articles-en/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku.md",
+        "content/articles-de/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku.md"
+      ]
+    },
+    {
+      "id": "kdy-mereni-emisi",
+      "slug": "kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: A specialist preparing to assess an industrial emissions source: close view of a closed portable analyser case, coiled sampling hose and a plain technical folder on a clean workbench beside a boiler-room window. In the background, a stationary commercial boiler and stainless flue. Practical, calm environment; no smoke, no readable results, no fictional certification badges.",
+      "output": "/hero/generated-2026-09/kdy-mereni-emisi.webp",
+      "thumbnail": "/hero/generated-2026-09/kdy-mereni-emisi-640.webp",
+      "articleFiles": [
+        "content/articles/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad.md",
+        "content/articles-en/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad.md",
+        "content/articles-de/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad.md"
+      ]
+    },
+    {
+      "id": "posudek-zmena-zdroje",
+      "slug": "kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Review of a proposed modification to an existing industrial source: an anonymous engineer's hands and forearms in navy workwear comparing two abstract technical drawings of a ventilation and filter unit on a worktable, with the actual unbranded filter unit softly visible behind. Single scene, natural light, no readable annotations, no legal verdict or approval marks.",
+      "output": "/hero/generated-2026-09/posudek-zmena-zdroje.webp",
+      "thumbnail": "/hero/generated-2026-09/posudek-zmena-zdroje-640.webp",
+      "articleFiles": [
+        "content/articles/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje.md",
+        "content/articles-en/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje.md",
+        "content/articles-de/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje.md"
+      ]
+    },
+    {
+      "id": "kotelna-clanek",
+      "slug": "kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: A tidy commercial gas boiler room with two unbranded floor-standing boilers, insulated piping and a stainless exhaust duct. In the foreground a closed measurement equipment case and neatly coiled sampling line on a service trolley. Cool neutral lighting with subtle blue-green equipment details, realistic moderate scale, no flames, no dramatic smoke, no readable labels or measurement values.",
+      "output": "/hero/generated-2026-09/kotelna-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/kotelna-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox.md",
+        "content/articles-en/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox.md",
+        "content/articles-de/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox.md"
+      ]
+    },
+    {
+      "id": "lakovna-clanek",
+      "slug": "lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: An unoccupied industrial paint booth prepared for coating metal components, with metal parts hung on a rail, visible extraction grilles and orderly ventilation ducts. In the near foreground, closed plain paint containers on a safe tray and an unbranded portable measurement case. Clean utilitarian factory, soft neutral light, no clouds of spray, no unsafe unprotected worker.",
+      "output": "/hero/generated-2026-09/lakovna-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/lakovna-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu.md",
+        "content/articles-en/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu.md",
+        "content/articles-de/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu.md"
+      ]
+    },
+    {
+      "id": "chemicke-latky-rozsah",
+      "slug": "mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Selecting equipment for workplace chemical exposure sampling: close-up of several capped sorbent tubes and filter cassettes arranged separately beside a compact unbranded sampling pump and a plain folder on a stainless laboratory table. An industrial extraction hood is gently defocused in the background. Realistic materials and orderly purposeful arrangement, no readable chemical names or invented results.",
+      "output": "/hero/generated-2026-09/chemicke-latky-rozsah.webp",
+      "thumbnail": "/hero/generated-2026-09/chemicke-latky-rozsah-640.webp",
+      "articleFiles": [
+        "content/articles/mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni.md",
+        "content/articles-en/mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni.md",
+        "content/articles-de/mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni.md"
+      ]
+    },
+    {
+      "id": "khs-pracovni-prostredi",
+      "slug": "mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: An anonymous occupational environment specialist seen from behind in navy workwear surveying an ordinary well-lit manufacturing workstation from a marked pedestrian aisle. A document clipboard and compact measurement case are held naturally, a ventilation hood and machine enclosure visible in the middle distance. Documentary-style fictional illustration, no authority uniform or official insignia, no posed portrait.",
+      "output": "/hero/generated-2026-09/khs-pracovni-prostredi.webp",
+      "thumbnail": "/hero/generated-2026-09/khs-pracovni-prostredi-640.webp",
+      "articleFiles": [
+        "content/articles/mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs.md",
+        "content/articles-en/mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs.md",
+        "content/articles-de/mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs.md"
+      ]
+    },
+    {
+      "id": "merici-misto-projekt",
+      "slug": "merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: An accessible industrial exhaust sampling location designed into a clean stainless steel duct: bolted closed circular sampling port, substantial protected platform and guardrail. A rolled engineering drawing and helmet on a foreground service table connect construction design with measurement access. Emphasize practical access and metal detail, no person working at height, no exact normative dimensions or labels.",
+      "output": "/hero/generated-2026-09/merici-misto-projekt.webp",
+      "thumbnail": "/hero/generated-2026-09/merici-misto-projekt-640.webp",
+      "articleFiles": [
+        "content/articles/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu.md",
+        "content/articles-en/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu.md",
+        "content/articles-de/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu.md"
+      ]
+    },
+    {
+      "id": "metodicke-vyklady-mzp",
+      "slug": "nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: An environmental specialist's desk during a review of operating-source documentation: several paper report pages with indistinct lines, a plain blue binder with colored divider tabs and a pen, through a window a modest industrial exhaust and roofline. Tight editorial crop, natural textures, warm-neutral daylight with restrained teal details. No coat of arms, ministry logo, readable legal text or official seal.",
+      "output": "/hero/generated-2026-09/metodicke-vyklady-mzp.webp",
+      "thumbnail": "/hero/generated-2026-09/metodicke-vyklady-mzp-640.webp",
+      "articleFiles": [
+        "content/articles/nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat.md",
+        "content/articles-en/nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat.md",
+        "content/articles-de/nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat.md"
+      ]
+    },
+    {
+      "id": "odborny-posudek-clanek",
+      "slug": "odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Preparation of an expert environmental assessment: a substantial open technical report with a small grayscale industrial site diagram, a laptop viewed obliquely with non-readable content, and a mechanical pencil on a neat office desk. A softly defocused engineer in navy shirt seated in the background, not facing camera. Quiet thoughtful mood, no gavel, no legal scales, no seals or readable claims.",
+      "output": "/hero/generated-2026-09/odborny-posudek-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/odborny-posudek-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat.md",
+        "content/articles-en/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat.md",
+        "content/articles-de/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat.md"
+      ]
+    },
+    {
+      "id": "prach-frakce",
+      "slug": "prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Workplace dust sampling preparation beside an inactive enclosed stone-processing workstation: compact personal sampling pump with tubing and a small cyclone sampler carefully laid on a clean tool tray, stone sample and safety glasses nearby. Industrial background softly defocused, subtle real surface dust but no airborne cloud, no exposed cutting blade, no readable numerical results.",
+      "output": "/hero/generated-2026-09/prach-frakce.webp",
+      "thumbnail": "/hero/generated-2026-09/prach-frakce-640.webp",
+      "articleFiles": [
+        "content/articles/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity.md",
+        "content/articles-en/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity.md",
+        "content/articles-de/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity.md"
+      ]
+    },
+    {
+      "id": "katalogovy-hluk",
+      "slug": "proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Assessing the noise of installed ventilation equipment beyond a catalogue specification: a plain technical brochure with indistinct fan drawing on a clipboard beside a black sound-level meter, with a real-looking large unbranded ventilation unit mounted outdoors on a commercial building behind. One coherent scene in soft daylight, no numeric sound ratings, no graph overlays.\nQuality revision: create a fresh original scene, with an HVAC unit on the right and an unbranded sound level meter on a tripod at the center, a simple closed navy equipment case below it, no people, no papers or diagrams. The complete image must be a clean edge-to-edge industrial scene. Absolutely no signature, watermark, pseudo-logo, abstract corner mark or text anywhere, including the bottom right corner. Natural neutral daylight.",
+      "output": "/hero/generated-2026-09/katalogovy-hluk.webp",
+      "thumbnail": "/hero/generated-2026-09/katalogovy-hluk-640.webp",
+      "articleFiles": [
+        "content/articles/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni.md",
+        "content/articles-en/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni.md",
+        "content/articles-de/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni.md"
+      ]
+    },
+    {
+      "id": "projektant-konzultant",
+      "slug": "projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Two anonymous technical professionals in a modest engineering office reviewing a large industrial site plan together at a table. One wears a navy work shirt, the other muted teal; natural attentive posture and realistic hands, no handshake or staged smile. The plan, drafting tools and plain folders are central, faces secondary, soft window daylight, no readable text or client branding.",
+      "output": "/hero/generated-2026-09/projektant-konzultant.webp",
+      "thumbnail": "/hero/generated-2026-09/projektant-konzultant-640.webp",
+      "articleFiles": [
+        "content/articles/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia.md",
+        "content/articles-en/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia.md",
+        "content/articles-de/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia.md"
+      ]
+    },
+    {
+      "id": "provozni-rad-clanek",
+      "slug": "provozni-rad-zdroje-znecistovani-ovzdusi",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: An operating manual for an industrial emissions source: an open ring binder with indistinct schematic piping diagrams and orderly divider tabs on a stable service desk near a clean industrial filtration unit. Navy folder, stainless steel ductwork, pen and maintenance clipboard. Real physical working environment, no readable legal text, no 'approved' stamp, no decorative floating icons.",
+      "output": "/hero/generated-2026-09/provozni-rad-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/provozni-rad-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/provozni-rad-zdroje-znecistovani-ovzdusi.md"
+      ]
+    },
+    {
+      "id": "recyklace-clanek",
+      "slug": "recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: A well-organized construction waste recycling yard with separate aggregate piles, an inactive mobile crusher and screening equipment, clear vehicle routes and a green edge of trees. A simple black sound-level meter on a tripod in the foreground establishes the environmental-assessment topic. Medium-wide daylight photograph, no dramatic dust cloud, no workers near moving machinery, no company logos.",
+      "output": "/hero/generated-2026-09/recyklace-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/recyklace-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia.md",
+        "content/articles-en/recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia.md",
+        "content/articles-de/recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia.md"
+      ]
+    },
+    {
+      "id": "rozptylova-studie-clanek",
+      "slug": "rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Environmental dispersion study preparation: a printed overhead site map with softly shaded muted green and amber concentration-like contours without labels on an engineering desk, a closed navy binder and pencil. Industrial roofline and stacks are softly visible through the window. Natural photographic realism, no floating map, no invented numeric predictions, no compliance symbols.",
+      "output": "/hero/generated-2026-09/rozptylova-studie-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/rozptylova-studie-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba.md",
+        "content/articles-en/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba.md",
+        "content/articles-de/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba.md"
+      ]
+    },
+    {
+      "id": "scitaci-pravidla",
+      "slug": "scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Several distinct exhaust stacks from separate low industrial buildings inside one modest manufacturing site, clearly legible as a group. Elevated oblique but realistic photographic view, piping and roofs, distant trees, natural overcast Central European daylight. No smoke clouds, no giant power station, no floating numbers, no mathematical symbols, no labels.",
+      "output": "/hero/generated-2026-09/scitaci-pravidla.webp",
+      "thumbnail": "/hero/generated-2026-09/scitaci-pravidla-640.webp",
+      "articleFiles": [
+        "content/articles/scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele.md",
+        "content/articles-en/scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele.md",
+        "content/articles-de/scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele.md"
+      ]
+    },
+    {
+      "id": "skladka-clanek",
+      "slug": "skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: A managed non-hazardous waste facility landscape with a gently sloping covered landfill cell, orderly internal access road, drainage edge, fence and surrounding vegetation. One unbranded site vehicle in the middle distance, no people close to machines. Wide editorial view under soft cloudy sky, no sensational rubbish mountain, no toxic spill or smoke.",
+      "output": "/hero/generated-2026-09/skladka-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/skladka-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi.md",
+        "content/articles-en/skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi.md",
+        "content/articles-de/skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi.md"
+      ]
+    },
+    {
+      "id": "svarovna-clanek",
+      "slug": "svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: A metalworking welding station at rest, with welding torch on a steel table, protective screen and a clearly visible local extraction arm positioned near the work area. In foreground a compact personal sampling pump on a separate clean tray. Practical worn metal textures, navy and muted green details, soft factory light; no active welding arc, no unprotected worker, no floating particles.",
+      "output": "/hero/generated-2026-09/svarovna-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/svarovna-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise.md",
+        "content/articles-en/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise.md",
+        "content/articles-de/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise.md"
+      ]
+    },
+    {
+      "id": "dieselagregat-clanek",
+      "slug": "zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady",
+      "kind": "article",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: An unbranded enclosed backup diesel generator next to a commercial utility building, ventilation louvers and safely terminated steel exhaust pipe visible. In foreground a closed portable measuring case and sound-level meter on a tripod. Soft daylight, realistic Czech industrial-yard scale, no dramatic smoke, no readable labels or power ratings.",
+      "output": "/hero/generated-2026-09/dieselagregat-clanek.webp",
+      "thumbnail": "/hero/generated-2026-09/dieselagregat-clanek-640.webp",
+      "articleFiles": [
+        "content/articles/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady.md",
+        "content/articles-en/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady.md",
+        "content/articles-de/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady.md"
+      ]
+    },
+    {
+      "id": "pyrolyza-kalu",
+      "slug": "pyrolyza-kalu",
+      "kind": "case-study",
+      "prompt": "Use case: photorealistic-natural. Asset type: original wide 16:9 editorial website illustration for NATURCHEM, a Czech B2B environmental measurement and consulting company. Style: photorealistic industrial editorial image matching the existing website, natural light, restrained navy and muted teal accents, steel gray and warm neutral materials, believable Central European context, practical equipment, subtle surface wear, calm serious professional mood. Composition: one coherent scene, clear subject within the central 65 percent, crop-safe for both wide page headers and small mobile cards, sharp subject and gently softened background. Constraints: no readable text, letters, numbers, labels, trademarks, logos, watermarks, official seals, certification marks, readable test results, dramatic pollution, futuristic UI, collages or ornamental graphics. People only where specified, anonymous fictional adults, natural anatomy and normal safe working context. Not a photograph of a real named client, employee or project; no claims of regulatory compliance. Scene: Conceptual editorial illustration of an enclosed thermal sludge-treatment facility: a modest industrial hall containing sealed cylindrical processing equipment, insulated stainless piping and an extraction/filtration unit. In foreground a closed sample jar holding dark granular material and a plain technical folder on a stainless workbench. No detailed process schematic, no flames, no dramatic emissions, no brand logos; fictional illustrative plant, not an actual NATURCHEM reference.",
+      "output": "/hero/generated-2026-09/pyrolyza-kalu.webp",
+      "thumbnail": "/hero/generated-2026-09/pyrolyza-kalu-640.webp",
+      "articleFiles": []
+    }
+  ],
+  "baseline": {
+    "articles": [
+      {
+        "file": "content/articles/automotive-provoz-co-se-typicky-meri-a-posuzuje.md",
+        "slug": "automotive-provoz-co-se-typicky-meri-a-posuzuje",
+        "originalHero": null,
+        "contentHash": "e020f483b5eed685db2a836b5891ca37bfe989c12f32264614de8c9790570bf1"
+      },
+      {
+        "file": "content/articles/chladova-zatez-na-pracovisti.md",
+        "slug": "chladova-zatez-na-pracovisti",
+        "originalHero": "/uploads/chatgpt-image-7.-8.-2026-13_58_55-3-.webp",
+        "contentHash": "51e41e47e26124c06bcb1ea6370d51142786b2d9f678127e98b6e0fe88baa76a"
+      },
+      {
+        "file": "content/articles/chyby-souhrnna-provozni-evidence.md",
+        "slug": "chyby-souhrnna-provozni-evidence",
+        "originalHero": "/uploads/chatgpt-image-7.-8.-2026-13_58_55-1-.webp",
+        "contentHash": "5fe86e09d22fc2bdc3d8bb70a189137c09c547d8ead9b5c41024332b33b65a77"
+      },
+      {
+        "file": "content/articles/co-poslat-pro-rychle-posouzeni-zameru.md",
+        "slug": "co-poslat-pro-rychle-posouzeni-zameru",
+        "originalHero": null,
+        "contentHash": "87db6aca04e5a9071b953a7efd9fbdac9749de9344ec9bd9c54d62f3b873c3c8"
+      },
+      {
+        "file": "content/articles/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026.md",
+        "slug": "co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026",
+        "originalHero": null,
+        "contentHash": "1d56ef57bef260097186acfd24e83f5678924f623cf0955b23dd007035d5a27f"
+      },
+      {
+        "file": "content/articles/deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek.md",
+        "slug": "deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek",
+        "originalHero": "/uploads/chatgpt-image-2.-7.-2026-09_41_15.webp",
+        "contentHash": "d1f882da4533595e68176a64b3b72a5b86ccbc56e5a539850552c4269295af56"
+      },
+      {
+        "file": "content/articles/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje.md",
+        "slug": "drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje",
+        "originalHero": null,
+        "contentHash": "300bda8e4faea16e5c142b7b77ed6f2ae92a7db62ec58697424a919978ae09fd"
+      },
+      {
+        "file": "content/articles/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele.md",
+        "slug": "elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele",
+        "originalHero": null,
+        "contentHash": "4f6748f3b83982531d896105a594e6f65419595d2e3be7ace165d8641a2bc45c"
+      },
+      {
+        "file": "content/articles/emise-vs-imise-proc-provozovatel-resi-oboji.md",
+        "slug": "emise-vs-imise-proc-provozovatel-resi-oboji",
+        "originalHero": null,
+        "contentHash": "b33b0dd75df2d65acc1f8f35e91e7c145f311a377ca5bd5d967330ab752a0560"
+      },
+      {
+        "file": "content/articles/emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni.md",
+        "slug": "emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_47_15.webp",
+        "contentHash": "2e9a3e239c30f22b049fca3e6e1c00f3c42efdb6d6c2dc59d6a551c78684fe36"
+      },
+      {
+        "file": "content/articles/galvanovna-povoleni-provozu.md",
+        "slug": "galvanovna-povoleni-provozu",
+        "originalHero": "/uploads/chatgpt-image-7.-8.-2026-14_35_37.webp",
+        "contentHash": "a4dfc8c6e66f8234f5990658292d44f1e029b9a0f6aa387fcea0fcad32576e56"
+      },
+      {
+        "file": "content/articles/hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni.md",
+        "slug": "hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni",
+        "originalHero": "/uploads/chatgpt-image-23.-6.-2026-12_24_16.webp",
+        "contentHash": "de9289ffdf1fee7644ee2625a74d9eb037a1d2005a4ee9be1866936655e8513e"
+      },
+      {
+        "file": "content/articles/hluk-nocni-provoz-arealu.md",
+        "slug": "hluk-nocni-provoz-arealu",
+        "originalHero": "/uploads/chatgpt-image-7.-8.-2026-13_58_55-4-.webp",
+        "contentHash": "00b345725aff4a29def1ec6e507763268017f432f17eec8283534e4e7797bc6a"
+      },
+      {
+        "file": "content/articles/hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji.md",
+        "slug": "hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji",
+        "originalHero": null,
+        "contentHash": "fa41846a3a03c48429881a1c509497faab1c8ed0ef65bb4bbcdcff64508cee23"
+      },
+      {
+        "file": "content/articles/hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci.md",
+        "slug": "hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci",
+        "originalHero": null,
+        "contentHash": "8f7388e5b7de1562688502497ea67c80707278b7d513620783e0cbbbca69f5d6"
+      },
+      {
+        "file": "content/articles/institut-minimalni-vzdalenosti-ochrana-ovzdusi.md",
+        "slug": "institut-minimalni-vzdalenosti-ochrana-ovzdusi",
+        "originalHero": null,
+        "contentHash": "df5388ffc482f21cc6bf67f3cea590d8ec7f8a4971ca580b697f730d0ef5e9c9"
+      },
+      {
+        "file": "content/articles/ippc-kdy-provoz-potrebuje-integrovane-povoleni.md",
+        "slug": "ippc-kdy-provoz-potrebuje-integrovane-povoleni",
+        "originalHero": "/uploads/chatgpt-image-14.-7.-2026-09_37_14.webp",
+        "contentHash": "7a5a249393f4d18c008ab4b3769ce3097f97868dafa9b3cde9704bb8d3311581"
+      },
+      {
+        "file": "content/articles/ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba.md",
+        "slug": "ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_30_49.webp",
+        "contentHash": "e8eb1e47c99b21d21a0eb17f0a984ac884648ed000edee8729838bceed4e2434"
+      },
+      {
+        "file": "content/articles/izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi.md",
+        "slug": "izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi",
+        "originalHero": "/uploads/clipboard_07-06-2026_01.webp",
+        "contentHash": "11674d926f0dd4e473a69e60db496babe96ad20ecc3bddc0ae8451294f6ee41c"
+      },
+      {
+        "file": "content/articles/jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota.md",
+        "slug": "jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota",
+        "originalHero": null,
+        "contentHash": "2761ec0f38c7f667c85dc2eb885afe77dc4861e7451ddd44da4c68d10543b60d"
+      },
+      {
+        "file": "content/articles/jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi.md",
+        "slug": "jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi",
+        "originalHero": null,
+        "contentHash": "5c625c3805cfb5c7f530a710fca7e8fbe64d83748d5bc1e8230f3b5d6ea5cf75"
+      },
+      {
+        "file": "content/articles/jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni.md",
+        "slug": "jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni",
+        "originalHero": "/uploads/chatgpt-image-16.-7.-2026-09_47_59.webp",
+        "contentHash": "5ec3e15f2a8710ebbb54f670c4cb99cebe424d4c57b9199206bcf5cd0e5f0b02"
+      },
+      {
+        "file": "content/articles/jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia.md",
+        "slug": "jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia",
+        "originalHero": null,
+        "contentHash": "cb4b3e876fc2fc431e297a620f91cdd145ba6ab1b4f523ca4dd0305b8a6d31c9"
+      },
+      {
+        "file": "content/articles/kategorizace-praci-jake-mereni-je-potreba-jako-podklad.md",
+        "slug": "kategorizace-praci-jake-mereni-je-potreba-jako-podklad",
+        "originalHero": null,
+        "contentHash": "e9c0278e8046d38ffe48eeef1f18d309501fa297e6b7ae4d7c17cb275f0c76de"
+      },
+      {
+        "file": "content/articles/kategorizace-praci-po-zmene-technologie-nove-mereni.md",
+        "slug": "kategorizace-praci-po-zmene-technologie-nove-mereni",
+        "originalHero": "/uploads/chatgpt-image-23.-6.-2026-12_42_59.webp",
+        "contentHash": "32c7557c33cd7e29f5175edf505734b0fc2aa018aa3431e5f48a229c841fa22d"
+      },
+      {
+        "file": "content/articles/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku.md",
+        "slug": "kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku",
+        "originalHero": null,
+        "contentHash": "cbc498e1659b57765cae10d3e334eeb917e6b999cfe3d3ff5a72e57a1f52d001"
+      },
+      {
+        "file": "content/articles/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad.md",
+        "slug": "kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad",
+        "originalHero": null,
+        "contentHash": "ebf1b4e166e00c99e5ac3a2f652b9a80b7a33b83cb37174784fae2d21853dde3"
+      },
+      {
+        "file": "content/articles/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje.md",
+        "slug": "kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje",
+        "originalHero": null,
+        "contentHash": "b2b623b2573c26929f9f494b5175510826a0f45eba2de863b12b530b1899ed23"
+      },
+      {
+        "file": "content/articles/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu.md",
+        "slug": "kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu",
+        "originalHero": "/uploads/pxl_20260702_063317620.mp.webp",
+        "contentHash": "0fe9a58c53e3c878a26e26c7f3035e6967d37e6c006de85f7d2b51b5df8ef629"
+      },
+      {
+        "file": "content/articles/kontrola-cizp-ovzdusi.md",
+        "slug": "kontrola-cizp-ovzdusi",
+        "originalHero": "/uploads/chatgpt-image-7.-8.-2026-14_46_38.webp",
+        "contentHash": "58b37abebc57bedb6c151c591a4576b700cd66cd336a3e5ac18e5e0d0a7347f4"
+      },
+      {
+        "file": "content/articles/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox.md",
+        "slug": "kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox",
+        "originalHero": null,
+        "contentHash": "73aabcbde00c17d4a94a9f627349fcd7b13e6dc63e6c0e13101109ab9c4ac717"
+      },
+      {
+        "file": "content/articles/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu.md",
+        "slug": "lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu",
+        "originalHero": null,
+        "contentHash": "dffd4d786adc4f481c3f6a1bff02591639a4a47ceb012f8b5ce23fe0663504cd"
+      },
+      {
+        "file": "content/articles/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni.md",
+        "slug": "manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni",
+        "originalHero": "/uploads/fcb8f524-381e-4c0a-baf5-3fe088f9d036.webp",
+        "contentHash": "9a1f53c0c5404b93d2266289ff480a775eb55136c765e5656c141918067ea4a5"
+      },
+      {
+        "file": "content/articles/mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni.md",
+        "slug": "mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni",
+        "originalHero": null,
+        "contentHash": "ca61fa1df8f37469a353d7f1305fbc68a849b6f5dfd44e1c5d46f4aaa60b4b3a"
+      },
+      {
+        "file": "content/articles/mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu.md",
+        "slug": "mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu",
+        "originalHero": "/uploads/chatgpt-image-16.-6.-2026-06_56_15.webp",
+        "contentHash": "a8329e569ba9a4d339f325606a9658aae70997396b38670985cf25aa59440bb3"
+      },
+      {
+        "file": "content/articles/mereni-osvetleni-pracoviste-khs-kolaudace.md",
+        "slug": "mereni-osvetleni-pracoviste-khs-kolaudace",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-12_14_55.webp",
+        "contentHash": "b5e9307cbb9a201545ac0011016be6223f2fe7284762e6c228de48c349b5da40"
+      },
+      {
+        "file": "content/articles/mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs.md",
+        "slug": "mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs",
+        "originalHero": null,
+        "contentHash": "0966416e446502678c5aad54227de011c4f8cef839291ce032a19cca27ddb03d"
+      },
+      {
+        "file": "content/articles/mereni-rozpoustedel-pracovniho-ovzdusi-1.md",
+        "slug": "mereni-rozpoustedel-pracovniho-ovzdusi",
+        "originalHero": null,
+        "contentHash": "aea08380d8885a942437194c2fea82ac8fce8c1db8e6d0dcf0496efecea6c823"
+      },
+      {
+        "file": "content/articles/mereni-rozpoustedel-pracovniho-ovzdusi.md",
+        "slug": "priprava-na-mereni-emisi",
+        "originalHero": null,
+        "contentHash": "a1ca6618045ed370742622a9f8daf6e4f246a975e6660993d7b94f10a6f12222"
+      },
+      {
+        "file": "content/articles/mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci.md",
+        "slug": "mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci",
+        "originalHero": "/uploads/chatgpt-image-21.-6.-2026-13_15_45.webp",
+        "contentHash": "a644300c8d7f95cdaed9ae8d618541c1f77d55183c6a9f4062a444cfd4ed0b3c"
+      },
+      {
+        "file": "content/articles/merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi.md",
+        "slug": "merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_37_51.webp",
+        "contentHash": "a4f9fd696e7db5f5ae23a25894b056e08a4163a43750c7e8d114ef4cc5706fe4"
+      },
+      {
+        "file": "content/articles/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu.md",
+        "slug": "merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu",
+        "originalHero": null,
+        "contentHash": "6b03b5b5831855ab1307bdf78dcc34c7aeb5154bd26f7d85fef38376bc52c15d"
+      },
+      {
+        "file": "content/articles/nedostatecne-osvetleni-pracoviste-co-se-meri-podklady.md",
+        "slug": "nedostatecne-osvetleni-pracoviste-co-se-meri-podklady",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-12_22_27.webp",
+        "contentHash": "06b9a02cfb8e7677e4cda29053218051f4f271702aacd402d07f19758fca7b0d"
+      },
+      {
+        "file": "content/articles/nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat.md",
+        "slug": "nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat",
+        "originalHero": null,
+        "contentHash": "b3f4d68e68491bf6b9169b46149dc877d2d53719dc358b66c2061c5e3199c56e"
+      },
+      {
+        "file": "content/articles/novela-zakona-o-ochrane-ovzdusi-2025.md",
+        "slug": "novela-zakona-o-ochrane-ovzdusi-2025",
+        "originalHero": "/uploads/chatgpt-image-jun-14-2026-08_02_34-pm.webp",
+        "contentHash": "6c268f733413c9e315200adfed2179ab13476a1b16a416a290d50eedca465eef"
+      },
+      {
+        "file": "content/articles/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat.md",
+        "slug": "odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat",
+        "originalHero": null,
+        "contentHash": "205d4923e66e9b91a871b7246cc61acc6645f862ca9e259086627c9223739b28"
+      },
+      {
+        "file": "content/articles/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba.md",
+        "slug": "oznameni-zameru-eia-co-to-je-a-kdy-je-potreba",
+        "originalHero": "/uploads/eia.webp",
+        "contentHash": "6033fc0feb36e5441b3dd51abc8e888f5ad5b864ecfe24ae5793c5ea8abd3c22"
+      },
+      {
+        "file": "content/articles/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni.md",
+        "slug": "plynova-kotelna-03-50-mw-nox-co-mereni-povoleni",
+        "originalHero": "/uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp",
+        "contentHash": "ac70bad476c03670b8a19dbdbba3ebaae6b447c3444513496bb622e73fd6d325"
+      },
+      {
+        "file": "content/articles/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence.md",
+        "slug": "poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_57_05.webp",
+        "contentHash": "2455a43444b9127ce54a4f13387448961f90cfeea62bce89df17ba2ec90606b1"
+      },
+      {
+        "file": "content/articles/povoleni-provozu-stacionarniho-zdroje.md",
+        "slug": "cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu",
+        "originalHero": "/uploads/chatgpt-image-7.-8.-2026-13_58_55-2-.webp",
+        "contentHash": "b166e9f0f0693741af3dabfcc887769901794ae9117de316bb703956a98f748a"
+      },
+      {
+        "file": "content/articles/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity.md",
+        "slug": "prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity",
+        "originalHero": null,
+        "contentHash": "4b40d2d1ee373bf8a6e46b95289d45f8aabe9b017a1b28fbf9bc0e9553c9cb8b"
+      },
+      {
+        "file": "content/articles/praskova-lakovna-povoleni.md",
+        "slug": "praskova-lakovna-povoleni",
+        "originalHero": "/uploads/chatgpt-image-7.-8.-2026-14_33_50.webp",
+        "contentHash": "4333e737561dc3bc857a27beb45457254045c67dc37eda5538864e07111dcfb7"
+      },
+      {
+        "file": "content/articles/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni.md",
+        "slug": "proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni",
+        "originalHero": null,
+        "contentHash": "c8465c3d4295c6bc0a909d7f6d8c8c953966f85b918406b8efb19322e69daa68"
+      },
+      {
+        "file": "content/articles/projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi.md",
+        "slug": "projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi",
+        "originalHero": "/uploads/chatgpt-image-16.-6.-2026-12_34_52.webp",
+        "contentHash": "3c991d2c5f2904efa42861ab45f440f8e046fe0a5176861efe4830c8f164ebc1"
+      },
+      {
+        "file": "content/articles/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia.md",
+        "slug": "projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia",
+        "originalHero": null,
+        "contentHash": "fe7dcfd177b27baa7051a05dd799e636fbf7079ac6ad25f906c1ee3227a71cbf"
+      },
+      {
+        "file": "content/articles/protihlukova-opatreni-pred-merenim-hluku.md",
+        "slug": "protihlukova-opatreni-pred-merenim-hluku",
+        "originalHero": "/uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp",
+        "contentHash": "23bee73fb0d2b49c4bf1b7cc5a0fedf7025e417735a0f08ba746e1bbef0b80df"
+      },
+      {
+        "file": "content/articles/protiprasna-opatreni-na-stavbe-dokumentace-urad.md",
+        "slug": "protiprasna-opatreni-na-stavbe-dokumentace-urad",
+        "originalHero": "/uploads/chatgpt-image-2.-7.-2026-09_53_57.webp",
+        "contentHash": "a2f6347d7d256a7ff476e68a3249471d8ee6b2ccf1d0b8ee5a07ea87d7a965e3"
+      },
+      {
+        "file": "content/articles/provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat.md",
+        "slug": "provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_23_43.webp",
+        "contentHash": "6306ccdceb849bdc2cbf14a3b49d1bea49bb5657a4dac705de90fec5b353edd0"
+      },
+      {
+        "file": "content/articles/provozni-rad-zdroje-znecistovani-ovzdusi.md",
+        "slug": "provozni-rad-zdroje-znecistovani-ovzdusi",
+        "originalHero": null,
+        "contentHash": "be60d79cd0cd38cca2393fff8da0bd50d1ecc1b83279d518493209166ecffe8b"
+      },
+      {
+        "file": "content/articles/recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia.md",
+        "slug": "recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia",
+        "originalHero": null,
+        "contentHash": "e2fec2119172ea347f387ade2fdc7544e2a5500c460a77d48f4a37103f773fb2"
+      },
+      {
+        "file": "content/articles/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba.md",
+        "slug": "rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba",
+        "originalHero": null,
+        "contentHash": "3ffc1ab70c9bfc32200bc3b540fe8878997347076232b6deb71276fb558f5fd2"
+      },
+      {
+        "file": "content/articles/scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele.md",
+        "slug": "scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele",
+        "originalHero": null,
+        "contentHash": "83968e8b153ee9fb1312d5425fdabaa4de6034632f5b02c6e8733d44207ebb6c"
+      },
+      {
+        "file": "content/articles/skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi.md",
+        "slug": "skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi",
+        "originalHero": null,
+        "contentHash": "b1d2e2dbd5e60d9ec5027e2b600f30b05e37a5f0d43ab2b9071de5bed03322d1"
+      },
+      {
+        "file": "content/articles/souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim.md",
+        "slug": "souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_12_13.webp",
+        "contentHash": "2afd4f67a296dc32298cd56d54e5c8712603c9780ed0026977d22de8f9b71e2b"
+      },
+      {
+        "file": "content/articles/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise.md",
+        "slug": "svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        "originalHero": null,
+        "contentHash": "54271fe696f3d2be209336ac955ec65653c2a901f83acd05e56229e924e9ad08"
+      },
+      {
+        "file": "content/articles/tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace.md",
+        "slug": "tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace",
+        "originalHero": "/uploads/chatgpt-image-23.-7.-2026-16_28_56.webp",
+        "contentHash": "44918c76ac0edb521a7e27febb74035977485379dde12451773158ced4b8a795"
+      },
+      {
+        "file": "content/articles/tonove-slozky-hluku-ceska-legislativa-provozovatel.md",
+        "slug": "tonove-slozky-hluku-ceska-legislativa-provozovatel",
+        "originalHero": "/uploads/0ee63946-ea53-49b5-9635-170da9c81ee7.webp",
+        "contentHash": "2f90f3637d0598bcc65ad0c08185d9f04c35f8ebe1fb6b74321519cdac5ce3f1"
+      },
+      {
+        "file": "content/articles/vyzva-khs-mereni-pracovniho-prostredi.md",
+        "slug": "vyzva-khs-mereni-pracovniho-prostredi",
+        "originalHero": null,
+        "contentHash": "b7138df0cbd104961827eea29b40488f0b9d782cb0c1f6f96958f991c3466673"
+      },
+      {
+        "file": "content/articles/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady.md",
+        "slug": "zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady",
+        "originalHero": null,
+        "contentHash": "25f1fa8dfbf20fcda0fc233b3cbfd7028cc6407fe2be3262b2efa0a414d15779"
+      },
+      {
+        "file": "content/articles/zalozni-dieselagregat-emise-povoleni-provozni-hodiny.md",
+        "slug": "zalozni-dieselagregat-emise-povoleni-provozni-hodiny",
+        "originalHero": "/uploads/48b959ca-90d0-432e-b083-31f4ef5e4625.webp",
+        "contentHash": "279df8851203b1fe5e8aa2dc77b5bb43d6f3aadb148e8f1ed554c21ba6d83d94"
+      },
+      {
+        "file": "content/articles/zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia.md",
+        "slug": "zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia",
+        "originalHero": "/uploads/chatgpt-image-20.-7.-2026-11_08_54.webp",
+        "contentHash": "ad2fd7219f2a9ffb40b9d941894dbc1a318315ed7adfdbdf35908604087dbbd9"
+      },
+      {
+        "file": "content/articles-en/automotive-provoz-co-se-typicky-meri-a-posuzuje.md",
+        "slug": "automotive-provoz-co-se-typicky-meri-a-posuzuje",
+        "originalHero": null,
+        "contentHash": "9f40e17c10ab3070c706ad7ba80ca8d5e4c5e55186ebe9beb193d760f581a6d8"
+      },
+      {
+        "file": "content/articles-en/co-poslat-pro-rychle-posouzeni-zameru.md",
+        "slug": "co-poslat-pro-rychle-posouzeni-zameru",
+        "originalHero": null,
+        "contentHash": "8d1c1c0d6db8ceb29b51e23b19ecaec2b0be986c36985e9cbfb44eb18b03690d"
+      },
+      {
+        "file": "content/articles-en/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026.md",
+        "slug": "co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026",
+        "originalHero": null,
+        "contentHash": "f3bbf9e79f24e69d0c278f2767de7326d5c2dc6bcfa157d80a40226e8b14c082"
+      },
+      {
+        "file": "content/articles-en/deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek.md",
+        "slug": "deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek",
+        "originalHero": "/uploads/chatgpt-image-2.-7.-2026-09_41_15.webp",
+        "contentHash": "92f6292cec82dcc4f13e83fedd805c7ddd8985d2be8dde37739ee08c885b404f"
+      },
+      {
+        "file": "content/articles-en/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje.md",
+        "slug": "drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje",
+        "originalHero": null,
+        "contentHash": "bd5e2d3453765ccf4bc498665ccfc0763cf376e3974cf18ca59e639d24c65d78"
+      },
+      {
+        "file": "content/articles-en/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele.md",
+        "slug": "elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele",
+        "originalHero": null,
+        "contentHash": "d7571abf3e620a7d3af52938a78378b9bb20d6d5a00f14353f2936f8234a024b"
+      },
+      {
+        "file": "content/articles-en/emise-vs-imise-proc-provozovatel-resi-oboji.md",
+        "slug": "emise-vs-imise-proc-provozovatel-resi-oboji",
+        "originalHero": null,
+        "contentHash": "78c8a338ea5de07e0aabeb5edb9a135b4495d85fdae63d230793e6af63b45825"
+      },
+      {
+        "file": "content/articles-en/emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni.md",
+        "slug": "emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_47_15.webp",
+        "contentHash": "fad0a1b92beae2c2ea01ef556d8e8bdd3ff92f9c6e4b2e713dcd5eda12e36e3f"
+      },
+      {
+        "file": "content/articles-en/hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni.md",
+        "slug": "hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni",
+        "originalHero": "/uploads/chatgpt-image-23.-6.-2026-12_24_16.webp",
+        "contentHash": "9275e8216e2ff0c3e4e2df77537cfae82320ee89fd602d851346d66f8059f065"
+      },
+      {
+        "file": "content/articles-en/hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji.md",
+        "slug": "hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji",
+        "originalHero": null,
+        "contentHash": "7a942aa8a12c4042e210c53bd5b5be3fe17b5daa78d09afa97342e31f338b385"
+      },
+      {
+        "file": "content/articles-en/hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci.md",
+        "slug": "hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci",
+        "originalHero": null,
+        "contentHash": "71f48c8c3796571c5bbef36e730b40882cf1410fb442d6dc88ca7ea0c3e1f9b1"
+      },
+      {
+        "file": "content/articles-en/institut-minimalni-vzdalenosti-ochrana-ovzdusi.md",
+        "slug": "institut-minimalni-vzdalenosti-ochrana-ovzdusi",
+        "originalHero": null,
+        "contentHash": "52bea101fc627d3d4aa172086155426e0a0538157f5366e47ee766599f4637b6"
+      },
+      {
+        "file": "content/articles-en/ippc-kdy-provoz-potrebuje-integrovane-povoleni.md",
+        "slug": "ippc-kdy-provoz-potrebuje-integrovane-povoleni",
+        "originalHero": "/uploads/chatgpt-image-14.-7.-2026-09_37_14.webp",
+        "contentHash": "1643d120a972f4c69b1c3dd22b633b001374813ce732cd421c9d3a01fd7c8bfb"
+      },
+      {
+        "file": "content/articles-en/ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba.md",
+        "slug": "ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_30_49.webp",
+        "contentHash": "a52cd536366bb5757884601e8a403ed50c33c05805086dc7252f1c3bd3bc47f5"
+      },
+      {
+        "file": "content/articles-en/izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi.md",
+        "slug": "izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi",
+        "originalHero": "/uploads/clipboard_07-06-2026_01.webp",
+        "contentHash": "53893cd92b0816faa4793bd85e6b5c320162ffc822121c4b1a880619111ab126"
+      },
+      {
+        "file": "content/articles-en/jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota.md",
+        "slug": "jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota",
+        "originalHero": null,
+        "contentHash": "33a45f58fd9cd1513ef436ecb031d92ea4caae38b01251c3915d167e9a8cf340"
+      },
+      {
+        "file": "content/articles-en/jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi.md",
+        "slug": "jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi",
+        "originalHero": null,
+        "contentHash": "b425796d9740172491e69123d3389318c3e7f3298429fdf7340b51c1004289d6"
+      },
+      {
+        "file": "content/articles-en/jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia.md",
+        "slug": "jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia",
+        "originalHero": null,
+        "contentHash": "bf1ee4f105a4f5ca3573471e46cc6d36fab396d8a88fac88934c04b24fa90aff"
+      },
+      {
+        "file": "content/articles-en/kategorizace-praci-jake-mereni-je-potreba-jako-podklad.md",
+        "slug": "kategorizace-praci-jake-mereni-je-potreba-jako-podklad",
+        "originalHero": null,
+        "contentHash": "26d5491c73a46b283a17c4676cdef22391c0001997201784a958d17ae42ca310"
+      },
+      {
+        "file": "content/articles-en/kategorizace-praci-po-zmene-technologie-nove-mereni.md",
+        "slug": "kategorizace-praci-po-zmene-technologie-nove-mereni",
+        "originalHero": "/uploads/chatgpt-image-23.-6.-2026-12_42_59.webp",
+        "contentHash": "154e9f57d8e6e02eb9dc4f37fa69bde0d7d10df8680dcc627d7bc41de8ead1f0"
+      },
+      {
+        "file": "content/articles-en/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku.md",
+        "slug": "kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku",
+        "originalHero": null,
+        "contentHash": "7b516956f85eec5483a5d41c6e426ff7c35ddf3e98f436734c7627320180b8ca"
+      },
+      {
+        "file": "content/articles-en/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad.md",
+        "slug": "kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad",
+        "originalHero": null,
+        "contentHash": "26decb3053e94bc73d0949bfb2d58fc7f430fe0092eece17de4ec6288fb958d6"
+      },
+      {
+        "file": "content/articles-en/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje.md",
+        "slug": "kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje",
+        "originalHero": null,
+        "contentHash": "ee3a8d61cc3a2533779e28b5b47c6d9a0cd486ea207c9cea4805be0790544542"
+      },
+      {
+        "file": "content/articles-en/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu.md",
+        "slug": "kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu",
+        "originalHero": "/uploads/pxl_20260702_063317620.mp.webp",
+        "contentHash": "c4981d556b15285ed7389136906530d6358dd38627e18952d7d88be8eb059d89"
+      },
+      {
+        "file": "content/articles-en/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox.md",
+        "slug": "kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox",
+        "originalHero": null,
+        "contentHash": "3bebc6efa77852bb0c48167b64da69723461ef25cc922d46858151719d7c34fa"
+      },
+      {
+        "file": "content/articles-en/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu.md",
+        "slug": "lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu",
+        "originalHero": null,
+        "contentHash": "7195184b0c649a37efced3fa8aa01f4f65046f00ded8e8737e48624291a97bde"
+      },
+      {
+        "file": "content/articles-en/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni.md",
+        "slug": "manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni",
+        "originalHero": "/uploads/fcb8f524-381e-4c0a-baf5-3fe088f9d036.webp",
+        "contentHash": "36b9db8deb0dfd4cf17434ee0269993b0e149f46b8554fe503da5e47e8628994"
+      },
+      {
+        "file": "content/articles-en/mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni.md",
+        "slug": "mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni",
+        "originalHero": null,
+        "contentHash": "9afc2a5155ba13a42e13a89238c176feddbc374cb138d00a03f92de8870fc2db"
+      },
+      {
+        "file": "content/articles-en/mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu.md",
+        "slug": "mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu",
+        "originalHero": "/uploads/chatgpt-image-16.-6.-2026-06_56_15.webp",
+        "contentHash": "0ee86960ad2d5e8f8379dbd55259bbc0d1ab952c66ce42a464f8e20243b12184"
+      },
+      {
+        "file": "content/articles-en/mereni-osvetleni-pracoviste-khs-kolaudace.md",
+        "slug": "mereni-osvetleni-pracoviste-khs-kolaudace",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-12_14_55.webp",
+        "contentHash": "0552c1ebb8fcb8d598c3956ce35ac7ba5526b5b9735f257f254ec7daad2ce3b3"
+      },
+      {
+        "file": "content/articles-en/mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs.md",
+        "slug": "mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs",
+        "originalHero": null,
+        "contentHash": "771db162d00a0441b90661df83952bb38368d7f301db989a15a1ef4e50909e05"
+      },
+      {
+        "file": "content/articles-en/mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci.md",
+        "slug": "mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci",
+        "originalHero": "/uploads/chatgpt-image-21.-6.-2026-13_15_45.webp",
+        "contentHash": "1f0b1402ec0256a07f25f0e96ac2217d6c2d42b9c05b60aab7a5dba76d233359"
+      },
+      {
+        "file": "content/articles-en/merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi.md",
+        "slug": "merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_37_51.webp",
+        "contentHash": "2bdcdb494139963db8d43982f8ade9e95f917dfe935b4a4ae603a78d651f88c8"
+      },
+      {
+        "file": "content/articles-en/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu.md",
+        "slug": "merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu",
+        "originalHero": null,
+        "contentHash": "7dad8d895a2ccd49e46f351ecfe486a63ee2ab5164939109b64428f2f32b6bb4"
+      },
+      {
+        "file": "content/articles-en/nedostatecne-osvetleni-pracoviste-co-se-meri-podklady.md",
+        "slug": "nedostatecne-osvetleni-pracoviste-co-se-meri-podklady",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-12_22_27.webp",
+        "contentHash": "888084c93d368ae3f5b03400410e601795b8191994e527ed6892fcde7e1315e8"
+      },
+      {
+        "file": "content/articles-en/nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat.md",
+        "slug": "nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat",
+        "originalHero": null,
+        "contentHash": "b3576e8d7ed036aa68446db40326325eb6e88feec27a6a22110ccdb51be210b0"
+      },
+      {
+        "file": "content/articles-en/novela-zakona-o-ochrane-ovzdusi-2025.md",
+        "slug": "novela-zakona-o-ochrane-ovzdusi-2025",
+        "originalHero": "/uploads/chatgpt-image-jun-14-2026-08_02_34-pm.webp",
+        "contentHash": "26afc7823cb1aa646123f8b92e33f5b8fd35a551390a96f6fa1f7f56da96dca5"
+      },
+      {
+        "file": "content/articles-en/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat.md",
+        "slug": "odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat",
+        "originalHero": null,
+        "contentHash": "8a5ff6a75aa828f6f9acf0c9e13c32d993eadff71b251cbe53046b3f23731f4b"
+      },
+      {
+        "file": "content/articles-en/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba.md",
+        "slug": "oznameni-zameru-eia-co-to-je-a-kdy-je-potreba",
+        "originalHero": "/uploads/eia.webp",
+        "contentHash": "21efbe472f6eca359d9899ef9bfd8757885d0e73ed140d99d39eabb55638df8b"
+      },
+      {
+        "file": "content/articles-en/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni.md",
+        "slug": "plynova-kotelna-03-50-mw-nox-co-mereni-povoleni",
+        "originalHero": "/uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp",
+        "contentHash": "c3d68a4c265e7e76f669bc353970f4ab03d49da3c1f37767f7323db7bb2d2b0c"
+      },
+      {
+        "file": "content/articles-en/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence.md",
+        "slug": "poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_57_05.webp",
+        "contentHash": "01ef79f30b7cca646d644148fc1d707ab8640ccdb444cb07afe8adbfc5243fd5"
+      },
+      {
+        "file": "content/articles-en/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity.md",
+        "slug": "prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity",
+        "originalHero": null,
+        "contentHash": "121e146200a0351a2725e3f7b11fc2f07d946c726201d69ac06eda4a45a0293f"
+      },
+      {
+        "file": "content/articles-en/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni.md",
+        "slug": "proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni",
+        "originalHero": null,
+        "contentHash": "8d7ceb33b2ffc456fad81dd18e931ebfbd039540ead4e5d45e017514f835617a"
+      },
+      {
+        "file": "content/articles-en/projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi.md",
+        "slug": "projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi",
+        "originalHero": "/uploads/chatgpt-image-16.-6.-2026-12_34_52.webp",
+        "contentHash": "0f3246537bbfb8b59be7808f7b0564f2a8ee603d13b53deea0c7f91f89c7b632"
+      },
+      {
+        "file": "content/articles-en/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia.md",
+        "slug": "projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia",
+        "originalHero": null,
+        "contentHash": "ee2c70a1e9d75fe7272705c9afdddb7812c39494a5a026e0c61ac741fd759084"
+      },
+      {
+        "file": "content/articles-en/protiprasna-opatreni-na-stavbe-dokumentace-urad.md",
+        "slug": "protiprasna-opatreni-na-stavbe-dokumentace-urad",
+        "originalHero": "/uploads/chatgpt-image-2.-7.-2026-09_53_57.webp",
+        "contentHash": "5f13807ee8018327cff07210e8a6718fb5770fe3ce4d3d540218e4a462662d30"
+      },
+      {
+        "file": "content/articles-en/provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat.md",
+        "slug": "provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_23_43.webp",
+        "contentHash": "56f6165eabca1e42bc291b2b6e209c8a973d8c3b2bf26abef5f212d510812cd8"
+      },
+      {
+        "file": "content/articles-en/recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia.md",
+        "slug": "recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia",
+        "originalHero": null,
+        "contentHash": "9a3666a62481065aa9e1ac367c2152416cbafe4ae3a53ad6721ac929ff358442"
+      },
+      {
+        "file": "content/articles-en/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba.md",
+        "slug": "rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba",
+        "originalHero": null,
+        "contentHash": "8f84bc81b9a3dc0c54a9411030b56f8b16900f1dc6d36ff298a8afbe67898104"
+      },
+      {
+        "file": "content/articles-en/scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele.md",
+        "slug": "scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele",
+        "originalHero": null,
+        "contentHash": "00eabcb2ef76fab4fad649f4e94b6abd581688dc5afdba3be7941fd985423f53"
+      },
+      {
+        "file": "content/articles-en/skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi.md",
+        "slug": "skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi",
+        "originalHero": null,
+        "contentHash": "459da348aa52bfa6fd62addf5c99e7dc17b22514bfaa0c945988b55394fe4be9"
+      },
+      {
+        "file": "content/articles-en/souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim.md",
+        "slug": "souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_12_13.webp",
+        "contentHash": "c7b57954330fe16fed5a64cb5ce94bb57a3d477404f864dfc6de796394d2ce74"
+      },
+      {
+        "file": "content/articles-en/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise.md",
+        "slug": "svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        "originalHero": null,
+        "contentHash": "b4fe81b02f9d532c78f9ee55d2868746472b8d36ebbd4fa46e82dc8f3a37b0e7"
+      },
+      {
+        "file": "content/articles-en/tonove-slozky-hluku-ceska-legislativa-provozovatel.md",
+        "slug": "tonove-slozky-hluku-ceska-legislativa-provozovatel",
+        "originalHero": "/uploads/0ee63946-ea53-49b5-9635-170da9c81ee7.webp",
+        "contentHash": "6883472b08a1c679decdd3c5b419f66712e45f940384d4e86029d10e615b940d"
+      },
+      {
+        "file": "content/articles-en/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady.md",
+        "slug": "zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady",
+        "originalHero": null,
+        "contentHash": "8d31c3c9079547dbfaf2367096b1d3f6a06a8a926742ad28f3522f1d9dd741d7"
+      },
+      {
+        "file": "content/articles-en/zalozni-dieselagregat-emise-povoleni-provozni-hodiny.md",
+        "slug": "zalozni-dieselagregat-emise-povoleni-provozni-hodiny",
+        "originalHero": "/uploads/48b959ca-90d0-432e-b083-31f4ef5e4625.webp",
+        "contentHash": "10487a55214b9e290a2ab7871598d096d002d199a79c88dbf561f44d1512d9ca"
+      },
+      {
+        "file": "content/articles-de/automotive-provoz-co-se-typicky-meri-a-posuzuje.md",
+        "slug": "automotive-provoz-co-se-typicky-meri-a-posuzuje",
+        "originalHero": null,
+        "contentHash": "10ac7301800b23732e1a700da9391ceb5a2c54477ae4f390117bc38f3d6edae8"
+      },
+      {
+        "file": "content/articles-de/co-poslat-pro-rychle-posouzeni-zameru.md",
+        "slug": "co-poslat-pro-rychle-posouzeni-zameru",
+        "originalHero": null,
+        "contentHash": "a9ce67dafd19ba3e35220c7e26fe73e1d2c1d38df515b00ef8a492f60b0d065e"
+      },
+      {
+        "file": "content/articles-de/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026.md",
+        "slug": "co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026",
+        "originalHero": null,
+        "contentHash": "fe1933836861819125f1eec8e6f352441aad550c1f2d90de11ea6e1290f1f040"
+      },
+      {
+        "file": "content/articles-de/deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek.md",
+        "slug": "deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek",
+        "originalHero": "/uploads/chatgpt-image-2.-7.-2026-09_41_15.webp",
+        "contentHash": "ae79fdc6eb1353aa6ec25cda2618e969923afdaf97bc8d18217cbe2e4b8f0eae"
+      },
+      {
+        "file": "content/articles-de/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje.md",
+        "slug": "drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje",
+        "originalHero": null,
+        "contentHash": "9f3e2fdf5db4765efc18f6731c146e7f6d7db225485a5bc6e55132b4e94e04a9"
+      },
+      {
+        "file": "content/articles-de/elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele.md",
+        "slug": "elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele",
+        "originalHero": null,
+        "contentHash": "cdd957c8b5e80aa94024bca183028b8613ee1315c5673758f16104332ac7c44b"
+      },
+      {
+        "file": "content/articles-de/emise-vs-imise-proc-provozovatel-resi-oboji.md",
+        "slug": "emise-vs-imise-proc-provozovatel-resi-oboji",
+        "originalHero": null,
+        "contentHash": "fe45f0285d77024dc2f32f76f8217499508fa151a1030937040d19cc6f77e311"
+      },
+      {
+        "file": "content/articles-de/emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni.md",
+        "slug": "emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_47_15.webp",
+        "contentHash": "0c11d223c1ba37db2ccb3250dc75dbc6e3c2e9bc1c6eceb530d81da1df4173c6"
+      },
+      {
+        "file": "content/articles-de/hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni.md",
+        "slug": "hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni",
+        "originalHero": "/uploads/chatgpt-image-23.-6.-2026-12_24_16.webp",
+        "contentHash": "8e2ca2388afe1153cb9c54929aba50cf59e828f9b46fcf521b73c1598073ff35"
+      },
+      {
+        "file": "content/articles-de/hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji.md",
+        "slug": "hluk-z-provozovny-co-delat-kdyz-si-sousede-stezuji",
+        "originalHero": null,
+        "contentHash": "1cb6e93cc5859bbac3baa589bdd53a08566dac8dd69ce77a3dff4e295647bf3b"
+      },
+      {
+        "file": "content/articles-de/hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci.md",
+        "slug": "hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci",
+        "originalHero": null,
+        "contentHash": "69314b55397ca6d3e42d49ef2e40606366cab87ac495f1ee2856f5c0f9d88292"
+      },
+      {
+        "file": "content/articles-de/institut-minimalni-vzdalenosti-ochrana-ovzdusi.md",
+        "slug": "institut-minimalni-vzdalenosti-ochrana-ovzdusi",
+        "originalHero": null,
+        "contentHash": "a29b79583bd1c196024cd908b8f00b7f584ceed7ef4d7465e12852edd92ad0aa"
+      },
+      {
+        "file": "content/articles-de/ippc-kdy-provoz-potrebuje-integrovane-povoleni.md",
+        "slug": "ippc-kdy-provoz-potrebuje-integrovane-povoleni",
+        "originalHero": "/uploads/chatgpt-image-14.-7.-2026-09_37_14.webp",
+        "contentHash": "487cb2240efa2977aa121848a8a7f4526f0c4d5006f010e1165a46d06104c8cd"
+      },
+      {
+        "file": "content/articles-de/ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba.md",
+        "slug": "ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_30_49.webp",
+        "contentHash": "2aec2ce863f81182c48609559b6d884b07971db13cafe90f3a455aa5e480552c"
+      },
+      {
+        "file": "content/articles-de/izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi.md",
+        "slug": "izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi",
+        "originalHero": "/uploads/clipboard_07-06-2026_01.webp",
+        "contentHash": "74ae086d4773aee2c3b0d64a97c7aab955d6476181e962657e636acdadd5dc10"
+      },
+      {
+        "file": "content/articles-de/jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota.md",
+        "slug": "jak-cist-hlukovou-studii-laeq-lafmax-chraneny-prostor-a-nejistota",
+        "originalHero": null,
+        "contentHash": "51030826d29b5af26cf3c7dd9c68e34b0573f39a6ff49e09549425ae4dff75b4"
+      },
+      {
+        "file": "content/articles-de/jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi.md",
+        "slug": "jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi",
+        "originalHero": null,
+        "contentHash": "e50257893725b93905f037679042b19185b8567e8c5e957c1d58ae1ef80a1994"
+      },
+      {
+        "file": "content/articles-de/jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia.md",
+        "slug": "jes-a-eia-kdy-se-resi-jednotne-environmentalni-stanovisko-spolecne-s-eia",
+        "originalHero": null,
+        "contentHash": "fa562cd517d85f9d4092742c3c824629662a74c097ebc4a9239b53eac40582aa"
+      },
+      {
+        "file": "content/articles-de/kategorizace-praci-jake-mereni-je-potreba-jako-podklad.md",
+        "slug": "kategorizace-praci-jake-mereni-je-potreba-jako-podklad",
+        "originalHero": null,
+        "contentHash": "d6994304fd160410cc34cff9a8ec268ceffbf9cb1785df9be29ee67ed842a098"
+      },
+      {
+        "file": "content/articles-de/kategorizace-praci-po-zmene-technologie-nove-mereni.md",
+        "slug": "kategorizace-praci-po-zmene-technologie-nove-mereni",
+        "originalHero": "/uploads/chatgpt-image-23.-6.-2026-12_42_59.webp",
+        "contentHash": "efba7678d75d4366c3f1caa37db4ae2f8127a1c8d5a8c97b0bf01fe33ce9e606"
+      },
+      {
+        "file": "content/articles-de/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku.md",
+        "slug": "kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku",
+        "originalHero": null,
+        "contentHash": "768e05eabc558dbbb358c50441d66df29f8d6be0e1b2bd792c0e026cc37ed9a5"
+      },
+      {
+        "file": "content/articles-de/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad.md",
+        "slug": "kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad",
+        "originalHero": null,
+        "contentHash": "4570f9eeebc8636c4fdf349a56232d6b2d6c0b2c2e430679041a2f75bab5037f"
+      },
+      {
+        "file": "content/articles-de/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje.md",
+        "slug": "kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje",
+        "originalHero": null,
+        "contentHash": "720edaf8666f89df338c6ba6421088b55a59634bf8cf0bed2ef30600e5125746"
+      },
+      {
+        "file": "content/articles-de/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu.md",
+        "slug": "kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu",
+        "originalHero": "/uploads/pxl_20260702_063317620.mp.webp",
+        "contentHash": "3951d1a9d807806c2866758430928f37683bdd649aa833b8c2e6b92f56afee72"
+      },
+      {
+        "file": "content/articles-de/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox.md",
+        "slug": "kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox",
+        "originalHero": null,
+        "contentHash": "a19120049cbd088baff9d9844557be05cc57c234ac30a9f805a2707099d235b5"
+      },
+      {
+        "file": "content/articles-de/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu.md",
+        "slug": "lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu",
+        "originalHero": null,
+        "contentHash": "827e77e743b077dd648c633ff4ed9adf6d44806939ed20d2cacb060cc3dd3cf8"
+      },
+      {
+        "file": "content/articles-de/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni.md",
+        "slug": "manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni",
+        "originalHero": "/uploads/fcb8f524-381e-4c0a-baf5-3fe088f9d036.webp",
+        "contentHash": "d97dbdf36f000f9898afbb71a888ecf07a52e1ace5a9d7eb5b5dfd29fcb566e6"
+      },
+      {
+        "file": "content/articles-de/mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni.md",
+        "slug": "mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni",
+        "originalHero": null,
+        "contentHash": "5e2d9218c37ece3017b54d2090aca37a384d916f9cfd4b84f1337041a8d312f5"
+      },
+      {
+        "file": "content/articles-de/mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu.md",
+        "slug": "mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu",
+        "originalHero": "/uploads/chatgpt-image-16.-6.-2026-06_56_15.webp",
+        "contentHash": "dc78859c8a09f6f3c73669cfd87283a70ee24bd43b6c8f6c4204b0458a766a8b"
+      },
+      {
+        "file": "content/articles-de/mereni-osvetleni-pracoviste-khs-kolaudace.md",
+        "slug": "mereni-osvetleni-pracoviste-khs-kolaudace",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-12_14_55.webp",
+        "contentHash": "b9dfcddea066a23506e81d660a4ffca69d2bd6feb78e4e91a0c8808c5e0ed00c"
+      },
+      {
+        "file": "content/articles-de/mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs.md",
+        "slug": "mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs",
+        "originalHero": null,
+        "contentHash": "e406b1d07e7eec52e525eceac6667fcf953dc83ffcac6b1c96ea09cd59ba5960"
+      },
+      {
+        "file": "content/articles-de/mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci.md",
+        "slug": "mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci",
+        "originalHero": "/uploads/chatgpt-image-21.-6.-2026-13_15_45.webp",
+        "contentHash": "a44b527eaf8fd26e48e7ac7f08d1e2fba04be5fdc7ba0e821b1ecc04dfeff76d"
+      },
+      {
+        "file": "content/articles-de/merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi.md",
+        "slug": "merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_37_51.webp",
+        "contentHash": "345f9bed7064e47ac8ac4e93743546926b0457371d0b90ad00d54b6c7396da86"
+      },
+      {
+        "file": "content/articles-de/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu.md",
+        "slug": "merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu",
+        "originalHero": null,
+        "contentHash": "27c2c85e322e50a9bbd2120f21efc128de4e460aec533f4dc2a3ef8954be523b"
+      },
+      {
+        "file": "content/articles-de/nedostatecne-osvetleni-pracoviste-co-se-meri-podklady.md",
+        "slug": "nedostatecne-osvetleni-pracoviste-co-se-meri-podklady",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-12_22_27.webp",
+        "contentHash": "69ae1c20a5da130b388aecc7549e581e0544ae3f213d4b2b0240d4548ea9e0e3"
+      },
+      {
+        "file": "content/articles-de/nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat.md",
+        "slug": "nove-metodicke-vyklady-mzp-k-dopovolovanym-zdrojum-co-ma-provozovatel-zkontrolovat",
+        "originalHero": null,
+        "contentHash": "cd5396255f68d6c93bd01e79edc649292576744be36d88b063725bbacf8ed32e"
+      },
+      {
+        "file": "content/articles-de/novela-zakona-o-ochrane-ovzdusi-2025.md",
+        "slug": "novela-zakona-o-ochrane-ovzdusi-2025",
+        "originalHero": "/uploads/chatgpt-image-jun-14-2026-08_02_34-pm.webp",
+        "contentHash": "a4af84ccb8aa83c82eff2666ccb1a1134e5f7c4ffa922673d25bd37f5a09b2d6"
+      },
+      {
+        "file": "content/articles-de/odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat.md",
+        "slug": "odborny-posudek-podle-zakona-o-ochrane-ovzdusi-kdy-je-potreba-a-co-musi-obsahovat",
+        "originalHero": null,
+        "contentHash": "396c7d21fdd09e4828ea00b7467e1a281571cfef213b92a1a0ed4e294aec7879"
+      },
+      {
+        "file": "content/articles-de/oznameni-zameru-eia-co-to-je-a-kdy-je-potreba.md",
+        "slug": "oznameni-zameru-eia-co-to-je-a-kdy-je-potreba",
+        "originalHero": "/uploads/eia.webp",
+        "contentHash": "a0790ace7c01d8a22e0c9b8c093bd75e4926adc0d6b6372079728f92e73f0fe7"
+      },
+      {
+        "file": "content/articles-de/plynova-kotelna-03-50-mw-nox-co-mereni-povoleni.md",
+        "slug": "plynova-kotelna-03-50-mw-nox-co-mereni-povoleni",
+        "originalHero": "/uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp",
+        "contentHash": "44a32ff96cb64dc834bef04a061eb5eec6edf8c080552b7249a5c6f7fa79fa2a"
+      },
+      {
+        "file": "content/articles-de/poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence.md",
+        "slug": "poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_57_05.webp",
+        "contentHash": "32b63f532477e4e911a2690422b70094af72144b6072e4d4af139c17eb037d24"
+      },
+      {
+        "file": "content/articles-de/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity.md",
+        "slug": "prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity",
+        "originalHero": null,
+        "contentHash": "09bcde2cba26c4fec5b4af5597f7b34abacd53a7413cd9126d7b25ed51b92143"
+      },
+      {
+        "file": "content/articles-de/proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni.md",
+        "slug": "proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni",
+        "originalHero": null,
+        "contentHash": "5d7c0f5489c39580d2e8402907bc144bf0f7feb0f34c757f5fc9c5e353942bfb"
+      },
+      {
+        "file": "content/articles-de/projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi.md",
+        "slug": "projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi",
+        "originalHero": "/uploads/chatgpt-image-16.-6.-2026-12_34_52.webp",
+        "contentHash": "14a568f6baf0e01605b366bc1b1f57eff54f296a4d4dc93201334687f5bea680"
+      },
+      {
+        "file": "content/articles-de/projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia.md",
+        "slug": "projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia",
+        "originalHero": null,
+        "contentHash": "c3ba4db6c42b5660abfe9590b613cfc1829a4802bc95c081d68dcca00119938a"
+      },
+      {
+        "file": "content/articles-de/protiprasna-opatreni-na-stavbe-dokumentace-urad.md",
+        "slug": "protiprasna-opatreni-na-stavbe-dokumentace-urad",
+        "originalHero": "/uploads/chatgpt-image-2.-7.-2026-09_53_57.webp",
+        "contentHash": "86eff8c8fd8ad3ea57003a453d353117527395b34de3e71da37c063d92c2f74c"
+      },
+      {
+        "file": "content/articles-de/provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat.md",
+        "slug": "provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_23_43.webp",
+        "contentHash": "77add1dc701f2e98ce1f501857fa722256abda099f78fb634303286df29545d9"
+      },
+      {
+        "file": "content/articles-de/recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia.md",
+        "slug": "recyklacni-stredisko-stavebnich-odpadu-hluk-prach-doprava-a-eia",
+        "originalHero": null,
+        "contentHash": "811bd3132480c6a855bca5dedce32618d3b33e93ed0645ee8cae69b1abacceb3"
+      },
+      {
+        "file": "content/articles-de/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba.md",
+        "slug": "rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba",
+        "originalHero": null,
+        "contentHash": "b159a36bbd5c8e5fa303842087cbf45d43567cc63bf90c8f3766423c6cd06b09"
+      },
+      {
+        "file": "content/articles-de/scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele.md",
+        "slug": "scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele",
+        "originalHero": null,
+        "contentHash": "29980fc9bcdf68e084787b7d3870e5ef4545a2b9d9c7dd5b4e299f7b0f06c27d"
+      },
+      {
+        "file": "content/articles-de/skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi.md",
+        "slug": "skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi",
+        "originalHero": null,
+        "contentHash": "26b392dfe25a87eedb47490db8acfce8da0e1ef383a295c56f27775d9d1b503e"
+      },
+      {
+        "file": "content/articles-de/souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim.md",
+        "slug": "souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim",
+        "originalHero": "/uploads/chatgpt-image-15.-6.-2026-11_12_13.webp",
+        "contentHash": "5217bad9ea1bbe87ca0f90821ae7de1c44873dd061d2cefbd012616873ab04b7"
+      },
+      {
+        "file": "content/articles-de/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise.md",
+        "slug": "svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        "originalHero": null,
+        "contentHash": "a131305c2db1bae974616aacd1c4dd191d71c9a9fc97b3bcf5df3ae051a7540b"
+      },
+      {
+        "file": "content/articles-de/tonove-slozky-hluku-ceska-legislativa-provozovatel.md",
+        "slug": "tonove-slozky-hluku-ceska-legislativa-provozovatel",
+        "originalHero": "/uploads/0ee63946-ea53-49b5-9635-170da9c81ee7.webp",
+        "contentHash": "8ec4048b6e8d0081a6424fc6cbeb2cd36cc2355a96fe74bb229eb38c3ff2aa1b"
+      },
+      {
+        "file": "content/articles-de/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady.md",
+        "slug": "zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady",
+        "originalHero": null,
+        "contentHash": "3b94fe30254996d2bb9bab83546672cd380be9740e9a61a76c8ee3d736a0c602"
+      },
+      {
+        "file": "content/articles-de/zalozni-dieselagregat-emise-povoleni-provozni-hodiny.md",
+        "slug": "zalozni-dieselagregat-emise-povoleni-provozni-hodiny",
+        "originalHero": "/uploads/48b959ca-90d0-432e-b083-31f4ef5e4625.webp",
+        "contentHash": "d44075c2089bdcdf965561d7715ce45a5b9e12aa2969b60fa3e7e2edca95b3f5"
+      }
+    ],
+    "protectedPaths": {
+      "src/components/HomeStudyGraphic.tsx": "beef92f8bd201e9b01b61efd1b215b87086a48601458a534e1f832b2dc531752",
+      "src/components/HomeServiceIndex.tsx": "6d63b3be6fa3cbfc75298a10018629fa22b6e24ed229f948afd3fa447a1e64ca",
+      "public/uploads/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public/uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp": "83eec3d772b4fb90984e703396edc6a3b0e8f24abc98157a59b5b8084883ae7e",
+      "public/uploads/0ee63946-ea53-49b5-9635-170da9c81ee7.webp": "0b67a06b4a5143d2f56fa4cfadbb2c238955f0e735e9e8c68f2de893cc7d7f2b",
+      "public/uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp": "73ff2f24dbfcc635b9cf936857f342359552ea11830137e2d3c1ebfe740f5f50",
+      "public/uploads/48b959ca-90d0-432e-b083-31f4ef5e4625.webp": "d6791841b76364a3031cea5436aec3fd63d9acc04ecc3e6facb2e26da4156432",
+      "public/uploads/chatgpt-image-14.-7.-2026-09_37_14.webp": "91748d8d455e0b78e8d6b6a11f4211825f11befe5d291e01eefb21e391ab463d",
+      "public/uploads/chatgpt-image-15.-6.-2026-11_12_13.webp": "56eaea42b6f5f2d6c4a1caada9fbf9d72528bf6d01dac406ff39c1a5bf0a11b6",
+      "public/uploads/chatgpt-image-15.-6.-2026-11_23_43.webp": "fba43a1bc4c956aa0b0a97389dd77231678eb91fd304ab61e750bcf440f3eaf3",
+      "public/uploads/chatgpt-image-15.-6.-2026-11_30_49.webp": "aa96d6116c2b9d00c8c7b8a121a3a73b51e093c323d5a1797904fb292f77e577",
+      "public/uploads/chatgpt-image-15.-6.-2026-11_37_51.webp": "ef92522dcd061b39a527f84dbab6a5eb61fe70327c9f601c2239c2cccb90a2eb",
+      "public/uploads/chatgpt-image-15.-6.-2026-11_47_15.webp": "8c666757ddd7e53eccb407f1652faabe2f872dda8cfb96976dd363a6b5bc2e42",
+      "public/uploads/chatgpt-image-15.-6.-2026-11_57_05.webp": "8385ab17ef19c6fd9c8cdbdbf6091412b23b488825a7b069f91f95ef26a4aed6",
+      "public/uploads/chatgpt-image-15.-6.-2026-12_14_55.webp": "73c8a809e5a0d4876a73569b815eac0d95ef6bec2f321e2785a6bf6db6493395",
+      "public/uploads/chatgpt-image-15.-6.-2026-12_22_27.webp": "10c2f084d30cc2f1fcec0e9ba3d6a02fed5b030116610d4bc254e9933e7450ab",
+      "public/uploads/chatgpt-image-16.-6.-2026-06_56_15.webp": "a14ca142b43d866fa6100b71c92e7425a148eabcd5d586743891e0dc4c8ec7b4",
+      "public/uploads/chatgpt-image-16.-6.-2026-12_34_52.webp": "b770f58ed5a0c6e99c0d06c3d625b25552849ed734f3bc8df9c809e9944de507",
+      "public/uploads/chatgpt-image-16.-7.-2026-09_47_59.webp": "da25d146f921bbc74580a8a4d96ceb7dfa9b722b5cd9b31a2f0698114036b235",
+      "public/uploads/chatgpt-image-2.-7.-2026-09_41_15.webp": "1a4d0dd2f7ccf042d1158c4f7f539f6ce3bf3d60ed856d159cb1f72b3d240d22",
+      "public/uploads/chatgpt-image-2.-7.-2026-09_53_57.webp": "aca4dd20e9f9a43774de89f4a693198c615be9b3adb5119481c4295abfbe4676",
+      "public/uploads/chatgpt-image-20.-7.-2026-11_08_54.webp": "c6eed9c9acc0fe72104851e9a8001b894b402f02f703d6a0c67bbdc743e5a7d6",
+      "public/uploads/chatgpt-image-21.-6.-2026-13_15_45.webp": "dce0739e6995f855739d63f98ef072cd3b84c583f6a413e3930b47c1ec0d0cec",
+      "public/uploads/chatgpt-image-23.-6.-2026-12_24_16.webp": "b7de5befdc7e0dc63af296b2ee90e3c8531e112dec2d655557d3304b783b3668",
+      "public/uploads/chatgpt-image-23.-6.-2026-12_42_59.webp": "fa5e99e40ee760a6113eb4a5e1789d2773d0a545c148881809ad6e2b9cf93eeb",
+      "public/uploads/chatgpt-image-23.-7.-2026-16_28_56.webp": "8cd5239b04be2f9e8e55d3b129d882544c86a206abdfcf3fafe20b6487503378",
+      "public/uploads/chatgpt-image-7.-8.-2026-13_58_55-1-.webp": "74b987160a8f0f20a2bb6f502c6bfb722e664dfe26d1d4fd2ff09763fd97cc85",
+      "public/uploads/chatgpt-image-7.-8.-2026-13_58_55-2-.png": "54c66f087c4fa5dd0a9d0a999e54378ff70531674c749dae819b2bcd78f2a6a1",
+      "public/uploads/chatgpt-image-7.-8.-2026-13_58_55-2-.webp": "1e0df216c4538cfb218659ac1572b5aaa5e8e033585821f828bd3b8adbd7c86c",
+      "public/uploads/chatgpt-image-7.-8.-2026-13_58_55-3-.webp": "1f8957942d1cbd9bc9622b9a3b70e3b541c2a91497b1c8c2ddf91731790c8fb1",
+      "public/uploads/chatgpt-image-7.-8.-2026-13_58_55-4-.webp": "81e35a14b567da55b928d3c6813840a940e62b54716e6b72c8bfb8b952587cfd",
+      "public/uploads/chatgpt-image-7.-8.-2026-14_33_50.webp": "ea6c5d877012295d50a414a22bc40b697a0db9ecd6ed80c9679903498e349bf3",
+      "public/uploads/chatgpt-image-7.-8.-2026-14_35_37.webp": "21089c7f2a8f71966178dc0aa65e9308f664d2c4f94dd28079a6201f2c553543",
+      "public/uploads/chatgpt-image-7.-8.-2026-14_46_38.webp": "e818d3c60d9d41ac09d80358c68f06a0cda1db66797e8e3cf99caf24d583ef04",
+      "public/uploads/chatgpt-image-jun-14-2026-08_02_34-pm.webp": "5d986721786060308d76815cd1ead8f9cf82270139fceb7b21c63be9b88ff515",
+      "public/uploads/clipboard_07-06-2026_01.webp": "50e267c8164f31e9ea10ac4b33c97b9a36f03b4d402806339ef3f761526e7133",
+      "public/uploads/eia.webp": "668cf03e83666ad3ea46e380091959f2e938e3265216d4685e7f0559c17bd422",
+      "public/uploads/fcb8f524-381e-4c0a-baf5-3fe088f9d036.webp": "adc176a9182a2680409ab218c8688a2c103c65924d5b86c64f9478c9363b2723",
+      "public/uploads/pxl_20260702_063317620.mp.webp": "278134baeca92760a80739f1bc08f8e38b54ac40872690534478695643e2aa73",
+      "public/team/hezina.jpg": "51297ce19f0915000b4ed4860d47f7b6e494f7151756d15f65151257632aee93",
+      "public/team/svatova.jpg": "176c74245ad973ef9555d741ff6d33b85da7d90f4f986ba3e35572044415898a",
+      "public/team/zilkova.jpg": "0f57c3f12d58a87f766760f4c70e1604d0772d62509ea031bc1aa30e1d33b1c9",
+      "public/graphics/brands/pcf-elettronica.png": "284e5c2223b3cef0c78819546e82c1812bd7500e23efe3211a6db014951666bf",
+      "public/graphics/brands/pcf-elettronica.svg": "f8432d3d139d4d3ccb79b2d4fe29d3536d8707eb0c5578132863a62c20879642",
+      "public/graphics/hero-technical.svg": "e9f42de84dae034e93118296c769749eb2278f49bde1b147ee87b7cc83411f3f",
+      "public/graphics/naturchem-logo.png": "98e70dcc7fff0b1c46719237a90266e67715904daa36c272aabde5cc66adcb5c",
+      "public/graphics/naturchem-mark.svg": "4cd65374aacfccf7ffcd7ea6743512f6c2465e1fc75b74f2e29fed077120b804",
+      "public/graphics/not-found-404.png": "c5c1d4c4d2ca62bad5d68c3ef172cbf27f41dd38bf02e8ed12f0c30fe5b1aa8b",
+      "public/graphics/pcf-elettronica/cylinder-basket-2.jpg": "2fb3730f0b96aa83399a7a018488e5194e232c1149bb2407627753a9ca1a4676",
+      "public/graphics/pcf-elettronica/cylinder-basket-3.jpg": "2fb3730f0b96aa83399a7a018488e5194e232c1149bb2407627753a9ca1a4676",
+      "public/graphics/pcf-elettronica/fid-detector.jpg": "861f75232fc7c225e89e10120345c435127acbf2bba8603fba0371b0f1374967",
+      "public/graphics/pcf-elettronica/heated-sampling-line.jpg": "3ec5b793ddce5033c7cd144f3820f57d5565e9ff3a3fe166adf6b56c0111cc6a",
+      "public/graphics/pcf-elettronica/mod-110-e-discrete-sampling-voc-monitor.jpg": "f7173f0680aeb00881c2acdc7f22be19b52c472ed23c9240dcf7cc6a23c4013d",
+      "public/graphics/pcf-elettronica/mod-110-h-fast-response-time-voc-monitor.jpg": "a78da0eef6ef33975bc0089190ee05dc2e82878c68835d294a7ea4ef4972eb11",
+      "public/graphics/pcf-elettronica/mod-2001-c-for-voc-and-check-of-ch4-fraction.jpg": "e43720618af65e0ad50ed5f8469bf523b371ab278438e4d5199caba838a621be",
+      "public/graphics/pcf-elettronica/mod-2005-for-total-voc.jpg": "0b1c768a0bd579652f4a1c7392f18ad318e106ea6387c40f00a88ad375a337c5",
+      "public/graphics/pcf-elettronica/mod-529-nr-h-gc-analyzer.jpg": "7242650808b4ce33bde0840ffa5a7c982ceb1777f7978d1599210864a0958d7c",
+      "public/graphics/pcf-elettronica/mod-529-nr-nmh-analyzer.jpg": "7242650808b4ce33bde0840ffa5a7c982ceb1777f7978d1599210864a0958d7c",
+      "public/graphics/pcf-elettronica/mod-529-nr-s-specific-hc-analyzer.jpg": "7242650808b4ce33bde0840ffa5a7c982ceb1777f7978d1599210864a0958d7c",
+      "public/graphics/pcf-elettronica/mod-529-nr-t-total-voc-analyzer.jpg": "7242650808b4ce33bde0840ffa5a7c982ceb1777f7978d1599210864a0958d7c",
+      "public/graphics/pcf-elettronica/mod-529-nr-tcd-mini-industrial-gc-with-tcd-detector.jpg": "27098c085249e44c75f3e8beae2750d67976cfa4eac8f4315ac1cd620c8d6f06",
+      "public/graphics/pcf-elettronica/mod-530-nr-btex-aromatics-analyzer.jpg": "850eaad6cd9da7e4e5dbe977fec8c9b5d8641d1d0ce38668d96d853455d256b7",
+      "public/graphics/pcf-elettronica/mod-8807-nr-portable-gc-for-nmh-or-specifics.jpg": "43daccaccc9acbaac71b18cf88cab196540d093cd7e1b360b43d173eb5560b01",
+      "public/graphics/pcf-elettronica/mod-9588.jpg": "469c0e4f497fe2e5629c6184454d0774cca2bc0f7e5e8db39718ecace70c0e9f",
+      "public/graphics/pcf-elettronica/mod-c-2011-for-voc-and-ch4-simultaneously.jpg": "c712641105f27a25648691c5ca70e82e7bd67ff45ff4a914671402574d2e2011",
+      "public/graphics/pcf-elettronica/mod-dp-99.jpg": "89de1fdd01426deb7caf6614c5173749bc28a8572183c8f505045032a9675a71",
+      "public/graphics/pcf-elettronica/mod-liv-10.jpg": "d49dc9a68f6d2dcc9c1bb25324ee701c3bc7c8f6ef0e439b2bd65d15a7ca0886",
+      "public/graphics/pcf-elettronica/mod-pf-2014.jpg": "b599bdf6885c9d6bf841e21537eab947a6ac60a8d3adaea1a193121bf76f67d1",
+      "public/graphics/pcf-elettronica/pid-detector.jpg": "518429ae75e56aa031d1a4d8550ae0fd0c37153d11833c201e2d306f2be82154",
+      "public/graphics/pcf-elettronica/sampling-probe-ss-1m.jpg": "cd3c30e487cee9a015296f98b23989010e7b61eb867cb06aded61e821e7de36d",
+      "public/graphics/pcf-elettronica/tcd-detector.png": "21dab27e0230d1b5cc554bd1fe5ef747342dd47a3edbdedac184574d7d566ef8",
+      "public/hero/akreditace-autorizace-dokumenty.webp": "12366dd511a4b3a5e6b8d1cbe82a6178ee368f99806ae9148172acef219188ce",
+      "public/hero/akusticke-posudky.webp": "d8793a6d65330bc9fb0fcb2250581554bea07146ea85133a9fb594fda854c481",
+      "public/hero/bezpecnostni-listy.webp": "50d96c1cbe96cf37595fd52a9ecafd11f2fc7fc1fd19b59a78f431d2ec8d1783",
+      "public/hero/case-studies/aktualizace-provozniho-radu.webp": "36b4aca7d6f524aff946b379fa83bd03222b700e6219eecb4f842c35691c570a",
+      "public/hero/case-studies/bezpecnostni-list-chemicky-vyrobek.webp": "2159f3ad7554ab9e46889f7f3ce8410b3c2625db9e0f1330aa94299770abcc98",
+      "public/hero/case-studies/cov-kalovy-vyduch.webp": "8a3e27389103f88308d781984565b4e45d050855d58293fdbb7a3e94c3652bec",
+      "public/hero/case-studies/eia-recyklacni-areal.webp": "2c6ce901f8e524a276427f36297643992df82339f8af2324f1d876b71622d5ca",
+      "public/hero/case-studies/eia-skladka-odpady.webp": "f5e0f28a16dd47760993c5696d38b5aba44ac25bcb031f7ec0d380daa40f26fb",
+      "public/hero/case-studies/ghg-cnr-vykaz.webp": "466edf42a9cc8aa239f8cb040749c046706d192a02b761bda7de045db45a226c",
+      "public/hero/case-studies/hluk-drtic-recyklace.webp": "3dc2574a0eedd880d2428ef329b29f0ba28fb79d3067f106912f7c2b90d34ee5",
+      "public/hero/case-studies/hluk-vibrace-mobilni-cinnost.webp": "1c2c7f92edb680ad9b30d1d32aa94f1759d87a4cc476dd631d6fbb6f32368fdc",
+      "public/hero/case-studies/hlukova-studie-vyrobni-areal.webp": "4f7921d57f381191df2336034fe326abdfa46934cca55a5084a34da5870914ac",
+      "public/hero/case-studies/hlukova-studie-vzt.webp": "262445735772f8abfda5a47bafe539ac4ec0d34b2af97d5437bcf0d5453f8067",
+      "public/hero/case-studies/ispop-rocni-hlaseni.webp": "f48255ef3eb4305f2c44b4cec548906d9c91e9b0696e83127de479c502c7dd0a",
+      "public/hero/case-studies/kontrolni-mereni-pozadavek-khs.webp": "d7325d60996155ff1e08c3077c450076a21cad6be54eaf1f11dbf13af144d840",
+      "public/hero/case-studies/laborator-cisty-prostor.webp": "5ef88fc74099393127f5f519630e8e6e9eb2eafbfcf890b95774ad0a4e81492c",
+      "public/hero/case-studies/mereni-emisi-filtr-aktivni-uhli.webp": "59fa6fb6d3e65969a0317c891a32343f0f80e87892a6e5ee7ac608a145e18641",
+      "public/hero/case-studies/mereni-emisi-galvanovna.webp": "593999d6cb26f68c00951823e9f72abc3ef33492a4af56d0f6e48e7dc2378f24",
+      "public/hero/case-studies/mereni-emisi-kotel-biomasa.webp": "4949d86da5d5c1cf2708e1549b27b3debde5e5fd626262a2e8615985d2b081df",
+      "public/hero/case-studies/mereni-emisi-krematorium.webp": "f6325577d76e17d7c2c9141712b55ac7c1bb22a2a08cf1620530864b2762e918",
+      "public/hero/case-studies/mereni-emisi-lakovna.webp": "433903d24f9649f18119042df4693235905a3f61ee43d34174905c784599f3c0",
+      "public/hero/case-studies/mereni-emisi-novy-kotel.webp": "eef46f3b900ad7444212e5039a6c96d130d2385f6af99ef3b1732e8e7adecc20",
+      "public/hero/case-studies/mereni-emisi-plynova-kotelna-verejna-budova.webp": "eec9e65e2e79b9e8f4fbcbea8009de4ff082be5d5017854c6ae4ac776c683781",
+      "public/hero/case-studies/mereni-emisi-plynovy-horak.webp": "4b1d513d9e4ba2c99dde2ade842f98384bf7465a62c25eaef29c837d3296d4ef",
+      "public/hero/case-studies/mereni-emisi-potravinarsky-provoz.webp": "25627a5c3557b3e486c534365b643a9205760740aecd8164e0a9d3a8dbf1be51",
+      "public/hero/case-studies/mereni-emisi-pradelna.webp": "6fce9f06c566a8964787d2207f95d48a36d747800792be76a9b758cdbbb5210f",
+      "public/hero/case-studies/mereni-emisi-tryskani.webp": "2179c44144b075a31f7d69a740c24af3aa5f799e895aacefcba28719a7274aff",
+      "public/hero/case-studies/mereni-emisi-voc-tisk.webp": "716e36f5a974547b20edf0ac890bf7a789b6c49408787535bf1658437d3c086e",
+      "public/hero/case-studies/mereni-hluku-dieselgenerator.webp": "b189af59cde1ae90cf65d7377dd2b34d7e73fdb14609bcffee0e63daff27205b",
+      "public/hero/case-studies/mereni-hluku-tepelne-cerpadlo.webp": "5b09ed9ccd8f5707f0a639e6aaefc4e45259f5c0836ac645a671eff99f92b0b7",
+      "public/hero/case-studies/mereni-vibraci-cele-telo.webp": "cc89b263715d8292cd3e4087f59455d80a0225a118f61ab9675da0d348c0ff58",
+      "public/hero/case-studies/mereni-vibraci-ruce.webp": "050c1d37df56ce40201fc743126ddbf46e040a760c799c34defb7d3870e7d93e",
+      "public/hero/case-studies/oprava-ispop.webp": "73acac0507170aa8342522274644ff39fe83c57fcaf58ff71fbd03d4cba10568",
+      "public/hero/case-studies/pfas-povrchove-upravy.webp": "a462cabf2b476411848ee5ea16d175c84ee712f526878bf3ab148a475848d844",
+      "public/hero/case-studies/posudek-tryskaci-zarizeni.webp": "f2b0b0d70329a40613f525128cc20c11f822e7eea725a93e7bbc1a6b7cdd8112",
+      "public/hero/case-studies/posudek-zmena-povoleni-lakovna.webp": "24f0132c122db66cb2fcfd546535e87b7c0232a1b6d121c449bff3c85b3d2e42",
+      "public/hero/case-studies/pracovni-prostredi-chemicke-latky.webp": "9fc69769b391305de8978e8bb2167e9a26b3d0a5be7062738d812c85b8521892",
+      "public/hero/case-studies/pracovni-prostredi-drevni-prach.webp": "ae7799771ecd79e000b5778feff4478800755399b0f536fea043e27e76d0da91",
+      "public/hero/case-studies/pracovni-prostredi-hluk-hala.webp": "163a568de780acaa1eaebef7b2e264aa4b3cd34eaba13c56ff1fefa8499d7a87",
+      "public/hero/case-studies/pracovni-prostredi-komplex.webp": "6b0b3998f60e30084c1b67e01ada6de842a33b10da7b90903293c87a1ec32a34",
+      "public/hero/case-studies/pracovni-prostredi-lakovna.webp": "fea60837bdb32bcbc0c04b910665cd94ec717df030fbb2a97d0eb5c104b7be1a",
+      "public/hero/case-studies/pracovni-prostredi-mikroklima.webp": "c70d64fb978f6de050aedad0adb49010719fdd40f1cb7e43e5a6a7cf31c6e3ca",
+      "public/hero/case-studies/pracovni-prostredi-osvetleni.webp": "dd13bb577660f9b370f56bc7a0aa722cf826e4f8f5b9834b737eee796a9d3bda",
+      "public/hero/case-studies/pracovni-prostredi-svarovna.webp": "f466e66664a732303ee7d08e37147192443e43d04fb913f9142132b1c4e50053",
+      "public/hero/case-studies/provozni-rad-kompostarna.webp": "7f5ff426a35398e60df2bea17a0e7d90210140a1e7ab4b69093f49686835973b",
+      "public/hero/case-studies/provozni-rad-recyklacni-stredisko.webp": "ac529cc0342da9806b1ec510134dbadc387ae3b7304af78eb5f95d92724957df",
+      "public/hero/case-studies/rozptylova-hlukova-terenni-upravy.webp": "a7158431343523a23d9a535b14852fc4aede6a101b93f01862ffbcc6de5bc9b3",
+      "public/hero/case-studies/rozptylova-studie-plynova-kotelna.webp": "679db79332521281c1fc3bba2b7f1ee7e3526fb5b6f248974cb087c21be0773c",
+      "public/hero/case-studies/sklarsky-provoz-pec.webp": "85827c8af511d9db72040f45f579c73aa3a987ec5e1d5b7e3264b55170214209",
+      "public/hero/case-studies/susarna-kalu.webp": "617cdd07b353b6a793d8afb00c269f21c17b22baacf041ccc2a3c744066a29b4",
+      "public/hero/case-studies/taveni-opalove-sklo-fluoridy.webp": "7bf37a30194dc06def3eff3db1c727248818c71546daa4b7319513270b635aa9",
+      "public/hero/case-studies/vyjadreni-kontrola-cizp.webp": "9c5797c0af895e93fd297c670f820b42ce3b04775e17d66d2d55c2d281bdf18a",
+      "public/hero/chemicke-latky-context.webp": "731188e5f2f6211d8a4ca27996e04acad4e546dfed1d1147dd684733df2db923",
+      "public/hero/chemicke-latky.webp": "48f9851632cc03f36978296a1445a30863aaf50f6114fdc7118d27960988923e",
+      "public/hero/dokumentace-fallback.webp": "03c4b9fdc06af2d892eb76144c84bb860f4ba691021f24e959f3c91037b96d7e",
+      "public/hero/eia-context.webp": "7a85efa4c20f9c1bca21097566d22b2d1781bb8d7a52b07be2f4cd00f9f72cae",
+      "public/hero/eia-posudky-poradenstvi.webp": "d6f86c09312b2e1934a1ee26163b5399c25b26ad69ddc2820b224d710fc11ed6",
+      "public/hero/eia.webp": "ae8f6aded4d519fe1d8218189079e6a503450e36c6098379e97a06f971e5bd5b",
+      "public/hero/faq.webp": "25b340b7506280166964ba4b2cf3fc4a2407520a299557359bf61a4b1273dca2",
+      "public/hero/ghg-overovani-context.webp": "9c1b93286fb218f2fac3081d9d72d5da9b62e8ed93711467a146e12c86b7f968",
+      "public/hero/ghg-overovani.webp": "8bfbfc049dd894700d1c0334a8c791afeb74c3070df81fd82cf18e263193f932",
+      "public/hero/hluk-fallback.webp": "a4298f196e2cdf078846dd1990834c8ca620f647c62c6cf0041c27563670e39c",
+      "public/hero/hlukove-studie-context.webp": "28f83a4a20efe92ec4af5ce82bf105aad2b93d3845a462353114156600912ea2",
+      "public/hero/hlukove-studie.webp": "380d85f77991c7ad1070ba23511e9f0c49fd0d3482e3f591f0a3a1c4b36f0b1c",
+      "public/hero/homepage-eia.webp": "b6d791bf23bbd577200a61262d72a796422edb6a522efca13cdb79ce5f6c7c59",
+      "public/hero/homepage-mereni-640.avif": "65e99bd89b8b5624ab80bab378286e018f05b07a55a4ea9f8c277a880b3b3212",
+      "public/hero/homepage-mereni-640.webp": "29c3c11ea69414bbb265c231ce43a7add2a0894286f31b9ee450e6dc53138949",
+      "public/hero/homepage-mereni.avif": "81f7e480e58b70ccd0d26f515fa3a95edde698a412b75607d5f4419532501949",
+      "public/hero/homepage-mereni.webp": "7fdd991e7f524286de484fcca699936044d29f52105012a0953718ef3e2a6127",
+      "public/hero/homepage-studie.webp": "7cb238476c914ede22a929a5acd1686efe54011a37756d5de14242b05ae614f4",
+      "public/hero/imisni-dopady-context.webp": "1b35324cc8ab03e8c9e1c31db737ff1915b815586d3a0ff366f4e9f5971df8a9",
+      "public/hero/imisni-dopady.webp": "3a105074679d0e395174335f8144cf1ba202863c612a2c611e8f69793a03afaf",
+      "public/hero/ippc-integrovana-povoleni.webp": "757d836d38b7db68b977e6b56bafa2ca369713d5ff248d53d0832bef280f29b4",
+      "public/hero/ispop-context.webp": "4f89906a6b89dc8bb79ab7c8a89a1c9303fbe754ad0f31a8d40e99e953fbb523",
+      "public/hero/ispop.webp": "8c065199e08d7b96593a6ceaf76ee10932e77bc09fb2cec4973fe3d02db7a395",
+      "public/hero/kontakt.webp": "ef4b19ce17bbd33418a2e015173cc24882fa262326a2f100166fdeb9b2aa66cc",
+      "public/hero/mereni-diisokyanatu-context.webp": "78d4d9094209629766526021846e9a773bd9dcc4602d24c9a7cc02853fbc8327",
+      "public/hero/mereni-diisokyanatu.webp": "da9424c850750e186bb16d0abdebe1493a2f4cb849d2f7ab3147a1f6b820962d",
+      "public/hero/mereni-emisi-context.webp": "265040175df31df13e6bb23c63e46f9151531a7bbc35f12b6f3da21a39bbca25",
+      "public/hero/mereni-emisi.webp": "c50c3e0b6d639dea3671331b9823ba224a4768e7e28c62ff2202ba87211c23b1",
+      "public/hero/mereni-hluku-context.webp": "6ac5fd9837aca2e320bc5d6f56dfdaa436651b4b5d056cb6e59d80be6ffa3199",
+      "public/hero/mereni-hluku.webp": "8288dfbe3833ec49683189c424b4751e0d69b33b204db603b8d7a2b813ffb1f2",
+      "public/hero/mereni-mikroklimatu.webp": "da0cd7fd12f1628c5f11d0e97b3d4dbbc168765b31a8ff9b2e1a68fc7927ace0",
+      "public/hero/mereni-osvetleni.webp": "d3f8c79c723bcca73ab6ddb0e7aab48c59640b8dcd0fb46a1c1ab4c93d591095",
+      "public/hero/mereni-tepelna-chladova-zatez.webp": "f02a415f146fb3a79cd65e50040a5e72c694b56fa4ce18b0f35759917b9b99d8",
+      "public/hero/mereni-vibraci.webp": "659ac0e393f5ece25921c5d65e636c8995e3efb630032d357326de7b16239d61",
+      "public/hero/modelove-vypocty-context.webp": "fa4dbc756d4bab7aa77b075f78caac3e11bb7f6a9326998e88c9993ea0dbce8b",
+      "public/hero/modelove-vypocty.webp": "4e0b930c77f4f6c69eab53bfe6146b8aef1b947c04fee70c9d55e0c358da9b31",
+      "public/hero/o-spolecnosti-naturchem.webp": "874f4ad7d7e7da870b1d24502134b6443c9f19f95686fc14617dee5ed61d81aa",
+      "public/hero/odborne-posudky-context.webp": "4ab8880615144b3f09fe4b5f555dd1efbcaf7597e2fe8dd5e78852169fd388fe",
+      "public/hero/odborne-posudky.webp": "7c887ee860a827b93febb134e02e22b092eae6d679a7b798794a035d869668b4",
+      "public/hero/poradna/air-quality.jpg": "8eec98522f1e2ed45de9c213887150657c7ac8d694f652403aa99c6a8afd762d",
+      "public/hero/poradna/automotive.jpg": "063458bab5709b4d4d754a5c86958549f6e7e8c0e6a970a057e17949882f6ab7",
+      "public/hero/poradna/boiler-room.jpg": "d551760cc2f8157185c3b396768fcd69c7e540c773e12227d9f472456137f260",
+      "public/hero/poradna/diesel-generator.jpg": "9bcf747d2dbc8ffd63b8e759cd1e897cc76ebd9e578ddee22968c9fa1b8532cc",
+      "public/hero/poradna/documents-desk.jpg": "f086ed159bfe1e2a7350b550b36fbb7cf974509b98bba115f234633f8c7c4518",
+      "public/hero/poradna/factory-aerial.jpg": "7ceb5c0165821aebc566e83d6b81dd923081e2b4930a10d340e4b8ba3c50d39d",
+      "public/hero/poradna/hvac-units.jpg": "5c4693fee96551ec38cf65214da6881f3c1d5ae1bc67510eaec5af6ddb4382ed",
+      "public/hero/poradna/industrial-chimney.jpg": "2406a104bbda843148171b7ff7df71cb45ccab727f15743c1854dffbc12f017b",
+      "public/hero/poradna/laptop-forms.jpg": "7044916392646659d1def1c5d121b73e7bf46d61c6ff2cb07e24d45555b855e3",
+      "public/hero/poradna/paint-spray.jpg": "3ecec3bec4a959c471fe429a66619c8a1b711e8673a03e494fb37d8d331fc32c",
+      "public/hero/poradna/recycling.jpg": "fd5116d36ed33c9d7da2385398a12ed769b8a4a6f7f415b6b241ad01c8946448",
+      "public/hero/poradna/waste-landfill.jpg": "8e443217134c6314418e6de017f93e0037d6cd55ede26b09331f54b5f77cb20a",
+      "public/hero/poradna/woodworking.jpg": "0b7d6b246c3aec2815f37944337ffb9162c418934257d7a4fbd9b5f4ecc6027b",
+      "public/hero/poradna.webp": "f31537b08ab23c00774520db1d3290a148dcbd2b57a8f9f3f4e829081d2b6bc2",
+      "public/hero/povoleni-provozu.webp": "ecf6817ecfe4602e9bc95f155558d85ef7093b1518495ac429a50d38cce25c34",
+      "public/hero/pracovni-prostredi-context.webp": "b40112f872ee97e7fc31878d327b8f8ab7e608ddecd81cf741e1d5020ea0ed49",
+      "public/hero/pracovni-prostredi.webp": "c4e3c87101c4a8b6448a7c7f5ca0471b1cbc3407e12b90874c215f0500bb0bb7",
+      "public/hero/pristrojove-vybaveni.webp": "89c079dfb8f97649b9b0840721a7e452a94a23f3f4704d2ba10f3c2334084d5c",
+      "public/hero/provozni-rady-context.webp": "03c9785a1eeb3e52fde688df1a3265bdbd18f20e63c6c0b98fd18ca7899f9055",
+      "public/hero/provozni-rady.webp": "af5e114f64de8bb40fa488a32e3c8543714066fc2784188bbdb7da8628261b41",
+      "public/hero/provozy/automotive.webp": "fb868460a7e3f33e1fbf670efe4c54e269fa38c1870129275721467330cdd1e9",
+      "public/hero/provozy/bioplyn-biometan.webp": "d8930ac3e8c559a24215c8fa9ff65d4c6bc26dbaba0236446f93834100dd208e",
+      "public/hero/provozy/cisteni-spalin.webp": "c5eaeeeb035864192bdd4d7954854190dd1c71a2750dc2e98646194391094ad0",
+      "public/hero/provozy/cov-kaly.webp": "90da9dbac5d75b798b7f845c437207020f0068f1c20ef83204c2122abea8effa",
+      "public/hero/provozy/drevozpracujici.webp": "bd38ebfa2e142e834f7cc957ca965bfdd00b4d0d0cef598b7f4fe57d7312d835",
+      "public/hero/provozy/galvanovny.webp": "7a8ae39aca43dcfc5619ed4eab0dc4950c85e8a1594536b458c812b68d041534",
+      "public/hero/provozy/ghg-cnr.webp": "41fd1640af2c23891f19659a9e94f455a13db409028f1d1478fa44beecfb9d0c",
+      "public/hero/provozy/ispop-evidence.webp": "26b55209468acce7a2177411d65cc4a117692e0d3548ead9bb0199f8db87da7b",
+      "public/hero/provozy/kamenolomy.webp": "5703c0b4c6d877d2bf786ea2af5556e11d31b192a248535292916acd5d903638",
+      "public/hero/provozy/kompostarny.webp": "98d659a7e226861b1a3532164de99e4582cb751f88aa31c306afe7d8fa72e19f",
+      "public/hero/provozy/kotelny.webp": "6b71ace337d5c5d34fe1c0d05f58940293d620ed9337ad81bb4835b85178c84d",
+      "public/hero/provozy/krematoria.webp": "6d0c8a06333cdd544720841d79e4c9b92cca3f56cf28e2e67e1f192c91d76851",
+      "public/hero/provozy/laboratore.webp": "6f69651f7854cd5de366790a654978214ab04994a6536aeae646c049e735985e",
+      "public/hero/provozy/lakovny.webp": "f69a0bbececbcf1bf979b2d8bfdc68e6e0b8e9837175b4804fbb0e7a6822176d",
+      "public/hero/provozy/lesnictvi-doprava.webp": "f58eddfdee1aebf73df723a75492d5abda67950f65fdef46c506634ddd1c8395",
+      "public/hero/provozy/odborne-posudky-povoleni.webp": "2dccbb932bd8079d8da6aa0f4532b928b84fc484c747daca1e3c9b57e352bfff",
+      "public/hero/provozy/odpady-recyklace.webp": "b4ddd2d8738a426f53f81bf6747564f4bcc8ab1117358fc028c6fde3e763ca6a",
+      "public/hero/provozy/potravinarstvi.webp": "3c8f14546cdff39ae2620cdc8d39365e0c72d044bd60514dfa6baebd655f084f",
+      "public/hero/provozy/provozni-rady.webp": "76168ab5d25392150c099c7c32ccb4c99f22cfd7319caa705d83ec5fe3e5c4d8",
+      "public/hero/provozy/pyrolyza-kalu.webp": "4f9431d2bdffe9dc9fd30c608f87a234444ca3d7614a56a180212ba17fade949",
+      "public/hero/provozy/skladky-odpady.webp": "5b72086d680c0c82920c4655ff54733a69e70ed3ec5ad821d17392a96a28d5c7",
+      "public/hero/provozy/sklarstvi.webp": "c2259f6ad5998c3ca7c752299a101a501a301c0df47a5dc2c7728e38f4e6de98",
+      "public/hero/provozy/stavebni-zamery.webp": "7354ec86d60d24132fc6c7331615d7aab3f19fd918bc367fd0303bb28ff7693b",
+      "public/hero/provozy/susarny-kalu.webp": "33ec4f6a09c858b31dd6aa131328b5754489721535809a373191750156f9c6b4",
+      "public/hero/provozy/susarny-zemedelstvi.webp": "d4802ecb7ffaf043cecabf64d041160db7d9385dda6d245888e06dd98491649c",
+      "public/hero/provozy/svarovny.webp": "b7fc8ad1a926bcf9d56f5a3d92ec9455addff27e2b2071248a5ff026094789d0",
+      "public/hero/provozy/tepelna-cerpadla-vzt.webp": "0b6cabd5ffc329dac54f7bebabaa240c8d49816eebf1637bf73776984a5ebd59",
+      "public/hero/provozy/teplarny.webp": "c2b6e8fc95906e6178c9284616211cb3588bdb94bec3ba1938c0dcc841e339d9",
+      "public/hero/provozy/tiskarny-textilie.webp": "547edf61dd8b2f7f9fd2e543cfcf186195183e6d505b1677a8b586879305f479",
+      "public/hero/provozy/verejne-budovy.webp": "334438c688f0a905cf4665f0b6b18f86817dd731466323ea46a3c57994547886",
+      "public/hero/provozy/zemedelske-provozy.webp": "d2f2829a9cd8f3d97c3c8464116ce871db6911d32a66872b4b21c7f7641694e8",
+      "public/hero/provozy-a-technologie.webp": "d051a7d0fb8bdf0e3679f39c3f9c6b68aa18fee36db992bd55925378b42875f3",
+      "public/hero/reference.webp": "8ea3fe8697089d471308172cdad10d970138409bb2ca5848c8ddeb00dea81f24",
+      "public/hero/rozptylove-studie-context.webp": "f577358c55bdc6fe39b417b86eea7a98e94f56156eee4d73f4d530f14c7783e0",
+      "public/hero/rozptylove-studie.webp": "6a259e57e8f3f3134827a1a7eabf64f6b578344f221f07f42e3e77037154a862",
+      "public/hero/skoleni-chemicke-legislativy-context.webp": "0329096e2ea2691956db918752f8b21e684922332dff890637f4657be3179f9c",
+      "public/hero/skoleni-chemicke-legislativy.webp": "0329096e2ea2691956db918752f8b21e684922332dff890637f4657be3179f9c",
+      "public/hero/sluzby.webp": "c9d587e96539a22d440488baeee90de48505ae5b5d1a22a3e38244084b059aa0",
+      "public/hero/technicke-prilohy-context.webp": "af0fec5fca10351e82f0b9ddc4e3c5492a0a7681acabe1946a76bd95331f4bed",
+      "public/hero/technicke-prilohy.webp": "070f7f12b3af34006cb6cdb7059b986d4c022abf263d46f5ccd546818d3ec7b4",
+      "public/hero/typicke-zakazky.webp": "e59575bc3c682f3e7ed1d4d5e20ad73f2db3b52feea88749aa7429930ea7c0d0",
+      "public/hero/zjistovaci-rizeni-eia.webp": "4cc5b12f052ebc791ab0f125ea16ff9320c447fbb0f2412dc1e7758f0dd528c1",
+      "public/loga-referenci/aisin.svg": "b1ab1e295efd0386e18ac1f266eaad6d882152f2ebdf0c1302507e753439074b",
+      "public/loga-referenci/cd.svg": "c8fa0f30c6dc4305a697baddae276fdf016e60f0c439009e293287e4e4ad18cc",
+      "public/loga-referenci/cez.svg": "c6b0a00a7694672a49cb8c4fa0e7ff84a7649dec525bf003ca10cbacb313f444",
+      "public/loga-referenci/dura.svg": "68de030072f897f23443c545423b0c50eb914399aa731671ecc115f0ab9036d2",
+      "public/loga-referenci/eaton.svg": "b87342adeaead3a53572b751500a7245a3f208e69181acf360beda11d382be8f",
+      "public/loga-referenci/eon.svg": "4b9570664f3668b0371359da34d2e781c0abdbb80e834891401978dcf2e068e9",
+      "public/loga-referenci/heluz.svg": "3873bed9fdd955842a72b31ba836356b486e0bc052fcff96c1772c64a19780bc",
+      "public/loga-referenci/jihotrans.svg": "93b2ddfeae5b71597ac034cfbf0fe6ca1bf30ef966c204c4d427ea79e34d9555",
+      "public/loga-referenci/letiste-cb.png": "41f1ec237e2323d53cc1acbb025f04e44f5f55e2ab7970b91076448d36d0d197",
+      "public/loga-referenci/letiste-cb.webp": "840e9945ebbd86e1cdfbb6406ec6868b1bf64ecd9a645133674ec9a2b0fdedaf",
+      "public/loga-referenci/madeta.svg": "423a6f047c71b53cf178ae499ce0d76aefabb17c08a13ce3f38a4006b071cb06",
+      "public/loga-referenci/mtcomax.svg": "54f05c5cb999fe736f49b897cdfc59f637fd76117df639ecf5683bbd099c92ed",
+      "public/loga-referenci/rsd.svg": "bca609f4ef95743ef205d0160480366da842e8101bb2a0ebb018c05a432ac313",
+      "public/loga-referenci/silon.svg": "7cddf7a9d58f321f24f8fa21d2f7abeb376088905374b4ad8cf3d0b8462c2fff",
+      "public/loga-referenci/skoda.svg": "069e4e8f075ca7ca6f713a2f5e93c503499d6814e2f7c582d1b17e5a7853ede2",
+      "public/loga-referenci/strabag.svg": "67506c9f5cab063083501e459282e254ce8cf1ee006a1387389067c2dc56ad3b",
+      "public/loga-referenci/swietelsky-temp.png": "7600985bcb470ad1caead4f7594a9f425a3a24236a15e22bf32b699c88ad15a2",
+      "public/loga-referenci/swietelsky.png": "e474ab920404b93350af1253be6f771d6d91813789173244e8378bc2a3567bd4",
+      "public/loga-referenci/swietelsky.svg": "b986344969474dca4c3925429149e5681c88ee1e4c5b81e29f48ce7a87c75529",
+      "public/loga-referenci/swietelsky.webp": "d438d8a3455bb7c0e0e1c6c3bc9f4689a75ed9f31d4ec9836d5faedda101d4d0",
+      "public/loga-referenci/tcb-official-2x.png": "1b8475b1549a6a4259894fbf23989e32b29d75bdbbba097e83f2118a235d44b5",
+      "public/loga-referenci/tcb-official.png": "074efbb65c780b852f420b08e7bd823fb79f0b7bf0b26cdbb655ebb480e0013e",
+      "public/loga-referenci/teplarnapisek-temp.png": "1d97efe5773df244f4a86d4b36227b2ebf3fee490f4c360a208ec406a7116e7f",
+      "public/loga-referenci/teplarnapisek.png": "c63d10f7a341806bddd3f97ccf05a37305708809eb3eec908acec4fb48090532",
+      "public/loga-referenci/teplarnapisek.webp": "452773ec7c686e65c2ce527b1ff9d1b97d20921c3368d58055d84dab9534d4fd",
+      "public/loga-referenci/teplarnastrakonice-icon.png": "853e0f577d3b58e31b7a23252766be82dee7d512075da3921849430d34675dce",
+      "public/loga-referenci/teplarnastrakonice-test.svg": "ed355598a8e776f5897b967fd3956dfe0d1e12197cb4f24dbb1734d6e5c55f6e",
+      "public/loga-referenci/teplarnastrakonice.png": "02281cb91a41567412d0b244956f14eb258078cd63c1a7855236fdad7f13e729",
+      "public/loga-referenci/teplarnastrakonice.webp": "4d044adfa7c18f40b54c98236e18fab4d2088c6dce76c5faa5cbecebf73895be",
+      "public/loga-referenci/teplarnatucb.png": "0e44da85371840c3da3d8e4eee74d7fe392a37b72f70eb7e5b989fe8701df2d8",
+      "public/loga-referenci/teplarnatucb.webp": "911780bac9f22b66236bd50bace804c22355c408af878cd8a7fec4c758c60300",
+      "public/loga-referenci/tpi-icon.png": "1d97efe5773df244f4a86d4b36227b2ebf3fee490f4c360a208ec406a7116e7f",
+      "public/loga-referenci/ts-icon.png": "eafbd0c5e2fd6e15c37bb1645bcdc1a5c9cd6902ca499398eaf210c37389a347"
+    }
+  }
+}

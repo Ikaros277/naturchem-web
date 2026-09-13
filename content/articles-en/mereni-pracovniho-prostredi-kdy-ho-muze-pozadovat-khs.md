@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/khs-pracovni-prostredi.webp
 title: 'Workplace environment measurement: when can KHS require it?'
 slug: mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs
 excerpt: 'The regional hygiene station may require workplace environment measurement especially when it is necessary to verify employee exposure to risk factors of work. Chemical substances, dust, noise, vibration, microclimate, lighting or documentation for job categorisation are most often addressed.'

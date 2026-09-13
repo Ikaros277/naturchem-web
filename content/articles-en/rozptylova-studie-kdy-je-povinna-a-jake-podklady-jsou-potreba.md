@@ -1,4 +1,5 @@
 ---
+heroImage: /hero/generated-2026-09/rozptylova-studie-clanek.webp
 title: 'Dispersion study: when is it mandatory and what documentation is needed?'
 slug: rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba
 excerpt: 'A dispersion study assesses how emissions from a stationary source, traffic, or other project will manifest in surrounding air quality. In practice it is addressed especially when permitting new sources, operational changes, capacity increases, significant related traffic, or in proceedings where the regional authority needs to assess immission contributions of the project.'

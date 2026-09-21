@@ -12,6 +12,7 @@ const load = require("./lib/load-typescript.js")({
   "./homepage.module.css": css,
   "./count-up-stat.module.css": css,
   "./service-improvements.module.css": css,
+  "./header-inquiry-cta.module.css": css,
   "next/link": { __esModule: true, default: link },
   "@/lib/i18n/locale-link": { LocaleLink: link },
   "@/components/PageHeroBand": { PageHeroBand: ({ children }) => React.createElement("section", null, children) },
@@ -27,6 +28,7 @@ const { serviceMegaGroups } = load(path.join(root, "src/lib/service-megamenu.ts"
 const { localesForConstrainedPath } = load(path.join(root, "src/lib/locale-constrained-paths.ts"));
 const { stripLocaleFromPathname } = load(path.join(root, "src/lib/i18n/navigation.ts"));
 const { HomeHeroShell } = load(path.join(root, "src/components/HomeHeroShell.tsx"));
+const { HeaderInquiryCta } = load(path.join(root, "src/components/HeaderInquiryCta.tsx"));
 const { CountUpStatValue } = load(path.join(root, "src/components/CountUpStatValue.tsx"));
 const { verifyImmutableAssets, hash } = require("./verify_immutable_assets.js");
 
@@ -43,6 +45,15 @@ async function main() {
   }
   for (const locale of ["cs", "en", "de"]) {
     const prefix = locale === "cs" ? "" : "/" + locale;
+    const labels = require(path.join(root, "messages", locale + ".json")).header;
+    for (const className of ["button nav-cta-desktop", "button nav-cta-mobile", "button nav-mobile-cta"]) {
+      const cta = renderToStaticMarkup(React.createElement(HeaderInquiryCta, { labels, className }));
+      assert.equal((cta.match(/<a /g) || []).length, 1, "Keep one inquiry link per header variant");
+      // LocaleLink is mocked as an anchor, without URL localization or normalization.
+      assert.ok(cta.includes('href="/kontakt#poptavkovy-formular"'));
+      assert.ok(cta.includes(labels.cta) && cta.includes(labels.responseTime));
+      assert.ok(cta.indexOf("data-header-inquiry-response") < cta.indexOf("</a>"));
+    }
     const html = renderToStaticMarkup(await ServicePage({
       locale, slug: "sluzby/mereni-hluku", title: "Noise fixture", intro: "Synthetic test only",
       contactService: "Měření hluku", scope: Array.from({ length: 7 }, (_, i) => "SCOPE-" + i),

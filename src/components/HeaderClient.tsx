@@ -3,13 +3,13 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { contactFormHref } from "@/lib/contact-url";
 import type { HeaderClientProps } from "@/lib/header-nav-data";
 import { kontaktNav } from "@/lib/navigation";
 import { LocaleLink, useLocalizedPathname } from "@/lib/i18n/locale-link";
 import { BrandLogo } from "@/components/BrandLogo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { MobileNavSummaryRow } from "@/components/MobileNavSummaryRow";
+import { HeaderInquiryCta } from "@/components/HeaderInquiryCta";
 
 const ServiceMegaMenu = dynamic(
   () => import("@/components/ServiceMegaMenu").then((mod) => mod.ServiceMegaMenu),
@@ -266,9 +266,7 @@ export function HeaderClient({
                 <div className="nav-mobile-lang-row">
                   <LanguageSwitcher />
                 </div>
-                <LocaleLink className="button nav-mobile-cta" href={contactFormHref} onClick={closeMenu}>
-                  {t.cta}
-                </LocaleLink>
+                <HeaderInquiryCta className="button nav-mobile-cta" labels={t} onClick={closeMenu} />
               </div>
             </div>
           </div>,
@@ -392,12 +390,8 @@ export function HeaderClient({
             <LocaleLink href={kontaktNav.href}>{t.contact}</LocaleLink>
           </nav>
 
-          <LocaleLink className="button nav-cta-desktop" href={contactFormHref}>
-            {t.cta}
-          </LocaleLink>
-            <LocaleLink className="button nav-cta-mobile" href={contactFormHref}>
-              {t.cta}
-            </LocaleLink>
+          <HeaderInquiryCta className="button nav-cta-desktop" labels={t} />
+          <HeaderInquiryCta className="button nav-cta-mobile" labels={t} />
             <button
               ref={mobileToggleRef}
               type="button"

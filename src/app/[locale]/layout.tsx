@@ -5,7 +5,6 @@ import { DeferredClientWidgets } from "@/components/DeferredClientWidgets";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { GoogleConsentModeInit } from "@/components/GoogleConsentModeInit";
 import { OutboundLinkTelemetry } from "@/components/OutboundLinkTelemetry";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/Header";
 import { SkipToContent } from "@/components/SkipToContent";
 import { Footer } from "@/components/Footer";
@@ -27,7 +26,10 @@ const fontSans = Source_Sans_3({
   subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
   weight: ["400", "600", "700"],
-  display: "swap"
+  display: "swap",
+  /** Don't preload fonts — they compete with the mobile LCP hero image on slow 4G. */
+  preload: false,
+  adjustFontFallback: true
 });
 
 type Props = {
@@ -141,7 +143,6 @@ export default async function LocaleLayout({ children, params }: Props) {
           <CookieConsentBanner />
           <DeferredClientWidgets />
           <OutboundLinkTelemetry />
-          <SpeedInsights />
         </LocaleProvider>
       </body>
     </html>

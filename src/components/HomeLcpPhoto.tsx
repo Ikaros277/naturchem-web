@@ -22,7 +22,7 @@ export function HomeLcpPhoto({ theme }: Props) {
         width={1200}
         height={800}
         loading="eager"
-        decoding="async"
+        decoding="sync"
         fetchPriority="high"
         className="hero-photo-img hero-photo-img--lcp"
         style={{ objectPosition: position }}

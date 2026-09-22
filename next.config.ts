@@ -53,7 +53,9 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     globalNotFound: true,
-    optimizePackageImports: ["react-markdown"]
+    optimizePackageImports: ["react-markdown"],
+    /** Inline CSS into HTML to remove render-blocking stylesheet round-trips (mobile LCP). */
+    inlineCss: true
   },
   async headers() {
     return [

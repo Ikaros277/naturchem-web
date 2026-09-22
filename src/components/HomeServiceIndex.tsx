@@ -43,8 +43,18 @@ export function HomeServiceIndex({ locale }: { locale: Locale }) {
             <Link className={`${styles.serviceCard} ${index < 3 ? styles.measurementCard : styles.studyCard}`} href={localizeHref(href, locale)}>
               {index < 3 ? (
                 <div className={styles.servicePhoto} aria-hidden="true">
-                  {/* eslint-disable-next-line @next/next/no-img-element -- Existing static WebP; no runtime image transformations. */}
-                  <img src={`/hero/${slug}.webp`} alt="" width={640} height={360} loading="lazy" decoding="async" />
+                  {/* eslint-disable-next-line @next/next/no-img-element -- Pre-sized card WebP; no runtime image transformations. */}
+                  <img
+                    src={`/hero/${slug}-card.webp`}
+                    srcSet={`/hero/${slug}-card-192.webp 192w, /hero/${slug}-card.webp 384w`}
+                    sizes="(max-width: 767px) 96px, (max-width: 1024px) 30vw, 280px"
+                    alt=""
+                    width={384}
+                    height={216}
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                  />
                 </div>
               ) : (
                 <div className={styles.studyGraphic}>

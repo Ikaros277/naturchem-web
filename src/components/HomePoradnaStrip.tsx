@@ -28,7 +28,7 @@ export async function HomePoradnaStrip({ locale }: { locale: Locale }) {
             <Link key={article.slug} href={article.href} className={styles.article}>
               <div className={styles.articlePhoto} aria-hidden="true">
                 {getGeneratedIllustrationSources(imageSrc) ? (
-                  <GeneratedIllustration src={imageSrc} sizes="(max-width: 767px) calc(100vw - 32px), 33vw" />
+                  <GeneratedIllustration src={imageSrc} sizes="(max-width: 1024px) 640px, 400px" />
                 ) : (
                   // eslint-disable-next-line @next/next/no-img-element -- Lazy static assets do not consume image transformation quota.
                   <img src={imageSrc} alt="" width={640} height={360} loading="lazy" decoding="async" />

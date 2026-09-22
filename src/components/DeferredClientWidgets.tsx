@@ -13,11 +13,19 @@ const LiveChatWidgets = dynamic(
   { ssr: false }
 );
 
+const SpeedInsights = dynamic(
+  () => import("@vercel/speed-insights/next").then((m) => m.SpeedInsights),
+  { ssr: false }
+);
+
 export function DeferredClientWidgets() {
   return (
     <>
       <DelayedMount delayMs={6000}>
         <LiveChatWidgets />
+      </DelayedMount>
+      <DelayedMount delayMs={4000}>
+        <SpeedInsights />
       </DelayedMount>
       <ConsentAwareTracking />
     </>

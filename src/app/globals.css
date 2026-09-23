@@ -7715,6 +7715,21 @@ main.services-index-page:has(> .page-hero-band) {
   min-height: 2.75rem;
 }
 
+.nav-mobile-direct-services {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #d7e2df;
+}
+
+.nav-mobile-direct-services .mega-menu-link-row {
+  padding-block: 0.65rem;
+}
+
+body:has(.nav-mobile-sheet) .live-chat-whatsapp {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* ——— Kategoriální design systém služeb ——— */
 
 .category-badge {
@@ -9850,6 +9865,11 @@ main.home-page + .site-footer {
 }
 
 /* Tawk bublina vpravo dole, WhatsApp vlevo — bez překryvu. */
+body:has([data-tawk-suppressed]) div:has(> iframe[title="Widget chatu"]),
+body:has([data-tawk-suppressed]) div:has(> iframe[title="chat widget" i]) {
+  display: none !important;
+}
+
 body:has(.live-chat-whatsapp) .tawk-min-container {
   right: 1.1rem !important;
   left: auto !important;

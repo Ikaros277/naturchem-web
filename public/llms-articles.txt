@@ -1,6 +1,6 @@
 # NATURCHEM — odborné články (poradna)
 
-> 71 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
+> 73 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
 
 ## Index
 
@@ -40,6 +40,7 @@
 - Kdy je potřeba měření emisí a kdy stačí jiný podklad?: https://www.naturchem.cz/poradna/kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad/
 - Kdy může úřad požadovat odborný posudek i u změny stávajícího zdroje?: https://www.naturchem.cz/poradna/kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje/
 - Kogenerační jednotka: emise, hluk, měření a povolení provozu: https://www.naturchem.cz/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu/
+- Kolaudace výrobní haly nebo provozovny: jaká měření může požadovat KHS a co připravit: https://www.naturchem.cz/poradna/kolaudace-vyrobni-haly-provozovny-khs-mereni/
 - Příprava na kontrolu ČIŽP v oblasti ovzduší: dokumenty a skutečnosti, které mít v pořádku: https://www.naturchem.cz/poradna/kontrola-cizp-ovzdusi/
 - Kotelna a plynový kotel: kdy se měří emise CO a NOx?: https://www.naturchem.cz/poradna/kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox/
 - Lakovna: emise, VOC, provozní řád, měření a povolení provozu: https://www.naturchem.cz/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu/
@@ -77,6 +78,7 @@
 - Svařovna: prach, kovy, odsávání, pracovní prostředí a emise: https://www.naturchem.cz/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise/
 - Tepelná zátěž na pracovišti: kdy je nutné měření a jak se stanoví přípustná doba práce: https://www.naturchem.cz/poradna/tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace/
 - Tónové složky hluku a česká legislativa: https://www.naturchem.cz/poradna/tonove-slozky-hluku-ceska-legislativa-provozovatel/
+- Vyjmenovaný stacionární zdroj: jak poznat, zda potřebujete povolení provozu: https://www.naturchem.cz/poradna/vyjmenovany-stacionarni-zdroj-povoleni-provozu/
 - Přišla výzva KHS k měření pracovního prostředí: jak sestavit správný rozsah: https://www.naturchem.cz/poradna/vyzva-khs-mereni-pracovniho-prostredi/
 - Záložní dieselagregát: emise, hluk a povolovací podklady: https://www.naturchem.cz/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady/
 - Záložní dieselagregát: kdy je jen záloha a kdy už běžný zdroj emisí: https://www.naturchem.cz/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny/

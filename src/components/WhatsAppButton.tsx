@@ -8,9 +8,7 @@ import { useTranslations } from "@/lib/i18n/locale-context";
 export function WhatsAppButton() {
   const t = useTranslations("common");
   const pathname = usePathname();
-  const isHomepage = pathname === "/" || /^\/(en|de)\/?$/.test(pathname);
-
-  if (!isWhatsAppEnabled() || isHomepage || isChatExcludedPath(pathname)) return null;
+  if (!isWhatsAppEnabled() || isChatExcludedPath(pathname)) return null;
 
   return (
     <a

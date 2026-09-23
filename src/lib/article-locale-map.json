@@ -137,6 +137,9 @@
     "en",
     "de"
   ],
+  "kolaudace-vyrobni-haly-provozovny-khs-mereni": [
+    "cs"
+  ],
   "kontrola-cizp-ovzdusi": [
     "cs"
   ],
@@ -307,6 +310,9 @@
     "cs",
     "en",
     "de"
+  ],
+  "vyjmenovany-stacionarni-zdroj-povoleni-provozu": [
+    "cs"
   ],
   "vyzva-khs-mereni-pracovniho-prostredi": [
     "cs"

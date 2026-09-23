@@ -1,4 +1,5 @@
 import { IndexCard } from "@/components/IndexCard";
+import { ReferenceHashTarget } from "@/components/ReferenceHashTarget";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { getMessages } from "@/lib/i18n/get-messages";
 import type { Locale } from "@/lib/i18n/locales";
@@ -47,6 +48,7 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
 
   return (
     <div className="service-groups-accordion-inner reference-examples-groups">
+      <ReferenceHashTarget groupIds={groups.map(group => group.id)} />
       {groups.map((group) => {
         const groupExamples = group.exampleIds
           .map((id) => examplesById.get(id))

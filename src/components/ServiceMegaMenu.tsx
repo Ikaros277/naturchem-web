@@ -9,6 +9,7 @@ import { serviceMegaGroupHeadHrefs } from "@/lib/megamenu-head-hrefs";
 import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { serviceMegaGroupIcons, type ServiceMegaGroupId } from "@/lib/megamenu-types";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
+import { splitMobileServiceLinks } from "@/lib/mobile-service-links";
 
 function hasHashHref(href: string) {
   return href.includes("#");
@@ -38,7 +39,10 @@ function MegaMenuLinkRow({
       <LocaleLink
         href={href}
         scroll={hasHashHref(href) ? false : undefined}
-        onClick={hasHashHref(href) ? onHashLinkClick : onNavigate}
+        onClick={() => {
+          if (hasHashHref(href)) onHashLinkClick();
+          onNavigate?.();
+        }}
         className="mega-menu-link-row"
         data-category={getServiceCategoryFromHref(href) ?? undefined}
       >
@@ -121,9 +125,16 @@ export function MobileServiceMegaGroups({
   groups: readonly ServiceHeaderMegaGroup[];
   onNavigate?: () => void;
 }) {
+  const { direct, remaining } = splitMobileServiceLinks(groups);
   return (
     <>
-      {groups.map((group) => {
+      <ul className="mega-menu-link-list mega-menu-link-list--mobile nav-mobile-direct-services">
+        {direct.map(item => (
+          <MegaMenuLinkRow key={item.href} href={item.href} label={item.label}
+            description="" groupId={item.groupId} onNavigate={onNavigate} />
+        ))}
+      </ul>
+      {remaining.map((group) => {
         const headHref = group.id ? serviceMegaGroupHeadHrefs[group.id] : group.links[0]?.href;
 
         return (

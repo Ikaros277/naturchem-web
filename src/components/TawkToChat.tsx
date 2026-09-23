@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useCookieConsentState } from "@/components/CookieConsentBanner";
 import { getTawkConfig } from "@/lib/live-chat";
-import { isChatExcludedPath } from "@/lib/chat-visibility";
+import { canShowTawk } from "@/lib/chat-visibility";
 
 type TawkApi = { hideWidget?: () => void; showWidget?: () => void; onLoad?: () => void };
 
 const mobileTawkMq = "(max-width: 1023px)";
 
 function useIsMobileViewport() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     const mq = window.matchMedia(mobileTawkMq);
@@ -30,26 +30,26 @@ export function TawkToChat() {
   const tawk = getTawkConfig();
   const isMobile = useIsMobileViewport();
   const pathname = usePathname();
-  const isHomepage = pathname === "/" || /^\/(en|de)\/?$/.test(pathname);
-
-  const visible = Boolean(tawk && consent.updatedAt && consent.marketing && !isMobile && !isHomepage && !isChatExcludedPath(pathname));
+  const visible = Boolean(tawk && canShowTawk(pathname, isMobile, Boolean(consent.updatedAt && consent.marketing)));
 
   useEffect(() => {
     const host = window as Window & { Tawk_API?: TawkApi };
     const api = host.Tawk_API ??= {};
     const syncVisibility = () => {
-      if (visible) api.showWidget?.();
-      else api.hideWidget?.();
+      // The asynchronously loaded vendor script may replace the initial API object.
+      if (visible) host.Tawk_API?.showWidget?.();
+      else host.Tawk_API?.hideWidget?.();
     };
     api.onLoad = syncVisibility;
     syncVisibility();
     return () => {
       if (api.onLoad === syncVisibility) api.onLoad = undefined;
-      api.hideWidget?.();
+      host.Tawk_API?.hideWidget?.();
     };
   }, [visible]);
 
-  if (!tawk || !visible) return null;
+  // Also guard already-loaded iframes if the vendor reopens them after a resize.
+  if (!tawk || !visible) return <span hidden data-tawk-suppressed="true" />;
 
   return (
     <Script id="tawk-to-live-chat" strategy="lazyOnload">

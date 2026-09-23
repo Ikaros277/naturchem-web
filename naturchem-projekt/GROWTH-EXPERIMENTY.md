@@ -2,6 +2,31 @@
 
 > Interní provozní dokument. Aktualizovat podle živého webu, GSC a GA4. Starší projektové roadmapy mohou být neaktuální.
 
+## UX-2026-09-22 — lokální B2B úpravy a obnovení chatu
+
+Stav aktualizovaný 23. 9. 2026: připraveno lokálně ve větvi `codex/b2b-quality-2026-09-22`, nově na základu `545ba57` se zrychlením Cursoru. Veřejný produkční snapshot i vzdálený GitHub main při kontrole stále uváděly `585ae82`; veřejná homepage neměla nové malé obrázky karet a stále přednačítala dva fonty. Bez nasazení a bez tvrzení o růstu SEO či poptávek. Aktuální GSC/GA4 baseline nebyla v tomto implementačním kroku odečtena; starší čísla níže nejsou současný výsledek.
+
+| Oblast | Ověřený výchozí stav | Lokální změna / hypotéza |
+| --- | --- | --- |
+| Homepage / kontakt | Homepage explicitně blokovala Tawk i WhatsApp. | Tawk na desktopu po marketingovém souhlasu, WhatsApp vlevo dole; kontaktní formulář nadále bez překryvů. Oprava dostupnosti kontaktu, nikoliv konverze sama o sobě. |
+| Mobilní menu | Služby byly dostupné až uvnitř kategorií. | Šest hlavních služeb přímo pod položkou Služby; zbytek zůstává v kategoriích bez duplikací. Hypotéza: snazší nalezení služby. |
+| Články na homepage | Dva nové články neměly individuální mapování a používaly stejný obecný motiv. | Dvě odlišné existující tematické ilustrace a kratší titulky karet. H1, metadata, publikace a URL článků beze změny. |
+| Důvěryhodnost homepage | Skutečný tým a podrobnější příklady byly až na vnitřních stránkách. | Návrh nového bloku s portrétem stažen 23. 9. podle přání uživatele. Homepage bez osobního bloku; portréty zachovány pouze v existujícím týmu na stránce O společnosti. |
+| Reference u služeb | Odkaz vedl na obecný přehled příkladů. | Odkaz na odpovídající skupinu, automatické rozbalení cílové skupiny, viditelné označení anonymizace. |
+
+Ochrany: původní pracovní prostor a změny Cursoru nedotčeny; žádné nové balíčky, ISR intervaly, placené služby nebo transformace obrázků; tři stávající grafiky studií na homepage zachovány. Výchozí hero/H1/hlavní CTA a landing-page experimenty neměněny. Tawk může po souhlasu zvýšit klientskou síťovou zátěž; obnovuje se na výslovné přání uživatele, pouze na desktopu.
+
+Před případným nasazením znovu zkontrolovat rozdíl vůči aktuálnímu main a překryv s neuloženými změnami Cursoru. Změny z tohoto balíčku nelze bez řízeného testu vyhodnotit jednotlivě. Pro souhrnné vyhodnocení porovnat 28 kompletních dní před/po nasazení (při nízkém počtu poptávek 56), oddělit mobil/desktop a organické návštěvy. Hlavní metrika: skutečně úspěšné `generate_lead` a firmou potvrzené kvalifikované poptávky; podpůrně `form_start`, návštěvy služeb a telefon/e-mail. Kliknutí na chat ani WhatsApp není automaticky přijatá poptávka.
+
+### Podklady, které musí dodat firma
+
+- Vlastní fotografie měření, přístrojů a týmu v provozu, včetně oprávnění k použití. Generované ilustrace nenahrazují dokumentaci skutečných zakázek.
+- Tři konkrétní zakázky s ověřeným zadáním, rozsahem a výsledkem; souhlas s názvem klienta nebo schválená anonymizace. Nelze přisuzovat výsledky klientům pouze podle jejich loga.
+- Schválená anonymizovaná ukázka protokolu / studie bez osobních a obchodně citlivých dat.
+- Schválení případných cenových rozpětí či termínů realizace. Stávající příslib reakce do 24 hodin není příslib hotové nabídky ani provedení měření.
+
+Technické a vizuální výsledky kontroly: viz `B2B-QUALITY-2026-09-22.md`.
+
 ## Co považujeme za úspěch
 
 - Primární konverze: úspěšně odeslaná poptávka (`generate_lead`).

@@ -6,6 +6,7 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import { getLatestPoradnaArticles } from "@/lib/poradna-articles";
 import { getHeroImageSrc } from "@/lib/hero-images";
 import { heroThemeForArticle } from "@/lib/poradna-topic";
+import { homeArticleTitle } from "@/lib/home-article-titles";
 import { GeneratedIllustration } from "@/components/GeneratedIllustration";
 import { getGeneratedIllustrationSources } from "@/lib/generated-illustrations";
 import styles from "./homepage.module.css";
@@ -36,7 +37,7 @@ export async function HomePoradnaStrip({ locale }: { locale: Locale }) {
               </div>
               <div className={styles.articleBody}>
                 <time dateTime={article.publishedAt}>{formatArticleDate(article.publishedAt, locale)}</time>
-                <h3>{article.title}</h3>
+                <h3>{homeArticleTitle(article, locale)}</h3>
                 <span className={styles.articleCta}>{messages.common.readMore} <span aria-hidden="true"> ↗</span></span>
               </div>
             </Link>

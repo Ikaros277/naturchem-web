@@ -5,6 +5,8 @@ import type { HeroTheme } from "@/lib/hero-images";
  * Klíč = slug článku (frontmatter nebo název souboru).
  */
 export const poradnaArticleHeroThemes: Record<string, HeroTheme> = {
+  "kolaudace-vyrobni-haly-provozovny-khs-mereni": "poradna-automotive",
+  "vyjmenovany-stacionarni-zdroj-povoleni-provozu": "poradna-boiler-room",
   "vyzva-khs-mereni-pracovniho-prostredi": "pracovni-prostredi",
   "priprava-na-mereni-emisi": "mereni-emisi",
   "mereni-rozpoustedel-pracovniho-ovzdusi": "chemicke-latky",

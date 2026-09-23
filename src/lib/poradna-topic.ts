@@ -87,8 +87,8 @@ export function poradnaTopicIconKey(article: ArticleTopicInput) {
 const topicToHeroTheme: Record<PoradnaTopic, HeroTheme> = {
   Emise: "emise",
   "Hluk a vibrace": "hluk",
-  "Rozptylové studie": "hluk",
-  "Pracovní prostředí": "emise",
+  "Rozptylové studie": "rozptylove-studie",
+  "Pracovní prostředí": "pracovni-prostredi",
   "Prašnost a deponie": "emise",
   "EIA a povolování": "dokumentace",
   "KHS, ČIŽP a úřady": "dokumentace",

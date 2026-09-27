@@ -17,6 +17,8 @@ const load = require("./lib/load-typescript.js")({
   "./count-up-stat.module.css": css,
   "./service-improvements.module.css": css,
   "./header-inquiry-cta.module.css": css,
+  "./service-detail.module.css": css,
+  "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/hero/mereni-emisi.webp", alt: "" }) },
   "next/link": { __esModule: true, default: link },
   "next/script": { __esModule: true, default: () => null },
   "next/navigation": { usePathname: () => "/" },
@@ -47,6 +49,49 @@ const { TawkToChat } = load(path.join(root, "src/components/TawkToChat.tsx"));
 const { verifyImmutableAssets, hash } = require("./verify_immutable_assets.js");
 
 async function main() {
+  for (const locale of ["cs", "en", "de"]) {
+    const serviceModule = load(path.join(root, "src/lib/dedicated-service-pages" + (locale === "cs" ? "" : "-" + locale) + ".ts"));
+    const pages = serviceModule.dedicatedServicePages || serviceModule.dedicatedServicePagesEn;
+    const { stripInlineMarkdown } = load(path.join(root, "src/lib/plain-text.ts"));
+    for (const page of Object.values(pages)) {
+      const html = renderToStaticMarkup(await ServicePage({ ...page, locale }));
+      assert.ok(html.includes('data-service-layout="compact"'), page.slug);
+      assert.equal((html.match(/<h1\b/g) || []).length, 1, page.slug + ": one H1");
+      assert.ok(!html.includes("service-evidence"), "No case study block in service layout");
+      for (const field of ["scope", "whenNeeded", "docs", "outputs", "commonMistakes", "practicalSituations"]) {
+        const visibleText = html.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, "")
+          .replace(/&amp;/g, "&").replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, ">").replace(/&lt;/g, "<");
+        for (const item of page[field] || []) assert.ok(visibleText.includes(stripInlineMarkdown(item)), page.slug + ": missing " + field);
+      }
+    }
+  }
+  const emissionFixture = {
+    slug: "sluzby/mereni-emisi", title: "Měření emisí", intro: "Synthetic emissions fixture",
+    contactService: "Měření emisí", faqCategoryId: "emise",
+    scope: ["PILOT-SCOPE"], whenNeeded: ["PILOT-WHEN"], outputs: ["PILOT-OUTPUT"],
+    docs: ["PILOT-DOC"], commonMistakes: ["PILOT-RISK"], practicalSituations: ["PILOT-PRACTICE"]
+  };
+  for (const locale of ["cs", "en", "de"]) {
+    const html = renderToStaticMarkup(await ServicePage({ ...emissionFixture, locale }));
+    assert.ok(html.includes('data-service-layout="compact"'), "Compact layout must support all locales");
+    for (const field of ["SCOPE", "WHEN", "OUTPUT", "DOC", "RISK", "PRACTICE"]) {
+      assert.ok(html.includes("PILOT-" + field), "Original technical content lost: " + field);
+    }
+    if (locale === "cs") {
+      assert.equal((html.match(/<h1\b/g) || []).length, 1);
+      assert.equal((html.match(/<img\b/g) || []).length, 1, "Only one service image in the pilot");
+      assert.ok(!html.includes("service-overview-grid"));
+      const schemas = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(m => JSON.parse(m[1]));
+      for (const type of ["Service", "BreadcrumbList", "FAQPage", "ItemList"]) assert.ok(schemas.some(s => s["@type"] === type), "Missing schema: " + type);
+      for (const item of schemas.find(s => s["@type"] === "ItemList").itemListElement) {
+        assert.ok(html.includes('href="' + new URL(item.url).pathname + '"'), "Related link lost from pilot");
+      }
+      for (const question of schemas.find(s => s["@type"] === "FAQPage").mainEntity) assert.ok(html.includes(question.name), "FAQ schema must match displayed disclosures");
+      const contacts = [...html.matchAll(/href="([^"]*kontakt[^"]*)"/g)].map(m => m[1]);
+      assert.equal(contacts.length, 2, "Two contextual inquiry actions, not repeated blocks");
+      for (const href of contacts) assert.ok(href.includes("service=M%C4%9B%C5%99en%C3%AD%20emis%C3%AD") && href.endsWith("#poptavkovy-formular"));
+    }
+  }
   const homepageSource = fs.readFileSync(path.join(root, "src/app/[locale]/page.tsx"), "utf8");
   assert.ok(!homepageSource.includes("HomeProof") && !homepageSource.includes("/team/"), "Homepage should not contain the rejected director profile block");
   const pendingViewportChat = renderToStaticMarkup(React.createElement(TawkToChat));

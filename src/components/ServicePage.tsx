@@ -1,16 +1,5 @@
-import Link from "next/link";
-import styles from "./service-improvements.module.css";
-import { PageHeroBand } from "@/components/PageHeroBand";
-import { OverviewGridCell } from "@/components/OverviewGridCell";
-import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
-import { IndexCard } from "@/components/IndexCard";
-import { InlineEmphasis } from "@/components/InlineEmphasis";
-import { ServiceFaqTeaser } from "@/components/ServiceFaqTeaser";
-import { ServicePoradnaTeaser } from "@/components/ServicePoradnaTeaser";
-import { ServiceEvidence } from "@/components/ServiceEvidence";
-import { PageCtaStrip } from "@/components/PageCtaStrip";
-import { ServiceIcon } from "@/components/ServiceIcon";
 import { JsonLd } from "@/components/Schema";
+import { ServiceDetailLayout } from "@/components/ServiceDetailLayout";
 import { getFaqTeaserItemsForLocale } from "@/lib/i18n/faq-helpers";
 import { getCtaCopy } from "@/lib/i18n/cta-i18n";
 import { getProvozyNavLabel, getSectors, getSiteServices } from "@/lib/i18n/content";
@@ -20,15 +9,12 @@ import type { Locale } from "@/lib/i18n/locales";
 import { getSeoLandingsForService } from "@/lib/seo-landing-service-links";
 import { contactUrl } from "@/lib/contact-url";
 import { relatedSectorsForService } from "@/lib/service-sector-links";
-import { CategoryBadge } from "@/components/CategoryBadge";
 import { getServiceCategoryFromHref } from "@/lib/service-categories";
-import { getDetailGroupIconKey } from "@/lib/service-icons";
-import { getServiceHeroTheme } from "@/lib/hero-images";
 import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
 import { stripInlineMarkdown } from "@/lib/plain-text";
 import { company, siteUrl } from "@/lib/site";
 
-type Props = {
+export type ServicePageProps = {
   locale: Locale;
   title: string;
   intro: string;
@@ -46,7 +32,7 @@ type Props = {
   faqCategoryId?: string;
 };
 
-export async function ServicePage(props: Props) {
+export async function ServicePage(props: ServicePageProps) {
   const { locale } = props;
   const copy = getServiceCopy(locale);
   const ctaCopy = getCtaCopy(locale);
@@ -67,28 +53,10 @@ export async function ServicePage(props: Props) {
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
   const seoLandingLinks = await getSeoLandingsForService(`/sluzby/${bareSlug}`, locale, 3);
   const relatedLinks = props.relatedLinks ?? [];
-  const keyScope = props.scope.slice(0, 4);
-  const keyWhenNeeded = props.whenNeeded.slice(0, 4);
-  const keyOutputs = props.outputs.slice(0, 3);
-  const keyDocs = props.docs.slice(0, 3);
-  const practicalExamples = props.practicalSituations ?? [];
   const sectorLabel = await getProvozyNavLabel(locale);
   const faqTeaserItems = props.faqCategoryId
     ? await getFaqTeaserItemsForLocale(props.faqCategoryId, locale, 5)
     : [];
-  const detailGroups = [
-    { title: props.scopeHeading ?? copy.scopeHeading, items: props.scope.slice(4) },
-    { title: copy.whenNeededHeading, items: props.whenNeeded.slice(4) },
-    { title: copy.outputsHeading, items: props.outputs.slice(3) },
-    { title: copy.howToStartHeading, items: props.docs.slice(3) },
-    practicalExamples.length > 0
-      ? { title: copy.practicalExamplesHeading, items: practicalExamples }
-      : null,
-    props.commonMistakes && props.commonMistakes.length > 0
-      ? { title: copy.mistakesHeading, items: props.commonMistakes }
-      : null
-  ].filter((group): group is { title: string; items: string[] } => group !== null && group.items.length > 0);
-
   const mergedRelated = [
     ...relatedLinks.map((l) => ({
       href: l.href,
@@ -170,209 +138,19 @@ export async function ServicePage(props: Props) {
     }))
   };
 
-  const heroTheme = getServiceHeroTheme(props.slug);
-  const serviceCategory = getServiceCategoryFromHref(`/${props.slug}`);
-
   return (
-    <main className="page">
-      <JsonLd data={serviceData} />
-      <JsonLd data={breadcrumbData} />
-      {faqTeaserItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(faqTeaserItems)} /> : null}
-      {mergedRelated.length > 0 ? (
-        <JsonLd data={relatedItemListData} />
-      ) : null}
-      <PageHeroBand
-        locale={locale}
-        theme={heroTheme}
-        variant="service"
-        breadcrumbs={[
-          { name: copy.breadcrumbHome, href: link("/") },
-          { name: copy.breadcrumbServices, href: link("/sluzby") },
-          { name: props.title }
-        ]}
-      >
-        <header className="page-header service-hero service-hero--photo service-hero--single">
-          {serviceCategory ? (
-            <CategoryBadge category={serviceCategory} locale={locale} className="service-hero-category" />
-          ) : null}
-          <h1>{props.title}</h1>
-          <p className="page-lead">
-            <InlineEmphasis text={props.intro} />
-          </p>
-        </header>
-      </PageHeroBand>
-
-      <div className="container">
-        <nav className={styles.verification} aria-label={copy.trustAria}>
-          <Link href={link("/akreditace-autorizace-dokumenty")}>{copy.accreditationLink} <span aria-hidden="true">↗</span></Link>
-          <Link href={link("/reference#priklady")}>{locale === "cs" ? "Příklady zakázek" : locale === "de" ? "Projektbeispiele" : "Project examples"} <span aria-hidden="true">↗</span></Link>
-          <a href={`tel:${company.phones[0].replace(/\s+/g, "")}`}>{company.phones[0]}</a>
-        </nav>
-        {bareSlug === "mereni-hluku" ? (
-          <p className={styles.intent}>
-            {locale === "cs" ? "Potřebujete posoudit hluk plánované stavby nebo technologie? " : locale === "de" ? "Planen Sie ein Gebäude oder eine Anlage? " : "Planning a building or new equipment? "}
-            <Link href={link("/sluzby/hlukove-studie")}>{locale === "cs" ? "Hlukové studie a výpočty →" : locale === "de" ? "Lärmstudien und Berechnungen →" : "Noise studies and calculations →"}</Link>
-          </p>
-        ) : null}
-      </div>
-
-      <section
-        className={[
-          "service-overview-section page-below-fold",
-          serviceCategory ? `service-overview-section--${serviceCategory}` : "section--forest-tint"
-        ].join(" ")}
-        aria-label={copy.overviewAria}
-      >
-        <div className="container">
-          <h2 className="service-overview-title">{copy.overviewHeading}</h2>
-          <div className="service-overview-layout">
-            <div className="service-overview-panel">
-              <div
-                className={[
-                  "service-overview-grid",
-                  keyWhenNeeded.length === 0 ? "service-overview-grid--three" : ""
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                {keyWhenNeeded.length > 0 ? (
-                  <OverviewGridCell icon="process-posouzeni" title={copy.whenNeededHeading}>
-                    <ul className="check-list">
-                      {keyWhenNeeded.map((item) => (
-                        <li key={item}>
-                          <InlineEmphasis text={item} />
-                        </li>
-                      ))}
-                    </ul>
-                  </OverviewGridCell>
-                ) : null}
-
-                <OverviewGridCell icon="process-rozsah" title={props.scopeHeading ?? copy.scopeHeading}>
-                  <ul className="check-list">
-                    {keyScope.map((item) => (
-                      <li key={item}>
-                        <InlineEmphasis text={item} />
-                      </li>
-                    ))}
-                  </ul>
-                </OverviewGridCell>
-
-                <OverviewGridCell icon="process-vystup" title={copy.outputsHeading}>
-                  <ul className="check-list">
-                    {keyOutputs.map((item) => (
-                      <li key={item}>
-                        <InlineEmphasis text={item} />
-                      </li>
-                    ))}
-                  </ul>
-                </OverviewGridCell>
-
-                <OverviewGridCell
-                  icon="process-posouzeni"
-                  title={copy.howToStartHeading}
-                  className="service-overview-cell--start"
-                >
-                  <p className="muted">{copy.docsIntro}</p>
-                  <ul className="check-list">
-                    {keyDocs.map((item) => (
-                      <li key={item}>
-                        <InlineEmphasis text={item} />
-                      </li>
-                    ))}
-                  </ul>
-                  <Link className="button service-overview-cta--in-cell" href={quickContactHref}>
-                    {contactCta}
-                  </Link>
-                </OverviewGridCell>
-              </div>
-              <div className="service-overview-actions">
-                <Link className="button service-overview-cta--in-bar" href={quickContactHref}>
-                  {contactCta}
-                </Link>
-              </div>
-            </div>
-            <ServiceContextPhoto theme={heroTheme} className="service-overview-photo" />
-          </div>
-        </div>
-      </section>
-
-      <div className="container page-inner page-below-fold">
-        <ServiceEvidence locale={locale} slug={props.slug} />
-        {detailGroups.length > 0 ? (
-          <section className="content-block service-extra-section">
-            <details className="service-extra-details">
-              <summary>{copy.extraInfoSummary}</summary>
-              <div className="service-extra-grid">
-                {detailGroups.map((group) => (
-                  <article key={group.title} className="service-extra-card">
-                    <div className="service-extra-card-head">
-                      <ServiceIcon icon={getDetailGroupIconKey(group.title)} variant="inline" />
-                      <h3>{group.title}</h3>
-                    </div>
-                    <ul className="compact-list">
-                      {group.items.map((item) => (
-                        <li key={item}>
-                          <InlineEmphasis text={item} />
-                        </li>
-                      ))}
-                    </ul>
-                  </article>
-                ))}
-              </div>
-            </details>
-          </section>
-        ) : null}
-
-        {props.faqCategoryId ? (
-          <ServiceFaqTeaser locale={locale} categoryId={props.faqCategoryId} />
-        ) : null}
-
-        <ServicePoradnaTeaser locale={locale} serviceSlug={props.slug} />
-
-        {mergedRelated.length > 0 ? (
-          <section className="content-block">
-            <h2>{copy.relatedHeading}</h2>
-            <div className="grid grid-3 index-card-grid">
-              {mergedRelated.slice(0, 3).map((item) => (
-                <IndexCard
-                  key={item.href}
-                  href={link(item.href)}
-                  title={item.title}
-                  cta={item.cta}
-                  className="service-related-card"
-                  serviceCategory={getServiceCategoryFromHref(item.href)}
-                  icon={<ServiceIcon href={item.href} variant="inline" size={20} />}
-                  meta={
-                    item.sectionLabel ? (
-                      <p className="related-card-section-label">{item.sectionLabel}</p>
-                    ) : null
-                  }
-                >
-                  {item.description ? (
-                    <p className="muted">
-                      <InlineEmphasis text={item.description} />
-                    </p>
-                  ) : null}
-                </IndexCard>
-              ))}
-            </div>
-            {mergedRelated.length > 3 ? (
-              <ul className={styles.related}>
-                {mergedRelated.slice(3).map(item => <li key={item.href}><Link href={link(item.href)}>{item.title} <span aria-hidden="true">→</span></Link></li>)}
-              </ul>
-            ) : null}
-          </section>
-        ) : null}
-      </div>
-
-      <PageCtaStrip
-        text={copy.ctaStripText}
-        primaryLabel={ctaCopy.globalCta}
-        primaryHref={quickContactHref}
-        secondaryLabel={copy.accreditationLink}
-        secondaryHref={link("/akreditace-autorizace-dokumenty")}
-        className="container"
-      />
-    </main>
+    <ServiceDetailLayout
+      content={props}
+      contactHref={quickContactHref}
+      contactLabel={contactCta}
+      faqItems={faqTeaserItems}
+      relatedItems={mergedRelated}
+      schemas={<>
+        <JsonLd data={serviceData} />
+        <JsonLd data={breadcrumbData} />
+        {faqTeaserItems.length > 0 ? <JsonLd data={buildFaqPageJsonLd(faqTeaserItems)} /> : null}
+        {mergedRelated.length > 0 ? <JsonLd data={relatedItemListData} /> : null}
+      </>}
+    />
   );
 }

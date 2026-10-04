@@ -10,6 +10,7 @@ import {
 export function usePoradnaSearchIndex(locale: Locale) {
   const [index, setIndex] = useState<Map<string, string> | null>(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const loadPromise = useRef<Promise<Map<string, string>> | null>(null);
 
   const load = useCallback(async () => {
@@ -17,23 +18,26 @@ export function usePoradnaSearchIndex(locale: Locale) {
     if (loadPromise.current) return loadPromise.current;
 
     setLoading(true);
+    setError(false);
     loadPromise.current = fetch(poradnaSearchIndexUrl(locale))
       .then((response) => {
         if (!response.ok) throw new Error(`search index ${response.status}`);
         return response.json() as Promise<PoradnaSearchIndexEntry[]>;
       })
-      .then((entries) => new Map(entries.map((entry) => [entry.slug, entry.s])))
+      .then((entries) => {
+        const map = new Map(entries.map((entry) => [entry.slug, entry.s]));
+        setIndex(map);
+        return map;
+      })
+      .catch(() => {
+        loadPromise.current = null;
+        setError(true);
+        return new Map<string, string>();
+      })
       .finally(() => setLoading(false));
 
-    try {
-      const map = await loadPromise.current;
-      setIndex(map);
-      return map;
-    } catch {
-      loadPromise.current = null;
-      return new Map<string, string>();
-    }
+    return loadPromise.current;
   }, [index, locale]);
 
-  return { index, loading, ensureLoaded: load };
+  return { index, loading, error, ensureLoaded: load };
 }

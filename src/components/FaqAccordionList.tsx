@@ -95,7 +95,7 @@ function FaqAccordionEntry({
             {item.links.map((itemLink, index) => (
               <span key={`${itemLink.href}-${itemLink.label}`}>
                 {index > 0 ? " | " : null}
-                <Link href={link(itemLink.href)}>{itemLink.label}</Link>
+                <Link prefetch={false} href={link(itemLink.href)}>{itemLink.label}</Link>
               </span>
             ))}
           </p>

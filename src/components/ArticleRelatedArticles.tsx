@@ -27,7 +27,7 @@ export async function ArticleRelatedArticles({ locale, slug, topic, limit = 3 }:
       <ul className="article-related-articles-list">
         {related.map((item) => (
           <li key={item.slug} className="article-related-articles-item">
-            <Link href={item.href} className="article-related-articles-link">
+            <Link prefetch={false} href={item.href} className="article-related-articles-link">
               {item.title}
             </Link>
             {item.excerpt ? <p className="muted">{item.excerpt}</p> : null}
@@ -35,7 +35,7 @@ export async function ArticleRelatedArticles({ locale, slug, topic, limit = 3 }:
         ))}
       </ul>
       <p>
-        <Link href={articlesHref} className="text-link">
+        <Link prefetch={false} href={articlesHref} className="text-link">
           {messages.poradna.allArticles}
         </Link>
       </p>

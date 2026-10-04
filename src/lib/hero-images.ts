@@ -1,3 +1,5 @@
+import { getAuthenticPhoto } from "@/lib/authentic-photos";
+
 export type HeroTheme = string;
 
 export type HeroImageConfig = {
@@ -46,6 +48,12 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
   "homepage-eia": hero("homepage-eia"),
 
   "mereni-emisi": hero("mereni-emisi", "mereni-emisi-context"),
+  "mereni-pro-kolaudaci": { src: "/hero/generated-2026-10/kolaudace.webp" },
+  "mereni-nove-haly": { src: "/hero/generated-2026-10/nova-hala.webp" },
+  "poradna-skladovani-chemie": { src: "/hero/generated-2026-10/skladovani-chemie.webp" },
+  "poradna-bezpecnostni-listy": { src: "/hero/generated-2026-10/bezpecnostni-listy-clanek.webp" },
+  "poradna-kolaudace-haly": { src: "/hero/generated-2026-10/kolaudace-haly-clanek.webp" },
+  "poradna-povoleni-zdroje": { src: "/hero/generated-2026-10/povoleni-zdroje-clanek.webp" },
   "mereni-hluku": hero("mereni-hluku", "mereni-hluku-context"),
   "mereni-vibraci": hero("mereni-vibraci"),
   "mereni-osvetleni": hero("mereni-osvetleni"),
@@ -104,11 +112,22 @@ const heroSlugImages: Record<string, HeroImageConfig> = {
 };
 
 function resolveConfig(theme: string): HeroImageConfig {
+  const photo = getAuthenticPhoto(theme);
+  if (photo) return {
+    src: photo.src, avifSrc: photo.avifSrc, mobileSrc: photo.mobileSrc,
+    mobileAvifSrc: photo.mobileAvifSrc, position: photo.position
+  };
   return heroSlugImages[theme] ?? heroFallbackImages[theme] ?? heroFallbackImages.dokumentace;
 }
 
 export function getHeroImageSrc(theme: string): string {
   return resolveConfig(theme).src;
+}
+
+/** Only registered themes, not every archived file in public/hero. */
+export function getKnownHeroImageSources(): string[] {
+  return [...new Set([...Object.keys(heroSlugImages), ...Object.keys(heroFallbackImages)]
+    .map(theme => resolveConfig(theme).src))];
 }
 
 export function getHeroImageConfig(theme: string): HeroImageConfig {
@@ -174,7 +193,9 @@ const pageThemeMap: Record<string, string> = {
   "/poradna": "poradna",
   "/faq": "faq",
   "/dotaznik-spokojenosti": "reference",
-  "/sluzby": "sluzby"
+  "/sluzby": "sluzby",
+  "/mereni-pro-kolaudaci": "mereni-pro-kolaudaci",
+  "/mereni-nove-haly": "mereni-nove-haly"
 };
 
 function normalizePath(path: string): string {

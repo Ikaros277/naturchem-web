@@ -4,6 +4,7 @@ import type { HomeHeroPillar } from "@/lib/home-hero-pillars";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
 import styles from "./homepage.module.css";
+import { getAuthenticPhoto } from "@/lib/authentic-photos";
 
 /** Stable server-rendered hero: navigation links, without automatic rotation. */
 export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pillarsAriaLabel, locale, credential }: {
@@ -15,6 +16,7 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
   locale: Locale;
   credential: string;
 }) {
+  const photo = getAuthenticPhoto(pillars[0]?.theme ?? "");
   return (
     <section className={styles.hero} aria-label={ariaLabel}>
       <div className={`${styles.container} ${styles.heroGrid}`}>
@@ -31,7 +33,10 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
             ))}
           </nav>
         </div>
-        <div className={styles.heroMedia} aria-hidden="true">{initialPhoto}</div>
+        <figure className={styles.heroMedia}>
+          {initialPhoto}
+          {photo ? <figcaption className={styles.photoCaption}>{photo.caption[locale]}</figcaption> : null}
+        </figure>
       </div>
     </section>
   );

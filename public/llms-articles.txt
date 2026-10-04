@@ -1,6 +1,6 @@
 # NATURCHEM — odborné články (poradna)
 
-> 73 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
+> 75 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
 
 ## Index
 
@@ -11,6 +11,7 @@
 ## České články
 
 - Automobilový provoz: co se typicky měří a posuzuje?: https://www.naturchem.cz/poradna/automotive-provoz-co-se-typicky-meri-a-posuzuje/
+- Bezpečnostní listy v provozu: co z nich musí zaměstnavatel skutečně převést do praxe: https://www.naturchem.cz/poradna/bezpecnostni-listy-v-provozu-co-musi-zamestnavatel/
 - Kolik stojí odborný posudek, rozptylová studie, provozní řád a povolení provozu: https://www.naturchem.cz/poradna/cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu/
 - Co poslat pro rychlé posouzení záměru?: https://www.naturchem.cz/poradna/co-poslat-pro-rychle-posouzeni-zameru/
 - Co se mění v povolování zdrojů znečišťování ovzduší v roce 2026?: https://www.naturchem.cz/poradna/co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026/
@@ -74,6 +75,7 @@
 - Rozptylová studie: kdy je povinná a jaké podklady jsou potřeba?: https://www.naturchem.cz/poradna/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba/
 - Sčítací pravidla u zdrojů znečišťování ovzduší: proč mohou změnit povinnosti provozovatele?: https://www.naturchem.cz/poradna/scitaci-pravidla-u-zdroju-znecistovani-ovzdusi-proc-mohou-zmenit-povinnosti-provozovatele/
 - Skládka a odpadové zařízení: jaké environmentální podklady se obvykle řeší?: https://www.naturchem.cz/poradna/skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi/
+- Skladování chemických látek a směsí: co musí mít firma v pořádku před kontrolou: https://www.naturchem.cz/poradna/skladovani-chemickych-latek-smesi-kontrola/
 - Souhrnná provozní evidence 2026: co musí provozovatel zkontrolovat před odesláním: https://www.naturchem.cz/poradna/souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim/
 - Svařovna: prach, kovy, odsávání, pracovní prostředí a emise: https://www.naturchem.cz/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise/
 - Tepelná zátěž na pracovišti: kdy je nutné měření a jak se stanoví přípustná doba práce: https://www.naturchem.cz/poradna/tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace/

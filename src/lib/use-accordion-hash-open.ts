@@ -23,11 +23,13 @@ function scrollToAccordion(id: string) {
   });
 }
 
-export function useAccordionHashOpen(validIds: readonly string[]) {
+export function useAccordionHashOpen(validIds: readonly string[], defaultOpenId?: string) {
   const pathname = usePathname();
   const validIdsKey = validIds.join("\0");
   const stableValidIds = useMemo(() => validIds, [validIdsKey]);
-  const [openIds, setOpenIds] = useState<Set<string>>(() => new Set());
+  const [openIds, setOpenIds] = useState<Set<string>>(
+    () => new Set(defaultOpenId && validIds.includes(defaultOpenId) ? [defaultOpenId] : [])
+  );
 
   const syncFromHash = useCallback(() => {
     const id = getHashTarget(stableValidIds);
@@ -61,7 +63,7 @@ export function useAccordionHashOpen(validIds: readonly string[]) {
     window.addEventListener(ACCORDION_HASH_SYNC_EVENT, syncFromHash);
 
     // Next.js client navigations between /sluzby#... links do not always fire hashchange.
-    const interval = setInterval(onHashUpdate, 100);
+    const interval = setInterval(onHashUpdate, 500);
 
     return () => {
       window.removeEventListener("hashchange", onHashUpdate);

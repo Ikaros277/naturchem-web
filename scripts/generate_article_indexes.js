@@ -7,12 +7,18 @@ const root = path.resolve(__dirname, "..");
 const site = "https://www.naturchem.cz";
 const locales = ["cs", "en", "de"];
 const headings = { cs: "České články", en: "English articles", de: "Deutsche Artikel" };
+const load = require("./lib/load-typescript.js")();
+const { resolveArticleTopic } = load(path.join(root, "src/lib/poradna-topic.ts"));
+const { shortenListingExcerpt } = load(path.join(root, "src/lib/excerpt.ts"));
+const { formatArticleDate } = load(path.join(root, "src/lib/format-date.ts"));
+const { localizeHref } = load(path.join(root, "src/lib/i18n/navigation.ts"));
 
 function buildArticleIndexes(catalog, now = Date.now()) {
   // All artifacts share the real YAML parser and the site's Prague date normalizer.
   const publicArticles = catalog.filter((a) => Number.isFinite(Date.parse(a.publishedAt)) && Date.parse(a.publishedAt) <= now);
   const localeMap = {};
   const searches = {};
+  const listings = {};
   const seen = new Set();
   for (const article of publicArticles) {
     const key = `${article.locale}/${article.slug}`;
@@ -32,6 +38,12 @@ function buildArticleIndexes(catalog, now = Date.now()) {
   ];
   for (const locale of locales) {
     const articles = publicArticles.filter((a) => a.locale === locale).sort((a, b) => a.slug.localeCompare(b.slug));
+    listings[locale] = [...articles].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt) || a.slug.localeCompare(b.slug)).map((a) => ({
+      slug: a.slug, title: a.title, href: localizeHref(`/poradna/${a.slug}`, locale),
+      excerpt: shortenListingExcerpt(a.excerpt), topic: resolveArticleTopic(a),
+      publishedAt: a.publishedAt, displayDate: formatArticleDate(a.publishedAt, locale),
+      ...(a.heroImage ? { heroImage: a.heroImage } : {})
+    }));
     searches[locale] = articles.map((a) => {
       const body = a.body.replace(/```[\s\S]*?```/g, " ").replace(/#{1,6}\s+/g, " ")
         .replace(/\|[^\n]+\|/g, " ").replace(/[*_~`>#\\-]/g, " ").replace(/\s+/g, " ").trim();
@@ -46,7 +58,7 @@ function buildArticleIndexes(catalog, now = Date.now()) {
     llms.push("");
   }
   llms.push("## Sitemap", "", `${site}/sitemap.xml`, "");
-  return { localeMap: sortedMap, searches, llms: llms.join("\n") };
+  return { localeMap: sortedMap, searches, listings, llms: llms.join("\n") };
 }
 
 function main() {
@@ -60,10 +72,12 @@ function main() {
   }
   if (only === "all" || only === "locale-map") {
     fs.writeFileSync(path.join(root, "src/lib/article-locale-map.json"), JSON.stringify(indexes.localeMap, null, 2) + "\n");
+    fs.writeFileSync(path.join(root, "src/lib/article-listing-counts.json"), JSON.stringify(Object.fromEntries(locales.map(locale => [locale, indexes.listings[locale].length])), null, 2) + "\n");
   }
   if (only === "all" || only === "search") {
     fs.mkdirSync(path.join(root, "public/search"), { recursive: true });
     for (const locale of locales) fs.writeFileSync(path.join(root, `public/search/poradna-${locale}.json`), JSON.stringify(indexes.searches[locale]));
+    for (const locale of locales) fs.writeFileSync(path.join(root, `public/search/poradna-listing-${locale}.json`), JSON.stringify(indexes.listings[locale]));
   }
   if (only === "all" || only === "llms") fs.writeFileSync(path.join(root, "public/llms-articles.txt"), indexes.llms);
   console.log(`Generated ${only} article indexes from published content only: ${locales.map((locale) => `${locale}=${indexes.searches[locale].length}`).join(", ")}`);

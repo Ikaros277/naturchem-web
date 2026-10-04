@@ -52,11 +52,15 @@ async function main() {
     const before = buildArticleIndexes(catalog, Date.parse("2026-09-01T21:59:59Z"));
     assert.deepEqual(Object.keys(before.localeMap), ["multiline"]);
     assert.deepEqual(before.searches.cs.map((a) => a.slug), ["multiline"]);
+    assert.deepEqual(before.listings.cs.map(a => a.slug), ["multiline"]);
+    assert.equal(before.listings.cs[0].title, "Complete title across two lines");
     assert.ok(before.searches.cs[0].s.includes("complete excerpt across two lines"));
     assert.ok(before.llms.includes("Complete title across two lines"));
     assert.ok(!before.llms.includes("real-public-slug") && !before.llms.includes("/future/"));
     const after = buildArticleIndexes(catalog, Date.parse(due.publishedAt));
     assert.ok(after.localeMap["real-public-slug"]);
+    assert.ok(after.listings.cs.some(a => a.slug === "real-public-slug"));
+    assert.equal(after.listings.en.length, 0, "No future articles in the lazy listing index");
     assert.ok(after.llms.includes("/real-public-slug/"));
     assert.ok(!after.llms.includes("/private/") && !after.llms.includes("/metadata/") && !after.llms.includes("/invalid/"));
   } finally {

@@ -15,6 +15,7 @@ author: Ing. František Hezina
 status: published
 publishedAt: 2026-10-01
 topic: Chemická legislativa
+heroImage: /hero/generated-2026-10/bezpecnostni-listy-clanek.webp
 ---
 # Bezpečnostní listy v provozu: co z nich musí zaměstnavatel skutečně převést do praxe
 

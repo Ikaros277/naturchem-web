@@ -27,6 +27,7 @@ export function SemanticCard({
   return (
     <Link
       href={href}
+      prefetch={false}
       className={classes}
       aria-label={ariaLabel}
       data-category={serviceCategory ?? undefined}

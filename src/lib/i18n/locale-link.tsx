@@ -7,6 +7,8 @@ import { useLocale } from "@/lib/i18n/locale-context";
 import type { Locale } from "@/lib/i18n/locales";
 import { isLocale } from "@/lib/i18n/locales";
 import articleLocaleMap from "@/lib/article-locale-map.json";
+import articleListingCounts from "@/lib/article-listing-counts.json";
+import { poradnaPageCount } from "@/lib/poradna-pagination";
 import { localesForConstrainedPath } from "@/lib/locale-constrained-paths";
 
 type Props = {
@@ -33,6 +35,10 @@ export function useLocalizedPathname(): string {
 
 export function useLocaleSwitchHref(targetLocale: Locale): string {
   const pathname = useLocalizedPathname();
+  const listingPage = pathname.match(/^\/poradna\/strana\/(\d+)\/?$/);
+  if (listingPage && Number(listingPage[1]) > poradnaPageCount(articleListingCounts[targetLocale])) {
+    return localizeHref("/poradna", targetLocale);
+  }
   const pageLocales = localesForConstrainedPath(pathname);
   if (pageLocales && !pageLocales.includes(targetLocale)) {
     return localizeHref("/sluzby", targetLocale);

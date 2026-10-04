@@ -26,7 +26,7 @@ export function WhatsAppButton() {
           />
         </svg>
       </span>
-      <span className="live-chat-whatsapp-label">WhatsApp</span>
+      <span className="live-chat-whatsapp-label" aria-hidden="true">WhatsApp</span>
     </a>
   );
 }

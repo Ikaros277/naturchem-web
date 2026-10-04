@@ -23,7 +23,7 @@ const apiMessages = {
     sendFailure: (email: string, phone: string) =>
       `Zprávu se nepodařilo odeslat. Napište na ${email} nebo zavolejte ${phone}.`,
     success:
-      "Ozveme se Vám s dalším postupem. Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.",
+      "Ozveme se Vám do 24 hodin. Pokud budeme potřebovat další podklady, domluvíme se s Vámi e-mailem nebo telefonicky.",
     rateLimited: "Příliš mnoho odeslaných zpráv. Zkuste to prosím později nebo nás kontaktujte telefonicky.",
     fieldTooLong: "Jedno z polí je příliš dlouhé. Zkuste text zkrátit.",
     tooManyAttachments: "Můžete nahrát maximálně 5 příloh.",
@@ -41,8 +41,8 @@ const apiMessages = {
         `Týká se oblasti: ${focus}.`,
         `ID poptávky: ${leadId}`,
         "",
-        "Ozveme se Vám s dalším postupem.",
-        "Když bude potřeba něco doplnit, dáme vědět e-mailem nebo telefonicky.",
+        "Ozveme se Vám do 24 hodin.",
+        "Pokud budeme potřebovat další podklady, domluvíme se s Vámi e-mailem nebo telefonicky.",
         "",
         "NATURCHEM, s.r.o."
       ].join("\n")
@@ -54,7 +54,7 @@ const apiMessages = {
     sendFailure: (email: string, phone: string) =>
       `We could not send the message. Email ${email} or call ${phone}.`,
     success:
-      "We will get back to you with next steps. If we need anything else, we will let you know by email or phone.",
+      "We will contact you within 24 hours. If we need further documents, we will arrange this with you by email or phone.",
     rateLimited: "Too many messages sent. Please try again later or call us.",
     fieldTooLong: "One of the fields is too long. Please shorten the text.",
     tooManyAttachments: "You can upload at most 5 attachments.",
@@ -72,7 +72,7 @@ const apiMessages = {
         `It concerns: ${focus}.`,
         `Inquiry ID: ${leadId}`,
         "",
-        "We will contact you with the next steps.",
+        "We will contact you within 24 hours.",
         "If we need additional information, we will let you know by email or phone.",
         "",
         "NATURCHEM, s.r.o."
@@ -85,7 +85,7 @@ const apiMessages = {
     sendFailure: (email: string, phone: string) =>
       `Die Nachricht konnte nicht gesendet werden. E-Mail ${email} oder Anruf ${phone}.`,
     success:
-      "Wir melden uns mit den nächsten Schritten. Falls wir etwas ergänzen müssen, informieren wir Sie per E-Mail oder Telefon.",
+      "Wir melden uns innerhalb von 24 Stunden bei Ihnen. Falls weitere Unterlagen erforderlich sind, stimmen wir uns per E-Mail oder Telefon mit Ihnen ab.",
     rateLimited: "Zu viele Nachrichten. Bitte versuchen Sie es später erneut oder rufen Sie uns an.",
     fieldTooLong: "Ein Feld ist zu lang. Bitte kürzen Sie den Text.",
     tooManyAttachments: "Sie können höchstens 5 Anhänge hochladen.",
@@ -103,7 +103,7 @@ const apiMessages = {
         `Sie betrifft den Bereich: ${focus}.`,
         `Anfrage-ID: ${leadId}`,
         "",
-        "Wir melden uns mit den nächsten Schritten bei Ihnen.",
+        "Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
         "Falls wir weitere Angaben benötigen, informieren wir Sie per E-Mail oder Telefon.",
         "",
         "NATURCHEM, s.r.o."

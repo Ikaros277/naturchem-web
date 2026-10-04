@@ -23,7 +23,7 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
     slug: "sluzby/hlukove-studie",
     title: "Hluková studie pro KHS, stavby a technologie",
     description:
-      "Hluková studie pro nové technologie, VZT, tepelná čerpadla, areály a dopravu. Podklad pro KHS, stavební řízení a EIA; nabídka podle podkladů.",
+      "Hluková studie pro KHS, stavební řízení a EIA. Průmyslové areály, VZT, tepelná čerpadla i doprava. Cena podle rozsahu a podkladů. Reakce do 24 hodin.",
     intro:
       "Potřebujete **hlukovou studii** pro KHS nebo před instalací technologie? Zmodelujeme hluk areálu, dopravy, VZT či tepelného čerpadla a navrhneme další postup.",
     scopeHeading: "Co hluková studie vyřeší",

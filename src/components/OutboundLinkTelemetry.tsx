@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useCookieConsentState } from "@/components/CookieConsentBanner";
 import { sendGtagEvent } from "@/lib/gtag";
 import { getInquiryCtaParams } from "@/lib/inquiry-cta-analytics";
+import { getServiceSelectionParams } from "@/lib/service-selection-analytics";
 
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
@@ -36,6 +37,18 @@ export function OutboundLinkTelemetry() {
         page_path: window.location.pathname
       };
       const inquiryParams = getInquiryCtaParams(href, window.location.href);
+      const placement = a.dataset.servicePlacement === "home_service_index" ? "home_service_index"
+        : a.closest(".service-groups-accordion") ? "service_catalog"
+        : a.closest(".article-related-services") ? "article_related_service" : null;
+      const serviceParams = getServiceSelectionParams(href, window.location.href, placement);
+      if (serviceParams) {
+        sendGtagEvent("select_service", { ...serviceParams, page_path: window.location.pathname });
+      }
+      const audience = a.dataset.b2bAudience;
+      if (audience && ["business_ehs", "environmental_partner", "project_public_sector"].includes(audience)) {
+        // Only a public role identifier; never form content or contact query values.
+        sendGtagEvent("select_audience", { audience, placement: "home_work_context", page_path: window.location.pathname });
+      }
 
       // Čistý krok do poptávkové cesty. Původní click_cta zůstává kvůli historické návaznosti.
       if (inquiryParams) {

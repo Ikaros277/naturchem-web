@@ -17,7 +17,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "mericke-sluzby",
     title: "Akkreditierte und autorisierte Messungen",
     intro:
-      "Benötigen Sie einen Bericht für eine Behörde oder Ihren Betrieb? Wir bieten Feldmessungen von Emissionen, Lärm, Arbeitsplatzumgebung und anderen Parametern an – mit Ergebnissen für die regionale Hygienestation, die tschechische Umweltinspektion oder die regionale Behörde.",
+      "Messungen von Emissionen, Lärm und Arbeitsbedingungen mit Berichten für Betriebe und Behörden.",
     items: [
       {
         title: "Messungen der Arbeitsplatzumgebung",
@@ -65,7 +65,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "studie-vypocty",
     title: "Studien, Berechnungen und Modellierung",
     intro:
-      "Planen Sie eine betriebliche Änderung oder ein neues Projekt? Wir erstellen Ausbreitungs-, Lärm-, Modellrechnungen und damit verbundene Auswirkungen einschließlich Varianten für Behörden und Investoren.",
+      "Ausbreitungs- und Lärmstudien, Berechnungen und Folgenabschätzungen für Projekte und Betriebsänderungen.",
     items: [
       {
         title: "Ausbreitungsstudien",
@@ -98,7 +98,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "povolovaci-podklady",
     title: "Genehmigung und amtliche Dokumentation",
     intro:
-      "Technologie- oder Quellengenehmigung ändern? Wir erstellen Gutachten, Betriebsvorschriften und Begleitdokumente für integrierte Genehmigungen – für die Regionalbehörde und das tschechische Umweltinspektorat.",
+      "Gutachten, Betriebsvorschriften und Unterlagen für Quellen- und integrierte Genehmigungen.",
     items: [
       {
         title: "Gutachten",
@@ -126,7 +126,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "eia-investice",
     title: "UVP und Investitionsvorbereitung",
     intro:
-      "Bereiten Sie eine Investition mit EIA vor? Wir koordinieren die Projektanmeldung, das Scoping und die technischen Anhänge im Zusammenhang mit der Genehmigung.",
+      "Projektanmeldungen und Fachunterlagen für die Umweltverträglichkeitsprüfung.",
     items: [
       {
         title: "UVP und Projektmeldung",
@@ -149,7 +149,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "evidence-reporting",
     title: "Betriebsaufzeichnungen, Berichterstattung und gesetzgeberische Unterstützung",
     intro:
-      "ISPOP-Bericht oder Datenüberprüfung stehen bevor? Wir überprüfen integrierte Aufzeichnungen zur Schadstoffberichterstattung und Treibhausgasemissionen im Zusammenhang mit Messungen und Genehmigungen.",
+      "ISPOP-Berichte, Betriebsaufzeichnungen und Berechnung von Treibhausgasemissionen.",
     items: [
       {
         title: "ISPOP und integrierte Aufzeichnungen zur Verschmutzungsberichterstattung",
@@ -172,17 +172,12 @@ export const serviceGroups: ServiceGroup[] = [
     id: "skoleni-podpora",
     title: "Schulung und fachliche Unterstützung",
     intro:
-      "Benötigen Sie Schulungen oder klare Regeln für Chemikalien im Betrieb? Wir decken Gesetze, Sicherheitsdatenblätter, Kennzeichnung und Lagerung für Lager, Produktion und Labore ab.",
+      "Schulungen zum Chemikalienrecht, Sicherheitsdatenblätter, Kennzeichnung und Lagerung.",
     items: [
       {
         title: "Schulung zum Chemikalienrecht",
         href: "/sluzby/skoleni-chemicke-legislativy",
         text: "Praxisnahe Schulung für Unternehmen, die mit chemischen Stoffen und Gemischen umgehen."
-      },
-      {
-        title: "Arbeiten mit chemischen Stoffen und Gemischen",
-        href: "/sluzby/chemicke-latky",
-        text: "Sichere Verwendungs-, Lagerungs-, Kennzeichnungs- und Betriebsregeln für Mitarbeiter."
       },
       {
         title: "Sicherheitsdatenblätter und Kennzeichnung",

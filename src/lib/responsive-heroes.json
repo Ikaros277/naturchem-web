@@ -1,0 +1,1019 @@
+{
+  "/hero/akreditace-autorizace-dokumenty.webp": {
+    "base": "/hero/responsive-2026-10/image-3276b4eae6b0",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/akusticke-posudky.webp": {
+    "base": "/hero/responsive-2026-10/image-f9af55d5ef91",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/bezpecnostni-listy.webp": {
+    "base": "/hero/responsive-2026-10/image-d15b99cb3263",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/chemicke-latky.webp": {
+    "base": "/hero/responsive-2026-10/image-6584d3857d8a",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/dokumentace-fallback.webp": {
+    "base": "/hero/responsive-2026-10/image-dc84a3aeec42",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/hero/eia-posudky-poradenstvi.webp": {
+    "base": "/hero/responsive-2026-10/image-ff235544fb74",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/hero/eia.webp": {
+    "base": "/hero/responsive-2026-10/image-cfb3f82063a1",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/faq.webp": {
+    "base": "/hero/responsive-2026-10/image-6431bce4b962",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/hero/generated-2026-09/automotive-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-900d3611fbe3",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/chemicke-latky-rozsah.webp": {
+    "base": "/hero/responsive-2026-10/image-d31ba3518477",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/cteni-hlukove-studie.webp": {
+    "base": "/hero/responsive-2026-10/image-8e4c04097682",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/dieselagregat-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-403735aabe0f",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/drevozpracujici-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-13699851a3f5",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/elektronicke-protokoly.webp": {
+    "base": "/hero/responsive-2026-10/image-4a03b756121f",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/emise-imise.webp": {
+    "base": "/hero/responsive-2026-10/image-ce26f899a5ab",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/hluk-sousede.webp": {
+    "base": "/hero/responsive-2026-10/image-7b6b9c0b0000",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/jes-eia-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-a2f9e930de5c",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/katalogovy-hluk.webp": {
+    "base": "/hero/responsive-2026-10/image-e8d7ed3a2697",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/kategorizace-praci-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-c6872060e762",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/kdy-mereni-emisi.webp": {
+    "base": "/hero/responsive-2026-10/image-5116e8e18111",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/khs-pracovni-prostredi.webp": {
+    "base": "/hero/responsive-2026-10/image-b955888dfd5b",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/kotelna-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-443472d07f4e",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/lakovna-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-ed140794348f",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/merici-misto-projekt.webp": {
+    "base": "/hero/responsive-2026-10/image-131d0de46392",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/metodicke-vyklady-mzp.webp": {
+    "base": "/hero/responsive-2026-10/image-155773227e44",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/minimalni-vzdalenost.webp": {
+    "base": "/hero/responsive-2026-10/image-67dcb9ffb6c0",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/odborny-posudek-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-537947eb1ac6",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/podklady-prumyslovy-provoz.webp": {
+    "base": "/hero/responsive-2026-10/image-d21d8e54c6fd",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/podklady-zamer.webp": {
+    "base": "/hero/responsive-2026-10/image-aa06e6c27040",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/posudek-zmena-zdroje.webp": {
+    "base": "/hero/responsive-2026-10/image-51bd13ea1630",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/povolovani-2026.webp": {
+    "base": "/hero/responsive-2026-10/image-d49b498f81e6",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/prach-frakce.webp": {
+    "base": "/hero/responsive-2026-10/image-990c719ccea1",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/priprava-mereni-emisi.webp": {
+    "base": "/hero/responsive-2026-10/image-10ea2062b6c0",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/projektant-konzultant.webp": {
+    "base": "/hero/responsive-2026-10/image-d12918fa9b42",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/provozni-rad-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-7829971e7063",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/recyklace-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-bb0c88ceaad6",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/rozpoustedla-voc.webp": {
+    "base": "/hero/responsive-2026-10/image-f3b3798debc6",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/rozptylova-studie-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-479545f55a98",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/scitaci-pravidla.webp": {
+    "base": "/hero/responsive-2026-10/image-42b8d8cf9337",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/skladka-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-3a1b9e4e118a",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/studie-nebo-mereni-hluku.webp": {
+    "base": "/hero/responsive-2026-10/image-49cd666949bc",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/svarovna-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-953edcd48fcd",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/tepelna-cerpadla-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-b4b91bf98e14",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-09/vyzva-khs.webp": {
+    "base": "/hero/responsive-2026-10/image-b8a026325b68",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-10/bezpecnostni-listy-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-3e6cec4b0733",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-10/kolaudace-haly-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-44ecef4b8f14",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-10/povoleni-zdroje-clanek.webp": {
+    "base": "/hero/responsive-2026-10/image-404bc945991d",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/generated-2026-10/skladovani-chemie.webp": {
+    "base": "/hero/responsive-2026-10/image-dd4b7936f942",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "/hero/ghg-overovani.webp": {
+    "base": "/hero/responsive-2026-10/image-53579b242f0a",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/hluk-fallback.webp": {
+    "base": "/hero/responsive-2026-10/image-18f76bdfb6b7",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/hero/hlukove-studie.webp": {
+    "base": "/hero/responsive-2026-10/image-fa7112aadf7b",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/homepage-eia.webp": {
+    "base": "/hero/responsive-2026-10/image-857f28516813",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/homepage-mereni.webp": {
+    "base": "/hero/responsive-2026-10/image-53442dbb7252",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/homepage-studie.webp": {
+    "base": "/hero/responsive-2026-10/image-cc22c07e3692",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/imisni-dopady.webp": {
+    "base": "/hero/responsive-2026-10/image-6cc7eb0d99a1",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/hero/ippc-integrovana-povoleni.webp": {
+    "base": "/hero/responsive-2026-10/image-c6a1af7884f6",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/hero/ispop.webp": {
+    "base": "/hero/responsive-2026-10/image-a7012a5f8fc6",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/kontakt.webp": {
+    "base": "/hero/responsive-2026-10/image-f1b44c47933f",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/mereni-diisokyanatu.webp": {
+    "base": "/hero/responsive-2026-10/image-7f6d5b377e8c",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/hero/mereni-emisi.webp": {
+    "base": "/hero/responsive-2026-10/image-63d4bedf1f06",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1718,
+    "height": 966
+  },
+  "/hero/mereni-osvetleni.webp": {
+    "base": "/hero/responsive-2026-10/image-4cfc3f58e32c",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/mereni-tepelna-chladova-zatez.webp": {
+    "base": "/hero/responsive-2026-10/image-134256f2031e",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/hero/mereni-vibraci.webp": {
+    "base": "/hero/responsive-2026-10/image-7440730cb7ac",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/modelove-vypocty.webp": {
+    "base": "/hero/responsive-2026-10/image-436c5d449350",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/o-spolecnosti-naturchem.webp": {
+    "base": "/hero/responsive-2026-10/image-60ef03c916f9",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/odborne-posudky.webp": {
+    "base": "/hero/responsive-2026-10/image-465b5eda13a0",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/poradna.webp": {
+    "base": "/hero/responsive-2026-10/image-8f8d33df703f",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/povoleni-provozu.webp": {
+    "base": "/hero/responsive-2026-10/image-4c4e130ec3d1",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/hero/pristrojove-vybaveni.webp": {
+    "base": "/hero/responsive-2026-10/image-540bf0c725c7",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1671,
+    "height": 941
+  },
+  "/hero/provozni-rady.webp": {
+    "base": "/hero/responsive-2026-10/image-16481f9a590c",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/provozy-a-technologie.webp": {
+    "base": "/hero/responsive-2026-10/image-64f0cfe95c3f",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/reference.webp": {
+    "base": "/hero/responsive-2026-10/image-6d1d1d8b0cfa",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/rozptylove-studie.webp": {
+    "base": "/hero/responsive-2026-10/image-beda1719a723",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/skoleni-chemicke-legislativy.webp": {
+    "base": "/hero/responsive-2026-10/image-ca2c2f81cdea",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/sluzby.webp": {
+    "base": "/hero/responsive-2026-10/image-1d921e869525",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/technicke-prilohy.webp": {
+    "base": "/hero/responsive-2026-10/image-94fbb214443a",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/hero/typicke-zakazky.webp": {
+    "base": "/hero/responsive-2026-10/image-2d9021002b35",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/hero/zjistovaci-rizeni-eia.webp": {
+    "base": "/hero/responsive-2026-10/image-4e8b0ea4a567",
+    "widths": [
+      640,
+      1024
+    ],
+    "width": 1024,
+    "height": 576
+  },
+  "/uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp": {
+    "base": "/hero/responsive-2026-10/image-81aba865cc0f",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/0ee63946-ea53-49b5-9635-170da9c81ee7.webp": {
+    "base": "/hero/responsive-2026-10/image-ee3e39c295d7",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/3403325b-9e27-4dfd-ba0f-216a4598395a.webp": {
+    "base": "/hero/responsive-2026-10/image-d2e84360f300",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/48b959ca-90d0-432e-b083-31f4ef5e4625.webp": {
+    "base": "/hero/responsive-2026-10/image-d093cd1d0874",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/chatgpt-image-14.-7.-2026-09_37_14.webp": {
+    "base": "/hero/responsive-2026-10/image-a8c1b044fea9",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-15.-6.-2026-11_12_13.webp": {
+    "base": "/hero/responsive-2026-10/image-5939df75522d",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-15.-6.-2026-11_23_43.webp": {
+    "base": "/hero/responsive-2026-10/image-31b94bb213b1",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-15.-6.-2026-11_30_49.webp": {
+    "base": "/hero/responsive-2026-10/image-5d2901d090b0",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/chatgpt-image-15.-6.-2026-11_37_51.webp": {
+    "base": "/hero/responsive-2026-10/image-5ac9314d6623",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-15.-6.-2026-11_47_15.webp": {
+    "base": "/hero/responsive-2026-10/image-93631c0be86d",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-15.-6.-2026-11_57_05.webp": {
+    "base": "/hero/responsive-2026-10/image-ac7e773171eb",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-15.-6.-2026-12_14_55.webp": {
+    "base": "/hero/responsive-2026-10/image-f6ad9a132d7f",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-15.-6.-2026-12_22_27.webp": {
+    "base": "/hero/responsive-2026-10/image-aa48b14f4773",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-16.-6.-2026-06_56_15.webp": {
+    "base": "/hero/responsive-2026-10/image-85bccdf07040",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-16.-6.-2026-12_34_52.webp": {
+    "base": "/hero/responsive-2026-10/image-4d11442b60ea",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-16.-7.-2026-09_47_59.webp": {
+    "base": "/hero/responsive-2026-10/image-c483df046bc1",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-2.-7.-2026-09_41_15.webp": {
+    "base": "/hero/responsive-2026-10/image-7168a2affd12",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-2.-7.-2026-09_53_57.webp": {
+    "base": "/hero/responsive-2026-10/image-a39e5fe1ed77",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/chatgpt-image-20.-7.-2026-11_08_54.webp": {
+    "base": "/hero/responsive-2026-10/image-a5d382a549c8",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/chatgpt-image-21.-6.-2026-13_15_45.webp": {
+    "base": "/hero/responsive-2026-10/image-a991ae88516e",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-23.-6.-2026-12_24_16.webp": {
+    "base": "/hero/responsive-2026-10/image-f4ddddc96692",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/chatgpt-image-23.-6.-2026-12_42_59.webp": {
+    "base": "/hero/responsive-2026-10/image-b30006552363",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/chatgpt-image-23.-7.-2026-16_28_56.webp": {
+    "base": "/hero/responsive-2026-10/image-f869140c0ad3",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/chatgpt-image-7.-8.-2026-13_58_55-1-.webp": {
+    "base": "/hero/responsive-2026-10/image-6c415f6d2813",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-7.-8.-2026-13_58_55-2-.webp": {
+    "base": "/hero/responsive-2026-10/image-78e58a09011d",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-7.-8.-2026-13_58_55-3-.webp": {
+    "base": "/hero/responsive-2026-10/image-c1d50481161a",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-7.-8.-2026-13_58_55-4-.webp": {
+    "base": "/hero/responsive-2026-10/image-799057675681",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-7.-8.-2026-14_33_50.webp": {
+    "base": "/hero/responsive-2026-10/image-eebcedec02b1",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-7.-8.-2026-14_35_37.webp": {
+    "base": "/hero/responsive-2026-10/image-59695c77a069",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-7.-8.-2026-14_46_38.webp": {
+    "base": "/hero/responsive-2026-10/image-7b6a9d178540",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/chatgpt-image-jun-14-2026-08_02_34-pm.webp": {
+    "base": "/hero/responsive-2026-10/image-2cb3750927e2",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/clipboard_07-06-2026_01.webp": {
+    "base": "/hero/responsive-2026-10/image-9d8897b0d5ca",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1672,
+    "height": 941
+  },
+  "/uploads/eia.webp": {
+    "base": "/hero/responsive-2026-10/image-9d2127027c33",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/fcb8f524-381e-4c0a-baf5-3fe088f9d036.webp": {
+    "base": "/hero/responsive-2026-10/image-cfa19846cbbf",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1536,
+    "height": 1024
+  },
+  "/uploads/pxl_20260702_063317620.mp.webp": {
+    "base": "/hero/responsive-2026-10/image-5e3b8b5fe5b7",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 4032,
+    "height": 2268
+  }
+}

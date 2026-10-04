@@ -25,6 +25,12 @@ const groupIcons: Record<string, ServiceIconKey> = {
   "skoleni-podpora": "skoleni"
 };
 
+const categoryNavigation = {
+  cs: { label: "Kategorie služeb", titles: ["Měření", "Studie a výpočty", "Povolovací podklady", "EIA", "Evidence a chemie", "Školení"] },
+  en: { label: "Service categories", titles: ["Measurements", "Studies", "Permitting", "EIA", "Reporting and chemicals", "Training"] },
+  de: { label: "Leistungskategorien", titles: ["Messungen", "Studien", "Genehmigungen", "UVP", "Berichte und Chemikalien", "Schulungen"] }
+};
+
 const groupAriaVerbs: Record<string, string> = {
   "mericke-sluzby": "měření",
   "studie-vypocty": "studie",
@@ -92,13 +98,22 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
   const common = useTranslations("common");
   const accordion = useTranslations("accordion");
   const groupIds = useMemo(() => groups.map((group) => group.id), [groups]);
-  const { isOpen, onToggle } = useAccordionHashOpen(groupIds);
+  const { isOpen, onToggle } = useAccordionHashOpen(groupIds, groupIds[0]);
+  const navigation = categoryNavigation[locale];
   const ariaVerbs =
     locale === "en" ? groupAriaVerbsEn : locale === "de" ? groupAriaVerbsDe : groupAriaVerbs;
 
   return (
     <section className="section section-surface accordion-index-surface service-groups-accordion">
       <div className="container service-groups-accordion-inner">
+        <nav className="service-category-nav" aria-label={navigation.label}>
+          {groups.map((group, index) => (
+            <a key={group.id} href={`#${group.id}`} onClick={() => onToggle(group.id, true)}>
+              <ServiceIcon icon={groupIcons[group.id]} variant="inline" size={20} />
+              <span>{navigation.titles[index] ?? group.title}</span>
+            </a>
+          ))}
+        </nav>
         {groups.map((group) => {
           const ariaVerb = ariaVerbs[group.id] ?? group.title;
           const groupCategory = getServiceCategoryFromServiceGroupId(group.id);

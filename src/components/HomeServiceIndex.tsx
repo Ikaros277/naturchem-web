@@ -3,6 +3,7 @@ import { HomeStudyGraphic } from "@/components/HomeStudyGraphic";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
 import styles from "./homepage.module.css";
+import { getAuthenticPhoto } from "@/lib/authentic-photos";
 
 const servicePaths = ["mereni-emisi", "mereni-hluku", "pracovni-prostredi", "hlukove-studie", "rozptylove-studie", "eia-posudky-poradenstvi"] as const;
 const copy = {
@@ -38,15 +39,18 @@ export function HomeServiceIndex({ locale }: { locale: Locale }) {
       {servicePaths.map((slug, index) => {
         const [title, description] = copy[locale][index];
         const href = `/sluzby/${slug}`;
+        const photo = getAuthenticPhoto(slug);
+        const cardSrc = photo ? `${photo.base}-card-384.webp` : `/hero/${slug}-card.webp`;
+        const smallSrc = photo ? `${photo.base}-card-192.webp` : `/hero/${slug}-card-192.webp`;
         return (
           <li key={slug}>
-            <Link className={`${styles.serviceCard} ${index < 3 ? styles.measurementCard : styles.studyCard}`} href={localizeHref(href, locale)}>
+            <Link className={`${styles.serviceCard} ${index < 3 ? styles.measurementCard : styles.studyCard} ${index === 5 ? styles.documentationCard : ""}`} href={localizeHref(href, locale)} data-service-placement="home_service_index">
               {index < 3 ? (
                 <div className={styles.servicePhoto} aria-hidden="true">
                   {/* eslint-disable-next-line @next/next/no-img-element -- Pre-sized card WebP; no runtime image transformations. */}
                   <img
-                    src={`/hero/${slug}-card.webp`}
-                    srcSet={`/hero/${slug}-card-192.webp 192w, /hero/${slug}-card.webp 384w`}
+                    src={cardSrc}
+                    srcSet={`${smallSrc} 192w, ${cardSrc} 384w`}
                     sizes="(max-width: 767px) 96px, (max-width: 1024px) 30vw, 280px"
                     alt=""
                     width={384}
@@ -54,6 +58,7 @@ export function HomeServiceIndex({ locale }: { locale: Locale }) {
                     loading="lazy"
                     decoding="async"
                     fetchPriority="low"
+                    style={{ objectPosition: photo?.cardPosition ?? photo?.position }}
                   />
                 </div>
               ) : (

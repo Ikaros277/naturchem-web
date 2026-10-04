@@ -19,7 +19,7 @@ export type PoradnaArticleListing = {
 
 function sortByPublishedAt(articles: PoradnaArticleListing[]): PoradnaArticleListing[] {
   return [...articles].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime() || a.slug.localeCompare(b.slug)
   );
 }
 

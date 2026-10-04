@@ -19,7 +19,7 @@ function FooterLinkList({ links, locale }: { links: readonly FooterLink[]; local
     <ul className="footer-links">
       {links.map((item) => (
         <li key={item.href}>
-          <Link href={localizeHref(item.href, locale)}>{item.label}</Link>
+          <Link prefetch={false} href={localizeHref(item.href, locale)}>{item.label}</Link>
         </li>
       ))}
     </ul>
@@ -78,7 +78,7 @@ export async function Footer({ locale }: Props) {
             <ul className="footer-key-links">
               {featuredLinks.map((item) => (
                 <li key={item.href}>
-                  <Link className="footer-key-link" href={localizeHref(item.href, locale)}>
+                  <Link prefetch={false} className="footer-key-link" href={localizeHref(item.href, locale)}>
                     <ServiceIcon icon={item.href === accreditationHref ? "povoleni" : "provozni-rad"} size={22} variant="plain" />
                     <span className="footer-key-link-label">{item.label}</span>
                     <span className="footer-key-link-arrow" aria-hidden="true">↗</span>

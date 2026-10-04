@@ -54,8 +54,8 @@ const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
     optimizePackageImports: ["react-markdown"],
-    /** Inline CSS into HTML to remove render-blocking stylesheet round-trips (mobile LCP). */
-    inlineCss: true
+    /** Versioned shared stylesheets reduce HTML/RSC transfer and can be reused. */
+    inlineCss: false
   },
   async headers() {
     return [

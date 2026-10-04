@@ -577,7 +577,7 @@ export const seoLandings: SeoLanding[] = [
     eyebrow: "Kolaudace a KHS",
     overviewHeading: "Co pro Vás ověříme",
     highlights: ["Hluk a akustika", "Osvětlení a mikroklima", "Pracovní prostředí"],
-    heroTheme: "pracovni-prostredi",
+    heroTheme: "mereni-pro-kolaudaci",
     relatedLinks: [
       {
         href: "/sluzby/mereni-hluku",
@@ -644,7 +644,7 @@ export const seoLandings: SeoLanding[] = [
     eyebrow: "Nová nebo upravená hala",
     overviewHeading: "Rozsah podle skutečného provozu",
     highlights: ["KHS a kategorizace", "Více faktorů v jednom zadání", "Termín podle provozu"],
-    heroTheme: "pracovni-prostredi",
+    heroTheme: "mereni-nove-haly",
     relatedLinks: [
       {
         href: "/sluzby/pracovni-prostredi",

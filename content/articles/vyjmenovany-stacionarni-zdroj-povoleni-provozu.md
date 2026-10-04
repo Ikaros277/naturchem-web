@@ -1,6 +1,7 @@
 ---
 title: "Vyjmenovaný stacionární zdroj: jak poznat, zda potřebujete povolení provozu"
 slug: vyjmenovany-stacionarni-zdroj-povoleni-provozu
+heroImage: /hero/generated-2026-10/povoleni-zdroje-clanek.webp
 excerpt: Instalujete nový kotel, dieselagregát, lakovnu, brusírnu, svařovací
   pracoviště, recyklační linku nebo jinou technologii a nevíte, zda potřebujete
   povolení provozu podle zákona o ochraně ovzduší? Základní otázkou je, zda jde

@@ -1,6 +1,6 @@
 import type { FaqItem } from "@/lib/faq";
 
-/** Full FAQ answer text for JSON-LD (AI crawlers and rich results). */
+/** Full text of each included answer for semantic JSON-LD. */
 export function faqItemAnswerText(item: FaqItem): string {
   const parts = [...item.paragraphs];
   if (item.legal?.summary) parts.push(item.legal.summary);

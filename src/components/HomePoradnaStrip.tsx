@@ -7,9 +7,11 @@ import { getLatestPoradnaArticles } from "@/lib/poradna-articles";
 import { getHeroImageSrc } from "@/lib/hero-images";
 import { heroThemeForArticle } from "@/lib/poradna-topic";
 import { homeArticleTitle } from "@/lib/home-article-titles";
+import { homeArticleThumbnails } from "@/lib/home-article-thumbnails";
 import { GeneratedIllustration } from "@/components/GeneratedIllustration";
 import { getGeneratedIllustrationSources } from "@/lib/generated-illustrations";
 import styles from "./homepage.module.css";
+import { getResponsiveImage, ResponsiveImage } from "@/components/ResponsiveImage";
 
 export async function HomePoradnaStrip({ locale }: { locale: Locale }) {
   const messages = await getMessages(locale);
@@ -26,10 +28,12 @@ export async function HomePoradnaStrip({ locale }: { locale: Locale }) {
           {articles.map(article => {
             const imageSrc = article.heroImage || getHeroImageSrc(heroThemeForArticle(article));
             return (
-            <Link key={article.slug} href={article.href} className={styles.article}>
+            <Link key={article.slug} href={article.href} prefetch={false} className={styles.article}>
               <div className={styles.articlePhoto} aria-hidden="true">
-                {getGeneratedIllustrationSources(imageSrc) ? (
-                  <GeneratedIllustration src={imageSrc} sizes="(max-width: 1024px) 640px, 400px" />
+                {getResponsiveImage(imageSrc) ? (
+                  <ResponsiveImage src={imageSrc} sizes="(max-width: 767px) 88px, (max-width: 1024px) 30vw, 400px" />
+                ) : getGeneratedIllustrationSources(imageSrc) ? (
+                  <GeneratedIllustration src={imageSrc} thumbnailSrc={homeArticleThumbnails[imageSrc]} sizes="(max-width: 767px) 88px, (max-width: 1024px) 30vw, 400px" />
                 ) : (
                   // eslint-disable-next-line @next/next/no-img-element -- Lazy static assets do not consume image transformation quota.
                   <img src={imageSrc} alt="" width={640} height={360} loading="lazy" decoding="async" />

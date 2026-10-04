@@ -1,0 +1,247 @@
+.poradna-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 2rem 0;
+}
+.poradna-pagination a, .poradna-pagination button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 1px solid #c7d6df;
+  border-radius: 8px;
+  background: #fff;
+  color: #183d54;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.poradna-pagination [aria-current="page"] {
+  background: #1e6050;
+  border-color: #1e6050;
+  color: #fff;
+}
+.poradna-pagination a:hover, .poradna-pagination button:hover { border-color: #1e6050; }
+.poradna-pagination a:focus-visible, .poradna-pagination button:focus-visible { outline: 3px solid #2f6f5e; outline-offset: 3px; }
+#poradna-article-list { scroll-margin-top: 120px; }
+/* Only the article section needs these filters and compact card rows. */
+.topic-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.topic-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-ui);
+  border: 1px solid rgba(26, 92, 58, 0.25);
+  background: #f3f8f5;
+  color: var(--forest);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.topic-pill[aria-pressed="true"] {
+  background: var(--forest);
+  color: #fff;
+  border-color: var(--forest);
+}
+
+.poradna-search {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 32rem;
+  margin: 0 0 1.25rem;
+  font-weight: 700;
+}
+
+.poradna-search input {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding-inline: 1rem;
+  font-weight: 500;
+  background: var(--surface);
+}
+
+.poradna-search input:focus {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+
+.poradna-filter-bar {
+  margin-bottom: 0.25rem;
+}
+
+.poradna-filter-count {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+}
+
+.poradna-empty-state {
+  grid-column: 1 / -1;
+}
+
+.text-link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--forest);
+  font-weight: 650;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 1023px) {
+  .article-card--mobile-row.card-link.semantic-card {
+    display: grid;
+    grid-template-columns: minmax(5.25rem, 33%) minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    column-gap: 0.9rem;
+    row-gap: 0.3rem;
+    align-items: start;
+    padding: 0.85rem 0.9rem;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .article-card-thumb {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 100%;
+    margin: 0;
+    aspect-ratio: 1;
+    min-height: 5.25rem;
+    align-self: stretch;
+    border-radius: var(--radius-sharp);
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .article-card-meta {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 0.35rem 0.5rem;
+    font-size: 0.78rem;
+    margin-bottom: 0.1rem;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .article-card-date {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .tag {
+    font-size: 0.68rem;
+    padding: 0.12rem 0.45rem;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .index-card-head {
+    grid-column: 2;
+    grid-row: 2;
+    gap: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .index-card-head .card-symbol {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .index-card-heading {
+    font-size: 1.05rem;
+    line-height: 1.28;
+    font-weight: 650;
+    color: var(--navy);
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .article-card-excerpt {
+    grid-column: 2;
+    grid-row: 3;
+    margin: 0;
+    font-size: 0.82rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .article-card--mobile-row .card-inline-link {
+    grid-column: 2;
+    grid-row: 4;
+    margin-top: 0.5rem;
+    padding: 0.55rem 0 0;
+    width: 100%;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(13, 54, 130, 0.1);
+    background: transparent;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .poradna-page .article-list-grid {
+    gap: 0.75rem;
+  }
+}
+
+.poradna-topic-select { display: none; }
+
+@media (max-width: 767px) {
+  .poradna-filter-bar .topic-filter-pills { display: none; }
+}
+
+@media (max-width: 767px) {
+  .poradna-topic-select { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
+}
+
+@media (max-width: 767px) {
+  .poradna-topic-select select {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 9px 12px;
+    border: 1px solid #c9dbd5;
+    border-radius: 10px;
+    color: #183a4a;
+    background: #fff;
+    font: inherit;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .poradna-topic-select select:focus-visible { outline: 3px solid #2f6f5e; outline-offset: 2px; }
+}

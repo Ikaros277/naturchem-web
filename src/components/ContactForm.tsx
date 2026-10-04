@@ -289,7 +289,7 @@ export function ContactForm({
               name="attachments"
               multiple
               aria-invalid={Boolean(attachmentError) || undefined}
-              aria-describedby={attachmentError ? "contact-attachments-error" : undefined}
+              aria-describedby={attachmentError ? "contact-attachments-help contact-attachments-error" : "contact-attachments-help"}
               onChange={(event) => {
                 const error = getAttachmentError(Array.from(event.currentTarget.files ?? []));
                 setAttachmentError(error ? t[error] : "");
@@ -302,6 +302,10 @@ export function ContactForm({
               </span>
             ) : null}
           </p>
+          <details className="contact-form-details contact-attachment-help" open={attachmentError === t.attachmentsTooLarge || undefined}>
+            <summary id="contact-attachments-help">{t.largeAttachmentsTitle}</summary>
+            <p>{t.largeAttachmentsHelp} <a href={`mailto:${company.email}`}>{company.email}</a>.</p>
+          </details>
         </div>
       </div>
 

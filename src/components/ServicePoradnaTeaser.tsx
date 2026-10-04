@@ -27,13 +27,13 @@ export async function ServicePoradnaTeaser({ locale, serviceSlug }: Props) {
       <ul className="compact-list">
         {related.map((article) => (
           <li key={article.href}>
-            <Link href={article.href}>{article.title}</Link>
+            <Link prefetch={false} href={article.href}>{article.title}</Link>
             {article.excerpt ? <p className="muted">{article.excerpt}</p> : null}
           </li>
         ))}
       </ul>
       <p>
-        <Link href={articlesHref} className="text-link">
+        <Link prefetch={false} href={articlesHref} className="text-link">
           {t.allArticles}
         </Link>
       </p>

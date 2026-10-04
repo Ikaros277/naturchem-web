@@ -267,7 +267,56 @@ Další technické poznatky:
 - GSC stále vykazuje starou URL `http://www.naturchem.cz/` (213 zobrazení a 2 kliknutí), ale živá URL se aktuálně přesměruje na `https://www.naturchem.cz/` a výsledná stránka má správný canonical. Sledovat pokles staré varianty, nyní bez zásahu do kódu.
 - Mobilní zařízení měla 13 kliknutí z 1 220 zobrazení, CTR 1,1 % a pozici 8,3; počítače 112 kliknutí z 4 151 zobrazení, CTR 2,7 % a pozici 11,4. Mobilní dotazy jsou však z velké části informační a vícejazyčné, takže samotný rozdíl neprokazuje problém mobilního rozhraní.
 
+## Monitoring 28. 9. 2026 — baseline před vyhodnocením nových služeb
+
+- Kompletní srovnání 29. 8.–25. 9. vs. 1.–28. 8.: GSC 218 vs. 146 kliknutí, AI zobrazení 2 189 vs. 1 251, ale GA4 `generate_lead` 5 vs. 5 a `form_start` 6 vs. 8. Nejde o potvrzené kvalifikované poptávky; Resend vyžaduje nové přihlášení.
+- Produkční redesign služeb `83793e1` z 27. 9. se v těchto datech ještě neprojevuje. Zachovat stabilní variantu, nepřidávat souběžný konverzní experiment a nepřisuzovat mu předchozí růst.
+- Aktuální Vercel ISR Reads 77,9 % limitu, Writes 0; limity nepřekročeny, budoucí nepřekročení nelze garantovat.
+- Podrobná evidence, indexace, interpretace a omezení: [MONITORING-2026-09-28.md](MONITORING-2026-09-28.md).
+
+## Lokální implementace auditu 2.–3. 10. 2026
+
+- Pouze lokální větev `codex/audit-quality-2026-10-02` na ověřeném produkčním základu `83793e1`; bez nasazení a bez změny definice primární konverze.
+- Opravy ilustrací, kompaktní katalog/poradna, nenápadný chat a měření výběru služby. Jeden návrh SEO description hlukových studií: baseline 1 kliknutí / 172 zobrazení, pozice 10,7; komerční dotaz „hluková studie cena“ 23 zobrazení / 0 kliknutí / pozice 15,2.
+- Nejde o prokázaný růst poptávek ani o spuštění dalšího produkčního experimentu. Doručení čeká na správný Resend účet a kvalifikaci firmou, usage na přihlášení Vercel.
+- Úplné hypotézy, změny, ochrana Cursoru, ověřovací podklady a rollback: [IMPLEMENTACE-AUDIT-2026-10-02.md](IMPLEMENTACE-AUDIT-2026-10-02.md).
+
+## Lokální B2B dopracování 3. 10. 2026
+
+- Na výslovný požadavek uživatele doplněno rozcestí pro podniky/EHS/BOZP, externí ekology/environmentální firmy a projektové či veřejné zadavatele. Zachovány tři původní komerční cesty a úvodní LCP.
+- Kratší titulky pouze na homepage kartách, úsporné mobilní články a unikátní ilustrace bezpečnostních listů. Bez nových neověřených obchodních slibů a bez nasazení.
+- Měření `select_audience` a homepage `select_service` je mezikrok, nikoli hotová poptávka. Efekt ověřit po schválení a dostatečných post-change datech; neprohlašovat už nyní lepší SEO či více klientů.
+- Podklad, hypotéza, assety, prompt, ochrana původních změn a ověření: [B2B-PREZENTACE-2026-10-03.md](B2B-PREZENTACE-2026-10-03.md).
+
+## Lokální UX dopracování 3. 10. 2026
+
+Aktuální návrh homepage a formuláře je popsán v [UX-POLISH-2026-10-03.md](UX-POLISH-2026-10-03.md). Nahrazuje velký B2B panel kompaktními neklikacími rolemi a jedním kontextovým partnerským proklikem. Bez spuštění produkčního experimentu; `select_audience` nyní náleží pouze skutečnému partnerskému odkazu. Předchozí tři klikací role nejsou stejnou měřicí sadou.
+
+## Lokální autentické fotografie 4. 10. 2026
+
+Na výslovné zadání uživatele zapojeno osm vybraných fotografií do homepage, šesti měřicích služeb a přístrojového vybavení. Zachovány kompaktní struktura, SVG studií/EIA, kontaktní cesta a SEO. Opraveno i sdílené hero přiřazení kolaudace a nové haly. Hypotéza je vyšší důvěra B2B zadavatelů, nikoli již změřený růst poptávek nebo rankingů. Pouze lokální návrh, bez nového produkčního experimentu. Rozsah, zdroje, omezení rozlišení, skutečné obrazové rozpočty, ověření a podmínky nasazení: [AUTENTICKE-FOTOGRAFIE-2026-10-04.md](AUTENTICKE-FOTOGRAFIE-2026-10-04.md).
+
+## TECH-009 — ochrana Vercel kvót 4. 10. 2026
+
+- Baseline Vercel: ISR Reads 1 093 696 / 1 000 000, Fast Origin Transfer 8,61 / 10 GB, ISR Writes 0. Předchozí 12hodinové okno obsahovalo zhruba 10 tisíc požadavků Meta-ExternalAgent. Historický součet není průběžná rychlost spotřeby.
+- Cílený WAF zákaz Meta-ExternalAgent byl aktivován již v předchozím kroku; běžní návštěvníci a důležití vyhledávací/AI roboti zůstávají povoleni. Tento krok nemá nový deployment aplikace.
+- Do společného lokálního návrhu přeneseny odpovídající robots pravidlo, externí cachovatelné CSS, ochrana statického publikování a omezené vedlejší přednačítání. Bez globálního zákazu AI a bez placeného upgradu.
+- Hypotéza: pokles zbytečných bot požadavků a opakovaného origin transferu. Efekt ověřit ve stejně dlouhých 12/24hodinových oknech; nelze garantovat nepřekročení kvót ani vynulování klouzavého součtu.
+- Evidence a omezení: [RYCHLOST-VERCEL-2026-10-04.md](RYCHLOST-VERCEL-2026-10-04.md).
+
+## TECH-010 — lokální rychlost bez odstranění obchodních vstupů 4. 10. 2026
+
+- Pouze lokální implementace v již rozpracovaném fotografickém/B2B návrhu. Žádný commit, push nebo produkční deployment; nezasahuje do definice primární konverze.
+- Měřený baseline stejného lokálního návrhu: homepage HTML 508 569 → 133 446 B, poradna 663 506 → 128 307 B, FAQ 663 126 → 250 510 B. Jde o objem HTML, nikoli o procento zrychlení celé stránky nebo důkaz vyšších konverzí.
+- Poradna má nejvýše 12 karet na stránku, úplné hledání a filtrování se načítá až při použití. Všech 187 publikovaných článků je dostupných bez JavaScriptu; 14 nových statických stránkovaných přehledů, žádná původní obsahová URL odstraněna.
+- Statické responzivní AVIF/WebP, sdílené varianty, menší sémantická kopie FAQ a odlehčení společných stylů. Osm schválených autentických fotografií zachováno. Cena za předpřipravené varianty: přibližně +24,7 MB veřejných souborů, nikoli menší Deployment Storage.
+- Ověření: kompletní verify/build, 750 lokálních kontrol URL/odkazů a routing smoke bez chyby, skutečná mobilní cesta CTA → formulář a desktopové stránkování/filtrování. Žádné odeslání reálné/testovací poptávky.
+- Hypotéza: méně přenosu a práce při první návštěvě, nižší odchody a vyšší dokončení relevantních poptávek. Po schváleném nasazení měřit tři mobilní PageSpeed běhy a stejně dlouhá 28denní GA4/GSC období včetně skutečně přijatých kvalifikovaných leadů; při malém vzorku 56 dní.
+- Podrobný rozsah, kompromisy, ověření a společný rollback: [RYCHLOST-VERCEL-2026-10-04.md](RYCHLOST-VERCEL-2026-10-04.md).
+
 ## Kontrola po nasazení
+
+Společný lokální balík audit/B2B/UX/fotografie a TECH-009/TECH-010 uživatel výslovně schválil k produkčnímu vydání 4. 10. 2026. Přednasazovací ověření, tehdejší main, kvóty, ochrana Cursoru a rollback: [RELEASE-PRIPRAVA-2026-10-04.md](RELEASE-PRIPRAVA-2026-10-04.md). Přesný nový commit a úspěšné živé nasazení se potvrzují samostatně po stavu Ready, nikoli tímto schválením.
 
 - Úspěšný produkční build a známý rollback commit.
 - HTTP 200 na změněných URL; canonical a hreflang odpovídají produkční doméně.

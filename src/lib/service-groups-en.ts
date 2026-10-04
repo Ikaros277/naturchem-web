@@ -17,7 +17,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "mericke-sluzby",
     title: "Accredited and authorised measurements",
     intro:
-      "Need a report for an authority or your operation? We provide field measurements of emissions, noise, workplace environment and other parameters — with outputs for the regional hygiene station, Czech Environmental Inspectorate or regional authority.",
+      "Field measurements of emissions, noise and workplace conditions, with reports for operations and authorities.",
     items: [
       {
         title: "Workplace environment measurements",
@@ -65,7 +65,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "studie-vypocty",
     title: "Studies, calculations and modelling",
     intro:
-      "Planning an operational change or new project? We prepare dispersion, noise, modelling calculations and linked impacts including variants for authorities and investors.",
+      "Dispersion and noise studies, calculations and impact assessments for projects and operational changes.",
     items: [
       {
         title: "Dispersion studies",
@@ -98,7 +98,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "povolovaci-podklady",
     title: "Permitting and official documentation",
     intro:
-      "Changing technology or source permit? We prepare expert reports, operating rules and supporting documentation for integrated permits — for the regional authority and Czech Environmental Inspectorate.",
+      "Expert reports, operating rules and documentation for source permits and integrated permits.",
     items: [
       {
         title: "Expert reports",
@@ -126,7 +126,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "eia-investice",
     title: "EIA and investment preparation",
     intro:
-      "Preparing an investment with EIA? We coordinate project notification, scoping and technical appendices linked to permitting.",
+      "Project notifications and technical appendices for environmental impact assessment.",
     items: [
       {
         title: "EIA and project notification",
@@ -149,7 +149,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "evidence-reporting",
     title: "Operating records, reporting and legislative support",
     intro:
-      "ISPOP reporting or data verification approaching? We review integrated pollution reporting records and greenhouse gas emissions linked to measurements and permits.",
+      "ISPOP reporting, operating records and greenhouse gas emission calculations.",
     items: [
       {
         title: "ISPOP and integrated pollution reporting records",
@@ -172,17 +172,12 @@ export const serviceGroups: ServiceGroup[] = [
     id: "skoleni-podpora",
     title: "Training and specialist support",
     intro:
-      "Need training or clear rules for chemicals in operation? We cover legislation, safety data sheets, labelling and storage for warehouses, production and laboratories.",
+      "Chemical legislation training, safety data sheets, labelling and storage.",
     items: [
       {
         title: "Chemical legislation training",
         href: "/sluzby/skoleni-chemicke-legislativy",
         text: "Practical training for companies handling chemical substances and mixtures."
-      },
-      {
-        title: "Working with chemical substances and mixtures",
-        href: "/sluzby/chemicke-latky",
-        text: "Safe use, storage, labelling and operating rules for employees."
       },
       {
         title: "Safety data sheets and labelling",

@@ -6,6 +6,14 @@ const { hashArticleSources, readArticleContentVersion } = require("./lib/article
 
 const projectRoot = path.resolve(__dirname, "..");
 const appRoot = path.join(projectRoot, "src", "app");
+const nextConfigSource = fs.readFileSync(path.join(projectRoot, "next.config.ts"), "utf8");
+assert.match(nextConfigSource, /inlineCss\s*:\s*false\b/, "Shared CSS must remain cacheable instead of repeated in HTML/RSC");
+const robotsSource = fs.readFileSync(path.join(appRoot, "robots.ts"), "utf8");
+assert.match(robotsSource, /userAgent:\s*"Meta-ExternalAgent",\s*disallow:\s*"\/"/, "Mirror the targeted quota-protection WAF rule");
+assert.doesNotMatch(robotsSource.split("] as const;")[0], /"Meta-ExternalAgent"/);
+for (const crawler of ["OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "ClaudeBot"]) {
+  assert.ok(robotsSource.split("] as const;")[0].includes(`"${crawler}"`), `Preserve discovery by ${crawler}`);
+}
 
 function collectSourceFiles(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -35,6 +43,7 @@ assert.deepEqual(
 const staticPublishingRoutes = [
   "src/app/[locale]/page.tsx",
   "src/app/[locale]/poradna/page.tsx",
+  "src/app/[locale]/poradna/strana/[page]/page.tsx",
   "src/app/[locale]/poradna/[slug]/page.tsx",
   "src/app/sitemap.ts"
 ];

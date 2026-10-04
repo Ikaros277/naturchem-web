@@ -18,6 +18,7 @@ const load = require("./lib/load-typescript.js")({
   "./service-improvements.module.css": css,
   "./header-inquiry-cta.module.css": css,
   "./service-detail.module.css": css,
+  "./tawk-launcher.module.css": css,
   "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/hero/mereni-emisi.webp", alt: "" }) },
   "next/link": { __esModule: true, default: link },
   "next/script": { __esModule: true, default: () => null },
@@ -39,6 +40,7 @@ const { homeArticleTitle } = load(path.join(root, "src/lib/home-article-titles.t
 const { ServicePage } = load(path.join(root, "src/components/ServicePage.tsx"));
 const { HomeServiceIndex } = load(path.join(root, "src/components/HomeServiceIndex.tsx"));
 const { HomeDemandPaths } = load(path.join(root, "src/components/HomeDemandPaths.tsx"));
+const { readContactUrlPrefill } = load(path.join(root, "src/lib/contact-url-prefill.ts"));
 const { serviceMegaGroups } = load(path.join(root, "src/lib/service-megamenu.ts"));
 const { localesForConstrainedPath } = load(path.join(root, "src/lib/locale-constrained-paths.ts"));
 const { stripLocaleFromPathname } = load(path.join(root, "src/lib/i18n/navigation.ts"));
@@ -46,6 +48,7 @@ const { HomeHeroShell } = load(path.join(root, "src/components/HomeHeroShell.tsx
 const { HeaderInquiryCta } = load(path.join(root, "src/components/HeaderInquiryCta.tsx"));
 const { CountUpStatValue } = load(path.join(root, "src/components/CountUpStatValue.tsx"));
 const { TawkToChat } = load(path.join(root, "src/components/TawkToChat.tsx"));
+const { LocaleProvider } = load(path.join(root, "src/lib/i18n/locale-context.tsx"));
 const { verifyImmutableAssets, hash } = require("./verify_immutable_assets.js");
 
 async function main() {
@@ -94,7 +97,9 @@ async function main() {
   }
   const homepageSource = fs.readFileSync(path.join(root, "src/app/[locale]/page.tsx"), "utf8");
   assert.ok(!homepageSource.includes("HomeProof") && !homepageSource.includes("/team/"), "Homepage should not contain the rejected director profile block");
-  const pendingViewportChat = renderToStaticMarkup(React.createElement(TawkToChat));
+  const pendingViewportChat = renderToStaticMarkup(React.createElement(LocaleProvider, {
+    locale: "cs", messages: require(path.join(root, "messages/cs.json"))
+  }, React.createElement(TawkToChat)));
   assert.ok(pendingViewportChat.includes('data-tawk-suppressed="true"'), "Suppress loaded vendor frames until the desktop viewport is known");
   assert.ok(fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8").includes("body:has([data-tawk-suppressed])"), "Keep fallback protection against a vendor reopening a hidden widget");
   assert.deepEqual(serviceMegaGroups.map(group => group.links.length), [8, 8, 8], "Czech service menu must have three balanced columns");
@@ -167,7 +172,7 @@ async function main() {
     assert.ok(!index.includes("/_next/image"), "Homepage media must use static assets");
     for (const image of index.matchAll(/<img\b[^>]*src="([^"]+)"/g)) {
       assert.ok(fs.existsSync(path.join(root, "public", image[1])), "Missing measurement image: " + image[1]);
-      assert.ok(image[1].endsWith("-card.webp"), "Preserve Cursor's lightweight service-card assets");
+      assert.ok(/-card(?:-384)?\.webp$/.test(image[1]), "Preserve pre-sized lightweight service-card assets");
       assert.ok(fs.statSync(path.join(root, "public", image[1])).size < 20000, "Service-card image exceeded its 20 KB budget");
     }
     assert.equal((index.match(/fetchPriority="low"/g) || []).length, 3, "Card images must not compete with the hero LCP");
@@ -175,6 +180,21 @@ async function main() {
     assert.ok(index.includes('href="' + prefix + '/sluzby/pracovni-prostredi/"'));
     const demand = renderToStaticMarkup(React.createElement(HomeDemandPaths, { locale }));
     assert.ok(!demand.includes("<p>"), "Situations should not return to paragraph-heavy cards");
+    assert.equal((demand.match(/data-b2b-role=/g) || []).length, 3, "Three visible B2B roles without a second service catalog");
+    assert.equal((demand.match(/data-b2b-audience=/g) || []).length, 1, "Only the actionable partner link tracks audience selection");
+    const partnerAnchor = [...demand.matchAll(/<a\b[^>]*>/g)].find(match => match[0].includes('data-b2b-audience="environmental_partner"'))?.[0];
+    const partnerHref = partnerAnchor?.match(/href="([^"]+)"/)?.[1]?.replace(/&amp;/g, "&");
+    assert.ok(partnerHref, "Environmental partners need a direct inquiry path");
+    const partnerUrl = new URL(partnerHref, "https://www.naturchem.cz");
+    assert.equal(partnerUrl.pathname, prefix + "/kontakt/");
+    assert.equal(partnerUrl.hash, "#poptavkovy-formular");
+    const partnerPrefill = readContactUrlPrefill(partnerUrl.search);
+    assert.equal(partnerPrefill.initialCategory, "nevim");
+    assert.deepEqual(partnerPrefill.initialServices, [], "Do not preselect an unrequested service for a partner");
+    assert.ok(partnerPrefill.initialMessage.length > 40 && partnerPrefill.initialMessage.includes("\n"));
+    assert.ok(!demand.includes("b2bCredential"), "Do not repeat hero accreditation in the B2B panel");
+    assert.ok(demand.includes('id="home-needs-heading"'), "Keep existing commercial demand paths");
+    assert.equal((index.match(/data-service-placement="home_service_index"/g) || []).length, 6);
     for (const match of demand.matchAll(/href="([^"]+)"/g)) {
       const pathname = stripLocaleFromPathname(new URL(match[1], "https://www.naturchem.cz").pathname);
       const available = localesForConstrainedPath(pathname);
@@ -193,6 +213,10 @@ async function main() {
   assert.equal(heroThemeForArticle({ title: "Fixture", topic: "Rozptylové studie" }), "rozptylove-studie");
   assert.equal(homeArticleTitle({ slug: articleSlugs[0], title: "Full title" }, "en"), "Full title");
   assert.equal(homeArticleTitle({ slug: "unmapped", title: "Full title" }, "cs"), "Full title");
+  for (const slug of ["bezpecnostni-listy-v-provozu-co-musi-zamestnavatel", "skladovani-chemickych-latek-smesi-kontrola"]) {
+    assert.ok(homeArticleTitle({ slug, title: "Full original article title" }, "cs").length < 60, "Readable homepage labels, not altered article titles");
+    assert.equal(homeArticleTitle({ slug, title: "Full original article title" }, "en"), "Full original article title");
+  }
   const hero = renderToStaticMarkup(React.createElement(HomeHeroShell, {
     locale: "cs", credential: "Fixture", ariaLabel: "Hero", pillarsAriaLabel: "Services",
     pillars: [{ id: "noise", label: "Noise", href: "/sluzby/mereni-hluku" }],

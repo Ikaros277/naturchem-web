@@ -600,3 +600,6 @@ main.contact-page + .site-footer {
 .contact-form-details > summary:focus-visible { outline: 3px solid #b88727; outline-offset: 3px; }
 .contact-form-details .contact-service-choices { border: 0; padding: 8px 0 16px; margin: 0; }
 .contact-form-details .contact-service-choice { min-height: 44px; }
+.contact-attachment-help { font-size: 14px; }
+.contact-attachment-help > p { margin: 0; padding: 0 4px 14px; color: #4e6370; line-height: 1.55; }
+.contact-attachment-help a { overflow-wrap: anywhere; }

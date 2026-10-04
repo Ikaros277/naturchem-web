@@ -6716,79 +6716,14 @@ main.services-index-page:has(> .page-hero-band) {
   padding: 0;
 }
 
-.topic-filter-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.25rem 0 1.75rem;
-}
 
-.topic-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-ui);
-  border: 1px solid rgba(26, 92, 58, 0.25);
-  background: #f3f8f5;
-  color: var(--forest);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
-.topic-pill[aria-pressed="true"] {
-  background: var(--forest);
-  color: #fff;
-  border-color: var(--forest);
-}
 
-.poradna-search {
-  display: grid;
-  gap: 0.45rem;
-  max-width: 32rem;
-  margin: 0 0 1.25rem;
-  font-weight: 700;
-}
 
-.poradna-search input {
-  width: 100%;
-  min-height: 48px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  padding-inline: 1rem;
-  font-weight: 500;
-  background: var(--surface);
-}
 
-.poradna-search input:focus {
-  outline: 2px solid var(--forest);
-  outline-offset: 2px;
-}
 
-.poradna-filter-bar {
-  margin-bottom: 0.25rem;
-}
 
-.poradna-filter-count {
-  margin: 0 0 1.25rem;
-  font-size: 0.9rem;
-}
 
-.poradna-empty-state {
-  grid-column: 1 / -1;
-}
 
-.text-link-button {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  color: var(--forest);
-  font-weight: 650;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 
 .article-card--with-thumb {
   overflow: hidden;
@@ -8342,84 +8277,16 @@ main.home-page + .site-footer {
   }
 
   /* Kompaktní řádek: náhled vlevo (1/3), obsah vpravo (2/3) — homepage + /poradna */
-  .article-card--mobile-row.card-link.semantic-card {
-    display: grid;
-    grid-template-columns: minmax(5.25rem, 33%) minmax(0, 1fr);
-    grid-template-rows: auto auto auto auto;
-    column-gap: 0.9rem;
-    row-gap: 0.3rem;
-    align-items: start;
-    padding: 0.85rem 0.9rem;
-  }
 
-  .article-card--mobile-row .article-card-thumb {
-    grid-column: 1;
-    grid-row: 1 / -1;
-    width: 100%;
-    margin: 0;
-    aspect-ratio: 1;
-    min-height: 5.25rem;
-    align-self: stretch;
-    border-radius: var(--radius-sharp);
-  }
 
-  .article-card--mobile-row .article-card-meta {
-    grid-column: 2;
-    grid-row: 1;
-    gap: 0.35rem 0.5rem;
-    font-size: 0.78rem;
-    margin-bottom: 0.1rem;
-  }
 
-  .article-card--mobile-row .article-card-date {
-    font-size: 0.78rem;
-  }
 
-  .article-card--mobile-row .tag {
-    font-size: 0.68rem;
-    padding: 0.12rem 0.45rem;
-  }
 
-  .article-card--mobile-row .index-card-head {
-    grid-column: 2;
-    grid-row: 2;
-    gap: 0;
-    margin: 0;
-  }
 
-  .article-card--mobile-row .index-card-head .card-symbol {
-    display: none;
-  }
 
-  .article-card--mobile-row .index-card-heading {
-    font-size: 1.05rem;
-    line-height: 1.28;
-    font-weight: 650;
-    color: var(--navy);
-  }
 
-  .article-card--mobile-row .article-card-excerpt {
-    grid-column: 2;
-    grid-row: 3;
-    margin: 0;
-    font-size: 0.82rem;
-    -webkit-line-clamp: 2;
-  }
 
-  .article-card--mobile-row .card-inline-link {
-    grid-column: 2;
-    grid-row: 4;
-    margin-top: 0.5rem;
-    padding: 0.55rem 0 0;
-    width: 100%;
-    font-size: 0.85rem;
-    border-top: 1px solid rgba(13, 54, 130, 0.1);
-    background: transparent;
-  }
 
-  .poradna-page .article-list-grid {
-    gap: 0.75rem;
-  }
 
   .home-poradna-footer {
     text-align: center;
@@ -9822,16 +9689,116 @@ main.home-page + .site-footer {
 }
 
 /* --- Live chat: WhatsApp + Tawk.to --- */
+/* Compact catalogue/guide headers: bring the actual choice above the fold. */
+.page-hero-band.page-hero-band--compact {
+  height: auto;
+  min-height: 0;
+}
+.page-hero-band--compact .page-hero-band-inner {
+  height: auto;
+  min-height: 0;
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+}
+.page-hero-band--compact .hero-band-text { height: auto; }
+.page-hero-band--compact .page-lead { max-width: 34rem; margin-bottom: 0; }
+.service-category-nav {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.service-category-nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 10px 12px;
+  border: 1px solid #c9dbd5;
+  border-radius: 10px;
+  background: #fff;
+  color: #183a4a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+}
+.service-category-nav a:hover { background: #eef5f2; border-color: #7eab99; }
+.service-category-nav a:focus-visible { outline: 3px solid #2f6f5e; outline-offset: 3px; }
+.service-category-nav a span { min-width: 0; overflow-wrap: anywhere; }
+.service-category-nav svg { flex: 0 0 auto; }
+.service-groups-accordion .index-card-head { min-height: 5.2rem; align-items: flex-start; }
+.service-groups-accordion .service-index-card-lead { padding-top: 10px; line-height: 1.5; }
+.service-groups-accordion .service-index-card .card-inline-link,
+.service-groups-accordion .service-index-card:hover .card-inline-link,
+.service-groups-accordion .service-index-card:focus-visible .card-inline-link {
+  align-self: flex-start;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: #1b5845 !important; /* Override legacy white pill text only inside this catalogue. */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transform: none;
+}
+.service-groups-accordion .service-index-card .card-inline-link::after { color: currentColor; }
+@media (max-width: 1023px) {
+  .service-category-nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .page-hero-band--compact .page-hero-band-inner { padding-block: 20px; }
+  .page-hero-band--compact .page-header h1,
+  .page-hero-band--compact .premium-page-hero h1 { font-size: clamp(1.75rem, 7vw, 2.1rem); }
+  .service-category-nav a { padding: 9px 7px; gap: 5px; font-size: 13px; }
+  .service-category-nav svg { width: 16px; height: 16px; }
+  .service-groups-accordion .service-index-card--with-thumb {
+    display: grid;
+    grid-template-columns: 104px minmax(0, 1fr);
+    grid-template-areas: "image heading" "description description" "action action";
+    align-content: start;
+    gap: 0;
+  }
+  .service-groups-accordion .service-index-card--with-thumb .article-card-thumb {
+    grid-area: image;
+    align-self: start;
+    width: 80px;
+    height: 80px;
+    margin: 12px;
+    border-radius: 8px;
+  }
+  .service-groups-accordion .service-index-card--with-thumb .index-card-head {
+    grid-area: heading;
+    min-height: 0;
+    align-self: center;
+    padding: 12px 12px 12px 0;
+  }
+  .service-groups-accordion .index-card-head > .service-icon-plain { display: none; }
+  .service-groups-accordion .index-card-heading { font-size: 1.05rem; line-height: 1.35; }
+  .service-groups-accordion .service-index-card--with-thumb .service-index-card-lead {
+    grid-area: description;
+    padding: 0 14px;
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+  .service-groups-accordion .service-index-card--with-thumb .card-inline-link {
+    grid-area: action;
+    margin: 6px 14px 10px;
+  }
+}
+
 
 .live-chat-whatsapp {
   position: fixed;
   left: 1.1rem;
-  bottom: 1.1rem;
+  bottom: max(1.1rem, env(safe-area-inset-bottom));
   z-index: 1100;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.72rem 0.95rem 0.72rem 0.82rem;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
   border-radius: var(--radius-pill);
   background: #0b7a38;
   color: #fff;
@@ -9853,7 +9820,7 @@ main.home-page + .site-footer {
 }
 
 .live-chat-whatsapp:focus-visible {
-  outline: 2px solid #fff;
+  outline: 3px solid #173f59;
   outline-offset: 3px;
 }
 
@@ -9863,6 +9830,25 @@ main.home-page + .site-footer {
   justify-content: center;
   flex-shrink: 0;
 }
+
+.live-chat-whatsapp-label {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 10px);
+  width: max-content;
+  padding: 9px 13px;
+  border-radius: 6px;
+  background: #09652f;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.live-chat-whatsapp:hover .live-chat-whatsapp-label,
+.live-chat-whatsapp:focus-visible .live-chat-whatsapp-label { visibility: visible; opacity: 1; }
 
 /* Tawk bublina vpravo dole, WhatsApp vlevo — bez překryvu. */
 body:has([data-tawk-suppressed]) div:has(> iframe[title="Widget chatu"]),
@@ -9888,8 +9874,7 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
 @media (max-width: 767px) {
   .live-chat-whatsapp {
     left: 0.85rem;
-    bottom: 0.85rem;
-    padding: 0.72rem;
+    bottom: max(0.85rem, env(safe-area-inset-bottom));
   }
 
   .live-chat-whatsapp-label {

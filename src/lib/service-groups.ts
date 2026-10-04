@@ -17,7 +17,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "mericke-sluzby",
     title: "Akreditovaná a autorizovaná měření",
     intro:
-      "Potřebujete protokol pro úřad nebo provoz? Zajistíme terénní měření emisí, hluku, pracovního prostředí i dalších veličin — s výstupem pro KHS, ČIŽP nebo krajský úřad.",
+      "Emise, hluk a pracovní prostředí. Protokoly pro provoz, kolaudaci a jednání s úřady.",
     items: [
       {
         title: "Měření pro kolaudaci",
@@ -75,7 +75,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "studie-vypocty",
     title: "Studie, výpočty a modelování",
     intro:
-      "Plánujete změnu provozu nebo nový záměr? Připravíme rozptyl, hluk, modelové výpočty a propojené dopady včetně variant pro úřad i investora.",
+      "Rozptylové a hlukové studie pro projekty, nové technologie a změny provozu.",
     items: [
       {
         title: "Rozptylové studie",
@@ -108,7 +108,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "povolovaci-podklady",
     title: "Povolovací a úřední dokumentace",
     intro:
-      "Měníte technologii nebo povolení zdroje? Zpracujeme odborné posudky, provozní řády a podklady pro integrovaná povolení — pro krajský úřad i ČIŽP.",
+      "Odborné posudky, provozní řády a podklady pro povolení provozu.",
     items: [
       {
         title: "Odborné posudky",
@@ -136,7 +136,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "eia-investice",
     title: "EIA a investiční příprava",
     intro:
-      "Připravujete investici s EIA? Zkoordinujeme oznámení záměru, zjišťovací řízení a technické přílohy v návaznosti na povolování.",
+      "Oznámení záměru, zjišťovací řízení a odborné přílohy pro investiční přípravu.",
     items: [
       {
         title: "EIA a oznámení záměru",
@@ -159,7 +159,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "evidence-reporting",
     title: "Provozní evidence, vykazování a legislativní poradenství",
     intro:
-      "Blíží se hlášení ISPOP nebo kontrola údajů? Zkontrolujeme souhrnnou evidenci a emise skleníkových plynů v návaznosti na měření a povolení.",
+      "ISPOP, emisní údaje a pravidla pro chemické látky v provozu.",
     items: [
       {
         title: "ISPOP a souhrnná provozní evidence",
@@ -182,17 +182,12 @@ export const serviceGroups: ServiceGroup[] = [
     id: "skoleni-podpora",
     title: "Školení a odborná podpora",
     intro:
-      "Potřebujete školení nebo srozumitelné pravidla pro chemii v provozu? Projdeme legislativu, bezpečnostní listy, označování a skladování pro sklady, výrobu i laboratoře.",
+      "Chemická legislativa, bezpečnostní listy a označování látek a směsí.",
     items: [
       {
         title: "Školení chemického zákona a chemické legislativy",
         href: "/sluzby/skoleni-chemicke-legislativy",
         text: "Praktické školení pro firmy nakládající s chemickými látkami a směsmi."
-      },
-      {
-        title: "Školení práce s chemickými látkami a směsmi",
-        href: "/sluzby/chemicke-latky",
-        text: "Bezpečné používání, skladování, značení a provozní pravidla pro zaměstnance."
       },
       {
         title: "Bezpečnostní listy a označování",

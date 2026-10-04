@@ -25,6 +25,8 @@ function readCatalog(contentRoot = path.join(root, "content")) {
         locale, slug, publishedAt,
         title: typeof data.title === "string" && data.title.trim() ? data.title.trim() : slug,
         excerpt: typeof data.excerpt === "string" ? data.excerpt.trim() : "",
+        topic: typeof data.topic === "string" ? data.topic.trim() : undefined,
+        heroImage: typeof data.heroImage === "string" ? data.heroImage.trim() : undefined,
         body: content
       });
     }

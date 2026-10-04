@@ -15,7 +15,6 @@ const aiCrawlers = [
   "Applebot-Extended",
   "cohere-ai",
   "Bytespider",
-  "Meta-ExternalAgent",
   "FacebookBot",
   "Diffbot",
   "Amazonbot",
@@ -50,10 +49,13 @@ export default function robots(): MetadataRoute.Robots {
         allow: ["/", ...llmDiscoveryPaths],
         disallow: disallowedPaths
       },
+      // Match the narrowly scoped quota-protection WAF rule. Search crawlers
+      // and user-initiated fetchers remain allowed.
+      { userAgent: "Meta-ExternalAgent", disallow: "/" },
       ...aiCrawlers.map((userAgent) => ({
         userAgent,
         allow: ["/", ...llmDiscoveryPaths],
-        disallow: ["/admin/", "/api/"]
+        disallow: disallowedPaths
       }))
     ],
     sitemap: `${siteUrl}/sitemap.xml`,

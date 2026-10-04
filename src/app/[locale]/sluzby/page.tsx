@@ -51,6 +51,7 @@ export default async function Page({ params }: Props) {
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}
+        className="page-hero-band--compact"
         theme={getPageHeroTheme("/sluzby")}
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },

@@ -95,6 +95,7 @@ async function main() {
     const result = await fixture.submit(data(), locale);
     assert.equal(result.status, 200);
     const body = await result.json();
+    assert.equal(body.message, require(path.join(root, "messages", locale + ".json")).contactForm.successMessage, "API success and client copy must share the verified 24-hour reaction promise");
     assert.match(body.leadId, /^[\da-f-]{36}$/);
     assert.ok(fixture.emails[0].text.includes(`ID poptávky: ${body.leadId}`));
     assert.ok(fixture.emails[0].subject.includes(body.leadId.slice(0, 8)));
@@ -153,6 +154,7 @@ async function main() {
   await protectedTurnstile.afterResponse[0]();
   assert.equal(protectedTurnstile.emails.length, 2);
   assert.ok(protectedTurnstile.emails[1].text.includes(protectedBody.leadId));
+  assert.ok(protectedTurnstile.emails[1].text.includes("do 24 hodin"), "Confirmation email describes reaction, not a completed quotation");
 
   global.fetch = async () =>
     Response.json({ success: true, action: "different-form", hostname: "example.invalid" });

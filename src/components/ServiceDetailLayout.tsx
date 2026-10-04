@@ -12,6 +12,7 @@ import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
 import { getServiceDetailCopy } from "@/lib/i18n/service-detail-copy";
 import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { getServiceHeroTheme } from "@/lib/hero-images";
+import { getAuthenticPhoto } from "@/lib/authentic-photos";
 import { company } from "@/lib/site";
 import styles from "./service-detail.module.css";
 
@@ -37,6 +38,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
   const category = getServiceCategoryFromHref("/" + content.slug);
   const categoryLabel = category === "measurement" ? ui.measurement : category === "studies" ? ui.studies : ui.docsCategory;
   const emissions = locale === "cs" && content.slug === "sluzby/mereni-emisi";
+  const photo = getAuthenticPhoto(getServiceHeroTheme(content.slug));
   const features = emissions ? [
     { title: "Měření u Vašeho zdroje", text: "Rozsah podle povolení provozu a zadání. Předem posoudíme měřicí místo a přípravu provozu.", icon: "process-rozsah" as const },
     { title: "Vyhodnocení vůči limitům", text: "Výsledky porovnáme s limity, povolením provozu a případným požadavkem úřadu.", icon: "process-posouzeni" as const },
@@ -65,9 +67,9 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
               <a className={styles.textLink} href="#podklady">{ui.docs} <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-          <div className={styles.photo} aria-hidden="true">
+          <div className={styles.photo} aria-hidden={photo ? undefined : true}>
             <HeroPhoto theme={getServiceHeroTheme(content.slug)} priority />
-            <span className={styles.photoCaption}>{content.title}</span>
+            <span className={styles.photoCaption}>{photo?.caption[locale] ?? content.title}</span>
           </div>
         </div>
       </section>

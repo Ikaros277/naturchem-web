@@ -7,18 +7,19 @@ type Props = {
   sizes: string;
   priority?: boolean;
   fill?: boolean;
+  thumbnailSrc?: string;
   style?: CSSProperties;
 };
 
 /** Decorative, fictional editorial imagery. Adjacent headings describe its subject. */
-export function GeneratedIllustration({ src, className, sizes, priority = false, fill = false, style }: Props) {
+export function GeneratedIllustration({ src, className, sizes, priority = false, fill = false, thumbnailSrc, style }: Props) {
   const sources = getGeneratedIllustrationSources(src);
   if (!sources) throw new Error(`Not a pre-encoded illustration: ${src}`);
   return (
     // eslint-disable-next-line @next/next/no-img-element -- Both responsive sizes are encoded locally, with no runtime transformation cost.
     <img
-      src={sources.smallSrc}
-      srcSet={sources.srcSet}
+      src={thumbnailSrc ?? sources.smallSrc}
+      srcSet={thumbnailSrc ? `${thumbnailSrc} 192w, ${sources.srcSet}` : sources.srcSet}
       sizes={sizes}
       width={sources.width}
       height={sources.height}

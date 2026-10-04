@@ -40,7 +40,9 @@ export default async function FaqPage({ params }: Props) {
   const link = (href: string) => localizeHref(href, locale);
   const faqUrl = `${siteUrl}${link("/faq")}/`.replace(/([^:]\/)\/+/g, "$1");
 
-  const faqData = buildFaqPageJsonLd(faq.flatItems);
+  // Keep a representative, visible question from each category in semantic data.
+  // All answers remain in HTML; do not duplicate the entire knowledge base in JSON-LD.
+  const faqData = buildFaqPageJsonLd(faq.categories.flatMap(category => category.items.slice(0, 1)));
 
   const breadcrumbData = {
     "@context": "https://schema.org",

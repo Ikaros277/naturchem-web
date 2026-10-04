@@ -5,6 +5,7 @@ import { SemanticCard } from "@/components/SemanticCard";
 type Props = {
   href: string;
   title: string;
+  headingLevel?: 2 | 3;
   cta?: string;
   className?: string;
   serviceCategory?: ServiceCategory | null;
@@ -20,6 +21,7 @@ type Props = {
 export function IndexCard({
   href,
   title,
+  headingLevel = 3,
   cta = "Zobrazit",
   className = "",
   serviceCategory,
@@ -28,6 +30,7 @@ export function IndexCard({
   meta,
   children
 }: Props) {
+  const Heading = headingLevel === 2 ? "h2" : "h3";
   return (
     <SemanticCard
       href={href}
@@ -42,10 +45,10 @@ export function IndexCard({
       ) : icon ? (
         <div className="index-card-head">
           {icon}
-          <h3 className="index-card-heading">{title}</h3>
+          <Heading className="index-card-heading">{title}</Heading>
         </div>
       ) : (
-        <h3 className="index-card-heading">{title}</h3>
+        <Heading className="index-card-heading">{title}</Heading>
       )}
       {children}
     </SemanticCard>

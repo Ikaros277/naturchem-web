@@ -1,4 +1,5 @@
 import { getHeroImageConfig, getHeroLcpSources, type HeroTheme } from "@/lib/hero-images";
+import { getAuthenticPhoto } from "@/lib/authentic-photos";
 
 type Props = {
   theme: HeroTheme;
@@ -10,6 +11,7 @@ type Props = {
 export function HomeLcpPhoto({ theme }: Props) {
   const { src, avifSrc, mobileSrc, mobileAvifSrc } = getHeroLcpSources(theme);
   const { position = "center center" } = getHeroImageConfig(theme);
+  const photo = getAuthenticPhoto(theme);
 
   return (
     <picture>
@@ -19,8 +21,8 @@ export function HomeLcpPhoto({ theme }: Props) {
       <img
         src={src}
         alt=""
-        width={1200}
-        height={800}
+        width={photo?.width ?? 1200}
+        height={photo?.height ?? 800}
         loading="eager"
         decoding="sync"
         fetchPriority="high"

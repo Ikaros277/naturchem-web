@@ -10,6 +10,7 @@ import { locales, type Locale } from "@/lib/i18n/locales";
 import { seoLandings } from "@/lib/seo-landings";
 import { getAllSalesCategoryParams } from "@/lib/sales-categories";
 import { pcfElettronicaProducts } from "@/lib/pcf-elettronica-catalog";
+import { poradnaPageCount, poradnaPagePath } from "@/lib/poradna-pagination";
 
 /** CMS publishing redeploys the site, so the sitemap remains static between deploys. */
 export const revalidate = false;
@@ -165,9 +166,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   const slugLocaleMap = await getArticleSlugLocaleMap();
+  const counts = new Map(locales.map(locale => [locale, poradnaPageCount(articlesByLocale.get(locale)?.length ?? 0)]));
+  const listingPages = locales.flatMap(locale => Array.from({ length: (counts.get(locale) ?? 1) - 1 }, (_, i) => {
+    const page = i + 2;
+    const path = poradnaPagePath(page);
+    const availableLocales = locales.filter(lang => (counts.get(lang) ?? 1) >= page);
+    return {
+      url: localizedCanonical(path, locale),
+      lastModified: poradnaHubDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+      alternates: { languages: buildLocaleAlternatesLanguages(path, availableLocales) }
+    };
+  }));
 
   return [
     ...staticSitemapEntries(staticPaths, poradnaHubDate),
+    ...listingPages,
     ...landingSitemapEntries(),
     ...articleSitemapEntries(articlesByLocale, slugLocaleMap)
   ];

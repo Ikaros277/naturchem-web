@@ -27,8 +27,14 @@ if (process.argv.includes("--rendered")) {
   for (const locale of ["cs", "en", "de"]) {
     const html = read(`.next/server/app/${locale}.html`);
     assert.equal((html.match(/prefetch/g) || []).length, 0, "No serialized Next Link instances on " + locale + " homepage");
-    const htmlBudget = { cs: 133500, en: 134000, de: 135500 }[locale];
-    assert.ok(Buffer.byteLength(html) < htmlBudget, "Keep homepage HTML below the measured pre-change baseline: " + locale);
+    // The production consent bootstrap is present only with configured GA/Ads.
+    // Baselines with it: cs 136858 B, en 137108 B, de 138576 B (f004d29).
+    // Keep both variants bounded; never disable consent/tracking to pass a test.
+    const hasConsentInit = html.includes("google-consent-mode-init");
+    const htmlBudget = (hasConsentInit
+      ? { cs: 136500, en: 137000, de: 138500 }
+      : { cs: 133500, en: 134000, de: 135500 })[locale];
+    assert.ok(Buffer.byteLength(html) < htmlBudget, "Keep homepage HTML below its matching consent baseline: " + locale);
     assert.equal((html.match(/data-service-placement="home_service_index"/g) || []).length, 6);
     assert.equal((html.match(/data-b2b-audience="environmental_partner"/g) || []).length, 1);
     assert.ok(html.includes('id="home-demand-paths-heading"') && html.includes('id="home-poradna-heading"'));

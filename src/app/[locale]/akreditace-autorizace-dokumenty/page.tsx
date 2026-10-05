@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCtaStrip } from "@/components/PageCtaStrip";

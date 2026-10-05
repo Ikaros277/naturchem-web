@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from "next";
+import "@/app/runtime.generated.css";
 import { HomeHeroSection } from "@/components/HomeHeroSection";
 import Link from "next/link";
 import { CountUpStatValue } from "@/components/CountUpStatValue";
@@ -82,12 +83,12 @@ export default async function Home({ params }: Props) {
       </section>
 
       <div className={`${styles.container} ${styles.clients}`}>
-        <Link href={link("/reference#zakaznici")} className={styles.clientsLabel}>
+        <Link prefetch={false} href={link("/reference#zakaznici")} className={styles.clientsLabel}>
           {messages.home.clientsTitle} <span aria-hidden="true">↗</span>
         </Link>
         <div className={styles.clientLogos}>
           {referenceClients.slice(0, 5).map((client) => (
-            <Link key={client.name} href={link("/reference#zakaznici")} aria-label={client.name}>
+            <Link prefetch={false} key={client.name} href={link("/reference#zakaznici")} aria-label={client.name}>
               {/* eslint-disable-next-line @next/next/no-img-element -- Pre-sized static logos avoid image transformations. */}
               <img src={client.logo} alt={client.name} width={120} height={40} loading="lazy" decoding="async" />
             </Link>
@@ -103,7 +104,7 @@ export default async function Home({ params }: Props) {
         <div className={styles.container}>
           <header className={styles.sectionHeader}>
             <h2 id="home-offer-heading">{messages.home.offerTitle}</h2>
-            <Link href={link("/sluzby")} className={styles.textLink}>
+            <Link prefetch={false} href={link("/sluzby")} className={styles.textLink}>
               {locale === "cs" ? "Všechny služby" : locale === "de" ? "Alle Leistungen" : "All services"} <span aria-hidden="true">→</span>
             </Link>
           </header>

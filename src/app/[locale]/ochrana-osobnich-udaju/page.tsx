@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { PrivacyPageBody } from "@/components/PrivacyPageBody";
 import { getPrivacyPage } from "@/lib/i18n/content";

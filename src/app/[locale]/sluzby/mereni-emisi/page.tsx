@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 ﻿import { createInlineServicePageExports } from "@/lib/render-inline-service-page";
 
 const czech = {

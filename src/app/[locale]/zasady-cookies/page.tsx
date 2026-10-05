@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { CookiesPageBody } from "@/components/CookiesPageBody";
 import { getCookiesPage } from "@/lib/i18n/content";

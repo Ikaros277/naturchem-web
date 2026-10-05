@@ -22,7 +22,7 @@ export async function HomePoradnaStrip({ locale }: { locale: Locale }) {
       <div className={styles.container}>
         <header className={styles.sectionHeader}>
           <h2 id="home-poradna-heading">{messages.home.articlesTitle}</h2>
-          <Link href={localizeHref("/poradna", locale)} className={styles.textLink}>{messages.common.allArticles}<span aria-hidden="true">→</span></Link>
+          <Link prefetch={false} href={localizeHref("/poradna", locale)} className={styles.textLink}>{messages.common.allArticles}<span aria-hidden="true">→</span></Link>
         </header>
         <div className={styles.articles}>
           {articles.map(article => {

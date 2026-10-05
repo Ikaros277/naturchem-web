@@ -314,6 +314,15 @@ Na výslovné zadání uživatele zapojeno osm vybraných fotografií do homepag
 - Hypotéza: méně přenosu a práce při první návštěvě, nižší odchody a vyšší dokončení relevantních poptávek. Po schváleném nasazení měřit tři mobilní PageSpeed běhy a stejně dlouhá 28denní GA4/GSC období včetně skutečně přijatých kvalifikovaných leadů; při malém vzorku 56 dní.
 - Podrobný rozsah, kompromisy, ověření a společný rollback: [RYCHLOST-VERCEL-2026-10-04.md](RYCHLOST-VERCEL-2026-10-04.md).
 
+## TECH-011 — lokální výkon homepage 5. 10. 2026
+
+- Uživatelem dodaný aktuální PageSpeed: mobil 87 (LCP 3,6 s), desktop 89 (TBT 260 ms). Žádné dostatečné CrUX údaje; nejde o prokázaný výsledek u všech návštěvníků.
+- Izolovaná větev `codex/performance-2026-10-05-release` na produkčním základu `8ef44bd`; původní Cursor změny zachovány. Uživatel 5. 10. 2026 výslovně schválil nasazení. Úspěšné vydání a následná měření se potvrzují samostatným záznamem, nikoli tímto schválením.
+- Homepage CSS ve stejném lokálním měření gzip 33 769 → 14 206 B (-57,9 %). HTML a styly kontaktu/služeb se nezvětšují; celkový součet JS se prakticky nezměnil. Úspornější animace statistik, měření hlavičky, variabilní font a omezení prefetch/widget práce. Obsah, URL, fotografie, konverzní definice a ochrana Vercel kvót zachovány.
+- Hypotéza: menší čekání na první vykreslení a méně práce CPU usnadní dokončení kvalifikovaných poptávek. Nejde o naměřené vyšší skóre, SEO nebo konverze; existující obsahové experimenty se nemění.
+- Verify/build a 750 URL/odkazových kontrol prošly; mobilní CTA → předvyplněný formulář, desktopové i mobilní menu a chat/WhatsApp ověřeny bez odeslání poptávky. Po schválení nasazení 3+3 PageSpeed běhy, následně stejná 28/56denní období GA4 s potvrzenými leady.
+- Podklady, přesné rozpočty, omezení a rollback: [PERFORMANCE-2026-10-05.md](PERFORMANCE-2026-10-05.md).
+
 ## Kontrola po nasazení
 
 Společný lokální balík audit/B2B/UX/fotografie a TECH-009/TECH-010 uživatel výslovně schválil k produkčnímu vydání 4. 10. 2026. Přednasazovací ověření, tehdejší main, kvóty, ochrana Cursoru a rollback: [RELEASE-PRIPRAVA-2026-10-04.md](RELEASE-PRIPRAVA-2026-10-04.md). Přesný nový commit a úspěšné živé nasazení se potvrzují samostatně po stavu Ready, nikoli tímto schválením.

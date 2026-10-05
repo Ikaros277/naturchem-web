@@ -9,18 +9,31 @@ type Props = {
   idle?: boolean;
 };
 
-/** Mount children after idle or timeout — keeps third-party widgets off the critical path. */
+/** Mount nonessential widgets after document load, then idle (or a timeout). */
 export function DelayedMount({ children, delayMs = 5000, idle = true }: Props) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    let idleId = 0;
+    let timer = 0;
+    let cancelled = false;
     const run = () => setShow(true);
-    if (idle && "requestIdleCallback" in window) {
-      const id = window.requestIdleCallback(run, { timeout: delayMs });
-      return () => window.cancelIdleCallback(id);
-    }
-    const timer = window.setTimeout(run, delayMs);
-    return () => window.clearTimeout(timer);
+    const schedule = () => {
+      if (cancelled) return;
+      if (idle && "requestIdleCallback" in window) {
+        idleId = window.requestIdleCallback(run, { timeout: delayMs });
+      } else {
+        timer = window.setTimeout(run, delayMs);
+      }
+    };
+    if (document.readyState === "complete") schedule();
+    else window.addEventListener("load", schedule, { once: true });
+    return () => {
+      cancelled = true;
+      window.removeEventListener("load", schedule);
+      if (idleId) window.cancelIdleCallback(idleId);
+      window.clearTimeout(timer);
+    };
   }, [delayMs, idle]);
 
   return show ? children : null;

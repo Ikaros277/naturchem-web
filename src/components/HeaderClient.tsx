@@ -103,35 +103,24 @@ export function HeaderClient({
     const header = document.querySelector<HTMLElement>("header.site-header");
     if (!header) return;
 
-    const syncHeaderOffset = () => {
-      const height = Math.ceil(header.getBoundingClientRect().height);
-      if (height > 0) {
+    let frame = 0;
+    let lastHeight = 0;
+    const observer = new ResizeObserver(([entry]) => {
+      // The observer supplies the measured size after layout. Avoid a forced
+      // layout read and duplicate writes when logo/font loading changes height.
+      const height = Math.ceil(entry.borderBoxSize[0]?.blockSize ?? entry.contentRect.height);
+      if (height <= 0 || height === lastHeight) return;
+      lastHeight = height;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
         document.documentElement.style.setProperty("--site-header-offset", `${height}px`);
-      }
-    };
-
-    const scheduleSync = () => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(syncHeaderOffset);
       });
-    };
-
-    scheduleSync();
-    const observer = new ResizeObserver(scheduleSync);
+    });
     observer.observe(header);
-
-    const logo = header.querySelector<HTMLImageElement>(".brand-logo-img");
-    logo?.addEventListener("load", scheduleSync);
-
-    if (document.fonts?.ready) {
-      void document.fonts.ready.then(scheduleSync);
-    }
-    window.addEventListener("load", scheduleSync, { once: true });
 
     return () => {
       observer.disconnect();
-      logo?.removeEventListener("load", scheduleSync);
-      window.removeEventListener("load", scheduleSync);
+      cancelAnimationFrame(frame);
     };
   }, []);
 

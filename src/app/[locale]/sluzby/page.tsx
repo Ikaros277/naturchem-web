@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/Schema";
 import { PageCtaStrip } from "@/components/PageCtaStrip";

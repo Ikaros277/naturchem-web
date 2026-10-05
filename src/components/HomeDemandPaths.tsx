@@ -59,7 +59,7 @@ export function HomeDemandPaths({ locale }: { locale: Locale }) {
         </ul>
         <div className={styles.partnerRow}>
           <span>{content.partnerTitle}</span>
-          <Link className={styles.partnerLink} href={localizeHref(contactCategoryUrl("nevim", content.partnerMessage), locale)} data-b2b-audience="environmental_partner">
+          <Link prefetch={false} className={styles.partnerLink} href={localizeHref(contactCategoryUrl("nevim", content.partnerMessage), locale)} data-b2b-audience="environmental_partner">
             {content.partnerLink} <span aria-hidden="true">↗</span>
           </Link>
         </div>
@@ -68,7 +68,7 @@ export function HomeDemandPaths({ locale }: { locale: Locale }) {
           <ul className={styles.situationGrid}>
             {content.items.map(([title, , cta], index) => (
               <li key={paths[index]}>
-                <Link href={localizeHref(paths[index], locale)} className={styles.situation}>
+                <Link prefetch={false} href={localizeHref(paths[index], locale)} className={styles.situation}>
                   <span className={styles.situationIcon} aria-hidden="true"><ServiceIcon icon={index === 0 ? "contact-building" : index === 1 ? "pracovni-prostredi" : "posudek"} size={38} /></span>
                   <div className={styles.situationBody}>
                     <strong>{title}</strong>

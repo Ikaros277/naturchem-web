@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import styles from "./count-up-stat.module.css";
 
 type Props = {
@@ -44,13 +44,15 @@ function formatValue(value: number, parsed: ParsedValue) {
 
 export function CountUpStatValue({ value }: Props) {
   const elementRef = useRef<HTMLSpanElement>(null);
+  const visibleRef = useRef<HTMLSpanElement>(null);
   const parsed = useMemo(() => parseValue(value), [value]);
-  const [displayValue, setDisplayValue] = useState(value);
 
   useEffect(() => {
     const element = elementRef.current;
+    const visible = visibleRef.current;
 
-    if (!element || !parsed || parsed.target <= 0) return;
+    if (!element || !visible || !parsed || parsed.target <= 0) return;
+    visible.textContent = value;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
@@ -64,27 +66,32 @@ export function CountUpStatValue({ value }: Props) {
       if (hasStarted) return;
 
       hasStarted = true;
-      const duration = 1400;
-      setDisplayValue(formatValue(0, parsed));
+      const duration = 900;
+      visible.textContent = formatValue(0, parsed);
 
       animationTimer = window.setTimeout(() => {
         const startedAt = performance.now();
+        let lastPaint = 0;
 
         const update = (now: number) => {
           const progress = Math.min((now - startedAt) / duration, 1);
           const easedProgress = 1 - Math.pow(1 - progress, 3);
 
-          setDisplayValue(formatValue(parsed.target * easedProgress, parsed));
+          // This isolated decorative node needs no React rerenders each frame.
+          // Reserved width and the accessible final value remain unchanged.
+          if (now - lastPaint >= 32 || progress === 1) {
+            const text = progress === 1 ? value : formatValue(parsed.target * easedProgress, parsed);
+            if (visible.textContent !== text) visible.textContent = text;
+            lastPaint = now;
+          }
 
           if (progress < 1) {
             animationFrame = window.requestAnimationFrame(update);
-          } else {
-            setDisplayValue(value);
           }
         };
 
         animationFrame = window.requestAnimationFrame(update);
-      }, 350);
+      }, 150);
     };
 
     if (!("IntersectionObserver" in window)) {
@@ -119,8 +126,8 @@ export function CountUpStatValue({ value }: Props) {
       <span className={styles.reserve} aria-hidden="true">
         {value}
       </span>
-      <span className={styles.visible} aria-hidden="true">
-        {displayValue}
+      <span ref={visibleRef} className={styles.visible} aria-hidden="true">
+        {value}
       </span>
       <span className="sr-only">{value}</span>
     </span>

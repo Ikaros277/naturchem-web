@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 ﻿import { createSectorIndexPageExports } from "@/lib/render-sector-page";
 
 const { generateMetadata, Page } = createSectorIndexPageExports();

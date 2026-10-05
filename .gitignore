@@ -4,6 +4,7 @@
 # next.js
 /.next
 /out
+/src/app/runtime.generated.css
 
 # local env files
 .env

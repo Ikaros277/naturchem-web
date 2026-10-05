@@ -1,3 +1,4 @@
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { ContactPageHeroMedia, ContactPageOfficesMap } from "@/components/ContactPageMedia";

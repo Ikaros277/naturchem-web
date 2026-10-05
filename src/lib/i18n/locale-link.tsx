@@ -23,9 +23,9 @@ function localesForArticleSlug(slug: string): Locale[] | null {
   return locales.filter((value): value is Locale => isLocale(value));
 }
 
-export function LocaleLink({ href, ...props }: Props) {
+export function LocaleLink({ href, prefetch = false, ...props }: Props) {
   const locale = useLocale();
-  return <Link href={localizeHref(href, locale)} {...props} />;
+  return <Link href={localizeHref(href, locale)} prefetch={prefetch} {...props} />;
 }
 
 export function useLocalizedPathname(): string {

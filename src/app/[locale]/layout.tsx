@@ -20,12 +20,11 @@ import { pickClientMessages } from "@/lib/i18n/client-messages";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
-import "../globals.css";
 
 const fontSans = Source_Sans_3({
   subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
-  weight: ["400", "600", "700"],
+  weight: "variable",
   display: "swap",
   /** Don't preload fonts — they compete with the mobile LCP hero image on slow 4G. */
   preload: false,

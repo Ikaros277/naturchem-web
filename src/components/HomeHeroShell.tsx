@@ -21,13 +21,13 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
     <section className={styles.hero} aria-label={ariaLabel}>
       <div className={`${styles.container} ${styles.heroGrid}`}>
         <div className={styles.heroCopy}>
-          <Link className={styles.credential} href={localizeHref("/akreditace-autorizace-dokumenty", locale)}>
+          <Link prefetch={false} className={styles.credential} href={localizeHref("/akreditace-autorizace-dokumenty", locale)}>
             <span aria-hidden="true">✓</span><span>{credential}</span><span aria-hidden="true">↗</span>
           </Link>
           {children}
           <nav className={styles.heroLinks} aria-label={pillarsAriaLabel}>
             {pillars.map((pillar) => (
-              <Link key={pillar.id} href={localizeHref(pillar.href, locale)}>
+              <Link prefetch={false} key={pillar.id} href={localizeHref(pillar.href, locale)}>
                 {pillar.label}<span aria-hidden="true">↗</span>
               </Link>
             ))}

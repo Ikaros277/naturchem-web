@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/generate_runtime_styles.js",
     "dev": "next dev",
+    "predev:webpack": "node scripts/generate_runtime_styles.js",
     "dev:webpack": "next dev --webpack",
     "preview": "npm run build && next start",
-    "prebuild": "node scripts/verify_public_assets.js && node scripts/verify_immutable_assets.js && node scripts/generate_article_indexes.js && node scripts/generate_responsive_images.js",
+    "prebuild": "node scripts/verify_public_assets.js && node scripts/verify_immutable_assets.js && node scripts/generate_article_indexes.js && node scripts/generate_responsive_images.js && node scripts/generate_runtime_styles.js",
     "build": "next build",
-    "postbuild": "node scripts/verify_rendered_cache_budget.js && node scripts/verify_rendered_performance.js",
+    "postbuild": "node scripts/verify_rendered_cache_budget.js && node scripts/verify_rendered_performance.js && node scripts/verify_runtime_styles.js --rendered",
     "images:prepare": "node scripts/generate_responsive_images.js",
     "start": "next start",
     "lint": "eslint .",
@@ -24,6 +26,7 @@
     "test:authentic-photos": "node scripts/verify_authentic_photos.js",
     "test:immutable-assets": "node scripts/verify_immutable_assets.js",
     "test:performance": "node scripts/verify_performance.js",
+    "test:runtime-styles": "node scripts/generate_runtime_styles.js && node scripts/verify_runtime_styles.js",
     "preverify": "node scripts/generate_article_indexes.js && node scripts/generate_responsive_images.js",
     "publication:check": "node scripts/scheduled_publication.js --check",
     "verify": "npm run lint && npm run typecheck && npm run test:contact-prefill && npm run test:cache-budget && npm run test:article-routing && npm run test:contact-delivery && npm run test:publication && npm run test:public-assets && npm run test:b2b && npm run test:audit-quality && npm run test:authentic-photos && npm run test:performance && npm run build",
@@ -49,6 +52,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "^16.2.6",
+    "postcss": "8.4.31",
     "typescript": "^5"
   },
   "browserslist": [

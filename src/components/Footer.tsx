@@ -101,7 +101,7 @@ export async function Footer({ locale }: Props) {
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </p>
             <p className="footer-contact-more">
-              <Link href={contactHref}>{footerContactPageLink.label}</Link>
+              <Link prefetch={false} href={contactHref}>{footerContactPageLink.label}</Link>
             </p>
           </FooterColumn>
         </div>

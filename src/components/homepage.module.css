@@ -2,6 +2,13 @@
 .page ul, .page ol { max-width: none; }
 .container { width: min(1220px, calc(100% - 48px)); margin-inline: auto; }
 .section { padding-block: clamp(40px, 5vw, 68px); }
+/* Keep every heading/link in HTML and the accessibility tree; only defer the
+   layout/paint of sections outside the viewport, never the hero or navigation. */
+@supports (content-visibility: auto) {
+  .section { content-visibility: auto; contain-intrinsic-block-size: auto 440px; }
+  .servicesSection { contain-intrinsic-block-size: auto 600px; }
+  .b2bSection { contain-intrinsic-block-size: auto 340px; }
+}
 .sectionHeader { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
 .sectionHeader h2 { min-width: 0; margin: 0; font-size: clamp(26px, 2.7vw, 36px); line-height: 1.16; letter-spacing: -.035em; }
 .textLink { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--home-green); font-weight: 700; text-decoration: underline; text-underline-offset: 5px; }
@@ -26,7 +33,7 @@
 .photoCaption { position: absolute; inset: auto 0 0; margin: 0; padding: 34px 24px 20px; background: linear-gradient(transparent, #102d40eb); color: #fff; font-size: 13px; font-weight: 550; line-height: 1.4; }
 .stats { border-bottom: 1px solid var(--home-line); background: #f1f6f4; }
 .statsGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding-block: 24px; gap: 22px; }
-.stat { min-width: 0; padding-left: 22px; border-left: 1px solid #b9cec5; }
+.stat { min-width: 0; padding-left: 22px; border-left: 1px solid #b9cec5; contain: layout style; }
 .stat:first-child { padding-left: 0; border-left: 0; }
 .stat :global(.stat-value) { display: inline-grid; font-size: clamp(27px, 2.5vw, 36px); color: #155541; font-weight: 750; line-height: 1.2; letter-spacing: -.035em; }
 .statLabel { display: block; color: #35584b; font-size: 15px; line-height: 1.4; margin-top: 5px; }
@@ -138,6 +145,8 @@
 @media (max-width: 767px) {
   .container { width: calc(100% - 32px); }
   .section { padding-block: 36px; }
+  .servicesSection { contain-intrinsic-block-size: auto 960px; }
+  .b2bSection { contain-intrinsic-block-size: auto 660px; }
   .sectionHeader { flex-wrap: wrap; gap: 4px 16px; margin-bottom: 20px; }
   .sectionHeader h2 { font-size: 28px; flex: 1 1 100%; }
   .heroGrid { display: block; min-height: 0; padding-block: 24px; }

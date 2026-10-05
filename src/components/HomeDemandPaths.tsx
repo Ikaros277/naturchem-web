@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { contactCategoryUrl } from "@/lib/contact-url";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -59,23 +58,23 @@ export function HomeDemandPaths({ locale }: { locale: Locale }) {
         </ul>
         <div className={styles.partnerRow}>
           <span>{content.partnerTitle}</span>
-          <Link prefetch={false} className={styles.partnerLink} href={localizeHref(contactCategoryUrl("nevim", content.partnerMessage), locale)} data-b2b-audience="environmental_partner">
+          <a className={styles.partnerLink} href={localizeHref(contactCategoryUrl("nevim", content.partnerMessage), locale)} data-b2b-audience="environmental_partner">
             {content.partnerLink} <span aria-hidden="true">↗</span>
-          </Link>
+          </a>
         </div>
         <nav className={styles.needsNav} aria-labelledby="home-needs-heading">
           <h3 id="home-needs-heading">{content.needsTitle}</h3>
           <ul className={styles.situationGrid}>
             {content.items.map(([title, , cta], index) => (
               <li key={paths[index]}>
-                <Link prefetch={false} href={localizeHref(paths[index], locale)} className={styles.situation}>
+                <a href={localizeHref(paths[index], locale)} className={styles.situation}>
                   <span className={styles.situationIcon} aria-hidden="true"><ServiceIcon icon={index === 0 ? "contact-building" : index === 1 ? "pracovni-prostredi" : "posudek"} size={38} /></span>
                   <div className={styles.situationBody}>
                     <strong>{title}</strong>
                     <span className={styles.situationCta}>{cta}</span>
                   </div>
                   <span className={styles.situationArrow} aria-hidden="true">↗</span>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

@@ -1,7 +1,6 @@
 ﻿import type { Metadata } from "next";
 import "@/app/runtime.generated.css";
 import { HomeHeroSection } from "@/components/HomeHeroSection";
-import Link from "next/link";
 import { CountUpStatValue } from "@/components/CountUpStatValue";
 import { HomeServiceIndex } from "@/components/HomeServiceIndex";
 import { JsonLd } from "@/components/Schema";
@@ -83,30 +82,30 @@ export default async function Home({ params }: Props) {
       </section>
 
       <div className={`${styles.container} ${styles.clients}`}>
-        <Link prefetch={false} href={link("/reference#zakaznici")} className={styles.clientsLabel}>
+        <a href={link("/reference#zakaznici")} className={styles.clientsLabel}>
           {messages.home.clientsTitle} <span aria-hidden="true">↗</span>
-        </Link>
+        </a>
         <div className={styles.clientLogos}>
           {referenceClients.slice(0, 5).map((client) => (
-            <Link prefetch={false} key={client.name} href={link("/reference#zakaznici")} aria-label={client.name}>
+            <a key={client.name} href={link("/reference#zakaznici")} aria-label={client.name}>
               {/* eslint-disable-next-line @next/next/no-img-element -- Pre-sized static logos avoid image transformations. */}
               <img src={client.logo} alt={client.name} width={120} height={40} loading="lazy" decoding="async" />
-            </Link>
+            </a>
           ))}
         </div>
       </div>
 
       <section
-        className={styles.section}
+        className={`${styles.section} ${styles.servicesSection}`}
         id="sluzby"
         aria-labelledby="home-offer-heading"
       >
         <div className={styles.container}>
           <header className={styles.sectionHeader}>
             <h2 id="home-offer-heading">{messages.home.offerTitle}</h2>
-            <Link prefetch={false} href={link("/sluzby")} className={styles.textLink}>
+            <a href={link("/sluzby")} className={styles.textLink}>
               {locale === "cs" ? "Všechny služby" : locale === "de" ? "Alle Leistungen" : "All services"} <span aria-hidden="true">→</span>
-            </Link>
+            </a>
           </header>
           <HomeServiceIndex locale={locale} />
         </div>

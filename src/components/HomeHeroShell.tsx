@@ -1,12 +1,11 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
 import type { HomeHeroPillar } from "@/lib/home-hero-pillars";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
 import styles from "./homepage.module.css";
 import { getAuthenticPhoto } from "@/lib/authentic-photos";
 
-/** Stable server-rendered hero: navigation links, without automatic rotation. */
+/** Stable server-rendered hero: native links need no per-link hydration or prefetch. */
 export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pillarsAriaLabel, locale, credential }: {
   initialPhoto: ReactNode;
   children: ReactNode;
@@ -21,15 +20,15 @@ export function HomeHeroShell({ initialPhoto, children, pillars, ariaLabel, pill
     <section className={styles.hero} aria-label={ariaLabel}>
       <div className={`${styles.container} ${styles.heroGrid}`}>
         <div className={styles.heroCopy}>
-          <Link prefetch={false} className={styles.credential} href={localizeHref("/akreditace-autorizace-dokumenty", locale)}>
+          <a className={styles.credential} href={localizeHref("/akreditace-autorizace-dokumenty", locale)}>
             <span aria-hidden="true">✓</span><span>{credential}</span><span aria-hidden="true">↗</span>
-          </Link>
+          </a>
           {children}
           <nav className={styles.heroLinks} aria-label={pillarsAriaLabel}>
             {pillars.map((pillar) => (
-              <Link prefetch={false} key={pillar.id} href={localizeHref(pillar.href, locale)}>
+              <a key={pillar.id} href={localizeHref(pillar.href, locale)}>
                 {pillar.label}<span aria-hidden="true">↗</span>
-              </Link>
+              </a>
             ))}
           </nav>
         </div>

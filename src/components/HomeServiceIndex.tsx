@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { HomeStudyGraphic } from "@/components/HomeStudyGraphic";
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
@@ -44,7 +43,7 @@ export function HomeServiceIndex({ locale }: { locale: Locale }) {
         const smallSrc = photo ? `${photo.base}-card-192.webp` : `/hero/${slug}-card-192.webp`;
         return (
           <li key={slug}>
-            <Link prefetch={false} className={`${styles.serviceCard} ${index < 3 ? styles.measurementCard : styles.studyCard} ${index === 5 ? styles.documentationCard : ""}`} href={localizeHref(href, locale)} data-service-placement="home_service_index">
+            <a className={`${styles.serviceCard} ${index < 3 ? styles.measurementCard : styles.studyCard} ${index === 5 ? styles.documentationCard : ""}`} href={localizeHref(href, locale)} data-service-placement="home_service_index">
               {index < 3 ? (
                 <div className={styles.servicePhoto} aria-hidden="true">
                   {/* eslint-disable-next-line @next/next/no-img-element -- Pre-sized card WebP; no runtime image transformations. */}
@@ -70,7 +69,7 @@ export function HomeServiceIndex({ locale }: { locale: Locale }) {
                 <div className={styles.serviceTitle}><h3>{title}</h3><span className={styles.arrow} aria-hidden="true">↗</span></div>
                 <p>{description}</p>
               </div>
-            </Link>
+            </a>
           </li>
         );
       })}

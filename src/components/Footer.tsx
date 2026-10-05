@@ -1,5 +1,4 @@
 ﻿import type { ReactNode } from "react";
-import Link from "next/link";
 import { FooterLegalBar } from "@/components/FooterLegalBar";
 import { getFooterNav } from "@/lib/i18n/nav-content";
 import { getMessages } from "@/lib/i18n/get-messages";
@@ -19,7 +18,7 @@ function FooterLinkList({ links, locale }: { links: readonly FooterLink[]; local
     <ul className="footer-links">
       {links.map((item) => (
         <li key={item.href}>
-          <Link prefetch={false} href={localizeHref(item.href, locale)}>{item.label}</Link>
+          <a href={localizeHref(item.href, locale)}>{item.label}</a>
         </li>
       ))}
     </ul>
@@ -78,11 +77,11 @@ export async function Footer({ locale }: Props) {
             <ul className="footer-key-links">
               {featuredLinks.map((item) => (
                 <li key={item.href}>
-                  <Link prefetch={false} className="footer-key-link" href={localizeHref(item.href, locale)}>
+                  <a className="footer-key-link" href={localizeHref(item.href, locale)}>
                     <ServiceIcon icon={item.href === accreditationHref ? "povoleni" : "provozni-rad"} size={22} variant="plain" />
                     <span className="footer-key-link-label">{item.label}</span>
                     <span className="footer-key-link-arrow" aria-hidden="true">↗</span>
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -101,7 +100,7 @@ export async function Footer({ locale }: Props) {
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </p>
             <p className="footer-contact-more">
-              <Link prefetch={false} href={contactHref}>{footerContactPageLink.label}</Link>
+              <a href={contactHref}>{footerContactPageLink.label}</a>
             </p>
           </FooterColumn>
         </div>

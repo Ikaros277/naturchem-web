@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { formatArticleDate } from "@/lib/format-date";
 import { getMessages } from "@/lib/i18n/get-messages";
 import type { Locale } from "@/lib/i18n/locales";
@@ -22,13 +21,13 @@ export async function HomePoradnaStrip({ locale }: { locale: Locale }) {
       <div className={styles.container}>
         <header className={styles.sectionHeader}>
           <h2 id="home-poradna-heading">{messages.home.articlesTitle}</h2>
-          <Link prefetch={false} href={localizeHref("/poradna", locale)} className={styles.textLink}>{messages.common.allArticles}<span aria-hidden="true">→</span></Link>
+          <a href={localizeHref("/poradna", locale)} className={styles.textLink}>{messages.common.allArticles}<span aria-hidden="true">→</span></a>
         </header>
         <div className={styles.articles}>
           {articles.map(article => {
             const imageSrc = article.heroImage || getHeroImageSrc(heroThemeForArticle(article));
             return (
-            <Link key={article.slug} href={article.href} prefetch={false} className={styles.article}>
+            <a key={article.slug} href={article.href} className={styles.article}>
               <div className={styles.articlePhoto} aria-hidden="true">
                 {getResponsiveImage(imageSrc) ? (
                   <ResponsiveImage src={imageSrc} sizes="(max-width: 767px) 88px, (max-width: 1024px) 30vw, 400px" />
@@ -44,7 +43,7 @@ export async function HomePoradnaStrip({ locale }: { locale: Locale }) {
                 <h3>{homeArticleTitle(article, locale)}</h3>
                 <span className={styles.articleCta}>{messages.common.readMore} <span aria-hidden="true"> ↗</span></span>
               </div>
-            </Link>
+            </a>
             );
           })}
         </div>

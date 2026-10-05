@@ -323,6 +323,13 @@ Na výslovné zadání uživatele zapojeno osm vybraných fotografií do homepag
 - Verify/build a 750 URL/odkazových kontrol prošly; mobilní CTA → předvyplněný formulář, desktopové i mobilní menu a chat/WhatsApp ověřeny bez odeslání poptávky. Po schválení nasazení 3+3 PageSpeed běhy, následně stejná 28/56denní období GA4 s potvrzenými leady.
 - Podklady, přesné rozpočty, omezení a rollback: [PERFORMANCE-2026-10-05.md](PERFORMANCE-2026-10-05.md).
 
+## TECH-012 — lokální mobilní vykreslování 5. 10. 2026
+
+- Nový report uživatele: mobil 64, TBT 1 500 ms, LCP 2,752 s. Kontrolní běh **stejného produkčního commitu f004d29 před novým nasazením**: mobil 96 / TBT 26 ms, desktop 100. Pozorováno velké kolísání CPU; 96 není výsledkem nové opravy a 100 na mobilu není potvrzeno.
+- Větev `codex/mobile-performance-2026-10-05`: nativní serverové odkazy místo 38 homepage Next Link instancí a běžných odkazů patičky, odložený layout/paint pouze spodních homepage sekcí a lokální containment statistik. Zachována celá prezentace, fotografie, obchodní cesty, SEO, consent a definice `generate_lead`.
+- Hypotéza: méně počáteční práce CPU a lepší rezerva na slabších telefonech, následně snazší dokončení kvalifikovaných poptávek. Žádný spuštěný produkční konverzní experiment ani prokázaný růst. Přenos JS se prakticky nezměnil; neprohlašovat tuto změnu za velké zmenšení JS.
+- Verify/build, 750 kontrol URL/odkazů a routing smoke prošly; mobilní menu a skutečná cesta karta → služba → předvyplněná poptávka i desktop mega menu ověřeny bez odeslání. Uživatel 5. 10. 2026 výslovně schválil commit, push do main v `Ikaros277/naturchem-web` a jeden Vercel deployment; úspěšné vydání a další měření se potvrzují samostatně. Výchozí reporty, skutečné rozpočty, kompromisy, testy a rollback: [PERFORMANCE-MOBILE-2026-10-05.md](PERFORMANCE-MOBILE-2026-10-05.md).
+
 ## Kontrola po nasazení
 
 Společný lokální balík audit/B2B/UX/fotografie a TECH-009/TECH-010 uživatel výslovně schválil k produkčnímu vydání 4. 10. 2026. Přednasazovací ověření, tehdejší main, kvóty, ochrana Cursoru a rollback: [RELEASE-PRIPRAVA-2026-10-04.md](RELEASE-PRIPRAVA-2026-10-04.md). Přesný nový commit a úspěšné živé nasazení se potvrzují samostatně po stavu Ready, nikoli tímto schválením.

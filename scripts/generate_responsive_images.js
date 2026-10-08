@@ -7,6 +7,7 @@ const root = path.resolve(__dirname, "..");
 const load = require("./lib/load-typescript.js")();
 const { readCatalog } = require("./scheduled_publication.js");
 const { getHeroImageSrc, getKnownHeroImageSources } = load(path.join(root, "src/lib/hero-images.ts"));
+const { getAuthenticPhotoBySrc } = load(path.join(root, "src/lib/authentic-photos.ts"));
 const { heroThemeForArticle } = load(path.join(root, "src/lib/poradna-topic.ts"));
 const target = path.join(root, "public/hero/responsive-2026-10");
 const prefix = "/hero/responsive-2026-10/";
@@ -44,7 +45,7 @@ async function main() {
   const heroSources = new Set([...articleSources, ...getKnownHeroImageSources()]);
   for (const src of [...heroSources].sort()) {
     // Approved authentic photographs already have carefully prepared LCP variants.
-    if (src.includes("/authentic-2026-10/")) continue;
+    if (getAuthenticPhotoBySrc(src)) continue;
     heroes[src] = await encode(src, [640, 1280]);
   }
   fs.writeFileSync(path.join(root, "src/lib/responsive-images.json"), JSON.stringify({ thumbs, heroes }, null, 2) + "\n");

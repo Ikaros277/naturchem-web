@@ -16,6 +16,8 @@ heroImage: /uploads/chatgpt-image-15.-6.-2026-12_22_27.webp
 
 Nedostatečné osvětlení na pracovišti není jen otázka komfortu. U řady činností může ovlivnit **zrakovou zátěž, únavu, přesnost práce, bezpečnost pohybu po pracovišti i celkové pracovní podmínky**. Problém se může týkat výrobní haly, skladu, kanceláře, dílny, laboratoře, školy, zdravotnického provozu i běžného zázemí zaměstnanců.
 
+Rozsah, podklady a výsledný protokol najdete na stránce [Měření osvětlení na pracovišti](/sluzby/mereni-osvetleni/).
+
 Z praxe se často ukazuje, že zaměstnanci nepopisují problém technickými slovy. Říkají například, že je v prostoru tma, bolí je oči, špatně vidí na detail, na stole se tvoří stíny, světla oslňují nebo že je rozdíl mezi jednotlivými částmi haly příliš velký. Pro provozovatele je v takové chvíli důležité nezůstat jen u subjektivního dojmu, ale ověřit, zda osvětlení odpovídá skutečné práci a požadavkům předpisů a norem.
 
 U nového pracoviště, rekonstrukce nebo kontroly KHS je situace podobná. Nestačí, že byla instalována nová LED svítidla nebo že projekt obsahuje světelnětechnický výpočet. Rozhodující je, zda **skutečně realizovaný stav** odpovídá účelu prostoru, rozmístění pracovních míst a zrakové náročnosti práce.
@@ -78,7 +80,7 @@ Pro prvotní posouzení pošlete půdorys nebo jednoduché schéma prostoru, pop
 
 Pokud zatím nevíte, zda měřit současný stav nebo až stav po výměně svítidel, pošlete i stručný popis plánované úpravy. Zkontrolujeme, zda je vhodné nejprve provést měření, posoudit návrh osvětlení, nebo počkat až na finální stav po realizaci.
 
-Více k měřením pracovního prostředí najdete na stránce [Pracovní prostředí NATURCHEM](https://www.naturchem.cz/sluzby/pracovni-prostredi).
+Více k této službě najdete na stránce [Měření osvětlení na pracovišti](/sluzby/mereni-osvetleni/).
 
 ## Krátké shrnutí
 

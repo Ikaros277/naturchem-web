@@ -76,7 +76,7 @@ Měření osvětlení na pracovišti je vhodné řešit vždy, když se připrav
 
 Pošlete nám půdorys, popis pracovišť a případný požadavek KHS. Prověříme, zda bude vhodné měření umělého osvětlení, denního osvětlení, kontrola projektu nebo kombinace více podkladů. U nejasných případů doporučujeme řešit podklady předem, než vznikne problém při kolaudaci nebo kontrole.
 
-Více k měřením pracovního prostředí najdete také na stránce [Pracovní prostředí NATURCHEM](https://www.naturchem.cz/sluzby/pracovni-prostredi).
+Rozsah služby a požadované podklady najdete na stránce [Měření osvětlení na pracovišti](/sluzby/mereni-osvetleni/).
 
 ## Věcná opora článku
 

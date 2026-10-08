@@ -6,7 +6,7 @@ const czech = {
   faqCategoryId: "hluk",
   title: "Měření hluku a akustika",
   intro:
-    "Stížnost na hluk, **kolaudace** nebo požadavek úřadu? Provedeme terénní **měření hluku** i akustické výpočty podle zdrojů hluku a chráněných prostor v okolí.",
+    "Provedeme terénní **měření hluku** provozu, technologií, VZT a tepelných čerpadel. Pro plánovaný záměr zpracujeme samostatnou **hlukovou studii**.",
   scope: [
     "Změříme LAeq a LAFmax u běžícího provozu v terénu",
     "Posoudíme hluk z dopravy a technologií v areálu",

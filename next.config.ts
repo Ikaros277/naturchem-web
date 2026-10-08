@@ -77,6 +77,15 @@ const nextConfig: NextConfig = {
         headers: [{ key: "Cache-Control", value: LONG_CACHE }]
       },
       {
+        // Only versioned photograph assets, never /reference/ HTML.
+        source: "/reference/authentic-2026-10-08/:path*",
+        headers: [{ key: "Cache-Control", value: LONG_CACHE }]
+      },
+      {
+        source: "/loga-referenci/:path*",
+        headers: [{ key: "Cache-Control", value: LONG_CACHE }]
+      },
+      {
         source: "/graphics/:path*",
         headers: [{ key: "Cache-Control", value: LONG_CACHE }]
       },

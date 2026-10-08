@@ -18,6 +18,7 @@ export type ReferenceExample = {
   href: string;
   contactService: string;
   cta: "Fordern Sie ein ähnliches Projekt an" | "Senden Sie Dokumente zur Überprüfung" | "Messung/Studie anfordern";
+  documented?: boolean;
 };
 
 export const referenceEyebrow = "36 Jahre am Markt · Referenzen aus der Praxis";
@@ -99,87 +100,94 @@ export const referenceAreas: readonly ReferenceArea[] = [
 export const referenceExamples: readonly ReferenceExample[] = [
   {
     id: "lak-automotive-emise",
-    title: "Autolackiererei – VOC/TOC- und Partikelmessungen",
-    operationType: "Lackiererei, Automobil",
-    scope: "VOC/TOC- und Partikelmessungen an Prozessabgaskaminen",
-    output: "Emissionsmessbericht und unterstützende Dokumentation für die Betriebsgenehmigung/Konformitätsüberprüfung",
-    text: "Wir haben die Emissionen der Lackiertechnik gemessen, einschließlich VOC/TOC und Partikel an den Abgaskaminen. Der Bericht unterstützte die Einhaltung der Betriebsbedingungen und die Kommunikation mit der Behörde.",
-    tags: ["Emissionen", "VOC", "Landesamt"],
+    title: "Lackierkabinen – TOC-Emissionsmessungen",
+    operationType: "Nasslackiererei für industrielle Bauteile",
+    scope: "TOC und lufttechnische Parameter an fünf Abluftöffnungen der Lackierkabinen",
+    output: "Emissionsmessbericht für fünf Lackierkabinen.",
+    text: "Wir haben die Emissionen an fünf Abluftöffnungen einer Nasslackiererei gemessen. Der Bericht dokumentiert TOC-Ergebnisse und lufttechnische Parameter jeder Abluftöffnung.",
+    tags: ["Emissionen", "TOC", "Lackiererei"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Fordern Sie ein ähnliches Projekt an"
+    cta: "Fordern Sie ein ähnliches Projekt an",
+    documented: true
   },
   {
     id: "bps-emise",
     title: "Biogasanlage – Emissionen aus der Kraft-Wärme-Kopplung",
     operationType: "Biogasanlage / Blockheizkraftwerk",
-    scope: "Emissionen von Blockheizkraftwerken, Betriebsdaten, Link zu ISPOP",
-    output: "Bericht und unterstützende Dokumentation für Betriebsaufzeichnungen",
-    text: "Wir haben die Emissionen von KWK-Einheiten unter einem vereinbarten Betriebsregime gemessen und die Ergebnisse mit Betriebsaufzeichnungen und ISPOP verknüpft.",
-    tags: ["Emissionen", "ISPOP", "Landesamt"],
+    scope: "Emissionsmessung an einem Blockheizkraftwerk im stationären Betrieb",
+    output: "Emissionsmessbericht für das Blockheizkraftwerk.",
+    text: "Wir haben die Emissionen eines Blockheizkraftwerks einer Biogasanlage im stationären Betrieb gemessen. Die Ergebnisse wurden in einem Emissionsmessbericht dokumentiert.",
+    tags: ["Emissionen", "Kraft-Wärme-Kopplung"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Messung/Studie anfordern"
+    cta: "Messung/Studie anfordern",
+    documented: true
   },
   {
     id: "bps-serie-emise",
-    title: "Mehrere Biogasanlagen – Reihe von Emissionsmessungen",
-    operationType: "Gruppe von Biogasanlagen",
-    scope: "Mehrere Standorte, mehrere Blockheizkraftwerke",
-    output: "Reihe von Berichten und einheitlichen Ergebnisaufzeichnungen",
-    text: "An mehreren Standorten haben wir die Emissionen von Blockheizkraftwerken nach einem einheitlichen Verfahren gemessen. Die Ergebnisse dienten der übersichtlichen Betriebsaufzeichnung im gesamten Anlagenverbund.",
-    tags: ["Emissionen", "ISPOP"],
+    title: "Biogasanlage – zwei Blockheizkraftwerke",
+    operationType: "Biogasanlage mit zwei Blockheizkraftwerken",
+    scope: "Emissionsmessungen an zwei Blockheizkraftwerken einer Biogasanlage",
+    output: "Emissionsmessbericht für beide Blockheizkraftwerke.",
+    text: "Wir haben die Emissionen von zwei Blockheizkraftwerken einer Biogasanlage gemessen. Die Ergebnisse beider Quellen wurden in einem Bericht dokumentiert.",
+    tags: ["Emissionen", "Biogas"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Fordern Sie ein ähnliches Projekt an"
+    cta: "Fordern Sie ein ähnliches Projekt an",
+    documented: true
   },
   {
     id: "plyn-kotelna-emise",
-    title: "Gaskesselanlage – Emissionsmessungen",
-    operationType: "Kommunale / örtliche Kesselanlage",
-    scope: "zwei Gaskessel, Rauchgase, Betriebsmodus",
-    output: "Emissionsmessbericht",
-    text: "Wir haben die Emissionen von zwei Kesseln mit repräsentativer Leistung gemessen. Der Bericht diente als Beleg für die Pflichten des Quellenbetreibers.",
-    tags: ["Emissionen", "Landesamt", "Umweltinspektion"],
+    title: "Zentrale Kesselanlage – Biomasseemissionen",
+    operationType: "zentrale Kesselanlage mit zwei Biomassekesseln",
+    scope: "Emissionsmessungen an zwei Kesseln für Holzbiomasse",
+    output: "Emissionsmessbericht für beide Biomassekessel.",
+    text: "Wir haben die Emissionen von zwei Holzbiomassekesseln einer zentralen Kesselanlage gemessen. Der Bericht dokumentiert die Ergebnisse beider Kessel.",
+    tags: ["Emissionen", "Biomasse"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Messung/Studie anfordern"
+    cta: "Messung/Studie anfordern",
+    documented: true
   },
   {
     id: "hala-pp",
-    title: "Produktionshalle – Messungen der Arbeitsplatzumgebung",
-    operationType: "Produktionsanlage",
-    scope: "Lärm, Staub, chemische Substanzen, Arbeitspositionen",
-    output: "unterstützende Dokumentation für die regionale Hygienestation und Arbeitsplatzkategorisierung",
-    text: "An ausgewählten Arbeitsplätzen haben wir Lärm, Staub und chemische Substanzen gemessen. Die Ergebnisse unterstützten die Arbeitsplatzkategorisierung und die Kommunikation mit der regionalen Hygienestation.",
-    tags: ["Hygienebehörde", "Lärm", "Staub"],
+    title: "Automobilproduktion – Arbeitsplatzumgebung",
+    operationType: "Produktionsanlage mit Montagelinien, Gießerei und Formenwartung",
+    scope: "Lärm, Mikroklima und organische Stoffe an ausgewählten Arbeitsplätzen",
+    output: "Separate Berichte zu Lärm-, Mikroklima- und Arbeitsplatzluftmessungen.",
+    text: "In der Automobilproduktion haben wir Arbeitsplatzlärm, mikroklimatische Bedingungen und organische Stoffe gemessen. Die Ergebnisse wurden in separaten Berichten dokumentiert.",
+    tags: ["Arbeitsplatzumgebung", "Mikroklima", "Lärm"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
-    cta: "Fordern Sie ein ähnliches Projekt an"
+    cta: "Fordern Sie ein ähnliches Projekt an",
+    documented: true
   },
   {
     id: "svarovna-pp",
-    title: "Schweißerei – Belastung und Lärm",
+    title: "Schweißerei – Lärm am Arbeitsplatz",
     operationType: "Schweißerei / Metallverarbeitungsbetrieb",
-    scope: "Staub, Metalle, Ozon, Lärm, Vibration",
-    output: "Berichte zur Beurteilung der Mitarbeiterexposition",
-    text: "Wir haben Staub, Metalle, Lärm und Vibrationen in der Schweißerei gemessen. Die Berichte unterstützten den Arbeitsschutz und schlugen Maßnahmen am Arbeitsplatz vor.",
-    tags: ["Hygienebehörde", "Staub", "Lärm"],
+    scope: "Lärmmessung für die Tätigkeit als Schweißer",
+    output: "Mess- und Bewertungsbericht zum Lärm für die Arbeitskategorisierung.",
+    text: "Wir haben den Lärm für die Tätigkeit eines Schweißers in einem Metallverarbeitungsbetrieb gemessen. Die Ergebnisse wurden für die Arbeitskategorisierung dokumentiert.",
+    tags: ["Lärm", "Arbeitskategorisierung"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
-    cta: "Fordern Sie ein ähnliches Projekt an"
+    cta: "Fordern Sie ein ähnliches Projekt an",
+    documented: true
   },
   {
     id: "tcp-hluk",
     title: "Wärmepumpe — Lärm in der Umgebung",
     operationType: "Bau technischer Anlagen",
     scope: "Außenlärm in einem geschützten Bereich",
-    output: "Messung / akustische Beurteilung und Empfehlungen für die nächsten Schritte",
-    text: "Wir haben den Lärm des Außengeräts in einem geschützten Bereich gemessen. Die Ergebnisse halfen bei der Kommunikation mit den Nachbarn und bei der Planung der nächsten Schritte.",
+    output: "Bericht zur Messung und Bewertung des Lärms der Außeneinheit.",
+    text: "Wir haben den Lärm während des Betriebs der Außeneinheit einer Wärmepumpe im geschützten Außenbereich gemessen. Die Ergebnisse und Bewertung wurden in einem Bericht dokumentiert.",
     tags: ["Lärm", "Hygienebehörde"],
     href: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
-    cta: "Messung/Studie anfordern"
+    cta: "Messung/Studie anfordern",
+    documented: true
   },
   {
     id: "vzt-hluk-studie",
@@ -190,7 +198,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     text: "Wir haben eine Lärmbewertung der Technologie im Verhältnis zu den nächstgelegenen Gebäuden erstellt. Die Dokumentation unterstützte die Belegungsgenehmigung und Gespräche mit den Behörden.",
     tags: ["Lärm", "Hygienebehörde", "HLK"],
     href: "/sluzby/hlukove-studie",
-    contactService: "Měření hluku a akustika",
+    contactService: "Hlukové studie",
     cta: "Messung/Studie anfordern"
   },
   {
@@ -243,36 +251,39 @@ export const referenceExamples: readonly ReferenceExample[] = [
   },
   {
     id: "provozni-rad-odpady",
-    title: "Abfall – Betriebsregeln für eine Kapazitätsänderung",
-    operationType: "Abfall / Recycling",
-    scope: "Betriebsregeln, Kapazitätserhöhung, Gespräche mit der Behörde",
-    output: "Betriebsdokumentation zur Genehmigung",
-    text: "Wir haben Betriebsordnungen für eine Kapazitätserhöhung und Aufbereitung von Bauschutt erstellt. Die Dokumentation ging in das offizielle Verfahren.",
-    tags: ["Landesamt", "Umweltinspektion", "Luft"],
+    title: "Aktualisierte Betriebsordnung für Prüföfen",
+    operationType: "Brandprüfstelle",
+    scope: "Aktualisierung der Betriebsordnung zum Schutz der Luft",
+    output: "Aktualisierte Betriebsordnung der Luftverschmutzungsquelle.",
+    text: "Wir aktualisierten die Betriebsordnung einer Brandprüfstelle mit Prüföfen. Das Dokument beschreibt die Technologie, die Betriebsaufzeichnungen und das Vorgehen bei außergewöhnlichen Betriebszuständen.",
+    tags: ["Betriebsordnung", "Luft"],
+    documented: true,
     href: "/sluzby/provozni-rady",
     contactService: "Provozní řády",
     cta: "Fordern Sie ein ähnliches Projekt an"
   },
   {
     id: "ispop-vice",
-    title: "Mehrere Operationen – ISPOP und Datensätze",
-    operationType: "mehrere Betriebe, verschiedene Branchen",
-    scope: "Luft, Abfall, Verbindung zu Emissionsmessungen",
-    output: "jährliche Berichterstattung und Betriebsaufzeichnungen",
-    text: "Wir erstellen jährlich integrierte Aufzeichnungen zur Verschmutzungsberichterstattung und ISPOP-Einreichungen im Zusammenhang mit Emissionsmessungen und Betriebsgenehmigungen.",
-    tags: ["ISPOP", "Landesamt"],
+    title: "ISPOP-Meldung für einen Industriestandort",
+    operationType: "Industriestandort mit Kesselanlagen und Oberflächenbehandlung",
+    scope: "jährliche Betriebsaufzeichnungen und Einreichung bei ISPOP",
+    output: "Jahresmeldung und Bestätigung der Einreichung.",
+    text: "Wir erstellten die jährlichen Betriebsaufzeichnungen der Kesselanlagen und Oberflächenbehandlung und reichten die Meldung bei ISPOP ein. Eine Systembestätigung dokumentiert die Einreichung.",
+    tags: ["ISPOP", "Luft"],
+    documented: true,
     href: "/sluzby/ispop",
     contactService: "ISPOP",
     cta: "Fordern Sie ein ähnliches Projekt an"
   },
   {
     id: "ghg-overovani",
-    title: "Treibhausgasemissionen – Überprüfung der Emissionsdaten",
-    operationType: "Betrieb mit Treibhausgasverpflichtungen",
-    scope: "jährliche Überprüfung, Kapazitätsänderungen, Betriebsdaten",
-    output: "Verifizierungsausgaben für den Bediener",
-    text: "Wir haben die jährlichen Emissionsdaten und die Begleitdokumentation für eine Kapazitätsänderung im Rahmen des Treibhausgasregimes überprüft.",
-    tags: ["Treibhausgas", "ISPOP"],
+    title: "Prüfung von Energiedaten und Treibhausgasberechnungen",
+    operationType: "Produktionsunternehmen",
+    scope: "Prüfung von Energiedaten und zugehörigen Emissionsberechnungen",
+    output: "Berechnungsdatei und schriftliche Erläuterung der Datenkorrekturen.",
+    text: "Wir prüften Energiedaten und zugehörige Emissionsberechnungen für eingekauften Strom. Die Arbeit umfasste eine Berechnungsdatei und eine Erläuterung der Korrekturen. Dies ist keine akkreditierte EU-ETS-Verifizierung.",
+    tags: ["Treibhausgas", "Emissionsdaten"],
+    documented: true,
     href: "/sluzby/ghg-overovani",
     contactService: "Treibhausgas",
     cta: "Fordern Sie ein ähnliches Projekt an"

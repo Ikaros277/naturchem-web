@@ -18,6 +18,7 @@ export type ReferenceExample = {
   href: string;
   contactService: string;
   cta: "Request a similar project" | "Send documents for review" | "Request measurement / study";
+  documented?: boolean;
 };
 
 export const referenceEyebrow = "36 years on the market · references from practice";
@@ -99,87 +100,94 @@ export const referenceAreas: readonly ReferenceArea[] = [
 export const referenceExamples: readonly ReferenceExample[] = [
   {
     id: "lak-automotive-emise",
-    title: "Automotive paint shop — VOC/TOC and particulate matter measurements",
-    operationType: "paint shop, automotive",
-    scope: "VOC/TOC and particulate matter measurements at process exhaust stacks",
-    output: "emission measurement report and supporting documentation for operating permit / compliance verification",
-    text: "We measured emissions from the paint technology including VOC/TOC and particulates at exhaust stacks. The report supported compliance with operating conditions and communication with the authority.",
-    tags: ["Emissions", "VOC", "Regional authority"],
+    title: "Paint booths — TOC emission measurements",
+    operationType: "wet paint shop for industrial components",
+    scope: "TOC and ventilation parameters at five paint booth exhausts",
+    output: "Emission measurement report for five paint booths.",
+    text: "We measured emissions at five exhausts of a wet paint shop. The report documents TOC results and ventilation parameters for each exhaust.",
+    tags: ["Emissions", "TOC", "Paint shop"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Request a similar project"
+    cta: "Request a similar project",
+    documented: true
   },
   {
     id: "bps-emise",
     title: "Biogas plant — cogeneration emissions",
     operationType: "biogas plant / cogeneration unit",
-    scope: "cogeneration unit emissions, operating data, link to ISPOP",
-    output: "report and supporting documentation for operating records",
-    text: "We measured cogeneration unit emissions under an agreed operating regime and linked the results to operating records and ISPOP.",
-    tags: ["Emissions", "ISPOP", "Regional authority"],
+    scope: "emissions measurement of one cogeneration unit under steady operation",
+    output: "Emissions measurement report for the cogeneration unit.",
+    text: "We measured emissions from one cogeneration unit at a biogas plant under steady operation. The results were documented in an emissions measurement report.",
+    tags: ["Emissions", "Cogeneration"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Request measurement / study"
+    cta: "Request measurement / study",
+    documented: true
   },
   {
     id: "bps-serie-emise",
-    title: "Multiple biogas plants — series of emission measurements",
-    operationType: "group of biogas plants",
-    scope: "multiple sites, multiple cogeneration units",
-    output: "set of reports and unified results records",
-    text: "At several sites we measured cogeneration unit emissions using a uniform procedure. The outputs served for clear operating records across the group of plants.",
-    tags: ["Emissions", "ISPOP"],
+    title: "Biogas plant — two cogeneration units",
+    operationType: "biogas plant with two cogeneration units",
+    scope: "emission measurements for two cogeneration units at one biogas plant",
+    output: "Emission measurement report for both cogeneration units.",
+    text: "We measured emissions from two cogeneration units at one biogas plant. Results for both sources were documented in one report.",
+    tags: ["Emissions", "Biogas"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Request a similar project"
+    cta: "Request a similar project",
+    documented: true
   },
   {
     id: "plyn-kotelna-emise",
-    title: "Gas boiler plant — emission measurements",
-    operationType: "municipal / site boiler plant",
-    scope: "two gas boilers, flue gases, operating regime",
-    output: "emission measurement report",
-    text: "We measured emissions from two boilers at representative output. The report served as supporting documentation for the source operator's obligations.",
-    tags: ["Emissions", "Regional authority", "CZ EPA"],
+    title: "Central boiler plant — biomass emissions",
+    operationType: "central boiler plant with two biomass boilers",
+    scope: "emission measurements of two wood biomass boilers",
+    output: "Emission measurement report for both biomass boilers.",
+    text: "We measured emissions from two wood biomass boilers at a central boiler plant. The report documents the results for both boilers.",
+    tags: ["Emissions", "Biomass"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Request measurement / study"
+    cta: "Request measurement / study",
+    documented: true
   },
   {
     id: "hala-pp",
-    title: "Production hall — workplace environment measurements",
-    operationType: "production plant",
-    scope: "noise, dust, chemical substances, work positions",
-    output: "supporting documentation for regional hygiene station and job categorisation",
-    text: "We measured noise, dust and chemical substances at selected workplaces. The results supported job categorisation and communication with the regional hygiene station.",
-    tags: ["Occupational health", "Noise", "Dust"],
+    title: "Automotive manufacturing — workplace environment",
+    operationType: "manufacturing plant with assembly lines, a foundry and mould maintenance",
+    scope: "noise, microclimatic conditions and organic substances at selected workplaces",
+    output: "Separate reports on noise, microclimate and workplace air measurements.",
+    text: "In automotive manufacturing, we measured occupational noise, microclimatic conditions and organic substances. The outputs were documented in separate reports.",
+    tags: ["Workplace environment", "Microclimate", "Noise"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
-    cta: "Request a similar project"
+    cta: "Request a similar project",
+    documented: true
   },
   {
     id: "svarovna-pp",
-    title: "Welding shop — exposure and noise",
+    title: "Welding shop — occupational noise",
     operationType: "welding shop / metalworking operation",
-    scope: "dust, metals, ozone, noise, vibration",
-    output: "reports for employee exposure assessment",
-    text: "We measured dust, metals, noise and vibration in the welding shop. The reports supported occupational health and safety and proposed workplace measures.",
-    tags: ["Occupational health", "Dust", "Noise"],
+    scope: "noise measurement for the welder job role",
+    output: "Noise measurement and assessment report for work categorisation.",
+    text: "We measured occupational noise for a welder in a metalworking facility. The results were documented in a report for work categorisation.",
+    tags: ["Noise", "Work categorisation"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
-    cta: "Request a similar project"
+    cta: "Request a similar project",
+    documented: true
   },
   {
     id: "tcp-hluk",
     title: "Heat pump — noise in the surroundings",
     operationType: "building technical equipment",
     scope: "outdoor noise in a protected area",
-    output: "measurement / acoustic assessment and recommendations for next steps",
-    text: "We measured noise from the outdoor unit in a protected area. The output helped in communication with neighbours and planning next steps.",
+    output: "Noise measurement and assessment report for the outdoor unit.",
+    text: "We measured noise during operation of a heat pump outdoor unit in a protected outdoor area. The results and assessment were documented in a report.",
     tags: ["Noise", "Occupational health"],
     href: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
-    cta: "Request measurement / study"
+    cta: "Request measurement / study",
+    documented: true
   },
   {
     id: "vzt-hluk-studie",
@@ -190,7 +198,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     text: "We prepared a noise assessment of the technology relative to the nearest buildings. The documentation supported occupancy approval and discussions with authorities.",
     tags: ["Noise", "Occupational health", "HVAC"],
     href: "/sluzby/hlukove-studie",
-    contactService: "Měření hluku a akustika",
+    contactService: "Hlukové studie",
     cta: "Request measurement / study"
   },
   {
@@ -243,36 +251,39 @@ export const referenceExamples: readonly ReferenceExample[] = [
   },
   {
     id: "provozni-rad-odpady",
-    title: "Waste — operating rules for a capacity change",
-    operationType: "waste / recycling",
-    scope: "operating rules, capacity increase, discussions with the authority",
-    output: "operating documentation for permitting",
-    text: "We prepared operating rules for a capacity increase and processing of construction rubble. The documentation went into official proceedings.",
-    tags: ["Regional authority", "CZ EPA", "Air"],
+    title: "Updated operating rules for test furnaces",
+    operationType: "fire testing facility",
+    scope: "updating operating rules for air protection",
+    output: "Updated operating rules for the air pollution source.",
+    text: "We updated the operating rules for a fire testing facility with test furnaces, covering technology, operating records and procedures for abnormal operating conditions.",
+    tags: ["Operating rules", "Air"],
+    documented: true,
     href: "/sluzby/provozni-rady",
     contactService: "Provozní řády",
     cta: "Request a similar project"
   },
   {
     id: "ispop-vice",
-    title: "Multiple operations — ISPOP and records",
-    operationType: "multiple operations, various sectors",
-    scope: "air, waste, link to emission measurements",
-    output: "annual reporting and operating records",
-    text: "We annually prepare integrated pollution reporting records and ISPOP submissions linked to emission measurements and operating permits.",
-    tags: ["ISPOP", "Regional authority"],
+    title: "ISPOP reporting for an industrial site",
+    operationType: "industrial site with boiler rooms and surface treatment",
+    scope: "annual operating records and ISPOP submission",
+    output: "Annual operating report and confirmation of submission.",
+    text: "We prepared annual operating records for boiler rooms and surface treatment equipment and submitted the report to ISPOP. Submission is documented by a system confirmation.",
+    tags: ["ISPOP", "Air"],
+    documented: true,
     href: "/sluzby/ispop",
     contactService: "ISPOP",
     cta: "Request a similar project"
   },
   {
     id: "ghg-overovani",
-    title: "GHG — verification of emission data",
-    operationType: "operation with greenhouse gas obligations",
-    scope: "annual verification, capacity changes, operating data",
-    output: "verification outputs for the operator",
-    text: "We verified annual emission data and supporting documentation for a capacity change under the greenhouse gas regime.",
-    tags: ["GHG", "ISPOP"],
+    title: "Review of energy data and GHG calculations",
+    operationType: "manufacturing company",
+    scope: "review of energy data and related emission calculations",
+    output: "Calculation file and written explanation of data revisions.",
+    text: "We reviewed energy data and related emission calculations for purchased electricity. The work included a calculation file and an explanation of revisions. This is not accredited EU ETS verification.",
+    tags: ["GHG", "Emission data"],
+    documented: true,
     href: "/sluzby/ghg-overovani",
     contactService: "GHG",
     cta: "Request a similar project"

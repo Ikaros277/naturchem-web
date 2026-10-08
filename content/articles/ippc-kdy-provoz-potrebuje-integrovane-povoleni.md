@@ -18,6 +18,8 @@ IPPC znamená integrovaná prevence a omezování znečištění. V českém pr�
 
 Smyslem integrovaného povolení je posoudit provoz jako celek. Neřeší se jen ovzduší, voda, odpady nebo hluk odděleně, ale jejich vzájemná souvislost. Úřad stanoví závazné podmínky provozu tak, aby byla zajištěna ochrana životního prostředí jako celku.
 
+Zpracování žádosti a odborných podkladů popisujeme na stránce [Integrované povolení IPPC a jeho změny](/sluzby/ippc-integrovana-povoleni/).
+
 Pro provozovatele je podstatné hlavně toto: pokud zařízení spadá do režimu IPPC, nelze ho provozovat pouze na základě dílčích povolení. Musí mít platné integrované povolení.
 
 Integrované povolení obvykle nahrazuje více složkových rozhodnutí, souhlasů a stanovisek. V praxi se v něm řeší zejména emise do ovzduší, vypouštění odpadních vod, nakládání s odpady, hluk, havarijní podmínky, monitoring, provozní evidence, provozní řády a povinnosti při ukončení provozu.

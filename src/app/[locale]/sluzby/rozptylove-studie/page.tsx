@@ -4,9 +4,9 @@ import "@/app/globals.css";
 const czech = {
   slug: "sluzby/rozptylove-studie",
   faqCategoryId: "studie",
-  title: "Rozptylové studie",
+  title: "Rozptylová studie pro zdroje a záměry",
   intro:
-    "Krajský úřad nebo **EIA** požaduje **rozptylovou studii**? Zmodelujeme **imisní příspěvky** zdrojů a dopravy — podklad pro investora, projektanta i úřad.",
+    "Zpracujeme **rozptylovou studii** pro nový zdroj, změnu provozu nebo projekt. Vyhodnotíme imisní příspěvky technologií a související dopravy.",
   scope: [
     "Zmodelujeme imisní příspěvek stacionárních zdrojů a dopravy v areálu",
     "Posoudíme varianty provozu a technická opatření",

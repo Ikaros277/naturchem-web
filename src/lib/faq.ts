@@ -705,16 +705,11 @@ export const faqCategories: FaqCategory[] = [
         }
       },
       {
-        q: "Zajišťujete GHG / ověřování emisí skleníkových plynů?",
+        q: "Zajišťujete výpočty emisí GHG a uhlíkové stopy?",
         paragraphs: [
-          "Ano. U zakázek souvisejících s emisemi skleníkových plynů připravujeme nebo ověřujeme podklady podle rozsahu oprávnění a požadavků provozovatele."
+          "Ano. Počítáme emise skleníkových plynů a uhlíkovou stopu a kontrolujeme emisní údaje v dohodnutém rozsahu. Nezajišťujeme nezávislé akreditované ověření výkazu EU ETS."
         ],
-        legal: {
-          summary:
-            "§ 32 zákona č. 201/2012 Sb. zahrnuje mezi autorizované činnosti také ověřování zprávy o emisích.",
-          refs: [{ label: "§ 32 zákona č. 201/2012 Sb.", href: L.p32 }]
-        },
-        links: [{ label: "Ověřování emisí skleníkových plynů", href: "/sluzby/ghg-overovani" }]
+        links: [{ label: "Emise skleníkových plynů a uhlíková stopa", href: "/sluzby/ghg-overovani" }]
       },
       {
         q: "Kdy je potřeba aktualizovat provozní řád?",

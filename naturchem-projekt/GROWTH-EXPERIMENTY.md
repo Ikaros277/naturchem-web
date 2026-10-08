@@ -331,6 +331,14 @@ Na výslovné zadání uživatele zapojeno osm vybraných fotografií do homepag
 - Verify/build, 750 kontrol URL/odkazů a routing smoke prošly; mobilní menu a skutečná cesta karta → služba → předvyplněná poptávka i desktop mega menu ověřeny bez odeslání. Uživatel 5. 10. 2026 výslovně schválil commit, push do main v `Ikaros277/naturchem-web` a jeden Vercel deployment; úspěšné vydání a další měření se potvrzují samostatně. Výchozí reporty, skutečné rozpočty, kompromisy, testy a rollback: [PERFORMANCE-MOBILE-2026-10-05.md](PERFORMANCE-MOBILE-2026-10-05.md).
 - První pokus `0d37887` byl pushnut do main, ale Vercel `4n33qpW4Uvtmiuku2hnyFVWgqNoD` skončil chybou nového HTML guardu. Produkční consent bootstrap přidává 2 975 B proti lokálnímu sestavení bez analytického nastavení; skutečný nový produkční HTML objem 136 104 B je menší než předchozích 136 858 B. Před opakovaným pokusem ostrý web stále potvrzuje `f004d29`, změna TECH-012 není nasazena a nemá post-release skóre. Oprava pouze testovacího limitu rozlišuje obě naměřené varianty, neodstraňuje consent ani analytiku. Uživatel následně výslovně schválil push opravy testu do main a jeden další produkční deployment; úspěch se musí ověřit samostatně.
 
+## Lokální SEO mikroklimatu a vibrací 6. 10. 2026
+
+Na výslovné zadání uživatele připraven samostatný návrh na `codex/seo-services-evidence-2026-10-06` ze základu `ea31548`, shodného s ověřeným aktuálním GitHub main. Přesnější české title/H1 a FAQ, relevantní propojení poradny, přesný kontext ve formuláři a nový skutečný snímek ruční brusky. Bez nových URL, přepisování homepage, změn ISR nebo neověřených referencí. Zatím lokální; není spuštěn nový produkční experiment ani doložen rankingový/obchodní přínos.
+
+EXP-004 má dosud plánované 56denní okno do 19. 10.; před případným schváleným nasazením zaznamenat jeho vyhodnocení nebo přechod do nové fáze. Jeho stávající odkaz v článku je zachován. EXP-013/014 a další služby nejsou obsahově měněny. Firemní evidence zakázek čeká na poskytnutí umístění a přístupu; žádné soukromé zdrojové údaje nejsou veřejně publikovány.
+
+Baseline, hypotézy, fotografie, ochrany a podmínky ověření: [SEO-SLUZBY-DOLOZENI-2026-10-06.md](SEO-SLUZBY-DOLOZENI-2026-10-06.md).
+
 ## Kontrola po nasazení
 
 Společný lokální balík audit/B2B/UX/fotografie a TECH-009/TECH-010 uživatel výslovně schválil k produkčnímu vydání 4. 10. 2026. Přednasazovací ověření, tehdejší main, kvóty, ochrana Cursoru a rollback: [RELEASE-PRIPRAVA-2026-10-04.md](RELEASE-PRIPRAVA-2026-10-04.md). Přesný nový commit a úspěšné živé nasazení se potvrzují samostatně po stavu Ready, nikoli tímto schválením.
@@ -340,3 +348,57 @@ Společný lokální balík audit/B2B/UX/fotografie a TECH-009/TECH-010 uživate
 - Formulář odešle poptávku a `generate_lead` vznikne až po úspěšném přijetí serverem.
 - GSC nemá nový indexační problém a sitemap zůstává dostupná.
 - Vercel usage a ISR zápisy zůstávají v bezpečné rezervě tarifu.
+
+## Dotazový audit 7. 10. 2026 — bez nového zásahu
+
+GSC úplná česká 28denní období 7. 9.–4. 10. vs. 10. 8.–6. 9.: 199 vs. 136 kliknutí, 5 325 vs. 3 847 zobrazení, Google AI odkazy 2 026 vs. 1 196. Po dvou ručně vyřešených CAPTCHA dokončeno všech 93 plánovaných dotazů: 45 s NATURCHEMem mezi hlavními výsledky první stránky, 48 bez nalezeného našeho hlavního výsledku, ve 22 z 29 skupin alespoň jedna varianta. Nejnovější skutečně ověřené stavy, konkrétní indexační mezery a ochrana EXP-004/013/014: [GOOGLE-AUDIT-2026-10-07.md](GOOGLE-AUDIT-2026-10-07.md). Nejde o národní/mobilní pořadí ani tržně vážené skóre. Růst viditelnosti není doložený růst kvalifikovaných poptávek. Žádný obsahový experiment ani nasazení tímto auditem spuštěno nebylo.
+
+## Lokální implementace 19 slabších oblastí 7. 10. 2026
+
+Na následné výslovné zadání uživatele připraveny změny všech 19 slabších dotazových skupin v dosavadní izolované větvi. Nabídka SDS, úplného servisu IPPC/povolení/ISPOP a GHG bez akreditovaného EU ETS ověření vychází z dnešních přímých potvrzení uživatele. Šest ověřených anonymních realizací, konkrétní FAQ, interní odkazy, kontext poptávky a opravená breadcrumb struktura; žádné nové URL ani tvrzení o již dosaženém SEO přínosu.
+
+GitHub main dnes ověřen jako ea31548. Verify/build, rychlostní rozpočty, 758 lokálních URL/odkazových kontrol, routing a 29 cílových SEO kontrol prošly. Desktop/mobil a CTA → předvyplnění zkontrolovány bez odeslání poptávky. Soukromé protokoly a klientská identita nejsou v repozitáři; produkce ani Cursor checkout nejsou změněny.
+
+EXP-004/013/014 zůstávají produkčně nedotčeny; nový obsah pro jejich stránky je pouze připravená další fáze a před vydáním potřebuje vyhodnocení/přefázování. Celý baseline, hypotézy, skutečné změny, limity doložení, ověření, podmínky schválení a rollback: [SEO-SLUZBY-IMPLEMENTACE-2026-10-07.md](SEO-SLUZBY-IMPLEMENTACE-2026-10-07.md).
+
+## Hlubší archivní doložení 7. 10. 2026 — další lokální fáze
+
+Na výslovné zadání vlastníka rozšířen průzkum interní evidence a doplněno 11 dalších anonymních ukázek podložených konkrétními výstupy. IPPC, ISPOP, bezpečnostní listy, chemické poradenství, EIA, GHG data, provozní řády a diisokyanáty. Celkem 19 službových poznámek praxe; v českých referencích 24 karet, z toho 11 nově doložených případů sdílených se službami. Bez nových URL, bez změny homepage/ISR a bez zveřejnění klientských dokumentů. GHG reference i profil jednatele sjednoceny s potvrzenou nabídkou bez nezávislého akreditovaného ověření EU ETS.
+
+Verify/build a výkonové rozpočty PASS, SEO smoke 758 adres/odkazů a routing bez chyb; desktop/mobil ověřen. Účinek na hodnocení důvěry, pořadí nebo leady není měřen. Zatím lokální návrh, nikoli aktivovaný experiment; žádné další produkční oprávnění tímto zápisem nevzniká. Dokladová matice soukromě mimo repo; baseline, hypotézy, publikační limity a rollback: [ARCHIV-KREDIBILITA-2026-10-07.md](ARCHIV-KREDIBILITA-2026-10-07.md).
+
+## Fotografické reference 8. 10. 2026 — lokální prezentační fáze
+
+Na výslovné zadání vlastníka připraveno osm fotografických karet ze stávajících 24 příkladů; dalších 16 bez snímku, bez duplicitního těla a bez nových URL. Tři fotografie přímo prověřeny s protokoly, pět autentických kontextových snímků výslovně ilustračních. BPS a hluk svářeče nyní ukotveny v konkrétních vlastních výstupech; znění CS/EN/DE věcně konzistentní, bez nedoložených výsledků. Každá karta má výstup a odpovídající službu/poptávku.
+
+Nové statické varianty 384 945 B celkem, bez metadat, tváří, on-demand obrazových transformací nebo nové galerie. Homepage a ISR politika beze změny. Finální verify/build a všechny výkonové rozpočty PASS; 758 URL/odkazových kontrol a routing bez chyby; desktop/375/320 px a skutečné předvolení ISPOP/Hlukové studie ověřeny bez odeslání. Jmenovaní zákazníci zůstávají před dlouhým přehledem a mobilní seznam jde skutečně rozbalit.
+
+Hypotéza: čitelnější, konkrétní doložení a kratší cesta od podobné zakázky k poptávce. Není to naměřený ranking ani růst leadů. EXP-004/013/014 neaktivovány/nepřepsány. Bez commitu/push/merge/deploymentu; před publikací náhled a kontrola práv/souhlasů. Baseline, rozsah, omezení a ověření: [FOTOGRAFICKE-REFERENCE-2026-10-08.md](FOTOGRAFICKE-REFERENCE-2026-10-08.md).
+
+## Oprava fotografických vazeb 8. 10. 2026 — pouze lokálně
+
+Vlastník odmítl pět tematických snímků jako neodpovídající popsaným realizacím. Byly odstraněny z karet; textové příklady zůstávají v kompaktních skupinách. Aktuálně tři skutečné foto–případ vazby a 21 případů bez fotografie. Cíl osmi doložených fotografických referencí zatím není dosažen; žádný počet nebyl doplněn generickými fotografiemi. Lakovna nově se skutečnou kazetou označenou Isokyanáty z pracoviště P5, ověřenou se stranou 3 původního vlastního protokolu. Starší test počtu osmi fotografií se nesmí vydávat za důkaz správné věcné vazby.
+
+Regresní kontrola odmítá ilustrační náhrady a nepoužité exporty, chrání všech 24 referencí a kontext poptávky. Použité exporty 369 844 B, bez změny homepage/ISR/lead událostí nebo produkce. Očekávána věrohodnější prezentace; ranking ani konverzní efekt nebyl naměřen. Aktuální rozsah a historie odmítnutého návrhu: [FOTOGRAFICKE-REFERENCE-2026-10-08.md](FOTOGRAFICKE-REFERENCE-2026-10-08.md).
+
+Ověření opravy: verify/build a rychlostní rozpočty PASS, 758 URL/odkazových kontrol a routing bez chyby. Desktop 1366 px / mobil 375 i 320 px bez přetékání; správné snímky a cesta lakovna → odpovídající předvolená poptávka potvrzeny bez odeslání. HTML referencí 214 790 B proti 224 775 B odmítnuté verze, ostatní sledované stránky beze změny. Jen lokální náhled, bez commitu nebo nasazení.
+
+## Rozšíření všech měřicích fotografických ukázek 8. 10. 2026 — pouze lokálně
+
+Vlastník požádal více než tři fotografie, alespoň ke všem vypsaným měřicím zakázkám. Baseline: tři správné foto–případ vazby, 24 českých příkladů, HTML referencí 214 790 B. Nově devět skutečně prověřených fotografických vazeb, žádné tematické náhrady. Doplněny lakovací boxy s TOC, dvě kogenerace v jednom areálu, dva kotle na biomasu, mikroklimatické měření ve výrobě, ruční nářadí se snímačem vibrací a venkovní jednotka tepelného čerpadla.
+
+Pět starších obecných popisů nově ukotveno v konkrétních vlastních výstupech, nepředstírat totožnost s dříve obecně popsaným případem. Přesný rozsah opraven podle protokolů také v EN/DE. Jeden nový doložený případ vibrací zvyšuje CS počet na 25: devět fotografických měřicích a 16 kompaktních studijních/dokumentačních případů, bez duplicitního těla. Samostatné protokoly jedné automobilové zakázky nejsou vydávány za další klienty. Dosavadní URL a skupinové kotvy chráněny.
+
+Devět sad 54 statických variant celkem 1 335 603 B, bez soukromých metadat, tváří, dokumentů, adres nebo výsledků expozice. Šest nových sad přidává 965 759 B. Bez klientské galerie, nového runtime, on-demand obrazových transformací, změny ISR či analytiky. Na úzkém mobilu zjištěný souběh názvu skupiny a šipky řešen vyhrazením místa jen u referencí.
+
+Hypotéza: přesnější vizuální důkaz rozsahu práce, vyšší důvěra B2B návštěvníka a snazší přechod k odpovídající poptávce. Po případném schváleném vydání porovnat stejně dlouhá úplná období reference → služba/formulář → úspěšné generate_lead s potvrzenými kvalifikovanými poptávkami. Kliknutí není lead, ranking ani konverzní uplift nebyl změřen. EXP-004/013/014 neaktivovány ani přepsány. Stále pouze lokálně bez commitu/push/merge/deploymentu; před vydáním schválit snímky, texty a práva zveřejnění. Podrobnosti a soukromá zdrojová matice: [FOTOGRAFICKE-REFERENCE-2026-10-08.md](FOTOGRAFICKE-REFERENCE-2026-10-08.md).
+
+Finální ověření tohoto rozšíření: verify/build a výkonové rozpočty PASS, 231 immutable URL beze změny; 758 URL/odkazových kontrol a routing bez chyby. Desktop načetl všech devět skutečných fotografií, mobil 375/320 px bez přetékání; nový kontext Měření vibrací potvrzen ve skutečném formuláři bez odeslání. Mobilní překrytí názvu skupiny šipkou odstraněno a vizuálně ověřeno. HTML referencí 235 097 B (+20 307 B proti třem kartám), ostatní sledované hlavní stránky beze změny. Nový náhled a snímek celé devítikartové sekce připraveny k lokálnímu odsouhlasení.
+
+## Schválený společný release a kontrola rychlosti 8. 10. 2026
+
+Vlastník devět skutečných fotografických referencí odsouhlasil a výslovně zadal kontrolu rychlosti mobil/PC a produkční nasazení. Baseline původního ostrého ea31548: PageSpeed cloud 91 mobil /100 PC, bez dostatku CrUX dat. V průběhu přípravy odstraněn router/prefetch v 18 referenčních CTA, odlehčena responzivní loga a drobné problémy přístupnosti. Fotografie jsou statické, nové cache pouze na assety; 337 immutable souborů zamčeno, dosavadní URL nepozměněny. Lokální měření mají jiný kontext a neprokazují růst leadů ani univerzální 100.
+
+Vydání začne novou společnou obsahovou/prezentační fázi; dosavadní EXP-004 na vibrace nebude po nasazení vyhodnocován jako izolovaný zásah. Odkazy EXP-013/014 zachovány, sdílené změny ale tvoří rušivý faktor jejich vyhodnocení. Hypotéza: lepší doložení a snazší kontakt zvýší podíl kvalifikovaných skutečně doručených poptávek. Vyhodnocení stejně dlouhých úplných 28/56denních období GSC/GA4 a potvrzených leadů. Není potvrzen efekt před vydáním/data.
+
+Žádný placený upgrade, změna DNS ani testovací poptávka. Historické 30denní ISR již nad limitem; nasazení samo kvótu zpětně neopravuje. Konkrétní rozsah, všechna lokální měření včetně horšího PC běhu, preflight a rollback: [RELEASE-PERFORMANCE-2026-10-08.md](RELEASE-PERFORMANCE-2026-10-08.md). Vydání je zatím schválené a připravené; Ready a skutečný produkční commit se ověřují následně, nejsou předpokládány.

@@ -9,6 +9,7 @@ export type ReferenceExampleListing = {
   shortText: string;
   tags: readonly string[];
   href: string;
+  output?: string;
 };
 
 export function toReferenceExampleListing(example: ReferenceExample): ReferenceExampleListing {
@@ -18,7 +19,8 @@ export function toReferenceExampleListing(example: ReferenceExample): ReferenceE
     operationType: example.operationType,
     shortText: shortenListingExcerpt(example.text, 2),
     tags: example.tags,
-    href: example.href
+    href: example.href,
+    ...(example.documented ? { output: example.output } : {})
   };
 }
 

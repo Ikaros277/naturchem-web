@@ -82,6 +82,6 @@ export const referenceClients: ClientLogo[] = [
   { name: "SILON", logo: "/loga-referenci/silon.svg", website: "https://www.silon.cz" },
   { name: "HELUZ cihlářský průmysl", logo: "/loga-referenci/heluz.svg", website: "https://www.heluz.cz" },
   { name: "Ředitelství silnic a dálnic ČR", logo: "/loga-referenci/rsd.svg", website: "https://www.rsd.cz" },
-  { name: "METAL TRADE COMAX", logo: "/loga-referenci/mtcomax.svg", website: "https://www.mtcomax.cz" },
+  { name: "METAL TRADE COMAX", logo: "/loga-referenci/prepared-2026-10-08/mtcomax-360-q90.webp", website: "https://www.mtcomax.cz" },
   { name: "DURA Automotive Systems CZ", logo: "/loga-referenci/dura.svg", website: "https://durashiloh.com" }
 ];

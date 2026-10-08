@@ -266,7 +266,7 @@ export function HeaderClient({
   return (
     <>
       <div className="container nav">
-        <LocaleLink href="/" aria-label={t.homeAria} className="nav-brand">
+        <LocaleLink href="/" aria-label={`${t.homeAria} — ${t.brandTagline}`} className="nav-brand">
           <span className="brand-mark">
             <BrandLogo className="brand-logo-img" />
             <span className="brand-tagline">{t.brandTagline}</span>

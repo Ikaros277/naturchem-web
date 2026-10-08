@@ -13,7 +13,7 @@ export const teamMembers: TeamMember[] = [
     name: "Ing. František Hezina",
     role: "Jednatel společnosti",
     details: [
-      "Soudní znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování emisí skleníkových plynů a oznámení EIA."
+      "Soudní znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie a oznámení EIA."
     ],
     phones: ["+420 603 216 983", "+420 774 100 570"],
     email: "hezina@naturchem.cz",

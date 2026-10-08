@@ -678,16 +678,11 @@ export const faqCategories: FaqCategory[] = [
         }
       },
       {
-        q: "Bieten Sie eine Überprüfung der Treibhausgas-/Treibhausgasemissionen an?",
+        q: "Berechnen Sie Treibhausgasemissionen und den CO₂-Fußabdruck?",
         paragraphs: [
-          "Ja. Für Projekte im Zusammenhang mit Treibhausgasemissionen erstellen oder prüfen wir die Dokumentation entsprechend dem Genehmigungsumfang und den Betreiberanforderungen."
+          "Ja. Wir berechnen Treibhausgasemissionen und den CO₂-Fußabdruck und prüfen Emissionsdaten im vereinbarten Umfang. Eine unabhängige akkreditierte Verifizierung von EU-ETS-Emissionsberichten bieten wir nicht an."
         ],
-        legal: {
-          summary:
-            "§ 32 des Gesetzes Nr. 201/2012 Slg. umfasst die Überprüfung von Emissionsberichten für genehmigte Aktivitäten.",
-          refs: [{ label: "§ 32 des Gesetzes Nr. 201/2012 Slg.", href: L.p32 }]
-        },
-        links: [{ label: "Überprüfung der Treibhausgasemissionen", href: "/sluzby/ghg-overovani" }]
+        links: [{ label: "Treibhausgasemissionen und CO₂-Fußabdruck", href: "/sluzby/ghg-overovani" }]
       },
       {
         q: "Wann sollte die Betriebsanleitung aktualisiert werden?",

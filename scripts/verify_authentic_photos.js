@@ -12,7 +12,7 @@ const { getHeroImageConfig } = load(path.join(root, "src/lib/hero-images.ts"));
 const { AuthenticPhoto } = load(path.join(root, "src/components/AuthenticPhoto.tsx"));
 const { HomeLcpPhoto } = load(path.join(root, "src/components/HomeLcpPhoto.tsx"));
 const { seoLandings } = load(path.join(root, "src/lib/seo-landings.ts"));
-const themes = ["homepage-mereni", "mereni-emisi", "mereni-hluku", "pracovni-prostredi", "mereni-pro-kolaudaci", "mereni-nove-haly", "mereni-mikroklimatu", "pristrojove-vybaveni"];
+const themes = ["homepage-mereni", "mereni-emisi", "mereni-hluku", "pracovni-prostredi", "mereni-pro-kolaudaci", "mereni-nove-haly", "mereni-mikroklimatu", "pristrojove-vybaveni", "mereni-vibraci"];
 
 (async () => {
   const photos = themes.map(getAuthenticPhoto);
@@ -20,6 +20,8 @@ const themes = ["homepage-mereni", "mereni-emisi", "mereni-hluku", "pracovni-pro
   for (const [i, photo] of photos.entries()) {
     assert.deepEqual(getAuthenticPhotoBySrc(photo.src), photo);
     assert.equal(getHeroImageConfig(themes[i]).src, photo.src);
+    const heroMap = JSON.parse(fs.readFileSync(path.join(root, "src/lib/responsive-heroes.json"), "utf8"));
+    assert.ok(!Object.hasOwn(heroMap, photo.src), "Do not duplicate prepared authentic photo variants");
     const meta = await sharp(path.join(root, "public", photo.src)).metadata();
     assert.equal(meta.width, photo.width);
     assert.equal(meta.height, photo.height);
@@ -58,5 +60,20 @@ const themes = ["homepage-mereni", "mereni-emisi", "mereni-hluku", "pracovni-pro
     if (file.endsWith("-640.avif")) assert.ok(size < 40000, "Mobile hero budget");
   }
   assert.ok(bytes < 2200000, "Total storage budget for all eight photographs");
-  console.log("PASS authentic photos: eight distinct assets, 64 metadata-free static variants, " + bytes + " B total, small mobile previews and preserved study illustrations");
+  const vibrationDirectory = path.join(root, "public/hero/authentic-2026-10-06");
+  const vibrationFiles = fs.readdirSync(vibrationDirectory);
+  assert.equal(vibrationFiles.length, 8);
+  let vibrationBytes = 0;
+  for (const file of vibrationFiles) {
+    assert.match(file, /^rucni-bruska(?:-640|-card-(?:192|384|320|640))?\.(?:webp|avif)$/);
+    const fullPath = path.join(vibrationDirectory, file);
+    const meta = await sharp(fullPath).metadata();
+    assert.ok(!meta.exif && !meta.xmp && !meta.iptc, "No private metadata");
+    const size = fs.statSync(fullPath).size;
+    vibrationBytes += size;
+    if (file.includes("-card-192")) assert.ok(size < 8000);
+    if (file.endsWith("-640.avif")) assert.ok(size < 40000);
+  }
+  assert.ok(vibrationBytes < 450000, "Bounded additional storage");
+  console.log("PASS authentic photos: nine distinct assets, 72 metadata-free static variants, " + (bytes + vibrationBytes) + " B total, small mobile previews and preserved study illustrations");
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -13,6 +13,8 @@ import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { buildFaqPageJsonLd } from "@/lib/faq-jsonld";
 import { stripInlineMarkdown } from "@/lib/plain-text";
 import { company, siteUrl } from "@/lib/site";
+import type { FaqItem } from "@/lib/faq";
+import { getCzechServiceSearchSupport } from "@/lib/service-search-support";
 
 export type ServicePageProps = {
   locale: Locale;
@@ -30,6 +32,7 @@ export type ServicePageProps = {
   relatedLinks?: { title: string; href: string; description: string }[];
   slug: string;
   faqCategoryId?: string;
+  faqItems?: FaqItem[];
 };
 
 export async function ServicePage(props: ServicePageProps) {
@@ -41,6 +44,7 @@ export async function ServicePage(props: ServicePageProps) {
   const link = (href: string) => localizeHref(href, locale);
 
   const bareSlug = props.slug.split("/").pop() ?? props.slug;
+  const searchSupport = locale === "cs" ? getCzechServiceSearchSupport(bareSlug) : undefined;
   const serviceMeta = services.find((s) => s.href === `/${props.slug}`);
   const category = getServiceCategoryFromHref(`/${props.slug}`);
   const relatedServices = services
@@ -48,16 +52,25 @@ export async function ServicePage(props: ServicePageProps) {
     .slice(0, 2);
   const contactServiceValue = props.contactService || serviceMeta?.contactService || props.title;
   const contactCta = serviceMeta?.contactCta ?? ctaCopy.contactSubmitCta;
-  const quickContactHref = link(contactUrl(contactServiceValue));
+  const contactPath = contactUrl(contactServiceValue);
+  const contextualContact = searchSupport?.contactMessage
+    ? contactPath.replace("#", `&message=${encodeURIComponent(searchSupport.contactMessage)}#`)
+    : contactPath;
+  const quickContactHref = link(contextualContact);
   const sectorMetaByHref = new Map(sectors.map((s) => [s.href, s]));
   const sectorCrossLinks = relatedSectorsForService(bareSlug);
   const seoLandingLinks = await getSeoLandingsForService(`/sluzby/${bareSlug}`, locale, 3);
   const relatedLinks = props.relatedLinks ?? [];
   const sectorLabel = await getProvozyNavLabel(locale);
-  const faqTeaserItems = props.faqCategoryId
+  const faqTeaserItems = props.faqItems ?? searchSupport?.faqItems ?? (props.faqCategoryId
     ? await getFaqTeaserItemsForLocale(props.faqCategoryId, locale, 5)
-    : [];
+    : []);
   const mergedRelated = [
+    ...(searchSupport?.relatedLinks ?? []).map((l) => ({
+      ...l,
+      cta: copy.viewService,
+      sectionLabel: undefined as string | undefined
+    })),
     ...relatedLinks.map((l) => ({
       href: l.href,
       title: l.title,
@@ -116,7 +129,7 @@ export async function ServicePage(props: ServicePageProps) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: copy.breadcrumbHome, item: `${siteUrl}${link("/")}/`.replace(/([^:]\/)\/+/g, "$1") },
-      { "@type": "ListItem", position: 2, name: copy.breadcrumbServices, item: `${siteUrl}${link("/sluzby")}/` },
+      { "@type": "ListItem", position: 2, name: copy.breadcrumbServices, item: `${siteUrl}${link("/sluzby")}/`.replace(/([^:]\/)\/+/g, "$1") },
       {
         "@type": "ListItem",
         position: 3,
@@ -144,6 +157,10 @@ export async function ServicePage(props: ServicePageProps) {
       contactHref={quickContactHref}
       contactLabel={contactCta}
       faqItems={faqTeaserItems}
+      faqUiLabels={locale === "cs" && (props.faqItems || searchSupport?.faqItems)
+        ? { tip: "Poznámka:", legal: "Odborné podklady", related: "Související:" }
+        : undefined}
+      evidence={searchSupport?.evidence}
       relatedItems={mergedRelated}
       schemas={<>
         <JsonLd data={serviceData} />

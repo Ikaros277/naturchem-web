@@ -339,15 +339,16 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
   },
   "ghg-overovani": {
     slug: "sluzby/ghg-overovani",
-    title: "GHG and greenhouse gas emission verification",
+    title: "Greenhouse gas emissions and carbon footprint",
     description:
-      "GHG, greenhouse gas emission verification, emission data review and reporting documentation for operators.",
+      "GHG emission and carbon footprint calculations, emission data review and operating balances within the agreed scope.",
     intro:
-      "Are you verifying **greenhouse gas** emissions before reporting? We assess methodology, inputs and the link to consumption, **measurements** and operating balances.",
+      "We calculate **greenhouse gas emissions** and **carbon footprints** within the agreed scope. We review input data, calculations and operating balances. We do not provide independent accredited EU ETS verification.",
     contactService: "GHG",
     faqCategoryId: "ispop",
     scope: [
-      "We verify **greenhouse gas** emissions and calculation sheets",
+      "We review **greenhouse gas** emission calculations and calculation sheets",
+      "We calculate GHG emissions and carbon footprints within the agreed scope",
       "We review emission factors, consumption and operating data",
       "We link to **emission measurements** and operating records",
       "We prepare an overview of discrepancies before **report** submission"
@@ -371,7 +372,8 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "reporting or audit requirement"
     ],
     outputs: [
-      "verification or review of emission data",
+      "review of emission data and calculations within the agreed scope",
+      "GHG emission or carbon footprint calculation according to the assignment",
       "overview of inputs, methodology and identified discrepancies",
       "documentation for GHG reporting"
     ],

@@ -17,17 +17,13 @@ publishedAt: 2026-10-01
 topic: Chemická legislativa
 heroImage: /hero/generated-2026-10/bezpecnostni-listy-clanek.webp
 ---
-# Bezpečnostní listy v provozu: co z nich musí zaměstnavatel skutečně převést do praxe
-
-Slug: bezpecnostni-listy-v-provozu-co-musi-zamestnavatel
-
-Perex: Bezpečnostní list není dokument, který stačí uložit do šanonu nebo na firemní server. Pokud firma používá barvy, lepidla, čisticí prostředky, rozpouštědla, kyseliny, louhy, oleje nebo jiné chemické výrobky, musí informace z bezpečnostních listů promítnout do skutečného provozu. Z bezpečnostního listu se mimo jiné určuje nebezpečnost výrobku, podmínky skladování, vhodné ochranné prostředky, opatření při úniku a požáru a také to, které chemické látky mohou být významné v pracovním ovzduší. Častým problémem při kontrole není samotná absence bezpečnostního listu, ale rozdíl mezi tím, co je v něm napsáno, a tím, jak firma s chemikálií skutečně zachází.
-
 ## Bezpečnostní list není jen povinná příloha k chemikálii
 
 Bezpečnostní list má podle evropského nařízení REACH umožnit uživateli přijmout potřebná opatření k ochraně zdraví zaměstnanců, bezpečnosti práce a životního prostředí.
 
 Pro zaměstnavatele je tedy především **zdrojem informací pro řízení rizik**.
+
+Potřebujete nový list nebo revizi dokumentace? Nabídku a podklady najdete na stránce [Zpracování a revize bezpečnostních listů](/sluzby/bezpecnostni-listy/).
 
 Pokud firma používá například dvousložkové lepidlo, nestačí mít bezpečnostní list obou složek uložený v počítači. Je potřeba z něj zjistit, zda směs obsahuje senzibilizující látky, jaké jsou požadavky na větrání, jaké rukavice výrobce doporučuje, zda existuje expoziční limit a co se má udělat při rozlití.
 

@@ -678,16 +678,11 @@ export const faqCategories: FaqCategory[] = [
         }
       },
       {
-        q: "Do you provide GHG / greenhouse gas emission verification?",
+        q: "Do you provide GHG emission and carbon footprint calculations?",
         paragraphs: [
-          "Yes. For projects related to greenhouse gas emissions we prepare or verify documentation according to the scope of authorisation and operator requirements."
+          "Yes. We calculate greenhouse gas emissions and carbon footprints and review emission data within the agreed scope. We do not provide independent accredited verification of EU ETS emission reports."
         ],
-        legal: {
-          summary:
-            "Section 32 of Act No. 201/2012 Coll. includes verification of emission reports among authorised activities.",
-          refs: [{ label: "Section 32 of Act No. 201/2012 Coll.", href: L.p32 }]
-        },
-        links: [{ label: "Greenhouse gas emission verification", href: "/sluzby/ghg-overovani" }]
+        links: [{ label: "Greenhouse gas emissions and carbon footprint", href: "/sluzby/ghg-overovani" }]
       },
       {
         q: "When should the operating manual be updated?",

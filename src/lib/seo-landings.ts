@@ -314,7 +314,8 @@ export const seoLandings: SeoLanding[] = [
       {
         heading: "Předáme protokol a ohlásíme data",
         paragraphs: [
-          "Jednorázové měření může provést pouze autorizovaná osoba. Vyhotovíme protokol a data z měření oznámíme prostřednictvím ISPOP do 60 dnů."
+          "Jednorázové měření může provést pouze autorizovaná osoba. Vyhotovíme protokol a data z měření oznámíme prostřednictvím ISPOP do 60 dnů.",
+          "Z naší praxe: u licího stroje jsme měřili tuhé znečišťující látky a zinek na technologickém výduchu. Výstupem byl protokol autorizovaného měření emisí."
         ]
       }
     ],

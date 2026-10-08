@@ -5,7 +5,7 @@ import type { FaqItem } from "@/lib/faq";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { HeroPhoto } from "@/components/HeroPhoto";
 import { InlineEmphasis } from "./InlineEmphasis";
-import { FaqAccordionList } from "./FaqAccordionList";
+import { FaqAccordionList, type FaqAccordionUiLabels } from "./FaqAccordionList";
 import { ServiceIcon } from "./ServiceIcon";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getServiceCopy } from "@/lib/i18n/service-copy-i18n";
@@ -14,6 +14,7 @@ import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { getServiceHeroTheme } from "@/lib/hero-images";
 import { getAuthenticPhoto } from "@/lib/authentic-photos";
 import { company } from "@/lib/site";
+import type { ServiceEvidence } from "@/lib/service-search-support";
 import styles from "./service-detail.module.css";
 
 type Props = {
@@ -23,6 +24,8 @@ type Props = {
   faqItems: FaqItem[];
   relatedItems: { title: string; href: string }[];
   schemas: ReactNode;
+  evidence?: ServiceEvidence;
+  faqUiLabels?: FaqAccordionUiLabels;
 };
 
 function DetailList({ items }: { items: string[] }) {
@@ -30,7 +33,7 @@ function DetailList({ items }: { items: string[] }) {
 }
 
 /** Shared server-rendered layout: full technical content remains in native disclosures. */
-export function ServiceDetailLayout({ content, contactHref, contactLabel, faqItems, relatedItems, schemas }: Props) {
+export function ServiceDetailLayout({ content, contactHref, contactLabel, faqItems, relatedItems, schemas, evidence, faqUiLabels }: Props) {
   const { locale } = content;
   const href = (path: string) => localizeHref(path, locale);
   const copy = getServiceCopy(locale);
@@ -94,6 +97,12 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             {content.slug === "sluzby/mereni-hluku" ? <p className={styles.situations}>
               <strong>{ui.noiseHint}</strong><Link href={href("/sluzby/hlukove-studie")}>{ui.noiseLink} →</Link>
             </p> : null}
+            {evidence ? <aside className={styles.evidence} aria-label="Ukázka realizace" data-service-evidence>
+              <p className={styles.eyebrow}>Z naší praxe</p>
+              <h3>{evidence.title}</h3>
+              <p>{evidence.summary}</p>
+              <p className={styles.evidenceOutput}><strong>Výstup:</strong> {evidence.output}</p>
+            </aside> : null}
           </div>
           <aside className={styles.inquiryPanel} id="podklady" aria-labelledby="service-docs-heading">
             <ServiceIcon icon="process-vystup" variant="plain" size={30} />
@@ -120,7 +129,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
           </div>
           {faqItems.length ? <div className={styles.faq}>
             <h3>{ui.faq}</h3>
-            <FaqAccordionList items={faqItems} locale={locale} />
+            <FaqAccordionList items={faqItems} locale={locale} uiLabels={faqUiLabels} />
             <Link className={styles.textLink} href={href("/faq#" + content.faqCategoryId)}>{ui.allFaq} <span aria-hidden="true">→</span></Link>
           </div> : null}
         </section>

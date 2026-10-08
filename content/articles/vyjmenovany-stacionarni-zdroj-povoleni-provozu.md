@@ -23,6 +23,8 @@ Pro provozovatele je zásadní jednoduché pravidlo:
 
 Nestačí tedy zjistit, zda zařízení „něco vypouští komínem“. Rozhodující je přesné zařazení technologie podle [přílohy č. 2 zákona č. 201/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-201).
 
+Potřebujete zpracovat žádost a odborné podklady? Rozsah popisujeme na stránce [Povolení provozu stacionárního zdroje](/sluzby/povoleni-provozu/).
+
 > Prakticky: Nejčastější chybou je začít řešit povolení až po instalaci technologie. Zařazení zdroje je vhodné prověřit už při výběru zařízení, protože může ovlivnit projekt, výduch, komín, filtraci, měřicí místo i další povolovací dokumentaci.
 
 ## Pozor na sloupce A, B a C

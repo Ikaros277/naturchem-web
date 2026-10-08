@@ -39,9 +39,10 @@ type Props = {
   examplesById: Map<string, ReferenceExampleListing>;
   groups: ReferenceExampleGroup[];
   locale: Locale;
+  featuredIds?: readonly string[];
 };
 
-export async function ReferenceExamplesIndex({ examplesById, groups, locale }: Props) {
+export async function ReferenceExamplesIndex({ examplesById, groups, locale, featuredIds = [] }: Props) {
   const messages = await getMessages(locale);
   const accordion = messages.accordion;
   const common = messages.common;
@@ -55,6 +56,8 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
           .filter((e): e is ReferenceExampleListing => e !== undefined);
         const countLabel = orderCountLabel(groupExamples.length, locale, messages);
         const groupCategory = groupCategories[group.id];
+        const photoExamples = groupExamples.filter(example => featuredIds.includes(example.id));
+        const otherExamples = groupExamples.filter(example => !featuredIds.includes(example.id));
 
         return (
           <details
@@ -64,7 +67,6 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
           >
             <summary
               className="service-group-summary"
-              aria-label={`${group.title}, ${countLabel} — ${accordion.showOrCollapse}`}
             >
               <ServiceIcon
                 icon={groupIcons[group.id]}
@@ -99,8 +101,16 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
                 </span>
               </span>
             </summary>
-            <div className="service-card-grid reference-group-examples">
-              {groupExamples.map((example) => (
+            {photoExamples.length ? (
+              <nav className="reference-photo-shortcuts" aria-label={"Fotografické reference — " + group.title}>
+                <span>Fotografické reference:</span>
+                <ul>
+                  {photoExamples.map(example => <li key={example.id}><a href={"#reference-" + example.id}>{example.title} <span aria-hidden="true">↑</span></a></li>)}
+                </ul>
+              </nav>
+            ) : null}
+            {otherExamples.length ? <div className="service-card-grid reference-group-examples">
+              {otherExamples.map((example) => (
                 <IndexCard
                   key={example.id}
                   href={localizeHref(example.href, locale)}
@@ -111,6 +121,7 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
                   icon={<ServiceIcon href={example.href} variant="inline" size={20} />}
                 >
                   <p className="muted">{example.shortText}</p>
+                  {example.output ? <p className="reference-example-output"><strong>{common.output}:</strong> {example.output}</p> : null}
                   <span className="muted reference-example-card-type">{example.operationType}</span>
                   <ul className="tag-row service-index-card-tags" aria-label={common.areas}>
                     {example.tags.slice(0, 3).map((tag) => (
@@ -121,7 +132,7 @@ export async function ReferenceExamplesIndex({ examplesById, groups, locale }: P
                   </ul>
                 </IndexCard>
               ))}
-            </div>
+            </div> : null}
           </details>
         );
       })}

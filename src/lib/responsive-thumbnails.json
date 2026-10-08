@@ -1,4 +1,15 @@
 {
+  "/hero/dokumentace-fallback.webp": {
+    "base": "/hero/responsive-2026-10/image-dc84a3aeec42",
+    "widths": [
+      192,
+      384,
+      640,
+      960
+    ],
+    "width": 1024,
+    "height": 576
+  },
   "/hero/generated-2026-09/automotive-clanek.webp": {
     "base": "/hero/responsive-2026-10/image-900d3611fbe3",
     "widths": [

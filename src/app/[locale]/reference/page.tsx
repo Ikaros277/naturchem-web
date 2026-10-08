@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { ReferenceExamplesIndex } from "@/components/ReferenceExamplesIndex";
+import { ReferencePhotoShowcase } from "@/components/ReferencePhotoShowcase";
+import { referencePhotographs } from "@/lib/reference-photographs";
 import { JsonLd } from "@/components/Schema";
 import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
 import { getReferenceContent, getReferenceExampleGroups } from "@/lib/i18n/content";
@@ -38,7 +40,9 @@ export default async function ReferencePage({ params }: Props) {
   const messages = await getMessages(locale);
   const reference = await getReferenceContent(locale);
   const exampleGroups = await getReferenceExampleGroups(locale);
-  const examplesById = toReferenceExampleListingMap(reference.getReferenceExamplesById());
+  const completeExamplesById = reference.getReferenceExamplesById();
+  const examplesById = toReferenceExampleListingMap(completeExamplesById);
+  const featuredIds = locale === "cs" ? referencePhotographs.map(photo => photo.exampleId) : [];
   const pageCtaPresets = getPageCtaPresets(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/reference")}/`.replace(/([^:]\/)\/+/g, "$1");
@@ -70,18 +74,20 @@ export default async function ReferencePage({ params }: Props) {
         </header>
       </PageHeroBand>
 
-      <section className="section content-block container page-first-section page-below-fold" id="zakaznici">
+      <section className="section content-block container page-first-section" id="zakaznici">
         <h2>{messages.reference.customersTitle}</h2>
         <p className="muted section-intro">{reference.referenceCustomersIntro}</p>
-        <ClientLogosGrid expandable moreHref={link("/reference#zakaznici")} />
+        <ClientLogosGrid expandable />
       </section>
 
-      <section className="section section-surface accordion-index-surface content-block container page-below-fold" id="priklady">
+      {locale === "cs" ? <ReferencePhotoShowcase examplesById={completeExamplesById} /> : null}
+
+      <section className="section section-surface accordion-index-surface content-block container" id="priklady">
         <h2>{reference.referenceExamplesHeading}</h2>
-        <ReferenceExamplesIndex examplesById={examplesById} groups={exampleGroups} locale={locale} />
+        <ReferenceExamplesIndex examplesById={examplesById} groups={exampleGroups} locale={locale} featuredIds={featuredIds} />
       </section>
 
-      <section className="section content-block container satisfaction-survey-teaser page-below-fold">
+      <section className="section content-block container satisfaction-survey-teaser">
         <article className="card satisfaction-survey-teaser-card">
           <h2>{messages.reference.surveyTeaserTitle}</h2>
           <p className="muted">{messages.reference.surveyTeaserText}</p>

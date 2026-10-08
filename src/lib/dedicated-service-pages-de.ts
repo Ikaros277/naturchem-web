@@ -339,15 +339,16 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
   },
   "ghg-overovani": {
     slug: "sluzby/ghg-overovani",
-    title: "Überprüfung der Treibhausgas- und Treibhausgasemissionen",
+    title: "Treibhausgasemissionen und CO₂-Fußabdruck",
     description:
-      "Überprüfung von Treibhausgasemissionen, Treibhausgasemissionen, Überprüfung von Emissionsdaten und Berichtsdokumentation für Betreiber.",
+      "Berechnung von Treibhausgasemissionen und CO₂-Fußabdruck, Prüfung von Emissionsdaten und Betriebsbilanzen im vereinbarten Umfang.",
     intro:
-      "Überprüfen Sie die **Treibhausgasemissionen** vor der Berichterstattung? Wir bewerten Methodik, Inputs und die Verbindung zu Verbrauch, **Messungen** und Betriebsbilanzen.",
+      "Wir berechnen **Treibhausgasemissionen** und den **CO₂-Fußabdruck** im vereinbarten Umfang. Wir prüfen Eingabedaten, Berechnungen und Betriebsbilanzen. Eine unabhängige akkreditierte EU-ETS-Verifizierung bieten wir nicht an.",
     contactService: "Treibhausgas",
     faqCategoryId: "ispop",
     scope: [
-      "Wir überprüfen **Treibhausgasemissionen** und Berechnungsblätter",
+      "Wir prüfen Berechnungen der **Treibhausgasemissionen** und Berechnungsblätter",
+      "Wir berechnen Treibhausgasemissionen und den CO₂-Fußabdruck im vereinbarten Umfang",
       "Wir überprüfen Emissionsfaktoren, Verbrauchs- und Betriebsdaten",
       "Wir verlinken auf **Emissionsmessungen** und Betriebsaufzeichnungen",
       "Wir erstellen vor der Meldungsabgabe eine Unstimmigkeitsübersicht"
@@ -371,7 +372,8 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
       "Berichterstattungs- oder Prüfungspflicht"
     ],
     outputs: [
-      "Überprüfung oder Überprüfung von Emissionsdaten",
+      "Prüfung von Emissionsdaten und Berechnungen im vereinbarten Umfang",
+      "Berechnung von Treibhausgasemissionen oder CO₂-Fußabdruck gemäß Auftrag",
       "Überblick über Eingaben, Methodik und festgestellte Abweichungen",
       "Dokumentation für die Treibhausgasberichterstattung"
     ],

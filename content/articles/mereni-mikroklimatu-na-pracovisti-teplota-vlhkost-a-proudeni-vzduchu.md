@@ -14,7 +14,7 @@ heroImage: /uploads/chatgpt-image-16.-6.-2026-06_56_15.webp
 
 Mikroklimatické podmínky patří mezi důležité faktory pracovního prostředí. Ovlivňují tepelnou pohodu, únavu, soustředění, výkon zaměstnanců i zdravotní rizika při práci. Problém se obvykle projeví jako dlouhodobé horko, chlad, průvan, suchý vzduch, kolísání teplot nebo rozdílné podmínky mezi jednotlivými pracovními místy.
 
-Měření mikroklimatu se uplatňuje ve výrobních halách, skladech, kuchyních, kancelářích, laboratořích, provozech s tepelnou zátěží, chlazených provozech, prostorách s klimatizací a na pracovištích, kde se opakují stížnosti zaměstnanců.
+[Měření mikroklimatu na pracovišti](/sluzby/mereni-mikroklimatu/) se uplatňuje ve výrobních halách, skladech, kuchyních, kancelářích, laboratořích, provozech s tepelnou zátěží, chlazených provozech, prostorách s klimatizací a na pracovištích, kde se opakují stížnosti zaměstnanců.
 
 Při posouzení vždy vycházíme z konkrétní práce, provozního režimu a skutečných podmínek na pracovišti. Jinak se hodnotí kancelář s klimatizací, jinak výrobní hala s technologickými zdroji tepla a jinak sklad s častým otevíráním vrat.
 

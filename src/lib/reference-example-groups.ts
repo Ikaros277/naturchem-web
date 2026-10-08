@@ -19,7 +19,7 @@ export const referenceExampleGroups: ReferenceExampleGroup[] = [
     id: "pracovni-prostredi",
     title: "Měření pracovního prostředí",
     intro: "Výrobní haly, svařovny a expozice na pracovištích — podklady pro KHS a kategorizaci prací.",
-    exampleIds: ["hala-pp", "svarovna-pp"]
+    exampleIds: ["hala-pp", "svarovna-pp", "lakovna-diisokyanaty", "kovovyroba-vibrace"]
   },
   {
     id: "hluk-akustika",
@@ -37,12 +37,12 @@ export const referenceExampleGroups: ReferenceExampleGroup[] = [
     id: "eia-povolovani",
     title: "EIA a povolovací řízení",
     intro: "Záměry v průmyslu, zemědělství i změny technologií — oznámení a přílohy pro úřad.",
-    exampleIds: ["eia-lak", "slevarna-eia", "zjistovaci-zemedelstvi"]
+    exampleIds: ["eia-lak", "slevarna-eia", "zjistovaci-zemedelstvi", "eia-recyklace-kovu", "ippc-bioodpad", "ippc-skladka", "povoleni-motorgenerator"]
   },
   {
     id: "evidence-dokumentace",
     title: "Evidence a provozní dokumentace",
-    intro: "ISPOP, GHG a provozní řády při změně kapacity nebo provozních povinnostech.",
-    exampleIds: ["provozni-rad-odpady", "ispop-vice", "ghg-overovani"]
+    intro: "Podaná hlášení ISPOP, kontrola emisních dat, provozní řády a dokumentace chemických směsí.",
+    exampleIds: ["ispop-vice", "ispop-kotelna-obce", "provozni-rad-odpady", "ghg-overovani", "bezpecnostni-listy-smesi", "chemie-lepidla"]
   }
 ];

@@ -2,6 +2,7 @@ import type { Locale } from "@/lib/i18n/locales";
 
 type Photo = {
   asset: string;
+  directory?: string;
   width: number;
   height: number;
   position: string;
@@ -42,6 +43,11 @@ const photos: Record<string, Photo> = {
     asset: "mikroklima-sestava", width: 900, height: 580, position: "center center",
     caption: { cs: "Přístroje pro měření mikroklimatu", en: "Instruments for microclimate measurements", de: "Geräte zur Mikroklimamessung" }
   },
+  "mereni-vibraci": {
+    asset: "rucni-bruska", directory: "/hero/authentic-2026-10-06",
+    width: 1200, height: 675, position: "center center",
+    caption: { cs: "Ruční bruska při práci", en: "Hand-held grinder in use", de: "Handgeführter Schleifer im Einsatz" }
+  },
   "pristrojove-vybaveni": {
     asset: "prenosna-technika", width: 1200, height: 675, position: "45% center",
     caption: { cs: "Přenosná měřicí sestava", en: "Portable measuring equipment", de: "Mobiler Messaufbau" }
@@ -53,7 +59,7 @@ const directory = "/hero/authentic-2026-10";
 export function getAuthenticPhoto(theme: string) {
   const photo = photos[theme];
   if (!photo) return null;
-  const base = `${directory}/${photo.asset}`;
+  const base = `${photo.directory ?? directory}/${photo.asset}`;
   return {
     ...photo, base,
     src: `${base}.webp`, avifSrc: `${base}.avif`,
@@ -62,6 +68,6 @@ export function getAuthenticPhoto(theme: string) {
 }
 
 export function getAuthenticPhotoBySrc(src: string) {
-  const theme = Object.keys(photos).find(key => `${directory}/${photos[key].asset}.webp` === src);
+  const theme = Object.keys(photos).find(key => getAuthenticPhoto(key)?.src === src);
   return theme ? getAuthenticPhoto(theme) : null;
 }

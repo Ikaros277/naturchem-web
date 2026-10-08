@@ -10,6 +10,7 @@ const css = { __esModule: true, default: new Proxy({}, { get: (_, name) => Strin
 const link = ({ children, href, ...props }) => {
   const domProps = { ...props };
   delete domProps.scroll;
+  delete domProps.prefetch;
   return React.createElement("a", { ...domProps, href }, children);
 };
 const load = require("./lib/load-typescript.js")({
@@ -60,7 +61,9 @@ async function main() {
       const html = renderToStaticMarkup(await ServicePage({ ...page, locale }));
       assert.ok(html.includes('data-service-layout="compact"'), page.slug);
       assert.equal((html.match(/<h1\b/g) || []).length, 1, page.slug + ": one H1");
-      assert.ok(!html.includes("service-evidence"), "No case study block in service layout");
+      assert.ok(!html.includes('id="service-evidence-heading"'), "Do not restore the long standalone case-study section");
+      assert.ok((html.match(/data-service-evidence/g) || []).length <= 1, "At most one compact, verified practice note");
+      if (locale !== "cs") assert.ok(!html.includes("data-service-evidence"), "Do not leak Czech practice notes into translations");
       for (const field of ["scope", "whenNeeded", "docs", "outputs", "commonMistakes", "practicalSituations"]) {
         const visibleText = html.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, "")
           .replace(/&amp;/g, "&").replace(/&#x27;/g, "'").replace(/&quot;/g, '"').replace(/&gt;/g, ">").replace(/&lt;/g, "<");

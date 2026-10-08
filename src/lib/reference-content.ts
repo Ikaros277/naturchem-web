@@ -1,5 +1,7 @@
 ﻿/** Obsah stránky Reference — oblasti, segmenty a anonymizované příklady zakázek. */
 
+import { archivedPractice } from "@/lib/archived-practice";
+
 export type ReferenceArea = {
   title: string;
   description: string;
@@ -18,6 +20,7 @@ export type ReferenceExample = {
   href: string;
   contactService: string;
   cta: "Poptat podobnou zakázku" | "Poslat podklady k posouzení" | "Poptat měření / studii";
+  documented?: boolean;
 };
 
 export const referenceEyebrow = "36 let na trhu · reference z praxe";
@@ -95,91 +98,111 @@ export const referenceAreas: readonly ReferenceArea[] = [
   }
 ] as const;
 
-/** Výběr 16 anonymizovaných příkladů pro web (z interní evidence). */
+/** Existing reference IDs are preserved; archived cases below have checked work products. */
 export const referenceExamples: readonly ReferenceExample[] = [
   {
     id: "lak-automotive-emise",
-    title: "Lakovna automobilových dílů — měření VOC/TOC a TZL",
-    operationType: "lakovna, automobilová výroba",
-    scope: "měření VOC/TOC a TZL na technologických výduších",
-    output: "protokol z měření emisí a podklad pro povolení provozu / kontrolu plnění podmínek",
-    text: "Změřili jsme emise z lakovací technologie včetně VOC/TOC a tuhých látek na výduších. Protokol šel do plnění podmínek provozu a komunikace s úřadem.",
-    tags: ["Emise", "VOC", "KÚ"],
+    title: "Lakovací boxy — měření emisí TOC",
+    operationType: "mokrá lakovna průmyslových dílů",
+    scope: "měření TOC a vzduchotechnických parametrů pěti výduchů lakovacích boxů",
+    output: "Protokol z měření emisí pěti lakovacích boxů.",
+    text: "Změřili jsme emise na pěti výduších mokré lakovny. Protokol obsahuje výsledky TOC a vzduchotechnické parametry jednotlivých výduchů.",
+    tags: ["Emise", "TOC", "Lakovna"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Poptat podobnou zakázku"
+    cta: "Poptat podobnou zakázku",
+    documented: true
   },
   {
     id: "bps-emise",
     title: "Bioplynová stanice — emise kogenerace",
     operationType: "BPS / kogenerační jednotka",
-    scope: "emise kogenerační jednotky, provozní údaje, návaznost na ISPOP",
-    output: "protokol a podklady pro provozní evidenci",
-    text: "Změřili jsme emise kogenerační jednotky v dohodnutém provozním režimu a propojili výsledek s provozní evidencí a ISPOP.",
-    tags: ["Emise", "ISPOP", "KÚ"],
+    scope: "měření emisí jedné kogenerační jednotky při ustáleném provozu",
+    output: "Protokol z měření emisí kogenerační jednotky.",
+    text: "Změřili jsme emise jedné kogenerační jednotky bioplynové stanice při ustáleném provozu. Výsledky jsme zpracovali v protokolu z měření emisí.",
+    tags: ["Emise", "Kogenerace"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Poptat měření / studii"
+    cta: "Poptat měření / studii",
+    documented: true
   },
   {
     id: "bps-serie-emise",
-    title: "Více bioplynových stanic — série měření emisí",
-    operationType: "skupina BPS",
-    scope: "více lokalit, více kogeneračních jednotek",
-    output: "sada protokolů a jednotná evidence výsledků",
-    text: "Na několika lokalitách jsme změřili emise kogeneračních jednotek jednotným postupem. Výstupy sloužily pro přehlednou provozní evidenci skupiny stanic.",
-    tags: ["Emise", "ISPOP"],
+    title: "Bioplynová stanice — dvě kogenerační jednotky",
+    operationType: "BPS se dvěma kogeneračními jednotkami",
+    scope: "měření emisí dvou kogeneračních jednotek v jedné bioplynové stanici",
+    output: "Protokol z měření emisí obou kogeneračních jednotek.",
+    text: "Změřili jsme emise dvou kogeneračních jednotek bioplynové stanice. Výsledky pro oba zdroje jsme zpracovali v jednom protokolu.",
+    tags: ["Emise", "Bioplyn"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Poptat podobnou zakázku"
+    cta: "Poptat podobnou zakázku",
+    documented: true
   },
   {
     id: "plyn-kotelna-emise",
-    title: "Plynová kotelna — měření emisí",
-    operationType: "městská / areálová kotelna",
-    scope: "dva plynové kotle, spaliny, provozní režim",
-    output: "protokol z měření emisí",
-    text: "Změřili jsme emise na dvou kotlích v reprezentativním výkonu. Protokol sloužil jako podklad pro plnění povinností provozovatele zdroje.",
-    tags: ["Emise", "KÚ", "ČIŽP"],
+    title: "Centrální kotelna — emise z biomasy",
+    operationType: "centrální kotelna se dvěma kotli na biomasu",
+    scope: "měření emisí dvou kotlů spalujících dřevní biomasu",
+    output: "Protokol z měření emisí obou kotlů na biomasu.",
+    text: "Změřili jsme emise dvou kotlů na dřevní biomasu v centrální kotelně. Protokol obsahuje výsledky pro oba kotle.",
+    tags: ["Emise", "Biomasa"],
     href: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    cta: "Poptat měření / studii"
+    cta: "Poptat měření / studii",
+    documented: true
   },
   {
     id: "hala-pp",
-    title: "Výrobní hala — měření pracovního prostředí",
-    operationType: "výrobní závod",
-    scope: "hluk, prach, chemické látky, pracovní pozice",
-    output: "podklad pro KHS a kategorizaci prací",
-    text: "Změřili jsme hluk, prašnost a chemické látky na vybraných pracovištích. Výsledky sloužily pro kategorizaci prací a komunikaci s KHS.",
-    tags: ["KHS", "Hluk", "Prašnost"],
+    title: "Automobilová výroba — pracovní prostředí",
+    operationType: "výrobní závod s montážními linkami, slévárnou a údržbou forem",
+    scope: "hluk, mikroklimatické podmínky a organické látky na vybraných pracovištích",
+    output: "Samostatné protokoly z měření hluku, mikroklimatu a pracovního ovzduší.",
+    text: "V automobilové výrobě jsme změřili hluk na pracovních pozicích, mikroklimatické podmínky a organické látky. Výstupy jsme zpracovali v samostatných protokolech.",
+    tags: ["Pracovní prostředí", "Mikroklima", "Hluk"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
-    cta: "Poptat podobnou zakázku"
+    cta: "Poptat podobnou zakázku",
+    documented: true
   },
   {
     id: "svarovna-pp",
-    title: "Svařovna — expozice a hluk",
+    title: "Svařovna — hluk na pracovní pozici",
     operationType: "svařovna / zámečnický provoz",
-    scope: "prach, kovy, ozon, hluk, vibrace",
-    output: "protokoly pro hodnocení expozice zaměstnanců",
-    text: "Změřili jsme prašnost, kovy, hluk a vibrace ve svařovně. Protokoly sloužily pro BOZP a návrh opatření na pracovištích.",
-    tags: ["KHS", "Prašnost", "Hluk"],
+    scope: "měření hluku na pracovní pozici svářeč",
+    output: "Protokol z měření a hodnocení hluku pro kategorizaci prací.",
+    text: "Změřili jsme hluk na pracovní pozici svářeče v kovovýrobě. Výsledky jsme zpracovali v protokolu pro účely kategorizace prací.",
+    tags: ["Hluk", "Kategorizace prací"],
     href: "/sluzby/pracovni-prostredi",
     contactService: "Měření pracovního prostředí",
-    cta: "Poptat podobnou zakázku"
+    cta: "Poptat podobnou zakázku",
+    documented: true
   },
   {
     id: "tcp-hluk",
     title: "Tepelné čerpadlo — hluk v okolí",
     operationType: "technické zařízení budovy",
     scope: "venkovní hluk v chráněném prostoru",
-    output: "měření / akustické posouzení a doporučení dalšího postupu",
-    text: "Změřili jsme hluk venkovní jednotky v chráněném prostoru. Výstup pomohl při komunikaci se sousedy a návrhu dalšího postupu.",
+    output: "Protokol z měření a hodnocení hluku venkovní jednotky.",
+    text: "Změřili jsme hluk při provozu venkovní jednotky tepelného čerpadla v chráněném venkovním prostoru. Výsledky a hodnocení jsme zpracovali v protokolu.",
     tags: ["Hluk", "KHS"],
     href: "/sluzby/mereni-hluku",
     contactService: "Měření hluku a akustika",
-    cta: "Poptat měření / studii"
+    cta: "Poptat měření / studii",
+    documented: true
+  },
+  {
+    id: "kovovyroba-vibrace",
+    title: "Kovovýroba — vibrace přenášené na ruce",
+    operationType: "kovovýroba s ručním motorovým nářadím",
+    scope: "měření vibrací přenášených na ruce při práci s ručním nářadím",
+    output: "Protokol z měření a hodnocení vibrací pro kategorizaci prací.",
+    text: "Změřili jsme vibrace přenášené na ruce při práci s ručním nářadím v kovovýrobě. Výsledky a pracovní činnosti jsme zpracovali v protokolu pro kategorizaci prací.",
+    tags: ["Vibrace", "Kategorizace prací"],
+    href: "/sluzby/mereni-vibraci",
+    contactService: "Měření vibrací",
+    cta: "Poptat podobnou zakázku",
+    documented: true
   },
   {
     id: "vzt-hluk-studie",
@@ -190,7 +213,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     text: "Připravili jsme hlukové posouzení technologie vůči nejbližší zástavbě. Podklad šel pro kolaudaci a jednání s úřady.",
     tags: ["Hluk", "KHS", "VZT"],
     href: "/sluzby/hlukove-studie",
-    contactService: "Měření hluku a akustika",
+    contactService: "Hlukové studie",
     cta: "Poptat měření / studii"
   },
   {
@@ -242,42 +265,6 @@ export const referenceExamples: readonly ReferenceExample[] = [
     cta: "Poptat měření / studii"
   },
   {
-    id: "provozni-rad-odpady",
-    title: "Odpady — provozní řád při změně kapacity",
-    operationType: "odpady / recyklace",
-    scope: "provozní řád, navýšení kapacity, jednání s úřadem",
-    output: "provozní dokumentace pro povolení",
-    text: "Zpracovali jsme provozní řád při navýšení kapacity a zpracování stavební suti. Dokumentace šla do úředního projednání.",
-    tags: ["KÚ", "ČIŽP", "Ovzduší"],
-    href: "/sluzby/provozni-rady",
-    contactService: "Provozní řády",
-    cta: "Poptat podobnou zakázku"
-  },
-  {
-    id: "ispop-vice",
-    title: "Více provozoven — ISPOP a evidence",
-    operationType: "více provozoven, různé obory",
-    scope: "ovzduší, odpady, návaznost na měření emisí",
-    output: "roční hlášení a provozní evidence",
-    text: "Každoročně zpracováváme souhrnnou provozní evidenci a hlášení ISPOP s návazností na měření emisí a povolení provozu.",
-    tags: ["ISPOP", "KÚ"],
-    href: "/sluzby/ispop",
-    contactService: "ISPOP",
-    cta: "Poptat podobnou zakázku"
-  },
-  {
-    id: "ghg-overovani",
-    title: "GHG — ověření emisních údajů",
-    operationType: "provoz s povinností v oblasti skleníkových plynů",
-    scope: "roční ověření, změny kapacity, provozní data",
-    output: "ověřovací výstupy pro provozovatele",
-    text: "Ověřili jsme roční emisní údaje a podklady ke změně kapacity v režimu skleníkových plynů.",
-    tags: ["GHG", "ISPOP"],
-    href: "/sluzby/ghg-overovani",
-    contactService: "GHG",
-    cta: "Poptat podobnou zakázku"
-  },
-  {
     id: "zjistovaci-zemedelstvi",
     title: "Zemědělský areál — zjišťovací řízení",
     operationType: "zemědělský areál",
@@ -288,5 +275,11 @@ export const referenceExamples: readonly ReferenceExample[] = [
     href: "/sluzby/zjistovaci-rizeni-eia",
     contactService: "EIA a oznámení záměru",
     cta: "Poptat měření / studii"
-  }
+  },
+  ...Object.values(archivedPractice).map((item): ReferenceExample => ({
+    id: item.id, title: item.title, operationType: item.operationType,
+    scope: item.title, output: item.output, text: item.summary, tags: item.tags,
+    href: "/sluzby/" + item.slug, contactService: item.contactService,
+    cta: "Poslat podklady k posouzení", documented: true
+  }))
 ] as const;

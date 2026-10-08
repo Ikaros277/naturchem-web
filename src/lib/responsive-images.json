@@ -1,5 +1,16 @@
 {
   "thumbs": {
+    "/hero/dokumentace-fallback.webp": {
+      "base": "/hero/responsive-2026-10/image-dc84a3aeec42",
+      "widths": [
+        192,
+        384,
+        640,
+        960
+      ],
+      "width": 1024,
+      "height": 576
+    },
     "/hero/generated-2026-09/automotive-clanek.webp": {
       "base": "/hero/responsive-2026-10/image-900d3611fbe3",
       "widths": [
@@ -1384,15 +1395,6 @@
       ],
       "width": 1024,
       "height": 576
-    },
-    "/hero/mereni-vibraci.webp": {
-      "base": "/hero/responsive-2026-10/image-7440730cb7ac",
-      "widths": [
-        640,
-        1280
-      ],
-      "width": 1672,
-      "height": 941
     },
     "/hero/modelove-vypocty.webp": {
       "base": "/hero/responsive-2026-10/image-436c5d449350",

@@ -14,6 +14,8 @@ U průmyslových a technických záměrů nestačí vyřešit pouze stavební a 
 
 Projektant navrhuje stavbu, technologii, dispozici, napojení objektu a technické řešení. Ekologický konzultant se na stejný záměr dívá jinou optikou: jak bude provoz působit na okolí, jaké zdroje emisí a hluku vzniknou, zda záměr spadá do EIA, zda bude potřeba jednotné environmentální stanovisko, rozptylová studie, hluková studie, odborný posudek, provozní řád nebo povolení provozu zdroje.
 
+Přehled dodávaných studií, měření a potřebných vstupů najdete na stránce [Environmentální podklady pro projekt a EIA](/sluzby/technicke-prilohy/).
+
 Problém vzniká tehdy, když se environmentální část začne řešit až po dokončení projektu. V tu chvíli už bývají pevně dané výduchy, VZT jednotky, dopravní napojení, dispozice technologie nebo umístění venkovních zdrojů hluku. Pokud se následně ukáže, že výduch je příliš nízko, technologie je blízko obytné zástavbě nebo chybí měřicí místo, nejde už o drobnou administrativní úpravu, ale o zásah do projektu.
 
 > Environmentální posouzení má největší hodnotu před tím, než je projekt „hotový“. Včasný vstup odborníka často ušetří přepracování výduchů, hlukových opatření, dopravního řešení nebo povolovacích podkladů.

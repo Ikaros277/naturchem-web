@@ -5,6 +5,10 @@ import { defaultLocale } from "@/lib/i18n/locales";
 import { services as servicesCs } from "@/lib/site";
 import { services as servicesDe } from "@/lib/site-services-de";
 import { services as servicesEn } from "@/lib/site-services-en";
+import { serviceMegaGroups } from "@/lib/service-megamenu";
+import { serviceMegaGroupsEn } from "@/lib/service-megamenu-en";
+import { serviceMegaGroupsDe } from "@/lib/service-megamenu-de";
+import type { ServiceMegaMenuGroup } from "@/lib/megamenu-types";
 export type ServiceLink = {
   href: string;
   title: string;
@@ -37,7 +41,10 @@ function serviceCatalog(locale: Locale) {
 }
 
 function toServiceLink(href: ServiceHref, locale: Locale): ServiceLink {
-  const title = serviceCatalog(locale).find((service) => service.href === href)?.title ?? href;
+  const groups: readonly ServiceMegaMenuGroup[] = locale === "en" ? serviceMegaGroupsEn : locale === "de" ? serviceMegaGroupsDe : serviceMegaGroups;
+  const title = serviceCatalog(locale).find((service) => service.href === href)?.title
+    ?? groups.flatMap(group => group.links).find(service => service.href === href)?.label
+    ?? href;
   return { href, title };
 }
 

@@ -53,6 +53,16 @@ const { LocaleProvider } = load(path.join(root, "src/lib/i18n/locale-context.tsx
 const { verifyImmutableAssets, hash } = require("./verify_immutable_assets.js");
 
 async function main() {
+  // Only the two owner-approved public contacts; WhatsApp must not mount even with an env override.
+  for (const locale of ["cs", "en", "de"]) {
+    const { teamMembers } = load(path.join(root, "src/lib/team" + (locale === "cs" ? "" : "-" + locale) + ".ts"));
+    assert.deepEqual(teamMembers.map(member => member.name), ["Ing. František Hezina", "Ing. Petra Svátová, DiS."]);
+    assert.deepEqual(teamMembers[0].phones, ["+420 603 216 983", "+420 774 100 570"]);
+    assert.deepEqual(teamMembers[1].phones, ["+420 774 100 572"]);
+  }
+  const chatWidgetsSource = fs.readFileSync(path.join(root, "src/components/LiveChatWidgets.tsx"), "utf8");
+  assert.doesNotMatch(chatWidgetsSource, /WhatsAppButton|wa\.me/);
+  assert.match(chatWidgetsSource, /<TawkToChat\s*\/>/, "Keep the existing Tawk.to contact path");
   for (const locale of ["cs", "en", "de"]) {
     const serviceModule = load(path.join(root, "src/lib/dedicated-service-pages" + (locale === "cs" ? "" : "-" + locale) + ".ts"));
     const pages = serviceModule.dedicatedServicePages || serviceModule.dedicatedServicePagesEn;

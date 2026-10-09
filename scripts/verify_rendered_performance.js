@@ -14,6 +14,12 @@ function readPage(locale, route) {
   return fs.readFileSync(htmlFile, "utf8");
 }
 for (const locale of ["cs", "en", "de"]) {
+  const about = readPage(locale, "/o-spolecnosti-naturchem");
+  assert.equal((about.match(/class="card team-card"/g) || []).length, 2, "Only Hezina and Svátová in the public team");
+  assert.doesNotMatch(about, /Žilkov|zilkova@|736\s*778\s*391/, "Removed contact must not remain in the rendered company page");
+  for (const phone of ["+420603216983", "+420774100570", "+420774100572"]) {
+    assert.ok(about.includes(`href="tel:${phone}"`), "Preserve the approved phone link: " + phone);
+  }
   const articles = JSON.parse(fs.readFileSync(path.join(root, `public/search/poradna-listing-${locale}.json`), "utf8"));
   const found = new Set();
   for (let page = 1; page <= poradnaPageCount(articles.length); page++) {

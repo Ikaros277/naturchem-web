@@ -13,15 +13,6 @@ export const teamMembers: TeamMember[] = [
     photo: "/team/hezina.jpg"
   },
   {
-    name: "Mgr. Markéta Žilková",
-    role: "Vertriebs-/Geschäftskontakt",
-    details: [
-      "Erster Ansprechpartner für Anfragen zu Messungen, Studien und Dokumentationen. Sie kann Ihnen dabei helfen, unterstützende Materialien einzureichen und die nächsten Schritte zu vereinbaren."
-    ],
-    phones: ["+420 736 778 391"],
-    email: "zilkova@naturchem.cz"
-  },
-  {
     name: "Ing. Petra Svátová, DiS.",
     role: "Umweltberater",
     details: [

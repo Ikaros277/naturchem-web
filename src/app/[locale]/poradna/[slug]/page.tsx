@@ -1,7 +1,8 @@
 import "@/app/globals.css";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArticleMarkdown } from "@/components/ArticleMarkdown";
+import { renderArticleMarkdown } from "@/components/ArticleMarkdown";
+import { ArticleReadingLayout } from "@/components/ArticleReadingLayout";
 import { ArticleRelatedArticles } from "@/components/ArticleRelatedArticles";
 import { ArticleRelatedServices } from "@/components/ArticleRelatedServices";
 import { JsonLd } from "@/components/Schema";
@@ -68,6 +69,7 @@ export default async function CmsArticlePage({ params }: Props) {
   const link = (href: string) => localizeHref(href, locale);
   const displayDate = formatArticleDate(article.updatedAt || article.publishedAt, locale);
   const topicLabel = getPoradnaTopicLabel(article.topic, locale);
+  const reading = renderArticleMarkdown(article.body, locale);
   const articleUrl = `${siteUrl}${link(`/poradna/${article.slug}`)}/`.replace(/([^:]\/)\/+/g, "$1");
   const poradnaUrl = `${siteUrl}${link("/poradna")}/`.replace(/([^:]\/)\/+/g, "$1");
 
@@ -132,7 +134,7 @@ export default async function CmsArticlePage({ params }: Props) {
       >
         <header className="premium-page-hero page-hero--photo">
           <p className="eyebrow">{topicLabel}</p>
-          <h1>{article.title}</h1>
+          <h1 id="article-title">{article.title}</h1>
           <p className="article-hero-meta muted">
             {article.author || "NATURCHEM"}
             {displayDate ? ` · ${displayDate}` : null}
@@ -141,18 +143,15 @@ export default async function CmsArticlePage({ params }: Props) {
       </PageHeroBand>
 
       <div className="container article-page-body page-first-section">
-        {article.excerpt ? (
-          <aside className="article-tldr" aria-label={messages.poradna.tldrAria}>
-            <p className="article-tldr-label">{messages.poradna.tldrLabel}</p>
-            <p className="article-tldr-text">{article.excerpt}</p>
-          </aside>
-        ) : null}
-
-        <div className="article-content">
-          <div className="article-body">
-            <ArticleMarkdown>{article.body}</ArticleMarkdown>
-          </div>
-        </div>
+        <ArticleReadingLayout
+          locale={locale}
+          headings={reading.headings}
+          excerpt={article.excerpt}
+          summaryLabel={messages.poradna.tldrLabel}
+          summaryAria={messages.poradna.tldrAria}
+        >
+          {reading.content}
+        </ArticleReadingLayout>
 
         <ArticleRelatedServices
           locale={locale}

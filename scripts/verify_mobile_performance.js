@@ -9,11 +9,17 @@ const read = file => fs.readFileSync(path.join(root, file), "utf8");
 for (const file of [
   "src/app/[locale]/page.tsx", "src/components/HomeHeroShell.tsx",
   "src/components/HomeServiceIndex.tsx", "src/components/HomeDemandPaths.tsx",
-  "src/components/HomePoradnaStrip.tsx", "src/components/Footer.tsx"
+  "src/components/HomePoradnaStrip.tsx", "src/components/Footer.tsx",
+  "src/components/ServiceDetailLayout.tsx", "src/components/FaqAccordionList.tsx"
 ]) {
   assert.doesNotMatch(read(file), /(?:from ["']next\/link|<Link\b)/, file + ": retain native server-rendered links");
   assert.match(read(file), /<a\b/, file + ": crawlable links remain present");
 }
+for (const file of ["src/app/[locale]/layout.tsx", "src/app/global-not-found.tsx"]) {
+  assert.match(read(file), /import \{ fontSans \} from "@\/lib\/font"/, "One shared font instance: " + file);
+  assert.doesNotMatch(read(file), /Source_Sans_3\(/, "Avoid duplicate font files: " + file);
+}
+assert.match(read("src/lib/font.ts"), /preload:\s*false/, "Do not preload a second font ahead of the mobile LCP image");
 const css = read("src/components/homepage.module.css");
 assert.match(css, /\.section\s*\{[^}]*content-visibility:\s*auto/);
 assert.match(css, /contain-intrinsic-block-size:\s*auto/);
@@ -40,6 +46,7 @@ if (process.argv.includes("--rendered")) {
     assert.ok(html.includes('id="home-demand-paths-heading"') && html.includes('id="home-poradna-heading"'));
     assert.match(html, /<h1>[^<]+<\/h1>/);
     assert.match(html, /loading="eager"[^>]*fetchPriority="high"/);
+    assert.doesNotMatch(html, /rel="preload"[^>]*as="font"/, "No redundant 404 font preload on a homepage");
   }
   console.log("PASS rendered mobile budgets: native links, complete visible content, analytics attributes and eager LCP");
 }

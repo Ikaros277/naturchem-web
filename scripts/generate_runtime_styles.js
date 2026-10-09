@@ -5,9 +5,10 @@ const postcss = require("postcss");
 const root = path.resolve(__dirname, "..");
 const sourceFile = path.join(root, "src/app/globals.css");
 const outputFile = path.join(root, "src/app/runtime.generated.css");
+const serviceOutputFile = path.join(root, "src/app/services.generated.css");
 
-// Homepage + shared shell only. Other page entry points import globals.css,
-// so their existing styles are neither deleted nor delayed.
+// Build route-family subsets from the canonical source. Required rules are
+// neither delayed nor reordered; unrelated pages keep their full globals.css.
 const sharedComponents = [
   "Header", "HeaderClient", "BrandLogo", "LanguageSwitcher", "MobileNavSummaryRow",
   "HeaderInquiryCta", "ServiceIcon", "ServiceMegaMenu", "ExperienceMegaMenu",
@@ -25,20 +26,28 @@ function sourceFiles(directory) {
   });
 }
 
-function collectUsage() {
+function collectUsage(kind = "home") {
+  const servicePages = kind === "services"
+    ? sourceFiles(path.join(root, "src/app/[locale]/sluzby")).filter(file => file.endsWith("page.tsx"))
+    : [];
+  const components = kind === "services"
+    ? sharedComponents.filter(name => !/^(?:Home|CountUpStatValue)/.test(name))
+    : sharedComponents;
   const files = [
-    ...sharedComponents.map(name => path.join(root, "src/components", name + ".tsx")),
+    ...components.map(name => path.join(root, "src/components", name + ".tsx")),
     ...sourceFiles(path.join(root, "src/lib/i18n")),
     path.join(root, "src/lib/service-categories.ts"),
     path.join(root, "src/app/[locale]/layout.tsx"),
-    path.join(root, "src/app/[locale]/page.tsx")
+    ...(kind === "services" ? servicePages : [path.join(root, "src/app/[locale]/page.tsx")])
   ];
   // Include descendants automatically: shared markup moved into a child must
-  // retain its styles. All detail pages continue to load the canonical CSS.
+  // retain its styles. Both families preserve canonical selector order.
   const descendants = new Set(files);
   function visit(file) {
-    for (const match of fs.readFileSync(file, "utf8").matchAll(/["'](@\/components\/[^"']+)["']/g)) {
-      const base = path.join(root, "src", match[1].slice(2));
+    for (const match of fs.readFileSync(file, "utf8").matchAll(/["'](@\/components\/[^"']+|\.{1,2}\/[^"']+)["']/g)) {
+      const base = match[1].startsWith("@/")
+        ? path.join(root, "src", match[1].slice(2))
+        : path.resolve(path.dirname(file), match[1]);
       const child = [base + ".tsx", base + ".ts"].find(candidate => fs.existsSync(candidate));
       if (child && !descendants.has(child)) {
         descendants.add(child);
@@ -84,11 +93,13 @@ function compactStyles(source, usage) {
 
 function generate() {
   const source = fs.readFileSync(sourceFile, "utf8");
-  const css = "/* Generated from globals.css; edit the source, not this file. */\n"
-    + compactStyles(source, collectUsage()) + "\n";
-  if (!fs.existsSync(outputFile) || fs.readFileSync(outputFile, "utf8") !== css) fs.writeFileSync(outputFile, css);
-  console.log("Runtime CSS: " + Buffer.byteLength(source) + " -> " + Buffer.byteLength(css) + " B; source retained, dynamic classes protected");
+  for (const [kind, target] of [["home", outputFile], ["services", serviceOutputFile]]) {
+    const css = "/* Generated from globals.css; edit the source, not this file. */\n"
+      + compactStyles(source, collectUsage(kind)) + "\n";
+    if (!fs.existsSync(target) || fs.readFileSync(target, "utf8") !== css) fs.writeFileSync(target, css);
+    console.log(kind + " CSS: " + Buffer.byteLength(source) + " -> " + Buffer.byteLength(css) + " B; source retained, dynamic classes protected");
+  }
 }
 
 if (require.main === module) generate();
-module.exports = { collectUsage, compactStyles, keepSelector, sourceFiles, sourceFile, outputFile };
+module.exports = { collectUsage, compactStyles, keepSelector, sourceFiles, sourceFile, outputFile, serviceOutputFile };

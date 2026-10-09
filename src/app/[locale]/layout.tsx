@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Source_Sans_3 } from "next/font/google";
+import { fontSans } from "@/lib/font";
 import { notFound } from "next/navigation";
 import { DeferredClientWidgets } from "@/components/DeferredClientWidgets";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
@@ -20,16 +20,6 @@ import { pickClientMessages } from "@/lib/i18n/client-messages";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
-
-const fontSans = Source_Sans_3({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-sans",
-  weight: "variable",
-  display: "swap",
-  /** Don't preload fonts — they compete with the mobile LCP hero image on slow 4G. */
-  preload: false,
-  adjustFontFallback: true
-});
 
 type Props = {
   children: React.ReactNode;

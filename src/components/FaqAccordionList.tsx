@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { FaqItem } from "@/lib/faq";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -95,7 +94,7 @@ function FaqAccordionEntry({
             {item.links.map((itemLink, index) => (
               <span key={`${itemLink.href}-${itemLink.label}`}>
                 {index > 0 ? " | " : null}
-                <Link prefetch={false} href={link(itemLink.href)}>{itemLink.label}</Link>
+                <a href={link(itemLink.href)}>{itemLink.label}</a>
               </span>
             ))}
           </p>

@@ -9,6 +9,7 @@ const inlineSlugs = new Set(["mereni-emisi", "mereni-hluku", "rozptylove-studie"
 const load = require("./lib/load-typescript.js")({
   "./service-detail.module.css": { __esModule: true, default: new Proxy({}, { get: (_, name) => String(name) }) },
   "@/app/globals.css": {},
+  "@/app/services.generated.css": {},
   "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/fixture.webp", alt: "" }) },
   "next/link": { __esModule: true, default: ({ children, href }) => React.createElement("a", { href }, children) },
   "next/navigation": { usePathname: () => "/" },

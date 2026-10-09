@@ -5,6 +5,7 @@
 /.next
 /out
 /src/app/runtime.generated.css
+/src/app/services.generated.css
 
 # local env files
 .env

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ServicePageProps } from "./ServicePage";
 import type { FaqItem } from "@/lib/faq";
@@ -64,9 +63,9 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             <h1 id="service-title" className={content.title.length > 38 ? styles.longTitle : undefined}>{content.title}</h1>
             <p className={styles.lead}><InlineEmphasis text={emissions ? "Změříme emise ze stacionárních zdrojů a vyhodnotíme výsledky vůči limitům. Získáte protokol pro provozní dokumentaci a jednání s úřady." : content.intro} /></p>
             <div className={styles.heroActions}>
-              <Link className={`button ${styles.inquiry}`} href={contactHref}>
+              <a className={`button ${styles.inquiry}`} href={contactHref}>
                 <span>{contactLabel}<small>{ui.response}</small></span><span aria-hidden="true">↗</span>
-              </Link>
+              </a>
               <a className={styles.textLink} href="#podklady">{ui.docs} <span aria-hidden="true">↓</span></a>
             </div>
           </div>
@@ -79,7 +78,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
       <div className={styles.credentials}>
         <div className={`container ${styles.credentialInner}`}>
           <p><span className={styles.seal} aria-hidden="true">✓</span><span>{category === "measurement" ? ui.lab : company.name}</span></p>
-          <Link href={href("/akreditace-autorizace-dokumenty")}>{copy.accreditationLink} <span aria-hidden="true">↗</span></Link>
+          <a href={href("/akreditace-autorizace-dokumenty")}>{copy.accreditationLink} <span aria-hidden="true">↗</span></a>
           <a href={`tel:${company.phones[0].replace(/\s/g, "")}`}>{company.phones[0]}</a>
         </div>
       </div>
@@ -95,7 +94,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
               </div>)}
             </div>
             {content.slug === "sluzby/mereni-hluku" ? <p className={styles.situations}>
-              <strong>{ui.noiseHint}</strong><Link href={href("/sluzby/hlukove-studie")}>{ui.noiseLink} →</Link>
+              <strong>{ui.noiseHint}</strong><a href={href("/sluzby/hlukove-studie")}>{ui.noiseLink} →</a>
             </p> : null}
             {evidence ? <aside className={styles.evidence} aria-label="Ukázka realizace" data-service-evidence>
               <p className={styles.eyebrow}>Z naší praxe</p>
@@ -109,7 +108,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             <h2 id="service-docs-heading">{ui.docs}</h2>
             <p>{copy.docsIntro}</p>
             <DetailList items={content.docs.slice(0, 3)} />
-            <Link className={styles.panelCta} href={contactHref}>{ui.inquiry}<span aria-hidden="true">↗</span></Link>
+            <a className={styles.panelCta} href={contactHref}>{ui.inquiry}<span aria-hidden="true">↗</span></a>
             <p className={styles.response}>{ui.responseFull}</p>
           </aside>
         </section>
@@ -130,15 +129,15 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
           {faqItems.length ? <div className={styles.faq}>
             <h3>{ui.faq}</h3>
             <FaqAccordionList items={faqItems} locale={locale} uiLabels={faqUiLabels} />
-            <Link className={styles.textLink} href={href("/faq#" + content.faqCategoryId)}>{ui.allFaq} <span aria-hidden="true">→</span></Link>
+            <a className={styles.textLink} href={href("/faq#" + content.faqCategoryId)}>{ui.allFaq} <span aria-hidden="true">→</span></a>
           </div> : null}
         </section>
         {relatedItems.length ? <nav className={styles.related} aria-label={ui.related}>
           <h2>{ui.related}</h2>
-          <ul>{relatedItems.slice(0, 3).map(item => <li key={item.href}><Link href={href(item.href)}>{item.title}<span aria-hidden="true">↗</span></Link></li>)}</ul>
+          <ul>{relatedItems.slice(0, 3).map(item => <li key={item.href}><a href={href(item.href)}>{item.title}<span aria-hidden="true">↗</span></a></li>)}</ul>
           {relatedItems.length > 3 ? <details className={styles.moreRelated}>
             <summary>{ui.moreRelated}</summary>
-            <ul>{relatedItems.slice(3).map(item => <li key={item.href}><Link href={href(item.href)}>{item.title}<span aria-hidden="true">↗</span></Link></li>)}</ul>
+            <ul>{relatedItems.slice(3).map(item => <li key={item.href}><a href={href(item.href)}>{item.title}<span aria-hidden="true">↗</span></a></li>)}</ul>
           </details> : null}
         </nav> : null}
       </div>

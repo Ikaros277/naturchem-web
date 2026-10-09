@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/services.generated.css";
 import { createDedicatedServicePageExports } from "@/lib/render-dedicated-service-page";
 
 const { generateMetadata, Page } = createDedicatedServicePageExports("ghg-overovani");

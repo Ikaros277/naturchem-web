@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Source_Sans_3 } from "next/font/google";
+import { fontSans } from "@/lib/font";
 import LocaleNotFound, { metadata as localeNotFoundMetadata } from "./[locale]/not-found";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
-
-const fontSans = Source_Sans_3({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-sans",
-  weight: ["400", "600", "700"],
-  display: "swap"
-});
 
 export const metadata: Metadata = {
   ...localeNotFoundMetadata,

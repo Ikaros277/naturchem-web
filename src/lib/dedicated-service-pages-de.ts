@@ -3,11 +3,11 @@ import type { DedicatedServicePage } from "./dedicated-service-pages";
 export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
   "hlukove-studie": {
     slug: "sluzby/hlukove-studie",
-    title: "Lärmstudien",
+    title: "Lärmstudien für KHS und Baubehörde",
     description:
-      "Lärmstudien für Technologien, Standorte, Verkehr, HVAC, Wärmepumpen und Bauprojekte. Unterstützende Dokumentation für KHS, Baugenehmigung und UVP.",
+      "Lärmstudien für KHS, Baubehörde und UVP: Betriebsgelände, HVAC, Wärmepumpen und Verkehr. Wir beraten, wann eine Studie genügt und wann eine Lärmmessung nötig ist.",
     intro:
-      "Hat eine Behörde eine **Lärmstudie** angefordert oder bearbeiten Sie eine Nachbarschaftsbeschwerde? Wir erstellen Berechnungen für Technologien, Standort und Transport – Dokumentation für **KHS**, Baugenehmigung und **UVP**.",
+      "Hat die Hygienestation (**KHS**) oder die Baubehörde eine **Lärmstudie** verlangt, oder sind Sie unsicher, ob eine Studie genügt oder eine Messung nötig ist? Wir berechnen den Lärm von Technologien, Betriebsgelände, Verkehr, HVAC oder Wärmepumpen und empfehlen ein Vorgehen nach der Anforderung der Behörde.",
     contactService: "Hlukové studie",
     faqCategoryId: "hluk",
     scope: [
@@ -49,6 +49,16 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
         title: "Lärmmessung und Akustik",
         href: "/sluzby/mereni-hluku",
         description: "Feldmessung und Überprüfung des tatsächlichen Betriebslärms."
+      },
+      {
+        title: "Lärmmessung zur Abnahme",
+        href: "/mereni-hluku-ke-kolaudaci",
+        description: "Wann eine Lärmstudie genügt und wann die Behörde eine Messung verlangt."
+      },
+      {
+        title: "Lärmstudie oder Lärmmessung?",
+        href: "/poradna/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku",
+        description: "Die praktische Unterscheidung von Studie und Messung nach Zweck und Projektphase."
       },
       {
         title: "UVP und Projektmeldung",
@@ -334,6 +344,11 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
         title: "Bedienungsanleitungen",
         href: "/sluzby/provozni-rady",
         description: "Die Betriebsdokumentation muss mit der tatsächlichen Betriebsweise der Quelle übereinstimmen."
+      },
+      {
+        title: "ISPOP: Messanmeldung und Jahresmeldung",
+        href: "/ispop-rocni-hlaseni-emise",
+        description: "Fristen, Anmeldung von Emissionsmessungen und Jahresmeldung Schritt für Schritt."
       }
     ]
   },

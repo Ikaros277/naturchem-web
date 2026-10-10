@@ -116,6 +116,11 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     relatedLinks: [
       {
+        title: "Lärmmessung zur Abnahme",
+        href: "/mereni-hluku-ke-kolaudaci",
+        description: "Wann eine Lärmstudie genügt und wann die Behörde eine Messung verlangt."
+      },
+      {
         title: "HVAC, Kühlung und Wärmepumpen",
         href: "/provozy-a-technologie/tepelna-cerpadla-vzt",
         description: "Lärm durch Außengeräte, Technik, Belegungsgenehmigung und Nachbarschaftsbeschwerden."

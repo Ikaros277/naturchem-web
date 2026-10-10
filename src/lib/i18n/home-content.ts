@@ -101,8 +101,8 @@ const offerPillars = {
       tags: ["KHS", "ČIŽP", "ISO 17025"],
       links: [
         { label: "Emission measurements", href: "/sluzby/mereni-emisi" },
-        { label: "Workplace measurements", href: "/sluzby/pracovni-prostredi" },
-        { label: "Lighting measurements", href: "/sluzby/mereni-osvetleni" }
+        { label: "Measurements for occupancy approval", href: "/mereni-pro-kolaudaci" },
+        { label: "Measurements for a new hall", href: "/mereni-nove-haly" }
       ]
     },
     {
@@ -145,8 +145,8 @@ const offerPillars = {
       tags: ["KHS", "ČIŽP", "ISO 17025"],
       links: [
         { label: "Emissionsmessungen", href: "/sluzby/mereni-emisi" },
-        { label: "Arbeitsplatzmessungen", href: "/sluzby/pracovni-prostredi" },
-        { label: "Beleuchtungsmessungen", href: "/sluzby/mereni-osvetleni" }
+        { label: "Messungen zur Abnahme", href: "/mereni-pro-kolaudaci" },
+        { label: "Messungen für eine neue Halle", href: "/mereni-nove-haly" }
       ]
     },
     {

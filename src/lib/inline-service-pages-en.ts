@@ -116,6 +116,11 @@ export const inlineServicePagesEn: Record<string, InlineServicePage> = {
     ],
     relatedLinks: [
       {
+        title: "Noise measurement for occupancy approval",
+        href: "/mereni-hluku-ke-kolaudaci",
+        description: "When a noise study is enough and when the authority requires a measurement."
+      },
+      {
         title: "HVAC, cooling and heat pumps",
         href: "/provozy-a-technologie/tepelna-cerpadla-vzt",
         description: "Noise from outdoor units, technology, occupancy approval and neighbourhood complaints."

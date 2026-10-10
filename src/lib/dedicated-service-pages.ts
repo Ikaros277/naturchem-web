@@ -23,11 +23,11 @@
 export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
   "hlukove-studie": {
     slug: "sluzby/hlukove-studie",
-    title: "Hluková studie pro KHS, stavby a technologie",
+    title: "Hluková studie pro KHS a stavební úřad",
     description:
-      "Hluková studie pro KHS, stavební řízení a EIA. Průmyslové areály, VZT, tepelná čerpadla i doprava. Cena podle rozsahu a podkladů. Reakce do 24 hodin.",
+      "Hluková studie pro KHS, stavební úřad a EIA: areály, VZT, tepelná čerpadla i doprava. Poradíme, kdy stačí studie a kdy je nutné měření hluku. Reakce do 24 hodin.",
     intro:
-      "Potřebujete **hlukovou studii** pro KHS nebo před instalací technologie? Zmodelujeme hluk areálu, dopravy, VZT či tepelného čerpadla a navrhneme další postup.",
+      "Požaduje KHS nebo stavební úřad **hlukovou studii**, případně nevíte, zda stačí studie, nebo je nutné měření? Zmodelujeme hluk areálu, dopravy, VZT či tepelného čerpadla a doporučíme postup podle požadavku úřadu.",
     scopeHeading: "Co hluková studie vyřeší",
     contactService: "Hlukové studie",
     faqCategoryId: "hluk",
@@ -70,6 +70,16 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
         title: "Měření hluku a akustika",
         href: "/sluzby/mereni-hluku",
         description: "Terénní měření a ověření skutečného hluku v provozu."
+      },
+      {
+        title: "Měření hluku ke kolaudaci",
+        href: "/mereni-hluku-ke-kolaudaci",
+        description: "Kdy stačí hluková studie a kdy úřad požaduje měření."
+      },
+      {
+        title: "Hluková studie, nebo měření hluku?",
+        href: "/poradna/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku",
+        description: "Praktické rozlišení studie a měření podle účelu a fáze projektu."
       },
       {
         title: "EIA a oznámení záměru",
@@ -359,6 +369,11 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
         title: "Provozní řády",
         href: "/sluzby/provozni-rady",
         description: "Provozní dokumentace musí odpovídat skutečnému režimu zdroje."
+      },
+      {
+        title: "ISPOP: oznámení měření a roční hlášení",
+        href: "/ispop-rocni-hlaseni-emise",
+        description: "Termíny, oznámení měření emisí a roční hlášení krok za krokem."
       }
     ]
   },

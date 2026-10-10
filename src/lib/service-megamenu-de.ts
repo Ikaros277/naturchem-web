@@ -52,6 +52,11 @@ export const serviceMegaGroupsDe = [
     subtitle: "Ausbreitungs- und Lärmstudien, Berechnungen und Gutachten",
     links: [
       {
+        href: "/pro-stavebni-firmy",
+        label: "Unterlagen für Bauunternehmen",
+        description: "Studien vor der Realisierung und Messungen vor der Abnahme"
+      },
+      {
         href: "/sluzby/rozptylove-studie",
         label: "Ausbreitungsstudien",
         description: "Ausbreitung von Schadstoffen in der Luft"

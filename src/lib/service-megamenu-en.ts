@@ -52,6 +52,11 @@ export const serviceMegaGroupsEn = [
     subtitle: "Dispersion and noise studies, calculations and reports",
     links: [
       {
+        href: "/pro-stavebni-firmy",
+        label: "Documents for construction companies",
+        description: "Studies before construction and measurements before occupancy approval"
+      },
+      {
         href: "/sluzby/rozptylove-studie",
         label: "Dispersion studies",
         description: "Spread of pollutants in ambient air"

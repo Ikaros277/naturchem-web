@@ -73,6 +73,37 @@ const keywordRules: { pattern: RegExp; services: ServiceHref[] }[] = [
   { pattern: /svařovn|automotive|recyklac|skládk|bioplyn|dřevozprac|zeměděl/i, services: [S.emise, S.hluk, S.eia] }
 ];
 
+type PriorityLanding = Record<Locale, ServiceLink>;
+
+const landingIspop: PriorityLanding = {
+  cs: { href: "/ispop-rocni-hlaseni-emise", title: "ISPOP: oznámení měření emisí a roční hlášení" },
+  en: { href: "/ispop-rocni-hlaseni-emise", title: "ISPOP: measurement notification and annual report" },
+  de: { href: "/ispop-rocni-hlaseni-emise", title: "ISPOP: Messanmeldung und Jahresmeldung" }
+};
+const landingKategorizace: PriorityLanding = {
+  cs: { href: "/mereni-pracovniho-prostredi-kategorizace-praci", title: "Měření pro kategorizaci prací a podklady pro KHS" },
+  en: { href: "/mereni-pracovniho-prostredi-kategorizace-praci", title: "Measurements for job categorisation (KHS)" },
+  de: { href: "/mereni-pracovniho-prostredi-kategorizace-praci", title: "Messungen zur Arbeitsplatzkategorisierung (KHS)" }
+};
+const landingHlukKolaudace: PriorityLanding = {
+  cs: { href: "/mereni-hluku-ke-kolaudaci", title: "Měření hluku ke kolaudaci" },
+  en: { href: "/mereni-hluku-ke-kolaudaci", title: "Noise measurement for occupancy approval" },
+  de: { href: "/mereni-hluku-ke-kolaudaci", title: "Lärmmessung zur Abnahme" }
+};
+
+/** Články s přímou návazností na konkrétní poptávkovou stránku: zobrazí se jako první. */
+const priorityLandingBySlug: Record<string, PriorityLanding> = {
+  "ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba": landingIspop,
+  "elektronicke-oznamovani-mereni-emisi-a-predavani-protokolu-prakticky-dopad-na-provozovatele": landingIspop,
+  "kategorizace-praci-jake-mereni-je-potreba-jako-podklad": landingKategorizace,
+  "kategorizace-praci-po-zmene-technologie-nove-mereni": landingKategorizace,
+  "mereni-pracovniho-prostredi-kdy-ho-muze-pozadovat-khs": landingKategorizace,
+  "vyzva-khs-mereni-pracovniho-prostredi": landingKategorizace,
+  "kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku": landingHlukKolaudace,
+  "hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci": landingHlukKolaudace,
+  "kolaudace-vyrobni-haly-provozovny-khs-mereni": landingHlukKolaudace
+};
+
 function dedupeLinks(links: ServiceLink[]): ServiceLink[] {
   const seen = new Set<string>();
   return links.filter((link) => {
@@ -96,7 +127,10 @@ export function getRelatedServicesForArticle(
     .filter((rule) => rule.pattern.test(haystack))
     .flatMap((rule) => rule.services);
 
-  return dedupeLinks([...fromKeywords, ...base].map((href) => toServiceLink(href, locale))).slice(0, 3);
+  const priority = priorityLandingBySlug[slug];
+  const priorityLinks = priority ? [priority[locale]] : [];
+
+  return dedupeLinks([...priorityLinks, ...[...fromKeywords, ...base].map((href) => toServiceLink(href, locale))]).slice(0, 3);
 }
 
 export function serviceHrefToSlug(href: string): string {

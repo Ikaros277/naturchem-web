@@ -174,12 +174,16 @@ export const czechServiceSearchSupport: Record<string, ServiceSearchSupport> = {
     faqItems: [
       {
         q: "Kdy potřebujete hlukovou studii a kdy měření hluku?",
-        paragraphs: ["Studie výpočtem posuzuje navrhovaný záměr nebo varianty provozu. Terénní měření ověřuje skutečný hluk u existujícího zdroje. Podle zadání lze oba výstupy propojit."],
-        links: [{ label: "Měření hluku", href: "/sluzby/mereni-hluku" }]
+        paragraphs: ["Studie výpočtem posuzuje navrhovaný záměr nebo varianty provozu. Terénní měření ověřuje skutečný hluk u existujícího zdroje. Co se vyžaduje u Vašeho záměru, určují podmínky povolení a požadavek KHS nebo stavebního úřadu; podle zadání lze oba výstupy propojit."],
+        links: [
+          { label: "Měření hluku", href: "/sluzby/mereni-hluku" },
+          { label: "Měření hluku ke kolaudaci", href: "/mereni-hluku-ke-kolaudaci" },
+          { label: "Studie, nebo měření: článek", href: "/poradna/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku" }
+        ]
       },
       {
         q: "Co potřebujete pro hlukovou studii ke stavbě nebo technologii?",
-        paragraphs: ["Situaci s umístěním zdrojů a okolní zástavby, technické údaje zařízení a denní i noční provozní režim. Přiložte také údaje o dopravě a požadavek KHS nebo projektanta."]
+        paragraphs: ["Situaci s umístěním zdrojů a okolní zástavby, technické údaje zařízení a denní i noční provozní režim. Přiložte také údaje o dopravě a požadavek KHS, stavebního úřadu nebo projektanta. Výstupem je studie použitelná jako podklad pro řízení před KHS, stavebním úřadem nebo v EIA."]
       },
       {
         q: "Podle čeho stanovíte cenu hlukové studie?",
@@ -235,7 +239,10 @@ export const czechServiceSearchSupport: Record<string, ServiceSearchSupport> = {
       {
         q: "Je pro plánovanou technologii vhodné měření, nebo hluková studie?",
         paragraphs: ["Měření ověřuje skutečný provoz. U dosud neinstalované technologie nebo navrhovaného záměru slouží k posouzení výpočtová hluková studie."],
-        links: [{ label: "Hlukové studie", href: "/sluzby/hlukove-studie" }]
+        links: [
+          { label: "Hlukové studie", href: "/sluzby/hlukove-studie" },
+          { label: "Měření hluku ke kolaudaci", href: "/mereni-hluku-ke-kolaudaci" }
+        ]
       },
       {
         q: "Podle čeho připravíte cenu měření hluku?",

@@ -98,6 +98,15 @@ Articles are authoritative for **Czech regulatory context** (Czech laws, Czech a
 
 Structured FAQ with legal references: https://www.naturchem.cz/faq/
 
+## Verified answers (Czech legal context)
+
+Short factual answers that mirror the FAQ on the landing pages. Primary sources are linked on each page. Always check the current wording of the law before relying on a statement.
+
+- **Who may perform one-off emission measurements in Czechia?** Only an authorized person (autorizovaná osoba) under Act No. 201/2012 Sb. — https://www.naturchem.cz/autorizovana-osoba-mereni-emisi/
+- **ISPOP deadlines for one-off emission measurement:** the operator announces the measurement date in ISPOP at least 5 working days in advance (form F_OVZ_TERM_JME); the authorized person reports the protocol data through ISPOP within 60 days (form F_OVZ_JME). The operating site must be registered in CRŽP. Source: https://www.ispop.cz/nasazeni-formularu-jednorazoveho-mereni-emisi-f_ovz_term_jme-a-f_ovz_jme/ — https://www.naturchem.cz/ispop-rocni-hlaseni-emise/
+- **Who may measure workplace factors for job categorization?** A holder of an accreditation certificate or an authorization for the relevant measurements (§ 38 of Act No. 258/2000 Sb.). NATURCHEM is an accredited testing laboratory, No. 1599 (ČIA) — https://www.naturchem.cz/mereni-pracovniho-prostredi-kategorizace-praci/
+- **Who may measure environmental noise?** Only a holder of an accreditation certificate or of an authorization under § 83c (§ 32a of Act No. 258/2000 Sb.). For approval of certain protected buildings in areas burdened by excessive noise, § 77(5) accepts either noise measurement under § 32a or a noise study with a proposal of measures — https://www.naturchem.cz/mereni-hluku-ke-kolaudaci/
+
 ## Accreditation & credentials
 
 https://www.naturchem.cz/akreditace-autorizace-dokumenty/
@@ -109,8 +118,11 @@ https://www.naturchem.cz/akreditace-autorizace-dokumenty/
 - https://www.naturchem.cz/mereni-tezkych-kovu-emise/
 - https://www.naturchem.cz/podklady-pro-khs/
 - https://www.naturchem.cz/podklady-pro-cizp/
-- https://www.naturchem.cz/rozptylova-studie-kdy-je-povinna/
-- https://www.naturchem.cz/ispop-u-jednorazoveho-mereni-emisi/
+- https://www.naturchem.cz/mereni-hluku-ke-kolaudaci/ — Noise measurement for building approval
+- https://www.naturchem.cz/mereni-pracovniho-prostredi-kategorizace-praci/ — Workplace measurements for job categorization
+- https://www.naturchem.cz/ispop-rocni-hlaseni-emise/ — ISPOP: emission measurement notification and annual reporting
+- https://www.naturchem.cz/poradna/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba/
+- https://www.naturchem.cz/poradna/ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba/
 
 ## Equipment sales
 
@@ -175,6 +187,10 @@ https://www.naturchem.cz/akreditace-autorizace-dokumenty/
 - https://www.naturchem.cz/en/mereni-prasnosti/
 - https://www.naturchem.cz/en/podklady-pro-khs/
 - https://www.naturchem.cz/en/podklady-pro-cizp/
+- https://www.naturchem.cz/en/mereni-hluku-ke-kolaudaci/
+- https://www.naturchem.cz/en/mereni-pracovniho-prostredi-kategorizace-praci/
+- https://www.naturchem.cz/en/ispop-rocni-hlaseni-emise/
+- https://www.naturchem.cz/en/odborny-posudek-zdroj-znecistovani/
 
 ## German SEO landing pages
 
@@ -184,6 +200,10 @@ https://www.naturchem.cz/akreditace-autorizace-dokumenty/
 - https://www.naturchem.cz/de/mereni-prasnosti/
 - https://www.naturchem.cz/de/podklady-pro-khs/
 - https://www.naturchem.cz/de/podklady-pro-cizp/
+- https://www.naturchem.cz/de/mereni-hluku-ke-kolaudaci/
+- https://www.naturchem.cz/de/mereni-pracovniho-prostredi-kategorizace-praci/
+- https://www.naturchem.cz/de/ispop-rocni-hlaseni-emise/
+- https://www.naturchem.cz/de/odborny-posudek-zdroj-znecistovani/
 
 ## Search intent keywords (DE)
 
@@ -212,4 +232,4 @@ Emissionsmessung Tschechien, Ausbreitungsstudie, Lärmstudie, Arbeitsplatzmessun
 
 ## Last updated
 
-2026-07-14
+2026-10-09

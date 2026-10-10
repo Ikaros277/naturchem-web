@@ -3,11 +3,11 @@ import type { DedicatedServicePage } from "./dedicated-service-pages";
 export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
   "hlukove-studie": {
     slug: "sluzby/hlukove-studie",
-    title: "Noise studies",
+    title: "Noise studies for KHS and building authorities",
     description:
-      "Noise studies for technologies, sites, transport, HVAC, heat pumps and construction projects. Supporting documentation for KHS, building permitting and EIA.",
+      "Noise studies for KHS, building authorities and EIA: sites, HVAC, heat pumps and transport. We advise when a study is enough and when a noise measurement is needed.",
     intro:
-      "Has an authority requested a **noise study** or are you addressing a neighbourhood complaint? We prepare calculations for technologies, the site and transport — documentation for **KHS**, building permitting and **EIA**.",
+      "Has the hygiene station (**KHS**) or the building authority requested a **noise study**, or are you unsure whether a study is enough or a measurement is needed? We calculate noise from technologies, the site, transport, HVAC or heat pumps and recommend an approach according to the authority's requirement.",
     contactService: "Hlukové studie",
     faqCategoryId: "hluk",
     scope: [
@@ -49,6 +49,16 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
         title: "Noise measurement and acoustics",
         href: "/sluzby/mereni-hluku",
         description: "Field measurement and verification of actual operational noise."
+      },
+      {
+        title: "Noise measurement for occupancy approval",
+        href: "/mereni-hluku-ke-kolaudaci",
+        description: "When a noise study is enough and when the authority requires a measurement."
+      },
+      {
+        title: "Noise study or noise measurement?",
+        href: "/poradna/kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku",
+        description: "A practical distinction between a study and a measurement by purpose and project phase."
       },
       {
         title: "EIA and project notification",
@@ -334,6 +344,11 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
         title: "Operating manuals",
         href: "/sluzby/provozni-rady",
         description: "Operating documentation must match the actual source operating mode."
+      },
+      {
+        title: "ISPOP: measurement notification and annual report",
+        href: "/ispop-rocni-hlaseni-emise",
+        description: "Deadlines, notification of emission measurements and the annual report step by step."
       }
     ]
   },

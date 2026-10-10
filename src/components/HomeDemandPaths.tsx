@@ -4,10 +4,7 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
 import styles from "./homepage.module.css";
 
-const czechPaths = ["/mereni-pro-kolaudaci", "/mereni-pracovniho-prostredi-kategorizace-praci", "/pro-stavebni-firmy"];
-// Two campaign pages deliberately exist only in Czech. Use translated service
-// overviews in EN/DE instead of manufacturing unavailable locale URLs.
-const translatedPaths = ["/sluzby#mericke-sluzby", "/mereni-pracovniho-prostredi-kategorizace-praci", "/sluzby#povolovaci-podklady"];
+const campaignPaths = ["/mereni-pro-kolaudaci", "/mereni-pracovniho-prostredi-kategorizace-praci", "/pro-stavebni-firmy"];
 const copy = {
   cs: { title: "Pro podniky i odborné partnery", kicker: "Spolupráce s NATURCHEM", needsTitle: "Co potřebujete vyřešit?", audiences: [
     "Podniky a specialisté EHS / BOZP",
@@ -40,7 +37,7 @@ const copy = {
 
 export function HomeDemandPaths({ locale }: { locale: Locale }) {
   const content = copy[locale];
-  const paths = locale === "cs" ? czechPaths : translatedPaths;
+  const paths = campaignPaths;
   return (
     <section className={`${styles.section} ${styles.b2bSection}`} aria-labelledby="home-demand-paths-heading">
       <div className={styles.container}>

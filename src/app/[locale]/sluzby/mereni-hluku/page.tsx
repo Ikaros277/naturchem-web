@@ -43,6 +43,11 @@ const czech = {
   ],
   relatedLinks: [
     {
+      title: "Měření hluku ke kolaudaci",
+      href: "/mereni-hluku-ke-kolaudaci",
+      description: "Kdy stačí hluková studie a kdy úřad požaduje měření."
+    },
+    {
       title: "VZT, chlazení a tepelná čerpadla",
       href: "/provozy-a-technologie/tepelna-cerpadla-vzt",
       description: "Hluk venkovních jednotek, technologie, kolaudace a stížnosti okolí."

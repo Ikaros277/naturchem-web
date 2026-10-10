@@ -451,6 +451,17 @@
       "width": 1600,
       "height": 900
     },
+    "/hero/mereni-emisi.webp": {
+      "base": "/hero/responsive-2026-10/image-63d4bedf1f06",
+      "widths": [
+        192,
+        384,
+        640,
+        960
+      ],
+      "width": 1718,
+      "height": 966
+    },
     "/uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp": {
       "base": "/hero/responsive-2026-10/image-81aba865cc0f",
       "widths": [

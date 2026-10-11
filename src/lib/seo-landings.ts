@@ -135,83 +135,351 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-lakoven",
-    title: "Měření emisí lakovny a povrchových úprav",
+    title: "Měření emisí lakovny: TOC/VOC a TZL na výduchu",
     metaDescription:
-      "Měření emisí VOC/TOC a TZL z lakovacích linek, výduchů a filtrů. Protokol pro provozovatele a správní orgány.",
+      "Měření emisí lakoven a povrchových úprav: TOC/VOC a TZL na výduchu. Protokol pro ČIŽP, povolení provozu a ISPOP. Pošlete povolení a výduchy, nabídku připravíme.",
     h1: "Měření emisí lakovny a povrchových úprav",
     intro:
-      "U lakovacích technologií řešíme emise VOC/TOC, TZL a související parametry z výduchů a filtračních zařízení. Měření navazujeme na provozní řád a režim linky.",
+      "Měříme emise z lakovacích boxů, sušení a vypalování na výduchu: TOC/VOC, případně TZL. Rozsah vychází z povolení provozu, provozního řádu a skutečného režimu linky.",
     sections: [
       {
+        heading: "Co u lakovny měříme",
         paragraphs: [
-          "Posoudíme měřicí místo, zvolíme sledované látky a provedeme terénní část v reprezentativním provozu.",
-          "Výstup slouží pro provozní rozhodování, aktualizaci dokumentace i jednání s KÚ, ČIŽP nebo krajským úřadem."
+          "Typicky měříme **TOC** jako ukazatel organických látek (VOC) ve výduchu a podle povolení nebo technologie také konkrétní organické látky či TZL z přestřiků. K výsledku přidáváme průtok odpadní vzdušiny a provozní parametry linky, aby šel správně vyhodnotit.",
+          "Odvádí-li lakovna vzdušinu **více výduchy** (box, sušení, vypalování), zjišťuje se úroveň znečišťování zpravidla na každém z nich, pokud povolení provozu nestanoví jinak. Schéma výduchů proto porovnáme s povolením ještě před objednáním měření."
+        ]
+      },
+      {
+        heading: "Jak měření probíhá",
+        paragraphs: [
+          "Z povolení, provozního řádu a technických listů nátěrových hmot ověříme zdroj, výduchy a měřené látky. Měříme v běžném provozu, tedy při obvyklé aplikaci nátěrových hmot a s filtrací ve standardním stavu; **měření při minimální výrobě** nemusí být použitelné.",
+          "Jednorázové měření emisí provádí **autorizovaná osoba**. Provozovatel oznamuje termín v ISPOP nejméně 5 pracovních dní před měřením a data z protokolu se oznamují prostřednictvím ISPOP do 60 dnů."
+        ]
+      },
+      {
+        heading: "Co nám poslat",
+        paragraphs: [
+          "Povolení provozu a případný provozní řád, poslední protokol, seznam nebo schéma výduchů, technické a bezpečnostní listy nátěrových hmot a ředidel, popis filtrace či čištění vzdušiny a plánovaný režim linky. Pomohou i fotografie měřicích míst.",
+          "Pokud z podkladů vyplyne, že samotné měření nestačí, upozorníme na **bilanci VOC**, provozní řád nebo změnu povolení provozu."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/lakovny"
+    oboryHref: "/provozy-a-technologie/lakovny",
+    layout: "demand",
+    eyebrow: "Lakovny a povrchové úpravy",
+    overviewHeading: "Od výduchů k protokolu",
+    highlights: ["TOC/VOC a TZL na výduchu", "Boxy, sušení a vypalování", "Protokol a data pro ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu",
+        label: "Lakovna: VOC, provozní řád a povolení",
+        description: "Bilance VOC, výduchy, filtrace a provozní evidence lakovny."
+      },
+      {
+        href: "/poradna/praskova-lakovna-povoleni",
+        label: "Prášková lakovna: povolení a měření",
+        description: "V čem se práškové lakování liší a kdy se měří TZL nebo TOC."
+      },
+      {
+        href: "/sluzby/provozni-rady",
+        label: "Provozní řády",
+        description: "Provozní řád lakovny sladěný s povolením a měřením emisí."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Autorizované měření emisí",
+        description: "Kdo smí měřit, co poslat a jak probíhá oznámení v ISPOP."
+      }
+    ],
+    faq: [
+      {
+        question: "Co se při měření emisí z lakovny měří?",
+        answer:
+          "Typicky TOC jako ukazatel organických látek, případně konkrétní organické látky nebo TZL. Konkrétní rozsah určuje povolení provozu a technologie, proto jej před nabídkou ověříme z Vašich podkladů."
+      },
+      {
+        question: "Musí se měřit všechny výduchy lakovny?",
+        answer:
+          "Má-li zdroj více výduchů, zjišťuje se úroveň znečišťování zpravidla na každém z nich, pokud povolení provozu nestanoví jinak. Seznam výduchů proto porovnáme s povolením před objednáním měření."
+      },
+      {
+        question: "Jak má lakovna při měření pracovat?",
+        answer:
+          "Měření má proběhnout v běžném, reprezentativním režimu: při obvyklé aplikaci nátěrových hmot a s filtrací ve standardním provozním stavu. Měření při minimální výrobě nebo v mimořádném režimu nemusí být použitelné."
+      },
+      {
+        question: "Měří se u práškové lakovny také TZL?",
+        answer:
+          "Rozhoduje platné povolení provozu: z něj je zřejmé, zda se TZL měří, na kterém výduchu, s jakým limitem a v jakém intervalu. Vyhláška č. 415/2012 Sb. stanoví pro nanášení práškových plastů specifický limit jen pro TOC (od projektované spotřeby 10 t/rok); u TZL se může uplatnit obecný limit, nebo limit určí krajský úřad v povolení."
+      }
+    ],
+    sourcesEyebrow: "Ověřené informace",
+    sourcesHeading: "Právní a metodické zdroje",
+    sources: [sourceZakonOvzdusi, sourceVyhlaska415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-bioplynovych-stanic",
-    title: "Měření emisí bioplynových stanic a kogenerace",
+    title: "Měření emisí bioplynových stanic a kogeneračních jednotek",
     metaDescription:
-      "Měření emisí motorů bioplynových stanic a kogeneračních jednotek. Termíny, protokoly a návaznost na povinnosti provozovatele.",
+      "Měření emisí motorů bioplynových stanic a kogeneračních jednotek. Autorizovaná osoba, protokol pro ČIŽP a ISPOP. Pošlete povolení, navrhneme rozsah měření.",
     h1: "Měření emisí bioplynových stanic a kogeneračních jednotek",
     intro:
-      "U bioplynových stanic a kogeneračních jednotek řešíme měření emisí motorů, provozní režim, oznámení měření a návaznost na povinnosti vůči ČIŽP a dalším orgánům.",
+      "Měříme emise motorů kogeneračních jednotek na bioplynových stanicích a předáme protokol použitelný pro povolení provozu, ČIŽP i ISPOP. Rozsah vychází z povolení provozu, bioplynu jako paliva a skutečného režimu motoru.",
     sections: [
       {
+        heading: "Co u motoru bioplynové stanice měříme",
         paragraphs: [
-          "Pomáháme s harmonogramem měření, přípravou podkladů a vyhodnocením výsledků pro provoz i povolovací dokumentaci.",
-          "V návaznosti zajišťujeme rozptylové a hlukové studie nebo EIA podklady pro změny provozu."
+          "Měříme emise **motorů kogeneračních jednotek** spalujících bioplyn. Vyhláška č. 415/2012 Sb. stanoví u pístových motorů specifické emisní limity pro NOx, CO, SO₂ a tuhé znečišťující látky podle paliva, příkonu a data uvedení do provozu a pro bioplyn obsahuje zvláštní ustanovení.",
+          "Konkrétní rozsah ale určuje **povolení provozu**. Bioplyn není zemní plyn a u jiných paliv než zemního plynu se rozsah posouzení může významně změnit, proto jej ověříme z Vašeho povolení a posledního protokolu, ne podle šablony."
+        ]
+      },
+      {
+        heading: "Kdy a jak měření probíhá",
+        paragraphs: [
+          "Jednorázové měření emisí provádí autorizovaná osoba. Provozovatel oznamuje termín v ISPOP nejméně 5 pracovních dní před měřením a data z protokolu se oznamují prostřednictvím ISPOP do 60 dnů.",
+          "Vyhláška ukládá provést měření **nejpozději do 4 měsíců** po prvním uvedení zdroje do provozu, po změně paliva uvedeného v povolení i po zásahu do konstrukce či vybavení, který by mohl změnit emise. Měří se při stabilním provozu a reprezentativní zátěži, proto termín sladíme s režimem Vaší stanice."
+        ]
+      },
+      {
+        heading: "Co nám poslat a co navazuje",
+        paragraphs: [
+          "Platné povolení provozu, poslední protokol, technický list kogenerační jednotky, údaje o palivu a příkonu, počet motorů a výduchů, plánovaný provozní režim a fotografie měřicího místa. Má-li stanice více výduchů, zjišťuje se úroveň znečišťování na každém z nich, pokud povolení nestanoví jinak.",
+          "Při změně provozu bioplynové stanice se často řeší i **hluk, rozptyl a podklady pro EIA**. Navazující studie připravíme podle záměru a požadavku úřadu."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/bioplyn-biometan"
+    oboryHref: "/provozy-a-technologie/bioplyn-biometan",
+    layout: "demand",
+    eyebrow: "Bioplynové stanice a kogenerace",
+    overviewHeading: "Od povolení k protokolu z měření",
+    highlights: ["Motory na bioplyn a kogenerace", "Protokol pro ČIŽP a úřady", "Návaznost na ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu",
+        label: "Kogenerační jednotka: emise, hluk a povolení",
+        description: "Co úřady u kogenerace sledují: tepelný příkon, komín, měření a hluk."
+      },
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "Jak připravit zdroj před měřením",
+        description: "Povolení, ISPOP, měřicí místo a reprezentativní režim před termínem."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Autorizované měření emisí",
+        description: "Kdo smí měřit, co poslat a jak probíhá oznámení v ISPOP."
+      },
+      {
+        href: "/provozy-a-technologie/bioplyn-biometan",
+        label: "Bioplyn, biometan a kogenerace",
+        description: "Rozptylové a hlukové studie a podklady pro EIA k bioplynovému záměru."
+      }
+    ],
+    faq: [
+      {
+        question: "Jaké látky se u motoru bioplynové stanice měří?",
+        answer:
+          "Rozsah určuje povolení provozu, palivo a typ motoru. Bioplyn je jiné palivo než zemní plyn, proto rozsah neodvozujeme od kotlů ani od zemního plynu, ale z Vašeho povolení a posledního protokolu."
+      },
+      {
+        question: "Kdy je potřeba měřit po spuštění nebo úpravě kogenerační jednotky?",
+        answer:
+          "Podle vyhlášky č. 415/2012 Sb. nejpozději do 4 měsíců po prvním uvedení zdroje do provozu, po změně paliva uvedeného v povolení nebo po zásahu do konstrukce či vybavení, který by mohl změnit emise. Četnost dalších měření vychází z vyhlášky a povolení provozu; ověříme ji z Vašich podkladů."
+      },
+      {
+        question: "Co když stanice má více motorů nebo výduchů?",
+        answer:
+          "U zdroje s více výduchy se úroveň znečišťování zjišťuje na každém z nich, pokud povolení provozu nestanoví jinak. Při zařazení zdroje se navíc posuzuje vzájemná vazba více jednotek v jedné provozovně, proto před objednáním porovnejte schéma výduchů s povolením."
+      },
+      {
+        question: "Řešíte u bioplynové stanice i hluk a rozptyl?",
+        answer:
+          "Ano, k měření navazujeme rozptylovou nebo hlukovou studií či podklady pro EIA při změně provozu. Oborový přehled pro bioplyn a biometan zahrnuje ovzduší, pach, hluk a dopravu; rozsah ověříme podle Vašeho záměru a požadavku úřadu."
+      }
+    ],
+    sourcesEyebrow: "Ověřené informace",
+    sourcesHeading: "Právní a metodické zdroje",
+    sources: [sourceZakonOvzdusi, sourceVyhlaska415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-drevozpracujicich-provoze",
-    title: "Měření emisí dřevozpracujících provozů",
+    title: "Měření emisí dřevozpracujících provozů: TZL, kotle, sušárny",
     metaDescription:
-      "Měření emisí z pil, sušáren, kotelen na biomasu a technologických výduchů ve dřevozpracujících provozech.",
+      "Měření emisí TZL z odsávání a filtrů, kotlů na biomasu a sušáren v pilách a truhlárnách. Protokol pro povolení provozu a úřady. Pošlete popis provozu.",
     h1: "Měření emisí dřevozpracujících provozů",
     intro:
-      "Ve dřevozpracujících provozech měříme emise ze spalování biomasy, sušáren, technologických výduchů a souvisejících zdrojů. Řešíme také prašnost a pracovní prostředí.",
+      "Měříme tuhé znečišťující látky (TZL) z odsávání a filtrů a emise z kotlů na biomasu a ze sušáren v pilách, truhlárnách i při výrobě štěpek a pelet. Rozsah vychází z technologie, paliva a povolení provozu, ne z obecné šablony.",
     sections: [
       {
+        heading: "Co ve dřevozpracujícím provozu měříme",
         paragraphs: [
-          "Rozsah měření odvozujeme od technologie, paliva a požadavku úřadu nebo investora.",
-          "Výstupy připravujeme pro povolení provozu, KHS, krajský úřad i interní BOZP."
+          "Nejčastěji jde o TZL na výduchu z odsávání a filtračního zařízení. U kotle na biomasu nebo sušárny se rozsah řídí povolením zdroje, u sušení třísek a dřevních vláken může přibýt i TOC.",
+          "Zpracování dřeva je **vyjmenovaným zdrojem** při celkové projektované spotřebě materiálu 150 m³ a více za rok. Pak je potřeba ověřit zařazení, emisní limity, měřicí povinnosti a povolení provozu; u menší dílny se i tak řeší pracovní prostředí, hluk a odsávání."
+        ]
+      },
+      {
+        heading: "Emise na výduchu, nebo prach na pracovišti",
+        paragraphs: [
+          "Měření emisí a měření pracovního ovzduší jsou dvě různá měření s odlišným účelem. Výduch ukazuje, co odchází do venkovního ovzduší (krajský úřad, ČIŽP, povolení provozu), pracovní ovzduší ukazuje, co dýchá obsluha pily, brusky nebo CNC centra (KHS, kategorizace prací).",
+          "Filtr, který zlepší stav v hale, ještě **nedokládá plnění emisního limitu** na výduchu. Oba pohledy proto plánujeme společně podle technologie a požadovaného výstupu; expozici zaměstnanců řeší měření prašnosti na pracovišti."
+        ]
+      },
+      {
+        heading: "Co nám poslat a jak měření probíhá",
+        paragraphs: [
+          "Pošlete popis technologie a seznam strojů, zpracovávaný materiál a jeho projektovanou roční spotřebu v m³. Doplňte údaje o odsávání, filtru a výduších, provozní dobu, fotografie zdrojů a výduchů a povolení či rozhodnutí, pokud existují; u kotle na biomasu uveďte druh paliva.",
+          "Jednorázové měření emisí provádí **autorizovaná osoba**. Provozovatel oznamuje termín v ISPOP nejméně 5 pracovních dní předem; před měřením ověříme měřicí místo na výduchu a sladíme **reprezentativní provozní režim**, aby protokol odpovídal skutečnému provozu."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/drevozpracujici"
+    oboryHref: "/provozy-a-technologie/drevozpracujici",
+    layout: "demand",
+    eyebrow: "Pily, truhlárny a výroba štěpek",
+    overviewHeading: "Od popisu provozu k protokolu",
+    highlights: ["TZL z odsávání a filtrů", "Kotle na biomasu a sušárny", "Protokol pro úřady a povolení"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje",
+        label: "Dřevozpracující provoz: prach, odsávání a povolení",
+        description: "Rozdíl mezi emisemi na výduchu, pracovním ovzduším a hlukem."
+      },
+      {
+        href: "/mereni-prasnosti",
+        label: "Měření prašnosti na pracovišti",
+        description: "Dřevní prach v dýchací zóně obsluhy pily, brusky nebo CNC centra."
+      },
+      {
+        href: "/mereni-emisi-kotelen",
+        label: "Měření emisí kotelen a spalovacích zdrojů",
+        description: "Kotel na biomasu: NOx, CO, SO₂ a prašnost podle povolení."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Autorizované měření emisí",
+        description: "Kdo smí měřit, co poslat a jak probíhá oznámení v ISPOP."
+      }
+    ],
+    faq: [
+      {
+        question: "Kdy je dřevozpracující provoz vyjmenovaným zdrojem?",
+        answer:
+          "Zpracování dřeva včetně truhlářské výroby a výroby štěpek a pelet je vyjmenovaným zdrojem při celkové projektované spotřebě materiálu 150 m³ a více za rok. Výjimkou jsou mimo jiné pilařské provozy v manipulačních nebo expedičních skladech (krácení kmenů); Váš případ ověříme z podkladů."
+      },
+      {
+        question: "Co se na výduchu dřevozpracujícího provozu měří?",
+        answer:
+          "Nejčastěji TZL z odsávání a filtrů, u sušení třísek a dřevních vláken může přibýt TOC. U kotle na biomasu se měří látky podle povolení spalovacího zdroje; konkrétní rozsah vždy určuje povolení provozu a technologie."
+      },
+      {
+        question: "Stačí měření na výduchu, nebo musíme měřit i prach na pracovišti?",
+        answer:
+          "Jde o dvě různé věci: výduch ukazuje emise do venkovního ovzduší, měření v dýchací zóně expozici zaměstnanců. Které z nich potřebujete, určuje požadavek úřadu (krajský úřad, ČIŽP, KHS) a charakter provozu; měření emisí expozici zaměstnanců nenahrazuje."
+      },
+      {
+        question: "Můžeme ve vlastním kotli spalovat odřezky z dřevotřísky?",
+        answer:
+          "Vyhláška č. 415/2012 Sb. (§ 15 odst. 5) dovoluje spalovat dřevotřísku, překližku, dřevovláknitou desku nebo jiné lepené dřevo jen tehdy, když neobsahují halogenované organické sloučeniny nebo těžké kovy z ošetření či povrchových úprav, a jen ve zdrojích určitého příkonu. Palivo proto vždy ověřte z povolení a vyhlášky a do podkladů pro měření uveďte jeho přesný druh."
+      }
+    ],
+    sourcesEyebrow: "Ověřené informace",
+    sourcesHeading: "Právní a metodické zdroje",
+    sources: [sourceZakonOvzdusi, sourceVyhlaska415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-susaren",
-    title: "Měření emisí sušáren",
+    title: "Měření emisí sušáren: TZL, NOx a CO",
     metaDescription:
-      "Měření emisí ze sušáren biomasy a technologických zdrojů. Protokoly pro provozovatele a povolovací řízení.",
+      "Měření emisí ze sušáren obilí, biomasy a dřeva: TZL, NOx a CO podle povolení. Protokol pro úřad a ISPOP. Pošlete povolení nebo popis sušárny, navrhneme rozsah.",
     h1: "Měření emisí sušáren",
     intro:
-      "U sušáren a technologií se spalováním nebo odvodem plynných emisí zajišťujeme měření emisních parametrů v reprezentativním provozním režimu.",
+      "Měříme emise ze sušáren obilí, biomasy a dřeva i z navazujících spalovacích zdrojů v reprezentativním provozním režimu. Rozsah vychází z povolení provozu, paliva a technologie sušení.",
     sections: [
       {
+        heading: "Co u sušárny měříme",
         paragraphs: [
-          "Typicky řešíme zdroje v zemědělských a dřevozpracujících areálech, včetně návaznosti na měření prašnosti a pracovního prostředí.",
-          "Součástí zakázky bývá příprava podkladů pro úřad i plán pravidelných měření."
+          "Rozsah se liší podle toho, co se suší a čím se ohřívá. U sušáren obilí, biomasy a dřeva typicky řešíme **TZL, NOx a CO** ze spalování; u sušení třísek a dřevních vláken může být relevantní i TOC.",
+          "Má-li sušárna **více výduchů**, například samostatné odsávací větve, zjišťuje se úroveň znečišťování zpravidla na každém z nich, pokud povolení provozu nestanoví jinak. Je-li hořák součástí sušárny, upřesníme měřicí místo a to, zda se měří spaliny samostatně, nebo ve směsi s technologickou vzdušinou."
+        ]
+      },
+      {
+        heading: "Jak měření probíhá",
+        paragraphs: [
+          "Z povolení ověříme zdroj, výduchy, palivo a měřené látky. Měříme při **standardní výrobní vsázce**; u šaržovitého provozu předem popíšeme celý výrobní cyklus, aby výsledek odpovídal skutečnému provozu.",
+          "Do protokolu popíšeme stav sušárny během měření, proto potřebujeme údaje o vsázce, výkonu a množství zpracovaného materiálu. Jednorázové měření provádí **autorizovaná osoba**; termín se oznamuje v ISPOP nejméně 5 pracovních dní předem a data z protokolu do 60 dnů."
+        ]
+      },
+      {
+        heading: "Co nám poslat",
+        paragraphs: [
+          "Povolení provozu a případný provozní řád, poslední protokol, popis sušárny (co a čím se suší, palivo, výkon), schéma výduchů a filtrace, plánovaný režim a fotografie měřicích míst.",
+          "Pomůžeme s podklady pro úřad a s **plánem pravidelných měření**; u prašných provozů navážeme měřením prašnosti na pracovišti."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/zemedelske-provozy"
+    oboryHref: "/provozy-a-technologie/zemedelske-provozy",
+    layout: "demand",
+    eyebrow: "Sušárny obilí, biomasy a dřeva",
+    overviewHeading: "Od technologie sušení k protokolu",
+    highlights: ["TZL, NOx a CO podle povolení", "Standardní vsázka a více výduchů", "Protokol a data pro ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "Jak připravit zdroj před měřením",
+        description: "Reprezentativní režim, výduchy, měřicí místo a ohlášení v ISPOP."
+      },
+      {
+        href: "/mereni-emisi-drevozpracujicich-provoze",
+        label: "Měření emisí dřevozpracujících provozů",
+        description: "Pily, sušárny, kotelny na biomasu a technologické výduchy."
+      },
+      {
+        href: "/poradna/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu",
+        label: "Měřicí místo na výduchu",
+        description: "Co musí výduch splnit, aby šlo bezpečně a reprezentativně měřit."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Autorizované měření emisí",
+        description: "Kdo smí měřit, co poslat a jak probíhá oznámení v ISPOP."
+      }
+    ],
+    faq: [
+      {
+        question: "Musím u sušárny měřit emise?",
+        answer:
+          "Záleží na kódu zdroje v příloze č. 2 zákona č. 201/2012 Sb., jeho kapacitě nebo příkonu a na podmínkách povolení provozu. Pošlete povolení nebo popis sušárny a ověříme, zda a v jakém rozsahu se měření týká právě Vás."
+      },
+      {
+        question: "Co se u sušárny na biomasu nebo dřevo měří?",
+        answer:
+          "Typicky TZL, NOx a CO ze spalování; u sušení třísek a dřevních vláken může být relevantní i TOC. Konkrétní rozsah určuje povolení provozu, palivo a technologie."
+      },
+      {
+        question: "Kdy má sušárna při měření běžet?",
+        answer:
+          "V běžném provozu se standardní výrobní vsázkou; u šaržovitého provozu se předem popisuje celý výrobní cyklus. Měření při minimální výrobě nebo za nestandardně příznivých podmínek nemusí být použitelné."
+      },
+      {
+        question: "Kdy se měří po uvedení nové nebo upravené sušárny do provozu?",
+        answer:
+          "Vyhláška č. 415/2012 Sb. požaduje jednorázové měření nejpozději do 4 měsíců po prvním uvedení zdroje do provozu, po změně paliva nebo suroviny uvedené v povolení a po zásahu do konstrukce či vybavení, který může změnit emise. Zda se to týká Vaší sušárny, ověříme z povolení provozu."
+      }
+    ],
+    sourcesEyebrow: "Ověřené informace",
+    sourcesHeading: "Právní a metodické zdroje",
+    sources: [sourceZakonOvzdusi, sourceVyhlaska415, sourceIspopJme]
   },
   {
     slug: "mereni-hluku-tepelneho-cerpadla-vzt",
@@ -624,20 +892,96 @@ export const seoLandings: SeoLanding[] = [
     slug: "mereni-emisi-dieselagregat",
     title: "Měření emisí dieselagregátu a záložního zdroje",
     metaDescription:
-      "Měření emisí dieselagregátu, záložního zdroje a pohotovostního provozu. Autorizované měření a protokol pro úřad.",
+      "Měření emisí dieselagregátů a záložních zdrojů: NOx, CO, TZL. Z povolení a provozních hodin nejdřív ověříme, zda se měření týká Vašeho zdroje.",
     h1: "Měření emisí dieselagregátu a záložního zdroje",
     intro:
-      "Zajistíme jednorázové měření emisí z dieselagregátů a záložních zdrojů včetně přípravy na oznámení termínu v ISPOP. Měření provádí autorizovaná osoba.",
+      "Měříme emise z dieselagregátů a záložních zdrojů a nejprve s Vámi ověříme, zda a v jakém rozsahu se měření na Váš zdroj vztahuje. Jednorázové měření provádí autorizovaná osoba a termín se oznamuje v ISPOP.",
     sections: [
       {
+        heading: "Kdy se u záložního zdroje měří",
         paragraphs: [
-          "Typicky měříme NOx, CO, prašnost a další parametry dle povolení a charakteru zdroje.",
-          "Výstup slouží pro provozní řád, povolení provozu i roční hlášení emisí."
+          "Dieselagregát je pístový spalovací motor a rozhoduje u něj **jmenovitý tepelný příkon v palivu**, ne elektrický výkon na štítku generátoru. Od celkového příkonu 0,3 MW jde o vyjmenovaný stacionární zdroj; u více souvisejících agregátů se příkony posuzují společně.",
+          "U skutečného záložního zdroje s provozem **méně než 300 hodin ročně** a bez zvláštních limitů v povolení nemusí povinnost zjišťovat úroveň znečišťování vzniknout vůbec. Při vyšším počtu hodin se může zjišťovat výpočtem a u zdroje, který už není skutečně záložní, může být vyžadováno měření; Váš případ ověříme z povolení a evidence provozních hodin."
+        ]
+      },
+      {
+        heading: "Jak měření probíhá",
+        paragraphs: [
+          "Pokud se měření na zdroj vztahuje, ověříme z povolení výduch a měřené látky; typicky jde o NOx, CO a TZL. Měří se při ustáleném provozu s reprezentativní zátěží a hodnoty z najíždění a odstavování se do výsledků nezahrnují.",
+          "Jednorázové měření emisí provádí **autorizovaná osoba**. Provozovatel oznamuje termín v ISPOP nejméně 5 pracovních dní před měřením a data z protokolu se oznamují prostřednictvím ISPOP do 60 dnů."
+        ]
+      },
+      {
+        heading: "Co nám poslat",
+        paragraphs: [
+          "**Technický list agregátu**, jmenovitý elektrický výkon a tepelný příkon v palivu, druh paliva, počet agregátů v areálu, umístění a výšku výduchu, režim testů a stávající povolení provozu.",
+          "Přiložte také **evidenci provozních hodin**; z ní ověříme, zda zdroj zůstává v režimu zálohy. Podle podkladů navrhneme, zda stačí výpočet emisí, nebo je potřeba měření, povolení provozu, rozptylová či hluková studie."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    layout: "demand",
+    eyebrow: "Dieselagregáty a záložní zdroje",
+    overviewHeading: "Od povolení a provozních hodin k měření",
+    highlights: ["Ověření povinnosti z povolení", "NOx, CO a TZL", "Autorizovaná osoba a ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny",
+        label: "Záložní dieselagregát: záloha, nebo běžný zdroj",
+        description: "Hranice 0,3 MW, 300 a 500 provozních hodin a evidence provozu."
+      },
+      {
+        href: "/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady",
+        label: "Emise, hluk a povolovací podklady",
+        description: "NOx, CO, TZL, výduch a hluk záložního agregátu."
+      },
+      {
+        href: "/rozptylova-studie-povoleni",
+        label: "Rozptylová studie pro povolení provozu",
+        description: "Kdy ji u záložního zdroje může úřad požadovat a co k ní dodat."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Autorizované měření emisí",
+        description: "Kdo smí měřit, co poslat a jak probíhá oznámení v ISPOP."
+      }
+    ],
+    faq: [
+      {
+        question: "Musí se u záložního dieselagregátu měřit emise?",
+        answer:
+          "Záleží na provozních hodinách, zařazení zdroje a povolení provozu. Podle stanoviska MŽP z roku 2025 nemusí u skutečného záložního zdroje s provozem méně než 300 hodin ročně a bez zvláštních limitů v povolení vzniknout povinnost zjišťovat úroveň znečišťování měřením ani výpočtem; ověříme to z Vašich podkladů."
+      },
+      {
+        question: "Podle čeho se posuzuje hranice 0,3 MW?",
+        answer:
+          "Podle jmenovitého tepelného příkonu v palivu, nikoli podle elektrického výkonu generátoru. U více agregátů, které spolu technicky nebo provozně souvisejí, se posuzuje jejich celkový příkon."
+      },
+      {
+        question: "Počítají se do provozních hodin i testy?",
+        answer:
+          "Obvykle ano: kromě havarijních chodů při výpadku se zahrnují i pravidelné testy, servisní zkoušky a zkušební provoz. Hranice 300 hodin ročně a 500 hodin jako tříletého klouzavého průměru proto hlídejte podle provozního deníku nebo záznamu z řídicího systému."
+      },
+      {
+        question: "Musí být záložní charakter zdroje uveden v povolení provozu?",
+        answer:
+          "Podle stanoviska MŽP má být skutečnost, že zdroj slouží jako záložní zdroj energie, uvedena v povolení provozu; označení v projektu nestačí. Pokud v povolení chybí, nelze automaticky předpokládat, že se uplatní režim záložního zdroje."
+      }
+    ],
+    sourcesEyebrow: "Ověřené informace",
+    sourcesHeading: "Právní a metodické zdroje",
+    sources: [
+      sourceZakonOvzdusi,
+      sourceVyhlaska415,
+      sourceIspopJme,
+      {
+        href: "https://mzp.gov.cz/system/files/2025-08/OOO-Stanovisko_zalozni_zdroje_zjistovani_emisi_RS-2025080804.pdf",
+        label: "Stanovisko MŽP k povolování záložních zdrojů energie (2025)",
+        description: "Výklad ke zjišťování úrovně znečišťování, hranicím 300 a 500 provozních hodin a uvedení záložního režimu v povolení provozu."
+      }
+    ]
   },
   {
     slug: "autorizovana-osoba-mereni-emisi",
@@ -761,42 +1105,191 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-prasnosti",
-    title: "Měření prašnosti na pracovišti a v provozu",
+    title: "Měření prašnosti na pracovišti pro KHS a kategorizaci prací",
     metaDescription:
-      "Měření prašnosti — vdechovatelná a respirabilní frakce, pracovní prostředí a kategorizace prací. Akreditovaná laboratoř NATURCHEM č. 1599.",
+      "Měření prašnosti na pracovišti: vdechovatelná a respirabilní frakce pro KHS a kategorizaci prací. Akreditovaná laboratoř č. 1599. Pošlete popis provozu.",
     h1: "Měření prašnosti na pracovišti",
     intro:
-      "NATURCHEM, s. r. o. měří prašnost v pracovním prostředí včetně vdechovatelné a respirabilní frakce. Výstupy slouží pro KHS, kategorizaci prací, BOZP a návrh technických opatření.",
+      "Měříme prašnost v pracovním ovzduší, tedy vdechovatelnou a respirabilní frakci prachu, které jsou zaměstnanci vystaveni při skutečné práci. Výsledek použijete pro KHS, kategorizaci prací, BOZP a posouzení odsávání.",
     sections: [
       {
+        heading: "Co u prachu na pracovišti hodnotíme",
         paragraphs: [
-          "Měření provádíme na vybraných pracovištích podle skutečných operací a směnnosti. U sypkých materiálů a technologií s odsáváním posoudíme i účinnost ochranných opatření.",
-          "Protokol je použitelný pro hygienickou stanici, aktualizaci kategorizace prací a interní dokumentaci BOZP."
+          "Prašnost není jeden parametr, rozhoduje druh prachu, velikost částic a složení. Podle materiálu a technologie posoudíme, zda stačí vdechovatelná frakce (celková koncentrace), nebo je třeba řešit i respirabilní frakci a krystalický oxid křemičitý.",
+          "Nařízení vlády č. 361/2007 Sb. rozlišuje limit PELc pro celkovou koncentraci (vdechovatelnou frakci) a PELr pro **respirabilní frakci**. Je-li v prachu fibrogenní složka, musí se vždy stanovit respirabilní frakce a koncentrace fibrogenní složky."
+        ]
+      },
+      {
+        heading: "Pracoviště, výduch, nebo venkovní plocha",
+        paragraphs: [
+          "Tato služba měří prach v pracovním ovzduší, tedy expozici zaměstnanců. Prach odváděný výduchem do venkovního ovzduší řeší měření emisí a u otevřených deponií a manipulace se sypkými materiály se podle velikosti plochy může řešit zařazení zdroje, povolení provozu, rozptylová studie a provozní řád.",
+          "Typickým příkladem jsou svařovny a dřevozpracující provozy, kde se řeší dvě roviny: **expozice zaměstnance** v hale a emise výduchem. Měření v dýchací zóně nenahrazuje emisní měření na výduchu a naopak."
+        ]
+      },
+      {
+        heading: "Co nám poslat a jak měříme",
+        paragraphs: [
+          "Pošlete popis technologie a pracovních činností a seznam zpracovávaných materiálů s bezpečnostními nebo technickými listy. Doplňte směnnost a dobu expozice, popis odsávání nebo skrápění, používané OOPP, dosavadní kategorizaci prací a požadavek KHS.",
+          "Odběr vzorku vedeme podle **skutečné pracovní činnosti** a charakteristické směny, ne podle vizuálního odhadu prašnosti. Pro zařazení prací do druhé, třetí nebo čtvrté kategorie smí měřit jen držitel osvědčení o akreditaci nebo autorizace (§ 38 zákona č. 258/2000 Sb.); vdechovatelná a respirabilní frakce prachu jsou v akreditovaném rozsahu laboratoře č. 1599."
         ]
       }
     ],
     serviceHref: "/sluzby/pracovni-prostredi",
-    contactService: "Měření pracovního prostředí"
+    contactService: "Měření pracovního prostředí",
+    layout: "demand",
+    eyebrow: "Pracovní prostředí a KHS",
+    overviewHeading: "Od popisu provozu k protokolu o prašnosti",
+    highlights: ["Vdechovatelná a respirabilní frakce", "Akreditovaná laboratoř č. 1599", "Podklady pro KHS a kategorizaci"],
+    heroTheme: "pracovni-prostredi",
+    relatedLinks: [
+      {
+        href: "/poradna/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity",
+        label: "Prach na pracovišti: frakce a oxid křemičitý",
+        description: "Kdy měřit celkový prach, respirabilní frakci a krystalický SiO₂."
+      },
+      {
+        href: "/mereni-pracovniho-prostredi-kategorizace-praci",
+        label: "Měření pro kategorizaci prací",
+        description: "Kdo smí měřit a co připravit pro zařazení prací."
+      },
+      {
+        href: "/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        label: "Svařovna: prach, kovy a odsávání",
+        description: "Svářečské dýmy v dýchací zóně a rozdíl oproti emisím z výduchu."
+      },
+      {
+        href: "/poradna/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni",
+        label: "Deponie a manipulace se sypkými materiály",
+        description: "Kdy se z venkovní plochy stává vyjmenovaný zdroj ovzduší."
+      }
+    ],
+    faq: [
+      {
+        question: "Kdy se měření prašnosti na pracovišti řeší?",
+        answer:
+          "Typicky na výzvu KHS, při zařazení nových prací, po podstatné změně technologie nebo když míru expozice nelze spolehlivě určit odhadem. Rozsah upřesníme z výzvy a popisu provozu."
+      },
+      {
+        question: "Jaký je rozdíl mezi celkovým prachem a respirabilní frakcí?",
+        answer:
+          "Celková koncentrace (vdechovatelná frakce) zahrnuje částice, které lze vdechnout nosem nebo ústy. Respirabilní frakce je část, která proniká do hlubších částí dýchacích cest a plicních sklípků; u prachu s fibrogenní složkou, například krystalickým oxidem křemičitým, se musí stanovit vždy."
+      },
+      {
+        question: "Stačí u našeho materiálu změřit celkový prach?",
+        answer:
+          "Záleží na materiálu a technologii. U betonu, kamene, keramiky nebo cihel může být významný krystalický oxid křemičitý, u dřeva druh dřeva a u svařování i kovy ve svářečských dýmech; rozsah navrhneme z popisu provozu."
+      },
+      {
+        question: "Je to totéž jako měření prachu z výduchu nebo z deponie?",
+        answer:
+          "Ne. Tato služba hodnotí expozici zaměstnanců v pracovním ovzduší, prach z výduchu řeší měření emisí a prach z otevřených deponií jiný postup podle ochrany ovzduší. Při zadání proto nejdřív upřesníme, který případ řešíte."
+      }
+    ],
+    sourcesEyebrow: "Ověřené informace",
+    sourcesHeading: "Právní zdroje",
+    sources: [
+      sourceZakonVerejneZdravi,
+      {
+        href: "https://www.zakonyprolidi.cz/cs/2007-361",
+        label: "Nařízení vlády č. 361/2007 Sb.",
+        description: "Podmínky ochrany zdraví při práci, včetně přípustných expozičních limitů prachu (PELc, PELr)."
+      }
+    ]
   },
   {
     slug: "mereni-tezkych-kovu-emise",
-    title: "Měření těžkých kovů ve spalinách a pracovním prostředí",
+    title: "Měření těžkých kovů v emisích a pracovním ovzduší",
     metaDescription:
-      "Měření těžkých kovů v emisích ze stacionárních zdrojů a v pracovním ovzduší. Akreditovaný rozsah laboratoře NATURCHEM.",
-    h1: "Měření těžkých kovů",
+      "Měření těžkých kovů (As, Cd, Cr, Ni, Pb, Hg aj.) v emisích ze stacionárních zdrojů a v pracovním ovzduší. Akreditovaná laboratoř č. 1599. Pošlete povolení.",
+    h1: "Měření těžkých kovů v emisích a pracovním ovzduší",
     intro:
-      "V akreditovaném rozsahu laboratoře NATURCHEM měříme těžké kovy v emisích ze stacionárních zdrojů i v pracovním ovzduší. Typicky As, Cd, Cr, Ni, Pb, Hg a další kovy dle požadavku povolení nebo KHS.",
+      "U stacionárních zdrojů odebíráme vzorky těžkých kovů do kapaliny a kovy analyzujeme v akreditovaném rozsahu laboratoře. Podle požadavku KHS posoudíme také kovy v pracovním ovzduší, například při svařování a broušení.",
     sections: [
       {
+        heading: "Kdy se těžké kovy v emisích měří",
         paragraphs: [
-          "U emisí zajišťujeme odběr do kapalného sorbentu a analytické vyhodnocení. V pracovním prostředí měříme expozici na pracovištích se svařováním, broušením nebo manipulací s kovy.",
-          "Výstup je protokol s hodnocením vůči limitům nebo podkladům pro kategorizaci prací."
+          "O tom, zda se kovy měří, rozhoduje typ zdroje a povolení provozu, ne obecná šablona. Vyhláška č. 415/2012 Sb. stanoví specifické emisní limity pro kovy u vybraných zdrojů, například u tepelného zpracování odpadu, výroby skla, tavení a odlévání zinku a jeho slitin nebo žárového pokovování zinkem.",
+          "Pošlete povolení provozu, poslední protokol, technický popis zdroje a výduchu a fotografie měřicího místa. Jednorázové měření emisí provádí **autorizovaná osoba**; měřené látky a rozsah ověříme z povolení ještě před nabídkou."
+        ]
+      },
+      {
+        heading: "Jak se kovy v emisích odebírají a vyhodnocují",
+        paragraphs: [
+          "U emisí zajišťujeme odběr vzorku do kapaliny a analytické vyhodnocení kovů. Vyhláška č. 415/2012 Sb. řadí odběr vzorků pro stanovení těžkých kovů mezi metody, u kterých se vyžaduje osvědčení o akreditaci.",
+          "V **akreditovaném rozsahu laboratoře** jsou například As, Cd, Cr, Co, Ni, Pb, Mn, Zn a Hg; úplný výčet je v příloze osvědčení č. 562/2023. Z naší praxe: u licího stroje jsme měřili tuhé znečišťující látky a zinek na technologickém výduchu."
+        ]
+      },
+      {
+        heading: "Kovy v pracovním ovzduší: jiné měření, jiný účel",
+        paragraphs: [
+          "Kovy v pracovním ovzduší hodnotí expozici zaměstnanců a nenahrazují měření emisí na výduchu. Týká se to zejména svařoven a pracovišť s broušením kovů, kde se podle materiálu posuzují kovy jako mangan, chrom, nikl, zinek nebo hliník v dýchací zóně svářeče.",
+          "Pro posouzení pošlete seznam svařovaných a přídavných materiálů, metody svařování, informace o odsávání a případnou výzvu KHS. U svářečských dýmů musí podle nařízení vlády č. 361/2007 Sb. také **toxické kovy**, například Cr(VI) nebo Mn, plnit vlastní hygienické limity; před nabídkou ověříme, že požadované metody spadají do akreditovaného rozsahu."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/svarovny"
+    oboryHref: "/provozy-a-technologie/svarovny",
+    layout: "demand",
+    eyebrow: "Kovy v emisích a pracovním ovzduší",
+    overviewHeading: "Od povolení k hodnocení kovů",
+    highlights: ["Odběr těžkých kovů do kapaliny", "Akreditovaná laboratoř č. 1599", "Kovy v emisích i na pracovišti"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Autorizované měření emisí",
+        description: "Kdo smí měřit, co poslat a jak probíhá oznámení v ISPOP."
+      },
+      {
+        href: "/akreditace-autorizace-dokumenty",
+        label: "Akreditace, autorizace a dokumenty",
+        description: "Osvědčení laboratoře a příloha s akreditovaným rozsahem."
+      },
+      {
+        href: "/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        label: "Svařovna: prach, kovy a emise",
+        description: "Pracovní ovzduší a emise z výduchu jako dvě oddělená měření."
+      },
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "Jak připravit zdroj před měřením",
+        description: "Praktická kontrola povolení, režimu zdroje a měřicího místa."
+      }
+    ],
+    faq: [
+      {
+        question: "Které těžké kovy v emisích měříte?",
+        answer:
+          "V akreditovaném rozsahu laboratoře jsou například As, Cd, Cr, Co, Ni, Pb, Mn, Zn a Hg; úplný výčet je v příloze osvědčení o akreditaci. Které z nich se měří u Vašeho zdroje, určuje povolení provozu."
+      },
+      {
+        question: "Měří se těžké kovy u každého zdroje?",
+        answer:
+          "Ne, záleží na typu zdroje a povolení provozu. Vyhláška č. 415/2012 Sb. stanoví specifické emisní limity pro kovy u vybraných zdrojů, například u tepelného zpracování odpadu nebo tavení a odlévání zinku; Váš případ ověříme z povolení."
+      },
+      {
+        question: "Musí těžké kovy v emisích měřit autorizovaná osoba?",
+        answer:
+          "Jednorázové měření emisí podle zákona o ochraně ovzduší může provést pouze autorizovaná osoba. Odběr vzorků pro stanovení těžkých kovů navíc patří mezi metody, u kterých vyhláška č. 415/2012 Sb. vyžaduje osvědčení o akreditaci."
+      },
+      {
+        question: "Měříte kovy i v pracovním ovzduší, například ve svařovně?",
+        answer:
+          "Ano, posuzujeme expozici zaměstnanců ve svařovnách a na pracovištích s broušením kovů, typicky mangan, chrom, nikl, zinek nebo hliník v dýchací zóně. Rozsah a vhodnost metod pro Váš účel ověříme před nabídkou."
+      }
+    ],
+    sourcesEyebrow: "Ověřené informace",
+    sourcesHeading: "Právní a metodické zdroje",
+    sources: [
+      sourceZakonOvzdusi,
+      sourceVyhlaska415,
+      {
+        href: "https://www.zakonyprolidi.cz/cs/2007-361",
+        label: "Nařízení vlády č. 361/2007 Sb.",
+        description: "Podmínky ochrany zdraví při práci, včetně limitů pro svářečské dýmy a toxické kovy v nich."
+      }
+    ]
   },
   {
     slug: "podklady-pro-khs",

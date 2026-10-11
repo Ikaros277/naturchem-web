@@ -114,83 +114,351 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-lakoven",
-    title: "Emission measurements at paint shops and surface treatment",
+    title: "Emission measurements at paint shops: TOC/VOC and particulates",
     metaDescription:
-      "VOC/TOC and particulate matter emission measurements from paint lines, exhaust stacks and filters. Reports for operators and authorities.",
+      "Emission measurements at paint shops: TOC/VOC and particulates at the stack. Report for the inspectorate, operating permit and ISPOP. Send us your permit.",
     h1: "Emission measurements at paint shops and surface treatment",
     intro:
-      "For paint technologies we address VOC/TOC, particulate matter and related parameters from exhaust stacks and filtration equipment. Measurements are linked to operating rules and line regime.",
+      "We measure emissions from paint booths, drying and curing at the stack: TOC/VOC and, where relevant, particulates. The scope follows the operating permit, the operating rules and the actual line regime.",
     sections: [
       {
+        heading: "What we measure at a paint shop",
         paragraphs: [
-          "We assess the measurement location, select monitored substances and carry out the field work under representative operating conditions.",
-          "The output serves operational decision-making, documentation updates and discussions with the building authority, Czech Environmental Inspectorate or regional authority."
+          "We typically measure **TOC** as an indicator of organic substances (VOC) in the stack and, depending on the permit or technology, specific organic substances or particulates from overspray. We add the exhaust air flow and the operating parameters of the line so that the result can be evaluated correctly.",
+          "If the paint shop discharges air through **several stacks** (booth, drying, curing), the pollution level is generally determined at each of them unless the operating permit says otherwise. We therefore compare the stack scheme with the permit before the measurement is ordered."
+        ]
+      },
+      {
+        heading: "How the measurement works",
+        paragraphs: [
+          "From the permit, the operating rules and the technical data sheets of the coatings we verify the source, the stacks and the measured substances. We measure during normal operation, that is, with the usual coating application and the filtration in its standard state; **measurement at minimal production** may not be usable.",
+          "One-off emission measurements are carried out by an **authorised person**. The operator announces the date in ISPOP at least 5 working days before the measurement, and the protocol data are reported through ISPOP within 60 days."
+        ]
+      },
+      {
+        heading: "What to send us",
+        paragraphs: [
+          "The operating permit and any operating rules, the latest report, a list or scheme of the stacks, the technical and safety data sheets of the coatings and thinners, a description of filtration or air cleaning and the planned line regime. Photographs of the measuring points also help.",
+          "If the documents show that measurement alone is not enough, we will point out a **VOC balance**, the operating rules or a change of the operating permit."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/lakovny"
+    oboryHref: "/provozy-a-technologie/lakovny",
+    layout: "demand",
+    eyebrow: "Paint shops and surface treatment",
+    overviewHeading: "From stacks to the report",
+    highlights: ["TOC/VOC and particulates at the stack", "Booths, drying and curing", "Report and data for ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu",
+        label: "Paint shop: VOC, operating rules and permit",
+        description: "VOC balance, stacks, filtration and operating records of a paint shop."
+      },
+      {
+        href: "/poradna/praskova-lakovna-povoleni",
+        label: "Powder coating shop: permit and measurement",
+        description: "How powder coating differs and when particulates or TOC are measured."
+      },
+      {
+        href: "/sluzby/provozni-rady",
+        label: "Operating rules",
+        description: "Paint shop operating rules aligned with the permit and emission measurements."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Authorised emission measurements",
+        description: "Who may measure, what to send and how the ISPOP notification works."
+      }
+    ],
+    faq: [
+      {
+        question: "What is measured when measuring emissions from a paint shop?",
+        answer:
+          "Typically TOC as an indicator of organic substances, and where relevant specific organic substances or particulates. The exact scope is set by the operating permit and the technology, so we verify it from your documents before quoting."
+      },
+      {
+        question: "Must all stacks of a paint shop be measured?",
+        answer:
+          "If a source has several stacks, the pollution level is generally determined at each of them unless the operating permit says otherwise. We therefore compare the list of stacks with the permit before the measurement is ordered."
+      },
+      {
+        question: "How should the paint shop operate during the measurement?",
+        answer:
+          "The measurement should take place in a normal, representative regime: with the usual coating application and the filtration in its standard operating state. Measurement at minimal production or in an exceptional regime may not be usable."
+      },
+      {
+        question: "Are particulates also measured at a powder coating shop?",
+        answer:
+          "The valid operating permit decides: it shows whether particulates are measured, at which stack, with what limit and at what interval. Decree No. 415/2012 Coll. sets a specific limit only for TOC for powder coating (from a design consumption of 10 t/year); for particulates a general limit may apply, or the regional authority may set a limit in the permit."
+      }
+    ],
+    sourcesEyebrow: "Verified information",
+    sourcesHeading: "Legal and methodological sources",
+    sources: [sourceAirAct, sourceDecree415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-bioplynovych-stanic",
-    title: "Emission measurements at biogas plants and cogeneration",
+    title: "Emission measurements at biogas plants and cogeneration units",
     metaDescription:
-      "Emission measurements at biogas plant engines and cogeneration units. Scheduling, reports and link to operator obligations.",
+      "Emission measurements of biogas plant and cogeneration engines. Authorised person, report for the Czech Environmental Inspectorate and ISPOP. Send your permit.",
     h1: "Emission measurements at biogas plants and cogeneration units",
     intro:
-      "At biogas plants and cogeneration units we address engine emission measurements, operating regime, measurement notification and link to obligations towards the Czech Environmental Inspectorate and other authorities.",
+      "We measure emissions from the engines of cogeneration units at biogas plants and deliver a report usable for the operating permit, the Czech Environmental Inspectorate and ISPOP. The scope follows the operating permit, biogas as the fuel and the actual engine regime.",
     sections: [
       {
+        heading: "What we measure at a biogas plant engine",
         paragraphs: [
-          "We help with measurement scheduling, preparation of supporting documentation and evaluation of results for operation and permitting documentation.",
-          "Where needed, we also provide dispersion and noise studies or EIA supporting documentation for operational changes."
+          "We measure emissions from the **engines of cogeneration units** running on biogas. For reciprocating engines, Decree No. 415/2012 Coll. sets specific emission limits for NOx, CO, SO₂ and particulate matter depending on the fuel, thermal input and date of commissioning, and it contains a special provision for biogas.",
+          "The exact scope, however, is set by the **operating permit**. Biogas is not natural gas and for fuels other than natural gas the scope of assessment can change significantly, so we verify it from your permit and the latest report, not from a template."
+        ]
+      },
+      {
+        heading: "When and how the measurement is carried out",
+        paragraphs: [
+          "One-off emission measurements are carried out by an authorised person. The operator announces the date in ISPOP at least 5 working days before the measurement, and the protocol data are reported through ISPOP within 60 days.",
+          "The decree requires a measurement **within 4 months at the latest** after the source is first put into operation, after a change of fuel stated in the permit and after any intervention in the design or equipment that could change emissions. Measurement is carried out under stable operation and representative load, so we agree the date with the regime of your plant."
+        ]
+      },
+      {
+        heading: "What to send us and what follows",
+        paragraphs: [
+          "The valid operating permit, the latest report, the technical data sheet of the cogeneration unit, fuel and input data, the number of engines and stacks, the planned operating regime and photographs of the measuring point. If the plant has several stacks, the emission level is determined on each of them unless the permit states otherwise.",
+          "When operation at a biogas plant changes, **noise, dispersion and EIA documentation** are often addressed as well. We prepare follow-up studies according to the project and the authority's requirement."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/bioplyn-biometan"
+    oboryHref: "/provozy-a-technologie/bioplyn-biometan",
+    layout: "demand",
+    eyebrow: "Biogas plants and cogeneration",
+    overviewHeading: "From the permit to the measurement report",
+    highlights: ["Biogas and cogeneration engines", "Report for inspectorate and authorities", "Link to ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu",
+        label: "Cogeneration unit: emissions, noise and permit",
+        description: "What authorities look at for cogeneration: thermal input, chimney, measurement and noise."
+      },
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "How to prepare a source before measurement",
+        description: "Permit, ISPOP, measuring point and representative regime before the date."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Authorised emission measurements",
+        description: "Who may measure, what to send and how the ISPOP notification works."
+      },
+      {
+        href: "/provozy-a-technologie/bioplyn-biometan",
+        label: "Biogas, biomethane and cogeneration",
+        description: "Dispersion and noise studies and EIA documentation for a biogas project."
+      }
+    ],
+    faq: [
+      {
+        question: "Which substances are measured at a biogas plant engine?",
+        answer:
+          "The scope is set by the operating permit, the fuel and the engine type. Biogas is a different fuel from natural gas, so we do not derive the scope from boilers or natural gas but from your permit and the latest report."
+      },
+      {
+        question: "When must measurement be carried out after commissioning or a modification of a cogeneration unit?",
+        answer:
+          "Under Decree No. 415/2012 Coll., within 4 months at the latest after the source is first put into operation, after a change of fuel stated in the permit or after an intervention in the design or equipment that could change emissions. The frequency of later measurements follows the decree and the operating permit; we verify it from your documents."
+      },
+      {
+        question: "What if the plant has several engines or stacks?",
+        answer:
+          "If a source discharges emissions through several stacks, the emission level is determined on each of them unless the operating permit states otherwise. When the source is classified, the relationship of several units in one operation is also assessed, so compare the stack diagram with your permit before ordering."
+      },
+      {
+        question: "Do you also address noise and dispersion at biogas plants?",
+        answer:
+          "Yes, we follow up measurement with a dispersion or noise study or EIA documentation when operation changes. Our sector overview for biogas and biomethane covers air quality, odour, noise and transport; the exact scope depends on your project and the authority's requirement."
+      }
+    ],
+    sourcesEyebrow: "Verified information",
+    sourcesHeading: "Legal and methodological sources",
+    sources: [sourceAirAct, sourceDecree415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-drevozpracujicich-provoze",
-    title: "Emission measurements at wood processing operations",
+    title: "Emission measurements for wood processing: TSP, boilers, dryers",
     metaDescription:
-      "Emission measurements from sawmills, dryers, biomass boiler plants and process exhaust stacks at wood processing operations.",
+      "Emission measurements of particulates from extraction and filters, biomass boilers and dryers at sawmills and joineries. Report for permits and authorities.",
     h1: "Emission measurements at wood processing operations",
     intro:
-      "At wood processing operations we measure emissions from biomass combustion, dryers, process exhaust stacks and related sources. We also address dust exposure and workplace environment.",
+      "We measure total suspended particulates (TSP) from extraction and filter systems and emissions from biomass boilers and dryers at sawmills, joineries and wood chip and pellet production. The scope follows the technology, the fuel and the operating permit, not a generic template.",
     sections: [
       {
+        heading: "What we measure at a wood processing operation",
         paragraphs: [
-          "We derive the measurement scope from the technology, fuel and authority or investor requirement.",
-          "We prepare outputs for operating permits, regional hygiene station, regional authority and internal occupational health and safety."
+          "Most often this means TSP at the stack of the extraction and filtration system. For a biomass boiler or a dryer the scope follows the permit of the source, and for drying chips and wood fibres TOC may be added.",
+          "Wood processing is a **listed source** at a total design material consumption of 150 m³ or more per year. In that case classification, emission limits, measurement obligations and the operating permit must be verified; at a smaller workshop, the workplace environment, noise and extraction are still addressed."
+        ]
+      },
+      {
+        heading: "Emissions at the stack or dust in the workplace",
+        paragraphs: [
+          "Emission measurement and workplace air measurement are two different measurements with different purposes. The stack shows what leaves to the outdoor air, which matters to the regional authority, the Czech Environmental Inspectorate (ČIŽP) and the operating permit. Workplace air shows what the operator of a saw, sander or CNC centre breathes, which matters to the hygiene station (KHS) and job categorisation.",
+          "A filter that improves conditions in the hall does not yet **demonstrate compliance with the emission limit** at the stack. We therefore plan both views together according to the technology and the required output; employee exposure is covered by dust measurement in the workplace."
+        ]
+      },
+      {
+        heading: "What to send and how the measurement works",
+        paragraphs: [
+          "Send a description of the technology and a list of machines, the processed material and its design annual consumption in m³. Add data on extraction, filters and stacks, operating hours, photographs of the sources and stacks, and any permits or decisions; for a biomass boiler, state the type of fuel.",
+          "One-off emission measurements are carried out by an **authorised person**. The operator announces the date in ISPOP at least 5 working days in advance; before the measurement we verify the measuring point at the stack and agree a **representative operating regime** so that the report reflects real operation."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/drevozpracujici"
+    oboryHref: "/provozy-a-technologie/drevozpracujici",
+    layout: "demand",
+    eyebrow: "Sawmills, joineries and chip production",
+    overviewHeading: "From a description of the operation to the report",
+    highlights: ["TSP from extraction and filters", "Biomass boilers and dryers", "Report for authorities and permits"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje",
+        label: "Wood processing: dust, extraction and source permit",
+        description: "The difference between stack emissions, workplace air and noise."
+      },
+      {
+        href: "/mereni-prasnosti",
+        label: "Dust measurement in the workplace",
+        description: "Wood dust in the breathing zone of saw, sander or CNC operators."
+      },
+      {
+        href: "/mereni-emisi-kotelen",
+        label: "Boiler plant emission measurements",
+        description: "Biomass boiler: NOx, CO, SO₂ and particulates as required by the permit."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Authorised emission measurements",
+        description: "Who may measure, what to send and how the ISPOP notification works."
+      }
+    ],
+    faq: [
+      {
+        question: "When is a wood processing operation a listed source?",
+        answer:
+          "Wood processing, including joinery production and the production of wood chips and pellets, is a listed source at a total design material consumption of 150 m³ or more per year. Exceptions include sawmill operations in handling or dispatch warehouses (shortening of logs); we will verify your case from your documents."
+      },
+      {
+        question: "What is measured at the stack of a wood processing operation?",
+        answer:
+          "Most often TSP from extraction and filters, and for drying of chips and wood fibres TOC may be added. For a biomass boiler the substances follow the permit of the combustion source; the exact scope is always set by the operating permit and the technology."
+      },
+      {
+        question: "Is stack measurement enough, or do we also have to measure dust in the workplace?",
+        answer:
+          "These are two different things: the stack shows emissions to the outdoor air, while measurement in the breathing zone shows employee exposure. Which one you need depends on the requirement of the authority (regional authority, ČIŽP or KHS) and the nature of the operation; emission measurement does not replace exposure measurement."
+      },
+      {
+        question: "May we burn chipboard offcuts in our own boiler?",
+        answer:
+          "Decree No. 415/2012 Coll. (Section 15(5)) allows chipboard, plywood, fibreboard or other glued wood to be burned only if it contains no halogenated organic compounds or heavy metals from treatment or surface finishes, and only in sources of a certain thermal input. Always verify the fuel against the permit and the decree, and state its exact type in the documents for the measurement."
+      }
+    ],
+    sourcesEyebrow: "Verified information",
+    sourcesHeading: "Legal and methodological sources",
+    sources: [sourceAirAct, sourceDecree415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-susaren",
-    title: "Emission measurements at dryers",
+    title: "Emission measurements at dryers: particulates, NOx and CO",
     metaDescription:
-      "Emission measurements from biomass dryers and process sources. Reports for operators and permitting proceedings.",
+      "Emission measurements at grain, biomass and wood dryers: particulates, NOx and CO per permit. Report for authorities and ISPOP. Send us your permit.",
     h1: "Emission measurements at dryers",
     intro:
-      "For dryers and technologies with combustion or discharge of gaseous emissions we provide emission parameter measurements under representative operating conditions.",
+      "We measure emissions from grain, biomass and wood dryers and linked combustion sources under representative operating conditions. The scope follows the operating permit, the fuel and the drying technology.",
     sections: [
       {
+        heading: "What we measure at a dryer",
         paragraphs: [
-          "We typically address sources in agricultural and wood processing sites, including link to dust and workplace environment measurements.",
-          "The project often includes preparation of supporting documentation for the authority and a plan for regular measurements."
+          "The scope depends on what is dried and how it is heated. At grain, biomass and wood dryers we typically address **particulates, NOx and CO** from combustion; for drying wood chips and wood fibres, TOC may also be relevant.",
+          "If a dryer has **several stacks**, for example separate extraction branches, the pollution level is generally determined at each of them unless the operating permit says otherwise. Where the burner is part of the dryer, we clarify the measuring point and whether the flue gas is measured separately or mixed with process air."
+        ]
+      },
+      {
+        heading: "How the measurement works",
+        paragraphs: [
+          "From the permit we verify the source, the stacks, the fuel and the measured substances. We measure at a **standard production load**; for batch operation we describe the whole production cycle beforehand so that the result reflects real operation.",
+          "We describe the state of the dryer during the measurement in the report, so we need data on the load, the output and the amount of processed material. One-off measurements are carried out by an **authorised person**; the date is announced in ISPOP at least 5 working days in advance and the protocol data are reported within 60 days."
+        ]
+      },
+      {
+        heading: "What to send us",
+        paragraphs: [
+          "The operating permit and any operating rules, the latest report, a description of the dryer (what is dried and how, the fuel, the output), a scheme of the stacks and filtration, the planned regime and photographs of the measuring points.",
+          "We help with documentation for the authority and with a **plan for regular measurements**; at dusty operations we follow up with dust measurements at the workplace."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/zemedelske-provozy"
+    oboryHref: "/provozy-a-technologie/zemedelske-provozy",
+    layout: "demand",
+    eyebrow: "Grain, biomass and wood dryers",
+    overviewHeading: "From drying technology to the report",
+    highlights: ["Particulates, NOx and CO per permit", "Standard load and several stacks", "Report and data for ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "How to prepare a source before measurement",
+        description: "Representative regime, stacks, measuring point and ISPOP notification."
+      },
+      {
+        href: "/mereni-emisi-drevozpracujicich-provoze",
+        label: "Emission measurements at wood processing operations",
+        description: "Sawmills, dryers, biomass boiler plants and process stacks."
+      },
+      {
+        href: "/poradna/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu",
+        label: "Measuring point on the stack",
+        description: "What a stack must meet so that it can be measured safely and representatively."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Authorised emission measurements",
+        description: "Who may measure, what to send and how the ISPOP notification works."
+      }
+    ],
+    faq: [
+      {
+        question: "Do I have to measure emissions at a dryer?",
+        answer:
+          "It depends on the source code in Annex 2 to Act No. 201/2012 Coll., its capacity or input and the conditions of the operating permit. Send us the permit or a description of the dryer and we will verify whether and to what extent a measurement applies to you."
+      },
+      {
+        question: "What is measured at a biomass or wood dryer?",
+        answer:
+          "Typically particulates, NOx and CO from combustion; for drying wood chips and wood fibres, TOC may also be relevant. The exact scope is set by the operating permit, the fuel and the technology."
+      },
+      {
+        question: "When should the dryer be running during the measurement?",
+        answer:
+          "In normal operation with a standard production load; for batch operation the whole production cycle is described beforehand. Measurement at minimal production or under unusually favourable conditions may not be usable."
+      },
+      {
+        question: "When is a measurement required after a new or modified dryer is put into operation?",
+        answer:
+          "Decree No. 415/2012 Coll. requires a one-off measurement within 4 months of the first commissioning of a source, of a change of the fuel or raw material stated in the permit and of an intervention in the construction or equipment that may change emissions. We will verify from the operating permit whether this applies to your dryer."
+      }
+    ],
+    sourcesEyebrow: "Verified information",
+    sourcesHeading: "Legal and methodological sources",
+    sources: [sourceAirAct, sourceDecree415, sourceIspopJme]
   },
   {
     slug: "mereni-hluku-tepelneho-cerpadla-vzt",
@@ -603,20 +871,96 @@ export const seoLandings: SeoLanding[] = [
     slug: "mereni-emisi-dieselagregat",
     title: "Emission measurements from diesel generators and backup sources",
     metaDescription:
-      "Emission measurements from diesel generators, backup sources and standby operation. Authorised measurement and report for authorities.",
+      "Emission measurements of diesel generators and backup sources: NOx, CO, particulates. We first check from permit and operating hours whether it applies to you.",
     h1: "Emission measurements from diesel generators and backup sources",
     intro:
-      "We provide one-off emission measurements from diesel generators and backup sources including preparation for ISPOP measurement notification. Measurements are carried out by an authorised person.",
+      "We measure emissions from diesel generators and backup sources and first verify with you whether and to what extent a measurement applies to your source. One-off measurements are carried out by an authorised person and the date is announced in ISPOP.",
     sections: [
       {
+        heading: "When a backup source is measured",
         paragraphs: [
-          "We typically measure NOx, CO, particulate matter and other parameters according to the permit and source type.",
-          "The output serves operating rules, operating permits and annual emission reporting."
+          "A diesel generator is a reciprocating combustion engine, and what matters is its **rated thermal input in the fuel**, not the electrical output on the generator plate. From a total input of 0.3 MW it is a listed stationary source; for several related units the inputs are assessed together.",
+          "For a genuine backup source operated **fewer than 300 hours per year** and without special limits in the permit, no obligation to determine the pollution level may arise at all. At higher hours it may be determined by calculation, and for a source that is no longer genuinely backup, measurement may be required; we will verify your case from the permit and the record of operating hours."
+        ]
+      },
+      {
+        heading: "How the measurement works",
+        paragraphs: [
+          "If measurement applies to the source, we verify the stack and the measured substances from the permit; typically NOx, CO and particulates. Measurement is carried out under stable operation with a representative load, and values from start-up and shutdown are not included in the results.",
+          "One-off emission measurements are carried out by an **authorised person**. The operator announces the date in ISPOP at least 5 working days before the measurement, and the protocol data are reported through ISPOP within 60 days."
+        ]
+      },
+      {
+        heading: "What to send us",
+        paragraphs: [
+          "The **generator data sheet**, the rated electrical output and thermal input in the fuel, the type of fuel, the number of units on site, the location and height of the stack, the testing regime and the current operating permit.",
+          "Please also attach the **record of operating hours**; from it we verify whether the source remains in backup mode. Based on the documents we will propose whether an emission calculation is enough or whether measurement, an operating permit, a dispersion study or a noise study is needed."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    layout: "demand",
+    eyebrow: "Diesel generators and backup sources",
+    overviewHeading: "From permit and operating hours to measurement",
+    highlights: ["Obligation verified from the permit", "NOx, CO and particulates", "Authorised person and ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny",
+        label: "Backup diesel generator: backup or regular source",
+        description: "The 0.3 MW threshold, 300 and 500 operating hours and operating records."
+      },
+      {
+        href: "/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady",
+        label: "Emissions, noise and permitting documents",
+        description: "NOx, CO, particulates, stack and noise of a backup generator."
+      },
+      {
+        href: "/rozptylova-studie-povoleni",
+        label: "Dispersion study for operating permit",
+        description: "When an authority may require it for a backup source and what to provide."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Authorised emission measurements",
+        description: "Who may measure, what to send and how the ISPOP notification works."
+      }
+    ],
+    faq: [
+      {
+        question: "Must emissions of a backup diesel generator be measured?",
+        answer:
+          "It depends on the operating hours, the classification of the source and the operating permit. According to the 2025 opinion of the Czech Ministry of the Environment (MŽP), a genuine backup source operated fewer than 300 hours per year and without special limits in the permit may have no obligation to determine the pollution level by measurement or calculation; we will verify this from your documents."
+      },
+      {
+        question: "How is the 0.3 MW threshold assessed?",
+        answer:
+          "By the rated thermal input in the fuel, not by the electrical output of the generator. For several units that are technically or operationally linked, their total input is assessed."
+      },
+      {
+        question: "Do tests count towards operating hours?",
+        answer:
+          "Usually yes: besides emergency runs during an outage, regular tests, service trials and test operation are included. Track the thresholds of 300 hours per year and 500 hours as a three-year moving average from an operating log or a control-system record."
+      },
+      {
+        question: "Must the backup character of the source be stated in the operating permit?",
+        answer:
+          "According to the MŽP opinion, the fact that the source serves as a backup energy source should be stated in the operating permit; a label in the project is not enough. If it is missing, you cannot automatically assume that the backup source regime applies."
+      }
+    ],
+    sourcesEyebrow: "Verified information",
+    sourcesHeading: "Legal and methodological sources",
+    sources: [
+      sourceAirAct,
+      sourceDecree415,
+      sourceIspopJme,
+      {
+        href: "https://mzp.gov.cz/system/files/2025-08/OOO-Stanovisko_zalozni_zdroje_zjistovani_emisi_RS-2025080804.pdf",
+        label: "MŽP opinion on permitting backup energy sources (2025)",
+        description: "Interpretation of how the pollution level is determined, the thresholds of 300 and 500 operating hours and stating the backup regime in the operating permit."
+      }
+    ]
   },
   {
     slug: "autorizovana-osoba-mereni-emisi",
@@ -720,42 +1064,191 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-prasnosti",
-    title: "Dust measurements in the workplace and in operations",
+    title: "Dust measurements in the workplace for KHS and job categorisation",
     metaDescription:
-      "Dust measurements — inhalable and respirable fraction, workplace environment and job categorisation. NATURCHEM accredited laboratory No. 1599.",
+      "Workplace dust measurements: inhalable and respirable fractions for the hygiene station (KHS) and job categorisation. Accredited laboratory No. 1599.",
     h1: "Dust measurements in the workplace",
     intro:
-      "NATURCHEM measures dust in the workplace including inhalable and respirable fractions. Outputs serve the regional hygiene station, job categorisation, occupational health and safety and proposals for technical measures.",
+      "We measure dust in workplace air, that is the inhalable and respirable fractions that employees are exposed to during real work. You can use the result for the hygiene station (KHS), job categorisation, occupational health and safety and an assessment of extraction.",
     sections: [
       {
+        heading: "What we assess for workplace dust",
         paragraphs: [
-          "We measure at selected workplaces according to actual operations and shift patterns. For bulk materials and technologies with extraction we also assess the effectiveness of protective measures.",
-          "The report is usable for the hygiene station, job categorisation updates and internal occupational health and safety documentation."
+          "Dust is not a single parameter: the type of dust, the particle size and the composition all matter. Depending on the material and technology we assess whether the inhalable fraction (total concentration) is enough, or whether the respirable fraction and crystalline silica must be addressed as well.",
+          "Government Regulation No. 361/2007 Coll. distinguishes the limit PELc for total concentration (the inhalable fraction) and PELr for the **respirable fraction**. If the dust contains a fibrogenic component, the respirable fraction and the concentration of the fibrogenic component must always be determined."
+        ]
+      },
+      {
+        heading: "Workplace, stack or outdoor area",
+        paragraphs: [
+          "This service measures dust in workplace air, that is employee exposure. Dust carried through a stack into the outdoor air is covered by emission measurement, and for open storage areas and the handling of bulk materials, depending on the area size, source classification, an operating permit, a dispersion study and operating rules may have to be addressed.",
+          "Typical examples are welding shops and wood processing operations, where two levels arise: **employee exposure** in the hall and emissions through the stack. Measurement in the breathing zone does not replace emission measurement at the stack, and vice versa."
+        ]
+      },
+      {
+        heading: "What to send and how we measure",
+        paragraphs: [
+          "Send a description of the technology and the work activities and a list of processed materials with safety or technical data sheets. Add the shift pattern and exposure time, a description of extraction or wetting, the personal protective equipment used, any existing job categorisation and the hygiene station requirement.",
+          "We sample according to the **actual work activity** and the characteristic shift, not according to a visual estimate of dustiness. To classify jobs into the second, third or fourth category, only a holder of an accreditation certificate or an authorisation may measure (Section 38 of Act No. 258/2000 Coll.); the inhalable and respirable dust fractions are within the accredited scope of laboratory No. 1599."
         ]
       }
     ],
     serviceHref: "/sluzby/pracovni-prostredi",
-    contactService: "Měření pracovního prostředí"
+    contactService: "Měření pracovního prostředí",
+    layout: "demand",
+    eyebrow: "Workplace environment and KHS",
+    overviewHeading: "From a description of the operation to the dust report",
+    highlights: ["Inhalable and respirable fractions", "Accredited laboratory No. 1599", "Documents for KHS and job categorisation"],
+    heroTheme: "pracovni-prostredi",
+    relatedLinks: [
+      {
+        href: "/poradna/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity",
+        label: "Dust in the workplace: fractions and silica",
+        description: "When to measure total dust, the respirable fraction and crystalline SiO₂."
+      },
+      {
+        href: "/mereni-pracovniho-prostredi-kategorizace-praci",
+        label: "Measurements for job categorisation",
+        description: "Who may measure and what to prepare for job classification."
+      },
+      {
+        href: "/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        label: "Welding shop: dust, metals and extraction",
+        description: "Welding fumes in the breathing zone and how this differs from stack emissions."
+      },
+      {
+        href: "/poradna/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni",
+        label: "Storage areas and handling of bulk materials",
+        description: "When an open area becomes a listed air pollution source."
+      }
+    ],
+    faq: [
+      {
+        question: "When is dust measurement in the workplace addressed?",
+        answer:
+          "Typically on a notice from the hygiene station (KHS), when classifying new jobs, after a substantial change of technology, or when the level of exposure cannot be reliably determined by estimate. We clarify the scope from the notice and the description of the operation."
+      },
+      {
+        question: "What is the difference between total dust and the respirable fraction?",
+        answer:
+          "The total concentration (inhalable fraction) covers particles that can be inhaled through the nose or mouth. The respirable fraction is the part that penetrates into the deeper airways and the alveoli; for dust with a fibrogenic component, for example crystalline silica, it must always be determined."
+      },
+      {
+        question: "Is total dust enough for our material?",
+        answer:
+          "It depends on the material and the technology. With concrete, stone, ceramics or bricks crystalline silica may be significant, with wood the species of wood, and with welding also the metals in the welding fumes; we propose the scope from the description of the operation."
+      },
+      {
+        question: "Is this the same as measuring dust at a stack or at a storage area?",
+        answer:
+          "No. This service assesses employee exposure in workplace air; dust at a stack is addressed by emission measurement, and dust from open storage areas by a different procedure under air protection rules. We therefore first clarify which case you are dealing with."
+      }
+    ],
+    sourcesEyebrow: "Verified information",
+    sourcesHeading: "Legal sources",
+    sources: [
+      sourcePublicHealthAct,
+      {
+        href: "https://www.zakonyprolidi.cz/cs/2007-361",
+        label: "Government Regulation No. 361/2007 Coll.",
+        description: "Conditions of health protection at work, including permissible exposure limits for dust (PELc, PELr)."
+      }
+    ]
   },
   {
     slug: "mereni-tezkych-kovu-emise",
-    title: "Heavy metal measurements in flue gases and workplace air",
+    title: "Heavy metal measurements in emissions and workplace air",
     metaDescription:
-      "Heavy metal measurements in emissions from stationary sources and in workplace air. Accredited scope of NATURCHEM laboratory.",
-    h1: "Heavy metal measurements",
+      "Heavy metal measurements (As, Cd, Cr, Ni, Pb, Hg etc.) in emissions from stationary sources and in workplace air. Accredited laboratory No. 1599.",
+    h1: "Heavy metal measurements in emissions and workplace air",
     intro:
-      "Within the accredited scope of the NATURCHEM laboratory we measure heavy metals in emissions from stationary sources and in workplace air. Typically As, Cd, Cr, Ni, Pb, Hg and other metals as required by the permit or hygiene station.",
+      "At stationary sources we sample heavy metals into liquid and analyse them within the accredited scope of the laboratory. Where the hygiene station (KHS) requires it, we also assess metals in workplace air, for example at welding and grinding.",
     sections: [
       {
+        heading: "When heavy metals in emissions are measured",
         paragraphs: [
-          "For emissions we provide sampling into liquid sorbent and analytical evaluation. In the workplace we measure exposure at welding, grinding or metal handling workplaces.",
-          "The output is a report with evaluation against limits or supporting documentation for job categorisation."
+          "Whether metals are measured depends on the source type and the operating permit, not on a generic template. Decree No. 415/2012 Coll. sets specific emission limits for metals at selected sources, for example thermal waste treatment, glass production, melting and casting of zinc and its alloys, or hot-dip zinc coating.",
+          "Send the operating permit, the latest report, a technical description of the source and stack, and photographs of the measuring point. One-off emission measurements are carried out by an **authorised person**; we verify the substances to be measured and the scope from the permit before quoting."
+        ]
+      },
+      {
+        heading: "How metals are sampled and evaluated in emissions",
+        paragraphs: [
+          "For emissions we provide sampling into liquid and analytical evaluation of the metals. Decree No. 415/2012 Coll. lists sampling for the determination of heavy metals among the methods for which an accreditation certificate is required.",
+          "The **accredited scope of the laboratory** includes, for example, As, Cd, Cr, Co, Ni, Pb, Mn, Zn and Hg; the full list is in the appendix to certificate No. 562/2023. From our practice: at a casting machine we measured particulate matter and zinc at the process stack."
+        ]
+      },
+      {
+        heading: "Metals in workplace air: a different measurement, a different purpose",
+        paragraphs: [
+          "Metals in workplace air assess employee exposure and do not replace emission measurement at the stack. This applies above all to welding shops and workplaces with metal grinding, where, depending on the material, metals such as manganese, chromium, nickel, zinc or aluminium are assessed in the welder's breathing zone.",
+          "For the assessment send a list of welded and filler materials, the welding methods, information on extraction and any hygiene station notice. For welding fumes, Government Regulation No. 361/2007 Coll. also requires **toxic metals**, for example Cr(VI) or Mn, to comply with their own hygiene limits; before quoting we verify that the required methods fall within the accredited scope."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/svarovny"
+    oboryHref: "/provozy-a-technologie/svarovny",
+    layout: "demand",
+    eyebrow: "Metals in emissions and workplace air",
+    overviewHeading: "From the permit to the evaluation of metals",
+    highlights: ["Heavy metal sampling into liquid", "Accredited laboratory No. 1599", "Metals in emissions and at the workplace"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Authorised emission measurements",
+        description: "Who may measure, what to send and how the ISPOP notification works."
+      },
+      {
+        href: "/akreditace-autorizace-dokumenty",
+        label: "Accreditation, authorisation and documents",
+        description: "The laboratory's certificate and the appendix with its accredited scope."
+      },
+      {
+        href: "/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        label: "Welding shop: dust, metals and emissions",
+        description: "Workplace air and stack emissions as two separate measurements."
+      },
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "How to prepare a source before measurement",
+        description: "A practical check of the permit, the source regime and the measuring point."
+      }
+    ],
+    faq: [
+      {
+        question: "Which heavy metals do you measure in emissions?",
+        answer:
+          "The accredited scope of the laboratory includes, for example, As, Cd, Cr, Co, Ni, Pb, Mn, Zn and Hg; the full list is in the appendix to the accreditation certificate. Which of them are measured at your source is determined by the operating permit."
+      },
+      {
+        question: "Are heavy metals measured at every source?",
+        answer:
+          "No, it depends on the source type and the operating permit. Decree No. 415/2012 Coll. sets specific emission limits for metals at selected sources, for example thermal waste treatment or melting and casting of zinc; we will verify your case from the permit."
+      },
+      {
+        question: "Must heavy metals in emissions be measured by an authorised person?",
+        answer:
+          "Under the Air Protection Act, one-off emission measurements may only be carried out by an authorised person. In addition, sampling for the determination of heavy metals is among the methods for which Decree No. 415/2012 Coll. requires an accreditation certificate."
+      },
+      {
+        question: "Do you also measure metals in workplace air, for example in a welding shop?",
+        answer:
+          "Yes, we assess employee exposure in welding shops and at metal grinding workplaces, typically manganese, chromium, nickel, zinc or aluminium in the breathing zone. We verify the scope and the suitability of the methods for your purpose before quoting."
+      }
+    ],
+    sourcesEyebrow: "Verified information",
+    sourcesHeading: "Legal and methodological sources",
+    sources: [
+      sourceAirAct,
+      sourceDecree415,
+      {
+        href: "https://www.zakonyprolidi.cz/cs/2007-361",
+        label: "Government Regulation No. 361/2007 Coll.",
+        description: "Conditions of health protection at work, including limits for welding fumes and the toxic metals in them."
+      }
+    ]
   },
   {
     slug: "podklady-pro-khs",

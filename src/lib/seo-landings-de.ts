@@ -114,83 +114,351 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-lakoven",
-    title: "Emissionsmessungen in Lackierereien und Oberflächenbehandlungen",
+    title: "Emissionsmessungen an Lackierereien: TOC/VOC und Staub",
     metaDescription:
-      "VOC/TOC- und Partikelemissionsmessungen aus Lackierstraßen, Abgaskaminen und Filtern. Berichte für Betreiber und Behörden.",
+      "Emissionsmessungen an Lackierereien: TOC/VOC und Staub am Abluftkamin. Bericht für Behörden, Betriebsgenehmigung und ISPOP. Senden Sie uns Ihre Genehmigung.",
     h1: "Emissionsmessungen in Lackierereien und Oberflächenbehandlungen",
     intro:
-      "Bei der Lackiertechnologie befassen wir uns mit VOC/TOC, Partikeln und verwandten Parametern aus Abgaskaminen und Filteranlagen. Messungen sind mit Betriebsregeln und Leitungsregime verknüpft.",
+      "Wir messen Emissionen aus Lackierkabinen, Trocknung und Einbrennen am Abluftkamin: TOC/VOC und gegebenenfalls Staub. Der Umfang richtet sich nach der Betriebsgenehmigung, der Betriebsordnung und dem tatsächlichen Betriebszustand der Anlage.",
     sections: [
       {
+        heading: "Was wir in einer Lackiererei messen",
         paragraphs: [
-          "Wir beurteilen den Messort, wählen überwachte Stoffe aus und führen die Feldarbeiten unter repräsentativen Betriebsbedingungen durch.",
-          "Die Ergebnisse dienen der operativen Entscheidungsfindung, Aktualisierung der Dokumentation und Diskussionen mit der Baubehörde, der tschechischen Umweltinspektion oder der Regionalbehörde."
+          "Typischerweise messen wir am Abluftkamin **TOC** als Indikator für organische Stoffe (VOC) und je nach Genehmigung oder Technologie einzelne organische Stoffe oder Staub aus Overspray. Hinzu kommen der Abluftvolumenstrom und die Betriebsparameter der Anlage, damit sich das Ergebnis korrekt bewerten lässt.",
+          "Leitet die Lackiererei die Abluft über **mehrere Abluftkamine** ab (Kabine, Trocknung, Einbrennen), wird das Emissionsniveau in der Regel an jedem davon ermittelt, sofern die Betriebsgenehmigung nichts anderes festlegt. Das Schema der Abluftkamine gleichen wir daher vor der Beauftragung mit der Genehmigung ab."
+        ]
+      },
+      {
+        heading: "So läuft die Messung ab",
+        paragraphs: [
+          "Anhand von Genehmigung, Betriebsordnung und technischen Datenblättern der Beschichtungsstoffe prüfen wir Quelle, Abluftkamine und Messgrößen. Gemessen wird im Normalbetrieb, also bei üblichem Lackauftrag und mit Filtration im Standardzustand; eine **Messung bei minimaler Produktion** ist möglicherweise nicht verwertbar.",
+          "Einmalige Emissionsmessungen führt eine **bevollmächtigte Person** durch. Der Betreiber meldet den Termin in ISPOP mindestens 5 Arbeitstage vor der Messung an, die Protokolldaten werden innerhalb von 60 Tagen über ISPOP gemeldet."
+        ]
+      },
+      {
+        heading: "Was Sie uns senden",
+        paragraphs: [
+          "Die Betriebsgenehmigung und gegebenenfalls die Betriebsordnung, den letzten Bericht, eine Liste oder ein Schema der Abluftkamine, technische Datenblätter und Sicherheitsdatenblätter der Lacke und Verdünner, eine Beschreibung von Filtration oder Abluftreinigung und den geplanten Betriebszustand der Anlage. Hilfreich sind auch Fotos der Messstellen.",
+          "Zeigt sich in den Unterlagen, dass die Messung allein nicht ausreicht, weisen wir auf eine **VOC-Bilanz**, die Betriebsordnung oder eine Änderung der Betriebsgenehmigung hin."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/lakovny"
+    oboryHref: "/provozy-a-technologie/lakovny",
+    layout: "demand",
+    eyebrow: "Lackierereien und Oberflächenbehandlung",
+    overviewHeading: "Von den Abluftkaminen zum Bericht",
+    highlights: ["TOC/VOC und Staub am Abluftkamin", "Kabinen, Trocknung und Einbrennen", "Bericht und Daten für ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/lakovna-emise-voc-provozni-rad-mereni-a-povoleni-provozu",
+        label: "Lackiererei: VOC, Betriebsordnung und Genehmigung",
+        description: "VOC-Bilanz, Abluftkamine, Filtration und Betriebsaufzeichnungen einer Lackiererei."
+      },
+      {
+        href: "/poradna/praskova-lakovna-povoleni",
+        label: "Pulverbeschichtungsanlage: Genehmigung und Messung",
+        description: "Worin sich das Pulverbeschichten unterscheidet und wann Staub oder TOC gemessen wird."
+      },
+      {
+        href: "/sluzby/provozni-rady",
+        label: "Betriebsordnungen",
+        description: "Betriebsordnung der Lackiererei, abgestimmt auf Genehmigung und Emissionsmessungen."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Bevollmächtigte Emissionsmessung",
+        description: "Wer messen darf, was Sie senden und wie die ISPOP-Anmeldung funktioniert."
+      }
+    ],
+    faq: [
+      {
+        question: "Was wird bei der Emissionsmessung einer Lackiererei gemessen?",
+        answer:
+          "Typischerweise TOC als Indikator für organische Stoffe, gegebenenfalls einzelne organische Stoffe oder Staub. Den genauen Umfang legen die Betriebsgenehmigung und die Technologie fest; wir prüfen ihn vor dem Angebot anhand Ihrer Unterlagen."
+      },
+      {
+        question: "Müssen alle Abluftkamine einer Lackiererei gemessen werden?",
+        answer:
+          "Hat eine Quelle mehrere Abluftkamine, wird das Emissionsniveau in der Regel an jedem davon ermittelt, sofern die Betriebsgenehmigung nichts anderes festlegt. Die Liste der Abluftkamine gleichen wir daher vor der Beauftragung mit der Genehmigung ab."
+      },
+      {
+        question: "Wie soll die Lackiererei während der Messung betrieben werden?",
+        answer:
+          "Die Messung soll im normalen, repräsentativen Betriebszustand stattfinden: bei üblichem Lackauftrag und mit Filtration im Standardbetriebszustand. Eine Messung bei minimaler Produktion oder in einem Ausnahmezustand ist möglicherweise nicht verwertbar."
+      },
+      {
+        question: "Wird bei einer Pulverbeschichtungsanlage auch Staub gemessen?",
+        answer:
+          "Maßgeblich ist die gültige Betriebsgenehmigung: Aus ihr geht hervor, ob Staub gemessen wird, an welchem Abluftkamin, mit welchem Grenzwert und in welchem Intervall. Die Verordnung Nr. 415/2012 Sb. legt für das Pulverbeschichten nur für TOC einen spezifischen Grenzwert fest (ab einem projektierten Verbrauch von 10 t/Jahr); für Staub kann ein allgemeiner Grenzwert gelten oder die Landesbehörde setzt in der Genehmigung einen Grenzwert fest."
+      }
+    ],
+    sourcesEyebrow: "Geprüfte Informationen",
+    sourcesHeading: "Rechtliche und methodische Quellen",
+    sources: [sourceAirAct, sourceDecree415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-bioplynovych-stanic",
-    title: "Emissionsmessungen an Biogasanlagen und Kraft-Wärme-Kopplung",
+    title: "Emissionsmessungen an Biogasanlagen und Blockheizkraftwerken",
     metaDescription:
-      "Emissionsmessungen an Biogasanlagenmotoren und Blockheizkraftwerken. Terminplanung, Berichte und Verknüpfung mit Betreiberpflichten.",
+      "Emissionsmessung an Motoren von Biogasanlagen und BHKW. Bevollmächtigte Person, Bericht für die tschechische Umweltinspektion und ISPOP. Genehmigung senden.",
     h1: "Emissionsmessungen an Biogasanlagen und Blockheizkraftwerken",
     intro:
-      "Bei Biogasanlagen und Blockheizkraftwerken befassen wir uns mit der Messung der Motoremissionen, dem Betriebsmodus, der Messmeldung und der Verknüpfung mit den Verpflichtungen gegenüber der tschechischen Umweltinspektion und anderen Behörden.",
+      "Wir messen die Emissionen der Motoren von Blockheizkraftwerken auf Biogasanlagen und liefern einen Bericht, der für die Betriebsgenehmigung, die tschechische Umweltinspektion (ČIŽP) und ISPOP verwendbar ist. Der Umfang richtet sich nach der Betriebsgenehmigung, dem Brennstoff Biogas und dem tatsächlichen Betriebszustand des Motors.",
     sections: [
       {
+        heading: "Was wir am Motor einer Biogasanlage messen",
         paragraphs: [
-          "Wir helfen bei der Messplanung, der Erstellung der Begleitdokumentation und der Auswertung der Ergebnisse für den Betrieb und die Genehmigungsdokumentation.",
-          "Bei Bedarf erstellen wir auch Ausbreitungs- und Lärmstudien oder UVP-Unterlagen für betriebliche Änderungen."
+          "Wir messen die Emissionen der **Motoren von Blockheizkraftwerken**, die mit Biogas betrieben werden. Für Kolbenmotoren legt die Verordnung Nr. 415/2012 Sb. spezifische Emissionsgrenzwerte für NOx, CO, SO₂ und Staub fest, abhängig von Brennstoff, Nennwärmeinput und Datum der Inbetriebnahme, und enthält eine Sonderregelung für Biogas.",
+          "Den genauen Umfang legt jedoch die **Betriebsgenehmigung** fest. Biogas ist kein Erdgas, und bei anderen Brennstoffen als Erdgas kann sich der Beurteilungsumfang deutlich ändern; wir prüfen ihn daher anhand Ihrer Genehmigung und des letzten Berichts, nicht anhand einer Vorlage."
+        ]
+      },
+      {
+        heading: "Wann und wie die Messung abläuft",
+        paragraphs: [
+          "Einmalige Emissionsmessungen führt eine bevollmächtigte Person durch. Der Betreiber meldet den Termin in ISPOP mindestens 5 Arbeitstage vor der Messung an, die Protokolldaten werden innerhalb von 60 Tagen über ISPOP gemeldet.",
+          "Die Verordnung verlangt eine Messung **spätestens innerhalb von 4 Monaten** nach der ersten Inbetriebnahme der Quelle, nach einer Änderung des in der Genehmigung angegebenen Brennstoffs und nach jedem Eingriff in Konstruktion oder Ausstattung, der die Emissionen verändern könnte. Gemessen wird bei stabilem Betrieb und repräsentativer Auslastung, daher stimmen wir den Termin auf den Betrieb Ihrer Anlage ab."
+        ]
+      },
+      {
+        heading: "Was Sie uns senden und was folgt",
+        paragraphs: [
+          "Die gültige Betriebsgenehmigung, den letzten Bericht, das technische Datenblatt der Kogenerationseinheit, Angaben zu Brennstoff und Input, die Zahl der Motoren und Abluftkamine, den geplanten Betriebszustand und Fotos der Messstelle. Hat die Anlage mehrere Abluftkamine, wird das Emissionsniveau an jedem davon ermittelt, sofern die Genehmigung nichts anderes festlegt.",
+          "Bei betrieblichen Änderungen an einer Biogasanlage werden häufig auch **Lärm, Ausbreitung und UVP-Unterlagen** behandelt. Anschlussstudien erstellen wir je nach Vorhaben und Anforderung der Behörde."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/bioplyn-biometan"
+    oboryHref: "/provozy-a-technologie/bioplyn-biometan",
+    layout: "demand",
+    eyebrow: "Biogasanlagen und Kogeneration",
+    overviewHeading: "Von der Genehmigung zum Messbericht",
+    highlights: ["Biogas- und BHKW-Motoren", "Bericht für Inspektion und Behörden", "Anbindung an ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu",
+        label: "Kogenerationsanlage: Emissionen, Lärm und Genehmigung",
+        description: "Worauf Behörden bei der Kogeneration achten: Wärmeinput, Schornstein, Messung und Lärm."
+      },
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "So bereiten Sie die Quelle vor der Messung vor",
+        description: "Genehmigung, ISPOP, Messstelle und repräsentativer Betriebszustand vor dem Termin."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Bevollmächtigte Emissionsmessung",
+        description: "Wer messen darf, was Sie senden und wie die ISPOP-Anmeldung funktioniert."
+      },
+      {
+        href: "/provozy-a-technologie/bioplyn-biometan",
+        label: "Biogas, Biomethan und Kogeneration",
+        description: "Ausbreitungs- und Lärmstudien sowie UVP-Unterlagen für ein Biogasvorhaben."
+      }
+    ],
+    faq: [
+      {
+        question: "Welche Stoffe werden am Motor einer Biogasanlage gemessen?",
+        answer:
+          "Der Umfang richtet sich nach der Betriebsgenehmigung, dem Brennstoff und dem Motortyp. Biogas ist ein anderer Brennstoff als Erdgas, daher leiten wir den Umfang nicht von Kesseln oder Erdgas ab, sondern aus Ihrer Genehmigung und dem letzten Bericht."
+      },
+      {
+        question: "Wann muss nach Inbetriebnahme oder Umbau einer Kogenerationseinheit gemessen werden?",
+        answer:
+          "Nach der Verordnung Nr. 415/2012 Sb. spätestens innerhalb von 4 Monaten nach der ersten Inbetriebnahme der Quelle, nach einer Änderung des in der Genehmigung angegebenen Brennstoffs oder nach einem Eingriff in Konstruktion oder Ausstattung, der die Emissionen verändern könnte. Die Häufigkeit weiterer Messungen ergibt sich aus der Verordnung und der Betriebsgenehmigung; wir prüfen sie anhand Ihrer Unterlagen."
+      },
+      {
+        question: "Was gilt bei mehreren Motoren oder Abluftkaminen?",
+        answer:
+          "Leitet eine Quelle Emissionen über mehrere Abluftkamine ab, wird das Emissionsniveau an jedem davon ermittelt, sofern die Betriebsgenehmigung nichts anderes festlegt. Bei der Einstufung der Quelle wird auch das Zusammenwirken mehrerer Einheiten in einem Betrieb beurteilt; vergleichen Sie daher vor der Bestellung den Plan der Abluftkamine mit Ihrer Genehmigung."
+      },
+      {
+        question: "Befassen Sie sich bei Biogasanlagen auch mit Lärm und Ausbreitung?",
+        answer:
+          "Ja, wir knüpfen an die Messung mit Ausbreitungs- oder Lärmstudien bzw. UVP-Unterlagen an, wenn sich der Betrieb ändert. Unser Branchenüberblick für Biogas und Biomethan umfasst Luftqualität, Geruch, Lärm und Transport; der genaue Umfang hängt von Ihrem Vorhaben und der Anforderung der Behörde ab."
+      }
+    ],
+    sourcesEyebrow: "Geprüfte Informationen",
+    sourcesHeading: "Rechtliche und methodische Quellen",
+    sources: [sourceAirAct, sourceDecree415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-drevozpracujicich-provoze",
-    title: "Emissionsmessungen bei holzverarbeitenden Betrieben",
+    title: "Emissionsmessungen bei der Holzverarbeitung: TSP, Kessel, Trockner",
     metaDescription:
-      "Emissionsmessungen von Sägewerken, Trocknern, Biomassekesselanlagen und Prozessabgaskaminen in Holzverarbeitungsbetrieben.",
+      "Emissionsmessungen von Gesamtstaub aus Absaugungen und Filtern, Biomassekesseln und Trocknern in Sägewerken und Tischlereien. Bericht für Behörden.",
     h1: "Emissionsmessungen bei holzverarbeitenden Betrieben",
     intro:
-      "In Holzverarbeitungsbetrieben messen wir Emissionen aus der Verbrennung von Biomasse, Trocknern, Prozessabgaskaminen und verwandten Quellen. Wir befassen uns auch mit der Staubbelastung und der Arbeitsplatzumgebung.",
+      "Wir messen Gesamtschwebstaub (TSP) aus Absaugungen und Filteranlagen sowie Emissionen von Biomassekesseln und Trocknern in Sägewerken, Tischlereien und bei der Herstellung von Hackschnitzeln und Pellets. Der Umfang richtet sich nach Technologie, Brennstoff und Betriebsgenehmigung, nicht nach einer allgemeinen Vorlage.",
     sections: [
       {
+        heading: "Was wir in einem holzverarbeitenden Betrieb messen",
         paragraphs: [
-          "Den Messumfang leiten wir aus der Technologie, dem Brennstoff und den behördlichen bzw. Investorenanforderungen ab.",
-          "Wir bereiten Ausgaben für Betriebsgenehmigungen, regionale Hygienestationen, regionale Behörden und den internen Arbeitsschutz vor."
+          "Am häufigsten geht es um TSP am Abluftkamin der Absaugung und Filteranlage. Bei einem Biomassekessel oder Trockner richtet sich der Umfang nach der Genehmigung der Quelle, bei der Trocknung von Spänen und Holzfasern kann auch TOC hinzukommen.",
+          "Die Holzverarbeitung ist bei einem geplanten Gesamtmaterialverbrauch von 150 m³ oder mehr pro Jahr eine **gelistete stationäre Quelle**. Dann sind Einstufung, Emissionsgrenzwerte, Messpflichten und Betriebsgenehmigung zu prüfen; bei einer kleineren Werkstatt bleiben Arbeitsumfeld, Lärm und Absaugung trotzdem Thema."
+        ]
+      },
+      {
+        heading: "Emissionen am Kamin oder Staub am Arbeitsplatz",
+        paragraphs: [
+          "Emissionsmessung und Messung der Arbeitsplatzluft sind zwei verschiedene Messungen mit unterschiedlichem Zweck. Der Kamin zeigt, was in die Außenluft gelangt, und ist für die Landesbehörde, die tschechische Umweltinspektion (ČIŽP) und die Betriebsgenehmigung relevant. Die Arbeitsplatzluft zeigt, was die Bedienperson an Säge, Schleifmaschine oder CNC-Zentrum einatmet, und ist für die Hygienestation (KHS) und die Arbeitsplatzkategorisierung relevant.",
+          "Ein Filter, der die Lage in der Halle verbessert, **belegt noch nicht die Einhaltung des Emissionsgrenzwerts** am Kamin. Beide Sichtweisen planen wir daher gemeinsam nach Technologie und gewünschtem Ergebnis; die Exposition der Beschäftigten behandelt die Staubmessung am Arbeitsplatz."
+        ]
+      },
+      {
+        heading: "Was Sie uns senden und wie die Messung abläuft",
+        paragraphs: [
+          "Senden Sie eine Beschreibung der Technologie und eine Maschinenliste, das verarbeitete Material und seinen geplanten Jahresverbrauch in m³. Ergänzen Sie Angaben zu Absaugung, Filtern und Kaminen, die Betriebszeit, Fotos der Quellen und Kamine sowie vorhandene Genehmigungen oder Entscheidungen; bei einem Biomassekessel geben Sie den Brennstoff an.",
+          "Einmalige Emissionsmessungen führt eine **bevollmächtigte Person** durch. Der Betreiber meldet den Termin in ISPOP mindestens 5 Arbeitstage im Voraus an; vor der Messung prüfen wir die Messstelle am Kamin und stimmen einen **repräsentativen Betriebszustand** ab, damit der Bericht den realen Betrieb abbildet."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/drevozpracujici"
+    oboryHref: "/provozy-a-technologie/drevozpracujici",
+    layout: "demand",
+    eyebrow: "Sägewerke, Tischlereien und Hackschnitzelproduktion",
+    overviewHeading: "Von der Betriebsbeschreibung zum Bericht",
+    highlights: ["TSP aus Absaugung und Filtern", "Biomassekessel und Trockner", "Bericht für Behörden und Genehmigung"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje",
+        label: "Holzverarbeitung: Staub, Absaugung und Genehmigung der Quelle",
+        description: "Der Unterschied zwischen Kaminemissionen, Arbeitsplatzluft und Lärm."
+      },
+      {
+        href: "/mereni-prasnosti",
+        label: "Staubmessung am Arbeitsplatz",
+        description: "Holzstaub in der Atemzone von Säge-, Schleif- oder CNC-Bedienpersonal."
+      },
+      {
+        href: "/mereni-emisi-kotelen",
+        label: "Emissionsmessungen an Kesselanlagen",
+        description: "Biomassekessel: NOx, CO, SO₂ und Staub gemäß Genehmigung."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Bevollmächtigte Emissionsmessung",
+        description: "Wer messen darf, was Sie senden und wie die ISPOP-Anmeldung funktioniert."
+      }
+    ],
+    faq: [
+      {
+        question: "Wann ist ein holzverarbeitender Betrieb eine gelistete Quelle?",
+        answer:
+          "Die Holzverarbeitung einschließlich Tischlerei und Herstellung von Hackschnitzeln und Pellets ist bei einem geplanten Gesamtmaterialverbrauch von 150 m³ oder mehr pro Jahr eine gelistete stationäre Quelle. Ausnahmen gelten unter anderem für Sägewerksbetriebe in Umschlags- oder Versandlagern (Ablängen von Rundholz); Ihren Fall prüfen wir anhand Ihrer Unterlagen."
+      },
+      {
+        question: "Was wird am Kamin eines holzverarbeitenden Betriebs gemessen?",
+        answer:
+          "Am häufigsten TSP aus Absaugung und Filtern; bei der Trocknung von Spänen und Holzfasern kann TOC hinzukommen. Bei einem Biomassekessel richten sich die Stoffe nach der Genehmigung der Feuerungsanlage; den genauen Umfang bestimmen stets die Betriebsgenehmigung und die Technologie."
+      },
+      {
+        question: "Genügt die Messung am Kamin oder müssen wir auch Staub am Arbeitsplatz messen?",
+        answer:
+          "Das sind zwei verschiedene Dinge: Der Kamin zeigt Emissionen in die Außenluft, die Messung in der Atemzone die Exposition der Beschäftigten. Welche Sie benötigen, hängt von der Anforderung der Behörde (Landesbehörde, ČIŽP oder KHS) und der Art des Betriebs ab; die Emissionsmessung ersetzt die Expositionsmessung nicht."
+      },
+      {
+        question: "Dürfen wir in der eigenen Anlage Spanplattenreste verbrennen?",
+        answer:
+          "Die Verordnung Nr. 415/2012 Sb. (§ 15 Abs. 5) erlaubt das Verbrennen von Spanplatten, Sperrholz, Faserplatten oder anderem verleimtem Holz nur, wenn sie keine halogenierten organischen Verbindungen oder Schwermetalle aus Behandlungen oder Oberflächenveredelungen enthalten, und nur in Feuerungsanlagen mit bestimmter Wärmeleistung. Prüfen Sie den Brennstoff daher stets anhand der Genehmigung und der Verordnung und geben Sie in den Unterlagen für die Messung seine genaue Art an."
+      }
+    ],
+    sourcesEyebrow: "Geprüfte Informationen",
+    sourcesHeading: "Rechtliche und methodische Quellen",
+    sources: [sourceAirAct, sourceDecree415, sourceIspopJme]
   },
   {
     slug: "mereni-emisi-susaren",
-    title: "Emissionsmessungen an Trocknern",
+    title: "Emissionsmessungen an Trocknern: Staub, NOx und CO",
     metaDescription:
-      "Emissionsmessungen von Biomassetrocknern und Prozessquellen. Gutachten für Betreiber und Genehmigungsverfahren.",
+      "Emissionsmessungen an Getreide-, Biomasse- und Holztrocknern: Staub, NOx und CO laut Genehmigung. Bericht für Behörden und ISPOP. Genehmigung senden.",
     h1: "Emissionsmessungen an Trocknern",
     intro:
-      "Für Trockner und Technologien mit Verbrennung oder Ableitung gasförmiger Emissionen bieten wir Emissionsparametermessungen unter repräsentativen Betriebsbedingungen an.",
+      "Wir messen Emissionen von Getreide-, Biomasse- und Holztrocknern sowie angeschlossenen Verbrennungsquellen unter repräsentativen Betriebsbedingungen. Der Umfang richtet sich nach der Betriebsgenehmigung, dem Brennstoff und der Trocknungstechnologie.",
     sections: [
       {
+        heading: "Was wir an einem Trockner messen",
         paragraphs: [
-          "Wir befassen uns in der Regel mit Quellen in landwirtschaftlichen und holzverarbeitenden Betrieben, einschließlich der Verbindung zu Staub- und Arbeitsplatzumgebungsmessungen.",
-          "Das Projekt umfasst häufig die Erstellung von Begleitdokumenten für die Behörde und einen Plan für regelmäßige Messungen."
+          "Der Umfang hängt davon ab, was getrocknet und wie beheizt wird. An Getreide-, Biomasse- und Holztrocknern befassen wir uns typischerweise mit **Staub, NOx und CO** aus der Verbrennung; bei der Trocknung von Holzspänen und Holzfasern kann auch TOC relevant sein.",
+          "Hat ein Trockner **mehrere Abluftkamine**, zum Beispiel getrennte Absaugstränge, wird das Emissionsniveau in der Regel an jedem davon ermittelt, sofern die Betriebsgenehmigung nichts anderes festlegt. Ist der Brenner Teil des Trockners, klären wir die Messstelle und ob das Abgas getrennt oder im Gemisch mit der Prozessluft gemessen wird."
+        ]
+      },
+      {
+        heading: "So läuft die Messung ab",
+        paragraphs: [
+          "Anhand der Genehmigung prüfen wir Quelle, Abluftkamine, Brennstoff und Messgrößen. Wir messen bei einer **üblichen Produktionscharge**; bei Chargenbetrieb beschreiben wir vorab den gesamten Produktionszyklus, damit das Ergebnis dem realen Betrieb entspricht.",
+          "Im Bericht beschreiben wir den Zustand des Trockners während der Messung, daher benötigen wir Angaben zu Beschickung, Leistung und Menge des verarbeiteten Materials. Einmalige Messungen führt eine **bevollmächtigte Person** durch; der Termin wird in ISPOP mindestens 5 Arbeitstage im Voraus angemeldet, die Protokolldaten innerhalb von 60 Tagen."
+        ]
+      },
+      {
+        heading: "Was Sie uns senden",
+        paragraphs: [
+          "Die Betriebsgenehmigung und gegebenenfalls die Betriebsordnung, den letzten Bericht, eine Beschreibung des Trockners (was und womit getrocknet wird, Brennstoff, Leistung), ein Schema der Abluftkamine und der Filtration, den geplanten Betriebszustand und Fotos der Messstellen.",
+          "Wir unterstützen bei den Unterlagen für die Behörde und bei einem **Plan für regelmäßige Messungen**; bei staubigen Betrieben knüpfen wir mit Staubmessungen am Arbeitsplatz an."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/zemedelske-provozy"
+    oboryHref: "/provozy-a-technologie/zemedelske-provozy",
+    layout: "demand",
+    eyebrow: "Getreide-, Biomasse- und Holztrockner",
+    overviewHeading: "Von der Trocknungstechnologie zum Bericht",
+    highlights: ["Staub, NOx und CO gemäß Genehmigung", "Übliche Charge und mehrere Abluftkamine", "Bericht und Daten für ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "So bereiten Sie die Quelle vor der Messung vor",
+        description: "Repräsentativer Betriebszustand, Abluftkamine, Messstelle und ISPOP-Anmeldung."
+      },
+      {
+        href: "/mereni-emisi-drevozpracujicich-provoze",
+        label: "Emissionsmessungen bei holzverarbeitenden Betrieben",
+        description: "Sägewerke, Trockner, Biomassekesselanlagen und Prozessabluftkamine."
+      },
+      {
+        href: "/poradna/merici-misto-na-vyduchu-proc-je-dulezite-uz-ve-fazi-projektu",
+        label: "Messstelle am Abluftkamin",
+        description: "Was ein Abluftkamin erfüllen muss, damit sicher und repräsentativ gemessen werden kann."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Bevollmächtigte Emissionsmessung",
+        description: "Wer messen darf, was Sie senden und wie die ISPOP-Anmeldung funktioniert."
+      }
+    ],
+    faq: [
+      {
+        question: "Muss ich an einem Trockner Emissionen messen?",
+        answer:
+          "Das hängt vom Quellencode in Anhang Nr. 2 des Gesetzes Nr. 201/2012 Sb., von Kapazität oder Nennwärmeinput und von den Bedingungen der Betriebsgenehmigung ab. Senden Sie uns die Genehmigung oder eine Beschreibung des Trockners, dann prüfen wir, ob und in welchem Umfang die Messung Sie betrifft."
+      },
+      {
+        question: "Was wird an einem Biomasse- oder Holztrockner gemessen?",
+        answer:
+          "Typischerweise Staub, NOx und CO aus der Verbrennung; bei der Trocknung von Holzspänen und Holzfasern kann auch TOC relevant sein. Den genauen Umfang legen die Betriebsgenehmigung, der Brennstoff und die Technologie fest."
+      },
+      {
+        question: "Wann soll der Trockner während der Messung laufen?",
+        answer:
+          "Im Normalbetrieb mit einer üblichen Produktionscharge; bei Chargenbetrieb wird der gesamte Produktionszyklus vorab beschrieben. Eine Messung bei minimaler Produktion oder unter ungewöhnlich günstigen Bedingungen ist möglicherweise nicht verwertbar."
+      },
+      {
+        question: "Wann wird nach der Inbetriebnahme eines neuen oder umgebauten Trockners gemessen?",
+        answer:
+          "Die Verordnung Nr. 415/2012 Sb. verlangt eine einmalige Messung spätestens innerhalb von 4 Monaten nach der Erstinbetriebnahme einer Quelle, nach einer Änderung von Brennstoff oder Rohstoff laut Genehmigung und nach einem Eingriff in Konstruktion oder Ausstattung, der die Emissionen verändern kann. Anhand der Betriebsgenehmigung prüfen wir, ob dies auf Ihren Trockner zutrifft."
+      }
+    ],
+    sourcesEyebrow: "Geprüfte Informationen",
+    sourcesHeading: "Rechtliche und methodische Quellen",
+    sources: [sourceAirAct, sourceDecree415, sourceIspopJme]
   },
   {
     slug: "mereni-hluku-tepelneho-cerpadla-vzt",
@@ -603,20 +871,96 @@ export const seoLandings: SeoLanding[] = [
     slug: "mereni-emisi-dieselagregat",
     title: "Emissionsmessungen von Dieselaggregaten und Notstromquellen",
     metaDescription:
-      "Emissionsmessungen von Dieselaggregaten, Notstromquellen und Bereitschaftsbetrieb. Bevollmächtigte Messung und Bericht für Behörden.",
+      "Emissionsmessungen an Dieselaggregaten und Notstromquellen: NOx, CO, Staub. Wir prüfen anhand von Genehmigung und Betriebsstunden, ob die Messung Sie betrifft.",
     h1: "Emissionsmessungen von Dieselaggregaten und Notstromquellen",
     intro:
-      "Wir führen einmalige Emissionsmessungen von Dieselaggregaten und Notstromquellen durch, einschließlich Vorbereitung der ISPOP-Messungsanmeldung. Messungen werden von einer bevollmächtigten Person durchgeführt.",
+      "Wir messen Emissionen von Dieselaggregaten und Notstromquellen und prüfen zunächst mit Ihnen, ob und in welchem Umfang eine Messung Ihre Quelle betrifft. Einmalige Messungen führt eine bevollmächtigte Person durch, der Termin wird in ISPOP angemeldet.",
     sections: [
       {
+        heading: "Wann eine Notstromquelle gemessen wird",
         paragraphs: [
-          "Typischerweise messen wir NOx, CO, Feinstaub und weitere Parameter gemäß Genehmigung und Quellentyp.",
-          "Der Output dient Betriebsregeln, Betriebsgenehmigungen und der jährlichen Emissionsmeldung."
+          "Ein Dieselaggregat ist ein Kolbenverbrennungsmotor, und maßgeblich ist sein **Nennwärmeinput im Brennstoff** (Feuerungswärmeleistung), nicht die elektrische Leistung auf dem Typenschild des Generators. Ab einem Gesamtinput von 0,3 MW handelt es sich um eine aufgeführte stationäre Quelle; bei mehreren zusammenhängenden Aggregaten werden die Inputs gemeinsam beurteilt.",
+          "Bei einer echten Notstromquelle mit **weniger als 300 Betriebsstunden pro Jahr** und ohne besondere Grenzwerte in der Genehmigung kann die Pflicht, den Verschmutzungsgrad zu ermitteln, ganz entfallen. Bei mehr Stunden kann er rechnerisch ermittelt werden, und bei einer Quelle, die nicht mehr echte Notstromquelle ist, kann eine Messung verlangt werden; Ihren Fall prüfen wir anhand der Genehmigung und der Aufzeichnung der Betriebsstunden."
+        ]
+      },
+      {
+        heading: "So läuft die Messung ab",
+        paragraphs: [
+          "Betrifft die Messung die Quelle, prüfen wir anhand der Genehmigung Abgaskamin und Messgrößen; typischerweise sind das NOx, CO und Staub. Gemessen wird bei stabilem Betrieb mit repräsentativer Last, Werte aus dem Anfahren und Abfahren fließen nicht in die Ergebnisse ein.",
+          "Einmalige Emissionsmessungen führt eine **bevollmächtigte Person** durch. Der Betreiber meldet den Termin in ISPOP mindestens 5 Arbeitstage vor der Messung an, die Protokolldaten werden innerhalb von 60 Tagen über ISPOP gemeldet."
+        ]
+      },
+      {
+        heading: "Was Sie uns senden",
+        paragraphs: [
+          "Das **technische Datenblatt des Aggregats**, die elektrische Nennleistung und den Nennwärmeinput im Brennstoff, die Brennstoffart, die Zahl der Aggregate im Areal, Lage und Höhe des Abgaskamins, das Testregime und die aktuelle Betriebsgenehmigung.",
+          "Fügen Sie bitte auch die **Aufzeichnung der Betriebsstunden** bei; daran prüfen wir, ob die Quelle im Notstrombetrieb bleibt. Anhand der Unterlagen schlagen wir vor, ob eine Emissionsberechnung genügt oder ob Messung, Betriebsgenehmigung, Ausbreitungsstudie oder Lärmstudie nötig sind."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
-    contactService: "Měření emisí"
+    contactService: "Měření emisí",
+    layout: "demand",
+    eyebrow: "Dieselaggregate und Notstromquellen",
+    overviewHeading: "Von Genehmigung und Betriebsstunden zur Messung",
+    highlights: ["Pflicht anhand der Genehmigung geprüft", "NOx, CO und Staub", "Bevollmächtigte Person und ISPOP"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny",
+        label: "Notstrom-Dieselaggregat: Notstrom oder reguläre Quelle",
+        description: "Die Schwelle von 0,3 MW, 300 und 500 Betriebsstunden und Betriebsaufzeichnungen."
+      },
+      {
+        href: "/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady",
+        label: "Emissionen, Lärm und Genehmigungsunterlagen",
+        description: "NOx, CO, Staub, Abgaskamin und Lärm eines Notstromaggregats."
+      },
+      {
+        href: "/rozptylova-studie-povoleni",
+        label: "Ausbreitungsstudie für Betriebsgenehmigung",
+        description: "Wann eine Behörde sie für eine Notstromquelle verlangen kann und was dazu vorzulegen ist."
+      },
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Bevollmächtigte Emissionsmessung",
+        description: "Wer messen darf, was Sie senden und wie die ISPOP-Anmeldung funktioniert."
+      }
+    ],
+    faq: [
+      {
+        question: "Müssen die Emissionen eines Notstrom-Dieselaggregats gemessen werden?",
+        answer:
+          "Das hängt von den Betriebsstunden, der Einstufung der Quelle und der Betriebsgenehmigung ab. Nach der Stellungnahme des tschechischen Umweltministeriums (MŽP) von 2025 kann bei einer echten Notstromquelle mit weniger als 300 Betriebsstunden pro Jahr und ohne besondere Grenzwerte in der Genehmigung die Pflicht entfallen, den Verschmutzungsgrad durch Messung oder Berechnung zu ermitteln; wir prüfen das anhand Ihrer Unterlagen."
+      },
+      {
+        question: "Wie wird die Schwelle von 0,3 MW beurteilt?",
+        answer:
+          "Nach dem Nennwärmeinput im Brennstoff, nicht nach der elektrischen Leistung des Generators. Bei mehreren technisch oder betrieblich zusammenhängenden Aggregaten wird deren Gesamtinput beurteilt."
+      },
+      {
+        question: "Zählen Tests zu den Betriebsstunden?",
+        answer:
+          "In der Regel ja: Neben Notläufen bei Netzausfall werden auch regelmäßige Tests, Wartungsversuche und der Probebetrieb eingerechnet. Die Schwellen von 300 Stunden pro Jahr und 500 Stunden als dreijähriger gleitender Durchschnitt überwachen Sie anhand eines Betriebstagebuchs oder einer Aufzeichnung des Steuerungssystems."
+      },
+      {
+        question: "Muss der Notstrom-Charakter der Quelle in der Betriebsgenehmigung stehen?",
+        answer:
+          "Nach der Stellungnahme des MŽP soll die Tatsache, dass die Quelle als Notstrom-Energiequelle dient, in der Betriebsgenehmigung angegeben sein; eine Bezeichnung im Projekt genügt nicht. Fehlt sie dort, kann nicht automatisch davon ausgegangen werden, dass das Notstromregime gilt."
+      }
+    ],
+    sourcesEyebrow: "Geprüfte Informationen",
+    sourcesHeading: "Rechtliche und methodische Quellen",
+    sources: [
+      sourceAirAct,
+      sourceDecree415,
+      sourceIspopJme,
+      {
+        href: "https://mzp.gov.cz/system/files/2025-08/OOO-Stanovisko_zalozni_zdroje_zjistovani_emisi_RS-2025080804.pdf",
+        label: "Stellungnahme des MŽP zur Genehmigung von Notstrom-Energiequellen (2025)",
+        description: "Auslegung zur Ermittlung des Verschmutzungsgrades, zu den Schwellen von 300 und 500 Betriebsstunden und zur Angabe des Notstromregimes in der Betriebsgenehmigung."
+      }
+    ]
   },
   {
     slug: "autorizovana-osoba-mereni-emisi",
@@ -720,42 +1064,191 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-prasnosti",
-    title: "Staubmessungen am Arbeitsplatz und im Betrieb",
+    title: "Staubmessung am Arbeitsplatz für KHS und Kategorisierung",
     metaDescription:
-      "Staubmessungen — einatembare und alveolengängige Fraktion, Arbeitsumfeld und Arbeitsplatzkategorisierung. NATURCHEM akkreditiertes Labor Nr. 1599.",
+      "Staubmessung am Arbeitsplatz: einatembare und alveolengängige Fraktion für KHS und Arbeitsplatzkategorisierung. Akkreditiertes Labor Nr. 1599.",
     h1: "Staubmessungen am Arbeitsplatz",
     intro:
-      "NATURCHEM misst Staub im Arbeitsumfeld einschließlich einatembarer und alveolengängiger Fraktionen. Die Ergebnisse dienen der Hygienestation, Arbeitsplatzkategorisierung, dem Arbeitsschutz und technischen Maßnahmen.",
+      "Wir messen Staub in der Arbeitsplatzluft, also die einatembare und alveolengängige Fraktion, der Beschäftigte bei der tatsächlichen Arbeit ausgesetzt sind. Das Ergebnis können Sie für die Hygienestation (KHS), die Arbeitsplatzkategorisierung, den Arbeitsschutz und die Beurteilung der Absaugung nutzen.",
     sections: [
       {
+        heading: "Was wir beim Staub am Arbeitsplatz beurteilen",
         paragraphs: [
-          "Wir messen an ausgewählten Arbeitsplätzen nach tatsächlichen Betriebsabläufen und Schichtmodellen. Bei Schüttgütern und Technologien mit Absaugung bewerten wir auch die Wirksamkeit von Schutzmaßnahmen.",
-          "Der Bericht ist für die Hygienestation, Aktualisierung der Arbeitsplatzkategorisierung und interne Arbeitsschutzdokumentation verwendbar."
+          "Staub ist kein einzelner Parameter, entscheidend sind Staubart, Partikelgröße und Zusammensetzung. Je nach Material und Technologie beurteilen wir, ob die einatembare Fraktion (Gesamtkonzentration) genügt oder ob auch die alveolengängige Fraktion und kristallines Siliziumdioxid zu berücksichtigen sind.",
+          "Die Regierungsverordnung Nr. 361/2007 Sb. unterscheidet den Grenzwert PELc für die Gesamtkonzentration (einatembare Fraktion) und PELr für die **alveolengängige Fraktion**. Enthält der Staub eine fibrogene Komponente, müssen stets die alveolengängige Fraktion und die Konzentration der fibrogenen Komponente bestimmt werden."
+        ]
+      },
+      {
+        heading: "Arbeitsplatz, Kamin oder Außenfläche",
+        paragraphs: [
+          "Diese Leistung misst Staub in der Arbeitsplatzluft, also die Exposition der Beschäftigten. Staub, der über einen Kamin in die Außenluft gelangt, behandelt die Emissionsmessung; bei offenen Lagerflächen und dem Umschlag von Schüttgütern können je nach Flächengröße Einstufung der Quelle, Betriebsgenehmigung, Ausbreitungsstudie und Betriebsordnung ein Thema sein.",
+          "Typische Beispiele sind Schweißereien und holzverarbeitende Betriebe, in denen zwei Ebenen zusammentreffen: die **Exposition der Beschäftigten** in der Halle und die Emissionen über den Kamin. Die Messung in der Atemzone ersetzt die Emissionsmessung am Kamin nicht und umgekehrt."
+        ]
+      },
+      {
+        heading: "Was Sie uns senden und wie wir messen",
+        paragraphs: [
+          "Senden Sie die Beschreibung der Technologie und der Arbeitstätigkeiten sowie die Liste der verarbeiteten Materialien. Ergänzen Sie Sicherheits- oder technische Datenblätter, Schichtmodell und Expositionsdauer, eine Beschreibung von Absaugung oder Befeuchtung, die verwendete persönliche Schutzausrüstung, eine vorhandene Arbeitsplatzkategorisierung und die Anforderung der KHS.",
+          "Die Probenahme richtet sich nach der **tatsächlichen Arbeitstätigkeit** und der charakteristischen Schicht, nicht nach einer visuellen Schätzung der Staubbelastung. Für die Einstufung von Arbeiten in die zweite, dritte oder vierte Kategorie darf nur ein Inhaber eines Akkreditierungszertifikats oder einer Autorisierung messen (§ 38 des Gesetzes Nr. 258/2000 Sb.); die einatembare und die alveolengängige Staubfraktion gehören zum akkreditierten Umfang des Labors Nr. 1599."
         ]
       }
     ],
     serviceHref: "/sluzby/pracovni-prostredi",
-    contactService: "Měření pracovního prostředí"
+    contactService: "Měření pracovního prostředí",
+    layout: "demand",
+    eyebrow: "Arbeitsumfeld und KHS",
+    overviewHeading: "Von der Betriebsbeschreibung zum Staubbericht",
+    highlights: ["Einatembare und alveolengängige Fraktion", "Akkreditiertes Labor Nr. 1599", "Unterlagen für KHS und Kategorisierung"],
+    heroTheme: "pracovni-prostredi",
+    relatedLinks: [
+      {
+        href: "/poradna/prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity",
+        label: "Staub am Arbeitsplatz: Fraktionen und Siliziumdioxid",
+        description: "Wann Gesamtstaub, alveolengängige Fraktion und kristallines SiO₂ gemessen werden."
+      },
+      {
+        href: "/mereni-pracovniho-prostredi-kategorizace-praci",
+        label: "Messungen zur Arbeitsplatzkategorisierung",
+        description: "Wer messen darf und was für die Einstufung von Arbeiten vorzubereiten ist."
+      },
+      {
+        href: "/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        label: "Schweißerei: Staub, Metalle und Absaugung",
+        description: "Schweißrauch in der Atemzone und der Unterschied zu Kaminemissionen."
+      },
+      {
+        href: "/poradna/manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni",
+        label: "Lagerflächen und Umschlag von Schüttgütern",
+        description: "Wann eine offene Fläche zur gelisteten Luftschadstoffquelle wird."
+      }
+    ],
+    faq: [
+      {
+        question: "Wann wird eine Staubmessung am Arbeitsplatz erforderlich?",
+        answer:
+          "Typischerweise auf Aufforderung der Hygienestation (KHS), bei der Einstufung neuer Arbeiten, nach einer wesentlichen Technologieänderung oder wenn sich das Expositionsniveau nicht zuverlässig schätzen lässt. Den Umfang klären wir anhand der Aufforderung und der Betriebsbeschreibung."
+      },
+      {
+        question: "Worin unterscheiden sich Gesamtstaub und alveolengängige Fraktion?",
+        answer:
+          "Die Gesamtkonzentration (einatembare Fraktion) umfasst Partikel, die durch Nase oder Mund eingeatmet werden können. Die alveolengängige Fraktion ist der Anteil, der in tiefere Atemwege und bis in die Lungenbläschen vordringt; bei Staub mit fibrogener Komponente, etwa kristallinem Siliziumdioxid, ist sie stets zu bestimmen."
+      },
+      {
+        question: "Genügt bei unserem Material die Messung des Gesamtstaubs?",
+        answer:
+          "Das hängt von Material und Technologie ab. Bei Beton, Stein, Keramik oder Ziegeln kann kristallines Siliziumdioxid bedeutsam sein, bei Holz die Holzart und beim Schweißen auch die Metalle im Schweißrauch; den Umfang schlagen wir anhand der Betriebsbeschreibung vor."
+      },
+      {
+        question: "Ist das dasselbe wie die Messung von Staub am Kamin oder an einer Lagerfläche?",
+        answer:
+          "Nein. Diese Leistung beurteilt die Exposition der Beschäftigten in der Arbeitsplatzluft; Staub am Kamin behandelt die Emissionsmessung, Staub von offenen Lagerflächen ein anderes Verfahren nach den Luftschutzvorschriften. Bei der Beauftragung klären wir daher zuerst, um welchen Fall es geht."
+      }
+    ],
+    sourcesEyebrow: "Geprüfte Informationen",
+    sourcesHeading: "Rechtliche Quellen",
+    sources: [
+      sourcePublicHealthAct,
+      {
+        href: "https://www.zakonyprolidi.cz/cs/2007-361",
+        label: "Regierungsverordnung Nr. 361/2007 Sb.",
+        description: "Bedingungen für den Gesundheitsschutz bei der Arbeit, einschließlich zulässiger Expositionsgrenzwerte für Staub (PELc, PELr)."
+      }
+    ]
   },
   {
     slug: "mereni-tezkych-kovu-emise",
-    title: "Schwermetallmessungen in Rauchgasen und Arbeitsluft",
+    title: "Schwermetallmessungen in Emissionen und Arbeitsplatzluft",
     metaDescription:
-      "Schwermetallmessungen in Emissionen stationärer Quellen und in der Arbeitsluft. Akkreditierter Umfang des NATURCHEM-Labors.",
-    h1: "Schwermetallmessungen",
+      "Schwermetallmessungen (As, Cd, Cr, Ni, Pb, Hg u. a.) in Emissionen stationärer Quellen und in der Arbeitsplatzluft. Akkreditiertes Labor Nr. 1599.",
+    h1: "Schwermetallmessungen in Emissionen und Arbeitsplatzluft",
     intro:
-      "Im akkreditierten Umfang des NATURCHEM-Labors messen wir Schwermetalle in Emissionen stationärer Quellen und in der Arbeitsluft. Typischerweise As, Cd, Cr, Ni, Pb, Hg und weitere Metalle gemäß Genehmigung oder Hygienestation.",
+      "An stationären Quellen entnehmen wir Schwermetallproben in Flüssigkeit und analysieren die Metalle im akkreditierten Umfang des Labors. Auf Anforderung der Hygienestation (KHS) beurteilen wir auch Metalle in der Arbeitsplatzluft, zum Beispiel beim Schweißen und Schleifen.",
     sections: [
       {
+        heading: "Wann Schwermetalle in Emissionen gemessen werden",
         paragraphs: [
-          "Bei Emissionen sichern wir Probenahme in flüssigen Sorptionsmitteln und analytische Auswertung. Im Arbeitsumfeld messen wir die Exposition an Schweiß-, Schleif- oder Metallbearbeitungsplätzen.",
-          "Der Output ist ein Bericht mit Bewertung gegenüber Grenzwerten oder Unterlage für die Arbeitsplatzkategorisierung."
+          "Ob Metalle gemessen werden, hängt vom Quellentyp und von der Betriebsgenehmigung ab, nicht von einer allgemeinen Vorlage. Die Verordnung Nr. 415/2012 Sb. legt für ausgewählte Quellen spezifische Emissionsgrenzwerte für Metalle fest, zum Beispiel bei der thermischen Abfallbehandlung, der Glasherstellung, dem Schmelzen und Gießen von Zink und seinen Legierungen oder dem Feuerverzinken.",
+          "Senden Sie die Betriebsgenehmigung, den letzten Bericht, eine technische Beschreibung der Quelle und des Kamins sowie Fotos der Messstelle. Einmalige Emissionsmessungen führt eine **bevollmächtigte Person** durch; zu messende Stoffe und Umfang prüfen wir vor dem Angebot anhand der Genehmigung."
+        ]
+      },
+      {
+        heading: "Wie Metalle in Emissionen entnommen und ausgewertet werden",
+        paragraphs: [
+          "Bei Emissionen sorgen wir für die Probenahme in Flüssigkeit und die analytische Auswertung der Metalle. Die Verordnung Nr. 415/2012 Sb. führt die Probenahme zur Bestimmung von Schwermetallen unter den Methoden auf, für die ein Akkreditierungszertifikat erforderlich ist.",
+          "Zum **akkreditierten Umfang des Labors** gehören zum Beispiel As, Cd, Cr, Co, Ni, Pb, Mn, Zn und Hg; die vollständige Liste steht im Anhang zum Zertifikat Nr. 562/2023. Aus unserer Praxis: An einer Gießmaschine haben wir Staub (TSP) und Zink am Prozessabgaskamin gemessen."
+        ]
+      },
+      {
+        heading: "Metalle in der Arbeitsplatzluft: andere Messung, anderer Zweck",
+        paragraphs: [
+          "Metalle in der Arbeitsplatzluft bewerten die Exposition der Beschäftigten und ersetzen die Emissionsmessung am Kamin nicht. Das betrifft vor allem Schweißereien und Arbeitsplätze mit Metallschleifen, wo je nach Material Metalle wie Mangan, Chrom, Nickel, Zink oder Aluminium in der Atemzone des Schweißers beurteilt werden.",
+          "Senden Sie für die Beurteilung eine Liste der geschweißten Materialien und Zusatzwerkstoffe, die Schweißverfahren, Angaben zur Absaugung und eine eventuelle Aufforderung der KHS. Bei Schweißrauch müssen nach der Regierungsverordnung Nr. 361/2007 Sb. auch **toxische Metalle**, zum Beispiel Cr(VI) oder Mn, eigene hygienische Grenzwerte einhalten; vor dem Angebot prüfen wir, ob die benötigten Methoden im akkreditierten Umfang liegen."
         ]
       }
     ],
     serviceHref: "/sluzby/mereni-emisi",
     contactService: "Měření emisí",
-    oboryHref: "/provozy-a-technologie/svarovny"
+    oboryHref: "/provozy-a-technologie/svarovny",
+    layout: "demand",
+    eyebrow: "Metalle in Emissionen und Arbeitsplatzluft",
+    overviewHeading: "Von der Genehmigung zur Bewertung der Metalle",
+    highlights: ["Schwermetall-Probenahme in Flüssigkeit", "Akkreditiertes Labor Nr. 1599", "Metalle in Emissionen und am Arbeitsplatz"],
+    heroTheme: "mereni-emisi",
+    relatedLinks: [
+      {
+        href: "/autorizovana-osoba-mereni-emisi",
+        label: "Bevollmächtigte Emissionsmessung",
+        description: "Wer messen darf, was Sie senden und wie die ISPOP-Anmeldung funktioniert."
+      },
+      {
+        href: "/akreditace-autorizace-dokumenty",
+        label: "Akkreditierung, Bevollmächtigung und Dokumente",
+        description: "Zertifikat des Labors und Anhang mit dem akkreditierten Umfang."
+      },
+      {
+        href: "/poradna/svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise",
+        label: "Schweißerei: Staub, Metalle und Emissionen",
+        description: "Arbeitsplatzluft und Kaminemissionen als zwei getrennte Messungen."
+      },
+      {
+        href: "/poradna/priprava-na-mereni-emisi",
+        label: "So bereiten Sie die Quelle vor der Messung vor",
+        description: "Praktische Prüfung von Genehmigung, Betriebszustand der Quelle und Messstelle."
+      }
+    ],
+    faq: [
+      {
+        question: "Welche Schwermetalle messen Sie in Emissionen?",
+        answer:
+          "Zum akkreditierten Umfang des Labors gehören zum Beispiel As, Cd, Cr, Co, Ni, Pb, Mn, Zn und Hg; die vollständige Liste steht im Anhang zum Akkreditierungszertifikat. Welche davon an Ihrer Quelle gemessen werden, bestimmt die Betriebsgenehmigung."
+      },
+      {
+        question: "Werden Schwermetalle an jeder Quelle gemessen?",
+        answer:
+          "Nein, das hängt vom Quellentyp und von der Betriebsgenehmigung ab. Die Verordnung Nr. 415/2012 Sb. legt für ausgewählte Quellen spezifische Emissionsgrenzwerte für Metalle fest, zum Beispiel bei der thermischen Abfallbehandlung oder dem Schmelzen und Gießen von Zink; Ihren Fall prüfen wir anhand der Genehmigung."
+      },
+      {
+        question: "Muss eine bevollmächtigte Person Schwermetalle in Emissionen messen?",
+        answer:
+          "Einmalige Emissionsmessungen nach dem Luftschutzgesetz darf nur eine bevollmächtigte Person durchführen. Außerdem gehört die Probenahme zur Bestimmung von Schwermetallen zu den Methoden, für die die Verordnung Nr. 415/2012 Sb. ein Akkreditierungszertifikat verlangt."
+      },
+      {
+        question: "Messen Sie Metalle auch in der Arbeitsplatzluft, zum Beispiel in einer Schweißerei?",
+        answer:
+          "Ja, wir beurteilen die Exposition der Beschäftigten in Schweißereien und an Arbeitsplätzen mit Metallschleifen, typischerweise Mangan, Chrom, Nickel, Zink oder Aluminium in der Atemzone. Umfang und Eignung der Methoden für Ihren Zweck prüfen wir vor dem Angebot."
+      }
+    ],
+    sourcesEyebrow: "Geprüfte Informationen",
+    sourcesHeading: "Rechtliche und methodische Quellen",
+    sources: [
+      sourceAirAct,
+      sourceDecree415,
+      {
+        href: "https://www.zakonyprolidi.cz/cs/2007-361",
+        label: "Regierungsverordnung Nr. 361/2007 Sb.",
+        description: "Bedingungen für den Gesundheitsschutz bei der Arbeit, einschließlich der Grenzwerte für Schweißrauch und die darin enthaltenen toxischen Metalle."
+      }
+    ]
   },
   {
     slug: "podklady-pro-khs",

@@ -108,7 +108,7 @@ Maßgeblich ist stets die aktuelle Betriebsgenehmigung.
 
 ## Emissionen in die Luft und Luft am Arbeitsplatz sind zwei verschiedene Beurteilungen
 
-Der Abluftkamin einer Galvanik wird nach dem Gesetz über den Schutz der Luft beurteilt. Die Exposition der Beschäftigten wird nach der [Nařízení vlády Nr. 361/2007 Sb.](https://www.zakonyprolidi.cz/cs/2007-361) bewertet.
+Der Abluftkamin einer Galvanik wird nach dem Gesetz über den Schutz der Luft beurteilt. Die Exposition der Beschäftigten wird nach der [Regierungsverordnung Nr. 361/2007 Sb.](https://www.zakonyprolidi.cz/cs/2007-361) bewertet.
 
 Eine im Abluftkamin gemessene Emissionskonzentration kann daher nicht als Nachweis dafür verwendet werden, dass die Beschäftigten keiner übermäßigen Exposition ausgesetzt sind.
 
@@ -204,6 +204,6 @@ Weitere Informationen finden Sie auf der Seite [Betriebsgenehmigung – NATURCHE
 
 [Verordnung Nr. 415/2012 Sb. über das zulässige Maß der Luftverschmutzung und dessen Ermittlung](https://www.zakonyprolidi.cz/cs/2012-415)
 
-[Nařízení vlády Nr. 361/2007 Sb. zur Festlegung der Bedingungen für den Gesundheitsschutz bei der Arbeit](https://www.zakonyprolidi.cz/cs/2007-361)
+[Regierungsverordnung Nr. 361/2007 Sb. zur Festlegung der Bedingungen für den Gesundheitsschutz bei der Arbeit](https://www.zakonyprolidi.cz/cs/2007-361)
 
 [Verordnung Nr. 432/2003 Sb. über die Bedingungen für die Einstufung von Arbeiten in Kategorien](https://www.zakonyprolidi.cz/cs/2003-432)

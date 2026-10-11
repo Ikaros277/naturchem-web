@@ -10,13 +10,13 @@ topic: Work environment
 
 ## Wann eine Arbeit als Arbeit unter Kältebelastung gilt
 
-Die Bedingungen für den Schutz der Beschäftigten legt die [Nařízení vlády Nr. 361/2007 Sb.](https://www.zakonyprolidi.cz/cs/2007-361) fest.
+Die Bedingungen für den Schutz der Beschäftigten legt die [Regierungsverordnung Nr. 361/2007 Sb.](https://www.zakonyprolidi.cz/cs/2007-361) fest.
 
 An einem Arbeitsplatz im Innenbereich wird die Kältebelastung anhand der **operativen oder resultierenden Temperatur** beurteilt. Bei Arbeitsplätzen im Freien wird die **nach der Wirkung der Luftströmung korrigierte Lufttemperatur** verwendet.
 
 An einem technologisch gekühlten Arbeitsplatz kann die Temperatur bewusst niedriger sein als die üblichen, für die Arbeitsumgebung festgelegten Mindesttemperaturen. Typische Beispiele sind Kühlräume, Tiefkühlräume und manche Lebensmittel- oder Pharmabetriebe.
 
-Die Nařízení vlády lässt an einem solchen Arbeitsplatz im Innenbereich die Kälteexposition bei Arbeiten zu, die einem Energieumsatz von **106 W/m² und mehr** entsprechen, also ab der Arbeitsklasse IIb.
+Die Regierungsverordnung lässt an einem solchen Arbeitsplatz im Innenbereich die Kälteexposition bei Arbeiten zu, die einem Energieumsatz von **106 W/m² und mehr** entsprechen, also ab der Arbeitsklasse IIb.
 
 **Beschäftigen Sie sich wegen der KHS oder der Kategorisierung von Arbeiten mit der Kältebelastung?** Senden Sie uns eine Beschreibung des Arbeitsplatzes, der Arbeitsvorgänge, der Aufenthaltsdauer und eine etwaige Anforderung der KHS. [Unterlagen für einen Messvorschlag senden](/de/kontakt?service=M%C4%9B%C5%99en%C3%AD%20tepeln%C3%A9%20a%20chladov%C3%A9%20z%C3%A1t%C4%9B%C5%BEe#poptavkovy-formular)
 
@@ -37,7 +37,7 @@ In einer unbeheizten Produktions- oder Lagerhalle werden zunächst die gemessene
 | IVb | 251–300 W/m² | 10 °C |
 | V | 301 W/m² und mehr | 10 °C |
 
-Die Werte beruhen auf Anlage Nr. 1 der Nařízení vlády Nr. 361/2007 Sb. und gelten für Arbeitsplätze im Innenbereich ohne gehaltene Temperatur. Für ihre Beurteilung wird eine entsprechende Arbeitskleidung mit einem Wärmedurchlasswiderstand von 1,0 clo vorausgesetzt.
+Die Werte beruhen auf Anlage Nr. 1 der Regierungsverordnung Nr. 361/2007 Sb. und gelten für Arbeitsplätze im Innenbereich ohne gehaltene Temperatur. Für ihre Beurteilung wird eine entsprechende Arbeitskleidung mit einem Wärmedurchlasswiderstand von 1,0 clo vorausgesetzt.
 
 Für einen Lagerarbeiter, der sich während der Schicht intensiv bewegt, gelten daher andere Anforderungen als für einen Beschäftigten, der in derselben Halle mehrere Stunden am Computer sitzt.
 
@@ -51,7 +51,7 @@ Zur Bestimmung der erforderlichen Wärmeisolation der Kleidung und der höchstzu
 
 ## Wie lange ein Beschäftigter in der Kälte arbeiten darf
 
-Die Nařízení vlády legt die maximale Dauer ununterbrochener Arbeit in Abhängigkeit von der Umgebungstemperatur fest.
+Die Regierungsverordnung legt die maximale Dauer ununterbrochener Arbeit in Abhängigkeit von der Umgebungstemperatur fest.
 
 | Temperatur am Arbeitsplatz | Maximale ununterbrochene Arbeitsdauer |
 |---|---:|
@@ -135,7 +135,7 @@ Wird die Messung als Grundlage für die Kategorisierung der Arbeit oder für den
 
 In Logistik- und Produktionshallen ist ein Temperaturabfall in den Wintermonaten ein häufiges Problem. Ursache können eine unzureichende Beheizung, häufiges Öffnen der Tore, ein intensiver Luftaustausch oder ein großes Raumvolumen sein.
 
-Die Beurteilung geht von der Klasse der verrichteten Arbeit und den in der Nařízení vlády angegebenen Mindesttemperaturen aus. Für Arbeiten der Klasse IIb beträgt das Minimum beispielsweise **14 °C**, für die Klasse IIIa dagegen **10 °C**.
+Die Beurteilung geht von der Klasse der verrichteten Arbeit und den in der Regierungsverordnung angegebenen Mindesttemperaturen aus. Für Arbeiten der Klasse IIb beträgt das Minimum beispielsweise **14 °C**, für die Klasse IIIa dagegen **10 °C**.
 
 Werden die Tore an einem für Dauerarbeit bestimmten Arbeitsplatz im Winter wiederholt unmittelbar ins Freie geöffnet, muss auch der Schutz gegen das Eindringen kalter Außenluft gelöst werden.
 
@@ -163,7 +163,7 @@ Weitere Informationen finden Sie auf der Seite [Messung der Hitze- und Kältebel
 
 ## Zugehörige Rechtsvorschriften
 
-[Nařízení vlády Nr. 361/2007 Sb. zur Festlegung der Bedingungen für den Gesundheitsschutz bei der Arbeit](https://www.zakonyprolidi.cz/cs/2007-361)
+[Regierungsverordnung Nr. 361/2007 Sb. zur Festlegung der Bedingungen für den Gesundheitsschutz bei der Arbeit](https://www.zakonyprolidi.cz/cs/2007-361)
 
 [Verordnung Nr. 432/2003 Sb. über die Bedingungen für die Einstufung von Arbeiten in Kategorien](https://www.zakonyprolidi.cz/cs/2003-432)
 

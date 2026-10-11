@@ -179,7 +179,7 @@ Nach den Grundsätzen des Gesundheitsschutzes bei der Arbeit haben technische un
 
 Hier ist das Sicherheitsdatenblatt unmittelbar mit der Arbeitsumgebung verknüpft.
 
-Die aktuelle Regierungsverordnung ([Nařízení vlády Nr. 361/2007 Sb.](https://www.zakonyprolidi.cz/cs/2007-361)) legt ausdrücklich fest, dass die Beurteilung des Gesundheitsrisikos eines Beschäftigten, der einem chemischen Stoff oder Gemisch ausgesetzt ist, die Nutzung der Angaben aus dem Sicherheitsdatenblatt und anderer Quellen zur chemischen Sicherheit umfasst.
+Die aktuelle Regierungsverordnung ([Regierungsverordnung Nr. 361/2007 Sb.](https://www.zakonyprolidi.cz/cs/2007-361)) legt ausdrücklich fest, dass die Beurteilung des Gesundheitsrisikos eines Beschäftigten, der einem chemischen Stoff oder Gemisch ausgesetzt ist, die Nutzung der Angaben aus dem Sicherheitsdatenblatt und anderer Quellen zur chemischen Sicherheit umfasst.
 
 Der Arbeitgeber soll also nicht nur wissen, welche Erzeugnisse er eingekauft hat.
 

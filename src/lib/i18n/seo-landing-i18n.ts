@@ -2,6 +2,12 @@ import type { Locale } from "@/lib/i18n/locales";
 
 const copy = {
   cs: {
+    processEyebrow: "Postup spolupráce",
+    contactEyebrow: "Rychlá poptávka",
+    ctaHeading: "Máte požadavek úřadu nebo projekt?",
+    phoneLabel: "Telefon",
+    emailLabel: "E-mail",
+    responseLabel: "Odpověď",
     breadcrumbHome: "Úvod",
     breadcrumbServices: "Služby",
     ctaText:
@@ -17,6 +23,12 @@ const copy = {
       "{company} — akreditovaná laboratoř a autorizovaná osoba v České republice. Tato stránka popisuje službu: {service}."
   },
   en: {
+    processEyebrow: "How we work",
+    contactEyebrow: "Quick inquiry",
+    ctaHeading: "Do you have an authority requirement or a project?",
+    phoneLabel: "Phone",
+    emailLabel: "Email",
+    responseLabel: "Reply",
     breadcrumbHome: "Home",
     breadcrumbServices: "Services",
     ctaText:
@@ -32,6 +44,12 @@ const copy = {
       "{company} — accredited laboratory and authorized body in the Czech Republic. This page describes: {service}."
   },
   de: {
+    processEyebrow: "So arbeiten wir",
+    contactEyebrow: "Schnelle Anfrage",
+    ctaHeading: "Liegt Ihnen eine Behördenanforderung oder ein Projekt vor?",
+    phoneLabel: "Telefon",
+    emailLabel: "E-Mail",
+    responseLabel: "Antwort",
     breadcrumbHome: "Startseite",
     breadcrumbServices: "Leistungen",
     ctaText:

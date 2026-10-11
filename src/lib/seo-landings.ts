@@ -987,28 +987,27 @@ export const seoLandings: SeoLanding[] = [
     slug: "autorizovana-osoba-mereni-emisi",
     title: "Autorizované měření emisí stacionárních zdrojů",
     metaDescription:
-      "Autorizované měření emisí kotelen, lakoven a technologií. NATURCHEM, akreditovaná laboratoř č. 1599: příprava, protokol a data pro ISPOP.",
-    h1: "Autorizované měření emisí",
+      "Jednorázové měření emisí smí provádět jen autorizovaná osoba. Akreditovaná laboratoř č. 1599: TZL, NOx, CO, SO₂, TOC, VOC a těžké kovy. Pošlete povolení provozu.",
+    h1: "Autorizované měření emisí ze zdrojů znečišťování ovzduší",
     intro:
-      "NATURCHEM provádí autorizované jednorázové měření emisí ze stacionárních zdrojů. Zkontrolujeme podklady, změříme zdroj v reprezentativním provozu a předáme akreditovaný protokol.",
+      "Jednorázové měření emisí smí podle zákona provádět jen autorizovaná osoba. Změříme emise z kotelen, lakoven, sušáren i dalších zdrojů a pomůžeme s oznámením v ISPOP.",
     sections: [
       {
-        heading: "Pošlete povolení a poslední protokol",
+        heading: "Kdo smí emise měřit",
         paragraphs: [
-          "Z povolení ověříme zdroje, výduchy, měřené látky a četnost. Přiložte technický popis, změny technologie, fotografie měřicího místa a plánovaný provozní režim."
+          "Jednorázové měření emisí, zpracování odborného posudku, rozptylové studie a ověřování zprávy o emisích smí podle § 32 zákona č. 201/2012 Sb. vykonávat jen autorizovaná osoba. Před objednáním ověřte u každého dodavatele rozsah autorizace a akreditovaných metod."
         ]
       },
       {
-        heading: "Připravíme měření pro skutečný provoz",
+        heading: "Co měříme",
         paragraphs: [
-          "Před termínem sladíme rozsah, přístup k výduchu a reprezentativní režim zdroje. Provozovatel oznamuje termín v ISPOP nejméně 5 pracovních dní před měřením."
+          "TZL, NOx, CO, SO₂, O₂, TOC a VOC, HCl a těžké kovy v rozsahu akreditace. Rozsah u Vašeho zdroje určuje povolení provozu. Z povolení, schématu výduchů a provozního režimu ověříme, co a kde se má měřit."
         ]
       },
       {
-        heading: "Předáme protokol a ohlásíme data",
+        heading: "Jak to probíhá",
         paragraphs: [
-          "Jednorázové měření může provést pouze autorizovaná osoba. Vyhotovíme protokol a data z měření oznámíme prostřednictvím ISPOP do 60 dnů.",
-          "Z naší praxe: u licího stroje jsme měřili tuhé znečišťující látky a zinek na technologickém výduchu. Výstupem byl protokol autorizovaného měření emisí."
+          "Provozovatel oznamuje termín měření v ISPOP nejméně 5 pracovních dní předem. Měříme v reprezentativním provozu zdroje a data z protokolu se oznamují prostřednictvím ISPOP do 60 dnů. Protokol obsahuje popis zdroje, provozní podmínky, použité metody, naměřené hodnoty a vyhodnocení vůči limitu."
         ]
       }
     ],
@@ -1018,11 +1017,7 @@ export const seoLandings: SeoLanding[] = [
     layout: "demand",
     eyebrow: "Ochrana ovzduší",
     overviewHeading: "Od podkladů k použitelnému protokolu",
-    highlights: [
-      "Akreditovaná laboratoř č. 1599",
-      "Kotelny, lakovny a technologie",
-      "Protokol a data pro ISPOP"
-    ],
+    highlights: ["Autorizovaná osoba", "Akreditovaná laboratoř č. 1599", "Protokol a pomoc s ISPOP"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
       {

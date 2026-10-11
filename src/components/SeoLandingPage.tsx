@@ -18,6 +18,7 @@ import { getWorkProcessCopy } from "@/lib/i18n/work-process-i18n";
 import type { Locale } from "@/lib/i18n/locales";
 import { contactUrl } from "@/lib/contact-url";
 import { getServiceHeroTheme } from "@/lib/hero-images";
+import { getExtraLandingFaq, getLandingBlocks, getLandingTopic } from "@/lib/landing-blocks";
 import { renderRichText, splitLeadSentence, stripRichText } from "@/lib/rich-text";
 import type { SeoLanding } from "@/lib/seo-landings";
 import type { ServiceIconKey } from "@/lib/service-icons";
@@ -83,11 +84,15 @@ export async function SeoLandingPage({ landing, locale }: Props) {
     ]
   };
 
-  const faqData = landing.faq?.length
+  const blocks = getLandingBlocks(locale);
+  const topic = getLandingTopic(landing.slug);
+  const allFaq = [...(landing.faq ?? []), ...getExtraLandingFaq(landing.slug, locale)];
+
+  const faqData = allFaq.length
     ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: landing.faq.map((item) => ({
+        mainEntity: allFaq.map((item) => ({
           "@type": "Question",
           name: item.question,
           acceptedAnswer: { "@type": "Answer", text: item.answer }
@@ -171,6 +176,12 @@ export async function SeoLandingPage({ landing, locale }: Props) {
                   {landing.overviewHeading ?? landing.sections[0]?.heading}
                 </h2>
               </header>
+              {topic === "emise" ? (
+                <p className="seo-demand-breadth">
+                  {blocks.breadth.text}{" "}
+                  <Link href={link("/provozy-a-technologie")}>{blocks.breadth.linkLabel}</Link>.
+                </p>
+              ) : null}
               {supportPhoto ? (
                 <figure className="seo-demand-photo">
                   <div className="seo-demand-photo-frame">
@@ -180,6 +191,7 @@ export async function SeoLandingPage({ landing, locale }: Props) {
                 </figure>
               ) : null}
             </div>
+            <div className="seo-demand-overview-main">
             <ol className="seo-demand-overview-list">
               {landing.sections.map((section, index) => {
                 const [firstParagraph, ...otherParagraphs] = section.paragraphs;
@@ -213,6 +225,14 @@ export async function SeoLandingPage({ landing, locale }: Props) {
                 );
               })}
             </ol>
+            {topic && topic !== "studie" ? (
+              <aside className="seo-demand-measured" aria-labelledby="seo-demand-measured-heading">
+                <p className="eyebrow">{blocks.measured.eyebrow}</p>
+                <h3 id="seo-demand-measured-heading">{blocks.measured.title}</h3>
+                <p>{blocks.measured[topic]}</p>
+              </aside>
+            ) : null}
+            </div>
           </div>
         </section>
 
@@ -250,6 +270,32 @@ export async function SeoLandingPage({ landing, locale }: Props) {
           </div>
         </section>
 
+        <section className="section seo-demand-terms" aria-labelledby="seo-demand-terms-heading">
+          <div className="container">
+            <header className="seo-demand-section-header">
+              <p className="eyebrow">{blocks.termsEyebrow}</p>
+              <h2 id="seo-demand-terms-heading">{blocks.termsTitle}</h2>
+            </header>
+            <ul className="seo-demand-terms-grid">
+              {(
+                [
+                  ["process-rozsah", blocks.price],
+                  ["process-vystup", blocks.timing],
+                  ["process-posouzeni", blocks.scope]
+                ] as const
+              ).map(([icon, item]) => (
+                <li key={item.title} className="seo-demand-term">
+                  <span className="seo-demand-step-icon" aria-hidden="true">
+                    <ServiceIcon icon={icon} variant="inline" />
+                  </span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {landing.relatedLinks?.length ? (
           <section className="section seo-demand-related-section" aria-labelledby="seo-related-heading">
             <div className="container">
@@ -279,7 +325,7 @@ export async function SeoLandingPage({ landing, locale }: Props) {
           </section>
         ) : null}
 
-        {landing.faq?.length ? (
+        {allFaq.length ? (
           <section className="section seo-demand-faq" aria-labelledby="seo-demand-faq-heading">
             <div className="container seo-demand-faq-inner">
               <header className="seo-demand-section-header">
@@ -287,7 +333,7 @@ export async function SeoLandingPage({ landing, locale }: Props) {
                 <h2 id="seo-demand-faq-heading">{copy.faqTitle}</h2>
               </header>
               <FaqAccordionList
-                items={landing.faq.map((item) => ({ q: item.question, paragraphs: [item.answer] }))}
+                items={allFaq.map((item) => ({ q: item.question, paragraphs: [item.answer] }))}
               />
             </div>
           </section>
@@ -330,12 +376,34 @@ export async function SeoLandingPage({ landing, locale }: Props) {
           </section>
         ) : null}
 
+        <section className="section seo-demand-credentials" aria-labelledby="seo-demand-credentials-heading">
+          <div className="container seo-demand-credentials-inner">
+            <span className="seo-demand-step-icon" aria-hidden="true">
+              <ServiceIcon icon="povoleni" variant="inline" />
+            </span>
+            <div className="seo-demand-credentials-copy">
+              <p className="eyebrow">{blocks.credentials.eyebrow}</p>
+              <h2 id="seo-demand-credentials-heading">{blocks.credentials.title}</h2>
+              <p>{blocks.credentials.text}</p>
+            </div>
+            <Link href={link("/akreditace-autorizace-dokumenty")} className="button secondary">
+              {blocks.credentials.link}
+            </Link>
+          </div>
+        </section>
+
         <section className="seo-demand-contact" aria-labelledby="seo-demand-contact-heading">
           <div className="container seo-demand-contact-inner">
             <div className="seo-demand-contact-copy">
               <p className="eyebrow">{copy.contactEyebrow}</p>
               <h2 id="seo-demand-contact-heading">{copy.ctaHeading}</h2>
               <p>{copy.ctaText}</p>
+              {topic ? (
+                <div className="seo-demand-send">
+                  <strong>{blocks.sendTitle}</strong>
+                  <p>{blocks.send[topic]}</p>
+                </div>
+              ) : null}
               <div className="btn-row">
                 <Link href={contactHref} className="button">
                   {ctaCopy.globalCta}

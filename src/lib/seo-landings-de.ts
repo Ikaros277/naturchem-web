@@ -964,30 +964,29 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "autorizovana-osoba-mereni-emisi",
-    title: "Bevollmächtigte Person für Emissionsmessungen in Tschechien",
+    title: "Bevollmächtigte Emissionsmessung an stationären Quellen",
     metaDescription:
-      "Einmalige Emissionsmessungen dürfen nur von einer bevollmächtigten Person durchgeführt werden. NATURCHEM: akkreditiertes Labor Nr. 1599 mit Emissionsbefugnis. Vorbereitung, Bericht und Daten für ISPOP.",
-    h1: "Bevollmächtigte Emissionsmessung",
+      "Einmalige Emissionsmessungen darf nur eine bevollmächtigte Person durchführen. Akkreditiertes Labor Nr. 1599: TZL, NOx, CO, SO₂, TOC, VOC und Schwermetalle. Senden Sie die Betriebsgenehmigung.",
+    h1: "Bevollmächtigte Emissionsmessung an Luftschadstoffquellen",
     intro:
-      "NATURCHEM führt bevollmächtigte einmalige Emissionsmessungen an stationären Quellen durch. Wir prüfen Ihre Unterlagen, messen die Quelle im repräsentativen Betrieb und übergeben einen akkreditierten Bericht.",
+      "Einmalige Emissionsmessungen darf nach dem Gesetz nur eine bevollmächtigte Person durchführen. Wir messen Emissionen von Kesselanlagen, Lackierereien, Trocknern und weiteren Quellen und helfen bei der Meldung im ISPOP.",
     sections: [
       {
-        heading: "Senden Sie die Genehmigung und den letzten Bericht",
+        heading: "Wer Emissionen messen darf",
         paragraphs: [
-          "Anhand der Genehmigung prüfen wir Quellen, Abluftkamine, Messgrößen und Häufigkeit. Fügen Sie eine technische Beschreibung, Technologieänderungen, Fotos der Messstelle und den geplanten Betriebszustand bei."
+          "Einmalige Emissionsmessungen, Fachgutachten, Ausbreitungsstudien und die Verifizierung von Emissionsberichten dürfen nach § 32 des Gesetzes Nr. 201/2012 Sb. nur von einer bevollmächtigten Person durchgeführt werden. Prüfen Sie vor der Bestellung bei jedem Anbieter den Umfang der Bevollmächtigung und der akkreditierten Methoden."
         ]
       },
       {
-        heading: "Wir bereiten die Messung für den realen Betrieb vor",
+        heading: "Was wir messen",
         paragraphs: [
-          "Vor dem Termin stimmen wir Umfang, Zugang zum Abluftkamin und einen repräsentativen Betriebszustand der Quelle ab. Der Betreiber meldet den Termin in ISPOP mindestens 5 Arbeitstage vor der Messung an."
+          "TZL, NOx, CO, SO₂, O₂, TOC und VOC, HCl und Schwermetalle im akkreditierten Bereich. Den Umfang für Ihre Quelle bestimmt die Betriebsgenehmigung. Anhand der Genehmigung, des Abluftschemas und des Betriebszustands prüfen wir, was und wo gemessen werden soll."
         ]
       },
       {
-        heading: "Wir übergeben den Bericht und melden die Daten",
+        heading: "Ablauf",
         paragraphs: [
-          "Eine einmalige Messung darf nur eine bevollmächtigte Person durchführen. Wir erstellen den Bericht und melden die Messdaten innerhalb von 60 Tagen über ISPOP.",
-          "Aus unserer Praxis: An einer Gießmaschine haben wir Staub und Zink an einem Technologieschornstein gemessen. Ergebnis war ein Bericht über eine bevollmächtigte Emissionsmessung."
+          "Der Betreiber meldet den Messtermin im ISPOP mindestens 5 Arbeitstage im Voraus an. Wir messen im repräsentativen Betrieb der Quelle, und die Daten aus dem Protokoll werden innerhalb von 60 Tagen über das ISPOP gemeldet. Das Protokoll enthält eine Beschreibung der Quelle, die Betriebsbedingungen, die verwendeten Methoden, die Messwerte und die Bewertung gegenüber dem Grenzwert."
         ]
       }
     ],
@@ -997,7 +996,7 @@ export const seoLandings: SeoLanding[] = [
     layout: "demand",
     eyebrow: "Luftreinhaltung",
     overviewHeading: "Von den Unterlagen zum verwendbaren Bericht",
-    highlights: ["Akkreditiertes Labor Nr. 1599", "Kesselanlagen, Lackierereien und Technologien", "Bericht und Daten für ISPOP"],
+    highlights: ["Bevollmächtigte Person", "Akkreditiertes Labor Nr. 1599", "Protokoll und ISPOP-Unterstützung"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
       {

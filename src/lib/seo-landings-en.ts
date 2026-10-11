@@ -964,30 +964,29 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "autorizovana-osoba-mereni-emisi",
-    title: "Authorised person for emission measurements in the Czech Republic",
+    title: "Authorised emission measurement of stationary sources",
     metaDescription:
-      "One-off emission measurements may only be carried out by an authorised person. NATURCHEM: accredited laboratory No. 1599 with authorisation for emissions. Preparation, report and data for ISPOP.",
-    h1: "Authorised emission measurements",
+      "One-off emission measurement may only be carried out by an authorised person. Accredited laboratory No. 1599: TZL, NOx, CO, SO₂, TOC, VOC and heavy metals. Send your operating permit.",
+    h1: "Authorised emission measurement for air pollution sources",
     intro:
-      "NATURCHEM carries out authorised one-off emission measurements of stationary sources. We check your documents, measure the source in representative operation and hand over an accredited report.",
+      "One-off emission measurement may, by law, only be carried out by an authorised person. We measure emissions from boiler plants, paint shops, dryers and other sources and help with notification in ISPOP.",
     sections: [
       {
-        heading: "Send the permit and the latest report",
+        heading: "Who may measure emissions",
         paragraphs: [
-          "From the permit we verify the sources, stacks, measured substances and frequency. Attach a technical description, technology changes, photographs of the measuring point and the planned operating regime."
+          "One-off emission measurement, expert reports, dispersion studies and verification of emission reports may, under Section 32 of Act No. 201/2012 Coll., only be carried out by an authorised person. Before ordering, check the scope of authorisation and accredited methods with every supplier."
         ]
       },
       {
-        heading: "We prepare the measurement for real operation",
+        heading: "What we measure",
         paragraphs: [
-          "Before the date we agree the scope, access to the stack and a representative regime of the source. The operator announces the date in ISPOP at least 5 working days before the measurement."
+          "TZL, NOx, CO, SO₂, O₂, TOC and VOC, HCl and heavy metals within the accredited scope. The scope for your source is determined by the operating permit. From the permit, the stack diagram and the operating regime we verify what is to be measured and where."
         ]
       },
       {
-        heading: "We hand over the report and report the data",
+        heading: "How it works",
         paragraphs: [
-          "Only an authorised person may carry out a one-off measurement. We prepare the report and report the measurement data through ISPOP within 60 days.",
-          "From our practice: at a casting machine we measured particulate matter and zinc at a process stack. The output was an authorised emission measurement report."
+          "The operator notifies the measurement date in ISPOP at least 5 working days in advance. We measure in representative operation of the source and data from the report are notified through ISPOP within 60 days. The report contains a description of the source, operating conditions, methods used, measured values and an evaluation against the limit."
         ]
       }
     ],
@@ -997,7 +996,7 @@ export const seoLandings: SeoLanding[] = [
     layout: "demand",
     eyebrow: "Air protection",
     overviewHeading: "From input documents to a usable report",
-    highlights: ["Accredited laboratory No. 1599", "Boiler plants, paint shops and technologies", "Report and data for ISPOP"],
+    highlights: ["Authorised person", "Accredited laboratory No. 1599", "Report and ISPOP support"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
       {

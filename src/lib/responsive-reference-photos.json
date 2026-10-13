@@ -1,0 +1,74 @@
+{
+  "lakovaci-boxy-toc": {
+    "base": "/hero/responsive-2026-10/image-1d45c5315e7f",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  },
+  "kogenerace": {
+    "base": "/hero/responsive-2026-10/image-aa3ce25e3a64",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  },
+  "dve-kogenerace": {
+    "base": "/hero/responsive-2026-10/image-d74c1133b66d",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  },
+  "kotelna-biomasa": {
+    "base": "/hero/responsive-2026-10/image-3a8b51cbe904",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  },
+  "hala-mikroklima": {
+    "base": "/hero/responsive-2026-10/image-9922d15fb99a",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  },
+  "lakovna-vzorkovaci-kazeta": {
+    "base": "/hero/responsive-2026-10/image-6eeceeb3bab2",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  },
+  "kovovyroba-mereni": {
+    "base": "/hero/responsive-2026-10/image-6a1722969e0a",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  },
+  "rucni-naradi-vibrace": {
+    "base": "/hero/responsive-2026-10/image-cd8648d162de",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  },
+  "tepelne-cerpadlo-hluk": {
+    "base": "/hero/responsive-2026-10/image-83b4892b220d",
+    "widths": [
+      768
+    ],
+    "width": 960,
+    "height": 540
+  }
+}

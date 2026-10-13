@@ -4,21 +4,21 @@ const trustBand = {
   cs: [
     "Akreditovaná laboratoř č. 1599",
     "ČSN EN ISO/IEC 17025",
-    "Autorizace EIA, rozptylové studie, odborné posudky, GHG",
+    "Autorizace EIA, rozptylové studie, odborné posudky",
     "Soudní znalec",
     "Výstupy pro KHS, ČIŽP, KÚ a stavební úřady"
   ],
   en: [
     "Accredited laboratory No. 1599",
     "ČSN EN ISO/IEC 17025",
-    "EIA authorisation, dispersion studies, expert reports, GHG",
+    "EIA authorisation, dispersion studies, expert reports",
     "Court-appointed expert",
     "Outputs for KHS, ČIŽP, regional authorities and building offices"
   ],
   de: [
     "Akkreditiertes Labor Nr. 1599",
     "ČSN EN ISO/IEC 17025",
-    "EIA-Autorisierung, Ausbreitungsstudien, Gutachten, THG",
+    "EIA-Autorisierung, Ausbreitungsstudien, Gutachten",
     "Gerichtlich beeideter Sachverständiger",
     "Ergebnisse für KHS, ČIŽP, Krajschaftsbehörden und Bauämter"
   ]

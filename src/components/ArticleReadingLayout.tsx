@@ -23,6 +23,10 @@ type Props = {
 export function ArticleReadingLayout({ locale, headings, excerpt, summaryLabel, summaryAria, children }: Props) {
   const copy = articleReadingCopy[locale];
   const hasOutline = headings.length > 1;
+  const sentences = [...new Intl.Segmenter(locale, { granularity: "sentence" }).segment(excerpt)]
+    .map(part => part.segment.trim()).filter(Boolean);
+  const brief = sentences.slice(0, sentences.slice(0, 2).join(" ").length <= 380 ? 2 : 1);
+  const moreLabel = locale === "cs" ? "Podrobnější souhrn" : locale === "de" ? "Ausführlichere Zusammenfassung" : "Full summary";
   return <div className={`${styles.frame} ${hasOutline ? styles.withOutline : styles.withoutOutline}`} id={hasOutline ? "article-outline" : undefined}>
     {hasOutline ? <aside className={styles.rail}>
       <nav className={styles.desktopOutline} aria-label={copy.contents}>
@@ -38,7 +42,11 @@ export function ArticleReadingLayout({ locale, headings, excerpt, summaryLabel, 
     <article className={styles.reading} aria-labelledby="article-title">
       {excerpt ? <aside className={`article-tldr ${styles.summary}`} aria-label={summaryAria}>
         <p className="article-tldr-label">{summaryLabel}</p>
-        <p className="article-tldr-text">{excerpt}</p>
+        <ul className={styles.summaryPoints}>{brief.map(sentence => <li key={sentence}>{sentence}</li>)}</ul>
+        {brief.join(" ") !== excerpt.trim() ? <details className={styles.summaryMore}>
+          <summary>{moreLabel}</summary>
+          <p>{excerpt}</p>
+        </details> : null}
       </aside> : null}
       <div className="article-content"><div className="article-body" data-article-reading-body>{children}</div></div>
       {hasOutline ? <p className={styles.back}><a href="#article-outline"><span aria-hidden="true">↑</span> {copy.back}</a></p> : null}

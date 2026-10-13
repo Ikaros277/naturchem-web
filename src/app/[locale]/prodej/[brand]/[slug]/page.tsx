@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/sales.generated.css";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -26,6 +26,7 @@ import { getPcfCategoryLabel } from "@/lib/pcf-category-labels";
 import { getPcfCategorySummary } from "@/lib/pcf-category-summaries";
 import { buildSalesProductSchema } from "@/lib/sales-product-schema";
 import { siteUrl } from "@/lib/site";
+import { getServiceDetailCopy } from "@/lib/i18n/service-detail-copy";
 
 type Props = {
   params: Promise<{ locale: string; brand: string; slug: string }>;
@@ -156,6 +157,8 @@ export default async function SalesSlugPage({ params }: Props) {
         <PageHeroBand
           locale={locale}
           theme={getPageHeroTheme(`/prodej/${brandSlug}`)}
+          plain
+          className="page-hero-band--compact"
           breadcrumbs={[
             { name: messages.common.breadcrumbHome, href: link("/") },
             { name: messages.sales.breadcrumb, href: link("/prodej") },
@@ -203,6 +206,7 @@ export default async function SalesSlugPage({ params }: Props) {
 
   const { brand, product } = match;
   const productSalesCta = getSalesProductCta(locale, product.title);
+  const detailCopy = getServiceDetailCopy(locale);
   const categoryTitle = product.categoryId
     ? getCategoryLabel(brandSlug, product.categoryId, locale, product.category)
     : product.category;
@@ -258,6 +262,8 @@ export default async function SalesSlugPage({ params }: Props) {
       <PageHeroBand
         locale={locale}
         theme={getPageHeroTheme(`/prodej/${brandSlug}`)}
+        plain
+        className="page-hero-band--compact"
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },
           { name: messages.sales.breadcrumb, href: link("/prodej") },
@@ -272,6 +278,11 @@ export default async function SalesSlugPage({ params }: Props) {
           <p className="eyebrow sales-eyebrow">{categoryTitle}</p>
           <h1>{product.title}</h1>
           {product.tagline ? <p className="page-lead">{product.tagline}</p> : null}
+          <div className="sales-product-hero-actions">
+            <a href={productSalesCta.primaryHref} className="button primary">{productSalesCta.primaryLabel}</a>
+            <a href="#sales-product-specs-heading" className="why-proof-link">{messages.sales.specificationsHeading} ↓</a>
+          </div>
+          <p className="sector-response">{detailCopy.responseFull}</p>
         </header>
       </PageHeroBand>
 
@@ -296,7 +307,8 @@ export default async function SalesSlugPage({ params }: Props) {
             applicationsHeading: messages.sales.applicationsHeading,
             emptySection: messages.sales.emptySection,
             datasheet: messages.sales.datasheet,
-            manufacturerPage: messages.sales.manufacturerPage
+            manufacturerPage: messages.sales.manufacturerPage,
+            moreSpecifications: locale === "cs" ? "Další technické parametry" : locale === "de" ? "Weitere technische Daten" : "More technical specifications"
           }}
         />
       </section>

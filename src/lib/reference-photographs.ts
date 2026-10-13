@@ -1,3 +1,5 @@
+import middleSources from "@/lib/responsive-reference-photos.json";
+
 type ReferencePhotograph = {
   exampleId: string;
   asset: string;
@@ -61,10 +63,11 @@ export const referencePhotographs: readonly ReferencePhotograph[] = [
 
 export function getReferencePhotographSources(photo: ReferencePhotograph) {
   const base = "/reference/authentic-2026-10-08/" + photo.asset;
+  const middle = (middleSources as Record<string, { base: string }>)[photo.asset]?.base;
   return {
     src: base + "-640.webp",
-    srcSet: [384, 640, 960].map(width => base + "-" + width + ".webp " + width + "w").join(", "),
-    avifSrcSet: [384, 640, 960].map(width => base + "-" + width + ".avif " + width + "w").join(", "),
+    srcSet: [384, 640, ...(middle ? [768] : []), 960].map(width => (width === 768 ? middle : base) + "-" + width + ".webp " + width + "w").join(", "),
+    avifSrcSet: [384, 640, ...(middle ? [768] : []), 960].map(width => (width === 768 ? middle : base) + "-" + width + ".avif " + width + "w").join(", "),
     width: 960, height: 540, position: "center"
   };
 }

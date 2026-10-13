@@ -1,5 +1,7 @@
-import "@/app/globals.css";
+import "@/app/articles.generated.css";
 import type { Metadata } from "next";
+import { buildArticleAuthor, expertAuthorName } from "@/lib/article-author";
+import { articleSearchMetadata } from "@/lib/article-seo";
 import { notFound } from "next/navigation";
 import { renderArticleMarkdown } from "@/components/ArticleMarkdown";
 import { ArticleReadingLayout } from "@/components/ArticleReadingLayout";
@@ -41,12 +43,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const availableLocales = await getLocalesForArticleSlug(article.slug);
+  const searchMetadata = articleSearchMetadata(article, locale);
 
   return pageMetadata({
     locale,
     path: `/poradna/${article.slug}`,
-    title: article.title,
-    description: article.excerpt || messages.poradna.articleMetaFallback,
+    title: searchMetadata.title,
+    description: searchMetadata.description || messages.poradna.articleMetaFallback,
     availableLocales,
     ogImage: article.heroImage,
     ogType: "article",
@@ -83,7 +86,7 @@ export default async function CmsArticlePage({ params }: Props) {
     url: articleUrl,
     inLanguage: locale,
     ...(article.heroImage ? { image: resolveOgImageUrl(article.heroImage) } : {}),
-    author: { "@type": "Organization", name: article.author || company.name },
+    author: buildArticleAuthor(article.author, locale),
     publisher: {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
@@ -136,7 +139,7 @@ export default async function CmsArticlePage({ params }: Props) {
           <p className="eyebrow">{topicLabel}</p>
           <h1 id="article-title">{article.title}</h1>
           <p className="article-hero-meta muted">
-            {article.author || "NATURCHEM"}
+            {article.author === expertAuthorName ? <a href={link("/o-spolecnosti-naturchem#frantisek-hezina")}>{article.author}</a> : article.author || "NATURCHEM"}
             {displayDate ? ` · ${displayDate}` : null}
           </p>
         </header>

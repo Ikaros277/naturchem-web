@@ -1,6 +1,5 @@
-import "@/app/globals.css";
+import "@/app/faq.generated.css";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { FaqPageContent } from "@/components/FaqPageContent";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
@@ -70,15 +69,7 @@ export default async function FaqPage({ params }: Props) {
           <h1>{faq.pageTitle}</h1>
           <p className="page-lead faq-page-intro">{faq.pageIntro}</p>
           <div className="btn-row faq-intro-ctas">
-            {faq.introCtas.map((cta, i) => (
-              <Link
-                key={cta.href}
-                href={link(cta.href)}
-                className={i === 0 ? "button" : "button secondary"}
-              >
-                {cta.label}
-              </Link>
-            ))}
+            <a href="#faq-search" className="button secondary">{faq.uiLabels.searchLabel} ↓</a>
           </div>
         </header>
       </PageHeroBand>

@@ -31,7 +31,7 @@ export const accreditationDocuments: AccreditationDocument[] = [
   {
     id: "autorizace-ghg",
     title: "Authorisation for greenhouse gas emission verification",
-    description: "Authorisation to verify greenhouse gas emissions.",
+    description: "GHG document. The current service includes emissions calculations, data checks and carbon footprint, not independent accredited EU ETS verification.",
     href: "/dokumenty/autorizace-emise-sklenikovych-plynu.pdf",
     group: "autorizace"
   },

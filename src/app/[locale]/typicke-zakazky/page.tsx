@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/cases.generated.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/Schema";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
 import { toCaseStudyListing } from "@/lib/case-study-listing";
-import { getCaseStudies, getCaseStudyFilterCategories, getSiteServices, getTypickeZakazkyContent } from "@/lib/i18n/content";
+import { getCaseStudies, getCaseStudyCategories, getCaseStudyFilterCategories, getSiteServices, getTypickeZakazkyContent } from "@/lib/i18n/content";
 import { getWorkProcessCopy } from "@/lib/i18n/work-process-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { localizedCanonical, pageMetadata } from "@/lib/i18n/metadata-helpers";
@@ -41,6 +41,7 @@ export default async function TypickeZakazkyPage({ params }: Props) {
   const workProcess = getWorkProcessCopy(locale);
   const caseStudies = await getCaseStudies(locale);
   const categoryFilters = await getCaseStudyFilterCategories(locale);
+  const categoryPages = await getCaseStudyCategories(locale);
   const siteServices = await getSiteServices(locale);
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = localizedCanonical("/typicke-zakazky", locale);
@@ -94,6 +95,12 @@ export default async function TypickeZakazkyPage({ params }: Props) {
 
       <section className="section content-block container" aria-labelledby="case-studies-heading">
         <h2 id="case-studies-heading">{content.typickeZakazkyCasesHeading}</h2>
+        <details className="case-category-guide">
+          <summary>{locale === "cs" ? "Přehled zakázek podle služby" : locale === "de" ? "Projekte nach Leistung" : "Projects by service"}</summary>
+          <nav className="context-links" aria-label={locale === "cs" ? "Kategorie zakázek" : locale === "de" ? "Projektkategorien" : "Project categories"}>
+            {categoryPages.map(category => <a key={category.slug} href={link("/typicke-zakazky/" + category.slug)}>{category.title}</a>)}
+          </nav>
+        </details>
         <CaseStudiesHub
           locale={locale}
           caseStudyListings={caseStudies.map(toCaseStudyListing)}

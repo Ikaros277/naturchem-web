@@ -11,6 +11,7 @@ excerpt: Spotřebovává váš provoz větší množství zemního plynu nebo ji
   vyřadit odpovídající množství emisních povolenek. Ne každé vykazování uhlíkové
   stopy je ale EU ETS – jde o dvě odlišné věci.
 author: Ing. František Hezina
+heroImage: /hero/ghg-overovani.webp
 status: published
 publishedAt: 2026-10-06
 topic: Legislativa

@@ -15,14 +15,14 @@ export function ArticleCardThumb({ theme, src }: Props) {
   return (
     <div className="article-card-thumb" aria-hidden="true">
       {getResponsiveImage(imageSrc) ? (
-        <ResponsiveImage src={imageSrc} fill sizes="(max-width: 767px) calc((100vw - 64px) / 3), (max-width: 1023px) 150px, (max-width: 1279px) 30vw, 400px" className="article-card-thumb-img" />
+        <ResponsiveImage src={imageSrc} fill sizes="(max-width: 767px) 88px, (max-width: 1023px) 150px, (max-width: 1279px) 30vw, 400px" className="article-card-thumb-img" />
       ) : getGeneratedIllustrationSources(imageSrc) ? (
-        <GeneratedIllustration src={imageSrc} fill sizes="(max-width: 767px) 33vw, (max-width: 1023px) 150px, 30vw" className="article-card-thumb-img" />
+        <GeneratedIllustration src={imageSrc} fill sizes="(max-width: 767px) 88px, (max-width: 1023px) 150px, 30vw" className="article-card-thumb-img" />
       ) : <Image
         src={imageSrc}
         alt=""
         fill
-        sizes="(max-width: 767px) 33vw, (max-width: 1023px) 150px, 30vw"
+        sizes="(max-width: 767px) 88px, (max-width: 1023px) 150px, 30vw"
         className="article-card-thumb-img"
         loading="lazy"
         fetchPriority="low"

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getReferenceContent, getReferenceExampleGroups } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -21,7 +20,7 @@ export async function ServiceEvidence({ locale, slug }: { locale: Locale; slug: 
       <div><p className={styles.kicker}>{t.title}</p><h2 id="service-evidence-heading">{example.title}</h2></div>
       <div>
         <dl><dt>{t.scope}</dt><dd>{example.scope}</dd><dt>{t.output}</dt><dd>{example.output}</dd></dl>
-        <Link href={localizeHref(`/reference#${group?.id ?? "priklady"}`, locale)}>{t.link} <span aria-hidden="true">→</span></Link>
+        <a href={localizeHref(`/reference#${group?.id ?? "priklady"}`, locale)}>{t.link} <span aria-hidden="true">→</span></a>
       </div>
     </section>
   );

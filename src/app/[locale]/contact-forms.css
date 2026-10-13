@@ -603,3 +603,14 @@ main.contact-page + .site-footer {
 .contact-attachment-help { font-size: 14px; }
 .contact-attachment-help > p { margin: 0; padding: 0 4px 14px; color: #4e6370; line-height: 1.55; }
 .contact-attachment-help a { overflow-wrap: anywhere; }
+.page-hero-band--plain { min-height: 0; height: auto; }
+.page-hero-band--plain .page-hero-band-inner { min-height: 0; height: auto; padding-block: 28px; }
+.page-hero-band--plain .hero-band-text { max-width: 76ch; height: auto; padding-right: 0; }
+.page-hero-band--plain .hero-diagonal-spacer { display: none; }
+.contact-map-disclosure { margin-top: 20px; }
+.contact-map-disclosure > summary { min-height: 44px; padding-block: 12px; color: var(--forest-dark); font-weight: 700; cursor: pointer; }
+@media (max-width: 767px) {
+  .contact-page .page-first-section { margin-top: 24px; }
+  .page-hero-band--contact .eyebrow { display: none; }
+  .page-hero-band--contact .page-lead { font-size: 16px; line-height: 1.5; }
+}

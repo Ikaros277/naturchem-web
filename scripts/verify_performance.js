@@ -40,7 +40,9 @@ async function main() {
       }
     }
   }
-  assert.ok(fs.readFileSync(path.join(root, "src/components/SemanticCard.tsx"), "utf8").includes("prefetch={false}"), "Do not prefetch every linked card");
+  const cardSource = fs.readFileSync(path.join(root, "src/components/SemanticCard.tsx"), "utf8");
+  assert.match(cardSource, /<a\s/, "Cards retain real, crawlable links");
+  assert.doesNotMatch(cardSource, /next\/link|prefetch/, "Native card links cannot initiate background route prefetches");
   assert.ok(!fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8").includes(".poradna-search"), "Keep article-only CSS out of shared styles");
   console.log("PASS performance source checks: publication parity, versioned lazy search, static image budgets and scoped styles");
 }

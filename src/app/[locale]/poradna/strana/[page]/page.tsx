@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/articles.generated.css";
 import { notFound } from "next/navigation";
 import { PoradnaListingPage, poradnaListingMetadata } from "@/components/PoradnaListingPage";
 import { getPoradnaArticles } from "@/lib/poradna-articles";

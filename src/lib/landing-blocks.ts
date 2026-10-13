@@ -81,7 +81,7 @@ const cs: Blocks = {
   credentials: {
     eyebrow: "Oprávnění",
     title: "Naše oprávnění",
-    text: "Akreditovaná zkušební laboratoř č. 1599 (ČSN EN ISO/IEC 17025:2018, osvědčení o akreditaci č. 562/2023, platnost do 26. 10. 2028). Autorizace pro odborné posudky v ochraně ovzduší, rozptylové studie, EIA a ověřování emisí skleníkových plynů.",
+    text: "Akreditovaná zkušební laboratoř č. 1599 (ČSN EN ISO/IEC 17025:2018, osvědčení o akreditaci č. 562/2023, platnost do 26. 10. 2028). Autorizace pro odborné posudky v ochraně ovzduší, rozptylové studie, EIA.",
     link: "Zobrazit doklady"
   },
   breadth: {
@@ -145,7 +145,7 @@ const en: Blocks = {
   credentials: {
     eyebrow: "Credentials",
     title: "Our authorisations",
-    text: "Accredited testing laboratory No. 1599 (ČSN EN ISO/IEC 17025:2018, accreditation certificate No. 562/2023, valid until 26 October 2028). Authorisations for expert reports in air protection, dispersion studies, EIA and verification of greenhouse gas emissions.",
+    text: "Accredited testing laboratory No. 1599 (ČSN EN ISO/IEC 17025:2018, accreditation certificate No. 562/2023, valid until 26 October 2028). Authorisations for expert reports in air protection, dispersion studies, EIA.",
     link: "View the documents"
   },
   breadth: {
@@ -209,7 +209,7 @@ const de: Blocks = {
   credentials: {
     eyebrow: "Befugnisse",
     title: "Unsere Zulassungen",
-    text: "Akkreditiertes Prüflabor Nr. 1599 (ČSN EN ISO/IEC 17025:2018, Akkreditierungsurkunde Nr. 562/2023, gültig bis 26. 10. 2028). Autorisierungen für Fachgutachten zur Luftreinhaltung, Ausbreitungsstudien, UVP und die Verifizierung von Treibhausgasemissionen.",
+    text: "Akkreditiertes Prüflabor Nr. 1599 (ČSN EN ISO/IEC 17025:2018, Akkreditierungsurkunde Nr. 562/2023, gültig bis 26. 10. 2028). Autorisierungen für Fachgutachten zur Luftreinhaltung, Ausbreitungsstudien, UVP.",
     link: "Dokumente ansehen"
   },
   breadth: {

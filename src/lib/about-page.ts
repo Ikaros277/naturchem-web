@@ -40,7 +40,7 @@ export const aboutPageContent = {
     title: "Odborná garance",
   },
   guaranteeCredentials:
-    "Za odbornou stránku zakázek odpovídá Ing. František Hezina — jednatel, odborná garance, soudní znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie, ověřování emisí skleníkových plynů a oznámení EIA.",
+    "Za odbornou stránku zakázek odpovídá Ing. František Hezina — jednatel, odborná garance, soudní znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie a oznámení EIA.",
   team: {
     title: "Tým"
   },

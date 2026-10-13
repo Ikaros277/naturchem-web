@@ -37,7 +37,6 @@ export function IndexCard({
       className={className}
       cta={cta}
       serviceCategory={serviceCategory}
-      aria-label={title}
     >
       {meta}
       {heading ? (

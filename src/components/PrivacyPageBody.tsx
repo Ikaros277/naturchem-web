@@ -3,7 +3,7 @@ import { LocaleLink } from "@/lib/i18n/locale-link";
 import { getPrivacyPage } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/locales";
 import { fillLegalTemplate } from "@/lib/legal-template";
-import { inquiryRetentionMonths, legalController, legalEffectiveDate, legalPaths } from "@/lib/legal";
+import { legalController, legalEffectiveDate, legalPaths } from "@/lib/legal";
 
 export async function PrivacyPageBody({ locale }: { locale: Locale }) {
   const { content } = await getPrivacyPage(locale);

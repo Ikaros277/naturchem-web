@@ -119,7 +119,6 @@ export function buildLocalBusinessJsonLd(locale: Locale = "cs") {
     telephone: company.phones[0],
     email: company.email,
     image: `${siteUrl}/opengraph-image`,
-    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: company.labAddress.street,

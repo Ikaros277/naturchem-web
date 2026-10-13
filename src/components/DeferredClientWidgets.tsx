@@ -14,7 +14,7 @@ const LiveChatWidgets = dynamic(
 );
 
 const SpeedInsights = dynamic(
-  () => import("@vercel/speed-insights/next").then((m) => m.SpeedInsights),
+  () => import("@/components/PlatformSpeedInsights").then((m) => m.PlatformSpeedInsights),
   { ssr: false }
 );
 

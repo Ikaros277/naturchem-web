@@ -52,9 +52,5 @@ export const authorizations = [
   {
     title: "Odborné posudky",
     text: "odborné posudky v ochraně ovzduší"
-  },
-  {
-    title: "Skleníkové plyny",
-    text: "ověřování emisí skleníkových plynů (GHG)"
   }
 ] as const;

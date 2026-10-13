@@ -1,7 +1,7 @@
-import "@/app/globals.css";
+import "@/app/contact.generated.css";
 import type { Metadata } from "next";
 import { ContactFormSection } from "@/components/ContactFormSection";
-import { ContactPageHeroMedia, ContactPageOfficesMap } from "@/components/ContactPageMedia";
+import { ContactMapDisclosure } from "@/components/ContactMapDisclosure";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { company, getCompanyOffices, siteUrl } from "@/lib/site";
@@ -64,9 +64,8 @@ export default async function Page({ params }: PageProps) {
           { name: messages.common.breadcrumbHome, href: link("/") },
           { name: messages.contact.eyebrow }
         ]}
-        className="page-hero-band--map"
-        media={<ContactPageHeroMedia theme={heroTheme} />}
-        mediaLabel={messages.contact.mapLabel}
+        className="page-hero-band--contact"
+        plain
       >
         <header className="premium-page-hero contact-hero page-hero--photo">
           <div>
@@ -140,7 +139,7 @@ export default async function Page({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-              <ContactPageOfficesMap />
+              <ContactMapDisclosure label={messages.contact.mapLabel} />
             </div>
           </div>
         </article>

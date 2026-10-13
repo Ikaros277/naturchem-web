@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ServiceCategory } from "@/lib/service-categories";
 
@@ -25,15 +24,14 @@ export function SemanticCard({
     .join(" ");
 
   return (
-    <Link
+    <a
       href={href}
-      prefetch={false}
       className={classes}
       aria-label={ariaLabel}
       data-category={serviceCategory ?? undefined}
     >
       {children}
       <span className="card-inline-link">{cta}</span>
-    </Link>
+    </a>
   );
 }

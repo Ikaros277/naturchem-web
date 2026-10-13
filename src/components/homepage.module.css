@@ -219,3 +219,14 @@
 @media (prefers-reduced-motion: reduce) {
   .page *, .page *::before, .page *::after { animation: none !important; transition: none !important; }
 }
+
+/* All .section blocks follow the hero: keep their complete HTML, but avoid
+   laying out distant content until it approaches the visitor's viewport. */
+.section {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 600px;
+}
+
+@media print {
+  .section { content-visibility: visible; contain-intrinsic-block-size: none; }
+}

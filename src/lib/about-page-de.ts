@@ -40,7 +40,7 @@ export const aboutPageContent = {
     title: "Professionelle Betreuung"
   },
   guaranteeCredentials:
-    "Ing. František Hezina ist für die technische Seite der Projekte verantwortlich – Geschäftsführer, Fachaufsicht, gerichtlich bestellter Sachverständiger, bevollmächtigte Person für Emissionsmessungen, Gutachten, Ausbreitungsstudien, Überprüfung der Treibhausgasemissionen und EIA-Meldungen.",
+    "Ing. František Hezina ist für die technische Seite der Projekte verantwortlich – Geschäftsführer, Fachaufsicht, gerichtlich bestellter Sachverständiger, bevollmächtigte Person für Emissionsmessungen, Gutachten, Ausbreitungsstudien und EIA-Meldungen.",
   team: {
     title: "Unser Team"
   },

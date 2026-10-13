@@ -43,7 +43,7 @@ export function SectorCard({ sector, serviceTitles, labels }: Props) {
   const heroConfig = getSectorHeroImageConfig(sector.id);
 
   return (
-    <article id={sector.id} className="sector-card card index-card sector-card-rich card-interactive">
+    <article id={sector.id === "odpady-recyklace" ? "provoz-odpady-recyklace" : sector.id} className="sector-card card index-card sector-card-rich card-interactive">
       <LocaleLink
         href={cardHref}
         className="card-cover-link"

@@ -1,16 +1,5 @@
 {
   "thumbs": {
-    "/hero/dokumentace-fallback.webp": {
-      "base": "/hero/responsive-2026-10/image-dc84a3aeec42",
-      "widths": [
-        192,
-        384,
-        640,
-        960
-      ],
-      "width": 1024,
-      "height": 576
-    },
     "/hero/generated-2026-09/automotive-clanek.webp": {
       "base": "/hero/responsive-2026-10/image-900d3611fbe3",
       "widths": [
@@ -451,16 +440,27 @@
       "width": 1600,
       "height": 900
     },
-    "/hero/mereni-emisi.webp": {
-      "base": "/hero/responsive-2026-10/image-63d4bedf1f06",
+    "/hero/ghg-overovani.webp": {
+      "base": "/hero/responsive-2026-10/image-53579b242f0a",
       "widths": [
         192,
         384,
         640,
         960
       ],
-      "width": 1718,
-      "height": 966
+      "width": 1672,
+      "height": 941
+    },
+    "/hero/ippc-integrovana-povoleni.webp": {
+      "base": "/hero/responsive-2026-10/image-c6a1af7884f6",
+      "widths": [
+        192,
+        384,
+        640,
+        960
+      ],
+      "width": 1536,
+      "height": 1024
     },
     "/uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp": {
       "base": "/hero/responsive-2026-10/image-81aba865cc0f",

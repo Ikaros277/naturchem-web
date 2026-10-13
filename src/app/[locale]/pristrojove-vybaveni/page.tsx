@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/company.generated.css";
 import type { Metadata } from "next";
 
 import { EquipmentGroupsIndex } from "@/components/EquipmentGroupsIndex";

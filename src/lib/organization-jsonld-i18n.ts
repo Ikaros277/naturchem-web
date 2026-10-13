@@ -13,7 +13,7 @@ type OrganizationSchemaCopy = {
 const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
   cs: {
     description:
-      "NATURCHEM, s. r. o. je česká akreditovaná zkušební laboratoř (ČIA, č. 1599) a autorizovaná osoba pro měření emisí, pracovního prostředí, hluku, vibrací, prašnosti, mikroklimatu, rozptylové a hlukové studie, odborné posudky, EIA, provozní řády a ISPOP v celé ČR.",
+      "NATURCHEM, s. r. o. je česká akreditovaná zkušební laboratoř (ČIA, č. 1599). Poskytuje měření emisí a pracovního prostředí, hlukové a rozptylové studie, odborné posudky, EIA, povolovací dokumentaci, ISPOP a výpočty emisí skleníkových plynů v celé ČR.",
     audienceTypes: [
       "Provozovatelé zdrojů znečišťování ovzduší",
       "Podnikoví ekologové",
@@ -34,7 +34,7 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       "provozní řády zdrojů znečišťování ovzduší",
       "IPPC a integrovaná povolení",
       "ISPOP a provozní evidence",
-      "ověřování emisí skleníkových plynů (GHG)",
+      "výpočty emisí skleníkových plynů (GHG), kontrola emisních dat a uhlíková stopa",
       "chemická legislativa a bezpečnostní listy",
       "environmentální poradenství pro úřady a provozovatele",
       "prodej analytických přístrojů PCF Elettronica"
@@ -49,14 +49,14 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       {
         name: "Autorizovaná osoba",
         category:
-          "EIA, rozptylové studie, odborné posudky, jednorázové měření emisí, ověřování GHG"
+          "EIA, rozptylové studie, odborné posudky, jednorázové měření emisí"
       }
     ],
     identifierNames: { ico: "IČO", dic: "DIČ" }
   },
   en: {
     description:
-      "NATURCHEM, s.r.o. is a Czech accredited testing laboratory (CAI No. 1599) and authorized body for emission measurements, workplace environment, noise, vibration, dust, microclimate, dispersion and noise studies, expert reports, EIA, operating rules, and ISPOP across the Czech Republic.",
+      "NATURCHEM, s.r.o. is a Czech accredited testing laboratory (CAI No. 1599). It provides emission and workplace measurements, noise and dispersion studies, expert reports, EIA, permitting documentation, ISPOP and greenhouse gas calculations across the Czech Republic.",
     audienceTypes: [
       "Air pollution source operators",
       "Corporate environmental specialists",
@@ -77,7 +77,7 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       "operating rules for air pollution sources",
       "IPPC and integrated permits",
       "ISPOP and operating records",
-      "greenhouse gas (GHG) emission verification",
+      "greenhouse gas (GHG) calculations, emissions data checks and carbon footprint",
       "chemical legislation and safety data sheets",
       "environmental consulting for authorities and operators",
       "sale of PCF Elettronica analytical instruments"
@@ -91,14 +91,14 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       },
       {
         name: "Authorized body",
-        category: "EIA, dispersion studies, expert reports, one-off emission measurements, GHG verification"
+        category: "EIA, dispersion studies, expert reports, one-off emission measurements"
       }
     ],
     identifierNames: { ico: "Company ID", dic: "VAT ID" }
   },
   de: {
     description:
-      "NATURCHEM, s.r.o. ist ein tschechisches akkreditiertes Prüflabor (CAI Nr. 1599) und autorisierte Stelle für Emissionsmessungen, Arbeitsplatzumgebung, Lärm, Vibrationen, Staub, Mikroklima, Ausbreitungs- und Lärmstudien, Gutachten, UVP, Betriebsregeln und ISPOP in der gesamten Tschechischen Republik.",
+      "NATURCHEM, s.r.o. ist ein tschechisches akkreditiertes Prüflabor (CAI Nr. 1599). Es bietet Emissions- und Arbeitsplatzmessungen, Lärm- und Ausbreitungsstudien, Gutachten, UVP, Genehmigungsunterlagen, ISPOP und Treibhausgasberechnungen in der gesamten Tschechischen Republik.",
     audienceTypes: [
       "Betreiber von Luftschadstoffquellen",
       "Betriebliche Umweltfachkräfte",
@@ -119,7 +119,7 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       "Betriebsregeln für Luftschadstoffquellen",
       "IPPC und integrierte Genehmigungen",
       "ISPOP und Betriebsaufzeichnungen",
-      "Überprüfung von Treibhausgasemissionen (GHG)",
+      "Berechnung von Treibhausgasemissionen (GHG), Prüfung von Emissionsdaten und CO₂-Fußabdruck",
       "Chemikalienrecht und Sicherheitsdatenblätter",
       "Umweltberatung für Behörden und Betreiber",
       "Verkauf analytischer Geräte PCF Elettronica"
@@ -133,7 +133,7 @@ const organizationSchemaCopy: Record<Locale, OrganizationSchemaCopy> = {
       },
       {
         name: "Autorisierte Stelle",
-        category: "UVP, Ausbreitungsstudien, Gutachten, einmalige Emissionsmessungen, GHG-Überprüfung"
+        category: "UVP, Ausbreitungsstudien, Gutachten, einmalige Emissionsmessungen"
       }
     ],
     identifierNames: { ico: "Unternehmens-ID", dic: "USt-IdNr." }

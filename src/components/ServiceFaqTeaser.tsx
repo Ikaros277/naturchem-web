@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getFaqCategoryForLocale, getFaqTeaserItemsForLocale } from "@/lib/i18n/faq-helpers";
 import { getFaqContent } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/locales";
@@ -24,9 +23,9 @@ export async function ServiceFaqTeaser({ locale, categoryId, limit = 5 }: Props)
       <h2>{uiLabels.serviceTeaserTitle}</h2>
       <FaqAccordionList items={items} />
       <p>
-        <Link href={faqHref}>
+        <a href={faqHref}>
           {uiLabels.viewAllCategory.replace("{category}", category.title)}
-        </Link>
+        </a>
       </p>
     </section>
   );

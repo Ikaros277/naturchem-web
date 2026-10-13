@@ -8,6 +8,7 @@ const load = require("./lib/load-typescript.js")();
 const { readCatalog } = require("./scheduled_publication.js");
 const { getHeroImageSrc, getKnownHeroImageSources } = load(path.join(root, "src/lib/hero-images.ts"));
 const { getAuthenticPhotoBySrc } = load(path.join(root, "src/lib/authentic-photos.ts"));
+const { referencePhotographs } = load(path.join(root, "src/lib/reference-photographs.ts"));
 const { heroThemeForArticle } = load(path.join(root, "src/lib/poradna-topic.ts"));
 const target = path.join(root, "public/hero/responsive-2026-10");
 const prefix = "/hero/responsive-2026-10/";
@@ -51,6 +52,11 @@ async function main() {
   fs.writeFileSync(path.join(root, "src/lib/responsive-images.json"), JSON.stringify({ thumbs, heroes }, null, 2) + "\n");
   fs.writeFileSync(path.join(root, "src/lib/responsive-thumbnails.json"), JSON.stringify(thumbs, null, 2) + "\n");
   fs.writeFileSync(path.join(root, "src/lib/responsive-heroes.json"), JSON.stringify(heroes, null, 2) + "\n");
+  const references = {};
+  for (const photo of referencePhotographs) {
+    references[photo.asset] = await encode("/reference/authentic-2026-10-08/" + photo.asset + "-960.webp", [768]);
+  }
+  fs.writeFileSync(path.join(root, "src/lib/responsive-reference-photos.json"), JSON.stringify(references, null, 2) + "\n");
   console.log(`Prepared ${Object.keys(thumbs).length} article images and ${Object.keys(heroes).length} hero images (static AVIF/WebP; original URLs untouched)`);
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

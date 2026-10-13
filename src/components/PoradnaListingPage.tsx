@@ -14,6 +14,9 @@ import { getPageHeroTheme } from "@/lib/hero-images";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
 import { formatArticleDate } from "@/lib/format-date";
 import { PORADNA_PAGE_SIZE, poradnaPageCount, poradnaPagePath, poradnaPaginationLabels } from "@/lib/poradna-pagination";
+function listingDescription(locale: Locale, page: number, description: string) {
+  return page > 1 ? `${poradnaPaginationLabels[locale].page} ${page}. ${description}` : description;
+}
 
 export async function poradnaListingMetadata(locale: Locale, page = 1): Promise<Metadata> {
   const messages = await getMessages(locale);
@@ -24,7 +27,7 @@ export async function poradnaListingMetadata(locale: Locale, page = 1): Promise<
   return pageMetadata({
     locale, path: poradnaPagePath(page), availableLocales,
     title: page === 1 ? messages.poradna.metaTitle : `${messages.poradna.metaTitle} – ${poradnaPaginationLabels[locale].page} ${page}`,
-    description: messages.poradna.metaDescription
+    description: listingDescription(locale, page, messages.poradna.metaDescription)
   });
 }
 
@@ -41,7 +44,7 @@ export async function PoradnaListingPage({ locale, page = 1 }: { locale: Locale;
   const title = page === 1 ? messages.nav.articles : `${messages.nav.articles} – ${poradnaPaginationLabels[locale].page} ${page}`;
   return (
     <main className="section poradna-page premium-page">
-      <JsonLd data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: title, url, description: messages.poradna.metaDescription }} />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: title, url, description: listingDescription(locale, page, messages.poradna.metaDescription) }} />
       <JsonLd data={{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
         { "@type": "ListItem", position: 1, name: messages.common.breadcrumbHome, item: localizedCanonical("/", locale) },
         { "@type": "ListItem", position: 2, name: messages.nav.articles, item: localizedCanonical("/poradna", locale) },

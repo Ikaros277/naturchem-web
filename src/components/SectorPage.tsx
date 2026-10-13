@@ -5,7 +5,6 @@ import { IndexCard } from "@/components/IndexCard";
 import { OverviewGridCell } from "@/components/OverviewGridCell";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
-import { ServiceContextPhoto } from "@/components/ServiceContextPhoto";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { SectorFaqTeaser } from "@/components/SectorFaqTeaser";
 import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
@@ -23,6 +22,8 @@ import { getSeoLandingsForSector } from "@/lib/seo-landing-service-links";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { getSectorHeroImageConfig, hasSectorPhoto } from "@/lib/custom-hero-photos";
 import { getServiceCategoryFromHref } from "@/lib/service-categories";
+import { getServiceDetailCopy } from "@/lib/i18n/service-detail-copy";
+import { getSiteServices } from "@/lib/i18n/content";
 import { siteUrl } from "@/lib/site";
 
 type Props = {
@@ -42,6 +43,8 @@ type Props = {
 export async function SectorPage(props: Props) {
   const { locale } = props;
   const copy = getSectorCopy(locale);
+  const detailCopy = getServiceDetailCopy(locale);
+  const serviceCatalog = await getSiteServices(locale);
   const messages = await getMessages(locale);
   const provozyNavLabel = await getProvozyNavLabel(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
@@ -109,10 +112,15 @@ export async function SectorPage(props: Props) {
         <header className="page-header service-hero service-hero--photo">
           <h1>{props.title}</h1>
           <p className="page-lead">{props.intro}</p>
+          <div className="sector-hero-actions">
+            <a href={link(contactHref)} className="button primary">{detailCopy.inquiry}</a>
+            <a href="#podklady" className="sector-docs-link">{detailCopy.docs} <span aria-hidden="true">↓</span></a>
+          </div>
+          <p className="sector-response">{detailCopy.responseFull}</p>
         </header>
       </PageHeroBand>
 
-      <section className="service-overview-section section-surface page-below-fold" aria-label={copy.overviewHeading}>
+      <section id="podklady" className="service-overview-section section-surface page-below-fold" aria-label={copy.overviewHeading}>
         <div className="container">
           <h2 className="service-overview-title">{copy.overviewHeading}</h2>
           <div className="service-overview-layout">
@@ -126,7 +134,7 @@ export async function SectorPage(props: Props) {
                   </ul>
                 </OverviewGridCell>
 
-                <OverviewGridCell icon="pillar-dokumentace" title={copy.docs}>
+                <OverviewGridCell icon="pillar-dokumentace" title={copy.docs} className="sector-documents-cell">
                   <ul className="check-list">
                     {props.docs.map((item) => (
                       <li key={item}>{item}</li>
@@ -151,7 +159,6 @@ export async function SectorPage(props: Props) {
                 </OverviewGridCell>
               </div>
             </div>
-            <ServiceContextPhoto theme={heroTheme} className="service-overview-photo" />
           </div>
         </div>
       </section>
@@ -160,25 +167,24 @@ export async function SectorPage(props: Props) {
         className="section content-block container sector-process-section typicke-zakazky-process page-below-fold"
         aria-labelledby="sector-process-heading"
       >
-        <h2 id="sector-process-heading">{copy.processHeading}</h2>
-        <p className="muted section-intro">{copy.processIntro}</p>
-        <WorkProcessTimeline
-          steps={processSteps}
-          processAria={messages.common.cooperationProcess}
-        />
+        <details className="sector-process-disclosure">
+          <summary id="sector-process-heading">{copy.processHeading}</summary>
+          <p className="muted section-intro">{copy.processIntro}</p>
+          <WorkProcessTimeline steps={processSteps} processAria={messages.common.cooperationProcess} />
+        </details>
       </section>
 
       <div className="container page-inner page-below-fold">
         <section className="content-block">
           <h2>{copy.relatedServices}</h2>
-          <div className="grid grid-3 index-card-grid">
+          <div className="sector-related-list">
             {seoLandingLinks.map((landing) => (
               <IndexCard
                 key={landing.href}
                 href={link(landing.href)}
                 title={landing.title}
                 cta={copy.viewService}
-                className="service-related-card"
+                className="service-related-card sector-related-card"
               >
                 <p className="muted">{landing.description}</p>
               </IndexCard>
@@ -189,10 +195,12 @@ export async function SectorPage(props: Props) {
                 href={link(service.href)}
                 title={service.title}
                 cta={copy.viewService}
-                className="service-related-card"
+                className="service-related-card sector-related-card"
                 serviceCategory={getServiceCategoryFromHref(service.href)}
                 icon={<ServiceIcon href={service.href} variant="inline" size={20} />}
-              />
+              >
+                <p className="muted">{serviceCatalog.find(item => item.href === service.href)?.short}</p>
+              </IndexCard>
             ))}
           </div>
         </section>

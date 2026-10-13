@@ -263,7 +263,7 @@ const EN: Partial<Record<string, SectorText>> = {
   "ghg-cnr": {
     title: "GHG and greenhouse gases",
     description:
-      "For operations we handle greenhouse gas reporting, GHG verification and links to measurements and operating data.",
+      "For operations we handle greenhouse gas calculations and reporting, emissions data checks and links to measurements and operating data.",
     serviceTags: "GHG, ISPOP, emissions, reporting",
     factors: "CO₂, greenhouse gases, fuels, emission factors",
     ariaLabel: "View services for greenhouse gas reporting",

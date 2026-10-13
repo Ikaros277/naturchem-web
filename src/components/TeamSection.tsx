@@ -7,7 +7,7 @@ function TeamCard({ member, compact = false }: { member: TeamMember; compact?: b
   const detailLines = compact ? member.details.slice(0, 1) : member.details;
 
   return (
-    <article className="card team-card">
+    <article className="card team-card" id={member.name === "Ing. František Hezina" ? "frantisek-hezina" : undefined}>
       {member.photo ? (
         <div className="team-card-avatar team-card-avatar--photo" aria-hidden="true">
           <Image src={member.photo} alt="" width={80} height={80} className="team-card-photo" />

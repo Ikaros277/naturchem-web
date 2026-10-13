@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/other.generated.css";
 import type { Metadata } from "next";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { SatisfactionSurveyForm } from "@/components/SatisfactionSurveyForm";

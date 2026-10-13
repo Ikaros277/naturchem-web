@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type Crumb = { name: string; href?: string };
 
 export function Breadcrumbs({
@@ -13,7 +11,7 @@ export function Breadcrumbs({
     <nav className="breadcrumbs" aria-label={breadcrumbsAria}>
       {items.map((item, i) => (
         <span key={item.name}>
-          {item.href ? <Link href={item.href}>{item.name}</Link> : item.name}
+          {item.href ? <a href={item.href}>{item.name}</a> : item.name}
           {i < items.length - 1 ? " / " : ""}
         </span>
       ))}

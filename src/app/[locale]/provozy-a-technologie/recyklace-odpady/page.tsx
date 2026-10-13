@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/sectors.generated.css";
 import { permanentRedirect } from "next/navigation";
 
 export default function Page() {

@@ -83,14 +83,9 @@ export const serviceMegaGroups = [
         description: "Dopady záměrů na okolí a imise"
       },
       {
-        href: "/sluzby/ispop",
-        label: "ISPOP a provozní evidence",
-        description: "Souhrnná provozní evidence a roční hlášení ISPOP"
-      },
-      {
         href: "/sluzby/ghg-overovani",
         label: "Emise skleníkových plynů (GHG)",
-        description: "Výkazy a ověřování emisí GHG"
+        description: "Výpočty emisí a uhlíkové stopy"
       }
     ]
   },
@@ -99,6 +94,11 @@ export const serviceMegaGroups = [
     title: "Dokumentace a povolení",
     subtitle: "EIA, povolení provozu a provozní dokumentace",
     links: [
+      {
+        href: "/sluzby/ispop",
+        label: "ISPOP a provozní evidence",
+        description: "Souhrnná provozní evidence a roční hlášení ISPOP"
+      },
       {
         href: "/sluzby/eia-oznameni-zameru",
         label: "EIA a oznámení záměru",

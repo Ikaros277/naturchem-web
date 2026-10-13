@@ -31,7 +31,7 @@ export const accreditationDocuments: AccreditationDocument[] = [
   {
     id: "autorizace-ghg",
     title: "Genehmigung zur Überprüfung der Treibhausgasemissionen",
-    description: "Berechtigung zur Überprüfung von Treibhausgasemissionen.",
+    description: "Dokument zum THG-Bereich. Das aktuelle Angebot umfasst Emissionsberechnungen, Datenprüfung und CO₂-Fußabdruck, keine unabhängige akkreditierte EU-EHS-Verifizierung.",
     href: "/dokumenty/autorizace-emise-sklenikovych-plynu.pdf",
     group: "autorizace"
   },

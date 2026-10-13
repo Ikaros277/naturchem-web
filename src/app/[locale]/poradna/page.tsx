@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/articles.generated.css";
 import { PoradnaListingPage, poradnaListingMetadata } from "@/components/PoradnaListingPage";
 import { isLocale } from "@/lib/i18n/locales";
 

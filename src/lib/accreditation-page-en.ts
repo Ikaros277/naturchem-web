@@ -59,7 +59,7 @@ export const accreditationPageContent = {
     eyebrow: "Evidence of professional competence",
     title: "Accreditation, authorisations and professional qualifications",
     lead:
-      "Results from NATURCHEM stand up to inspection by ČIŽP, KHS and in building permitting proceedings — here are the certificates behind them."
+      "Documents covering laboratory accreditation, measurement scope and professional authorisations. Certificates and appendices are available to download."
   },
   overview: {
     factsTitle: "Key accreditation details",
@@ -76,7 +76,7 @@ export const accreditationPageContent = {
   authorizations: {
     title: "Authorisations, qualifications and documents",
     intro:
-      "EIA, dispersion and noise studies or expert reports do not fall under laboratory accreditation — they are covered by separate authorisations held by Ing. Hezina:",
+      "Laboratory accreditation and professional authorisations are different credentials. Ing. Hezina's separate authorisations are listed below:",
     documentsSubheading: "Documents for download",
     downloadButtonLabel: "Download PDF",
     downloadAriaSuffix: "— download PDF"

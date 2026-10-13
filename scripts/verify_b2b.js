@@ -115,7 +115,9 @@ async function main() {
   }, React.createElement(TawkToChat)));
   assert.ok(pendingViewportChat.includes('data-tawk-suppressed="true"'), "Suppress loaded vendor frames until the desktop viewport is known");
   assert.ok(fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8").includes("body:has([data-tawk-suppressed])"), "Keep fallback protection against a vendor reopening a hidden widget");
-  assert.deepEqual(serviceMegaGroups.map(group => group.links.length), [8, 8, 8], "Czech service menu must have three balanced columns");
+  assert.deepEqual(serviceMegaGroups.map(group => group.id), ["mereni", "studie", "dokumentace"], "Keep the three service families");
+  assert.equal(serviceMegaGroups.flatMap(group => group.links).length, 24, "Keep all existing service links");
+  assert.ok(serviceMegaGroups.find(group => group.id === "dokumentace").links.some(link => link.href === "/sluzby/ispop"), "ISPOP reporting belongs with documentation, not modelling");
   const menuLinks = serviceMegaGroups.flatMap(group => group.links.map(link => link.href));
   assert.ok(!menuLinks.includes("/mereni-pro-kolaudaci") && !menuLinks.includes("/mereni-nove-haly"), "Campaign links should stay outside the service megamenu");
   for (const prefix of ["", "/cs", "/en", "/de"]) {

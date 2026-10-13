@@ -27,7 +27,7 @@ type Props = {
   locale: Locale;
 };
 
-export function EquipmentGroupsIndex({ groups, groupAriaVerbs, locale }: Props) {
+export function EquipmentGroupsIndex({ groups, groupAriaVerbs }: Props) {
   const equipment = useTranslations("equipment");
   const accordion = useTranslations("accordion");
   const groupIds = useMemo(() => groups.map((group) => group.id), [groups]);

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FaqAccordionList, type FaqAccordionUiLabels } from "@/components/FaqAccordionList";
 import { FaqSearchClient } from "@/components/FaqSearchClient";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -42,10 +41,13 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
   return (
     <div className="faq-page-content">
       <FaqSearchClient
+        locale={locale}
         searchLabel={uiLabels.searchLabel}
         searchPlaceholder={uiLabels.searchPlaceholder}
         emptyTitle={uiLabels.emptyTitle}
         emptyText={uiLabels.emptyText}
+        categories={categories.map(category => ({ id: category.id, title: category.tileLabel }))}
+        categoriesLabel={uiLabels.categoriesNavAria}
       />
 
       <nav className="faq-tiles" aria-label={uiLabels.categoriesNavAria}>
@@ -77,20 +79,20 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
         <span className="faq-contact-inline-sep" aria-hidden="true">
           ·
         </span>
-        <Link className="faq-contact-inline-link" href={link(contactFormHref)}>
+        <a className="faq-contact-inline-link" href={link(contactFormHref)}>
           {uiLabels.inquiryCta ?? "Nezávazně poptat"}
-        </Link>
+        </a>
       </p>
 
       <div className="faq-categories">
         {categories.map((category) => (
-          <section key={category.id} id={category.id} className="section faq-category">
-            <div className="faq-category-heading">
+          <details key={category.id} id={category.id} className="faq-category faq-category-disclosure">
+            <summary className="faq-category-heading">
               <h2>{category.title}</h2>
               <span className="faq-category-count">
                 {formatCategoryCount(uiLabels.categoryItemCount, category.items.length)}
               </span>
-            </div>
+            </summary>
             <div className="faq-category-body">
               <FaqAccordionList
                 items={category.items}
@@ -101,17 +103,17 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
             {category.ctas.length > 0 ? (
               <div className="btn-row faq-category-ctas">
                 {category.ctas.map((cta, index) => (
-                  <Link
+                  <a
                     key={cta.href}
                     href={link(cta.href)}
-                    className={index === 0 ? "button" : "button secondary"}
+                    className={index === 0 ? "faq-topic-link" : "faq-topic-link faq-topic-link--secondary"}
                   >
                     {cta.label}
-                  </Link>
+                  </a>
                 ))}
               </div>
             ) : null}
-          </section>
+          </details>
         ))}
       </div>
     </div>

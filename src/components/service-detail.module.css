@@ -19,6 +19,8 @@
 .textLink { display: inline-flex; align-items: center; gap: 12px; padding-block: 12px; min-height: 44px; color: #245d4a; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
 .photo { position: relative; align-self: stretch; min-height: 340px; overflow: hidden; border-radius: 8px 8px 56px 8px; background: #d5e0d7; }
 .photo :global(.hero-photo-img) { filter: none; transform: none; opacity: 1; }
+.highlights { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px 16px; color: #395e50; font-size: 14px; line-height: 1.4; }
+.highlights li::before { content: "✓"; margin-right: 7px; }
 .photoCaption { position: absolute; inset: auto 0 0; padding: 44px 24px 20px; background: linear-gradient(transparent, #0c283cda); color: #fff; font-size: 14px; font-weight: 600; letter-spacing: .02em; }
 .credentials { border-bottom: 1px solid #e0e7e2; }
 .credentialInner { display: flex; gap: 18px 32px; align-items: center; padding-block: 14px; font-size: 15px; }
@@ -50,6 +52,17 @@
 .panelCta { background: #fff; color: #102f42; min-height: 48px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-weight: 700; border-radius: 5px; text-decoration: none; }
 .panelCta:hover { background: #dceee4; }
 .inquiryPanel .response { color: #c0d5dc; font-size: 13px; margin-top: 10px; }
+.inquiryPanel .docsParagraph { margin-bottom: 16px; }
+.inquiryPanel .panelCta { margin-top: 20px; }
+.fullIntro { grid-column: 1 / -1; margin: 0; }
+.detailBody p, .detailColumns p { font-size: 16px; line-height: 1.65; color: #465b68; max-width: 74ch; }
+.detailBody h3 { font-size: 19px; margin-block: 16px 10px; }
+.sources { margin-top: 24px; padding-top: 20px; border-top: 1px solid #dce6df; }
+.sources h3 { font-size: 18px; }
+.sources li { margin-block: 12px; font-size: 15px; }
+.sources li p { margin-block: 4px; color: #526373; }
+.page[data-category="studies"] .eyebrow, .page[data-category="studies"] .textLink { color: #2c6095; }
+.page[data-category="docs"] .eyebrow, .page[data-category="docs"] .textLink { color: #85521c; }
 .detailsSection { padding-top: 44px; }
 .sectionHeading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px 28px; margin-bottom: 20px; }
 .sectionHeading h2 { font-size: 28px; margin: 0; }
@@ -101,6 +114,7 @@
   .credentialInner p { flex-basis: 100%; }
   .body { padding-block: 34px; }
   .overview { grid-template-columns: 1fr; gap: 28px; }
+  .inquiryPanel { order: -1; }
   .offer h2 { font-size: 28px; margin-bottom: 24px; }
   .feature { gap: 14px; }
   .feature h3 { font-size: 19px; }

@@ -82,14 +82,9 @@ export const serviceMegaGroupsDe = [
         description: "Auswirkungen von Vorhaben auf die Umgebung"
       },
       {
-        href: "/sluzby/ispop",
-        label: "ISPOP und Betriebsaufzeichnungen",
-        description: "Betriebsaufzeichnungen zu Abfällen und Stoffen"
-      },
-      {
         href: "/sluzby/ghg-overovani",
         label: "Treibhausgasberichterstattung (THG)",
-        description: "THG-Berichterstattung und Verifizierung"
+        description: "Emissionsberechnungen und CO₂-Fußabdruck"
       }
     ]
   },
@@ -98,6 +93,11 @@ export const serviceMegaGroupsDe = [
     title: "Dokumentation und Genehmigungen",
     subtitle: "EIA, Betriebsgenehmigungen und Betriebsdokumentation",
     links: [
+      {
+        href: "/sluzby/ispop",
+        label: "ISPOP und Betriebsaufzeichnungen",
+        description: "Betriebsaufzeichnungen und jährliche ISPOP-Meldungen"
+      },
       {
         href: "/sluzby/eia-oznameni-zameru",
         label: "EIA und Projektanmeldung",

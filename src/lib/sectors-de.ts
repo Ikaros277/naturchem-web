@@ -263,7 +263,7 @@ const DE: Partial<Record<string, SectorText>> = {
   "ghg-cnr": {
     title: "THG und Treibhausgase",
     description:
-      "Für Betriebe bearbeiten wir Treibhausgas-Berichterstattung, THG-Verifizierung und Anbindung an Messungen und Betriebsdaten.",
+      "Für Betriebe bearbeiten wir Berechnung und Berichterstattung von Treibhausgasemissionen, Prüfung von Emissionsdaten und Anbindung an Messungen und Betriebsdaten.",
     serviceTags: "THG, ISPOP, Emissionen, Berichterstattung",
     factors: "CO₂, Treibhausgase, Brennstoffe, Emissionsfaktoren",
     ariaLabel: "Leistungen für Treibhausgas-Berichterstattung anzeigen",

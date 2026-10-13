@@ -6,9 +6,27 @@ const root = path.resolve(__dirname, "..");
 const sourceFile = path.join(root, "src/app/globals.css");
 const outputFile = path.join(root, "src/app/runtime.generated.css");
 const serviceOutputFile = path.join(root, "src/app/services.generated.css");
+const families = ["home", "services", "contact", "references", "faq", "articles", "company", "sectors", "cases", "sales", "other"];
+function familyForRoute(route) {
+  const clean = route.replace(/\\/g, "/").replace(/\.html$/, "").replace(/^(?:cs|en|de)(?:\/|$)/, "");
+  if (!clean) return "home";
+  const first = clean.split("/")[0];
+  return ({ sluzby: "services", kontakt: "contact", reference: "references", faq: "faq",
+    poradna: "articles", "provozy-a-technologie": "sectors", "typicke-zakazky": "cases",
+    prodej: "sales", "o-spolecnosti-naturchem": "company", "proc-naturchem": "company",
+    "akreditace-autorizace-dokumenty": "company", "pristrojove-vybaveni": "company", redakce: "company" })[first] || "other";
+}
+function familyForPage(file) {
+  const route = path.relative(path.join(root, "src/app/[locale]"), file)
+    .replace(/\\/g, "/").replace(/(?:^|\/)\([^/]+\)\//g, "").replace(/(?:^|\/)page\.tsx$/, "");
+  return familyForRoute(route);
+}
+function familyOutputFile(kind) {
+  return kind === "home" ? outputFile : path.join(root, "src/app", kind + ".generated.css");
+}
 
 // Build route-family subsets from the canonical source. Required rules are
-// neither delayed nor reordered; unrelated pages keep their full globals.css.
+// neither delayed nor reordered; each route family retains its required rules.
 const sharedComponents = [
   "Header", "HeaderClient", "BrandLogo", "LanguageSwitcher", "MobileNavSummaryRow",
   "HeaderInquiryCta", "ServiceIcon", "ServiceMegaMenu", "ExperienceMegaMenu",
@@ -27,10 +45,9 @@ function sourceFiles(directory) {
 }
 
 function collectUsage(kind = "home") {
-  const servicePages = kind === "services"
-    ? sourceFiles(path.join(root, "src/app/[locale]/sluzby")).filter(file => file.endsWith("page.tsx"))
-    : [];
-  const components = kind === "services"
+  const pages = sourceFiles(path.join(root, "src/app/[locale]"))
+    .filter(file => file.endsWith(path.sep + "page.tsx") && familyForPage(file) === kind);
+  const components = kind !== "home"
     ? sharedComponents.filter(name => !/^(?:Home|CountUpStatValue)/.test(name))
     : sharedComponents;
   const files = [
@@ -38,13 +55,13 @@ function collectUsage(kind = "home") {
     ...sourceFiles(path.join(root, "src/lib/i18n")),
     path.join(root, "src/lib/service-categories.ts"),
     path.join(root, "src/app/[locale]/layout.tsx"),
-    ...(kind === "services" ? servicePages : [path.join(root, "src/app/[locale]/page.tsx")])
+    ...pages
   ];
   // Include descendants automatically: shared markup moved into a child must
-  // retain its styles. Both families preserve canonical selector order.
+  // retain its styles. All families preserve canonical selector order.
   const descendants = new Set(files);
   function visit(file) {
-    for (const match of fs.readFileSync(file, "utf8").matchAll(/["'](@\/components\/[^"']+|\.{1,2}\/[^"']+)["']/g)) {
+    for (const match of fs.readFileSync(file, "utf8").matchAll(/["'](@\/(?:components|lib)\/[^"']+|\.{1,2}\/[^"']+)["']/g)) {
       const base = match[1].startsWith("@/")
         ? path.join(root, "src", match[1].slice(2))
         : path.resolve(path.dirname(file), match[1]);
@@ -93,7 +110,8 @@ function compactStyles(source, usage) {
 
 function generate() {
   const source = fs.readFileSync(sourceFile, "utf8");
-  for (const [kind, target] of [["home", outputFile], ["services", serviceOutputFile]]) {
+  for (const kind of families) {
+    const target = familyOutputFile(kind);
     const css = "/* Generated from globals.css; edit the source, not this file. */\n"
       + compactStyles(source, collectUsage(kind)) + "\n";
     if (!fs.existsSync(target) || fs.readFileSync(target, "utf8") !== css) fs.writeFileSync(target, css);
@@ -102,4 +120,4 @@ function generate() {
 }
 
 if (require.main === module) generate();
-module.exports = { collectUsage, compactStyles, keepSelector, sourceFiles, sourceFile, outputFile, serviceOutputFile };
+module.exports = { collectUsage, compactStyles, keepSelector, sourceFiles, sourceFile, outputFile, serviceOutputFile, families, familyForRoute, familyForPage, familyOutputFile };

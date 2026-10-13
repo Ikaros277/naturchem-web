@@ -1,6 +1,6 @@
 ﻿import { globalCta } from "@/lib/cta";
 import { contactPageHref } from "@/lib/contact-url";
-import { homeSectors as sectorsForHome, provozyNavLabel, sectors } from "@/lib/sectors";
+import { homeSectors as sectorsForHome, provozyNavLabel } from "@/lib/sectors";
 
 /**
  * Hlavní menu: Služby | Provozy | Typické zakázky | Reference | O nás ▾ | Kontakt | Poptat
@@ -72,7 +72,7 @@ export const accreditationNav = {
     "Mimopracovní prostředí: hluk"
   ],
   authTitle: "Autorizace",
-  authItems: ["EIA", "Rozptylové studie", "Odborné posudky", "Emise skleníkových plynů (GHG)"]
+  authItems: ["EIA", "Rozptylové studie", "Odborné posudky"]
 } as const;
 
 /** Dropdown O nás v hlavní navigaci */

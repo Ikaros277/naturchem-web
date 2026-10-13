@@ -3,7 +3,7 @@ import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { SectorGroupsIndex } from "@/components/SectorGroupsIndex";
 import { JsonLd } from "@/components/Schema";
 import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
-import { getCaseStudies, getProvozyNavLabel, getSectorPage, getSectors, getSiteServices } from "@/lib/i18n/content";
+import { getProvozyNavLabel, getSectorPage, getSectors, getSiteServices } from "@/lib/i18n/content";
 import { toSectorCardModel } from "@/lib/sector-card-model";
 import { getSectorGroups } from "@/lib/i18n/sector-groups-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";

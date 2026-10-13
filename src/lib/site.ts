@@ -187,7 +187,7 @@ export const services = [
   {
     href: "/sluzby/ghg-overovani",
     title: "Emise skleníkových plynů (GHG)",
-    short: "Ověřování emisí skleníkových plynů, emisní údaje a vykazování.",
+    short: "Výpočty emisí skleníkových plynů, kontrola emisních dat a uhlíková stopa.",
     cta: "Zjistit více o GHG",
     contactCta: "Poptat GHG",
     contactService: "GHG"

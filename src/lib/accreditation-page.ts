@@ -57,9 +57,9 @@ export const accreditationPageContent = {
   ],
   hero: {
     eyebrow: "Důkaz odborné způsobilosti",
-    title: "Akreditace, autorizace a odborná oprávnění",
+    title: "Akreditace a odborná oprávnění",
     lead:
-      "Výsledky z NATURCHEM obstojí při kontrole ČIŽP, KHS i v stavebním řízení — tady jsou osvědčení, která za nimi stojí."
+      "Doklady o akreditaci laboratoře, rozsahu měření a odborných autorizacích. Osvědčení a přílohy jsou dostupné ke stažení."
   },
   overview: {
     factsTitle: "Základní údaje o akreditaci",
@@ -76,7 +76,7 @@ export const accreditationPageContent = {
   authorizations: {
     title: "Autorizace, oprávnění a dokumenty",
     intro:
-      "EIA, rozptylové a hlukové studie nebo odborné posudky nespadají pod akreditaci laboratoře — jsou kryty samostatnými autorizacemi Ing. Heziny:",
+      "Akreditace laboratoře a odborné autorizace jsou různé doklady. Samostatná oprávnění Ing. Heziny uvádíme níže:",
     documentsSubheading: "Dokumenty ke stažení",
     downloadButtonLabel: "Stáhnout PDF",
     downloadAriaSuffix: "— stáhnout PDF"

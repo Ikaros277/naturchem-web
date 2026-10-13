@@ -1,0 +1,28 @@
+/* Subset of Source Sans 3 under OFL 1.1; same outlines, variation axis and fallback metrics.
+ * License: /fonts/2026-10-13/OFL.txt. No font preload ahead of the LCP photograph. */
+@font-face {
+  font-family: "Naturchem Sans";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/2026-10-13/naturchem-sans-latin-e1c0a9e157c9.woff2") format("woff2");
+  unicode-range: U+20-7E,U+A0-FF,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+300-301,U+303-304,U+308-309,U+323,U+329,U+2009,U+200B,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF;
+}
+@font-face {
+  font-family: "Naturchem Sans";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/2026-10-13/naturchem-sans-latin-ext-b6cfb4333aca.woff2") format("woff2");
+  unicode-range: U+100-130,U+132-151,U+154-181,U+186,U+18A,U+18D-190,U+192-194,U+196-197,U+19A-19B,U+19E,U+1A0-1A1,U+1AF-1B1,U+1B7,U+1BF-1C3,U+1CD-1DD,U+1E2-1E7,U+1EA-1EB,U+1EE-1F0,U+1F4-1F5,U+1F7-201,U+204-205,U+208-209,U+20C-20D,U+218-220,U+222-223,U+226-227,U+237,U+23A-23E,U+241-245,U+248-249;
+}
+@font-face {
+  font-family: "Naturchem Sans Fallback";
+  src: local(Arial);
+  ascent-override: 109.21%;
+  descent-override: 42.66%;
+  line-gap-override: 0%;
+  size-adjust: 93.76%;
+}
+.naturchem-font { font-family: "Naturchem Sans", "Naturchem Sans Fallback"; font-style: normal; }
+.naturchem-font-variable { --font-sans: "Naturchem Sans", "Naturchem Sans Fallback"; }

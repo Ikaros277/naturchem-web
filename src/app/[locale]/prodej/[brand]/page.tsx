@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/sales.generated.css";
 import type { Metadata } from "next";
 
 import { notFound } from "next/navigation";

@@ -3,6 +3,7 @@ title: "Änderung der integrierten Genehmigung nach IPPC: Wann ist eine Änderun
 slug: zmena-integrovaneho-povoleni-ippc-podstatna-zmena
 excerpt: "Sie verfügen über eine integrierte Genehmigung und planen eine neue Produktionslinie, eine Kapazitätserhöhung, einen Brennstoffwechsel, neue Abfälle, einen anderen Abluftkamin oder eine Änderung der Technologie? Warten Sie nicht, bis die Änderung abgeschlossen ist. Der Betreiber einer Anlage im IPPC-Regime muss der Landesbehörde jede geplante Änderung der Nutzung, der Betriebsweise oder des Umfangs der Anlage anzeigen, die Auswirkungen auf die Umwelt haben kann. Die Behörde beurteilt anschließend, ob die Änderung die integrierte Genehmigung überhaupt nicht berührt, ob eine gewöhnliche Änderung der Genehmigung genügt oder ob es sich um eine wesentliche Änderung mit einem umfangreicheren Verfahren handelt."
 author: Ing. František Hezina
+heroImage: /hero/ippc-integrovana-povoleni.webp
 publishedAt: "2026-10-10"
 topic: Legislation
 ---

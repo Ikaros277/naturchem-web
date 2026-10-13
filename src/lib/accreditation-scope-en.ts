@@ -52,9 +52,5 @@ export const authorizations = [
   {
     title: "Expert reports",
     text: "expert reports in air protection"
-  },
-  {
-    title: "Greenhouse gases",
-    text: "verification of greenhouse gas emissions (GHG)"
   }
 ] as const;

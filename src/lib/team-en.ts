@@ -6,7 +6,7 @@ export const teamMembers: TeamMember[] = [
     name: "Ing. František Hezina",
     role: "Managing director",
     details: [
-      "Court-appointed expert, authorised person for emission measurements, expert reports, dispersion studies, greenhouse gas emission verification and EIA notifications."
+      "Court-appointed expert, authorised person for emission measurements, expert reports, dispersion studies and EIA notifications."
     ],
     phones: ["+420 603 216 983", "+420 774 100 570"],
     email: "hezina@naturchem.cz",

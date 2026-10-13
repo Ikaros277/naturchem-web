@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/other.generated.css";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SeoLandingPage } from "@/components/SeoLandingPage";

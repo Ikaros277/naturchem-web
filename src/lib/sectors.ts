@@ -330,7 +330,7 @@ export const sectors: Sector[] = [
   sector(
     "ghg-cnr",
     "GHG a skleníkové plyny",
-    "U provozů řešíme výkazování skleníkových plynů, GHG ověřování a návaznost na měření a provozní data.",
+    "U provozů řešíme výpočty a vykazování skleníkových plynů, kontrolu emisních dat a návaznost na měření a provozní data.",
     "GHG, ISPOP, emise, vykazování",
     "CO₂, skleníkové plyny, paliva, emisní faktory",
     ["/sluzby/ghg-overovani", "/sluzby/ispop"],

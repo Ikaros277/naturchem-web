@@ -31,7 +31,7 @@ export const referenceIntro =
 export const referenceCustomersIntro =
   "Společnosti, které u nás řeší měření, studie a podklady pro úřad — od automobilové výroby a energetiky po veřejný sektor.";
 
-export const referenceExamplesHeading = "Příklady zakázek z praxe";
+export const referenceExamplesHeading = "Další doložené ukázky";
 
 export const referenceAreasHeading = "Reference podle oborů a typu provozu";
 

@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/references.generated.css";
 import type { Metadata } from "next";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
@@ -12,7 +12,6 @@ import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
-import { getPageHeroTheme } from "@/lib/hero-images";
 import { ClientLogosGrid } from "@/components/ClientLogosGrid";
 import { LocaleLink } from "@/lib/i18n/locale-link";
 import { toReferenceExampleListingMap } from "@/lib/reference-example-listing";
@@ -61,7 +60,7 @@ export default async function ReferencePage({ params }: Props) {
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}
-        theme={getPageHeroTheme("/reference")}
+        theme="mereni-emisi"
         breadcrumbs={[
           { name: messages.common.breadcrumbHome, href: link("/") },
           { name: messages.reference.breadcrumb }

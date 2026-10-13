@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getPoradnaArticles, getRelatedArticlesForArticle } from "@/lib/poradna-articles";
 import { getMessages } from "@/lib/i18n/get-messages";
 import type { Locale } from "@/lib/i18n/locales";
@@ -27,17 +26,17 @@ export async function ArticleRelatedArticles({ locale, slug, topic, limit = 3 }:
       <ul className="article-related-articles-list">
         {related.map((item) => (
           <li key={item.slug} className="article-related-articles-item">
-            <Link prefetch={false} href={item.href} className="article-related-articles-link">
+            <a href={item.href} className="article-related-articles-link">
               {item.title}
-            </Link>
+            </a>
             {item.excerpt ? <p className="muted">{item.excerpt}</p> : null}
           </li>
         ))}
       </ul>
       <p>
-        <Link prefetch={false} href={articlesHref} className="text-link">
+        <a href={articlesHref} className="text-link">
           {messages.poradna.allArticles}
-        </Link>
+        </a>
       </p>
     </section>
   );

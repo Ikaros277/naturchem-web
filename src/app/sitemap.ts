@@ -73,6 +73,12 @@ function uniquePaths(paths: string[]): string[] {
 
 const CONTENT_REFRESH = new Date("2026-07-14T00:00:00.000Z");
 const CATALOG_REFRESH = new Date("2026-03-01T00:00:00.000Z");
+// Explicit semantic metadata revision: corrected business scope and author identity.
+// This is not the build time and does not change on routine redeployments.
+const ENTITY_METADATA_REVISION = new Date("2026-10-13T00:00:00.000Z");
+function latestRevision(date: Date): Date {
+  return date > ENTITY_METADATA_REVISION ? date : ENTITY_METADATA_REVISION;
+}
 
 function articleLastModified(article: { updatedAt?: string; publishedAt: string }): Date {
   const raw = article.updatedAt || article.publishedAt;
@@ -93,7 +99,7 @@ function staticSitemapEntries(
   return locales.flatMap((locale) =>
     staticPaths.map((route) => ({
       url: localizedCanonical(route, locale),
-      lastModified: staticRouteLastModified(route, poradnaHubDate),
+      lastModified: latestRevision(staticRouteLastModified(route, poradnaHubDate)),
       changeFrequency: "monthly" as const,
       priority: route === "/" ? 1 : 0.8,
       alternates: {
@@ -117,7 +123,7 @@ function articleSitemapEntries(
 
       entries.push({
         url: localizedCanonical(route, locale),
-        lastModified: articleLastModified(article),
+        lastModified: latestRevision(articleLastModified(article)),
         changeFrequency: "monthly",
         priority: 0.7,
         alternates: {
@@ -136,7 +142,7 @@ function landingSitemapEntries(): MetadataRoute.Sitemap {
     const route = `/${landing.slug}`;
     return availableLocales.map((locale) => ({
       url: localizedCanonical(route, locale),
-      lastModified: CONTENT_REFRESH,
+      lastModified: latestRevision(CONTENT_REFRESH),
       changeFrequency: "monthly" as const,
       priority: 0.85,
       alternates: {
@@ -173,7 +179,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const availableLocales = locales.filter(lang => (counts.get(lang) ?? 1) >= page);
     return {
       url: localizedCanonical(path, locale),
-      lastModified: poradnaHubDate,
+      lastModified: latestRevision(poradnaHubDate),
       changeFrequency: "monthly" as const,
       priority: 0.5,
       alternates: { languages: buildLocaleAlternatesLanguages(path, availableLocales) }

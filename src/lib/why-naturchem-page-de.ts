@@ -22,7 +22,7 @@ export const whyNaturchemPageContent = {
     authorizations: {
       heading: "Autorisierungen und Sachverständigentätigkeit",
       paragraphs: [
-        "Wir sind autorisiert für einmalige Emissionsmessungen, Ausbreitungsstudien, Gutachten nach dem Luftschutzgesetz und THG-Verifizierung sowie UVP.",
+        "Wir sind autorisiert für einmalige Emissionsmessungen, Ausbreitungsstudien, Gutachten nach dem Luftschutzgesetz sowie UVP.",
         "Geschäftsführer Ing. František Hezina ist gerichtlich beeideter Sachverständiger."
       ]
     },

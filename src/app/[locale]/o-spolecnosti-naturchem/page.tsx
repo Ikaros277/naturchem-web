@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/company.generated.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ExperienceStats } from "@/components/ExperienceStats";
@@ -15,8 +15,9 @@ import { getHomeTrustBandItems } from "@/lib/i18n/home-content";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
-import { getPageHeroTheme } from "@/lib/hero-images";
 import { company, siteUrl } from "@/lib/site";
+import { expertAuthorId, expertAuthorUrl } from "@/lib/article-author";
+import { ContextualPageLinks } from "@/components/ContextualPageLinks";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -75,6 +76,8 @@ export default async function ONaturchemPage({ params }: Props) {
   const personData = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": expertAuthorId,
+    url: expertAuthorUrl(locale),
     name: "Ing. František Hezina",
     jobTitle: content.personSchema.jobTitle,
     worksFor: { "@type": "Organization", name: company.name, url: siteUrl }
@@ -97,7 +100,7 @@ export default async function ONaturchemPage({ params }: Props) {
       <JsonLd data={breadcrumbData} />
       <PageHeroBand
         locale={locale}
-        theme={getPageHeroTheme("/o-spolecnosti-naturchem")}
+        theme="homepage-mereni"
         breadcrumbs={content.breadcrumbs.map((crumb) =>
           "href" in crumb ? { name: crumb.name, href: link(crumb.href) } : { name: crumb.name }
         )}
@@ -149,6 +152,7 @@ export default async function ONaturchemPage({ params }: Props) {
             <h2>{content.guarantee.title}</h2>
             <p>{guaranteeIntro}</p>
             <p>{content.guaranteeCredentials}</p>
+            <ContextualPageLinks locale={locale} topic="company" />
           </article>
         </div>
       </section>

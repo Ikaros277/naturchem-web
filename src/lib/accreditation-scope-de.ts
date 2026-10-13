@@ -52,9 +52,5 @@ export const authorizations = [
   {
     title: "Gutachten",
     text: "Gutachten im Luftschutz"
-  },
-  {
-    title: "Treibhausgase",
-    text: "Überprüfung der Treibhausgasemissionen (THG)"
   }
 ] as const;

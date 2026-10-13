@@ -17,6 +17,8 @@ type Props = {
   children: ReactNode;
   className?: string;
   priority?: boolean;
+  /** Text-first pages such as contact do not need a decorative image or map above the form. */
+  plain?: boolean;
   /** standard = index stránky; service = ServicePage */
   variant?: PageHeroBandVariant;
   /** Nahradí výchozí hero fotku (např. mapa na kontaktu). */
@@ -32,6 +34,7 @@ export async function PageHeroBand({
   children,
   className = "",
   priority = true,
+  plain = false,
   variant = "standard",
   media,
   mediaLabel
@@ -42,6 +45,7 @@ export async function PageHeroBand({
   const bandClassName = [
     `page-hero-band page-hero-band--${variant}`,
     media ? "page-hero-band--media" : "",
+    plain ? "page-hero-band--plain" : "",
     className
   ]
     .filter(Boolean)
@@ -58,14 +62,14 @@ export async function PageHeroBand({
           {children}
         </div>
       </div>
-      <div
+      {!plain ? <div
         className="hero-photo-frame"
         aria-hidden={media ? undefined : true}
         role={media ? "region" : undefined}
         aria-label={media ? mediaLabel : undefined}
       >
         {media ?? <HeroPhoto theme={theme} src={imageSrc} priority={priority} />}
-      </div>
+      </div> : null}
     </div>
   );
 }

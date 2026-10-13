@@ -22,7 +22,7 @@ export const whyNaturchemPageContent = {
     authorizations: {
       heading: "Authorisations and expert activity",
       paragraphs: [
-        "We are authorised for one-off emission measurements, dispersion studies, expert reports under the Air Protection Act and GHG verification. We also hold EIA authorisation.",
+        "We are authorised for one-off emission measurements, dispersion studies and expert reports under the Air Protection Act. We also hold EIA authorisation.",
         "Managing director Ing. František Hezina performs court-appointed expert activity. The combination of accreditation, authorisation and authority-facing practice reduces the risk that an output cannot be used in administrative proceedings."
       ]
     },

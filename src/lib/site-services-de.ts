@@ -106,7 +106,7 @@ export const services = [
   {
     href: "/sluzby/ghg-overovani",
     title: "Treibhausgasemissionen (THG)",
-    short: "Überprüfung der Treibhausgasemissionen, Emissionsdaten und Berichterstattung.",
+    short: "Berechnung von Treibhausgasemissionen, Prüfung von Emissionsdaten und CO₂-Fußabdruck.",
     cta: "Erfahren Sie mehr über Treibhausgasemissionen",
     contactCta: "Fordern Sie Treibhausgas-Dienstleistungen an",
     contactService: "Treibhausgas"

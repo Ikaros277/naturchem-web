@@ -169,7 +169,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "GHG a skleníkové plyny",
         href: "/sluzby/ghg-overovani",
-        text: "Ověřování emisních údajů, podklady pro výkazování skleníkových plynů."
+        text: "Výpočty emisí, kontrola emisních dat a podklady pro vykazování skleníkových plynů."
       },
       {
         title: "Chemické látky v provozu",

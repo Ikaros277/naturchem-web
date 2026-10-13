@@ -6,6 +6,7 @@
 /out
 /src/app/runtime.generated.css
 /src/app/services.generated.css
+/src/app/*.generated.css
 
 # local env files
 .env

@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/company.generated.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
@@ -69,6 +69,8 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
       <PageHeroBand
         locale={locale}
         theme={getPageHeroTheme("/akreditace-autorizace-dokumenty")}
+        plain
+        className="page-hero-band--compact"
         breadcrumbs={content.breadcrumbs.map((crumb) =>
           "href" in crumb ? { name: crumb.name, href: link(crumb.href) } : { name: crumb.name }
         )}
@@ -77,6 +79,12 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
           <p className="eyebrow">{content.hero.eyebrow}</p>
           <h1>{content.hero.title}</h1>
           <p className="page-lead">{content.hero.lead}</p>
+          <nav className="accreditation-quick-links" aria-label={content.authorizations.documentsSubheading}>
+            <a className="button secondary" href="/dokumenty/osvedceni-akreditace-562-2023.pdf" target="_blank" rel="noopener noreferrer">
+              {locale === "cs" ? "Osvědčení o akreditaci (PDF)" : locale === "de" ? "Akkreditierungsurkunde (PDF)" : "Accreditation certificate (PDF)"}
+            </a>
+            <a className="why-proof-link" href="#dokumenty">{content.authorizations.documentsSubheading} ↓</a>
+          </nav>
         </header>
       </PageHeroBand>
 
@@ -92,14 +100,11 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
           </article>
           <article className="card">
             <h2>{content.overview.benefitsTitle}</h2>
-            <div className="mini-card-grid">
-              {benefits.map(({ icon, text }) => (
-                <div key={text} className="mini-card">
-                  <ServiceIcon icon={icon} size={32} />
-                  <span>{text}</span>
-                </div>
-              ))}
-            </div>
+            <ul className="check-list">{benefits.slice(0, 2).map(({ text }) => <li key={text}>{text}</li>)}</ul>
+            <details className="accreditation-benefits-details">
+              <summary>{locale === "cs" ? "Další souvislosti" : locale === "de" ? "Weitere Hinweise" : "Additional context"}</summary>
+              <ul className="check-list">{benefits.slice(2).map(({ text }) => <li key={text}>{text}</li>)}</ul>
+            </details>
           </article>
         </section>
 
@@ -146,7 +151,14 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
               </article>
             ))}
           </div>
-          <h3 className="accreditation-docs-subheading">{content.authorizations.documentsSubheading}</h3>
+          <h3 id="dokumenty" className="accreditation-docs-subheading">{content.authorizations.documentsSubheading}</h3>
+          <p className="accreditation-ghg-note">{locale === "cs"
+            ? "U skleníkových plynů zajišťujeme výpočty, kontrolu emisních dat a uhlíkovou stopu. Akreditované ověřování EU ETS neposkytujeme."
+            : locale === "de"
+              ? "Für Treibhausgase bieten wir Berechnungen, die Prüfung von Emissionsdaten und den CO₂-Fußabdruck an. Eine akkreditierte EU-ETS-Verifizierung bieten wir nicht an."
+              : "For greenhouse gases, we provide calculations, checks of emissions data and carbon footprints. We do not provide accredited EU ETS verification."}
+            {" "}<Link href={link("/sluzby/ghg-overovani")}>{locale === "cs" ? "Rozsah služeb GHG" : locale === "de" ? "THG-Leistungen" : "GHG services"} →</Link>
+          </p>
           <div className="download-card-grid">
             {accreditationDocuments.map((doc) => (
               <div key={doc.id} className="card download-card">

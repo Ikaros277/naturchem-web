@@ -82,14 +82,9 @@ export const serviceMegaGroupsEn = [
         description: "Project impacts on surroundings"
       },
       {
-        href: "/sluzby/ispop",
-        label: "ISPOP & operational records",
-        description: "Waste and substance operational records"
-      },
-      {
         href: "/sluzby/ghg-overovani",
         label: "Greenhouse gas (GHG) reporting",
-        description: "GHG reporting and verification"
+        description: "Emission calculations and carbon footprint"
       }
     ]
   },
@@ -98,6 +93,11 @@ export const serviceMegaGroupsEn = [
     title: "Documentation & permitting",
     subtitle: "EIA, operating permits and compliance documentation",
     links: [
+      {
+        href: "/sluzby/ispop",
+        label: "ISPOP & operational records",
+        description: "Operational records and annual ISPOP reporting"
+      },
       {
         href: "/sluzby/eia-oznameni-zameru",
         label: "EIA & project notification",

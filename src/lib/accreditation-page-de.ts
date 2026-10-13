@@ -59,7 +59,7 @@ export const accreditationPageContent = {
     eyebrow: "Nachweis der Fachkompetenz",
     title: "Akkreditierung, Zulassungen und Berufsqualifikationen",
     lead:
-      "Ergebnisse von NATURCHEM halten der Prüfung durch ČIŽP, KHS und im Baugenehmigungsverfahren stand – hier sind die Zertifikate dahinter."
+      "Dokumente zur Laborakkreditierung, zum Messumfang und zu fachlichen Autorisierungen. Zertifikate und Anlagen stehen zum Download bereit."
   },
   overview: {
     factsTitle: "Wichtige Akkreditierungsdetails",
@@ -76,7 +76,7 @@ export const accreditationPageContent = {
   authorizations: {
     title: "Berechtigungen, Qualifikationen und Dokumente",
     intro:
-      "UVP, Ausbreitungs- und Lärmstudien oder Gutachten fallen nicht unter die Laborakkreditierung – sie unterliegen gesonderten Genehmigungen von Ing. Hezina:",
+      "Laborakkreditierung und fachliche Autorisierungen sind unterschiedliche Nachweise. Die gesonderten Autorisierungen von Ing. Hezina sind unten aufgeführt:",
     documentsSubheading: "Dokumente zum Download",
     downloadButtonLabel: "PDF herunterladen",
     downloadAriaSuffix: "— PDF herunterladen"

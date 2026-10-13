@@ -22,7 +22,7 @@ export const whyNaturchemPageContent = {
     authorizations: {
       heading: "Autorizace a znalecká činnost",
       paragraphs: [
-        "Jsme autorizovanou osobou pro jednorázové měření emisí, rozptylové studie, odborné posudky podle zákona č. 201/2012 Sb. a ověřování emisí skleníkových plynů. Autorizace EIA zajišťujeme pro podklady v procesu posuzování vlivů na životní prostředí.",
+        "Jsme autorizovanou osobou pro jednorázové měření emisí, rozptylové studie a odborné posudky podle zákona č. 201/2012 Sb. Autorizace EIA zajišťujeme pro podklady v procesu posuzování vlivů na životní prostředí.",
         "Statutární zástupce Ing. František Hezina vykonává znaleckou činnost v oboru. Kombinace akreditace, autorizace a praxe s úřady snižuje riziko, že výstup nebude pro správní řízení použitelný."
       ]
     },

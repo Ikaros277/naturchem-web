@@ -60,6 +60,7 @@ const topicServiceHrefs: Record<string, ServiceHref[]> = {
 
 /** Klíčová slova v názvu/slugu → doplnění souvisejících služeb. */
 const keywordRules: { pattern: RegExp; services: ServiceHref[] }[] = [
+  { pattern: /ippc|integrovan/i, services: [S.ippc, S.posudky, S.povoleni] },
   { pattern: /ispop|provozní evidence|hlášen/i, services: [S.ispop, S.ghg, S.emise] },
   { pattern: /ghg|skleníkov/i, services: [S.ghg, S.ispop] },
   { pattern: /kotel|plynov|spalov|voc|lakovn|imise|ovzduší|emis/i, services: [S.emise, S.posudky] },
@@ -69,7 +70,7 @@ const keywordRules: { pattern: RegExp; services: ServiceHref[] }[] = [
   { pattern: /posudek|posuzov/i, services: [S.posudky, S.emise] },
   { pattern: /pracovní prostřed|kategorizac|prach|chemick.*látk|respirabil/i, services: [S.pracovni, S.chemLatky] },
   { pattern: /bezpečnostní list|chemick/i, services: [S.bezpecnostni, S.skoleni, S.chemLatky] },
-  { pattern: /provozní řád|ippc|integrovan/i, services: [S.provozni, S.ippc] },
+  { pattern: /provozní řád/i, services: [S.provozni, S.ippc] },
   { pattern: /svařovn|automotive|recyklac|skládk|bioplyn|dřevozprac|zeměděl/i, services: [S.emise, S.hluk, S.eia] }
 ];
 

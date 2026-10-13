@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { ContextualPageLinks } from "@/components/ContextualPageLinks";
 import type { ServicePageProps } from "./ServicePage";
 import type { FaqItem } from "@/lib/faq";
 import { Breadcrumbs } from "./Breadcrumbs";
@@ -41,6 +42,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
   const categoryLabel = category === "measurement" ? ui.measurement : category === "studies" ? ui.studies : ui.docsCategory;
   const emissions = locale === "cs" && content.slug === "sluzby/mereni-emisi";
   const photo = getAuthenticPhoto(getServiceHeroTheme(content.slug));
+  const workplace = locale === "cs" && content.slug === "sluzby/pracovni-prostredi";
   const features = emissions ? [
     { title: "Měření u Vašeho zdroje", text: "Rozsah podle povolení provozu a zadání. Předem posoudíme měřicí místo a přípravu provozu.", icon: "process-rozsah" as const },
     { title: "Vyhodnocení vůči limitům", text: "Výsledky porovnáme s limity, povolením provozu a případným požadavkem úřadu.", icon: "process-posouzeni" as const },
@@ -61,7 +63,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             ]} />
             <p className={styles.eyebrow}>{categoryLabel}</p>
             <h1 id="service-title" className={content.title.length > 38 ? styles.longTitle : undefined}>{content.title}</h1>
-            <p className={styles.lead}><InlineEmphasis text={emissions ? "Změříme emise ze stacionárních zdrojů a vyhodnotíme výsledky vůči limitům. Získáte protokol pro provozní dokumentaci a jednání s úřady." : content.intro} /></p>
+            <p className={styles.lead}><InlineEmphasis text={emissions ? "Změříme emise ze stacionárních zdrojů a vyhodnotíme výsledky vůči limitům. Získáte protokol pro provozní dokumentaci a jednání s úřady." : workplace ? "Měření hluku, prachu, chemických látek a dalších faktorů pro kategorizaci prací, BOZP a požadavky KHS." : content.intro} /></p>
             <div className={styles.heroActions}>
               <a className={`button ${styles.inquiry}`} href={contactHref}>
                 <span>{contactLabel}<small>{ui.response}</small></span><span aria-hidden="true">↗</span>
@@ -116,6 +118,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
           <div className={styles.sectionHeading}><h2 id="service-details-heading">{ui.details}</h2></div>
           <div className={styles.disclosures}>
             <details><summary>{ui.scopeAndOutputs}</summary><div className={styles.detailColumns}>
+              {workplace ? <p className={styles.fullIntro}><InlineEmphasis text={content.intro} /></p> : null}
               <div><h3>{content.scopeHeading ?? copy.scopeHeading}</h3><DetailList items={content.scope} /></div>
               <div><h3>{copy.outputsHeading}</h3><DetailList items={content.outputs} /></div>
             </div></details>
@@ -129,9 +132,11 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
           {faqItems.length ? <div className={styles.faq}>
             <h3>{ui.faq}</h3>
             <FaqAccordionList items={faqItems} locale={locale} uiLabels={faqUiLabels} />
-            <a className={styles.textLink} href={href("/faq#" + content.faqCategoryId)}>{ui.allFaq} <span aria-hidden="true">→</span></a>
+            <a className={styles.textLink} href={href(content.faqCategoryId ? "/faq#" + content.faqCategoryId : "/faq")}>{ui.allFaq} <span aria-hidden="true">→</span></a>
           </div> : null}
         </section>
+        {content.slug === "sluzby/mereni-emisi" ? <ContextualPageLinks locale={locale} topic="emissions" /> : null}
+        {content.slug === "sluzby/mereni-hluku" ? <ContextualPageLinks locale={locale} topic="noise" /> : null}
         {relatedItems.length ? <nav className={styles.related} aria-label={ui.related}>
           <h2>{ui.related}</h2>
           <ul>{relatedItems.slice(0, 3).map(item => <li key={item.href}><a href={href(item.href)}>{item.title}<span aria-hidden="true">↗</span></a></li>)}</ul>

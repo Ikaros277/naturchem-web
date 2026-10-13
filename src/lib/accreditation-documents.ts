@@ -31,7 +31,7 @@ export const accreditationDocuments: AccreditationDocument[] = [
   {
     id: "autorizace-ghg",
     title: "Autorizace k ověřování emisí skleníkových plynů",
-    description: "Oprávnění k ověřování emisí skleníkových plynů.",
+    description: "Dokument k oblasti GHG. Aktuální nabídka zahrnuje výpočty emisí, kontrolu dat a uhlíkovou stopu, nikoli nezávislé akreditované ověření EU ETS.",
     href: "/dokumenty/autorizace-emise-sklenikovych-plynu.pdf",
     group: "autorizace"
   },

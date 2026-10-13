@@ -19,7 +19,8 @@ for (const file of ["src/app/[locale]/layout.tsx", "src/app/global-not-found.tsx
   assert.match(read(file), /import \{ fontSans \} from "@\/lib\/font"/, "One shared font instance: " + file);
   assert.doesNotMatch(read(file), /Source_Sans_3\(/, "Avoid duplicate font files: " + file);
 }
-assert.match(read("src/lib/font.ts"), /preload:\s*false/, "Do not preload a second font ahead of the mobile LCP image");
+assert.match(read("src/lib/font.css"), /font-display:\s*swap/, "Preserve readable fallback text while local fonts load");
+assert.doesNotMatch(read("src/lib/font.ts"), /next\/font\/google/, "Use only the verified, lighter local font subsets");
 const css = read("src/components/homepage.module.css");
 assert.match(css, /\.section\s*\{[^}]*content-visibility:\s*auto/);
 assert.match(css, /contain-intrinsic-block-size:\s*auto/);

@@ -1,57 +1,24 @@
+import { DemandLandingLayout } from "@/components/DemandLandingLayout";
 import Link from "next/link";
-import { AuthenticPhoto } from "@/components/AuthenticPhoto";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqAccordionList } from "@/components/FaqAccordionList";
-import { PageHeroBand } from "@/components/PageHeroBand";
 import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { JsonLd } from "@/components/Schema";
-import { ServiceIcon } from "@/components/ServiceIcon";
-import { WorkProcessTimeline } from "@/components/WorkProcessTimeline";
-import { getAuthenticPhoto } from "@/lib/authentic-photos";
 import { getCtaCopy } from "@/lib/i18n/cta-i18n";
-import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getMessages } from "@/lib/i18n/get-messages";
-import { getServiceTrustBandItems } from "@/lib/i18n/home-content";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { getSeoLandingCopy } from "@/lib/i18n/seo-landing-i18n";
-import { getWorkProcessCopy } from "@/lib/i18n/work-process-i18n";
 import type { Locale } from "@/lib/i18n/locales";
 import { contactUrl } from "@/lib/contact-url";
-import { getServiceHeroTheme } from "@/lib/hero-images";
-import { getExtraLandingFaq, getLandingBlocks, getLandingTopic } from "@/lib/landing-blocks";
-import { renderRichText, splitLeadSentence, stripRichText } from "@/lib/rich-text";
+import { getExtraLandingFaq } from "@/lib/landing-blocks";
+import { renderRichText, stripRichText } from "@/lib/rich-text";
 import type { SeoLanding } from "@/lib/seo-landings";
-import type { ServiceIconKey } from "@/lib/service-icons";
 import { company, siteUrl } from "@/lib/site";
 
 type Props = {
   landing: SeoLanding;
   locale: Locale;
 };
-
-/**
- * Second approved photograph for the body of a landing page. It is never the same picture
- * as the hero, and only generic equipment/context captions from authentic-photos are shown.
- */
-const supportPhotoCandidates: Record<string, readonly string[]> = {
-  "mereni-hluku": ["mereni-pro-kolaudaci", "mereni-nove-haly"],
-  "mereni-pro-kolaudaci": ["mereni-nove-haly", "mereni-hluku"],
-  "mereni-nove-haly": ["mereni-pro-kolaudaci", "pracovni-prostredi"],
-  "pracovni-prostredi": ["mereni-mikroklimatu", "pristrojove-vybaveni"],
-  "mereni-emisi": ["homepage-mereni", "pristrojove-vybaveni"],
-  emise: ["homepage-mereni", "pristrojove-vybaveni"]
-};
-const defaultSupportPhotos = ["homepage-mereni", "pristrojove-vybaveni", "mereni-emisi"] as const;
-
-function pickSupportPhoto(heroTheme: string) {
-  const heroAsset = getAuthenticPhoto(heroTheme)?.asset;
-  const candidates = [...(supportPhotoCandidates[heroTheme] ?? []), ...defaultSupportPhotos];
-  for (const theme of candidates) {
-    const photo = getAuthenticPhoto(theme);
-    if (photo && photo.asset !== heroAsset) return photo;
-  }
-  return null;
-}
 
 export async function SeoLandingPage({ landing, locale }: Props) {
   const messages = await getMessages(locale);
@@ -84,8 +51,6 @@ export async function SeoLandingPage({ landing, locale }: Props) {
     ]
   };
 
-  const blocks = getLandingBlocks(locale);
-  const topic = getLandingTopic(landing.slug);
   const allFaq = [...(landing.faq ?? []), ...getExtraLandingFaq(landing.slug, locale)];
 
   const faqData = allFaq.length
@@ -105,338 +70,9 @@ export async function SeoLandingPage({ landing, locale }: Props) {
     .replace("{service}", landing.h1);
 
   if (landing.layout === "demand") {
-    const sectionIcons: ServiceIconKey[] = [
-      "process-posouzeni",
-      "process-rozsah",
-      "process-vystup",
-      "process-zpracovani"
-    ];
-    const heroTheme = landing.heroTheme ?? getServiceHeroTheme(landing.slug);
-    const supportPhoto = pickSupportPhoto(heroTheme);
-    const stats = getCompanyStatsContent(locale);
-    const workProcess = getWorkProcessCopy(locale);
-    const trustItems = getServiceTrustBandItems(locale);
-    const phone = company.phones[0];
-    const phoneHref = `tel:${phone.replace(/\s+/g, "")}`;
-    const mailHref = `mailto:${company.email}`;
-
-    return (
-      <main className="page seo-demand-page">
-        <JsonLd data={serviceData} />
-        <JsonLd data={breadcrumbData} />
-        {faqData ? <JsonLd data={faqData} /> : null}
-
-        <PageHeroBand
-          locale={locale}
-          theme={heroTheme}
-          variant="service"
-          breadcrumbs={[
-            { name: copy.breadcrumbHome, href: link("/") },
-            { name: copy.breadcrumbServices, href: link("/sluzby") },
-            { name: landing.h1 }
-          ]}
-        >
-          <header className="page-header service-hero service-hero--photo service-hero--single seo-demand-hero">
-            {landing.eyebrow ? <p className="eyebrow">{landing.eyebrow}</p> : null}
-            <h1>{landing.h1}</h1>
-            <p className="page-lead">{renderRichText(landing.intro)}</p>
-            <div className="btn-row seo-demand-hero-actions">
-              <Link href={contactHref} className="button">
-                {ctaCopy.globalCta}
-              </Link>
-              <Link href={link(landing.serviceHref)} className="button secondary">
-                {copy.generalServicePage}
-              </Link>
-            </div>
-          </header>
-        </PageHeroBand>
-
-        {landing.highlights?.length ? (
-          <section className="seo-demand-highlight-band" aria-label={landing.overviewHeading}>
-            <div className="container seo-demand-highlight-grid">
-              {landing.highlights.map((item) => (
-                <div key={item} className="seo-demand-highlight">
-                  <span aria-hidden="true">✓</span>
-                  <strong>{item}</strong>
-                </div>
-              ))}
-            </div>
-          </section>
-        ) : null}
-
-        <section
-          className="section seo-demand-overview"
-          aria-labelledby="seo-demand-overview-heading"
-        >
-          <div className="container seo-demand-overview-layout">
-            <div className="seo-demand-overview-aside">
-              <header className="seo-demand-section-header">
-                <p className="eyebrow">{copy.overviewEyebrow}</p>
-                <h2 id="seo-demand-overview-heading">
-                  {landing.overviewHeading ?? landing.sections[0]?.heading}
-                </h2>
-              </header>
-              {topic === "emise" ? (
-                <p className="seo-demand-breadth">
-                  {blocks.breadth.text}{" "}
-                  <Link href={link("/provozy-a-technologie")}>{blocks.breadth.linkLabel}</Link>.
-                </p>
-              ) : null}
-              {supportPhoto ? (
-                <figure className="seo-demand-photo">
-                  <div className="seo-demand-photo-frame">
-                    <AuthenticPhoto src={supportPhoto.src} position={supportPhoto.position} />
-                  </div>
-                  <figcaption>{supportPhoto.caption[locale]}</figcaption>
-                </figure>
-              ) : null}
-            </div>
-            <div className="seo-demand-overview-main">
-            <ol className="seo-demand-overview-list">
-              {landing.sections.map((section, index) => {
-                const [firstParagraph, ...otherParagraphs] = section.paragraphs;
-                const split = firstParagraph ? splitLeadSentence(firstParagraph) : null;
-                return (
-                  <li
-                    key={section.heading ?? section.paragraphs[0]?.slice(0, 40)}
-                    className="seo-demand-card"
-                  >
-                    <div className="seo-demand-card-top">
-                      <span className="seo-demand-step-icon" aria-hidden="true">
-                        <ServiceIcon icon={sectionIcons[index] ?? "process-zpracovani"} variant="inline" />
-                      </span>
-                      <span className="seo-demand-step-index" aria-hidden="true">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-                    {section.heading ? <h3>{section.heading}</h3> : null}
-                    {split ? (
-                      <>
-                        <p className="seo-demand-card-lead">{split.lead}</p>
-                        <p>{renderRichText(split.rest)}</p>
-                      </>
-                    ) : firstParagraph ? (
-                      <p>{renderRichText(firstParagraph)}</p>
-                    ) : null}
-                    {otherParagraphs.map((paragraph) => (
-                      <p key={paragraph.slice(0, 48)}>{renderRichText(paragraph)}</p>
-                    ))}
-                  </li>
-                );
-              })}
-            </ol>
-            {topic && topic !== "studie" ? (
-              <aside className="seo-demand-measured" aria-labelledby="seo-demand-measured-heading">
-                <p className="eyebrow">{blocks.measured.eyebrow}</p>
-                <h3 id="seo-demand-measured-heading">{blocks.measured.title}</h3>
-                <p>{blocks.measured[topic]}</p>
-              </aside>
-            ) : null}
-            </div>
-          </div>
-        </section>
-
-        <section className="seo-demand-stats-band" aria-labelledby="seo-demand-stats-heading">
-          <div className="container">
-            <h2 id="seo-demand-stats-heading" className="seo-demand-stats-heading">
-              {stats.companyStatsIntro}
-            </h2>
-            <ul className="seo-demand-trust-chips">
-              {trustItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <ul className="seo-demand-stats">
-              {stats.companyStats.map((stat) => (
-                <li key={stat.label}>
-                  <ServiceIcon icon={stat.icon} variant="inline" />
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="seo-demand-stats-note">{stats.companyStatsNote}</p>
-          </div>
-        </section>
-
-        <section className="section seo-demand-process" aria-labelledby="seo-demand-process-heading">
-          <div className="container">
-            <header className="seo-demand-section-header">
-              <p className="eyebrow">{copy.processEyebrow}</p>
-              <h2 id="seo-demand-process-heading">{workProcess.heading}</h2>
-              <p className="muted">{workProcess.intro}</p>
-            </header>
-            <WorkProcessTimeline steps={workProcess.steps} processAria={messages.common.cooperationProcess} />
-          </div>
-        </section>
-
-        <section className="section seo-demand-terms" aria-labelledby="seo-demand-terms-heading">
-          <div className="container">
-            <header className="seo-demand-section-header">
-              <p className="eyebrow">{blocks.termsEyebrow}</p>
-              <h2 id="seo-demand-terms-heading">{blocks.termsTitle}</h2>
-            </header>
-            <ul className="seo-demand-terms-grid">
-              {(
-                [
-                  ["process-rozsah", blocks.price],
-                  ["process-vystup", blocks.timing],
-                  ["process-posouzeni", blocks.scope]
-                ] as const
-              ).map(([icon, item]) => (
-                <li key={item.title} className="seo-demand-term">
-                  <span className="seo-demand-step-icon" aria-hidden="true">
-                    <ServiceIcon icon={icon} variant="inline" />
-                  </span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {landing.relatedLinks?.length ? (
-          <section className="section seo-demand-related-section" aria-labelledby="seo-related-heading">
-            <div className="container">
-              <header className="seo-demand-section-header">
-                <p className="eyebrow">{copy.relatedEyebrow}</p>
-                <h2 id="seo-related-heading">{copy.relatedSolutions}</h2>
-              </header>
-              <ul className="seo-demand-related-list">
-                {landing.relatedLinks.map((item) => (
-                  <li key={item.href}>
-                    <Link href={link(item.href)} className="seo-demand-related-row">
-                      <span className="seo-demand-related-icon" aria-hidden="true">
-                        <ServiceIcon href={item.href} variant="inline" />
-                      </span>
-                      <span className="seo-demand-related-copy">
-                        <strong>{item.label}</strong>
-                        <small>{item.description}</small>
-                      </span>
-                      <span className="seo-demand-related-arrow" aria-hidden="true">
-                        →
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-        ) : null}
-
-        {allFaq.length ? (
-          <section className="section seo-demand-faq" aria-labelledby="seo-demand-faq-heading">
-            <div className="container seo-demand-faq-inner">
-              <header className="seo-demand-section-header">
-                <p className="eyebrow">{copy.faqEyebrow}</p>
-                <h2 id="seo-demand-faq-heading">{copy.faqTitle}</h2>
-              </header>
-              <FaqAccordionList
-                items={allFaq.map((item) => ({ q: item.question, paragraphs: [item.answer] }))}
-              />
-            </div>
-          </section>
-        ) : null}
-
-        {landing.sources?.length ? (
-          <section
-            className="section seo-demand-sources"
-            aria-labelledby="seo-demand-sources-heading"
-          >
-            <div className="container">
-              <header className="seo-demand-section-header">
-                {landing.sourcesEyebrow ? <p className="eyebrow">{landing.sourcesEyebrow}</p> : null}
-                <h2 id="seo-demand-sources-heading">{landing.sourcesHeading}</h2>
-              </header>
-              <ul className="seo-demand-related-list">
-                {landing.sources.map((source) => (
-                  <li key={source.href}>
-                    <a
-                      href={source.href}
-                      className="seo-demand-related-row"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="seo-demand-related-icon" aria-hidden="true">
-                        <ServiceIcon icon="process-posouzeni" variant="inline" />
-                      </span>
-                      <span className="seo-demand-related-copy">
-                        <strong>{source.label}</strong>
-                        <small>{source.description}</small>
-                      </span>
-                      <span className="seo-demand-related-arrow" aria-hidden="true">
-                        ↗
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-        ) : null}
-
-        <section className="section seo-demand-credentials" aria-labelledby="seo-demand-credentials-heading">
-          <div className="container seo-demand-credentials-inner">
-            <span className="seo-demand-step-icon" aria-hidden="true">
-              <ServiceIcon icon="povoleni" variant="inline" />
-            </span>
-            <div className="seo-demand-credentials-copy">
-              <p className="eyebrow">{blocks.credentials.eyebrow}</p>
-              <h2 id="seo-demand-credentials-heading">{blocks.credentials.title}</h2>
-              <p>{blocks.credentials.text}</p>
-            </div>
-            <Link href={link("/akreditace-autorizace-dokumenty")} className="button secondary">
-              {blocks.credentials.link}
-            </Link>
-          </div>
-        </section>
-
-        <section className="seo-demand-contact" aria-labelledby="seo-demand-contact-heading">
-          <div className="container seo-demand-contact-inner">
-            <div className="seo-demand-contact-copy">
-              <p className="eyebrow">{copy.contactEyebrow}</p>
-              <h2 id="seo-demand-contact-heading">{copy.ctaHeading}</h2>
-              <p>{copy.ctaText}</p>
-              {topic ? (
-                <div className="seo-demand-send">
-                  <strong>{blocks.sendTitle}</strong>
-                  <p>{blocks.send[topic]}</p>
-                </div>
-              ) : null}
-              <div className="btn-row">
-                <Link href={contactHref} className="button">
-                  {ctaCopy.globalCta}
-                </Link>
-                <Link href={link(landing.serviceHref)} className="button secondary">
-                  {copy.generalServicePage}
-                </Link>
-              </div>
-            </div>
-            <ul className="seo-demand-contact-list">
-              <li>
-                <a href={phoneHref}>
-                  <small>{copy.phoneLabel}</small>
-                  <strong>{phone}</strong>
-                </a>
-              </li>
-              <li>
-                <a href={mailHref}>
-                  <small>{copy.emailLabel}</small>
-                  <strong>{company.email}</strong>
-                </a>
-              </li>
-              <li>
-                <span>
-                  <small>{copy.responseLabel}</small>
-                  <strong>{messages.header.responseTime}</strong>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
-    );
+    return <DemandLandingLayout landing={landing} locale={locale} contactHref={contactHref} faq={allFaq} schemas={<>
+      <JsonLd data={serviceData} /><JsonLd data={breadcrumbData} />{faqData ? <JsonLd data={faqData} /> : null}
+    </>} />;
   }
 
   return (

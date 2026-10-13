@@ -100,8 +100,8 @@ export function CookieConsentBanner() {
   if (!visible) return null;
 
   return (
-    <div className="cookie-consent-root" role="dialog" aria-modal="true" aria-labelledby="cookie-consent-title">
-      <div className="cookie-consent-panel">
+    <div className="cookie-consent-root" role="dialog" aria-modal="false" aria-labelledby="cookie-consent-title">
+      <div className={mode === "banner" ? "cookie-consent-panel cookie-consent-panel--banner" : "cookie-consent-panel"}>
         <h2 id="cookie-consent-title">{mode === "banner" ? t.bannerTitle : t.settingsTitle}</h2>
 
         {mode === "banner" ? (
@@ -112,10 +112,10 @@ export function CookieConsentBanner() {
               <LocaleLink href={legalPaths.privacy}>{t.privacyPolicy}</LocaleLink>.
             </p>
             <div className="cookie-consent-actions">
-              <button type="button" className="button cookie-consent-btn-accept" onClick={acceptAll}>
+              <button type="button" className="button cookie-consent-choice" onClick={acceptAll}>
                 {t.acceptAll}
               </button>
-              <button type="button" className="button secondary" onClick={rejectOptional}>
+              <button type="button" className="button cookie-consent-choice" onClick={rejectOptional}>
                 {t.rejectOptional}
               </button>
               <button type="button" className="button ghost" onClick={() => setMode("settings")}>

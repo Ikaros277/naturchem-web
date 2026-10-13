@@ -10,6 +10,7 @@ import { usePoradnaCatalog } from "@/hooks/usePoradnaCatalog";
 import { PoradnaPagination } from "@/components/PoradnaPagination";
 import { PORADNA_PAGE_SIZE, poradnaPageCount, poradnaPaginationLabels } from "@/lib/poradna-pagination";
 import { categoryFromPoradnaTopic } from "@/lib/service-categories";
+import { homeArticleTitle } from "@/lib/home-article-titles";
 import type { PoradnaTopic } from '@/lib/poradna-topic';
 import { useLocale, useTranslations } from '@/lib/i18n/locale-context';
 import type { Locale } from '@/lib/i18n/locales';
@@ -215,7 +216,7 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
               <IndexCard
                 key={article.href}
                 href={localizeHref(article.href, locale)}
-                title={article.title}
+                  title={homeArticleTitle({ slug: article.href.replace(/^\/poradna\//, "").replace(/\/$/, ""), title: article.title }, locale)}
                 headingLevel={2}
                 className="article-list-card article-card article-card--with-thumb article-card--mobile-row"
                 cta={common.readMore}

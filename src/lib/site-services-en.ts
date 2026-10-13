@@ -106,7 +106,7 @@ export const services = [
   {
     href: "/sluzby/ghg-overovani",
     title: "Greenhouse gas emissions (GHG)",
-    short: "Verification of greenhouse gas emissions, emission data and reporting.",
+    short: "Greenhouse gas calculations, emissions data checks and carbon footprint.",
     cta: "Learn more about GHG",
     contactCta: "Request GHG services",
     contactService: "GHG"

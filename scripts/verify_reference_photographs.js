@@ -96,7 +96,11 @@ async function main() {
   const source = fs.readFileSync(path.join(root, "src/components/ReferencePhotoShowcase.tsx"), "utf8");
   assert.ok(!source.includes('"use client"'));
   assert.doesNotMatch(source, /(?:from ["']next\/link|<Link\b)/, "Static photo-card navigation must not add hydrated router instances");
-  assert.equal((source.match(/<a\s+href=/g) || []).length, 3, "Keep overview, service and inquiry native links");
+  assert.ok(source.includes('href={example.href}') && source.includes('href={contactUrl(example.contactService)}'), "Keep contextual service and inquiry native links");
+  const more = html.slice(html.indexOf('<details id="dalsi-fotograficke-reference"'));
+  assert.equal((more.match(/data-photographic-reference=/g) || []).length, 6, "Six further photographed cases remain in native disclosure");
+  assert.equal((html.slice(0, html.indexOf('<details id="dalsi-fotograficke-reference"')).match(/data-photographic-reference=/g) || []).length, 3, "Lead with three different specialisms");
+  for (const id of ["lak-automotive-emise", "hala-pp", "tcp-hluk"]) assert.ok(html.includes('href="#reference-' + id + '"'), "Direct shortcuts to representative specialisms");
   const config = fs.readFileSync(path.join(root, "next.config.ts"), "utf8");
   assert.ok(config.includes('source: "/reference/authentic-2026-10-08/:path*"'), "Only dated photograph assets get immutable caching");
   assert.ok(!config.includes('source: "/reference/:path*"'), "Reference HTML must not receive a year-long browser cache");

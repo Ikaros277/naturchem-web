@@ -40,7 +40,7 @@ export const aboutPageContent = {
     title: "Professional supervision"
   },
   guaranteeCredentials:
-    "Ing. František Hezina is responsible for the technical side of projects — managing director, professional supervision, court-appointed expert, authorised person for emission measurements, expert reports, dispersion studies, greenhouse gas emission verification and EIA notifications.",
+    "Ing. František Hezina is responsible for the technical side of projects — managing director, professional supervision, court-appointed expert, authorised person for emission measurements, expert reports, dispersion studies and EIA notifications.",
   team: {
     title: "Team"
   },

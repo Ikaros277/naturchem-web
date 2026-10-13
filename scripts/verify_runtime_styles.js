@@ -4,13 +4,18 @@ const fs = require("node:fs");
 const path = require("node:path");
 const zlib = require("node:zlib");
 const postcss = require("postcss");
-const { collectUsage, compactStyles, keepSelector, sourceFiles, sourceFile, outputFile, serviceOutputFile } = require("./generate_runtime_styles");
+const { collectUsage, compactStyles, keepSelector, sourceFiles, sourceFile, outputFile, serviceOutputFile, families, familyForRoute, familyForPage, familyOutputFile } = require("./generate_runtime_styles");
 
 const usage = collectUsage();
 const source = fs.readFileSync(sourceFile, "utf8");
 const output = fs.readFileSync(outputFile, "utf8");
 const serviceUsage = collectUsage("services");
 const serviceOutput = fs.readFileSync(serviceOutputFile, "utf8");
+for (const family of families) {
+  assert.equal(fs.readFileSync(familyOutputFile(family), "utf8"),
+    "/* Generated from globals.css; edit the source, not this file. */\n" + compactStyles(source, collectUsage(family)) + "\n",
+    "Exact ordered regeneration for every route family: " + family);
+}
 assert.equal(serviceOutput, "/* Generated from globals.css; edit the source, not this file. */\n" + compactStyles(source, serviceUsage) + "\n");
 assert.ok(Buffer.byteLength(serviceOutput) < Buffer.byteLength(source) * .5, "Services omit unrelated page styles, not required rules");
 assert.equal(output, "/* Generated from globals.css; edit the source, not this file. */\n" + compactStyles(source, usage) + "\n");
@@ -18,8 +23,7 @@ assert.ok(Buffer.byteLength(output) < Buffer.byteLength(source) * .4, "Homepage 
 const localeRoot = path.resolve(__dirname, "../src/app/[locale]");
 for (const file of sourceFiles(localeRoot).filter(file => file.endsWith(path.sep + "page.tsx"))) {
   if (file === path.join(localeRoot, "page.tsx")) continue;
-  const isService = file.startsWith(path.join(localeRoot, "sluzby") + path.sep);
-  const expected = isService ? '@/app/services.generated.css' : '@/app/globals.css';
+  const expected = '@/app/' + familyForPage(file) + '.generated.css';
   assert.ok(fs.readFileSync(file, "utf8").includes('import "' + expected + '"'), "Every page retains its verified stylesheet: " + file);
 }
 for (const name of ["nav-mobile-sheet", "nav-mega-panel", "cookie-consent-panel", "footer-key-link", "button", "hero-photo-img"]) {
@@ -43,12 +47,14 @@ if (process.argv.includes("--rendered")) {
       return entry.isDirectory() ? htmlFiles(file) : entry.name.endsWith(".html") ? [file] : [];
     });
   }
-  for (const [kind, sheet] of [["homepage", output], ["services", serviceOutput]]) {
+  for (const kind of families) {
+    const sheet = fs.readFileSync(familyOutputFile(kind), "utf8");
     const classes = new Set();
-    const pages = htmlFiles(directory).filter(file => kind === "homepage"
-      ? /(?:^|[\\/])(?:cs|en|de)\.html$/.test(file)
-      : /[\\/](?:cs|en|de)[\\/]sluzby(?:[\\/]|\.html$)/.test(file));
-    assert.ok(pages.length >= (kind === "homepage" ? 3 : 70), "Check every service locale, not just one sample");
+    const pages = htmlFiles(directory).filter(file => {
+      const route = path.relative(directory, file).replace(/\\/g, "/");
+      return /^(?:cs|en|de)(?:\/|\.html$)/.test(route) && familyForRoute(route) === kind;
+    });
+    assert.ok(pages.length >= (kind === "services" ? 70 : 3), "Check every route family and locale: " + kind);
     for (const file of pages) {
       for (const match of fs.readFileSync(file, "utf8").matchAll(/\bclass="([^"]+)"/g)) {
         for (const name of match[1].split(/\s+/)) classes.add(name);

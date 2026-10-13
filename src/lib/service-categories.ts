@@ -101,7 +101,7 @@ const iconKeyToCategory: Partial<Record<ServiceIconKey, ServiceCategory>> = {
   akustika: "studies",
   model: "studies",
   "imis-hluk": "studies",
-  ispop: "studies",
+  ispop: "docs",
   ghg: "studies",
   posudek: "docs",
   "provozni-rad": "docs",

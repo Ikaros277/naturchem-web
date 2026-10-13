@@ -3,6 +3,18 @@ import type { Locale } from "@/lib/i18n/locales";
 
 /** Search-result labels, not replacements for the reviewed article headings or body. */
 const czechTitles: Record<string, string> = {
+  "mereni-vibraci-ridicu-vzv-priprava-smeny": "Měření vibrací řidičů VZV: příprava a podklady",
+  "bezpecnostni-list-novy-vyrobek-podklady-revize": "Nový bezpečnostní list: podklady a revize",
+  "cena-hlukove-studie-podklady-nabidka": "Cena hlukové studie: rozsah a podklady",
+  "mereni-osvetleni-skladu-regaly-expedice": "Měření osvětlení skladu: regály a pracovní místa",
+  "uhlikova-stopa-firmy-podklady-pro-odberatele": "Uhlíková stopa firmy: podklady pro výpočet",
+  "rocni-bilance-rozpoustedel-lakovna-podklady": "Bilance rozpouštědel v lakovně: podklady a evidence",
+  "zadost-ippc-integrovane-povoleni-prilohy": "Žádost IPPC: příprava podkladů a příloh",
+  "odborne-prilohy-eia-hluk-rozptyl-doprava": "Odborné přílohy EIA: hluk, rozptyl a doprava",
+  "prekroceni-emisniho-limitu-dalsi-postup": "Překročení emisního limitu: podklady a další postup",
+  "podani-ispop-za-firmu-zmocneni-podklady": "Podání ISPOP za firmu: podklady a zmocnění",
+  "rozsireni-bioplynove-stanice-biometan-podklady": "Rozšíření BPS a biometan: odborné podklady",
+  "mikroklima-vyrobni-pracoviste-realna-zakazka": "Měření mikroklimatu: skutečná výrobní zakázka",
   "praskova-lakovna-povoleni": "Prášková lakovna: povolení, měření a filtrace",
   "rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba": "Rozptylová studie: povinnost a potřebné podklady",
   "bezpecnostni-listy-v-provozu-co-musi-zamestnavatel": "Bezpečnostní listy: povinnosti zaměstnavatele",

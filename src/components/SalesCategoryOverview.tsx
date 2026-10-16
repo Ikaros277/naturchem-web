@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { StaticContentImage } from "@/components/StaticContentImage";
 
 import { SalesCountBadge } from "@/components/SalesCountBadge";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -36,14 +36,12 @@ export function SalesCategoryOverview({ locale, brandSlug, productCountLabel }: 
             >
               {imageSrc ? (
                 <span className="sales-category-list-thumb" aria-hidden="true">
-                  <Image
+                  <StaticContentImage
                     src={imageSrc}
                     alt=""
                     fill
                     className="sales-category-list-thumb-img"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 16vw"
-                    loading="lazy"
-                    fetchPriority="low"
+                    sizes="(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 0.425rem), (max-width: 1279px) calc(30.67vw - 0.667rem), min(15.33vw, 191px)"
                   />
                 </span>
               ) : (

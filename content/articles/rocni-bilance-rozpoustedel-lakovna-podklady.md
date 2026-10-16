@@ -6,7 +6,7 @@ author: NATURCHEM
 status: draft
 publishedAt: "2026-11-23"
 topic: Emise
-heroImage: /uploads/poradna-2026/bilance-rozpoustedel.webp
+heroImage: /uploads/poradna-2026/bilance-rozpoustedel-cista.webp
 ---
 
 Připravujete roční bilanci rozpouštědel pro lakovnu a máte nákupy barev, ředidel a protokoly emisí? Nejdříve sjednoťte období, jednotky a vymezení zdroje. Nákup přípravku, jeho spotřeba a množství organického rozpouštědla nejsou totožné údaje. Přehledná evidence pomůže propojit provozní data s výpočtem a navazujícím hlášením.
@@ -15,11 +15,11 @@ Připravujete roční bilanci rozpouštědel pro lakovnu a máte nákupy barev, 
 
 ## Co bilance sleduje
 
-Roční hmotnostní bilance propojuje vstupy a výstupy organických rozpouštědel v daném zdroji. Rozsah a způsob použití vycházejí z technologie, příslušných požadavků a povolení. [Metodický pokyn MŽP](https://mzp.gov.cz/system/files/2024-11/OOO-Metodika_bilance_VOC-20190715.pdf) vysvětluje jednotlivé toky a práci s bilancí. Nejde o univerzální povinnost stejného rozsahu pro každou technologii označenou jako lakovna.
+Roční hmotnostní bilance propojuje vstupy a výstupy organických rozpouštědel v daném zdroji. Rozsah a způsob použití vycházejí z technologie, příslušných požadavků a povolení. [Metodický pokyn MŽP z roku 2019](https://mzp.gov.cz/system/files/2024-11/OOO-Metodika_bilance_VOC-20190715.pdf) vysvětluje jednotlivé toky a práci s bilancí; nenahrazuje aktuální znění předpisů ani podmínky povolení. Právní požadavky ověřujte v [aktuálním znění vyhlášky č. 415/2012 Sb.](https://www.e-sbirka.cz/sb/2012/415). Nejde o univerzální povinnost stejného rozsahu pro každou technologii označenou jako lakovna.
 
 Měření koncentrace na výduchu zachycuje jiné zadání. Samo o sobě nepopisuje všechny roční materiálové toky. Bilance a měření se mohou doplňovat, ale nejsou vzájemně zaměnitelné. Ani vyhovující koncentrace automaticky neřeší správnost celé roční evidence.
 
-## Rozlišujte nákup, zásobu a skutečné použití
+## Nákup, zásoby a spotřeba
 
 Shromážděte skladové a provozní údaje za stejné období. Připojte počáteční a konečné zásoby tam, kde jsou pro výpočet relevantní. U přesunů mezi provozy popište, kam materiál skutečně vstoupil. Nekopírujte bez kontroly součet nákupních faktur do kolonky spotřeby zdroje.
 
@@ -36,29 +36,29 @@ V seznamu nezapomeňte na prostředky používané při čištění a příprav�
 
 Ke každému podkladu uveďte zdroj a odpovědnou osobu. Usnadní to ověření nejasností ještě před vlastním výpočtem bilance a navazujícího hlášení.
 
-## Jednotky kontrolujte před výpočtem
+## Jednotky a složení přípravků
 
 Litry přípravku nejsou automaticky kilogramy rozpouštědla. Pro převod potřebujete odpovídající údaje a jednoznačný postup. Předejte zpracovateli zdrojové doklady včetně jednotek. Pokud údaj neznáte, označte jej k doplnění místo použití odhadu bez podkladu.
 
 U směsi s více složkami přiložte aktuální dokumentaci používaného výrobku. Starší bezpečnostní list nemusí odpovídat aktuální dodávce. Rozmezí ve složení není totéž jako přesně potvrzená hodnota. Použitelnost údajů musí posoudit zpracovatel podle konkrétního výpočtu.
 
-## Propojte bilanci s technologií a výduchy
+## Technologie a výduchy
 
 Připravte jednoduché schéma lakování, sušení, čištění a odsávání. Uveďte, kde se jednotlivé přípravky používají. Přiložte povolení provozu, dostupné protokoly a předchozí bilanci. Označení zdrojů a výduchů musí být dohledatelné napříč dokumenty.
 
 Pokud se během roku změnila technologie, popište datum a charakter změny. Zvlášť uveďte odstávky a výrazně odlišné režimy. Nepřenášejte automaticky původní výpočtové podklady do nového stavu. Zpracovatel potřebuje rozpoznat, ke které části období se údaje vztahují.
 
-## Nezaměňujte VOC a TOC
+## Přepočet TOC na VOC
 
-VOC označuje těkavé organické látky, TOC celkový organický uhlík. Výsledek vyjádřený jako uhlík není bez dalšího hmotností směsi všech rozpouštědel. Nepoužívejte jeden univerzální převodní koeficient pro všechny přípravky a režimy. Konkrétní návaznost musí vycházet z odborně vymezeného postupu.
+VOC označuje těkavé organické látky, TOC celkový organický uhlík. Výsledek vyjádřený jako uhlík není bez dalšího hmotností směsi všech rozpouštědel. Přepočet emisí z TOC na VOC pro bilanci upravuje § 12 odst. 4 vyhlášky č. 415/2012 Sb. Postup rozlišuje, zda je složení měřených emisí známé, nebo se použije předepsaný postup pro neznámé složení. Převod proto nevolte odhadem ani podle složení přípravku bez posouzení jeho vazby na měřené emise.
 
 Při předání protokolu zachovejte názvy veličin, jednotky a referenční podmínky. Neposílejte pouze přepsané číslo z výsledkové tabulky. Celý dokument umožní ověřit, co bylo skutečně měřeno. Stejně postupujte u výpočtů z předchozího období.
 
-## Kdo ve firmě připraví vstupy?
+## Příprava vstupních dat
 
 Propojte výrobní evidenci se skladem, nákupem a ekologem. Každé oddělení může znát jinou část toku materiálů. Určete jednoho koordinátora a sjednoťte předávané soubory, aby se položky nezapočetly dvakrát.
 
-## Jak připravit objednávku zpracování
+## Podklady pro objednávku
 
 Uveďte lakovnu, období, používané přípravky a stav dostupných dat. Pošlete poslední bilanci, povolení a přehled změn. Napište, zda potřebujete pouze výpočet, nebo také návaznou provozní evidenci a hlášení. Pro SPE použijte také aktuální [návody ČHMÚ k ISPOP](https://www.chmi.cz/kvalita-ovzdusi/emise-a-zdroje-znecistovani-ovzdusi/souhrnna-provozni-evidence-stacionarnich-zdroju/ispop-hlaseni-navody-pomucky).
 

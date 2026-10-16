@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { StaticContentImage } from "@/components/StaticContentImage";
 
 import { localizeHref } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/locales";
@@ -40,14 +40,14 @@ export function SalesProductList({
             >
               {product.imageSrc ? (
                 <span className="sales-product-grid-thumb" aria-hidden="true">
-                  <Image
+                  <StaticContentImage
                     src={product.imageSrc}
                     alt=""
                     fill
                     className="sales-product-grid-thumb-img"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    loading="lazy"
-                    fetchPriority="low"
+                    sizes={fullWidthRows
+                      ? "(max-width: 759px) calc(92vw - 2.2rem), clamp(160px, 17vw, 240px)"
+                      : "(max-width: 639px) calc(92vw - 2.2rem), (max-width: 1099px) calc(46vw - 2.75rem), min(30vw, 370px)"}
                   />
                 </span>
               ) : null}

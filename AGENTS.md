@@ -17,6 +17,10 @@ Grow qualified B2B inquiries for NATURCHEM through organic search and a clear co
 - Address visitors formally as `Vy` in Czech copy.
 - Never invent expertise, authorizations, deadlines, prices, references, statistics, legal claims or technical details. Mark uncertain factual copy `[OVERIT S HEZINOU]` and do not publish it until verified.
 - For legal or technical articles, use primary authoritative sources and retain source links where appropriate.
+- Use short, descriptive article headings. Remove rhetorical add-ons and AI-like filler such as "a proč nestačil jeden údaj" or comments about what "this article" does. Keep useful explanations and essential qualifications, but never pad text to reach a word count.
+- Serve photographs and raster illustrations in appropriately sized WebP/AVIF variants. Prefer build-time static variants over repeated on-demand image transformations. Retain SVG for vector graphics and tiny PNG assets when conversion would be larger or less suitable; preserve source files and published immutable URLs.
+- Never use article illustrations with added text labels, arrows, measurement annotations or other explanatory overlays. Inspect the full-size source, not just its thumbnail. Keep any necessary explanation in the caption outside the image.
+- Before publication, verify every legal number, paragraph, standard edition, numerical limit and procedural claim against the applicable primary source. Record the source, effective date and scope of applicability; do not treat old guidance, search snippets or another client's protocol as proof of current requirements. Claims about our own work must match the actual job documents and any reference photograph. Unverified claims remain unpublished pending Ing. Hezina's expert review.
 
 ## SEO and conversion priorities
 

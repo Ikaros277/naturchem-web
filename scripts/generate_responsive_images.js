@@ -13,26 +13,30 @@ const { heroThemeForArticle } = load(path.join(root, "src/lib/poradna-topic.ts")
 const target = path.join(root, "public/hero/responsive-2026-10");
 const prefix = "/hero/responsive-2026-10/";
 const recipe = "v1-webp68-avif44-fit-inside";
+const contentRecipe = "v1-webp78-avif50-fit-inside";
 
-async function encode(src, widths) {
+async function encode(src, widths, isContent = false) {
   const input = path.resolve(root, "public", "." + src);
   if (!input.startsWith(path.join(root, "public") + path.sep) || !fs.existsSync(input)) throw new Error("Missing local image: " + src);
-  const hash = createHash("sha256").update(recipe + JSON.stringify(sharp.versions)).update(fs.readFileSync(input)).digest("hex").slice(0, 12);
+  const hash = createHash("sha256").update((isContent ? contentRecipe : recipe) + JSON.stringify(sharp.versions)).update(fs.readFileSync(input)).digest("hex").slice(0, 12);
   // The same 640px variant can serve both a card and a hero.
   const name = "image-" + hash;
   const metadata = await sharp(input).metadata();
-  const actualWidths = [...new Set(widths.map(width => Math.min(width, metadata.width)))];
+  const rotated = metadata.orientation >= 5 && metadata.orientation <= 8;
+  const imageWidth = rotated ? metadata.height : metadata.width;
+  const imageHeight = rotated ? metadata.width : metadata.height;
+  const actualWidths = [...new Set(widths.map(width => Math.min(width, imageWidth)))];
   for (const width of actualWidths) {
     for (const format of ["webp", "avif"]) {
       const file = path.join(target, name + "-" + width + "." + format);
       // New content/encoder gets a new hash. Never overwrite an immutable URL.
       if (fs.existsSync(file)) continue;
       await sharp(input).rotate().resize({ width, withoutEnlargement: true })
-        .toFormat(format, format === "webp" ? { quality: 68, effort: 4 } : { quality: 44, effort: 4 })
+        .toFormat(format, format === "webp" ? { quality: isContent ? 78 : 68, effort: 4 } : { quality: isContent ? 50 : 44, effort: 4 })
         .toFile(file);
     }
   }
-  return { base: prefix + name, widths: actualWidths, width: metadata.width, height: metadata.height };
+  return { base: prefix + name, widths: actualWidths, width: imageWidth, height: imageHeight };
 }
 
 async function main() {
@@ -57,6 +61,12 @@ async function main() {
     references[photo.asset] = await encode("/reference/authentic-2026-10-08/" + photo.asset + "-960.webp", [768]);
   }
   fs.writeFileSync(path.join(root, "src/lib/responsive-reference-photos.json"), JSON.stringify(references, null, 2) + "\n");
+  const contentImages = {};
+  for (const [src, widths] of require("./lib/content-image-plan.js")(root)) {
+    contentImages[src] = await encode(src, widths, true);
+  }
+  fs.writeFileSync(path.join(root, "src/lib/responsive-content-images.json"), JSON.stringify(contentImages, null, 2) + "\n");
   console.log(`Prepared ${Object.keys(thumbs).length} article images and ${Object.keys(heroes).length} hero images (static AVIF/WebP; original URLs untouched)`);
+  console.log(`Prepared ${Object.keys(contentImages).length} catalog/contact/404 images (no on-demand resizing)`);
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

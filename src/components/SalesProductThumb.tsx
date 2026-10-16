@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { StaticContentImage } from "@/components/StaticContentImage";
 
 type Props = {
   src: string;
@@ -9,14 +9,12 @@ type Props = {
 export function SalesProductThumb({ src, alt }: Props) {
   return (
     <div className="article-card-thumb sales-product-thumb" aria-hidden="true">
-      <Image
+      <StaticContentImage
         src={src}
         alt={alt}
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
         className="article-card-thumb-img sales-product-thumb-img"
-        loading="lazy"
-        fetchPriority="low"
       />
       <div className="article-card-thumb-overlay sales-product-thumb-overlay" />
     </div>
@@ -28,15 +26,13 @@ export function SalesProductFigure({ src, alt }: Props) {
   return (
     <figure className="sales-product-figure">
       <div className="sales-product-figure-frame">
-        <Image
+        <StaticContentImage
           src={src}
           alt={alt}
           width={800}
           height={520}
           className="sales-product-figure-img"
           sizes="(max-width: 768px) 100vw, min(42vw, 800px)"
-          loading="lazy"
-          fetchPriority="low"
         />
       </div>
     </figure>

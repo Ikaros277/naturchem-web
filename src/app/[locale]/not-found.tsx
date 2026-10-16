@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { StaticContentImage } from "@/components/StaticContentImage";
 import Link from "next/link";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -48,7 +48,7 @@ export default async function LocaleNotFound() {
           </div>
 
           <figure className="not-found-figure">
-            <Image
+            <StaticContentImage
               src="/graphics/not-found-404.png"
               alt={t.illustrationAlt}
               width={1024}

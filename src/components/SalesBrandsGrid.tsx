@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { StaticContentImage } from "@/components/StaticContentImage";
 
 import { IndexCard } from "@/components/IndexCard";
 import { SalesCountBadge } from "@/components/SalesCountBadge";
@@ -28,15 +28,13 @@ export function SalesBrandsGrid({ brands, locale, ctaLabel, productCountLabel }:
           heading={
             brand.logoSrc ? (
               <div className="sales-brand-card-logo">
-                <Image
+                <StaticContentImage
                   src={brand.logoSrc}
                   alt={`${brand.name} logo`}
                   width={160}
                   height={48}
                   className="sales-brand-logo-img"
                   sizes="160px"
-                  loading="lazy"
-                  fetchPriority="low"
                 />
               </div>
             ) : undefined

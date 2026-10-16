@@ -15,11 +15,11 @@ heroImage: /uploads/poradna-2026/vibrace-vzv.webp
 
 ## Co se hodnotí u řidiče VZV
 
-U sedícího řidiče se řeší zejména celkové vibrace přenášené přes sedadlo. Jde o jinou situaci než vibrace rukou při práci s bruskou. Tento rozdíl určuje způsob měření i následné vyhodnocení. Základní rozlišení popisuje [Státní zdravotní ústav](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/vibrace/vibrace-prenasene-na-cloveka/).
+U sedícího řidiče se řeší zejména celkové vibrace přenášené přes sedadlo. Jde o jinou situaci než vibrace rukou při práci s bruskou. Tento rozdíl určuje způsob měření i následné vyhodnocení. Základní rozlišení popisuje [Státní zdravotní ústav](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/vibrace/vibrace-prenasene-na-cloveka/). Tento starší přehled vysvětluje princip; pro aktuální právní limity není rozhodujícím zdrojem.
 
 Stejný model vozíku nemusí znamenat stejnou expozici. Záleží na jeho používání, povrchu trasy, sedadle a délce jízdy. Technický list proto pošlete jako podklad, nikoli jako náhradu popisu práce. Uveďte také, zda řidič během směny střídá více vozíků.
 
-## Sepište činnosti, ne pouze délku směny
+## Činnosti a délka expozice
 
 Údaj „řidič pracuje osm hodin“ neříká, kolik času skutečně řídí. Oddělte přejezdy, manipulaci, čekání a práci mimo vozík. Zaznamenejte, na jakém vozíku a kde jednotlivé činnosti probíhají. Přestávky evidujte zvlášť.
 
@@ -35,23 +35,23 @@ Přehled ověřte s vedoucím skladu i obsluhou. Plánovaná organizace práce s
 
 Tabulka slouží k přípravě zadání. Není výsledkem měření ani univerzálním návodem k zařazení práce do kategorie.
 
-## Připravte běžné trasy a provozní podmínky
+## Trasy a provozní podmínky
 
 Vyznačte trasu alespoň do jednoduchého plánku. Připojte fotografie nerovností, ramp, vrat a přechodů mezi halou a venkovní plochou. Uveďte, zda se podmínky liší podle počasí nebo vytížení. Laboratoř tak může před návštěvou posoudit, které situace má zachytit.
 
 Nevytvářejte pro měření zvláštní trasu, po které řidič běžně nejezdí. Neodstraňujte z popisu nepříjemné úseky jen proto, že tvoří menší část směny. Stejně tak nevybírejte pouze nejhorší místo bez informace o četnosti průjezdů. Důležitá je vazba měřeného úseku na skutečnou práci.
 
-## Zkontrolujte vozík a organizaci návštěvy
+## Příprava vozíku a provozu
 
 Předem sdělte známé závady, provedený servis a plánované změny. Zkontrolujte dostupnost vozíku, obsluhy a odpovědné kontaktní osoby. Připravte informace o sedadle a jeho nastavení. Potřebné technické zásahy řešte standardním servisním postupem, nikoli improvizovaně během měření.
 
 Domluvte bezpečný vstup týmu do provozu. Uveďte požadovaná školení, ochranné pomůcky a pravidla pohybu v logistické zóně. Měření nesmí narušit bezpečnou manipulaci s nákladem. Konkrétní postup a rozsah stanoví laboratoř podle zadání.
 
-## Co z protokolu využijete pro další rozhodování
+## Protokol a kategorizace prací
 
-Výsledek potřebuje souvislost s vozíkem, činností a dobou expozice. Samotné číslo bez těchto údajů nestačí k pochopení pracovních podmínek. Uchovejte proto časový snímek společně s protokolem. Při změně trasy, sedadla nebo organizace práce bude možné dohledat původní zadání.
+Protokol uchovejte společně s časovým snímkem. Při změně trasy, sedadla nebo organizace práce tak dohledáte podmínky původního měření.
 
-Měření slouží jako odborný podklad. Kategorizaci prací řešte v návaznosti na skutečné činnosti a příslušné požadavky. Aktuální právní rámec hluku a vibrací obsahuje [nařízení vlády č. 272/2011 Sb.](https://www.e-sbirka.cz/sb/2011/272). Tento článek nenahrazuje posouzení Vašeho konkrétního pracoviště.
+Měření slouží jako podklad pro kategorizaci podle skutečných činností a expozice. Právní rámec hluku a vibrací obsahuje [nařízení vlády č. 272/2011 Sb.](https://www.e-sbirka.cz/sb/2011/272).
 
 ## Má se měřit každý vozík samostatně?
 

@@ -13,19 +13,19 @@ Odběratel Vám poslal dotazník k uhlíkové stopě a potřebujete dodat spoleh
 
 **Pošlete původní požadavek zákazníka, sledované období a seznam provozoven.** Teprve potom sestavujte vstupní data. Výpočet uhlíkové stopy není totožný s nezávislým akreditovaným ověřením v systému EU ETS.
 
-## Vyjasněte, komu a k čemu výstup slouží
+## Požadavek odběratele
 
 Zeptejte se odběratele na požadovanou metodiku, formát a rozsah. Někdy potřebuje firemní emisní inventuru, jindy údaje pro vlastní dodavatelský řetězec. Dotazník může mít konkrétní pravidla pro hranice a jednotky. Uchovejte jejich znění spolu s pracovním zadáním.
 
-Požadavek zákazníka není automaticky důkazem stejné zákonné povinnosti pro všechny firmy. Obchodní požadavek, dobrovolný výpočet a regulatorní vykazování je potřeba rozlišit. Článek se zaměřuje na přípravu dat pro dohodnutý výpočet. Neposkytuje univerzální posouzení Vašich povinností v oblasti ESG.
+Rozlišujte požadavek odběratele, dobrovolný výpočet a zákonné vykazování. Povinnosti konkrétní firmy v oblasti ESG je nutné posoudit samostatně.
 
-## Firma, provozovna a výrobek nejsou totéž
+## Hranice výpočtu
 
 Uveďte, které společnosti a místa má výpočet zahrnout. Popište pronajaté prostory, sdílené energie a změny během sledovaného období. Pokud zákazník požaduje výsledek pro výrobek, nepřepočítávejte automaticky celofiremní emise prostým dělením počtem kusů. Metodiku a případné rozdělení vstupů je nutné nejprve vymezit.
 
 Pro firemní inventuru nabízí metodický rámec [GHG Protocol Corporate Standard](https://ghgprotocol.org/corporate-standard). Ten není standardem pro provedení nezávislého ověřování. Volbu konkrétního přístupu a rozsahu projednejte před sběrem dat, aby výstup odpovídal požadavku odběratele.
 
-## Připravte energie a paliva s jasnými jednotkami
+## Energie, paliva a další vstupy
 
 Shromážděte faktury a další dostupné záznamy za stejné období. Oddělte nákup, skutečnou spotřebu a případnou změnu zásob. U sdílených prostor popište způsob rozúčtování. Záznamy musí umožnit dohledat původ čísla, nikoli pouze jeho součet.
 
@@ -40,13 +40,13 @@ Shromážděte faktury a další dostupné záznamy za stejné období. Oddělte
 
 Tabulka není úplným seznamem pro každý výpočet. Rozsah dalších dat vychází z dohodnuté metodiky a účelu výstupu.
 
-## Nepřeskakujte vysvětlení neúplných údajů
+## Chybějící údaje a odhady
 
 Chybějící spotřebu označte a popište důvod. Pokud máte pouze fakturované nákupy, nezaměňujte je bez ověření se spotřebou. U odhadů uveďte použitý postup a jeho podklady. Odlišujte doložené údaje od dopočtu už při předání zpracovateli.
 
 Přiřaďte každému vstupu odpovědnou osobu nebo oddělení. Energie může evidovat facility, dopravu logistika a materiály nákup. Jednotný seznam požadavků sníží opakované dohledávání. Není potřeba zasílat nesouvisející obchodní dokumenty nebo osobní údaje zaměstnanců.
 
-## Výsledek musí umožnit zpětnou kontrolu
+## Dokumentace výpočtu
 
 Vymezte, které vstupy se zahrnuly a které nikoli. Uveďte období, jednotky a původ použitých dat. Při meziročním porovnání popište změnu rozsahu firmy nebo metodiky. Rozdíl výsledků nemusí sám o sobě znamenat skutečné snížení či zvýšení emisí.
 

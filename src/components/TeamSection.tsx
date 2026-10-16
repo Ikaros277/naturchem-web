@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { StaticContentImage } from "@/components/StaticContentImage";
 import { getTeamInitials } from "@/lib/team-initials";
 import { teamMembers as defaultTeamMembers } from "@/lib/team";
 import type { TeamMember } from "@/lib/team";
@@ -10,7 +10,7 @@ function TeamCard({ member, compact = false }: { member: TeamMember; compact?: b
     <article className="card team-card" id={member.name === "Ing. František Hezina" ? "frantisek-hezina" : undefined}>
       {member.photo ? (
         <div className="team-card-avatar team-card-avatar--photo" aria-hidden="true">
-          <Image src={member.photo} alt="" width={80} height={80} className="team-card-photo" />
+          <StaticContentImage src={member.photo} alt="" width={80} height={80} sizes="80px" className="team-card-photo" />
         </div>
       ) : (
         <div className="team-card-avatar" aria-hidden="true">

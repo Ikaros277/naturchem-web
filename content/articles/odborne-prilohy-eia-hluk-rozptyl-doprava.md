@@ -13,13 +13,13 @@ Objednáváte hlukovou a rozptylovou studii jako přílohy k oznámení EIA? Př
 
 **Nejdříve sestavte jednotné zadání.** Označte platnou situaci, stávající a navrhovaný stav, provozní režimy a dopravní předpoklady. Ujasněte také, kdo koordinuje celé oznámení a kdo dodává jednotlivé přílohy.
 
-## Samostatné přílohy nejsou celé oznámení
+## Rozsah odborných příloh
 
 EIA znamená posuzování vlivů záměru na životní prostředí. Oznámení popisuje záměr a jeho možné vlivy v požadovaném rozsahu. Hluková nebo rozptylová studie může tvořit odborný podklad, ale sama celé oznámení nenahrazuje. Potřeba konkrétních příloh vychází z charakteru projektu a zadání.
 
 Při objednávce výslovně rozlišujte samostatnou studii, soubor příloh a kompletní oznámení. Definujte předání výsledků a způsob jejich zapracování. Základní informace o oznámení obsahuje [Portál veřejné správy](https://portal.gov.cz/sluzby-vs/zverejneni-oznameni-v-ramci-posuzovani-vlivu-na-zivotni-prostredi-S12342). Právní rámec upravuje [zákon č. 100/2001 Sb.](https://www.e-sbirka.cz/sb/2001/100).
 
-## Které údaje mají být společné
+## Společné zadání studií
 
 Studie mohou používat odlišné odborné postupy, ale jejich technické zadání musí být sladěné. Shodně vymezte projekt, jeho varianty a relevantní provozní situace. Označte období nebo etapu, ke které se výpočty vztahují. Nezaměňujte současný provoz s výhledovým stavem po rozšíření.
 
@@ -34,25 +34,25 @@ Studie mohou používat odlišné odborné postupy, ale jejich technické zadán
 
 Tabulka slouží ke koordinaci. Neznamená, že všechny uvedené údaje vstupují do každé studie stejným způsobem.
 
-## Dopravu předávejte s vysvětlením jednotek
+## Dopravní údaje
 
-U počtu vozidel uveďte, zda jde o příjezdy, odjezdy nebo součet pohybů. Rozlišujte osobní a nákladní dopravu tam, kde je to relevantní. Popište rozdělení do dne a noci i používané trasy. Bez těchto údajů si různí zpracovatelé mohou stejné číslo vyložit rozdílně.
+U počtu vozidel rozlišujte příjezdy, odjezdy a součet pohybů. Uveďte osobní a nákladní dopravu, rozdělení do dne a noci i používané trasy.
 
 Pokud dodavatel technologie změní logistický předpoklad, informujte všechny dotčené zpracovatele. U nových variant přiložte přehled rozdílů. Nekopírujte pouze poslední tabulku bez informace, kterou nahrazuje. U každého vstupu musí být dohledatelná platná verze.
 
-## Opatření musí odpovídat výslednému projektu
+## Navrhovaná opatření
 
 Studie může posuzovat variantu s clonou, upraveným provozem nebo konkrétním technickým řešením. Jestliže se opatření nepromítne do projektu, posuzovaný a navrhovaný stav se rozejdou. Proto před předáním finálních příloh zkontrolujte jejich technické předpoklady. Nejde pouze o úpravu textu závěru.
 
 Stejně pracujte s návazností na ostatní dokumenty. Rozhodující informace nesmí zůstat jen v příloze, kterou hlavní text opomine. Koordinátor oznámení má znát podmínky a omezení odborných výstupů. Případné rozpory je potřeba vyřešit, ne pouze přiložit oba dokumenty.
 
-## Jak řídit změny během zpracování
+## Změny projektu
 
-Vytvořte krátký seznam změn projektu. U každé položky označte datum, odpovědnou osobu a dotčené přílohy. Zpracovatel posoudí, zda změna vyžaduje nový výpočet nebo úpravu dokumentu. Investor tak získá přehled o následcích změn ještě před dokončením.
+Změny evidujte s datem, odpovědnou osobou a seznamem dotčených příloh. Zpracovatel posoudí, zda vyžadují nový výpočet nebo úpravu dokumentu.
 
 Určete okamžik potvrzení finálních vstupů. Pozdější změna kapacity nebo technologie může znamenat další práci. Vymezte ji také v nabídce a harmonogramu. Nelze současně očekávat neměnný termín a neomezený počet zásadních změn zadání.
 
-## Co pošlete zpracovateli odborných příloh
+## Podklady pro objednávku
 
 Připravte situaci, technický popis, provozní režimy a dostupné údaje o dopravě. Doplňte požadovaný účel a seznam již objednaných studií. Uveďte koordinátora oznámení a způsob předávání aktualizací. Pokud existuje výzva nebo požadavek úřadu, přiložte celé znění.
 

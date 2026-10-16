@@ -2,6 +2,10 @@
 
 > Interní provozní dokument. Aktualizovat podle živého webu, GSC a GA4. Starší projektové roadmapy mohou být neaktuální.
 
+## Společné schválené vydání — 16. 10. 2026
+
+Vlastník po upřesnění rozdílu mezi pracovní větví a produkcí výslovně schválil kontrolu a produkční nasazení všech připravených vlastních úprav. Společná fáze spojuje komerční návaznost a strukturu služeb z `3284ed2` s dosud nevydanými úspornými katalogovými obrázky a stylistickými opravami dvanácti neveřejných redakčních konceptů. Základ main/produkce `8a96cf0`; předešlé konfigurace spotřeby a rychlosti zachovány. Hypotéza: snazší výběr služby a zadání poptávky, menší obrázkový přenos. Efekt na kvalifikované leady a pořadí zatím není změřen. Dvanáct konceptů nadále draft; žádná skutečná poptávka ani placený upgrade. Schválení, rozsah, ochrany, výchozí usage a rollback: [RELEASE-2026-10-16.md](RELEASE-2026-10-16.md). Skutečný produkční commit, čas a výsledek kontrol budou zaznamenány v soukromém výstupním protokolu bez dalšího deploymentu.
+
 ## Lokální zpřehlednění služeb se zachováním SEO — 16. 10. 2026
 
 Na schválený audit navazuje osm konkrétních shrnutí podobných služeb, tři hlavní okruhy rozcestníku při zachování všech podskupin a adres, přesné popisy potvrzené nabídky CS/EN/DE a tři cílené odkazy z existujících článků. Bez rušení URL, změn indexace, přepisování vítězných titulů či nové produkční fáze. Vlastník 16. 10. schválil commit a push oddělené pracovní větve, nikoli sloučení do main či nasazení. Baseline, hypotéza, ověření a plán měření: [SEO-STRUKTURA-2026-10-16.md](SEO-STRUKTURA-2026-10-16.md).

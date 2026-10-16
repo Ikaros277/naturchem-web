@@ -1,0 +1,268 @@
+{
+  "/graphics/pcf-elettronica/mod-529-nr-t-total-voc-analyzer.jpg": {
+    "base": "/hero/responsive-2026-10/image-0e9c92305ac8",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 275
+  },
+  "/graphics/pcf-elettronica/mod-530-nr-btex-aromatics-analyzer.jpg": {
+    "base": "/hero/responsive-2026-10/image-7a050d7c4468",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 513
+  },
+  "/graphics/pcf-elettronica/mod-529-nr-nmh-analyzer.jpg": {
+    "base": "/hero/responsive-2026-10/image-0e9c92305ac8",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 275
+  },
+  "/graphics/pcf-elettronica/mod-529-nr-s-specific-hc-analyzer.jpg": {
+    "base": "/hero/responsive-2026-10/image-0e9c92305ac8",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 275
+  },
+  "/graphics/pcf-elettronica/mod-110-h-fast-response-time-voc-monitor.jpg": {
+    "base": "/hero/responsive-2026-10/image-c41a10745a4c",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 253
+  },
+  "/graphics/pcf-elettronica/mod-110-e-discrete-sampling-voc-monitor.jpg": {
+    "base": "/hero/responsive-2026-10/image-3189588a3996",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 286
+  },
+  "/graphics/pcf-elettronica/mod-529-nr-h-gc-analyzer.jpg": {
+    "base": "/hero/responsive-2026-10/image-0e9c92305ac8",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 275
+  },
+  "/graphics/pcf-elettronica/mod-529-nr-tcd-mini-industrial-gc-with-tcd-detector.jpg": {
+    "base": "/hero/responsive-2026-10/image-bc0e0c369d0c",
+    "widths": [
+      240,
+      480,
+      601
+    ],
+    "width": 601,
+    "height": 261
+  },
+  "/graphics/pcf-elettronica/mod-2005-for-total-voc.jpg": {
+    "base": "/hero/responsive-2026-10/image-e8e1d2b2b6c0",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 477
+  },
+  "/graphics/pcf-elettronica/mod-2001-c-for-voc-and-check-of-ch4-fraction.jpg": {
+    "base": "/hero/responsive-2026-10/image-a6728ca4ca55",
+    "widths": [
+      240,
+      480,
+      531
+    ],
+    "width": 531,
+    "height": 700
+  },
+  "/graphics/pcf-elettronica/mod-c-2011-for-voc-and-ch4-simultaneously.jpg": {
+    "base": "/hero/responsive-2026-10/image-6d8592f98950",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 400
+  },
+  "/graphics/pcf-elettronica/mod-8807-nr-portable-gc-for-nmh-or-specifics.jpg": {
+    "base": "/hero/responsive-2026-10/image-c3b911cd302a",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 475
+  },
+  "/graphics/pcf-elettronica/fid-detector.jpg": {
+    "base": "/hero/responsive-2026-10/image-accc2b98fdb0",
+    "widths": [
+      240,
+      480,
+      960
+    ],
+    "width": 1159,
+    "height": 773
+  },
+  "/graphics/pcf-elettronica/pid-detector.jpg": {
+    "base": "/hero/responsive-2026-10/image-e4ea0fae2c28",
+    "widths": [
+      240,
+      480,
+      960
+    ],
+    "width": 1640,
+    "height": 1920
+  },
+  "/graphics/pcf-elettronica/tcd-detector.png": {
+    "base": "/hero/responsive-2026-10/image-4df72731fed4",
+    "widths": [
+      240,
+      480,
+      548
+    ],
+    "width": 548,
+    "height": 251
+  },
+  "/graphics/pcf-elettronica/mod-pf-2014.jpg": {
+    "base": "/hero/responsive-2026-10/image-27ce926e05bf",
+    "widths": [
+      240,
+      480,
+      647
+    ],
+    "width": 647,
+    "height": 144
+  },
+  "/graphics/pcf-elettronica/sampling-probe-ss-1m.jpg": {
+    "base": "/hero/responsive-2026-10/image-5a672a6ed210",
+    "widths": [
+      240,
+      480,
+      647
+    ],
+    "width": 647,
+    "height": 144
+  },
+  "/graphics/pcf-elettronica/heated-sampling-line.jpg": {
+    "base": "/hero/responsive-2026-10/image-28856ec6e5b6",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 690
+  },
+  "/graphics/pcf-elettronica/cylinder-basket-2.jpg": {
+    "base": "/hero/responsive-2026-10/image-f9aeae91d67f",
+    "widths": [
+      240,
+      480,
+      960
+    ],
+    "width": 999,
+    "height": 721
+  },
+  "/graphics/pcf-elettronica/cylinder-basket-3.jpg": {
+    "base": "/hero/responsive-2026-10/image-f9aeae91d67f",
+    "widths": [
+      240,
+      480,
+      960
+    ],
+    "width": 999,
+    "height": 721
+  },
+  "/graphics/pcf-elettronica/mod-9588.jpg": {
+    "base": "/hero/responsive-2026-10/image-da8d3927b814",
+    "widths": [
+      240,
+      480,
+      960
+    ],
+    "width": 1224,
+    "height": 1686
+  },
+  "/graphics/pcf-elettronica/mod-dp-99.jpg": {
+    "base": "/hero/responsive-2026-10/image-4c9928ad2d67",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 511
+  },
+  "/graphics/pcf-elettronica/mod-liv-10.jpg": {
+    "base": "/hero/responsive-2026-10/image-30e4acd8e16a",
+    "widths": [
+      240,
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 278
+  },
+  "/team/hezina.jpg": {
+    "base": "/hero/responsive-2026-10/image-95e6a5bc7a39",
+    "widths": [
+      80,
+      160
+    ],
+    "width": 1379,
+    "height": 919
+  },
+  "/team/svatova.jpg": {
+    "base": "/hero/responsive-2026-10/image-35079cab7f6e",
+    "widths": [
+      80,
+      160
+    ],
+    "width": 1379,
+    "height": 919
+  },
+  "/graphics/brands/pcf-elettronica.png": {
+    "base": "/hero/responsive-2026-10/image-59b414495251",
+    "widths": [
+      160,
+      320
+    ],
+    "width": 1024,
+    "height": 183
+  },
+  "/graphics/not-found-404.png": {
+    "base": "/hero/responsive-2026-10/image-8538612a68ba",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 1024,
+    "height": 687
+  }
+}

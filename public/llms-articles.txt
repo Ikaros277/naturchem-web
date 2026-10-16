@@ -1,6 +1,6 @@
 # NATURCHEM — odborné články (poradna)
 
-> 77 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
+> 78 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
 
 ## Index
 
@@ -85,6 +85,7 @@
 - Přišla výzva KHS k měření pracovního prostředí: jak sestavit správný rozsah: https://www.naturchem.cz/poradna/vyzva-khs-mereni-pracovniho-prostredi/
 - Záložní dieselagregát: emise, hluk a povolovací podklady: https://www.naturchem.cz/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady/
 - Záložní dieselagregát: kdy je jen záloha a kdy už běžný zdroj emisí: https://www.naturchem.cz/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny/
+- Zápach z provozovny: co dělat při stížnosti a jak se pachové látky posuzují: https://www.naturchem.cz/poradna/zapach-z-provozovny-stiznost-pachove-latky/
 - Změna integrovaného povolení IPPC: kdy je změna podstatná a co musí provozovatel ohlásit předem: https://www.naturchem.cz/poradna/zmena-integrovaneho-povoleni-ippc-podstatna-zmena/
 - Změna technologie ve výrobním areálu: kdy řešit ovzduší, hluk, odpady a EIA: https://www.naturchem.cz/poradna/zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia/
 
@@ -165,6 +166,7 @@
 - You have received a KHS request for work environment measurement: how to define the right scope: https://www.naturchem.cz/en/poradna/vyzva-khs-mereni-pracovniho-prostredi/
 - Backup diesel generator: emissions, noise, and permitting documentation: https://www.naturchem.cz/en/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady/
 - Backup diesel generator: when it is only backup and when it is already a regular emission source: https://www.naturchem.cz/en/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny/
+- Odour from a facility: what to do when a complaint arrives and how odorous substances are assessed: https://www.naturchem.cz/en/poradna/zapach-z-provozovny-stiznost-pachove-latky/
 - Changing an IPPC integrated permit: when is a change substantial and what must the operator report in advance: https://www.naturchem.cz/en/poradna/zmena-integrovaneho-povoleni-ippc-podstatna-zmena/
 - Changing Technology in a Production Site: When to Address Air, Noise, Waste and EIA: https://www.naturchem.cz/en/poradna/zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia/
 
@@ -245,6 +247,7 @@
 - Aufforderung der KHS zur Messung der Arbeitsumgebung erhalten: So legen Sie den richtigen Umfang fest: https://www.naturchem.cz/de/poradna/vyzva-khs-mereni-pracovniho-prostredi/
 - Backup-Dieselgenerator: Emissionen, Lärm und Genehmigungsunterlagen: https://www.naturchem.cz/de/poradna/zalozni-dieselagregat-emise-hluk-a-povolovaci-podklady/
 - Backup-Dieselaggregat: Wann es nur Ersatz ist und wann es bereits eine reguläre Emissionsquelle ist: https://www.naturchem.cz/de/poradna/zalozni-dieselagregat-emise-povoleni-provozni-hodiny/
+- Geruch aus einem Betrieb: Was bei einer Beschwerde zu tun ist und wie Geruchsstoffe beurteilt werden: https://www.naturchem.cz/de/poradna/zapach-z-provozovny-stiznost-pachove-latky/
 - Änderung der integrierten Genehmigung nach IPPC: Wann ist eine Änderung wesentlich und was muss der Betreiber vorab anzeigen: https://www.naturchem.cz/de/poradna/zmena-integrovaneho-povoleni-ippc-podstatna-zmena/
 - Technologieänderung in einem Produktionsareal: wann Luft, Lärm, Abfälle und UVP zu behandeln sind: https://www.naturchem.cz/de/poradna/zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia/
 

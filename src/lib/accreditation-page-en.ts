@@ -5,7 +5,7 @@ export const accreditationPageMetadata = {
     absolute: "Accreditation and authorisations | NATURCHEM"
   },
   description:
-    "Scope of ČIA accreditation No. 1599, EIA authorisations, dispersion studies, reports and GHG. Documents for download."
+    "Accredited scope of testing laboratory No. 1599, EIA authorisations, dispersion studies and expert reports. Certificates and documents for download."
 } as const;
 
 export const accreditationFacts = [

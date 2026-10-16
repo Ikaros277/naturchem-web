@@ -15,6 +15,8 @@ import { getServiceHeroTheme } from "@/lib/hero-images";
 import { getAuthenticPhoto } from "@/lib/authentic-photos";
 import { company } from "@/lib/site";
 import type { ServiceEvidence } from "@/lib/service-search-support";
+import type { ServiceCommercialIntent } from "@/lib/service-commercial-intent";
+import { getServiceOverview } from "@/lib/service-overviews";
 import styles from "./service-detail.module.css";
 
 type Props = {
@@ -25,6 +27,7 @@ type Props = {
   relatedItems: { title: string; href: string }[];
   schemas: ReactNode;
   evidence?: ServiceEvidence;
+  commercialIntent?: ServiceCommercialIntent;
   faqUiLabels?: FaqAccordionUiLabels;
 };
 
@@ -33,7 +36,7 @@ function DetailList({ items }: { items: string[] }) {
 }
 
 /** Shared server-rendered layout: full technical content remains in native disclosures. */
-export function ServiceDetailLayout({ content, contactHref, contactLabel, faqItems, relatedItems, schemas, evidence, faqUiLabels }: Props) {
+export function ServiceDetailLayout({ content, contactHref, contactLabel, faqItems, relatedItems, schemas, evidence, commercialIntent, faqUiLabels }: Props) {
   const { locale } = content;
   const href = (path: string) => localizeHref(path, locale);
   const copy = getServiceCopy(locale);
@@ -43,7 +46,11 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
   const emissions = locale === "cs" && content.slug === "sluzby/mereni-emisi";
   const photo = getAuthenticPhoto(getServiceHeroTheme(content.slug));
   const workplace = locale === "cs" && content.slug === "sluzby/pracovni-prostredi";
-  const features = emissions ? [
+  const overview = commercialIntent ?? (locale === "cs" ? getServiceOverview(content.slug) : undefined);
+  const features = overview ? overview.features.map((feature, index) => ({
+    ...feature,
+    icon: (["process-rozsah", "process-posouzeni", "process-vystup"] as const)[index % 3],
+  })) : emissions ? [
     { title: "Měření u Vašeho zdroje", text: "Rozsah podle povolení provozu a zadání. Předem posoudíme měřicí místo a přípravu provozu.", icon: "process-rozsah" as const },
     { title: "Vyhodnocení vůči limitům", text: "Výsledky porovnáme s limity, povolením provozu a případným požadavkem úřadu.", icon: "process-posouzeni" as const },
     { title: "Protokol a další postup", text: "Předáme protokol z měření, shrnutí výsledků a doporučení navazujících kroků.", icon: "process-vystup" as const },
@@ -88,7 +95,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
         <section className={styles.overview} aria-labelledby="service-overview-heading">
           <div className={styles.offer}>
             <p className={styles.eyebrow}>{categoryLabel}</p>
-            <h2 id="service-overview-heading">{emissions ? "Měření, vyhodnocení a protokol." : copy.overviewHeading}</h2>
+            <h2 id="service-overview-heading">{overview?.heading ?? (emissions ? "Měření, vyhodnocení a protokol." : copy.overviewHeading)}</h2>
             <div className={styles.features}>
               {features.filter(item => item.text).map(item => <div className={styles.feature} key={item.title}>
                 <ServiceIcon icon={item.icon} variant="plain" size={26} />
@@ -103,6 +110,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
               <h3>{evidence.title}</h3>
               <p>{evidence.summary}</p>
               <p className={styles.evidenceOutput}><strong>Výstup:</strong> {evidence.output}</p>
+              {evidence.referenceHref ? <a className={styles.textLink} href={href(evidence.referenceHref)}>Doložené realizace <span aria-hidden="true">→</span></a> : null}
             </aside> : null}
           </div>
           <aside className={styles.inquiryPanel} id="podklady" aria-labelledby="service-docs-heading">
@@ -110,6 +118,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             <h2 id="service-docs-heading">{ui.docs}</h2>
             <p>{copy.docsIntro}</p>
             <DetailList items={content.docs.slice(0, 3)} />
+            {commercialIntent ? <p className={styles.quoteBasis} data-service-quote-basis><strong>Rozsah a nabídka</strong>{commercialIntent.quoteBasis}</p> : null}
             <a className={styles.panelCta} href={contactHref}>{ui.inquiry}<span aria-hidden="true">↗</span></a>
             <p className={styles.response}>{ui.responseFull}</p>
           </aside>

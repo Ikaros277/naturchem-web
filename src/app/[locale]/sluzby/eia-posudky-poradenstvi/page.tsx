@@ -45,6 +45,21 @@ const czech = {
   ],
   relatedLinks: [
     {
+      title: "EIA a oznámení záměru",
+      href: "/sluzby/eia-oznameni-zameru",
+      description: "Zpracování oznámení a koordinace odborných příloh."
+    },
+    {
+      title: "IPPC a integrovaná povolení",
+      href: "/sluzby/ippc-integrovana-povoleni",
+      description: "Žádost o integrované povolení nebo jeho změnu a podání za klienta."
+    },
+    {
+      title: "ISPOP a provozní evidence",
+      href: "/sluzby/ispop",
+      description: "Zpracování a podání hlášení podle dohodnuté agendy."
+    },
+    {
       title: "Rozptylové studie",
       href: "/sluzby/rozptylove-studie",
       description: "Imisní příspěvek zdrojů a dopravy jako častá příloha EIA a povolování."

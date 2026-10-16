@@ -5,7 +5,7 @@ export const accreditationPageMetadata = {
     absolute: "Akkreditierung und Zulassungen | NATURCHEM"
   },
   description:
-    "Akkreditierungsumfang ČIA Nr. 1599, UVP-Genehmigungen, Ausbreitungsstudien, Gutachten und GHG. Dokumente zum Download."
+    "Akkreditierter Umfang des Prüflabors Nr. 1599, UVP-Zulassungen, Ausbreitungsstudien und Gutachten. Urkunden und Dokumente zum Download."
 } as const;
 
 export const accreditationFacts = [

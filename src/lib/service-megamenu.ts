@@ -70,17 +70,17 @@ export const serviceMegaGroups = [
       {
         href: "/sluzby/modelove-vypocty",
         label: "Modelové výpočty",
-        description: "Atmosférické a akustické modely"
+        description: "Výpočtové porovnání variant technologie a provozu"
       },
       {
         href: "/sluzby/akusticke-posudky",
         label: "Akustické posudky",
-        description: "Posudky hluku a vibrací"
+        description: "Hluk strojoven a technologií v objektech"
       },
       {
         href: "/sluzby/imisni-dopady",
         label: "Imisní a hlukové dopady",
-        description: "Dopady záměrů na okolí a imise"
+        description: "Společné posouzení ovzduší a hluku záměru"
       },
       {
         href: "/sluzby/ghg-overovani",
@@ -97,7 +97,7 @@ export const serviceMegaGroups = [
       {
         href: "/sluzby/ispop",
         label: "ISPOP a provozní evidence",
-        description: "Souhrnná provozní evidence a roční hlášení ISPOP"
+        description: "Zpracování evidence, hlášení a podání za klienta"
       },
       {
         href: "/sluzby/eia-oznameni-zameru",
@@ -112,12 +112,12 @@ export const serviceMegaGroups = [
       {
         href: "/sluzby/ippc-integrovana-povoleni",
         label: "IPPC a integrovaná povolení",
-        description: "Integrovaná povolení a dokumentace BAT"
+        description: "Žádost, odborné přílohy a podání za klienta"
       },
       {
         href: "/sluzby/povoleni-provozu",
         label: "Povolení provozu zdroje",
-        description: "Povolení provozu a změny technologie"
+        description: "Žádost a podání pro nový zdroj nebo změnu"
       },
       {
         href: "/sluzby/provozni-rady",

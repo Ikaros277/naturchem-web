@@ -5,7 +5,7 @@ export const accreditationPageMetadata = {
     absolute: "Akreditace a autorizace | NATURCHEM"
   },
   description:
-    "Rozsah akreditace ČIA č. 1599, autorizace EIA, rozptylové studie, posudky a GHG. Dokumenty ke stažení."
+    "Akreditovaný rozsah zkušební laboratoře č. 1599, autorizace EIA, rozptylové studie a odborné posudky. Osvědčení a dokumenty ke stažení."
 } as const;
 
 export const accreditationFacts = [

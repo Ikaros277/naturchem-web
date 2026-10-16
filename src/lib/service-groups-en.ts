@@ -113,12 +113,12 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Source operating permit",
         href: "/sluzby/povoleni-provozu",
-        text: "Supporting documentation for issuing or changing a stationary source operating permit."
+        text: "Application preparation, supporting documents and submission for a new or amended stationary source operating permit."
       },
       {
         title: "IPPC and permit changes",
         href: "/sluzby/ippc-integrovana-povoleni",
-        text: "Integrated pollution prevention and control, comprehensive supporting documentation for operation."
+        text: "Application for an integrated permit or permit change, technical appendices and submission on the client's behalf."
       }
     ]
   },
@@ -154,7 +154,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "ISPOP and integrated pollution reporting records",
         href: "/sluzby/ispop",
-        text: "Annual reporting, integrated pollution reporting records, link to emission measurements."
+        text: "Record checks, report preparation and ISPOP submission on the operator's behalf with authorisation."
       },
       {
         title: "GHG and greenhouse gases",
@@ -182,7 +182,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Safety data sheets and labelling",
         href: "/sluzby/bezpecnostni-listy",
-        text: "Orientation in safety data sheets, internal containers, labels and link to occupational health and safety."
+        text: "Preparation of new safety data sheets, revision of existing sheets and checks of labelling information."
       }
     ]
   }

@@ -26,10 +26,16 @@ const groupIcons: Record<string, ServiceIconKey> = {
 };
 
 const categoryNavigation = {
-  cs: { label: "Kategorie služeb", titles: ["Měření", "Studie a výpočty", "Povolovací podklady", "EIA", "Evidence a chemie", "Školení"] },
-  en: { label: "Service categories", titles: ["Measurements", "Studies", "Permitting", "EIA", "Reporting and chemicals", "Training"] },
-  de: { label: "Leistungskategorien", titles: ["Messungen", "Studien", "Genehmigungen", "UVP", "Berichte und Chemikalien", "Schulungen"] }
+  cs: { label: "Kategorie služeb", categories: ["Měření", "Studie a výpočty", "Dokumentace a povolení"], hints: ["Emise, hluk a pracovní prostředí", "Rozptyl, hluk a varianty záměrů"], titles: ["Měření", "Studie a výpočty", "Povolovací podklady", "EIA", "Evidence a chemie", "Školení"] },
+  en: { label: "Service categories", categories: ["Measurements", "Studies and calculations", "Documentation and permits"], hints: ["Emissions, noise and workplace conditions", "Dispersion, noise and project alternatives"], titles: ["Measurements", "Studies", "Permitting", "EIA", "Reporting and chemicals", "Training"] },
+  de: { label: "Leistungskategorien", categories: ["Messungen", "Studien und Berechnungen", "Dokumentation und Genehmigungen"], hints: ["Emissionen, Lärm und Arbeitsumgebung", "Ausbreitung, Lärm und Projektvarianten"], titles: ["Messungen", "Studien", "Genehmigungen", "UVP", "Berichte und Chemikalien", "Schulungen"] }
 };
+
+const primaryCategories = [
+  { id: "measurement", icon: "pillar-mereni" },
+  { id: "studies", icon: "pillar-studie" },
+  { id: "docs", icon: "pillar-dokumentace" },
+] as const;
 
 const groupAriaVerbs: Record<string, string> = {
   "mericke-sluzby": "měření",
@@ -107,12 +113,30 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
     <section className="section section-surface accordion-index-surface service-groups-accordion">
       <div className="container service-groups-accordion-inner">
         <nav className="service-category-nav" aria-label={navigation.label}>
-          {groups.map((group, index) => (
-            <a key={group.id} href={`#${group.id}`} onClick={() => onToggle(group.id, true)}>
-              <ServiceIcon icon={groupIcons[group.id]} variant="inline" size={20} />
-              <span>{navigation.titles[index] ?? group.title}</span>
-            </a>
-          ))}
+          {primaryCategories.map((category, categoryIndex) => {
+            const categoryGroups = groups.filter(group =>
+              (getServiceCategoryFromServiceGroupId(group.id) ?? "docs") === category.id
+            );
+            if (!categoryGroups.length) return null;
+            const firstGroup = categoryGroups[0];
+            return <div key={category.id} className="service-category-nav-group" data-service-index-category={category.id}>
+              {categoryGroups.length === 1 ? <a
+                className="service-category-nav-main"
+                href={`#${firstGroup.id}`}
+                onClick={() => onToggle(firstGroup.id, true)}
+              >
+                <ServiceIcon icon={category.icon} variant="inline" size={24} />
+                <span>{navigation.categories[categoryIndex]}<small>{navigation.hints[categoryIndex]}</small></span>
+              </a> : <>
+                <p className="service-category-nav-heading"><ServiceIcon icon={category.icon} variant="inline" size={24} /><span>{navigation.categories[categoryIndex]}</span></p>
+                <div className="service-category-nav-links">
+                  {categoryGroups.map(group => <a key={group.id} href={`#${group.id}`} onClick={() => onToggle(group.id, true)}>
+                    <span>{navigation.titles[groups.indexOf(group)] ?? group.title}</span><span aria-hidden="true">↓</span>
+                  </a>)}
+                </div>
+              </>}
+            </div>;
+          })}
         </nav>
         {groups.map((group) => {
           const ariaVerb = ariaVerbs[group.id] ?? group.title;

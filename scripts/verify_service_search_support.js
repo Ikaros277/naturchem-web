@@ -96,7 +96,7 @@ async function main() {
   assert.equal(normalizeBreadcrumbJsonLd(service), service);
   const supportSource = fs.readFileSync(path.join(root, "src/lib/service-search-support.ts"), "utf8");
   const archiveSource = fs.readFileSync(path.join(root, "src/lib/archived-practice.ts"), "utf8");
-  assert.ok(!/\b[A-Z]:[/\\]|\b20\d{5}\b|\/ARCHIV\/|\.pdf\b|ISPOP_\d+|@/i.test(supportSource.replaceAll("@/lib/", "") + archiveSource), "No private paths, job IDs, source PDFs, email addresses or system IDs; client attribution needs separate approval");
+  assert.ok(!/\b[A-Z]:[/\\]|\b20\d{5}\b|\/ARCHIV\/|\.pdf\b|ISPOP_\d+|@/i.test((supportSource + archiveSource).replaceAll("@/lib/", "")), "No private paths, job IDs, source PDFs, email addresses or system IDs; client attribution needs separate approval");
   const { archivedPractice, practiceNote } = load(path.join(root, "src/lib/archived-practice.ts"));
   assert.equal(Object.keys(archivedPractice).length, 11);
   assert.equal(Object.values(czechServiceSearchSupport).filter(item => item.evidence).length, 19);

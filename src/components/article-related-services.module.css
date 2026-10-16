@@ -1,0 +1,5 @@
+.inquiry { margin-top: 20px; padding: 20px 24px; background: #f1f5f2; border-left: 3px solid #2f7a61; border-radius: 0 6px 6px 0; }
+.inquiry p { margin: 0 0 10px; font-size: 16px; line-height: 1.55; color: #395060; }
+.inquiry a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #245d4a; font-weight: 650; text-decoration: underline; text-underline-offset: 4px; }
+.inquiry a:focus-visible { outline: 3px solid #b7792f; outline-offset: 5px; }
+@media (max-width: 767px) { .inquiry { padding: 18px; } }

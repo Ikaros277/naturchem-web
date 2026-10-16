@@ -1,4 +1,6 @@
-export type ServiceEvidence = { title: string; summary: string; output: string };
+import { referenceExampleGroups } from "@/lib/reference-example-groups";
+
+export type ServiceEvidence = { title: string; summary: string; output: string; referenceHref?: string };
 
 type ArchivedPractice = ServiceEvidence & {
   id: string;
@@ -95,5 +97,6 @@ export const archivedPractice = {
 
 export function practiceNote(key: keyof typeof archivedPractice): ServiceEvidence {
   const item = archivedPractice[key];
-  return { title: item.title, summary: item.summary, output: item.output };
+  const group = referenceExampleGroups.find(group => group.exampleIds.includes(item.id));
+  return { title: item.title, summary: item.summary, output: item.output, referenceHref: group ? "/reference#" + group.id : undefined };
 }

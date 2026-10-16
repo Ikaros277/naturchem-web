@@ -163,9 +163,9 @@ export const services = [
   {
     href: "/sluzby/ippc-integrovana-povoleni",
     title: "IPPC a integrovaná povolení",
-    short: "Podklady pro integrovaná povolení, změny IPPC a návaznou dokumentaci.",
+    short: "Žádost o integrované povolení nebo jeho změnu, odborné přílohy a podání za klienta.",
     cta: "Zjistit více o IPPC",
-    contactCta: "Poptat podklady pro IPPC",
+    contactCta: "Poptat zpracování IPPC",
     contactService: "IPPC a integrovaná povolení"
   },
   {
@@ -179,9 +179,9 @@ export const services = [
   {
     href: "/sluzby/ispop",
     title: "ISPOP a provozní evidence",
-    short: "Souhrnná provozní evidence, roční hlášení a návaznost na měření emisí.",
+    short: "Zpracování souhrnné provozní evidence, hlášení ISPOP a podání za klienta.",
     cta: "Zjistit více o ISPOP",
-    contactCta: "Poptat ISPOP a evidenci",
+    contactCta: "Poptat hlášení ISPOP",
     contactService: "ISPOP"
   },
   {
@@ -189,7 +189,7 @@ export const services = [
     title: "Emise skleníkových plynů (GHG)",
     short: "Výpočty emisí skleníkových plynů, kontrola emisních dat a uhlíková stopa.",
     cta: "Zjistit více o GHG",
-    contactCta: "Poptat GHG",
+    contactCta: "Poptat výpočet GHG",
     contactService: "GHG"
   },
   {
@@ -203,7 +203,7 @@ export const services = [
   {
     href: "/sluzby/bezpecnostni-listy",
     title: "Bezpečnostní listy",
-    short: "Kontrola bezpečnostních listů, označování, štítky a návaznost na BOZP.",
+    short: "Zpracování nových bezpečnostních listů, revize a kontrola dokumentace v provozu.",
     cta: "Zjistit více o bezpečnostních listech",
     contactCta: "Poptat bezpečnostní listy",
     contactService: "Bezpečnostní listy"

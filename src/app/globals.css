@@ -9451,29 +9451,43 @@ main.home-page + .site-footer {
 .page-hero-band--compact .page-lead { max-width: 34rem; margin-bottom: 0; }
 .service-category-nav {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 8px;
-  margin-bottom: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
 }
+.service-category-nav-group {
+  --index-accent: var(--service-measurement-dark);
+  min-width: 0;
+  border: 1px solid #c9dbd5;
+  border-top: 3px solid var(--index-accent);
+  border-radius: 8px;
+  background: #fff;
+}
+.service-category-nav-group[data-service-index-category="studies"] { --index-accent: var(--service-studies-dark); }
+.service-category-nav-group[data-service-index-category="docs"] { --index-accent: var(--service-docs-dark); }
 .service-category-nav a {
   display: flex;
   align-items: center;
   gap: 8px;
-  min-height: 52px;
-  padding: 10px 12px;
-  border: 1px solid #c9dbd5;
-  border-radius: 10px;
-  background: #fff;
+  min-height: 44px;
+  padding: 8px 10px;
+  border-radius: 5px;
   color: #183a4a;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
   text-decoration: none;
 }
-.service-category-nav a:hover { background: #eef5f2; border-color: #7eab99; }
-.service-category-nav a:focus-visible { outline: 3px solid #2f6f5e; outline-offset: 3px; }
+.service-category-nav a:hover { background: #eef5f2; }
+.service-category-nav a:focus-visible { outline: 3px solid #2f6f5e; outline-offset: -3px; }
 .service-category-nav a span { min-width: 0; overflow-wrap: anywhere; }
 .service-category-nav svg { flex: 0 0 auto; }
+.service-category-nav .service-category-nav-main { height: 100%; align-items: flex-start; padding: 20px 16px; font-size: 17px; gap: 12px; }
+.service-category-nav-main small { display: block; margin-top: 8px; color: #526573; font-size: 14px; font-weight: 400; line-height: 1.5; }
+.service-category-nav-heading { display: flex; align-items: flex-start; gap: 12px; padding: 16px 16px 4px; margin: 0; color: #183a4a; font-size: 17px; font-weight: 650; line-height: 1.3; }
+.service-category-nav-heading span { min-width: 0; overflow-wrap: anywhere; }
+.service-category-nav-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 4px; padding: 4px 6px 8px; }
+.service-category-nav-links a { justify-content: space-between; }
 .service-groups-accordion .index-card-head { min-height: 5.2rem; align-items: flex-start; }
 .service-groups-accordion .service-index-card-lead { padding-top: 10px; line-height: 1.5; }
 .service-groups-accordion .service-index-card .card-inline-link,
@@ -9498,8 +9512,12 @@ main.home-page + .site-footer {
   .page-hero-band--compact .page-hero-band-inner { padding-block: 20px; }
   .page-hero-band--compact .page-header h1,
   .page-hero-band--compact .premium-page-hero h1 { font-size: clamp(1.75rem, 7vw, 2.1rem); }
-  .service-category-nav a { padding: 9px 7px; gap: 5px; font-size: 13px; }
-  .service-category-nav svg { width: 16px; height: 16px; }
+  .service-category-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .service-category-nav-group[data-service-index-category="docs"] { grid-column: 1 / -1; }
+  .service-category-nav .service-category-nav-main { padding: 14px 12px; gap: 8px; font-size: 15px; }
+  .service-category-nav-main small { font-size: 13px; margin-top: 6px; }
+  .service-category-nav-heading { padding: 12px 14px 4px; font-size: 16px; gap: 8px; }
+  .service-category-nav svg { width: 20px; height: 20px; }
   .service-groups-accordion .service-index-card--with-thumb {
     display: grid;
     grid-template-columns: 104px minmax(0, 1fr);

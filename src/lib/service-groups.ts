@@ -90,17 +90,17 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Akustické posudky",
         href: "/sluzby/akusticke-posudky",
-        text: "Vyjádření k hluku technologií, strojoven a provozních zdrojů v objektech."
+        text: "Akustický posudek technologií a strojoven v objektech. Výpočet a návrh opatření podle zadání."
       },
       {
         title: "Modelové výpočty",
         href: "/sluzby/modelove-vypocty",
-        text: "Imisní a hlukové modelování pro záměry a varianty provozu."
+        text: "Porovnání umístění technologie a variant provozu. Výpočtové podklady pro navazující studie."
       },
       {
         title: "Imisní a hlukové dopady záměrů",
         href: "/sluzby/imisni-dopady",
-        text: "Propojení studií ovzduší a hluku pro záměr nebo změnu provozu."
+        text: "Společné posouzení ovzduší a hluku jednoho záměru. Sjednocené vstupy a souhrn pro investora."
       }
     ]
   },
@@ -108,7 +108,7 @@ export const serviceGroups: ServiceGroup[] = [
     id: "povolovaci-podklady",
     title: "Povolovací a úřední dokumentace",
     intro:
-      "Odborné posudky, provozní řády a podklady pro povolení provozu.",
+      "Odborné posudky, provozní řády a žádosti o povolení provozu či IPPC.",
     items: [
       {
         title: "Odborné posudky",
@@ -123,12 +123,12 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Povolení provozu zdroje",
         href: "/sluzby/povoleni-provozu",
-        text: "Podklady pro vydání nebo změnu povolení provozu stacionárního zdroje."
+        text: "Zpracování žádosti, odborné podklady a podání pro vydání nebo změnu povolení provozu zdroje."
       },
       {
         title: "IPPC a změny povolení",
         href: "/sluzby/ippc-integrovana-povoleni",
-        text: "Integrovaná prevence a omezování znečišťování, souhrnné podklady pro provoz."
+        text: "Žádost o integrované povolení nebo jeho změnu, odborné přílohy a podání za klienta."
       }
     ]
   },
@@ -141,17 +141,17 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "EIA a oznámení záměru",
         href: "/sluzby/eia-oznameni-zameru",
-        text: "Příprava oznámení a technických příloh pro záměry s vlivy na životní prostředí."
+        text: "Zpracování oznámení záměru a koordinace odborných příloh pro EIA."
       },
       {
         title: "Zjišťovací řízení EIA",
         href: "/sluzby/zjistovaci-rizeni-eia",
-        text: "Odborné podklady a koordinace vstupů pro fázi zjišťovacího řízení."
+        text: "Dílčí odborné podklady pro zpracovatele EIA ve fázi zjišťovacího řízení."
       },
       {
         title: "Technické přílohy pro investory",
         href: "/sluzby/technicke-prilohy",
-        text: "Rozptyl, hluk, doprava, emise a návaznost na skutečný provoz záměru."
+        text: "Odborné přílohy podle zadání projektanta: rozptyl, hluk, doprava a emise."
       }
     ]
   },
@@ -164,7 +164,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "ISPOP a souhrnná provozní evidence",
         href: "/sluzby/ispop",
-        text: "Roční hlášení, souhrnná provozní evidence, návaznost na měření emisí."
+        text: "Kontrola evidence, zpracování hlášení a podání do ISPOP za provozovatele na základě zmocnění."
       },
       {
         title: "GHG a skleníkové plyny",
@@ -192,7 +192,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Bezpečnostní listy a označování",
         href: "/sluzby/bezpecnostni-listy",
-        text: "Orientace v bezpečnostních listech, interní nádoby, štítky a návaznost na BOZP."
+        text: "Tvorba nových bezpečnostních listů, revize stávajících a kontrola údajů pro označování."
       }
     ]
   }

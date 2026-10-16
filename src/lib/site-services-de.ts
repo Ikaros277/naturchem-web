@@ -82,9 +82,9 @@ export const services = [
   {
     href: "/sluzby/ippc-integrovana-povoleni",
     title: "IPPC und integrierte Genehmigungen",
-    short: "Unterstützende Dokumentation für integrierte Genehmigungen, IPPC-Änderungen und Folgedokumentation.",
+    short: "Anträge auf integrierte Genehmigungen und Änderungen, Fachanhänge und Einreichung im Auftrag des Kunden.",
     cta: "Erfahren Sie mehr über IPPC",
-    contactCta: "Fordern Sie IPPC-Dokumentation an",
+    contactCta: "IPPC-Antrag anfragen",
     contactService: "IPPC a integrovaná povolení"
   },
   {
@@ -98,7 +98,7 @@ export const services = [
   {
     href: "/sluzby/ispop",
     title: "ISPOP- und Betriebsaufzeichnungen",
-    short: "Integrierte Aufzeichnungen zur Schadstoffberichterstattung, jährliche Berichterstattung und Verknüpfung zu Emissionsmessungen.",
+    short: "Erstellung von Betriebsaufzeichnungen und ISPOP-Meldungen sowie Einreichung im Auftrag des Kunden.",
     cta: "Erfahren Sie mehr über ISPOP",
     contactCta: "Fordern Sie ISPOP und Aufzeichnungen an",
     contactService: "ISPOP"
@@ -122,7 +122,7 @@ export const services = [
   {
     href: "/sluzby/bezpecnostni-listy",
     title: "Sicherheitsdatenblätter",
-    short: "Überprüfung von Sicherheitsdatenblättern, Kennzeichnungen, Etiketten und Link zu Gesundheit und Sicherheit am Arbeitsplatz.",
+    short: "Erstellung neuer Sicherheitsdatenblätter, Überarbeitung und Prüfung der betrieblichen Dokumentation.",
     cta: "Erfahren Sie mehr über Sicherheitsdatenblätter",
     contactCta: "Fordern Sie Unterstützung bei Sicherheitsdatenblättern an",
     contactService: "Bezpečnostní listy"

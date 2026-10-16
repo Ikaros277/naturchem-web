@@ -117,6 +117,8 @@ V takovém případě se už neřeší jen expozice svářeče, ale také výduc
 
 Měření emisí na výduchu tedy neříká automaticky, jaká je expozice svářeče. A naopak měření v dýchací zóně pracovníka nenahrazuje emisní měření na výduchu.
 
+Pro výduchy s obsahem kovů nabízíme [měření těžkých kovů v emisích](/mereni-tezkych-kovu-emise/).
+
 ## Co by měl mít provozovatel připravené
 
 Pro správné posouzení svařovny je vhodné připravit základní technické a provozní údaje. Není nutné začínat dlouhým formulářem, ale bez znalosti technologie nelze rozumně navrhnout měření ani dokumentaci.

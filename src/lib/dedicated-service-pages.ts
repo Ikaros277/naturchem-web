@@ -316,9 +316,9 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
   },
   "ispop": {
     slug: "sluzby/ispop",
-    title: "ISPOP a souhrnná provozní evidence",
+    title: "ISPOP: zpracování hlášení a provozní evidence",
     description:
-      "ISPOP, souhrnná provozní evidence a roční hlášení pro provozovatele zdrojů v návaznosti na měření emisí a povolení provozu.",
+      "Zpracování souhrnné provozní evidence a hlášení ISPOP. Kontrola provozních údajů, podání za klienta a potvrzení podání v dohodnutém rozsahu.",
     intro:
       "Zpracujeme **souhrnnou provozní evidenci** a zajistíme podání do **ISPOP** za klienta. Údaje sladíme s měřením emisí a skutečným provozem.",
     contactService: "ISPOP",
@@ -349,8 +349,8 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "předchozí hlášení a dostupná evidence"
     ],
     outputs: [
-      "podklady pro **ISPOP** a souhrnnou provozní evidenci",
-      "zpracované hlášení a podání do ISPOP v dohodnutém rozsahu",
+      "zpracovaná **souhrnná provozní evidence** a dohodnuté hlášení ISPOP",
+      "podání hlášení za klienta a potvrzení podání do ISPOP",
       "kontrola návaznosti na **povolení provozu** a měření",
       "přehled chybějících nebo rizikových údajů"
     ],
@@ -406,10 +406,10 @@ export const dedicatedServicePages: Record<string, DedicatedServicePage> = {
       "příprava podkladů pro audit nebo investora"
     ],
     docs: [
-      "metodika výpočtu a vstupní data",
-      "spotřeby paliv, surovin a provozní bilance",
-      "**protokoly** z **měření emisí** a provozní evidence",
-      "požadavek na hlášení nebo audit"
+      "účel výpočtu nebo požadavek odběratele a sledované období",
+      "spotřeby energií, paliv, surovin a provozní bilance",
+      "stávající výpočet a metodika, pokud je chcete zkontrolovat",
+      "dostupná zdrojová data a provozní evidence"
     ],
     outputs: [
       "kontrola emisních údajů a výpočtů v dohodnutém rozsahu",

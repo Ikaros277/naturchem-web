@@ -18,6 +18,11 @@ const S = {
   emise: "/sluzby/mereni-emisi",
   pracovni: "/sluzby/pracovni-prostredi",
   hluk: "/sluzby/mereni-hluku",
+  osvetleni: "/sluzby/mereni-osvetleni",
+  mikroklima: "/sluzby/mereni-mikroklimatu",
+  vibrace: "/sluzby/mereni-vibraci",
+  tepelnaZatez: "/sluzby/mereni-tepelna-chladova-zatez",
+  diisokyanaty: "/sluzby/mereni-diisokyanatu",
   hlukStudie: "/sluzby/hlukove-studie",
   rozptyl: "/sluzby/rozptylove-studie",
   eia: "/sluzby/eia-oznameni-zameru",
@@ -50,10 +55,13 @@ function toServiceLink(href: ServiceHref, locale: Locale): ServiceLink {
 
 const topicServiceHrefs: Record<string, ServiceHref[]> = {
   Emise: [S.emise, S.posudky, S.rozptyl],
-  Hluk: [S.hluk, S.hlukStudie, S.eia],
+  "Hluk a vibrace": [S.hluk, S.hlukStudie, S.vibrace],
   "Rozptylové studie": [S.rozptyl, S.emise, S.eia],
   "Pracovní prostředí": [S.pracovni, S.chemLatky, S.bezpecnostni],
   "EIA a povolování": [S.eia, S.posudky, S.rozptyl],
+  "Prašnost a deponie": [S.emise, S.rozptyl, S.povoleni],
+  "KHS, ČIŽP a úřady": [S.pracovni, S.hluk, S.emise],
+  "Provozní praxe pro ekology": [S.ispop, S.emise, S.provozni],
   Legislativa: [S.posudky, S.provozni, S.povoleni],
   "Chemická legislativa": [S.skoleni, S.bezpecnostni, S.chemLatky]
 };
@@ -72,6 +80,20 @@ const keywordRules: { pattern: RegExp; services: ServiceHref[] }[] = [
   { pattern: /bezpečnostní list|chemick/i, services: [S.bezpecnostni, S.skoleni, S.chemLatky] },
   { pattern: /provozní řád/i, services: [S.provozni, S.ippc] },
   { pattern: /svařovn|automotive|recyklac|skládk|bioplyn|dřevozprac|zeměděl/i, services: [S.emise, S.hluk, S.eia] }
+];
+
+/** Specific subjects precede broad topic matches; accents and URL hyphens are normalized. */
+const specificServiceRules: { pattern: RegExp; services: ServiceHref[] }[] = [
+  { pattern: /osvetlen/, services: [S.osvetleni, S.pracovni] },
+  { pattern: /mikroklima/, services: [S.mikroklima, S.tepelnaZatez] },
+  { pattern: /vibrac/, services: [S.vibrace, S.pracovni] },
+  { pattern: /(?:tepelna|tepelne|chladova|chladove) zatez/, services: [S.tepelnaZatez, S.mikroklima] },
+  { pattern: /diisokyan|diisocyan/, services: [S.diisokyanaty, S.pracovni] },
+  { pattern: /bezpecnostni(?:ch|ho|mi)? list/, services: [S.bezpecnostni, S.chemLatky] },
+  { pattern: /uhlikov|sklenikov|\bghg\b/, services: [S.ghg] },
+  { pattern: /souhrnn[a-z]* provozn[a-z]* evidenc|\bispop\b|\bf ovz spe\b/, services: [S.ispop, S.emise] },
+  { pattern: /hlukov[a-z]* studi/, services: [S.hlukStudie, S.hluk] },
+  { pattern: /rozptylov[a-z]* studi/, services: [S.rozptyl, S.posudky] },
 ];
 
 type PriorityLanding = Record<Locale, ServiceLink>;
@@ -128,10 +150,16 @@ export function getRelatedServicesForArticle(
     .filter((rule) => rule.pattern.test(haystack))
     .flatMap((rule) => rule.services);
 
+  const normalizedSubject = haystack.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[-_]/g, " ");
+  const specific = specificServiceRules.find(rule => rule.pattern.test(normalizedSubject))?.services ?? [];
   const priority = priorityLandingBySlug[slug];
-  const priorityLinks = priority ? [priority[locale]] : [];
+  const comparison = slug === "kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku";
+  const priorityLinks = priority && !comparison ? [priority[locale]] : [];
+  const specificLinks = specific.map(href => toServiceLink(href, locale));
+  // The comparison needs study and measurement first; retain the approval path as the third choice.
+  const comparisonLinks = priority && comparison ? [priority[locale]] : [];
 
-  return dedupeLinks([...priorityLinks, ...[...fromKeywords, ...base].map((href) => toServiceLink(href, locale))]).slice(0, 3);
+  return dedupeLinks([...priorityLinks, ...specificLinks, ...comparisonLinks, ...[...fromKeywords, ...base].map((href) => toServiceLink(href, locale))]).slice(0, 3);
 }
 
 export function serviceHrefToSlug(href: string): string {
@@ -155,8 +183,7 @@ export function getRelatedArticlesForService(
 ): PoradnaArticleListing[] {
   return articles
     .filter((article) => {
-      const slug = article.href.replace(/^\/poradna\//, "").replace(/\/$/, "");
-      return articleMatchesService(article.title, slug, serviceHref);
+      return articleMatchesService(article.title, article.slug, serviceHref);
     })
     .slice(0, limit);
 }

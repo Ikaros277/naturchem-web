@@ -200,7 +200,7 @@ Pro kontrolu souhrnné provozní evidence nám můžete zaslat:
 - protokoly z autorizovaného měření emisí, roční provozní hodiny, spotřeby paliv, surovin a VOC a údaje o výrobě,
 - informace o změnách technologie, nových výduších, filtrech nebo odstavených zařízeních během vykazovaného roku.
 
-Porovnáme **zdroje, výduchy, kapacity, provozní hodiny a emise** s platným povolením a dostupnou provozní dokumentací. Zkontrolujeme návaznost na výsledky měření a připravíme podklady pro správné ohlášení F_OVZ_SPE prostřednictvím ISPOP.
+Porovnáme **zdroje, výduchy, kapacity, provozní hodiny a emise** s platným povolením a dostupnou provozní dokumentací. Zkontrolujeme návaznost na výsledky měření. V dohodnutém rozsahu zpracujeme hlášení F_OVZ_SPE a se zmocněním zajistíme jeho podání do ISPOP za Vás.
 
 Více informací najdete na stránce [ISPOP a ohlašování – NATURCHEM](https://www.naturchem.cz/sluzby/ispop/).
 

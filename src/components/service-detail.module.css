@@ -52,6 +52,8 @@
 .panelCta { background: #fff; color: #102f42; min-height: 48px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-weight: 700; border-radius: 5px; text-decoration: none; }
 .panelCta:hover { background: #dceee4; }
 .inquiryPanel .response { color: #c0d5dc; font-size: 13px; margin-top: 10px; }
+.inquiryPanel .quoteBasis { border-top: 1px solid #ffffff24; padding-top: 16px; font-size: 15px; color: #d4e3e9; }
+.quoteBasis strong { display: block; margin-bottom: 6px; color: #fff; }
 .inquiryPanel .docsParagraph { margin-bottom: 16px; }
 .inquiryPanel .panelCta { margin-top: 20px; }
 .fullIntro { grid-column: 1 / -1; margin: 0; }

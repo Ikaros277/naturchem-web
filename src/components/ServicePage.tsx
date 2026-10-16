@@ -15,6 +15,7 @@ import { stripInlineMarkdown } from "@/lib/plain-text";
 import { company, siteUrl } from "@/lib/site";
 import type { FaqItem } from "@/lib/faq";
 import { getCzechServiceSearchSupport } from "@/lib/service-search-support";
+import { getServiceCommercialIntent } from "@/lib/service-commercial-intent";
 
 export type ServicePageProps = {
   locale: Locale;
@@ -45,6 +46,7 @@ export async function ServicePage(props: ServicePageProps) {
 
   const bareSlug = props.slug.split("/").pop() ?? props.slug;
   const searchSupport = locale === "cs" ? getCzechServiceSearchSupport(bareSlug) : undefined;
+  const commercialIntent = locale === "cs" ? getServiceCommercialIntent(bareSlug) : undefined;
   const serviceMeta = services.find((s) => s.href === `/${props.slug}`);
   const category = getServiceCategoryFromHref(`/${props.slug}`);
   const relatedServices = services
@@ -53,8 +55,9 @@ export async function ServicePage(props: ServicePageProps) {
   const contactServiceValue = props.contactService || serviceMeta?.contactService || props.title;
   const contactCta = serviceMeta?.contactCta ?? ctaCopy.contactSubmitCta;
   const contactPath = contactUrl(contactServiceValue);
-  const contextualContact = searchSupport?.contactMessage
-    ? contactPath.replace("#", `&message=${encodeURIComponent(searchSupport.contactMessage)}#`)
+  const contactMessage = searchSupport?.contactMessage ?? commercialIntent?.contactMessage;
+  const contextualContact = contactMessage
+    ? contactPath.replace("#", `&message=${encodeURIComponent(contactMessage)}#`)
     : contactPath;
   const quickContactHref = link(contextualContact);
   const sectorMetaByHref = new Map(sectors.map((s) => [s.href, s]));
@@ -161,6 +164,7 @@ export async function ServicePage(props: ServicePageProps) {
         ? { tip: "Poznámka:", legal: "Odborné podklady", related: "Související:" }
         : undefined}
       evidence={searchSupport?.evidence}
+      commercialIntent={commercialIntent}
       relatedItems={mergedRelated}
       schemas={<>
         <JsonLd data={serviceData} />

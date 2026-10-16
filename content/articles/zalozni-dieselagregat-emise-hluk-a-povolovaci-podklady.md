@@ -149,6 +149,8 @@ Zvláštní pozornost je vhodné věnovat zdrojům u nemocnic, datových center,
 
 Pošlete nám technický list dieselagregátu, jmenovitý elektrický výkon, tepelný příkon, spotřebu paliva, předpokládané provozní hodiny, umístění výduchu, situaci objektu a případný požadavek úřadu. Ověříme zařazení zdroje a navrhneme, zda je potřeba povolení provozu, rozptylová studie, hluková studie, provozní evidence nebo další povolovací podklady.
 
+Rozsah služby a podklady pro nabídku najdete také u [měření emisí dieselagregátů](/mereni-emisi-dieselagregat/).
+
 ## Věcná opora článku
 
 Článek vychází zejména z těchto zdrojů:

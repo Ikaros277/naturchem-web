@@ -61,7 +61,7 @@ U těchto provozů se v ochraně ovzduší typicky řeší hlavně **TZL**, tedy
 | řezání a hoblování | piliny, třísky, odsávání, filtrace |
 | broušení | jemný prach, přísnější pohled na TZL |
 | výroba štěpek a pelet | prach, skladování, doprava materiálu |
-| sušení třísek nebo pilin | teplota, riziko doutnání, případně organické látky |
+| [sušení třísek nebo pilin](/mereni-emisi-susaren/) | teplota, riziko doutnání, případně organické látky |
 | výduch z filtru | měřicí místo, emisní limit, provozní evidence |
 
 Důležité je, aby výduch umožňoval reprezentativní měření, pokud je pro zdroj požadováno. Problém vzniká tehdy, když je výduch technicky nepřístupný, nemá vhodné měřicí místo nebo je proudění v potrubí nevhodné pro odběr vzorku.

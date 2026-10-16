@@ -113,12 +113,12 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Quelle Betriebserlaubnis",
         href: "/sluzby/povoleni-provozu",
-        text: "Belege für die Erteilung oder Änderung einer Betriebserlaubnis für ortsfeste Quellen."
+        text: "Antrag, fachliche Unterlagen und Einreichung für eine neue oder geänderte Betriebsgenehmigung einer stationären Quelle."
       },
       {
         title: "IPPC- und Genehmigungsänderungen",
         href: "/sluzby/ippc-integrovana-povoleni",
-        text: "Integrierte Vermeidung und Kontrolle der Umweltverschmutzung, umfassende Begleitdokumentation für den Betrieb."
+        text: "Antrag auf eine integrierte Genehmigung oder deren Änderung, fachliche Anlagen und Einreichung im Auftrag des Kunden."
       }
     ]
   },
@@ -154,7 +154,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "ISPOP und integrierte Aufzeichnungen zur Verschmutzungsberichterstattung",
         href: "/sluzby/ispop",
-        text: "Jährliche Berichterstattung, integrierte Aufzeichnungen zur Schadstoffberichterstattung, Verknüpfung zu Emissionsmessungen."
+        text: "Prüfung der Betriebsdaten, Erstellung der Meldung und bevollmächtigte Einreichung in ISPOP für den Betreiber."
       },
       {
         title: "THG und Treibhausgase",
@@ -182,7 +182,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: "Sicherheitsdatenblätter und Kennzeichnung",
         href: "/sluzby/bezpecnostni-listy",
-        text: "Orientierung in Sicherheitsdatenblättern, internen Behältern, Etiketten und Link zum Arbeitsschutz."
+        text: "Erstellung neuer Sicherheitsdatenblätter, Überarbeitung bestehender Blätter und Prüfung der Kennzeichnungsangaben."
       }
     ]
   }

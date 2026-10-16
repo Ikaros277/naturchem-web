@@ -2,6 +2,16 @@
 
 > Interní provozní dokument. Aktualizovat podle živého webu, GSC a GA4. Starší projektové roadmapy mohou být neaktuální.
 
+## Lokální zpřehlednění služeb se zachováním SEO — 16. 10. 2026
+
+Na schválený audit navazuje osm konkrétních shrnutí podobných služeb, tři hlavní okruhy rozcestníku při zachování všech podskupin a adres, přesné popisy potvrzené nabídky CS/EN/DE a tři cílené odkazy z existujících článků. Bez rušení URL, změn indexace, přepisování vítězných titulů či nové produkční fáze. Vlastník 16. 10. schválil commit a push oddělené pracovní větve, nikoli sloučení do main či nasazení. Baseline, hypotéza, ověření a plán měření: [SEO-STRUKTURA-2026-10-16.md](SEO-STRUKTURA-2026-10-16.md).
+
+## Lokální komerční nabídka a návaznost článků — 14. 10. 2026
+
+Na výslovný pokyn vlastníka připraveny body 2 a 3 dokončeného Google/AI auditu. Samostatná větev `codex/serp-commercial-evidence-2026-10-14`, základ produkce `8a96cf0`; ostatní rozpracované kopie a Cursor nedotčeny. Sedm cílených nabídek nahrazuje obecné souhrny, sjednocena potvrzená tvorba SDS a kompletní IPPC/ISPOP, upřesněna GHG prezentace a konkrétní článek → služba → poptávka. Všech 12 článkových draftů zůstává neveřejných. Bez commitu, push, merge, publikace či deploymentu, bez požadavku na nové indexování a bez testovací poptávky. Jde o připravenou další společnou fázi, nikoli o nový aktivní experiment nebo potvrzený uplift. Baseline, rozsah, hypotéza, ochrany, ověření a měřicí plán: [SEO-KOMERCNI-NAVAZNOST-2026-10-14.md](SEO-KOMERCNI-NAVAZNOST-2026-10-14.md).
+
+Dopracováno lokálně 16. 10.: finální `npm run verify`/build PASS, 886 lokálních URL/odkazových kontrol bez chyby, ověřené canonical/H1/JSON-LD u 21 jazykových službových verzí a skutečná cesta článek → studie → předvyplněný formulář bez odeslání. Mobil 320 px bez přetékání; krátké cenové podmínky po vizuální kontrole zkráceny. Náhled port 3125, bez aktivace produkční fáze.
+
 ## UX-2026-09-22 — lokální B2B úpravy a obnovení chatu
 
 Stav aktualizovaný 23. 9. 2026: připraveno lokálně ve větvi `codex/b2b-quality-2026-09-22`, nově na základu `545ba57` se zrychlením Cursoru. Veřejný produkční snapshot i vzdálený GitHub main při kontrole stále uváděly `585ae82`; veřejná homepage neměla nové malé obrázky karet a stále přednačítala dva fonty. Bez nasazení a bez tvrzení o růstu SEO či poptávek. Aktuální GSC/GA4 baseline nebyla v tomto implementačním kroku odečtena; starší čísla níže nejsou současný výsledek.

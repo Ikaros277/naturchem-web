@@ -69,7 +69,7 @@ export function HomeSituationPaths({ locale }: { locale: Locale }) {
   return (
     <section className={`${styles.section} ${styles.needsSection}`} aria-labelledby="home-needs-heading">
       <div className={styles.container}>
-        <nav className={styles.needsNav} aria-labelledby="home-needs-heading">
+        <nav className={styles.needsNav} aria-labelledby="home-needs-heading" data-service-placement="home_situation_paths">
           <h2 id="home-needs-heading">{content.needsTitle}</h2>
           <ul className={styles.situationGrid}>
             {content.items.map(([title, , cta], index) => (
@@ -80,7 +80,7 @@ export function HomeSituationPaths({ locale }: { locale: Locale }) {
                     <strong>{title}</strong>
                     <span className={styles.situationCta}>{cta}</span>
                   </div>
-                  <span className={styles.situationArrow} aria-hidden="true">↗</span>
+                  <span className={styles.situationArrow} aria-hidden="true">→</span>
                 </a>
               </li>
             ))}

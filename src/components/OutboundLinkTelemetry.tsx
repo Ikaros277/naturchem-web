@@ -37,7 +37,9 @@ export function OutboundLinkTelemetry() {
         page_path: window.location.pathname
       };
       const inquiryParams = getInquiryCtaParams(href, window.location.href);
-      const placement = a.dataset.servicePlacement === "home_service_index" ? "home_service_index"
+      const servicePlacement = a.closest<HTMLElement>("[data-service-placement]")?.dataset.servicePlacement;
+      const placement = servicePlacement === "home_service_index" ? "home_service_index"
+        : servicePlacement === "home_situation_paths" ? "home_situation_paths"
         : a.closest(".service-groups-accordion") ? "service_catalog"
         : a.closest(".article-related-services") ? "article_related_service" : null;
       const serviceParams = getServiceSelectionParams(href, window.location.href, placement);

@@ -126,7 +126,11 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
                 onClick={() => onToggle(firstGroup.id, true)}
               >
                 <ServiceIcon icon={category.icon} variant="inline" size={24} />
-                <span>{navigation.categories[categoryIndex]}<small>{navigation.hints[categoryIndex]}</small></span>
+                <span className="service-category-nav-copy">
+                  <span className="service-category-nav-title">{navigation.categories[categoryIndex]}</span>
+                  <small>{navigation.hints[categoryIndex]}</small>
+                </span>
+                <span className="service-category-nav-arrow" aria-hidden="true">↓</span>
               </a> : <>
                 <p className="service-category-nav-heading"><ServiceIcon icon={category.icon} variant="inline" size={24} /><span>{navigation.categories[categoryIndex]}</span></p>
                 <div className="service-category-nav-links">

@@ -27,6 +27,8 @@ const { PoradnaFilterableList } = load(path.join(root, "src/components/PoradnaFi
 const { PORADNA_TOPICS } = load(path.join(root, "src/lib/poradna-topic.ts"));
 const { homeArticleThumbnails } = load(path.join(root, "src/lib/home-article-thumbnails.ts"));
 const { GeneratedIllustration } = load(path.join(root, "src/components/GeneratedIllustration.tsx"));
+const { ContactQuickLinks } = load(path.join(root, "src/components/ContactQuickLinks.tsx"));
+const { company } = load(path.join(root, "src/lib/site.ts"));
 for (const [src, thumbnail] of Object.entries(homeArticleThumbnails)) {
   assert.ok(fs.existsSync(path.join(root, "public", src)));
   assert.ok(fs.existsSync(path.join(root, "public", thumbnail)));
@@ -64,6 +66,18 @@ for (const locale of ["cs", "en", "de"]) {
   assert.ok(!html.includes("/_next/image"), "No runtime image transformations for catalog cards");
   assert.ok(html.includes('style="position:absolute;inset:0;width:100%;height:100%;'), "Static thumbnails must fill their responsive frame, not render at intrinsic 640px width");
   for (const group of serviceGroups) assert.ok(html.includes('href="#' + group.id + '"'));
+  const nav = html.match(/<nav class="service-category-nav"[\s\S]*?<\/nav>/)?.[0] || "";
+  assert.equal((nav.match(/class="service-category-nav-arrow" aria-hidden="true"/g) || []).length, 2, "Both full-card category links need a visible directional cue");
+  assert.equal((nav.match(/<a\b/g) || []).length, 6, "Keep all six category destinations without introducing redundant links");
+  const messages = require(path.join(root, "messages", locale + ".json"));
+  const quickContacts = renderToStaticMarkup(React.createElement(ContactQuickLinks, {
+    phoneLabel: messages.contact.phone, emailLabel: messages.contact.email
+  }));
+  assert.equal((quickContacts.match(/<a\b/g) || []).length, 2);
+  assert.ok(quickContacts.includes('href="tel:' + company.phones[0].replaceAll(" ", "") + '"'));
+  assert.ok(quickContacts.includes('href="mailto:' + company.email + '"'));
+  for (const label of [messages.contact.phone, messages.contact.email]) assert.ok(quickContacts.includes('aria-label="' + label + ': '), "Direct contacts must have localized accessible names");
+  assert.ok(!quickContacts.includes("<script") && !quickContacts.includes("<form"), "Direct contact requires no extra tracker or form");
   const poradna = renderToStaticMarkup(React.createElement(LocaleProvider, {
     locale, messages: require(path.join(root, "messages", locale + ".json"))
   }, React.createElement(PoradnaFilterableList, {
@@ -115,4 +129,27 @@ for (const href of ["https://example.com/sluzby/mereni-emisi/", "/kontakt/?email
   assert.equal(getServiceSelectionParams(href, base, "service_catalog"), null);
 }
 assert.equal(getServiceSelectionParams("/sluzby/mereni-emisi/", base, null), null);
+for (const locale of ["", "/en", "/de"]) {
+  for (const route of ["/mereni-pro-kolaudaci", "/mereni-pracovniho-prostredi-kategorizace-praci", "/pro-stavebni-firmy"]) {
+    assert.deepEqual(getServiceSelectionParams(locale + route + "/?private=omit#x", base, "home_situation_paths"),
+      { service_path: route, placement: "home_situation_paths" }, "Record only the public path of each homepage situation");
+  }
+}
+const telemetry = fs.readFileSync(path.join(root, "src/components/OutboundLinkTelemetry.tsx"), "utf8");
+assert.ok(telemetry.includes('closest<HTMLElement>("[data-service-placement]")'), "Support a shared navigation placement as well as existing anchor placements");
+assert.ok(telemetry.includes('!consent.statistics'), "Keep situation clicks behind existing statistical consent");
+const homeCss = fs.readFileSync(path.join(root, "src/components/homepage.module.css"), "utf8");
+const relativeLuminance = hex => {
+  const rgb = [1, 3, 5].map(offset => parseInt(hex.slice(offset, offset + 2), 16) / 255)
+    .map(v => v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+  return rgb[0] * 0.2126 + rgb[1] * 0.7152 + rgb[2] * 0.0722;
+};
+const situationColors = [...homeCss.matchAll(/--need-(?:background|hover):\s*(#[a-f\d]{6})/g)].map(match => match[1]);
+assert.equal(situationColors.length, 6, "Three card themes, each with a hover/focus color");
+for (const color of situationColors) assert.ok(1.05 / (relativeLuminance(color) + 0.05) >= 4.5, "White text must retain AA contrast in every state: " + color);
+for (const color of ["#1d3b4d", "#2b5063"]) assert.ok(1.05 / (relativeLuminance(color) + 0.05) >= 4.5, "Direct contact links must retain AA contrast: " + color);
+const globalCss = fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8");
+assert.match(globalCss, /@media \(min-width: 768px\) and \(max-width: 1023px\)\s*\{\s*\.page-hero-band > \.hero-photo-frame::after\s*\{[^}]*background: rgba\(7, 24, 39, 0\.82\)/, "Protect full-width tablet titles from bright photographs without changing mobile/desktop crops");
+const contactPage = fs.readFileSync(path.join(root, "src/app/[locale]/kontakt/page.tsx"), "utf8");
+assert.ok(contactPage.indexOf("<ContactQuickLinks") < contactPage.indexOf("<ContactFormSection"), "Direct contact must appear before the inquiry form");
 console.log("PASS audit quality: distinct catalog images (27 CS, 25 EN/DE), accessible category navigation, four article illustrations, small homepage thumbnails, title protection and consent-scoped service navigation");

@@ -43,6 +43,7 @@ if (process.argv.includes("--rendered")) {
       : { cs: 133500, en: 134000, de: 135500 })[locale];
     assert.ok(Buffer.byteLength(html) < htmlBudget, "Keep homepage HTML below its matching consent baseline: " + locale);
     assert.equal((html.match(/data-service-placement="home_service_index"/g) || []).length, 6);
+    assert.equal((html.match(/data-service-placement="home_situation_paths"/g) || []).length, 1);
     assert.equal((html.match(/data-b2b-audience="environmental_partner"/g) || []).length, 1);
     assert.ok(html.includes('id="home-demand-paths-heading"') && html.includes('id="home-poradna-heading"'));
     assert.match(html, /<h1>[^<]+<\/h1>/);

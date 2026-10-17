@@ -7,7 +7,8 @@ export function getServiceSelectionParams(href: string, baseUrl: string, placeme
     if (target.origin !== base.origin) return null;
     const path = target.pathname.replace(/^\/(?:cs|en|de)(?=\/)/, "").replace(/\/$/, "");
     if (!/^\/sluzby\/[a-z0-9-]+$/.test(path) &&
-        !["/mereni-pro-kolaudaci", "/mereni-nove-haly", "/podklady-pro-stavebni-firmy"].includes(path)) return null;
+        !["/mereni-pro-kolaudaci", "/mereni-nove-haly", "/podklady-pro-stavebni-firmy",
+          "/mereni-pracovniho-prostredi-kategorizace-praci", "/pro-stavebni-firmy"].includes(path)) return null;
     return { service_path: path, placement };
   } catch {
     return null;

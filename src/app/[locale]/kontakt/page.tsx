@@ -2,6 +2,7 @@ import "@/app/contact.generated.css";
 import type { Metadata } from "next";
 import { ContactFormSection } from "@/components/ContactFormSection";
 import { ContactMapDisclosure } from "@/components/ContactMapDisclosure";
+import { ContactQuickLinks } from "@/components/ContactQuickLinks";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { company, getCompanyOffices, siteUrl } from "@/lib/site";
@@ -72,6 +73,7 @@ export default async function Page({ params }: PageProps) {
             <p className="eyebrow">{messages.contact.eyebrow}</p>
             <h1>{messages.contact.title}</h1>
             <p className="page-lead">{messages.contact.lead}</p>
+            <ContactQuickLinks phoneLabel={messages.contact.phone} emailLabel={messages.contact.email} />
           </div>
         </header>
       </PageHeroBand>

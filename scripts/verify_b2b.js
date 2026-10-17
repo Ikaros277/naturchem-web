@@ -213,6 +213,7 @@ async function main() {
     assert.ok(!demand.includes('id="home-needs-heading"'), "Move existing paths, do not duplicate them");
     assert.ok(situations.includes('<h2 id="home-needs-heading">'), "Standalone situation navigation needs a level-two heading");
     assert.equal((situations.match(/<a\b/g) || []).length, 3, "Keep all three commercial demand paths");
+    assert.equal((situations.match(/data-service-placement="home_situation_paths"/g) || []).length, 1, "One delegated placement identifies all three situation links without duplicated markup");
     assert.ok(homepageSource.indexOf("<HomeSituationPaths") < homepageSource.indexOf("<HomeServiceIndex"), "Situation paths must precede the service catalog");
     assert.equal((index.match(/data-service-placement="home_service_index"/g) || []).length, 6);
     for (const match of (demand + situations).matchAll(/href="([^"]+)"/g)) {

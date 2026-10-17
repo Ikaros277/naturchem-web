@@ -89,8 +89,8 @@
 .partnerLink { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #173f59; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
 .partnerLink span { font-size: 22px; }
 .partnerLink:hover { color: #112b3e; }
-.needsNav { margin-top: 26px; padding-top: 24px; border-top: 1px solid #cedbd7; }
-.needsNav h3 { margin: 0 0 16px; font-size: 20px; line-height: 1.3; letter-spacing: -.02em; }
+.needsSection { padding-block: 32px 0; }
+.needsNav h2 { margin: 0 0 18px; font-size: clamp(24px, 2.2vw, 30px); line-height: 1.2; letter-spacing: -.025em; }
 .needsNav .situation { padding: 16px 18px; gap: 12px; grid-template-columns: 30px minmax(0, 1fr) 20px; background: #fff; color: #112b3e; border-color: #cbd9d3; }
 .needsNav .situationIcon { grid-column: auto; color: #2a6b55; }
 .needsNav .situationIcon svg { width: 28px; height: 28px; }
@@ -192,7 +192,7 @@
   .audienceIcon { width: 38px; height: 38px; }
   .audienceTitle { font-size: 18px; }
   .partnerRow { margin-top: 22px; padding: 14px 16px; gap: 4px; }
-  .needsNav { margin-top: 20px; padding-top: 20px; }
+  .needsSection { padding-block: 28px 0; }
   .needsNav .situation { padding: 14px 16px; }
   .needsNav .situationGrid { gap: 10px; }
   .evidenceCard h3 { font-size: 22px; }

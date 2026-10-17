@@ -114,8 +114,10 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             </aside> : null}
           </div>
           <aside className={styles.inquiryPanel} id="podklady" aria-labelledby="service-docs-heading">
-            <ServiceIcon icon="process-vystup" variant="plain" size={30} />
-            <h2 id="service-docs-heading">{ui.docs}</h2>
+            <div className={styles.panelHeading}>
+              <ServiceIcon icon="process-vystup" variant="plain" size={30} />
+              <h2 id="service-docs-heading">{ui.docs}</h2>
+            </div>
             <p>{copy.docsIntro}</p>
             <DetailList items={content.docs.slice(0, 3)} />
             {commercialIntent ? <p className={styles.quoteBasis} data-service-quote-basis><strong>Rozsah a nabídka</strong>{commercialIntent.quoteBasis}</p> : null}

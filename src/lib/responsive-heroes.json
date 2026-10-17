@@ -692,6 +692,15 @@
     "width": 1024,
     "height": 576
   },
+  "/reference/authentic-2026-10-08/kotelna-biomasa-960.webp": {
+    "base": "/hero/responsive-2026-10/image-3a8b51cbe904",
+    "widths": [
+      640,
+      960
+    ],
+    "width": 960,
+    "height": 540
+  },
   "/uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp": {
     "base": "/hero/responsive-2026-10/image-81aba865cc0f",
     "widths": [

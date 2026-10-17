@@ -10,7 +10,7 @@ excerpt: Máte integrované povolení a plánujete novou výrobní linku, zvýš
   následně posoudí, zda změna integrované povolení vůbec neovlivní, zda postačí
   jeho běžná změna, nebo zda jde o podstatnou změnu s rozsáhlejším řízením.
 author: Ing. František Hezina
-heroImage: /hero/ippc-integrovana-povoleni.webp
+heroImage: /hero/authentic-2026-10/prumyslova-hala.webp
 status: published
 publishedAt: 2026-10-10
 topic: Legislativa

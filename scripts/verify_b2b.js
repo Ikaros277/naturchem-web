@@ -3,6 +3,7 @@ const assert = require("node:assert/strict");
 const path = require("node:path");
 const fs = require("node:fs");
 const os = require("node:os");
+const matter = require("gray-matter");
 const React = require("react");
 const { renderToStaticMarkup } = require("react-dom/server");
 const root = path.resolve(__dirname, "..");
@@ -40,7 +41,7 @@ const { getHeroImageSrc } = load(path.join(root, "src/lib/hero-images.ts"));
 const { homeArticleTitle } = load(path.join(root, "src/lib/home-article-titles.ts"));
 const { ServicePage } = load(path.join(root, "src/components/ServicePage.tsx"));
 const { HomeServiceIndex } = load(path.join(root, "src/components/HomeServiceIndex.tsx"));
-const { HomeDemandPaths } = load(path.join(root, "src/components/HomeDemandPaths.tsx"));
+const { HomeDemandPaths, HomeSituationPaths } = load(path.join(root, "src/components/HomeDemandPaths.tsx"));
 const { readContactUrlPrefill } = load(path.join(root, "src/lib/contact-url-prefill.ts"));
 const { serviceMegaGroups } = load(path.join(root, "src/lib/service-megamenu.ts"));
 const { localesForConstrainedPath } = load(path.join(root, "src/lib/locale-constrained-paths.ts"));
@@ -208,15 +209,36 @@ async function main() {
     assert.deepEqual(partnerPrefill.initialServices, [], "Do not preselect an unrequested service for a partner");
     assert.ok(partnerPrefill.initialMessage.length > 40 && partnerPrefill.initialMessage.includes("\n"));
     assert.ok(!demand.includes("b2bCredential"), "Do not repeat hero accreditation in the B2B panel");
-    assert.ok(demand.includes('id="home-needs-heading"'), "Keep existing commercial demand paths");
+    const situations = renderToStaticMarkup(React.createElement(HomeSituationPaths, { locale }));
+    assert.ok(!demand.includes('id="home-needs-heading"'), "Move existing paths, do not duplicate them");
+    assert.ok(situations.includes('<h2 id="home-needs-heading">'), "Standalone situation navigation needs a level-two heading");
+    assert.equal((situations.match(/<a\b/g) || []).length, 3, "Keep all three commercial demand paths");
+    assert.ok(homepageSource.indexOf("<HomeSituationPaths") < homepageSource.indexOf("<HomeServiceIndex"), "Situation paths must precede the service catalog");
     assert.equal((index.match(/data-service-placement="home_service_index"/g) || []).length, 6);
-    for (const match of demand.matchAll(/href="([^"]+)"/g)) {
+    for (const match of (demand + situations).matchAll(/href="([^"]+)"/g)) {
       const pathname = stripLocaleFromPathname(new URL(match[1], "https://www.naturchem.cz").pathname);
       const available = localesForConstrainedPath(pathname);
       assert.ok(!available || available.includes(locale), "Unavailable localized campaign URL: " + match[1]);
     }
   }
   const articleSlugs = ["kolaudace-vyrobni-haly-provozovny-khs-mereni", "vyjmenovany-stacionarni-zdroj-povoleni-provozu"];
+  // Full-size sources were visually reviewed: genuine unannotated photographs,
+  // used here as illustrations, not proof that these facilities fall under ETS/IPPC.
+  const cleanArticlePhotos = {
+    "zmena-integrovaneho-povoleni-ippc-podstatna-zmena": "/hero/authentic-2026-10/prumyslova-hala.webp",
+    "eu-ets-ghg-kdy-sledovat-vykazovat-emise-sklenikovych-plynu": "/reference/authentic-2026-10-08/kotelna-biomasa-960.webp"
+  };
+  for (const [slug, src] of Object.entries(cleanArticlePhotos)) {
+    assert.ok(fs.existsSync(path.join(root, "public", src)), "Reviewed article photo exists");
+    for (const directory of ["articles", "articles-en", "articles-de"]) {
+      const article = matter(fs.readFileSync(path.join(root, "content", directory, slug + ".md"), "utf8"));
+      assert.equal(article.data.heroImage, src, "Use the reviewed image consistently across locales");
+    }
+    const uses = fs.readdirSync(path.join(root, "content/articles")).filter(file => file.endsWith(".md")).filter(file =>
+      matter(fs.readFileSync(path.join(root, "content/articles", file), "utf8")).data.heroImage === src
+    );
+    assert.equal(uses.length, 1, "Do not repeat these illustrations across articles");
+  }
   const articleImages = articleSlugs.map(slug => getHeroImageSrc(heroThemeForArticle({ slug, title: "Fixture" })));
   assert.equal(new Set(articleImages).size, 2, "Latest articles need distinct illustrations");
   for (const src of articleImages) {

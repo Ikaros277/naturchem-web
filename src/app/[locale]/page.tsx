@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/Schema";
 import { referenceClients } from "@/lib/client-logos";
 import styles from "@/components/homepage.module.css";
 import { HomePoradnaStrip } from "@/components/HomePoradnaStrip";
-import { HomeDemandPaths } from "@/components/HomeDemandPaths";
+import { HomeDemandPaths, HomeSituationPaths } from "@/components/HomeDemandPaths";
 import { getCompanyStatsContent } from "@/lib/i18n/company-stats-i18n";
 import { getHomeHeroPillars } from "@/lib/i18n/content";
 import { getMessages } from "@/lib/i18n/get-messages";
@@ -94,6 +94,8 @@ export default async function Home({ params }: Props) {
           ))}
         </div>
       </div>
+
+      <HomeSituationPaths locale={locale} />
 
       <section
         className={`${styles.section} ${styles.servicesSection}`}

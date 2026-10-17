@@ -3,7 +3,7 @@ title: "Changing an IPPC integrated permit: when is a change substantial and wha
 slug: zmena-integrovaneho-povoleni-ippc-podstatna-zmena
 excerpt: "Do you hold an integrated permit and are you planning a new production line, a capacity increase, a change of fuel, new waste types, a different stack or a modification of the technology? Do not wait until the change has been completed. The operator of an installation under the IPPC regime must notify the regional authority of every planned change in the use, manner of operation or extent of the installation that may have consequences for the environment. The authority then assesses whether the change does not affect the integrated permit at all, whether an ordinary amendment of the permit is sufficient, or whether it is a substantial change requiring more extensive proceedings."
 author: Ing. František Hezina
-heroImage: /hero/ippc-integrovana-povoleni.webp
+heroImage: /hero/authentic-2026-10/prumyslova-hala.webp
 publishedAt: "2026-10-10"
 topic: Legislation
 ---

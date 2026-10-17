@@ -44,6 +44,7 @@
 .evidence .evidenceOutput { margin-top: 12px; padding-top: 10px; border-top: 1px solid #d6e2db; font-size: 14px; }
 .inquiryPanel { background: #102f42; color: #e0e9ed; padding: 30px; border-radius: 8px; scroll-margin-top: 140px; }
 .inquiryPanel > :first-child { color: #a6d7c1; }
+.panelHeading > :first-child { color: #a6d7c1; }
 .inquiryPanel h2 { color: #fff; font-size: 29px; margin: 14px 0 12px; }
 .inquiryPanel p { font-size: 16px; line-height: 1.5; margin: 0; }
 .inquiryPanel ul { list-style: none; padding: 0; margin: 20px 0 24px; }
@@ -123,7 +124,18 @@
   .feature p { font-size: 16px; }
   .evidence { padding: 20px; }
   .evidence h3 { font-size: 19px; }
-  .inquiryPanel { padding: 24px; scroll-margin-top: 110px; }
+  .inquiryPanel { padding: 20px; scroll-margin-top: 110px; }
+  .panelHeading { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .panelHeading > :first-child { flex-shrink: 0; }
+  .panelHeading h2 { font-size: 26px; line-height: 1.2; margin: 0; }
+  .inquiryPanel p { font-size: 15px; line-height: 1.45; }
+  .inquiryPanel ul { margin: 12px 0; }
+  .inquiryPanel li { padding: 8px 0 8px 16px; font-size: 16px; line-height: 1.4; }
+  .inquiryPanel li::before { top: 17px; }
+  .inquiryPanel .quoteBasis { padding-top: 12px; }
+  .inquiryPanel .quoteBasis strong { margin-bottom: 4px; }
+  .inquiryPanel .panelCta { margin-top: 16px; }
+  .inquiryPanel .response { margin-top: 8px; }
   .hero h1.longTitle { font-size: clamp(32px, 8.7vw, 42px); }
   .detailsSection { padding-top: 34px; }
   .sectionHeading { display: block; }

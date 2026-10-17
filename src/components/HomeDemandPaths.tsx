@@ -37,7 +37,6 @@ const copy = {
 
 export function HomeDemandPaths({ locale }: { locale: Locale }) {
   const content = copy[locale];
-  const paths = campaignPaths;
   return (
     <section className={`${styles.section} ${styles.b2bSection}`} aria-labelledby="home-demand-paths-heading">
       <div className={styles.container}>
@@ -59,12 +58,23 @@ export function HomeDemandPaths({ locale }: { locale: Locale }) {
             {content.partnerLink} <span aria-hidden="true">↗</span>
           </a>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/** Existing situation links, placed before the service catalog rather than repeated. */
+export function HomeSituationPaths({ locale }: { locale: Locale }) {
+  const content = copy[locale];
+  return (
+    <section className={`${styles.section} ${styles.needsSection}`} aria-labelledby="home-needs-heading">
+      <div className={styles.container}>
         <nav className={styles.needsNav} aria-labelledby="home-needs-heading">
-          <h3 id="home-needs-heading">{content.needsTitle}</h3>
+          <h2 id="home-needs-heading">{content.needsTitle}</h2>
           <ul className={styles.situationGrid}>
             {content.items.map(([title, , cta], index) => (
-              <li key={paths[index]}>
-                <a href={localizeHref(paths[index], locale)} className={styles.situation}>
+              <li key={campaignPaths[index]}>
+                <a href={localizeHref(campaignPaths[index], locale)} className={styles.situation}>
                   <span className={styles.situationIcon} aria-hidden="true"><ServiceIcon icon={index === 0 ? "contact-building" : index === 1 ? "pracovni-prostredi" : "posudek"} size={38} /></span>
                   <div className={styles.situationBody}>
                     <strong>{title}</strong>

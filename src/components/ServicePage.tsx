@@ -34,6 +34,7 @@ export type ServicePageProps = {
   slug: string;
   faqCategoryId?: string;
   faqItems?: FaqItem[];
+  detailPresentation?: "emissions-editorial";
 };
 
 export async function ServicePage(props: ServicePageProps) {

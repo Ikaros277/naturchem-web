@@ -18,17 +18,17 @@ export const aboutPageContent = {
     lead:
       "Jsme tým měřicích a environmentálních specialistů pod odbornou garancí Ing. Františka Heziny. Zajistíme měření, studie i povolovací podklady — pro průmysl, investory, projektanty i veřejnou správu."
   },
-  trustBandHeading: "Důvěryhodnost a oprávnění",
+  trustBandHeading: "Naše odborná oprávnění",
   statsAriaLabel: "Zkušenosti v číslech",
   whoWeAre: {
     title: "Kdo jsme",
     paragraphs: [
-      "NATURCHEM, s.r.o. je akreditovaná měřicí a poradenská firma. Měříme a zpracováváme studie z Havlíčkova Brodu, Českých Budějovic a Prahy; zakázky v terénu řešíme po celé ČR.",
-      "Za odbornou stránku zakázek stojí tým pod garancí Ing. Františka Heziny — od návrhu rozsahu po výstup pro úřad. Pracujeme pro průmyslové provozy, investory, projektanty i veřejnou správu.",
-      "Nejsme jen laboratoř s jedním typem výstupu. Měření, výpočty, studie i dokumentaci pro úřady vyřešíte u nás najednou — bez koordinace více dodavatelů."
+      "Jsme akreditovaná měřicí a poradenská firma. Z Havlíčkova Brodu, Českých Budějovic a Prahy zajišťujeme zakázky po celé České republice.",
+      "Zakázky vedeme pod odbornou garancí Ing. Františka Heziny, od návrhu měření či studie po předání výsledků. Pracujeme pro průmyslové provozy, investory, projektanty i veřejnou správu.",
+      "V jednom týmu zajišťujeme měření, výpočty, studie i dokumentaci pro úřady. Koordinaci jednotlivých odborných podkladů převezmeme za Vás."
     ],
     relatedLinksIntro:
-      "Chcete vědět, co konkrétně umíme? Přehled služeb, typů provozů a referencí najdete v sekcích",
+      "Prohlédněte si naše služby, zkušenosti a reference:",
     relatedLinks: [
       { label: "Služby", href: "/sluzby" },
       { label: "Provozy a technologie", href: "/provozy-a-technologie" },
@@ -40,7 +40,7 @@ export const aboutPageContent = {
     title: "Odborná garance",
   },
   guaranteeCredentials:
-    "Za odbornou stránku zakázek odpovídá Ing. František Hezina — jednatel, odborná garance, soudní znalec, autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie a oznámení EIA.",
+    "Za odborné vedení zakázek odpovídá Ing. František Hezina — jednatel, soudní znalec a autorizovaná osoba pro měření emisí, odborné posudky, rozptylové studie a oznámení EIA.",
   team: {
     title: "Tým"
   },

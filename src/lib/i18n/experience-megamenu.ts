@@ -30,12 +30,12 @@ const experienceMegaShell: Record<Locale, ExperienceMegaShell> = {
     },
     zakazky: {
       title: "Typické zakázky",
-      subtitle: "Anonymizované příklady z praxe",
+      subtitle: "Měření, studie a dokumentace z našich zakázek",
       overviewLabel: "Přehled zakázek"
     },
     reference: {
       title: "Reference",
-      subtitle: "Spolupráce a důvěra zákazníků",
+      subtitle: "Naši zákazníci a realizované zakázky",
       overviewLabel: "Reference a příklady"
     }
   },

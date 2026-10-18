@@ -3,7 +3,7 @@ import type { Locale } from "./locales";
 const copy = {
   cs: {
     breadcrumbs: "Drobečková navigace", docs: "Co nám poslat", details: "Podrobnosti ke službě",
-    scopeAndOutputs: "Rozsah služby a výstupy", preparation: "Podklady a příprava",
+    scopeAndOutputs: "Co zajišťujeme a co dostanete", preparation: "Podklady a příprava",
     situations: "Typické situace", faq: "Časté dotazy", allFaq: "Další otázky a odpovědi",
     related: "Navazující služby a témata", moreRelated: "Další související témata",
     response: "Ozveme se do 24 h", responseFull: "Na poptávky reagujeme do 24 hodin.",

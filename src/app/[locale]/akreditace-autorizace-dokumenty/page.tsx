@@ -5,6 +5,7 @@ import { PageCtaStrip } from "@/components/PageCtaStrip";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { JsonLd } from "@/components/Schema";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { EmissionAuthorizationScope, FullAccreditedScope } from "@/components/AccreditedMeasurementScope";
 import { getPageCtaPresets } from "@/lib/i18n/cta-i18n";
 import {
   getAccreditationDocuments,
@@ -137,10 +138,12 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
           </Link>
         </section>
 
+        {locale === "cs" ? <FullAccreditedScope /> : null}
         <section className="section">
           <h2>{content.authorizations.title}</h2>
-          <p className="muted">{content.authorizations.intro}</p>
+          <p className="muted">{locale === "cs" ? "Akreditace laboratoře a odborné autorizace jsou různé doklady. Níže uvádíme oprávnění společnosti NATURCHEM a Ing. Františka Heziny." : content.authorizations.intro}</p>
           <div className="grid grid-4 authorization-grid">
+            {locale === "cs" ? <article className="card"><div className="authorization-card-head"><ServiceIcon icon="emise" /><h3>Měření emisí</h3></div><p className="muted">Jednorázové měření emisí. Autorizace MŽP č. MZP/2021/780/1387.</p></article> : null}
             {authorizations.map((item) => (
               <article key={item.title} className="card">
                 <div className="authorization-card-head">
@@ -151,6 +154,7 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
               </article>
             ))}
           </div>
+          {locale === "cs" ? <EmissionAuthorizationScope /> : null}
           <h3 id="dokumenty" className="accreditation-docs-subheading">{content.authorizations.documentsSubheading}</h3>
           <p className="accreditation-ghg-note">{locale === "cs"
             ? "U skleníkových plynů zajišťujeme výpočty, kontrolu emisních dat a uhlíkovou stopu. Akreditované ověřování EU ETS neposkytujeme."

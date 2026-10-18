@@ -8,6 +8,7 @@ const root = path.resolve(__dirname, "..");
 const inlineSlugs = new Set(["mereni-emisi", "mereni-hluku", "rozptylove-studie", "pracovni-prostredi"]);
 const load = require("./lib/load-typescript.js")({
   "./service-detail.module.css": { __esModule: true, default: new Proxy({}, { get: (_, name) => String(name) }) },
+  "./accredited-scope.module.css": { __esModule: true, default: new Proxy({}, { get: (_, name) => String(name) }) },
   "@/app/globals.css": {},
   "@/app/services.generated.css": {},
   "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/fixture.webp", alt: "" }) },
@@ -36,7 +37,7 @@ async function main() {
     assert.equal(schemas.find(schema => schema["@type"] === "Service").url, "https://www.naturchem.cz/sluzby/" + slug + "/");
     const expectedFaq = content.faqItems ?? support.faqItems;
     if (expectedFaq) {
-      assert.equal(expectedFaq.length, 3, "Short service-specific FAQ");
+      assert.equal(expectedFaq.length, slug === "mereni-emisi" ? 2 : 3, "Emissions prototype removes only the repeated preparation answer; other service FAQ stay unchanged");
       const schemaFaq = schemas.find(schema => schema["@type"] === "FAQPage");
       assert.equal(schemaFaq.mainEntity.length, expectedFaq.length);
       for (const [index, item] of expectedFaq.entries()) {

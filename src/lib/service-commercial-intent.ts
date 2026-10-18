@@ -13,7 +13,7 @@ export const serviceCommercialIntent: Record<string, ServiceCommercialIntent> = 
     features: [
       { title: "Pracovní místa i celý prostor", text: "Umělé a denní osvětlení ve výrobě, skladech a kancelářích. Také venkovní umělé osvětlení." },
       { title: "Rozsah podle účelu měření", text: "Zohledníme pracovní činnosti, rozmístění pracovišť a zadání pro KHS, kolaudaci nebo interní kontrolu." },
-      { title: "Výsledky s vyhodnocením", text: "Protokol uvede měřicí místa, podmínky a výsledky. Při nedostatcích doporučíme úpravy osvětlení." },
+      { title: "Výsledky s vyhodnocením", text: "Předáme protokol s měřicími místy, podmínkami a výsledky. Při nedostatcích doporučíme úpravy osvětlení." },
     ],
     quoteBasis: "Rozsah a cenu určíme podle počtu prostorů, pracovních míst a typu osvětlení.",
     contactMessage: "Poptávám měření osvětlení. Místo, pracovní činnosti a účel měření: ",
@@ -24,7 +24,7 @@ export const serviceCommercialIntent: Record<string, ServiceCommercialIntent> = 
     features: [
       { title: "Zpracování nového listu", text: "Vypracujeme bezpečnostní list látky nebo směsi z podkladů k produktu a jeho složení." },
       { title: "Revize stávající dokumentace", text: "Zkontrolujeme dodaný bezpečnostní list a údaje pro označování. Doplníme potřebné úpravy." },
-      { title: "Používání chemie v provozu", text: "Posoudíme návaznost na štítky, skladování a pracovní postupy. Rozsah odlišíme od tvorby nového listu." },
+      { title: "Používání chemie v provozu", text: "Zkontrolujeme souvislost bezpečnostního listu s označováním, skladováním a pracovními postupy." },
     ],
     quoteBasis: "Cenu určíme podle počtu produktů, požadované úpravy a dostupnosti údajů o složení.",
     contactMessage: "Poptávám zpracování nebo revizi bezpečnostního listu. Produkt, počet listů a dostupné podklady: ",

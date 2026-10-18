@@ -2,17 +2,17 @@ import type { Locale } from "@/lib/i18n/locales";
 
 const copy = {
   cs: {
-    overviewHeading: "Stručně o službě",
+    overviewHeading: "Co pro Vás zajistíme",
     scopeHeading: "Co zajišťujeme",
     whenNeededHeading: "Kdy službu potřebujete",
     mistakesHeading: "Typické chyby a rizika",
-    docsIntro: "Pro první posouzení rozsahu pošlete obvykle:",
+    docsIntro: "Pro přípravu nabídky nám pošlete:",
     ctaStripText:
-      "Pošlete popis technologie, požadavek úřadu nebo dostupné podklady. Navrhneme potřebné měření, studii nebo dokumentaci podle účelu výstupu.",
+      "Pošlete nám popis technologie, požadavek úřadu nebo projekt. Navrhneme rozsah měření, studie či dokumentace.",
     outputsHeading: "Co dostanete",
     howToStartHeading: "Jak začít",
     practicalExamplesHeading: "Příklady zakázek z praxe",
-    extraInfoSummary: "Doplňující informace pro přípravu zakázky",
+    extraInfoSummary: "Jak připravit zakázku",
     relatedHeading: "Mohlo by Vás zajímat",
     trustAria: "Důvěryhodnost a oprávnění",
     overviewAria: "Stručný přehled služby",

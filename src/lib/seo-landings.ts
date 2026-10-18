@@ -87,7 +87,7 @@ export const seoLandings: SeoLanding[] = [
     internalLinkPriority: 100,
     layout: "demand",
     eyebrow: "Kotelny a spalovací zdroje",
-    overviewHeading: "Od povolení k protokolu",
+    overviewHeading: "Měření emisí kotelen",
     highlights: ["NOx, CO, SO₂ a prašnost", "Protokol pro ČIŽP a úřady", "Návaznost na ISPOP"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -169,7 +169,7 @@ export const seoLandings: SeoLanding[] = [
     oboryHref: "/provozy-a-technologie/lakovny",
     layout: "demand",
     eyebrow: "Lakovny a povrchové úpravy",
-    overviewHeading: "Od výduchů k protokolu",
+    overviewHeading: "Měření emisí lakoven",
     highlights: ["TOC/VOC a TZL na výduchu", "Boxy, sušení a vypalování", "Protokol a data pro ISPOP"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -256,7 +256,7 @@ export const seoLandings: SeoLanding[] = [
     oboryHref: "/provozy-a-technologie/bioplyn-biometan",
     layout: "demand",
     eyebrow: "Bioplynové stanice a kogenerace",
-    overviewHeading: "Od povolení k protokolu z měření",
+    overviewHeading: "Měření emisí kogeneračních jednotek",
     highlights: ["Motory na bioplyn a kogenerace", "Protokol pro ČIŽP a úřady", "Návaznost na ISPOP"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -343,7 +343,7 @@ export const seoLandings: SeoLanding[] = [
     oboryHref: "/provozy-a-technologie/drevozpracujici",
     layout: "demand",
     eyebrow: "Pily, truhlárny a výroba štěpek",
-    overviewHeading: "Od popisu provozu k protokolu",
+    overviewHeading: "Měření emisí dřevozpracujících provozů",
     highlights: ["TZL z odsávání a filtrů", "Kotle na biomasu a sušárny", "Protokol pro úřady a povolení"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -430,7 +430,7 @@ export const seoLandings: SeoLanding[] = [
     oboryHref: "/provozy-a-technologie/zemedelske-provozy",
     layout: "demand",
     eyebrow: "Sušárny obilí, biomasy a dřeva",
-    overviewHeading: "Od technologie sušení k protokolu",
+    overviewHeading: "Měření emisí sušáren",
     highlights: ["TZL, NOx a CO podle povolení", "Standardní vsázka a více výduchů", "Protokol a data pro ISPOP"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -593,7 +593,7 @@ export const seoLandings: SeoLanding[] = [
     internalLinkPriority: 110,
     layout: "demand",
     eyebrow: "Kategorizace prací a KHS",
-    overviewHeading: "Od popisu provozu k protokolu pro KHS",
+    overviewHeading: "Měření pro kategorizaci prací",
     highlights: ["Faktory pracovního prostředí", "Akreditovaná laboratoř č. 1599", "Podklady pro KHS a BOZP"],
     heroTheme: "pracovni-prostredi",
     relatedLinks: [
@@ -686,7 +686,7 @@ export const seoLandings: SeoLanding[] = [
     internalLinkPriority: 100,
     layout: "demand",
     eyebrow: "Ochrana ovzduší a EIA",
-    overviewHeading: "Od záměru k odbornému podkladu",
+    overviewHeading: "Rozptylová studie pro povolení záměru",
     highlights: ["Autorizovaná osoba", "Povolení provozu a EIA", "Návaznost na měření emisí"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -766,7 +766,7 @@ export const seoLandings: SeoLanding[] = [
     internalLinkPriority: 100,
     layout: "demand",
     eyebrow: "Ochrana ovzduší",
-    overviewHeading: "Od požadavku úřadu k použitelnému posudku",
+    overviewHeading: "Odborný posudek pro povolení provozu",
     highlights: ["Autorizovaná osoba", "Změna zdroje a technologie", "Podklad pro správní řízení"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -923,7 +923,7 @@ export const seoLandings: SeoLanding[] = [
     contactService: "Měření emisí",
     layout: "demand",
     eyebrow: "Dieselagregáty a záložní zdroje",
-    overviewHeading: "Od povolení a provozních hodin k měření",
+    overviewHeading: "Měření emisí záložních dieselagregátů",
     highlights: ["Ověření povinnosti z povolení", "NOx, CO a TZL", "Autorizovaná osoba a ISPOP"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -1016,7 +1016,7 @@ export const seoLandings: SeoLanding[] = [
     internalLinkPriority: 110,
     layout: "demand",
     eyebrow: "Ochrana ovzduší",
-    overviewHeading: "Od podkladů k použitelnému protokolu",
+    overviewHeading: "Autorizované měření a protokol",
     highlights: ["Autorizovaná osoba", "Akreditovaná laboratoř č. 1599", "Protokol a pomoc s ISPOP"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -1133,7 +1133,7 @@ export const seoLandings: SeoLanding[] = [
     contactService: "Měření pracovního prostředí",
     layout: "demand",
     eyebrow: "Pracovní prostředí a KHS",
-    overviewHeading: "Od popisu provozu k protokolu o prašnosti",
+    overviewHeading: "Měření prašnosti na pracovišti",
     highlights: ["Vdechovatelná a respirabilní frakce", "Akreditovaná laboratoř č. 1599", "Podklady pro KHS a kategorizaci"],
     heroTheme: "pracovni-prostredi",
     relatedLinks: [
@@ -1227,7 +1227,7 @@ export const seoLandings: SeoLanding[] = [
     oboryHref: "/provozy-a-technologie/svarovny",
     layout: "demand",
     eyebrow: "Kovy v emisích a pracovním ovzduší",
-    overviewHeading: "Od povolení k hodnocení kovů",
+    overviewHeading: "Měření emisí kovů",
     highlights: ["Odběr těžkých kovů do kapaliny", "Akreditovaná laboratoř č. 1599", "Kovy v emisích i na pracovišti"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -1321,7 +1321,7 @@ export const seoLandings: SeoLanding[] = [
     internalLinkPriority: 100,
     layout: "demand",
     eyebrow: "Hygienická stanice (KHS)",
-    overviewHeading: "Od výzvy KHS k protokolům",
+    overviewHeading: "Měření a podklady pro KHS",
     highlights: ["Pracovní prostředí a hluk", "Akreditovaná laboratoř č. 1599", "Podklady pro kategorizaci"],
     heroTheme: "pracovni-prostredi",
     relatedLinks: [
@@ -1476,7 +1476,7 @@ export const seoLandings: SeoLanding[] = [
     internalLinkPriority: 100,
     layout: "demand",
     eyebrow: "ČIŽP a krajský úřad",
-    overviewHeading: "Od výzvy úřadu ke správnému podkladu",
+    overviewHeading: "Měření a dokumentace pro ČIŽP",
     highlights: ["Měření emisí", "Posudek a rozptylová studie", "Návaznost na ISPOP"],
     heroTheme: "mereni-emisi",
     relatedLinks: [
@@ -1634,7 +1634,7 @@ export const seoLandings: SeoLanding[] = [
     internalLinkPriority: 100,
     layout: "demand",
     eyebrow: "Kolaudace a chráněné prostory",
-    overviewHeading: "Od požadavku úřadu k protokolu",
+    overviewHeading: "Měření hluku pro kolaudaci",
     highlights: ["Měření, nebo studie", "VZT a tepelná čerpadla", "Protokol pro stavební úřad a KHS"],
     heroTheme: "mereni-hluku",
     relatedLinks: [

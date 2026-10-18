@@ -4,7 +4,7 @@
 };
 
 export const homeOfferIntro =
-  "NATURCHEM propojuje měření, výpočty, odborné studie a povolovací podklady. Díky tomu lze zakázku řešit jako jeden celek — od terénního měření přes výpočetní studii až po dokumentaci pro úřady.";
+  "Zajišťujeme terénní měření, výpočty, odborné studie i povolovací dokumentaci. Jednotlivé podklady pro Vás koordinujeme v rámci jedné zakázky.";
 
 export const homeMeasurementPillar = {
   title: "Měření a terénní práce",

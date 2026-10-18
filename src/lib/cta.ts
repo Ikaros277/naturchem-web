@@ -21,7 +21,7 @@ export type PageCtaStripProps = {
 
 export const pageCtaPresets = {
   contact: {
-    text: "Nenašli jste odpověď? Pošlete dotaz nebo podklady přímo.",
+    text: "Pošlete nám svůj požadavek nebo podklady. Navrhneme postup pro Vaši zakázku.",
     primaryLabel: "Kontaktovat NATURCHEM",
     primaryHref: contactFormHref
   },
@@ -36,14 +36,14 @@ export const pageCtaPresets = {
     primaryHref: contactFormHref
   },
   accreditation: {
-    text: "Nejste si jistí, zda Váš případ akreditace pokrývá? Pošlete popis zdroje nebo záměru — odpovíme.",
+    text: "Pošlete nám popis zdroje nebo pracoviště. Navrhneme rozsah měření a připravíme nabídku.",
     primaryLabel: "Kontaktovat NATURCHEM",
     primaryHref: contactFormHref,
     secondaryLabel: "Přehled služeb",
     secondaryHref: "/sluzby"
   },
   cooperation: {
-    text: "Potřebujete poradit s rozsahem měření, studie nebo dokumentace? Napište nám — navrhneme další postup.",
+    text: "Pro Váš provoz nebo projekt navrhneme měření, studie i dokumentaci. Pošlete nám zadání.",
     primaryLabel: "Kontaktovat NATURCHEM",
     primaryHref: contactFormHref,
     secondaryLabel: "Přehled služeb",
@@ -55,7 +55,7 @@ export const pageCtaPresets = {
     primaryHref: contactUrl("Školení chemického zákona / chemické legislativy")
   },
   measurement: {
-    text: "Pošlete popis technologie, požadavek úřadu nebo dostupné podklady. Určíme potřebné měření, odběry nebo navazující studii podle účelu výstupu.",
+    text: "Pošlete nám popis technologie, požadavek úřadu nebo dostupné podklady. Navrhneme měření, odběry a potřebné odborné studie.",
     primaryLabel: "Poptat měření",
     primaryHref: contactUrl("Měření emisí"),
     secondaryLabel: "Akreditace a oprávnění",
@@ -67,7 +67,7 @@ export const pageCtaPresets = {
     primaryHref: contactUrl("Nejsem si jistý")
   },
   sectorIndex: {
-    text: "Pošlete nám stručný popis provozu, technologii, požadavek úřadu nebo projektovou dokumentaci. Podle situace určíme, zda je potřeba měření, studie, odborný posudek, provozní řád nebo jiný podklad.",
+    text: "Pošlete nám popis technologie, požadavek úřadu nebo projekt. Navrhneme potřebná měření, studie a dokumentaci.",
     primaryLabel: "Poslat podklady k posouzení",
     primaryHref: contactUrl("Nejsem si jistý")
   },
@@ -89,8 +89,8 @@ export const pageCtaPresets = {
     primaryHref: contactFormHref
   },
   equipment: {
-    text: "Potřebujete ověřit, zda máme vybavení pro Vaši veličinu nebo zdroj? Napište typ měření nebo přiložte výzvu úřadu.",
-    primaryLabel: "Ověřit dostupnost vybavení",
+    text: "Měřicí techniku vybereme podle Vašeho zdroje, pracoviště a sledovaných parametrů. Pošlete nám zadání nebo výzvu úřadu.",
+    primaryLabel: "Poptat měření",
     primaryHref: contactUrl("Nejsem si jistý"),
     secondaryLabel: "Akreditace a rozsah laboratoře",
     secondaryHref: "/akreditace-autorizace-dokumenty"

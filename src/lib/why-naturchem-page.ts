@@ -9,7 +9,7 @@ export const whyNaturchemPageMetadata = {
 export const whyNaturchemPageContent = {
   title: "Proč NATURCHEM",
   lead:
-    "NATURCHEM, s. r. o. je česká akreditovaná zkušební laboratoř a autorizovaná osoba. Měříme emise, pracovní prostředí a hluk, zpracováváme rozptylové a hlukové studie, odborné posudky a podklady pro EIA, KHS, ČIŽP i krajské úřady — v jednom týmu, bez rozdělování na více dodavatelů.",
+    "Jsme česká akreditovaná zkušební laboratoř a autorizovaná osoba. Měříme emise, pracovní prostředí a hluk. Zpracováváme rozptylové a hlukové studie, odborné posudky a podklady pro EIA, KHS, ČIŽP i krajské úřady.",
   breadcrumbLabel: "Proč NATURCHEM",
   sections: {
     accreditation: {
@@ -23,21 +23,21 @@ export const whyNaturchemPageContent = {
       heading: "Autorizace a znalecká činnost",
       paragraphs: [
         "Jsme autorizovanou osobou pro jednorázové měření emisí, rozptylové studie a odborné posudky podle zákona č. 201/2012 Sb. Autorizace EIA zajišťujeme pro podklady v procesu posuzování vlivů na životní prostředí.",
-        "Statutární zástupce Ing. František Hezina vykonává znaleckou činnost v oboru. Kombinace akreditace, autorizace a praxe s úřady snižuje riziko, že výstup nebude pro správní řízení použitelný."
+        "Ing. František Hezina vykonává znaleckou činnost v oboru. Provozovatelům a projektantům připravujeme odborné podklady pro správní řízení."
       ]
     },
     authorities: {
       heading: "Znalost požadavků úřadů",
       paragraphs: [
-        "Výstupy připravujeme s ohledem na to, kdo je bude používat: provozovatele, projektanta, investora, hygienickou stanici (KHS), Český inspektorát životního prostředí (ČIŽP), krajský úřad, stavební úřad nebo proces EIA.",
+        "Připravujeme podklady pro provozovatele, projektanty, investory, hygienické stanice (KHS), Českou inspekci životního prostředí (ČIŽP), krajské a stavební úřady i EIA.",
         "Typicky řešíme výzvy z kontrol, požadavky na doplnění žádosti o povolení, změnu provozu, kategorizaci prací, ISPOP a roční hlášení emisí."
       ]
     },
     scope: {
       heading: "Měření i navazující odborné výstupy",
       paragraphs: [
-        "Na jednom místě zajistíme měření emisí, pracovního prostředí a hluku, rozptylovou nebo hlukovou studii, odborný posudek, provozní řád, podklady pro EIA nebo ISPOP.",
-        "Provozovatel tak nemusí koordinovat několik dodavatelů s různým rozsahem oprávnění a metodikou."
+        "Zajistíme měření emisí, pracovního prostředí a hluku, rozptylovou nebo hlukovou studii, odborný posudek, provozní řád, podklady pro EIA nebo ISPOP.",
+        "Měření, studie a dokumentaci koordinujeme v rámci zakázky."
       ]
     },
     customers: {
@@ -59,7 +59,7 @@ export const whyNaturchemPageContent = {
     proof: {
       heading: "Reference a typické zakázky",
       paragraph:
-        "Za více než tři desetiletí praxe spolupracujeme s významnými průmyslovými podniky, energetikou, automotive i veřejným sektorem. Příklady zakázek a loga zákazníků jsou na stránkách Reference a Typické zakázky."
+        "Více než tři desetiletí pracujeme pro průmyslové podniky, energetiku, automobilový průmysl i veřejný sektor. Prohlédněte si naše reference a typické zakázky."
     }
   },
   links: {

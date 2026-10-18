@@ -8,6 +8,7 @@ const root = path.resolve(__dirname, "..");
 const css = { __esModule: true, default: new Proxy({}, { get: (_, name) => String(name) }) };
 const load = require("./lib/load-typescript")({
   "./service-detail.module.css": css,
+  "./accredited-scope.module.css": css,
   "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/fixture.webp", alt: "" }) }
 });
 const { DemandLandingLayout } = load(path.join(root, "src/components/DemandLandingLayout.tsx"));
@@ -23,8 +24,24 @@ async function main() {
       const plain = text(html);
       assert.ok(html.includes('data-service-layout="compact"'), landing.slug);
       assert.equal((html.match(/<h1\b/g) || []).length, 1);
-      assert.equal((html.match(/<img\b/g) || []).length, 1, "One primary visual, no duplicated case photo");
+      const scopeFeature = locale === "cs" && landing.slug === "mereni-pracovniho-prostredi-kategorizace-praci";
+      const imageTags = [...html.matchAll(/<img\b[^>]*>/g)].map(match => match[0]);
+      assert.equal(imageTags.length, scopeFeature ? 2 : 1, "Only the explicitly redesigned Czech workplace scope adds a second photograph");
+      const imageSources = imageTags.map(tag => tag.match(/\bsrc="([^"]+)"/)[1]);
+      assert.equal(new Set(imageSources).size, imageSources.length, "Never repeat the hero photograph in the scope feature");
+      assert.equal((html.match(/data-scope-feature="authentic"/g) || []).length, scopeFeature ? 1 : 0);
+      if (scopeFeature) {
+        const image = imageTags.find(tag => tag.includes("/reference/authentic-2026-10-08/kovovyroba-mereni-640.webp"));
+        assert.ok(image && image.includes('loading="lazy"'), "Use the specific reviewed, lazy, static photograph; not an arbitrary second image");
+      }
       assert.ok(html.includes('href="#podklady"') && html.includes('id="podklady"'));
+      assert.match(html, /class="detailsGrid(?:Solo)?"/, "Demand pages share the same lower-page hierarchy");
+      // Topic disclosures are plain details; nested analyte disclosures have
+      // their own class and a separate exact-content accreditation test.
+      const technicalSummaries = [...html.matchAll(/<details><summary>([\s\S]*?)<\/summary>/g)].map(match => match[1]);
+      assert.ok(technicalSummaries.length > 0 && technicalSummaries.every(summary => summary.includes("disclosureIcon") && summary.includes("aria-hidden=\"true\"")), "Decorative topic icons must remain server-rendered and accessible names unchanged");
+      const relatedNavigation = html.match(/<nav class="related"[\s\S]*?<\/nav>/)?.[0] || "";
+      assert.equal((relatedNavigation.match(/relatedIcon/g) || []).length, landing.relatedLinks?.length || 0, "Every existing related landing link keeps a visual card");
       assert.ok(plain.includes(stripRichText(landing.intro)), "Preserve full approved intro: " + landing.slug);
       for (const section of landing.sections) for (const paragraph of section.paragraphs) assert.ok(plain.includes(stripRichText(paragraph)), "Preserve approved content: " + landing.slug);
       for (const source of landing.sources || []) assert.ok(html.includes(source.href), "Preserve authoritative sources");

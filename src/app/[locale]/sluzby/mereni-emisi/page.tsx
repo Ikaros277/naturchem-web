@@ -3,6 +3,7 @@ import "@/app/services.generated.css";
 
 const czech = {
   slug: "sluzby/mereni-emisi",
+  detailPresentation: "emissions-editorial" as const,
   faqCategoryId: "emise",
   title: "Měření emisí",
   intro:

@@ -17,6 +17,8 @@ import { company } from "@/lib/site";
 import type { ServiceEvidence } from "@/lib/service-search-support";
 import type { ServiceCommercialIntent } from "@/lib/service-commercial-intent";
 import { getServiceOverview } from "@/lib/service-overviews";
+import { EmissionsServiceDetails } from "./EmissionsServiceDetails";
+import { AccreditedMeasurementScope } from "./AccreditedMeasurementScope";
 import styles from "./service-detail.module.css";
 
 type Props = {
@@ -35,7 +37,7 @@ function DetailList({ items }: { items: string[] }) {
   return <ul>{items.map(item => <li key={item}><InlineEmphasis text={item} /></li>)}</ul>;
 }
 
-/** Shared server-rendered layout: full technical content remains in native disclosures. */
+/** Shared server-rendered layout with an explicit, service-specific presentation option. */
 export function ServiceDetailLayout({ content, contactHref, contactLabel, faqItems, relatedItems, schemas, evidence, commercialIntent, faqUiLabels }: Props) {
   const { locale } = content;
   const href = (path: string) => localizeHref(path, locale);
@@ -44,6 +46,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
   const category = getServiceCategoryFromHref("/" + content.slug);
   const categoryLabel = category === "measurement" ? ui.measurement : category === "studies" ? ui.studies : ui.docsCategory;
   const emissions = locale === "cs" && content.slug === "sluzby/mereni-emisi";
+  const editorialEmissions = emissions && content.detailPresentation === "emissions-editorial";
   const photo = getAuthenticPhoto(getServiceHeroTheme(content.slug));
   const workplace = locale === "cs" && content.slug === "sluzby/pracovni-prostredi";
   const overview = commercialIntent ?? (locale === "cs" ? getServiceOverview(content.slug) : undefined);
@@ -105,12 +108,12 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             {content.slug === "sluzby/mereni-hluku" ? <p className={styles.situations}>
               <strong>{ui.noiseHint}</strong><a href={href("/sluzby/hlukove-studie")}>{ui.noiseLink} →</a>
             </p> : null}
-            {evidence ? <aside className={styles.evidence} aria-label="Ukázka realizace" data-service-evidence>
+            {evidence && !editorialEmissions ? <aside className={styles.evidence} aria-label="Ukázka realizace" data-service-evidence>
               <p className={styles.eyebrow}>Z naší praxe</p>
               <h3>{evidence.title}</h3>
               <p>{evidence.summary}</p>
               <p className={styles.evidenceOutput}><strong>Výstup:</strong> {evidence.output}</p>
-              {evidence.referenceHref ? <a className={styles.textLink} href={href(evidence.referenceHref)}>Doložené realizace <span aria-hidden="true">→</span></a> : null}
+              {evidence.referenceHref ? <a className={styles.textLink} href={href(evidence.referenceHref)}>Naše realizace <span aria-hidden="true">→</span></a> : null}
             </aside> : null}
           </div>
           <aside className={styles.inquiryPanel} id="podklady" aria-labelledby="service-docs-heading">
@@ -119,38 +122,42 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
               <h2 id="service-docs-heading">{ui.docs}</h2>
             </div>
             <p>{copy.docsIntro}</p>
-            <DetailList items={content.docs.slice(0, 3)} />
+            <DetailList items={editorialEmissions ? content.docs : content.docs.slice(0, 3)} />
+            {editorialEmissions ? <p className={styles.requestTiming}>Uveďte také požadovaný termín měření.</p> : null}
             {commercialIntent ? <p className={styles.quoteBasis} data-service-quote-basis><strong>Rozsah a nabídka</strong>{commercialIntent.quoteBasis}</p> : null}
             <a className={styles.panelCta} href={contactHref}>{ui.inquiry}<span aria-hidden="true">↗</span></a>
             <p className={styles.response}>{ui.responseFull}</p>
           </aside>
         </section>
-        <section className={styles.detailsSection} aria-labelledby="service-details-heading">
+        {workplace ? <AccreditedMeasurementScope kind="workplace" title="Akreditovaná měření a odběry" /> : null}
+        {editorialEmissions ? <EmissionsServiceDetails whenNeeded={content.whenNeeded} evidence={evidence} faqItems={faqItems} faqUiLabels={faqUiLabels} /> : <section className={styles.detailsSection} aria-labelledby="service-details-heading">
           <div className={styles.sectionHeading}><h2 id="service-details-heading">{ui.details}</h2></div>
+          <div className={faqItems.length ? styles.detailsGrid : styles.detailsGridSolo}>
           <div className={styles.disclosures}>
-            <details><summary>{ui.scopeAndOutputs}</summary><div className={styles.detailColumns}>
+            <details><summary><ServiceIcon icon="process-rozsah" size={22} className={styles.disclosureIcon} /><span>{ui.scopeAndOutputs}</span></summary><div className={styles.detailColumns}>
               {workplace ? <p className={styles.fullIntro}><InlineEmphasis text={content.intro} /></p> : null}
               <div><h3>{content.scopeHeading ?? copy.scopeHeading}</h3><DetailList items={content.scope} /></div>
               <div><h3>{copy.outputsHeading}</h3><DetailList items={content.outputs} /></div>
             </div></details>
-            {content.whenNeeded.length ? <details><summary>{copy.whenNeededHeading}</summary><div className={styles.detailBody}><DetailList items={content.whenNeeded} /></div></details> : null}
-            <details><summary>{ui.preparation}</summary><div className={styles.detailColumns}>
+            {content.whenNeeded.length ? <details><summary><ServiceIcon icon="process-posouzeni" size={22} className={styles.disclosureIcon} /><span>{copy.whenNeededHeading}</span></summary><div className={styles.detailBody}><DetailList items={content.whenNeeded} /></div></details> : null}
+            <details><summary><ServiceIcon icon="contact-mail" size={22} className={styles.disclosureIcon} /><span>{ui.preparation}</span></summary><div className={styles.detailColumns}>
               <div><h3>{ui.docs}</h3><DetailList items={content.docs} /></div>
               {content.commonMistakes?.length ? <div><h3>{copy.mistakesHeading}</h3><DetailList items={content.commonMistakes} /></div> : null}
             </div></details>
-            {content.practicalSituations?.length ? <details><summary>{ui.situations}</summary><div className={styles.detailBody}><DetailList items={content.practicalSituations} /></div></details> : null}
+            {content.practicalSituations?.length ? <details><summary><ServiceIcon icon="contact-building" size={22} className={styles.disclosureIcon} /><span>{ui.situations}</span></summary><div className={styles.detailBody}><DetailList items={content.practicalSituations} /></div></details> : null}
           </div>
           {faqItems.length ? <div className={styles.faq}>
-            <h3>{ui.faq}</h3>
+            <h3><ServiceIcon icon="faq" size={24} className={styles.faqIcon} />{ui.faq}</h3>
             <FaqAccordionList items={faqItems} locale={locale} uiLabels={faqUiLabels} />
             <a className={styles.textLink} href={href(content.faqCategoryId ? "/faq#" + content.faqCategoryId : "/faq")}>{ui.allFaq} <span aria-hidden="true">→</span></a>
           </div> : null}
-        </section>
-        {content.slug === "sluzby/mereni-emisi" ? <ContextualPageLinks locale={locale} topic="emissions" /> : null}
+          </div>
+        </section>}
+        {!editorialEmissions && content.slug === "sluzby/mereni-emisi" ? <ContextualPageLinks locale={locale} topic="emissions" /> : null}
         {content.slug === "sluzby/mereni-hluku" ? <ContextualPageLinks locale={locale} topic="noise" /> : null}
         {relatedItems.length ? <nav className={styles.related} aria-label={ui.related}>
           <h2>{ui.related}</h2>
-          <ul>{relatedItems.slice(0, 3).map(item => <li key={item.href}><a href={href(item.href)}>{item.title}<span aria-hidden="true">↗</span></a></li>)}</ul>
+          <ul>{relatedItems.slice(0, 3).map(item => <li key={item.href}><a href={href(item.href)}><ServiceIcon href={item.href} size={24} className={styles.relatedIcon} /><span className={styles.relatedTitle}>{item.title}</span><span className={styles.relatedArrow} aria-hidden="true">↗</span></a></li>)}</ul>
           {relatedItems.length > 3 ? <details className={styles.moreRelated}>
             <summary>{ui.moreRelated}</summary>
             <ul>{relatedItems.slice(3).map(item => <li key={item.href}><a href={href(item.href)}>{item.title}<span aria-hidden="true">↗</span></a></li>)}</ul>

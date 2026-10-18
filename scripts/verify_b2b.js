@@ -20,6 +20,7 @@ const load = require("./lib/load-typescript.js")({
   "./service-improvements.module.css": css,
   "./header-inquiry-cta.module.css": css,
   "./service-detail.module.css": css,
+  "./accredited-scope.module.css": css,
   "./tawk-launcher.module.css": css,
   "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/hero/mereni-emisi.webp", alt: "" }) },
   "next/link": { __esModule: true, default: link },

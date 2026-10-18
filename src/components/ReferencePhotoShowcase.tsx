@@ -43,7 +43,7 @@ export function ReferencePhotoShowcase({ examplesById }: { examplesById: Map<str
   return <section className="section content-block container" id="fotograficke-reference" aria-labelledby="reference-photo-heading">
     <ReferenceHashTarget groupIds={[moreId]} />
     <div className={styles.heading}><div><p className="eyebrow">Fotografie z realizací</p><h2 id="reference-photo-heading">Fotografické reference</h2></div>
-      <a href="#priklady" className={styles.overview}>Další doložené ukázky <span aria-hidden="true">↓</span></a>
+      <a href="#priklady" className={styles.overview}>Další reference <span aria-hidden="true">↓</span></a>
     </div>
     <nav className={styles.shortcuts} aria-label="Výběr fotografických referencí"><a href="#reference-lak-automotive-emise">Emise</a><a href="#reference-hala-pp">Pracovní prostředí</a><a href="#reference-tcp-hluk">Hluk v okolí</a><a href={"#" + moreId}>Všechny fotografické reference ({referencePhotographs.length})</a></nav>
     <div className={styles.grid}>{featured.map(render)}</div>

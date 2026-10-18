@@ -1,0 +1,90 @@
+.eyebrow { margin: 0 0 10px; color: #296a53; font-size: 12px; line-height: 1.5; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+.accreditedSection { margin-top: 40px; padding: 28px; border: 1px solid #ccded5; border-radius: 10px; background: #f4f8f5; scroll-margin-top: 140px; color: #183246; }
+.scopeSectionHeading { margin-bottom: 22px; }
+.scopeSectionHeading h2 { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.25; margin: 0; color: #102d40; }
+.accreditedScopeList { min-width: 0; overflow-wrap: anywhere; }
+.accreditedGroups { margin: 0; width: 100%; max-width: none; }
+.accreditedGroups > div { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr); gap: 12px; align-items: baseline; border-top: 1px solid #d5e2d9; padding: 15px 0; min-width: 0; }
+.accreditedGroups dt { font-size: 16px; line-height: 1.4; color: #526373; overflow-wrap: anywhere; }
+.accreditedGroups dd { margin: 0; min-width: 0; }
+.accreditedSummary { display: block; font-size: 18px; line-height: 1.45; font-weight: 650; color: #183e30; }
+.accreditedSection .accreditedGroups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.accreditedSection .accreditedGroups > div { grid-template-columns: minmax(0, .8fr) minmax(0, 1.3fr); }
+.scopeQualification { display: block; margin-top: 8px; color: #526373; font-size: 14px; line-height: 1.5; font-weight: 400; }
+.scopeAnalytes { margin-top: 6px; }
+.scopeAnalytes > summary, .fullAccreditation > summary { padding: 10px 0; min-height: 44px; color: #245d4a; font-size: 15px; line-height: 1.4; font-weight: 650; cursor: pointer; }
+.scopeAnalytes > summary span { font-weight: 400; }
+.scopeAnalytes > summary:focus-visible, .fullAccreditation > summary:focus-visible, .scopeDocument:focus-visible { outline: 3px solid #b7792f; outline-offset: 4px; }
+.scopeAnalytes ul { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 10px 0; margin: 0; width: 100%; max-width: none; list-style: none; }
+.scopeAnalytes li { font-size: 15px; line-height: 1.5; color: #183246; margin: 0; }
+.scopeAnalytes li::before { content: "·"; margin-right: 6px; color: #2f7a61; }
+.accreditedScopeList .scopeFootnote { padding-top: 14px; margin: 4px 0 0; border-top: 1px solid #d5e2d9; font-size: 14px; line-height: 1.5; color: #526373; }
+.scopeDocument { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding-block: 10px; margin-inline-end: 14px; font-size: 14px; line-height: 1.45; color: #245d4a; text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+.fullAccreditation { margin-block: 12px 32px; padding: 10px 22px; border: 1px solid #ccded5; border-radius: 10px; background: #fff; }
+.fullAccreditation > summary { font-size: 18px; }
+.fullAccreditation .accreditedSection { margin-top: 16px; }
+.serviceScope { padding: 34px 0 0; border: 0; border-top: 1px solid #dce5df; border-radius: 0; background: transparent; }
+.serviceScope .scopeSectionHeading { padding-left: 17px; border-left: 4px solid #2f7a61; margin-bottom: 24px; }
+.serviceScope .scopeSectionHeading h2 { font-size: clamp(26px, 2.7vw, 34px); letter-spacing: -.02em; }
+.scopeFeature { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); margin-bottom: 22px; overflow: hidden; border: 1px solid #163f52; border-radius: 14px; background: #102f42; }
+.scopeFeatureCopy { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: 34px; overflow: hidden; }
+.scopeFeature .eyebrow { position: relative; color: #a6d7c1; font-size: 11px; margin-bottom: 14px; }
+.scopeFeature .scopeFeatureCopy h2 { position: relative; max-width: 21ch; margin: 0; color: #fff; font-size: clamp(28px, 3vw, 38px); line-height: 1.12; letter-spacing: -.02em; text-wrap: balance; }
+.scopeWave { position: absolute; z-index: -1; inset: auto -10% -42px auto; width: 115%; height: 180px; color: #7fb7bc; opacity: .24; pointer-events: none; }
+.scopeFeatureTopics { position: relative; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0 0; max-width: none; }
+.scopeFeatureTopics li { display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 7px 10px; border: 1px solid #ffffff30; border-radius: 5px; background: #102f42b3; color: #e3edf1; font-size: 13px; line-height: 1.4; }
+.scopeFeatureTopics li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: #8eb9d8; }
+.scopeFeatureTopics li:nth-child(2)::before { background: #a6d7c1; }
+.scopeFeatureTopics li:nth-child(3)::before { background: #e3bd7c; }
+.scopeFeaturePhoto { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-width: 0; min-height: 268px; margin: 0; background: #dce7e5; }
+.scopeFeaturePhoto picture { display: block; position: relative; min-height: 224px; }
+.scopeFeaturePhoto img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 64% 52%; }
+.scopeFeaturePhoto figcaption { margin: 0; padding: 8px 16px; background: #edf4f1; color: #415966; font-size: 12px; line-height: 1.5; }
+.accreditedScopeList .scopeCards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.accreditedScopeList .scopeCards > div { --scope-accent: #24634e; --scope-tint: #d9ebe1; --scope-border: #afcaba; display: flex; flex-direction: column; gap: 12px; min-width: 0; height: 100%; padding: 18px; border: 1px solid var(--scope-border); border-top: 3px solid var(--scope-accent); border-radius: 10px; background: var(--scope-tint); box-shadow: 0 3px 12px #102d4007; }
+.accreditedScopeList .scopeCards > div[data-scope-tone="air"] { --scope-accent: #2b6288; --scope-tint: #dceaf5; --scope-border: #b0c9dc; }
+.accreditedScopeList .scopeCards > div[data-scope-tone="sampling"] { --scope-accent: #855b28; --scope-tint: #f2e3cc; --scope-border: #d6bd98; }
+.scopeCards dt { display: flex; align-items: center; gap: 11px; min-height: 38px; color: #102d40; font-size: 19px; font-weight: 700; line-height: 1.25; }
+.scopeCards dt > span:last-child { min-width: 0; }
+.scopeCards .scopeIcon { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 38px; margin: 0; padding: 7px; border-radius: 9px; background: var(--scope-accent); color: #fff; }
+.scopeCards .scopeIcon svg { width: 22px; height: 22px; }
+.scopeCards dd { display: flex; flex: 1; flex-direction: column; }
+.scopeCards .accreditedSummary { flex: 1; font-size: 16px; font-weight: 450; line-height: 1.5; color: #274554; }
+.scopeCards .scopeAnalytes { margin-top: 12px; border-top: 0; border-radius: 6px; background: #ffffffa6; }
+.scopeCards .scopeAnalytes > summary { position: relative; list-style: none; padding: 10px 38px 10px 11px; border-radius: 6px; color: var(--scope-accent); font-size: 14px; }
+.scopeCards .scopeAnalytes > summary::-webkit-details-marker { display: none; }
+.scopeCards .scopeAnalytes > summary::after { content: "+"; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 22px; height: 22px; border: 1px solid currentColor; border-radius: 50%; font-size: 19px; font-weight: 400; line-height: 1; }
+.scopeCards .scopeAnalytes[open] > summary::after { content: "−"; }
+.scopeCards .scopeAnalytes > summary:hover { background: #ffffffa6; text-decoration: underline; text-underline-offset: 3px; }
+.scopeCards .scopeAnalytes > summary:focus-visible { outline-color: #102f42; }
+.scopeCards .scopeAnalytes ul { padding: 8px 12px 12px; }
+.scopeCards .scopeAnalytes li { font-size: 14px; }
+@media (min-width: 1100px) {
+  .serviceScope .scopeCards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .accreditedSection { padding: 20px 16px; margin-top: 30px; }
+  .accreditedGroups > div { grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 12px; padding-block: 13px; }
+  .accreditedGroups dt { font-size: 15px; }
+  .accreditedSummary { font-size: 17px; }
+  .accreditedSection .accreditedGroups { grid-template-columns: 1fr; }
+  .accreditedSection .accreditedGroups > div { grid-template-columns: 1fr; gap: 5px; }
+  .fullAccreditation .accreditedGroups > div { grid-template-columns: 1fr; gap: 5px; }
+  .fullAccreditation { padding: 8px 14px; }
+  .serviceScope { padding: 26px 0 0; }
+  .serviceScope .scopeSectionHeading { padding-left: 13px; margin-bottom: 20px; }
+  .scopeFeature { grid-template-columns: minmax(0, 1fr); margin-bottom: 16px; }
+  .scopeFeatureCopy { padding: 24px 22px; }
+  .scopeFeature .scopeFeatureCopy h2 { font-size: 29px; max-width: 23ch; }
+  .scopeFeatureTopics { margin-top: 18px; gap: 6px; }
+  .scopeFeatureTopics li { padding: 5px 8px; font-size: 12px; }
+  .scopeFeaturePhoto { min-height: 0; }
+  .scopeFeaturePhoto picture { min-height: 0; height: 158px; }
+  .accreditedScopeList .scopeCards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .accreditedScopeList .scopeCards > div { padding: 14px 16px; gap: 8px; }
+  .scopeCards dt { font-size: 18px; }
+  .scopeCards .accreditedSummary { font-size: 16px; }
+}
+@media (max-width: 599px) {
+  .accreditedScopeList .scopeCards { grid-template-columns: minmax(0, 1fr); }
+}

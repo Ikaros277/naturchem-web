@@ -9,6 +9,7 @@ const root = path.resolve(__dirname, "..");
 const css = { __esModule: true, default: new Proxy({}, { get: (_, name) => String(name) }) };
 const load = require("./lib/load-typescript.js")({
   "./service-detail.module.css": css,
+  "./accredited-scope.module.css": css,
   "./article-related-services.module.css": css,
   "@/app/services.generated.css": {},
   "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/fixture.webp", alt: "" }) },

@@ -16,10 +16,10 @@ export const accreditationFacts = [
 ] as const;
 
 export const customerBenefits: Array<{ icon: ServiceIconKey; text: string }> = [
-  { icon: "ippc", text: "Výsledky dohledatelné a obhajitelné při kontrole" },
+  { icon: "ippc", text: "V protokolech uvádíme výsledky, podmínky a použité metody" },
   { icon: "bezpecnostni-listy", text: "Protokoly přímo pro ČIŽP, KHS nebo stavební úřad" },
-  { icon: "skoleni", text: "Odborný výklad výsledků — nejen čísla" },
-  { icon: "povoleni", text: "Vždy v souladu s platným osvědčením a jeho přílohou" }
+  { icon: "skoleni", text: "Výsledky odborně vyhodnotíme a vysvětlíme" },
+  { icon: "povoleni", text: "Akreditovaná měření provádíme v rozsahu platného osvědčení a jeho přílohy" }
 ];
 
 export const scopeGroups = [
@@ -56,10 +56,10 @@ export const accreditationPageContent = {
     { name: "Akreditace a oprávnění" }
   ],
   hero: {
-    eyebrow: "Důkaz odborné způsobilosti",
+    eyebrow: "Naše akreditace a autorizace",
     title: "Akreditace a odborná oprávnění",
     lead:
-      "Doklady o akreditaci laboratoře, rozsahu měření a odborných autorizacích. Osvědčení a přílohy jsou dostupné ke stažení."
+      "Jsme akreditovaná zkušební laboratoř č. 1599. Prohlédněte si naše osvědčení, rozsah měření a odborné autorizace."
   },
   overview: {
     factsTitle: "Základní údaje o akreditaci",
@@ -70,7 +70,7 @@ export const accreditationPageContent = {
     appendixIntro: "Úplný výčet metod a analytů je v",
     appendixLinkLabel: "příloze osvědčení o akreditaci (PDF)",
     equipmentNote:
-      "Laboratoř využívá analyzátory, odběrové aparatury, akustickou a vibrační techniku, luxmetry, čerpadla a laboratorní zázemí pro přípravu a vyhodnocení vzorků.",
+      "K měření používáme analyzátory, odběrové aparatury, akustickou a vibrační techniku, luxmetry a čerpadla. Vzorky připravujeme a vyhodnocujeme v laboratorním zázemí.",
     equipmentLinkLabel: "Vybrané přístrojové vybavení"
   },
   authorizations: {

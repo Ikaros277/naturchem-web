@@ -23,7 +23,7 @@ export function equipmentItemCountLabel(count: number): string {
 export const equipmentSectionHeading = "Jakou techniku používáme?";
 
 export const equipmentSectionIntro =
-  "Uvádíme techniku, kterou laboratoř obvykle nasazuje v terénu i v laboratoři.";
+  "Prohlédněte si přístroje a odběrové vybavení, které používáme při měření v terénu a při laboratorní práci.";
 
 export const equipmentGroups: readonly EquipmentGroup[] = [
   {

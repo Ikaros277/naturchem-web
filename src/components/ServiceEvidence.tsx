@@ -11,7 +11,7 @@ export async function ServiceEvidence({ locale, slug }: { locale: Locale; slug: 
   const groups = await getReferenceExampleGroups(locale);
   const group = groups.find(item => item.exampleIds.includes(example.id));
   const t = locale === "cs"
-    ? { title: "Anonymizovaný příklad zakázky", scope: "Rozsah", output: "Výstup", link: "Další příklady z této oblasti" }
+    ? { title: "Z našich zakázek", scope: "Rozsah", output: "Výstup", link: "Další zakázky z této oblasti" }
     : locale === "de"
       ? { title: "Anonymisiertes Projektbeispiel", scope: "Umfang", output: "Ergebnis", link: "Weitere Beispiele aus diesem Bereich" }
       : { title: "Anonymised project example", scope: "Scope", output: "Output", link: "More examples in this area" };

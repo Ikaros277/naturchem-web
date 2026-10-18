@@ -45,7 +45,7 @@ const L = {
 export const faqPageTitle = "Časté dotazy";
 
 export const faqPageIntro =
-  "Zjistíte, zda jde o měření, studii nebo provozní řád — a co poslat ČIŽP, KHS nebo stavebnímu úřadu jako první podklad.";
+  "Odpovídáme na dotazy k měření, studiím a dokumentaci pro ČIŽP, KHS či stavební úřad. Vysvětlíme, jaké podklady potřebujete připravit.";
 
 export const faqIntroCtas: FaqLink[] = [
   { label: "Poslat podklady k posouzení", href: contactUrl("Nejsem si jistý") },

@@ -31,7 +31,7 @@ export const referenceIntro =
 export const referenceCustomersIntro =
   "Společnosti, které u nás řeší měření, studie a podklady pro úřad — od automobilové výroby a energetiky po veřejný sektor.";
 
-export const referenceExamplesHeading = "Další doložené ukázky";
+export const referenceExamplesHeading = "Další reference";
 
 export const referenceAreasHeading = "Reference podle oborů a typu provozu";
 
@@ -210,7 +210,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     operationType: "VZT / technologické zařízení",
     scope: "výpočet nebo měření hluku technologie",
     output: "podklad pro kolaudaci, KHS nebo stavební úřad",
-    text: "Připravili jsme hlukové posouzení technologie vůči nejbližší zástavbě. Podklad šel pro kolaudaci a jednání s úřady.",
+    text: "Připravili jsme hlukové posouzení technologie vůči nejbližší zástavbě pro kolaudaci a jednání s úřady.",
     tags: ["Hluk", "KHS", "VZT"],
     href: "/sluzby/hlukove-studie",
     contactService: "Hlukové studie",
@@ -234,7 +234,7 @@ export const referenceExamples: readonly ReferenceExample[] = [
     operationType: "kompostárna / zařízení k nakládání s odpady",
     scope: "odborný posudek, rozptylová studie, hluková studie",
     output: "sada podkladů pro povolovací řízení",
-    text: "Spojili jsme odborný posudek, rozptylovou a hlukovou studii pro zařízení odpadů. Výstupy šly do jednoho povolovacího řízení.",
+    text: "Zpracovali jsme odborný posudek, rozptylovou a hlukovou studii pro zařízení odpadů. Podklady jsme připravili pro společné povolovací řízení.",
     tags: ["Rozptyl", "Hluk", "EIA", "KÚ"],
     href: "/sluzby/odborne-posudky",
     contactService: "Odborné posudky",

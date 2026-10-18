@@ -65,7 +65,7 @@ export const serviceOverviews: Record<string, ServiceOverview> = {
     features: [
       { title: "Nový zdroj nebo změna", text: "Zpracujeme žádost o vydání nebo změnu povolení provozu podle technologie a provozního režimu." },
       { title: "Odborné podklady", text: "Zkoordinujeme potřebné měření emisí, odborný posudek a provozní řád." },
-      { title: "Podání za provozovatele", text: "V dohodnutém rozsahu zajistíme podání a doplnění žádosti. O vydání povolení rozhoduje úřad." },
+      { title: "Podání za provozovatele", text: "Za Vás zajistíme podání a doplnění žádosti v dohodnutém rozsahu. Povolení vydává příslušný úřad." },
     ],
   },
 };

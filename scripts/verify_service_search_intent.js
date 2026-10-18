@@ -8,6 +8,7 @@ const root = path.resolve(__dirname, "..");
 const css = { __esModule: true, default: new Proxy({}, { get: (_, name) => String(name) }) };
 const load = require("./lib/load-typescript.js")({
   "./service-detail.module.css": css,
+  "./accredited-scope.module.css": css,
   "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/fixture.webp", alt: "" }) },
   "next/link": { __esModule: true, default: ({ children, href }) => React.createElement("a", { href }, children) },
   "next/navigation": { usePathname: () => "/" }

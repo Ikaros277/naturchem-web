@@ -9,6 +9,7 @@ const css = { __esModule: true, default: new Proxy({}, { get: (_, name) => Strin
 let currentLocale = "cs";
 const load = require("./lib/load-typescript.js")({
   "./service-detail.module.css": css,
+  "./accredited-scope.module.css": css,
   "@/components/HeroPhoto": { HeroPhoto: () => React.createElement("img", { src: "/fixture.webp", alt: "" }) },
   "@/components/ServiceCardThumb": { ServiceCardThumb: () => null },
   "@/app/services.generated.css": {},
@@ -79,6 +80,13 @@ async function main() {
       for (const original of content[field] ?? []) assert.ok(plain.includes(stripInlineMarkdown(original)), "Retain approved technical copy: " + slug + " / " + field);
     }
     assert.equal((body.match(/href="[^"]*kontakt[^"]*"/g) ?? []).length, 2, "No new repeated inquiry buttons");
+    assert.match(body, /class="detailsGrid(?:Solo)?"/, "Keep technical topics and FAQ in a responsive lower-page layout");
+    assert.ok(body.includes("disclosureIcon"), "Technical topics need visible, server-rendered cues");
+    const relatedNavigation = body.match(/<nav class="related"[\s\S]*?<\/nav>/)?.[0];
+    if (relatedNavigation) {
+      const cards = (relatedNavigation.match(/relatedIcon/g) || []).length;
+      assert.ok(cards > 0 && cards <= 3, "At most three primary related-service cards; retain other links in their existing disclosure");
+    }
     if (slug === "eia-posudky-poradenstvi") {
       for (const target of ["eia-oznameni-zameru", "ippc-integrovana-povoleni", "ispop", "rozptylove-studie", "hlukove-studie", "odborne-posudky"]) assert.ok(body.includes('href="' + localizeHref("/sluzby/" + target, "cs") + '"'), "Coordinated-service hub retains existing and adds specific path: " + target);
     }
@@ -89,6 +97,30 @@ async function main() {
       const enHtml = renderToStaticMarkup(await ServicePage({ ...translated, locale: "en" }));
       assert.ok(!enHtml.includes(overview.heading), "Do not leak Czech summaries into translated pages");
     }
+  }
+  const emissions = load(path.join(root, "src/app/[locale]/sluzby/mereni-emisi/page.tsx")).default();
+  const emissionsHtml = renderToStaticMarkup(await ServicePage({ ...emissions, locale: "cs" }));
+  const emissionsBody = emissionsHtml.replace(/<script[\s\S]*?<\/script>/g, "");
+  const emissionsText = text(emissionsBody);
+  assert.ok(emissionsBody.includes('data-emissions-presentation="editorial"'), "Only the Czech emissions page pilots the new editorial layout");
+  assert.equal((emissionsBody.match(/id="service-details-heading"/g) || []).length, 1, "Keep the existing details anchor and a unique heading");
+  for (const doc of emissions.docs) {
+    assert.equal(emissionsText.split(stripInlineMarkdown(doc)).length - 1, 1, "Preparation documents appear once, next to the inquiry");
+  }
+  for (const heading of ["Typické situace", "Podklady a příprava", "Co potřebujete pro nabídku měření emisí?"]) {
+    assert.ok(!emissionsText.includes(heading), "Remove redundant layers, not just hide them: " + heading);
+  }
+  for (const term of ["NOx", "CO", "SO₂", "O₂", "HCl", "TOC / VOC", "TZL", "kovy"]) assert.ok(emissionsText.includes(term), "Retain existing measurement scope: " + term);
+  for (const item of emissions.whenNeeded) assert.ok(emissionsText.includes(stripInlineMarkdown(item)), "Keep unique authority/documentation scenarios");
+  assert.ok(emissionsBody.includes('data-photographic-reference="bps-emise"'));
+  assert.ok(emissionsBody.includes('data-photo-relationship="case"'));
+  assert.match(emissionsBody, /<img[^>]*kogenerace-640\.webp[^>]*loading="lazy"[^>]*fetchPriority="low"/i, "Use existing lazy static case photography");
+  assert.ok(emissionsBody.includes('href="' + localizeHref('/reference#reference-bps-emise', 'cs') + '"'));
+  assert.equal((emissionsBody.match(/href="[^"]*kontakt[^"]*"/g) || []).length, 2, "Do not increase inquiry repetition");
+  for (const locale of ["en", "de"]) {
+    const translated = load(path.join(root, "src/lib/inline-service-pages-" + locale + ".ts")).inlineServicePagesEn["mereni-emisi"];
+    const html = renderToStaticMarkup(await ServicePage({ ...translated, locale }));
+    assert.ok(!html.includes("data-emissions-presentation") && !html.includes('data-photographic-reference="bps-emise"'), "Prototype does not change translated pages");
   }
   for (const [file, href] of [
     ["drevozpracujici-provoz-prach-piliny-odsavani-hluk-a-povoleni-zdroje", "/mereni-emisi-susaren/"],

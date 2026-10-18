@@ -223,10 +223,6 @@ export const czechServiceSearchSupport: Record<string, ServiceSearchSupport> = {
         q: "Jak určíte rozsah měření emisí u našeho zdroje?",
         paragraphs: ["Podle povolení provozu, typu technologie, měřených látek a případného požadavku úřadu. Pošlete poslední protokol, provozní režim a informace o změnách zdroje."],
         links: [{ label: "Autorizované měření emisí", href: "/autorizovana-osoba-mereni-emisi" }]
-      },
-      {
-        q: "Co potřebujete pro nabídku měření emisí?",
-        paragraphs: ["Povolení provozu, technický popis zdroje a poslední protokol, pokud existuje. Doplňte fotografie výduchu a měřicího místa, plánovaný režim a požadovaný termín."]
       }
     ]
   },

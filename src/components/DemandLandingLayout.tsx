@@ -3,6 +3,7 @@ import { Breadcrumbs } from "./Breadcrumbs";
 import { HeroPhoto } from "./HeroPhoto";
 import { FaqAccordionList } from "./FaqAccordionList";
 import { ServiceIcon } from "./ServiceIcon";
+import { AccreditedMeasurementScope } from "./AccreditedMeasurementScope";
 import { WorkProcessTimeline } from "./WorkProcessTimeline";
 import { getAuthenticPhoto } from "@/lib/authentic-photos";
 import { getLandingBlocks, getLandingTopic } from "@/lib/landing-blocks";
@@ -83,24 +84,27 @@ export async function DemandLandingLayout({ landing, locale, schemas, contactHre
           <a href={contactHref} className={styles.panelCta}>{ui.inquiry}<span aria-hidden="true">↗</span></a><p className={styles.response}>{ui.responseFull}</p>
         </aside>
       </section>
+      {locale === "cs" && landing.slug === "mereni-pracovniho-prostredi-kategorizace-praci" ? <AccreditedMeasurementScope kind="workplace" title="Akreditovaná měření pro podklady ke kategorizaci" /> : null}
       <section className={styles.detailsSection} aria-labelledby="service-details-heading">
         <div className={styles.sectionHeading}><h2 id="service-details-heading">{ui.details}</h2></div>
+        <div className={faq.length ? styles.detailsGrid : styles.detailsGridSolo}>
         <div className={styles.disclosures}>
           {landing.sections.filter(section => section !== docsSection).map((section, index) => <details key={section.heading ?? index}>
-            <summary>{section.heading ?? title}</summary><div className={styles.detailBody}>{section.paragraphs.map(text => <p key={text}>{renderRichText(text)}</p>)}</div>
+            <summary><ServiceIcon icon={index === 0 ? "process-rozsah" : "process-posouzeni"} size={22} className={styles.disclosureIcon} /><span>{section.heading ?? title}</span></summary><div className={styles.detailBody}>{section.paragraphs.map(text => <p key={text}>{renderRichText(text)}</p>)}</div>
           </details>)}
-          <details><summary>{ui.scopeAndOutputs}</summary><div className={styles.detailBody}>
+          <details><summary><ServiceIcon icon="process-vystup" size={22} className={styles.disclosureIcon} /><span>{ui.scopeAndOutputs}</span></summary><div className={styles.detailBody}>
             <p>{renderRichText(landing.intro)}</p>
             {topic && topic !== "studie" && category === "measurement" ? <><h3>{blocks.measured.title}</h3><p>{blocks.measured[topic]}</p></> : null}
             {topic === "emise" && category === "measurement" ? <p>{blocks.breadth.text} <a href={href("/provozy-a-technologie")}>{blocks.breadth.linkLabel}</a>.</p> : null}
           </div></details>
-          {category === "measurement" ? <details><summary>{blocks.termsTitle}</summary><div className={styles.detailColumns}>{[blocks.price, blocks.timing, blocks.scope].map(item => <div key={item.title}><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></details> : null}
-          <details><summary>{process.heading}</summary><div className={styles.detailBody}><WorkProcessTimeline steps={process.steps} processAria={process.heading} /></div></details>
+          {category === "measurement" ? <details><summary><ServiceIcon icon="posudek" size={22} className={styles.disclosureIcon} /><span>{blocks.termsTitle}</span></summary><div className={styles.detailColumns}>{[blocks.price, blocks.timing, blocks.scope].map(item => <div key={item.title}><h3>{item.title}</h3><p>{item.text}</p></div>)}</div></details> : null}
+          <details><summary><ServiceIcon icon="process-posouzeni" size={22} className={styles.disclosureIcon} /><span>{process.heading}</span></summary><div className={styles.detailBody}><WorkProcessTimeline steps={process.steps} processAria={process.heading} /></div></details>
         </div>
-        {faq.length ? <div className={styles.faq}><h3>{ui.faq}</h3><FaqAccordionList locale={locale} items={faq.map(item => ({ q: item.question, paragraphs: [item.answer] }))} /></div> : null}
+        {faq.length ? <div className={styles.faq}><h3><ServiceIcon icon="faq" size={24} className={styles.faqIcon} />{ui.faq}</h3><FaqAccordionList locale={locale} items={faq.map(item => ({ q: item.question, paragraphs: [item.answer] }))} /></div> : null}
+        </div>
         {landing.sources?.length ? <div className={styles.sources}><h3>{landing.sourcesHeading}</h3><ul>{landing.sources.map(source => <li key={source.href}><a href={source.href} target="_blank" rel="noreferrer">{source.label}</a>{source.description ? <p>{source.description}</p> : null}</li>)}</ul></div> : null}
       </section>
-      {landing.relatedLinks?.length ? <nav className={styles.related} aria-label={ui.related}><h2>{ui.related}</h2><ul>{landing.relatedLinks.map(item => <li key={item.href}><a href={href(item.href)}>{item.label}<span aria-hidden="true">↗</span></a></li>)}</ul></nav> : null}
+      {landing.relatedLinks?.length ? <nav className={styles.related} aria-label={ui.related}><h2>{ui.related}</h2><ul>{landing.relatedLinks.map(item => <li key={item.href}><a href={href(item.href)}><ServiceIcon href={item.href} size={24} className={styles.relatedIcon} /><span className={styles.relatedTitle}>{item.label}</span><span className={styles.relatedArrow} aria-hidden="true">↗</span></a></li>)}</ul></nav> : null}
       {landing.oboryHref ? <p><a href={href(landing.oboryHref)} className={styles.textLink}>{copy.relatedFacility} ↗</a></p> : null}
     </div>
   </main>;

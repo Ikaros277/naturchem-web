@@ -5,7 +5,7 @@ import type { Locale } from "@/lib/i18n/locales";
 import styles from "./homepage.module.css";
 
 const copy = {
-  cs: { title: "Měření a podklady v praxi", intro: "Anonymizované příklady z přehledu našich zakázek.", scope: "Rozsah", output: "Výstup", all: "Přehled referencí", service: "Související služba" },
+  cs: { title: "Z našich zakázek", intro: "Měření a odborné podklady, které jsme zpracovali pro naše zákazníky.", scope: "Rozsah", output: "Výstup", all: "Přehled referencí", service: "Související služba" },
   en: { title: "Measurements and documentation in practice", intro: "Anonymised examples from our project overview.", scope: "Scope", output: "Output", all: "Project references", service: "Related service" },
   de: { title: "Messungen und Unterlagen in der Praxis", intro: "Anonymisierte Beispiele aus unserer Auftragsübersicht.", scope: "Umfang", output: "Ergebnis", all: "Referenzübersicht", service: "Zugehörige Leistung" }
 };

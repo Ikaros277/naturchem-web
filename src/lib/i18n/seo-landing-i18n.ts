@@ -13,14 +13,14 @@ const copy = {
     ctaText:
       "Pošlete stručný popis provozu nebo požadavek úřadu. Na základě podkladů navrhneme rozsah prací a možný termín realizace.",
     generalServicePage: "Přehled služby",
-    overviewEyebrow: "Stručně a věcně",
+    overviewEyebrow: "Naše služby",
     relatedEyebrow: "Navazující řešení",
     faqEyebrow: "Praktické informace",
     relatedFacility: "Související provoz",
     relatedSolutions: "Související služby a situace",
     faqTitle: "Časté dotazy",
     entitySummary:
-      "{company} — akreditovaná laboratoř a autorizovaná osoba v České republice. Tato stránka popisuje službu: {service}."
+      "Jsme akreditovaná laboratoř a autorizovaná osoba. Naše měření a odborné služby zajišťujeme po celé České republice."
   },
   en: {
     processEyebrow: "How we work",

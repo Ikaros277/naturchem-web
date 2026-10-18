@@ -43,18 +43,18 @@ export const sectorPages: Record<string, SectorPageData> = {
     eyebrow: "Podle typu provozu",
     heroTitle: "Provozy a technologie — měření, studie a podklady pro úřad",
     heroLead:
-      "Pro které provozy řešíme měření, studie a podklady — od kotelny a lakovny přes bioplyn až po recyklaci nebo VZT.",
+      "Měříme a zpracováváme studie pro kotelny, lakovny, bioplynové stanice, recyklační provozy, VZT i další technologie.",
     introHeading: "Najděte svůj typ provozu",
     introParagraphs: [
-      "Na této stránce rychle zjistíte, zda váš typ provozu spadá do oblasti, kterou řešíme, a jaké služby s ním typicky souvisejí. U každého provozu najdete štítky služeb, typické faktory a odkazy na anonymizované příklady zakázek z praxe.",
-      "Jde o přehled typů provozů a technologií — ne o případové studie. Konkrétní anonymizované scénáře zakázek najdete na stránce Typické zakázky."
+      "Pro Váš provoz zajistíme měření emisí, pracovního prostředí a hluku, odborné studie i povolovací dokumentaci.",
+      "Vyberte typ provozu. Najdete příslušné služby a příklady zakázek."
     ],
     introMuted:
-      "U provozů s vlastní detailní stránkou uvidíte také typické situace, dokumentaci a postup zakázky. U ostatních provozů vás odkážeme na související služby a příklady z praxe.",
-    assessmentHeading: "Nejste si jistí, kam váš provoz zařadit?",
+      "U jednotlivých provozů uvádíme, co měříme, jaké podklady potřebujeme a co Vám předáme.",
+    assessmentHeading: "Posoudíme Váš provoz",
     assessmentIntro:
-      "Pošlete nám stručný popis provozu, technologii, požadavek úřadu nebo projektovou dokumentaci. Podle situace určíme, zda je potřeba měření, studie, odborný posudek, provozní řád nebo jiný podklad.",
-    assessmentSubheading: "Co nám pomůže při prvním posouzení",
+      "Pošlete nám popis technologie, požadavek úřadu nebo projekt. Navrhneme potřebná měření, studie a dokumentaci.",
+    assessmentSubheading: "Co nám poslat",
     assessmentItems: [
       "stručný popis provozu, technologie nebo záměru",
       "účel zakázky: měření, studie, EIA, posudek, provozní řád nebo požadavek úřadu",

@@ -47,14 +47,14 @@ export const archivedPractice = {
   ispopIndustry: {
     id: "ispop-vice", slug: "ispop",
     title: "ISPOP pro průmyslový areál",
-    summary: "Zpracovali jsme souhrnnou provozní evidenci kotelen a technologie povrchové úpravy a podali hlášení do ISPOP. Podání je doložené potvrzením ze systému.",
+    summary: "Zpracovali jsme souhrnnou provozní evidenci kotelen a technologie povrchové úpravy a podali hlášení do ISPOP. Součástí výstupu je potvrzení podání ze systému.",
     output: "Hlášení souhrnné provozní evidence a potvrzení podání.",
     operationType: "průmyslový areál s kotelnami a povrchovou úpravou", tags: ["ISPOP", "Ovzduší"], contactService: "ISPOP"
   },
   ispopMunicipal: {
     id: "ispop-kotelna-obce", slug: "ispop",
     title: "ISPOP pro obecní kotelnu na biomasu",
-    summary: "Připravili jsme souhrnnou provozní evidenci kotelny na biomasu a podali hlášení do ISPOP. Podání je doložené potvrzením ze systému.",
+    summary: "Připravili jsme souhrnnou provozní evidenci kotelny na biomasu a podali hlášení do ISPOP. Součástí výstupu je potvrzení podání ze systému.",
     output: "Roční hlášení a potvrzení podání do ISPOP.",
     operationType: "obecní kotelna", tags: ["ISPOP", "Kotelny"], contactService: "ISPOP"
   },

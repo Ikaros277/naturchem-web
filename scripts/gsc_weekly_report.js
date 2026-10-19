@@ -12,6 +12,9 @@
  * Needs (GitHub repository settings):
  *   secret GSC_SERVICE_ACCOUNT_JSON  - service-account key, added as a user in Search Console
  *   variable GSC_PROPERTY            - e.g. sc-domain:naturchem.cz (default)
+ *   variable REPORT_REPO + secret REPORT_TOKEN - PRIVATE repository (and a token that may write its
+ *                                      issues) that receives the report. This repository is public, so
+ *                                      traffic data is never published here unless ALLOW_PUBLIC_REPORT=true.
  * Without them the job opens one setup issue instead of failing.
  *
  *   node scripts/gsc_weekly_report.js --dry-run   # print the report, create nothing
@@ -38,7 +41,10 @@ const SETUP_BODY = `Týdenní zpráva o návštěvnosti zatím nemá přístup k
 5. V repozitáři na GitHubu otevřete „Settings → Secrets and variables → Actions“ a přidejte:
    - **secret** \`GSC_SERVICE_ACCOUNT_JSON\`: celý obsah staženého JSON souboru,
    - **variable** \`GSC_PROPERTY\`: \`sc-domain:naturchem.cz\` (nebo \`https://www.naturchem.cz/\`, podle toho, jak je web v Search Console veden).
-6. V záložce „Actions → Týdenní zpráva návštěvnosti“ klikněte na „Run workflow“. První zpráva přijde e-mailem.
+6. **Kam zpráva půjde (důležité):** tento repozitář je veřejný, takže zpráva s kliky a dotazy by byla vidět komukoli. Vytvořte proto **soukromý** repozitář (např. \`naturchem-monitoring\`), v Nastavení účtu → Developer settings → Fine-grained tokens vytvořte token jen pro tento repozitář s oprávněním **Issues: Read and write** a přidejte:
+   - **variable** \`REPORT_REPO\`: \`Ikaros277/naturchem-monitoring\`,
+   - **secret** \`REPORT_TOKEN\`: vytvořený token.
+7. V záložce „Actions → Týdenní zpráva návštěvnosti“ klikněte na „Run workflow“. První zpráva přijde e-mailem z GitHubu.
 
 Klíč nikdy nevkládejte do kódu ani do chatu. Slouží jen jako GitHub secret.`;
 
@@ -83,10 +89,36 @@ async function loadSearchData(token, windows) {
   return { queries, queriesPrev, pages, pagesPrev, queryPages, daily, windows };
 }
 
+/** Destination of the traffic report: a private repository when configured, else this repository. */
+function reportContext() {
+  const own = lib.githubContext();
+  if (process.env.REPORT_REPO && process.env.REPORT_TOKEN) {
+    return { repo: process.env.REPORT_REPO, token: process.env.REPORT_TOKEN, assignee: (own && own.assignee) || process.env.REPORT_REPO.split("/")[0] };
+  }
+  return own;
+}
+
+const PUBLIC_WARNING = `Týdenní zpráva návštěvnosti je připravená, ale **nebyla zveřejněna**: cílový repozitář je veřejný a zpráva obsahuje kliky a dotazy z Search Console.
+
+Nastavte soukromý cíl podle kroku 6 v úkolu „Nastavit přístup k Google Search Console“ (proměnná \`REPORT_REPO\` a secret \`REPORT_TOKEN\`). Pokud je Vám veřejnost zprávy jedno, nastavte proměnnou \`ALLOW_PUBLIC_REPORT\` na \`true\`.`;
+
 async function publish(title, body, label, color, description) {
-  const ctx = lib.githubContext();
+  const ctx = reportContext();
   if (!ctx) {
     console.log("GITHUB_TOKEN/GITHUB_REPOSITORY nejsou nastaveny, úkol se nevytváří.");
+    return;
+  }
+  const info = await lib.github(ctx, "");
+  const isPublic = !info.data || info.data.private === false;
+  if (isPublic && process.env.ALLOW_PUBLIC_REPORT !== "true") {
+    console.log("Cílový repozitář je veřejný, zpráva se nezveřejňuje (nastavte REPORT_REPO nebo ALLOW_PUBLIC_REPORT).");
+    const own = lib.githubContext();
+    if (own) {
+      await lib.ensureLabel(own, SETUP_LABEL, "fbca04", "Jednorázové nastavení monitoringu");
+      if (!(await lib.findOpenIssue(own, SETUP_LABEL))) {
+        await lib.createIssue(own, { title: "Týdenní zpráva čeká na soukromé místo (repozitář je veřejný)", body: PUBLIC_WARNING, labels: [SETUP_LABEL] });
+      }
+    }
     return;
   }
   await lib.ensureLabel(ctx, label, color, description);

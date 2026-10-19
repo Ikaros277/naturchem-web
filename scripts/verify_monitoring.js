@@ -121,6 +121,12 @@ for (const [file, script] of [["site-monitor.yml", "scripts/monitor_site.js"], [
 }
 const weekly = fs.readFileSync(path.join(root, ".github", "workflows", "weekly-traffic-report.yml"), "utf8");
 assert.ok(weekly.includes("secrets.GSC_SERVICE_ACCOUNT_JSON"), "Search Console key comes from a GitHub secret");
+assert.ok(weekly.includes("secrets.REPORT_TOKEN") && weekly.includes("vars.REPORT_REPO"), "report destination comes from settings");
+const weeklyScript = fs.readFileSync(path.join(root, "scripts", "gsc_weekly_report.js"), "utf8");
+assert.ok(
+  weeklyScript.includes('ALLOW_PUBLIC_REPORT !== "true"') && weeklyScript.includes("private === false"),
+  "traffic data is never published to a public repository unless explicitly allowed"
+);
 for (const file of ["scripts/lib/monitoring.js", "scripts/monitor_site.js", "scripts/gsc_weekly_report.js"]) {
   assert.ok(!/BEGIN (RSA )?PRIVATE KEY/.test(fs.readFileSync(path.join(root, file), "utf8")), `${file} contains no key`);
 }

@@ -31,7 +31,7 @@ const sourcePublicHealthAct: LandingSource = {
 export const seoLandings: SeoLanding[] = [
   {
     slug: "mereni-emisi-kotelen",
-    title: "Emission measurements at boiler plants and combustion sources",
+    title: "Emission measurements at boiler plants",
     metaDescription:
       "Emission measurements at boiler plants, burners and cogeneration units: NOx, CO, SO₂, particulates. Report for the Czech Environmental Inspectorate, operating permit and ISPOP. Send your permit and we will prepare a quote.",
     h1: "Emission measurements at boiler plants and combustion sources",
@@ -114,7 +114,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-lakoven",
-    title: "Emission measurements at paint shops: TOC/VOC and particulates",
+    title: "Paint shop emission measurements: TOC/VOC",
     metaDescription:
       "Emission measurements at paint shops: TOC/VOC and particulates at the stack. Report for the inspectorate, operating permit and ISPOP. Send us your permit.",
     h1: "Emission measurements at paint shops and surface treatment",
@@ -201,7 +201,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-bioplynovych-stanic",
-    title: "Emission measurements at biogas plants and cogeneration units",
+    title: "Emission measurements at biogas plants",
     metaDescription:
       "Emission measurements of biogas plant and cogeneration engines. Authorised person, report for the Czech Environmental Inspectorate and ISPOP. Send your permit.",
     h1: "Emission measurements at biogas plants and cogeneration units",
@@ -288,7 +288,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-drevozpracujicich-provoze",
-    title: "Emission measurements for wood processing: TSP, boilers, dryers",
+    title: "Emission measurements for wood processing",
     metaDescription:
       "Emission measurements of particulates from extraction and filters, biomass boilers and dryers at sawmills and joineries. Report for permits and authorities.",
     h1: "Emission measurements at wood processing operations",
@@ -375,7 +375,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-susaren",
-    title: "Emission measurements at dryers: particulates, NOx and CO",
+    title: "Dryer emission measurements: dust, NOx, CO",
     metaDescription:
       "Emission measurements at grain, biomass and wood dryers: particulates, NOx and CO per permit. Report for authorities and ISPOP. Send us your permit.",
     h1: "Emission measurements at dryers",
@@ -869,7 +869,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-dieselagregat",
-    title: "Emission measurements from diesel generators and backup sources",
+    title: "Diesel generator emission measurements",
     metaDescription:
       "Emission measurements of diesel generators and backup sources: NOx, CO, particulates. We first check from permit and operating hours whether it applies to you.",
     h1: "Emission measurements from diesel generators and backup sources",
@@ -964,7 +964,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "autorizovana-osoba-mereni-emisi",
-    title: "Authorised emission measurement of stationary sources",
+    title: "Authorised emission measurement for sources",
     metaDescription:
       "One-off emission measurement may only be carried out by an authorised person. Accredited laboratory No. 1599: TZL, NOx, CO, SO₂, TOC, VOC and heavy metals. Send your operating permit.",
     h1: "Authorised emission measurement for air pollution sources",
@@ -1063,7 +1063,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-prasnosti",
-    title: "Dust measurements in the workplace for KHS and job categorisation",
+    title: "Workplace dust measurement for KHS",
     metaDescription:
       "Workplace dust measurements: inhalable and respirable fractions for the hygiene station (KHS) and job categorisation. Accredited laboratory No. 1599.",
     h1: "Dust measurements in the workplace",
@@ -1156,7 +1156,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-tezkych-kovu-emise",
-    title: "Heavy metal measurements in emissions and workplace air",
+    title: "Heavy metals: emissions and workplace air",
     metaDescription:
       "Heavy metal measurements (As, Cd, Cr, Ni, Pb, Hg etc.) in emissions from stationary sources and in workplace air. Accredited laboratory No. 1599.",
     h1: "Heavy metal measurements in emissions and workplace air",
@@ -1251,7 +1251,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "podklady-pro-khs",
-    title: "Supporting documentation for the hygiene station — workplace and noise",
+    title: "Documents for KHS: workplace and noise",
     metaDescription:
       "Preparation of supporting documentation for the hygiene station (KHS): noise, dust, chemical substances, microclimate and job categorisation.",
     h1: "Supporting documentation for the hygiene station",
@@ -1327,7 +1327,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-hluku-ceske-budejovice",
-    title: "Noise measurement in České Budějovice: operations and KHS",
+    title: "Noise measurement in České Budějovice",
     metaDescription:
       "Noise measurement in České Budějovice for operations, workplaces, the hygiene station (KHS) and occupancy approval. Laboratory at Rudolfovská 119/57; we propose a suitable scope.",
     h1: "Noise measurement in České Budějovice",
@@ -1407,7 +1407,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "podklady-pro-cizp",
-    title: "Supporting documentation for the Czech Environmental Inspectorate and regional authority",
+    title: "Documents for ČIŽP and regional authority",
     metaDescription:
       "Emission measurements, expert reports and operating documentation as supporting material for the Czech Environmental Inspectorate, regional authority and source operating permits.",
     h1: "Supporting documentation for the Czech Environmental Inspectorate and regional authority",
@@ -1579,7 +1579,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-pro-kolaudaci",
-    title: "Measurements for occupancy approval: noise, lighting and workplaces",
+    title: "Measurements for occupancy approval",
     metaDescription:
       "Measurements for occupancy approval of an operation or building: noise, lighting, microclimate and workplace environment. Send the requirement of the hygiene station or building authority.",
     h1: "Measurements for occupancy approval — noise, lighting and workplace environment",
@@ -1650,7 +1650,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-nove-haly",
-    title: "Measurements for a new production hall: hygiene station and occupancy approval",
+    title: "Measurements for a new production hall",
     metaDescription:
       "Measurements for a new hall: noise, lighting, microclimate, vibration, dust and chemical substances. A common scope for the hygiene station, workplaces and occupancy approval.",
     h1: "Measurements for a new hall and the workplace environment",
@@ -1721,7 +1721,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "pro-stavebni-firmy",
-    title: "Project documentation for construction companies and designers",
+    title: "Project documentation for construction firms",
     metaDescription:
       "Project documentation for construction companies and designers: noise and dispersion studies, expert reports, EIA and technical annexes.",
     h1: "Studies and documentation for the project",
@@ -1792,7 +1792,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-hluku-havlickuv-brod",
-    title: "Noise measurement in Havlíčkův Brod: operations and occupancy approval",
+    title: "Noise measurement in Havlíčkův Brod",
     metaDescription:
       "Noise measurement in Havlíčkův Brod and the Vysočina Region for operations, workplaces, technologies and occupancy approval. NATURCHEM is based in Havlíčkův Brod.",
     h1: "Noise measurement in Havlíčkův Brod and the Vysočina Region",
@@ -1864,7 +1864,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-hluku-praha",
-    title: "Noise measurement in Prague: technologies, HVAC and occupancy approval",
+    title: "Noise measurement in Prague: HVAC, heat pumps",
     metaDescription:
       "Noise measurement in Prague for premises, technologies, HVAC, heat pumps and occupancy approval. NATURCHEM office in Prague 5.",
     h1: "Noise measurement in Prague",

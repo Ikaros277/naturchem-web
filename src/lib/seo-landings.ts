@@ -222,7 +222,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-bioplynovych-stanic",
-    title: "Měření emisí bioplynových stanic a kogeneračních jednotek",
+    title: "Měření emisí bioplynových stanic a kogenerací",
     metaDescription:
       "Měření emisí motorů bioplynových stanic a kogeneračních jednotek. Autorizovaná osoba, protokol pro ČIŽP a ISPOP. Pošlete povolení, navrhneme rozsah měření.",
     h1: "Měření emisí bioplynových stanic a kogeneračních jednotek",
@@ -309,7 +309,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-drevozpracujicich-provoze",
-    title: "Měření emisí dřevozpracujících provozů: TZL, kotle, sušárny",
+    title: "Měření emisí dřevozpracujících provozů",
     metaDescription:
       "Měření emisí TZL z odsávání a filtrů, kotlů na biomasu a sušáren v pilách a truhlárnách. Protokol pro povolení provozu a úřady. Pošlete popis provozu.",
     h1: "Měření emisí dřevozpracujících provozů",
@@ -1100,7 +1100,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-prasnosti",
-    title: "Měření prašnosti na pracovišti pro KHS a kategorizaci prací",
+    title: "Měření prašnosti na pracovišti pro KHS",
     metaDescription:
       "Měření prašnosti na pracovišti: vdechovatelná a respirabilní frakce pro KHS a kategorizaci prací. Akreditovaná laboratoř č. 1599. Pošlete popis provozu.",
     h1: "Měření prašnosti na pracovišti",
@@ -1288,7 +1288,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "podklady-pro-khs",
-    title: "Podklady pro KHS — měření pracovního prostředí a hluku",
+    title: "Podklady pro KHS: pracovní prostředí a hluk",
     metaDescription:
       "Příprava podkladů pro hygienickou stanici (KHS): měření hluku, prašnosti, chemických látek, mikroklimatu a kategorizace prací.",
     h1: "Podklady pro hygienickou stanici (KHS)",
@@ -1758,7 +1758,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "pro-stavebni-firmy",
-    title: "Dokumentace k projektu pro stavební firmy a projektanty",
+    title: "Dokumentace k projektu pro stavební firmy",
     metaDescription:
       "Dokumentace k projektu pro stavební firmy a projektanty: hlukové a rozptylové studie, odborné posudky, EIA a technické přílohy.",
     h1: "Studie a dokumentace k projektu",

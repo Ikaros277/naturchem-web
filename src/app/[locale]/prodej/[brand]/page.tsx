@@ -90,11 +90,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 function messagesTitle(locale: Locale, brandName: string) {
 
-  if (locale === "de") return `${brandName} | Gerätevertrieb NATURCHEM`;
+  if (locale === "de") return `${brandName}: Geräteverkauf`;
 
-  if (locale === "en") return `${brandName} | NATURCHEM instrument sales`;
+  if (locale === "en") return `${brandName}: instrument sales`;
 
-  return `${brandName} | NATURCHEM`;
+  return `${brandName}: prodej přístrojů`;
 
 }
 

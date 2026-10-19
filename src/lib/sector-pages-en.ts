@@ -2,7 +2,7 @@ import type { SectorPageData } from "./sector-pages";
 
 export const sectorPagesEn: Record<string, SectorPageData> = {
   index: {
-    metadataTitle: "Facilities and technologies – measurement, studies and permitting documentation",
+    metadataTitle: "Facilities and technologies: measurement, studies",
     metadataDescription:
       "Measurement, studies and permitting documentation for boiler plants, paint shops, biogas plants, welding shops, recycling, agricultural operations, HVAC and other technologies.",
     eyebrow: "By facility type",
@@ -29,7 +29,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   lakovny: {
-    metadataTitle: "Emission and workplace environment measurement in paint shops",
+    metadataTitle: "Emission and workplace measurement in paint shops",
     metadataDescription:
       "Sector overview for paint shops: VOC/TOC, extraction, filtration, workplace exposure and documentation for regional authorities, ČIŽP and KHS.",
     title: "Paint shops",
@@ -81,7 +81,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   kotelny: {
-    metadataTitle: "Emission measurement for boiler plants and combustion sources",
+    metadataTitle: "Emission measurement for boiler plants",
     metadataDescription:
       "Sector overview for boiler plants: NOx, CO, O₂, load modes, measurement points and documentation for operators and authorities.",
     title: "Boiler plants and combustion sources",
@@ -133,7 +133,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   svarovny: {
-    metadataTitle: "Workplace environment and emission measurement in welding shops",
+    metadataTitle: "Workplace and emission measurement in welding",
     metadataDescription:
       "Sector overview for welding shops: dust, metals, NOx, ozone, local extraction, job categorisation and documentation for KHS.",
     title: "Welding shops",
@@ -185,7 +185,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   sklarstvi: {
-    metadataTitle: "Emission measurement and expert documentation for glass operations",
+    metadataTitle: "Emission measurement for glass operations",
     metadataDescription:
       "Sector overview for glassmaking: furnace sources, measurement points, filtration, operating modes and link to permitting documentation.",
     title: "Glass operations",
@@ -237,7 +237,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   "odpady-recyklace": {
-    metadataTitle: "Studies and measurement for waste and recycling facilities",
+    metadataTitle: "Studies and measurement for recycling facilities",
     metadataDescription:
       "Sector overview for waste and recycling: dust, noise, transport, dispersion, EIA and documentation for permitting proceedings.",
     title: "Waste and recycling",
@@ -341,7 +341,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   "bioplyn-biometan": {
-    metadataTitle: "Dispersion and noise studies for biogas and biomethane",
+    metadataTitle: "Dispersion and noise studies for biogas",
     metadataDescription:
       "Sector overview for biogas plants and biomethane: air quality, odour, noise, transport and documentation for EIA and permitting.",
     title: "Biogas and biomethane",
@@ -393,7 +393,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   "zemedelske-provozy": {
-    metadataTitle: "Measurement and documentation for agricultural and food processing operations",
+    metadataTitle: "Measurement for agricultural and food plants",
     metadataDescription:
       "Emission measurement, workplace environment and operational parameters for agricultural sites, livestock buildings, dryers, biogas plants and food processing technologies.",
     title: "Agricultural operations and dryers",
@@ -445,7 +445,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   drevozpracujici: {
-    metadataTitle: "Measurement and documentation for wood processing operations",
+    metadataTitle: "Measurement and documents for wood processing",
     metadataDescription:
       "Emission, dust, noise and workplace environment measurement for sawmills, joinery shops, dryers and biomass boiler plants.",
     title: "Wood processing operations",
@@ -500,7 +500,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   automotive: {
-    metadataTitle: "Measurement and documentation for automotive and technical textiles",
+    metadataTitle: "Measurement for automotive and technical textiles",
     metadataDescription:
       "Emission, workplace environment and noise measurement for automotive, technical textiles and production lines.",
     title: "Automotive and technical textiles",

@@ -32,13 +32,35 @@ for (const locale of ["cs", "en", "de"]) {
     assert.ok(metadata.title && metadata.description);
     assert.ok(!titles.has(metadata.title), "No duplicate article metadata: " + locale + "/" + article.slug);
     titles.add(metadata.title);
+    assert.ok(metadata.title.length <= 50, "Article search title fits with the brand suffix (max 50): " + locale + "/" + article.slug + " (" + metadata.title.length + ")");
     if (locale === "cs") {
-      assert.ok(metadata.title.length <= 62, "Bounded Czech article title including the brand suffix: " + article.slug);
       assert.ok(metadata.description.length <= 180, "Bounded complete-sentence description: " + article.slug);
     }
     articles++;
   }
 }
+// Landing and facility pages: search titles stay within one result line together with the brand suffix.
+for (const [name, list] of [
+  ["cs landing", load(path.join(root, "src/lib/seo-landings.ts")).seoLandings],
+  ["en landing", load(path.join(root, "src/lib/seo-landings-en.ts")).seoLandings],
+  ["de landing", load(path.join(root, "src/lib/seo-landings-de.ts")).seoLandings]
+]) {
+  for (const landing of list) assert.ok(landing.title.length <= 50, name + " title too long for search results: " + landing.slug + " (" + landing.title.length + ")");
+}
+for (const [name, pages] of [
+  ["cs sector", load(path.join(root, "src/lib/sector-pages.ts")).sectorPages],
+  ["en sector", load(path.join(root, "src/lib/sector-pages-en.ts")).sectorPagesEn],
+  ["de sector", load(path.join(root, "src/lib/sector-pages-de.ts")).sectorPagesEn]
+]) {
+  for (const [key, page] of Object.entries(pages)) assert.ok(page.metadataTitle.length <= 56, name + " title too long for search results: " + key + " (" + page.metadataTitle.length + ")");
+}
+const { salesMetaTitle } = load(path.join(root, "src/lib/sales-meta-title.ts"));
+assert.equal(salesMetaTitle("FID detektor", "PCF Elettronica"), "FID detektor | PCF Elettronica");
+assert.equal(salesMetaTitle("Mod. 8807/NR přenosný GC pro NMH nebo specifické složky", "PCF Elettronica"), "Mod. 8807/NR přenosný GC pro NMH nebo specifické složky", "brand is dropped when the title would be cut");
+const { fallbackSearchTitle } = load(path.join(root, "src/lib/article-seo.ts"));
+assert.equal(fallbackSearchTitle("Short title"), "Short title");
+assert.equal(fallbackSearchTitle("Dust control measures on construction sites: what documentation should contain and what the authority may require"), "Dust control measures on construction sites");
+assert.ok(fallbackSearchTitle("A very long title without any separator that keeps going and going and going for much longer").length <= 50);
 const glyphs = new Set(fonts.flatMap(font => font.codepoints));
 for (const letter of "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäöüÄÖÜß€") assert.ok(glyphs.has(letter.codePointAt(0)), "Required font glyph: " + letter);
 assert.ok(fonts.reduce((sum, font) => sum + font.after, 0) < 56000);

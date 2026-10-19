@@ -109,7 +109,7 @@
     "metaDescription": "Accredited laboratory No. 1599 — emissions, workplace environment, noise, studies and documentation for authorities."
   },
   "home": {
-    "metaTitle": "NATURCHEM – emissions, noise and building approval measurements",
+    "metaTitle": "NATURCHEM – emission, noise and approval measurements",
     "metaDescription": "Measurements of emissions, noise, lighting, vibration, microclimate and workplace conditions. Documentation for building approval, KHS, ČIŽP and construction companies.",
     "heroTitle": "Measurements and studies for industry and construction",
     "heroLead": "Emissions, noise and workplace conditions. Documentation for operating permits, building approval and authorities.",
@@ -270,7 +270,7 @@
     "pageTitle": "Typical projects we handle",
     "breadcrumb": "Typical projects",
     "backLink": "← Back to typical projects",
-    "categoryMetaTitle": "{title} – types of completed projects",
+    "categoryMetaTitle": "{title}: typical projects",
     "categoryMetaDescription": "{short} Examples of NATURCHEM projects.",
     "categoryFallbackTitle": "Project types",
     "intro": "Examples of assignments combining measurements, studies, operating documentation and outputs for authorities.",

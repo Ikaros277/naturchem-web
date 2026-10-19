@@ -2,7 +2,7 @@ import type { SectorPageData } from "./sector-pages";
 
 export const sectorPagesEn: Record<string, SectorPageData> = {
   index: {
-    metadataTitle: "Anlagen und Technologien – Messung, Studien und Genehmigungsdokumentation",
+    metadataTitle: "Anlagen und Technologien: Messung und Studien",
     metadataDescription:
       "Messungen, Studien und Genehmigungsunterlagen für Kesselanlagen, Lackierereien, Biogasanlagen, Schweißereien, Recycling, landwirtschaftliche Betriebe, HVAC und andere Technologien.",
     eyebrow: "Nach Einrichtungstyp",
@@ -29,7 +29,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   lakovny: {
-    metadataTitle: "Emissions- und Arbeitsplatzumgebungsmessung in Lackierereien",
+    metadataTitle: "Emissions- und Arbeitsplatzmessung: Lackierereien",
     metadataDescription:
       "Branchenübersicht für Lackierereien: VOC/TOC, Absaugung, Filtration, Arbeitsplatzexposition und Dokumentation für Gebietskörperschaften, ČIŽP und KHS.",
     title: "Lackierereien",
@@ -81,7 +81,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   kotelny: {
-    metadataTitle: "Emissionsmessung für Kesselanlagen und Verbrennungsquellen",
+    metadataTitle: "Emissionsmessung für Kesselanlagen",
     metadataDescription:
       "Branchenübersicht für Kesselanlagen: NOx, CO, O₂, Belastungsarten, Messstellen und Dokumentation für Betreiber und Behörden.",
     title: "Kesselanlagen und Verbrennungsquellen",
@@ -133,7 +133,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   svarovny: {
-    metadataTitle: "Arbeitsplatzumgebung und Emissionsmessung in Schweißbetrieben",
+    metadataTitle: "Arbeitsplatz- und Emissionsmessung: Schweißen",
     metadataDescription:
       "Branchenübersicht für Schweißbetriebe: Staub, Metalle, NOx, Ozon, lokale Absaugung, Auftragskategorisierung und Dokumentation für KHS.",
     title: "Schweißbetriebe",
@@ -185,7 +185,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   sklarstvi: {
-    metadataTitle: "Emissionsmessung und Sachverständigendokumentation für Glasbetriebe",
+    metadataTitle: "Emissionsmessung und Gutachten für Glasbetriebe",
     metadataDescription:
       "Branchenübersicht für die Glasherstellung: Ofenquellen, Messpunkte, Filterung, Betriebsarten und Link zur Genehmigungsdokumentation.",
     title: "Glasbetriebe",
@@ -237,7 +237,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   "odpady-recyklace": {
-    metadataTitle: "Studien und Messungen für Abfall- und Recyclinganlagen",
+    metadataTitle: "Studien und Messungen für Recyclinganlagen",
     metadataDescription:
       "Branchenüberblick für Abfall und Recycling: Staub, Lärm, Transport, Ausbreitung, UVP und Dokumentation für Genehmigungsverfahren.",
     title: "Abfall und Recycling",
@@ -341,7 +341,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   "bioplyn-biometan": {
-    metadataTitle: "Ausbreitungs- und Lärmstudien für Biogas und Biomethan",
+    metadataTitle: "Ausbreitungs- und Lärmstudien für Biogas",
     metadataDescription:
       "Branchenüberblick für Biogasanlagen und Biomethan: Luftqualität, Geruch, Lärm, Transport und Dokumentation für UVP und Genehmigungen.",
     title: "Biogas und Biomethan",
@@ -393,7 +393,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   "zemedelske-provozy": {
-    metadataTitle: "Messung und Dokumentation für landwirtschaftliche und lebensmittelverarbeitende Betriebe",
+    metadataTitle: "Messung: Landwirtschaft und Lebensmittelbetriebe",
     metadataDescription:
       "Emissionsmessung, Arbeitsplatzumgebung und Betriebsparameter für landwirtschaftliche Standorte, Viehställe, Trockner, Biogasanlagen und Lebensmittelverarbeitungstechnologien.",
     title: "Landwirtschaftliche Betriebe und Trockner",
@@ -445,7 +445,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   drevozpracujici: {
-    metadataTitle: "Messung und Dokumentation für holzverarbeitende Betriebe",
+    metadataTitle: "Messung und Unterlagen für Holzverarbeitung",
     metadataDescription:
       "Emissions-, Staub-, Lärm- und Arbeitsplatzumgebungsmessung für Sägewerke, Tischlereien, Trockner und Biomassekesselanlagen.",
     title: "Holzverarbeitungsbetriebe",
@@ -500,7 +500,7 @@ export const sectorPagesEn: Record<string, SectorPageData> = {
     ]
   },
   automotive: {
-    metadataTitle: "Messung und Dokumentation für Automobil- und technische Textilien",
+    metadataTitle: "Messung für Automobil und technische Textilien",
     metadataDescription:
       "Emissions-, Arbeitsplatzumgebungs- und Lärmmessung für Automobil, technische Textilien und Produktionslinien.",
     title: "Automobil- und technische Textilien",

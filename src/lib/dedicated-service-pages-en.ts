@@ -412,7 +412,7 @@ export const dedicatedServicePagesEn: Record<string, DedicatedServicePage> = {
   },
   "bezpecnostni-listy": {
     slug: "sluzby/bezpecnostni-listy",
-    title: "Safety data sheets and chemical substance labelling",
+    title: "Safety data sheets and chemical labelling",
     description:
       "Review of safety data sheets, labelling of chemical substances and mixtures, labels, internal containers and links to occupational health and safety.",
     intro:

@@ -36,8 +36,7 @@ export function isSectorDetailPage(data: SectorPageData): data is SectorDetailPa
 
 export const sectorPages: Record<string, SectorPageData> = {
   index: {
-    metadataTitle:
-      "Provozy a technologie | Měření emisí, hluku, pracovního prostředí, EIA a posudky",
+    metadataTitle: "Provozy a technologie: měření, studie, posudky",
     metadataDescription:
       "Přehled provozů a technologií, pro které NATURCHEM zajišťuje měření emisí, hluku, pracovního prostředí, rozptylové a hlukové studie, odborné posudky, EIA/JES, provozní řády a ISPOP.",
     eyebrow: "Podle typu provozu",
@@ -221,7 +220,7 @@ export const sectorPages: Record<string, SectorPageData> = {
     ]
   },
   sklarstvi: {
-    metadataTitle: "Měření emisí a odborné podklady pro sklářské provozy",
+    metadataTitle: "Měření emisí a podklady pro sklářské provozy",
     metadataDescription:
       "Oborový přehled pro sklářství: pecní zdroje, měřicí místa, filtrace, provozní režimy a návaznost na povolovací podklady.",
     title: "Sklářské provozy",
@@ -429,7 +428,7 @@ export const sectorPages: Record<string, SectorPageData> = {
     ]
   },
   "zemedelske-provozy": {
-    metadataTitle: "Měření a podklady pro zemědělské a potravinářské provozy",
+    metadataTitle: "Zemědělské a potravinářské provozy: měření",
     metadataDescription:
       "Měření emisí, pracovního prostředí a provozních parametrů pro zemědělské areály, stáje, sušárny, bioplynové stanice a potravinářské technologie.",
     title: "Zemědělské provozy a sušárny",
@@ -536,7 +535,7 @@ export const sectorPages: Record<string, SectorPageData> = {
     ]
   },
   automotive: {
-    metadataTitle: "Měření a podklady pro automobilovou výrobu a technické textilie",
+    metadataTitle: "Měření a podklady pro automobilovou výrobu",
     metadataDescription:
       "Měření emisí, pracovního prostředí a hluku pro automobilovou výrobu, technické textilie a výrobní linky.",
     title: "Automobilová výroba a technické textilie",

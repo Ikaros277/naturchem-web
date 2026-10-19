@@ -31,7 +31,7 @@ const sourcePublicHealthAct: LandingSource = {
 export const seoLandings: SeoLanding[] = [
   {
     slug: "mereni-emisi-kotelen",
-    title: "Emissionsmessungen an Kesselanlagen und Verbrennungsquellen",
+    title: "Emissionsmessungen an Kesselanlagen",
     metaDescription:
       "Emissionsmessungen an Kesselanlagen, Brennern und Blockheizkraftwerken: NOx, CO, SO₂, Staub. Bericht für die tschechische Umweltinspektion, Betriebsgenehmigung und ISPOP. Senden Sie uns Ihre Genehmigung, wir erstellen ein Angebot.",
     h1: "Emissionsmessungen an Kesselanlagen und Verbrennungsquellen",
@@ -114,7 +114,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-lakoven",
-    title: "Emissionsmessungen an Lackierereien: TOC/VOC und Staub",
+    title: "Emissionsmessung an Lackierereien: TOC/VOC",
     metaDescription:
       "Emissionsmessungen an Lackierereien: TOC/VOC und Staub am Abluftkamin. Bericht für Behörden, Betriebsgenehmigung und ISPOP. Senden Sie uns Ihre Genehmigung.",
     h1: "Emissionsmessungen in Lackierereien und Oberflächenbehandlungen",
@@ -201,7 +201,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-bioplynovych-stanic",
-    title: "Emissionsmessungen an Biogasanlagen und Blockheizkraftwerken",
+    title: "Emissionsmessungen an Biogasanlagen",
     metaDescription:
       "Emissionsmessung an Motoren von Biogasanlagen und BHKW. Bevollmächtigte Person, Bericht für die tschechische Umweltinspektion und ISPOP. Genehmigung senden.",
     h1: "Emissionsmessungen an Biogasanlagen und Blockheizkraftwerken",
@@ -288,7 +288,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-drevozpracujicich-provoze",
-    title: "Emissionsmessungen bei der Holzverarbeitung: TSP, Kessel, Trockner",
+    title: "Emissionsmessungen bei Holzverarbeitung",
     metaDescription:
       "Emissionsmessungen von Gesamtstaub aus Absaugungen und Filtern, Biomassekesseln und Trocknern in Sägewerken und Tischlereien. Bericht für Behörden.",
     h1: "Emissionsmessungen bei holzverarbeitenden Betrieben",
@@ -869,7 +869,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-emisi-dieselagregat",
-    title: "Emissionsmessungen von Dieselaggregaten und Notstromquellen",
+    title: "Emissionsmessungen an Dieselaggregaten",
     metaDescription:
       "Emissionsmessungen an Dieselaggregaten und Notstromquellen: NOx, CO, Staub. Wir prüfen anhand von Genehmigung und Betriebsstunden, ob die Messung Sie betrifft.",
     h1: "Emissionsmessungen von Dieselaggregaten und Notstromquellen",
@@ -964,7 +964,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "autorizovana-osoba-mereni-emisi",
-    title: "Bevollmächtigte Emissionsmessung an stationären Quellen",
+    title: "Bevollmächtigte Emissionsmessung an Quellen",
     metaDescription:
       "Einmalige Emissionsmessungen darf nur eine bevollmächtigte Person durchführen. Akkreditiertes Labor Nr. 1599: TZL, NOx, CO, SO₂, TOC, VOC und Schwermetalle. Senden Sie die Betriebsgenehmigung.",
     h1: "Bevollmächtigte Emissionsmessung an Luftschadstoffquellen",
@@ -1063,7 +1063,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-prasnosti",
-    title: "Staubmessung am Arbeitsplatz für KHS und Kategorisierung",
+    title: "Staubmessung am Arbeitsplatz für die KHS",
     metaDescription:
       "Staubmessung am Arbeitsplatz: einatembare und alveolengängige Fraktion für KHS und Arbeitsplatzkategorisierung. Akkreditiertes Labor Nr. 1599.",
     h1: "Staubmessungen am Arbeitsplatz",
@@ -1156,7 +1156,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-tezkych-kovu-emise",
-    title: "Schwermetallmessungen in Emissionen und Arbeitsplatzluft",
+    title: "Schwermetalle: Emissionen und Arbeitsplatz",
     metaDescription:
       "Schwermetallmessungen (As, Cd, Cr, Ni, Pb, Hg u. a.) in Emissionen stationärer Quellen und in der Arbeitsplatzluft. Akkreditiertes Labor Nr. 1599.",
     h1: "Schwermetallmessungen in Emissionen und Arbeitsplatzluft",
@@ -1251,7 +1251,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "podklady-pro-khs",
-    title: "Unterlagen für die Hygienestation — Arbeitsplatz und Lärm",
+    title: "Unterlagen für die KHS: Arbeitsplatz, Lärm",
     metaDescription:
       "Vorbereitung von Unterlagen für die Hygienestation (KHS): Lärm, Staub, chemische Substanzen, Mikroklima und Arbeitsplatzkategorisierung.",
     h1: "Unterlagen für die Hygienestation",
@@ -1407,7 +1407,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "podklady-pro-cizp",
-    title: "Unterlagen für die Umweltinspektion und Landesbehörde",
+    title: "Unterlagen für ČIŽP und Landesbehörde",
     metaDescription:
       "Emissionsmessungen, Gutachten und Betriebsdokumentation als Unterlage für die tschechische Umweltinspektion, Landesbehörde und Betriebsgenehmigungen.",
     h1: "Unterlagen für die Umweltinspektion und Landesbehörde",
@@ -1579,7 +1579,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-pro-kolaudaci",
-    title: "Messungen zur Abnahme: Lärm, Beleuchtung und Arbeitsplätze",
+    title: "Messungen zur Abnahme: Lärm und Beleuchtung",
     metaDescription:
       "Messungen zur Abnahme eines Betriebs oder Bauwerks: Lärm, Beleuchtung, Mikroklima und Arbeitsumgebung. Senden Sie uns die Anforderung der Hygienestation oder der Baubehörde.",
     h1: "Messungen zur Abnahme — Lärm, Beleuchtung und Arbeitsumgebung",
@@ -1650,7 +1650,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-nove-haly",
-    title: "Messungen für eine neue Produktionshalle: Hygienestation und Abnahme",
+    title: "Messungen für eine neue Produktionshalle",
     metaDescription:
       "Messungen für eine neue Halle: Lärm, Beleuchtung, Mikroklima, Vibrationen, Staub und chemische Stoffe. Gemeinsamer Umfang für die Hygienestation, Arbeitsplätze und die Abnahme.",
     h1: "Messungen für eine neue Halle und die Arbeitsumgebung",
@@ -1792,7 +1792,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-hluku-havlickuv-brod",
-    title: "Lärmmessung in Havlíčkův Brod: Betriebe und Abnahme",
+    title: "Lärmmessung in Havlíčkův Brod und Vysočina",
     metaDescription:
       "Lärmmessung in Havlíčkův Brod und in der Region Vysočina für Betriebe, Arbeitsplätze, Technologien und die Abnahme. NATURCHEM hat seinen Sitz in Havlíčkův Brod.",
     h1: "Lärmmessung in Havlíčkův Brod und in der Region Vysočina",
@@ -1864,7 +1864,7 @@ export const seoLandings: SeoLanding[] = [
   },
   {
     slug: "mereni-hluku-praha",
-    title: "Lärmmessung in Prag: Technologien, HVAC und Abnahme",
+    title: "Lärmmessung in Prag: HVAC, Wärmepumpen",
     metaDescription:
       "Lärmmessung in Prag für Betriebsstätten, Technologien, HVAC, Wärmepumpen und die Abnahme. NATURCHEM-Standort in Prag 5.",
     h1: "Lärmmessung in Prag",

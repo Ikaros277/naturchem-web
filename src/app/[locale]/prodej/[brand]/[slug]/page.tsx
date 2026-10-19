@@ -18,6 +18,7 @@ import {
 import { getMessages } from "@/lib/i18n/get-messages";
 import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
+import { salesMetaTitle } from "@/lib/sales-meta-title";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 import { formatSalesProductCount } from "@/lib/sales-i18n";
 import { isSalesCategorySlug } from "@/lib/sales-categories";
@@ -84,7 +85,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return pageMetadata({
       locale,
       path: `/prodej/${brandSlug}/${slug}`,
-      title: `${categoryTitle} | ${match.brand.name}`,
+      title: salesMetaTitle(categoryTitle, match.brand.name),
       description:
         getCategorySummary(brandSlug, slug, locale) || match.brand.tagline
     });
@@ -96,7 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({
     locale,
     path: `/prodej/${brandSlug}/${slug}`,
-    title: `${match.product.title} | ${match.brand.name}`,
+    title: salesMetaTitle(match.product.title, match.brand.name),
     description: match.product.tagline || match.product.intro || match.brand.tagline,
     ogImage: match.product.imageSrc
   });

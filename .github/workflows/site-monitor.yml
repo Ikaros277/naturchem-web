@@ -1,0 +1,32 @@
+name: Site monitor (naturchem.cz)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every six hours, away from the top of the hour (UTC).
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: site-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.repository == 'Ikaros277/naturchem-web'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check the live site and open, update or close the alert issue
+        run: node scripts/monitor_site.js
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

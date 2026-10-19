@@ -1,0 +1,34 @@
+name: Weekly traffic report (naturchem.cz)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays 06:41 UTC, after Search Console has settled the previous week.
+    - cron: '41 6 * * 1'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: weekly-traffic-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    if: github.repository == 'Ikaros277/naturchem-web'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Publish the weekly report as an issue (or a one-time setup guide)
+        run: node scripts/gsc_weekly_report.js
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_PROPERTY: ${{ vars.GSC_PROPERTY }}

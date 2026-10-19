@@ -21,6 +21,7 @@
     "test:article-reading": "node scripts/verify_article_reading.js",
     "test:contact-delivery": "node scripts/verify_contact_delivery.js",
     "test:publication": "node scripts/verify_publication.js",
+    "test:monitoring": "node scripts/verify_monitoring.js",
     "test:public-assets": "node scripts/verify_public_assets.js",
     "test:b2b": "node scripts/verify_b2b.js",
     "test:audit-quality": "node scripts/verify_audit_quality.js",
@@ -39,12 +40,14 @@
     "test:runtime-styles": "node scripts/generate_runtime_styles.js && node scripts/verify_runtime_styles.js",
     "preverify": "node scripts/generate_article_indexes.js && node scripts/generate_responsive_images.js && node scripts/generate_runtime_styles.js && node scripts/verify_seo_geo_polish.js",
     "publication:check": "node scripts/scheduled_publication.js --check",
-    "verify": "npm run lint && npm run typecheck && npm run test:contact-prefill && npm run test:cache-budget && npm run test:article-routing && npm run test:article-reading && npm run test:contact-delivery && npm run test:publication && npm run test:public-assets && npm run test:b2b && npm run test:audit-quality && npm run test:visual-cohesion && npm run test:authentic-photos && npm run test:reference-photographs && npm run test:service-search-intent && npm run test:service-search-support && npm run test:commercial-intent && npm run test:service-structure && npm run test:accreditation-scope && npm run test:company-voice && npm run test:performance && npm run build",
+    "verify": "npm run lint && npm run typecheck && npm run test:contact-prefill && npm run test:cache-budget && npm run test:article-routing && npm run test:article-reading && npm run test:contact-delivery && npm run test:publication && npm run test:public-assets && npm run test:b2b && npm run test:audit-quality && npm run test:visual-cohesion && npm run test:authentic-photos && npm run test:reference-photographs && npm run test:service-search-intent && npm run test:service-search-support && npm run test:commercial-intent && npm run test:service-structure && npm run test:accreditation-scope && npm run test:company-voice && npm run test:performance && npm run test:monitoring && npm run build",
     "seo:smoke-sitemap": "python scripts/smoke_test_urls.py https://www.naturchem.cz",
     "seo:smoke-local": "python scripts/smoke_test_urls.py http://localhost:3000",
     "seo:smoke-routing-local": "python scripts/smoke_test_routing.py http://localhost:3000",
     "seo:gsc-report": "python scripts/gsc_monthly_report.py",
-    "seo:gsc-404-import": "python scripts/gsc_import_404_redirects.py"
+    "seo:gsc-404-import": "python scripts/gsc_import_404_redirects.py",
+    "monitor:site": "node scripts/monitor_site.js --dry-run",
+    "monitor:traffic": "node scripts/gsc_weekly_report.js --dry-run"
   },
   "dependencies": {
     "@vercel/speed-insights": "^2.0.0",

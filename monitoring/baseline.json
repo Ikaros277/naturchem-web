@@ -1,0 +1,27 @@
+{
+  "site": "https://www.naturchem.cz",
+  "sitemapUrls": 582,
+  "minSitemapRatio": 0.95,
+  "dailySample": 40,
+  "hygieneSample": 60,
+  "criticalPaths": [
+    "/",
+    "/kontakt/",
+    "/sluzby/",
+    "/poradna/",
+    "/typicke-zakazky/",
+    "/reference/",
+    "/en/",
+    "/de/",
+    "/autorizovana-osoba-mereni-emisi/",
+    "/mereni-hluku-ke-kolaudaci/",
+    "/mereni-emisi-kotelen/",
+    "/mereni-pracovniho-prostredi-kategorizace-praci/",
+    "/rozptylova-studie-povoleni/",
+    "/ispop-rocni-hlaseni-emise/",
+    "/en/mereni-pro-kolaudaci/",
+    "/de/autorizovana-osoba-mereni-emisi/"
+  ],
+  "files": ["/sitemap.xml", "/robots.txt", "/llms.txt"],
+  "contactFormAnchor": "poptavkovy-formular"
+}

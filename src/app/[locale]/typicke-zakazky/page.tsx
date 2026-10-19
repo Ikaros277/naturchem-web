@@ -16,6 +16,7 @@ import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { company } from "@/lib/site";
 import { contactFormHref } from "@/lib/contact-url";
+import { ScopedMessagesProvider } from "@/lib/i18n/locale-context";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -101,12 +102,14 @@ export default async function TypickeZakazkyPage({ params }: Props) {
             {categoryPages.map(category => <a key={category.slug} href={link("/typicke-zakazky/" + category.slug)}>{category.title}</a>)}
           </nav>
         </details>
-        <CaseStudiesHub
-          locale={locale}
-          caseStudyListings={caseStudies.map(toCaseStudyListing)}
-          categoryFilters={categoryFilters}
-          serviceTitles={siteServices.map((service) => ({ href: service.href, title: service.title }))}
-        />
+        <ScopedMessagesProvider messages={{ caseStudies: messages.caseStudies }}>
+          <CaseStudiesHub
+            locale={locale}
+            caseStudyListings={caseStudies.map(toCaseStudyListing)}
+            categoryFilters={categoryFilters}
+            serviceTitles={siteServices.map((service) => ({ href: service.href, title: service.title }))}
+          />
+        </ScopedMessagesProvider>
       </section>
 
       <section className="section content-block container typicke-zakazky-cta">

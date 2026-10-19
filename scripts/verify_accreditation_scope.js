@@ -92,6 +92,7 @@ async function main() {
   const workplace = load(path.join(root, "src/app/[locale]/sluzby/pracovni-prostredi/page.tsx")).default();
   const html = renderToStaticMarkup(await ServicePage({...workplace, locale:"cs"}));
   assert.equal((html.match(/data-accredited-scope="workplace"/g)||[]).length, 1, "One complete scope on the workplace page");
+  assert.ok(html.indexOf('id="akreditovany-rozsah"') < html.indexOf('id="service-overview-heading"'), "Show the complete visual measurement scope before the general service overview on the workplace page");
   assert.equal((html.match(/href="[^"]*kontakt[^"]*"/g)||[]).length, 2, "Do not multiply inquiry CTAs");
   assert.ok(!html.includes(scope.externalLaboratoryNotes.workplace), "No repeated methodology paragraph on the actual workplace page");
   assert.ok(html.includes("/akreditace-autorizace-dokumenty/"), "Keep the existing route to accreditation documents");

@@ -14,6 +14,7 @@ import { getPageHeroTheme } from "@/lib/hero-images";
 import { getPoradnaArticles } from "@/lib/poradna-articles";
 import { formatArticleDate } from "@/lib/format-date";
 import { PORADNA_PAGE_SIZE, poradnaPageCount, poradnaPagePath, poradnaPaginationLabels } from "@/lib/poradna-pagination";
+import { ScopedMessagesProvider } from "@/lib/i18n/locale-context";
 function listingDescription(locale: Locale, page: number, description: string) {
   return page > 1 ? `${poradnaPaginationLabels[locale].page} ${page}. ${description}` : description;
 }
@@ -62,7 +63,9 @@ export async function PoradnaListingPage({ locale, page = 1 }: { locale: Locale;
         </header>
       </PageHeroBand>
       <div className="container page-first-section">
-        <PoradnaFilterableList key={`${locale}/${page}`} articles={articles} locale={locale} topicLabels={getPoradnaTopicLabels(locale)} total={allArticles.length} page={page} pageCount={pageCount} />
+        <ScopedMessagesProvider messages={{ poradna: messages.poradna }}>
+          <PoradnaFilterableList key={`${locale}/${page}`} articles={articles} locale={locale} topicLabels={getPoradnaTopicLabels(locale)} total={allArticles.length} page={page} pageCount={pageCount} />
+        </ScopedMessagesProvider>
         <PageCtaStrip {...getPageCtaPresets(locale).poradna} />
       </div>
     </main>

@@ -30,6 +30,8 @@
 .credentialInner a { color: #245d4a; display: inline-flex; align-items: center; gap: 14px; min-height: 44px; font-weight: 600; }
 .seal { border: 1px solid #b9d6c6; color: #247151; border-radius: 50%; width: 30px; height: 30px; display: inline-grid; place-items: center; flex-shrink: 0; }
 .body { padding-block: 54px 48px; }
+.body > section[id="akreditovany-rozsah"]:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.body > section[id="akreditovany-rozsah"] + .overview { margin-top: 40px; }
 .overview { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 84px); align-items: start; }
 .offer h2 { font-size: clamp(26px, 2.5vw, 34px); line-height: 1.18; letter-spacing: -.02em; max-width: 24ch; margin: 0 0 28px; }
 .features { display: grid; gap: 22px; }
@@ -157,6 +159,7 @@
   .disclosures summary { padding-left: 12px; font-size: 17px; }
 }
 @media (max-width: 767px) {
+  .body > section[id="akreditovany-rozsah"] + .overview { margin-top: 28px; }
   .editorialScope, .editorialDetails { grid-template-columns: 1fr; gap: 28px; margin-top: 32px; padding-top: 28px; scroll-margin-top: 90px; }
   .scopeIntro { font-size: 16px; margin-bottom: 20px; }
   .scopeContent h2 { scroll-margin-top: 90px; }

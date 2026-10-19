@@ -1,6 +1,6 @@
 import type { Messages } from "@/lib/i18n/get-messages";
 
-/** Message namespaces passed to client components via LocaleProvider. */
+/** All supported client namespaces; route-only text stays with its consumer. */
 export type ClientMessages = Pick<
   Messages,
   | "language"
@@ -17,19 +17,17 @@ export type ClientMessages = Pick<
   | "cookies"
 >;
 
-export function pickClientMessages(messages: Messages): ClientMessages {
+export type ClientMessageScope = Partial<ClientMessages>;
+
+export type GlobalClientMessages = Pick<ClientMessages, "language" | "footer" | "common" | "accordion" | "cookies">;
+
+/** Do not serialize form/catalog dictionaries into every public document. */
+export function pickGlobalClientMessages(messages: Messages): GlobalClientMessages {
   return {
     language: messages.language,
     footer: messages.footer,
     common: messages.common,
     accordion: messages.accordion,
-    contact: messages.contact,
-    contactForm: messages.contactForm,
-    satisfactionSurvey: messages.satisfactionSurvey,
-    poradna: messages.poradna,
-    caseStudies: messages.caseStudies,
-    equipment: messages.equipment,
-    sectorsIndex: messages.sectorsIndex,
     cookies: messages.cookies
   };
 }

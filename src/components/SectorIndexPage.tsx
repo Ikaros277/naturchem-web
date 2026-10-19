@@ -13,6 +13,7 @@ import type { Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { isSectorDetailPage } from "@/lib/sector-pages";
 import { siteUrl } from "@/lib/site";
+import { ScopedMessagesProvider } from "@/lib/i18n/locale-context";
 
 type Props = {
   locale: Locale;
@@ -82,16 +83,18 @@ export async function SectorIndexPage({ locale }: Props) {
         <p className="muted">{indexData.introMuted}</p>
       </section>
 
-      <SectorGroupsIndex
-        sectors={sectorCards}
-        locale={locale}
-        sectorGroups={sectorGroups}
-        serviceTitles={siteServices.map((service) => ({ href: service.href, title: service.title }))}
-        sectorCardLabels={{
-          detailPage: messages.sectorsIndex.detailPageLabel,
-          exampleFromPractice: messages.sectorsIndex.exampleFromPractice
-        }}
-      />
+      <ScopedMessagesProvider messages={{ sectorsIndex: messages.sectorsIndex }}>
+        <SectorGroupsIndex
+          sectors={sectorCards}
+          locale={locale}
+          sectorGroups={sectorGroups}
+          serviceTitles={siteServices.map((service) => ({ href: service.href, title: service.title }))}
+          sectorCardLabels={{
+            detailPage: messages.sectorsIndex.detailPageLabel,
+            exampleFromPractice: messages.sectorsIndex.exampleFromPractice
+          }}
+        />
+      </ScopedMessagesProvider>
 
       <section className="section content-block container" aria-labelledby="sector-assessment-heading">
         <h2 id="sector-assessment-heading">{indexData.assessmentHeading}</h2>

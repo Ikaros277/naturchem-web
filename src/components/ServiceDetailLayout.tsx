@@ -95,6 +95,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
         </div>
       </div>
       <div className={`container ${styles.body}`}>
+        {workplace ? <AccreditedMeasurementScope kind="workplace" title="Akreditovaná měření a odběry" /> : null}
         <section className={styles.overview} aria-labelledby="service-overview-heading">
           <div className={styles.offer}>
             <p className={styles.eyebrow}>{categoryLabel}</p>
@@ -129,7 +130,6 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             <p className={styles.response}>{ui.responseFull}</p>
           </aside>
         </section>
-        {workplace ? <AccreditedMeasurementScope kind="workplace" title="Akreditovaná měření a odběry" /> : null}
         {editorialEmissions ? <EmissionsServiceDetails whenNeeded={content.whenNeeded} evidence={evidence} faqItems={faqItems} faqUiLabels={faqUiLabels} /> : <section className={styles.detailsSection} aria-labelledby="service-details-heading">
           <div className={styles.sectionHeading}><h2 id="service-details-heading">{ui.details}</h2></div>
           <div className={faqItems.length ? styles.detailsGrid : styles.detailsGridSolo}>

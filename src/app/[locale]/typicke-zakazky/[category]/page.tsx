@@ -10,6 +10,7 @@ import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
+import { ScopedMessagesProvider } from "@/lib/i18n/locale-context";
 
 type Props = {
   params: Promise<{ locale: string; category: string }>;
@@ -75,7 +76,9 @@ export default async function CaseStudyCategoryPage({ params }: Props) {
             {messages.caseStudies.backLink}
           </Link>
         </p>
-        <CaseStudiesView category={category} categories={categories} locale={locale} />
+        <ScopedMessagesProvider messages={{ caseStudies: messages.caseStudies }}>
+          <CaseStudiesView category={category} categories={categories} locale={locale} />
+        </ScopedMessagesProvider>
       </section>
     </main>
   );

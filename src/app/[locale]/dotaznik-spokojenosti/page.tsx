@@ -12,6 +12,7 @@ import { pageMetadata, withNoindex } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { siteUrl } from "@/lib/site";
+import { ScopedMessagesProvider } from "@/lib/i18n/locale-context";
 
 const pagePath = "/dotaznik-spokojenosti";
 
@@ -80,7 +81,9 @@ export default async function Page({ params }: PageProps) {
 
       <section className="section content-block container page-first-section contact-form-section satisfaction-survey-section">
         <article className="card contact-form-panel contact-page-card satisfaction-survey-panel">
-          <SatisfactionSurveyForm categories={categories} />
+          <ScopedMessagesProvider messages={{ satisfactionSurvey: messages.satisfactionSurvey }}>
+            <SatisfactionSurveyForm categories={categories} />
+          </ScopedMessagesProvider>
         </article>
       </section>
     </main>

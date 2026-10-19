@@ -16,7 +16,7 @@ import {
   buildOrganizationJsonLd,
   buildWebSiteJsonLd
 } from "@/lib/organization-jsonld";
-import { pickClientMessages } from "@/lib/i18n/client-messages";
+import { pickGlobalClientMessages } from "@/lib/i18n/client-messages";
 import { getMessages } from "@/lib/i18n/get-messages";
 import { LocaleProvider } from "@/lib/i18n/locale-context";
 import { isLocale, locales, type Locale } from "@/lib/i18n/locales";
@@ -119,7 +119,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body className={fontSans.className} suppressHydrationWarning>
-        <LocaleProvider locale={locale} messages={pickClientMessages(messages)}>
+        <LocaleProvider locale={locale} messages={pickGlobalClientMessages(messages)}>
           <JsonLd data={websiteData} />
           <JsonLd data={orgData} />
           <JsonLd data={localBusinessData} />

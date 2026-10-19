@@ -15,6 +15,7 @@ import { pageMetadata } from "@/lib/i18n/metadata-helpers";
 import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { buildContactPageJsonLd } from "@/lib/organization-jsonld";
+import { ScopedMessagesProvider } from "@/lib/i18n/locale-context";
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -83,7 +84,9 @@ export default async function Page({ params }: PageProps) {
         aria-labelledby="poptavka-heading"
       >
         <article className="card contact-form-panel contact-page-card">
-          <ContactFormSection serviceChoices={serviceChoices} />
+          <ScopedMessagesProvider messages={{ contactForm: messages.contactForm }}>
+            <ContactFormSection serviceChoices={serviceChoices} />
+          </ScopedMessagesProvider>
         </article>
       </section>
 
@@ -141,7 +144,9 @@ export default async function Page({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-              <ContactMapDisclosure label={messages.contact.mapLabel} />
+              <ScopedMessagesProvider messages={{ contact: messages.contact }}>
+                <ContactMapDisclosure label={messages.contact.mapLabel} />
+              </ScopedMessagesProvider>
             </div>
           </div>
         </article>

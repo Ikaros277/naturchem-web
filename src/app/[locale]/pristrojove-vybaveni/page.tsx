@@ -14,6 +14,7 @@ import { localizeHref } from "@/lib/i18n/navigation";
 import { isLocale, type Locale } from "@/lib/i18n/locales";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { siteUrl } from "@/lib/site";
+import { ScopedMessagesProvider } from "@/lib/i18n/locale-context";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -84,11 +85,13 @@ export default async function Page({ params }: Props) {
         <p>{equipment.equipmentSectionIntro}</p>
       </section>
 
-      <EquipmentGroupsIndex
-        groups={equipment.equipmentGroups}
-        groupAriaVerbs={equipment.equipmentGroupAriaVerbs}
-        locale={locale}
-      />
+      <ScopedMessagesProvider messages={{ equipment: messages.equipment }}>
+        <EquipmentGroupsIndex
+          groups={equipment.equipmentGroups}
+          groupAriaVerbs={equipment.equipmentGroupAriaVerbs}
+          locale={locale}
+        />
+      </ScopedMessagesProvider>
 
       <PageCtaStrip {...pageCtaPresets.equipment} className="container" />
     </main>

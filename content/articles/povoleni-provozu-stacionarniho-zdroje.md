@@ -1,5 +1,5 @@
 ---
-title: Kolik stojí odborný posudek, rozptylová studie, provozní řád a povolení provozu
+title: "Cena posudku, studie a provozního řádu"
 slug: cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu
 excerpt: Cena podkladů pro povolení zdroje znečišťování ovzduší závisí na typu
   technologie, počtu zdrojů a výduchů, rozsahu emisí a kvalitě dostupné

@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-14_46_38.webp
-title: "Vorbereitung auf eine Kontrolle der tschechischen Umweltinspektion (ČIŽP) im Bereich Luftreinhaltung: Dokumente und Sachverhalte, die in Ordnung sein sollten"
+title: "ČIŽP-Kontrolle: Unterlagen zur Luftreinhaltung"
 slug: kontrola-cizp-ovzdusi
 excerpt: "Die Kontrolle der tschechischen Umweltinspektion bei einer genehmigungspflichtigen (gelisteten) stationären Quelle konzentriert sich auf den tatsächlichen Betrieb der Technologie und dessen Übereinstimmung mit der Betriebsgenehmigung, den Emissionsgrenzwerten, der Betriebsordnung, der Emissionsmessung und den Betriebsaufzeichnungen. Vor der Kontrolle empfiehlt es sich außerdem, Änderungen der Technologie, die Abluftkamine, Filteranlagen, Betriebsparameter und die über ISPOP gemeldeten Daten zu prüfen."
 author: Ing. František Hezina

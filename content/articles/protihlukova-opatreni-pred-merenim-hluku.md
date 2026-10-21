@@ -1,5 +1,5 @@
 ---
-title: "Protihluková opatření před měřením hluku: co pomůže"
+title: "Protihluková opatření před měřením hluku"
 slug: protihlukova-opatreni-pred-merenim-hluku
 excerpt: Jak určit hlavní zdroj hluku a zvolit účinné opatření před měřením.
   Praktický přehled pro provozovny, VZT, kompresory a další technologie.

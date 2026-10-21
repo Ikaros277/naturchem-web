@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-3-.webp
-title: "Kältebelastung in Kühlhäusern, Tiefkühlräumen und unbeheizten Hallen: Was der Arbeitgeber nachweisen muss"
+title: "Kältebelastung: Messung und Nachweise"
 slug: chladova-zatez-na-pracovisti
 excerpt: "Arbeiten in einem Kühlraum, Tiefkühlraum oder einer unbeheizten Halle können die Messung der mikroklimatischen Bedingungen, eine Anpassung des Arbeitsregimes, Schutzkleidung, Sicherheitspausen und die Berücksichtigung des Faktors Kältebelastung bei der Kategorisierung von Arbeiten erfordern. Entscheidend sind Temperatur, Luftströmung, der Energiebedarf der Arbeit, die Dauer der Exposition und der Wechsel zwischen Aufenthalt in Wärme und Kälte."
 author: Ing. František Hezina

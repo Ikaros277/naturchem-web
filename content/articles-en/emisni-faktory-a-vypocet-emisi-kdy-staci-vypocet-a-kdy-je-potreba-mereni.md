@@ -1,5 +1,5 @@
 ---
-title: "Emission factors and emission calculation: when calculation is enough and when measurement is required"
+title: "Emission calculation: when it is enough"
 slug: emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni
 excerpt: Emissions can in some cases be determined by calculation, for example using an emission factor, mass balance, specific production emission, or data on fuel, raw material, and solvent consumption. Calculation is not always enough, however. If a source has an obligation for authorised emission measurement or compliance with an emission limit must be demonstrated, measurement cannot simply be replaced by an approximate calculation.
 author: Ing. František Hezina

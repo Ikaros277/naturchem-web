@@ -1,5 +1,5 @@
 ---
-title: "Vyjmenovaný stacionární zdroj: jak poznat, zda potřebujete povolení provozu"
+title: "Vyjmenovaný zdroj: povolení provozu"
 slug: vyjmenovany-stacionarni-zdroj-povoleni-provozu
 heroImage: /hero/generated-2026-10/povoleni-zdroje-clanek.webp
 excerpt: Instalujete nový kotel, dieselagregát, lakovnu, brusírnu, svařovací

@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-23.-7.-2026-16_28_56.webp
-title: "Heat stress in the workplace: when measurement is required and how the permissible working time is determined"
+title: "Heat stress: measurement and work time"
 slug: tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace
 excerpt: "High temperatures in a production hall, work at a furnace or summer operation at an outdoor workplace may require heat stress measurement and the determination of the permissible working time, safety breaks and protective drinks. The result also depends on the energy demand of the work, work clothing, radiant heat, air movement and shift length."
 author: Ing. František Hezina

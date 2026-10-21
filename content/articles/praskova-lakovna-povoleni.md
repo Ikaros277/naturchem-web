@@ -1,5 +1,5 @@
 ---
-title: "Prášková lakovna: povolení, měření TZL, filtrace a provozní řád"
+title: "Prášková lakovna: povolení, měření a filtrace"
 slug: praskova-lakovna-povoleni
 excerpt: Práškové lakování se z hlediska ochrany ovzduší posuzuje jako
   vyjmenovaný stacionární zdroj pod kódem 9.11 „Nanášení práškových plastů“.

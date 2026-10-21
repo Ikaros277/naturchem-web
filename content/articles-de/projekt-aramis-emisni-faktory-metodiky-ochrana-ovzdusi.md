@@ -1,6 +1,6 @@
 ---
 
-title: "ARAMIS-Projekt: Was neue Emissionsfaktoren und Methoden für die Luftschutzpraxis bedeuten können"
+title: "ARAMIS: Emissionsfaktoren und Methoden"
 slug: projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi
 excerpt: Das ARAMIS-Projekt bringt neue professionelle Grundlagen für die Bewertung der Luftqualität, Emissionsbilanzen, Ausbreitungsmodellierung, Identifizierung von Schadstoffquellen und Emissionsberechnungen. Für Betreiber, Planer, Investoren und Kommunen sind insbesondere Aussagen zu Emissionsfaktoren, Baustaub, Recyclingleitungen, Treibhausgasen und Quellenbedeutung nach dem Luftschutzgesetz von Bedeutung.
 author: Ing. František Hezina

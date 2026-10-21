@@ -1,6 +1,5 @@
 ---
-title: "Deponie materiálu v areálu: kdy je potřeba povolení, rozptylová studie
-  nebo odborný posudek"
+title: "Deponie materiálu: povolení, studie a posudky"
 slug: deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek
 excerpt: Skladování sypkých materiálů v areálu může být z pohledu ochrany
   ovzduší problém, i když nejde o komín, filtr nebo výrobní technologii.

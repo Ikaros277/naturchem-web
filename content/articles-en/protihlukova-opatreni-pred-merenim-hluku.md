@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp
-title: "Noise control measures before noise measurement: what helps"
+title: "Noise control before a noise measurement"
 slug: protihlukova-opatreni-pred-merenim-hluku
 excerpt: "How to identify the main noise source and choose an effective measure before measurement. A practical overview for premises, ventilation systems, compressors and other technologies."
 author: Ing. František Hezina

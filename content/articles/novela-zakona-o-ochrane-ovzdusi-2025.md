@@ -1,6 +1,5 @@
 ---
-title: "Novela zákona o ochraně ovzduší 2025: co se mění pro provozovatele
-  zdrojů emisí"
+title: "Novela ochrany ovzduší 2025: změny"
 slug: novela-zakona-o-ochrane-ovzdusi-2025
 excerpt: Novela zákona o ochraně ovzduší provedená zákonem č. 42/2025 Sb.
   přináší řadu praktických změn pro provozovatele stacionárních zdrojů emisí.

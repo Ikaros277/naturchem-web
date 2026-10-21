@@ -1,6 +1,5 @@
 ---
-title: "Skladování chemických látek a směsí: co musí mít firma v pořádku před
-  kontrolou"
+title: "Skladování chemikálií: příprava na kontrolu"
 slug: skladovani-chemickych-latek-smesi-kontrola
 heroImage: /hero/generated-2026-10/skladovani-chemie.webp
 excerpt: Máte ve výrobě barvy, ředidla, lepidla, kyseliny, louhy, oleje, čisticí

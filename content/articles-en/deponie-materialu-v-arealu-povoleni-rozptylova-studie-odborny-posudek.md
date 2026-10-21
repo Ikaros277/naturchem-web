@@ -1,5 +1,5 @@
 ---
-title: "Material stockpiles on site: when is a permit, dispersion study, or expert opinion needed?"
+title: "Material stockpiles: permit, study, report"
 slug: deponie-materialu-v-arealu-povoleni-rozptylova-studie-odborny-posudek
 excerpt: Storing bulk materials on site can be an air protection issue even when there is no stack, filter, or production technology involved. What matters is what is stored, on what area, how the material is handled, whether dust arises, and whether the area is actually covered by the operating permit. For larger or dusty stockpiles, an operating permit, dispersion study, expert opinion, or update of operating rules may be required.
 author: Ing. František Hezina

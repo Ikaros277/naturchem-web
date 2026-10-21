@@ -1,5 +1,5 @@
 ---
-title: 'EIA project notification: what it is and when a business needs it before construction or a new operation'
+title: "EIA notification: what it is, when needed"
 slug: oznameni-zameru-eia-co-to-je-a-kdy-je-potreba
 excerpt: 'Project notification is an expert supporting document with which a business, investor, or municipality initiates the process of assessing the environmental impacts of a planned project. It is typically addressed for industrial operations, recycling facilities, warehouse sites, energy sources, agricultural operations, transport structures, mining, waste facilities, or major changes to existing operations. The aim of notification is not to permit construction, but to describe the project, its capacities, location, and expected impacts so that the competent authority can decide whether further EIA assessment is needed, or whether the project will not be assessed further after screening procedure.'
 author: Ing. František Hezina

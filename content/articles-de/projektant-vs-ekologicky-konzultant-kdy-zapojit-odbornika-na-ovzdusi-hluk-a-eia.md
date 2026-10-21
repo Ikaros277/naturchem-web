@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/projektant-konzultant.webp
 
-title: "Planer vs. Umweltberater: Wann sollte ein Luft-, Lärm- und UVP-Spezialist hinzugezogen werden?"
+title: "Planer und Umweltberater: Zusammenarbeit"
 slug: projektant-vs-ekologicky-konzultant-kdy-zapojit-odbornika-na-ovzdusi-hluk-a-eia
 excerpt: "Bei industriellen und technischen Projekten reicht es nicht aus, nur den Gebäude- und Technologieteil zu lösen. Bereits in einer frühen Phase können Abgasplatzierung, Lärmquellen, Verkehrswege, Schutzrückschläge und Betriebskapazität über den Ausgang entscheiden. „Ein Umweltberater hilft dem Planer bei der Überprüfung, welche Dokumentation für Luft, Lärm, UVP, JES und Behördenkommunikation erforderlich ist, damit das Projekt später nicht unnötig überarbeitet werden muss."
 author: Ing. František Hezina

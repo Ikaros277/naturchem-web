@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/provozni-rad-clanek.webp
-title: "Operating Rules for an Air Pollution Source: When They Are Mandatory and Who Approves Them"
+title: "Operating rules: duty and approval"
 slug: provozni-rad-zdroje-znecistovani-ovzdusi
 excerpt: "The operating rules set out the binding conditions for operating a selected air pollution source, the rules for operating and inspecting the equipment, procedures in the event of faults and measures to reduce emissions. The obligation to prepare operating rules does not apply to all listed sources. What matters is how the source is classified in Annex 2 to the Air Protection Act."
 author: Ing. František Hezina

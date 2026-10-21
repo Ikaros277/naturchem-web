@@ -1,5 +1,5 @@
 ---
-title: 'Summary operating records 2026: what must the operator check before submission?'
+title: "Operating records 2026: check before filing"
 slug: souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim
 excerpt: 'Summary operating records are not just an administrative form in ISPOP. Data in the report must match the operating permit, actual source operation, emission measurements, emission calculations, fuel and raw material consumptions, and any fee obligations. Errors in summary operating records may appear during inspection, permit change, or verification of annual emissions.'
 author: Ing. František Hezina

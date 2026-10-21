@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/kotelna-clanek.webp
-title: 'Boiler plant and gas boiler: when are CO and NOx emissions measured?'
+title: "Gas boilers: CO and NOx measurements"
 slug: kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox
 excerpt: |
   For boiler plants and gas boilers, practice often raises the question of whether measurement of carbon monoxide and nitrogen oxide emissions is mandatory. What matters is not only that it is a gas boiler, but especially total rated thermal input, fuel type, source classification, and operating permit conditions. A smaller source may have different obligations from a listed stationary source under the Air Protection Act.

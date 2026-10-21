@@ -1,6 +1,5 @@
 ---
-title: "Kolaudace výrobní haly nebo provozovny: jaká měření může požadovat KHS a
-  co připravit"
+title: "Kolaudace haly: měření pro KHS a podklady"
 slug: kolaudace-vyrobni-haly-provozovny-khs-mereni
 heroImage: /hero/generated-2026-10/kolaudace-haly-clanek.webp
 excerpt: Dokončujete výrobní halu, sklad, dílnu nebo jinou provozovnu a

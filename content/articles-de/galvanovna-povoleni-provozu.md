@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-14_35_37.webp
-title: "Galvanik und Beizerei: Emissionen, Luft am Arbeitsplatz, Absaugung und Betriebsgenehmigung"
+title: "Galvanik und Beizerei: Genehmigung"
 slug: galvanovna-povoleni-provozu
 excerpt: "Galvanisieren, Beizen, Phosphatieren und andere chemische oder elektrolytische Oberflächenbehandlungen können eine genehmigungspflichtige (gelistete) stationäre Quelle der Luftverunreinigung darstellen. Entscheidend sind vor allem das projektierte Volumen der Prozessbäder, die verwendeten chemischen Stoffe und die Art der Absaugung. Neben den Emissionen in die Außenluft muss der Betreiber auch die Exposition der Beschäftigten gegenüber Säuren, Metallen und anderen Stoffen in der Luft am Arbeitsplatz berücksichtigen."
 author: Ing. František Hezina

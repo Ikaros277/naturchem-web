@@ -1,6 +1,5 @@
 ---
-title: "Tepelná zátěž na pracovišti: kdy je nutné měření a jak se stanoví
-  přípustná doba práce"
+title: "Tepelná zátěž: měření a přípustná doba práce"
 slug: tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace
 excerpt: Vysoká teplota ve výrobní hale, práce u pece nebo letní provoz na
   venkovním pracovišti mohou vyžadovat měření tepelné zátěže, stanovení

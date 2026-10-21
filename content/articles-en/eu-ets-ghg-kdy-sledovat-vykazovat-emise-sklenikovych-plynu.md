@@ -1,5 +1,5 @@
 ---
-title: "EU ETS and GHG: when an operator must monitor and report greenhouse gas emissions"
+title: "EU ETS and GHG: monitoring and reporting"
 slug: eu-ets-ghg-kdy-sledovat-vykazovat-emise-sklenikovych-plynu
 excerpt: "Does your operation consume large quantities of natural gas or other fuels, do you run a boiler plant, a heating plant, a furnace or an energy-intensive production process? Then it is advisable to verify whether the installation falls within the EU ETS. For installations included in the system, ordinary records of fuel consumption are not enough. The operator needs a greenhouse gas emissions permit and an approved monitoring plan, must determine emissions every year, have them verified by an accredited verifier and then surrender the corresponding quantity of emission allowances. Not every carbon footprint reporting exercise is the EU ETS, however – these are two different things."
 author: Ing. František Hezina

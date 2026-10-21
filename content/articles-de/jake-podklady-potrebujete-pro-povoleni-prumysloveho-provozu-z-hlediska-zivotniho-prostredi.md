@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/podklady-prumyslovy-provoz.webp
 
-title: Welche Unterlagen benötigen Sie, um einen Industriebetrieb aus umweltrechtlicher Sicht zu genehmigen?
+title: "Betriebsgenehmigung: nötige Unterlagen"
 slug: jake-podklady-potrebujete-pro-povoleni-prumysloveho-provozu-z-hlediska-zivotniho-prostredi
 excerpt: „Die Genehmigung eines Industriebetriebs aus Umweltgesichtspunkten betrifft in der Regel nicht nur einen Bereich. Abhängig von der Art des Projekts kann es erforderlich sein, Luftqualität, Lärm, Abfall, Wasser, UVP, das einheitliche Umweltgutachten, Betriebsvorschriften, Gutachten und Ausbreitungsstudien zu bewerten. „Für Investoren und Planer ist es wichtig, die Dokumentation rechtzeitig zu erstellen, denn Fehler bei Kapazitäten, Abgasen, Verkehr oder Betriebsführung fallen oft erst im Verfahren vor den Behörden auf.“
 author: Ing. František Hezina

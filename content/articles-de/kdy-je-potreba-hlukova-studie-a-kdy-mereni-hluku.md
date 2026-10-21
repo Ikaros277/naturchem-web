@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/studie-nebo-mereni-hluku.webp
 
-title: Wann ist eine Lärmstudie erforderlich und wann ist eine Lärmmessung erforderlich?
+title: "Lärmstudie oder Lärmmessung?"
 slug: kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku
 excerpt: „Eine Lärmstudie und eine Lärmmessung sind nicht dasselbe.“ Eine Lärmstudie bewertet in der Regel vorab durch Berechnung, welchen Lärm ein Projekt, eine Technologie, eine Anlage, ein Transportmittel, eine Wärmepumpe oder eine HVAC-Einheit nach der Umsetzung verursachen wird. Die Lärmmessung hingegen überprüft den tatsächlichen Zustand an einem bestimmten Ort und zu einer bestimmten Zeit. Die richtige Wahl hängt davon ab, ob das Projekt vorbereitet, in Auftrag gegeben oder betrieben wird oder ob eine Beschwerde oder eine Anforderung einer regionalen Gesundheitsbehörde behandelt wird.“
 author: Ing. František Hezina

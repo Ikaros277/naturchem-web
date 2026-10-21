@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-16.-7.-2026-09_47_59.webp
-title: "Unified Environmental Opinion (JES): Documents for Faster Proceedings"
+title: "Unified environmental opinion: documents"
 slug: jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni
 excerpt: "What to prepare for a JES application, why proceedings get delayed and how to align the documents for air, noise, water, waste, agricultural land, nature and a possible EIA."
 author: Ing. František Hezina

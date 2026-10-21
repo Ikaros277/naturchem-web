@@ -1,6 +1,5 @@
 ---
-title: "Noční provoz výrobního areálu: které zdroje bývají rozhodující pro
-  hygienický limit"
+title: "Noční provoz areálu: zdroje hluku a limity"
 slug: hluk-nocni-provoz-arealu
 excerpt: Noční provoz bývá z hlediska hluku podstatně náročnější než provoz ve
   dne. U běžných stacionárních zdrojů se v chráněném venkovním prostoru staveb

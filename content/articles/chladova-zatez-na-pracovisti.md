@@ -1,6 +1,5 @@
 ---
-title: "Chladová zátěž v chladírnách, mrazírnách a nevytápěných halách: co musí
-  zaměstnavatel doložit"
+title: "Chladová zátěž: měření na pracovišti"
 slug: chladova-zatez-na-pracovisti
 excerpt: Práce v chladírně, mrazírně nebo nevytápěné hale může vyžadovat měření
   mikroklimatických podmínek, úpravu pracovního režimu, ochranný oděv,

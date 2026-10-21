@@ -1,7 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/rozpoustedla-voc.webp
-title: "Měření rozpouštědel a VOC v pracovním ovzduší: jak vybrat látky z
-  bezpečnostních listů"
+title: "Měření rozpouštědel a VOC na pracovišti"
 slug: mereni-rozpoustedel-pracovniho-ovzdusi
 excerpt: >
   Bezpečnostní list barvy, lepidla, odmašťovadla nebo čisticího prostředku může

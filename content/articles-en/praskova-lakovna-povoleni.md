@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-14_33_50.webp
-title: "Powder coating shop: permit, TSP measurement, filtration and operating rules"
+title: "Powder coating shop: permit and TSP tests"
 slug: praskova-lakovna-povoleni
 excerpt: "From the air protection perspective, powder coating is assessed as a listed stationary source under code 9.11 “Application of powder plastics”. The operator needs an operating permit and operating rules. The conditions for emission measurement depend on the designed consumption of powder plastics, the extraction method, curing and the specific conditions set by the regional authority."
 author: Ing. František Hezina

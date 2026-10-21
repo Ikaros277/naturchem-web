@@ -1,6 +1,6 @@
 ---
 
-title: "Messung der Arbeitsplatzbeleuchtung: Wann KHS es verlangt und wann es für die Baugenehmigung benötigt wird"
+title: "Beleuchtungsmessung: KHS und Abnahme"
 slug: mereni-osvetleni-pracoviste-khs-kolaudace
 excerpt: Ein Beleuchtungsmessbericht wird häufig für Baugenehmigungen, Nutzungsänderungen, KHS-Inspektion oder Überprüfung der Arbeitsplatzbedingungen benötigt. Es reicht nicht aus, dass neue Leuchten im Gebäude installiert werden. Entscheidend ist, ob die tatsächliche Beleuchtung dem Raumzweck, den visuellen Anforderungen der Arbeit, der Anordnung der Arbeitsplätze und den Anforderungen der Gesetzgebung und technischen Normen entspricht.
 author: Ing. František Hezina

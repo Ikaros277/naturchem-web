@@ -1,5 +1,5 @@
 ---
-title: "IPPC: kdy provoz potřebuje integrované povolení"
+title: "IPPC: kdy je nutné integrované povolení"
 slug: ippc-kdy-provoz-potrebuje-integrovane-povoleni
 excerpt: Integrované povolení se netýká každého průmyslového provozu. Řeší se
   hlavně u větších zařízení v energetice, odpadech, chemii, zpracování kovů,

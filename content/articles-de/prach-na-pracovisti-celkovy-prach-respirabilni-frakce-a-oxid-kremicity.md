@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/prach-frakce.webp
 
-title: "Arbeitsplatzstaub: Gesamtstaub, alveolengängige Fraktion und Siliziumdioxid"
+title: "Arbeitsplatzstaub: Fraktionen und Quarz"
 slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity
 excerpt: "Arbeitsplatzstaub ist nicht nur sichtbare Verschmutzung in der Luft oder auf dem Boden. Für den Gesundheitsschutz der Beschäftigten ist entscheidend, welcher Staub entsteht und welche Partikelgrößen er enthält."
 author: Ing. František Hezina

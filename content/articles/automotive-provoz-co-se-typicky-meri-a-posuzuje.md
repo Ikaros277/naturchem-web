@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/automotive-clanek.webp
-title: "Automobilový provoz: co se typicky měří a posuzuje?"
+title: "Automotive: měření a studie pro výrobu"
 slug: automotive-provoz-co-se-typicky-meri-a-posuzuje
 excerpt: Automobilové provozy kombinují řadu technologií, které mohou mít vliv na
   pracovní prostředí, emise do ovzduší i hluk v okolí. Typicky se řeší lakování,

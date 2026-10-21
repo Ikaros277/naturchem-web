@@ -1,5 +1,5 @@
 ---
-title: 'Tonal components of noise and Czech legislation'
+title: "Tonal noise components and Czech legislation"
 slug: tonove-slozky-hluku-ceska-legislativa-provozovatel
 excerpt: 'The tonal component of noise is important for operators because it worsens noise assessment even when the overall level in dB does not appear high at first glance. It typically concerns fans, compressors, pumps, cooling, cogeneration units, transformers, ventilation, extraction, heat pumps, or production technologies. If a tonal component is demonstrated, the hygiene limit for most stationary sources is tightened by 5 dB. The operator must therefore address not only the overall loudness of equipment but also its frequency character.'
 author: NATURCHEM

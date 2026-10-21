@@ -1,6 +1,5 @@
 ---
-title: "Bezpečnostní listy v provozu: co z nich musí zaměstnavatel skutečně
-  převést do praxe"
+title: "Bezpečnostní listy: povinnosti zaměstnavatele"
 slug: bezpecnostni-listy-v-provozu-co-musi-zamestnavatel
 excerpt: Bezpečnostní list není dokument, který stačí uložit do šanonu nebo na
   firemní server. Pokud firma používá barvy, lepidla, čisticí prostředky,

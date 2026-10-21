@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/04a60a3f-1db5-4ebc-9e2b-5eb6e5a20206.webp
-title: "Lärmschutzmaßnahmen vor der Lärmmessung: Was hilft"
+title: "Lärmschutz vor der Lärmmessung"
 slug: protihlukova-opatreni-pred-merenim-hluku
 excerpt: "Wie die Hauptlärmquelle bestimmt und vor der Messung eine wirksame Maßnahme gewählt wird. Ein praktischer Überblick für Betriebsstätten, Lüftungsanlagen, Kompressoren und weitere Technologien."
 author: Ing. František Hezina

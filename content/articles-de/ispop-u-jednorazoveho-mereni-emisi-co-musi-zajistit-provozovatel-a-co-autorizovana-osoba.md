@@ -1,6 +1,6 @@
 ---
 
-title: "ISPOP zur einmaligen Emissionsmessung: Was der Betreiber sicherstellen muss und was der Berechtigte tut"
+title: "ISPOP bei Emissionsmessung: Pflichten"
 slug: ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba
 excerpt: Ab 2026 umfasst der ISPOP für die einmalige Emissionsmessung nicht nur den Messtermin, sondern auch die Meldung des Berichts. Der Betreiber muss für die korrekte Bekanntgabe des Messtermins sorgen und die Quelle, Abgase und Betriebsbedingungen vorbereiten. Die autorisierte Person führt die Messung durch und meldet den Bericht im ISPOP. Wird das Verfahren vernachlässigt, kann es zu Problemen bei der Anerkennung der Bemessung zur Erfüllung der gesetzlichen Verpflichtung kommen.
 author: Ing. František Hezina

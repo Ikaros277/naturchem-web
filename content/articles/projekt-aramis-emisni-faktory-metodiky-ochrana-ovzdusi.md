@@ -1,6 +1,5 @@
 ---
-title: "Projekt ARAMIS: co mohou nové emisní faktory a metodiky znamenat pro
-  praxi v ochraně ovzduší"
+title: "Projekt ARAMIS: emisní faktory a metodiky"
 slug: projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi
 excerpt: Projekt ARAMIS přináší nové odborné podklady pro hodnocení kvality
   ovzduší, emisní bilance, rozptylové modelování, identifikaci zdrojů znečištění

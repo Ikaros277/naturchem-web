@@ -1,9 +1,9 @@
 ---
-title: "Cena hlukové studie: co ovlivňuje nabídku a jaké podklady poslat"
+title: "Cena hlukové studie: rozsah a podklady"
 slug: cena-hlukove-studie-podklady-nabidka
 excerpt: "Cenu hlukové studie určuje rozsah zdrojů, provozních režimů, variant a potřebných podkladů. Jak připravit zadání a porovnat nabídky pro stejný projekt."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-11-02"
 topic: Hluk
 heroImage: /uploads/poradna-2026/hlukova-studie-cena.webp

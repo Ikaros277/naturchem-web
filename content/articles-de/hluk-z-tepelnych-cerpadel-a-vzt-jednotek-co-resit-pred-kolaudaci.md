@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/tepelna-cerpadla-clanek.webp
 
-title: "Lärm von Wärmepumpen und HVAC-Geräten: Was ist vor der Fertigstellung des Gebäudes zu beachten?"
+title: "Wärmepumpen und Lüftung: Lärm"
 slug: hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci
 excerpt: "Wärmepumpen, Außenklimaanlagen, auf dem Dach montierte HLK-Geräte, Ventilatoren und Kältemaschinen gehören zu den häufigsten Lärmquellen, mit denen vor der Fertigstellung des Gebäudes und nach der Inbetriebnahme des Gebäudes umgegangen wird.“ „Das Problem entsteht meist nicht nur durch den Geräuschpegel der Geräte selbst, sondern auch durch deren Standort, den Nachtbetrieb, Reflexionen an Fassaden, den gleichzeitigen Betrieb mehrerer Geräte und die Entfernung zu den nächstgelegenen Schutzgebieten."
 author: Ing. František Hezina

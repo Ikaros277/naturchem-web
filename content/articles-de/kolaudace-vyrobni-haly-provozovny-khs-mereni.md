@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-10/kolaudace-haly-clanek.webp
-title: "Abnahme einer Produktionshalle oder Betriebsstätte: Welche Messungen die KHS verlangen kann und was Sie vorbereiten sollten"
+title: "Abnahme der Halle: Messungen für die KHS"
 slug: kolaudace-vyrobni-haly-provozovny-khs-mereni
 excerpt: "Sie stellen eine Produktionshalle, ein Lager, eine Werkstatt oder eine andere Betriebsstätte fertig und möchten sie in Nutzung nehmen? Eine der häufigsten Fragen lautet, welche Messungen der Hygienebehörde vorzulegen sind. Eine allgemeingültige Liste gibt es nicht. Entscheidend sind die Stellungnahme der KHS, die tatsächliche Ausführung des Gebäudes, die installierte Technologie und die Arbeiten, die die Beschäftigten ausführen werden. In der Praxis werden am häufigsten Beleuchtung, Lärm, Lüftung, Mikroklima, Staub und chemische Stoffe behandelt."
 author: Ing. František Hezina

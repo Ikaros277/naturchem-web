@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/vyzva-khs.webp
-title: "Aufforderung der KHS zur Messung der Arbeitsumgebung erhalten: So legen Sie den richtigen Umfang fest"
+title: "KHS-Aufforderung: Umfang der Messung"
 slug: vyzva-khs-mereni-pracovniho-prostredi
 excerpt: "Haben Sie eine Messaufforderung der KHS erhalten? Bereiten Sie die Aufforderung, eine Liste der Arbeitsplätze und eine Beschreibung der Tätigkeiten vor. Wir erklären, wonach sich der Messumfang richtet."
 author: Ing. František Hezina

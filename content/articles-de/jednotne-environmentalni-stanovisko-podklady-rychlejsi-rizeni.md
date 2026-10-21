@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-16.-7.-2026-09_47_59.webp
-title: "Einheitliche Umweltstellungnahme (JES): Unterlagen für schnellere Verfahren"
+title: "Einheitliche Umweltstellungnahme: Unterlagen"
 slug: jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni
 excerpt: "Was für einen JES-Antrag vorzubereiten ist, warum sich das Verfahren verzögert und wie sich die Unterlagen zu Luft, Lärm, Wasser, Abfall, landwirtschaftlichem Bodenfonds, Natur und einer möglichen UVP aufeinander abstimmen lassen."
 author: Ing. František Hezina

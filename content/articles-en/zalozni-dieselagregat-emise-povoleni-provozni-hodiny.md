@@ -1,5 +1,5 @@
 ---
-title: "Backup diesel generator: when it is only backup and when it is already a regular emission source"
+title: "Backup diesel: backup or regular source?"
 slug: zalozni-dieselagregat-emise-povoleni-provozni-hodiny
 excerpt: A backup diesel generator is often acquired for the event of a power outage. It is typically found at data centres, hospitals, waterworks, industrial sites, office buildings, or critical infrastructure facilities. From the perspective of air protection, however, it is not decisive that the equipment remains switched off most of the year. What matters is whether it truly serves as a backup source, how many hours it runs per year, how it is tested, what its thermal input is, where the exhaust is located, and what is stated in the operating permit.
 author: Ing. František Hezina

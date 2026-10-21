@@ -1,5 +1,5 @@
 ---
-title: "Manipulace se sypkými materiály: kdy se z plochy stává vyjmenovaný zdroj"
+title: "Sypké materiály: zařazení a povolení zdroje"
 slug: manipulace-se-sypkymi-materialy-kod-12-1-deponie-povoleni
 excerpt: Plocha se zeminou, kamenivem, recyklátem, sutí nebo jiným sypkým
   materiálem nemusí být jen běžnou skladovací plochou. Pokud jde o aktivní

@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-4-.webp
-title: "Nachtbetrieb eines Produktionsareals: Welche Quellen für den hygienischen Grenzwert oft entscheidend sind"
+title: "Nachtbetrieb: Lärmquellen und Grenzwerte"
 slug: hluk-nocni-provoz-arealu
 excerpt: "Der Nachtbetrieb ist hinsichtlich des Lärms wesentlich anspruchsvoller als der Betrieb am Tag. Bei üblichen stationären Quellen wird im geschützten Außenraum von Gebäuden in der Regel ein Grenzwert von 40 dB beurteilt, bei nachgewiesener Tonhaltigkeit 35 dB. Entscheidend muss dabei nicht die Hauptproduktionslinie sein. Oft handelt es sich um einen Dachventilator, die Kühlung, einen Kompressor, einen Auslass, offene Tore oder den Umschlag im Außenbereich."
 author: Ing. František Hezina

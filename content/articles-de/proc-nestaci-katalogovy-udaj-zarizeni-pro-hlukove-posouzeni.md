@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/katalogovy-hluk.webp
 
-title: Warum reicht ein Gerätekatalogwert für die Lärmbeurteilung nicht aus?
+title: "Warum Katalogwerte für Lärm nicht genügen"
 slug: proc-nestaci-katalogovy-udaj-zarizeni-pro-hlukove-posouzeni
 excerpt: „Ein Katalogwert für Gerätelärm ist eine nützliche Orientierungshilfe, reicht aber für eine professionelle Lärmbeurteilung allein meist nicht aus.“ Entscheidend ist, ob der Hersteller den Schallleistungspegel oder den Schalldruckpegel angibt, in welchem ​​Abstand der Wert ermittelt wurde, unter welchem ​​Betriebsregime, mit welcher Richtwirkung und mit welcher Unsicherheit. „Für Industriebetriebe ist dies von entscheidender Bedeutung, insbesondere wenn die Ausrüstung nachts läuft oder sich in der Nähe von Wohngebieten befindet.“
 author: Ing. František Hezina

@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-10/povoleni-zdroje-clanek.webp
-title: "Genehmigungspflichtige stationäre Quelle: So erkennen Sie, ob Sie eine Betriebsgenehmigung benötigen"
+title: "Gelistete Quelle: Genehmigung nötig?"
 slug: vyjmenovany-stacionarni-zdroj-povoleni-provozu
 excerpt: "Installieren Sie einen neuen Kessel, ein Dieselaggregat, eine Lackiererei, eine Schleiferei, einen Schweißarbeitsplatz, eine Recyclinganlage oder eine andere Technologie und wissen nicht, ob Sie nach dem Luftschutzgesetz eine Betriebsgenehmigung benötigen? Die Grundfrage lautet, ob es sich um eine in Anlage Nr. 2 des Gesetzes Nr. 201/2012 Sb. aufgeführte stationäre Quelle handelt. Entscheidend sind die Art der Technologie und ihre Auslegungsparameter. Eine fehlerhafte Einstufung kann bedeuten, dass dem Betreiber die erforderliche Genehmigung, die Emissionsmessung oder die Betriebsordnung fehlt."
 author: Ing. František Hezina

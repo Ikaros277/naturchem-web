@@ -1,6 +1,5 @@
 ---
-title: "Souhrnná provozní evidence 2026: co musí provozovatel zkontrolovat před
-  odesláním"
+title: "Souhrnná provozní evidence 2026"
 slug: souhrnna-provozni-evidence-2026-co-musi-provozovatel-zkontrolovat-pred-odeslanim
 excerpt: Souhrnná provozní evidence není jen administrativní formulář v ISPOP.
   Údaje v hlášení musí odpovídat povolení provozu, skutečnému provozu zdroje,

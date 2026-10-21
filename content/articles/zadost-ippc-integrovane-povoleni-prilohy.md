@@ -1,9 +1,9 @@
 ---
-title: "Žádost o integrované povolení IPPC: jak připravit přílohy před podáním"
+title: "Žádost IPPC: příprava podkladů a příloh"
 slug: zadost-ippc-integrovane-povoleni-prilohy
 excerpt: "Potřebujete zpracovat žádost IPPC? Připravte jednotný popis zařízení, kapacity, provozní toky a související dokumenty. Co dodat zpracovateli před podáním."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-11-30"
 topic: EIA a povolování
 heroImage: /uploads/poradna-2026/zadost-ippc.webp

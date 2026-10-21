@@ -1,5 +1,5 @@
 ---
-title: "Protiprašná opatření na stavbě: co má být v dokumentaci a co může chtít úřad"
+title: "Protiprašná opatření na stavbě: dokumentace"
 slug: protiprasna-opatreni-na-stavbe-dokumentace-urad
 excerpt: Prašnost ze stavby, demolice, zemních prací nebo dopravy po staveništi
   může být problémem už ve fázi povolování. Úřad může chtít konkrétní a

@@ -1,5 +1,5 @@
 ---
-title: "Isocyanates in production: training, safety data sheets, and workplace air measurement"
+title: "Isocyanates: training and air measurement"
 slug: izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi
 excerpt: Isocyanates appear in operations mainly in PUR systems, two-component coatings, hardeners, adhesives, foams, sealants, and some repair or maintenance activities. The operator must know which products contain isocyanates, whether mandatory REACH training applies, what requirements are stated in safety data sheets, and whether employee exposure needs to be verified by workplace air measurement.
 author: Ing. František Hezina

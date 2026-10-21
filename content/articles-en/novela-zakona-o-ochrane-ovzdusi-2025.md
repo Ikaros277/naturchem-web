@@ -1,5 +1,5 @@
 ---
-title: "Amendment to the Air Protection Act 2025: what is changing for emission source operators"
+title: "Air Protection Act 2025: what changes"
 slug: novela-zakona-o-ochrane-ovzdusi-2025
 excerpt: The amendment to the Air Protection Act carried out by Act No. 42/2025 Coll. brings a number of practical changes for operators of stationary emission sources. It concerns source classification, aggregation rules, content of operating permits, emission measurement, monitoring of operating parameters, dust, minimum distances, fees, and records. We recommend that operators verify whether their permit, operating rule, measurement obligations, and operating records comply with current requirements.
 author: Naturchem s.r.o.

@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/priprava-mereni-emisi.webp
-title: "So bereiten Sie eine Quelle auf die bevollmächtigte Emissionsmessung vor, damit die Messung nicht wiederholt werden muss"
+title: "Quelle auf die Emissionsmessung vorbereiten"
 slug: priprava-na-mereni-emisi
 excerpt: "Planen Sie eine bevollmächtigte Emissionsmessung? Bereiten Sie die Genehmigung, das letzte Protokoll und Informationen zum Betrieb vor. Prüfen Sie vor dem Termin die Meldung in ISPOP und den Zugang zur Messstelle."
 author: Ing. František Hezina

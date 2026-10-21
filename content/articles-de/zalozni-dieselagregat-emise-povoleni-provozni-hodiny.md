@@ -1,5 +1,5 @@
 ---
-title: "Backup-Dieselaggregat: Wann es nur Ersatz ist und wann es bereits eine reguläre Emissionsquelle ist"
+title: "Dieselaggregat: Notstrom oder Dauerbetrieb?"
 slug: zalozni-dieselagregat-emise-povoleni-provozni-hodiny
 excerpt: Ein Backup-Dieselaggregat wird häufig für den Fall eines Stromausfalls angeschafft. Typischerweise findet man es in Rechenzentren, Krankenhäusern, Wasserwerken, Industriearealen, Verwaltungsgebäuden oder Objekten kritischer Infrastruktur. Aus Sicht des Luftschutzes ist jedoch nicht entscheidend, dass die Anlage den größten Teil des Jahres abgeschaltet ist. Wichtig ist, ob sie tatsächlich als Backup-Quelle dient, wie viele Stunden sie jährlich läuft, wie sie getestet wird, welchen Wärmeinput sie hat, wo der Abgasweg liegt und was in der Betriebserlaubnis steht.
 author: Ing. František Hezina

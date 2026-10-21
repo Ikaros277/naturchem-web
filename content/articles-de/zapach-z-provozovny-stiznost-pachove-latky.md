@@ -1,5 +1,5 @@
 ---
-title: "Geruch aus einem Betrieb: Was bei einer Beschwerde zu tun ist und wie Geruchsstoffe beurteilt werden"
+title: "Geruchsbeschwerden aus Betrieben"
 slug: zapach-z-provozovny-stiznost-pachove-latky
 excerpt: "Eine Geruchsbeschwerde bedeutet nicht automatisch, dass der Betrieb gegen das Gesetz verstößt. Man sollte sie aber nicht unterschätzen. Geruch ist oft veränderlich, hängt von der Technologie, dem Wetter, der Betriebsweise und dem Abstand zur Wohnbebauung ab, und seine Ursache ist häufig schwerer zu finden als bei Lärm oder Staub. Der Betreiber sollte zunächst klären, wann der Geruch auftritt, woher er freigesetzt wird und ob der tatsächliche Betrieb der Genehmigung entspricht. Erst danach ist es sinnvoll, über eine Messung, eine fachliche Beurteilung oder eine technische Maßnahme zu entscheiden."
 author: Ing. František Hezina

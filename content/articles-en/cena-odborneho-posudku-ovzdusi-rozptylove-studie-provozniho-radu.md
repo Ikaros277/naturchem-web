@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-2-.webp
-title: "How much do an expert report, a dispersion study, operating rules and an operating permit cost?"
+title: "Costs: expert report, study, operating rules"
 slug: cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu
 excerpt: "The price of the documents for permitting an air pollution source depends on the type of technology, the number of sources and stacks, the extent of emissions and the quality of the available documentation. A simple gas boiler or a smaller paint shop requires a different scope of work than a production site with several technologies, filters and dozens of emission outlets. We provide an indicative overview of costs and an explanation of what a quotation should include."
 author: Ing. František Hezina

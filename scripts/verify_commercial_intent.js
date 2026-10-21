@@ -123,10 +123,20 @@ async function main() {
   const drafts = fs.readdirSync(path.join(root, "content/articles")).filter(file => file.endsWith(".md"))
     .map(file => ({ file, data: matter(fs.readFileSync(path.join(root, "content/articles", file), "utf8")).data }))
     .filter(({ data }) => data.status === "draft");
-  assert.equal(drafts.length, 12, "Retain the twelve expert-review drafts");
+  const plan = require("../content/editorial-plan-2026-10.json");
+  assert.equal(plan.expertApprovedOn, "2026-10-21", "Explicit owner approval, not automatic draft publication");
+  assert.equal(plan.articles.length, 12);
+  for (const item of plan.articles) {
+    const { data } = matter(fs.readFileSync(path.join(root, "content/articles", item.slug + ".md"), "utf8"));
+    assert.equal(data.status, "published", "Only these reviewed articles are approved: " + item.slug);
+    assert.equal(data.publishedAt, item.publishedAt, "Preserve the approved Monday: " + item.slug);
+    assert.ok(!indexes.listings.cs.some(article => article.slug === item.slug), "Future articles were not public before their dates");
+  }
+  const now = buildArticleIndexes(readCatalog(path.join(root, "content")), Date.parse("2026-10-21T12:00:00Z"));
+  assert.deepEqual(plan.articles.filter(item => now.listings.cs.some(article => article.slug === item.slug)).map(item => item.slug), [plan.articles[0].slug], "Publish only the first due article, not all twelve at once");
   for (const { file, data } of drafts) assert.ok(!indexes.listings.cs.some(article => article.slug === (data.slug ?? file.slice(0, -3))), "No draft in public indexes");
   assert.ok(!indexes.listings.cs.some(article => article.slug === "uhlikova-stopa-firmy-podklady-pro-odberatele"));
   assert.ok(!/use client|next\/image|useEffect|fetch\(/.test(fs.readFileSync(path.join(root, "src/lib/service-commercial-intent.ts"), "utf8")), "Static content without client JS or runtime requests");
-  console.log("PASS commercial intent: 7 concise offers, exact prefilled inquiries, 12 article paths, reference groups, translations and draft protection");
+  console.log("PASS commercial intent: 7 concise offers, exact prefilled inquiries, 12 article paths, approved weekly calendar, translations and generic draft/future protection");
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

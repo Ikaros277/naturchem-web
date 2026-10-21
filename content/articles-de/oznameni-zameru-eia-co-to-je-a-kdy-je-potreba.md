@@ -1,5 +1,5 @@
 ---
-title: 'EIA-Projektanzeige: Was sie ist und wann ein Unternehmen sie vor Bau oder neuem Betrieb benötigt'
+title: "EIA-Projektanzeige: wann sie nötig ist"
 slug: oznameni-zameru-eia-co-to-je-a-kdy-je-potreba
 excerpt: 'Die Projektanzeige ist ein fachliches Unterlagenwerk, mit dem ein Unternehmen, Investor oder eine Gemeinde das Verfahren zur Bewertung der Umweltauswirkungen eines geplanten Vorhabens einleitet. Sie wird typischerweise bei Industriebetrieben, Recyclinganlagen, Lagerarealen, Energiequellen, landwirtschaftlichen Betrieben, Verkehrsbauwerken, Bergbau, Abfallanlagen oder größeren Änderungen bestehender Betriebe behandelt. Ziel der Anzeige ist nicht die Baugenehmigung, sondern die Beschreibung des Vorhabens, seiner Kapazitäten, seines Standorts und der erwarteten Auswirkungen, damit die zuständige Behörde entscheiden kann, ob eine weitere EIA-Prüfung erforderlich ist oder ob das Vorhaben nach dem Screening-Verfahren nicht weiter bewertet wird.'
 author: Ing. František Hezina

@@ -858,6 +858,17 @@
       "width": 1536,
       "height": 1024
     },
+    "/uploads/poradna-2026/vibrace-vzv.webp": {
+      "base": "/hero/responsive-2026-10/image-a5aad11a4350",
+      "widths": [
+        192,
+        384,
+        640,
+        960
+      ],
+      "width": 1280,
+      "height": 720
+    },
     "/uploads/pxl_20260702_063317620.mp.webp": {
       "base": "/hero/responsive-2026-10/image-5e3b8b5fe5b7",
       "widths": [
@@ -1878,6 +1889,15 @@
       ],
       "width": 1536,
       "height": 1024
+    },
+    "/uploads/poradna-2026/vibrace-vzv.webp": {
+      "base": "/hero/responsive-2026-10/image-a5aad11a4350",
+      "widths": [
+        640,
+        1280
+      ],
+      "width": 1280,
+      "height": 720
     },
     "/uploads/pxl_20260702_063317620.mp.webp": {
       "base": "/hero/responsive-2026-10/image-5e3b8b5fe5b7",

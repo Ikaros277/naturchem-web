@@ -1,9 +1,9 @@
 ---
-title: "Měření mikroklimatu výrobního pracoviště: ukázka reálné zakázky"
+title: "Měření mikroklimatu ve výrobě"
 slug: mikroklima-vyrobni-pracoviste-realna-zakazka
 excerpt: "Měření mikroklimatu při údržbě forem u lisu a v dílně. Ukázka zakázky NATURCHEM: měřicí místa, sledované veličiny a podklady pro vyhodnocení."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2027-01-04"
 topic: Pracovní prostředí
 heroImage: /uploads/poradna-2026/mikroklima-realizace.webp

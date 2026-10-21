@@ -1,9 +1,9 @@
 ---
-title: "Uhlíková stopa firmy pro odběratele: jaká data připravit k výpočtu"
+title: "Uhlíková stopa firmy: podklady pro výpočet"
 slug: uhlikova-stopa-firmy-podklady-pro-odberatele
 excerpt: "Odběratel požaduje emisní data nebo uhlíkovou stopu? Nejdřív vyjasněte období, hranice výpočtu a metodiku. Checklist energií, paliv a dalších podkladů."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-11-16"
 topic: Legislativa
 heroImage: /uploads/poradna-2026/uhlikova-stopa-firmy.webp

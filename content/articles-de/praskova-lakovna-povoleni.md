@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-14_33_50.webp
-title: "Pulverbeschichtungsanlage: Genehmigung, Staubmessung (TZL), Filtration und Betriebsordnung"
+title: "Pulverlackiererei: Genehmigung, Messung"
 slug: praskova-lakovna-povoleni
 excerpt: "Die Pulverbeschichtung wird unter dem Gesichtspunkt des Schutzes der Luft als genehmigungspflichtige (gelistete) stationäre Quelle unter Code 9.11 „Auftragen von Pulverkunststoffen“ beurteilt. Der Betreiber benötigt eine Betriebsgenehmigung und eine Betriebsordnung. Die Bedingungen der Emissionsmessung hängen vom projektierten Verbrauch an Pulverkunststoffen, der Art der Absaugung, dem Einbrennen und den konkreten, von der Landesbehörde festgelegten Bedingungen ab."
 author: Ing. František Hezina

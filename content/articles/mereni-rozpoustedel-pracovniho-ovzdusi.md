@@ -1,7 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/priprava-mereni-emisi.webp
-title: Jak připravit zdroj na autorizované měření emisí, aby se měření nemuselo
-  opakovat
+title: "Jak připravit zdroj na měření emisí"
 slug: priprava-na-mereni-emisi
 excerpt: >
   Plánujete autorizované měření emisí? Připravte povolení, poslední protokol

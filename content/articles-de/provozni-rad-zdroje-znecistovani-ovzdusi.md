@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/provozni-rad-clanek.webp
-title: "Betriebsordnung für eine Luftschadstoffquelle: wann sie verpflichtend ist und wer sie genehmigt"
+title: "Betriebsordnung: Pflicht und Genehmigung"
 slug: provozni-rad-zdroje-znecistovani-ovzdusi
 excerpt: "Die Betriebsordnung legt die verbindlichen Betriebsbedingungen einer ausgewählten Luftschadstoffquelle fest, die Regeln für Bedienung und Kontrolle der Anlage, Verfahren bei Störungen sowie Maßnahmen zur Emissionsminderung. Die Pflicht zur Erstellung einer Betriebsordnung gilt nicht für alle gelisteten Quellen. Maßgeblich ist die Einstufung der Quelle in Anlage Nr. 2 des Luftreinhaltegesetzes."
 author: Ing. František Hezina

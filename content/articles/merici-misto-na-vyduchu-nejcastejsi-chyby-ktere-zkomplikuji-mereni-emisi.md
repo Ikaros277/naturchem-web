@@ -1,5 +1,5 @@
 ---
-title: "Měřicí místo na výduchu: nejčastější chyby, které zkomplikují měření emisí"
+title: "Měřicí místo na výduchu: nejčastější chyby"
 slug: merici-misto-na-vyduchu-nejcastejsi-chyby-ktere-zkomplikuji-mereni-emisi
 excerpt: Měření emisí může zkomplikovat nevhodně navržený výduch, chybějící
   měřicí hrdla, krátké rovné úseky potrubí, turbulence, špatný přístup nebo

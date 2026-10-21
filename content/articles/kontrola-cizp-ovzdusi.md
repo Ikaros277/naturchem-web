@@ -1,6 +1,5 @@
 ---
-title: "Příprava na kontrolu ČIŽP v oblasti ovzduší: dokumenty a skutečnosti,
-  které mít v pořádku"
+title: "Kontrola ČIŽP: podklady pro ochranu ovzduší"
 slug: kontrola-cizp-ovzdusi
 excerpt: Kontrola České inspekce životního prostředí u vyjmenovaného
   stacionárního zdroje se zaměřuje na skutečný provoz technologie a jeho soulad

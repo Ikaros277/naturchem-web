@@ -1,5 +1,5 @@
 ---
-title: "EU-EHS und Treibhausgase: Wann ein Betreiber Treibhausgasemissionen überwachen und berichten muss"
+title: "EU-EHS und THG: Überwachung und Bericht"
 slug: eu-ets-ghg-kdy-sledovat-vykazovat-emise-sklenikovych-plynu
 excerpt: "Verbraucht Ihr Betrieb größere Mengen Erdgas oder anderer Brennstoffe, betreiben Sie eine Kesselanlage, ein Heizwerk, einen Ofen oder eine energieintensive Produktion? Dann ist es ratsam zu prüfen, ob die Anlage unter das EU-EHS (EU ETS) fällt. Bei Anlagen, die in das System einbezogen sind, genügt die übliche Erfassung des Brennstoffverbrauchs nicht. Der Betreiber benötigt eine Genehmigung zur Emission von Treibhausgasen und einen genehmigten Überwachungsplan, muss die Emissionen jedes Jahr ermitteln, von einer akkreditierten Prüfstelle verifizieren lassen und anschließend die entsprechende Menge an Emissionszertifikaten abgeben. Nicht jede Berichterstattung zum CO₂-Fußabdruck ist jedoch EU ETS – es handelt sich um zwei verschiedene Dinge."
 author: Ing. František Hezina

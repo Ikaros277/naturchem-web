@@ -1,5 +1,5 @@
 ---
-title: "Záložní dieselagregát: kdy je jen záloha a kdy už běžný zdroj emisí"
+title: "Dieselagregát: kdy je záložním zdrojem"
 slug: zalozni-dieselagregat-emise-povoleni-provozni-hodiny
 excerpt: Záložní dieselagregát se často pořizuje pro případ výpadku elektřiny.
   Typicky ho mají datacentra, nemocnice, vodárny, průmyslové areály,

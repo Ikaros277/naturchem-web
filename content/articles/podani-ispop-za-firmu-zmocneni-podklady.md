@@ -1,9 +1,9 @@
 ---
-title: "Podání hlášení ISPOP za firmu: podklady, zmocnění a kontrola doručení"
+title: "Podání ISPOP za firmu: podklady a zmocnění"
 slug: podani-ispop-za-firmu-zmocneni-podklady
 excerpt: "Chcete předat hlášení ISPOP externímu zpracovateli? Vymezte agendu, období a provozovny. Jak připravit podklady, zastoupení a ověření výsledku podání."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-12-21"
 topic: Legislativa
 heroImage: /uploads/poradna-2026/podani-ispop.webp

@@ -1,5 +1,5 @@
 ---
-title: "Jednotné environmentální stanovisko: podklady pro JES"
+title: "Jednotné environmentální stanovisko"
 slug: jednotne-environmentalni-stanovisko-podklady-rychlejsi-rizeni
 excerpt: Co připravit k žádosti o JES, proč se řízení zdržuje a jak sladit
   podklady pro ovzduší, hluk, vodu, odpady, ZPF, přírodu a případnou EIA.

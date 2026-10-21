@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/rozpoustedla-voc.webp
-title: "Measuring solvents and VOC in workplace air: how to select substances from safety data sheets"
+title: "Solvents and VOC in workplace air"
 slug: mereni-rozpoustedel-pracovniho-ovzdusi
 excerpt: "The safety data sheet of a paint, adhesive, degreaser or cleaning product may list several organic solvents. For workplace air measurement, it is necessary to determine which substances can actually reach the employee's breathing zone during a specific work operation and which hygiene limits apply to them. Correctly selecting the substances before measurement is important for the usability of the results in exposure assessment and job categorisation."
 author: Ing. František Hezina

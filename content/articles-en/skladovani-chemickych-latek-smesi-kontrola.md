@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-10/skladovani-chemie.webp
-title: "Storing chemical substances and mixtures: what a company must have in order before an inspection"
+title: "Chemical storage: prepare for an inspection"
 slug: skladovani-chemickych-latek-smesi-kontrola
 excerpt: "Do you have paints, thinners, adhesives, acids, alkalis, oils, cleaning agents or other chemical products in your production? Simply placing canisters in a store is not enough. A company must know what it stores, what hazardous properties the substances have, which products must not be stored together and what happens in the event of a spill. Before an inspection, the biggest problems are usually outdated safety data sheets, unlabelled containers, missing spill containment, incompatible chemicals stored next to each other and documentation that does not match the actual store."
 author: Ing. František Hezina

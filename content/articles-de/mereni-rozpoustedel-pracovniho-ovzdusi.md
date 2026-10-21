@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/rozpoustedla-voc.webp
-title: "Messung von Lösemitteln und VOC in der Luft am Arbeitsplatz: Wie Stoffe aus Sicherheitsdatenblättern ausgewählt werden"
+title: "Lösemittel und VOC am Arbeitsplatz"
 slug: mereni-rozpoustedel-pracovniho-ovzdusi
 excerpt: "Das Sicherheitsdatenblatt einer Farbe, eines Klebstoffs, eines Entfetters oder eines Reinigungsmittels kann mehrere organische Lösemittel enthalten. Für die Messung der Luft am Arbeitsplatz muss bestimmt werden, welche Stoffe bei einem konkreten Arbeitsvorgang tatsächlich in die Atemzone des Beschäftigten gelangen können und welche hygienischen Grenzwerte für sie gelten. Die richtige Auswahl der Stoffe vor der Messung ist wichtig für die Verwertbarkeit der Ergebnisse bei der Expositionsbeurteilung und der Kategorisierung von Arbeiten."
 author: Ing. František Hezina

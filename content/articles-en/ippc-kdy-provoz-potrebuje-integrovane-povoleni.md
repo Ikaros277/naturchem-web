@@ -1,5 +1,5 @@
 ---
-title: 'IPPC: when does an operation need an integrated permit'
+title: "IPPC: when an integrated permit is needed"
 slug: ippc-kdy-provoz-potrebuje-integrovane-povoleni
 excerpt: 'An integrated permit does not apply to every industrial operation. It mainly concerns larger installations in energy, waste, chemicals, metal processing, the minerals industry, food processing and intensive livestock farming. The operator or investor should verify in good time whether their technology falls within Annex No. 1 to the Act on integrated prevention, what capacities apply and whether a change to an existing installation requires a change to the integrated permit.'
 author: Ing. František Hezina

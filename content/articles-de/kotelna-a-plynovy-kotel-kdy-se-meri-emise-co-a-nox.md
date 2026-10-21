@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/kotelna-clanek.webp
 
-title: "Kesselanlage und Gaskessel: Wann werden CO- und NOx-Emissionen gemessen?"
+title: "Gaskessel: CO- und NOx-Messung"
 slug: kotelna-a-plynovy-kotel-kdy-se-meri-emise-co-a-nox
 excerpt: "Bei Kesselanlagen und Gaskesseln stellt sich in der Praxis oft die Frage, ob die Messung von Kohlenmonoxid- und Stickoxid-Emissionen verpflichtend ist."
 author: Ing. František Hezina

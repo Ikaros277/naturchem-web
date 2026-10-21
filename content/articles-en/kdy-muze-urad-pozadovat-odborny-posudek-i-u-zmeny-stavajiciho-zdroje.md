@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/posudek-zmena-zdroje.webp
-title: When can the authority require an expert opinion even for a change to an existing source?
+title: "Expert report for a source change"
 slug: kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje
 excerpt: 'An expert opinion under the Air Protection Act is not addressed only for new sources. In some cases it must also be submitted when changing an existing listed stationary source, especially if designed output, capacity, or emissions increase, or if an operating technical condition replacing a specific emission limit is being set. The operator should therefore before every change of technology, capacity, fuel, exhaust, or filtration verify whether it is a change that requires expert assessment by an authorised person.'
 author: Ing. František Hezina

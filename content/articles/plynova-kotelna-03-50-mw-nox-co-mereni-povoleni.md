@@ -1,5 +1,5 @@
 ﻿---
-title: "Plynová kotelna 0,3 až 50 MW: co řešit u NOx, CO, měření a povolení"
+title: "Plynová kotelna 0,3–50 MW: emise a povolení"
 slug: plynova-kotelna-03-50-mw-nox-co-mereni-povoleni
 excerpt: U plynové kotelny nestačí znát pouze počet kotlů a jejich výkon v kW.
   Pro povinnosti podle ochrany ovzduší je rozhodující zejména **celkový

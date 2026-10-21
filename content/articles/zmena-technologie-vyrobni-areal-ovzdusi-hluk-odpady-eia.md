@@ -1,5 +1,5 @@
 ---
-title: "Změna technologie ve výrobním areálu: kdy řešit ovzduší, hluk, odpady a EIA"
+title: "Změna technologie: emise, hluk a EIA"
 slug: zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia
 excerpt: Výměna výrobní linky, zvýšení kapacity, nový výduch nebo rozšíření
   provozní doby mohou vyžadovat změnu povolení provozu, rozptylovou či hlukovou

@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/provozni-rad-clanek.webp
-title: "Provozní řád zdroje znečišťování ovzduší: kdy je povinný a kdo jej schvaluje"
+title: "Provozní řád zdroje: povinnost a schvalování"
 slug: provozni-rad-zdroje-znecistovani-ovzdusi
 excerpt: Provozní řád stanovuje závazné podmínky provozu vybraného zdroje
   znečišťování ovzduší, pravidla pro obsluhu a kontrolu zařízení, postupy při

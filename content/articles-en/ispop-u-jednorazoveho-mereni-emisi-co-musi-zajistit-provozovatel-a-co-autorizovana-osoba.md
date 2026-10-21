@@ -1,5 +1,5 @@
 ---
-title: "ISPOP for one-time emission measurement: what the operator must ensure and what the authorised person does"
+title: "ISPOP and emission tests: who does what"
 slug: ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba
 excerpt: From 2026, ISPOP for one-time emission measurement covers not only the measurement date but also notification of the report. The operator must ensure correct notification of the measurement date, and prepare the source, exhausts and operating regime. The authorised person carries out the measurement and notifies the report in ISPOP. If the procedure is neglected, problems may arise with recognition of the measurement for fulfilment of the statutory obligation.
 author: Ing. František Hezina

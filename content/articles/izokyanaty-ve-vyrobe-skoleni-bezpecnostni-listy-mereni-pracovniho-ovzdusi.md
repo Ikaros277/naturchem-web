@@ -1,5 +1,5 @@
 ---
-title: "Izokyanáty ve výrobě: školení, bezpečnostní listy a měření pracovního ovzduší"
+title: "Izokyanáty ve výrobě: školení a měření"
 slug: izokyanaty-ve-vyrobe-skoleni-bezpecnostni-listy-mereni-pracovniho-ovzdusi
 excerpt: Izokyanáty se v provozech objevují hlavně u PUR systémů, dvousložkových
   laků, tvrdidel, lepidel, pěn, tmelů a některých opravárenských nebo údržbových

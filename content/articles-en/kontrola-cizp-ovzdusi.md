@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-14_46_38.webp
-title: "Preparing for a Czech Environmental Inspectorate (CEI) air protection inspection: documents and facts to have in order"
+title: "ČIŽP air inspection: what to prepare"
 slug: kontrola-cizp-ovzdusi
 excerpt: "An inspection by the Czech Environmental Inspectorate of a listed stationary source focuses on the actual operation of the technology and its compliance with the operating permit, emission limits, operating rules, emission measurement and operating records. Before an inspection, it is also advisable to review changes to the technology, stacks, filtration equipment, operating parameters and data reported through ISPOP."
 author: Ing. František Hezina

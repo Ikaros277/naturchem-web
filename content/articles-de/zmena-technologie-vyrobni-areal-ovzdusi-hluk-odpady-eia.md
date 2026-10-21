@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-20.-7.-2026-11_08_54.webp
-title: "Technologieänderung in einem Produktionsareal: wann Luft, Lärm, Abfälle und UVP zu behandeln sind"
+title: "Technologieänderung: Luft, Lärm, Abfall, UVP"
 slug: zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia
 excerpt: "Der Austausch einer Produktionslinie, eine Kapazitätserhöhung, ein neuer Auslass oder eine Verlängerung der Betriebszeit können eine Änderung der Betriebsgenehmigung, eine Ausbreitungs- oder Lärmstudie, eine Anpassung der Abfallwirtschaft oder die Prüfung des Vorhabens nach dem UVP-Gesetz erfordern. Umweltanforderungen sollten daher noch vor der Bestellung der Technologie und dem Abschluss des Projekts behandelt werden."
 author: Ing. František Hezina

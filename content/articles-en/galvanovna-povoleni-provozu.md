@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-14_35_37.webp
-title: "Electroplating and pickling shops: emissions, workplace air, extraction and operating permit"
+title: "Electroplating shop: emissions and permit"
 slug: galvanovna-povoleni-provozu
 excerpt: "Electroplating, pickling, phosphating and other chemical or electrolytic surface treatments may constitute a listed stationary source of air pollution. The decisive factors are the designed volume of the process baths, the chemicals used and the extraction method. In addition to emissions into the outdoor air, the operator must also address employee exposure to acids, metals and other substances in workplace air."
 author: Ing. František Hezina

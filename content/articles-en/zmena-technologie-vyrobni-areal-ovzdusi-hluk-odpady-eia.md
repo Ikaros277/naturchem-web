@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-20.-7.-2026-11_08_54.webp
-title: "Changing Technology in a Production Site: When to Address Air, Noise, Waste and EIA"
+title: "Technology change: air, noise, waste, EIA"
 slug: zmena-technologie-vyrobni-areal-ovzdusi-hluk-odpady-eia
 excerpt: "Replacing a production line, increasing capacity, a new vent or extended operating hours may require an amendment of the operating permit, a dispersion or noise study, adjustment of waste management or a review of the project under the EIA Act. It is therefore advisable to address environmental requirements before the technology is ordered and the project is completed."
 author: Ing. František Hezina

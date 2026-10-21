@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/vyzva-khs.webp
-title: "Přišla výzva KHS k měření pracovního prostředí: jak sestavit správný rozsah"
+title: "Výzva KHS k měření: co připravit"
 slug: vyzva-khs-mereni-pracovniho-prostredi
 excerpt: >
   Přišla Vám výzva KHS k měření? Připravte výzvu, seznam pracovních pozic

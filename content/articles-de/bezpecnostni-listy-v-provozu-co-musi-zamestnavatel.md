@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-10/bezpecnostni-listy-clanek.webp
-title: "Sicherheitsdatenblätter im Betrieb: Was der Arbeitgeber tatsächlich in die Praxis umsetzen muss"
+title: "Sicherheitsdatenblätter: Arbeitgeberpflichten"
 slug: bezpecnostni-listy-v-provozu-co-musi-zamestnavatel
 excerpt: "Ein Sicherheitsdatenblatt ist kein Dokument, das man einfach in einem Ordner oder auf dem Firmenserver ablegen kann. Setzt ein Unternehmen Farben, Klebstoffe, Reinigungsmittel, Lösemittel, Säuren, Laugen, Öle oder andere chemische Erzeugnisse ein, muss es die Angaben aus den Sicherheitsdatenblättern in den tatsächlichen Betrieb übertragen. Dem Sicherheitsdatenblatt entnimmt man unter anderem die Gefährlichkeit des Erzeugnisses, die Lagerbedingungen, geeignete Schutzausrüstung, Maßnahmen bei Freisetzung und Brand sowie auch, welche chemischen Stoffe in der Luft am Arbeitsplatz von Bedeutung sein können. Ein häufiges Problem bei Kontrollen ist nicht das Fehlen des Sicherheitsdatenblatts an sich, sondern die Diskrepanz zwischen dem, was darin steht, und dem, wie das Unternehmen tatsächlich mit dem Chemikal umgeht."
 author: Ing. František Hezina

@@ -1,5 +1,5 @@
 ---
-title: "Kategorizace prací po změně technologie: kdy je nutné nové měření"
+title: "Kategorizace prací po změně technologie"
 slug: kategorizace-praci-po-zmene-technologie-nove-mereni
 excerpt: Kategorizace prací musí odpovídat skutečným podmínkám na pracovišti.
   Pokud podnik změní technologii, pracovní postup, používané chemické látky,

@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-1-.webp
-title: "Annual summary operating records: the most common errors in data on sources, vents and emissions"
+title: "Annual operating records: common errors"
 slug: chyby-souhrnna-provozni-evidence
 excerpt: "The annual summary operating records form F_OVZ_SPE is submitted every year through ISPOP for listed stationary sources. The most common problems do not arise when the form is submitted, but from inconsistencies between the operating permit, the actual technology, the numbering of sources and vents, the emission measurement reports and the reported annual emissions. Checking these links before submitting the report significantly reduces the risk of subsequent corrections."
 author: Ing. František Hezina

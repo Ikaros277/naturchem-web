@@ -1,5 +1,5 @@
 ---
-title: "Workplace microclimate measurement: temperature, humidity and air movement"
+title: "Microclimate: temperature, humidity, airflow"
 slug: mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu
 excerpt: Microclimate measurement is addressed where employees experience heat, cold, draughts, dry air or significant differences between parts of the workplace. During measurement we evaluate temperature, humidity, air movement and related operating conditions so that the workplace environment, thermal or cold load and suitability of technical or organisational measures can be assessed objectively.
 author: Ing. František Hezina

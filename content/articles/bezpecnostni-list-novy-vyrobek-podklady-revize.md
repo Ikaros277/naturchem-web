@@ -1,9 +1,9 @@
 ---
-title: "Bezpečnostní list pro nový výrobek: co dodat ke zpracování a kdy stačí revize"
+title: "Nový bezpečnostní list: podklady a revize"
 slug: bezpecnostni-list-novy-vyrobek-podklady-revize
 excerpt: "Uvádíte na trh chemický výrobek? Přehled podkladů pro nový bezpečnostní list, rozdílu proti revizi a vazby na složení, klasifikaci a etiketu."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-10-26"
 topic: Chemická legislativa
 heroImage: /uploads/poradna-2026/bezpecnostni-list.webp

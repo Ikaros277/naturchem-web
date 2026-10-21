@@ -1,6 +1,5 @@
 ---
-title: "Měření osvětlení na pracovišti: kdy ho požaduje KHS a kdy je potřeba pro
-  kolaudaci"
+title: "Měření osvětlení: požadavky KHS a kolaudace"
 slug: mereni-osvetleni-pracoviste-khs-kolaudace
 excerpt: Protokol z měření osvětlení bývá potřeba při kolaudaci, změně užívání
   prostoru, kontrole KHS nebo při ověření podmínek na pracovišti. Nestačí, že

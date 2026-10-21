@@ -1,6 +1,5 @@
 ---
-title: "Změna integrovaného povolení IPPC: kdy je změna podstatná a co musí
-  provozovatel ohlásit předem"
+title: "Změna povolení IPPC: rozsah a ohlášení"
 slug: zmena-integrovaneho-povoleni-ippc-podstatna-zmena
 excerpt: Máte integrované povolení a plánujete novou výrobní linku, zvýšení
   kapacity, změnu paliva, nové odpady, jiný výduch nebo úpravu technologie?

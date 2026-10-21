@@ -1,6 +1,5 @@
 ---
-title: "ISPOP u jednorázového měření emisí: co musí zajistit provozovatel a co
-  autorizovaná osoba"
+title: "ISPOP a měření emisí: povinnosti obou stran"
 slug: ispop-u-jednorazoveho-mereni-emisi-co-musi-zajistit-provozovatel-a-co-autorizovana-osoba
 excerpt: Od roku 2026 se u jednorázového měření emisí řeší v ISPOP nejen termín
   měření, ale také ohlášení protokolu. Provozovatel musí zajistit správné

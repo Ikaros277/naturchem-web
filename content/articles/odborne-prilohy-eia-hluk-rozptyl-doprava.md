@@ -1,9 +1,9 @@
 ---
-title: "Odborné přílohy k oznámení EIA: jak sladit hluk, rozptyl a dopravu"
+title: "Odborné přílohy EIA: hluk, rozptyl a doprava"
 slug: odborne-prilohy-eia-hluk-rozptyl-doprava
 excerpt: "Studie pro EIA musí popisovat stejný projekt. Jak sjednotit kapacity, provozní dobu a dopravu a vymezit odborné přílohy oproti celému oznámení záměru."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-12-07"
 topic: EIA a povolování
 heroImage: /uploads/poradna-2026/prilohy-eia.webp

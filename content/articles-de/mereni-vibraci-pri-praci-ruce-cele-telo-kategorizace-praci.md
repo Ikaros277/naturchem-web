@@ -1,5 +1,5 @@
 ---
-title: "Vibrationsmessung bei der Arbeit: wann Hand-Arm, Ganzkörper und Berufskategorisierung behandelt werden"
+title: "Vibrationen: Hand-Arm und Ganzkörper"
 slug: mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci
 excerpt: "Vibrationen am Arbeitsplatz werden nicht nur allgemein bewertet. Hand-Arm-Vibrationen bei der Arbeit mit Handwerkzeugen werden anders beurteilt als Ganzkörpervibrationen, die auf den Körper wirken, beispielsweise beim Führen eines Gabelstaplers, einer Baumaschine oder anderer fahrbaren Technik. Für die richtige Berufskategorisierung ist es daher wichtig, zunächst die Art der Exposition zu unterscheiden, Arbeitsverfahren zu beschreiben und die tatsächliche Arbeitszeit an Vibrationsquellen festzulegen."
 author: Ing. František Hezina

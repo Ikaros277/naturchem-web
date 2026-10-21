@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/povolovani-2026.webp
 
-title: Was ändert sich im Jahr 2026 bei der Genehmigung von Luftverschmutzungsquellen?
+title: "Luftreinhaltung: Genehmigungen 2026"
 slug: co-se-meni-v-povolovani-zdroju-znecistovani-ovzdusi-v-roce-2026
 excerpt: „Das Jahr 2026 ist für den Luftschutz vor allem wegen der praktischen Auswirkungen der Änderung des Luftschutzgesetzes Nr. 42/2025 Slg. wichtig.“ und damit verbundene Änderungen des Dekrets Nr. 415/2012 Slg. Betreiber gelisteter ortsfester Quellen müssen auf Änderungen der Betriebsgenehmigungen, Betriebsparameter, Meldung einmaliger Emissionsmessungen, Ersatzquellen, Gebühren, Kapazitätszusammenlegung und die neue Regel 12.1 für den Umgang mit Schüttgütern achten. „Die Änderungen sind nicht nur formaler Natur – sie können sich auch auf Gutachten, Ausbreitungsstudien, Betriebsvorschriften, Aufzeichnungen und die Kommunikation mit der Regionalbehörde oder der tschechischen Umweltinspektion (CEI) auswirken.“
 author: Ing. František Hezina

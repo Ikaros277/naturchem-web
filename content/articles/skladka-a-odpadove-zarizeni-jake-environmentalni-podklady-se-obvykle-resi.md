@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/skladka-clanek.webp
-title: 'Skládka a odpadové zařízení: jaké environmentální podklady se obvykle řeší?'
+title: "Skládka a odpadové zařízení: podklady"
 slug: skladka-a-odpadove-zarizeni-jake-environmentalni-podklady-se-obvykle-resi
 excerpt: |
   Skládky a odpadová zařízení patří mezi záměry, u kterých se obvykle neřeší jen samotné nakládání s odpady. Důležité jsou kapacity, okamžitá kapacita, druhy odpadů, provozní řád, hluk, ovzduší, voda, doprava, EIA a u větších zařízení také IPPC. Kvalitní příprava podkladů pomáhá předejít tomu, že se problém objeví až v řízení před krajským úřadem, stavebním úřadem, KHS, ČIŽP nebo v připomínkách veřejnosti.

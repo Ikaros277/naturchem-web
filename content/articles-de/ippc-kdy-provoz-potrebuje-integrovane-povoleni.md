@@ -1,5 +1,5 @@
 ---
-title: 'IPPC: Wann benötigt ein Betrieb eine integrierte Genehmigung'
+title: "IPPC: wann eine Genehmigung nötig ist"
 slug: ippc-kdy-provoz-potrebuje-integrovane-povoleni
 excerpt: 'Die integrierte Genehmigung betrifft nicht jeden Industriebetrieb. Sie wird vor allem bei größeren Anlagen in Energie, Abfall, Chemie, Metallverarbeitung, Mineralindustrie, Lebensmittelverarbeitung und intensiver Tierhaltung behandelt. Der Betreiber oder Investor sollte rechtzeitig prüfen, ob seine Technologie in Anlage Nr. 1 zum Gesetz über die integrierte Vermeidung fällt, welche Kapazitäten gelten und ob eine Änderung einer bestehenden Anlage eine Änderung der integrierten Genehmigung erfordert.'
 author: Ing. František Hezina

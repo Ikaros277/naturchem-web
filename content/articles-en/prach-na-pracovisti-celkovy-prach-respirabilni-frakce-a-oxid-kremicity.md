@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/prach-frakce.webp
-title: 'Workplace dust: total dust, respirable fraction, and silicon dioxide'
+title: "Workplace dust: fractions and silica"
 slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity
 excerpt: |
   Workplace dust is not just visible mess in the air or on the floor. From the perspective of employee health protection, what dust arises, what particle sizes it contains, and whether it contains crystalline silicon dioxide, for example, is important. Total dust, respirable fraction, and dust with a fibrogenic effect that can penetrate deep into the lungs are assessed differently.

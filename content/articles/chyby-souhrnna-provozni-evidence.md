@@ -1,6 +1,5 @@
 ---
-title: "Souhrnná provozní evidence: nejčastější chyby v údajích o zdrojích,
-  výduších a emisích"
+title: "Souhrnná provozní evidence: nejčastější chyby"
 slug: chyby-souhrnna-provozni-evidence
 excerpt: Souhrnná provozní evidence F_OVZ_SPE se každoročně podává
   prostřednictvím ISPOP za vyjmenované stacionární zdroje. Nejčastější problémy

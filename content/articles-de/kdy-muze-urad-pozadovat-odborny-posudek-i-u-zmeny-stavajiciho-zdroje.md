@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/posudek-zmena-zdroje.webp
 
-title: Wann kann die Behörde auch für eine Änderung einer bestehenden Quelle ein Gutachten verlangen?
+title: "Gutachten bei Quellenänderung: wann nötig"
 slug: kdy-muze-urad-pozadovat-odborny-posudek-i-u-zmeny-stavajiciho-zdroje
 excerpt: „Ein Gutachten nach dem Luftschutzgesetz ist nicht nur für neue Quellen vorgesehen. In manchen Fällen muss sie auch bei der Änderung einer bestehenden gelisteten stationären Quelle eingereicht werden, insbesondere wenn die geplante Leistung, Kapazität oder Emissionen steigen oder wenn eine betriebstechnische Bedingung festgelegt wird, die einen bestimmten Emissionsgrenzwert ersetzt. Der Betreiber sollte daher vor jeder Änderung von Technologie, Kapazität, Kraftstoff, Abgas oder Filterung prüfen, ob es sich um eine Änderung handelt, die einer sachverständigen Beurteilung durch eine autorisierte Person bedarf.“
 author: Ing. František Hezina

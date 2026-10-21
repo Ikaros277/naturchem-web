@@ -1,5 +1,5 @@
 ---
-title: "Měření vibrací při práci: kdy se řeší ruce, celé tělo a kategorizace prací"
+title: "Měření vibrací: ruce, celé tělo a kategorizace"
 slug: mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci
 excerpt: Vibrace na pracovišti se nehodnotí jen obecně. Jinak se posuzují
   vibrace přenášené na ruce při práci s ručním nářadím a jinak celkové vibrace

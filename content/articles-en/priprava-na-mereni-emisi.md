@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/priprava-mereni-emisi.webp
-title: "How to prepare a source for authorised emission measurement so that the measurement does not have to be repeated"
+title: "How to prepare a source for emission testing"
 slug: priprava-na-mereni-emisi
 excerpt: "Planning an authorised emission measurement? Prepare the permit, the last protocol and information on operation. Before the date, verify the notification in ISPOP and access to the measurement point."
 author: Ing. František Hezina

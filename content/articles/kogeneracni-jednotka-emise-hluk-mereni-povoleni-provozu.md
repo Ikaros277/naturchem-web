@@ -1,5 +1,5 @@
 ---
-title: "Kogenerační jednotka: emise, hluk, měření a povolení provozu"
+title: "Kogenerační jednotka: emise, hluk a povolení"
 slug: kogeneracni-jednotka-emise-hluk-mereni-povoleni-provozu
 excerpt: Kogenerační jednotka může být pro provozovatele výhodným zdrojem
   elektřiny a tepla, ale z hlediska povolování nejde jen o technické zařízení v

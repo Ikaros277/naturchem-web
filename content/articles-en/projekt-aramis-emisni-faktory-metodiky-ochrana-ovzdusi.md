@@ -1,5 +1,5 @@
 ---
-title: "ARAMIS project: what new emission factors and methodologies may mean for air protection practice"
+title: "ARAMIS project: emission factors, methods"
 slug: projekt-aramis-emisni-faktory-metodiky-ochrana-ovzdusi
 excerpt: The ARAMIS project brings new professional bases for air quality assessment, emission balances, dispersion modelling, pollution source identification, and emission calculation. For operators, designers, investors, and municipalities, outputs on emission factors, construction dust, recycling lines, greenhouse gases, and source significance under the Air Protection Act are especially important.
 author: Ing. František Hezina

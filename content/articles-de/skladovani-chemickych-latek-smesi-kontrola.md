@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-10/skladovani-chemie.webp
-title: "Lagerung von chemischen Stoffen und Gemischen: Was ein Unternehmen vor einer Kontrolle in Ordnung haben muss"
+title: "Chemikalienlager: Kontrolle vorbereiten"
 slug: skladovani-chemickych-latek-smesi-kontrola
 excerpt: "Haben Sie in Ihrer Produktion Farben, Verdünner, Klebstoffe, Säuren, Laugen, Öle, Reinigungsmittel oder andere chemische Erzeugnisse? Es genügt nicht, Kanister einfach in ein Lager zu stellen. Das Unternehmen muss wissen, was es lagert, welche gefährlichen Eigenschaften die Stoffe haben, welche Erzeugnisse nicht gemeinsam gelagert werden dürfen und was bei einem Austritt geschieht. Vor einer Kontrolle sind die größten Probleme meist veraltete Sicherheitsdatenblätter, nicht gekennzeichnete Behälter, fehlende Auffangvorrichtungen, unverträgliche Chemikalien nebeneinander und eine Dokumentation, die nicht dem tatsächlichen Lager entspricht."
 author: Ing. František Hezina

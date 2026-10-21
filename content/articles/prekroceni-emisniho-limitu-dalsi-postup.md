@@ -1,9 +1,9 @@
 ---
-title: "Překročení emisního limitu v protokolu: co prověřit před dalším měřením"
+title: "Překročení emisního limitu: postup"
 slug: prekroceni-emisniho-limitu-dalsi-postup
 excerpt: "Překročený emisní limit: kontrola protokolu, povolení, provozních záznamů a technického stavu zdroje. Podklady pro nápravu a opakované měření."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-12-14"
 topic: Emise
 heroImage: /uploads/poradna-2026/emisni-limit.webp

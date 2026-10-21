@@ -1,9 +1,9 @@
 ---
-title: "Měření vibrací u řidičů vysokozdvižných vozíků: jak připravit směnu a podklady pro kategorizaci"
+title: "Měření vibrací řidičů VZV: příprava a podklady"
 slug: mereni-vibraci-ridicu-vzv-priprava-smeny
 excerpt: "Připravte pro měření vibrací VZV skutečné trasy, vozíky a časový snímek řidiče. Praktický checklist pro sklady, výrobní areály a podklady ke kategorizaci prací."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-10-19"
 topic: Pracovní prostředí
 heroImage: /uploads/poradna-2026/vibrace-vzv.webp

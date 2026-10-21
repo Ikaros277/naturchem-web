@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/vyzva-khs.webp
-title: "You have received a KHS request for work environment measurement: how to define the right scope"
+title: "KHS request: workplace measurement scope"
 slug: vyzva-khs-mereni-pracovniho-prostredi
 excerpt: "Have you received a KHS request for measurement? Prepare the request, a list of job positions and a description of activities. We explain how the scope of measurement is determined."
 author: Ing. František Hezina

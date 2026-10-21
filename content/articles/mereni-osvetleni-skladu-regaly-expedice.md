@@ -1,9 +1,9 @@
 ---
-title: "Měření osvětlení ve skladu: regálové uličky, expedice a pracovní místa"
+title: "Měření osvětlení skladu a regálů"
 slug: mereni-osvetleni-skladu-regaly-expedice
 excerpt: "Sklad není jedno pracovní místo. Jak připravit měření osvětlení mezi regály, při vychystávání, balení a expedici a které podklady předat laboratoři."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-11-09"
 topic: Pracovní prostředí
 heroImage: /uploads/poradna-2026/osvetleni-skladu.webp

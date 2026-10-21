@@ -1,5 +1,5 @@
 ---
-title: 'Staubschutzmaßnahmen auf der Baustelle: Was die Dokumentation enthalten soll und was die Behörde verlangen kann'
+title: "Staubschutz auf Baustellen: Unterlagen"
 slug: protiprasna-opatreni-na-stavbe-dokumentace-urad
 excerpt: 'Staub von Bau, Abbruch, Erdarbeiten oder Verkehr auf der Baustelle kann bereits in der Genehmigungsphase problematisch sein. Die Behörde kann eine konkrete und überprüfbare Beschreibung der Maßnahmen verlangen, nicht nur einen allgemeinen Satz, dass Staub begrenzt wird. Der Artikel erläutert, was die Dokumentation enthalten soll, wann Maßnahmen in EIA, JES, Ausbreitungsstudie oder im Baurecht behandelt werden und wie Unterlagen so vorzubereiten sind, dass sie für die Genehmigung und die anschließende Kontrolle verwendbar sind.'
 author: Ing. František Hezina

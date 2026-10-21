@@ -1,5 +1,5 @@
 ---
-title: "Oznámení záměru EIA: kdy je potřeba a co obsahuje"
+title: "Oznámení záměru EIA: kdy je potřeba"
 slug: oznameni-zameru-eia-co-to-je-a-kdy-je-potreba
 excerpt: Kdy je potřeba oznámení záměru EIA, co musí obsahovat a jaké podklady
   připravit, aby mohl úřad posoudit plánovanou stavbu nebo změnu provozu.

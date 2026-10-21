@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-1-.webp
-title: "Zusammenfassende Betriebsaufzeichnungen: die häufigsten Fehler bei den Angaben zu Quellen, Auslässen und Emissionen"
+title: "Betriebsaufzeichnungen: häufige Fehler"
 slug: chyby-souhrnna-provozni-evidence
 excerpt: "Die zusammenfassenden Betriebsaufzeichnungen F_OVZ_SPE werden jährlich über ISPOP für genehmigungspflichtige (gelistete) stationäre Quellen eingereicht. Die häufigsten Probleme entstehen nicht beim Absenden des Formulars selbst, sondern durch Widersprüche zwischen der Betriebsgenehmigung, der tatsächlichen Technologie, der Nummerierung von Quellen und Auslässen, den Protokollen der Emissionsmessungen und den gemeldeten Jahresemissionen. Die Prüfung dieser Zusammenhänge vor dem Absenden der Meldung verringert das Risiko späterer Korrekturen erheblich."
 author: Ing. František Hezina

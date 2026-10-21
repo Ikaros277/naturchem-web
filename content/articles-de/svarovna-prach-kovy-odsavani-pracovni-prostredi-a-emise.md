@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/svarovna-clanek.webp
 
-title: "Schweißerei: Staub, Metalle, Absaugung, Arbeitsumgebung und Emissionen"
+title: "Schweißerei: Staub, Metalle, Absaugung"
 slug: svarovna-prach-kovy-odsavani-pracovni-prostredi-a-emise
 excerpt: "Eine Schweißerei kann aus Sicht des Gesundheitsschutzes der Arbeitnehmer und des Luftschutzes ein bedeutender Arbeitsplatz sein.“ Beim Schweißen entstehen Schweißrauch, feine Partikel, Metalloxide und andere Stoffe, deren Zusammensetzung vom Schweißgut, dem Zusatzwerkstoff, der Schweißmethode und der Absaugleistung abhängt. In der Praxis ist es daher wichtig, sich mit der Luft am Arbeitsplatz, der lokalen Absaugung, der Messung von Staub und Metallen am Arbeitsplatz und der Frage zu befassen, ob die Schweißerei gleichzeitig eine stationäre Emissionsquelle für die Außenluft sein kann."
 author: Ing. František Hezina

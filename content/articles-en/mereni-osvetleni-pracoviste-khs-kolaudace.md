@@ -1,5 +1,5 @@
 ---
-title: "Workplace lighting measurement: when KHS requires it and when it is needed for building approval"
+title: "Lighting measurement: KHS and approval"
 slug: mereni-osvetleni-pracoviste-khs-kolaudace
 excerpt: A lighting measurement report is often needed for building approval, change of use, KHS inspection or verification of workplace conditions. It is not enough that new luminaires are installed in the building. What matters is whether actual lighting corresponds to room purpose, visual demands of work, layout of workstations and requirements of legislation and technical standards.
 author: Ing. František Hezina

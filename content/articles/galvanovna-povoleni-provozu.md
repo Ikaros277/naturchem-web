@@ -1,5 +1,5 @@
 ---
-title: "Galvanovna a mořírna: emise, pracovní ovzduší, odsávání a povolení provozu"
+title: "Galvanovna a mořírna: emise a povolení"
 slug: galvanovna-povoleni-provozu
 excerpt: >
   Galvanické pokovování, moření, fosfátování a další chemické nebo

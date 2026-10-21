@@ -1,5 +1,5 @@
 ---
-title: "Měření mikroklimatu na pracovišti: teplota, vlhkost a proudění vzduchu"
+title: "Měření mikroklimatu na pracovišti"
 slug: mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu
 excerpt: Měření mikroklimatu se řeší tam, kde zaměstnanci pociťují horko, chlad,
   průvan, suchý vzduch nebo výrazné rozdíly mezi jednotlivými částmi pracoviště.

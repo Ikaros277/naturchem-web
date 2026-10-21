@@ -1,5 +1,5 @@
 ---
-title: "Nedostatečné osvětlení na pracovišti: co se měří a jaké podklady připravit"
+title: "Nedostatečné osvětlení: měření a podklady"
 slug: nedostatecne-osvetleni-pracoviste-co-se-meri-podklady
 excerpt: Nedostatečné osvětlení na pracovišti se často začne řešit až ve chvíli,
   kdy si zaměstnanci stěžují na únavu očí, špatnou viditelnost, odlesky nebo

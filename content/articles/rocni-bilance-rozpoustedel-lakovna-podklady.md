@@ -1,9 +1,9 @@
 ---
-title: "Roční bilance rozpouštědel v lakovně: jak propojit spotřeby, emise a provozní evidenci"
+title: "Bilance rozpouštědel v lakovně"
 slug: rocni-bilance-rozpoustedel-lakovna-podklady
 excerpt: "Pro bilanci VOC nestačí součet nakoupených barev. Připravte spotřeby, složení, zásoby a výstupy a propojte je s technologií a provozní evidencí lakovny."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-11-23"
 topic: Emise
 heroImage: /uploads/poradna-2026/bilance-rozpoustedel-cista.webp

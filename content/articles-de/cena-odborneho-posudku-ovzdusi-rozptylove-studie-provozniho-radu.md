@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-2-.webp
-title: "Was kosten ein Gutachten, eine Ausbreitungsstudie, eine Betriebsordnung und eine Betriebsgenehmigung?"
+title: "Kosten: Gutachten, Studie, Betriebsordnung"
 slug: cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu
 excerpt: "Der Preis der Unterlagen für die Genehmigung einer Luftschadstoffquelle hängt von der Art der Technologie, der Anzahl der Quellen und Abluftkamine, dem Umfang der Emissionen und der Qualität der verfügbaren Dokumentation ab. Ein einfacher Gaskessel oder eine kleinere Lackiererei erfordert einen anderen Arbeitsumfang als ein Produktionsareal mit mehreren Technologien, Filtern und Dutzenden von Emissionsaustritten. Wir geben einen Richtwert-Überblick über die Kosten und erläutern, was ein Angebot enthalten sollte."
 author: Ing. František Hezina

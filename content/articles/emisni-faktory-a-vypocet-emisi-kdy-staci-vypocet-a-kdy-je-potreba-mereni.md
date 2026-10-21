@@ -1,5 +1,5 @@
 ---
-title: "Emisní faktory a výpočet emisí: kdy stačí výpočet a kdy je potřeba měření"
+title: "Výpočet emisí: kdy stačí a kdy je nutné měření"
 slug: emisni-faktory-a-vypocet-emisi-kdy-staci-vypocet-a-kdy-je-potreba-mereni
 excerpt: Emise lze v některých případech stanovit výpočtem, například pomocí
   emisního faktoru, hmotnostní bilance, měrné výrobní emise nebo údajů o

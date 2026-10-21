@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-10/povoleni-zdroje-clanek.webp
-title: "Listed stationary source: how to tell whether you need an operating permit"
+title: "Listed source: operating permit"
 slug: vyjmenovany-stacionarni-zdroj-povoleni-provozu
 excerpt: "Are you installing a new boiler, diesel generator, paint shop, grinding shop, welding workstation, recycling line or other technology and not sure whether you need an operating permit under the Air Protection Act? The key question is whether it is a stationary source listed in Annex 2 to Act No. 201/2012 Coll. The decisive factors are the type of technology and its design parameters. Incorrect classification may mean that the operator lacks the necessary permit, emission measurement or operating rules."
 author: Ing. František Hezina

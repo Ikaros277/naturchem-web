@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-4-.webp
-title: "Night operation of a production site: which sources are often decisive for the hygiene limit"
+title: "Night-time site operation: noise sources"
 slug: hluk-nocni-provoz-arealu
 excerpt: "Night operation is considerably more demanding in terms of noise than daytime operation. For common stationary sources, a limit of 40 dB is generally assessed in the protected outdoor space of buildings, or 35 dB where a tonal component is demonstrated. The decisive source need not be the main production line. It is often a rooftop fan, cooling, a compressor, a vent, open doors or handling in the outdoor area."
 author: Ing. František Hezina

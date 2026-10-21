@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-23.-7.-2026-16_28_56.webp
-title: "Hitzebelastung am Arbeitsplatz: Wann eine Messung erforderlich ist und wie die zulässige Arbeitszeit festgelegt wird"
+title: "Hitzebelastung: Messung, zulässige Arbeitszeit"
 slug: tepelna-zatez-na-pracovisti-kdy-je-nutne-mereni-a-jak-se-stanovi-pripustna-doba-prace
 excerpt: "Hohe Temperaturen in der Produktionshalle, Arbeiten am Ofen oder der Sommerbetrieb an einem Außenarbeitsplatz können eine Messung der Hitzebelastung sowie die Festlegung der zulässigen Arbeitszeit, von Sicherheitspausen und Schutzgetränken erforderlich machen. Das Ergebnis hängt auch vom Energieumsatz der Arbeit, der Arbeitskleidung, der Strahlungswärme, der Luftströmung und der Schichtdauer ab."
 author: Ing. František Hezina

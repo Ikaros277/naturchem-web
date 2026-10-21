@@ -1,6 +1,6 @@
 ---
 
-title: "Messung des Mikroklimas am Arbeitsplatz: Temperatur, Luftfeuchtigkeit und Luftbewegung"
+title: "Mikroklima am Arbeitsplatz messen"
 slug: mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu
 excerpt: Die Messung des Mikroklimas wird dort eingesetzt, wo Mitarbeiter Hitze, Kälte, Zugluft, trockene Luft oder erhebliche Unterschiede zwischen Teilen des Arbeitsplatzes wahrnehmen. Bei der Messung bewerten wir Temperatur, Luftfeuchtigkeit, Luftbewegung und damit verbundene Betriebsbedingungen, sodass das Arbeitsplatzklima, die Wärme- oder Kältebelastung und die Eignung technischer oder organisatorischer Maßnahmen objektiv beurteilt werden können.
 author: Ing. František Hezina

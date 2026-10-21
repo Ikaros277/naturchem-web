@@ -1,5 +1,5 @@
 ---
-title: "Odour from a facility: what to do when a complaint arrives and how odorous substances are assessed"
+title: "Odour complaints: what to do, how assessed"
 slug: zapach-z-provozovny-stiznost-pachove-latky
 excerpt: "A complaint about odour does not automatically mean that the operation is breaking the law. It is still unwise to underestimate it. Odour is often variable, depends on the technology, the weather, the operating mode and the distance from nearby buildings, and its cause is frequently harder to trace than that of noise or dust. The operator should first establish when the odour occurs, where it is released from and whether the actual operation matches the permit. Only then does it make sense to decide on measurement, an expert assessment or a technical measure."
 author: Ing. František Hezina

@@ -1,6 +1,6 @@
 ---
 heroImage: /uploads/chatgpt-image-7.-8.-2026-13_58_55-3-.webp
-title: "Cold stress in cold stores, freezer rooms and unheated halls: what the employer must demonstrate"
+title: "Cold stress at work: measurement and records"
 slug: chladova-zatez-na-pracovisti
 excerpt: "Work in a cold store, freezer room or unheated hall may require measurement of microclimatic conditions, adjustment of the work regime, protective clothing, safety breaks and inclusion of the cold stress factor in job categorisation. The decisive factors are the temperature, air movement, the energy demand of the work, the length of exposure and the alternation between time spent in warm and cold conditions."
 author: Ing. František Hezina

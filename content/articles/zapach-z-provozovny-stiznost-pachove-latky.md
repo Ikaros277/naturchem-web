@@ -1,5 +1,5 @@
 ---
-title: "Zápach z provozovny: co dělat při stížnosti a jak se pachové látky posuzují"
+title: "Zápach z provozovny: stížnosti a posouzení"
 slug: zapach-z-provozovny-stiznost-pachove-latky
 excerpt: >
   Stížnost na zápach neznamená automaticky, že provoz porušuje zákon. Není ale

@@ -1,7 +1,7 @@
 ---
 heroImage: /hero/generated-2026-09/rozptylova-studie-clanek.webp
 
-title: "Dispersionsstudie: Wann ist sie obligatorisch und welche Dokumentation ist erforderlich?"
+title: "Ausbreitungsstudie: Pflicht und Unterlagen"
 slug: rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba
 excerpt: "Eine Ausbreitungsstudie bewertet, wie sich Emissionen aus einer stationären Quelle, dem Verkehr oder einem anderen Projekt auf die Luftqualität in der Umgebung auswirken.“ In der Praxis wird dies insbesondere bei der Genehmigung neuer Quellen, Betriebsänderungen, Kapazitätserhöhungen, erheblichem damit verbundenen Verkehr oder in Verfahren angegangen, bei denen die regionale Behörde die Immissionsbeiträge des Projekts bewerten muss."
 author: NATURCHEM

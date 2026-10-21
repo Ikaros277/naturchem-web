@@ -16,7 +16,7 @@ collections:
     extension: md
     format: frontmatter
     slug: "{{fields.slug}}"
-    summary: "{{publishedAt}} — {{title}}"
+    summary: "{{publishedAt}} — {{status}} — {{title}}"
     sortable_fields:
       - { field: publishedAt, default_sort: desc }
       - title
@@ -24,7 +24,13 @@ collections:
       - updatedAt
       - author
     fields:
-      - { label: "Nadpis", name: "title", widget: "string" }
+      - {
+          label: "Nadpis",
+          name: "title",
+          widget: "string",
+          pattern: ["^.{1,50}$", "Napište úplný výstižný nadpis do 50 znaků."],
+          hint: "Hlavní téma dejte na začátek. Nadpis se používá na webu i ve vyhledávání. Google může znění změnit nebo zkrátit podle zařízení a dotazu."
+        }
       - {
           label: "Slug (URL, bez diakritiky)",
           name: "slug",
@@ -40,7 +46,7 @@ collections:
           widget: "select",
           options:
             [
-              { label: "Publikovat (podle data níže)", value: "published" },
+              { label: "Schválený — zveřejnit podle data", value: "published" },
               { label: "Koncept (skrytý na webu)", value: "draft" }
             ],
           default: "published",

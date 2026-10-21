@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-10/kolaudace-haly-clanek.webp
-title: "Occupancy approval of a production hall or facility: which measurements the KHS may require and what to prepare"
+title: "Hall approval: KHS measurements to prepare"
 slug: kolaudace-vyrobni-haly-provozovny-khs-mereni
 excerpt: "Are you completing a production hall, warehouse, workshop or another facility and need to put it into use? One of the most common questions is which measurements will have to be submitted to the public health authority. There is no universal list. What matters is the KHS opinion, the actual execution of the building, the installed technology and the work the employees will perform. In practice, lighting, noise, ventilation, microclimate, dust and chemical substances are addressed most often."
 author: Ing. František Hezina

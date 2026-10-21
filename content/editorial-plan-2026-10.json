@@ -1,0 +1,18 @@
+{
+  "expertApprovedOn": "2026-10-21",
+  "approval": "Owner explicitly approved all 12 articles and weekly publication.",
+  "articles": [
+    { "slug": "mereni-vibraci-ridicu-vzv-priprava-smeny", "publishedAt": "2026-10-19" },
+    { "slug": "bezpecnostni-list-novy-vyrobek-podklady-revize", "publishedAt": "2026-10-26" },
+    { "slug": "cena-hlukove-studie-podklady-nabidka", "publishedAt": "2026-11-02" },
+    { "slug": "mereni-osvetleni-skladu-regaly-expedice", "publishedAt": "2026-11-09" },
+    { "slug": "uhlikova-stopa-firmy-podklady-pro-odberatele", "publishedAt": "2026-11-16" },
+    { "slug": "rocni-bilance-rozpoustedel-lakovna-podklady", "publishedAt": "2026-11-23" },
+    { "slug": "zadost-ippc-integrovane-povoleni-prilohy", "publishedAt": "2026-11-30" },
+    { "slug": "odborne-prilohy-eia-hluk-rozptyl-doprava", "publishedAt": "2026-12-07" },
+    { "slug": "prekroceni-emisniho-limitu-dalsi-postup", "publishedAt": "2026-12-14" },
+    { "slug": "podani-ispop-za-firmu-zmocneni-podklady", "publishedAt": "2026-12-21" },
+    { "slug": "rozsireni-bioplynove-stanice-biometan-podklady", "publishedAt": "2026-12-28" },
+    { "slug": "mikroklima-vyrobni-pracoviste-realna-zakazka", "publishedAt": "2027-01-04" }
+  ]
+}

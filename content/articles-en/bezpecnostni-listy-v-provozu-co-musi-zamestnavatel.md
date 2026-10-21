@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-10/bezpecnostni-listy-clanek.webp
-title: "Safety data sheets in operation: what an employer must actually put into practice"
+title: "Safety data sheets: employer duties"
 slug: bezpecnostni-listy-v-provozu-co-musi-zamestnavatel
 excerpt: "A safety data sheet is not a document that can simply be filed in a folder or saved on the company server. If a company uses paints, adhesives, cleaning agents, solvents, acids, alkalis, oils or other chemical products, it must carry the information from the safety data sheets into real operations. The safety data sheet is used, among other things, to determine the hazards of a product, storage conditions, suitable protective equipment, measures in the event of a spill or fire, and also which chemical substances may be significant in workplace air. The problem found during inspections is often not the absence of a safety data sheet itself, but the gap between what it says and how the company actually handles the chemical."
 author: Ing. František Hezina

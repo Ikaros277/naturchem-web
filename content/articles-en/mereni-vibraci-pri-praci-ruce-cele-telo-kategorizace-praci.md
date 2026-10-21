@@ -1,5 +1,5 @@
 ---
-title: 'Vibration measurement at work: when hand-arm, whole-body and job categorisation are addressed'
+title: "Vibration measurement: hand-arm, whole-body"
 slug: mereni-vibraci-pri-praci-ruce-cele-telo-kategorizace-praci
 excerpt: 'Vibration in the workplace is not assessed only in general terms. Hand-arm vibration transmitted during work with hand-held tools is evaluated differently from whole-body vibration acting on the body, for example when operating a forklift truck, construction machine or other mobile equipment. For correct job categorisation it is therefore important first to distinguish the type of exposure, describe work procedures and determine the actual time spent working with vibration sources.'
 author: Ing. František Hezina

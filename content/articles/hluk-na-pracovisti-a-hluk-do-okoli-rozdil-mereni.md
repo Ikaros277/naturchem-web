@@ -1,5 +1,5 @@
 ---
-title: "Hluk na pracovišti a hluk do okolí: proč jsou to dvě různá měření"
+title: "Hluk na pracovišti a do okolí: rozdíly v měření"
 slug: hluk-na-pracovisti-a-hluk-do-okoli-rozdil-mereni
 excerpt: Měření hluku na pracovišti a měření hluku do okolí nejsou totéž.
   Pracovní hluk se řeší kvůli ochraně zaměstnanců, kategorizaci prací a

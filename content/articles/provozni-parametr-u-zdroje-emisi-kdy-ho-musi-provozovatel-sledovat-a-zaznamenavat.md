@@ -1,6 +1,5 @@
 ---
-title: "Provozní parametr u zdroje emisí: kdy ho musí provozovatel sledovat a
-  zaznamenávat"
+title: "Provozní parametr zdroje: evidence"
 slug: provozni-parametr-u-zdroje-emisi-kdy-ho-musi-provozovatel-sledovat-a-zaznamenavat
 excerpt: Provozní parametr slouží k průběžnému prokazování, že technologie ke
   snižování emisí nebo opatření ke snížení emisí skutečně funguje. Může jít

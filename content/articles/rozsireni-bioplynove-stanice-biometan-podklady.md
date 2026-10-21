@@ -1,9 +1,9 @@
 ---
-title: "Rozšíření bioplynové stanice nebo přechod na biometan: jaké odborné podklady připravit"
+title: "Rozšíření BPS a biometan: odborné podklady"
 slug: rozsireni-bioplynove-stanice-biometan-podklady
 excerpt: "Připravujete změnu bioplynové stanice? Sjednoťte stávající a navrhované kapacity, technologie, dopravu a provozní režimy pro odborné studie a povolovací podklady."
 author: NATURCHEM
-status: draft
+status: published
 publishedAt: "2026-12-28"
 topic: EIA a povolování
 heroImage: /uploads/poradna-2026/bioplyn-biometan.webp

@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/prach-frakce.webp
-title: 'Prach na pracovišti: celkový prach, respirabilní frakce a oxid křemičitý'
+title: "Prach na pracovišti: frakce a oxid křemičitý"
 slug: prach-na-pracovisti-celkovy-prach-respirabilni-frakce-a-oxid-kremicity
 excerpt: |
   Prach na pracovišti není jen viditelný nepořádek ve vzduchu nebo na podlaze. Z hlediska ochrany zdraví zaměstnanců je důležité, jaký prach vzniká, jak velké částice obsahuje a zda je v něm přítomen například krystalický oxid křemičitý. Jinak se hodnotí celkový prach, jinak respirabilní frakce a jinak prach s fibrogenním účinkem, který může pronikat hluboko do plic.

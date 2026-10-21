@@ -1,6 +1,5 @@
 ---
-title: "Poplatky za znečišťování ovzduší: jak souvisí měření, výpočet emisí a
-  provozní evidence"
+title: "Poplatky za ovzduší: měření a evidence"
 slug: poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence
 excerpt: Poplatkové přiznání v oblasti ovzduší nevzniká samo od sebe. Vychází z
   provozní evidence, měření emisí, výpočtů emisí, spotřeb paliv a surovin,

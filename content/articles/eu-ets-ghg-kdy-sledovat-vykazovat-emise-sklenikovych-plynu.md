@@ -1,6 +1,5 @@
 ---
-title: "EU ETS a GHG: kdy musí provozovatel sledovat a vykazovat emise
-  skleníkových plynů"
+title: "EU ETS a GHG: sledování a vykazování emisí"
 slug: eu-ets-ghg-kdy-sledovat-vykazovat-emise-sklenikovych-plynu
 excerpt: Spotřebovává váš provoz větší množství zemního plynu nebo jiných paliv,
   provozujete kotelnu, teplárnu, pec nebo energeticky náročnou výrobu? Pak je

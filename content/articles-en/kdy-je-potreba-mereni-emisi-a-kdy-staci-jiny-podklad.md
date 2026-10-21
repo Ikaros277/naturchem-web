@@ -1,6 +1,6 @@
 ---
 heroImage: /hero/generated-2026-09/kdy-mereni-emisi.webp
-title: When is emission measurement needed and when is another supporting document sufficient?
+title: "Emission measurement or other evidence?"
 slug: kdy-je-potreba-mereni-emisi-a-kdy-staci-jiny-podklad
 excerpt: 'Operators of boiler plants, paint shops, technological lines, and other stationary sources often face the question of whether they must commission authorised emission measurement, or whether another expert supporting document is sufficient for the given situation. What matters most is the type of source, operating permit conditions, technology change, and the purpose for which the output is to be documented.'
 author: NATURCHEM

@@ -34,7 +34,7 @@ function parseValue(value: string): ParsedValue | null {
 }
 
 function formatValue(value: number, parsed: ParsedValue) {
-  const digits = Math.round(value).toString();
+  const digits = Math.floor(value).toString();
   const grouped = parsed.thousandsSeparator
     ? digits.replace(/\B(?=(\d{3})+(?!\d))/g, parsed.thousandsSeparator)
     : digits;
@@ -59,45 +59,41 @@ export function CountUpStatValue({ value }: Props) {
     }
 
     let animationFrame = 0;
-    let animationTimer = 0;
     let hasStarted = false;
 
     const startAnimation = () => {
       if (hasStarted) return;
 
       hasStarted = true;
-      const duration = 900;
+      const duration = 1500;
       visible.textContent = formatValue(0, parsed);
 
-      animationTimer = window.setTimeout(() => {
-        const startedAt = performance.now();
-        let lastPaint = 0;
+      const startedAt = performance.now();
+      let lastPaint = 0;
 
-        const update = (now: number) => {
-          const progress = Math.min((now - startedAt) / duration, 1);
-          const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const update = (now: number) => {
+        const progress = Math.min((now - startedAt) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
 
-          // This isolated decorative node needs no React rerenders each frame.
-          // Reserved width and the accessible final value remain unchanged.
-          if (now - lastPaint >= 32 || progress === 1) {
-            const text = progress === 1 ? value : formatValue(parsed.target * easedProgress, parsed);
-            if (visible.textContent !== text) visible.textContent = text;
-            lastPaint = now;
-          }
+        // Only paint the decorative node; keep layout and accessible text fixed.
+        // Flooring also keeps small values (e.g. 36) counting until the end.
+        if (now - lastPaint >= 32 || progress === 1) {
+          const text = progress === 1 ? value : formatValue(parsed.target * easedProgress, parsed);
+          if (visible.textContent !== text) visible.textContent = text;
+          lastPaint = now;
+        }
 
-          if (progress < 1) {
-            animationFrame = window.requestAnimationFrame(update);
-          }
-        };
+        if (progress < 1) {
+          animationFrame = window.requestAnimationFrame(update);
+        }
+      };
 
-        animationFrame = window.requestAnimationFrame(update);
-      }, 150);
+      animationFrame = window.requestAnimationFrame(update);
     };
 
     if (!("IntersectionObserver" in window)) {
       startAnimation();
       return () => {
-        window.clearTimeout(animationTimer);
         window.cancelAnimationFrame(animationFrame);
       };
     }
@@ -116,7 +112,6 @@ export function CountUpStatValue({ value }: Props) {
 
     return () => {
       observer.disconnect();
-      window.clearTimeout(animationTimer);
       window.cancelAnimationFrame(animationFrame);
     };
   }, [parsed, value]);

@@ -149,6 +149,15 @@ main.contact-page + .site-footer {
   min-height: 100%;
 }
 
+.contact-form-supplements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  padding: 4px 4px 16px;
+}
+
+.contact-form-supplements-grid > * { min-width: 0; }
+
 .contact-form-message-field {
   margin: 0;
   height: 100%;
@@ -244,6 +253,11 @@ main.contact-page + .site-footer {
 
 .contact-form-submit {
   width: 100%;
+}
+
+.contact-quick-form input:not([type="checkbox"]):not([type="radio"]),
+.contact-quick-form textarea {
+  font-weight: 400;
 }
 
 .contact-inquiry-select {
@@ -598,6 +612,26 @@ main.contact-page + .site-footer {
   .contact-form-message-field textarea {
     min-height: 9rem;
   }
+
+  /* Essential fields first; optional documents remain one tap away. */
+  .contact-quick-form .contact-form-header { margin-bottom: 0; }
+  .contact-quick-form .contact-form-col { gap: 12px; }
+  .contact-quick-form .contact-form-grid { gap: 16px; }
+  .contact-quick-form .contact-form-message-field { height: auto; }
+  .contact-quick-form .contact-form-message-field textarea { min-height: 8rem; height: 8rem; flex: none; }
+  .contact-quick-form .contact-form-supplements-grid { grid-template-columns: 1fr; }
+  .contact-quick-form > .contact-form-details { margin-block: 0; }
+  .contact-quick-form input:not([type="checkbox"]):not([type="radio"]),
+  .contact-quick-form button[type="submit"] { min-height: 48px; }
+  .contact-quick-form button[type="submit"] { font-size: 1rem; }
+  .contact-quick-form .form-info-tip-trigger { min-width: 44px; min-height: 44px; }
+  .contact-quick-form input,
+  .contact-quick-form textarea,
+  .contact-quick-form summary { scroll-margin-top: calc(var(--site-header-offset, 4rem) + 1rem); }
+  .contact-quick-form .contact-form-label-row { display: flex; justify-content: space-between; }
+  .contact-quick-form .contact-form-label-row label { min-width: 0; }
+  .contact-quick-form .contact-service-option { font-size: 0.9rem; line-height: 1.5; }
+  .contact-quick-form .contact-service-option input { width: 20px; height: 20px; }
 
   .contact-service-option {
     min-height: 44px;

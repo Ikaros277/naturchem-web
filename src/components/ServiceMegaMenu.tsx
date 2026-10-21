@@ -1,6 +1,6 @@
 "use client";
 
-import { MegaMenuColumnHead, MegaMenuMobileHeadLink } from "@/components/MegaMenuColumnHead";
+import { MegaMenuColumnHead } from "@/components/MegaMenuColumnHead";
 import { MobileNavSummaryRow } from "@/components/MobileNavSummaryRow";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { HeaderLabels, ServiceHeaderMegaGroup } from "@/lib/header-nav-data";
@@ -9,7 +9,6 @@ import { serviceMegaGroupHeadHrefs } from "@/lib/megamenu-head-hrefs";
 import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { serviceMegaGroupIcons, type ServiceMegaGroupId } from "@/lib/megamenu-types";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
-import { splitMobileServiceLinks } from "@/lib/mobile-service-links";
 
 function hasHashHref(href: string) {
   return href.includes("#");
@@ -125,39 +124,15 @@ export function MobileServiceMegaGroups({
   groups: readonly ServiceHeaderMegaGroup[];
   onNavigate?: () => void;
 }) {
-  const { direct, remaining } = splitMobileServiceLinks(groups);
   return (
     <>
-      <ul className="mega-menu-link-list mega-menu-link-list--mobile nav-mobile-direct-services">
-        {direct.map(item => (
-          <MegaMenuLinkRow key={item.href} href={item.href} label={item.label}
-            description="" groupId={item.groupId} onNavigate={onNavigate} />
-        ))}
-      </ul>
-      {remaining.map((group) => {
-        const headHref = group.id ? serviceMegaGroupHeadHrefs[group.id] : group.links[0]?.href;
-
-        return (
+      {groups.map((group) => (
         <details
           key={group.id ?? group.title}
           className={`nav-mobile-details nav-mobile-nested mega-menu-mobile-group mega-menu-mobile-group--${group.id ?? "default"}`}
         >
           <summary>
             <MobileNavSummaryRow>
-            {headHref ? (
-              <MegaMenuMobileHeadLink
-                href={headHref}
-                groupId={group.id}
-                icon={
-                  group.id ? (
-                    <ServiceIcon icon={serviceMegaGroupIcons[group.id]} variant="plain" size={18} />
-                  ) : null
-                }
-                title={group.title}
-                subtitle={group.subtitle}
-                onNavigate={onNavigate}
-              />
-            ) : (
               <span className="mega-menu-mobile-summary">
                 {group.id ? (
                   <span className={`mega-menu-column-badge mega-menu-column-badge--${group.id}`}>
@@ -169,7 +144,6 @@ export function MobileServiceMegaGroups({
                   {group.subtitle ? <span className="mega-menu-column-sub">{group.subtitle}</span> : null}
                 </span>
               </span>
-            )}
             </MobileNavSummaryRow>
           </summary>
           <ul className="mega-menu-link-list mega-menu-link-list--mobile">
@@ -185,8 +159,7 @@ export function MobileServiceMegaGroups({
             ))}
           </ul>
         </details>
-        );
-      })}
+      ))}
     </>
   );
 }

@@ -437,6 +437,40 @@ Naměřený nový baseline: 591 sestavených dokumentů; raw HTML 82 802 307 →
 
 Nové celé verify/build, zachovaný test monitoringu a kontroly klientských oblastí prošly; 886 místních URL/link kontrol bez chyby. Nový neměnný c2c5d7c baseline ověřil všech 591 dokumentů, shodný sitemap a 271 chráněných zdrojů. PC/mobil a služba → předvyplněná poptávka ověřeny bez odeslání. Plán jednoho produkčního Git buildu, bez preview/placeného upgradu; skutečný commit a Ready se ověří po push. Vydání bude další technický/prezentační rušivý faktor EXP-008/011/013/014; výsledky oddělit a měřit stejné úplné intervaly s doručením a kvalifikací skutečných leadů. Baseline, souhlas, přesný rozsah, testy a rollback c2c5d7c: [RELEASE-SERVICE-PERFORMANCE-2026-10-19.md](RELEASE-SERVICE-PERFORMANCE-2026-10-19.md).
 
+## Lokální kontrola kvality měření — 20. 10. 2026
+
+Nad aktuálním vydaným dd9a751 připravena úzká ochrana vlastních GA4 událostí. Offline skutečný bootstrap a helper reprodukovaly zápis generate_lead do fronty i bez statistické volby / po jejím odvolání; nejde o prokázaný externí přenos nebo příčinu chybějících GA4 údajů. Nově společná funkce respektuje aktuální statistický souhlas, zachovává existující parametry platných událostí a výpadek volitelného tagu nemění úspěšně přijatou poptávku na chybu.
+
+Cíl: důvěryhodnější rozhodování podle skutečných, souhlas respektujících konverzí, nikoli zvýšení analytických čísel. API, doručování, formulářový výsledek, souhlasy, veřejné texty, 591 stránek SEO/schema, sitemap a robots zachovány. Izolované regresní a integrační testy, verify/build a 886 místních URL/link kontrol prošly. Bez skutečné poptávky, nových závislostí, commitu, push nebo nasazení. GA4 aktuálně vyžaduje ruční obnovení identity a dnešní doručovací historie Resendu není přístupná; nové meziobdobní nebo kvalifikační výsledky nejsou tvrzeny.
+
+Před případným výslovně schváleným vydáním znovu zkontrolovat main/Cursor; změnu měření označit skutečným datem a nepovažovat případný pokles událostí bez souhlasu za pokles zakázek. Žádný překrývající se obsahový/CTR experiment. Rozsah, omezení reprodukce, testy a další postup: [ANALYTICS-CONSENT-2026-10-20.md](ANALYTICS-CONSENT-2026-10-20.md).
+
+Následné upřesnění 20. 10.: vlastník ověření GA4 dokončil a správné přehledy byly skutečně dočteny. Původní poznámka o požadovaném přihlášení je historický stav, nikoli současná překážka. Podrobný konverzní rozpad zůstává mimo veřejný repozitář; neposkytuje post-data tohoto nevydaného návrhu ani automatické nové ověření Resendu.
+
+## Mobilní poptávkový formulář — pouze lokálně, 20. 10. 2026
+
+Po novém konverzním auditu vlastník požádal rovnou opravit mobilní slabinu. Skutečná cesta homepage/služba → kontakt funguje; zjištěné konkrétní tření je dlouhý základní formulář, nepovinné přerušení uprostřed a vstupy kolem 41 px. Nad současným dd9a751 připraven souvislý hlavní formulář, jediné rozbalení příloh/místa/termínu, mobilní hlavní vstupy 48 px a chyba chybějícího kontaktu přímo u polí. Krátké popisky CS/EN/DE, žádné nové povinné pole nebo duplicita form_start. API, odborný obsah, URL, SEO a cache beze změny.
+
+Hypotéza: menší tření při mobilním kontaktu, nikoli už prokázaný růst kvalifikovaných poptávek. Základní 390px formulář při první zkoušce 1 173 →867 px (přibližně −26 %). Izolované integrační testy, zachovaná předvolba, souhlasy a doručování; žádná skutečná poptávka nebo produkční zásah. Případné další schválené vydání bude novou prezentační fází a rušivým faktorem EXP-008/011/013/014, ne jejich izolovaným výsledkem. Baseline, přesná změna, testy, měření a rollback: [MOBILE-INQUIRY-2026-10-20.md](MOBILE-INQUIRY-2026-10-20.md).
+
+## Jemné animace rozhraní — pouze lokálně, 21. 10. 2026
+
+Na navazující výslovné zadání majitele přidáno plynulé rozvíjení/sbalování mobilních kategorií a krátké jemné reakce tlačítek a hlavních karet. Mobilní menu zachovává nativní details, navigační odkazy a klávesnici; jediný delegovaný posluchač existuje pouze během otevřeného panelu. Vnoření, rychlé obrácení směru, preference omezeného pohybu a cleanup jsou regresně testované. Seznamy v těle mají čistě CSS výškové přechody s bezpečným nativním chováním starších prohlížečů. Bez těžké knihovny, nové URL, textového/SEO zásahu, externích požadavků nebo nového měření.
+
+Baseline je skoková změna výšky menu, nikoli doložená příčina nízkých mobilních konverzí. Hypotéza: lepší orientace a čitelná reakce rozhraní; žádný naměřený lead/ranking uplift. Celé verify/build, rozsah feature fallbacku, skutečná UI zkouška a podmínky případného vydání v [INTERACTION-MOTION-2026-10-21.md](INTERACTION-MOTION-2026-10-21.md). Stále pouze lokálně, bez commitu/push/merge/deploymentu. Dřívější návrhy formuláře a souhlasů zůstávají zachovány, Cursor checkout nedotčen.
+
+Doplnění 21. 10.: na další zadání upraven průběh počítadel homepage na 1 500 ms bez úvodní prodlevy, s rychlým nástupem a kubickým zpomalením. Drobné číselné hodnoty se již kvůli zaokrouhlování neustálí předčasně; původní statistiky i přístupný/SEO text jsou neměnné. Test skutečné komponenty, B2B, lint/typecheck a build/postbuild prošly. Jde pouze o kultivaci prezentace, nikoli naměřený růst leadů. Podrobnosti v navazující části [INTERACTION-MOTION-2026-10-21.md](INTERACTION-MOTION-2026-10-21.md). Bez commitu nebo produkčního zásahu.
+
+## Mobilní služby v úplných kategoriích — pouze lokálně, 21. 10. 2026
+
+Na nové zadání vlastníka odstraněna matoucí kombinace šesti vytažených služeb a kategorií se zbytkem nabídky. Po rozbalení Služby nově jen Přehled služeb a tři úplné skupiny; všechny dosavadní navigační cíle a jejich řazení zachovány. Celý nadpis skupiny rozbaluje, nikoli skrytě naviguje. CS/EN/DE, desktop beze změny, dosavadní animace i jasná poptávka zachovány. Nepoužívaný rozdělovací helper a CSS odstraněny.
+
+Hypotéza: předvídatelnější nalezení správné nabídky a kratší první seznam. Nejde o menší počet klepnutí na každou službu ani již naměřený růst poptávek. Skutečný render regresně chrání úplnost, přesně tři kategorie a žádné duplicitní cíle. Baseline, kompromis rychlých zkratek, testy a podmínky případného vydání: [MOBILE-SERVICE-NAV-2026-10-21.md](MOBILE-SERVICE-NAV-2026-10-21.md). Stále bez commitu, push, produkce nebo skutečné testovací poptávky; předchozí lokální návrhy a Cursor práce zachovány.
+
+## Schválené společné vydání mobilních úprav — 21. 10. 2026
+
+Majitel po kontrole posledního náhledu výslovně požádal nasazení. Dosavadní zápisy „pouze lokálně“ pro kratší formulář, interakce, počítadla a úplné mobilní kategorie jsou historickým stavem přípravy; nyní se připravuje jedno společné vydání nad ověřeným main / Ready dd9a751. Zahrnuta ochrana analytických událostí aktuálním souhlasem; nesmí být chybně interpretována jako pokles skutečných poptávek. Cursor checkout, odborné články a všechny URL/SEO zachovány. Skutečný nový Ready se ověří až po push. Souhlas, baseline, celý rozsah, testy, měření a rollback: [RELEASE-MOBILE-INTERACTIONS-2026-10-21.md](RELEASE-MOBILE-INTERACTIONS-2026-10-21.md).
+
 ## TECH-014 — čtenářská šablona poradny, pouze lokální návrh 9. 10. 2026
 
 Na zadání vlastníka připraven širší čtenářský panel, sticky obsah na PC a nativní rozbalovací obsah na telefonu. Hlavní kapitoly mají skutečné kotvy bez dalšího klientského JavaScriptu; zachován celý odborný text, zdrojové/službové odkazy, URL a SEO metadata. Hypotéza je menší tření při hledání odpovědi a následném kontaktu, nikoli prokázaný růst pozic nebo leadů. Vlastník 9. 10. výslovně schválil společné produkční vydání článků, odstranění kontaktu na Žilkovou a dříve zadaného skrytí WhatsAppu. GitHub main při preflightu `9f9864a`; připravuje se jeden produkční build, Ready a skutečný commit se ověří následně. TECH-014 bude prezentační rušivý faktor společné fáze, nikoli izolovaný SEO experiment. Baseline, ochrany a vyhodnocení: [ARTICLE-READING-2026-10-09.md](ARTICLE-READING-2026-10-09.md), [CONTACTS-CLEANUP-2026-10-09.md](CONTACTS-CLEANUP-2026-10-09.md).

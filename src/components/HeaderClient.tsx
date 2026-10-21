@@ -10,6 +10,7 @@ import { BrandLogo } from "@/components/BrandLogo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { MobileNavSummaryRow } from "@/components/MobileNavSummaryRow";
 import { HeaderInquiryCta } from "@/components/HeaderInquiryCta";
+import { installMenuDisclosureMotion } from "@/lib/menu-disclosure-motion";
 
 const ServiceMegaMenu = dynamic(
   () => import("@/components/ServiceMegaMenu").then((mod) => mod.ServiceMegaMenu),
@@ -87,6 +88,11 @@ export function HeaderClient({
   const [mounted, setMounted] = useState(false);
   const mobileSheetRef = useRef<HTMLDivElement>(null);
   const mobileToggleRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!menuOpen || !mobileSheetRef.current) return;
+    return installMenuDisclosureMotion(mobileSheetRef.current);
+  }, [menuOpen]);
 
   useEffect(() => {
     setMounted(true);

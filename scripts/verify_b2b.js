@@ -34,7 +34,6 @@ const load = require("./lib/load-typescript.js")({
   "@/components/ServiceFaqTeaser": { ServiceFaqTeaser: () => null }
 });
 const { isChatExcludedPath, canShowTawk } = load(path.join(root, "src/lib/chat-visibility.ts"));
-const { splitMobileServiceLinks } = load(path.join(root, "src/lib/mobile-service-links.ts"));
 const { MobileServiceMegaGroups } = load(path.join(root, "src/components/ServiceMegaMenu.tsx"));
 const { ServiceEvidence } = load(path.join(root, "src/components/ServiceEvidence.tsx"));
 const { heroThemeForArticle } = load(path.join(root, "src/lib/poradna-topic.ts"));
@@ -139,14 +138,20 @@ async function main() {
     const prefix = locale === "cs" ? "" : "/" + locale;
     const menuModule = load(path.join(root, `src/lib/service-megamenu${locale === "cs" ? "" : "-" + locale}.ts`));
     const localizedGroups = menuModule[locale === "cs" ? "serviceMegaGroups" : locale === "en" ? "serviceMegaGroupsEn" : "serviceMegaGroupsDe"];
-    const mobile = splitMobileServiceLinks(localizedGroups);
-    assert.equal(mobile.direct.length, 6);
-    const regrouped = [...mobile.direct, ...mobile.remaining.flatMap(group => group.links)].map(item => item.href);
-    assert.deepEqual([...regrouped].sort(), localizedGroups.flatMap(group => group.links.map(item => item.href)).sort(), "Mobile links must not be lost or duplicated");
     const menu = renderToStaticMarkup(React.createElement(MobileServiceMegaGroups, { groups: localizedGroups }));
-    for (const item of mobile.direct) {
-      assert.ok(menu.indexOf(`href="${item.href}"`) < menu.indexOf("<details"), "Core services must be accessible before category accordions");
-    }
+    const mobileLinks = [...menu.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)].map(match => match[1]);
+    assert.deepEqual(mobileLinks, localizedGroups.flatMap(group => group.links.map(item => item.href)), "Every existing service remains once, inside its complete category");
+    assert.equal(new Set(mobileLinks).size, mobileLinks.length, "No repeated service destinations");
+    assert.equal((menu.match(/<details\b/g) || []).length, 3, "Three complete mobile categories, no separate six-link block");
+    assert.ok(!menu.includes("nav-mobile-direct-services"));
+    const summaries = [...menu.matchAll(/<summary\b[^>]*>([\s\S]*?)<\/summary>/g)];
+    assert.equal(summaries.length, 3);
+    assert.ok(summaries.every(match => !/<a\b/.test(match[1])), "The whole category heading toggles; no conflicting navigation inside the control");
+    const categories = [...menu.matchAll(/<details\b[^>]*>([\s\S]*?)<\/details>/g)];
+    categories.forEach((match, index) => {
+      const hrefs = [...match[1].matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)].map(link => link[1]);
+      assert.deepEqual(hrefs, localizedGroups[index].links.map(item => item.href), "Preserve each complete group and its order in " + locale);
+    });
     const evidence = renderToStaticMarkup(await ServiceEvidence({ locale, slug: "sluzby/pracovni-prostredi" }));
     assert.ok(evidence.includes(prefix + "/reference/#pracovni-prostredi"));
     const labels = require(path.join(root, "messages", locale + ".json")).header;

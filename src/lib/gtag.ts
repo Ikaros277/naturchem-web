@@ -1,7 +1,10 @@
 /**
- * GA4 – bezpečné volání `gtag('event', …)` pouze v prohlížeči po načtení skriptu.
- * Aktivní jen pokud je nastaveno NEXT_PUBLIC_GA_MEASUREMENT_ID a gtag existuje.
+ * GA4 – vlastní události jen s aktuálním souhlasem se statistikami.
+ * Samotná přítomnost gtag není souhlas: fronta existuje už při bootstrapu
+ * Consent Mode a po odvolání souhlasu může zůstat načtený Google tag.
  */
+import { readCookieConsent } from "@/lib/cookie-consent";
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -14,6 +17,13 @@ export function sendGtagEvent(
   params?: Record<string, string | number | boolean | undefined>
 ): void {
   if (typeof window === "undefined") return;
-  if (typeof window.gtag !== "function") return;
-  window.gtag("event", eventName, params ?? {});
+  if (!process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) return;
+  const consent = readCookieConsent();
+  if (!consent?.statistics || !consent.updatedAt) return;
+  try {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", eventName, params ?? {});
+  } catch {
+    // An optional tracker must never turn an accepted inquiry into a form error.
+  }
 }

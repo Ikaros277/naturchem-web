@@ -66,7 +66,7 @@ export function ContactForm({
     if (!email && !phone) {
       setContactChannelError(true);
       setStatus("error");
-      setFeedback(t.contactRequired);
+      setFeedback("");
       form.querySelector<HTMLInputElement>("#contact-email-input")?.focus();
       return;
     }
@@ -78,6 +78,8 @@ export function ContactForm({
     if (uploadError) {
       setStatus("error");
       setFeedback("");
+      const supplements = form.querySelector<HTMLDetailsElement>(".contact-form-supplements");
+      if (supplements) supplements.open = true;
       form.querySelector<HTMLInputElement>("#contact-attachments-input")?.focus();
       return;
     }
@@ -152,6 +154,7 @@ export function ContactForm({
     <form
       id="poptavkovy-formular"
       className="contact-quick-form"
+      aria-labelledby="poptavka-heading"
       method="post"
       action="/api/contact/"
       encType="multipart/form-data"
@@ -179,10 +182,6 @@ export function ContactForm({
 
       <input type="hidden" name="inquiryCategory" value={inquiryCategory} />
 
-      <p id="contact-channel-hint" className="contact-form-channel-hint muted">
-        {t.contactChannelHint}
-      </p>
-
       <div className="contact-form-grid">
         <div className="contact-form-col contact-form-col--identity">
           <p>
@@ -191,6 +190,14 @@ export function ContactForm({
               <br />
               <input name="name" required autoComplete="name" maxLength={200} />
             </label>
+          </p>
+
+          <p
+            id="contact-channel-hint"
+            className={`contact-form-channel-hint ${contactChannelError ? "contact-form-feedback-error" : "muted"}`}
+            role={contactChannelError ? "alert" : undefined}
+          >
+            {contactChannelError ? t.contactRequired : t.contactChannelHint}
           </p>
 
           <p>
@@ -205,10 +212,12 @@ export function ContactForm({
                 maxLength={254}
                 aria-describedby="contact-channel-hint"
                 aria-invalid={contactChannelError || undefined}
+                onChange={(event) => {
+                  if (event.currentTarget.value.trim()) setContactChannelError(false);
+                }}
               />
             </label>
           </p>
-
           <p>
             <label htmlFor="contact-phone-input">
               {t.phoneLabel}
@@ -221,33 +230,12 @@ export function ContactForm({
                 maxLength={40}
                 aria-describedby="contact-channel-hint"
                 aria-invalid={contactChannelError || undefined}
+                onChange={(event) => {
+                  if (event.currentTarget.value.trim()) setContactChannelError(false);
+                }}
               />
             </label>
           </p>
-
-          <details className="contact-form-details">
-            <summary>{t.optionalDetails}</summary>
-          <p>
-            <label>
-              {t.locationLabel}
-              <br />
-              <input
-                name="location"
-                autoComplete="address-level2"
-                maxLength={200}
-                placeholder={t.locationPlaceholder}
-              />
-            </label>
-          </p>
-
-          <p>
-            <label>
-              {t.deadlineLabel}
-              <br />
-              <input name="deadline" maxLength={200} placeholder={t.deadlinePlaceholder} />
-            </label>
-          </p>
-          </details>
         </div>
 
         <div className="contact-form-col contact-form-col--message">
@@ -266,6 +254,13 @@ export function ContactForm({
             </label>
           </p>
 
+        </div>
+      </div>
+
+      <details className="contact-form-details contact-form-supplements">
+        <summary>{t.optionalDetails}</summary>
+        <div className="contact-form-supplements-grid">
+          <div className="contact-form-col">
           <p>
             <span className="contact-form-label-row">
               <label htmlFor="contact-attachments-input">{t.attachmentLabel}</label>
@@ -306,8 +301,30 @@ export function ContactForm({
             <summary id="contact-attachments-help">{t.largeAttachmentsTitle}</summary>
             <p>{t.largeAttachmentsHelp} <a href={`mailto:${company.email}`}>{company.email}</a>.</p>
           </details>
+          </div>
+          <div className="contact-form-col">
+            <p>
+              <label>
+                {t.locationLabel}
+                <br />
+                <input
+                  name="location"
+                  autoComplete="address-level2"
+                  maxLength={200}
+                  placeholder={t.locationPlaceholder}
+                />
+              </label>
+            </p>
+            <p>
+              <label>
+                {t.deadlineLabel}
+                <br />
+                <input name="deadline" maxLength={200} placeholder={t.deadlinePlaceholder} />
+              </label>
+            </p>
+          </div>
         </div>
-      </div>
+      </details>
 
       <details className="contact-form-details contact-form-services">
         <summary>{selectedServices.length > 0 ? t.changeServices : t.chooseServices}</summary>

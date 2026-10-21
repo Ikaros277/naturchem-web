@@ -60,22 +60,39 @@ function api({ send, allowed = true, scheduleThrows = false } = {}) {
 
 function client(formData, response) {
   const events = [], requests = [], states = [], focus = [];
+  const values = [];
+  const supplements = { open: false };
   let stateIndex = 0;
   const mocked = createLoader({
-    react: { useState: (initial) => { const id = stateIndex++; return [initial, (value) => states.push({ id, value })]; }, useRef: (value) => ({ current: value }) },
+    react: { useState: (initial) => {
+      const id = stateIndex++;
+      if (!(id in values)) values[id] = initial;
+      return [values[id], (value) => {
+        values[id] = typeof value === "function" ? value(values[id]) : value;
+        states.push({ id, value: values[id] });
+      }];
+    }, useRef: (value) => ({ current: value }) },
     "@/lib/i18n/locale-context": { useLocale: () => "cs", useTranslations: (ns) => require("../messages/cs.json")[ns] },
     "@/lib/i18n/locale-link": { LocaleLink: () => null },
     "@/lib/gtag": { sendGtagEvent: (name, params) => events.push({ name, params }) }
   });
   const { ContactForm } = mocked(path.join(root, "src/components/ContactForm.tsx"));
-  const tree = ContactForm({ serviceChoices: [] });
+  let tree = ContactForm({ serviceChoices: [] });
   assert.equal(tree.props.method, "post", "Missing JavaScript must never put inquiry details in the URL");
   assert.equal(tree.props.action, "/api/contact/");
   assert.equal(tree.props.encType, "multipart/form-data");
-  const form = { fixtureData: formData, reset: () => {}, querySelector: (selector) => ({ focus: () => focus.push(selector) }) };
+  const form = { fixtureData: formData, reset: () => {}, querySelector: (selector) => selector === ".contact-form-supplements" ? supplements : { focus: () => focus.push(selector) } };
   global.FormData = class { constructor(value) { return value.fixtureData; } };
   global.fetch = async (...args) => { requests.push(args); return response ? await response() : Response.json({ ok: true, leadId: "test-lead-id", message: "OK" }); };
-  return { events, requests, states, focus, submit: () => tree.props.onSubmit({ preventDefault() {}, currentTarget: form }) };
+  return { events, requests, states, focus, supplements,
+    render: () => { stateIndex = 0; tree = ContactForm({ serviceChoices: [] }); return tree; },
+    submit: () => tree.props.onSubmit({ preventDefault() {}, currentTarget: form }) };
+}
+
+function descendants(node) {
+  if (!node || typeof node !== "object") return [];
+  if (Array.isArray(node)) return node.flatMap(descendants);
+  return [node, ...descendants(node.props?.children)];
 }
 
 async function main() {
@@ -237,10 +254,25 @@ async function main() {
   assert.equal(blockedUpload.requests.length, 0, "Oversize upload never reaches the network");
   assert.deepEqual(blockedUpload.focus, ["#contact-attachments-input"]);
   assert.ok(blockedUpload.states.some((s) => typeof s.value === "string" && s.value.includes("4 MB")));
+  assert.equal(blockedUpload.supplements.open, true, "Open optional documents before focusing their validation error");
+  assert.equal(descendants(blockedUpload.render()).find(node => node.props?.className === "contact-form-details contact-form-supplements").props.open, undefined, "React must not close the native disclosure again when a corrected attachment clears the error");
   const noContact = client(data({ email: "", phone: "" }));
   await noContact.submit();
   assert.equal(noContact.requests.length, 0);
   assert.deepEqual(noContact.focus, ["#contact-email-input"]);
+  const errorTree = descendants(noContact.render());
+  const contactHint = errorTree.find(node => node.props?.id === "contact-channel-hint");
+  assert.equal(contactHint.props.role, "alert");
+  assert.equal(contactHint.props.children, require("../messages/cs.json").contactForm.contactRequired);
+  assert.equal(errorTree.find(node => node.props?.name === "email").props["aria-invalid"], true);
+  errorTree.find(node => node.props?.name === "phone").props.onChange({ currentTarget: { value: "123456789" } });
+  assert.equal(descendants(noContact.render()).find(node => node.props?.id === "contact-channel-hint").props.role, undefined, "A supplied contact clears the inline error");
+  const compactTree = descendants(client(data()).render());
+  const optional = compactTree.find(node => node.props?.className === "contact-form-details contact-form-supplements");
+  assert.equal(optional.props.open, undefined, "Optional fields start collapsed, not removed");
+  const optionalNames = descendants(optional).map(node => node.props?.name).filter(Boolean);
+  assert.deepEqual(optionalNames, ["attachments", "location", "deadline"]);
+  assert.ok(compactTree.findIndex(node => node.props?.name === "message") < compactTree.indexOf(optional), "No optional section interrupts the essential name/contact/message fields");
   let finish;
   const duplicate = client(data(), () => new Promise((resolve) => { finish = resolve; }));
   const first = duplicate.submit();

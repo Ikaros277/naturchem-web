@@ -1439,6 +1439,8 @@ main ol {
 }
 
 .nav-mobile-details {
+  flex-shrink: 0;
+  min-height: 0;
   border: 0;
   border-radius: 0;
   padding: 0;
@@ -7382,16 +7384,6 @@ main.services-index-page:has(> .page-hero-band) {
   min-height: 2.75rem;
 }
 
-.nav-mobile-direct-services {
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid #d7e2df;
-}
-
-.nav-mobile-direct-services .mega-menu-link-row {
-  padding-block: 0.65rem;
-}
-
 body:has(.nav-mobile-sheet) .live-chat-whatsapp {
   visibility: hidden;
   pointer-events: none;
@@ -9981,4 +9973,45 @@ body:has(.live-chat-whatsapp) .tawk-min-container {
     max-width: 22rem;
     margin-inline: auto;
   }
+}
+
+/* Short, interaction-only motion; content is never hidden pending JavaScript. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .button {
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+  }
+  .button:not(:disabled):active { transform: translateY(1px); transition-duration: 100ms; }
+  main summary { transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease; }
+  .nav-mobile-sheet { animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+  .nav-mobile-details[data-disclosure-state="closing"] > summary .nav-mobile-summary-toggle::before {
+    transform: rotate(45deg);
+    margin-top: -0.2rem;
+  }
+}
+
+/* Native height transitions progressively enhance FAQ, scope and form lists. */
+@supports (interpolate-size: allow-keywords) and selector(details::details-content) {
+  @media screen and (prefers-reduced-motion: no-preference) {
+    main details { interpolate-size: allow-keywords; }
+    main details::details-content {
+      block-size: 0;
+      opacity: 0;
+      overflow: clip;
+      overflow-clip-margin: 6px;
+      transition: block-size 280ms cubic-bezier(0.22, 1, 0.36, 1), opacity 180ms ease, content-visibility 280ms allow-discrete;
+    }
+    main details[open]::details-content { block-size: auto; opacity: 1; }
+    main details.home-offer-details::details-content { block-size: auto; opacity: 1; overflow: visible; transition: none; }
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .button:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  main summary,
+  .nav-mobile-summary-toggle::before { transition: none; }
+  .button:hover,
+  .button:active { transform: none; }
 }

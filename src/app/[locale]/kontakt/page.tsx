@@ -1,7 +1,7 @@
 import "@/app/contact.generated.css";
 import type { Metadata } from "next";
 import { ContactFormSection } from "@/components/ContactFormSection";
-import { ContactMapDisclosure } from "@/components/ContactMapDisclosure";
+import { ContactPageHeroMedia } from "@/components/ContactPageMedia";
 import { ContactQuickLinks } from "@/components/ContactQuickLinks";
 import { PageHeroBand } from "@/components/PageHeroBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -69,14 +69,19 @@ export default async function Page({ params }: PageProps) {
         className="page-hero-band--contact"
         plain
       >
-        <header className="premium-page-hero contact-hero page-hero--photo">
-          <div>
-            <p className="eyebrow">{messages.contact.eyebrow}</p>
-            <h1>{messages.contact.title}</h1>
-            <p className="page-lead">{messages.contact.lead}</p>
-            <ContactQuickLinks phoneLabel={messages.contact.phone} emailLabel={messages.contact.email} />
-          </div>
-        </header>
+        <div className="contact-hero-grid">
+          <header className="premium-page-hero contact-hero page-hero--photo">
+            <div>
+              <p className="eyebrow">{messages.contact.eyebrow}</p>
+              <h1>{messages.contact.title}</h1>
+              <p className="page-lead">{messages.contact.lead}</p>
+              <ContactQuickLinks phoneLabel={messages.contact.phone} emailLabel={messages.contact.email} />
+            </div>
+          </header>
+          <ScopedMessagesProvider messages={{ contact: messages.contact }}>
+            <ContactPageHeroMedia />
+          </ScopedMessagesProvider>
+        </div>
       </PageHeroBand>
 
       <section
@@ -144,9 +149,6 @@ export default async function Page({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-              <ScopedMessagesProvider messages={{ contact: messages.contact }}>
-                <ContactMapDisclosure label={messages.contact.mapLabel} />
-              </ScopedMessagesProvider>
             </div>
           </div>
         </article>

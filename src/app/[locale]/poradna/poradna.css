@@ -58,29 +58,6 @@
   border-color: var(--forest);
 }
 
-.poradna-search {
-  display: grid;
-  gap: 0.45rem;
-  max-width: 32rem;
-  margin: 0 0 1.25rem;
-  font-weight: 700;
-}
-
-.poradna-search input {
-  width: 100%;
-  min-height: 48px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  padding-inline: 1rem;
-  font-weight: 500;
-  background: var(--surface);
-}
-
-.poradna-search input:focus {
-  outline: 2px solid var(--forest);
-  outline-offset: 2px;
-}
-
 .poradna-filter-bar {
   margin-bottom: 0.25rem;
 }

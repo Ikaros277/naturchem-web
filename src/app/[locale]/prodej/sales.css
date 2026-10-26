@@ -20,7 +20,7 @@
   display: grid;
   gap: 1.1rem;
   padding: clamp(1.25rem, 3vw, 1.85rem);
-  border-radius: calc(var(--radius-ui) + 2px);
+  border-radius: var(--radius-sharp);
   border: 1px solid rgba(15, 23, 42, 0.08);
   background: linear-gradient(145deg, #ffffff 0%, #faf6f1 58%, #f6efe6 100%);
   box-shadow: var(--shadow-card);
@@ -67,7 +67,7 @@
   padding: 0.9rem 1rem;
   border-left: 3px solid var(--sales-accent);
   background: rgba(255, 255, 255, 0.72);
-  border-radius: 0 var(--radius-ui) var(--radius-ui) 0;
+  border-radius: var(--radius-sharp);
   color: #5a3b24;
   line-height: 1.55;
 }
@@ -217,7 +217,7 @@
 .sales-brand-offer {
   margin: 0;
   padding: 1.1rem 1.15rem;
-  border-radius: calc(var(--radius-ui) + 2px);
+  border-radius: var(--radius-sharp);
   background: linear-gradient(180deg, #fff 0%, var(--sales-accent-soft) 100%);
   border: 1px solid var(--sales-accent-border);
   box-shadow: var(--sales-card-shadow);
@@ -235,7 +235,7 @@
   z-index: 12;
   margin: 0 0 1.5rem;
   padding: 0.55rem 0.65rem;
-  border-radius: calc(var(--radius-ui) + 2px);
+  border-radius: var(--radius-sharp);
   border: 1px solid rgba(15, 23, 42, 0.08);
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 8px 24px rgba(12, 26, 42, 0.06);
@@ -339,7 +339,7 @@
   height: 100%;
   padding: 1.15rem 1.2rem 1.1rem;
   border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-sharp);
   box-shadow: var(--sales-card-shadow);
   text-decoration: none;
   color: inherit;
@@ -490,7 +490,7 @@
   height: 100%;
   padding: 1.05rem 1.1rem 1rem;
   border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 12px;
+  border-radius: var(--radius-sharp);
   box-shadow: var(--sales-card-shadow);
   text-decoration: none;
   color: inherit;
@@ -528,7 +528,7 @@
   width: 100%;
   aspect-ratio: 16 / 10;
   margin: 0 0 0.9rem;
-  border-radius: calc(var(--radius-ui) + 2px);
+  border-radius: var(--radius-sharp);
   overflow: hidden;
   background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
   border: 1px solid rgba(15, 23, 42, 0.06);
@@ -680,7 +680,7 @@
   gap: 0.75rem 1rem;
   margin-bottom: 1.15rem;
   padding: 0.85rem 1rem;
-  border-radius: calc(var(--radius-ui) + 2px);
+  border-radius: var(--radius-sharp);
   background: linear-gradient(90deg, rgba(250, 244, 238, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
   border: 1px solid var(--sales-accent-border);
 }
@@ -726,7 +726,7 @@
 .sales-product-card--with-thumb .sales-product-thumb {
   margin: 0 calc(-1 * var(--card-pad)) 0.9rem;
   width: calc(100% + 2 * var(--card-pad));
-  border-radius: calc(var(--radius-ui) + 2px) calc(var(--radius-ui) + 2px) 0 0;
+  border-radius: var(--radius-sharp);
 }
 
 .sales-product-thumb {
@@ -756,7 +756,7 @@
   min-height: 3rem;
   margin: 0;
   padding: 0.55rem 0.7rem;
-  border-radius: var(--radius-ui);
+  border-radius: var(--radius-sharp);
   background: #fff;
   border: 1px solid rgba(15, 23, 42, 0.06);
 }
@@ -897,7 +897,7 @@
   justify-content: center;
   align-items: center;
   padding: 1.35rem 1.25rem;
-  border-radius: calc(var(--radius-ui) + 2px);
+  border-radius: var(--radius-sharp);
   border: 1px solid var(--sales-accent-border);
   background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
   box-shadow: var(--sales-card-shadow);
@@ -915,7 +915,7 @@
   margin: 0;
   padding: 0.85rem 1rem;
   border: 1px dashed rgba(143, 79, 26, 0.28);
-  border-radius: var(--radius-ui);
+  border-radius: var(--radius-sharp);
   color: #5b6775;
   background: rgba(250, 244, 238, 0.55);
 }
@@ -966,7 +966,7 @@
   overflow-x: auto;
   margin: 0;
   border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: calc(var(--radius-ui) + 2px);
+  border-radius: var(--radius-sharp);
   background: #fff;
   box-shadow: 0 1px 2px rgba(12, 26, 42, 0.04);
 }

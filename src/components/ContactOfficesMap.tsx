@@ -3,6 +3,7 @@
 import "./contact-offices-map.css";
 import { useEffect, useRef, useState } from "react";
 import { useCookieConsentState } from "@/components/CookieConsentBanner";
+import { ContactMapFallback } from "@/components/ContactMapFallback";
 import { useTranslations } from "@/lib/i18n/locale-context";
 import {
   getCompanyOfficeMapPoints,
@@ -19,34 +20,6 @@ function useMapsAllowed() {
   return consent.updatedAt !== "" && consent.statistics;
 }
 
-function ContactOfficesMapPlaceholder({ variant }: { variant: "hero" | "panel" }) {
-  const contact = useTranslations("contact");
-
-  return (
-    <div className={`contact-offices-map-placeholder contact-offices-map--${variant}`}>
-      <p className="contact-offices-map-placeholder-lead">{contact.mapConsentLead}</p>
-      <ul className="contact-offices-map-placeholder-list" aria-label={contact.mapConsentOfficesAria}>
-        {offices.map((office) => (
-          <li key={office.label}>
-            <strong>{office.label}</strong>
-            <span>{officeAddressLine(office)}</span>
-            <a href={officeMapsSearchUrl(office)} target="_blank" rel="noopener noreferrer">
-              {contact.openInGoogleMaps}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <button
-        type="button"
-        className="button ghost contact-offices-map-placeholder-manage"
-        onClick={() => window.dispatchEvent(new Event("naturchem:open-cookie-settings"))}
-      >
-        {contact.mapConsentManage}
-      </button>
-    </div>
-  );
-}
-
 type GoogleMapsNamespace = {
   maps: {
     Map: new (
@@ -55,6 +28,8 @@ type GoogleMapsNamespace = {
         mapTypeControl?: boolean;
         streetViewControl?: boolean;
         fullscreenControl?: boolean;
+        gestureHandling?: string;
+        scrollwheel?: boolean;
       }
     ) => GoogleMap;
     Marker: new (options: {
@@ -69,6 +44,8 @@ type GoogleMapsNamespace = {
 
 type GoogleMap = {
   fitBounds: (bounds: GoogleLatLngBounds, padding?: number) => void;
+  setCenter: (position: { lat: number; lng: number }) => void;
+  setZoom: (zoom: number) => void;
 };
 
 type GoogleMarker = {
@@ -77,6 +54,7 @@ type GoogleMarker = {
 
 type GoogleInfoWindow = {
   open: (options: { map: GoogleMap; anchor: GoogleMarker }) => void;
+  close: () => void;
 };
 
 type GoogleLatLngBounds = {
@@ -190,7 +168,7 @@ function officeInfoContent(office: CompanyOfficeMapPoint, openInGoogleMaps: stri
 
 function officePopupContent(office: CompanyOfficeMapPoint, navigateInGoogleMaps: string): string {
   const mapsUrl = officeMapsSearchUrl(office);
-  return `<strong>${office.label}</strong><br>${officeAddressLine(office)}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">${navigateInGoogleMaps}</a>`;
+  return `<div class="contact-map-infowindow"><strong>${office.label}</strong><br>${officeAddressLine(office)}<br><a href="${mapsUrl}" target="_blank" rel="noopener noreferrer">${navigateInGoogleMaps}</a></div>`;
 }
 
 function OfficePicker({
@@ -205,7 +183,7 @@ function OfficePicker({
   selectOfficeAria: string;
 }) {
   return (
-    <div className="contact-offices-map-picker" role="tablist" aria-label={selectOfficeAria}>
+    <div className="contact-offices-map-picker" role="group" aria-label={selectOfficeAria}>
       {offices.map((office, index) => {
         const tabId = `contact-map-tab-${variant}-${index}`;
         const isActive = index === activeIndex;
@@ -213,9 +191,8 @@ function OfficePicker({
           <button
             key={office.label}
             type="button"
-            role="tab"
             id={tabId}
-            aria-selected={isActive}
+            aria-pressed={isActive}
             className={`contact-offices-map-tab${isActive ? " is-active" : ""}`}
             onClick={() => onSelect(index)}
           >
@@ -234,6 +211,28 @@ type MapLabels = {
   selectOfficeAria: string;
 };
 
+function MapFrame({ variant, labels, activeIndex, onSelect, children }: {
+  variant: "hero" | "panel";
+  labels: MapLabels;
+  activeIndex: number;
+  onSelect: (index: number) => void;
+  children: React.ReactNode;
+}) {
+  const active = offices[activeIndex];
+  return (
+    <div className={`contact-offices-map-leaflet contact-offices-map-embed--${variant}`}>
+      <OfficePicker variant={variant} activeIndex={activeIndex} onSelect={onSelect} selectOfficeAria={labels.selectOfficeAria} />
+      <div className="contact-offices-map-frame-wrap">{children}</div>
+      <div className="contact-offices-map-embed-foot">
+        <p className="contact-offices-map-address">{officeAddressLine(active)}</p>
+        <a className="contact-offices-map-external" href={officeMapsSearchUrl(active)} target="_blank" rel="noopener noreferrer">
+          {labels.openInGoogleMaps}
+        </a>
+      </div>
+    </div>
+  );
+}
+
 function ContactOfficesMapInteractive({
   apiKey,
   variant,
@@ -244,7 +243,24 @@ function ContactOfficesMapInteractive({
   labels: MapLabels;
 }) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<GoogleMap | null>(null);
+  const selectedOfficeRef = useRef<number | null>(null);
+  const markersRef = useRef<GoogleMarker[]>([]);
+  const infoRef = useRef<GoogleInfoWindow[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [loadError, setLoadError] = useState(false);
+
+  const focusOffice = (index: number) => {
+    setActiveIndex(index);
+    selectedOfficeRef.current = index;
+    const map = mapRef.current;
+    if (!map) return;
+    const office = offices[index];
+    map.setCenter({ lat: office.lat, lng: office.lng });
+    map.setZoom(14);
+    infoRef.current.forEach(info => info.close());
+    infoRef.current[index]?.open({ map, anchor: markersRef.current[index] });
+  };
 
   useEffect(() => {
     const container = mapContainerRef.current;
@@ -260,11 +276,13 @@ function ContactOfficesMapInteractive({
         const map = new Map(mapContainerRef.current, {
           mapTypeControl: false,
           streetViewControl: false,
-          fullscreenControl: true
+          fullscreenControl: true,
+          gestureHandling: "cooperative",
+          scrollwheel: false
         });
         const bounds = new LatLngBounds();
 
-        offices.forEach((office) => {
+        offices.forEach((office, index) => {
           const position = { lat: office.lat, lng: office.lng };
           bounds.extend(position);
 
@@ -279,11 +297,23 @@ function ContactOfficesMapInteractive({
           });
 
           marker.addListener("click", () => {
+            setActiveIndex(index);
+            infoRef.current.forEach(other => other.close());
             info.open({ map, anchor: marker });
           });
+          markersRef.current.push(marker);
+          infoRef.current.push(info);
         });
 
         map.fitBounds(bounds, 56);
+        mapRef.current = map;
+        if (selectedOfficeRef.current !== null) {
+          const index = selectedOfficeRef.current;
+          const office = offices[index];
+          map.setCenter({ lat: office.lat, lng: office.lng });
+          map.setZoom(14);
+          infoRef.current[index]?.open({ map, anchor: markersRef.current[index] });
+        }
       })
       .catch(() => {
         if (!cancelled) setLoadError(true);
@@ -291,6 +321,10 @@ function ContactOfficesMapInteractive({
 
     return () => {
       cancelled = true;
+      infoRef.current.forEach(info => info.close());
+      infoRef.current = [];
+      markersRef.current = [];
+      mapRef.current = null;
     };
   }, [apiKey, labels.openInGoogleMaps]);
 
@@ -299,12 +333,9 @@ function ContactOfficesMapInteractive({
   }
 
   return (
-    <div
-      ref={mapContainerRef}
-      className="contact-offices-map-canvas"
-      role="application"
-      aria-label={labels.mapAria}
-    />
+    <MapFrame variant={variant} labels={labels} activeIndex={activeIndex} onSelect={focusOffice}>
+      <div ref={mapContainerRef} className="contact-offices-map-canvas" role="region" aria-label={labels.mapAria} />
+    </MapFrame>
   );
 }
 
@@ -319,21 +350,23 @@ function ContactOfficesMapLeaflet({
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<LeafletMap | null>(null);
   const markersRef = useRef<LeafletMarker[]>([]);
+  const selectedOfficeRef = useRef<number | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const active = offices[activeIndex];
+  const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
     const container = mapContainerRef.current;
     if (!container) return;
 
     let cancelled = false;
+    let resizeTimer: number | undefined;
 
     loadLeafletAssets()
       .then(() => {
         if (cancelled || !mapContainerRef.current || !window.L) return;
 
         const L = window.L;
-        const map = L.map(mapContainerRef.current, { scrollWheelZoom: true });
+        const map = L.map(mapContainerRef.current, { scrollWheelZoom: false });
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
@@ -350,18 +383,24 @@ function ContactOfficesMapLeaflet({
         });
 
         map.fitBounds(bounds, { padding: [48, 48] });
-        window.setTimeout(() => {
+        resizeTimer = window.setTimeout(() => {
           map.invalidateSize?.();
         }, 120);
         mapRef.current = map;
         markersRef.current = markers;
+        if (selectedOfficeRef.current !== null) {
+          const selected = offices[selectedOfficeRef.current];
+          map.flyTo([selected.lat, selected.lng], 14, { duration: 0 });
+          markers[selectedOfficeRef.current]?.openPopup();
+        }
       })
       .catch(() => {
-        /* tichý fallback — mapa zůstane prázdná */
+        if (!cancelled) setLoadError(true);
       });
 
     return () => {
       cancelled = true;
+      window.clearTimeout(resizeTimer);
       mapRef.current?.remove();
       mapRef.current = null;
       markersRef.current = [];
@@ -370,43 +409,28 @@ function ContactOfficesMapLeaflet({
 
   const focusOffice = (index: number) => {
     setActiveIndex(index);
+    selectedOfficeRef.current = index;
     const map = mapRef.current;
     const marker = markersRef.current[index];
     const office = offices[index];
     if (!map) return;
 
-    map.flyTo([office.lat, office.lng], 14, { duration: 0.6 });
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    map.flyTo([office.lat, office.lng], 14, { duration: reducedMotion ? 0 : 0.6 });
     marker?.openPopup();
   };
 
+  if (loadError) return <ContactMapFallback variant={variant} loading />;
+
   return (
-    <div className={`contact-offices-map-leaflet contact-offices-map-embed--${variant}`}>
-      <OfficePicker
-        variant={variant}
-        activeIndex={activeIndex}
-        onSelect={focusOffice}
-        selectOfficeAria={labels.selectOfficeAria}
-      />
-      <div className="contact-offices-map-frame-wrap">
+    <MapFrame variant={variant} labels={labels} activeIndex={activeIndex} onSelect={focusOffice}>
         <div
           ref={mapContainerRef}
           className="contact-offices-map-canvas contact-offices-map-canvas--leaflet"
-          role="application"
+          role="region"
           aria-label={labels.mapAria}
         />
-      </div>
-      <div className="contact-offices-map-embed-foot">
-        <p className="contact-offices-map-address">{officeAddressLine(active)}</p>
-        <a
-          className="contact-offices-map-external"
-          href={officeMapsSearchUrl(active)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {labels.openInGoogleMaps}
-        </a>
-      </div>
-    </div>
+    </MapFrame>
   );
 }
 
@@ -426,7 +450,7 @@ export function ContactOfficesMap({ variant = "hero" }: Props) {
   };
 
   if (!mapsAllowed) {
-    return <ContactOfficesMapPlaceholder variant={variant} />;
+    return <ContactMapFallback variant={variant} />;
   }
 
   const content = mapsApiKey ? (

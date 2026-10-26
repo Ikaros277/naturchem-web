@@ -73,13 +73,13 @@ export default async function ReferencePage({ params }: Props) {
         </header>
       </PageHeroBand>
 
-      <section className="section content-block container page-first-section" id="zakaznici">
+      {locale === "cs" ? <ReferencePhotoShowcase examplesById={completeExamplesById} /> : null}
+
+      <section className={`section content-block container${locale === "cs" ? "" : " page-first-section"}`} id="zakaznici">
         <h2>{messages.reference.customersTitle}</h2>
         <p className="muted section-intro">{reference.referenceCustomersIntro}</p>
         <ClientLogosGrid expandable />
       </section>
-
-      {locale === "cs" ? <ReferencePhotoShowcase examplesById={completeExamplesById} /> : null}
 
       <section className="section section-surface accordion-index-surface content-block container" id="priklady">
         <h2>{reference.referenceExamplesHeading}</h2>

@@ -1,6 +1,6 @@
 # NATURCHEM — odborné články (poradna)
 
-> 79 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
+> 80 published Czech articles on environmental permitting, measurements, EIA, ISPOP, and operations; available translations listed below.
 
 ## Index
 
@@ -11,6 +11,7 @@
 ## České články
 
 - Automotive: měření a studie pro výrobu: https://www.naturchem.cz/poradna/automotive-provoz-co-se-typicky-meri-a-posuzuje/
+- Nový bezpečnostní list: podklady a revize: https://www.naturchem.cz/poradna/bezpecnostni-list-novy-vyrobek-podklady-revize/
 - Bezpečnostní listy: povinnosti zaměstnavatele: https://www.naturchem.cz/poradna/bezpecnostni-listy-v-provozu-co-musi-zamestnavatel/
 - Cena posudku, studie a provozního řádu: https://www.naturchem.cz/poradna/cena-odborneho-posudku-ovzdusi-rozptylove-studie-provozniho-radu/
 - Co poslat pro rychlé posouzení záměru?: https://www.naturchem.cz/poradna/co-poslat-pro-rychle-posouzeni-zameru/

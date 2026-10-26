@@ -80,7 +80,8 @@ for (const component of ["SkipToContent", "Breadcrumbs", "PageCtaStrip", "Articl
 }
 assert.doesNotMatch(read("src/components/ServiceDetailLayout.tsx"), /href\("\/faq#" \+ content.faqCategoryId\)/);
 assert.match(read("src/components/TeamSection.tsx"), /"frantisek-hezina"/);
-assert.match(read("src/components/FaqSearchClient.tsx"), /if \(!query && !previousOpen.current\) return/);
+assert.match(read("src/components/FaqTopicNavigation.tsx"), /window\.addEventListener\("hashchange", syncActiveTopic\)/);
+assert.doesNotMatch(read("src/components/FaqTopicNavigation.tsx"), /type="search"|\.hidden\s*=/, "FAQ topics must not hide answers based on a text query");
 assert.match(read("src/components/CookieConsentBanner.tsx"), /onClick=\{acceptAll\}/);
 assert.match(read("src/components/CookieConsentBanner.tsx"), /onClick=\{rejectOptional\}/);
 for (const host of ["localhost", "127.0.0.1", "::1", "[::1]", "preview.localhost"]) assert.equal(shouldLoadSpeedInsights(host), false);

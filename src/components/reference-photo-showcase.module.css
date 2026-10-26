@@ -2,7 +2,7 @@
 .heading h2 { margin: 0; }
 .overview { color: var(--forest-dark); font-size: .95rem; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; padding: 10px 0; }
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
-.card { min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; scroll-margin-top: calc(var(--site-header-offset) + 24px); }
+.card { min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius-sharp); background: var(--surface); overflow: hidden; scroll-margin-top: calc(var(--site-header-offset) + 24px); }
 .figure { margin: 0; background: var(--surface-muted); }
 .figure picture { display: block; aspect-ratio: 16 / 9; overflow: hidden; }
 .figure img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -18,10 +18,10 @@
 .details summary { min-height: 44px; padding-block: 12px; cursor: pointer; color: var(--forest-dark); font-weight: 600; }
 .details p { line-height: 1.55; margin-block: 8px; }
 .more { margin-top: 24px; scroll-margin-top: calc(var(--site-header-offset) + 24px); }
-.more > summary { padding: 20px; min-height: 64px; cursor: pointer; border: 1px solid var(--border); border-radius: 8px; color: var(--navy); font-weight: 700; background: var(--bg-soft); }
+.more > summary { padding: 20px; min-height: 64px; cursor: pointer; border: 1px solid var(--border); border-radius: var(--radius-sharp); color: var(--navy); font-weight: 700; background: var(--bg-soft); }
 .more > summary span { margin-left: 12px; font-size: 14px; color: var(--muted); font-weight: 450; }
 .more[open] > summary { margin-bottom: 24px; }
-.output { margin-top: auto; padding: 15px 18px; border-left: 3px solid var(--forest); background: var(--forest-tint); border-radius: 0 8px 8px 0; }
+.output { margin-top: auto; padding: 15px 18px; border-left: 3px solid var(--forest); background: var(--forest-tint); border-radius: var(--radius-sharp); }
 .output span { display: block; color: var(--forest-dark); font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
 .output p { margin: 5px 0 0; color: var(--navy); font-size: .94rem; line-height: 1.5; }
 .actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px; padding-top: 20px; }

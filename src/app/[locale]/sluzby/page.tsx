@@ -69,7 +69,7 @@ export default async function Page({ params }: Props) {
       <ServiceGroupsIndex groups={serviceGroups} locale={locale} />
 
       <section className="section container">
-        <PageCtaStrip {...pageCtaPresets.servicesIndex} />
+        <PageCtaStrip {...pageCtaPresets.servicesIndex} primaryHref={link(pageCtaPresets.servicesIndex.primaryHref)} />
       </section>
     </main>
   );

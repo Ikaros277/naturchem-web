@@ -54,11 +54,13 @@ async function main() {
   assert.equal(getRelatedServicesForArticle("Změna integrovaného povolení IPPC", "zmena-integrovaneho-povoleni-ippc-podstatna-zmena")[0].href, "/sluzby/ippc-integrovana-povoleni");
   const contact = fs.readFileSync(path.join(root, "src/app/[locale]/kontakt/page.tsx"), "utf8");
   assert.match(contact, /className="page-hero-band--contact"\s+plain/);
-  assert.doesNotMatch(contact, /ContactPageHeroMedia/);
+  assert.equal((contact.match(/<ContactPageHeroMedia\s*\/>/g) || []).length, 1, "Exactly one restored top map");
+  assert.ok(contact.indexOf("<ContactPageHeroMedia") < contact.indexOf('aria-labelledby="poptavka-heading"'), "Keep the approved map above the inquiry form");
+  assert.doesNotMatch(contact, /ContactMapDisclosure|ContactPageOfficesMap/, "Do not mount a duplicate bottom map");
   const faq = fs.readFileSync(path.join(root, "src/components/FaqPageContent.tsx"), "utf8");
   assert.match(faq, /<details[^>]*id=\{category.id\}/);
   const globals = fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8");
   assert.doesNotMatch(globals, /\.seo-demand-hero/);
-  console.log("PASS visual cohesion: " + count + " localized compact landings, full approved content and source links preserved, contextual IPPC link, plain contact and native FAQ groups.");
+  console.log("PASS visual cohesion: " + count + " localized compact landings, full approved content and source links preserved, contextual IPPC link, one top contact map and native FAQ groups.");
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

@@ -100,7 +100,9 @@ async function main() {
   const more = html.slice(html.indexOf('<details id="dalsi-fotograficke-reference"'));
   assert.equal((more.match(/data-photographic-reference=/g) || []).length, 6, "Six further photographed cases remain in native disclosure");
   assert.equal((html.slice(0, html.indexOf('<details id="dalsi-fotograficke-reference"')).match(/data-photographic-reference=/g) || []).length, 3, "Lead with three different specialisms");
-  for (const id of ["lak-automotive-emise", "hala-pp", "tcp-hluk"]) assert.ok(html.includes('href="#reference-' + id + '"'), "Direct shortcuts to representative specialisms");
+  for (const id of ["lak-automotive-emise", "hala-pp", "tcp-hluk", "kovovyroba-vibrace"]) assert.ok(html.includes('href="#reference-' + id + '"'), "Direct shortcuts to representative specialisms, including preserved emissions access");
+  const firstCases = [...html.slice(0, html.indexOf('<details id="dalsi-fotograficke-reference"')).matchAll(/data-photographic-reference="([^"]+)"/g)].map(m => m[1]);
+  assert.deepEqual(firstCases, ["hala-pp", "tcp-hluk", "kovovyroba-vibrace"], "Owner-prioritized fields use only their individually reviewed case photos");
   const config = fs.readFileSync(path.join(root, "next.config.ts"), "utf8");
   assert.ok(config.includes('source: "/reference/authentic-2026-10-08/:path*"'), "Only dated photograph assets get immutable caching");
   assert.ok(!config.includes('source: "/reference/:path*"'), "Reference HTML must not receive a year-long browser cache");
@@ -110,7 +112,7 @@ async function main() {
   assert.ok(!overview.includes('aria-label="Měření emisí,'), "Native summaries expose their complete visible name");
   const page = fs.readFileSync(path.join(root, "src/app/[locale]/reference/page.tsx"), "utf8");
   assert.ok(page.includes('locale === "cs" ? <ReferencePhotoShowcase'), "No Czech content leaked to EN/DE");
-  assert.ok(page.indexOf('id="zakaznici"') < page.indexOf("<ReferencePhotoShowcase"), "Named customer evidence stays ahead of the longer showcase");
+  assert.ok(page.indexOf('id="zakaznici"') > page.indexOf("<ReferencePhotoShowcase"), "Czech visitors see the reviewed cases before the customer-logo directory");
   assert.ok(page.includes("<ClientLogosGrid expandable />"), "More customers must expand, not link back to its own anchor");
   assert.doesNotMatch(page, /page-below-fold[^"\n]*" id="priklady"|satisfaction-survey-teaser page-below-fold/, "Native reference controls keep stable geometry during audit and deep-link traversal");
   assert.ok(!source.includes("page-below-fold"), "Native deep links need stable layout, not one estimated-height giant gallery");

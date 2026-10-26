@@ -9,6 +9,7 @@ import { serviceMegaGroupHeadHrefs } from "@/lib/megamenu-head-hrefs";
 import { getServiceCategoryFromHref } from "@/lib/service-categories";
 import { serviceMegaGroupIcons, type ServiceMegaGroupId } from "@/lib/megamenu-types";
 import { notifyAccordionHashSync } from "@/lib/use-accordion-hash-open";
+import { prioritizeMeasurements } from "@/lib/service-order";
 
 function hasHashHref(href: string) {
   return href.includes("#");
@@ -84,7 +85,7 @@ function MegaMenuColumn({
         />
       ) : null}
       <ul className="mega-menu-link-list">
-        {group.links.map((item) => (
+        {(group.id === "mereni" ? prioritizeMeasurements(group.links) : group.links).map((item) => (
           <MegaMenuLinkRow
             key={`${group.title}-${item.href}`}
             href={item.href}
@@ -119,17 +120,19 @@ export function ServiceMegaMenu({ labels, serviceMegaGroups, onNavigate }: Props
 
 export function MobileServiceMegaGroups({
   groups,
-  onNavigate
+  onNavigate,
+  topLevel = false
 }: {
   groups: readonly ServiceHeaderMegaGroup[];
   onNavigate?: () => void;
+  topLevel?: boolean;
 }) {
   return (
     <>
       {groups.map((group) => (
         <details
           key={group.id ?? group.title}
-          className={`nav-mobile-details nav-mobile-nested mega-menu-mobile-group mega-menu-mobile-group--${group.id ?? "default"}`}
+          className={`nav-mobile-details${topLevel ? "" : " nav-mobile-nested"} mega-menu-mobile-group mega-menu-mobile-group--${group.id ?? "default"}`}
         >
           <summary>
             <MobileNavSummaryRow>
@@ -147,7 +150,7 @@ export function MobileServiceMegaGroups({
             </MobileNavSummaryRow>
           </summary>
           <ul className="mega-menu-link-list mega-menu-link-list--mobile">
-            {group.links.map((item) => (
+            {(group.id === "mereni" ? prioritizeMeasurements(group.links) : group.links).map((item) => (
               <MegaMenuLinkRow
                 key={`${group.title}-${item.href}`}
                 href={item.href}

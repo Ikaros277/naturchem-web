@@ -15,6 +15,13 @@ import {
 } from "@/lib/service-categories";
 import type { serviceGroups as serviceGroupsCs } from "@/lib/service-groups";
 import { useAccordionHashOpen } from "@/lib/use-accordion-hash-open";
+import { partitionServiceCatalog } from "@/lib/service-catalog";
+
+const catalogCopy = {
+  cs: { situations: "Kolaudace a nový provoz" },
+  en: { situations: "Occupancy approval and new premises" },
+  de: { situations: "Abnahme und neue Betriebsstätten" },
+};
 
 const groupIcons: Record<string, ServiceIconKey> = {
   "mericke-sluzby": "pillar-mereni",
@@ -106,12 +113,21 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
   const groupIds = useMemo(() => groups.map((group) => group.id), [groups]);
   const { isOpen, onToggle } = useAccordionHashOpen(groupIds, groupIds[0]);
   const navigation = categoryNavigation[locale];
+  const copy = catalogCopy[locale];
+  const catalog = useMemo(() => partitionServiceCatalog(groups), [groups]);
   const ariaVerbs =
     locale === "en" ? groupAriaVerbsEn : locale === "de" ? groupAriaVerbsDe : groupAriaVerbs;
 
   return (
     <section className="section section-surface accordion-index-surface service-groups-accordion">
       <div className="container service-groups-accordion-inner">
+        {catalog.situations.length ? <section className="service-catalog-situations" aria-labelledby="service-situations-heading">
+          <h2 id="service-situations-heading">{copy.situations}</h2>
+          <div>{catalog.situations.map(item => <a key={item.href} href={localizeHref(item.href, locale)}>
+            <div className="service-situation-visual"><ServiceCardThumb href={item.href} alt="" sizes="(max-width: 767px) 112px, 240px" /></div>
+            <ServiceIcon href={item.href} size={26} /><span className="service-situation-copy"><strong>{item.title}</strong><small>{item.text}</small></span><span className="service-situation-arrow" aria-hidden="true">↗</span>
+          </a>)}</div>
+        </section> : null}
         <nav className="service-category-nav" aria-label={navigation.label}>
           {primaryCategories.map((category, categoryIndex) => {
             const categoryGroups = groups.filter(group =>
@@ -142,7 +158,7 @@ export function ServiceGroupsIndex({ groups, locale }: Props) {
             </div>;
           })}
         </nav>
-        {groups.map((group) => {
+        {catalog.groups.map((group) => {
           const ariaVerb = ariaVerbs[group.id] ?? group.title;
           const groupCategory = getServiceCategoryFromServiceGroupId(group.id);
 

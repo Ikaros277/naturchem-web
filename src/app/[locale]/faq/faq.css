@@ -18,21 +18,6 @@
   margin-top: 1.25rem;
 }
 
-.faq-search {
-  display: grid;
-  gap: 0.45rem;
-  max-width: 32rem;
-  margin: 1.35rem 0 0;
-  font-weight: 700;
-}
-
-.faq-search input {
-  width: 100%;
-  min-height: 48px;
-  border-radius: var(--radius-pill);
-  padding-inline: 1rem;
-}
-
 .faq-tiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(6.75rem, 1fr));
@@ -252,7 +237,7 @@
   padding: 0.85rem 1rem;
   background: #f4f8fc;
   border: 1px solid rgba(13, 54, 130, 0.08);
-  border-radius: var(--radius-ui);
+  border-radius: var(--radius-sharp);
 }
 
 .faq-legal summary {

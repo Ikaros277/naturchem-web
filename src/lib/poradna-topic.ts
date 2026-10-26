@@ -1,6 +1,8 @@
 import type { HeroTheme } from "@/lib/hero-images";
 import { poradnaHeroThemeForSlug } from "@/lib/poradna-hero-images";
 import { getPoradnaTopicIconKey } from "@/lib/service-icons";
+import { PORADNA_TOPICS_EN } from "@/lib/poradna-topic-en";
+import { PORADNA_TOPICS_EN as PORADNA_TOPICS_DE } from "@/lib/poradna-topic-de";
 
 export const PORADNA_TOPICS = [
   "Emise",
@@ -60,16 +62,24 @@ export function topicFromTitle(title: string): PoradnaTopic {
 
 type ArticleTopicInput = { title: string; topic?: string | null; slug?: string | null };
 
-const topicAliases: Record<string, PoradnaTopic> = {
-  Hluk: "Hluk a vibrace"
-};
+// CMS files may contain an older label or a translated label. Resolve these
+// before the Czech-title fallback, which cannot classify translated headlines.
+const topicAliases = new Map<string, PoradnaTopic>([
+  ["Hluk", "Hluk a vibrace"],
+  ["Noise", "Hluk a vibrace"],
+  ["Work environment", "Pracovní prostředí"],
+  ...PORADNA_TOPICS.flatMap((topic) => [
+    [PORADNA_TOPICS_EN[topic], topic] as const,
+    [PORADNA_TOPICS_DE[topic], topic] as const
+  ])
+]);
 
 /** Téma článku — frontmatter `topic` má přednost před heuristikou z titulku. */
 export function resolveArticleTopic(article: ArticleTopicInput): PoradnaTopic {
   const fromFrontmatter = article.topic?.trim();
   if (fromFrontmatter) {
     if (isPoradnaTopic(fromFrontmatter)) return fromFrontmatter;
-    const aliased = topicAliases[fromFrontmatter];
+    const aliased = topicAliases.get(fromFrontmatter);
     if (aliased) return aliased;
   }
   return topicFromTitle(article.title);

@@ -49,6 +49,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
   const editorialEmissions = emissions && content.detailPresentation === "emissions-editorial";
   const photo = getAuthenticPhoto(getServiceHeroTheme(content.slug));
   const workplace = locale === "cs" && content.slug === "sluzby/pracovni-prostredi";
+  const decisionFirst = workplace || (locale === "cs" && content.slug === "sluzby/mereni-mikroklimatu");
   const overview = commercialIntent ?? (locale === "cs" ? getServiceOverview(content.slug) : undefined);
   const features = overview ? overview.features.map((feature, index) => ({
     ...feature,
@@ -63,7 +64,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
     { title: copy.outputsHeading, text: content.outputs.slice(0, 2).join("; "), icon: "process-vystup" as const },
   ];
   return (
-    <main className={styles.page} data-service-layout="compact" data-category={category}>
+    <main className={styles.page} data-service-layout="compact" data-category={category} data-service-presentation={decisionFirst ? "decision-first" : undefined}>
       {schemas}
       <section className={styles.hero} aria-labelledby="service-title">
         <div className={`container ${styles.heroInner}`}>
@@ -99,9 +100,12 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
         <section className={styles.overview} aria-labelledby="service-overview-heading">
           <div className={styles.offer}>
             <p className={styles.eyebrow}>{categoryLabel}</p>
-            <h2 id="service-overview-heading">{overview?.heading ?? (emissions ? "Měření, vyhodnocení a protokol." : copy.overviewHeading)}</h2>
+            <h2 id="service-overview-heading">{decisionFirst ? "Měření a výstupy pro Váš provoz" : overview?.heading ?? (emissions ? "Měření, vyhodnocení a protokol." : copy.overviewHeading)}</h2>
             <div className={styles.features}>
-              {features.filter(item => item.text).map(item => <div className={styles.feature} key={item.title}>
+              {decisionFirst ? <>
+                <div className={styles.feature}><ServiceIcon icon="process-rozsah" variant="plain" size={26} /><div className={styles.featureList}><h3>{content.scopeHeading ?? copy.scopeHeading}</h3><DetailList items={content.scope} /></div></div>
+                <div className={styles.feature}><ServiceIcon icon="process-vystup" variant="plain" size={26} /><div className={styles.featureList}><h3>{copy.outputsHeading}</h3><DetailList items={content.outputs} /></div></div>
+              </> : features.filter(item => item.text).map(item => <div className={styles.feature} key={item.title}>
                 <ServiceIcon icon={item.icon} variant="plain" size={26} />
                 <div><h3>{item.title}</h3><p><InlineEmphasis text={item.text} /></p></div>
               </div>)}
@@ -123,7 +127,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
               <h2 id="service-docs-heading">{ui.docs}</h2>
             </div>
             <p>{copy.docsIntro}</p>
-            <DetailList items={editorialEmissions ? content.docs : content.docs.slice(0, 3)} />
+            <DetailList items={editorialEmissions || decisionFirst ? content.docs : content.docs.slice(0, 3)} />
             {editorialEmissions ? <p className={styles.requestTiming}>Uveďte také požadovaný termín měření.</p> : null}
             {commercialIntent ? <p className={styles.quoteBasis} data-service-quote-basis><strong>Rozsah a nabídka</strong>{commercialIntent.quoteBasis}</p> : null}
             <a className={styles.panelCta} href={contactHref}>{ui.inquiry}<span aria-hidden="true">↗</span></a>
@@ -134,17 +138,23 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
           <div className={styles.sectionHeading}><h2 id="service-details-heading">{ui.details}</h2></div>
           <div className={faqItems.length ? styles.detailsGrid : styles.detailsGridSolo}>
           <div className={styles.disclosures}>
-            <details><summary><ServiceIcon icon="process-rozsah" size={22} className={styles.disclosureIcon} /><span>{ui.scopeAndOutputs}</span></summary><div className={styles.detailColumns}>
-              {workplace ? <p className={styles.fullIntro}><InlineEmphasis text={content.intro} /></p> : null}
+            {!decisionFirst ? <details><summary><ServiceIcon icon="process-rozsah" size={22} className={styles.disclosureIcon} /><span>{ui.scopeAndOutputs}</span></summary><div className={styles.detailColumns}>
               <div><h3>{content.scopeHeading ?? copy.scopeHeading}</h3><DetailList items={content.scope} /></div>
               <div><h3>{copy.outputsHeading}</h3><DetailList items={content.outputs} /></div>
-            </div></details>
-            {content.whenNeeded.length ? <details><summary><ServiceIcon icon="process-posouzeni" size={22} className={styles.disclosureIcon} /><span>{copy.whenNeededHeading}</span></summary><div className={styles.detailBody}><DetailList items={content.whenNeeded} /></div></details> : null}
+            </div></details> : null}
+            {content.whenNeeded.length ? <details><summary><ServiceIcon icon="process-posouzeni" size={22} className={styles.disclosureIcon} /><span>{copy.whenNeededHeading}</span></summary><div className={styles.detailBody}>
+              {workplace ? <p className={styles.fullIntro}><InlineEmphasis text={content.intro} /></p> : null}
+              <DetailList items={content.whenNeeded} /></div></details> : null}
+            {decisionFirst ? <details><summary><ServiceIcon icon="contact-building" size={22} className={styles.disclosureIcon} /><span>Další situace a příprava pracoviště</span></summary><div className={styles.detailColumns}>
+              <div><h3>{ui.situations}</h3><DetailList items={content.practicalSituations ?? []} /></div>
+              <div><h3>{copy.mistakesHeading}</h3><DetailList items={content.commonMistakes ?? []} /></div>
+            </div></details> : <>
             <details><summary><ServiceIcon icon="contact-mail" size={22} className={styles.disclosureIcon} /><span>{ui.preparation}</span></summary><div className={styles.detailColumns}>
               <div><h3>{ui.docs}</h3><DetailList items={content.docs} /></div>
               {content.commonMistakes?.length ? <div><h3>{copy.mistakesHeading}</h3><DetailList items={content.commonMistakes} /></div> : null}
             </div></details>
             {content.practicalSituations?.length ? <details><summary><ServiceIcon icon="contact-building" size={22} className={styles.disclosureIcon} /><span>{ui.situations}</span></summary><div className={styles.detailBody}><DetailList items={content.practicalSituations} /></div></details> : null}
+            </>}
           </div>
           {faqItems.length ? <div className={styles.faq}>
             <h3><ServiceIcon icon="faq" size={24} className={styles.faqIcon} />{ui.faq}</h3>

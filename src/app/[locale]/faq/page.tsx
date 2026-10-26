@@ -69,7 +69,7 @@ export default async function FaqPage({ params }: Props) {
           <h1>{faq.pageTitle}</h1>
           <p className="page-lead faq-page-intro">{faq.pageIntro}</p>
           <div className="btn-row faq-intro-ctas">
-            <a href="#faq-search" className="button secondary">{faq.uiLabels.searchLabel} ↓</a>
+            <a href="#faq-topics" className="button secondary">{faq.uiLabels.categoriesNavAria} ↓</a>
           </div>
         </header>
       </PageHeroBand>

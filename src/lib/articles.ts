@@ -9,6 +9,7 @@ import type { Locale } from "@/lib/i18n/locales";
 import { defaultLocale, locales } from "@/lib/i18n/locales";
 import type { PoradnaTopic } from "@/lib/poradna-topic";
 import { resolveArticleTopic } from "@/lib/poradna-topic";
+import { parseArticleHeadingIds, type ArticleHeadingIds } from "@/lib/article-reading";
 
 function articlesDirectoryForLocale(locale: Locale): string {
   const subdir =
@@ -27,6 +28,7 @@ export type Article = {
   updatedAt?: string;
   author?: string;
   heroImage?: string;
+  headingIds?: ArticleHeadingIds;
   /** Explicit frontmatter status; drafts stay private regardless of publishedAt. */
   status: ArticleStatus;
   body: string;
@@ -41,6 +43,7 @@ type ArticleFrontmatter = {
   updatedAt?: unknown;
   author?: string;
   heroImage?: string;
+  headingIds?: unknown;
   status?: unknown;
 };
 
@@ -90,6 +93,7 @@ function toArticle(fileSlug: string, fileContents: string): Article {
     updatedAt: normalizeArticleDate(data.updatedAt),
     author: data.author || "NATURCHEM",
     heroImage: typeof data.heroImage === "string" ? data.heroImage.trim() || undefined : undefined,
+    headingIds: parseArticleHeadingIds(data.headingIds),
     status,
     body: normalizeMarkdownBody(parsed.content)
   };

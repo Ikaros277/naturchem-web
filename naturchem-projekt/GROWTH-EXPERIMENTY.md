@@ -2,6 +2,44 @@
 
 > Interní provozní dokument. Aktualizovat podle živého webu, GSC a GA4. Starší projektové roadmapy mohou být neaktuální.
 
+## Schválené společné vydání místních UX úprav — 26. 10. 2026
+
+Vlastník požádal dokončit mapové ovládání a vydat vše připravené na produkci; následně výslovně potvrdil i odbornou revizi všech tří německých článků. Před vydáním main i veřejná produkce `6e87fdd`, Vercel Ready / Current `DKeA7G7mNi6a37uaaiGMyBrTkhQt` jako zachovaný rollback. Balík spojuje níže popsané místní fáze; jejich původní označení „lokálně“ jsou historický stav, nikoli důkaz již provedeného nasazení. Nová kompaktní mapová lišta zachovává souhlas, tři provozovny a odložené načtení. Dokončené produkční SHA, čas a kontroly se ukládají soukromě až po potvrzení Ready. Žádný prokázaný růst či garance kvót. Rozsah, souhlas, ověření, jediné Git nasazení a návrat: [RELEASE-UX-2026-10-26.md](RELEASE-UX-2026-10-26.md).
+
+## Jednotné ostré hrany karet podle přání vlastníka — 26. 10. 2026
+
+Pouze lokální designová fáze: společný nulový poloměr obsahových karet, fotografických rámečků a panelů napříč veřejnými typy stránek i mobilními styly. Kruhové ikony a samostatné ovládací prvky ponechány. Bez změny odborného obsahu, cílových adres, metadat, konverzního měření nebo nových externích závislostí. Hypotézou je konzistentnější profesionální prezentace; růst poptávek ani SEO není prokázán. Baseline, rozsah, ochrany a ověření: [CARD-SHAPE-2026-10-26.md](CARD-SHAPE-2026-10-26.md).
+
+## Místní zvýraznění katalogu po připomínce vlastníka — 26. 10. 2026
+
+Připraven sytější tříbarevný rozcestník, podbarvené služby s jasnou plnou akcí, zachované jedinečné fotografie a dva obrazové situační vstupy. Bez textového hledání, nových URL, odborných tvrzení a bez změny pořadí podle potvrzených priorit. Hypotézou je snazší rozpoznání vhodné služby, nikoli již prokázaný růst. Pouze lokální fáze bez produkčního zásahu. Stav nedokončených částí auditu, baseline a ochrany: [CATALOG-VISUAL-2026-10-26.md](CATALOG-VISUAL-2026-10-26.md).
+
+## Místní úpravy zákaznické cesty podle priorit vlastníka — 26. 10. 2026
+
+**Následná připomínka vlastníka 26. 10.:** textové hledání je z místního katalogu, poradny i FAQ odstraněno; tematická navigace a všechny indexované cíle ponechány. Původní návrh katalogového hledání níže je překonaný mezikrok. Bez produkční změny a bez vyhlašování růstu. Aktuální rozsah a omezení dat jsou v aktualizaci CUSTOMER-JOURNEY-2026-10-26.md.
+
+Vlastník potvrdil priority pracovní prostředí, kolaudace, hluk, vibrace a osvětlení; prodej techniky je vedlejší. Na audit navazuje místní zjednodušení mobilní navigace, oddělení situačních cest od jednotlivých měření, katalogové hledání, přesnější návaznost článků, dvě vzorové služby bez opakování podkladů a prioritní fotografické reference. Cílem je snadnější relevantní poptávka, nikoli více stránek či dosud neprokázaný růst SEO. Hlavní pracovní kopie Cursoru zůstává nedotčená. Žádná produkční fáze, commit, push či nasazení. Baseline, rozsah, ochrany a plán měření: [CUSTOMER-JOURNEY-2026-10-26.md](CUSTOMER-JOURNEY-2026-10-26.md).
+
+## Lokální odložení mapy při přímé poptávce — 24. 10. 2026
+
+Mobilní kontrola vrácené mapy ukázala zbytečné načtení externích podkladů i při přímém přesunu k formuláři: pod lištou zůstal jen 54px proužek mapy. První aktivace nyní čeká na ustálení posunu a znovu ověří dostatečně viditelnou část bloku. Při skutečné cestě ze služby Měření emisí se zachoval výběr služby a nevložil se mapový skript, stylesheet ani dlaždice; návrat nahoru mapu automaticky načte. Souhlas, formulář, zákaznické HTML a SEO údaje zachovány. Úplné verify/build, 887 GET kontrol a prohlížečové ověření prošly. Lokální řídicí JS +262 B gzip; žádný příslib Lighthouse skóre, růstu poptávek ani vyřešení kvót. Bez commitu, push či nasazení. Baseline, ochrany a rollback: [CONTACT-MAP-DEFER-2026-10-24.md](CONTACT-MAP-DEFER-2026-10-24.md).
+
+## Lokální opravy německého pracovního prostředí — 24. 10. 2026
+
+Navázáno na ověřenou jazykovou chybu, nikoli nové přestavování českých konverzních stránek. Připraveny německé texty mikroklimatu a chemických látek na pracovišti: česká působnost, konkrétní podklady pro zákazníka, odpovídající služba a jedna návaznost na kontakt. Ověřeny aktuální primární odborné podklady, zachována identita a všech 29 dalších fragmentů včetně H3, dvě a čtyři tabulky. Úplné verify/build, 887 GET kontrol, srovnání SEO/formulářů s baseline a mobilní ověření prošly. Tři z původních dvaceti chyb s anglickým tělem v německé verzi jsou lokálně opravené, sedmnáct zbývá. Bez commitu, push, publikace či nasazení; bez nového experimentu a tvrzení o již naměřeném růstu. Rozsah a hranice: [ARTICLE-WORKPLACE-DE-2026-10-24.md](ARTICLE-WORKPLACE-DE-2026-10-24.md).
+
+## Lokální návrat mapy nahoru na Kontakt — 24. 10. 2026
+
+Vlastník schválil obnovení přepínatelné mapy provozoven v úvodu Kontaktu. Jediná mapa na desktopu i mobilu, stejné podmínky souhlasu, načítání externích podkladů až po načtení dokumentu a při viditelnosti bloku. Adresy a přímý kontakt dostupné i bez souhlasu. Úplné verify/build, 887 GET kontrol a vizuální ověření desktop/mobil prošly; formulář i SEO údaje zachovány. Hypotéza: snazší nalezení konkrétní provozovny; nikoli prokázaný konverzní uplift. Bez commitu, push či nasazení. Podrobnosti a kontrola: [CONTACT-MAP-RESTORE-2026-10-24.md](CONTACT-MAP-RESTORE-2026-10-24.md).
+
+## Lokální oprava prvního německého textu — 24. 10. 2026
+
+Na jazykový audit navazuje věcný německý překlad existujícího článku o podkladech k posouzení záměru. Původní adresa, datum a všech 14 dosavadních odkazů na kapitoly zachovány, stejně jako šest tabulek. Doplněno volitelné bezpečně ověřené mapování názvů na stabilní ID, bez dalšího klientského JavaScriptu. Hypotéza: srozumitelnější podklady pro německy čtoucího B2B zákazníka s projektem v ČR a přirozená cesta k zadání. Z dvaceti potvrzených anglických těl zbývá lokálně devatenáct; produkce dosud nezměněná. Nové úplné verify/build, srovnání 592 HTML a 887 lokálních GET kontrol prošly. Bez produkční fáze, commitu, push, publikace či nasazení; neprohlašovat za naměřený růst SEO nebo poptávek. Rozsah a ochrany: [ARTICLE-LANGUAGE-REPAIR-2026-10-24.md](ARTICLE-LANGUAGE-REPAIR-2026-10-24.md).
+
+## Lokální oprava témat jazykových článků — 24. 10. 2026
+
+Pozorovaná chyba: přeložené téma článku resolver nerozpoznal a nahrazoval je heuristikou nad cizojazyčným nadpisem. Připravena izolovaná oprava převodu existujících EN/DE a historických názvů témat na kanonický klíč; český obsah a indexované adresy beze změny. Hypotéza: přesnější výběr oboru v poradně a návaznost na odpovídající službu. Kompletní verify/build a 887 lokálních GET kontrol prošly; nejde o naměřený růst zakázek. Samostatně zjištěná anglická těla v německých článcích nejsou touto opravou přeložena. Bez commitu, push, CMS publikace, nasazení či nové produkční fáze. Podrobnosti, baseline, zachované ochrany a rollback: [ARTICLE-TOPIC-QUALITY-2026-10-24.md](ARTICLE-TOPIC-QUALITY-2026-10-24.md).
+
 ## Společné schválené vydání — 16. 10. 2026
 
 Vlastník po upřesnění rozdílu mezi pracovní větví a produkcí výslovně schválil kontrolu a produkční nasazení všech připravených vlastních úprav. Společná fáze spojuje komerční návaznost a strukturu služeb z `3284ed2` s dosud nevydanými úspornými katalogovými obrázky a stylistickými opravami dvanácti neveřejných redakčních konceptů. Základ main/produkce `8a96cf0`; předešlé konfigurace spotřeby a rychlosti zachovány. Hypotéza: snazší výběr služby a zadání poptávky, menší obrázkový přenos. Efekt na kvalifikované leady a pořadí zatím není změřen. Dvanáct konceptů nadále draft; žádná skutečná poptávka ani placený upgrade. Schválení, rozsah, ochrany, výchozí usage a rollback: [RELEASE-2026-10-16.md](RELEASE-2026-10-16.md). Skutečný produkční commit, čas a výsledek kontrol budou zaznamenány v soukromém výstupním protokolu bez dalšího deploymentu.

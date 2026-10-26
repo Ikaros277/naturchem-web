@@ -54,7 +54,7 @@
   min-height: 52px;
   padding: 10px 14px;
   border: 1px solid #738a97;
-  border-radius: 8px;
+  border-radius: var(--radius-sharp);
   background: #1d3b4d;
   color: #fff;
   font-size: 1rem;
@@ -238,7 +238,7 @@ main.contact-page + .site-footer {
 .contact-form-hint {
   margin: 0 0 1.15rem;
   padding: 0.85rem 1rem;
-  border-radius: var(--radius-ui);
+  border-radius: var(--radius-sharp);
   border: 1px solid rgba(47, 111, 94, 0.18);
   background: rgba(47, 111, 94, 0.06);
   color: var(--secondary);
@@ -269,7 +269,7 @@ main.contact-page + .site-footer {
   margin: 1.15rem 0;
   padding: 1rem;
   border: 1px solid rgba(47, 111, 94, 0.2);
-  border-radius: var(--radius-ui);
+  border-radius: var(--radius-sharp);
   background: rgba(47, 111, 94, 0.045);
 }
 

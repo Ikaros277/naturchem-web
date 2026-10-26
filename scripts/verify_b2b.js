@@ -44,6 +44,7 @@ const { HomeServiceIndex } = load(path.join(root, "src/components/HomeServiceInd
 const { HomeDemandPaths, HomeSituationPaths } = load(path.join(root, "src/components/HomeDemandPaths.tsx"));
 const { readContactUrlPrefill } = load(path.join(root, "src/lib/contact-url-prefill.ts"));
 const { serviceMegaGroups } = load(path.join(root, "src/lib/service-megamenu.ts"));
+const { prioritizeMeasurements } = load(path.join(root, "src/lib/service-order.ts"));
 const { localesForConstrainedPath } = load(path.join(root, "src/lib/locale-constrained-paths.ts"));
 const { stripLocaleFromPathname } = load(path.join(root, "src/lib/i18n/navigation.ts"));
 const { HomeHeroShell } = load(path.join(root, "src/components/HomeHeroShell.tsx"));
@@ -140,7 +141,7 @@ async function main() {
     const localizedGroups = menuModule[locale === "cs" ? "serviceMegaGroups" : locale === "en" ? "serviceMegaGroupsEn" : "serviceMegaGroupsDe"];
     const menu = renderToStaticMarkup(React.createElement(MobileServiceMegaGroups, { groups: localizedGroups }));
     const mobileLinks = [...menu.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)].map(match => match[1]);
-    assert.deepEqual(mobileLinks, localizedGroups.flatMap(group => group.links.map(item => item.href)), "Every existing service remains once, inside its complete category");
+    assert.deepEqual(mobileLinks, localizedGroups.flatMap(group => (group.id === "mereni" ? prioritizeMeasurements(group.links) : group.links).map(item => item.href)), "Every existing service remains once, in the owner-prioritized category order");
     assert.equal(new Set(mobileLinks).size, mobileLinks.length, "No repeated service destinations");
     assert.equal((menu.match(/<details\b/g) || []).length, 3, "Three complete mobile categories, no separate six-link block");
     assert.ok(!menu.includes("nav-mobile-direct-services"));
@@ -150,7 +151,8 @@ async function main() {
     const categories = [...menu.matchAll(/<details\b[^>]*>([\s\S]*?)<\/details>/g)];
     categories.forEach((match, index) => {
       const hrefs = [...match[1].matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)].map(link => link[1]);
-      assert.deepEqual(hrefs, localizedGroups[index].links.map(item => item.href), "Preserve each complete group and its order in " + locale);
+      const group = localizedGroups[index];
+      assert.deepEqual(hrefs, (group.id === "mereni" ? prioritizeMeasurements(group.links) : group.links).map(item => item.href), "Preserve every destination and the confirmed priorities in " + locale);
     });
     const evidence = renderToStaticMarkup(await ServiceEvidence({ locale, slug: "sluzby/pracovni-prostredi" }));
     assert.ok(evidence.includes(prefix + "/reference/#pracovni-prostredi"));

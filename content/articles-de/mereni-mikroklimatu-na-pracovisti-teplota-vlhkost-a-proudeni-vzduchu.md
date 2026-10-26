@@ -1,103 +1,116 @@
 ---
-
 title: "Mikroklima am Arbeitsplatz messen"
 slug: mereni-mikroklimatu-na-pracovisti-teplota-vlhkost-a-proudeni-vzduchu
-excerpt: Die Messung des Mikroklimas wird dort eingesetzt, wo Mitarbeiter Hitze, Kälte, Zugluft, trockene Luft oder erhebliche Unterschiede zwischen Teilen des Arbeitsplatzes wahrnehmen. Bei der Messung bewerten wir Temperatur, Luftfeuchtigkeit, Luftbewegung und damit verbundene Betriebsbedingungen, sodass das Arbeitsplatzklima, die Wärme- oder Kältebelastung und die Eignung technischer oder organisatorischer Maßnahmen objektiv beurteilt werden können.
+excerpt: "Temperatur, Luftfeuchtigkeit und Luftbewegung am Arbeitsplatz: Wir erläutern den Messumfang und die Unterlagen für die Beurteilung von Produktionshallen, Lagern und Büros in Tschechien."
 author: Ing. František Hezina
 publishedAt: "2026-06-16"
 topic: Work environment
 heroImage: /uploads/chatgpt-image-16.-6.-2026-06_56_15.webp
+headingIds:
+  "Mikroklima am Arbeitsplatz": kapitola-when-workplace-microclimate-is-addressed
+  "Messgrößen und Betriebsbedingungen": kapitola-what-is-evaluated-during-microclimate-measurement
+  "Wann eine Messung sinnvoll ist": kapitola-when-to-order-measurement
+  "Jahreszeit und Betriebszustand": kapitola-significance-of-season-and-operating-regime
+  "Ergebnisse und Messbericht": kapitola-measurement-outputs
+  "Typische Probleme": kapitola-most-common-findings-in-practice
+  "Unterlagen für Ihre Anfrage": kapitola-what-you-can-send-us-for-assessment
+  "Zusammenfassung": kapitola-summary
+  "Fachliche Grundlagen": kapitola-factual-basis-of-the-article
+  "Weiterführende Links": kapitola-useful-links
 ---
-## When workplace microclimate is addressed
 
-Microclimatic conditions are among the important factors of the workplace environment. They affect thermal comfort, fatigue, concentration, employee performance and health risks at work. The problem usually appears as long-term heat, cold, draught, dry air, temperature fluctuations or different conditions between individual workstations.
+## Mikroklima am Arbeitsplatz
 
-Microclimate measurement is applied in production halls, warehouses, kitchens, offices, laboratories, operations with thermal load, refrigerated operations, air-conditioned spaces and workplaces where employee complaints recur.
+Anhaltende Hitze, Kälte, Zugluft oder trockene Luft beeinträchtigen die Arbeitsbedingungen. Auch innerhalb eines Raumes können sich Arbeitsplätze deutlich unterscheiden. Eine Messung liefert objektive Daten für die Beurteilung des Raumklimas und möglicher Maßnahmen.
 
-Assessment always starts from the specific work, operating regime and actual conditions at the workplace. An air-conditioned office is evaluated differently from a production hall with technological heat sources and differently from a warehouse with frequent door opening.
+Die folgenden Hinweise betreffen Arbeitsplätze in **Tschechien**. Eine [Mikroklimamessung](/de/sluzby/mereni-mikroklimatu/) kommt beispielsweise in Produktionshallen, Lagern, Küchen, Büros, Laboren und klimatisierten Räumen infrage. Weitere Anlässe sind Wärmequellen in der Produktion, gekühlte Bereiche oder wiederkehrende Beschwerden der Beschäftigten.
 
-## What is evaluated during microclimate measurement
+Wir berücksichtigen die konkrete Tätigkeit, den Betriebsablauf und die tatsächlichen Bedingungen vor Ort. Ein klimatisiertes Büro, eine Halle mit technologischen Wärmequellen und ein Lager mit häufig geöffneten Toren stellen unterschiedliche Anforderungen.
 
-Microclimate is not only air temperature. For professional assessment it is important to monitor several quantities simultaneously and evaluate them in relation to work performed, shift pattern, season and technology operation.
+## Messgrößen und Betriebsbedingungen
 
-| Quantity | Practical significance |
+Für die Beurteilung des Mikroklimas reicht die Lufttemperatur allein häufig nicht aus. Die Messgrößen werden zusammen mit Tätigkeit, Schichtbetrieb, Jahreszeit und Nutzung der technischen Anlagen bewertet.
+
+| Messgröße oder Einflussfaktor | Bedeutung für die Beurteilung |
 |---|---|
-| Air temperature | basic information on temperature conditions at the place of work |
-| Resultant or operative temperature | better reflects thermal effect of surrounding surfaces, radiation and air movement |
-| Relative humidity | affects feeling of dryness, sweating and overall thermal comfort |
-| Air velocity | relates to ventilation, draught and cooling of the worker |
-| Differences between measurement locations | show unevenness of conditions in the space |
-| Operating regime | explains relationship between measured values, technology and work organisation |
+| Lufttemperatur | Beschreibt die Temperaturbedingungen am Arbeitsplatz. |
+| Temperatur eines Kugelthermometers oder operative Temperatur | Werden je nach Beurteilungsaufgabe zur Berücksichtigung der thermischen Umgebung und Wärmestrahlung herangezogen. |
+| Relative Luftfeuchtigkeit | Beeinflusst das Empfinden trockener Luft und die Wärmeabgabe des Körpers. |
+| Luftgeschwindigkeit | Ist für Lüftung, Zugluft und die Abkühlung der Beschäftigten relevant. |
+| Unterschiede zwischen Messorten | Zeigen ungleichmäßige Bedingungen innerhalb eines Raumes oder einer Halle. |
+| Betriebszustand | Macht den Zusammenhang mit Anlagen, Lüftung und Arbeitsorganisation nachvollziehbar. |
 
-In offices, air conditioning, draught, dry air and differences between locations by windows, under air outlets and in the depth of the room are often addressed. In production halls, heat sources, doors, local ventilation, radiation from technology and seasonal differences are usually key. In kitchens, laundries, bakeries or operations with ovens, thermal load is assessed in particular. In warehouses, cold stores and dispatch areas, cold, air movement and transitions between temperature zones are addressed.
+In Büros sind häufig Klimatisierung und Luftverteilung zu prüfen, etwa an Fenstern oder unter Luftauslässen. In Produktionshallen spielen Wärmequellen, Tore, örtliche Absaugung und Wärmestrahlung eine Rolle. In Küchen, Wäschereien, Bäckereien oder Betrieben mit Öfen kann die Wärmebelastung im Vordergrund stehen.
 
-## When to order measurement
+In Lagern, Kühlräumen und Versandbereichen sind Kälte, Luftbewegung und Wechsel zwischen Temperaturzonen zu berücksichtigen. Den erforderlichen Messumfang legen wir anhand der konkreten Aufgabe fest.
 
-We recommend measurement especially when routine operational assessment is not enough and the company needs an objective basis. This typically involves repeated employee complaints, suspicion of thermal or cold load, dealings with KHS, technology change, air conditioning adjustment, workplace reconstruction or documentation for job categorisation.
+## Wann eine Messung sinnvoll ist
 
-Measurement is also meaningful before investment in technical measures. Without data, often only an assumed problem is addressed. In practice the cause of discomfort may be poorly set ventilation, unsuitable workstation location, radiation from technology, local draught, open doors, insufficient shading or a combination of several influences.
+Eine Messung ist sinnvoll, wenn der Betrieb einen objektiven Befund benötigt. Typische Anlässe sind wiederholte Beschwerden, vermutete Wärme- oder Kältebelastung und Anforderungen der tschechischen regionalen Gesundheitsbehörde **KHS**. Auch Änderungen an Anlagen, Lüftung oder Klimatisierung sowie Unterlagen zur Einstufung von Tätigkeiten können Anlass sein.
 
-Professional measurement makes it possible to determine where the problem arises, when it appears and which measure makes technical sense.
+Messdaten helfen außerdem bei der Vorbereitung technischer Maßnahmen. Mögliche Ursachen sind eine ungünstig eingestellte Lüftung, die Lage eines Arbeitsplatzes, Wärmestrahlung, örtliche Zugluft oder offene Tore. Auch fehlende Verschattung und mehrere zusammenwirkende Einflüsse kommen infrage.
 
-## Significance of season and operating regime
+Mit einer geeigneten Messplanung lässt sich untersuchen, wo und unter welchen Betriebsbedingungen das Problem auftritt. Daraus ergeben sich belastbarere Grundlagen für die Auswahl einer Maßnahme.
 
-Microclimate changes significantly according to season. Summer thermal load must be assessed in the period when it actually occurs. Cold conditions at doors, dispatch zones, warehouses or cooling spaces are evaluated in corresponding winter or operationally loaded conditions.
+## Jahreszeit und Betriebszustand
 
-Operating regime is equally important. During measurement we record whether technology was running, whether doors were open, how ventilation was set, whether air conditioning was operating, what the shift was and whether operation corresponded to normal or critical state.
+Die Jahreszeit beeinflusst das Mikroklima. Eine sommerliche Wärmebelastung sollte unter Bedingungen untersucht werden, in denen sie tatsächlich auftritt. Für kalte Bereiche sind die entsprechenden winterlichen oder betrieblich bedingten Zustände maßgeblich.
 
-For variable operations we design measurement locations and duration so that they capture decisive work situations. In larger halls or office spaces several locations are usually measured, because conditions can differ significantly even within one room or operating zone.
+Ebenso wichtig ist die Nutzung während der Messung. Wir erfassen beispielsweise, ob Anlagen laufen, Tore geöffnet sind und Lüftung oder Klimaanlage im üblichen Zustand arbeiten. Auch Schicht und Arbeitsabläufe gehören zur Dokumentation.
 
-## Measurement outputs
+Bei wechselnden Bedingungen wählen wir Messorte und Messdauer so, dass die entscheidenden Arbeitssituationen erfasst werden. In größeren Hallen und Büros können mehrere Messorte nötig sein. Die Bedingungen müssen nicht im gesamten Raum gleich sein.
 
-The output is a report or expert documentation containing identification of workplaces, description of work activities, operating regime during measurement, measurement equipment used, measurement locations, measured values and professional evaluation.
+## Ergebnisse und Messbericht
 
-In the report the client will find in particular:
+Sie erhalten einen Messbericht oder eine fachliche Auswertung zum vereinbarten Auftrag. Darin werden Arbeitsplätze, Tätigkeiten, Betriebsbedingungen, eingesetzte Messtechnik, Messorte und Ergebnisse beschrieben.
 
-1. description of measured spaces and work activities,
-2. measured values of temperature, humidity and air movement,
-3. assessment of results in relation to nature of work and operating conditions,
-4. evaluation of differences between individual locations or regimes,
-5. conclusion usable for OHS, KHS, job categorisation or measure design.
+Zum Inhalt gehören insbesondere:
 
-For workplaces with significant thermal or cold load the output may serve as a basis for adjustment of work regime, breaks, fluid intake, ventilation, air conditioning, shading, insulation of heat sources or change of work organisation.
+1. die untersuchten Räume und Tätigkeiten,
+2. die gemessenen Werte für Temperatur, Feuchtigkeit und Luftbewegung,
+3. die Bewertung im Zusammenhang mit der Arbeit und dem Betriebszustand,
+4. Unterschiede zwischen Messorten oder untersuchten Zuständen,
+5. Schlussfolgerungen für Arbeitsschutz, Behördenunterlagen oder weitere Maßnahmen.
 
-## Most common findings in practice
+Bei Wärme- oder Kältebelastung können die Ergebnisse als Grundlage für Anpassungen dienen. Dazu zählen je nach Befund Arbeitsorganisation, Pausen, Trinkversorgung, Lüftung, Klimatisierung, Verschattung oder die Abschirmung von Wärmequellen. Welche Maßnahmen erforderlich sind, ergibt sich aus der konkreten Beurteilung.
 
-In offices, uneven air flow from air conditioning, differences between workstations or low air humidity are often confirmed. In production halls the problem is usually a combination of technological heat sources, insufficient ventilation, open doors and radiation from machines or material.
+## Typische Probleme
 
-In warehouses and dispatch areas, flow of cold air during door handling often appears. In kitchens and operations with thermal technology, the actual regime of cooking, baking, washing or other thermal activity is usually decisive. In air-conditioned spaces, not only temperature setting matters, but also flow direction, air speed and workstation location.
+In Büros kommen ungleichmäßige Luftverteilung, Unterschiede zwischen Arbeitsplätzen und niedrige Luftfeuchtigkeit als Ursachen infrage. In Produktionshallen können Wärmequellen, unzureichende Lüftung und Wärmestrahlung von Anlagen oder Material zusammenwirken.
 
-Professional assessment is therefore always combined with local knowledge of the operation. Temperature value alone without context often does not explain the cause of the problem.
+In Lagern und Versandbereichen ist kalte Luft beim Öffnen der Tore zu berücksichtigen. In Küchen und anderen Bereichen mit Wärmetechnik beeinflussen Kochen, Backen, Waschen und vergleichbare Abläufe die Bedingungen. Bei Klimaanlagen sind neben der Solltemperatur auch Strömungsrichtung, Luftgeschwindigkeit und Arbeitsplatzlage wichtig.
 
-## What you can send us for assessment
+Die Beurteilung verbindet Messwerte mit den Gegebenheiten im Betrieb. Eine einzelne Temperaturangabe erklärt diese Zusammenhänge nicht vollständig.
 
-For measurement scope design send us a brief description of the workplace, activities performed, shift pattern, heat or cold sources, ventilation and air conditioning method, floor plan or simple sketch and description of situations when the problem appears most.
+## Unterlagen für Ihre Anfrage
 
-Based on this documentation we will propose the scope of microclimate measurement, suitable measurement locations, measurement date and operating regime under which measurement should take place. The result will be expert documentation usable for internal decisions, OHS, KHS, job categorisation or design of technical measures.
+Senden Sie uns eine kurze Beschreibung des Arbeitsplatzes und der Tätigkeiten. Hilfreich sind Angaben zu Schichten, Wärme- und Kältequellen, Lüftung und Klimatisierung. Ergänzen Sie einen Grundriss oder eine Skizze und beschreiben Sie, wann die Beschwerden auftreten.
 
-## Summary
+Falls eine Anforderung der KHS oder eine vorhandene Beurteilung vorliegt, fügen Sie diese bei. Anhand der Unterlagen schlagen wir Messumfang, Messorte und geeignete Betriebsbedingungen für den Termin vor.
 
-Microclimate measurement objectively assesses temperature, humidity and air movement at the workplace. It is used for employee complaints, suspicion of thermal or cold load, ventilation and air conditioning adjustments, workplace reconstructions and preparation of documentation for KHS, OHS or job categorisation.
+[Senden Sie uns Ihre Arbeitsplatzbeschreibung und vorhandene Unterlagen.](/de/kontakt/#poptavkovy-formular) Wir stimmen mit Ihnen ab, welche Messung für Ihre Fragestellung benötigt wird.
 
-Properly designed measurement takes into account type of work, shift pattern, season, operating regime, heat or cold sources and layout of workstations. Thanks to that the actual cause of the problem can be determined and measures proposed that match the specific workplace.
+## Zusammenfassung
 
-## Factual basis of the article
+Eine Mikroklimamessung erfasst Temperatur, Luftfeuchtigkeit und Luftbewegung am Arbeitsplatz. Sie unterstützt die Beurteilung bei Beschwerden, vermuteter Wärme- oder Kältebelastung sowie Änderungen an Räumen oder Lüftungsanlagen.
 
-The article is based on requirements for health protection at work, legal regulation of microclimatic conditions at the workplace and expert information from the National Institute of Public Health on thermo-humidity conditions of indoor workplace environments.
+Aussagekräftige Ergebnisse setzen voraus, dass Tätigkeit, Jahreszeit, Betriebszustand und die Lage der Arbeitsplätze berücksichtigt werden. So erhalten Sie Unterlagen für betriebliche Entscheidungen, den Arbeitsschutz oder eine konkrete Behördenanforderung.
 
-| Source | Practical significance |
+## Fachliche Grundlagen
+
+Die Beurteilung richtet sich nach den für den konkreten Arbeitsplatz geltenden tschechischen Anforderungen. Die Hinweise zum Mikroklima betreffen das Zusammenspiel von Temperatur, Feuchtigkeit, Luftbewegung und Arbeitsbedingungen, nicht einen einheitlichen Grenzwert für alle Tätigkeiten.
+
+| Grundlage | Bezug zur Aufgabe |
 |---|---|
-| [Government Regulation No. 361/2007 Coll.](https://e-sbirka.gov.cz/sb/2007/361) | sets conditions for health protection at work including requirements for risk factors of working conditions and microclimatic conditions |
-| [Act No. 258/2000 Coll., on public health protection](https://www.zakonyprolidi.cz/cs/2000-258) | forms the basic framework of public health protection and supervision of working conditions |
-| [NIPH – microclimatic conditions of indoor workplace environments](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/tep-vlhk-mikroklim/mikrokli-pod-vnitr-pract/) | explains significance of temperature, humidity and air movement in microclimate evaluation |
-| [Ministry of Health – job categorisation](https://mzd.gov.cz/kategorizace-praci-podle-zakona-o-ochrane-verejneho-zdravi/) | describes job categorisation as a tool for evaluating influence of working conditions on employee health |
-| [Work environment – NATURCHEM](https://www.naturchem.cz/sluzby/pracovni-prostredi) | related service of workplace environment factor measurement including microclimate |
+| [Tschechische Regierungsverordnung Nr. 361/2007 Sb.](https://e-sbirka.gov.cz/sb/2007/361) | Anforderungen zum Gesundheitsschutz bei der Arbeit, einschließlich Wärme- und Kältebelastung sowie mikroklimatischer Bedingungen. |
+| [Gesetz Nr. 258/2000 Sb. zum Schutz der öffentlichen Gesundheit](https://www.zakonyprolidi.cz/cs/2000-258) | Rechtlicher Rahmen für öffentliche Gesundheit und die Aufsicht über Arbeitsbedingungen in Tschechien. |
+| [SZÚ: Mikroklimatische Bedingungen in Innenarbeitsräumen](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/tep-vlhk-mikroklim/mikrokli-pod-vnitr-pract/) | Fachliche Erläuterungen zu Temperatur, Luftfeuchtigkeit und Luftbewegung. |
+| [Tschechisches Gesundheitsministerium: Einstufung von Tätigkeiten](https://mzd.gov.cz/kategorizace-praci-podle-zakona-o-ochrane-verejneho-zdravi/) | Einordnung der Arbeitsbedingungen im Rahmen der tschechischen Tätigkeitskategorien. |
+| [NATURCHEM: Messungen im Arbeitsumfeld](https://www.naturchem.cz/sluzby/pracovni-prostredi) | Überblick über die zugehörigen Messleistungen. |
 
-From a practical point of view, microclimate evaluation must work with the specific workplace, type of work, season, operating regime, heat or cold sources, ventilation, air conditioning and employee placement. Temperature, humidity and air movement are evaluated together, because their combination determines actual working conditions.
+## Weiterführende Links
 
-## Useful links
-
-- [Government Regulation No. 361/2007 Coll. – e-Sbírka](https://e-sbirka.gov.cz/sb/2007/361)
-- [NIPH – microclimatic conditions of indoor workplace environments](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/tep-vlhk-mikroklim/mikrokli-pod-vnitr-pract/)
-- [Ministry of Health – job categorisation](https://mzd.gov.cz/kategorizace-praci-podle-zakona-o-ochrane-verejneho-zdravi/)
-- [Work environment – NATURCHEM](https://www.naturchem.cz/sluzby/pracovni-prostredi)
+- [Regierungsverordnung Nr. 361/2007 Sb. – amtliche e-Sbírka](https://e-sbirka.gov.cz/sb/2007/361)
+- [SZÚ: Mikroklimatische Bedingungen in Innenarbeitsräumen](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/tep-vlhk-mikroklim/mikrokli-pod-vnitr-pract/)
+- [Tschechisches Gesundheitsministerium: Einstufung von Tätigkeiten](https://mzd.gov.cz/kategorizace-praci-podle-zakona-o-ochrane-verejneho-zdravi/)
+- [NATURCHEM: Arbeitsumfeld](https://www.naturchem.cz/sluzby/pracovni-prostredi)

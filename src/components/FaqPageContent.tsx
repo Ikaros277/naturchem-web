@@ -1,5 +1,5 @@
 import { FaqAccordionList, type FaqAccordionUiLabels } from "@/components/FaqAccordionList";
-import { FaqSearchClient } from "@/components/FaqSearchClient";
+import { FaqTopicNavigation } from "@/components/FaqTopicNavigation";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import type { Locale } from "@/lib/i18n/locales";
 import { localizeHref } from "@/lib/i18n/navigation";
@@ -39,13 +39,9 @@ export function FaqPageContent({ categories, uiLabels, locale }: Props) {
   const link = (href: string) => localizeHref(href, locale);
 
   return (
-    <div className="faq-page-content">
-      <FaqSearchClient
-        locale={locale}
-        searchLabel={uiLabels.searchLabel}
-        searchPlaceholder={uiLabels.searchPlaceholder}
-        emptyTitle={uiLabels.emptyTitle}
-        emptyText={uiLabels.emptyText}
+    <div className="faq-page-content" id="faq-topics">
+      <span id="faq-search" aria-hidden="true" />
+      <FaqTopicNavigation
         categories={categories.map(category => ({ id: category.id, title: category.tileLabel }))}
         categoriesLabel={uiLabels.categoriesNavAria}
       />

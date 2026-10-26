@@ -4,7 +4,7 @@ import { getReferencePhotographSources, referencePhotographs } from "@/lib/refer
 import { ReferenceHashTarget } from "./ReferenceHashTarget";
 import styles from "./reference-photo-showcase.module.css";
 
-const featuredIds = ["lak-automotive-emise", "hala-pp", "tcp-hluk"];
+const featuredIds = ["hala-pp", "tcp-hluk", "kovovyroba-vibrace"];
 const moreId = "dalsi-fotograficke-reference";
 
 function ReferencePhotoCard({ photo, example }: { photo: (typeof referencePhotographs)[number]; example: ReferenceExample }) {
@@ -45,7 +45,7 @@ export function ReferencePhotoShowcase({ examplesById }: { examplesById: Map<str
     <div className={styles.heading}><div><p className="eyebrow">Fotografie z realizací</p><h2 id="reference-photo-heading">Fotografické reference</h2></div>
       <a href="#priklady" className={styles.overview}>Další reference <span aria-hidden="true">↓</span></a>
     </div>
-    <nav className={styles.shortcuts} aria-label="Výběr fotografických referencí"><a href="#reference-lak-automotive-emise">Emise</a><a href="#reference-hala-pp">Pracovní prostředí</a><a href="#reference-tcp-hluk">Hluk v okolí</a><a href={"#" + moreId}>Všechny fotografické reference ({referencePhotographs.length})</a></nav>
+    <nav className={styles.shortcuts} aria-label="Výběr fotografických referencí"><a href="#reference-hala-pp">Pracovní prostředí</a><a href="#reference-tcp-hluk">Hluk v okolí</a><a href="#reference-kovovyroba-vibrace">Vibrace</a><a href="#reference-lak-automotive-emise">Emise</a><a href={"#" + moreId}>Všechny fotografické reference ({referencePhotographs.length})</a></nav>
     <div className={styles.grid}>{featured.map(render)}</div>
     <details id={moreId} className={styles.more}>
       <summary>Další fotografické reference <span>{remaining.length} zakázek</span></summary>

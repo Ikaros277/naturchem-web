@@ -11,8 +11,8 @@
 .links a:hover, .links a:focus-visible { background: #eaf4ef; border-left-color: var(--forest); color: var(--forest-dark); }
 .links a:focus-visible, .back a:focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
 .mobileOutline { display: none; }
-.reading { min-width: 0; padding: clamp(1.35rem, 2.5vw, 2rem); border: 1px solid #e0e8e7; border-radius: 18px; background: #fff; }
-.summary { margin-bottom: 1.8rem; border-radius: 0 10px 10px 0; }
+.reading { min-width: 0; padding: clamp(1.35rem, 2.5vw, 2rem); border: 1px solid #e0e8e7; border-radius: var(--radius-sharp); background: #fff; }
+.summary { margin-bottom: 1.8rem; border-radius: var(--radius-sharp); }
 .summaryPoints { margin: 0; padding-left: 1.15rem; color: #284352; line-height: 1.6; }
 .summaryPoints li + li { margin-top: 0.55rem; }
 .summaryMore { margin-top: 0.6rem; font-size: 0.94rem; }
@@ -30,7 +30,7 @@
 .reading :global(.article-body) h2:focus-visible, .reading :global(.article-body) h3:focus-visible { outline: 2px solid var(--forest); outline-offset: 6px; }
 .reading :global(.article-body) ul, .reading :global(.article-body) ol { padding-left: 1.4rem; }
 .reading :global(.article-body) li + li { margin-top: 0.45rem; }
-.reading :global(.article-body) blockquote { margin: 1.5rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--forest); border-radius: 0 10px 10px 0; background: #f0f6f4; color: #284352; }
+.reading :global(.article-body) blockquote { margin: 1.5rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--forest); border-radius: var(--radius-sharp); background: #f0f6f4; color: #284352; }
 .reading :global(.article-body) blockquote p:last-child { margin-bottom: 0; }
 .reading :global(.article-body) a { text-decoration: underline; text-underline-offset: 0.18em; }
 .reading :global(.article-table-wrap):focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
@@ -42,11 +42,11 @@
   .frame { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
   .rail { position: static; }
   .desktopOutline { display: none; }
-  .mobileOutline { display: block; border: 1px solid #c9ddd4; border-radius: 12px; background: #fff; }
+  .mobileOutline { display: block; border: 1px solid #c9ddd4; border-radius: var(--radius-sharp); background: #fff; }
   .mobileOutline summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; padding: 0.9rem 1.1rem; color: var(--navy); font-weight: 800; list-style: none; cursor: pointer; }
   .mobileOutline summary::-webkit-details-marker { display: none; }
   .mobileOutline summary small { display: block; margin-top: 0.15rem; font-size: 0.8rem; font-weight: 500; color: #586c78; }
-  .mobileOutline summary:focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; border-radius: 12px; }
+  .mobileOutline summary:focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; border-radius: var(--radius-sharp); }
   .chevron { width: 9px; height: 9px; margin-right: 3px; border-right: 2px solid var(--forest); border-bottom: 2px solid var(--forest); transform: rotate(45deg); }
   .mobileOutline[open] .chevron { transform: rotate(225deg); }
   .mobileOutline nav { padding: 0 0.9rem 0.9rem; }

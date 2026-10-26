@@ -4,7 +4,7 @@ import { Children, isValidElement } from "react";
 import remarkGfm from "remark-gfm";
 import type { Root } from "mdast";
 import type { Locale } from "@/lib/i18n/locales";
-import { addArticleHeadingAnchors, articleReadingCopy, type ArticleHeading } from "@/lib/article-reading";
+import { addArticleHeadingAnchors, articleReadingCopy, type ArticleHeading, type ArticleHeadingIds } from "@/lib/article-reading";
 
 function articleMarkdownComponents(locale: Locale): Components {
   return {
@@ -44,12 +44,12 @@ function articleMarkdownComponents(locale: Locale): Components {
 }
 
 /** Synchronous server renderer; collect headings once, without a second parser or client JS. */
-export function renderArticleMarkdown(children: string, locale: Locale = "cs") {
+export function renderArticleMarkdown(children: string, locale: Locale = "cs", headingIds?: ArticleHeadingIds) {
   let headings: ArticleHeading[] = [];
   const content = Markdown({
     children,
     remarkPlugins: [remarkGfm, function outlinePlugin() {
-      return (tree: Root) => { headings = addArticleHeadingAnchors(tree); };
+      return (tree: Root) => { headings = addArticleHeadingAnchors(tree, headingIds); };
     }],
     components: articleMarkdownComponents(locale)
   });

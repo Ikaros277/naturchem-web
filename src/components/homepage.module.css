@@ -26,7 +26,7 @@
 .heroLinks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
 .heroLinks a { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 44px; padding: 9px 14px; border: 1px solid #6b8493; border-radius: 5px; color: #fff; text-decoration: none; font-size: 15px; font-weight: 650; }
 .heroLinks a:hover { background: #244c5e; border-color: #b5d1d8; }
-.heroMedia { position: relative; min-width: 0; margin: 24px 0 24px 12px; border-radius: 6px; overflow: hidden; }
+.heroMedia { position: relative; min-width: 0; margin: 24px 0 24px 12px; border-radius: var(--radius-sharp); overflow: hidden; }
 .heroMedia::after { content: ""; position: absolute; inset: 18px; border: 1px solid #ffffff38; border-left: 3px solid #b7d9c7; clip-path: polygon(0 0, 20% 0, 20% 1%, 1% 1%, 1% 99%, 20% 99%, 20% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 80% 100%, 80% 99%, 99% 99%, 99% 1%, 80% 1%, 80% 0); pointer-events: none; }
 .heroMedia picture { display: block; width: 100%; height: 100%; }
 .heroMedia img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -44,9 +44,9 @@
 .clientLogos img { width: 100%; max-width: 100px; height: 32px; object-fit: contain; }
 .servicesGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 0; padding: 0; list-style: none; }
 .servicesGrid li { min-width: 0; }
-.serviceCard { display: flex; flex-direction: column; height: 100%; border: 1px solid var(--home-line); border-radius: 8px; color: var(--home-ink); text-decoration: none; background: #fff; transition: border-color .18s, box-shadow .18s; }
+.serviceCard { display: flex; flex-direction: column; height: 100%; border: 1px solid var(--home-line); border-radius: var(--radius-sharp); color: var(--home-ink); text-decoration: none; background: #fff; transition: border-color .18s, box-shadow .18s; }
 .serviceCard:hover { border-color: #78a998; box-shadow: 0 8px 24px #143d3312; }
-.servicePhoto { aspect-ratio: 2.15; position: relative; overflow: hidden; border-radius: 7px 7px 0 0; background: #dce4e2; }
+.servicePhoto { aspect-ratio: 2.15; position: relative; overflow: hidden; border-radius: var(--radius-sharp); background: #dce4e2; }
 .servicePhoto img, .articlePhoto img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
 .serviceCard:hover .servicePhoto img, .article:hover img { transform: scale(1.025); }
 .serviceBody { padding: 20px 22px 23px; min-width: 0; }
@@ -57,14 +57,14 @@
 .serviceCard:hover .arrow { color: #fff; background: var(--home-green); border-color: var(--home-green); }
 .studyCard { --home-study-bg: #eef4f8; --home-study-ink: #285a7a; background: var(--home-study-bg); }
 .documentationCard { --home-study-bg: #f7f3eb; --home-study-ink: #865b28; }
-.studyGraphic { height: 96px; color: var(--home-study-ink); overflow: hidden; padding: 0 10px; border-radius: 7px 7px 0 0; }
+.studyGraphic { height: 96px; color: var(--home-study-ink); overflow: hidden; padding: 0 10px; border-radius: var(--radius-sharp); }
 .studyGraphic svg { display: block; height: 110px; width: 240px; margin-left: auto; }
 .studyCard .serviceBody { padding-top: 4px; }
 .situations { color: #fff; background: #123c42; }
 .situations .sectionHeader h2 { color: #fff; }
 .situationGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
 .situationGrid li { min-width: 0; }
-.situation { display: grid; grid-template-columns: 46px minmax(0, 1fr) 22px; gap: 15px; align-items: center; height: 100%; padding: 23px 20px; text-decoration: none; color: #fff; background: #ffffff06; border: 1px solid #7ca29e; border-radius: 7px; transition: background .18s, border-color .18s; }
+.situation { display: grid; grid-template-columns: 46px minmax(0, 1fr) 22px; gap: 15px; align-items: center; height: 100%; padding: 23px 20px; text-decoration: none; color: #fff; background: #ffffff06; border: 1px solid #7ca29e; border-radius: var(--radius-sharp); transition: background .18s, border-color .18s; }
 .situationIcon { color: #b7dfca; }
 .situationIcon :global(.service-icon-plain) { color: inherit; }
 .situationBody { min-width: 0; }
@@ -84,14 +84,14 @@
 .audienceList li:nth-child(2) .audienceIcon { background: #e8eff5; border-color: #c8d8e3; color: #285a7a; }
 .audienceList li:nth-child(3) .audienceIcon { background: #f2ede3; border-color: #e0d4bc; color: #865b28; }
 .audienceTitle { min-width: 0; font-family: var(--font-display), sans-serif; font-size: 18px; line-height: 1.35; letter-spacing: -.015em; overflow-wrap: anywhere; }
-.partnerRow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; margin-top: 26px; padding: 12px 20px; border-left: 3px solid #285a7a; border-radius: 0 6px 6px 0; background: #e7eef3; color: #254d65; font-size: 16px; }
+.partnerRow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; margin-top: 26px; padding: 12px 20px; border-left: 3px solid #285a7a; border-radius: var(--radius-sharp); background: #e7eef3; color: #254d65; font-size: 16px; }
 .partnerRow > span { min-width: 0; }
 .partnerLink { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #173f59; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
 .partnerLink span { font-size: 22px; }
 .partnerLink:hover { color: #112b3e; }
 .needsSection { padding-block: 32px 0; }
 .needsNav h2 { margin: 0 0 20px; font-size: clamp(26px, 2.4vw, 32px); line-height: 1.2; letter-spacing: -.025em; }
-.needsNav .situation { --need-background: #155b4b; --need-hover: #1d6b58; padding: 22px; gap: 14px; grid-template-columns: 44px minmax(0, 1fr) 38px; min-height: 136px; background: var(--need-background); color: #fff; border-color: var(--need-background); border-radius: 9px; }
+.needsNav .situation { --need-background: #155b4b; --need-hover: #1d6b58; padding: 22px; gap: 14px; grid-template-columns: 44px minmax(0, 1fr) 38px; min-height: 136px; background: var(--need-background); color: #fff; border-color: var(--need-background); border-radius: var(--radius-sharp); }
 .needsNav li:nth-child(2) .situation { --need-background: #254e6d; --need-hover: #2e5c7c; }
 .needsNav li:nth-child(3) .situation { --need-background: #79552e; --need-hover: #866035; }
 .needsNav .situationIcon { grid-column: auto; display: grid; place-items: center; width: 44px; height: 44px; color: #fff; background: #ffffff10; border: 1px solid #ffffff30; border-radius: 8px; }
@@ -118,7 +118,7 @@
 .steps p { font-size: 15px; line-height: 1.5; margin: 0; color: var(--home-muted); }
 .articles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .article { display: flex; flex-direction: column; min-width: 0; text-decoration: none; color: inherit; }
-.articlePhoto { aspect-ratio: 1.85; overflow: hidden; background: #e1e7e5; border-radius: 7px; }
+.articlePhoto { aspect-ratio: 1.85; overflow: hidden; background: #e1e7e5; border-radius: var(--radius-sharp); }
 .articleBody { display: flex; flex: 1; flex-direction: column; padding-top: 18px; }
 .article time { display: block; font-size: 14px; color: var(--home-muted); margin-bottom: 12px; }
 .article h3 { margin: 0 0 12px; font-size: 20px; line-height: 1.35; letter-spacing: -.02em; }
@@ -164,7 +164,7 @@
   .credential { font-size: 13px; min-height: 36px; }
   .heroLinks { gap: 7px; margin-top: 18px; }
   .heroLinks a { gap: 10px; font-size: 14px; padding-inline: 11px; }
-  .heroMedia { display: block; height: 176px; margin: 20px 0 0; border-radius: 6px; }
+  .heroMedia { display: block; height: 176px; margin: 20px 0 0; border-radius: var(--radius-sharp); }
   .photoCaption { padding: 24px 14px 12px; font-size: 12px; }
   .statsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding-block: 20px; }
   .stat, .stat:first-child { padding-left: 12px; border-left: 2px solid #b9cec5; }
@@ -177,7 +177,7 @@
   .clientLogos a { min-height: 40px; }
   .servicesGrid { grid-template-columns: 1fr; gap: 12px; }
   .measurementCard { display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: stretch; }
-  .servicePhoto { aspect-ratio: auto; min-height: 126px; border-radius: 7px 0 0 7px; }
+  .servicePhoto { aspect-ratio: auto; min-height: 126px; border-radius: var(--radius-sharp); }
   .servicePhoto img { position: absolute; inset: 0; }
   .serviceBody { padding: 17px 15px; }
   .serviceTitle { gap: 8px; }

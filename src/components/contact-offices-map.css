@@ -33,44 +33,53 @@
 .contact-offices-map-picker {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.35rem;
-  padding: 0.55rem 0.65rem;
-  background: rgba(7, 24, 39, 0.92);
+  gap: 0;
+  padding: 0;
+  border-bottom: 1px solid #c6d7cf;
+  background: #f4f8f6;
 }
 
 .contact-offices-map-tab {
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  margin: 0;
+  border: 0;
+  border-right: 1px solid #d6e1db;
+  border-radius: 0;
+  background: transparent;
+  color: #36515b;
   font: inherit;
-  font-size: clamp(0.68rem, 1.5vw, 0.78rem);
+  font-size: 0.82rem;
   font-weight: 600;
-  padding: 0.38rem 0.45rem;
+  line-height: 1.3;
+  padding: 12px 8px;
   cursor: pointer;
   min-width: 0;
+  min-height: 48px;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  box-shadow: inset 0 -3px 0 transparent;
   transition:
     background 0.15s ease,
-    border-color 0.15s ease;
+    box-shadow 0.15s ease;
+}
+
+.contact-offices-map-tab:last-child {
+  border-right: 0;
 }
 
 .contact-offices-map-tab:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: #e8f0eb;
 }
 
 .contact-offices-map-tab.is-active {
-  background: var(--forest, #2f6f5e);
-  border-color: var(--forest, #2f6f5e);
-  color: #fff;
+  background: #e1eee6;
+  box-shadow: inset 0 -3px 0 #24634e;
+  color: #174b3c;
+  font-weight: 750;
 }
 
 .contact-offices-map-tab:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+  outline: 2px solid #174b3c;
+  outline-offset: -5px;
 }
 
 .contact-offices-map-frame-wrap {
@@ -84,46 +93,41 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.35rem 0.75rem;
-  padding: 0.55rem 0.75rem;
+  gap: 0 12px;
+  padding: 4px 14px;
   background: #fff;
   border-top: 1px solid var(--border);
 }
 
 .contact-offices-map-address {
   margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.4;
-  color: #203247;
+  min-width: 0;
+  font-size: 0.81rem;
+  line-height: 1.45;
+  color: #36515b;
 }
 
 .contact-offices-map-external {
-  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 0.8rem;
   font-weight: 650;
-  color: var(--forest, #2f6f5e);
-  text-decoration: none;
+  color: #245d4a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   white-space: nowrap;
+}
+
+.contact-offices-map-external::after {
+  content: "↗";
+  font-size: 1rem;
 }
 
 .contact-offices-map-external:hover {
   color: #1c5a4e;
   text-decoration: underline;
-}
-
-.contact-offices-map--panel .contact-offices-map-picker {
-  background: #f4f8f6;
-}
-
-.contact-offices-map--panel .contact-offices-map-tab {
-  border-color: rgba(47, 111, 94, 0.25);
-  background: #fff;
-  color: #203247;
-}
-
-.contact-offices-map--panel .contact-offices-map-tab.is-active {
-  background: var(--forest, #2f6f5e);
-  border-color: var(--forest, #2f6f5e);
-  color: #fff;
 }
 
 .page-hero-band--map .page-hero-band-inner {
@@ -158,54 +162,15 @@
   height: 100%;
 }
 
-.contact-offices-map--hero .contact-offices-map-leaflet {
-  grid-template-rows: minmax(0, 1fr) auto auto;
-}
-
-.contact-offices-map--hero .contact-offices-map-frame-wrap {
-  grid-row: 1;
-}
-
-.contact-offices-map--hero .contact-offices-map-picker {
-  grid-row: 2;
-  background: rgba(7, 24, 39, 0.96);
-}
-
-@media (min-width: 1024px) {
-  .contact-offices-map--hero .contact-offices-map-picker {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: fit-content;
-    max-width: calc(100% - 2rem);
-    margin-inline: auto;
-    gap: 0.45rem;
-    padding: 0.55rem 0.65rem;
-    border-radius: var(--radius-pill);
-  }
-
-  .contact-offices-map--hero .contact-offices-map-tab {
-    flex: 0 0 auto;
-    width: auto;
-    padding: 0.38rem 0.85rem;
-    font-size: 0.76rem;
-  }
-}
-
-.contact-offices-map--hero .contact-offices-map-embed-foot {
-  grid-row: 3;
-}
-
 @media (max-width: 520px) {
-  .contact-offices-map-picker {
-    gap: 0.25rem;
-    padding: 0.45rem 0.5rem;
-  }
-
   .contact-offices-map-tab {
-    font-size: 0.66rem;
-    padding: 0.34rem 0.3rem;
+    font-size: 0.75rem;
+    padding: 10px 6px;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-offices-map-tab { transition: none; }
 }
 
 .contact-offices-map-canvas--leaflet {
@@ -226,6 +191,27 @@
 .contact-map-infowindow a {
   color: #0f43a7;
   font-weight: 600;
+}
+
+.contact-hero-map .leaflet-popup-content {
+  max-width: min(216px, calc(100vw - 120px));
+  margin: 12px 14px;
+}
+
+.contact-hero-map .contact-map-infowindow {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #203247;
+  overflow-wrap: anywhere;
+}
+
+.contact-hero-map .contact-map-infowindow a {
+  display: inline-block;
+  padding-block: 6px;
+  font-size: inherit;
+  line-height: inherit;
+  color: #245d4a;
+  white-space: normal;
 }
 
 .contact-offices-map-placeholder {
@@ -270,4 +256,54 @@
 .contact-offices-map--hero.contact-offices-map-placeholder {
   align-content: center;
   min-height: 100%;
+}
+
+/* Contact keeps one map above the form, without the decorative hero's crop. */
+.page-hero-band--contact .page-hero-band-inner {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.page-hero-band.page-hero-band--contact .hero-band-text {
+  width: 100%;
+  max-width: none;
+  padding-right: 0;
+  overflow: visible;
+}
+
+.contact-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+
+.contact-hero-map {
+  height: 420px;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sharp);
+  background: #e8eef4;
+}
+
+.contact-hero-map .contact-offices-map-placeholder {
+  height: 100%;
+  align-content: center;
+}
+
+.page-hero-band .contact-hero-map .contact-offices-map-placeholder-manage {
+  color: #174f42;
+  background: #fff;
+  border-color: #acc6ba;
+}
+
+@media (max-width: 767px) {
+  .contact-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .contact-hero-map {
+    height: 420px;
+  }
 }

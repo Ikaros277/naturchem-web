@@ -1,45 +1,34 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import "./contact-offices-map.css";
+import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { useCookieConsentState } from "@/components/CookieConsentBanner";
-import { ContactOfficesMap } from "@/components/ContactOfficesMap";
-import { HeroPhoto } from "@/components/HeroPhoto";
-import type { HeroTheme } from "@/lib/hero-images";
+import { ContactMapFallback } from "@/components/ContactMapFallback";
+import { installDeferredMapActivation } from "@/lib/deferred-map-activation";
 
-function useMapsAllowed() {
+const DeferredOfficesMap = dynamic(
+  () => import("./ContactOfficesMap").then(module => module.ContactOfficesMap),
+  { ssr: false, loading: () => <ContactMapFallback variant="hero" loading /> }
+);
+
+export function ContactPageHeroMedia() {
   const consent = useCookieConsentState();
-  return consent.updatedAt !== "" && consent.statistics;
-}
-
-function useIsDesktopNav() {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const mapsAllowed = consent.updatedAt !== "" && consent.statistics;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [activated, setActivated] = useState(false);
 
   useEffect(() => {
-    const mqDesktop = window.matchMedia("(min-width: 1024px)");
-    const update = () => setIsDesktop(mqDesktop.matches);
-    update();
-    mqDesktop.addEventListener("change", update);
-    return () => mqDesktop.removeEventListener("change", update);
-  }, []);
+    const container = containerRef.current;
+    if (!container || !mapsAllowed || activated) return;
+    return installDeferredMapActivation(container, () => setActivated(true));
+  }, [mapsAllowed, activated]);
 
-  return isDesktop;
-}
-
-export function ContactPageHeroMedia({ theme }: { theme: HeroTheme }) {
-  const isDesktop = useIsDesktopNav();
-  const mapsAllowed = useMapsAllowed();
-
-  if (isDesktop && mapsAllowed) {
-    return <ContactOfficesMap variant="hero" />;
-  }
-
-  return <HeroPhoto theme={theme} priority />;
-}
-
-export function ContactPageOfficesMap() {
-  const isDesktop = useIsDesktopNav();
-
-  if (isDesktop) return null;
-
-  return <ContactOfficesMap variant="panel" />;
+  return (
+    <div ref={containerRef} className="contact-hero-map">
+      {mapsAllowed && activated
+        ? <DeferredOfficesMap variant="hero" />
+        : <ContactMapFallback variant="hero" loading={mapsAllowed} />}
+    </div>
+  );
 }

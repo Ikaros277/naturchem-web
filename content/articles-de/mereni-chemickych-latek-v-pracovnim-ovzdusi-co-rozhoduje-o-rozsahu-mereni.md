@@ -1,247 +1,256 @@
 ---
 heroImage: /hero/generated-2026-09/chemicke-latky-rozsah.webp
-
 title: "Chemische Stoffe am Arbeitsplatz: Umfang"
 slug: mereni-chemickych-latek-v-pracovnim-ovzdusi-co-rozhoduje-o-rozsahu-mereni
 excerpt: "Den Messumfang chemischer Stoffe in der Luft am Arbeitsplatz kann man nicht allein aus dem Namen des Betriebs oder aus einer allgemeinen Anfrage „chemische Stoffe messen“ ableiten."
 author: Ing. František Hezina
 publishedAt: "2026-03-05"
 topic: Work environment
+headingIds:
+  "Messauftrag": kapitola-why-a-general-brief-to-measure-chemicals-is-not-enough
+  "Messumfang": kapitola-what-determines-the-scope-of-measurement
+  "Sicherheitsdatenblätter": kapitola-safety-data-sheets-as-the-starting-point
+  "Arbeitsabläufe und Freisetzung": kapitola-work-procedure-when-a-substance-really-arises-or-escapes
+  "Schichtlänge und Expositionsdauer": kapitola-shift-length-and-exposure-duration
+  "Beispiel für eine Schicht": kapitola-simple-example
+  "PEL und NPK-P": kapitola-pel-and-npk-p-two-different-views-of-the-limit
+  "TWA: zeitgewichteter Mittelwert": kapitola-twa-time-weighted-average
+  "Personenbezogene und ortsfeste Probenahme": kapitola-personal-and-stationary-sampling
+  "Auswahl einer repräsentativen Schicht": kapitola-selection-of-a-representative-shift
+  "Beispiel: Lackiererei": kapitola-example-paint-shop
+  "Beispiel: Klebearbeiten": kapitola-example-bonding
+  "Beispiel: Reinigen und Entfetten": kapitola-example-cleaning-and-degreasing
+  "Stoffgemische und additive Wirkung": kapitola-mixtures-of-chemical-substances-and-additive-effect
+  "Unterlagen vor der Messung": kapitola-what-to-prepare-before-measurement
+  "Häufige Fehler": kapitola-most-common-mistakes-when-measuring-chemical-substances
+  "Nutzen für den Betrieb": kapitola-how-measurement-helps-the-operator
+  "Zusammenfassung": kapitola-summary
+  "Fachliche Grundlagen": kapitola-factual-basis-of-the-article
 ---
 
-## Why a general brief to "measure chemicals" is not enough
+## Messauftrag
 
-Measurement of chemical substances in workplace air is among the common documentation for job categorisation, workplace environment inspection, requests from the regional hygiene station (KHS) or verification of ventilation and extraction effectiveness. In practice it applies to paint shops, bonding, degreasing, welding, plastics processing, chemical surface treatment, laboratories, mixing rooms, pressing operations, operations with material heating or workplaces where cleaning and process agents are used.
+Welche chemischen Stoffe sollen gemessen werden, an welchen Arbeitsplätzen und über welchen Zeitraum? Für einen geeigneten Messauftrag brauchen wir Angaben zu Produkten, Tätigkeiten und Arbeitsabläufen. Die Bezeichnung des Betriebs allein reicht dafür nicht aus.
 
-The scope of measurement cannot be determined only from the fact that "chemicals are used" in the operation. It is important to find out which substances may actually be present in the air, at what stage of work they arise, how long the worker is exposed and whether it is a normal state, peak operation or extraordinary activity.
+Die folgenden Hinweise beziehen sich auf **Arbeitsplätze in Tschechien**. Messungen chemischer Stoffe in der Arbeitsplatzluft können Unterlagen für die Einstufung von Tätigkeiten, den Arbeitsschutz oder eine Anforderung der regionalen Gesundheitsbehörde **KHS** liefern. Auch die Wirksamkeit von Lüftung und Absaugung kann Anlass einer Untersuchung sein.
 
-> The aim of measurement is not to capture a random moment in operation, but to assess professionally the employee's actual inhalation exposure.
+Typische Einsatzbereiche sind Lackieren, Kleben, Entfetten, Schweißen, Kunststoffverarbeitung, chemische Oberflächenbehandlung und Labore. Ebenso kommen Mischbereiche, Pressen, erwärmte Materialien sowie der Einsatz von Reinigungs- und Prozessmitteln infrage. Entscheidend ist, welche Stoffe tatsächlich in die Luft gelangen können und wie Beschäftigte ihnen ausgesetzt sind.
 
-## What determines the scope of measurement
+> Für die Beurteilung der inhalativen Exposition sind die Atemluft der Beschäftigten und der tatsächliche Arbeitsablauf maßgeblich.
 
-The scope of measurement consists of several professional decisions. It is necessary to determine which substances will be measured, where samples will be taken, how long sampling will last and how results will be evaluated against hygiene limits.
+## Messumfang
 
-| Input information | Why it matters |
+Bei der Planung legen wir fest, welche Stoffe untersucht werden, wo Proben genommen werden und wie lange die Messung dauert. Dazu gehört auch die Frage, welche Grenzwerte und Bewertungszeiträume für die Aufgabe relevant sind.
+
+| Eingangsangabe | Bedeutung für die Planung |
 |---|---|
-| safety data sheets | show composition of mixtures, hazardous components and basic toxicological information |
-| work procedure | determines when and how substances escape into the air |
-| shift length | affects calculation of time-weighted average |
-| exposure duration | decides whether the worker is exposed to the substance for the whole shift or only briefly |
-| ventilation and extraction | fundamentally affects concentrations in the breathing zone |
-| PEL and NPK-P | determine how results are evaluated |
-| type of sampling | personal sampling evaluates worker exposure, stationary sampling evaluates a selected location |
-| representative shift | decides on usability of results for practice and categorisation |
+| Sicherheitsdatenblätter | Informationen über Zusammensetzung, gefährliche Bestandteile und Eigenschaften der Produkte. |
+| Arbeitsverfahren | Zeigt, wann und wie Stoffe freigesetzt werden können. |
+| Schichtlänge | Ist für die zeitbezogene Auswertung wichtig. |
+| Expositionsdauer | Unterscheidet durchgehende von kurzzeitiger oder wechselnder Belastung. |
+| Lüftung und Absaugung | Beeinflussen die Konzentrationen im Arbeitsbereich und in der Atemzone. |
+| PEL und NPK-P | Bestimmen den jeweiligen Grenzwertbezug der Bewertung. |
+| Art der Probenahme | Unterscheidet die Untersuchung einer Person von der eines festen Messorts. |
+| Repräsentative Schicht | Stellt den Bezug zum untersuchten Betriebszustand her. |
 
-A proper measurement design therefore starts with analysis of the operation. Only then does it make sense to determine specific substances, number of samples, type of sampling and measurement duration.
+Der Messplan entsteht aus der Analyse des Betriebs. Daraus ergeben sich die Stoffauswahl, die Zahl der Proben, das Probenahmeverfahren und die Messdauer.
 
-## Safety data sheets as the starting point
+## Sicherheitsdatenblätter
 
-Safety data sheets are the basic documentation for measurement design. They contain information on hazardous components of mixtures, classification, physico-chemical properties, possible exposure and recommended protective measures.
+Sicherheitsdatenblätter liefern Angaben über gefährliche Bestandteile, Einstufung, physikalisch-chemische Eigenschaften und Schutzmaßnahmen. Sie gehören deshalb zu den wichtigsten Unterlagen für die Messplanung.
 
-From safety data sheets the following are usually assessed:
+Wir berücksichtigen insbesondere:
 
-- composition of the mixture and listed hazardous substances,
-- volatility of components,
-- hazard classification,
-- possible irritant, sensitising, toxic or carcinogenic effects,
-- recommended technical and personal protective equipment,
-- exposure limit information where stated,
-- method of product use in the specific technology.
+- Zusammensetzung und angegebene gefährliche Stoffe,
+- Flüchtigkeit der Bestandteile,
+- Gefahreneinstufung,
+- mögliche reizende, sensibilisierende, toxische oder krebserzeugende Wirkungen,
+- empfohlene technische und persönliche Schutzmaßnahmen,
+- angegebene Expositionsgrenzwerte,
+- Verwendung des Produkts im konkreten Verfahren.
 
-A safety data sheet alone is not enough. It gives information about the substance or mixture, not about actual exposure in the given operation. The same product can lead to very different concentrations depending on whether it is applied manually with a brush, sprayed, heated, used in enclosed equipment or applied in a poorly ventilated space.
+Das Sicherheitsdatenblatt beschreibt den Stoff oder das Gemisch, nicht die tatsächliche Belastung an einem bestimmten Arbeitsplatz. Streichen, Spritzen, Erwärmen oder die Verwendung in einer geschlossenen Anlage können zu unterschiedlichen Expositionsbedingungen führen.
 
-*Practically important:* the safety data sheet helps determine what may be a problem. Measurement then verifies how significant that problem actually is in the specific operation.
+*Für die Planung:* Produktinformationen und reale Verwendung müssen gemeinsam betrachtet werden. Die Messung untersucht anschließend die Belastung unter den festgelegten Betriebsbedingungen.
 
-## Work procedure: when a substance really arises or escapes
+## Arbeitsabläufe und Freisetzung
 
-For chemical substances it is necessary to know the actual work procedure. It is not enough to know that, for example, adhesive, thinner, cleaning agent or paint is used. What matters is how the product is handled.
+Es ist wichtig, wie Beschäftigte mit Klebstoff, Verdünnung, Reinigungsmittel oder Beschichtungsstoff umgehen. Der Produktname allein beschreibt die Freisetzung nicht.
 
-An employee may have different exposure in these situations:
+Zu berücksichtigen sind beispielsweise:
 
-1. opening packaging and dosing the product,
-2. manual application,
-3. spraying,
-4. mixing mixtures,
-5. cleaning tools,
-6. drying or curing,
-7. heating material,
-8. fault or non-standard condition,
-9. maintenance and cleaning of technology.
+1. Öffnen von Gebinden und Dosieren,
+2. manuelles Auftragen,
+3. Spritzen,
+4. Anmischen,
+5. Reinigen von Werkzeugen,
+6. Trocknen und Aushärten,
+7. Erwärmen von Material,
+8. Störungen oder abweichende Betriebszustände,
+9. Wartung und Anlagenreinigung.
 
-In some operations the highest exposure does not occur during the main production operation, but during preparation, cleaning or waste handling. For example, in a paint shop significant exposure may arise not only from coating application itself, but also from colour mixing and cleaning of spray equipment. In bonding, the method of application and ventilation time may be decisive. In plastics processing, process temperature and possible thermal decomposition products may be important.
+Eine hohe Belastung kann auch bei Vorbereitung, Reinigung oder Abfallhandhabung auftreten. In einer Lackiererei sind daher neben dem Beschichten auch das Anmischen und die Reinigung der Spritzgeräte zu beachten. Bei Klebearbeiten spielen Auftrag und Lüftung eine Rolle; bei Kunststoffen können Verarbeitungstemperatur und Zersetzungsprodukte wichtig sein.
 
-## Shift length and exposure duration
+## Schichtlänge und Expositionsdauer
 
-Shift length is essential for evaluation of results. Hygiene limits such as PEL are based on a full-shift time-weighted average. That means not only instantaneous concentration is evaluated, but exposure over time.
+Die Auswertung berücksichtigt den zeitlichen Verlauf. Wer während einer ganzen Schicht an einer Anlage arbeitet, hat einen anderen Tätigkeitsablauf als jemand, der nur zeitweise mit einem Stoff umgeht.
 
-If the worker performs a risky activity for the whole shift, the situation is simpler. If they work with a chemical substance only part of the shift and perform other work for the rest of the time, the time course of exposure must be taken into account.
+Für den Vergleich mit einem schichtbezogenen Grenzwert sind Dauer und Höhe der Exposition zusammen zu bewerten. Bei längeren Schichten und höherem Atemminutenvolumen sind die einschlägigen Anpassungsregeln zu berücksichtigen. Ein beliebiger Mittelwert darf nicht ohne diesen Bezug mit einem PEL verglichen werden.
 
-### Simple example
+### Beispiel für eine Schicht
 
-A worker may have the following regime during a shift:
+Das folgende **hypothetische Beispiel** zeigt nur die zeitliche Aufteilung. Es enthält keine Messergebnisse und beschreibt keine konkrete Referenz von NATURCHEM.
 
-| Part of shift | Activity | Possible exposure |
+| Teil der Schicht | Tätigkeit | Mögliche Belastung |
 |---|---|---|
-| 2 hours | bonding parts | higher exposure to solvents |
-| 1 hour | cleaning tools | briefly increased exposure |
-| 4 hours | assembly without chemical agents | low or zero exposure |
-| 1 hour | handling and cleaning | variable exposure |
+| 2 Stunden | Bauteile kleben | Exposition gegenüber Lösemitteln möglich. |
+| 1 Stunde | Werkzeuge reinigen | Zeitweise erhöhte Exposition möglich. |
+| 4 Stunden | Montage ohne chemische Produkte | Niedrigere oder keine verfahrensbedingte Exposition möglich. |
+| 1 Stunde | Handhabung und Aufräumen | Wechselnde Exposition möglich. |
 
-In such a case it is necessary to decide whether the whole shift, a selected exposure period, a short-term peak or a combination of these approaches should be measured. The result is then evaluated so that it corresponds to the worker's actual exposure.
+Je nach Stoff und Arbeitsablauf kann eine Messung über die Schicht, während ausgewählter Expositionsphasen oder für kurzzeitige Belastungen erforderlich sein. Auch eine Kombination kommt infrage. Welche Strategie geeignet ist, entscheidet die fachliche Planung.
 
-## PEL and NPK-P: two different views of the limit
+## PEL und NPK-P
 
-When evaluating chemical substances in workplace air, two basic limit values are used in particular: **PEL** and **NPK-P**.
+Bei der Beurteilung nach tschechischem Recht sind insbesondere **PEL** und **NPK-P** zu unterscheiden. Es handelt sich nicht um deutsche Arbeitsplatzgrenzwerte.
 
-| Abbreviation | Meaning | Practical use |
+| Kürzel | Bedeutung im tschechischen Regelwerk | Bezug der Bewertung |
 |---|---|---|
-| PEL | permissible exposure limit | evaluates full-shift exposure as time-weighted average |
-| NPK-P | maximum permissible concentration | evaluates short-term increased concentrations, typically peaks during work |
+| PEL | Zulässiger Expositionsgrenzwert | Zeitgewichtete Konzentration mit Bezug zur Arbeitsschicht. |
+| NPK-P | Höchstzulässige Konzentration | Kurzzeitige Konzentration im dafür vorgesehenen Bewertungszeitraum. |
 
-**PEL** corresponds to a longer-term view of the work shift. It is important where the employee works with a substance repeatedly or for a long time.
+Der PEL ist für die schichtbezogene Exposition relevant. Der NPK-P dient der Beurteilung kurzzeitiger Belastungen, etwa bei reizenden oder akut wirkenden Stoffen.
 
-**NPK-P** is important for substances that may briefly irritate eyes or airways, act acutely or create short-term peaks during certain operations. In practice this may involve opening containers, cleaning, pouring, spraying, emergency ventilation or short intensive technological steps.
+Öffnen, Umfüllen, Reinigen oder Spritzen können solche Belastungen verursachen. Ein NPK-P-Vergleich ist jedoch kein Vergleich mit einem beliebigen einzelnen Momentanwert. Der vorgeschriebene Bewertungszeitraum und die stoffspezifischen Bedingungen sind zu beachten.
 
-*In simplified terms:* PEL answers the question "what is the average exposure over the shift". NPK-P answers the question "whether unacceptable short-term peaks occur in operation".
+## TWA: zeitgewichteter Mittelwert
 
-## TWA: time-weighted average
+**TWA** steht für *time-weighted average*, den zeitgewichteten Mittelwert. Konzentrationen werden entsprechend der Dauer der jeweiligen Zeitabschnitte gewichtet.
 
-TWA means **time-weighted average**. In Czech practice it is used mainly to calculate full-shift exposure, where individual concentrations are weighted according to the duration of given activities.
+Das Rechenprinzip lautet:
 
-If exposure during the shift is variable, one cannot look only at a single measured value without time context. A short high concentration may be significant for NPK-P, but for the full-shift average it has a different weight than exposure lasting several hours.
+> TWA = (C1 × t1 + C2 × t2 + C3 × t3 + …) / Gesamtzeit
 
-Orientational calculation principle:
+Dabei bezeichnet C die Konzentration und t die Dauer des jeweiligen Abschnitts. Die Gesamtzeit muss zu dem Zeitraum passen, der beurteilt werden soll. Eine kurze hohe Konzentration hat im Schichtmittel ein anderes Gewicht als eine mehrere Stunden anhaltende Belastung.
 
-> TWA = (C1 × t1 + C2 × t2 + C3 × t3 + ... ) / total time
+Für den Vergleich mit PEL oder NPK-P gelten zusätzlich die jeweiligen Bewertungsregeln. Der Rechenansatz allein legt weder den Messumfang noch die Einhaltung eines Grenzwerts fest.
 
-Where:
+## Personenbezogene und ortsfeste Probenahme
 
-- C is substance concentration,
-- t is duration of the given activity,
-- the result is the time-weighted average for the evaluated period.
+Personenbezogene und ortsfeste Probenahmen beantworten unterschiedliche Fragen. Sie sind deshalb nicht beliebig austauschbar.
 
-This principle is important for operations where the worker alternates work at the emission source, handling away from the source and administrative or control activities.
-
-## Personal and stationary sampling
-
-Personal or stationary sampling is used when measuring chemical substances. Both have their place, but they do not answer the same question.
-
-| Sampling type | What it evaluates | When it is suitable |
+| Probenahme | Untersuchungsgegenstand | Typischer Zweck |
 |---|---|---|
-| personal sampling | exposure of a specific worker in the breathing zone | job categorisation, inhalation exposure assessment, comparison with PEL |
-| stationary sampling | concentration at a specific workplace location | space check, source, ventilation, technological location or background |
+| Personenbezogen | Exposition in der Atemzone einer bestimmten Person. | Beurteilung der inhalativen Exposition und Unterlagen zur Einstufung der Tätigkeit. |
+| Ortsfest | Konzentration an einem ausgewählten Messort. | Untersuchung von Raum, Quelle, Lüftung oder einem Bereich an der Anlage. |
 
-**Personal sampling** is carried out so that the sample best corresponds to the air the worker actually breathes. It is therefore essential when evaluating employee exposure and job categorisation.
+Bei einer **personenbezogenen Probenahme** soll die Probe die Luft erfassen, die der Beschäftigte während der Tätigkeit einatmet. Bewegung, wechselnde Positionen und unterschiedliche Tätigkeiten sind dabei zu berücksichtigen.
 
-**Stationary sampling** is useful, for example, to verify concentration at a source, in the workplace space, near technology or to compare different locations. It does not automatically replace personal sampling, because the worker may move, change position and perform different activities.
+Eine **ortsfeste Probenahme** kann beispielsweise Unterschiede zwischen Messorten oder die Konzentration in der Nähe einer Quelle untersuchen. Sie ersetzt nicht automatisch die Beurteilung der persönlichen Exposition.
 
-> If the purpose of measurement is evaluation of employee exposure, the sampling design must focus primarily on the worker's breathing zone and actual work regime.
+> Wenn die Exposition von Beschäftigten beurteilt werden soll, muss der Messplan deren Atemzone und tatsächlichen Arbeitsablauf erfassen.
 
-## Selection of a representative shift
+## Auswahl einer repräsentativen Schicht
 
-A representative shift is one that corresponds to normal and substantively significant operating state. It should not be an artificially created extreme, nor a day when risky work is barely performed.
+Die ausgewählte Schicht soll den für die Fragestellung maßgeblichen Betriebszustand abbilden. Ein Tag ohne die betreffende Tätigkeit ist dafür ebenso ungeeignet wie ein künstlich erzeugter Ausnahmezustand ohne Bezug zum Auftrag.
 
-When selecting a shift the following are assessed in particular:
+Bei der Auswahl prüfen wir insbesondere:
 
-- whether normal production is running,
-- whether usual chemical substances and mixtures are used,
-- whether technology is operated at standard output,
-- whether normal ventilation and extraction equipment are running,
-- whether workers perform typical activities,
-- whether it is not an extraordinary regime, shutdown or trial operation,
-- whether the shift includes activities with the most significant exposure.
+- ob die vorgesehene Produktion läuft,
+- welche Stoffe und Gemische eingesetzt werden,
+- mit welcher Leistung die Anlage arbeitet,
+- ob Lüftung und Absaugung im vorgesehenen Zustand sind,
+- welche Tätigkeiten die Beschäftigten ausführen,
+- ob Stillstand, Probebetrieb oder ein besonderer Zustand vorliegt,
+- ob relevante Expositionsphasen erfasst werden.
 
-In some operations it may be appropriate to measure more than one shift or more work regimes. Typically where different products, different chemical agents, different recipes or different application methods alternate.
+Bei wechselnden Produkten, Rezepturen und Verfahren kann es nötig sein, mehrere Schichten oder Betriebszustände zu untersuchen.
 
-### Example: paint shop
+### Beispiel: Lackiererei
 
-In a paint shop exposure may differ during priming, top coating, gun cleaning and colour mixing. If only a calmer regime without normal application is measured, the result may not be a suitable basis for categorisation.
+Grundieren, Decklackieren, Anmischen und Reinigen der Spritzpistolen können unterschiedliche Belastungen verursachen. Eine Messung ohne den für den Auftrag maßgeblichen Beschichtungsbetrieb bildet diese Tätigkeiten nicht ausreichend ab.
 
-### Example: bonding
+### Beispiel: Klebearbeiten
 
-In bonding the type of adhesive, application method, application area, time of opening packaging, temperature, ventilation intensity and number of bonded pieces per shift may matter. Two workplaces using the same product may therefore not have the same exposure.
+Bei Klebearbeiten können Klebstoff, Auftragsverfahren, Fläche, offene Gebinde, Temperatur und Lüftung die Exposition beeinflussen. Auch die Stückzahl je Schicht ist zu berücksichtigen. Das gleiche Produkt bedeutet daher nicht automatisch die gleiche Belastung.
 
-### Example: cleaning and degreasing
+### Beispiel: Reinigen und Entfetten
 
-Cleaning may create briefly high exposure even when the activity itself does not last long. In such a case full-shift evaluation may be important, but also assessment of short-term concentrations in relation to NPK-P.
+Reinigen kann eine kurzzeitige Belastung verursachen, obwohl die Tätigkeit nur einen kleinen Teil der Schicht ausmacht. Neben der Schichtbewertung kann deshalb die Untersuchung kurzzeitiger Konzentrationen relevant sein.
 
-## Mixtures of chemical substances and additive effect
+## Stoffgemische und additive Wirkung
 
-In practice the employee is often exposed not to a single substance. In paint shops, bonding, degreasing or cleaning, a mixture of organic substances may be present in the air. If substances act on the same organ system or have a similar effect, their combined action is also evaluated.
+In Lackierereien, beim Kleben und beim Entfetten können Beschäftigte mehreren Stoffen gleichzeitig ausgesetzt sein. Wirken Stoffe auf dasselbe Organsystem, ist nach den einschlägigen Regeln auch eine additive Wirkung zu berücksichtigen, sofern keine wissenschaftlich begründeten Gegeninformationen vorliegen.
 
-This is especially important for solvent mixtures. Individual substances may be below their limit separately, but their sum in relation to limit values may be significant for evaluation.
+Bei solchen Gemischen reicht die isolierte Betrachtung einzelner Stoffe nicht immer aus. Auch wenn jede Einzelkonzentration unter ihrem Grenzwert liegt, kann die gemeinsame Bewertung relevant sein. Die Zuordnung der Wirkungen und die passenden Bewertungsregeln gehören zur fachlichen Auswertung.
 
-*In practical terms:* it is not always correct to say that "each substance is below the limit, so everything is fine". For mixtures it is necessary to assess combined effect according to the applicable evaluation rules.
+## Unterlagen vor der Messung
 
-## What to prepare before measurement
+Für die Planung benötigen wir Informationen über den realen Betrieb. Bereiten Sie möglichst Folgendes vor:
 
-Good preparation saves time and reduces the risk that an important substance or activity is overlooked. Before measurement it is advisable to prepare documentation describing real operation.
+1. Sicherheitsdatenblätter der verwendeten Stoffe und Gemische,
+2. Verzeichnis der eingesetzten chemischen Produkte,
+3. Beschreibung der Anlagen und Arbeitsverfahren,
+4. Angaben zu Schichtlänge und Pausen,
+5. zeitliche Aufteilung der Tätigkeiten,
+6. Zahl der Beschäftigten und Beschreibung der Arbeitsplätze,
+7. Angaben zu Lüftung und örtlicher Absaugung,
+8. Informationen zu Atemschutz und weiterer persönlicher Schutzausrüstung,
+9. vorhandene Einstufung der Tätigkeiten,
+10. gegebenenfalls die Anforderung der KHS.
 
-Recommended documentation:
+Diese Unterlagen helfen bei der Entscheidung, welche Stoffe, Expositionsphasen und Betriebszustände zu untersuchen sind. Fehlende Angaben können wir mit Ihnen vor dem Messtermin abstimmen.
 
-1. safety data sheets of substances and mixtures used,
-2. list of chemical agents used,
-3. description of technology and work procedures,
-4. information on shift length and breaks,
-5. time snapshot of work activities,
-6. number of workers and description of job positions,
-7. data on ventilation and local extraction,
-8. information on use of respirators and other PPE,
-9. existing job categorisation if any,
-10. KHS request if issued.
+## Häufige Fehler
 
-The more accurate the input documentation, the better it is possible to determine whether, for example, full-shift exposure, short-term peaks, a specific substance, group of substances or several work regimes should be measured.
+Unklare Aufgabenstellungen können dazu führen, dass ein Messbericht die eigentliche betriebliche oder behördliche Frage nicht beantwortet. Zu vermeiden sind insbesondere:
 
-## Most common mistakes when measuring chemical substances
+- Planung ohne aktuelle Sicherheitsdatenblätter,
+- Stoffauswahl allein nach dem Produktnamen,
+- fehlende Berücksichtigung von Reinigung und Hilfsarbeiten,
+- Messung bei nicht repräsentativer Produktionsleistung,
+- Verwechslung ortsfester Konzentrationen mit persönlicher Exposition,
+- fehlende Zeitangaben zu den Tätigkeiten,
+- Übersehen relevanter kurzzeitiger Belastungen,
+- fehlende Bewertung gemeinsam wirkender Stoffe,
+- unklare Abgrenzung unterschiedlicher Arbeitsplätze,
+- Übertragung der Ergebnisse auf einen nicht untersuchten Betriebszustand.
 
-Mistakes often arise already in the brief. The operator orders general measurement without sufficient description of activities and products used. The result may be a report containing measured values that does not precisely answer the KHS question, categorisation or actual work risk.
+Aus der Dokumentation muss nachvollziehbar sein, warum die betreffenden Stoffe, Personen, Arbeitsplätze und Messbedingungen ausgewählt wurden.
 
-Common mistakes include:
+## Nutzen für den Betrieb
 
-- measurement without current safety data sheets,
-- selection of substances only from product name,
-- omission of cleaning and auxiliary operations,
-- measurement on a day with low production output,
-- substituting stationary sampling for personal exposure evaluation,
-- missing time snapshot of work,
-- failure to evaluate short-term peaks,
-- failure to take into account mixtures of substances with similar effect,
-- unclear distinction of job positions,
-- using results for a different operating regime than the one in which measurement was carried out.
+Die Ergebnisse zeigen, wie die untersuchte Belastung gegenüber den einschlägigen Anforderungen einzuordnen ist. Sie können Hinweise auf notwendigen Handlungsbedarf liefern, etwa bei Lüftung, Arbeitsverfahren, Produktwahl oder Schutzmaßnahmen.
 
-Properly designed measurement should be defensible not only technically but also substantively. It must be clear why exactly those substances, those workplaces, those workers and that measurement day were selected.
+Mögliche Verwendungszwecke sind:
 
-## How measurement helps the operator
+- Einstufung von Tätigkeiten nach tschechischem Recht,
+- Unterlagen für eine konkrete KHS-Anforderung,
+- Untersuchung der Absaugwirkung,
+- Vergleich alter und neuer Anlagen,
+- Beurteilung nach einem Produktwechsel,
+- Planung von Arbeitsschutzmaßnahmen,
+- betriebliche Überprüfung der Arbeitsbedingungen,
+- Grundlagen für die Auswahl persönlicher Schutzausrüstung.
 
-Measurement of chemical substances is not just formal documentation for the authority. Well-conducted measurement can show whether the workplace environment is safely below limits, whether ventilation needs improvement, work procedure adjustment, change of chemical agent or supplementary protective measures.
+Die Ergebnisse gelten für die dokumentierten Bedingungen. Bei veränderten Tätigkeiten, Produkten oder Betriebszuständen muss geprüft werden, ob die bisherige Beurteilung weiterhin passt.
 
-Results can be used for example for:
+## Zusammenfassung
 
-- job categorisation,
-- documentation of KHS request,
-- verification of extraction effectiveness,
-- comparison of old and new technology,
-- assessment of change of chemical agent,
-- proposal of occupational health measures,
-- internal workplace environment control,
-- decisions on need for personal protective equipment.
+Der Messumfang ergibt sich aus Stoffeigenschaften, Sicherheitsdatenblättern, Arbeitsverfahren, Expositionsdauer und Betriebsbedingungen. Grenzwertbezug, Probenahme und Messzeitraum müssen zur konkreten Aufgabe passen.
 
-In many operations the greatest benefit of measurement is that it separates assumptions from actual data. The operator then knows whether the problem is significant, marginal or concerns only a specific activity or shift.
+Für die Beurteilung der inhalativen Exposition sind die Atemzone und der Arbeitsablauf entscheidend. Ortsfeste Messungen haben andere Aufgaben und ersetzen nicht automatisch eine personenbezogene Untersuchung. Die zugehörigen Leistungen finden Sie unter [Messungen im Arbeitsumfeld](/de/sluzby/pracovni-prostredi/).
 
-## Summary
+[Senden Sie uns Sicherheitsdatenblätter, Arbeitsbeschreibung und eine vorhandene KHS-Anforderung.](/de/kontakt/#poptavkovy-formular) Wir schlagen den passenden Messumfang für Ihren Betrieb vor.
 
-The scope of measurement of chemical substances in workplace air is determined by a combination of several factors: safety data sheets, work procedure, shift length, exposure duration, PEL and NPK-P limit values, sampling method and selection of a representative shift.
+## Fachliche Grundlagen
 
-For evaluation of employee exposure, personal sampling in the breathing zone and correct evaluation of time-weighted average are essential. Stationary sampling has its place when evaluating space, sources or ventilation effectiveness, but does not automatically replace personal exposure of the worker.
+Für Arbeitsplätze in Tschechien sind insbesondere folgende Vorschriften relevant:
 
-Send us safety data sheets of products used, a description of technology, work procedure, shift length and any KHS request. We will propose a suitable scope of measurement of chemical substances in workplace air so that results are usable for job categorisation, workplace environment inspection and further dealings with the hygiene station.
+- [Regierungsverordnung Nr. 361/2007 Sb. zum Gesundheitsschutz bei der Arbeit](https://www.zakonyprolidi.cz/cs/2007-361),
+- [Verordnung Nr. 432/2003 Sb. zur Einstufung von Tätigkeiten](https://www.zakonyprolidi.cz/cs/2003-432),
+- [Gesetz Nr. 258/2000 Sb. zum Schutz der öffentlichen Gesundheit](https://www.zakonyprolidi.cz/cs/2000-258).
 
-## Factual basis of the article
+Das [auf dem Portal des tschechischen Arbeitsministeriums veröffentlichte Regelwerk Nr. 361/2007 Sb.](https://ppropo.mpsv.cz/narizeni_vlady_361_2007) unterscheidet schichtbezogene PEL und kurzzeitbezogene NPK-P. Es regelt auch die inhalative Exposition in der Atemzone und die Beurteilung additiv wirkender Gemische. Die Einstufung von Tätigkeiten berücksichtigt die jeweils maßgeblichen Arbeitsbedingungen und Bewertungsregeln.
 
-The article is based mainly on the following regulations:
-
-- [Government Regulation No. 361/2007 Coll., laying down conditions for health protection at work](https://www.zakonyprolidi.cz/cs/2007-361),
-- [Decree No. 432/2003 Coll., on job categorisation](https://www.zakonyprolidi.cz/cs/2003-432),
-- [Act No. 258/2000 Coll., on public health protection](https://www.zakonyprolidi.cz/cs/2000-258).
-
-Government Regulation No. 361/2007 Coll. defines PEL as full-shift time-weighted average and NPK-P as maximum permissible concentration for short-term evaluation. It also states that inhalation exposure relates to measurement of chemical substances or dusts in the employee's breathing zone. Decree No. 432/2003 Coll. follows on job categorisation and for chemical substances works with measured concentrations in workplace air, their comparison with PEL and NPK-P values and evaluation of substance mixtures with possible additive effect.
+Die Angaben dienen der Vorbereitung einer konkreten Messaufgabe. Sie sind keine Übertragung tschechischer Grenzwerte auf Arbeitsplätze in Deutschland oder anderen Ländern.

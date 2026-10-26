@@ -72,7 +72,7 @@ export function CountUpStatValue({ value }: Props) {
       let lastPaint = 0;
 
       const update = (now: number) => {
-        const progress = Math.min((now - startedAt) / duration, 1);
+        const progress = Math.max(0, Math.min((now - startedAt) / duration, 1));
         const easedProgress = 1 - Math.pow(1 - progress, 3);
 
         // Only paint the decorative node; keep layout and accessible text fixed.

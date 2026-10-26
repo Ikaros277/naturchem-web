@@ -462,17 +462,6 @@
       "width": 1600,
       "height": 900
     },
-    "/hero/mereni-emisi.webp": {
-      "base": "/hero/responsive-2026-10/image-63d4bedf1f06",
-      "widths": [
-        192,
-        384,
-        640,
-        960
-      ],
-      "width": 1718,
-      "height": 966
-    },
     "/reference/authentic-2026-10-08/kotelna-biomasa-960.webp": {
       "base": "/hero/responsive-2026-10/image-3a8b51cbe904",
       "widths": [
@@ -857,6 +846,17 @@
       ],
       "width": 1536,
       "height": 1024
+    },
+    "/uploads/poradna-2026/bezpecnostni-list.webp": {
+      "base": "/hero/responsive-2026-10/image-3ab22733c036",
+      "widths": [
+        192,
+        384,
+        640,
+        960
+      ],
+      "width": 1280,
+      "height": 721
     },
     "/uploads/poradna-2026/vibrace-vzv.webp": {
       "base": "/hero/responsive-2026-10/image-a5aad11a4350",
@@ -1889,6 +1889,15 @@
       ],
       "width": 1536,
       "height": 1024
+    },
+    "/uploads/poradna-2026/bezpecnostni-list.webp": {
+      "base": "/hero/responsive-2026-10/image-3ab22733c036",
+      "widths": [
+        640,
+        1280
+      ],
+      "width": 1280,
+      "height": 721
     },
     "/uploads/poradna-2026/vibrace-vzv.webp": {
       "base": "/hero/responsive-2026-10/image-a5aad11a4350",

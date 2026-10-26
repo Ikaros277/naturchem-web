@@ -44,6 +44,6 @@ async function main() {
   assert.match(cardSource, /<a\s/, "Cards retain real, crawlable links");
   assert.doesNotMatch(cardSource, /next\/link|prefetch/, "Native card links cannot initiate background route prefetches");
   assert.ok(!fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8").includes(".poradna-search"), "Keep article-only CSS out of shared styles");
-  console.log("PASS performance source checks: publication parity, versioned lazy search, static image budgets and scoped styles");
+  console.log("PASS performance source checks: publication parity, versioned topic catalog, preserved legacy indexes, static image budgets and scoped styles");
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

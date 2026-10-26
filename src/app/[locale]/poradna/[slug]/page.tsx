@@ -72,7 +72,7 @@ export default async function CmsArticlePage({ params }: Props) {
   const link = (href: string) => localizeHref(href, locale);
   const displayDate = formatArticleDate(article.updatedAt || article.publishedAt, locale);
   const topicLabel = getPoradnaTopicLabel(article.topic, locale);
-  const reading = renderArticleMarkdown(article.body, locale);
+  const reading = renderArticleMarkdown(article.body, locale, article.headingIds);
   const articleUrl = `${siteUrl}${link(`/poradna/${article.slug}`)}/`.replace(/([^:]\/)\/+/g, "$1");
   const poradnaUrl = `${siteUrl}${link("/poradna")}/`.replace(/([^:]\/)\/+/g, "$1");
 

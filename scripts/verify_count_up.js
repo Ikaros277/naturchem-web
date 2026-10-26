@@ -6,8 +6,8 @@ const originalWindow = global.window;
 const originalObserver = global.IntersectionObserver;
 const originalPerformance = global.performance;
 
-function fixture(value, { reduced = false, observe = true } = {}) {
-  let effect, time = 0, id = 0, refIndex = 0;
+function fixture(value, { reduced = false, observe = true, startAt = 0 } = {}) {
+  let effect, time = startAt, id = 0, refIndex = 0;
   const observers = [];
   const frames = new Map(), element = {}, visible = { textContent: value };
   class Observer {
@@ -61,6 +61,12 @@ try {
   f.enter();
   assert.equal(f.frames.size, 0, "Do not replay the same counter on repeated observations");
   f.cleanup();
+
+  const earlyFrame = fixture("14 000+", { startAt: 100 });
+  earlyFrame.enter();
+  assert.equal(earlyFrame.frame(90), "0+", "A frame timestamp before setup must never paint a negative number");
+  assert.equal(earlyFrame.frame(1600), "14 000+");
+  earlyFrame.cleanup();
 
   for (const [value, penultimate] of [["36 let", "35 let"], ["200+", "199+"], ["7,000+", "6,999+"]]) {
     const counter = fixture(value); counter.enter();

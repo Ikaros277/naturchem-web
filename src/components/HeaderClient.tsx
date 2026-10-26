@@ -215,33 +215,24 @@ export function HeaderClient({
                 </button>
               </div>
               <nav className="nav-mobile-nav" aria-label={t.navAria}>
-                <details className="nav-mobile-details">
-                  <summary>
-                    <MobileNavSummaryRow>{t.services}</MobileNavSummaryRow>
-                  </summary>
+                <section className="nav-mobile-services" aria-label={t.services}>
+                  <p className="nav-mobile-section-label">{t.services}</p>
+                  <MobileServiceMegaGroups groups={serviceMegaGroups} onNavigate={closeMenu} topLevel />
                   <LocaleLink href="/sluzby" className="nav-mobile-overview" onClick={closeMenu}>
                     {t.servicesOverview}
                   </LocaleLink>
-                  <div className="nav-mobile-sub nav-mobile-sub--mega">
-                    <MobileServiceMegaGroups groups={serviceMegaGroups} onNavigate={closeMenu} />
-                  </div>
-                </details>
+                </section>
                 <details className="nav-mobile-details">
                   <summary>
                     <MobileNavSummaryRow>{t.experience}</MobileNavSummaryRow>
                   </summary>
+                  <LocaleLink href="/reference" className="nav-mobile-overview" onClick={closeMenu}>
+                    {t.experience}
+                  </LocaleLink>
                   <div className="nav-mobile-sub nav-mobile-sub--mega">
                     <MobileExperienceMegaGroups groups={experienceMegaGroups} onNavigate={closeMenu} />
                   </div>
                 </details>
-                <LocaleLink
-                  href={salesNavLink.href}
-                  className="nav-mobile-link nav-sales-link"
-                  prefetch={false}
-                  onClick={closeMenu}
-                >
-                  {salesNavLink.label}
-                </LocaleLink>
                 <details className="nav-mobile-details">
                   <summary>
                     <MobileNavSummaryRow>{t.about}</MobileNavSummaryRow>
@@ -255,6 +246,9 @@ export function HeaderClient({
                 </details>
                 <LocaleLink href={kontaktNav.href} className="nav-mobile-link" onClick={closeMenu}>
                   {t.contact}
+                </LocaleLink>
+                <LocaleLink href={salesNavLink.href} className="nav-mobile-link nav-sales-link nav-secondary-link" prefetch={false} onClick={closeMenu}>
+                  {salesNavLink.label}
                 </LocaleLink>
               </nav>
               <div className="nav-mobile-sheet-foot">
@@ -331,7 +325,7 @@ export function HeaderClient({
             >
               <LocaleLink
                 className="nav-item-link"
-                href="/provozy-a-technologie"
+                href="/reference"
                 aria-expanded={experienceMenu.open}
                 aria-controls="nav-mega-zkusenosti"
               >
@@ -350,9 +344,6 @@ export function HeaderClient({
                 </div>
               ) : null}
             </div>
-            <LocaleLink href={salesNavLink.href} className="nav-sales-link" prefetch={false}>
-              {salesNavLink.label}
-            </LocaleLink>
             <div
               className="nav-mega-wrap"
               onMouseEnter={aboutMenu.openMenu}
@@ -383,6 +374,9 @@ export function HeaderClient({
               ) : null}
             </div>
             <LocaleLink href={kontaktNav.href}>{t.contact}</LocaleLink>
+            <LocaleLink href={salesNavLink.href} className="nav-sales-link nav-secondary-link" prefetch={false}>
+              {salesNavLink.label}
+            </LocaleLink>
           </nav>
 
           <HeaderInquiryCta className="button nav-cta-desktop" labels={t} />

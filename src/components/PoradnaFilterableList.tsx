@@ -1,11 +1,10 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { ArticleCardThumb } from '@/components/ArticleCardThumb';
 import { IndexCard } from '@/components/IndexCard';
 import { CategoryBadge } from "@/components/CategoryBadge";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { usePoradnaSearchIndex } from "@/hooks/usePoradnaSearchIndex";
 import { usePoradnaCatalog } from "@/hooks/usePoradnaCatalog";
 import { PoradnaPagination } from "@/components/PoradnaPagination";
 import { PORADNA_PAGE_SIZE, poradnaPageCount, poradnaPaginationLabels } from "@/lib/poradna-pagination";
@@ -14,7 +13,6 @@ import { homeArticleTitle } from "@/lib/home-article-titles";
 import type { PoradnaTopic } from '@/lib/poradna-topic';
 import { useLocale, useTranslations } from '@/lib/i18n/locale-context';
 import type { Locale } from '@/lib/i18n/locales';
-import { localeTag } from '@/lib/i18n/locale-pick';
 import { localizeHref } from '@/lib/i18n/navigation';
 import {
   heroThemeForArticle,
@@ -35,45 +33,15 @@ type Props = {
   pageCount?: number;
 };
 
-function normalizeSearchQuery(query: string, locale: Locale): string {
-  return query.trim().toLocaleLowerCase(localeTag(locale));
-}
-
-function articleMatchesQuery(
-  article: PoradnaArticleDisplay,
-  query: string,
-  locale: Locale,
-  searchIndex: Map<string, string> | null
-): boolean {
-  if (!query) return true;
-  const indexed = searchIndex?.get(article.slug);
-  if (indexed) return indexed.includes(query);
-  return [article.title, article.excerpt]
-    .join(" ")
-    .toLocaleLowerCase(localeTag(locale))
-    .includes(query);
-}
-
 export function PoradnaFilterableList({ articles, locale: localeProp, topicLabels, total = articles.length, page = 1, pageCount = 1 }: Props) {
   const contextLocale = useLocale();
   const locale = localeProp ?? contextLocale;
   const poradna = useTranslations('poradna');
   const common = useTranslations('common');
-  const { index: searchIndex, error: searchError, ensureLoaded } = usePoradnaSearchIndex(locale);
   const { articles: catalog, error: catalogError, ensureLoaded: loadCatalog } = usePoradnaCatalog(locale);
   const labels = poradnaPaginationLabels[locale];
   const [resultPage, setResultPage] = useState(1);
   const [activeTopics, setActiveTopics] = useState<Set<string>>(new Set());
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const normalizedQuery = normalizeSearchQuery(searchQuery, locale);
-
-  useEffect(() => {
-    if (normalizedQuery) {
-      void ensureLoaded();
-      void loadCatalog();
-    }
-  }, [normalizedQuery, ensureLoaded, loadCatalog]);
 
   function toggleTopic(topic: string) {
     void loadCatalog();
@@ -94,31 +62,18 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
     setResultPage(1);
   }
 
-  function clearAllFilters() {
-    setActiveTopics(new Set());
-    setSearchQuery('');
-    setResultPage(1);
-  }
-
   const filtered = useMemo(() => {
     return (catalog ?? articles).filter(article => {
       const matchesTopic =
         activeTopics.size === 0 || activeTopics.has(article.topic);
-      const matchesSearch = articleMatchesQuery(
-        article,
-        normalizedQuery,
-        locale,
-        searchIndex
-      );
-      return matchesTopic && matchesSearch;
+      return matchesTopic;
     });
-  }, [articles, catalog, activeTopics, normalizedQuery, locale, searchIndex]);
+  }, [articles, catalog, activeTopics]);
 
   const hasTopicFilters = activeTopics.size > 0;
-  const hasSearch = normalizedQuery.length > 0;
-  const hasAnyFilter = hasTopicFilters || hasSearch;
-  const failed = hasAnyFilter && (catalogError || (hasSearch && searchError));
-  const pending = hasAnyFilter && !failed && (!catalog || (hasSearch && !searchIndex));
+  const hasAnyFilter = hasTopicFilters;
+  const failed = hasAnyFilter && catalogError;
+  const pending = hasAnyFilter && !failed && !catalog;
   const visible = hasAnyFilter
     ? filtered.slice((resultPage - 1) * PORADNA_PAGE_SIZE, resultPage * PORADNA_PAGE_SIZE)
     : articles;
@@ -135,18 +90,6 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
 
   return (
     <>
-      <label className="poradna-search">
-        <span>{poradna.searchLabel}</span>
-        <input
-          type="search"
-          value={searchQuery}
-          onChange={event => { setSearchQuery(event.target.value); setResultPage(1); }}
-          onFocus={() => { void ensureLoaded(); void loadCatalog(); }}
-          placeholder={poradna.searchPlaceholder}
-          aria-controls="poradna-article-list"
-        />
-      </label>
-
       <div className="poradna-filter-bar">
         <label className="poradna-topic-select">
           <span>{poradna.topicsAria}</span>
@@ -193,15 +136,13 @@ export function PoradnaFilterableList({ articles, locale: localeProp, topicLabel
       <div id="poradna-article-list" className="article-list-grid" aria-busy={pending}>
         {pending ? <p className="poradna-empty-state" role="status">{labels.loading}</p> : failed ? (
           <p className="poradna-empty-state" role="status">{labels.error}{" "}
-            <button type="button" className="text-link-button" onClick={() => { void loadCatalog(); if (hasSearch) void ensureLoaded(); }}>{labels.retry}</button>{" "}
-            <button type="button" className="text-link-button" onClick={clearAllFilters}>{poradna.showAll}</button>
+            <button type="button" className="text-link-button" onClick={() => { void loadCatalog(); }}>{labels.retry}</button>{" "}
+            <button type="button" className="text-link-button" onClick={clearTopicFilters}>{poradna.showAll}</button>
           </p>
         ) : visible.length === 0 ? (
           <p className="muted poradna-empty-state">
-            {hasSearch
-              ? `${poradna.emptySearch.replace('{query}', searchQuery.trim())} `
-              : `${poradna.emptyTopic} `}
-            <button type="button" className="text-link-button" onClick={clearAllFilters}>
+            {`${poradna.emptyTopic} `}
+            <button type="button" className="text-link-button" onClick={clearTopicFilters}>
               {poradna.showAll}
             </button>
           </p>

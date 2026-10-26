@@ -12,6 +12,7 @@ const load = require('./lib/load-typescript')({
   './article-reading.module.css': { __esModule: true, default: new Proxy({}, { get: (_, name) => String(name) }) }
 });
 const { renderArticleMarkdown } = load(path.join(root, 'src/components/ArticleMarkdown.tsx'));
+const { parseArticleHeadingIds } = load(path.join(root, 'src/lib/article-reading.ts'));
 const { ArticleReadingLayout } = load(path.join(root, 'src/components/ArticleReadingLayout.tsx'));
 const { getRelatedServicesForArticle } = load(path.join(root, 'src/lib/poradna-service-links.ts'));
 for (const file of ['src/components/ArticleMarkdown.tsx','src/components/ArticleReadingLayout.tsx','src/lib/article-reading.ts']) {
@@ -29,12 +30,34 @@ assert.ok(rendered.indexOf('class="article-table-hint"') < rendered.indexOf('cla
 assert.equal(renderArticleMarkdown('### Jen podkapitoly\n\n### Druhé téma').headings.length,2);
 assert.equal(renderArticleMarkdown('Odstavec bez nadpisu.').headings.length,0);
 assert.equal(renderArticleMarkdown('## **Emise &amp; vlivy**').headings[0].title,'Emise & vlivy');
+const stableIds = parseArticleHeadingIds({ 'Neue Überschrift': 'kapitola-original-heading' });
+const stableReading = renderArticleMarkdown('## Neue Überschrift\n\nDeutscher Text.', 'de', stableIds);
+assert.deepEqual(stableReading.headings, [{ id: 'kapitola-original-heading', title: 'Neue Überschrift', level: 2 }]);
+assert.match(renderToStaticMarkup(stableReading.content), /<h2 id="kapitola-original-heading"/);
+assert.equal(parseArticleHeadingIds(undefined), undefined);
+for (const value of [[], 'invalid', { Heading: '<script>' }, { Heading: 'article-outline' }, { One: 'kapitola-same', Two: 'kapitola-same' }, { '': 'kapitola-empty' }]) {
+  assert.throws(() => parseArticleHeadingIds(value), /headingIds/);
+}
+assert.throws(() => renderArticleMarkdown('## Other heading', 'de', stableIds), /headingIds references/);
+assert.equal(renderArticleMarkdown('## toString', 'de').headings[0].id, 'kapitola-tostring');
+assert.throws(() => parseArticleHeadingIds({ 'Same  heading': 'kapitola-one', 'Same heading': 'kapitola-two' }), /unique headings/);
+const translatedFile = 'co-poslat-pro-rychle-posouzeni-zameru.md';
+const translated = matter(fs.readFileSync(path.join(root, 'content/articles-de', translatedFile), 'utf8'));
+const reference = matter(fs.readFileSync(path.join(root, 'content/articles-en', translatedFile), 'utf8'));
+assert.equal(translated.data.slug, reference.data.slug, 'Compare the same public article, not a filename collision');
+const translatedReading = renderArticleMarkdown(translated.content, 'de', parseArticleHeadingIds(translated.data.headingIds));
+const referenceReading = renderArticleMarkdown(reference.content, 'en', parseArticleHeadingIds(reference.data.headingIds));
+assert.equal(translatedReading.headings.length, 14);
+assert.deepEqual(translatedReading.headings.map(h => h.id).sort(), referenceReading.headings.map(h => h.id).sort(), 'All original chapter URLs survive the German translation');
+assert.notEqual(translated.content.trim(), reference.content.trim(), 'German article must not contain the copied English body');
+assert.doesNotMatch(translated.content, /For industrial, manufacturing|For a quick assessment|The aim is not to propose|## Summary/);
+assert.match(translated.content, /\]\(\/de\/kontakt\/#poptavkovy-formular\)/, 'One relevant German inquiry path');
 let checked = 0;
 for (const [locale, folder] of [['cs','articles'],['en','articles-en'],['de','articles-de']]) {
   for (const file of fs.readdirSync(path.join(root,'content',folder)).filter(f=>f.endsWith('.md') && !f.startsWith('_') && !/^(readme|changelog)\.md$/i.test(f))) {
     const article = matter(fs.readFileSync(path.join(root,'content',folder,file),'utf8'));
     const body = article.content;
-    const result = renderArticleMarkdown(body,locale);
+    const result = renderArticleMarkdown(body,locale,parseArticleHeadingIds(article.data.headingIds));
     const html = renderToStaticMarkup(result.content);
     const original = renderToStaticMarkup(Markdown({children:body,remarkPlugins:[remarkGfm],components:{h1:({children})=>React.createElement('h2',{},children)}}));
     const text = value => value.replace(/<p class="article-table-hint">[\s\S]*?<\/p>/g,'').replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();

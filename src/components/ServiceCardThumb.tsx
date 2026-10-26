@@ -4,10 +4,11 @@ import { getAuthenticPhoto } from "@/lib/authentic-photos";
 type Props = {
   href: string;
   alt: string;
+  sizes?: string;
 };
 
 /** Ilustrační náhled služby v přehledové kartě /sluzby. */
-export function ServiceCardThumb({ href }: Props) {
+export function ServiceCardThumb({ href, sizes = "(max-width: 359px) 80px, (max-width: 767px) 96px, (max-width: 1023px) calc((100vw - 96px) / 2), 280px" }: Props) {
   const theme = getPageHeroTheme(href);
   const { position = "center center" } = getHeroImageConfig(theme);
   const photo = getAuthenticPhoto(theme);
@@ -22,7 +23,7 @@ export function ServiceCardThumb({ href }: Props) {
         alt=""
         width={640}
         height={360}
-        sizes="(max-width: 767px) 80px, (max-width: 1023px) calc((100vw - 96px) / 2), 280px"
+        sizes={sizes}
         className="article-card-thumb-img"
         loading="lazy"
         fetchPriority="low"

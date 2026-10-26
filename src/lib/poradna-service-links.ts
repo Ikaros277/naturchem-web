@@ -159,7 +159,10 @@ export function getRelatedServicesForArticle(
   // The comparison needs study and measurement first; retain the approval path as the third choice.
   const comparisonLinks = priority && comparison ? [priority[locale]] : [];
 
-  return dedupeLinks([...priorityLinks, ...specificLinks, ...comparisonLinks, ...[...fromKeywords, ...base].map((href) => toServiceLink(href, locale))]).slice(0, 3);
+  // A narrow subject has its own useful next steps. Do not pad those cards with
+  // broad category matches (e.g. chemical administration below VZV vibration).
+  const supportingLinks = specificLinks.length ? [] : [...fromKeywords, ...base].map((href) => toServiceLink(href, locale));
+  return dedupeLinks([...priorityLinks, ...specificLinks, ...comparisonLinks, ...supportingLinks]).slice(0, 3);
 }
 
 export function serviceHrefToSlug(href: string): string {

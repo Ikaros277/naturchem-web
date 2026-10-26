@@ -61,6 +61,6 @@ Rozsah neodvozujte jen z počtu vozíků. Popište jejich rozdíly, střídání
 
 Pošlete lokalitu, počet vozíků, pracovní pozice a stručný časový snímek. Přiložte plánek tras a případnou výzvu KHS. Pokud se měnila technologie nebo organizace směn, popište rozdíl proti poslednímu měření.
 
-NATURCHEM zajišťuje [měření vibrací na pracovišti](/sluzby/mereni-vibraci/). [Pošlete nám zadání](/kontakt/#poptavkovy-formular) a uveďte, že potřebujete posoudit celkové vibrace řidičů VZV. Na poptávky reagujeme do 24 hodin; konkrétní termín a rozsah měření domluvíme podle provozu.
+NATURCHEM zajišťuje [měření vibrací na pracovišti](/sluzby/mereni-vibraci/). [Pošlete nám zadání](/kontakt/?service=M%C4%9B%C5%99en%C3%AD%20vibrac%C3%AD&message=Popt%C3%A1v%C3%A1m%20m%C4%9B%C5%99en%C3%AD%20celkov%C3%BDch%20vibrac%C3%AD%20%C5%99idi%C4%8D%C5%AF%20VZV.%20#poptavkovy-formular) a uveďte, že potřebujete posoudit celkové vibrace řidičů VZV. Na poptávky reagujeme do 24 hodin; konkrétní termín a rozsah měření domluvíme podle provozu.
 
 *Úvodní fotografie: vysokozdvižný vozík při manipulaci s paletami, vlastní fototéka NATURCHEM. Ilustrační snímek; článek neuvádí výsledky měření tohoto vozíku.*

@@ -1,224 +1,239 @@
 ---
 heroImage: /hero/generated-2026-09/podklady-zamer.webp
-
 title: "Was Sie für eine schnelle Prüfung senden"
 slug: co-poslat-pro-rychle-posouzeni-zameru
-excerpt: „Eine schnelle Projektbewertung ist nur möglich, wenn grundlegende Informationen zu Gebäude, Technik, Kapazität, Abgasen, Betriebsstunden, Transport und den behördlichen Anforderungen vorliegen.“ Eine vollständige Projektdokumentation ist nicht immer sofort erforderlich, aber anhand der Materialien muss festgestellt werden können, ob eine Messung, eine Lärmstudie, eine Ausbreitungsstudie, ein Gutachten, eine UVP, JES, Betriebsvorschriften oder andere Umweltdokumentationen erforderlich sind. „Je präziser die Eingaben, die Sie zu Beginn senden, desto schneller kann der richtige Ansatz vorgeschlagen werden.“
+excerpt: "Für die erste Einschätzung Ihres Vorhabens benötigen wir Angaben zu Standort, Technologie, Kapazität, Abluft, Betriebszeiten und Verkehr. Senden Sie vorhandene Projektunterlagen und die konkrete Anforderung der Behörde."
 author: Ing. František Hezina
 publishedAt: "2026-04-30"
 topic: Emissions
+headingIds:
+  "Unterlagen für die erste Einschätzung": kapitola-why-it-makes-sense-to-send-materials-right-at-the-start
+  "Projektunterlagen": kapitola-project-documentation
+  "Lageplan und Standort": kapitola-site-plan-and-project-location
+  "Beschreibung der Technologie": kapitola-technology-what-will-actually-be-done-in-the-operation
+  "Kapazitäten": kapitola-capacities
+  "Abluft, Schornsteine und Lüftung": kapitola-exhausts-chimneys-and-ventilation
+  "Betriebszeiten": kapitola-operating-hours
+  "Verkehr": kapitola-transport
+  "Karten und Umfeld": kapitola-map-materials-and-project-surroundings
+  "Anforderungen der Behörde": kapitola-authority-requirement
+  "Unterlagen für die erste Anfrage": kapitola-what-to-send-ideally-in-the-first-e-mail
+  "Umfang der Messungen und Studien": kapitola-how-we-propose-the-scope-of-measurement-and-studies-from-the-materials
+  "Häufige Unstimmigkeiten": kapitola-most-common-mistakes-when-sending-materials
+  "Zusammenfassung": kapitola-summary
 ---
-## Why it makes sense to send materials right at the start
 
-For industrial, manufacturing, storage, waste, or technology projects, a common question is: "What will the authority require from us?" The answer usually cannot be given from the project name alone. A small workshop, a paint shop, a boiler house, a recycling centre, a welding shop, a composting facility, an automotive operation, or a backup diesel generator set will each require a different scope of documentation.
+## Unterlagen für die erste Einschätzung
 
-For a quick assessment, basic technical parameters are needed: where the project will be located, what will be done there, what the capacity will be, what exhausts will arise, what the operating hours will be, how much transport there will be, and exactly what the authority requires.
+Bei Industrie-, Produktions-, Lager-, Abfall- oder Technologievorhaben in Tschechien stellt sich häufig die Frage: „Was wird die Behörde von uns verlangen?“ Aus der Bezeichnung des Vorhabens allein lässt sich das meist nicht beantworten. Eine kleine Werkstatt benötigt andere Unterlagen als eine Lackiererei, eine Kesselanlage, ein Recyclingzentrum, eine Schweißerei, eine Kompostierungsanlage, ein Automobilbetrieb oder ein Notstromaggregat.
 
-> It is often not necessary to send a complete project immediately. For initial orientation, a basic set of materials is enough to identify whether air quality, noise, waste, water, EIA, JES, or the work environment will need to be addressed.
+Für die erste Einschätzung brauchen wir grundlegende technische Angaben: Wo soll das Vorhaben umgesetzt werden? Welche Tätigkeiten sind geplant? Welche Kapazität, Abluftquellen und Betriebszeiten sind vorgesehen? Wie viel Verkehr entsteht, und was genau verlangt die Behörde?
 
-Well-prepared inputs save time. If capacities, exhausts, or operating hours are missing, the scope of measurement and studies must be estimated. That can lead either to an overly broad assignment or, conversely, to an important document being overlooked.
+> Eine vollständige Projektplanung ist zu Beginn häufig noch nicht erforderlich. Vorhandene Unterlagen helfen einzuordnen, ob Luftreinhaltung, Lärm, Abfälle, Wasser, UVP (EIA), JES oder das Arbeitsumfeld zu berücksichtigen sind.
 
-## Project documentation
+Gut vorbereitete Angaben sparen Rückfragen. Fehlen Kapazitäten, Abluftquellen oder Betriebszeiten, lässt sich der Umfang der Messungen und Studien nur vorläufig einschätzen. Dadurch kann ein unnötig breiter Auftrag entstehen oder eine wichtige Unterlage übersehen werden.
 
-The best starting material is project documentation, ideally at least the technical report and site plan. For an initial assessment, a draft project, building study, technology description, or summary technical report is often sufficient.
+## Projektunterlagen
 
-From project documentation it is usually possible to determine the project location, description of operations, building design, transport connections, heating method, ventilation, sewerage, waste handling, and basic capacities. If the project is not yet complete, it is advisable to send at least a working version. It is often in this phase that exhausts, noise sources, transport solutions, or technology placement can best be influenced.
+Als Grundlage eignen sich die Projektunterlagen, insbesondere der technische Bericht und ein Lageplan. Für die erste Einschätzung reichen häufig auch ein Planungsentwurf, eine Gebäudestudie, eine Beschreibung der Technologie oder ein zusammenfassender technischer Bericht.
 
-| Material | Why it is useful |
+Daraus lassen sich meist Standort, Betriebsablauf, bauliche Ausführung, Verkehrsanbindung, Heizung, Lüftung, Entwässerung, Abfallbehandlung und grundlegende Kapazitäten erkennen. Ist das Projekt noch nicht abgeschlossen, senden Sie eine Arbeitsfassung. In dieser Phase können Abluftquellen, Schallquellen, Verkehrsführung und die Anordnung der Technologie oft noch angepasst werden.
+
+| Unterlage | Bedeutung für die Einschätzung |
 |---|---|
-| summary technical report | basic description of the building and operations |
-| site plan | relationship to surroundings, roads, and residential development |
-| floor plans | location of technologies, warehouses, workplaces, and HVAC |
-| sections and elevations | building heights, roofs, exhausts, and chimneys |
-| technology section | capacities, equipment, work procedures |
-| fire safety design | may relate to chemical storage, waste, and emergencies |
+| Zusammenfassender technischer Bericht | Grundlegende Beschreibung des Gebäudes und des Betriebs |
+| Lageplan | Bezug zur Umgebung, zu Verkehrswegen und zur Wohnbebauung |
+| Grundrisse | Anordnung von Technologien, Lagern, Arbeitsplätzen und Lüftung |
+| Schnitte und Ansichten | Gebäudehöhen, Dächer, Abluftöffnungen und Schornsteine |
+| Technologischer Teil | Kapazitäten, Anlagen und Arbeitsabläufe |
+| Brandschutzkonzept | Mögliche Zusammenhänge mit Chemikalienlagern, Abfällen und Störfällen |
 
-*Practically important:* even an incomplete project is better than a verbal description. A drawing often reveals a problem that would never appear in an e-mail.
+*Auch unvollständige Planunterlagen sind hilfreich.* Eine Zeichnung zeigt häufig Zusammenhänge, die aus einer mündlichen Beschreibung oder einer E-Mail nicht hervorgehen.
 
-## Site plan and project location
+## Lageplan und Standort
 
-The site plan is very important for assessment. It shows where the project will be located, how transport will be routed, where the nearest residential buildings are, and where exhausts, technologies, storage areas, parking, or handling areas will be.
+Der Lageplan zeigt den Standort des Vorhabens, die Verkehrsführung, benachbarte Wohngebäude sowie Abluftquellen, Technologien, Lager-, Park- und Umschlagflächen.
 
-For noise, the distance to protected outdoor areas of buildings is essential. For air quality, exhaust location, building height, and surrounding development matter. For waste and water, handling areas, storage, sewer inlets, separators, or retention facilities are important.
+Für die Lärmbeurteilung ist unter anderem der Abstand zu geschützten Außenbereichen von Gebäuden wichtig. Bei der Luftreinhaltung sind die Lage der Abluftquellen, Gebäudehöhen und die umgebende Bebauung relevant. Bei Abfall- und Wasserfragen kommt es beispielsweise auf Umschlagflächen, Lager, Kanaleinläufe, Abscheider und Rückhalteeinrichtungen an.
 
-If a project site plan is not available, a simple sketch on a map will help. For an initial assessment, it is often enough to mark:
+Liegt noch kein Lageplan vor, hilft eine einfache Kartenskizze. Kennzeichnen Sie darin möglichst:
 
-- the site boundary,
-- the location of the technology,
-- exhausts or chimneys,
-- entry and exit,
-- the route of heavy goods traffic,
-- the nearest residential development,
-- storage and handling areas.
+- die Grundstücks- oder Betriebsgrenze,
+- den Standort der Technologie,
+- Abluftöffnungen und Schornsteine,
+- Ein- und Ausfahrten,
+- die Route des Schwerlastverkehrs,
+- die nächstgelegene Wohnbebauung,
+- Lager- und Umschlagflächen.
 
-For projects near residential buildings, schools, healthcare facilities, or recreational buildings, the site plan is a key document. Distance from sensitive locations often determines whether a noise study, dispersion study, or design modification will be needed.
+Bei Vorhaben in der Nähe von Wohngebäuden, Schulen, Gesundheitseinrichtungen oder Erholungsgebäuden ist der Lageplan besonders wichtig. Die Abstände zu solchen Nutzungen sind für die Beurteilung und einen möglichen Bedarf an Schall- oder Ausbreitungsstudien relevant.
 
-## Technology: what will actually be done in the operation
+## Beschreibung der Technologie
 
-The name of the operation is not enough. For assessment, it is necessary to know what technology will be installed and how it will operate. An assembly workshop without emissions is assessed differently from a paint shop, welding shop, boiler house, bonding operation, construction waste recycling facility, wood-processing plant, or composting facility.
+Die Bezeichnung des Betriebs reicht nicht aus. Wir müssen wissen, welche Technologie installiert wird und wie sie arbeitet. Eine Montagewerkstatt ohne Emissionen ist anders zu beurteilen als eine Lackiererei, Schweißerei, Kesselanlage, Kleberei, Bauschuttrecyclinganlage, Holzverarbeitung oder Kompostierungsanlage.
 
-The technology description should be brief but specific. It is important to state what input materials are used, what main operations take place, whether emissions, dust, odour, noise, waste, or wastewater arise, and whether the technology is extracted.
+Beschreiben Sie die Technologie kurz und konkret. Welche Ausgangsstoffe werden eingesetzt? Welche Arbeitsschritte finden statt? Entstehen Emissionen, Staub, Gerüche, Lärm, Abfälle oder Abwasser? Ist eine Absaugung vorhanden?
 
-| Technology | What usually needs to be known |
+| Technologie | Wichtige Angaben |
 |---|---|
-| painting | type of coating materials, solvent consumption, exhausts, filtration |
-| welding | method, power input, material, extraction, filtration |
-| boiler house | fuel, thermal input, chimney, operating regime |
-| wood-processing operation | wood consumption, extraction, filter, exhausts, noise |
-| recycling facility | capacities, crushing, sorting, dust, transport |
-| bonding and laminating | chemicals, VOC, temperature, extraction |
-| backup diesel generator set | thermal input, operating hours, exhaust, noise |
+| Lackieren | Beschichtungsstoffe, Lösemittelverbrauch, Abluftquellen und Filtration |
+| Schweißen | Verfahren, Leistungsaufnahme, Werkstoffe, Absaugung und Filtration |
+| Kesselanlage | Brennstoff, Feuerungswärmeleistung, Schornstein und Betriebsweise |
+| Holzverarbeitung | Holzverbrauch, Absaugung, Filter, Abluftquellen und Lärm |
+| Recyclinganlage | Kapazitäten, Brechen, Sortieren, Staub und Verkehr |
+| Kleben und Laminieren | Chemikalien, VOC, Temperatur und Absaugung |
+| Notstromaggregat | Feuerungswärmeleistung, Betriebsstunden, Abgasführung und Lärm |
 
-If equipment data sheets exist, it is advisable to attach them. For machines and technologies, power parameters, consumption, air flow rates, acoustic data, emission parameters, and filtration information are especially important.
+Fügen Sie vorhandene technische Datenblätter bei. Bei Maschinen und Technologien helfen insbesondere Leistungsdaten, Verbrauchsangaben, Luftvolumenströme, Schall- und Emissionsdaten sowie Angaben zur Filtration.
 
-## Capacities
+## Kapazitäten
 
-Capacities are one of the most important inputs. They determine whether the project falls under EIA, whether it is a listed air pollution source, whether operating rules will be required, whether a dispersion study, operating permit, or more detailed assessment of transport and noise will be needed.
+Kapazitätsangaben gehören zu den wichtigsten Grundlagen der Einschätzung. Sie sind unter anderem für die Prüfung einer UVP (EIA), die Einordnung einer Luftverschmutzungsquelle und den möglichen Bedarf an Betriebsordnung, Ausbreitungsstudie oder Betriebsgenehmigung relevant. Auch die Beurteilung von Verkehr und Lärm kann davon abhängen.
 
-Capacity should not be stated only in general terms. Depending on the type of operation, annual capacity, daily capacity, hourly output, instantaneous capacity, storage capacity, raw material consumption, or quantity of processed material may be important.
+Geben Sie Kapazitäten möglichst mit einer eindeutigen Bezugsgröße an. Je nach Betrieb sind Jahres- oder Tageskapazität, Stundenleistung, gleichzeitig vorhandene Menge, Lagerkapazität, Rohstoffverbrauch oder die Menge des verarbeiteten Materials wichtig.
 
-**Examples of capacities that are often addressed:**
+**Typische Kapazitätsangaben:**
 
-| Project type | Important capacity |
+| Vorhaben | Wichtige Bezugsgrößen |
 |---|---|
-| waste facility | annual capacity, daily capacity, instantaneous capacity |
-| paint shop | design consumption of organic solvents |
-| boiler house | total rated thermal input |
-| diesel generator set | thermal input, operating hours, fuel consumption |
-| wood-processing operation | design wood consumption in m³/year |
-| recycling line | capacity in t/year, m³/day, operating hours |
-| warehouse | stored quantities, types of substances, turnover |
+| Abfallanlage | Jahreskapazität, Tageskapazität und gleichzeitig vorhandene Menge |
+| Lackiererei | Ausgelegter Verbrauch organischer Lösemittel |
+| Kesselanlage | Gesamte Nennfeuerungswärmeleistung |
+| Notstromaggregat | Feuerungswärmeleistung, Betriebsstunden und Brennstoffverbrauch |
+| Holzverarbeitung | Ausgelegter Holzverbrauch in m³/Jahr |
+| Recyclinglinie | Kapazität in t/Jahr oder m³/Tag sowie Betriebsstunden |
+| Lager | Gelagerte Mengen, Stoffarten und Umschlag |
 
-*In practice:* capacity in the project, studies, application, and operating rules must be the same. Discrepancies in capacities are one of the most common reasons for supplementary documentation.
+*Achten Sie auf übereinstimmende Angaben:* Dieselben Kapazitätsgrößen und Betriebsszenarien sollten in Projektunterlagen, Studien, Antrag und Betriebsordnung zusammenpassen. Unterschiedliche Kapazitätsangaben können zusätzliche Rückfragen auslösen.
 
-## Exhausts, chimneys, and ventilation
+## Abluft, Schornsteine und Lüftung
 
-Exhausts are key for assessing both air quality and noise. It is necessary to know whether an exhaust carries only ventilation air or technological emissions. An exhaust from a paint shop, boiler house, welding shop, wood dust filter, or diesel generator set is assessed differently from ordinary office ventilation.
+Abluftquellen sind sowohl für die Luftreinhaltung als auch für die Lärmbeurteilung wichtig. Es muss erkennbar sein, ob eine Öffnung nur Lüftungsluft oder auch Prozessemissionen abführt. Abluft aus einer Lackiererei, Kesselanlage, Schweißerei, einem Holzstaubfilter oder einem Notstromaggregat ist anders zu beurteilen als eine gewöhnliche Bürolüftung.
 
-For exhausts, it is advisable to provide their location, height, diameter or dimensions, air flow rate, waste gas temperature, connection to the technology, and information on whether filtration or other separation equipment is installed.
+Geben Sie möglichst Lage, Höhe, Durchmesser oder Abmessungen, Luftvolumenstrom und Abgastemperatur an. Wichtig sind außerdem die angeschlossene Technologie und vorhandene Filter oder andere Abscheideeinrichtungen.
 
-For a quick assessment, these questions are especially important:
+Für die erste Einschätzung helfen insbesondere folgende Angaben:
 
-- what a specific exhaust carries,
-- what its flow rate is,
-- at what height it discharges,
-- whether it is above the roof or on the facade,
-- whether it is near residential buildings,
-- whether emission measurement will be possible,
-- whether the exhaust may be a noise source.
+- Welche Luft oder Abgase führt die jeweilige Öffnung ab?
+- Welcher Volumenstrom liegt vor?
+- In welcher Höhe erfolgt der Austritt?
+- Befindet sich die Öffnung über dem Dach oder an der Fassade?
+- Liegen Wohngebäude in der Nähe?
+- Ist eine Emissionsmessung möglich?
+- Kann die Abluftquelle auch eine Schallquelle sein?
 
-For new projects, measurability of exhausts should be addressed in good time. If emission measurement will be needed in future, the duct must have a suitable measurement point, access, and safe working conditions.
+Bei neuen Vorhaben sollte die spätere Messbarkeit rechtzeitig berücksichtigt werden. Wird eine Emissionsmessung benötigt, müssen eine geeignete Messstelle, ein Zugang und sichere Arbeitsbedingungen vorgesehen werden.
 
-## Operating hours
+## Betriebszeiten
 
-Operating hours affect noise, emissions, transport, the work environment, and the overall assessment of the project. An operation running only during the day is assessed differently from two-shift operation, night operation, or continuous operation.
+Die Betriebszeiten beeinflussen Lärm, Emissionen, Verkehr, Arbeitsumfeld und die Gesamtbeurteilung des Vorhabens. Reiner Tagesbetrieb ist anders zu bewerten als Zwei-Schicht-, Nacht- oder Dauerbetrieb.
 
-For noise, night operation is significantly more sensitive than daytime operation. For emissions, the number of hours the source operates per year is important. For backup diesel generator sets, the number of operating hours may determine what obligations apply to the source. For waste and recycling facilities, it matters whether operation will run every day or only on a campaign basis.
+Bei Lärm ist der Nachtbetrieb besonders relevant. Für Emissionen sind unter anderem die jährlichen Betriebsstunden der Quelle wichtig. Bei Notstromaggregaten können die Betriebsstunden die anzuwendenden Anforderungen beeinflussen. Bei Abfall- und Recyclinganlagen ist zu unterscheiden, ob der Betrieb täglich oder nur kampagnenweise stattfindet.
 
-| Operating data | Why it matters |
+| Betriebsangabe | Bedeutung |
 |---|---|
-| daytime operating hours | basis for noise and operating scenario |
-| night operation | significantly more sensitive noise assessment |
-| number of shifts | link to transport, employees, and exposure |
-| annual operating hours | basis for emissions and records |
-| campaign operation | important for crushing, recycling, or seasonal activities |
-| trial operation | may have a different regime from normal operation |
+| Tagesbetriebszeiten | Grundlage für Lärmbeurteilung und Betriebsszenario |
+| Nachtbetrieb | Besondere Bedeutung für die Lärmbeurteilung |
+| Anzahl der Schichten | Zusammenhang mit Verkehr, Beschäftigten und Exposition |
+| Jährliche Betriebsstunden | Grundlage für Emissionen und Betriebsaufzeichnungen |
+| Kampagnenbetrieb | Wichtig etwa beim Brechen, Recycling oder bei saisonalen Tätigkeiten |
+| Probebetrieb | Kann sich vom späteren Regelbetrieb unterscheiden |
 
-*Important:* if operating hours are uncertain, it is better to state both an assumption and the maximum possible regime. Studies and permits usually must be based on a defensible operating scenario.
+*Sind die Betriebszeiten noch offen, nennen Sie die Annahmen und den maximal vorgesehenen Betrieb.* Studien und Genehmigungsunterlagen benötigen ein nachvollziehbares Betriebsszenario.
 
-## Transport
+## Verkehr
 
-Transport often determines whether a project will be sensitive for the surroundings. For industrial and waste operations, it is necessary to know not only the number of vehicles per year, but above all daily intensity, vehicle type, and route.
+Der Verkehr kann für die Auswirkungen eines Vorhabens auf die Umgebung entscheidend sein. Bei Industrie- und Abfallbetrieben reicht die jährliche Fahrzeugzahl allein meist nicht aus. Wichtig sind die tägliche Verkehrsmenge, die Fahrzeugarten und die Fahrtroute.
 
-For an initial assessment, it is advisable to state the number of passenger cars, light vans, and heavy goods vehicles per day. For larger operations, it is important to distinguish material intake, product dispatch, waste removal, supplies, and any seasonal peaks.
+Nennen Sie für die erste Einschätzung die Zahl der Pkw, leichten Nutzfahrzeuge und Lkw pro Tag. Bei größeren Betrieben sollten Materialanlieferung, Produktauslieferung, Abfallabfuhr, Versorgung und mögliche saisonale Spitzen getrennt erkennbar sein.
 
-Transport data feed into the noise study, dispersion study, EIA, and communication with the municipality. If transport is routed through a residential street, through the municipality, or past sensitive buildings, it can be one of the main permitting topics.
+Verkehrsdaten fließen in Schall- und Ausbreitungsstudien, die UVP (EIA) und die Abstimmung mit der Gemeinde ein. Führt die Route durch eine Wohnstraße, eine Ortschaft oder an empfindlichen Nutzungen vorbei, kann dies für das Genehmigungsverfahren besonders wichtig sein.
 
-**For a quick assessment, the following is usually enough:**
+**Für die erste Einschätzung sind folgende Angaben hilfreich:**
 
-- number of heavy goods vehicles per day,
-- number of passenger vehicles per day,
-- arrival and departure route,
-- transport operating hours,
-- whether vehicles will wait or stand on site,
-- whether they will also operate at night,
-- whether the figure is an average or a maximum.
+- Anzahl der Lkw pro Tag,
+- Anzahl der Pkw pro Tag,
+- An- und Abfahrtsroute,
+- Zeiten des Verkehrsaufkommens,
+- Warte- und Standzeiten auf dem Gelände,
+- mögliche Fahrten während der Nacht,
+- Angabe, ob es sich um Durchschnitts- oder Höchstwerte handelt.
 
-For recycling, storage, and manufacturing operations, it is advisable to state the daily maximum, not just the annual average. Peak days are often decisive for noise, transport, and objections from the surroundings.
+Bei Recycling-, Lager- und Produktionsbetrieben sollte neben dem Jahresdurchschnitt auch das Tagesmaximum angegeben werden. Spitzentage können für Lärm, Verkehr und die Beurteilung der Auswirkungen auf die Nachbarschaft wichtig sein.
 
-## Map materials and project surroundings
+## Karten und Umfeld
 
-Map materials help quickly understand where the project is located and what surroundings may be affected. Sometimes a link to the parcel, coordinates, sketch on a map, or cadastral area is enough. For more complex projects, a scaled site plan, orthophoto, or map extract with surrounding buildings marked is advisable.
+Karten helfen, Standort und Umfeld des Vorhabens einzuordnen. Manchmal genügen ein Link zum Grundstück, Koordinaten, eine Kartenskizze oder die Bezeichnung der Katastralgemeinde. Bei komplexeren Vorhaben sind ein maßstäblicher Lageplan, ein Orthofoto oder ein Kartenausschnitt mit benachbarten Gebäuden hilfreich.
 
-For noise and air quality, the location of the nearest residential development is especially important. For water, proximity to a watercourse, flood zone, sewerage, wells, or protection zones may be significant. For EIA and JES, proximity to protected areas, forest, agricultural land, or other sensitive elements may matter.
+Für Lärm und Luftreinhaltung ist besonders die nächstgelegene Wohnbebauung wichtig. Bei Wasserfragen können Gewässer, Überschwemmungsgebiete, Kanalisation, Brunnen und Schutzzonen relevant sein. Für UVP (EIA) und JES können auch Schutzgebiete, Wald, landwirtschaftliche Flächen und weitere empfindliche Bestandteile der Umgebung eine Rolle spielen.
 
-| Map data | What it is used for |
+| Kartenunterlage | Verwendung |
 |---|---|
-| cadastral map | parcels, land boundaries, ownership relations |
-| orthophoto | actual state of the area and surrounding development |
-| site plan | technologies, exhausts, transport, warehouses |
-| location of residential buildings | noise, air quality, transport |
-| watercourses and sewerage | water management and emergency risks |
-| transport route | noise and emissions from transport |
+| Katasterkarte | Flurstücke, Grundstücksgrenzen und Eigentumsverhältnisse |
+| Orthofoto | Tatsächlicher Zustand des Geländes und der umgebenden Bebauung |
+| Lageplan | Technologien, Abluftquellen, Verkehr und Lager |
+| Lage der Wohngebäude | Lärm, Luftreinhaltung und Verkehr |
+| Gewässer und Kanalisation | Wasserwirtschaft und mögliche Störfallrisiken |
+| Verkehrsroute | Lärm und Emissionen des Verkehrs |
 
-If you are unsure what to send, a simple sketch on a map with notes often helps. For an initial assessment, an approximate sketch is better than no map material at all.
+Wenn Sie unsicher sind, welche Unterlage geeignet ist, senden Sie eine einfache Kartenskizze mit Erläuterungen. Für die erste Einschätzung ist auch eine vorläufige Skizze nützlich.
 
-## Authority requirement
+## Anforderungen der Behörde
 
-If you already have a notice, e-mail, inspection report, or authority requirement, it is advisable to send it immediately. It often shows whether the authority is addressing noise, air quality, waste, water, EIA, JES, the work environment, or operating documentation.
+Liegt bereits eine Aufforderung, E-Mail, ein Kontrollprotokoll oder eine andere behördliche Anforderung vor, senden Sie diese möglichst gleich mit. Daraus wird häufig deutlich, ob Lärm, Luftreinhaltung, Abfälle, Wasser, UVP (EIA), JES, Arbeitsumfeld oder Betriebsunterlagen zu bearbeiten sind.
 
-The authority requirement is also important because it helps target the scope of work correctly. Sometimes a broad study is not needed, but a precisely formulated supplement. At other times a short reply is not enough and an expert opinion, dispersion study, noise study, or operating rules must be prepared.
+Der Wortlaut hilft, den Arbeitsumfang richtig festzulegen. Manchmal ist keine umfassende Studie, sondern eine gezielte Ergänzung erforderlich. In anderen Fällen genügt eine kurze Antwort nicht, und ein Gutachten, eine Ausbreitungsstudie, eine Schallstudie oder eine Betriebsordnung wird benötigt.
 
-*Practically important:* do not send only your own summary of the requirement. Send the authority's original text. Wording, reference to a paragraph, file number, or attachment often determines what documentation is actually needed.
+*Senden Sie die ursprüngliche Anforderung der Behörde, nicht nur Ihre Zusammenfassung.* Formulierungen, Verweise auf Vorschriften, Aktenzeichen und Anlagen helfen einzuordnen, welche Unterlagen tatsächlich gebraucht werden.
 
-## What to send ideally in the first e-mail
+## Unterlagen für die erste Anfrage
 
-For an initial assessment, the materials do not need to be perfect. What matters is that the project, its location, and main impacts can be understood. If something is missing, it can be added later.
+Die Unterlagen müssen für die erste Einschätzung noch nicht vollständig ausgearbeitet sein. Entscheidend ist, dass das Vorhaben, sein Standort und seine wesentlichen Auswirkungen erkennbar werden. Fehlende Angaben können anschließend ergänzt werden.
 
-**Ideal first package of materials:**
+**Senden Sie nach Möglichkeit:**
 
-1. brief project description,
-2. project documentation or technical report,
-3. site plan,
-4. technology description,
-5. capacities and operating hours,
-6. data on exhausts, HVAC, and chimneys,
-7. transport data,
-8. map material or parcel,
-9. safety data sheets of chemicals used, if relevant,
-10. authority requirement, if one exists.
+1. eine kurze Beschreibung des Vorhabens,
+2. Projektunterlagen oder einen technischen Bericht,
+3. einen Lageplan,
+4. eine Beschreibung der Technologie,
+5. Kapazitäten und Betriebszeiten,
+6. Angaben zu Abluft, Lüftung und Schornsteinen,
+7. Verkehrsdaten,
+8. Kartenmaterial oder Angaben zum Grundstück,
+9. gegebenenfalls Sicherheitsdatenblätter der eingesetzten Chemikalien,
+10. eine bereits vorliegende behördliche Anforderung.
 
-If you do not have a particular item, that is fine. State at least an estimate or write that the data is not yet known. What matters is not concealing uncertainties. Unclear capacities, operating hours, or exhausts are often the main reason why materials are reworked later.
+Fehlt eine Position, kennzeichnen Sie das. Geben Sie eine Annahme als solche an oder schreiben Sie, dass der Wert noch nicht bekannt ist. Unklare Kapazitäten, Betriebszeiten und Abluftquellen führen häufig dazu, dass Unterlagen später überarbeitet werden müssen.
 
-## How we propose the scope of measurement and studies from the materials
+## Umfang der Messungen und Studien
 
-After receiving the materials, we first assess which environmental areas are relevant to the project. For some projects, noise and transport will be the main focus. For others, air quality, exhausts, and a dispersion study will be central. For waste facilities, EIA, operating rules, capacities, and water may be essential. For the work environment, employee exposure to chemicals, dust, noise, or vibration is addressed.
+Nach Eingang der Unterlagen prüfen wir zunächst, welche Umweltbereiche für Ihr Vorhaben relevant sind. Bei manchen Projekten stehen Lärm und Verkehr im Vordergrund. Bei anderen sind Luftreinhaltung, Abluft und eine Ausbreitungsstudie maßgeblich. Bei Abfallanlagen können UVP (EIA), Betriebsordnung, Kapazitäten und Wasserfragen wichtig sein. Beim Arbeitsumfeld geht es beispielsweise um die Exposition gegenüber Chemikalien, Staub, Lärm oder Vibrationen.
 
-The result of a quick assessment should be a proposal for the next steps. This may include, for example, a recommendation to prepare a noise study, dispersion study, expert opinion, operating rules, emission measurement, work environment measurement, EIA notification, or materials for JES.
+Auf dieser Grundlage schlagen wir die nächsten Schritte vor. Dazu können eine Schallstudie, Ausbreitungsstudie, ein Gutachten, eine Betriebsordnung, Emissionsmessungen, Arbeitsplatzmessungen, eine EIA-Mitteilung oder Unterlagen für JES gehören.
 
-| Finding from the materials | Typical next step |
+| Feststellung aus den Unterlagen | Möglicher nächster Schritt |
 |---|---|
-| technology has exhausts | verification of air pollution source, possibly dispersion study or expert opinion |
-| residential development nearby | noise study, possibly transport assessment |
-| VOC or dust arise | emission measurement, operating records, filtration, operating permit |
-| it is a waste facility | capacities, operating rules, EIA, water, air quality |
-| authority requests a supplement | targeted reply or expert document according to the notice |
-| source classification unclear | technical and legislative assessment |
+| Die Technologie hat Abluftquellen | Einordnung der Luftverschmutzungsquelle, gegebenenfalls Ausbreitungsstudie oder Gutachten |
+| Wohnbebauung liegt in der Nähe | Schallstudie, gegebenenfalls Betrachtung des Verkehrs |
+| VOC oder Staub entstehen | Prüfung von Emissionsmessung, Betriebsaufzeichnungen, Filtration und Betriebsgenehmigung |
+| Es handelt sich um eine Abfallanlage | Prüfung von Kapazitäten, Betriebsordnung, UVP (EIA), Wasser und Luftreinhaltung |
+| Die Behörde verlangt eine Ergänzung | Gezielte Antwort oder Fachunterlage entsprechend der Aufforderung |
+| Die Einordnung der Quelle ist unklar | Technische und rechtliche Prüfung |
 
-The aim is not to propose everything unnecessarily. The aim is to determine an appropriate scope of documentation that matches the project, risks, and authority requirements.
+Wir schlagen den Umfang vor, der zum Vorhaben, seinen Auswirkungen und den behördlichen Anforderungen passt. Nicht jede genannte Unterlage ist für jedes Projekt erforderlich.
 
-## Most common mistakes when sending materials
+## Häufige Unstimmigkeiten
 
-The most common mistake is an overly general description. The sentence "we will operate plastic parts manufacturing" is not enough. It is necessary to know whether pressing, bonding, painting, heating, welding, extraction, cooling, chemical storage, or air discharge through an exhaust will take place.
+Eine zu allgemeine Beschreibung erschwert die Einschätzung. „Wir werden Kunststoffteile herstellen“ genügt nicht, wenn unklar bleibt, ob gepresst, geklebt, lackiert, erwärmt, geschweißt, abgesaugt oder gekühlt wird. Auch Chemikalienlager und Abluftführung sollten erkennbar sein.
 
-The second common mistake is a missing site plan. Without the project location, noise, air quality, transport, and the relationship to residential development cannot be assessed well. The third common mistake is not sending the authority's original requirement, but only a loose interpretation.
+Ein weiterer häufiger Punkt ist der fehlende Lageplan. Ohne Standortbezug lassen sich Lärm, Luftreinhaltung, Verkehr und das Verhältnis zur Wohnbebauung nur eingeschränkt beurteilen. Ebenso wichtig ist die ursprüngliche behördliche Anforderung statt einer freien Wiedergabe.
 
-Problems also arise when different capacities appear in different documents. The project states different operating hours from the application, the noise study works with a different number of vehicles than the transport section, and exhausts on the drawing do not match the technical report. Such discrepancies are best identified right at the start.
+Rückfragen entstehen außerdem durch widersprüchliche Angaben. Beispielsweise nennt das Projekt andere Betriebszeiten als der Antrag, die Schallstudie arbeitet mit anderen Fahrzeugzahlen als der Verkehrsteil oder die Abluftquellen in der Zeichnung stimmen nicht mit dem technischen Bericht überein. Solche Unterschiede sollten möglichst zu Beginn geklärt werden.
 
-## Summary
+## Zusammenfassung
 
-For a quick project assessment, it is best to send basic project and operating materials: technical report, site plan, technology description, capacities, exhausts, operating hours, transport, map materials, and any authority requirement. It does not have to be final documentation, but the data must be specific enough to identify relevant environmental areas.
+Für die erste Einschätzung benötigen wir grundlegende Projekt- und Betriebsangaben: technischen Bericht, Lageplan, Beschreibung der Technologie, Kapazitäten, Abluftquellen, Betriebszeiten, Verkehr, Kartenmaterial und eine gegebenenfalls vorhandene behördliche Anforderung. Es muss noch keine endgültige Planung sein. Die Angaben sollten aber konkret genug sein, um die relevanten Umweltbereiche einzuordnen.
 
-A good initial package of materials helps quickly decide whether emission measurement, work environment measurement, a noise study, dispersion study, expert opinion, operating rules, EIA, JES, or another permitting document will be needed. Assessment is most valuable at the stage when exhausts, transport solutions, operating regime, or technology placement can still be adjusted.
+Damit lässt sich der mögliche Bedarf an Emissionsmessungen, Arbeitsplatzmessungen, Schall- und Ausbreitungsstudien, Gutachten, Betriebsordnungen, UVP (EIA), JES oder weiteren Genehmigungsunterlagen prüfen. Besonders hilfreich ist dies, solange Abluftführung, Verkehr, Betriebsweise und Anordnung der Technologie noch angepasst werden können.
 
-Send us basic materials and we will propose the scope of measurement/studies.
+[Senden Sie uns eine Beschreibung und vorhandene Unterlagen.](/de/kontakt/#poptavkovy-formular) Wir schlagen Ihnen den passenden Umfang der Messungen und Studien vor.

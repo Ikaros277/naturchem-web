@@ -29,6 +29,39 @@ const { homeArticleThumbnails } = load(path.join(root, "src/lib/home-article-thu
 const { GeneratedIllustration } = load(path.join(root, "src/components/GeneratedIllustration.tsx"));
 const { ContactQuickLinks } = load(path.join(root, "src/components/ContactQuickLinks.tsx"));
 const { company } = load(path.join(root, "src/lib/site.ts"));
+const catalogCss = require("postcss").parse(fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8"));
+function declarations(selector) {
+  const values = {};
+  catalogCss.walkRules(rule => {
+    if (rule.selectors.includes(selector)) rule.walkDecls(decl => { values[decl.prop] = decl.value; });
+  });
+  return values;
+}
+function rgb(hex) {
+  const raw = hex.slice(1);
+  return (raw.length === 3 ? raw.split("").map(c => c + c) : raw.match(/../g)).map(v => parseInt(v, 16));
+}
+function contrast(front, back) {
+  const lum = color => color.map(v => { const c = v / 255; return c <= .04045 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4; }).reduce((sum, c, i) => sum + c * [.2126, .7152, .0722][i], 0);
+  const a = lum(front), b = lum(back);
+  return (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+}
+const navBase = declarations(".service-category-nav-group");
+const cardBase = declarations(".service-groups-accordion .service-index-card");
+const navText = declarations(".service-category-nav a").color;
+const navHint = declarations(".service-category-nav-main small").color;
+const cardText = declarations(".service-groups-accordion .service-index-card .index-card-heading").color;
+const cardLead = declarations(".service-groups-accordion .service-index-card .service-index-card-lead").color;
+const cardAction = declarations(".service-groups-accordion .service-index-card .card-inline-link").color;
+for (const category of ["measurement", "studies", "docs"]) {
+  const nav = { ...navBase, ...declarations('.service-category-nav-group[data-service-index-category="' + category + '"]') };
+  const card = { ...cardBase, ...declarations('.service-groups-accordion .service-index-card[data-category="' + category + '"]') };
+  const brightestNav = rgb(nav["--index-accent"]).map(c => c + (255 - c) * .181); // decorative 10% white + 9% hover layer
+  assert.ok(contrast(rgb(navText), brightestNav) >= 4.5, "Category label contrast including hover: " + category);
+  if (category !== "docs") assert.ok(contrast(rgb(navHint), brightestNav) >= 4.5, "Category hint contrast: " + category);
+  for (const color of [cardText, cardLead]) assert.ok(contrast(rgb(color), rgb(card["--catalog-surface"])) >= 4.5, "Card text contrast: " + category);
+  assert.ok(contrast(rgb(cardAction), rgb(card["--catalog-accent"])) >= 4.5, "Filled card action contrast: " + category);
+}
 for (const [src, thumbnail] of Object.entries(homeArticleThumbnails)) {
   assert.ok(fs.existsSync(path.join(root, "public", src)));
   assert.ok(fs.existsSync(path.join(root, "public", thumbnail)));
@@ -62,7 +95,12 @@ for (const locale of ["cs", "en", "de"]) {
   }, React.createElement(ServiceGroupsIndex, { groups: serviceGroups, locale })));
   assert.ok(/<details[^>]*id="mericke-sluzby"[^>]*open=""|<details[^>]*open=""[^>]*id="mericke-sluzby"/.test(html), "Show measurements without an extra click");
   assert.equal((html.match(/<details\b/g) || []).length, 6);
-  assert.equal((html.match(/<h3\b/g) || []).length, expectedCards);
+  assert.equal((html.match(/<h3\b/g) || []).length, expectedCards - (locale === "cs" ? 2 : 0), "Specific services stay in the catalog; two Czech situations have their own visible entries");
+  const catalogHrefs = [...html.matchAll(/href="([^"]+)"/g)].map(m => m[1].replace(/\/$/, ""));
+  for (const href of hrefs) assert.equal(catalogHrefs.filter(actual => actual === (locale === "cs" ? "" : "/" + locale) + href).length, 1, "Each localized catalog destination stays server-rendered exactly once: " + locale + href);
+  const visibleImages = [...html.matchAll(/<img\b[^>]*\bsrc="([^"]+)"/g)].map(m => m[1]);
+  assert.equal(visibleImages.length, expectedCards, "Every service and situation gets its original prepared image");
+  assert.equal(new Set(visibleImages).size, expectedCards, "No repeated catalog photos, including situation cards");
   assert.ok(!html.includes("/_next/image"), "No runtime image transformations for catalog cards");
   assert.ok(html.includes('style="position:absolute;inset:0;width:100%;height:100%;'), "Static thumbnails must fill their responsive frame, not render at intrinsic 640px width");
   for (const group of serviceGroups) assert.ok(html.includes('href="#' + group.id + '"'));

@@ -11,6 +11,7 @@ import { seoLandings } from "@/lib/seo-landings";
 import { getAllSalesCategoryParams } from "@/lib/sales-categories";
 import { pcfElettronicaProducts } from "@/lib/pcf-elettronica-catalog";
 import { poradnaPageCount, poradnaPagePath } from "@/lib/poradna-pagination";
+import { getPageContentRevision } from "@/lib/page-content-revisions";
 
 /** CMS publishing redeploys the site, so the sitemap remains static between deploys. */
 export const revalidate = false;
@@ -86,7 +87,9 @@ function articleLastModified(article: { updatedAt?: string; publishedAt: string 
   return Number.isNaN(parsed.getTime()) ? CONTENT_REFRESH : parsed;
 }
 
-function staticRouteLastModified(route: string, poradnaHubDate?: Date): Date {
+function staticRouteLastModified(route: string, locale: Locale, poradnaHubDate?: Date): Date {
+  const revised = getPageContentRevision(route, locale);
+  if (revised) return revised;
   if (route === "/poradna" && poradnaHubDate) return poradnaHubDate;
   if (route.startsWith("/prodej")) return CATALOG_REFRESH;
   return CONTENT_REFRESH;
@@ -99,7 +102,7 @@ function staticSitemapEntries(
   return locales.flatMap((locale) =>
     staticPaths.map((route) => ({
       url: localizedCanonical(route, locale),
-      lastModified: latestRevision(staticRouteLastModified(route, poradnaHubDate)),
+      lastModified: latestRevision(staticRouteLastModified(route, locale, poradnaHubDate)),
       changeFrequency: "monthly" as const,
       priority: route === "/" ? 1 : 0.8,
       alternates: {

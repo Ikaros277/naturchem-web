@@ -25,7 +25,7 @@ import { isSalesCategorySlug } from "@/lib/sales-categories";
 import { getPageHeroTheme } from "@/lib/hero-images";
 import { getPcfCategoryLabel } from "@/lib/pcf-category-labels";
 import { getPcfCategorySummary } from "@/lib/pcf-category-summaries";
-import { buildSalesProductSchema } from "@/lib/sales-product-schema";
+import { buildSalesCatalogPageSchema } from "@/lib/sales-product-schema";
 import { siteUrl } from "@/lib/site";
 import { getServiceDetailCopy } from "@/lib/i18n/service-detail-copy";
 
@@ -250,7 +250,7 @@ export default async function SalesSlugPage({ params }: Props) {
     ]
   };
 
-  const productSchema = buildSalesProductSchema({
+  const catalogPageSchema = buildSalesCatalogPageSchema({
     product,
     brand,
     pageUrl
@@ -259,7 +259,7 @@ export default async function SalesSlugPage({ params }: Props) {
   return (
     <main className="section premium-page sales-page sales-product-page">
       <JsonLd data={breadcrumbData} />
-      <JsonLd data={productSchema} />
+      <JsonLd data={catalogPageSchema} />
       <PageHeroBand
         locale={locale}
         theme={getPageHeroTheme(`/prodej/${brandSlug}`)}

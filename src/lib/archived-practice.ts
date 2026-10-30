@@ -1,6 +1,6 @@
 import { referenceExampleGroups } from "@/lib/reference-example-groups";
 
-export type ServiceEvidence = { title: string; summary: string; output: string; referenceHref?: string };
+export type ServiceEvidence = { title: string; summary: string; output: string; referenceHref?: string; photographId?: string };
 
 type ArchivedPractice = ServiceEvidence & {
   id: string;

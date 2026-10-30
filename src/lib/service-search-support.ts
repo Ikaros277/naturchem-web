@@ -1,5 +1,6 @@
 import type { FaqItem } from "@/lib/faq";
 import { practiceNote, type ServiceEvidence } from "@/lib/archived-practice";
+import { referenceExamples } from "@/lib/reference-content";
 
 /** Public, anonymized scope only. Private documents and client identities stay outside the repository. */
 export type { ServiceEvidence } from "@/lib/archived-practice";
@@ -11,21 +12,18 @@ type ServiceSearchSupport = {
   evidence?: ServiceEvidence;
 };
 
-const vibrationEvidence: ServiceEvidence = {
-  title: "Vibrace při práci s motorovou pilou a mobilními stroji",
-  summary: "Pro lesnický provoz jsme měřili vibrace přenášené na ruce i na tělo při skutečných pracovních činnostech.",
-  output: "Protokol rozlišující práci s ručním nářadím a obsluhu strojů."
-};
+function photographicEvidence(id: string): ServiceEvidence {
+  const example = referenceExamples.find(item => item.id === id && item.documented);
+  if (!example) throw new Error("Missing documented reference: " + id);
+  return { title: example.title, summary: example.text, output: example.output, referenceHref: "/reference#reference-" + id, photographId: id };
+}
+const vibrationEvidence = photographicEvidence("kovovyroba-vibrace");
 const lightingEvidence: ServiceEvidence = {
   title: "Osvětlení výrobní haly automobilového průmyslu",
   summary: "Měřili jsme umělé osvětlení vybraných pracovních prostor s výrobními a svařovacími zařízeními.",
   output: "Protokol s měřením a hodnocením vybraných pracovišť."
 };
-const microclimateEvidence: ServiceEvidence = {
-  title: "Mikroklima ve zdravotnickém provozu",
-  summary: "Ve třech vybraných místnostech jsme měřili mikroklimatické podmínky za běžného provozu.",
-  output: "Protokol popisující místa měření, podmínky a výsledky."
-};
+const microclimateEvidence = photographicEvidence("hala-pp");
 const studyEvidence: ServiceEvidence = {
   title: "Hlukové a imisní posouzení terénních úprav",
   summary: "Pro jeden záměr jsme zpracovali hlukovou a rozptylovou studii. Zahrnuly související dopravu, mechanizaci a manipulaci s materiálem.",

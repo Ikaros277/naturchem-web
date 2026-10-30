@@ -157,6 +157,7 @@ export default async function CmsArticlePage({ params }: Props) {
         </ArticleReadingLayout>
 
         <ArticleRelatedServices
+          hasInlineInquiry={reading.hasInquiry}
           locale={locale}
           title={article.title}
           slug={article.slug}

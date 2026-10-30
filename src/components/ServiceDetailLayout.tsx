@@ -17,6 +17,7 @@ import { company } from "@/lib/site";
 import type { ServiceEvidence } from "@/lib/service-search-support";
 import type { ServiceCommercialIntent } from "@/lib/service-commercial-intent";
 import { getServiceOverview } from "@/lib/service-overviews";
+import { referencePhotographs, getReferencePhotographSources } from "@/lib/reference-photographs";
 import { EmissionsServiceDetails } from "./EmissionsServiceDetails";
 import { AccreditedMeasurementScope } from "./AccreditedMeasurementScope";
 import styles from "./service-detail.module.css";
@@ -30,6 +31,7 @@ type Props = {
   schemas: ReactNode;
   evidence?: ServiceEvidence;
   commercialIntent?: ServiceCommercialIntent;
+  quoteBasis?: string;
   faqUiLabels?: FaqAccordionUiLabels;
 };
 
@@ -38,7 +40,7 @@ function DetailList({ items }: { items: string[] }) {
 }
 
 /** Shared server-rendered layout with an explicit, service-specific presentation option. */
-export function ServiceDetailLayout({ content, contactHref, contactLabel, faqItems, relatedItems, schemas, evidence, commercialIntent, faqUiLabels }: Props) {
+export function ServiceDetailLayout({ content, contactHref, contactLabel, faqItems, relatedItems, schemas, evidence, commercialIntent, quoteBasis, faqUiLabels }: Props) {
   const { locale } = content;
   const href = (path: string) => localizeHref(path, locale);
   const copy = getServiceCopy(locale);
@@ -48,6 +50,8 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
   const emissions = locale === "cs" && content.slug === "sluzby/mereni-emisi";
   const editorialEmissions = emissions && content.detailPresentation === "emissions-editorial";
   const photo = getAuthenticPhoto(getServiceHeroTheme(content.slug));
+  const evidencePhoto = referencePhotographs.find(item => item.exampleId === evidence?.photographId);
+  const evidenceSources = evidencePhoto ? getReferencePhotographSources(evidencePhoto) : undefined;
   const workplace = locale === "cs" && content.slug === "sluzby/pracovni-prostredi";
   const decisionFirst = workplace || (locale === "cs" && content.slug === "sluzby/mereni-mikroklimatu");
   const overview = commercialIntent ?? (locale === "cs" ? getServiceOverview(content.slug) : undefined);
@@ -114,6 +118,14 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
               <strong>{ui.noiseHint}</strong><a href={href("/sluzby/hlukove-studie")}>{ui.noiseLink} →</a>
             </p> : null}
             {evidence && !editorialEmissions ? <aside className={styles.evidence} aria-label="Ukázka realizace" data-service-evidence>
+              {evidencePhoto && evidenceSources ? <figure className={styles.evidenceFigure} data-service-reference-photo={evidencePhoto.exampleId}>
+                <picture>
+                  <source type="image/avif" srcSet={evidenceSources.avifSrcSet} sizes="(max-width: 720px) calc(100vw - 84px), (max-width: 1100px) 44vw, 560px" />
+                  {/* Existing immutable static variants; no runtime image transformations. */}
+                  <img src={evidenceSources.src} srcSet={evidenceSources.srcSet} sizes="(max-width: 720px) calc(100vw - 84px), (max-width: 1100px) 44vw, 560px" width={evidenceSources.width} height={evidenceSources.height} alt={evidencePhoto.alt} loading="lazy" decoding="async" fetchPriority="low" />
+                </picture>
+                <figcaption>{evidencePhoto.caption}</figcaption>
+              </figure> : null}
               <p className={styles.eyebrow}>Z naší praxe</p>
               <h3>{evidence.title}</h3>
               <p>{evidence.summary}</p>
@@ -129,7 +141,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
             <p>{copy.docsIntro}</p>
             <DetailList items={editorialEmissions || decisionFirst ? content.docs : content.docs.slice(0, 3)} />
             {editorialEmissions ? <p className={styles.requestTiming}>Uveďte také požadovaný termín měření.</p> : null}
-            {commercialIntent ? <p className={styles.quoteBasis} data-service-quote-basis><strong>Rozsah a nabídka</strong>{commercialIntent.quoteBasis}</p> : null}
+            {quoteBasis ? <p className={styles.quoteBasis} data-service-quote-basis><strong>Rozsah a nabídka</strong>{quoteBasis}</p> : null}
             <a className={styles.panelCta} href={contactHref}>{ui.inquiry}<span aria-hidden="true">↗</span></a>
             <p className={styles.response}>{ui.responseFull}</p>
           </aside>

@@ -20,7 +20,8 @@ const load = require("./lib/load-typescript.js")({
 const { ServicePage } = load(path.join(root, "src/components/ServicePage.tsx"));
 const { ArticleRelatedServices } = load(path.join(root, "src/components/ArticleRelatedServices.tsx"));
 const { getDedicatedService } = load(path.join(root, "src/lib/i18n/service-pages.ts"));
-const { serviceCommercialIntent } = load(path.join(root, "src/lib/service-commercial-intent.ts"));
+const { serviceCommercialIntent, getServiceInquiryIntent } = load(path.join(root, "src/lib/service-commercial-intent.ts"));
+const { referencePhotographs } = load(path.join(root, "src/lib/reference-photographs.ts"));
 const { getRelatedServicesForArticle, getRelatedArticlesForService } = load(path.join(root, "src/lib/poradna-service-links.ts"));
 const { readContactUrlPrefill } = load(path.join(root, "src/lib/contact-url-prefill.ts"));
 const { services } = load(path.join(root, "src/lib/site.ts"));
@@ -36,7 +37,7 @@ const inquiryHrefs = html => [...html.matchAll(/href="([^"]*kontakt[^"]*)"/g)].m
 const escape = value => value.replaceAll("&", "&amp;").replaceAll('"', "&quot;");
 
 async function main() {
-  assert.equal(Object.keys(serviceCommercialIntent).length, 7);
+  assert.equal(Object.keys(serviceCommercialIntent).length, 8);
   for (const [slug, intent] of Object.entries(serviceCommercialIntent)) {
     const content = slug === "rozptylove-studie"
       ? load(path.join(root, "src/app/[locale]/sluzby", slug, "page.tsx")).default()
@@ -63,7 +64,8 @@ async function main() {
     const evidence = getCzechServiceSearchSupport(slug)?.evidence;
     if (evidence?.referenceHref) {
       assert.ok(body.includes('href="' + localizeHref(evidence.referenceHref, "cs") + '"'));
-      assert.ok(referenceExampleGroups.some(group => evidence.referenceHref === "/reference#" + group.id));
+      assert.ok(referenceExampleGroups.some(group => evidence.referenceHref === "/reference#" + group.id)
+        || referencePhotographs.some(photo => evidence.photographId === photo.exampleId && evidence.referenceHref === "/reference#reference-" + photo.exampleId));
     }
     for (const locale of ["en", "de"]) {
       const translated = slug === "rozptylove-studie"
@@ -87,6 +89,8 @@ async function main() {
     ["bezpecnostni-listy-v-provozu-co-musi-zamestnavatel", "bezpecnostni-listy"],
     ["eu-ets-ghg-kdy-sledovat-vykazovat-emise-sklenikovych-plynu", "ghg-overovani"],
     ["zmena-integrovaneho-povoleni-ippc-podstatna-zmena", "ippc-integrovana-povoleni"],
+    ["provozni-rad-zdroje-znecistovani-ovzdusi", "provozni-rady"],
+    ["oznameni-zameru-eia-co-to-je-a-kdy-je-potreba", "eia-oznameni-zameru"],
   ];
   for (const [slug, serviceSlug] of fixtures) {
     const { data } = matter(fs.readFileSync(path.join(root, "content/articles", slug + ".md"), "utf8"));
@@ -100,7 +104,7 @@ async function main() {
       const html = renderToStaticMarkup(await ArticleRelatedServices({ locale, title: data.title, slug, topic }));
       const inquiries = inquiryHrefs(html);
       assert.ok(inquiries.length <= 1, "No repeated article inquiry blocks");
-      const intent = serviceCommercialIntent[serviceSlug];
+      const intent = getServiceInquiryIntent(serviceSlug);
       if (intent && locale === "cs") {
         assert.equal(inquiries.length, 1);
         const url = new URL(inquiries[0], "https://www.naturchem.cz");
@@ -109,6 +113,9 @@ async function main() {
         assert.deepEqual(prefill.initialServices, [services.find(service => service.href === "/sluzby/" + serviceSlug).contactService]);
         assert.ok(html.includes(escape(intent.articlePrompt)));
       }
+      const withInlineInquiry = renderToStaticMarkup(await ArticleRelatedServices({ locale, title: data.title, slug, topic, hasInlineInquiry: true }));
+      assert.equal(inquiryHrefs(withInlineInquiry).length, 0, "Retain service links without duplicating the inquiry already in the article");
+      for (const link of links) assert.ok(withInlineInquiry.includes('href="' + localizeHref(link.href, locale) + '"'));
     }
     const listing = { title: data.title, href: "/poradna/" + slug, slug };
     assert.equal(getRelatedArticlesForService("/sluzby/" + serviceSlug, [listing])[0], listing, "Bidirectional service/article relevance");
@@ -137,6 +144,6 @@ async function main() {
   for (const { file, data } of drafts) assert.ok(!indexes.listings.cs.some(article => article.slug === (data.slug ?? file.slice(0, -3))), "No draft in public indexes");
   assert.ok(!indexes.listings.cs.some(article => article.slug === "uhlikova-stopa-firmy-podklady-pro-odberatele"));
   assert.ok(!/use client|next\/image|useEffect|fetch\(/.test(fs.readFileSync(path.join(root, "src/lib/service-commercial-intent.ts"), "utf8")), "Static content without client JS or runtime requests");
-  console.log("PASS commercial intent: 7 concise offers, exact prefilled inquiries, 12 article paths, approved weekly calendar, translations and generic draft/future protection");
+  console.log("PASS commercial intent: 8 concise offers, exact prefilled inquiries, 14 article paths without duplicate inquiries, approved weekly calendar and translation protection");
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

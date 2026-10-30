@@ -6,6 +6,25 @@ import type { Root } from "mdast";
 import type { Locale } from "@/lib/i18n/locales";
 import { addArticleHeadingAnchors, articleReadingCopy, type ArticleHeading, type ArticleHeadingIds } from "@/lib/article-reading";
 
+/** Only actual links to our inquiry form suppress an additional article inquiry. */
+function hasInquiryLink(tree: Root): boolean {
+  const definitions = new Map(tree.children.filter(node => node.type === "definition").map(node => [node.identifier, node.url]));
+  function isInquiryUrl(value: string): boolean {
+    try {
+      const url = new URL(value, "https://www.naturchem.cz");
+      return ["https://www.naturchem.cz", "https://naturchem.cz"].includes(url.origin)
+        && /^\/(?:en\/|de\/)?kontakt\/?$/.test(url.pathname)
+        && url.hash === "#poptavkovy-formular";
+    } catch { return false; }
+  }
+  type MarkdownNode = { type: string; url?: string; identifier?: string; children?: readonly MarkdownNode[] };
+  function visit(node: MarkdownNode): boolean {
+    const url = node.type === "link" ? node.url : node.type === "linkReference" ? definitions.get(node.identifier ?? "") : undefined;
+    return Boolean(url && isInquiryUrl(url)) || Boolean(node.children?.some(visit));
+  }
+  return visit(tree);
+}
+
 function articleMarkdownComponents(locale: Locale): Components {
   return {
     h1({ children, id }) {
@@ -46,14 +65,18 @@ function articleMarkdownComponents(locale: Locale): Components {
 /** Synchronous server renderer; collect headings once, without a second parser or client JS. */
 export function renderArticleMarkdown(children: string, locale: Locale = "cs", headingIds?: ArticleHeadingIds) {
   let headings: ArticleHeading[] = [];
+  let hasInquiry = false;
   const content = Markdown({
     children,
     remarkPlugins: [remarkGfm, function outlinePlugin() {
-      return (tree: Root) => { headings = addArticleHeadingAnchors(tree, headingIds); };
+      return (tree: Root) => {
+        headings = addArticleHeadingAnchors(tree, headingIds);
+        hasInquiry = hasInquiryLink(tree);
+      };
     }],
     components: articleMarkdownComponents(locale)
   });
-  return { content, headings };
+  return { content, headings, hasInquiry };
 }
 
 type Props = {

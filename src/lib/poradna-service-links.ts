@@ -94,7 +94,15 @@ const specificServiceRules: { pattern: RegExp; services: ServiceHref[] }[] = [
   { pattern: /souhrnn[a-z]* provozn[a-z]* evidenc|\bispop\b|\bf ovz spe\b/, services: [S.ispop, S.emise] },
   { pattern: /hlukov[a-z]* studi/, services: [S.hlukStudie, S.hluk] },
   { pattern: /rozptylov[a-z]* studi/, services: [S.rozptyl, S.posudky] },
+  { pattern: /provozn[a-z]* rad[a-z]*/, services: [S.provozni, S.povoleni] },
+  { pattern: /oznamen[a-z]* zamer[a-z]*|\beia\b/, services: [S.eia, S.posudky] },
 ];
+
+// This article covers the whole workplace, not only environmental noise or
+// chemical administration. Keep the follow-up offer aligned with that scope.
+const articleServiceHrefs: Record<string, ServiceHref[]> = {
+  "kolaudace-vyrobni-haly-provozovny-khs-mereni": [S.pracovni, S.osvetleni]
+};
 
 type PriorityLanding = Record<Locale, ServiceLink>;
 
@@ -113,6 +121,11 @@ const landingHlukKolaudace: PriorityLanding = {
   en: { href: "/mereni-hluku-ke-kolaudaci", title: "Noise measurement for occupancy approval" },
   de: { href: "/mereni-hluku-ke-kolaudaci", title: "Lärmmessung zur Abnahme" }
 };
+const landingKolaudace: PriorityLanding = {
+  cs: { href: "/mereni-pro-kolaudaci", title: "Měření pro kolaudaci" },
+  en: { href: "/mereni-pro-kolaudaci", title: "Measurements for occupancy approval" },
+  de: { href: "/mereni-pro-kolaudaci", title: "Messungen zur Abnahme" }
+};
 
 /** Články s přímou návazností na konkrétní poptávkovou stránku: zobrazí se jako první. */
 const priorityLandingBySlug: Record<string, PriorityLanding> = {
@@ -124,7 +137,7 @@ const priorityLandingBySlug: Record<string, PriorityLanding> = {
   "vyzva-khs-mereni-pracovniho-prostredi": landingKategorizace,
   "kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku": landingHlukKolaudace,
   "hluk-z-tepelnych-cerpadel-a-vzt-jednotek-co-resit-pred-kolaudaci": landingHlukKolaudace,
-  "kolaudace-vyrobni-haly-provozovny-khs-mereni": landingHlukKolaudace
+  "kolaudace-vyrobni-haly-provozovny-khs-mereni": landingKolaudace
 };
 
 function dedupeLinks(links: ServiceLink[]): ServiceLink[] {
@@ -151,7 +164,7 @@ export function getRelatedServicesForArticle(
     .flatMap((rule) => rule.services);
 
   const normalizedSubject = haystack.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[-_]/g, " ");
-  const specific = specificServiceRules.find(rule => rule.pattern.test(normalizedSubject))?.services ?? [];
+  const specific = articleServiceHrefs[slug] ?? specificServiceRules.find(rule => rule.pattern.test(normalizedSubject))?.services ?? [];
   const priority = priorityLandingBySlug[slug];
   const comparison = slug === "kdy-je-potreba-hlukova-studie-a-kdy-mereni-hluku";
   const priorityLinks = priority && !comparison ? [priority[locale]] : [];

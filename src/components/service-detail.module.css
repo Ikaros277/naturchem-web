@@ -48,6 +48,10 @@
 .evidence h3 { font-size: 20px; line-height: 1.3; margin: 0 0 10px; max-width: 36ch; }
 .evidence p { font-size: 16px; line-height: 1.5; color: #415966; margin: 0; }
 .evidence .evidenceOutput { margin-top: 12px; padding-top: 10px; border-top: 1px solid #d6e2db; font-size: 14px; }
+.evidenceFigure { margin: 0 0 20px; }
+.evidenceFigure picture { display: block; }
+.evidenceFigure img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.evidenceFigure figcaption { margin-top: 8px; color: #465d67; font-size: 13px; line-height: 1.45; }
 .inquiryPanel { background: #102f42; color: #e0e9ed; padding: 30px; border-radius: var(--radius-sharp); scroll-margin-top: 140px; }
 .inquiryPanel > :first-child { color: #a6d7c1; }
 .panelHeading > :first-child { color: #a6d7c1; }

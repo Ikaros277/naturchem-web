@@ -74,7 +74,9 @@ export async function DemandLandingLayout({ landing, locale, schemas, contactHre
           <p className={styles.eyebrow}>{categoryLabel}</p><h2 id="service-overview-heading">{landing.overviewHeading ?? title}</h2>
           <div className={styles.features}>{overview.map((section, index) => <div className={styles.feature} key={section.heading ?? index}>
             <ServiceIcon icon={index === 0 ? "process-rozsah" : "process-vystup"} variant="plain" size={26} />
-            <div><h3>{section.heading}</h3><p>{splitLeadSentence(section.paragraphs[0] ?? "")?.lead ?? stripRichText(section.paragraphs[0] ?? "")}</p></div>
+            <div><h3>{section.heading}</h3><p>{splitLeadSentence(section.paragraphs[0] ?? "")?.lead ?? stripRichText(section.paragraphs[0] ?? "")}</p>
+              {locale === "cs" && section.nextStep ? <a href={href(section.nextStep.href)} className={styles.textLink} data-landing-next-step={section.nextStep.href}>{section.nextStep.label} <span aria-hidden="true">↗</span></a> : null}
+            </div>
           </div>)}</div>
           <a href={href(landing.serviceHref)} className={styles.textLink}>{copy.generalServicePage} <span aria-hidden="true">↗</span></a>
         </div>

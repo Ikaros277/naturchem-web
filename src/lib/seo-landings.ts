@@ -4,7 +4,7 @@ export type SeoLanding = {
   metaDescription: string;
   h1: string;
   intro: string;
-  sections: { heading?: string; paragraphs: string[] }[];
+  sections: { heading?: string; paragraphs: string[]; nextStep?: { href: string; label: string } }[];
   serviceHref: string;
   contactService: string;
   oboryHref?: string;
@@ -1918,7 +1918,8 @@ export const seoLandings: SeoLanding[] = [
         heading: "Měření, nebo studie",
         paragraphs: [
           "Měření ověřuje existující zdroj. Pro navrhované zařízení může být vhodnější hluková studie nebo akustický posudek."
-        ]
+        ],
+        nextStep: { href: "/sluzby/hlukove-studie", label: "Nabídka hlukových studií" }
       },
       {
         heading: "Co nám poslat",

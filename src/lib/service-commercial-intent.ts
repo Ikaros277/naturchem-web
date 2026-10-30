@@ -1,13 +1,28 @@
 /** Short visible offers based on existing service scope and owner-confirmed capabilities. */
-export type ServiceCommercialIntent = {
+export type ServiceInquiryIntent = {
+  contactMessage: string;
+  articlePrompt: string;
+  quoteBasis?: string;
+};
+
+export type ServiceCommercialIntent = ServiceInquiryIntent & {
   heading: string;
   features: readonly { title: string; text: string }[];
   quoteBasis: string;
-  contactMessage: string;
-  articlePrompt: string;
 };
 
 export const serviceCommercialIntent: Record<string, ServiceCommercialIntent> = {
+  "mereni-vibraci": {
+    heading: "Měření vibrací při práci",
+    features: [
+      { title: "Vibrace přenášené na ruce", text: "Měříme při práci s ručním nářadím a stroji. Zohledníme pracovní činnosti a dobu jejich trvání." },
+      { title: "Celkové vibrace", text: "Měříme vibrace přenášené na tělo při obsluze vozidel a mobilních strojů, včetně řidičů VZV." },
+      { title: "Protokol pro kategorizaci prací", text: "Předáme výsledky a vyhodnocení vibrací pro pracovní pozice v dohodnutém rozsahu." },
+    ],
+    quoteBasis: "Cenu určíme podle počtu strojů, pracovních činností a měřených pozic. Uveďte také dobu práce se stroji.",
+    contactMessage: "Poptávám měření vibrací. Stroje nebo vozidla, pracovní činnosti a doba práce: ",
+    articlePrompt: "Pro nabídku měření vibrací napište typy strojů nebo vozidel, pracovní činnosti a dobu práce s nimi.",
+  },
   "mereni-osvetleni": {
     heading: "Měření osvětlení a protokol",
     features: [
@@ -89,4 +104,26 @@ export const serviceCommercialIntent: Record<string, ServiceCommercialIntent> = 
 
 export function getServiceCommercialIntent(slug: string): ServiceCommercialIntent | undefined {
   return serviceCommercialIntent[slug.split("/").pop() ?? slug];
+}
+
+/** Inquiry context without adding another offer section to the service page. */
+const serviceInquiryIntent: Record<string, ServiceInquiryIntent> = {
+  "mereni-mikroklimatu": {
+    quoteBasis: "Cenu určíme podle počtu prostorů, pracovních míst a účelu měření. Přiložte požadavek KHS nebo předchozí protokol, pokud je máte.",
+    contactMessage: "Poptávám měření mikroklimatických podmínek. Provoz, pracovní místa a účel měření: ",
+    articlePrompt: "Pro nabídku měření mikroklimatu popište provoz a pracovní místa. Přiložte půdorys nebo požadavek KHS, pokud je máte.",
+  },
+  "provozni-rady": {
+    contactMessage: "Poptávám zpracování nebo aktualizaci provozního řádu zdroje. Zdroj a plánovaná změna: ",
+    articlePrompt: "Potřebujete zpracovat nebo aktualizovat provozní řád? Pošlete popis zdroje, povolení provozu a stávající řád, pokud ho máte.",
+  },
+  "eia-oznameni-zameru": {
+    contactMessage: "Poptávám oznámení záměru EIA. Záměr, lokalita, kapacita a dostupná dokumentace: ",
+    articlePrompt: "Pro nabídku oznámení EIA pošlete popis záměru, lokalitu, kapacitu a dostupnou projektovou dokumentaci.",
+  },
+};
+
+export function getServiceInquiryIntent(slug: string): ServiceInquiryIntent | undefined {
+  const key = slug.split("/").pop() ?? slug;
+  return getServiceCommercialIntent(key) ?? serviceInquiryIntent[key];
 }

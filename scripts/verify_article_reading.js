@@ -21,6 +21,20 @@ for (const file of ['src/components/ArticleMarkdown.tsx','src/components/Article
 }
 const fixture = '# Úvod\n\n## Časté **dotazy** s [odkazem](/sluzby/) a `kódem`\n\nText.\n\n### Podrobnost\n\n## Časté dotazy s odkazem a kódem\n\n```md\n## Toto není kapitola\n```\n\nDalší kapitola\n---\n\n> ## Citace není kapitola obsahu\n\n| Název | Výsledek |\n|---|---|\n| Případ | 1 |\n\n**Podklady** [Pošlete zadání](/kontakt/?service=Emise#poptavkovy-formular)';
 const parsed = renderArticleMarkdown(fixture);
+assert.equal(parsed.hasInquiry, true, 'Recognize an existing inquiry, including a nested bold link');
+for (const body of [
+  '[Pošlete zadání](/kontakt/?service=Mikroklima#poptavkovy-formular)',
+  '**[Pošlete zadání](https://www.naturchem.cz/kontakt/#poptavkovy-formular)**',
+  '[Anfrage](/de/kontakt/#poptavkovy-formular)',
+  '[Dotaz][formular]\n\n[formular]: /kontakt/#poptavkovy-formular',
+]) assert.equal(renderArticleMarkdown(body).hasInquiry, true);
+for (const body of [
+  '`[Ukázka](/kontakt/#poptavkovy-formular)`',
+  '[Cizí formulář](https://example.com/kontakt/#poptavkovy-formular)',
+  '[Zavolejte](/kontakt/)',
+  '[Jiná stránka](/poradna/#poptavkovy-formular)',
+  'Text #poptavkovy-formular bez odkazu.',
+]) assert.equal(renderArticleMarkdown(body).hasInquiry, false);
 assert.deepEqual(parsed.headings.map(h=>h.id),['kapitola-uvod','kapitola-caste-dotazy-s-odkazem-a-kodem','kapitola-caste-dotazy-s-odkazem-a-kodem-2','kapitola-dalsi-kapitola']);
 const rendered = renderToStaticMarkup(parsed.content);
 assert.doesNotMatch(rendered, /<h1\b/);

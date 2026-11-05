@@ -54,6 +54,20 @@ async function main() {
     assert.equal(getPageContentRevision("/mereni-hluku-praha", locale), undefined);
   }
   assert.equal(getPageContentRevision("/mereni-hluku-praha", "cs").toISOString(), "2026-10-29T00:00:00.000Z");
+  const localNoise = getSeoLanding("mereni-hluku-ceske-budejovice");
+  for (const locale of ["cs", "en", "de"]) {
+    const body = renderToStaticMarkup(await DemandLandingLayout({ landing: localNoise, locale, schemas: null, contactHref: contactUrl(localNoise.contactService), faq: localNoise.faq }));
+    const hero = body.slice(0, body.indexOf("</section>"));
+    if (locale === "cs") {
+      assert.match(hero, /href="\/sluzby\/hlukove-studie\/"[^>]*data-regional-study-link/);
+      assert.match(hero, /<span>Poptat měření hluku<small>/);
+      const directInquiry = new URL(hero.match(/href="([^"]*kontakt[^"]*)"/)[1], "https://www.naturchem.cz");
+      assert.equal(directInquiry.hash, "#poptavkovy-formular");
+      assert.deepEqual(readContactUrlPrefill(directInquiry.search).initialServices, ["Měření hluku a akustika"]);
+    } else {
+      assert.ok(!hero.includes("data-regional-study-link"), "Czech regional pilot must not change other locales");
+    }
+  }
   for (const locale of ["cs", "en", "de"]) {
     for (const product of pcfElettronicaProducts) {
       const route = "/prodej/pcf-elettronica/" + product.slug;
@@ -104,6 +118,16 @@ async function main() {
   }
   assert.ok(!fs.readFileSync(path.join(root, "src/lib/page-content-revisions.ts"), "utf8").includes("Date.now"));
   if (process.argv.includes("--rendered")) {
+    for (const locale of ["cs", "en", "de"]) {
+      const home = fs.readFileSync(path.join(root, ".next/server/app", locale + ".html"), "utf8");
+      const localLab = home.match(/<aside\b[^>]*id="laborator-ceske-budejovice"[\s\S]*?<\/aside>/)?.[0];
+      if (locale === "cs") {
+        assert.ok(localLab, "Czech homepage must show the verified regional lab");
+        assert.match(localLab, /href="\/mereni-hluku-ceske-budejovice\/"/);
+      } else {
+        assert.equal(localLab, undefined, "Czech regional pilot must not leak into translations");
+      }
+    }
     for (const locale of ["cs", "en", "de"]) {
       const article = fs.readFileSync(path.join(root, ".next/server/app", locale, "poradna", approvalArticle + ".html"), "utf8");
       const related = article.match(/<section\b[^>]*class="content-block article-related-services"[\s\S]*?<\/section>/)?.[0];

@@ -99,8 +99,15 @@ async function main() {
   const archiveSource = fs.readFileSync(path.join(root, "src/lib/archived-practice.ts"), "utf8");
   assert.ok(!/\b[A-Z]:[/\\]|\b20\d{5}\b|\/ARCHIV\/|\.pdf\b|ISPOP_\d+|@/i.test((supportSource + archiveSource).replaceAll("@/lib/", "")), "No private paths, job IDs, source PDFs, email addresses or system IDs; client attribution needs separate approval");
   const { archivedPractice, practiceNote } = load(path.join(root, "src/lib/archived-practice.ts"));
-  assert.equal(Object.keys(archivedPractice).length, 11);
+  assert.equal(Object.keys(archivedPractice).length, 12);
   assert.equal(Object.values(czechServiceSearchSupport).filter(item => item.evidence).length, 19);
+  const recycling = archivedPractice.recyclingDispersion;
+  assert.equal(recycling.title, "Recyklační středisko — Jihočeský kraj, 2025");
+  assert.equal(recycling.summary, "Pro plánované recyklační středisko v areálu lomu jsme zpracovali rozptylovou studii a odborný posudek. Ve výpočtu jsme zahrnuli drcení a třídění materiálu, manipulaci a související dopravu.");
+  assert.deepEqual(czechServiceSearchSupport["rozptylove-studie"].evidence, practiceNote("recyclingDispersion"), "The service and reference share the expert-confirmed scope, not a second copy");
+  assert.equal(practiceNote("recyclingDispersion").referenceHref, "/reference#studie-posudky");
+  assert.equal(practiceNote("recyclingDispersion").photographId, undefined, "No unrelated image as proof of this study");
+  assert.match(czechServiceSearchSupport["hlukove-studie"].evidence.title, /terénních úprav/, "Do not replace or misattribute the separate noise-study case");
   for (const key of Object.keys(archivedPractice)) {
     const note = practiceNote(key);
     assert.ok(note.summary.length < 260, "Keep practice notes compact");
@@ -112,7 +119,7 @@ async function main() {
     const groupModule = load(path.join(root, "src/lib/reference-example-groups" + (locale === "cs" ? "" : "-" + locale) + ".ts"));
     const groups = locale === "cs" ? groupModule.referenceExampleGroups : groupModule.referenceExampleGroupsEn;
     const examples = reference.referenceExamples;
-    assert.equal(examples.length, locale === "cs" ? 25 : 16, "CS adds one separately documented hand-tool vibration case; translated case counts stay unchanged");
+    assert.equal(examples.length, locale === "cs" ? 26 : 16, "The new approved Czech recycling case is one project; translated case counts stay unchanged");
     const ids = groups.flatMap(group => group.exampleIds);
     assert.equal(new Set(ids).size, ids.length, "Each case belongs to one reference group, not several projects");
     assert.deepEqual([...ids].sort(), examples.map(item => item.id).sort(), "Every reference is reachable");
@@ -131,6 +138,6 @@ async function main() {
       }
     }
   }
-  console.log("PASS service support: 22 pages, 19 compact evidence notes, 11 additional documented cases, consistent references, truthful scope and preserved inquiry/SEO context");
+  console.log("PASS service support: 22 pages, 19 compact evidence notes, 12 additional documented cases, consistent references, truthful scope and preserved inquiry/SEO context");
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

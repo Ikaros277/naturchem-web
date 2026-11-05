@@ -110,6 +110,17 @@ export default async function Home({ params }: Props) {
             </a>
           </header>
           <HomeServiceIndex locale={locale} />
+          {locale === "cs" ? (
+            <aside id="laborator-ceske-budejovice" className={styles.regionalLab} aria-labelledby="home-regional-lab-heading">
+              <div>
+                <h3 id="home-regional-lab-heading">Laboratoř v Českých Budějovicích</h3>
+                <p>Měření a studie pro podniky a stavby v jižních Čechách.</p>
+              </div>
+              <a href={link("/mereni-hluku-ceske-budejovice")} className={styles.textLink}>
+                Měření hluku v Českých Budějovicích <span aria-hidden="true">↗</span>
+              </a>
+            </aside>
+          ) : null}
         </div>
       </section>
 

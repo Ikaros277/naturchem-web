@@ -16,6 +16,13 @@ type ArchivedPractice = ServiceEvidence & {
  * A prepared application is not an authority's approval; historic documents are not current guidance.
  */
 export const archivedPractice = {
+  recyclingDispersion: {
+    id: "rozptyl-recyklace", slug: "rozptylove-studie",
+    title: "Recyklační středisko — Jihočeský kraj, 2025",
+    summary: "Pro plánované recyklační středisko v areálu lomu jsme zpracovali rozptylovou studii a odborný posudek. Ve výpočtu jsme zahrnuli drcení a třídění materiálu, manipulaci a související dopravu.",
+    output: "Rozptylová studie a odborný posudek pro povolovací dokumentaci.",
+    operationType: "recyklační středisko v areálu lomu", tags: ["Rozptylové studie", "Odborné posudky", "Recyklace"], contactService: "Rozptylové studie"
+  },
   ippcBio: {
     id: "ippc-bioodpad", slug: "ippc-integrovana-povoleni",
     title: "Integrované povolení pro zpracování biologických odpadů",

@@ -31,7 +31,7 @@ export const referenceExampleGroups: ReferenceExampleGroup[] = [
     id: "studie-posudky",
     title: "Studie a odborné posudky",
     intro: "Rozptyl, hluk a kombinované posouzení záměrů před povolovacím řízením.",
-    exampleIds: ["rozptyl-kotelna", "kompost-studie"]
+    exampleIds: ["rozptyl-recyklace", "rozptyl-kotelna", "kompost-studie"]
   },
   {
     id: "eia-povolovani",

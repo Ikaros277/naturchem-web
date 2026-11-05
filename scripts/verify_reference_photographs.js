@@ -29,7 +29,7 @@ async function main() {
   assert.deepEqual(referencePhotographs.map(photo => photo.exampleId), expectedCases, "Only individually reviewed photo/case pairs, not thematic substitutions");
   assert.equal(new Set(referencePhotographs.map(photo => photo.exampleId)).size, count);
   assert.equal(new Set(referencePhotographs.map(photo => getReferencePhotographSources(photo).src)).size, count, "Different photographs of the described cases");
-  assert.equal(referenceExamples.length, 25, "One additional protocol-backed vibration case; do not count three protocols of the same plant as three clients");
+  assert.equal(referenceExamples.length, 26, "The approved recycling project adds one case with two outputs, not two customers");
   const ids = referencePhotographs.map(photo => photo.exampleId);
   const examplesById = getReferenceExamplesById();
   assert.equal(examplesById.get("vzt-hluk-studie").contactService, "Hlukové studie", "A study inquiry must not preselect noise measurement");
@@ -84,6 +84,10 @@ async function main() {
     assert.ok(overview.includes(examplesById.get(id).title), "Removing a mismatched photo must not remove the reference");
     assert.ok(!html.includes('id="reference-' + id + '"'));
   }
+  const recycling = examplesById.get("rozptyl-recyklace");
+  assert.ok(recycling.documented && overview.includes(recycling.title) && overview.includes(recycling.output));
+  assert.ok(!ids.includes(recycling.id), "Do not attach an unrelated photograph to the approved text-only study case");
+  assert.ok(overview.indexOf(recycling.title) < overview.indexOf(examplesById.get("rozptyl-kotelna").title), "The service-to-group link reveals the new matching case first");
   const measuringSlugs = ["/sluzby/mereni-emisi", "/sluzby/pracovni-prostredi", "/sluzby/mereni-hluku", "/sluzby/mereni-vibraci", "/sluzby/mereni-diisokyanatu"];
   const measuringCases = referenceExamples.filter(example => measuringSlugs.includes(example.href));
   assert.equal(measuringCases.length, count);
@@ -118,6 +122,6 @@ async function main() {
   assert.ok(!source.includes("page-below-fold"), "Native deep links need stable layout, not one estimated-height giant gallery");
   const globalStyles = fs.readFileSync(path.join(root, "src/app/globals.css"), "utf8");
   assert.ok(globalStyles.includes(".reference-example-group .service-group-summary-title-row { padding-inline-end: 52px; }"), "Narrow mobile category titles reserve space for the disclosure toggle");
-  console.log("PASS photographic references: all 9 listed measuring cases have unique reviewed photographs, 16 compact study/document cases, no illustrative substitutions or unused exports; metadata-free responsive assets and contextual inquiries; " + bytes + " B storage");
+  console.log("PASS photographic references: all 9 listed measuring cases have unique reviewed photographs, 17 compact study/document cases, no illustrative substitutions or unused exports; metadata-free responsive assets and contextual inquiries; " + bytes + " B storage");
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

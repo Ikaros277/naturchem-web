@@ -36,12 +36,14 @@ export async function DemandLandingLayout({ landing, locale, schemas, contactHre
   const photo = getAuthenticPhoto(theme);
   const docsSection = landing.sections.find(section => /poslat|podklady|send|documents|unterlagen/i.test(section.heading ?? ""));
   const overview = landing.sections.filter(section => section !== docsSection).slice(0, 2);
+  const localNoise = locale === "cs" && landing.slug === "mereni-hluku-ceske-budejovice";
   const title = locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Měření pro kolaudaci"
     : locale === "cs" && landing.slug === "mereni-nove-haly" ? "Měření nové výrobní haly" : landing.h1;
   const intro = locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Hluk, osvětlení a pracovní prostředí podle požadavků Vašeho projektu a úřadu."
     : locale === "cs" && landing.slug === "mereni-nove-haly" ? "Rozsah měření navrhneme podle technologie, pracovišť a požadavku KHS."
     : splitLeadSentence(landing.intro)?.lead ?? stripRichText(landing.intro);
-  const contactLabel = locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Poptat měření pro kolaudaci"
+  const contactLabel = localNoise ? "Poptat měření hluku"
+    : locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Poptat měření pro kolaudaci"
     : locale === "cs" && landing.slug === "mereni-nove-haly" ? "Poptat měření nové haly"
     : service?.contactCta ?? ui.inquiry;
   const categoryLabel = category === "measurement" ? ui.measurement : category === "studies" ? ui.studies : ui.docsCategory;
@@ -59,6 +61,7 @@ export async function DemandLandingLayout({ landing, locale, schemas, contactHre
             <a href={contactHref} className={`button ${styles.inquiry}`}><span>{contactLabel}<small>{ui.response}</small></span><span aria-hidden="true">↗</span></a>
             <a href="#podklady" className={styles.textLink}>{ui.docs} <span aria-hidden="true">↓</span></a>
           </div>
+          {localNoise ? <a href={href("/sluzby/hlukove-studie")} className={styles.textLink} data-regional-study-link>Potřebujete hlukovou studii? <span aria-hidden="true">↗</span></a> : null}
           {landing.highlights?.length ? <ul className={styles.highlights}>{landing.highlights.map(item => <li key={item}>{item}</li>)}</ul> : null}
         </div>
         <div className={styles.photo}><HeroPhoto theme={theme} priority /><span className={styles.photoCaption}>{photo?.caption[locale] ?? title}</span></div>

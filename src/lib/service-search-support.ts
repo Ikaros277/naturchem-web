@@ -190,7 +190,7 @@ export const czechServiceSearchSupport: Record<string, ServiceSearchSupport> = {
     ]
   },
   "rozptylove-studie": {
-    evidence: studyEvidence,
+    evidence: practiceNote("recyclingDispersion"),
     faqItems: [
       {
         q: "Jaké podklady potřebujete pro rozptylovou studii?",

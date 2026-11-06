@@ -54,6 +54,29 @@ async function main() {
     assert.equal(getPageContentRevision("/mereni-hluku-praha", locale), undefined);
   }
   assert.equal(getPageContentRevision("/mereni-hluku-praha", "cs").toISOString(), "2026-10-29T00:00:00.000Z");
+  assert.deepEqual(seoLandings.filter(landing => landing.sections.some(section => section.checklist)).map(landing => landing.slug), [
+    "mereni-pro-kolaudaci", "mereni-nove-haly"
+  ], "Only the two Czech building/production scenarios get a checklist");
+  for (const slug of ["mereni-pro-kolaudaci", "mereni-nove-haly"]) {
+    const landing = getSeoLanding(slug);
+    for (const locale of ["cs", "en", "de"]) {
+      const body = renderToStaticMarkup(await DemandLandingLayout({ landing, locale, schemas: null, contactHref: contactUrl(landing.contactService), faq: landing.faq }));
+      const panel = body.match(/<aside[^>]*id="podklady"[^>]*>([\s\S]*?)<\/aside>/)?.[1];
+      assert.ok(panel, slug + " inquiry panel");
+      if (locale === "cs") {
+        const checklist = panel.match(/<ul[^>]*data-landing-docs-checklist[^>]*>([\s\S]*?)<\/ul>/)?.[1];
+        assert.ok(checklist, slug + " scannable checklist");
+        assert.equal((checklist.match(/<li>/g) || []).length, 3);
+        assert.match(panel, /Chybějící podklady s Vámi upřesníme/);
+        assert.ok(panel.includes('href="' + escape(contactUrl(landing.contactService)) + '"'), "Same inquiry URL and selected service");
+        assert.equal(body.includes('href="/reference/#reference-hala-pp"'), slug === "mereni-nove-haly");
+      } else {
+        assert.ok(!body.includes("data-landing-docs-checklist") && !body.includes("data-landing-case-link"), "Keep EN/DE unchanged");
+      }
+    }
+  }
+  assert.ok(referenceExamples.some(example => example.id === "hala-pp" && example.documented));
+  assert.ok(referencePhotographs.some(photo => photo.exampleId === "hala-pp" && photo.relationship === "case"));
   const localNoise = getSeoLanding("mereni-hluku-ceske-budejovice");
   for (const locale of ["cs", "en", "de"]) {
     const body = renderToStaticMarkup(await DemandLandingLayout({ landing: localNoise, locale, schemas: null, contactHref: contactUrl(localNoise.contactService), faq: localNoise.faq }));

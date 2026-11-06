@@ -4,7 +4,7 @@ export type SeoLanding = {
   metaDescription: string;
   h1: string;
   intro: string;
-  sections: { heading?: string; paragraphs: string[]; nextStep?: { href: string; label: string } }[];
+  sections: { heading?: string; paragraphs: string[]; checklist?: { note: string }; nextStep?: { href: string; label: string } }[];
   serviceHref: string;
   contactService: string;
   oboryHref?: string;
@@ -1546,8 +1546,11 @@ export const seoLandings: SeoLanding[] = [
       {
         heading: "Co nám poslat",
         paragraphs: [
-          "Stačí požadavek úřadu, relevantní část projektu, popis technologie, lokalita a termín. Chybějící podklady s Vámi upřesníme."
-        ]
+          "Požadavek KHS nebo stavebního úřadu, pokud ho máte",
+          "Relevantní část projektu a popis technologie",
+          "Místo stavby a požadovaný termín"
+        ],
+        checklist: { note: "Chybějící podklady s Vámi upřesníme." }
       }
     ],
     serviceHref: "/sluzby/pracovni-prostredi",
@@ -1709,8 +1712,11 @@ export const seoLandings: SeoLanding[] = [
       {
         heading: "Co nám poslat",
         paragraphs: [
-          "Pomůže půdorys, popis pracovišť a směn, seznam technologií, bezpečnostní listy a požadavek KHS nebo stavebního úřadu."
-        ]
+          "Půdorys, popis pracovišť a směn",
+          "Seznam technologií a dostupné bezpečnostní listy",
+          "Požadavek KHS nebo stavebního úřadu, pokud ho máte"
+        ],
+        checklist: { note: "Chybějící podklady s Vámi upřesníme." }
       }
     ],
     serviceHref: "/sluzby/pracovni-prostredi",

@@ -35,8 +35,10 @@ export async function DemandLandingLayout({ landing, locale, schemas, contactHre
   const theme = landing.heroTheme ?? getServiceHeroTheme(landing.slug);
   const photo = getAuthenticPhoto(theme);
   const docsSection = landing.sections.find(section => /poslat|podklady|send|documents|unterlagen/i.test(section.heading ?? ""));
+  const docsChecklist = locale === "cs" ? docsSection?.checklist : undefined;
   const overview = landing.sections.filter(section => section !== docsSection).slice(0, 2);
   const localNoise = locale === "cs" && landing.slug === "mereni-hluku-ceske-budejovice";
+  const hall = locale === "cs" && landing.slug === "mereni-nove-haly";
   const title = locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Měření pro kolaudaci"
     : locale === "cs" && landing.slug === "mereni-nove-haly" ? "Měření nové výrobní haly" : landing.h1;
   const intro = locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Hluk, osvětlení a pracovní prostředí podle požadavků Vašeho projektu a úřadu."
@@ -81,11 +83,19 @@ export async function DemandLandingLayout({ landing, locale, schemas, contactHre
               {locale === "cs" && section.nextStep ? <a href={href(section.nextStep.href)} className={styles.textLink} data-landing-next-step={section.nextStep.href}>{section.nextStep.label} <span aria-hidden="true">↗</span></a> : null}
             </div>
           </div>)}</div>
-          <a href={href(landing.serviceHref)} className={styles.textLink}>{copy.generalServicePage} <span aria-hidden="true">↗</span></a>
+          <a href={href(landing.serviceHref)} className={styles.textLink}>{docsChecklist && landing.serviceHref === "/sluzby/pracovni-prostredi" ? "Měření pracovního prostředí" : copy.generalServicePage} <span aria-hidden="true">↗</span></a>
+          {hall ? <p className={styles.situations}>
+            <a className={styles.textLink} href={href("/reference#reference-hala-pp")} data-landing-case-link="hala-pp">
+              Ukázka měření ve výrobním provozu <span aria-hidden="true">↗</span>
+            </a>
+          </p> : null}
         </div>
         <aside className={styles.inquiryPanel} id="podklady" aria-labelledby="service-docs-heading">
           <ServiceIcon icon="process-vystup" variant="plain" size={30} /><h2 id="service-docs-heading">{ui.docs}</h2>
-          {docsSection ? docsSection.paragraphs.map(text => <p className={styles.docsParagraph} key={text}>{renderRichText(text)}</p>) : topic ? <p>{blocks.send[topic]}</p> : <p>{landing.intro}</p>}
+          {docsSection && docsChecklist ? <>
+            <ul data-landing-docs-checklist>{docsSection.paragraphs.map(text => <li key={text}>{renderRichText(text)}</li>)}</ul>
+            <p>{docsChecklist.note}</p>
+          </> : docsSection ? docsSection.paragraphs.map(text => <p className={styles.docsParagraph} key={text}>{renderRichText(text)}</p>) : topic ? <p>{blocks.send[topic]}</p> : <p>{landing.intro}</p>}
           <a href={contactHref} className={styles.panelCta}>{ui.inquiry}<span aria-hidden="true">↗</span></a><p className={styles.response}>{ui.responseFull}</p>
         </aside>
       </section>

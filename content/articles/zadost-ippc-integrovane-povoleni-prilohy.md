@@ -1,7 +1,7 @@
 ---
 title: "Žádost IPPC: příprava podkladů a příloh"
 slug: zadost-ippc-integrovane-povoleni-prilohy
-excerpt: "Potřebujete zpracovat žádost IPPC? Připravte jednotný popis zařízení, kapacity, provozní toky a související dokumenty. Co dodat zpracovateli před podáním."
+excerpt: "Co připravit k žádosti o integrované povolení: vymezení zařízení, kapacity, provozní podklady, odborné přílohy a návrh podmínek."
 author: NATURCHEM
 status: published
 publishedAt: "2026-11-30"
@@ -9,59 +9,48 @@ topic: EIA a povolování
 heroImage: /uploads/poradna-2026/zadost-ippc.webp
 ---
 
-Potřebujete zpracovat žádost o integrované povolení a chcete předejít opakovanému doplňování podkladů? Sjednoťte nejprve technický popis zařízení a aktuální stav dokumentace. Projekt, provozní data a odborné přílohy musí popisovat stejný záměr. Nestačí sestavit složku starších dokumentů bez kontroly jejich návaznosti.
-
-**Zpracovateli pošlete přehled zařízení, kapacit, změn a dostupných povolení.** Doplňte účel žádosti a fázi projektu. Konkrétní obsah příloh se určí podle zařízení a požadavků řízení.
+Při přípravě žádosti o integrované povolení si nejprve vymezte zařízení: které činnosti se v něm provádějí, jaké mají kapacity a které pomocné provozy s nimi souvisejí. Pro první posouzení obvykle pomůže situace areálu, technický popis a u stávajícího provozu platné povolení včetně změn.
 
 ## Nové zařízení nebo změna provozu
 
-Rozlišujte nové zařízení a změnu již povoleného provozu. U stávajícího zařízení připravte platné integrované povolení včetně změn. Označte, které části technologie se mění a které zůstávají. Pokud už máte vyjádření příslušného úřadu, přiložte celé znění.
+U nového zařízení se při posouzení povinnosti vychází z činností a kapacit podle [přílohy č. 1 zákona č. 76/2002 Sb.](https://e-sbirka.gov.cz/sb/2002/76?odkazId=40252151). Před podáním lze požádat krajský úřad o [předběžnou informaci](https://portal.gov.cz/sluzby-vs/S7445) k vymezení zařízení a náležitostem žádosti.
 
-Před přípravou žádosti ověřte, zda zařízení podléhá IPPC. Podrobnosti najdete na stránce [integrovaných povolení](/sluzby/ippc-integrovana-povoleni/). Právní rámec upravuje [zákon č. 76/2002 Sb.](https://www.e-sbirka.cz/sb/2002/76).
+U povoleného zařízení připravte popis plánované změny a jejího dopadu na platné podmínky. Postup pro ohlášení změny a případnou změnu povolení řeší § 16 a 19a téhož zákona. K porovnání pomůže přehled „stávající stav / navrhovaný stav“.
 
 ## Technické zadání
 
-Určete, který výkres a popis jsou aktuální. Uveďte zpracovatele, datum a verzi. Rozlišujte projektované kapacity od skutečných dosavadních výkonů. Pokud je údaj ještě předběžný, označte jej jako otevřenou položku.
-
-Technické zadání má popsat zařízení jako celek. Připojte vazby hlavní technologie na pomocné provozy a další relevantní části areálu. Odlišná interní označení sjednoťte pomocí přehledného seznamu. Zpracovatel tak pozná, zda dvě přílohy hovoří o stejném zdroji nebo o různých zařízeních.
+Při přípravě podkladů rozlišujte projektovanou kapacitu, dosavadní výrobu a budoucí provozní režim. V jednom přehledu spojte hlavní technologii s pomocnými provozy, zdroji emisí a místy vypouštění. Jednotné označení zdrojů usnadní práci s měřením, výkresy i návrhem podmínek.
 
 ## Vstupní podklady
 
-Připravte rozcestník dokumentů a seznam toho, co zatím chybí. Každému podkladu přiřaďte odpovědnou osobu. Nevyžadujte bez rozlišení všechny možné studie jen proto, že se objevily v jiné žádosti. Potřebu jednotlivých příloh je nutné vymezit pro Vaše zařízení.
+Náležitosti žádosti určuje § 4 zákona o integrované prevenci. Zahrnují mimo jiné popis zařízení a jeho vlivů, návrh závazných podmínek a stručné netechnické shrnutí. Pro přípravu žádosti si můžete podklady rozdělit takto:
 
-| Skupina | Příklady vstupních informací |
+| Oblast | Co připravit |
 | --- | --- |
-| Identifikace zařízení | Provozovatel, místo, popis a vymezení areálu |
-| Technologie | Procesy, kapacity, režimy a relevantní technické parametry |
-| Materiálové a energetické toky | Suroviny, paliva, energie a jejich vazba na provoz |
-| Vlivy na prostředí | Dostupné údaje o emisích, hluku, vodách a odpadech |
-| Dosavadní dokumentace | Povolení, monitoring, odborné studie a provozní záznamy |
-| Změna záměru | Přehled stávajícího a navrhovaného stavu |
+| Zařízení | Situaci areálu, provozovatele a popis hlavní a souvisejících činností |
+| Technologie | Procesy, projektované kapacity a skutečné provozní režimy |
+| Vstupy a výstupy | Suroviny, paliva, energie, vody, odpady a místa vzniku emisí |
+| Monitoring | Protokoly, dostupnou provozní evidenci a podmínky měření |
+| Povolení a změny | Platná rozhodnutí, návrh změn a případné vyjádření úřadu |
 
-Seznam slouží k přípravě zadání. Není úplným výčtem povinných příloh pro každou žádost IPPC.
+Při návrhu podmínek se posuzují relevantní nejlepší dostupné techniky (BAT). Potřebné odborné přílohy vymezíme podle konkrétního zařízení a předmětu řízení.
 
 ## Návaznost odborných studií
 
-Zkontrolujte kapacity, umístění zdrojů a provozní dobu napříč přílohami. Rozdílný počet směn může změnit předpoklady hlukového nebo emisního posouzení. Totéž platí pro změnu paliva, odsávání nebo dopravní obsluhy. Starší studie proto předávejte s informací, zda jejich zadání stále odpovídá projektu.
-
-U měření a monitoringu zachovejte celé protokoly. Označte období a podmínky, ke kterým se vztahují. Souhrnná tabulka může pomoci s orientací, ale nemá nahradit zdrojové dokumenty. Neověřené údaje ze staré žádosti nepovažujte automaticky za aktuální.
+Sjednoťte kapacity, polohy zdrojů a provozní dobu ve výkresech, žádosti i studiích. Pokud se například přidá noční směna, může se změnit zadání hlukové studie i rozsah monitoringu. U stávajícího měření přiložte celý protokol a uveďte, ke kterému stavu zařízení se vztahuje.
 
 ## Odpovědnosti a podání žádosti
 
-Provozovatel zná skutečné fungování zařízení a poskytuje technické údaje. Zpracovatel podle zadání připravuje žádost a odborné podklady. Projektant dodává aktuální návrh a vysvětluje jeho změny. Předem určete, kdo potvrzuje finální technickou verzi.
-
-U chybějících podkladů určete odpovědnou osobu a termín doplnění. V objednávce rozlišujte zpracování žádosti, její podání a zastupování.
+Provozovatel dodává údaje o skutečném provozu, projektant popisuje navrhovaný stav a zpracovatel připravuje žádost a přílohy. Předem si domluvte, kdo potvrdí finální technické údaje a zda má objednávka zahrnout i podání a zastupování. Oficiální možnosti podání uvádí [Portál veřejné správy](https://portal.gov.cz/sluzby-vs/integrovane-povoleni-S2964).
 
 ## Neveřejné podklady
 
-Technologie může obsahovat obchodní nebo výrobní informace, které nechcete veřejně šířit. Jejich režim projednejte před předáním a v návaznosti na pravidla řízení. Neposílejte celé podnikové databáze, pokud postačí relevantní výběr. Potřebný rozsah a případnou anonymizaci dohodněte se zpracovatelem.
-
-Nabídka vymezuje práci zpracovatele. O povolení zařízení rozhoduje příslušný úřad.
+[§ 8 zákona o integrované prevenci](https://e-sbirka.gov.cz/sb/2002/76?odkazId=210340227) upravuje zveřejnění žádosti a ochranu údajů označených v žádosti, na které se vztahuje zákonná ochrana. Předem s námi projděte podklady, které mohou obsahovat obchodní tajemství nebo osobní údaje. Způsob předání citlivé dokumentace dohodneme samostatně.
 
 ## Co poslat k nabídce IPPC
 
-Uveďte druh zařízení, lokalitu, kapacity a důvod žádosti. Přiložte dostupný technický popis, situaci a platná rozhodnutí. Označte požadovaný termín a známé chybějící podklady. Napište, zda chcete jednotlivou přílohu, nebo žádost včetně podání.
+Uveďte lokalitu, hlavní činnosti, kapacity a účel žádosti. Přiložte dostupnou situaci, technický popis a u stávajícího zařízení platná rozhodnutí. Podle rozsahu můžeme zpracovat [žádost o integrované povolení](/sluzby/ippc-integrovana-povoleni/) nebo jednotlivé odborné přílohy a zajistit dohodnuté zastupování.
 
-NATURCHEM zajišťuje [zpracování žádostí IPPC a související servis](/sluzby/ippc-integrovana-povoleni/). [Pošlete nám přehled zařízení](/kontakt/#poptavkovy-formular); na poptávky reagujeme do 24 hodin. Rozsah příloh a dalšího postupu potvrdíme podle Vašeho zadání.
+[Poslat podklady k integrovanému povolení](/kontakt/?service=IPPC%20a%20integrovan%C3%A1%20povolen%C3%AD#poptavkovy-formular).
 
-*Úvodní fotografie: ilustrační průmyslový areál z vlastní fototéky NATURCHEM. Nejde o tvrzení, že vyobrazené zařízení je konkrétní referencí zpracování IPPC.*
+*Úvodní fotografie: ilustrační snímek průmyslového areálu z fototéky NATURCHEM.*

@@ -17,9 +17,9 @@ import { getClarityPilotId } from "@/lib/clarity-config";
 type PanelMode = "banner" | "settings";
 
 const clarityCopy = {
-  cs: { label: "Analýza používání webu (Microsoft Clarity)", detail: "Vytváří mapy kliknutí a rekonstrukci používání vybraných veřejných stránek. Formuláře nesnímáme. Podrobnosti jsou v zásadách soukromí.", manage: "Microsoft Clarity můžete povolit samostatně v nastavení.", allowOthers: "Povolit statistiku a marketing" },
-  en: { label: "Website interaction analysis (Microsoft Clarity)", detail: "Creates click heatmaps and reconstructs visits to selected public pages. Forms are excluded. See our privacy policy for details.", manage: "You can enable Microsoft Clarity separately in settings.", allowOthers: "Allow statistics and marketing" },
-  de: { label: "Analyse der Websitenutzung (Microsoft Clarity)", detail: "Erstellt Klick-Heatmaps und rekonstruiert Besuche ausgewählter öffentlicher Seiten. Formulare sind ausgeschlossen. Einzelheiten finden Sie in der Datenschutzerklärung.", manage: "Microsoft Clarity können Sie separat in den Einstellungen aktivieren.", allowOthers: "Statistik und Marketing erlauben" }
+  cs: { label: "Analýza používání webu (Microsoft Clarity)", detail: "Vytváří mapy kliknutí a rekonstrukci používání vybraných veřejných stránek. Formuláře nesnímáme. Podrobnosti jsou v zásadách soukromí.", manage: "Volba „Přijmout vše“ povolí také Microsoft Clarity: mapy kliknutí a rekonstrukci návštěvy vybraných veřejných stránek, bez formulářů. Jednotlivé účely můžete zvolit v nastavení." },
+  en: { label: "Website interaction analysis (Microsoft Clarity)", detail: "Creates click heatmaps and reconstructs visits to selected public pages. Forms are excluded. See our privacy policy for details.", manage: "“Accept all” also enables Microsoft Clarity: click heatmaps and visit reconstruction on selected public pages, excluding forms. You can choose individual purposes in settings." },
+  de: { label: "Analyse der Websitenutzung (Microsoft Clarity)", detail: "Erstellt Klick-Heatmaps und rekonstruiert Besuche ausgewählter öffentlicher Seiten. Formulare sind ausgeschlossen. Einzelheiten finden Sie in der Datenschutzerklärung.", manage: "„Alle akzeptieren“ erlaubt auch Microsoft Clarity: Klick-Heatmaps und eine Rekonstruktion des Besuchs ausgewählter öffentlicher Seiten, ohne Formulare. Einzelne Zwecke können Sie in den Einstellungen auswählen." }
 };
 
 function CookieToggle({
@@ -99,7 +99,7 @@ export function CookieConsentBanner() {
   }
 
   function acceptAll() {
-    persist({ statistics: true, marketing: true, ...(showClarity ? { clarity: readCookieConsent()?.clarity === true } : {}) });
+    persist({ statistics: true, marketing: true, ...(showClarity ? { clarity: true } : {}) });
   }
 
   function rejectOptional() {
@@ -127,7 +127,7 @@ export function CookieConsentBanner() {
             </p>
             <div className="cookie-consent-actions">
               <button type="button" className="button cookie-consent-choice" onClick={acceptAll}>
-                {showClarity ? behavior.allowOthers : t.acceptAll}
+                {t.acceptAll}
               </button>
               <button type="button" className="button cookie-consent-choice" onClick={rejectOptional}>
                 {t.rejectOptional}

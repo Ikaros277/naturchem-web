@@ -11,6 +11,7 @@
 .category { margin: 0 0 10px; color: var(--forest-dark); font-size: .8rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .year { margin-left: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0; }
 .body h3 { margin: 0 0 14px; color: var(--navy); font-size: clamp(1.2rem, 1.8vw, 1.45rem); line-height: 1.3; overflow-wrap: anywhere; }
+.context { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 9px; width: fit-content; max-width: 100%; margin: 0 0 16px; padding: 7px 10px; border-left: 3px solid var(--forest); background: var(--forest-tint); color: var(--forest-dark); font-size: .85rem; font-weight: 650; line-height: 1.4; }
 .description { margin: 0 0 16px; color: var(--muted); font-size: 1rem; line-height: 1.55; }
 .shortcuts { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 20px; }
 .shortcuts a { min-height: 44px; display: inline-flex; align-items: center; color: var(--forest-dark); text-decoration: underline; text-underline-offset: 4px; font-size: 15px; }
@@ -30,6 +31,9 @@
 .inquiry { gap: 10px; color: var(--forest-dark); text-decoration: none; }
 .inquiry:hover { text-decoration: underline; }
 .overview:focus-visible, .service:focus-visible, .inquiry:focus-visible { outline: 3px solid var(--forest); outline-offset: 5px; border-radius: 3px; }
+@media (min-width: 768px) {
+  .figure figcaption { min-block-size: calc(3em + 20px); }
+}
 @media (min-width: 1024px) {
   .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
   .body { padding: 22px; }

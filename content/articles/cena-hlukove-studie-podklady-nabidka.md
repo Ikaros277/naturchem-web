@@ -1,65 +1,60 @@
 ---
-title: "Cena hlukové studie: rozsah a podklady"
+title: "Cena hlukové studie: orientační rozpětí"
 slug: cena-hlukove-studie-podklady-nabidka
-excerpt: "Cenu hlukové studie určuje rozsah zdrojů, provozních režimů, variant a potřebných podkladů. Jak připravit zadání a porovnat nabídky pro stejný projekt."
+excerpt: "Orientační ceny hlukových studií bez DPH podle rozsahu, od posouzení jednoho zařízení po výrobní areál. Jaké podklady pomohou ke konkrétní nabídce."
 author: NATURCHEM
 status: published
 publishedAt: "2026-11-02"
+updatedAt: "2026-11-08"
 topic: Hluk
 heroImage: /uploads/poradna-2026/hlukova-studie-cena.webp
 ---
 
-Potřebujete hlukovou studii a chcete předem znát cenu? Pošlete situaci projektu, seznam zdrojů a provozní režimy. Tyto podklady umožní vymezit rozsah nabídky. Cena za posouzení jednoho zařízení a cena za rozšíření výrobního areálu nejsou přímo porovnatelné.
-
-**Porovnávejte nabídky pro stejné zadání.** Zkontrolujte, zda zahrnují stejné zdroje, denní i noční provoz, měření a varianty.
+Cena hlukové studie u nás začíná orientačně na **5 000 Kč bez DPH**. U výrobního areálu s více technologiemi a obslužnou dopravou může dosáhnout vyšších desítek tisíc korun.
 
 ## Co ovlivňuje cenu
 
-Rozhoduje rozsah práce potřebné k posouzení konkrétního záměru. Nejde pouze o počet stránek výsledného dokumentu. Důležitá je dostupnost použitelných vstupních údajů a složitost provozu. Vliv má také počet posuzovaných variant a změn během zpracování.
+| Rozsah studie | Orientační cena bez DPH | Příklad zadání |
+| --- | ---: | --- |
+| Malý | 5 000–15 000 Kč | Jedna venkovní jednotka s určeným umístěním a dostupnými údaji výrobce. |
+| Střední | 15 000–25 000 Kč | Několik zařízení v jednom provozu, například vzduchotechnika a chlazení. |
+| Komplexní | Od 25 000 Kč až po vyšší desítky tisíc Kč | Výrobní areál s více zdroji, obslužnou dopravou a několika variantami provozu. |
 
-U jednoho zařízení mohou stačit přehledné technické údaje a jednoznačné umístění. Areál může zahrnovat VZT, chlazení, výrobní zařízení a obslužnou dopravu. Jednotlivé zdroje mohou běžet v různých časech. Zadání proto musí popsat jejich souběh, nikoli pouze seznam strojů.
-
-| Součást zadání | Vliv na rozsah nabídky |
-| --- | --- |
-| Rozsah areálu a okolí | Určuje území, které je nutné zpracovat |
-| Zdroje hluku | Vymezuje počet a charakter vstupních údajů |
-| Režimy provozu | Rozlišuje den, noc a relevantní souběhy |
-| Varianty projektu | Odděluje základní řešení od dalších výpočtů |
-| Potřebná měření | Mohou doplnit chybějící nebo nevhodné vstupy |
-| Změny zadání | Mohou vyžadovat úpravu modelu a závěrů |
+Při nacenění posuzujeme počet zdrojů hluku, jejich umístění vůči okolní zástavbě a provozní dobu. Výpočet se může rozšířit o noční provoz, souběh zařízení nebo srovnání více umístění. Když potřebujeme doplnit akustické údaje měřením, domluvíme s Vámi i rozsah měření.
 
 ## Akustické údaje zařízení
 
-Pošlete celý akustický podklad, ne jen vybranou hodnotu v e-mailu. U údaje musí být jasná veličina a podmínky, ke kterým se vztahuje. Není možné libovolně zaměnit akustický výkon a tlak v určité vzdálenosti. O použitelnosti údajů rozhoduje zpracovatel podle konkrétního posouzení.
-
-Uveďte umístění zařízení, případné clony a vazbu na stavbu. Doplňte očekávaný provozní režim. U stávajícího zařízení přiložte předchozí protokoly, pokud je máte. Chybějící podklad může vést k návrhu doplňujícího měření, nikoli k automatickému převzetí jiného zařízení.
+U každého zařízení pomůže technický list s označením modelu a údaji o hluku. **Hladina akustického výkonu** popisuje zdroj. **Hladina akustického tlaku** se vztahuje k určitému místu a podmínkám. Z listu zjistíme, který údaj výrobce uvádí a pro jaký provozní režim platí.
 
 ## Studie a měření hluku
 
-Hluková studie modeluje vymezenou situaci a pracuje se vstupními údaji. Měření zachycuje konkrétní podmínky skutečného provozu. Tyto výstupy se mohou doplňovat, ale nejsou totožnou službou. V nabídce proto musí být zřejmé, který z nich objednáváte.
+[Hlukovou studií](/sluzby/hlukove-studie/) předem posoudíme hluk plánované technologie nebo změny provozu. [Měřením hluku](/sluzby/mereni-hluku/) zjistíme hladiny hluku při konkrétním provozu. U rozšíření areálu může měření stávajících zdrojů dodat vstupy pro výpočet budoucího stavu.
 
-Pokud úřad požaduje konkrétní výstup, přiložte celé znění požadavku. Zadání „hluk pro kolaudaci“ může být příliš neurčité. Předejdete tak nabídce dokumentu, který neodpovídá Vašemu účelu. Právní rámec ochrany před hlukem obsahuje [nařízení vlády č. 272/2011 Sb.](https://www.e-sbirka.cz/sb/2011/272).
+Pokud řešíte požadavek úřadu nebo krajské hygienické stanice (KHS), přiložte jeho znění. Podle něj upřesníme, jaký výstup potřebujete.
 
 ## Porovnání rozsahu nabídek
 
-Nejnižší cena nemusí znamenat chybu. Nabídka může jednoduše obsahovat menší rozsah. Zjistěte, zda zahrnuje prohlídku, doplnění podkladů, měření a další varianty. Ověřte také, jak řeší úpravy při změně technologie nebo umístění zařízení.
+Při porovnání nabídek pomůže přehled položek, které jsou v ceně:
 
-Ptejte se na konkrétní předávaný výstup a jeho účel. Oddělte připomínky k původnímu zadání od nového projektového řešení. Výhodné je mít rozsah písemně vymezený. Vyhnete se nejasnostem při dodatečných požadavcích investora nebo projektanta.
+- **Výpočet:** které zdroje, denní a noční režimy a varianty studie zahrnuje.
+- **Práce na místě:** zda cena zahrnuje prohlídku nebo měření a jaký výstup z měření dostanete.
+- **Výstup a termín:** v jaké podobě studii dostanete a kdy, případně jak se nacení přepočet při změně projektu.
 
 ## Podklady pro kalkulaci
 
-Shromážděte jednu aktuální verzi situace. Označte stávající a navrhovaná zařízení odlišně. Připojte přehled provozu během dne a noci. U dopravy uveďte druhy vozidel, četnost a používané trasy v rozsahu, který znáte.
+Pro první kalkulaci nám pomohou tyto podklady:
 
-Pokud porovnáváte více řešení, očíslujte varianty a popište rozdíly. Uveďte požadovaný termín a stav projektové přípravy. Neslibujte neměnné zadání, pokud se technologie teprve vybírá. Nabídku lze vymezit i pro postupné zpracování, musí to však být předem domluveno.
+- **Adresa a situační výkres** s umístěním stávajících a nových zařízení.
+- **Seznam zdrojů** s technickými listy a případnými protokoly z dřívějšího měření.
+- **Provozní režim:** kdy zařízení běží a která pracují současně. U obslužné dopravy pomůže počet jízd a trasa po areálu.
+- **Účel a termín:** k čemu studii potřebujete, do kdy ji chcete a jaké varianty zvažujete.
 
 ## Neúplné podklady
 
-Označte neuzavřené části projektu. Pro úvodní vymezení nabídky může pomoci i předběžná situace. Zpracovatel ale musí vědět, které vstupy se ještě mohou měnit.
+Pro první posouzení pošlete podklady, které už máte. Pokud vybíráte mezi dvěma typy chlazení, pomohou listy obou modelů a předběžné umístění. Domluvíme se, které údaje bude potřeba doplnit pro kalkulaci nebo samotný výpočet.
 
 ## Individuální cenová nabídka
 
-Cenovou nabídku připravíme podle projektu, dostupných podkladů a požadovaného rozsahu studie.
+[Poptat cenu hlukové studie](/kontakt/?service=Hlukov%C3%A9%20studie#poptavkovy-formular). Podle dostupných podkladů s Vámi upřesníme rozsah a připravíme cenovou nabídku.
 
-NATURCHEM zpracovává [hlukové studie](/sluzby/hlukove-studie/) a zajišťuje související [měření hluku](/sluzby/mereni-hluku/). [Pošlete situaci, zdroje a režimy pro nabídku](/kontakt/#poptavkovy-formular). Na poptávky reagujeme do 24 hodin; nejde o příslib hotové studie ani cenové nabídky v této lhůtě.
-
-*Úvodní fotografie: vlastní ilustrační snímek technologie. Cena ani výsledky hlukového posouzení vyobrazeného zařízení nejsou v článku uvedeny.*
+*Úvodní fotografie: vlastní ilustrační snímek technologie.*

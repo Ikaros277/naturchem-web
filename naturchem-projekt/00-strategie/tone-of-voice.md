@@ -111,6 +111,9 @@ Představ si hlas jako:
 **Pravidla pro blog:**
 - Nadpis odpovídá na konkrétní otázku: „Kdy potřebuji EIA posudek?" — ne „EIA poradenství"
 - První věta hovoří o problému čtenáře, ne o nás
+- Pište jako odborník, který pomáhá vybrat další krok. Uveďte, jaké možnosti připadají v úvahu, pro jakou situaci a jaké podklady pomohou rozhodnout.
+- Vynechte šablonové kontrasty („nejde jen o…“, „nestačí jen…“), dramatické titulky a domněnky o chybách čtenáře. Věcné rozlišení popište přímo: co každý postup zjišťuje a kdy se použije.
+- Zákonnou povinnost oddělte od odborného doporučení. U limitu, lhůty či výjimky uvádějte také rozsah platnosti a primární zdroj. Technické normy citujte jen v ověřeném vydání; čísla z placené normy bez kontroly jejího znění nepřebírejte.
 - Každý článek zakončit konkrétní CTA: „Nejste si jisti, jestli váš provoz EIA potřebuje? Napište nám."
 - Délka: 600–1200 slov (úplné téma, ne zkratka, ne výplň)
 

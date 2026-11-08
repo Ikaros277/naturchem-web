@@ -127,6 +127,7 @@ export function ServiceDetailLayout({ content, contactHref, contactLabel, faqIte
                 <figcaption>{evidencePhoto.caption}</figcaption>
               </figure> : null}
               <p className={styles.eyebrow}>Z naší praxe</p>
+              {locale === "cs" && evidencePhoto?.region ? <p className={styles.evidenceContext} data-reference-context={evidencePhoto.exampleId}><span>{evidencePhoto.region}</span><span aria-hidden="true">·</span><span>{evidencePhoto.year}</span></p> : null}
               <h3>{evidence.title}</h3>
               <p>{evidence.summary}</p>
               <p className={styles.evidenceOutput}><strong>Výstup:</strong> {evidence.output}</p>

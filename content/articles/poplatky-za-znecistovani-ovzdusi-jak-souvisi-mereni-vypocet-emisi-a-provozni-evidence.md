@@ -1,126 +1,107 @@
 ---
 title: "Poplatky za ovzduší: měření a evidence"
 slug: poplatky-za-znecistovani-ovzdusi-jak-souvisi-mereni-vypocet-emisi-a-provozni-evidence
-excerpt: Poplatkové přiznání v oblasti ovzduší nevzniká samo od sebe. Vychází z
-  provozní evidence, měření emisí, výpočtů emisí, spotřeb paliv a surovin,
-  provozních hodin a údajů uvedených v povolení provozu. Pokud tyto podklady
-  nejsou vzájemně sladěné, může provozovatel udělat chybu v emisní bilanci,
-  souhrnné provozní evidenci i samotném poplatkovém přiznání.
+excerpt: "Jak připravit emisní bilanci pro poplatkové přiznání. Rozlišení období 2025 a 2026, návaznost na SPE a podklady pro výpočet poplatku."
 author: Ing. František Hezina
 publishedAt: "2026-06-15"
+updatedAt: "2026-11-07"
 topic: Legislativa
 heroImage: /uploads/chatgpt-image-15.-6.-2026-11_57_05.webp
+headingIds:
+  "Za které období poplatek počítáte": kapitola-proc-poplatky-resit-spolecne-s-evidenci-a-merenim
+  "Kontrola emisních údajů": kapitola-nejcastejsi-chyby-v-poplatkovem-priznani
+  "Co uchovat k přiznání": kapitola-shrnuti
+  "Právní předpisy": kapitola-vecna-opora-clanku
 ---
-## Proč poplatky řešit společně s evidencí a měřením
+## Za které období poplatek počítáte
 
-Poplatky za znečišťování ovzduší se týkají provozovatelů vybraných stacionárních zdrojů uvedených v příloze č. 2 zákona o ochraně ovzduší. Nejde jen o účetní nebo administrativní úkon. Výše poplatku vychází z množství emisí, které musí být technicky zdůvodněné a doložitelné.
+Při přípravě poplatkového přiznání vycházejte z ročních emisí konkrétní provozovny. Určete nejprve poplatkové období, tedy kalendářní rok, za který se poplatek počítá. Od něj se odvíjí právní úprava i použité sazby.
 
-V praxi se poplatkové přiznání často připravuje až na konci ohlašovacího období. To je rizikové, protože údaje pro poplatky vznikají průběžně celý rok. Vycházejí z provozních hodin, spotřeby paliv, spotřeby surovin, spotřeby organických rozpouštědel, výsledků měření emisí, výpočtů a provozní evidence.
+Přechod mezi roky 2025 a 2026 vysvětluje [stanovisko MŽP aktualizované k 1. lednu 2026](https://mzp.gov.cz/system/files/2026-02/OOO-Poplatky_stanovisko_aktualizace_2026-20260213.pdf):
 
-Pokud se tyto údaje neshodují, může vzniknout problém nejen v poplatkovém přiznání, ale také v souhrnné provozní evidenci, při kontrole ČIŽP nebo při změně povolení provozu.
+| Poplatkové období | Kdy se podává řádné přiznání | Sazby |
+|---|---|---|
+| Rok 2025 | Do 31. března 2026 | Předchozí sazby podle znění zákona účinného do 28. února 2025 |
+| Rok 2026 | Do 31. března 2027 | Zvýšené sazby zavedené novelou č. 42/2025 Sb. |
 
-> Poplatkové přiznání je až výsledkem. Základem je správně vedená provozní evidence a odborně obhajitelný výpočet ročních emisí.
+Zvýšení podle inflační doložky se může podle stanoviska MŽP uplatnit nejdříve pro poplatkové období 2027, při splnění zákonných podmínek. Při přípravě přiznání proto vždy pracujte se sazbou pro vykazovaný rok.
 
 ## Koho se poplatková povinnost týká
 
-Poplatníkem je podle zákona provozovatel stacionárního zdroje uvedeného v příloze č. 2 zákona o ochraně ovzduší. Předmětem poplatku jsou znečišťující látky vypouštěné zdrojem nebo zdroji, pro které má provozovatel povinnost zjišťovat úroveň znečišťování.
+Poplatníkem je provozovatel stacionárního zdroje uvedeného v příloze č. 2 zákona o ochraně ovzduší. Pro výpočet se posuzují zpoplatněné látky a povinnost zjišťovat jejich emise. Základem poplatku je množství emisí v tunách.
 
-V praxi se poplatky mohou týkat zejména větších provozů, energetických zdrojů, kotelen, lakoven, technologických linek, provozů se spalováním paliv, provozů s VOC, zařízení s tuhými znečišťujícími látkami nebo provozů, kde se emise stanovují na základě měření nebo výpočtu.
+**U hranice 50 000 Kč rozlišujte osvobození a povinnost podat přiznání.** Podle § 15 odst. 8 se řádné přiznání nepodává, pokud je poplatek za provozovnu pod touto hranicí již před uplatněním snižujících koeficientů a postupu podle odstavce 6. Při poklesu pod hranici teprve díky těmto úlevám se přiznání podává.
 
-Základem poplatku je množství emisí v tunách za poplatkové období. Poplatek se následně stanovuje podle zákonného postupu, který pracuje se základem poplatku, sazbou a případně koeficientem úrovně emisí. Důležité je také osvobození u provozoven, kde celková výše poplatků za poplatkové období činí méně než zákonem stanovený limit.
+Opravné nebo dodatečné podání se posuzuje samostatně. MŽP uvádí jeho podání prostřednictvím ISPOP také při částce pod 50 000 Kč. U opravy dřívějšího období ověřte právní úpravu platnou pro dané období.
 
 ## Jak spolu souvisejí jednotlivé podklady
 
-Poplatkové přiznání by mělo být v souladu s tím, co provozovatel uvádí v souhrnné provozní evidenci a co lze doložit z provozních a technických podkladů. Pokud se v jednom dokumentu pracuje s jinými emisemi než v druhém, je nutné vědět proč.
+Provozní evidence slouží k sestavení roční emisní bilance. Z té vycházejí údaje souhrnné provozní evidence (SPE) a odpovídající údaje poplatkového přiznání.
 
-| Podklad | Jak souvisí s poplatky |
+| Podklad | Co z něj potřebujete |
 |---|---|
-| Povolení provozu | určuje zdroje, výduchy, emisní limity, měřené látky a závazné podmínky provozu |
-| Provozní evidence | dokládá provozní hodiny, spotřeby, provozní režimy a další vstupy pro výpočet emisí |
-| Měření emisí | poskytuje údaje o skutečných emisích nebo podklad pro výpočet ročních emisí |
-| Výpočet emisí | převádí spotřeby, provozní údaje nebo výsledky měření na roční emise |
-| Souhrnná provozní evidence | ročně ohlašuje údaje o provozu zdroje a emisích |
-| Poplatkové přiznání | navazuje na stanovené množství emisí a zákonné sazby poplatků |
-
-Tato vazba je pro podnikového ekologa zásadní. Poplatkové přiznání by nemělo být samostatně vytvořenou tabulkou bez návaznosti na zbytek dokumentace. Údaje v něm musí být zpětně dohledatelné.
+| Povolení provozu a jeho změny | Identifikaci zdrojů, podmínky a způsob zjišťování emisí |
+| Průběžná provozní evidence | Skutečný provoz, spotřeby a změny během roku |
+| Protokoly z měření | Výsledky a provozní podmínky příslušného zdroje a výduchu |
+| Výpočet ročních emisí | Vstupy, jednotky, použitý postup a výsledek pro každou látku |
+| SPE a minulé přiznání | Návaznost údajů a vysvětlení meziročních změn |
 
 ## Měření emisí jako vstup do poplatků
 
-Autorizované měření emisí může být důležitým vstupem pro stanovení ročních emisí. Samotný protokol ale většinou neříká všechno, co je pro poplatky potřeba. Je nutné vědět, ke kterému zdroji a výduchu se měření vztahuje, za jakého provozního režimu proběhlo a jak se výsledek použije pro roční bilanci.
+U protokolu z [autorizovaného měření emisí](/sluzby/mereni-emisi/) zkontrolujte zdroj, výduch, látku a provozní režim. Pro roční bilanci potřebujete propojit naměřené údaje s provozem ve vykazovaném roce.
 
-U některých zdrojů se z výsledků měření odvozuje hmotnostní tok nebo měrná výrobní emise. Ta se následně vztáhne k provozní době, množství paliva, výrobě nebo jiné veličině za celé poplatkové období. Pokud nejsou provozní hodiny nebo množství výroby správně doložené, může být i výpočet založený na měření chybný.
+**Koncentrace, hmotnostní tok a roční množství emisí jsou různé veličiny.** Pro přepočet potřebujete příslušné provozní údaje a reprezentativní postup. Po změně paliva, technologie nebo filtrace může být vhodné rozdělit roční bilanci do odpovídajících částí.
 
-Problém vzniká také tehdy, když se měřilo na jiném provozním režimu, než který je typický pro zbytek roku, nebo když během roku došlo ke změně technologie, filtrace, paliva nebo výduchu. V takovém případě je potřeba posoudit, zda lze výsledky měření použít pro celé období, nebo zda je nutné emise rozdělit podle jednotlivých provozních stavů.
+Koeficient pro snížení poplatku podle § 15 odst. 5 vychází z kontinuálního měření za celé období. Pro tuto úlevu se jednorázové měření nepoužije. U nepředepsání poplatku podle odstavce 6 se podmínky liší podle uplatněného důvodu; každý nárok potřebuje vlastní podklady.
 
 ## Výpočet emisí a emisní bilance
 
-Výpočet emisí je pro poplatky často nezbytný. Může vycházet z emisních faktorů, hmotnostní bilance, spotřeby paliv, spotřeby surovin, spotřeby organických rozpouštědel, provozních hodin nebo výsledků měření emisí.
+Postup zvolte podle zdroje, platných předpisů a povolení. § 12 vyhlášky č. 415/2012 Sb. rozlišuje například hmotnostní bilanci, emisní faktor, měrnou výrobní emisi a použití hmotnostního toku s provozní dobou za stanovených podmínek.
 
-U spalovacích zdrojů bývá základním vstupem množství paliva a jeho parametry. U lakoven a dalších VOC provozů je klíčová evidence nátěrových hmot, ředidel, čistidel, obsah organických rozpouštědel, odpady a případné zachycení nebo likvidace emisí. U technologií s tuhými znečišťujícími látkami může být důležitá výrobní kapacita, množství zpracovaného materiálu a účinnost filtrace.
+U spalovacího zdroje si připravte spotřebu a parametry paliva. U lakovny oddělte nátěrové hmoty, ředidla a čistidla a doložte obsah rozpouštědel. Pro bilanci využijte skutečnou spotřebu v daném roce včetně pohybu zásob a příslušných výstupů.
 
-Výpočet musí být obhajitelný. Nestačí pouze výsledné číslo. Provozovatel by měl umět doložit, jaké vstupy použil, odkud pocházejí, jaký emisní faktor nebo postup výpočtu zvolil a jak výsledek navazuje na provozní evidenci.
+V protokolech a výpočtech rozlišujte VOC a TOC. MŽP upozorňuje na časovou použitelnost nové úpravy jejich přepočtu pro poplatkové období 2026. Postup použitý pro rok 2025 proto ověřujte odděleně.
 
-## Nejčastější chyby v poplatkovém přiznání
+## Kontrola emisních údajů
 
-U poplatků se často opakují stejné typy chyb. Některé vznikají přímo při vyplňování formuláře, jiné už během roku v provozní evidenci.
+Před vyplněním formuláře projděte čtyři vazby:
 
-Nejčastější problém je nesoulad mezi spotřebami, měřením, výpočtem emisí a souhrnnou provozní evidencí. Typicky jde o situaci, kdy se do poplatků použije jiná hodnota emisí než do SPE, není doložený výpočet, nejsou správně zohledněny provozní hodiny, použije se nevhodný emisní faktor nebo se nezohlední změna technologie během roku.
+- **Období:** všechny roční spotřeby a provozní hodiny se vztahují ke stejnému roku.
+- **Identifikace:** zdroje a výduchy lze přiřadit k povolení, protokolu a bilanci.
+- **Jednotky:** podklady rozlišují spotřebu směsi, obsah rozpouštědel, hmotnostní tok a tuny emisí.
+- **Rozdělení emisí:** společný výduch nebo více výduchů má popsané přiřazení k jednotlivým zdrojům.
 
-Chyby vznikají také u VOC provozů, kde se zaměňuje nákup přípravků za skutečnou spotřebu, opomíjejí se odpady s obsahem rozpouštědel nebo se nesprávně pracuje s obsahem VOC z bezpečnostních a technických listů. U spalovacích zdrojů bývá častým problémem nepřesná evidence paliva, chybné přepočty jednotek nebo nesoulad mezi provozními hodinami a skutečným provozem zařízení.
-
-U větších provozů může být rizikem také výrazná meziroční změna emisí bez komentáře. Pokud emise významně vzrostou nebo poklesnou, mělo by být jasné, zda je důvodem změna výroby, odstávka, rekonstrukce, výměna filtru, změna paliva, změna výpočtu nebo jiná objektivní skutečnost.
+U meziroční změny doplňte stručný důvod, například odstávku, změnu výroby nebo výměnu paliva. Usnadní to pozdější kontrolu výpočtu.
 
 ## Praktický postup před podáním přiznání
 
-Před podáním poplatkového přiznání je vhodné nejprve zkontrolovat návaznost hlavních podkladů. Začněte povolením provozu a ověřte, které zdroje, látky a výduchy jsou pro provozovnu relevantní. Následně porovnejte provozní evidenci, spotřeby, provozní hodiny a výsledky měření emisí s výpočtem ročních emisí.
+1. Určete poplatkové období a příslušné sazby.
+2. Připravte roční emise po zdrojích a látkách.
+3. Porovnejte bilanci s údaji SPE.
+4. Posuďte jednotlivé podmínky případné úlevy a povinnost podat přiznání.
+5. Použijte formulář F_OVZ_POPL pro odpovídající období.
+6. Uložte podanou verzi, doklad o podání a výpočtové podklady.
 
-Teprve poté má smysl vyplňovat samotné poplatkové přiznání. Pokud se přiznání vyplňuje bez kontroly technických vstupů, snadno vznikne formálně správný, ale věcně chybný dokument.
-
-Před odesláním doporučujeme projít zejména tyto body:
-
-1. Odpovídají zdroje, výduchy a látky povolení provozu?
-2. Navazují roční emise na měření, výpočty a provozní evidenci?
-3. Jsou spotřeby paliv, surovin nebo rozpouštědel doložitelné?
-4. Souhlasí údaje v poplatkovém přiznání se SPE?
-5. Je možné vysvětlit meziroční změny emisí?
-6. Jsou uložené podklady k výpočtu tak, aby obstály při kontrole?
-
-Tento postup pomáhá odhalit chyby ještě před odesláním. U provozů s více zdroji, více výduchů nebo významnými emisemi se vyplatí udělat technickou kontrolu výpočtů s předstihem.
+Nová struktura přiznání podle přílohy č. 22 vyhlášky č. 415/2012 Sb. se podle přechodných ustanovení poprvé použije za rok 2026.
 
 ## Co nám můžete poslat k posouzení
 
-Pokud si nejste jistí, zda údaje pro poplatkové přiznání technicky sedí, pošlete nám povolení provozu, poslední SPE, poslední poplatkové přiznání, protokoly z měření emisí, spotřeby paliv, surovin nebo rozpouštědel, provozní hodiny a výpočty ročních emisí.
+Pošlete povolení provozu, poslední SPE a poplatkové přiznání, protokoly z měření a výpočet ročních emisí. Přiložte spotřeby, provozní hodiny a přehled změn ve vykazovaném roce.
 
-Prověříme, zda jsou emisní údaje navázané na měření, výpočty a provozní evidenci, zda odpovídají povolení provozu a zda mezi SPE a poplatkovým přiznáním nevzniká nesoulad. U VOC provozů můžeme ověřit bilanci rozpouštědel, u spalovacích zdrojů návaznost na palivo a u technologických zdrojů vhodnost použitého výpočtu nebo emisního faktoru.
+Zkontrolujeme emisní bilanci a návaznost podkladů. V rámci služby [ISPOP a provozní evidence](/sluzby/ispop/) dohodneme zpracování a se zmocněním také podání za Vás.
 
-## Shrnutí
+[Poslat podklady k poplatkovému přiznání](/kontakt/?service=ISPOP#poptavkovy-formular)
 
-Poplatky za znečišťování ovzduší nelze řešit odděleně od provozní evidence, měření emisí a výpočtů emisí. Poplatkové přiznání musí vycházet z technicky správných a zpětně doložitelných údajů.
+## Co uchovat k přiznání
 
-Nejčastější chyby vznikají tehdy, když provozovatel převezme čísla bez kontroly návaznosti na povolení provozu, měření, spotřeby a SPE. U větších provozů, lakoven, energetických zdrojů a technologií s více výduchů doporučujeme zkontrolovat údaje před odesláním, ne až po výzvě úřadu nebo při kontrole.
+K podání připojte do firemní evidence použitou bilanci, zdrojové údaje a zdůvodnění případných úlev. U dalších oprav pak budete pracovat se stejnými podklady a jasně označenou verzí.
 
-## Věcná opora článku
+## Právní předpisy
 
-Článek vychází zejména ze zákona č. 201/2012 Sb., o ochraně ovzduší, vyhlášky č. 415/2012 Sb., pravidel ohlašování prostřednictvím ISPOP a metodických informací Ministerstva životního prostředí k poplatkům za znečišťování ovzduší.
-
-| Podklad | Praktický význam |
-|---|---|
-| [zákon č. 201/2012 Sb., o ochraně ovzduší](https://www.zakonyprolidi.cz/cs/2012-201) | stanoví základní povinnosti provozovatelů stacionárních zdrojů |
-| [§ 15 zákona č. 201/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-201#p15) | upravuje poplatky za znečišťování ovzduší, poplatníka, předmět poplatku, základ poplatku, výpočet, přiznání a splatnost |
-| [§ 6 zákona č. 201/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-201#p6) | upravuje zjišťování a vyhodnocování úrovně znečišťování měřením nebo výpočtem |
-| [§ 17 zákona č. 201/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-201#p17) | stanoví povinnosti provozovatele, včetně vedení provozní evidence a ohlašování souhrnné provozní evidence |
-| [vyhláška č. 415/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-415) | stanoví podrobnosti k přípustné úrovni znečišťování, způsobům zjišťování emisí a náležitostem provozní evidence |
-| [ISPOP – agenda ovzduší](https://www.ispop.cz/prehled-ohlasovacich-povinnosti/agenda-ovzdusi/) | uvádí formuláře F_OVZ_SPE a F_OVZ_POPL a termín podání do 31. 3. |
-| [MŽP – aktuality v ochraně ovzduší](https://mzp.gov.cz/cz/agenda/ochrana-ovzdusi/aktuality-v-ochrane-ovzdusi) | obsahuje metodická stanoviska a aktualizace k poplatkům, SPE, emisním faktorům a dalším povinnostem |
-| [Stanovisko MŽP k vybraným ustanovením § 15](https://mzp.gov.cz/system/files/2025-04/OOO-Poplatky_aktualizovane_stanovisko_2025_20250407.pdf) | vysvětluje praktické otázky výpočtu poplatků, sazeb, koeficientů a procesních postupů |
-
-Z praktického hlediska z těchto podkladů vyplývá, že poplatkové přiznání musí být navázané na správně stanovené množství emisí. To se obvykle neobejde bez kontroly provozní evidence, měření, výpočtů, spotřeb a údajů v povolení provozu.
-
-Provozovatel by měl být schopen doložit nejen to, že formulář odeslal, ale také to, z jakých údajů výpočet poplatku vychází. U složitějších provozů je vhodné archivovat výpočty emisí, vstupní spotřeby, použité emisní faktory, protokoly z měření, bilance VOC, SPE a minulá poplatková přiznání tak, aby byly použitelné při kontrole nebo při následném jednání s krajským úřadem.
+- [Zákon č. 201/2012 Sb.](https://e-sbirka.gov.cz/sb/2012/201) — § 6 a § 15, včetně přechodných ustanovení novely č. 42/2025 Sb.
+- [Vyhláška č. 415/2012 Sb.](https://e-sbirka.gov.cz/sb/2012/415) — § 12 a příloha č. 22.
 
 ## Užitečné odkazy
 
-- [ISPOP – agenda ovzduší](https://www.ispop.cz/prehled-ohlasovacich-povinnosti/agenda-ovzdusi/)
-- [Zákon č. 201/2012 Sb., o ochraně ovzduší](https://www.zakonyprolidi.cz/cs/2012-201)
-- [Vyhláška č. 415/2012 Sb.](https://www.zakonyprolidi.cz/cs/2012-415)
-- [MŽP – aktuality v ochraně ovzduší](https://mzp.gov.cz/cz/agenda/ochrana-ovzdusi/aktuality-v-ochrane-ovzdusi)
+- [ISPOP — agenda Ovzduší a termíny](https://www.ispop.cz/prehled-ohlasovacich-povinnosti/agenda-ovzdusi/)
+- [ČHMÚ — souhrnná provozní evidence](https://www.chmi.cz/kvalita-ovzdusi/emise-a-zdroje-znecistovani-ovzdusi/souhrnna-provozni-evidence-stacionarnich-zdroju)

@@ -18,8 +18,9 @@ function ReferencePhotoCard({ photo, example }: { photo: (typeof referencePhotog
       </picture><figcaption>{photo.caption}</figcaption>
     </figure>
     <div className={styles.body}>
-      <p className={styles.category}>{example.tags.slice(0, 2).join(" · ")}<span className={styles.year}>{photo.year}</span></p>
+      <p className={styles.category}>{example.tags.slice(0, 2).join(" · ")}{!photo.region ? <span className={styles.year}>{photo.year}</span> : null}</p>
       <h3>{example.title}</h3>
+      {photo.region ? <p className={styles.context} data-reference-context={example.id}><span>{photo.region}</span><span aria-hidden="true">·</span><span>{photo.year}</span></p> : null}
       <p className={styles.description}>{example.scope}</p>
       <div className={styles.output}><span>Výstup zakázky</span><p>{example.output}</p></div>
       <details className={styles.details}><summary>Podrobnosti realizace</summary><p>{example.text}</p><p><strong>Provoz:</strong> {example.operationType}</p></details>

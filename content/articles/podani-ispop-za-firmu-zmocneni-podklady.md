@@ -1,7 +1,7 @@
 ---
 title: "Podání ISPOP za firmu: podklady a zmocnění"
 slug: podani-ispop-za-firmu-zmocneni-podklady
-excerpt: "Chcete předat hlášení ISPOP externímu zpracovateli? Vymezte agendu, období a provozovny. Jak připravit podklady, zastoupení a ověření výsledku podání."
+excerpt: "Jak připravit evidenci pro externího zpracovatele, vymezit zmocnění v CRŽP a zkontrolovat výsledek podání v ISPOP."
 author: NATURCHEM
 status: published
 publishedAt: "2026-12-21"
@@ -9,57 +9,46 @@ topic: Legislativa
 heroImage: /uploads/poradna-2026/podani-ispop.webp
 ---
 
-Externímu zpracovateli hlášení ISPOP předejte agendu, období, provozovny a podklady. Domluvte způsob zastoupení a předání potvrzení o přijetí hlášení.
-
-**Nesdílejte hesla k firemním účtům.** Externí zpracovatel má používat vlastní oprávněný přístup a řádně nastavené zastoupení. Technické odeslání, přijetí systémem a věcná kontrola nejsou totožné kroky.
+Při předání hlášení externímu zpracovateli se domluvte na třech věcech: za koho a za jaké období se hlásí, kdo dodá údaje a kdo podání odešle. Pokud má zpracovatel hlášení podat za Vás, vyřešte zastoupení předem. Po podání si vyžádejte kopii hlášení a informaci o jeho stavu.
 
 ## Rozsah služby
 
-ISPOP je Integrovaný systém plnění ohlašovacích povinností. Nejde o jednu univerzální roční povinnost pro každou firmu. Konkrétní hlášení vycházejí z příslušných předpisů a činností subjektu. Oficiální přehled postupu nabízí stránka [Jak ohlásit](https://www.ispop.cz/jak-ohlasit/).
-
-U objednávky uveďte, zda potřebujete kontrolu dat, vyplnění, podání nebo celý postup. Označte firmu a dotčené provozovny. Pokud si nejste jisti agendou, pošlete popis činností a dosavadní hlášení. Rozsah služby se musí potvrdit, nelze jej odvodit pouze ze zkratky ISPOP.
+ISPOP je Integrovaný systém plnění ohlašovacích povinností v oblasti životního prostředí. To, který formulář firma podává, vychází z její činnosti a příslušného předpisu. Při objednávce rozlište kontrolu podkladů, vyplnění formuláře a podání za firmu. Pokud typ hlášení neznáte, pomůže popis provozu a kopie posledního podání.
 
 ## Vstupní podklady
 
-Zpracovateli předejte záznamy, které odpovídají ohlašovanému roku nebo jinému příslušnému období. Předchozí hlášení pomůže s orientací, ale jeho údaje se nesmějí automaticky převzít. Označte změny zdrojů, kapacit a provozních režimů. Doplňte, které údaje jsou zatím neúplné.
+Připravte údaje za období, kterého se hlášení týká. Poslední podání poslouží jako přehled provozoven a zdrojů. Pro nové hlášení doplňte aktuální údaje a změny od minulého období.
 
-| Podklad | Co kontrolovat před předáním |
+| Podklad | Co připravit |
 | --- | --- |
-| Identifikace subjektu | IČO a správné vymezení ohlašovatele |
-| Provozovny | Aktuální identifikaci a změny proti minulému období |
-| Minulá hlášení | Referenční dokumenty, nikoli automaticky platná data |
-| Provozní evidence | Úplnost, období a jednotky |
-| Protokoly a výpočty | Vazbu na zdroj, výduch a příslušný provoz |
-| Změny | Zahájení, ukončení nebo úpravu činnosti v relevantním rozsahu |
-
-Seznam je orientační. Konkrétní doklady závisí na objednané agendě a příslušném formuláři.
+| Ohlašovatel | IČO a kontakt na osobu odpovědnou za podklady |
+| Předmět hlášení | Identifikaci provozovny, zdroje nebo jiné jednotky podle formuláře |
+| Evidence | Údaje za příslušné období včetně jednotek |
+| Protokoly a výpočty | Dokumenty vztahující se k příslušnému zdroji nebo činnosti |
+| Změny | Nové nebo ukončené činnosti, změny kapacit a povolení |
 
 ## Zastoupení v CRŽP
 
-CRŽP je Centrální registr životního prostředí. Slouží mimo jiné pro správu relevantních přístupů a zmocnění. Oficiální [informace pro externí zmocněnce](https://crzp.mzp.cz/portal/informace-pro-zmocnence-externisty-zastupujici-ohlasovatele-v-systemu-ispop-novy-vzor-plne-moci/) uvádějí aktuální podklady pro zastupování v ISPOP. Postup ověřte před podáním podle stavu Vašeho subjektu.
+Externí zmocněnec používá vlastní účet. Pro podání za jiný subjekt se v Centrálním registru životního prostředí (CRŽP) nastavuje zmocnění v rozsahu, který pokrývá daný typ hlášení. [Oficiální pokyny CRŽP](https://crzp.mzp.cz/portal/informace-pro-zmocnence-externisty-zastupujici-ohlasovatele-v-systemu-ispop-novy-vzor-plne-moci/) popisují postup a poskytují vzor plné moci. Přístupové údaje zůstávají u každého uživatele.
 
-Rozsah a dobu zastoupení nastavte podle dohodnuté služby. Přístup neřešte zasláním uživatelského jména a hesla kolegy. Ověřte, kdo za firmu zmocnění potvrzuje. Připravte tento krok včas, aby dokončené hlášení nečekalo pouze na oprávnění k podání.
+Pokud má zmocněnec za povinný subjekt podat oznámení termínu nebo hlášení protokolu z jednorázového měření emisí, prověřte oprávnění pro příslušný formulář. Pokud ho stávající zmocnění v CRŽP nepokrývá, podává se nová žádost. Podle [pokynů provozovatele ISPOP k jednorázovým měřením](https://www.ispop.cz/informace-pro-zmocnence-jednorazove-mereni-emisi/) lze k žádosti přiložit původní plnou moc, pokud její rozsah tento úkon zahrnuje.
 
 ## Kontrola údajů
 
-Externí zpracovatel potřebuje potvrzení údajů, které poskytuje provozovatel. Určete odpovědnou osobu za výrobu, energie a další potřebné evidence. U nevysvětlených rozdílů proti minulému roku připojte komentář. Změna čísla může být správná, musí však mít dohledatelný důvod.
-
-Odborná kontrola může odhalit chybějící nebo navzájem rozporné podklady. Neznamená však, že dodavatel zná skutečný provoz bez Vaší součinnosti. Pošlete dokumenty v původní podobě a označte vlastní dopočty. Současně nesdílejte nesouvisející klientské, personální ani obchodní informace.
+Dohodněte se, kdo potvrzuje výrobní údaje a evidenci, ze kterých hlášení vychází. U odchylek od předchozího roku připojte stručné vysvětlení, například spuštění nové linky nebo delší odstávku. Zpracovatel pak může údaje ověřit proti podkladům.
 
 ## Kontrola doručení a stavu hlášení
 
-Hlášení se podává předepsaným způsobem a v platném datovém standardu. Běžný e-mail s tabulkou zpracovateli nenahrazuje podání do ISPOP. Po odeslání je potřeba kontrolovat systémový výsledek. Samotná věta „odesláno“ není úplnou informací o dalším zpracování.
-
-Při objednávce si domluvte předání kopie hlášení a dostupného potvrzení o přijetí. Uveďte, kdo sleduje případné chyby nebo požadavky na doplnění. Rozlišujte technické přijetí od věcného ověření příslušným orgánem. Pokud vznikne opravné nebo doplněné podání, uchovejte vazbu na předchozí verzi.
+Po odeslání zkontrolujte výsledek zpracování v ISPOP. Stav „Čeká na ověření“ podle [návodu ISPOP](https://www.ispop.cz/jak-ohlasit/) označuje podané hlášení, které čeká na ověření příslušným úřadem. Sledujte stav a případné požadavky na doplnění podle typu podání. Uložte kopii hlášení, evidenční číslo a dostupné potvrzení.
 
 ## Změna zpracovatele
 
-Předejte historii potřebných hlášení, dostupná potvrzení a seznam otevřených požadavků. Zkontrolujte oprávnění nového zpracovatele. Dohodněte, kdo sleduje dosud nedořešená podání. Nová objednávka sama neuzavírá starší chybu a neměla by přerušit dohledání předchozí dokumentace.
+Předejte novému zpracovateli poslední podání, jeho evidenční číslo a přehled otevřených požadavků. Určete, kdo bude sledovat stav dřívějších hlášení a kdo bude řešit případné doplnění. Zkontrolujte rozsah zmocnění pro následující podání.
 
 ## Podklady pro objednávku
 
-Napište požadovanou agendu, období, počet provozoven a stav evidence. Přiložte poslední dostupné hlášení a seznam změn. Uveďte, zda potřebujete také odborné výpočty nebo doplnění podkladů.
+Uveďte IČO, typ hlášení nebo popis činnosti, období a počet provozoven. Připojte poslední podání a přehled změn, pokud je máte. Zajišťujeme [zpracování i podání hlášení ISPOP](/sluzby/ispop/) v dohodnutém rozsahu.
 
-NATURCHEM zajišťuje [zpracování a podání hlášení ISPOP](/sluzby/ispop/) v dohodnutém rozsahu. [Pošlete nám zadání hlášení](/kontakt/#poptavkovy-formular); na poptávky reagujeme do 24 hodin. Hesla ani přístupové kódy do poptávky neuvádějte.
+[Poslat zadání k hlášení ISPOP](/kontakt/?service=ISPOP#poptavkovy-formular).
 
-*Úvodní fotografie: ilustrační vlastní snímek provozní technologie. Nezobrazuje neveřejné hlášení ani přístup do klientského účtu.*
+*Úvodní fotografie: ilustrační snímek provozní technologie z fototéky NATURCHEM.*

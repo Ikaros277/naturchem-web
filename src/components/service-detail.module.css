@@ -47,6 +47,7 @@
 .evidence .eyebrow { font-size: 11px; margin: 0 0 9px; }
 .evidence h3 { font-size: 20px; line-height: 1.3; margin: 0 0 10px; max-width: 36ch; }
 .evidence p { font-size: 16px; line-height: 1.5; color: #415966; margin: 0; }
+.evidence .evidenceContext { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 9px; width: fit-content; max-width: 100%; margin: 0 0 12px; padding: 6px 10px; border-left: 3px solid #2f7a61; background: #e1eee6; color: #214e40; font-size: 14px; font-weight: 650; line-height: 1.4; }
 .evidence .evidenceOutput { margin-top: 12px; padding-top: 10px; border-top: 1px solid #d6e2db; font-size: 14px; }
 .evidenceFigure { margin: 0 0 20px; }
 .evidenceFigure picture { display: block; }

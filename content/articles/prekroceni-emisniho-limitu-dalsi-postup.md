@@ -1,7 +1,7 @@
 ---
 title: "Překročení emisního limitu: postup"
 slug: prekroceni-emisniho-limitu-dalsi-postup
-excerpt: "Překročený emisní limit: kontrola protokolu, povolení, provozních záznamů a technického stavu zdroje. Podklady pro nápravu a opakované měření."
+excerpt: "Jak při překročení emisního limitu prověřit povolení, oznamovací povinnosti a technický stav. Kdy má smysl opakovat měření."
 author: NATURCHEM
 status: published
 publishedAt: "2026-12-14"
@@ -9,57 +9,44 @@ topic: Emise
 heroImage: /uploads/poradna-2026/emisni-limit.webp
 ---
 
-V emisním protokolu se objevilo překročení limitu? Nepovažujte prosté opakování měření za vyřešení problému. Nejdříve prověřte hodnocenou látku, podmínky povolení a skutečný provoz během měření. Potřebujete odlišit technickou příčinu od případné nesrovnalosti v podkladech nebo interpretaci.
-
-**Připravte celý protokol, platné povolení a záznam o provozu v den měření.** Povinnosti a lhůty ověřte podle příslušných předpisů, povolení a případné výzvy úřadu.
+Pokud protokol uvádí překročení emisního limitu, zajistěte celý protokol, platné povolení a záznamy o provozu. Současně s odpovědnou osobou prověřte, zda je potřeba oznámení, náprava nebo omezení provozu. Tyto kroky řešte podle předpisů a podmínek povolení už při zjištění problému.
 
 ## Kontrola výsledku měření
 
-Označte, který zdroj, výduch a znečišťující látku výsledek řeší. Rozlišujte naměřenou veličinu, použitý limit a závěr hodnocení. U tabulky zachovejte jednotky, referenční podmínky a poznámky. Samotná fotografie jednoho řádku může vynechat rozhodující souvislosti.
-
-Pokud závěru nerozumíte, obraťte se na zpracovatele protokolu. Požádejte o vysvětlení podmínek hodnocení. Neupravujte výsledek vlastní změnou jednotek nebo převodního koeficientu. Případná oprava musí vycházet z doložené chyby a řádného postupu.
+V protokolu si vyznačte zdroj, výduch, látku, příslušný limit a závěr hodnocení. Pro posouzení jsou důležité také jednotky, referenční podmínky a popis provozního režimu. Pokud některý údaj nesouhlasí s povolením nebo se skutečným provedením technologie, požádejte zpracovatele protokolu o vysvětlení.
 
 ## Platné povolení
 
-Připravte aktuální rozhodnutí včetně všech relevantních změn. Starší povolení nemusí odpovídat současnému zdroji nebo platným podmínkám. Zkontrolujte, zda označení výduchů odpovídá skutečné technologii. Pokud je zdroj součástí IPPC, přiložte také integrované povolení.
+Připravte povolení včetně změn a provozní řád, pokud je pro zdroj stanoven. U zařízení s integrovaným povolením ověřte i jeho závazné podmínky. Podle těchto dokumentů a zákonného režimu určete, kdo má být informován a v jaké lhůtě.
 
-Právní rámec ochrany ovzduší stanoví [zákon č. 201/2012 Sb.](https://www.e-sbirka.cz/sb/2012/201). Další povinnosti závisejí na režimu zdroje a rozhodnutí úřadu. Jejich splnění neodkládejte kvůli plánovanému měření.
+| Situace | Na co se zaměřit |
+| --- | --- |
+| Technická závada u vyjmenovaného zdroje, která současně zvýší úroveň znečišťování a způsobí nedodržení podmínky provozu | [§ 17 odst. 3 písm. e) a f) zákona č. 201/2012 Sb.](https://e-sbirka.gov.cz/sb/2012/201?odkazId=40576835&zalozka=text): bezodkladná náprava, zpráva krajskému úřadu a ČIŽP do 48 hodin od vzniku takové závady podle písm. e). Podmínky omezení nebo odstavení zdroje a výjimky řeší písm. f). |
+| Prokázané překročení specifického limitu při tepelném zpracování odpadu | [§ 17 odst. 6 písm. b) a c) téhož zákona](https://e-sbirka.gov.cz/sb/2012/201?odkazId=199433123): bezodkladné zastavení tepelného zpracování odpadu, nejpozději za čtyři hodiny, a bezodkladné oznámení ČIŽP. Další provoz se řídí podmínkami podle písm. b). |
+| Porušení závazné podmínky integrovaného povolení | [§ 16 odst. 1 písm. d) a e) zákona č. 76/2002 Sb.](https://e-sbirka.gov.cz/sb/2002/76?odkazId=40252151): neprodlené oznámení úřadu a ČIŽP a přijetí opatření k nápravě. |
+
+U jednoho zařízení mohou být relevantní souběžné požadavky. Při výběru postupu proto vycházejte i z provozního řádu a konkrétního rozhodnutí.
 
 ## Provoz v době měření
 
-Popište výrobu, zatížení zdroje a používané materiály. Uveďte spuštěná zařízení, odsávání a relevantní provozní parametry. Připojte záznamy údržby, závad a odstávek. Zvlášť označte situace, které se lišily od běžného provozu.
-
-| Dokument nebo údaj | Co dokládá |
-| --- | --- |
-| Celý emisní protokol | Obsahuje výsledky, podmínky a rozsah měření |
-| Platné povolení | Vymezuje příslušné požadavky pro zdroj |
-| Provozní záznamy | Umožní popsat skutečný stav při měření |
-| Materiály a paliva | Pomohou prověřit změnu vstupů |
-| Údržba a závady | Doloží technický stav a provedené zásahy |
-| Výzva úřadu | Určuje konkrétní požadovaný postup nebo výstup |
-
-U neúplných informací napište, co není doloženo. Nepřipravujte dodatečně provozní záznam tak, jako by vznikl v den měření.
+Dohledejte, které části technologie běžely, s jakým zatížením a jaké se používaly materiály nebo paliva. K údajům připojte provozní záznamy a servisní protokoly. U odlučování pomohou záznamy o stavu zařízení, jeho provozních parametrech a případné signalizaci poruchy.
 
 ## Technická kontrola a náprava
 
-Relevantní může být stav technologie, odlučování, vstupní materiál nebo organizace provozu. Z jednoho výsledku nelze automaticky určit konkrétní závadu. Technickou kontrolu řešte s odpovědným provozním pracovníkem a podle potřeby s dodavatelem zařízení. Odborné posouzení musí pracovat s tím, co je skutečně doloženo.
-
-Zapište provedené změny a jejich datum. Pokud zasahují do povoleného řešení, prověřte také jejich povolovací souvislosti. Servisní zásah a změna technologie nemusí mít stejný režim. Nové měření nemá nahradit potřebnou dokumentaci změny zdroje.
+S odpovědným technikem porovnejte stav zařízení, vstupy a provozní nastavení s podmínkami, pro které byl zdroj navržen a povolen. Záznam o zásahu doplňte datem a popisem provedených opatření. Pokud řešení mění technologii nebo provozní režim, ověřte jeho soulad s povolením před zavedením.
 
 ## Opakované měření
 
-Opakované měření má mít jasný účel a odpovídající provozní podmínky. Může navazovat na doloženou nápravu nebo požadavek příslušného postupu. Termín a rozsah je nutné odborně vymezit. Neobjednávejte pouze „lepší výsledek“ bez řešení příčiny.
-
-Záměrné snížení zatížení jen pro získání příznivějšího protokolu není vhodným řešením nesouladu. Podmínky musí odpovídat požadovanému režimu měření a hodnocení. Předejte laboratoři předchozí protokol i informace o nápravě. Zatajování předchozího výsledku by zkomplikovalo odborné posouzení.
+Opakované měření lze použít například k ověření účinku nápravy. S laboratoří upřesněte, který výduch, látku a provozní režim má pokrýt. Podmínky jednorázového měření se řídí [zákonem o ochraně ovzduší](https://e-sbirka.gov.cz/sb/2012/201?odkazId=40576835), [prováděcí vyhláškou č. 415/2012 Sb.](https://e-sbirka.gov.cz/sb/2012/415?odkazId=207509561) a příslušným povolením. Laboratoři předejte předchozí protokol a popis nápravy.
 
 ## Nezjištěná příčina
 
-Popište dostupné skutečnosti a označte otevřené otázky. Není potřeba při prvním kontaktu předkládat neověřenou diagnózu. Důležitější je zachovat zdrojové dokumenty a zajistit spolupráci odpovědného technika. U konkrétních povinností se řiďte platným rozhodnutím a odborně ověřeným postupem.
+Pro první posouzení pomohou i neúplné podklady. Označte, co víte z provozních záznamů a co je zatím pracovní předpoklad. Podle toho lze určit, které údaje doplnit a jaké technické ověření má smysl.
 
 ## Dokumentace nápravy
 
-Spojte protokol, technické záznamy a navazující kroky do přehledného celku. Uveďte, kdo posoudil příčinu a kdo provedl zásah. Oddělte plánované opatření od již provedené nápravy. Pokud se účinek ještě neověřil, neoznačujte problém za vyřešený.
+Uchovejte původní protokol, provozní záznamy, popis zásahu a případnou komunikaci s úřadem. Pokud se účinek nápravy ověřuje, připojte protokol z následného měření a podmínky, za kterých proběhlo.
 
-NATURCHEM zajišťuje [autorizované měření emisí](/sluzby/mereni-emisi/). [Pošlete nám protokol a popis situace](/kontakt/#poptavkovy-formular) pro vymezení dalšího měření a souvisejících podkladů. Na poptávky reagujeme do 24 hodin; nejde o příslib vyhovujícího výsledku ani vyřešení všech povinností v této lhůtě.
+Zajišťujeme [autorizované měření emisí](/sluzby/mereni-emisi/). [Poslat protokol a popis zdroje](/kontakt/?service=M%C4%9B%C5%99en%C3%AD%20emis%C3%AD#poptavkovy-formular).
 
-*Úvodní obrázek: ilustrační emisní technologie z fototéky NATURCHEM. Nejde o fotografickou referenci ani o označení konkrétního provozu za zdroj s překročeným limitem.*
+*Úvodní fotografie: ilustrační snímek emisní technologie z fototéky NATURCHEM.*

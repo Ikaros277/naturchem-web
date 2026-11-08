@@ -2,6 +2,7 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
+const { createHash } = require("node:crypto");
 const sharp = require("sharp");
 const React = require("react");
 const { renderToStaticMarkup } = require("react-dom/server");
@@ -29,9 +30,26 @@ async function main() {
   assert.deepEqual(referencePhotographs.map(photo => photo.exampleId), expectedCases, "Only individually reviewed photo/case pairs, not thematic substitutions");
   assert.equal(new Set(referencePhotographs.map(photo => photo.exampleId)).size, count);
   assert.equal(new Set(referencePhotographs.map(photo => getReferencePhotographSources(photo).src)).size, count, "Different photographs of the described cases");
-  assert.equal(referenceExamples.length, 26, "The approved recycling project adds one case with two outputs, not two customers");
+  assert.equal(referenceExamples.length, 26, "The approved recycling project adds one case with two outputs; three plant protocols are still one client case");
   const ids = referencePhotographs.map(photo => photo.exampleId);
   const examplesById = getReferenceExamplesById();
+  const regionalCases = new Map([["hala-pp", 2026], ["kovovyroba-vibrace", 2025]]);
+  assert.deepEqual(referencePhotographs.filter(photo => photo.region).map(photo => photo.exampleId).sort(), [...regionalCases.keys()].sort(), "Only independently checked case locations get a regional label");
+  for (const [id, year] of regionalCases) {
+    const photo = referencePhotographs.find(item => item.exampleId === id);
+    assert.equal(photo.region, "Jihočeský kraj");
+    assert.equal(photo.year, year, "Work year, not publication year");
+  }
+  assert.match(examplesById.get("hala-pp").output, /^Tři samostatné protokoly:/, "Three protocols of one job, not three customers or a guaranteed permit");
+  assert.match(examplesById.get("kovovyroba-vibrace").scope, /pěti pracovních pozicích/, "Five job roles, not five clients or five tools");
+  assert.match(referencePhotographs.find(photo => photo.exampleId === "hala-pp").caption, /Měření mikroklimatu v dílně údržby forem/, "The photograph depicts the microclimate part, not all measurements at one bench");
+  const vibrationPhoto = referencePhotographs.find(photo => photo.exampleId === "kovovyroba-vibrace");
+  assert.match(vibrationPhoto.caption, /Úkosovací nářadí/);
+  assert.doesNotMatch(vibrationPhoto.alt + vibrationPhoto.caption, /brusk|VZV|celkov[éý] vibrac/i, "The photographed hand tool is not a grinder or a forklift");
+  for (const [file, hash] of [
+    ["hala-mikroklima-960.webp", "ff8f7b2e3151677ef6201b7050464c531c62ac52c0336f8211cc23bf39e170a4"],
+    ["rucni-naradi-vibrace-960.webp", "a3eebfda1c42cad4efe9e5d10c2b9a05e0371b284d4d827ed50a5d85a0e3d161"]
+  ]) assert.equal(createHash("sha256").update(fs.readFileSync(path.join(root, "public/reference/authentic-2026-10-08", file))).digest("hex"), hash, "Keep the individually reviewed photograph unchanged");
   assert.equal(examplesById.get("vzt-hluk-studie").contactService, "Hlukové studie", "A study inquiry must not preselect noise measurement");
   for (const photo of referencePhotographs) {
     assert.ok(examplesById.has(photo.exampleId));
@@ -66,6 +84,13 @@ async function main() {
   assert.equal((html.match(/<img\b/g) || []).length, count);
   assert.equal((html.match(/loading="lazy"/g) || []).length, count);
   assert.equal((html.match(/fetchPriority="low"/g) || []).length, count);
+  assert.equal((html.match(/data-reference-context=/g) || []).length, regionalCases.size);
+  for (const [id, year] of regionalCases) {
+    const card = html.match(new RegExp('<article[^>]*id="reference-' + id + '"[\\s\\S]*?</article>'))?.[0];
+    assert.ok(card, "Existing case anchor stays stable");
+    assert.equal((card.match(new RegExp(">" + year + "<", "g")) || []).length, 1, "Avoid repeating the visible year in category and context; asset version dates are unrelated");
+    assert.ok(card.includes('data-reference-context="' + id + '"') && card.includes("Jihočeský kraj"));
+  }
   assert.ok(!html.includes("/_next/image") && !html.includes("<script"), "No transform endpoint or gallery runtime");
   for (const id of ids) {
     const item = examplesById.get(id);
@@ -99,6 +124,8 @@ async function main() {
   for (const id of ids) assert.ok(overview.includes('href="#reference-' + id + '"'), "Existing group links lead to featured case");
   const source = fs.readFileSync(path.join(root, "src/components/ReferencePhotoShowcase.tsx"), "utf8");
   assert.ok(!source.includes('"use client"'));
+  const cardStyles = fs.readFileSync(path.join(root, "src/components/reference-photo-showcase.module.css"), "utf8");
+  assert.match(cardStyles, /@media \(min-width: 768px\)\s*\{\s*\.figure figcaption \{ min-block-size: calc\(3em \+ 20px\); \}/, "Multi-column captions reserve two lines without clipping longer text or adding empty height on mobile");
   assert.doesNotMatch(source, /(?:from ["']next\/link|<Link\b)/, "Static photo-card navigation must not add hydrated router instances");
   assert.ok(source.includes('href={example.href}') && source.includes('href={contactUrl(example.contactService)}'), "Keep contextual service and inquiry native links");
   const more = html.slice(html.indexOf('<details id="dalsi-fotograficke-reference"'));

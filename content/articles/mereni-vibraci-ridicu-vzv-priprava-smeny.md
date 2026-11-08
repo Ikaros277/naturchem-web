@@ -1,66 +1,52 @@
 ---
 title: "Měření vibrací řidičů VZV: příprava a podklady"
 slug: mereni-vibraci-ridicu-vzv-priprava-smeny
-excerpt: "Připravte pro měření vibrací VZV skutečné trasy, vozíky a časový snímek řidiče. Praktický checklist pro sklady, výrobní areály a podklady ke kategorizaci prací."
+excerpt: "Jak připravit měření celkových vibrací řidičů vysokozdvižných vozíků. Rozhoduje doba řízení, trasy, stav vozíků a práce s nákladem."
 author: NATURCHEM
 status: published
 publishedAt: "2026-10-19"
+updatedAt: "2026-11-05"
 topic: Pracovní prostředí
 heroImage: /uploads/poradna-2026/vibrace-vzv.webp
 ---
 
-Řidič vozíku střídá nakládku, přejezdy a práci mimo kabinu. Pro posouzení vibrací proto potřebujete více než údaj výrobce vozíku. Připravte přehled skutečných tras a času stráveného jednotlivými činnostmi. Laboratoř podle něj navrhne reprezentativní měření a podklady pro hodnocení pracovní expozice.
-
-**Nejdůležitější podklady:** typy vozíků, stav sedadel, používané trasy, převážený náklad a časový snímek směny. Měřicí den má odpovídat běžnému provozu, nikoli mimořádně klidné směně.
+Řidič vysokozdvižného vozíku (VZV) během směny střídá jízdu, manipulaci s nákladem a práci mimo vozík. Při hodnocení vibrací nás zajímá, kolik času v každém režimu stráví a po jakém povrchu jezdí. Z přehledu činností vybereme situace, které má měření zachytit.
 
 ## Co se hodnotí u řidiče VZV
 
-U sedícího řidiče se řeší zejména celkové vibrace přenášené přes sedadlo. Jde o jinou situaci než vibrace rukou při práci s bruskou. Tento rozdíl určuje způsob měření i následné vyhodnocení. Základní rozlišení popisuje [Státní zdravotní ústav](https://szu.gov.cz/temata-zdravi-a-bezpecnosti/pracovni-prostredi-a-zdravi/faktory-pracovniho-prostredi/fyzikalni/vibrace/vibrace-prenasene-na-cloveka/). Tento starší přehled vysvětluje princip; pro aktuální právní limity není rozhodujícím zdrojem.
-
-Stejný model vozíku nemusí znamenat stejnou expozici. Záleží na jeho používání, povrchu trasy, sedadle a délce jízdy. Technický list proto pošlete jako podklad, nikoli jako náhradu popisu práce. Uveďte také, zda řidič během směny střídá více vozíků.
+U sedícího řidiče obvykle hodnotíme **celkové vibrace přenášené přes sedadlo**. Jejich velikost ovlivňuje povrch trasy, režim jízdy, náklad i stav vozíku a sedadla. Údaje výrobce pomáhají při hodnocení rizika. [§ 17 nařízení vlády č. 272/2011 Sb.](https://e-sbirka.gov.cz/sb/2011/272?odkazId=40492401) odlišuje toto hodnocení od měření při práci.
 
 ## Činnosti a délka expozice
 
-Údaj „řidič pracuje osm hodin“ neříká, kolik času skutečně řídí. Oddělte přejezdy, manipulaci, čekání a práci mimo vozík. Zaznamenejte, na jakém vozíku a kde jednotlivé činnosti probíhají. Přestávky evidujte zvlášť.
+U každé činnosti uveďte vozík, trasu a přibližnou dobu. Čas na vozíku rozdělte na přejezdy, manipulaci a čekání. Samostatně zachyťte práci mimo vozík a přestávky. Pokud se zásobování výroby a expedice v průběhu týdne liší, pomůže stručný rozpis pro oba režimy.
 
-Přehled ověřte s vedoucím skladu i obsluhou. Plánovaná organizace práce se může od skutečné směny lišit. Pokud existují výrazně odlišné směny, popište každou z nich. Nemíchejte bez vysvětlení klidný ranní provoz s intenzivní večerní expedicí.
-
-| Podklad | Co konkrétně uvést |
+| Podklad | Co se hodí uvést |
 | --- | --- |
-| Vozíky | Typ, interní označení a způsob střídání |
-| Trasy | Hala, venkovní plocha, rampy a přechody povrchů |
-| Manipulace | Druh nákladu, obvyklé zatížení a pracovní postup |
-| Časový snímek | Doba jednotlivých činností, přestávky a práce mimo kabinu |
-| Rozdíly směn | Expedice, zásobování výroby nebo jiné odlišné režimy |
-
-Tabulka slouží k přípravě zadání. Není výsledkem měření ani univerzálním návodem k zařazení práce do kategorie.
+| Vozíky | Typy, označení a způsob střídání |
+| Trasy | Hala, venkovní plocha, rampy a přejezdy mezi povrchy |
+| Manipulace | Obvyklý náklad a způsob manipulace |
+| Časový snímek | Doby činností, přestávek a práce mimo vozík |
 
 ## Trasy a provozní podmínky
 
-Vyznačte trasu alespoň do jednoduchého plánku. Připojte fotografie nerovností, ramp, vrat a přechodů mezi halou a venkovní plochou. Uveďte, zda se podmínky liší podle počasí nebo vytížení. Laboratoř tak může před návštěvou posoudit, které situace má zachytit.
-
-Nevytvářejte pro měření zvláštní trasu, po které řidič běžně nejezdí. Neodstraňujte z popisu nepříjemné úseky jen proto, že tvoří menší část směny. Stejně tak nevybírejte pouze nejhorší místo bez informace o četnosti průjezdů. Důležitá je vazba měřeného úseku na skutečnou práci.
+Do plánku zakreslete trasu mezi místem odběru a vykládky. Pokud vozík několikrát za směnu přejíždí rampu nebo spáry v podlaze, popište úsek i četnost průjezdů. Podle toho můžeme měřit jednotlivé režimy a vztáhnout výsledky k celé směně.
 
 ## Příprava vozíku a provozu
 
-Předem sdělte známé závady, provedený servis a plánované změny. Zkontrolujte dostupnost vozíku, obsluhy a odpovědné kontaktní osoby. Připravte informace o sedadle a jeho nastavení. Potřebné technické zásahy řešte standardním servisním postupem, nikoli improvizovaně během měření.
-
-Domluvte bezpečný vstup týmu do provozu. Uveďte požadovaná školení, ochranné pomůcky a pravidla pohybu v logistické zóně. Měření nesmí narušit bezpečnou manipulaci s nákladem. Konkrétní postup a rozsah stanoví laboratoř podle zadání.
+Předem domluvíme dostupnost vozíku, obsluhy a bezpečný pohyb měřicího týmu. Při přípravě pomůže informace o stavu pojezdových ploch, údržbě vozíku a nastavení sedadla. Pokud se chystá oprava povrchu nebo výměna sedadla, domluvíme se, zda posoudit současný stav, nebo stav po úpravě.
 
 ## Protokol a kategorizace prací
 
-Protokol uchovejte společně s časovým snímkem. Při změně trasy, sedadla nebo organizace práce tak dohledáte podmínky původního měření.
-
-Měření slouží jako podklad pro kategorizaci podle skutečných činností a expozice. Právní rámec hluku a vibrací obsahuje [nařízení vlády č. 272/2011 Sb.](https://www.e-sbirka.cz/sb/2011/272).
+Protokol spojuje výsledky měření s pracovními režimy a dobami expozice. Pro přípustné expoziční limity a vyhodnocení je výchozí [nařízení vlády č. 272/2011 Sb., § 13 až 17](https://e-sbirka.gov.cz/sb/2011/272?odkazId=40492401). Pro zařazení práce se používají samostatná kritéria [vyhlášky č. 432/2003 Sb., příloha č. 1, bod 4](https://e-sbirka.gov.cz/sb/2003/432/2026-01-01?zalozka=text). Protokol je podkladem pro posouzení faktoru vibrací v rámci kategorizace podle [§ 37 a 38 zákona č. 258/2000 Sb.](https://e-sbirka.gov.cz/sb/2000/258?odkazId=37614179)
 
 ## Má se měřit každý vozík samostatně?
 
-Rozsah neodvozujte jen z počtu vozíků. Popište jejich rozdíly, střídání a použití. Laboratoř podle těchto informací vymezí reprezentativní situace. Totožnost modelu sama nezaručuje totožné pracovní podmínky.
+Záleží na tom, jak jsou vozíky používány. U skupiny vozíků se srovnatelným provozem nejprve ověříme, které situace ji mohou zastoupit. Vozík jezdící mezi halou a venkovní rampou může vyžadovat vlastní měření, i když jde o stejný model jako u vozíku v hale.
 
 ## Co poslat pro nabídku měření
 
-Pošlete lokalitu, počet vozíků, pracovní pozice a stručný časový snímek. Přiložte plánek tras a případnou výzvu KHS. Pokud se měnila technologie nebo organizace směn, popište rozdíl proti poslednímu měření.
+Pošlete adresu pracoviště, přehled vozíků a směn, plánek tras a účel měření. Pokud máte dřívější protokol nebo požadavek krajské hygienické stanice (KHS), přiložte ho.
 
-NATURCHEM zajišťuje [měření vibrací na pracovišti](/sluzby/mereni-vibraci/). [Pošlete nám zadání](/kontakt/?service=M%C4%9B%C5%99en%C3%AD%20vibrac%C3%AD&message=Popt%C3%A1v%C3%A1m%20m%C4%9B%C5%99en%C3%AD%20celkov%C3%BDch%20vibrac%C3%AD%20%C5%99idi%C4%8D%C5%AF%20VZV.%20#poptavkovy-formular) a uveďte, že potřebujete posoudit celkové vibrace řidičů VZV. Na poptávky reagujeme do 24 hodin; konkrétní termín a rozsah měření domluvíme podle provozu.
+[Pošlete nám zadání](/kontakt/?service=M%C4%9B%C5%99en%C3%AD%20vibrac%C3%AD&message=Popt%C3%A1v%C3%A1m%20m%C4%9B%C5%99en%C3%AD%20celkov%C3%BDch%20vibrac%C3%AD%20%C5%99idi%C4%8D%C5%AF%20VZV.%20#poptavkovy-formular). Přehled služby najdete na stránce [měření vibrací na pracovišti](/sluzby/mereni-vibraci/).
 
-*Úvodní fotografie: vysokozdvižný vozík při manipulaci s paletami, vlastní fototéka NATURCHEM. Ilustrační snímek; článek neuvádí výsledky měření tohoto vozíku.*
+*Úvodní fotografie: ilustrační snímek VZV při manipulaci s paletami z fototéky NATURCHEM.*

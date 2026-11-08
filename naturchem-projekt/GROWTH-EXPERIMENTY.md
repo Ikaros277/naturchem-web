@@ -2,6 +2,16 @@
 
 > Interní provozní dokument. Aktualizovat podle živého webu, GSC a GA4. Starší projektové roadmapy mohou být neaktuální.
 
+## Navazující vydání lokálních úprav — 8. 11. 2026
+
+Omezený pilot Clarity je již nasazený jako `bf1d542`, produkční Ready ověřeno 8. 11. Následující oddíl o přípravě je historický. Na další výslovný pokyn k vydání hotových lokálních změn se připravuje užší sada nad tímto main: přepracovaný článek o ceně hlukové studie s třemi zadavatelem potvrzenými orientačními pásmy bez DPH a s přímou předvolbou správné služby; srozumitelná volba „Přijmout vše“ nově výslovně zahrnující popsaný účel Microsoft Clarity. Žádné předem zaškrtnuté volitelné souhlasy, převzetí starého souhlasu jako nového nebo změna rozsahu snímání. Jednotlivá volba Clarity, odmítnutí, odvolání a vyloučení formulářů zůstávají.
+
+Výchozí slabiny: živý cenový článek dosud neuvádí schválené částky a souhlas s Clarity vyžaduje samostatné otevření nastavení. První změna má pomoci provozovateli odhadnout rozpočet a zaslat podklady ke konkrétní nabídce. Druhá zpřístupňuje informovanou volbu, nikoli automatické sledování. Konverzní efekt není naměřen; po vydání nepřisuzovat případný růst měřených relací nebo GA4 událostí automaticky novým zákazníkům. Srovnávat stejně dlouhá dokončená 28/56denní období, u cenového článku relevantní české dotazy/vstupy a skutečně doručené kvalifikované poptávky; malé vzorky a současné změny přiznat.
+
+Navazující odpověď zadavatele v témže běhu výslovně potvrzuje odbornou kontrolu nového znění dalších 19 článků i dvou regionálních referencí NATURCHEMem. Do společné sady tedy patří všech 20 přepracovaných českých článků a obě rozšíření existujících fotografických případů. Zachovány dosavadní fotografie, autor, datum vydání, slugs, staré kapitoly a pondělní termíny devíti budoucích článků. Netvrdí se dokončená ruční revize zbývajících 226 jazykových souborů. Dvě další nové německé redakce a neodsouhlasená kolaudační archivní ukázka zůstávají mimo tuto sadu.
+
+Nezahrnovat jiné pracovní kopie Cursoru, zamítnutou změnu hostingu ani mechanicky vracet obsah starších větví. Před jediným produkčním push vyžadovat verify/build celé společné sady, HTTP/SEO a UI kontrolu, nový odečet main a kontrolu přesného diffu. Návratový bod je zachovaný Ready `bf1d542`. Skutečný nový commit a Ready budou evidovány až po dokončení, nikoli předpokládány.
+
 ## Clarity — příprava 7. 11., omezený pilot schválen 8. 11. 2026
 
 Zadavatel požádal o zapojení Microsoft Clarity do dlouhodobého vyhodnocování. Nad základem `7998add` vzniká oddělený, standardně vypnutý pilot ve větvi `codex/clarity-consent-pilot-2026-11-06`. Produkční web zatím nový sběr neobsahuje. Jde o přípravu diagnostiky ovládání, nikoli o nový obsahový, rankingový nebo CTR experiment.

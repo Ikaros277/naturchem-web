@@ -1,7 +1,7 @@
 ---
 title: "Odborné přílohy EIA: hluk, rozptyl a doprava"
 slug: odborne-prilohy-eia-hluk-rozptyl-doprava
-excerpt: "Studie pro EIA musí popisovat stejný projekt. Jak sjednotit kapacity, provozní dobu a dopravu a vymezit odborné přílohy oproti celému oznámení záměru."
+excerpt: "Jak připravit společné podklady pro hlukovou a rozptylovou studii k EIA. Co sjednotit v projektu, dopravě, variantách a navrhovaných opatřeních."
 author: NATURCHEM
 status: published
 publishedAt: "2026-12-07"
@@ -9,55 +9,42 @@ topic: EIA a povolování
 heroImage: /uploads/poradna-2026/prilohy-eia.webp
 ---
 
-Objednáváte hlukovou a rozptylovou studii jako přílohy k oznámení EIA? Předejte oběma zpracovatelům stejnou verzi projektu. Kapacity, provozní doba a doprava musí být vzájemně dohledatelné. Jinak mohou vzniknout odborně zpracované dokumenty, které neposuzují tentýž záměr.
-
-**Nejdříve sestavte jednotné zadání.** Označte platnou situaci, stávající a navrhovaný stav, provozní režimy a dopravní předpoklady. Ujasněte také, kdo koordinuje celé oznámení a kdo dodává jednotlivé přílohy.
+Hlukovou a rozptylovou studii pro posuzování vlivů na životní prostředí (EIA) je dobré zadat ze stejné verze projektu. Provozní doba, kapacita a dopravní obsluha se promítají do více příloh. Když se projekt mění, společný přehled pomůže určit, které výpočty mají zpracovatelé aktualizovat.
 
 ## Rozsah odborných příloh
 
-EIA znamená posuzování vlivů záměru na životní prostředí. Oznámení popisuje záměr a jeho možné vlivy v požadovaném rozsahu. Hluková nebo rozptylová studie může tvořit odborný podklad, ale sama celé oznámení nenahrazuje. Potřeba konkrétních příloh vychází z charakteru projektu a zadání.
+Náležitosti oznámení záměru stanoví [§ 6 a příloha č. 3 zákona č. 100/2001 Sb.](https://e-sbirka.gov.cz/sb/2001/100). Hluková nebo rozptylová studie dodává podklad pro hodnocení konkrétního vlivu. Rozsah odborných podkladů se odvíjí od povahy záměru, jeho umístění a fáze řízení. U dokumentace EIA, pokud se zpracovává, upravuje náležitosti příloha č. 4.
 
-Při objednávce výslovně rozlišujte samostatnou studii, soubor příloh a kompletní oznámení. Definujte předání výsledků a způsob jejich zapracování. Základní informace o oznámení obsahuje [Portál veřejné správy](https://portal.gov.cz/sluzby-vs/zverejneni-oznameni-v-ramci-posuzovani-vlivu-na-zivotni-prostredi-S12342). Právní rámec upravuje [zákon č. 100/2001 Sb.](https://www.e-sbirka.cz/sb/2001/100).
+Ujasněte si, zda potřebujete samostatné výpočty pro koordinátora, nebo zpracování celého oznámení včetně zapracování výsledků. Rozsah lze upřesnit podle dostupných podkladů a případného požadavku příslušného úřadu.
 
 ## Společné zadání studií
 
-Studie mohou používat odlišné odborné postupy, ale jejich technické zadání musí být sladěné. Shodně vymezte projekt, jeho varianty a relevantní provozní situace. Označte období nebo etapu, ke které se výpočty vztahují. Nezaměňujte současný provoz s výhledovým stavem po rozšíření.
-
-| Společný údaj | Co sjednotit |
+| Údaj | Co předat zpracovatelům |
 | --- | --- |
-| Situace projektu | Stejnou verzi umístění budov, zařízení a komunikací |
-| Kapacity | Projektované parametry a způsob jejich použití |
-| Provozní doba | Směnnost, noční provoz a relevantní souběhy |
-| Doprava | Četnost, druh vozidel, trasy a etapu záměru |
-| Varianty | Jednoznačné označení a rozdíly mezi řešeními |
-| Opatření | Shodný popis řešení, se kterým studie počítají |
+| Situace | Aktuální výkres s budovami, zařízeními a komunikacemi |
+| Kapacita | Stávající a navrhovaný stav, jednotky a fáze projektu |
+| Provozní doba | Směny, provoz v noci a souběh zařízení |
+| Doprava | Počet jízd, rozdělení vozidel, trasy a denní doba |
+| Varianty a opatření | Popis změn mezi variantami a opatření, se kterými se počítá |
 
-Tabulka slouží ke koordinaci. Neznamená, že všechny uvedené údaje vstupují do každé studie stejným způsobem.
+Každý odborný výpočet použije ty vstupy, které odpovídají jeho zadání. Společný přehled pomáhá dohledat, že se hodnotí stejná verze projektu.
 
 ## Dopravní údaje
 
-U počtu vozidel rozlišujte příjezdy, odjezdy a součet pohybů. Uveďte osobní a nákladní dopravu, rozdělení do dne a noci i používané trasy.
-
-Pokud dodavatel technologie změní logistický předpoklad, informujte všechny dotčené zpracovatele. U nových variant přiložte přehled rozdílů. Nekopírujte pouze poslední tabulku bez informace, kterou nahrazuje. U každého vstupu musí být dohledatelná platná verze.
+Uveďte, zda počet vyjadřuje jednotlivé příjezdy, odjezdy, nebo jejich součet. Jeden příjezd a jeden odjezd jsou dva pohyby vozidla. K počtům připojte druh vozidel, trasy a rozložení mezi den a noc. Samostatně popište výstavbu a budoucí provoz, pokud se jejich doprava posuzuje.
 
 ## Navrhovaná opatření
 
-Studie může posuzovat variantu s clonou, upraveným provozem nebo konkrétním technickým řešením. Jestliže se opatření nepromítne do projektu, posuzovaný a navrhovaný stav se rozejdou. Proto před předáním finálních příloh zkontrolujte jejich technické předpoklady. Nejde pouze o úpravu textu závěru.
-
-Stejně pracujte s návazností na ostatní dokumenty. Rozhodující informace nesmí zůstat jen v příloze, kterou hlavní text opomine. Koordinátor oznámení má znát podmínky a omezení odborných výstupů. Případné rozpory je potřeba vyřešit, ne pouze přiložit oba dokumenty.
+Pokud hluková studie počítá s clonou, zakreslete její polohu a výšku také do projektu. Při změně těchto parametrů může být potřeba přepočítat výsledek. U dalších opatření postupujte obdobně: ve studii, v projektu a v oznámení používejte stejný popis řešení.
 
 ## Změny projektu
 
-Změny evidujte s datem, odpovědnou osobou a seznamem dotčených příloh. Zpracovatel posoudí, zda vyžadují nový výpočet nebo úpravu dokumentu.
-
-Určete okamžik potvrzení finálních vstupů. Pozdější změna kapacity nebo technologie může znamenat další práci. Vymezte ji také v nabídce a harmonogramu. Nelze současně očekávat neměnný termín a neomezený počet zásadních změn zadání.
+U nové verze situace uveďte datum a stručný soupis změn. Například při přesunu výduchu nebo změně trasy nákladních vozidel může být dotčeno více podkladů. Zpracovatelé pak mohou určit, které závěry zůstávají použitelné a kde je potřeba aktualizovat výpočet.
 
 ## Podklady pro objednávku
 
-Připravte situaci, technický popis, provozní režimy a dostupné údaje o dopravě. Doplňte požadovaný účel a seznam již objednaných studií. Uveďte koordinátora oznámení a způsob předávání aktualizací. Pokud existuje výzva nebo požadavek úřadu, přiložte celé znění.
+Pošlete situaci, technický popis, provozní režimy, dopravu a přehled již objednaných studií. Pokud máte vyjádření úřadu nebo závěr zjišťovacího řízení, přiložte jeho úplné znění.
 
-Není nutné objednávat všechny odborné oblasti bez předchozího vymezení. Nejdříve posuďte, které podklady skutečně potřebujete. Ušetříte práci s dokumenty mimo rozsah záměru a současně nevynecháte relevantní vlivy. Konkrétní potřebu nelze určit pouze podle názvu provozu.
+Zpracováváme [odborné přílohy](/sluzby/technicke-prilohy/) i [oznámení záměru](/sluzby/zjistovaci-rizeni-eia/). [Poslat společné zadání projektu](/kontakt/?service=EIA%20a%20ozn%C3%A1men%C3%AD%20z%C3%A1m%C4%9Bru#poptavkovy-formular).
 
-NATURCHEM zpracovává [odborné přílohy](/sluzby/technicke-prilohy/) i [oznámení pro zjišťovací řízení EIA](/sluzby/zjistovaci-rizeni-eia/). [Pošlete nám společné zadání projektu](/kontakt/#poptavkovy-formular) a napište, zda poptáváte jednotlivé studie, nebo celý dokument. Na poptávky reagujeme do 24 hodin.
-
-*Úvodní fotografie: ilustrační průmyslový záměr z vlastní fototéky NATURCHEM. Článek neuvádí konkrétní závěr EIA pro vyobrazený provoz.*
+*Úvodní fotografie: ilustrační snímek průmyslového záměru z fototéky NATURCHEM.*

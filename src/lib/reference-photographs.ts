@@ -7,6 +7,7 @@ type ReferencePhotograph = {
   caption: string;
   relationship: "case";
   year: number;
+  region?: string;
 };
 
 /** Only photographs of the described case belong in this showcase.
@@ -35,9 +36,9 @@ export const referencePhotographs: readonly ReferencePhotograph[] = [
     caption: "Technologie kotelny · fotografie z této zakázky"
   },
   {
-    exampleId: "hala-pp", asset: "hala-mikroklima", relationship: "case", year: 2026,
+    exampleId: "hala-pp", asset: "hala-mikroklima", relationship: "case", year: 2026, region: "Jihočeský kraj",
     alt: "Měřicí sestava na stativu v dílně údržby forem automobilového výrobního závodu",
-    caption: "Měření mikroklimatu · fotografie z této zakázky"
+    caption: "Měření mikroklimatu v dílně údržby forem · fotografie z této zakázky"
   },
   {
     exampleId: "lakovna-diisokyanaty", asset: "lakovna-vzorkovaci-kazeta", relationship: "case", year: 2025,
@@ -50,9 +51,9 @@ export const referencePhotographs: readonly ReferencePhotograph[] = [
     caption: "Hlukoměr na pracovišti · fotografie z této zakázky"
   },
   {
-    exampleId: "kovovyroba-vibrace", asset: "rucni-naradi-vibrace", relationship: "case", year: 2025,
-    alt: "Ruce pracovníka s ručním nářadím a připojeným snímačem vibrací v kovovýrobě",
-    caption: "Nářadí s připojeným snímačem · fotografie z této zakázky"
+    exampleId: "kovovyroba-vibrace", asset: "rucni-naradi-vibrace", relationship: "case", year: 2025, region: "Jihočeský kraj",
+    alt: "Ruce pracovníka s úkosovacím nářadím a připojeným snímačem vibrací v kovovýrobě",
+    caption: "Úkosovací nářadí se snímačem vibrací · fotografie z této zakázky"
   },
   {
     exampleId: "tcp-hluk", asset: "tepelne-cerpadlo-hluk", relationship: "case", year: 2026,

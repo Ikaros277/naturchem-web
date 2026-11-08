@@ -1,67 +1,62 @@
 ---
 title: "Nový bezpečnostní list: podklady a revize"
 slug: bezpecnostni-list-novy-vyrobek-podklady-revize
-excerpt: "Uvádíte na trh chemický výrobek? Přehled podkladů pro nový bezpečnostní list, rozdílu proti revizi a vazby na složení, klasifikaci a etiketu."
+excerpt: "Kdy pro novou chemickou směs potřebujete bezpečnostní list, jaké podklady připravit a kdy dodavatel poskytuje odběratelům aktualizovanou verzi."
 author: NATURCHEM
 status: published
 publishedAt: "2026-10-26"
+updatedAt: "2026-11-05"
 topic: Chemická legislativa
 heroImage: /uploads/poradna-2026/bezpecnostni-list.webp
 ---
 
-Máte nový chemický výrobek a potřebujete bezpečnostní list? Začněte složením, zamýšleným použitím a údaji o dodavateli. Existující list podobného výrobku může pomoci s orientací, ale nenahradí odborné posouzení Vaší směsi. Pouhé přepsání obchodního názvu může přenést chyby do klasifikace, etikety i pokynů pro používání.
-
-**První krok:** pošlete popis výrobku a dostupné podklady. Podrobné složení předejte až dohodnutým způsobem. Recepturu nevkládejte do veřejného formuláře ani nezveřejňujte jako přílohu na webu.
+Pokud uvádíte vlastní chemickou směs na trh, začněte ověřením, zda k ní máte poskytovat bezpečnostní list. Povinnost se podle [čl. 31 nařízení REACH](https://eur-lex.europa.eu/eli/reg/2006/1907) vztahuje mimo jiné na směsi klasifikované jako nebezpečné podle CLP. U některých směsí, které jako nebezpečné klasifikované nejsou, dodavatel list poskytuje na vyžádání.
 
 ## Nový bezpečnostní list nebo revize
 
-Nový dokument řešíte například pro vlastní směs nebo výrobek bez použitelného bezpečnostního listu. Revize vychází z existujícího dokumentu a ověřuje jeho soulad s aktuálními informacemi. Rozhoduje skutečný stav výrobku a podkladů, nikoli samotné stáří souboru.
-
-Změna složení, klasifikace nebo informací o nebezpečnosti může vyžadovat aktualizaci. [ECHA při přezkoumání klasifikace směsí](https://echa.europa.eu/en/support/mixture-classification/review-the-classification) upozorňuje také na změny klasifikace vstupních surovin a nové údaje od dodavatelů. Bezpečnostní list nemá jednu univerzální dobu platnosti. Podmínky jeho poskytování a aktualizace upravuje REACH; konkrétní důvod a postup musí zpracovatel ověřit pro daný výrobek.
+Pro novou směs posoudíme její aktuální složení, dostupné údaje a zamýšlená použití. Pokud list už máte, při revizi vycházíme z něj a z přehledu změn od posledního vydání. Může jít například o nového dodavatele suroviny, změnu receptury nebo doplnění způsobu použití. Podle povahy změny upřesníme, které části je třeba přepracovat.
 
 ## Podklady pro zpracování
 
-Nejprve rozlište látku a směs. U směsi připravte podklady ke složkám a jejich zastoupení. Doplňte fyzikální podobu výrobku a způsob používání. Uveďte také země, pro které dokument potřebujete.
-
-| Oblast | Vhodné podklady |
+| Podklad | Co připravit |
 | --- | --- |
-| Identifikace | Obchodní název, typ výrobku a údaje o dodavateli |
-| Složení | Identifikace složek a jejich zastoupení, předané důvěrně |
-| Vstupní suroviny | Aktuální bezpečnostní listy a další údaje dodavatelů |
-| Vlastnosti | Dostupné technické listy a skutečné zkušební údaje |
-| Použití | Kdo výrobek používá, jak a v jakém prostředí |
-| Dosavadní dokumenty | Původní list, etiketa a seznam známých změn |
+| Výrobek | Obchodní název, forma výrobku, údaje o dodavateli a trhy, na kterých bude výrobek dodáván |
+| Použití | Kdo s výrobkem pracuje, k čemu slouží a jak se aplikuje |
+| Složení | Identifikace a zastoupení složek podle aktuální receptury |
+| Údaje o surovinách | Bezpečnostní listy dodavatelů a další dostupné informace |
+| Vlastnosti směsi | Technický list a dostupné výsledky zkoušek |
+| Dosavadní dokumentace | Stávající bezpečnostní list, etiketa a stručný přehled změn |
 
-Chybějící údaj označte jako chybějící. Nenahrazujte ho odhadem podle podobného výrobku. Zpracovatel musí poznat, které informace jsou doložené a které je třeba doplnit. Zvlášť důležité je rozlišit aktuální recepturu od starší vývojové varianty.
+Způsob bezpečného předání receptury s Vámi domluvíme předem.
 
 ## Posouzení výsledné směsi
 
-Směs není pouhým součtem dokumentů jejích složek. Je potřeba posoudit výsledný výrobek a dostupné údaje v souvislostech. K tomu patří klasifikace a navazující informace o bezpečném použití. Neopisujte automaticky všechny pokyny pro jednotlivé suroviny do dokumentu směsi.
-
-U technických údajů zachovejte jednotky a původ informace. Přiložte dostupné výsledky zkoušek. Zpracovatel posoudí jejich použitelnost a určí, zda potřebuje další podklady nebo zkoušky.
+Klasifikaci výsledné směsi posuzujeme podle CLP. Použitelné podklady závisí na třídě nebezpečnosti. Například při posouzení hořlavosti kapalné směsi mohou být důležité dostupné zkušební údaje o bodu vzplanutí. Listy jednotlivých surovin poskytují údaje o složkách; klasifikaci výrobku stanovujeme pro směs v podobě, v jaké ji dodáváte.
 
 ## Soulad s etiketou
 
-Při objednávce pošlete také návrh etikety. Zkontrolujte obchodní název, dodavatele a identifikaci výrobku napříč dokumenty. Odborné posouzení klasifikace má navazovat na obsah listu i označení. Překlad starého listu sám o sobě neověřuje správnost těchto vazeb.
-
-Pokud výrobek měníte, připojte stručný seznam změn. Pomůže rozlišit administrativní úpravu od změny, která ovlivňuje odborný obsah. Případné další povinnosti, například související s UFI nebo oznámením směsi, řešte odděleně. Nepovažujte je automaticky za splněné objednáním bezpečnostního listu.
+K návrhu bezpečnostního listu přiložte etiketu. Porovnáme identifikaci výrobku a dodavatele a ověříme, že údaje o nebezpečnosti odpovídají klasifikaci směsi. Pokud směs podléhá povinnosti oznámení toxikologickým střediskům, patří oznámení a práce s jednoznačným identifikátorem složení (UFI) do samostatného kroku podle přílohy VIII CLP.
 
 ## Podklady pro revizi
 
-Pošlete aktuálně používaný list a pokud možno jeho upravitelnou verzi. Přiložte nové podklady od dodavatelů a aktuální složení. Uveďte důvod revize: změnu receptury, dodavatele, použití nebo zjištěnou nesrovnalost. Pokud si nejste jisti rozsahem změn, napište to přímo.
+Podle čl. 31 odst. 9 REACH dodavatel bezpečnostní list aktualizuje bez prodlení, když:
 
-Před vydáním ověřte také firemní údaje a kontakty. Dohodněte jazykové verze a způsob správy dokumentu. Uchovejte předchozí verzi, datum změny a informaci o distribuci nové verze. Požadavky na předání odběratelům je třeba posoudit podle konkrétní situace a pravidel REACH.
+- získá nové údaje o nebezpečnosti nebo informace, které mohou ovlivnit opatření k řízení rizik;
+- je uděleno nebo zamítnuto povolení podle REACH;
+- je uloženo omezení podle REACH.
+
+V těchto případech dodavatel datovanou revizi poskytuje bezplatně také odběratelům, kterým látku nebo směs dodal v předchozích 12 měsících. Pro přípravu revize nám pomůže poslední používaná verze listu, nové podklady a datum změny.
 
 ## Co zadat do poptávky
 
-Uveďte počet výrobků, látku nebo směs, požadované jazyky a dostupnost podkladů. Napište, zda potřebujete nový list, revizi nebo nejprve kontrolu. Přiložte pouze dokumenty, které můžete bezpečně předat; citlivé složení domluvíme samostatně.
+Uveďte počet výrobků, zda jde o látky nebo směsi, země dodání a požadovaný termín. Pokud je k dispozici stávající list, popište stručně důvod revize. U nového výrobku pro první kontakt stačí informace o typu směsi a jejím použití.
 
-NATURCHEM zajišťuje [tvorbu a revize bezpečnostních listů](/sluzby/bezpecnostni-listy/). [Pošlete nám popis požadavku](/kontakt/#poptavkovy-formular). Na poptávky reagujeme do 24 hodin; termín dokončení závisí na rozsahu a úplnosti podkladů.
+[Poptat nový bezpečnostní list nebo revizi](/kontakt/?service=Bezpe%C4%8Dnostn%C3%AD%20listy#poptavkovy-formular). Rozsah služby najdete na stránce [bezpečnostní listy](/sluzby/bezpecnostni-listy/).
 
 ## Odborné zdroje
 
-- [ECHA: bezpečnostní listy a jejich aktualizace](https://echa.europa.eu/safety-data-sheets).
-- [ECHA: pokyny pro sestavení bezpečnostních listů](https://echa.europa.eu/-/guidance-on-the-compilation-of-safety-data-sheets).
-- [ECHA: přezkoumání klasifikace směsi](https://echa.europa.eu/en/support/mixture-classification/review-the-classification).
+- [Nařízení REACH: čl. 31 a příloha II](https://eur-lex.europa.eu/eli/reg/2006/1907) a [nařízení (EU) 2020/878 k příloze II](https://eur-lex.europa.eu/eli/reg/2020/878/oj).
+- [Nařízení CLP: klasifikace, označování a příloha VIII](https://eur-lex.europa.eu/eli/reg/2008/1272).
+- [ECHA: pokyny k sestavení bezpečnostního listu](https://echa.europa.eu/cs/-/guidance-on-the-compilation-of-safety-data-sheets) a [přezkoumání klasifikace směsi](https://echa.europa.eu/en/support/mixture-classification/review-the-classification).
 
-*Úvodní obrázek pochází z fototéky NATURCHEM a slouží k ilustraci chemického provozu. Nejde o fotografickou referenci, zveřejněnou recepturu ani ukázku konkrétního bezpečnostního listu.*
+*Úvodní fotografie: ilustrační snímek z fototéky NATURCHEM.*

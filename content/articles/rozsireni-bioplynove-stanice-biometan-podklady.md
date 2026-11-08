@@ -1,7 +1,7 @@
 ---
 title: "Rozšíření BPS a biometan: odborné podklady"
 slug: rozsireni-bioplynove-stanice-biometan-podklady
-excerpt: "Připravujete změnu bioplynové stanice? Sjednoťte stávající a navrhované kapacity, technologie, dopravu a provozní režimy pro odborné studie a povolovací podklady."
+excerpt: "Co předat při rozšíření bioplynové stanice o výrobu biometanu: kapacity, technologie, hlukové a emisní podklady a platná povolení."
 author: NATURCHEM
 status: published
 publishedAt: "2026-12-28"
@@ -9,57 +9,46 @@ topic: EIA a povolování
 heroImage: /uploads/poradna-2026/bioplyn-biometan.webp
 ---
 
-Plánujete rozšířit bioplynovou stanici nebo doplnit výrobu biometanu? Připravte nejprve srozumitelné porovnání stávajícího a navrhovaného stavu. Samotný název nové technologie nestačí k určení potřebných podkladů. Důležité jsou kapacity, provozní režimy, doprava a vazby na dosavadní povolení.
-
-**Pošlete situaci areálu, technický popis změny a platná rozhodnutí.** Odborné studie mají vycházet ze stejné verze projektu. Ne každá úprava automaticky znamená stejný rozsah EIA nebo jiných výstupů.
+Pokud ke stávající bioplynové stanici přidáváte výrobu biometanu, připravte popis areálu před změnou a po ní. Uveďte, co zůstane v provozu, která zařízení přibudou a které kapacity se změní. Tyto údaje pomohou určit potřebné studie a prověřit návaznost na platná povolení.
 
 ## Stávající a navrhovaný stav
 
-Oddělte stávající zařízení od nové technologie. Uveďte, zda se mění vstupy, výkon, skladování, zpracování nebo doprava. Pokud se zachovává kogenerace, popište její budoucí režim. Nepředpokládejte bez ověření, že přidání biometanové části ostatní vlivy areálu odstraní.
-
-V přehledu změn označte i pomocné technologie. Kompresory, chlazení, ventilace nebo obslužná doprava mohou být pro zadání studií podstatné. Jejich konkrétní význam posoudí zpracovatel podle projektu. Seznam všech zařízení pomůže vymezit rozsah, aniž by se automaticky objednávala každá možná studie.
+V situaci označte novou jednotku pro úpravu bioplynu, kompresory, chlazení a další související technologie. Pokud kogenerační jednotka zůstává, popište, kdy a v jakém režimu má běžet. U každé varianty uveďte, které technologie mohou běžet současně.
 
 ## Kapacity a materiálové toky
 
-Předejte projektované parametry a dostupná data dosavadního provozu odděleně. U materiálových toků vysvětlete jednotky a sledované období. Pokud dodavatel technologie pracuje s více variantami, označte je. Nejasné rozdíly v číslech se mohou přenést do všech navazujících dokumentů.
+Projektované hodnoty a údaje ze stávajícího provozu uvádějte samostatně. K hodnotám doplňte jednotky a období, ke kterému se vztahují.
 
-| Oblast | Co předat k úvodnímu posouzení |
+| Oblast | Co porovnat před změnou a po ní |
 | --- | --- |
-| Areál | Aktuální situaci a umístění změny |
-| Technologie | Popis současného a navrhovaného řešení |
-| Kapacity a vstupy | Jasné jednotky, projektované parametry a změny |
-| Provoz | Směnnost, souběhy zařízení a plánované režimy |
-| Doprava | Druhy vozidel, četnost a používané trasy |
-| Povolení | Dosavadní rozhodnutí a relevantní podmínky |
-
-Tabulka je přípravou zadání, nikoli rozhodnutím o povinných přílohách pro konkrétní stanici.
+| Vstupní suroviny | Druhy a množství, příjem, skladování a manipulaci |
+| Technologie | Kapacitu stanice a nové jednotky, využití bioplynu a režim kogenerace |
+| Výstupy | Biometan, využití či odvod dalších proudů z technologie a nakládání s digestátem |
+| Provoz a doprava | Provozní dobu, souběhy technologií, vozidla, počet jízd a trasy |
+| Povolení | Dosavadní podmínky a části provozu, kterých se změna týká |
 
 ## Hlukové podklady
 
-Nové zařízení neposuzujte bez informace o ostatních zdrojích. Uveďte, které technologie poběží současně a zda také v noci. Připojte akustické údaje dodavatelů včetně jejich podmínek. Katalogové číslo bez správného umístění a provozního režimu může být nedostatečné.
-
-Pokud uvažujete clonu nebo jiné opatření, zakreslete je do situace. Studie musí odpovídat variantě, která se skutečně připravuje. Změnu technologie nebo umístění oznamte zpracovateli před dokončením. Podklady pro [hlukovou studii](/sluzby/hlukove-studie/) tak budou navazovat na projekt, nikoli na jeho dřívější podobu.
+Pro [hlukovou studii](/sluzby/hlukove-studie/) pomohou akustické údaje od dodavatelů, poloha zdrojů a doba jejich provozu. U kompresoru nebo chlazení doplňte, zda poběží také v noci a v jakém režimu. Případné zakrytování nebo clonu vyznačte v situaci. U stávajících zdrojů přiložte dostupná měření nebo dřívější studii.
 
 ## Emisní zdroje a povolení
 
-Připravte dostupné údaje o emisních zdrojích, výduších a současném povolení. Doplňte protokoly měření, pokud jsou pro posuzovaný stav relevantní. Popište změnu paliva nebo provozu jednotlivých zařízení. Potřeba rozptylové studie, posudku či měření vychází z konkrétního záměru a požadavků.
-
-Nesměšujte tyto služby s analýzou kvality biometanu. Jde o odlišné zadání, které vyžaduje samostatné ověření rozsahu dodavatele. Stejně je potřeba odlišit projektové podklady od následného měření skutečného provozu. Jeden dokument nenahrazuje automaticky všechny ostatní.
+Připravte přehled technologií, míst vypouštění a platných podmínek ochrany ovzduší. Uveďte, kde se mění zařízení, kapacita nebo způsob provozu. Podle [zákona o ochraně ovzduší](https://e-sbirka.gov.cz/sb/2012/201?odkazId=199444893&zalozka=text) a platného povolení se pak posoudí, jaký povolovací postup a odborné podklady jsou potřeba. Podklady k emisím do ovzduší a požadavky na jakost plynu pro jeho dodávku jsou dvě různá zadání.
 
 ## Povolovací postup a EIA
 
-Připravte vymezení stávajícího zařízení a rozsahu změny. Přiložte dřívější dokumenty EIA. Příslušný postup závisí na parametrech záměru a aktuálních předpisech; přechod na biometan neznamená automaticky plné posouzení EIA.
+Pro posouzení změny je důležité zařazení záměru, jeho rozsah, umístění a dosavadní posouzení. Vychází se z [§ 4 a přílohy č. 1 zákona č. 100/2001 Sb.](https://e-sbirka.gov.cz/sb/2001/100). Podle konkrétních podmínek může změna podléhat zjišťovacímu řízení nebo posouzení vlivů na životní prostředí (EIA).
 
-Právní rámec obsahuje [zákon č. 100/2001 Sb.](https://www.e-sbirka.cz/sb/2001/100). Veřejné dokumenty lze dohledat v [Informačním systému EIA](https://portal.cenia.cz/eiasea/view/eia100_cr). Dokument jiného záměru pomůže s orientací, ale není hotovým seznamem povinností Vaší stanice.
+Dřívější oznámení, závěr nebo stanovisko k Vaší stanici přiložte k zadání. Veřejné dokumenty lze dohledat v [Informačním systému EIA](https://portal.cenia.cz/eiasea/view/eia100_cr).
 
 ## Termín zpracování studií
 
-Už při upřesňování technického zadání sdělte plánovanou změnu a dostupné varianty. Bude možné vymezit potřebná data před dokončením projektu. Předběžný přehled ale nezaměňujte za finální studii. Ta musí pracovat s potvrzenými podklady a jasně označenou variantou.
+Základní vymezení podkladů lze řešit už při výběru technologie. Pro výpočty je důležité domluvit, ze které varianty a verze projektu budou vycházet. Pokud se umístění nebo kapacita později změní, podle rozsahu změny prověříme použitelnost rozpracovaných výstupů.
 
 ## Podklady pro objednávku
 
-Uveďte lokalitu, fázi projektu, popis změny a dostupnou dokumentaci. Připojte požadavek úřadu nebo projektanta, pokud jej máte. Domluvte koordinaci příloh a potvrzení technických vstupů. Rozsah nabídky má odpovídat skutečným potřebám, nikoli všeobecnému balíčku bez posouzení.
+Pošlete lokalitu, situaci, popis současného a navrhovaného stavu a dostupná povolení. Podle těchto podkladů s Vámi upřesníme rozsah [měření a studií pro bioplyn a biometan](/provozy-a-technologie/bioplyn-biometan/).
 
-NATURCHEM poskytuje [měření a odborné podklady pro bioplynové stanice a biometanové projekty](/provozy-a-technologie/bioplyn-biometan/). [Pošlete nám stávající a navrhovaný stav](/kontakt/#poptavkovy-formular). Na poptávky reagujeme do 24 hodin; rozhodnutí a termín povolení úřadu negarantujeme.
+[Poslat popis změny bioplynové stanice](/kontakt/#poptavkovy-formular).
 
-*Úvodní fotografie: kogenerační technologie bioplynové stanice z vlastní fototéky NATURCHEM. Ilustrační snímek; není prezentován jako realizace konkrétní přestavby na biometan.*
+*Úvodní fotografie: ilustrační snímek kogenerační technologie z fototéky NATURCHEM.*

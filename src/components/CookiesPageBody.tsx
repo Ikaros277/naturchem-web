@@ -4,6 +4,8 @@ import { getCookiesPage } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/locales";
 import { fillLegalTemplate } from "@/lib/legal-template";
 import { legalController, legalEffectiveDate, legalPaths } from "@/lib/legal";
+import { ClarityDisclosure } from "@/components/ClarityDisclosure";
+import { clarityDisclosureDate, getClarityPilotId } from "@/lib/clarity-config";
 
 function splitAroundLabel(text: string, label: string): [string, string] {
   const parts = text.split(label);
@@ -21,7 +23,7 @@ export async function CookiesPageBody({ locale }: { locale: Locale }) {
   return (
     <LegalPageLayout locale={locale} title={content.title} lead={content.lead} breadcrumbLabel={content.breadcrumbLabel}>
       <p className="legal-meta">
-        {content.lastUpdatedLabel} {legalEffectiveDate}
+        {content.lastUpdatedLabel} {getClarityPilotId() ? clarityDisclosureDate : legalEffectiveDate}
       </p>
 
       <h2>{s.intro.heading}</h2>
@@ -77,6 +79,7 @@ export async function CookiesPageBody({ locale }: { locale: Locale }) {
         </table>
       </div>
       <p>{s.cookieList.note}</p>
+      <ClarityDisclosure locale={locale} cookies />
 
       <h2>{s.googleFonts.heading}</h2>
       <p>{s.googleFonts.paragraph}</p>

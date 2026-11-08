@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import { useCookieConsentState } from "@/components/CookieConsentBanner";
 import { applyGoogleConsentMode } from "@/lib/google-consent-mode";
+import { getClarityPilotId, mountClarityPilot } from "@/lib/clarity-pilot";
 
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
@@ -95,6 +96,11 @@ export function ConsentAwareTracking() {
   const marketingAllowed = hasChoice && consent.marketing;
   const googleTagsAllowed =
     hasChoice && (consent.statistics || (consent.marketing && Boolean(googleAdsId)));
+
+  useEffect(() => {
+    const id = getClarityPilotId();
+    if (id) return mountClarityPilot(id, window, document);
+  }, []);
 
   useEffect(() => {
     if (!getPrimaryGoogleTagId()) return;

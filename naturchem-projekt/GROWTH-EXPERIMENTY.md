@@ -2,6 +2,18 @@
 
 > Interní provozní dokument. Aktualizovat podle živého webu, GSC a GA4. Starší projektové roadmapy mohou být neaktuální.
 
+## Clarity — příprava 7. 11., omezený pilot schválen 8. 11. 2026
+
+Zadavatel požádal o zapojení Microsoft Clarity do dlouhodobého vyhodnocování. Nad základem `7998add` vzniká oddělený, standardně vypnutý pilot ve větvi `codex/clarity-consent-pilot-2026-11-06`. Produkční web zatím nový sběr neobsahuje. Jde o přípravu diagnostiky ovládání, nikoli o nový obsahový, rankingový nebo CTR experiment.
+
+Samostatný nový souhlas, omezené veřejné stránky, ukončení před přechodem na formuláře, ochrana proti pozdnímu načtení a odvolání, maskování formulářů a informace o soukromí v CS/EN/DE. Stávající souhlas GA4 neopravňuje k Clarity; běžné povolení statistiky a marketingu jej nezapíná. Sběr nezahrnuje celou cestu návštěvníka a dostupný vzorek omezuje souhlas i kompatibilita prohlížeče. Počet relací nelze vydávat za počet zákazníků.
+
+Celé verify/build a cílená kontrola posledních změn PASS. Prohlížečové testy skutečné místní lišty: desktop, malé mobily v CS/EN/DE i telefon na šířku; odmítnutí odstraní vlastní cookies také na vyloučené stránce Kontakt. Šest lokálních právních stránek má úplné informace a kanonické odkazy; 585 URL sitemap zachováno. Zkouška skutečného dodavatelského SDK na syntetické stránce ověřila odmítnutí, odvolání a pět způsobů navigace bez předání soukromého parametru. Veškeré testovací analytické přenosy byly lokálně zachyceny, bez odeslání formuláře nebo relace do Clarity.
+
+Hypotéza: opakovaná, konkrétním ovládáním vysvětlitelná chyba může vést k lepšímu návrhu a menšímu tření před poptávkou. Přímý lead/ranking efekt této přípravy není naměřen. Po případném samostatně schváleném nasazení oddělit nové měření od staršího konverzního baseline; použít GSC/GA4 a skutečně doručené kvalifikované poptávky, ne jen heatmapu. Konkrétní přístupy, schválení nastavení účtu, soukromé agregáty, omezení API a podrobné doklady jsou vedeny mimo repozitář. Kód není commitnutý, pushnutý ani nasazený; před vydáním kontrola aktuálního main/Cursoru a konkrétní souhlas se sběrem a produkcí.
+
+Navazující konkrétní schválení 8. 11.: zadavatel povolil tuto větev do main a jeden produkční deployment. Předchozí odstavec popisuje historickou přípravu. Main i původní Ready ověřeny jako 7998add, režim Strict uložen samostatně a zapnutí pouze veřejného pilotního ID připraveno pro Production. Zopakované verify/build a následné ověření ostré verze jsou podmínkou vydání; samotné schválení ani uložená konfigurace nejsou důkazem nasazení. Bez změny článků, obchodních konverzí, GA4 definic, reklamních propojení, tarifu nebo DNS. Předchozí Ready 7998add zůstává návratovým bodem. Nenulová výpočetní režie a výběrový vzorek jsou známým omezením pilotu, nikoli slibem růstu poptávek.
+
 ## Schválené vydání konverzní návaznosti — 30. 10. 2026
 
 Zadavatel výslovně schválil produkční vydání předložené sady a poté požaduje konkurenční zhodnocení jižních Čech. Nové úplné verify/build, ochranné srovnání původních metadat a místní SEO smoke PASS. Pouze jeden commit v oddělené codex větvi a jeden fast-forward push do main, jeden Git-triggered Vercel deployment; bez migrace hostingu, placených změn, nového odborného článku, testovací poptávky nebo cizí práce Cursoru. Rozsah, souhlas, baseline, předchozí zachovaný návratový deployment a vyhodnocení v [RELEASE-SEARCH-2026-10-30.md](RELEASE-SEARCH-2026-10-30.md). Finální produkční SHA a ověření se zaznamenávají soukromě až po skutečném Ready; samotný souhlas není dokladem dokončeného nasazení. Další nové návrhy z konkurenčního auditu nejsou automaticky zahrnuté do tohoto souhlasu. Níže uvedené místní stavy jsou historií přípravy sady.

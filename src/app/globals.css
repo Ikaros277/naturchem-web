@@ -9274,6 +9274,10 @@ main.home-page + .site-footer {
   max-width: 720px;
   margin: 0 auto;
   padding: 1.25rem 1.35rem;
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(18, 38, 52, 0.96);
@@ -9370,6 +9374,7 @@ main.home-page + .site-footer {
   margin-top: 0.2rem;
   width: 24px;
   height: 24px;
+  flex-shrink: 0;
   accent-color: var(--accent);
 }
 

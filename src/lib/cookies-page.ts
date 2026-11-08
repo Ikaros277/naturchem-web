@@ -112,12 +112,12 @@ export const cookiesPageContent = {
     consent: {
       heading: "6. Souhlas a správa nastavení",
       bannerParagraph:
-        "Při první návštěvě zobrazíme cookie lištu. Můžete zvolit „Přijmout vše“, „Odmítnout volitelné“ nebo upravit jednotlivé kategorie. Volitelné cookies se načtou až po uložení Vašeho výběru.",
+        "Při první návštěvě zobrazíme cookie lištu. Volitelné technologie můžete povolit, odmítnout nebo upravit jejich nastavení. Načtou se pouze ty, se kterými souhlasíte.",
       manageParagraph:
         "Souhlas můžete kdykoli změnit tlačítkem Spravovat cookies v patičce webu, nebo cookies smazat v nastavení prohlížeče.",
       manageButtonLabel: "Spravovat cookies",
       consentModeParagraph:
-        "U služeb Google (Analytics, Ads) používáme Google Consent Mode v2 — do souhlasu se tagy načtou s omezeným režimem bez ukládání cookies; po Vaší volbě se stav aktualizuje podle zvolených kategorií."
+        "U služeb Google (Analytics, Ads) používáme Google Consent Mode v2. Externí měřicí skript načteme až po souhlasu s příslušnou kategorií. Do té doby zůstává souhlas nastavený na odmítnuto."
     },
     disableCookies: {
       heading: "7. Jak cookies zakázat v prohlížeči",

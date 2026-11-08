@@ -13,6 +13,7 @@ export type CookieConsentCategories = {
 export type CookieConsentRecord = CookieConsentCategories & {
   version: string;
   updatedAt: string;
+  clarity?: boolean;
 };
 
 export const defaultCookieConsent: CookieConsentRecord = {
@@ -40,20 +41,32 @@ export function readCookieConsent(): CookieConsentRecord | null {
   }
 }
 
-export function writeCookieConsent(categories: Pick<CookieConsentCategories, "statistics" | "marketing">) {
+export function writeCookieConsent(categories: Pick<CookieConsentCategories, "statistics" | "marketing"> & { clarity?: boolean }) {
   const record: CookieConsentRecord = {
     version: COOKIE_CONSENT_VERSION,
     necessary: true,
     statistics: categories.statistics,
     marketing: categories.marketing,
+    ...(typeof categories.clarity === "boolean" ? { clarity: categories.clarity } : {}),
     updatedAt: new Date().toISOString()
   };
 
   window.localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(record));
+  // Withdrawal also works on excluded pages and after the pilot has stopped.
+  if (record.clarity === false) clearClarityStorage();
   window.dispatchEvent(new CustomEvent(COOKIE_CONSENT_EVENT, { detail: record }));
   applyGoogleConsentMode(categories);
 
   return record;
+}
+
+export function clearClarityStorage(win: Window = window, doc: Document = document) {
+  for (const name of ["_clck", "_clsk"]) {
+    for (const domain of ["", "; Domain=" + win.location.hostname, "; Domain=naturchem.cz"]) {
+      try { doc.cookie = name + "=; Max-Age=0; Path=/; SameSite=Lax; Secure" + domain; } catch { /* storage may be blocked */ }
+    }
+  }
+  try { win.sessionStorage.removeItem("_cltk"); } catch { /* storage may be blocked */ }
 }
 
 export function hasCookieConsentChoice(): boolean {

@@ -105,7 +105,7 @@ export function SatisfactionSurveyForm({ categories }: Props) {
 
   if (status === "success") {
     return (
-      <div className="contact-form-success" role="status">
+      <div className="contact-form-success" role="status" data-clarity-mask="true">
         <h2 className="contact-form-title">{t.successTitle}</h2>
         <p className="contact-form-success-message">{feedback}</p>
       </div>
@@ -113,7 +113,7 @@ export function SatisfactionSurveyForm({ categories }: Props) {
   }
 
   return (
-    <form className="contact-quick-form satisfaction-survey-form" onSubmit={handleSubmit}>
+    <form className="contact-quick-form satisfaction-survey-form" onSubmit={handleSubmit} data-clarity-mask="true">
       <header className="contact-form-header">
         <h2 className="contact-form-title">{t.formTitle}</h2>
         <p className="contact-form-lead">{t.formLead}</p>

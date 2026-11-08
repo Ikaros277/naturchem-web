@@ -137,7 +137,7 @@ export function ContactForm({
 
   if (status === "success") {
     return (
-      <div id="poptavkovy-formular" className="contact-form-success" role="status">
+      <div id="poptavkovy-formular" className="contact-form-success" role="status" data-clarity-mask="true">
         <h2 id="poptavka-heading" className="contact-form-title">
           {t.successTitle}
         </h2>
@@ -153,6 +153,7 @@ export function ContactForm({
   return (
     <form
       id="poptavkovy-formular"
+      data-clarity-mask="true"
       className="contact-quick-form"
       aria-labelledby="poptavka-heading"
       method="post"

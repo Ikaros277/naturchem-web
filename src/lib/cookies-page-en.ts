@@ -112,12 +112,12 @@ export const cookiesPageContent = {
     consent: {
       heading: "6. Consent and settings management",
       bannerParagraph:
-        "On your first visit we display a cookie banner. You can choose \"Accept all\", \"Reject optional\" or adjust individual categories. Optional cookies are loaded only after your selection is saved.",
+        "On your first visit we display a cookie banner. You can allow or reject optional technologies or adjust their settings. Only technologies you consent to are loaded.",
       manageParagraph:
         "You can change your consent at any time using the Manage cookies button in the website footer, or delete cookies in your browser settings.",
       manageButtonLabel: "Manage cookies",
       consentModeParagraph:
-        "For Google services (Analytics, Ads) we use Google Consent Mode v2 — until consent is given, tags load in a limited mode without storing cookies; after your choice, the state is updated according to the selected categories."
+        "For Google services (Analytics, Ads) we use Google Consent Mode v2. The external measurement script loads only after consent to the relevant category. Until then, consent remains set to denied."
     },
     disableCookies: {
       heading: "7. How to disable cookies in your browser",

@@ -23,7 +23,7 @@
     "test:article-topics": "node scripts/verify_article_topics.js && node scripts/verify_article_translations.js",
     "test:client-messages": "node scripts/verify_client_message_scope.js",
     "test:contact-delivery": "node scripts/verify_contact_delivery.js && node scripts/verify_deferred_map_activation.js && node scripts/verify_contact_map.js",
-    "test:analytics-consent": "node scripts/verify_analytics_consent.js",
+    "test:analytics-consent": "node scripts/verify_analytics_consent.js && node scripts/verify_clarity_pilot.js && node scripts/verify_clarity_disclosure.js",
     "test:motion": "node scripts/verify_disclosure_motion.js && node scripts/verify_count_up.js",
     "test:publication": "node scripts/verify_publication.js",
     "test:monitoring": "node scripts/verify_monitoring.js",

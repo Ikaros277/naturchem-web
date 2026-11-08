@@ -112,12 +112,12 @@ export const cookiesPageContent = {
     consent: {
       heading: "6. Einwilligungs- und Einstellungsverwaltung",
       bannerParagraph:
-        "Bei Ihrem ersten Besuch zeigen wir ein Cookie-Banner an. Sie können „Alle akzeptieren“, „Optional ablehnen“ wählen oder einzelne Kategorien anpassen. Optionale Cookies werden erst geladen, nachdem Ihre Auswahl gespeichert wurde.",
+        "Bei Ihrem ersten Besuch zeigen wir ein Cookie-Banner an. Sie können optionale Technologien erlauben, ablehnen oder deren Einstellungen anpassen. Geladen werden nur Technologien, denen Sie zustimmen.",
       manageParagraph:
         "Sie können Ihre Einwilligung jederzeit über die Schaltfläche „Cookies verwalten“ in der Fußzeile der Website ändern oder Cookies in Ihren Browsereinstellungen löschen.",
       manageButtonLabel: "Cookies verwalten",
       consentModeParagraph:
-        "Für Google-Dienste (Analytics, Ads) verwenden wir den Google Consent Mode v2 – bis die Einwilligung erteilt wird, werden Tags in einem eingeschränkten Modus geladen, ohne dass Cookies gespeichert werden; Nach Ihrer Auswahl wird der Status entsprechend den ausgewählten Kategorien aktualisiert."
+        "Für Google-Dienste (Analytics, Ads) verwenden wir den Google Consent Mode v2. Das externe Messskript wird erst nach Ihrer Einwilligung in die jeweilige Kategorie geladen. Bis dahin bleibt die Einwilligung auf abgelehnt eingestellt."
     },
     disableCookies: {
       heading: "7. So deaktivieren Sie Cookies in Ihrem Browser",

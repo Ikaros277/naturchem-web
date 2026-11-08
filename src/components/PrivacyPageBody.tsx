@@ -4,6 +4,8 @@ import { getPrivacyPage } from "@/lib/i18n/content";
 import type { Locale } from "@/lib/i18n/locales";
 import { fillLegalTemplate } from "@/lib/legal-template";
 import { legalController, legalEffectiveDate, legalPaths } from "@/lib/legal";
+import { ClarityDisclosure } from "@/components/ClarityDisclosure";
+import { clarityDisclosureDate, getClarityPilotId } from "@/lib/clarity-config";
 
 export async function PrivacyPageBody({ locale }: { locale: Locale }) {
   const { content } = await getPrivacyPage(locale);
@@ -12,7 +14,7 @@ export async function PrivacyPageBody({ locale }: { locale: Locale }) {
   return (
     <LegalPageLayout locale={locale} title={content.title} lead={content.lead} breadcrumbLabel={content.breadcrumbLabel}>
       <p className="legal-meta">
-        {content.effectiveDateLabel} {legalEffectiveDate}
+        {content.effectiveDateLabel} {getClarityPilotId() ? clarityDisclosureDate : legalEffectiveDate}
       </p>
 
       <h2>{s.controller.heading}</h2>
@@ -62,6 +64,7 @@ export async function PrivacyPageBody({ locale }: { locale: Locale }) {
         {s.dataCollected.cookies.cookiesLinkPrefix}{" "}
         <LocaleLink href={legalPaths.cookies}>{s.dataCollected.cookies.cookiesLinkLabel}</LocaleLink>.
       </p>
+      <ClarityDisclosure locale={locale} />
 
       <h3>{s.dataCollected.marketing.subheading}</h3>
       <p>{s.dataCollected.marketing.paragraph}</p>

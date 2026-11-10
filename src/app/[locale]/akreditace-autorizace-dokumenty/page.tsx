@@ -22,6 +22,21 @@ import {
 } from "@/lib/service-icons";
 import { company, siteUrl } from "@/lib/site";
 
+const labRegisterCopy = {
+  cs: {
+    addressLabel: "Adresa akreditované laboratoře",
+    registerLink: "Ověřit akreditaci v registru ČIA"
+  },
+  en: {
+    addressLabel: "Accredited laboratory address",
+    registerLink: "Verify the accreditation in the Czech Accreditation Institute register"
+  },
+  de: {
+    addressLabel: "Adresse des akkreditierten Prüflabors",
+    registerLink: "Akkreditierung im Register des Tschechischen Akkreditierungsinstituts prüfen"
+  }
+} as const;
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -45,6 +60,8 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
   const { accreditedLabScope, authorizations } = await getAccreditationScope(locale);
   const accreditationDocuments = await getAccreditationDocuments(locale);
   const pageCtaPresets = getPageCtaPresets(locale);
+  const labCopy = labRegisterCopy[locale];
+  const { street: labStreet, postalCode: labPostalCode, city: labCity } = company.labAddress;
   const link = (href: string) => localizeHref(href, locale);
   const pageUrl = `${siteUrl}${link("/akreditace-autorizace-dokumenty")}/`.replace(/([^:]\/)\/+/g, "$1");
 
@@ -97,7 +114,11 @@ export default async function AkreditaceAutorizaceDokumentyPage({ params }: Prop
               {facts.map((fact) => (
                 <li key={fact}>{fact}</li>
               ))}
+              <li>{labCopy.addressLabel}: {labStreet}, {labPostalCode} {labCity}</li>
             </ul>
+            <a href={locale === "en" ? "https://www.cai.cz/en/?subjekt=1599-naturchem-s-r-o" : "https://www.cai.cz/?subjekt=1599-naturchem-s-r-o"}>
+              {labCopy.registerLink}
+            </a>
           </article>
           <article className="card">
             <h2>{content.overview.benefitsTitle}</h2>

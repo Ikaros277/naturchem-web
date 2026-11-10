@@ -38,15 +38,16 @@ export async function DemandLandingLayout({ landing, locale, schemas, contactHre
   const docsChecklist = locale === "cs" ? docsSection?.checklist : undefined;
   const overview = landing.sections.filter(section => section !== docsSection).slice(0, 2);
   const localNoise = locale === "cs" && landing.slug === "mereni-hluku-ceske-budejovice";
+  const kolaudace = locale === "cs" && landing.slug === "mereni-pro-kolaudaci";
   const hall = locale === "cs" && landing.slug === "mereni-nove-haly";
-  const title = locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Měření pro kolaudaci"
-    : locale === "cs" && landing.slug === "mereni-nove-haly" ? "Měření nové výrobní haly" : landing.h1;
-  const intro = locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Hluk, osvětlení a pracovní prostředí podle požadavků Vašeho projektu a úřadu."
-    : locale === "cs" && landing.slug === "mereni-nove-haly" ? "Rozsah měření navrhneme podle technologie, pracovišť a požadavku KHS."
+  const title = kolaudace ? "Měření pro kolaudaci"
+    : hall ? "Měření nové výrobní haly" : landing.h1;
+  const intro = kolaudace ? "Hluk, osvětlení a pracovní prostředí podle požadavků Vašeho projektu a úřadu."
+    : hall ? "Rozsah měření navrhneme podle technologie, pracovišť a požadavku KHS."
     : splitLeadSentence(landing.intro)?.lead ?? stripRichText(landing.intro);
   const contactLabel = localNoise ? "Poptat měření hluku"
-    : locale === "cs" && landing.slug === "mereni-pro-kolaudaci" ? "Poptat měření pro kolaudaci"
-    : locale === "cs" && landing.slug === "mereni-nove-haly" ? "Poptat měření nové haly"
+    : kolaudace ? "Poptat měření pro kolaudaci"
+    : hall ? "Poptat měření nové haly"
     : service?.contactCta ?? ui.inquiry;
   const categoryLabel = category === "measurement" ? ui.measurement : category === "studies" ? ui.studies : ui.docsCategory;
 
@@ -89,6 +90,11 @@ export async function DemandLandingLayout({ landing, locale, schemas, contactHre
               Ukázka měření ve výrobním provozu <span aria-hidden="true">↗</span>
             </a>
           </p> : null}
+          {kolaudace ? <section className={styles.evidence} aria-labelledby="kolaudace-reference-title">
+            <p className={styles.eyebrow}>Jihočeský kraj · 2015</p>
+            <h3 id="kolaudace-reference-title">Měření osvětlení pro kolaudaci výrobní haly</h3>
+            <p>V nové výrobní hale jsme před uvedením do provozu změřili umělé osvětlení. Zpracovali jsme protokol jako podklad ke kolaudaci.</p>
+          </section> : null}
         </div>
         <aside className={styles.inquiryPanel} id="podklady" aria-labelledby="service-docs-heading">
           <ServiceIcon icon="process-vystup" variant="plain" size={30} /><h2 id="service-docs-heading">{ui.docs}</h2>

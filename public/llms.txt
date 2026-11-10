@@ -56,6 +56,7 @@ Akreditované nezávislé ověřování EU ETS neposkytujeme.
 - [Měření emisí kotelen](https://www.naturchem.cz/mereni-emisi-kotelen/)
 - [Rozptylová studie pro povolení provozu](https://www.naturchem.cz/rozptylova-studie-povoleni/)
 - [Odborný posudek zdroje znečišťování ovzduší](https://www.naturchem.cz/odborny-posudek-zdroj-znecistovani/)
+- [Měření hluku v Českých Budějovicích](https://www.naturchem.cz/mereni-hluku-ceske-budejovice/)
 - [Měření hluku Praha](https://www.naturchem.cz/mereni-hluku-praha/)
 - [Měření hluku Havlíčkův Brod](https://www.naturchem.cz/mereni-hluku-havlickuv-brod/)
 - [Podklady pro KHS](https://www.naturchem.cz/podklady-pro-khs/)
@@ -70,6 +71,7 @@ Akreditované nezávislé ověřování EU ETS neposkytujeme.
 - Telefon: +420 603 216 983
 - Web: https://www.naturchem.cz/kontakt/
 - Sídlo: Ledečská 3015, 580 01 Havlíčkův Brod, Česká republika
+- Laboratoř v Českých Budějovicích: Rudolfovská 119/57, 370 01 České Budějovice
 
 ## Pravidla citování
 

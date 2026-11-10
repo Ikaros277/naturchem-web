@@ -1,6 +1,6 @@
 # NATURCHEM — AI discovery
 
-> NATURCHEM, s.r.o. is a Czech accredited environmental laboratory and authorized expert for emission measurements, workplace monitoring, noise, dispersion studies, EIA, expert reports, and permitting documentation.
+> NATURCHEM, s.r.o. is a Czech accredited testing laboratory (No. 1599). The company provides environmental measurements, studies, expert reports, and permitting documentation. The accreditation scope and separate authorisations are described on the credentials page.
 
 ## Primary resources
 
@@ -10,6 +10,7 @@
 - Extended reference: https://www.naturchem.cz/llms-full.txt
 - Article index: https://www.naturchem.cz/llms-articles.txt
 - Sitemap: https://www.naturchem.cz/sitemap.xml
+- Accreditation and authorisations: https://www.naturchem.cz/en/akreditace-autorizace-dokumenty/
 - Contact: https://www.naturchem.cz/kontakt/
 
 ## Policy

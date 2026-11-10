@@ -15,6 +15,7 @@
 | Managing director | Ing. František Hezina |
 | Headquarters | Ledečská 3015, 580 01 Havlíčkův Brod |
 | Offices | Havlíčkův Brod, České Budějovice, Praha 5 |
+| České Budějovice laboratory | Rudolfovská 119/57, 370 01 České Budějovice |
 | Contact | naturchem@naturchem.cz, +420 603 216 983 |
 
 ## Service scope
@@ -119,6 +120,7 @@ https://www.naturchem.cz/akreditace-autorizace-dokumenty/
 - https://www.naturchem.cz/podklady-pro-khs/
 - https://www.naturchem.cz/podklady-pro-cizp/
 - https://www.naturchem.cz/mereni-hluku-ke-kolaudaci/ — Noise measurement for building approval
+- https://www.naturchem.cz/mereni-hluku-ceske-budejovice/ — Noise measurement in České Budějovice and South Bohemia
 - https://www.naturchem.cz/mereni-pracovniho-prostredi-kategorizace-praci/ — Workplace measurements for job categorization
 - https://www.naturchem.cz/ispop-rocni-hlaseni-emise/ — ISPOP: emission measurement notification and annual reporting
 - https://www.naturchem.cz/poradna/rozptylova-studie-kdy-je-povinna-a-jake-podklady-jsou-potreba/
